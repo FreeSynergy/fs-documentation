@@ -14,8 +14,8 @@
 
 ```
 A1. [ ] SQLite-Speicherung implementieren
-    - fsn-shared.db: übergreifende Settings, i18n-Auswahl, Audit-Log
-    - fsn-desktop.db: Widget-Positionen, Shortcuts, Profil, Layout, aktives Theme
+    - [x] fsn-shared.db: übergreifende Settings, i18n-Auswahl, Audit-Log — SeaORM via fsd-db
+    - [x] fsn-desktop.db: Widget-Positionen, Shortcuts, Profil, Layout, aktives Theme — SeaORM via fsd-db
     - fsn-conductor.db: Service-Konfigurationen, Quadlets, Variablen
     - fsn-store.db: Installierte Pakete, Versionen, Cache
     - fsn-core.db: Hosts, Projekte, Einladungen, Federation
@@ -40,20 +40,27 @@ A4. [ ] Scrollbars global (.fsn-scrollable überall)
 ## Phase B: Theme-System reparieren
 
 ```
-B1. [ ] CSS-Variablen-Namenskonvention (siehe technik/css.md)
-    - Shared-Themes OHNE Prefix
-    - Programm-spezifisch MIT Prefix
-    - Parser: prüft Pflicht-Variablen
+B1. [x] CSS-Variablen-Namenskonvention (siehe technik/css.md)
+    - Shared-Themes OHNE Prefix (Store-Format)
+    - Programm-spezifisch MIT Prefix (--fsn-*)
+    - Parser: prüft Pflicht-Variablen (validate_theme_vars in theme_loader.rs + appearance.rs)
 
-B2. [ ] Kontraste fixen (WCAG AA: 4.5:1 Text, 3:1 Muted)
-    - Alle 5 Themes überarbeiten
-    - Kontrast-Check Script
+B2. [x] Kontraste fixen (WCAG AA: 4.5:1 Text, 3:1 Muted)
+    - Nordic text-muted: #4C566A → #7B8FA6 (ratio 1.82 → 3.96)
+    - Cupertino text-muted: #aeaeb2 → #686868 (ratio 1.94 → 4.60)
+    - Cloud-White text-muted: #94a3b8 → #626d79 (ratio 2.30 → 4.52)
+    - Cloud-White text-secondary: #475569 → #334155 (verbessert)
 
-B3. [ ] Theme-Prefixing (beim Laden dynamisch hinzufügen)
+B3. [x] Theme-Prefixing (beim Laden dynamisch hinzufügen)
+    - prefix_theme_css() in fsd-shell/src/theme_loader.rs
 
-B4. [ ] Theme-Editor in Settings (ändern, preview, speichern, hochladen)
+B4. [x] Theme-Editor in Settings (ändern, preview, speichern, hochladen)
+    - CSS-Editor Textarea in AppearanceSettings, Live-Validation, Apply-Preview
 
-B5. [ ] Theme-Aspekte konfigurierbar (Window-Chrome, Buttons, Animationen, Mauszeiger)
+B5. [x] Theme-Aspekte konfigurierbar (Window-Chrome, Buttons, Animationen, Mauszeiger)
+    - Animations-Toggle (--fsn-anim-duration: 0ms/180ms)
+    - Window-Transparency Slider (--fsn-window-bg opacity)
+    - Beide als Dioxus-Context in Desktop, editierbar in Settings
 ```
 
 ## Phase C: Store funktionsfähig
