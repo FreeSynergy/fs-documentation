@@ -14,256 +14,195 @@
 
 ```
 A1. [ ] SQLite-Speicherung implementieren
-    - fsn-shared.db: übergreifende Settings (key/value, i18n-Auswahl, Audit-Log)
+    - fsn-shared.db: übergreifende Settings, i18n-Auswahl, Audit-Log
     - fsn-desktop.db: Widget-Positionen, Shortcuts, Profil, Layout, aktives Theme
     - fsn-conductor.db: Service-Konfigurationen, Quadlets, Variablen
     - fsn-store.db: Installierte Pakete, Versionen, Cache
     - fsn-core.db: Hosts, Projekte, Einladungen, Federation
+    - fsn-bus.db: Event-Log, Routing-Regeln, Standing Orders, Subscriptions
     - Tabellen definieren, Migrations, SeaORM-Entities
-    - JEDE Einstellung die der User macht MUSS in SQLite landen
+    - JEDE Einstellung MUSS in SQLite landen
     - Beim Start: DB lesen → UI befüllen
 
 A2. [ ] Window X-Button fixen
-    - Testen: Fenster bei jeder Größe schließbar
-    - with_decorations(true) ODER Custom-Chrome korrekt implementieren
 
 A3. [ ] FsnObject-System implementieren (siehe technik/ui-objekte.md)
-    - Basis-Struct: Position, Größe, State, Sidebar-Items
-    - Resize: 5px Toleranz, alle 4 Kanten + 4 Ecken, Fullscreen-Overlay
-    - Drag: Am Kopf/Titelleiste, Fullscreen-Overlay
+    - Resize: 5px Toleranz, alle Kanten + Ecken, Fullscreen-Overlay
+    - Drag: Am Kopf, Fullscreen-Overlay
     - Minimize: → Icon mit pulsierendem grünem Punkt
     - Close: Unsaved-Changes-Dialog
-    - Object-Sidebar: Icons wenn nicht gehovert, Icons+Text wenn gehovert
+    - Object-Sidebar: Icons / Icons+Text bei Hover
     - EINMAL definieren, für Window/Widget/Modal/Panel nutzen
 
-A4. [ ] Scrollbars global
-    - .fsn-scrollable CSS-Klasse (dünn, unauffällig)
-    - Auf JEDEN Container anwenden der überlaufen kann
-    - Settings, Store, Dropdowns, Modals, Listen, Sidebar, Hauptcontent
+A4. [ ] Scrollbars global (.fsn-scrollable überall)
 ```
 
 ## Phase B: Theme-System reparieren
 
 ```
-B1. [ ] CSS-Variablen-System bereinigen
-    - Namenskonvention definieren (siehe technik/css.md)
-    - Shared-Themes OHNE Prefix speichern
-    - Programm-spezifische Themes MIT Prefix speichern
-    - Parser: prüft ob alle Pflicht-Variablen gesetzt sind
+B1. [ ] CSS-Variablen-Namenskonvention (siehe technik/css.md)
+    - Shared-Themes OHNE Prefix
+    - Programm-spezifisch MIT Prefix
+    - Parser: prüft Pflicht-Variablen
 
-B2. [ ] Kontraste fixen (WCAG AA minimum)
-    - JEDE Theme prüfen: Text auf Hintergrund mindestens 4.5:1
-    - Text-Muted mindestens 3:1
+B2. [ ] Kontraste fixen (WCAG AA: 4.5:1 Text, 3:1 Muted)
     - Alle 5 Themes überarbeiten
-    - Kontrast-Check als Tool/Script
+    - Kontrast-Check Script
 
-B3. [ ] Theme-Prefixing implementieren
-    - Beim LADEN: Theme-Manager fügt Prefix hinzu (--fsn- für Desktop)
-    - Beim SPEICHERN im Store: kein Prefix
-    - Andere Programme (Wiki.rs) können eigenen Prefix nutzen (--wiki-)
+B3. [ ] Theme-Prefixing (beim Laden dynamisch hinzufügen)
 
-B4. [ ] Theme-Editor in Settings
-    - Einzelne Aspekte ändern (Farben, Button-Stil, etc.)
-    - Live-Preview
-    - Als neues Theme speichern
-    - In den Store hochladen können (mit Metadaten)
+B4. [ ] Theme-Editor in Settings (ändern, preview, speichern, hochladen)
 
-B5. [ ] Theme-Aspekte konfigurierbar
-    - Window-Chrome (MacOS, KDE, Windows, Minimal)
-    - Button-Style (Rounded, Square, Pill, Flat)
-    - Animationen (Dauer, Easing, an/aus)
-    - Mauszeiger (Standard, Custom)
+B5. [ ] Theme-Aspekte konfigurierbar (Window-Chrome, Buttons, Animationen, Mauszeiger)
 ```
 
-## Phase C: Store funktionsfähig machen
+## Phase C: Store funktionsfähig
 
 ```
 C1. [ ] Store-Catalog TOML fixen
-    - Parse-Fehler beheben
-    - Fehlerbehandlung: Freundliche Meldung + Retry
-
-C2. [ ] Sprachen installierbar
-    - .ftl-Dateien aus Store laden → in locales/{lang}/ speichern
-    - In fsn-store.db registrieren
-    - Nur installierte Sprachen im Dropdown
-    - Englisch immer vorinstalliert
-
-C3. [ ] Themes installierbar
-    - Theme aus Store laden → In fsn-store.db registrieren
-    - Live-Wechsel
-    - Bei Wechsel: Fragen ob altes Theme gelöscht werden soll
-
+C2. [ ] Sprachen installierbar (Download, DB-Registrierung, Dropdown)
+C3. [ ] Themes installierbar (Download, DB, Live-Wechsel, Lösch-Dialog)
 C4. [ ] Widgets installierbar
-    - Widget-Definition laden → registrieren
-    - Im "Add Widget"-Dialog verfügbar
-
-C5. [ ] Store-UI: Alle Pakettypen
-    - Tabs: All | Modules | Languages | Themes | Widgets | Bots | Tasks
-    - Jedes Paket: Icon, Name, Version, Tags, Beschreibung
-    - Detail-View bei Klick
-    - Install/Update/Remove Buttons
-    - Suche über Tags
+C5. [ ] Store-UI: Alle Pakettypen, Tabs, Suche über Tags, Detail-View
 ```
 
 ## Phase D: Widgets & Desktop
 
 ```
-D1. [ ] DraggableWidget-Komponente (basierend auf FsnObject)
-    - Position in SQLite speichern/laden
-
-D2. [ ] ResizableContainer-Komponente (basierend auf FsnObject)
-    - Größe in SQLite speichern/laden
-
-D3. [ ] Widget-Bearbeitungsmodus
-    - Rechtsklick → "Edit Desktop"
-    - Drag, Resize, Add, Remove, Background
-    - "Done" / "Cancel"
-
-D4. [ ] Desktop-Hintergrund
-    - Bild hochladen (FileEngine)
-    - URL eingeben
-    - Farbe/Gradient wählen
-    - In SQLite speichern
-
-D5. [ ] Basis-Widgets
-    - Clock-Widget
-    - System-Info-Widget
-    - Messages-Widget (Placeholder)
-    - My-Tasks-Widget (Placeholder)
+D1. [ ] DraggableWidget (basierend auf FsnObject, Position in SQLite)
+D2. [ ] ResizableContainer (basierend auf FsnObject, Größe in SQLite)
+D3. [ ] Widget-Bearbeitungsmodus (Rechtsklick → Edit Desktop)
+D4. [ ] Desktop-Hintergrund (Bild, URL, Farbe, Gradient)
+D5. [ ] Basis-Widgets (Clock, SysInfo, Messages-Placeholder, Tasks-Placeholder)
 ```
 
 ## Phase E: Conductor neu bauen
 
 ```
-E1. [ ] Alten Conductor-Code LÖSCHEN
-    - Alles mit podman.sock → weg
-    - Alles mit bollard → weg
-
-E2. [ ] YAML-Parser
-    - Docker-Compose YAML einlesen
-    - Services, Subservices, Volumes, Networks, Ports
-    - Subservices = gehören zum selben Paket
-
+E1. [ ] Alten Conductor-Code LÖSCHEN (podman.sock, bollard)
+E2. [ ] YAML-Parser (Services, Subservices, Volumes, Networks, Ports)
 E3. [ ] Variablen-Analyse
-    - Typ-Erkennung (*_HOST, *_PASSWORD, *_URL, ...)
+    - Typ-Erkennung (*_HOST, *_PASSWORD, *_URL)
     - Rollen-Erkennung mit Ober-/Unterrollen
-    - Redis-kompatible: Redis, Dragonfly, KeyDB, Valkey
+    - Redis-kompatible: Redis, Dragonfly, KeyDB, Valkey, Memcached
     - Datenbanken: Postgres, MySQL, MariaDB, MongoDB, SQLite, CockroachDB
-    - Cache: Redis, Dragonfly, Memcached, KeyDB, Valkey
     - Konfidenz-Angabe
-    - Einheitliches Pattern-Matching (mit _ und ohne _)
-
-E4. [ ] Dry-Run + Validierung
-    - Syntax-Check
-    - Healthcheck vorhanden? (Warnung)
-    - Netzwerke korrekt? (Warnung bei ungenutzten)
-    - Port-Konflikte?
-
-E5. [ ] Quadlet-Generator
-    - YAML → .container-Dateien
-    - Tera-Templates für Configs
-    - Kein Podman-Socket — nur Dateien + systemctl
-
-E6. [ ] Store-Integration (optional)
-    - "Kennt Store diesen Service?" → Ergänzen, NICHT überschreiben
-    - Bei Fehler: Fragen ob automatisch repariert werden soll
-    - Offline: Funktioniert auch ohne Store
-```
-
-## Phase F: Lenses
-
-```
-F1. [ ] Lens-Datenmodell
-    - Name, Suchbegriff/Thema, Service-Filter, Layout
+E4. [ ] Dry-Run + Validierung (Syntax, Healthcheck, Netzwerke, Ports)
+E5. [ ] Quadlet-Generator (YAML → .container, Tera-Templates, kein Podman-Socket)
+E6. [ ] Store-Integration (ergänzen nicht überschreiben, offline-fähig)
+E7. [ ] Instanz-Namen vergeben
+    - Benutzer vergibt Namen an jeden Service
+    - Subservices: Auto-Prefix/Postfix (z.B. outline-postgres)
     - In SQLite speichern
-
-F2. [ ] Lens-View
-    - Ergebnisse aus Services zusammenstellen
-    - Gruppiert nach Service-Rolle
-    - Jedes Ergebnis: Summary + Link zum Original
-
-F3. [ ] Lens als Desktop-Icon
-    - Lens auf Desktop platzieren
-    - Klick → Lens öffnet sich als Fenster (FsnObject)
 ```
 
-## Phase G: Search
+## Phase F: Message Bus
 
 ```
-G1. [ ] Search-View im Desktop
-    - Suchfeld (global, Shortcut: Ctrl+K oder konfigurierbar)
-    - Ergebnisse nach Service gruppiert
-    - Relevanz-Sortierung
-    - Preview + Link zum Original + Quelle (Service, Host, Projekt)
+F1. [ ] Bus-Grundstruktur (fsn-bus Crate)
+    - Pub/Sub Event-System
+    - BusEvent Struct (siehe konzepte/bus.md)
+    - DeliveryType: FireAndForget, Guaranteed, StandingOrder
+    - StorageType: NoStore, UntilAck, Persistent
+    - In-Process Channel (tokio::broadcast) für lokalen Bus
 
-G2. [ ] Service-Suche (Ebene 1)
-    - Jeder Service durchsucht seine eigenen Daten
-    - Normalisiertes Ergebnis-Format
+F2. [ ] Rollen-basierte Adressierung
+    - Events IMMER über Rollen adressiert, nie direkt
+    - Subscription-Filter: Rolle + Topic + Instanz-Tag (kombinierbar)
+    - Rollen-Hierarchie: Ober-Rolle = alle Unterrollen
 
-G3. [ ] Host-Suche (Ebene 2)
-    - Bus aggregiert Service-Ergebnisse
-    - Deduplizierung
+F3. [ ] Subscription-Manager
+    - Services registrieren sich mit Rolle + Topic-Filter
+    - Rechte-Prüfung: Hat der Abonnent read-Recht auf den Sender?
+    - Subscriptions in SQLite (fsn-bus.db)
 
-G4. [ ] Föderale Suche (Ebene 3-4)
-    - Nur Services mit search-Recht
-    - Über API zwischen Projekten/Föderationen
+F4. [ ] Nachrichtentypen-Handling
+    - Fire & Forget: Sofort zustellen, dann verwerfen
+    - Guaranteed Delivery: Queue, warten auf ACK, Retry
+    - Standing Order: Dauerhaft aktiv, feuert bei passender Service-Installation
+
+F5. [ ] Speicherungs-Layer
+    - NoStore: Nur im RAM
+    - UntilAck: In SQLite bis ACK, dann löschen
+    - Persistent: In SQLite, nie automatisch löschen (Audit-Log)
+
+F6. [ ] Konfigurierbare Default-Zuordnung
+    - Regelbasierte TOML-Konfiguration
+    - WENN Topic X UND Quelle Y → DeliveryType + StorageType
+    - Editierbar im Conductor
+    - Default-Regeln mitliefern (search=Fire&Forget, rights=Guaranteed+Persistent, etc.)
+
+F7. [ ] Standing Orders Engine
+    - Standing Orders in SQLite speichern
+    - Bei Service-Installation: Prüfe ob passende Standing Orders existieren
+    - Nur prüfen wenn Rolle des neuen Service zu einer Standing Order passt
+
+F8. [ ] Bridges (Bus-zu-Bus Verbindung)
+    - Bridge = aktiver Filter zwischen zwei Bus-Ebenen
+    - Filtert nach Rechte-Kaskade (read, write, execute, search)
+    - Doppelter Schutz: Bridge filtert + Empfänger-Bus hat eigene Regeln
+    - Konfigurierbar: Welche Events dürfen durch
+
+F9. [ ] Bus-API
+    - CLI: fsn bus publish, fsn bus subscribe, fsn bus rules, fsn bus log
+    - API: POST /api/bus/publish, GET /api/bus/subscribe (WebSocket)
+    - UI: Bus-Monitor im Desktop (Events live sehen)
 ```
 
-## Phase H: Bots
+## Phase G: Lenses
 
 ```
-H1. [ ] Bot-Framework Grundstruktur
-    - BotDefinition laden, BotConfig in SQLite
-
-H2. [ ] Broadcast-Bot
-    - Telegram zuerst (teloxide)
-    - Nachricht → an alle Gruppen senden
-
-H3. [ ] Gatekeeper-Bot
-    - Telegram-Join-Event → Verifikation → Approve/Deny
+G1. [ ] Lens-Datenmodell (Name, Thema, Service-Filter, Layout → SQLite)
+G2. [ ] Lens-View (Ergebnisse gruppiert nach Rolle, Summary + Link)
+G3. [ ] Lens als Desktop-Icon (platzierbar, öffnet als FsnObject-Fenster)
 ```
 
-## Phase I: Tasks
+## Phase H: Search
 
 ```
-I1. [ ] Data Offers/Accepts System
-I2. [ ] Task Builder UI (Feld-Mapping)
-I3. [ ] Task-Templates aus Store
+H1. [ ] Search-View (Suchfeld, Ergebnisse gruppiert, Preview + Link + Quelle)
+H2. [ ] Service-Suche (Ebene 1: jeder Service durchsucht eigene Daten)
+H3. [ ] Host-Suche (Ebene 2: Bus aggregiert, dedupliziert)
+H4. [ ] Föderale Suche (Ebene 3-4: nur mit search-Recht, über Bridges)
 ```
 
-## Phase J: Node (Invite, Federation)
+## Phase I: Bots
 
 ```
-J1. [ ] Invite-System
-    - Token generieren + verschlüsselte TOML-Datei
-    - Port pro Einladung (öffnen/schließen)
-    - Validate + Join-Prozess
-
-J2. [ ] Federation-Grundstruktur
-    - Beitritt (Einladung oder Anfrage)
-    - Domain-Pflicht für Föderationen
-    - Subdomain-Routing
-    - Auth-Broker (OAuth2 Proxy)
-
-J3. [ ] Rechte-Kaskade
-    - read, write, execute, search pro Service
-    - Weitergabe: gleich oder weniger, nie mehr
-    - Audit-Log für jede Änderung
-    - Warnung bei umfangreichen Freigaben
+I1. [ ] Bot-Framework (BotDefinition, BotConfig in SQLite)
+I2. [ ] Broadcast-Bot (Telegram zuerst)
+I3. [ ] Gatekeeper-Bot (Join-Event → Verifikation → Approve/Deny)
 ```
 
-## Phase K: Shortcuts, Menü, Profil, Polish
+## Phase J: Tasks
 
 ```
-K1. [ ] Action Registry (jede Aktion hat ID + Default-Shortcut)
-K2. [ ] Konfigurierbare Shortcuts in Settings
-K3. [ ] Hilfe: Auto-generierte Shortcut-Referenz
-K4. [ ] Menü: JEDER Punkt ruft echte Aktion auf
-K5. [ ] Profil: IAM-Daten + editierbare Felder + Account-Linking
-K6. [ ] Notification Bell
-K7. [ ] Context-Menüs
-K8. [ ] Animationen konfigurierbar
-K9. [ ] Alle Stubs/toten Code entfernen
+J1. [ ] Data Offers/Accepts System (konkrete Felder mit Typen)
+J2. [ ] Task Builder UI (Feld-Mapping, Trigger: Event/Scheduled/Manual)
+J3. [ ] Task-Templates aus Store
+```
+
+## Phase K: Node (Invite, Federation)
+
+```
+K1. [ ] Invite-System (Token, verschlüsselte TOML, Port pro Einladung)
+K2. [ ] Federation-Grundstruktur (Beitritt, Domain-Pflicht, Auth-Broker)
+K3. [ ] Rechte-Kaskade (read/write/execute/search, Audit-Log, Warnungen)
+K4. [ ] Föderaler Bus (Bridge-Konfiguration zwischen Projekt und Föderation)
+```
+
+## Phase L: Shortcuts, Menü, Profil, Polish
+
+```
+L1. [ ] Action Registry (ID + Default-Shortcut)
+L2. [ ] Konfigurierbare Shortcuts in Settings
+L3. [ ] Hilfe: Auto-generierte Shortcut-Referenz
+L4. [ ] Menü: JEDER Punkt ruft echte Aktion auf
+L5. [ ] Profil: IAM-Daten + editierbar + Account-Linking
+L6. [ ] Notification Bell
+L7. [ ] Context-Menüs
+L8. [ ] Animationen konfigurierbar
+L9. [ ] Alle Stubs/toten Code entfernen
 ```
 
 ---
@@ -271,15 +210,16 @@ K9. [ ] Alle Stubs/toten Code entfernen
 ## Reihenfolge
 
 ```
-Prio 1: A1-A4     (Fundament: SQLite, X-Button, FsnObject, Scrollbars)
-Prio 2: B1-B5     (Theme-System reparieren + Kontraste)
-Prio 3: C1-C5     (Store funktionsfähig)
-Prio 4: D1-D5     (Widgets & Desktop)
-Prio 5: E1-E6     (Conductor neu)
-Prio 6: F1-F3     (Lenses)
-Prio 7: G1-G4     (Search)
-Prio 8: H1-H3     (Bots)
-Prio 9: I1-I3     (Tasks)
-Prio 10: J1-J3    (Node Invite + Federation)
-Prio 11: K1-K9    (Polish)
+Prio 1:  A1-A4     Fundament (SQLite, X-Button, FsnObject, Scrollbars)
+Prio 2:  B1-B5     Theme-System reparieren + Kontraste
+Prio 3:  C1-C5     Store funktionsfähig
+Prio 4:  D1-D5     Widgets & Desktop
+Prio 5:  E1-E7     Conductor neu bauen
+Prio 6:  F1-F9     Message Bus
+Prio 7:  G1-G3     Lenses
+Prio 8:  H1-H4     Search
+Prio 9:  I1-I3     Bots
+Prio 10: J1-J3     Tasks
+Prio 11: K1-K4     Node (Invite + Federation)
+Prio 12: L1-L9     Polish
 ```
