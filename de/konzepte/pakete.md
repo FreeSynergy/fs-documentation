@@ -31,8 +31,19 @@ Jedes Paket MUSS haben:
 - `version` (SemVer, aus Git-Tag)
 - `type` (container, language, theme, widget, bot, bridge, task)
 - `description` (Kurzbeschreibung)
-- `tags` (für Suche — muss aussagekräftig sein)
+- `tags` (für Suche — muss aussagekräftig sein, siehe unten)
 - `icon` (SVG oder Icon-Name; wenn fehlt → generisches Icon für den Typ)
+
+## Tags
+
+Tags sind das primäre Suchinstrument. **Schlechte Tags = Paket wird nicht gefunden.**
+
+- Container-Pakete: alle Rollen + Unterrollen + kompatible Standards
+- Theme-Pakete: Farben, Stil-Namen
+- Widget-Pakete: Funktion, Datenquelle
+- Sprach-Pakete: Sprach-Code, Region, Programm-ID
+
+Details und Filter-Syntax: [Store](../programme/store/README.md#tag-system)
 
 ## Variable-System (für Container-Pakete)
 
