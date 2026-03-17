@@ -47,7 +47,7 @@ Init ist fertig. Der Store ist da. Ab jetzt:
 
 ```bash
 # Was will ich installieren?
-fsn store search --type group     # Zeige Installations-Gruppen
+fsn store search --type bundle    # Zeige Installations-Bundles
 
 # Server-Installation
 fsn store install server-minimal  # Node + Conductor + Proxy + S3
@@ -61,6 +61,21 @@ fsn store install kanidm
 fsn store install outline
 ```
 
+## Implementierung
+
+- **Lokal:** `/home/kal/Server/FreeSynergy.Init/`
+- Binary-Name: `fsn-init`
+- Transport: `gix` mit rustls (kein OpenSSL erforderlich)
+
+## CLI
+
+```bash
+fsn-init                                   # → ~/.local/share/fsn/store
+fsn-init --target-dir /opt/fsn/store       # Eigener Pfad
+fsn-init --store-url https://...           # Eigene Store-URL
+fsn-init --branch testing                  # Branch wählen
+```
+
 ## Repo
 
 https://github.com/FreeSynergy/Init
@@ -69,8 +84,8 @@ https://github.com/FreeSynergy/Init
 
 | Crate | Zweck |
 |---|---|
-| `gix` (gitoxide) | Git-Klon des Store-Repos |
-| `clap` | CLI (minimal: `freesynergy-init [store-url]`) |
+| `gix` (gitoxide) | Git-Klon des Store-Repos (reines Rust, kein OpenSSL) |
+| `clap` | CLI-Parser (--store-url, --target-dir, --branch) |
 
 ---
 

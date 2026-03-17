@@ -64,40 +64,43 @@ B5. [x] Theme-Aspekte konfigurierbar
 ## Phase C: Init + Store als Paketmanager
 
 ```
-C1. [ ] FreeSynergy.Init erstellen
-    - Minimales Rust-Binary
+C1. [x] FreeSynergy.Init erstellen
+    - Minimales Rust-Binary (fsn-init)
     - gitoxide (gix) für Git-Klon des Store-Repos
-    - GitHub Actions: Cross-Compilation für Linux/macOS/Windows
-    - Repo: FreeSynergy/Init
+    - GitHub Actions: Cross-Compilation für Linux x64/arm64, macOS x64/arm64, Windows x64
+    - Repo: /home/kal/Server/FreeSynergy.Init/
 
-C2. [ ] Store-Paketmanager: Kern
-    - Paket-Typen: program, container, group, language, theme, widget, bot, bridge, task
-    - Pflicht-Metadaten: id, name, version, type, description, icon, tags
-    - catalog.toml: maschinenlesbarer Index
-    - SQLite: installierte Pakete, Versionen, Status
+C2. [x] Store-Paketmanager: Kern
+    - PackageType enum: app, container, bundle, language, theme, widget, bot, bridge, task
+    - PackageMeta: icon, package_type, channel Felder ergänzt
+    - SQLite: installed_packages Entity + InstalledPackageRepo + Migration 003
+    - catalog.toml: von CI generiert (kein manuelles Bearbeiten)
 
-C3. [ ] Store: Versionierung
-    - SemVer + Git-Tags
-    - Parallele Versionen (installiert mit Versionsnummer)
-    - Release-Channels: stable, testing, nightly
-    - Rollback auf vorherige Version
+C3. [x] Store: Versionierung
+    - ReleaseChannel enum: Stable/Testing/Nightly (fsn-pkg/src/channel.rs)
+    - VersionManager + VersionRecord + RollbackError (fsn-pkg/src/versioning.rs)
+    - Parallele Versionen, rollback(), rollback_one(), prune()
 
-C4. [ ] Store: Paket-Signierung
-    - ed25519 als Default (austauschbar: ed448, RSA)
-    - Signatur-Prüfung vor Installation
-    - --trust-unsigned Flag (mit Warnung)
+C4. [x] Store: Paket-Signierung
+    - FsnSigningKey + FsnVerifyingKey + PackageSignature (fsn-crypto/src/signing.rs, feature: signing)
+    - ed25519-dalek v2, SHA-256 über Paket-Bytes
+    - SignatureVerifier + SignaturePolicy (RequireSigned / TrustUnsigned) in fsn-pkg/src/signing.rs
+    - --trust-unsigned: Warnung ausgegeben, Installation erlaubt
 
-C5. [ ] Store: Abhängigkeits-Auflösung
-    - Dependency-Solver
-    - Konflikte erkennen und warnen
+C5. [x] Store: Abhängigkeits-Auflösung
+    - DepGraph + DependencyResolver mit Kahn's Algorithmus (fsn-pkg/src/dependency_resolver.rs)
+    - Zyklen erkennen (ResolutionError::Cycle), fehlende Deps prüfen (MissingPackage)
+    - transitive_deps() + dependents_of()
 
-C6. [ ] Store: Gruppen (Meta-Pakete)
-    - server-minimal, server-full, desktop, desktop-full
-    - packages + optional Liste
+C6. [x] Store: Bundles (Meta-Pakete)
+    - PackageType::Bundle, BundleManifest { packages, optional } (fsn-pkg/src/manifest.rs)
+    - [bundle] Sektion im manifest.toml
+    - Beispiele: server-minimal, desktop-full
 
-C7. [ ] Store: Install-Scripts
-    - pre_install, post_install, pre_remove, post_remove
-    - Alte fsn-install.sh aufteilen in Paket-Scripts
+C7. [x] Store: Install-Scripts
+    - PackageHooks: pre_install, post_install, pre_remove, post_remove, pre_upgrade, post_upgrade
+    - PackageInstaller: vollständiger Install/Remove-Lifecycle mit EventBus (fsn-pkg/src/installer.rs)
+    - Dry-run-Modus, skip_hooks, Var-Expansion
 
 C8. [ ] Store: CLI komplett
     - search, info, install, update, rollback, remove, list, sync

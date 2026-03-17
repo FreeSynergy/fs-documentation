@@ -31,9 +31,9 @@ Siehe [Init](../init/README.md).
 
 | Typ | Inhalt | Beispiele |
 |---|---|---|
-| `program` | FreeSynergy-Kernprogramm | Node, Desktop, Conductor |
+| `app` | FreeSynergy-Kernanwendung | Node, Desktop, Conductor |
 | `container` | Service-Modul (Quadlet + Config) | Kanidm, Forgejo, Outline |
-| `group` | Meta-Paket das andere Pakete bündelt | server-minimal, desktop-full |
+| `bundle` | Meta-Paket das andere Pakete zusammenfasst | server-minimal, desktop-full |
 | `language` | Sprach-Snippets (.ftl) | Deutsch, Französisch, Arabisch |
 | `theme` | Visuelles Theme | Midnight Blue, Nordic |
 | `widget` | Desktop-Widget | Uhr, System-Info, Nachrichten |
@@ -41,23 +41,23 @@ Siehe [Init](../init/README.md).
 | `bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
 | `task` | Automatisierungs-Template | "Docs ins Wiki", "Daily Digest" |
 
-**Hinweis:** Libraries (`fsn-*` Crates) sind KEINE eigenständigen Pakete. Sie sind Abhängigkeiten die mit den Programmen mitkommen und in einem shared-Ordner leben.
+**Hinweis:** Libraries (`fsn-*` Crates) sind KEINE eigenständigen Pakete. Sie sind Abhängigkeiten die mit den Anwendungen mitkommen und in einem shared-Ordner leben.
 
 ---
 
-## Gruppen (Meta-Pakete)
+## Bundles (Meta-Pakete)
 
-Wie bei dnf — vordefinierte Sammlungen:
+Wie bei dnf group — vordefinierte Sammlungen beliebiger Pakete (Apps, Widgets, Themes, …):
 
 ```toml
 [package]
 id = "server-minimal"
 name = "Server Minimal"
-type = "group"
+type = "bundle"
 description = "Minimale Server-Installation"
 tags = ["server", "minimal", "node", "conductor", "proxy"]
 
-[group]
+[bundle]
 packages = [
     "node",
     "conductor",
@@ -75,10 +75,10 @@ optional = [
 [package]
 id = "desktop-full"
 name = "Desktop Vollständig"
-type = "group"
+type = "bundle"
 tags = ["desktop", "full", "themes", "widgets"]
 
-[group]
+[bundle]
 packages = [
     "desktop",
     "theme-midnight-blue",
@@ -163,7 +163,7 @@ Unterstützte Algorithmen:
 id = "kanidm"                   # Eindeutiger Name (KEIN Typ-Prefix!)
 name = "Kanidm"                 # Anzeigename
 version = "1.5.0"               # SemVer, aus Git-Tag
-type = "container"              # program, container, group, language, theme, ...
+type = "container"              # app, container, bundle, language, theme, ...
 description = "Modern identity management"
 icon = "kanidm"                 # SVG oder Icon-Name (PFLICHT)
 tags = ["iam", "oidc", "scim", "mfa", "webauthn", "identity", "rust"]
@@ -186,13 +186,13 @@ Tags sind das **primäre Suchinstrument**. Schlechte Tags = Paket unsichtbar.
 | Pakettyp | Tag-Regeln |
 |---|---|
 | `container` | Alle Rollen + Unterrollen + kompatible Standards |
-| `language` | Sprach-Code, Region, Programm-ID |
+| `language` | Sprach-Code, Region, Anwendungs-ID |
 | `theme` | Farb-Namen, Stil |
 | `widget` | Funktion, Datenquelle |
 | `bot` | Plattform, Funktion |
 | `task` | Quell-Service, Ziel-Service, Funktion |
-| `program` | Funktion, Plattform |
-| `group` | Enthaltene Programme, Zweck |
+| `app` | Funktion, Plattform |
+| `bundle` | Enthaltene Pakete, Zweck |
 
 ### Filter-Kombinationen
 
@@ -278,7 +278,7 @@ Der [Conductor](../conductor/README.md) nutzt das bei der YAML-Analyse: "Kennst 
 # Suche
 fsn store search "mail"
 fsn store search --type container --tag smtp
-fsn store search --type group
+fsn store search --type bundle
 
 # Info
 fsn store info kanidm
@@ -289,7 +289,7 @@ fsn store install kanidm
 fsn store install kanidm --version 1.4.0
 fsn store install kanidm --keep-previous
 fsn store install kanidm --channel testing
-fsn store install server-minimal              # Gruppe
+fsn store install server-minimal              # Bundle
 
 # Update
 fsn store update kanidm
@@ -345,11 +345,25 @@ Store/
 │   ├── modules/
 │   └── bridges/
 ├── desktop/         ← Für Desktop
-├── groups/          ← Meta-Pakete (Gruppen)
+├── bundles/         ← Meta-Pakete (Bundles)
 └── catalog.toml     ← Maschinenlesbarer Gesamt-Index
 ```
 
 ---
+
+## Implementierung (Crates)
+
+| Bereich | Crate | Details |
+|---|---|---|
+| Paket-Typen + Manifest | `fsn-pkg` (`manifest.rs`) | `PackageType` (9 Varianten: app, container, bundle, …), `PackageMeta`, `BundleManifest` |
+| Release-Channels | `fsn-pkg` (`channel.rs`) | `ReleaseChannel`: Stable/Testing/Nightly |
+| Versionierung + Rollback | `fsn-pkg` (`versioning.rs`) | `VersionManager`, `VersionRecord`, `RollbackError` |
+| Paket-Signierung | `fsn-crypto` (`signing.rs`, feature: `signing`) | `FsnSigningKey`, `FsnVerifyingKey`, `PackageSignature` — ed25519-dalek v2, SHA-256 |
+| Signatur-Verifikation | `fsn-pkg` (`signing.rs`) | `SignatureVerifier`, `SignaturePolicy` (RequireSigned/TrustUnsigned) |
+| SQLite-Tracking | `fsn-db` (`installed_package.rs`) | `installed_packages` Tabelle — `InstalledPackageRepo` |
+| Store-Client | `fsn-store` | `StoreClient`, `Catalog<M>`, `CatalogCache` |
+| Abhängigkeits-Auflösung | `fsn-pkg` (`dependency_resolver.rs`) | `DepGraph`, `DependencyResolver` (Kahn's Algorithmus) |
+| Install-Lifecycle | `fsn-pkg` (`installer.rs`) | `PackageInstaller`, Hooks, `EventBus` |
 
 ## Repo
 

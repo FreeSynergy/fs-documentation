@@ -8,9 +8,9 @@
 
 | Typ | Inhalt | Beispiele |
 |---|---|---|
-| `program` | FreeSynergy-Kernprogramm | Node, Desktop, Conductor |
+| `app` | FreeSynergy-Kernanwendung | Node, Desktop, Conductor |
 | `container` | Service-Modul (Quadlet + Config) | Kanidm, Forgejo, Outline |
-| `group` | Meta-Paket, bündelt andere Pakete | server-minimal, desktop-full |
+| `bundle` | Meta-Paket, fasst beliebige Pakete zusammen | server-minimal, desktop-full |
 | `language` | Sprach-Snippets (.ftl) | Deutsch, Französisch |
 | `theme` | Visuelles Theme | Midnight Blue, Nordic |
 | `widget` | Desktop-Widget | Uhr, System-Info |
@@ -18,7 +18,7 @@
 | `bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
 | `task` | Automatisierungs-Template | "Docs ins Wiki" |
 
-**Libraries** (`fsn-*` Crates) sind KEINE eigenständigen Pakete. Sie sind Abhängigkeiten die mit den Programmen mitkommen. Sie leben in einem shared-Ordner, Git handled das.
+**Libraries** (`fsn-*` Crates) sind KEINE eigenständigen Pakete. Sie sind Abhängigkeiten die mit den Anwendungen mitkommen. Sie leben in einem shared-Ordner, Git handled das.
 
 ## Paket-Lifecycle
 
@@ -39,7 +39,7 @@ Jedes Paket MUSS haben:
 - `id` (einzigartiger Name, KEIN Typ-Prefix)
 - `name` (Anzeigename)
 - `version` (SemVer, aus Git-Tag)
-- `type` (program, container, group, language, theme, widget, bot, bridge, task)
+- `type` (app, container, bundle, language, theme, widget, bot, bridge, task)
 - `description` (Kurzbeschreibung)
 - `tags` (für Suche — muss aussagekräftig sein)
 - `icon` (SVG oder Icon-Name; PFLICHT, wenn fehlt → generisches Icon)
