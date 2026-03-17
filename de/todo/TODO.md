@@ -169,11 +169,11 @@ D5. [x] Verteilter Storage über mehrere Hosts
 ## Phase E: Widgets & Desktop
 
 ```
-E1. [ ] DraggableWidget (basierend auf FsnObject, Position in SQLite)
-E2. [ ] ResizableContainer (basierend auf FsnObject, Größe in SQLite)
-E3. [ ] Widget-Bearbeitungsmodus (Rechtsklick → Edit Desktop)
-E4. [ ] Desktop-Hintergrund (Bild, URL, Farbe, Gradient)
-E5. [ ] Basis-Widgets (Clock, SysInfo, Messages, Tasks)
+E1. [x] DraggableWidget (HomeWidgetCard mit Drag-Overlay, Position in SQLite)
+E2. [x] ResizableContainer (HomeWidgetCard Resize-Handle + Overlay, Größe in SQLite)
+E3. [x] Widget-Bearbeitungsmodus (edit_mode, Toolbar mit Add/Clear/Done, Picker-Panel)
+E4. [x] Desktop-Hintergrund (URL, Datei, Farbwähler, 5 Gradient-Presets, Persistenz in fsn-shared.db)
+E5. [x] Basis-Widgets (Clock, SystemInfo, QuickNotes, Messages, MyTasks)
 ```
 
 ## Phase F: Conductor neu bauen
