@@ -40,9 +40,19 @@ Der Browser ist eine App im Desktop die Web-Seiten anzeigt. Da Dioxus bereits We
 - Gedacht für Service-UIs und interne Seiten
 - Für normales Surfen: System-Browser empfohlen
 
+## Interfaces
+
+| Interface | Beispiel |
+|---|---|
+| WGUI | Standalone-Fenster oder eingebettet in Desktop |
+| CLI | `fsn browser open https://example.com` |
+| API | `POST /api/browser/open { "url": "..." }` |
+
 ## Repo
 
-Teil von https://github.com/FreeSynergy/Desktop
+https://github.com/FreeSynergy/Browser
+
+Der Browser ist ein eigenständiges Programm. Desktop nutzt ihn als Dependency, aber er kann auch ohne Desktop gestartet werden.
 
 ---
 

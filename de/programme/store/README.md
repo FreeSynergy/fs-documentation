@@ -333,37 +333,102 @@ POST /api/store/sync
 
 ## Binary-Verteilung
 
-Das Store-Git enthält ausschließlich **Manifeste** (TOML-Dateien, klein, textbasiert). Kompilierte Binaries gehören **nicht** ins Git — sie liegen auf **GitHub Releases**.
+Kompilierte Rust-Binaries gehören **nicht** in Git-Repos. Git ist für Text — `target/`-Ordner können mehrere GB groß werden, GitHub hat ein 100 MB-Limit pro Datei.
+
+**Drei Ebenen:**
+
+**Ebene 1 — Git-Repos (nur Code + Text):**
+Jedes Programm hat ein eigenes Repo mit Quellcode, Manifesten, Configs. Kein `target/`, keine `.exe`, keine `.so`.
+
+**Ebene 2 — GitHub Releases (Binaries für Veröffentlichung):**
+Nur für getaggte Releases. GitHub Actions kompiliert automatisch wenn ein Tag gepusht wird:
+```
+git tag v0.5.0 && git push --tags
+→ GitHub Actions: kompiliert für linux-x86_64, linux-aarch64, macos-*, windows-x86_64
+  → Lädt Binaries als Release-Assets hoch
+```
+
+**Ebene 3 — Lokale Entwicklung:**
+```bash
+cargo build --release
+fsn store install --local ./target/release/fsn-node
+# Store liest Metadaten aus lokalem Git, kopiert Binary, registriert im Inventory
+```
+
+### Manifest-Feld [distribution]
+
+Jedes App-Manifest deklariert die Download-URLs je Plattform:
+
+```toml
+[package]
+id = "node"
+name = "FreeSynergy Node"
+version = "0.5.0"
+type = "app"
+icon = "freesynergy-node"
+tags = ["node", "server", "infrastructure"]
+
+[interfaces]
+cli  = true
+api  = true
+wgui = false
+tui  = false
+
+[distribution]
+linux-x86_64   = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-linux.tar.gz"
+linux-aarch64  = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-aarch64-linux.tar.gz"
+macos-x86_64   = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-macos.tar.gz"
+macos-aarch64  = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-aarch64-macos.tar.gz"
+windows-x86_64 = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-windows.zip"
+source         = "https://github.com/FreeSynergy/Node"
+```
+
+### Installationsfluss
 
 ```
-Store-Git (klein, nur Text):
-  apps/node/manifest.toml        ← Metadaten, Version, Download-URL
-  apps/desktop/manifest.toml
-  apps/conductor/manifest.toml
+Veröffentlichtes Paket:
+  fsn store install node
+    → Store liest manifest.toml → erkennt Plattform
+      → lädt Binary von GitHub Releases
+        → registriert im Inventory
 
-GitHub Releases (große Dateien):
-  FreeSynergy/Node/releases/v0.5.0/
-    fsn-node-x86_64-linux.tar.gz
-    fsn-node-aarch64-linux.tar.gz
-  FreeSynergy/Desktop/releases/v0.5.0/
-    fsn-desktop-x86_64-linux.tar.gz
+Lokal (Entwicklung):
+  cargo build --release
+  fsn store install --local ./target/release/fsn-node
+    → Store liest Metadaten aus lokalem Git
+      → kopiert Binary aus target/
+        → registriert im Inventory
+
+Source-Build (Fallback):
+  fsn store install node --from-source
+    → klont Repo → cargo build --release → wie oben
 ```
 
-Der Store liest das Manifest, findet die Download-URL, lädt das Binary von GitHub Releases. So bleibt das Store-Repo schlank und schnell klonbar.
+### catalog.toml — Die Linkdatei
 
-**Regel für eigene Repos vs. Crates/Module:**
+Die `catalog.toml` im Store-Repo ist die zentrale Liste aller Pakete mit ihren Repo-URLs. Kein Meta-Repo, nur eine Datei:
 
-| Eigenes Repo | Crate/Modul im Eltern-Repo |
-|---|---|
-| Kann **alleine** laufen (Node, Desktop, Store, Init) | Macht nur als **Teil** eines anderen Programms Sinn |
-| Beispiel: `FreeSynergy/Node`, `FreeSynergy/Desktop` | Beispiel: Browser → Crate in Desktop, Conductor → Crate in Node |
+```toml
+[[packages]]
+id = "node"
+type = "app"
+version = "0.5.0"
+repo = "https://github.com/FreeSynergy/Node"
+path = "apps/node/"
 
-```
-FreeSynergy/Desktop/          ← EIN Repo
-  crates/
-    fsn-ui/
-    fsn-browser/              ← Browser ist ein Crate, kein eigenes Repo
-    fsn-desktop/
+[[packages]]
+id = "conductor"
+type = "app"
+version = "0.3.0"
+repo = "https://github.com/FreeSynergy/Conductor"
+path = "apps/conductor/"
+
+[[packages]]
+id = "browser"
+type = "app"
+version = "0.1.0"
+repo = "https://github.com/FreeSynergy/Browser"
+path = "apps/browser/"
 ```
 
 ---

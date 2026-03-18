@@ -84,7 +84,9 @@ Schritt 8: In Git laden
 
 ## Repo
 
-Wird Teil von FreeSynergy/Node (Crate: `fsn-builder`)
+https://github.com/FreeSynergy/Builder
+
+Der Builder ist ein eigenständiges Programm mit eigenem Repo. Er kann ohne Node und ohne Desktop eingesetzt werden — z.B. in CI/CD-Pipelines um Pakete zu bauen und in den Store zu veröffentlichen.
 
 ---
 

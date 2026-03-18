@@ -56,13 +56,17 @@ FreeSynergy basiert auf drei Grundgedanken:
 |---|---|---|---|
 | [Init](../programme/init/README.md) | Bootstrap: Installiert den Store | Ja (Einmal-Tool) | `FreeSynergy/Init` |
 | [Node](../programme/node/README.md) | Projektverwalter + S3-Server | Ja | `FreeSynergy/Node` |
-| [Conductor](../programme/conductor/README.md) | Service-Orchestrierer | Ja | `FreeSynergy/Node` (Crate) |
+| [Conductor](../programme/conductor/README.md) | Service-Orchestrierer | Ja | `FreeSynergy/Conductor` |
+| [Builder](../programme/builder/README.md) | Ressourcen bauen & validieren | Ja | `FreeSynergy/Builder` |
 | [Desktop](../programme/desktop/README.md) | Mensch-Maschine-Schnittstelle | Ja (offline-fähig) | `FreeSynergy/Desktop` |
+| [Browser](../programme/browser/README.md) | Eingebetteter Web-Browser | Ja | `FreeSynergy/Browser` |
 | [Store](../programme/store/README.md) | Paketmanager + Wissen | Ja (Git-Repo) | `FreeSynergy/Store` |
 | [Lenses](../programme/lenses/README.md) | Informations-Betrachter | Nein (braucht Services) | Teil von Desktop |
 | [Search](../programme/search/README.md) | Mehrstufige Suche | Nein (braucht Bus) | Teil von Node |
 
-**Jedes Programm** funktioniert über CLI, API und UI. Die Business-Logik ist EINMAL implementiert — drei Eingänge.
+**Jedes eigenständige Programm** hat CLI + API + optional WGUI. Die Business-Logik ist EINMAL implementiert — mehrere Eingänge.
+
+**Regel für eigene Repos:** Ein Programm bekommt ein eigenes Repo wenn es alleine laufen kann — mit eigenem Release-Zyklus und eigener Versionierung. Einzige Ausnahme: Der S3-Server ist Infrastruktur von Node und hat kein eigenes Repo. Shared Libraries leben in `FreeSynergy/Lib`.
 
 ## Der Installationsweg
 

@@ -33,6 +33,22 @@ Browse/Suche im Store
               → Vollständig löschen (alles weg)
 ```
 
+## Interface-Spezifikation (für App-Pakete)
+
+Jedes `app`-Paket deklariert welche Interfaces es hat:
+
+```toml
+[interfaces]
+cli  = true    # Immer: clap-basiertes CLI
+api  = true    # REST-API via axum (wenn sinnvoll)
+wgui = false   # Web-based GUI via Dioxus WebView (optional)
+tui  = false   # Terminal-UI via ratatui (später, niedrige Priorität)
+```
+
+**WGUI** steht für *Web-based GUI* — die UI wird immer in einer Web-Engine gerendert (HTML/CSS in webkit2gtk / WebView2 / WKWebView). Auch auf dem Desktop ist es technisch ein WebView, kein natives GTK/Qt.
+
+**TUI** kommt nicht automatisch aus WGUI — HTML/CSS lässt sich nicht in Terminal-Raster übersetzen. TUI wird nur für ausgewählte CLI-Funktionen umgesetzt (z.B. `fsn conductor status`, `fsn store search`) und nicht als vollständiger Desktop-Ersatz.
+
 ## Pflicht-Metadaten
 
 Jedes Paket MUSS haben:

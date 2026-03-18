@@ -122,8 +122,9 @@ Der Conductor nutzt **keinen Podman-Socket**. Container werden ausschließlich v
 
 ## Repo
 
-Teil von https://github.com/FreeSynergy/Node (Crate: `fsn-conductor`)
-Kann aber auch eigenständig als Binary gebaut werden.
+https://github.com/FreeSynergy/Conductor
+
+Der Conductor ist ein eigenständiges Programm mit eigenem Repo und eigenem Release-Zyklus. Er kann unabhängig von Node eingesetzt werden.
 
 ## Bibliotheken
 

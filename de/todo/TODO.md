@@ -263,21 +263,13 @@ Q8. [ ] Alle Stubs/toten Code entfernen
 ✅ Erledigt: G    (Ressourcen-System & Inventory)
 ✅ Erledigt: H    (Bridges & Rollen-APIs)
 ✅ Erledigt: I    (Resource Builder — Builder-UI, CLI, Analyse-Pipeline)
+✅ Erledigt: J    (Message Bus)
+✅ Erledigt: K    (Browser)
+✅ Erledigt: L    (Lenses)
 
-Prio 1:  J1-J9      Message Bus
-Prio 2:  K1-K4      Browser
-Prio 3:  L1-L3      Lenses
-Prio 4:  M1-M4      Search
-Prio 5:  N1-N3      Bots
-Prio 6:  O1-O3      Tasks
-Prio 7:  P1-P4      Node (Invite + Federation)
-Prio 8:  Q1-Q8      Polish
-Prio 4:  J1-J9      Message Bus
-Prio 5:  K1-K4      Browser
-Prio 6:  L1-L3      Lenses
-Prio 7:  M1-M4      Search
-Prio 8:  N1-N3      Bots
-Prio 9:  O1-O3      Tasks
-Prio 10: P1-P4      Node (Invite + Federation)
-Prio 11: Q1-Q8      Polish
+Prio 1:  M1-M4      Search
+Prio 2:  N1-N3      Bots
+Prio 3:  O1-O3      Tasks
+Prio 4:  P1-P4      Node (Invite + Federation)
+Prio 5:  Q1-Q8      Polish
 ```

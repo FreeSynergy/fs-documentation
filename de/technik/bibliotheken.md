@@ -87,7 +87,8 @@ Alle wiederverwendbaren Libraries. Können auch von Drittprojekten (Wiki.rs, Dec
 
 | Crate | Wofür | Feature-Flag |
 |---|---|---|
-| `teloxide` | Telegram Bot | `telegram` |
+| `grammers` | Telegram UserBot (MTProto, volle Kontrolle) | `telegram-userbot` |
+| `teloxide` | Telegram Bot-API (eingeschränkte Rechte) | `telegram` |
 | `matrix-sdk` | Matrix Client | `matrix` |
 | `serenity` + `poise` | Discord Bot | `discord` |
 | `slack-morphism` | Slack Client | `slack` |

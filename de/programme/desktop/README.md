@@ -26,13 +26,16 @@ Desktop ist auch UI für die Services selbst — Web-Interfaces werden im eingeb
 | ⚙️ Settings | Themes, Shortcuts, Profil, Layout |
 | ❓ Help | Dokumentation |
 
-## Rendering-Modi
+## Interface-Typen
 
-| Modus | Technologie |
-|---|---|
-| Desktop (WGUI) | Dioxus WebView |
-| Web | Dioxus WASM |
-| Mobile | Dioxus (Android/iOS — reiner Client) |
+| Interface | Kürzel | Technologie |
+|---|---|---|
+| Web-based GUI | WGUI | Dioxus WebView (webkit2gtk / WebView2 / WKWebView) |
+| Web | WGUI (WASM) | Dioxus WASM im Browser |
+| Mobile | WGUI | Dioxus (Android/iOS — reiner Client) |
+| Command Line | CLI | clap |
+
+**WGUI** bedeutet: Die UI wird immer in einer Web-Engine gerendert (HTML/CSS). Auch auf dem Desktop ist es technisch ein WebView — kein natives GTK/Qt.
 
 ## UI-Objekt-System
 
