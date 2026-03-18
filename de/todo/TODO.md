@@ -219,9 +219,62 @@ M4. [ ] Föderale Suche (Ebene 3-4, nur mit search-Recht)
 ## Phase N: Bots
 
 ```
-N1. [ ] Bot-Framework
-N2. [ ] Broadcast-Bot (Telegram)
-N3. [ ] Gatekeeper-Bot
+N1. [ ] fsn-channel Crate (FreeSynergy.Lib)
+    - Channel-Trait: create_room, invite, kick, send, delete_room, get_members
+    - Inventory-Integration: services_with_role("chat") → aktive Channels
+    - TelegramChannel (grammers, UserBot/MTProto)
+    - MatrixChannel (matrix-sdk)
+    - DiscordChannel (serenity + poise)
+    - RocketChatChannel (reqwest, REST + WebSocket)
+    - Alle Implementierungen hinter dem Channel-Trait, Control-Bot-Code ändert sich nie
+
+N2. [ ] Control-Bot-Kern (FreeSynergy.Node oder eigenes Repo)
+    - Control-Bot-Runtime: startet, hält Verbindung zum Messenger, empfängt Commands
+    - Module-Loader: lädt bot-Pakete aus dem Inventory, initialisiert Module
+    - Command-Dispatcher: /command → passendes Modul, Rechte-Check
+    - Trigger-Engine: Bus-Events → Modul-Handler aufrufen
+    - Bot-Registry in fsn-inventory.db (welcher Bot auf welcher Plattform, welche Module aktiv)
+    - Bus-Client: publiziert Events, empfängt Events (bot.*, chat.*)
+    - Conductor konfiguriert Tokens + Gruppen → Control-Bot liest Konfiguration
+
+N3. [ ] Broadcast-Modul (bot-Paket im Store)
+    - /subscribe <topic> Command → Subscription in Bus registrieren
+    - /unsubscribe <topic> Command
+    - /subscriptions Command → Liste aktiver Subscriptions
+    - Bus-Listener: empfängt subscribte Events → sendet in Gruppe
+    - Subscription-Storage: SQLite (group_id, topic, messenger)
+    - manifest.toml: type = "bot", parent = "control-bot", triggers = ["*"]
+
+N4. [ ] Gatekeeper-Modul (bot-Paket im Store)
+    - Trigger: chat.join_request → publiziert Event an BotManager
+    - /verify <user_id> Command → IAM-Check via Bus (Rolle: iam)
+    - /approve <request_id> + /deny <request_id> Commands
+    - Join-Request-Queue: SQLite (request_id, user, group, status, iam_result)
+    - IAM-Integration: fragt via Bus-Event (nicht direkt) → Bridge → Kanidm
+    - manifest.toml: required_roles = [{ roles = ["iam"], mode = "ANY" }]
+
+N5. [ ] BotManager-Programm (eigenständig, Repo: FreeSynergy/BotManager)
+    - Bot-Status-View: alle Bots + Status (online/offline/error), aktive Module
+    - Broadcast-View: Empfänger wählen, Nachricht eingeben, senden → bus-Event
+    - Subscriptions-View: welche Gruppe abonniert welche Topics, hinzufügen/entfernen
+    - Gatekeeper-View: offene Beitrittsanfragen, IAM-Status, Genehmigen/Ablehnen
+    - Module-View: installierte Module je Bot, aktiv/inaktiv, Link zum Store
+    - CLI: fsn bot status / broadcast / gatekeeper list / gatekeeper approve <id>
+    - REST-API: /api/bot/* (status, broadcast, gatekeeper, subscriptions, modules)
+    - Bus-Client: publiziert bot.*, empfängt chat.join_request + bot.status.response
+    - Rechte-Check: execute für Broadcast/Gatekeeper, write für Subscriptions
+
+N6. [ ] Desktop-Integration
+    - BotManager als eingebettete App im Desktop (app-botmanager)
+    - Sidebar-Tab 🤖 Bots → öffnet BotManager
+    - BotManager als eigenständiges Fenster startbar (wie Browser, Builder)
+
+N7. [ ] Store-Integration (bot-Pakete)
+    - BotResource vollständig in fsn-types (channels, commands, triggers, tokens_required)
+    - Store-Verzeichnis: shared/bots/ mit Manifest-Beispielen
+    - Store-CLI: fsn store install bot-broadcast / bot-gatekeeper
+    - Store-UI: Bot-Pakete browsebar mit type = "bot" Filter
+    - required_roles → Modul wird inaktiv wenn Rolle fehlt, aktiv wenn Rolle verfügbar
 ```
 
 ## Phase O: Tasks

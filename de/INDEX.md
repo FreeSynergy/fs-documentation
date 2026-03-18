@@ -29,6 +29,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Store](programme/store/README.md) — Der Paketmanager & Das Wissen
 - [Lenses](programme/lenses/README.md) — Der Informations-Betrachter
 - [Search](programme/search/README.md) — Die mehrstufige Suche
+- [BotManager](programme/botmanager/README.md) — Bot-Steuerung & Messenger-Integration (eigenständig)
 
 ### Konzepte
 - [Ressourcen-System](konzepte/ressourcen.md) — Alles ist eine Ressource (Structs, Typen, Felder)

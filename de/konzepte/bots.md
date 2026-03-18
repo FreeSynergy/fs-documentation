@@ -1,16 +1,18 @@
 # Bots
 
-[← Zurück zum Index](../INDEX.md) | [Bus](bus.md) | [Desktop](../programme/desktop/README.md)
+[← Zurück zum Index](../INDEX.md) | [Bus](bus.md) | [Pakete](pakete.md) | [Rechte](rechte.md)
 
 ---
 
-## Drei Orte für Bots
+## Drei Programme, drei Aufgaben
 
-| Ort | Funktion |
+| Programm | Aufgabe |
 |---|---|
-| **Store** | Bot-Module finden und installieren |
-| **Conductor** | Bot konfigurieren (Tokens, Gruppen, Verbindungen) |
-| **Bot Manager** (Desktop) | Bot BENUTZEN (Broadcast senden, Gatekeeper verwalten) |
+| **[Store](../programme/store/README.md)** | Bot-Module als Pakete finden, installieren, aktualisieren |
+| **[Conductor](../programme/conductor/README.md)** | Bot konfigurieren (Tokens, Gruppen, Verbindungen, Plattform) |
+| **[BotManager](../programme/botmanager/README.md)** | Bot **benutzen** (Broadcasts senden, Gatekeeper verwalten, Status sehen) |
+
+Der BotManager ist ein **eigenständiges Programm** mit eigenem Repo (`FreeSynergy/BotManager`). Desktop bindet ihn als App ein (`app-botmanager`), aber er kann auch standalone laufen.
 
 ---
 
@@ -27,7 +29,7 @@ Control-Bot (immer installiert, Admin-Rechte)
   └── weitere Module aus dem Store
 ```
 
-Ein Bot in der Gruppe statt fünf. Jedes Modul ist ein Paket im Store das nachgeladen werden kann.
+Ein Bot in der Gruppe statt fünf. Jedes Modul ist ein `bot`-Paket im Store das nachgeladen werden kann.
 
 ---
 
@@ -40,6 +42,7 @@ Der Control-Bot ist der erste Bot der installiert wird. Nur Admins können ihn s
 - Mitglieder einladen / entfernen
 - Module nachladen (aus dem Store)
 - Befehle von Admins empfangen
+- Bus-Events empfangen und in Messenger-Gruppen weiterleiten
 - Andere spezialisierte Bots einladen wenn nötig
 
 ### Control-Bot je Messenger
@@ -58,24 +61,33 @@ Der Control-Bot ist der erste Bot der installiert wird. Nur Admins können ihn s
 
 ---
 
-## Channels (fsn-channel) — Messenger-Unabhängigkeit
+## fsn-channel — Messenger-Unabhängigkeit {#fsn-channel}
 
-Der Bot schreibt **einmal**, `fsn-channel` übersetzt für jeden Messenger:
+Der Control-Bot schreibt **einmal**, `fsn-channel` übersetzt für jeden Messenger:
 
 ```rust
-// Bot-Code (messenger-unabhängig):
+// Control-Bot-Code (messenger-unabhängig):
 control_bot.create_room("projekt-koeln").await?;
 control_bot.invite("projekt-koeln", user_id).await?;
 control_bot.send("projekt-koeln", "Willkommen!").await?;
 
 // fsn-channel übersetzt intern:
-// Telegram:    grammers  → CreateChat + InviteToChat + SendMessage
-// Matrix:      matrix-sdk → create_room + invite_user + send_message
-// Discord:     serenity  → create_channel + add_member + send_message
-// Rocket.Chat: reqwest   → POST /api/v1/channels.create + invite + sendMessage
+// Telegram:    grammers    → CreateChat + InviteToChat + SendMessage
+// Matrix:      matrix-sdk  → create_room + invite_user + send_message
+// Discord:     serenity    → create_channel + add_member + send_message
+// Rocket.Chat: reqwest     → POST /api/v1/channels.create + invite + sendMessage
 ```
 
-**Welcher Messenger aktiv ist, bestimmt das [Inventory](inventory.md):** Der Bot fragt nicht "Habe ich Telegram?" — er fragt das Inventory: "Welche Services haben die Rolle `chat`?" Wenn Telegram installiert ist, ist der Telegram-Channel aktiv. Wenn Matrix dazukommt, wird der Matrix-Channel ebenfalls aktiv. Der Bot-Code ändert sich nicht.
+**Welcher Messenger aktiv ist, bestimmt das Inventory:** Der Control-Bot fragt nicht "Habe ich Telegram?" — er fragt das Inventory: "Welche Services haben die Rolle `chat`?" Wenn Telegram installiert ist, ist der Telegram-Channel aktiv. Wenn Matrix dazukommt, wird der Matrix-Channel ebenfalls aktiv. Der Bot-Code ändert sich nicht.
+
+```rust
+// fsn-channel liest das Inventory:
+let channels = inventory.services_with_role("chat").await?;
+// → [TelegramChannel, MatrixChannel] wenn beide installiert sind
+// Neuer Messenger = neue Implementierung, kein Bot-Code-Change
+```
+
+`fsn-channel` lebt in `FreeSynergy.Lib` und wird vom Control-Bot als Dependency gezogen.
 
 ---
 
@@ -93,6 +105,47 @@ RICHTIG:
 ```
 
 Das ist das Grundprinzip: Rollen-basiert, nie direkt. Wenn Outline durch ein anderes Wiki ersetzt wird, funktioniert der Bot weiterhin ohne Änderung.
+
+Gleiches gilt für den BotManager: Er redet nicht mit Messengern, sondern publiziert Bus-Events. Der Control-Bot empfängt sie und handelt.
+
+```
+BotManager → Bus-Event (bot.broadcast) → Control-Bot → fsn-channel → Messenger
+```
+
+---
+
+## Rechte
+
+Bot-Aktionen folgen der [Rechte-Kaskade](rechte.md). Wer was darf:
+
+| Aktion | Benötigtes Recht |
+|---|---|
+| Bot-Status sehen | `read` |
+| Broadcasts empfangen (Subscriptions) | `read` |
+| Broadcasts senden | `execute` |
+| Subscriptions verwalten (eigene Gruppen) | `write` |
+| Gatekeeper: Anfragen sehen | `read` |
+| Gatekeeper: Genehmigen / Ablehnen | `execute` |
+| Module aktivieren / deaktivieren | `write` |
+| Bot-Tokens ändern | `execute` (Admin) |
+
+**Standard: Alles privat.** Kein Bot hat Zugriff auf fremde Projekte solange das Projekt nichts explizit freigibt. Wenn eine Föderation Broadcasts weiterleiten darf, dann nur weil das Projekt `execute`-Recht für die Bot-Rolle freigegeben hat — und Föderationen können dieses Recht nicht erhöhen, nur weitergeben oder einschränken.
+
+---
+
+## Bus-Events (Überblick)
+
+| Topic | Richtung | Beschreibung |
+|---|---|---|
+| `bot.broadcast` | BotManager → Control-Bot | Nachricht in Gruppen senden |
+| `bot.gatekeeper.approve` | BotManager → Control-Bot | Beitrittsanfrage genehmigen |
+| `bot.gatekeeper.deny` | BotManager → Control-Bot | Beitrittsanfrage ablehnen |
+| `bot.subscription.add` | BotManager → Control-Bot | Subscription hinzufügen |
+| `bot.subscription.remove` | BotManager → Control-Bot | Subscription entfernen |
+| `bot.status.request` | BotManager → Control-Bot | Status abfragen |
+| `bot.status.response` | Control-Bot → BotManager | Status-Antwort |
+| `chat.join_request` | Control-Bot → BotManager | Neuer Beitrittsantrag |
+| `chat.join_approved` | BotManager → Control-Bot | Genehmigung ausführen |
 
 ---
 
@@ -113,19 +166,21 @@ User schreibt: /unsubscribe git.commit
   → Subscription entfernt
 ```
 
-Jede Gruppe kann verschiedene Topics abonnieren. Benutzer konfigurieren das für ihre eigenen Gruppen (wenn sie die Rechte haben).
+Jede Gruppe kann verschiedene Topics abonnieren. Benutzer konfigurieren das für ihre eigenen Gruppen (wenn sie die Rechte haben). Der BotManager bietet dafür eine grafische Oberfläche.
 
 ---
 
 ## Bot-Module als Store-Pakete
 
-Bot-Module sind Pakete im Store mit `type = "bot"`:
+Bot-Module sind `bot`-Pakete im Store. Jedes Modul deklariert seine Commands, Triggers und benötigten Rollen:
 
 ```toml
 [package]
 id = "bot-broadcast"
 name = "Broadcast Module"
 type = "bot"
+version = "1.2.0"
+icon = "bot-broadcast"
 tags = ["bot", "broadcast", "notification", "subscribe"]
 description = "Subscribe to Bus-Events and receive notifications in Messenger groups"
 
@@ -145,21 +200,47 @@ triggers = ["*"]              # Kann auf alle Bus-Events reagieren
 id = "bot-gatekeeper"
 name = "Gatekeeper Module"
 type = "bot"
+version = "1.0.3"
+icon = "bot-gatekeeper"
 tags = ["bot", "gatekeeper", "iam", "verification"]
+description = "Verify group join requests against IAM"
 
 [bot]
 parent = "control-bot"
 commands = [
-    { name = "/verify", params = ["user_id"], description = "Verify a user via IAM" },
-    { name = "/approve", params = ["request_id"] },
-    { name = "/deny",    params = ["request_id"] },
+    { name = "/verify",  params = ["user_id"],    description = "Verify a user via IAM" },
+    { name = "/approve", params = ["request_id"], description = "Approve join request" },
+    { name = "/deny",    params = ["request_id"], description = "Deny join request" },
 ]
 required_roles = [{ roles = ["iam"], mode = "ANY" }]
 triggers = ["chat.join_request"]
 ```
 
+Ein Modul mit `required_roles` ist nur **aktiv** wenn ein passender Service installiert ist. Wenn kein IAM-Service installiert ist, bleibt das Gatekeeper-Modul inaktiv — es wird aber nicht entfernt. Sobald IAM installiert wird, aktiviert es sich automatisch.
+
 Jeder kann Bot-Module schreiben und in den Store stellen. Andere installieren sie und laden sie in ihren Control-Bot.
 
 ---
 
-Weiter: [Tasks](tasks.md) | [Bus](bus.md) | [Inventory](inventory.md)
+## Store-Verzeichnis
+
+Bot-Pakete liegen im Store unter:
+
+```
+Store/
+└── shared/
+    └── bots/
+        ├── bot-broadcast/
+        │   ├── manifest.toml
+        │   └── ...
+        ├── bot-gatekeeper/
+        │   ├── manifest.toml
+        │   └── ...
+        └── bot-tickets/
+            ├── manifest.toml
+            └── ...
+```
+
+---
+
+Weiter: [BotManager](../programme/botmanager/README.md) | [Tasks](tasks.md) | [Bus](bus.md) | [Inventory](inventory.md)

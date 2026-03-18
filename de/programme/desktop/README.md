@@ -17,7 +17,7 @@ Desktop ist auch UI für die Services selbst — Web-Interfaces werden im eingeb
 | 🏠 Home | Persönliches Dashboard, Widgets, Quick-Launch |
 | 📋 Tasks | Automatisierungs-Pipelines |
 | 🎛️ Conductor | Service-Konfiguration |
-| 🤖 Bots | Bots BENUTZEN |
+| 🤖 Bots | [BotManager](../botmanager/README.md) — Broadcasts senden, Gatekeeper verwalten, Status |
 | 🔍 Lenses | Informations-Betrachter |
 | 🌐 Browser | Eingebetteter Web-Browser für Service-UIs |
 | 📦 Store | Pakete installieren |
@@ -72,4 +72,4 @@ https://github.com/FreeSynergy/Desktop
 
 ---
 
-Weiter: [Browser](../browser/README.md) | [Lenses](../lenses/README.md) | [UI-Objekte](../../technik/ui-objekte.md)
+Weiter: [Browser](../browser/README.md) | [Lenses](../lenses/README.md) | [BotManager](../botmanager/README.md) | [UI-Objekte](../../technik/ui-objekte.md)
