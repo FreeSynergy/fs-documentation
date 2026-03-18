@@ -7,283 +7,196 @@
 - IMMER `cargo build` vor und nach jeder Änderung.
 - Altes das nicht passt → LÖSCHEN und neu machen.
 - Kein Menüpunkt ohne Funktion. Kein Button der nichts tut.
+- Begriffe: **App** (nicht Programm), **Container-App** (nicht Container-Service), **Bundle** (nicht Gruppe), **Ressource** (alles im Store)
 
 ---
 
-## Phase A: Fundament (MUSS ZUERST)
+## Phase A–F: ✅ ERLEDIGT
+
+Siehe Git-History. Fundament, Themes, Store, S3, Widgets, Conductor — alles implementiert.
+
+---
+
+## Phase G: Ressourcen-System & Inventory ✅
 
 ```
-A1. [x] SQLite-Speicherung implementieren
-    - fsn-shared.db: übergreifende Settings, i18n-Auswahl, Audit-Log
-    - fsn-desktop.db: Widget-Positionen, Shortcuts, Profil, Layout, aktives Theme
-    - fsn-conductor.db: Service-Konfigurationen, Quadlets, Variablen
-    - fsn-store.db: Installierte Pakete, Versionen, Cache, Signaturen
-    - fsn-core.db: Hosts, Projekte, Einladungen, Federation
-    - fsn-bus.db: Event-Log, Routing-Regeln, Standing Orders, Subscriptions
+G1. [x] ResourceMeta Struct (fsn-types/resources/meta.rs)
+    - ResourceType enum (16 Varianten: App, ContainerApp, Bundle, Widget, Bot, Bridge,
+      Task, Language, ColorScheme, Style, FontSet, CursorSet, IconSet, ButtonStyle,
+      WindowChrome, AnimationSet)
+    - ValidationStatus (Ok, Incomplete, Broken) mit badge() ✅⚠️❌
+    - Dependency struct (required/optional, version_req)
+    - Role newtype wrapper
 
-A2. [x] Window X-Button fixen
+G2. [x] Typ-spezifische Structs (fsn-types/resources/)
+    - AppResource (platforms, binary_name, locales, cli_commands, api_endpoints,
+      roles_provided, roles_required)
+    - ContainerAppResource (compose_yaml, services[], variables[], networks, volumes,
+      apis, roles_provided, roles_required)
+      inkl. ContainerVariable (VarType, AutoSource: InternalService/RoleVariable)
+    - WidgetResource (required_roles mit ANY/ALL Modus, data_sources, sizes)
+    - BotResource (channels, commands, triggers, tokens_required)
+    - BridgeResource (target_role, target_service, methods[] mit FieldMapping)
+    - BundleResource (packages[], theme mit ThemeBundleRefs)
+    - ColorScheme, FontSet, CursorSet, IconSet, ButtonStyle, WindowChrome, AnimationSet
 
-A3. [x] FsnObject-System implementieren (siehe technik/ui-objekte.md)
-    - Resize: 5px Toleranz, alle Kanten + Ecken
-    - Drag: Am Kopf
-    - Minimize: → Icon mit pulsierendem grünem Punkt
-    - Close: Unsaved-Changes-Dialog
-    - Object-Sidebar: Icons / Icons+Text bei Hover
+G3. [x] Style als standardisierte Ressource (StyleResource)
+    - Striktes Schema: 19 Pflichtfelder (radius, spacing, shadows, borders,
+      scrollbar, sidebar, transitions)
+    - Validator: Alle Felder müssen vorhanden sein → sonst Broken
+    - StyleTokens::default_tokens() liefert FreeSynergy-Standardwerte
+    - Im Store einzeln ladbar
 
-A4. [x] Scrollbars global (.fsn-scrollable überall)
+G4. [x] fsn-inventory Crate (eigene SQLite: fsn-inventory.db)
+    - InstalledResource (resource_type, version, channel, status, config_path,
+      data_path, validation)
+    - ServiceInstance (instance_name, roles_provided, roles_required, bridges,
+      variables, network, port, s3_paths)
+    - BridgeInstance (role, service_instance, api_base_url, status)
+    - Sea-ORM Entities + Migrations im SCHEMA const
+    - Inventory::services_with_role(role) / bridges_for_role(role)
+
+G5. [x] Validate trait für alle Ressource-Typen (fsn-types/resources/validator.rs)
+    - Einheitliches Validate trait mit validate() → meta.status wird gesetzt
+    - required_methods_for_role(role) definiert Minimal-API für iam/wiki/git/chat/
+      database/cache/smtp/llm/map/tasks/monitoring
+    - Bridge: alle Pflicht-Methoden gemappt → sonst Incomplete
+    - Bundle: mindestens eine Referenz → sonst Broken
+    - Container-App: YAML + Services + Healthcheck + Variablen-Beschreibungen
+    - 61 Unit-Tests grün
 ```
 
-## Phase B: Theme-System reparieren
+## Phase H: Bridges & Rollen-APIs
 
 ```
-B1. [x] CSS-Variablen-Namenskonvention (siehe technik/css.md)
-    - Shared-Themes OHNE Prefix im Store
-    - Programm-spezifisch MIT Prefix beim Laden
-    - prefix_theme_css + validate_theme_vars in fsn-theme konsolidiert
-    - Duplikate aus appearance.rs entfernt
+H1. [ ] Rollen-API-Definitionen (fsn-types)
+    - Standard-Methoden pro Rolle (iam, wiki, git, chat, database, cache, smtp, llm, map, tasks, monitoring)
+    - Parameter-Typen und Rückgabewerte
 
-B2. [x] Kontraste (WCAG AA) für alle Store-Theme-Pakete gesetzt
+H2. [ ] Bridge-Framework (fsn-bridge Crate)
+    - BridgeMethod: standard_name → http_method + endpoint + mapping
+    - Request/Response Field-Mapping
+    - Bridge-Instanz-Management
 
-B3. [x] Nur Midnight Blue eingebaut – Rest als Store-Pakete
-    - Cloud White, Cupertino, Nordic, Rose Pine:
-      FreeSynergy.Node.Store/shared/themes/{id}/ (manifest.toml + theme.css + icon.svg)
-    - app_shell.rs: nur midnight-blue behalten
-    - desktop.rs: __custom__ CSS-Injection für Store-Themes
+H3. [ ] Erste Bridges implementieren
+    - kanidm-iam-bridge
+    - outline-wiki-bridge
+    - forgejo-git-bridge
 
-B4. [x] Theme-Editor in Settings
-    - Vorhanden + Placeholder mit allen Pflicht-Variablen verbessert
-
-B5. [x] Theme-Aspekte konfigurierbar
-    - Neue Sektion "Component Style" in Settings → Appearance
-    - Window Chrome: KDE / macOS / Windows / Minimal (CSS + data-chrome-style)
-    - Button Style: Rounded / Square / Pill / Flat (CSS + data-btn-style)
-    - Sidebar Style: Solid / Glass / Transparent (CSS + data-sidebar-style)
-    - Contexts in desktop.rs, CSS-Regeln in GLOBAL_CSS
+H4. [ ] Bus ↔ Inventory ↔ Bridge Integration
+    - Bus fragt Inventory: "Wer hat Rolle X?"
+    - Inventory liefert Bridge-Instanz
+    - Bus ruft Standard-API über Bridge auf
 ```
 
-## Phase C: Init + Store als Paketmanager
+## Phase I: Resource Builder
 
 ```
-C1. [x] FreeSynergy.Init erstellen
-    - Minimales Rust-Binary (fsn-init)
-    - gitoxide (gix) für Git-Klon des Store-Repos
-    - GitHub Actions: Cross-Compilation für Linux x64/arm64, macOS x64/arm64, Windows x64
-    - Repo: /home/kal/Server/FreeSynergy.Init/
+I1. [ ] Builder-CLI (fsn-builder Crate)
+    - fsn builder analyze compose.yml → Variablen-Analyse + Rollen-Erkennung
+    - fsn builder validate ./package/ → Pflichtfelder prüfen
+    - fsn builder publish ./package/ → Signieren + Git-Commit
 
-C2. [x] Store-Paketmanager: Kern
-    - PackageType enum: app, container, bundle, language, theme, widget, bot, bridge, task
-    - PackageMeta: icon, package_type, channel Felder ergänzt
-    - SQLite: installed_packages Entity + InstalledPackageRepo + Migration 003
-    - catalog.toml: von CI generiert (kein manuelles Bearbeiten)
+I2. [ ] Container-App-Analyse-Pipeline
+    - YAML → Services + Subservices erkennen
+    - Variablen → Typ + Rolle + Konfidenz
+    - Service-Verknüpfungen (SMTP_HOST → welcher Service? REDIS_URL → welcher Slot?)
+    - Netzwerk auto-generieren ({servicename}-backend)
+    - Volumes → S3-Pfade vorschlagen
 
-C3. [x] Store: Versionierung
-    - ReleaseChannel enum: Stable/Testing/Nightly (fsn-pkg/src/channel.rs)
-    - VersionManager + VersionRecord + RollbackError (fsn-pkg/src/versioning.rs)
-    - Parallele Versionen, rollback(), rollback_one(), prune()
-
-C4. [x] Store: Paket-Signierung
-    - FsnSigningKey + FsnVerifyingKey + PackageSignature (fsn-crypto/src/signing.rs, feature: signing)
-    - ed25519-dalek v2, SHA-256 über Paket-Bytes
-    - SignatureVerifier + SignaturePolicy (RequireSigned / TrustUnsigned) in fsn-pkg/src/signing.rs
-    - --trust-unsigned: Warnung ausgegeben, Installation erlaubt
-
-C5. [x] Store: Abhängigkeits-Auflösung
-    - DepGraph + DependencyResolver mit Kahn's Algorithmus (fsn-pkg/src/dependency_resolver.rs)
-    - Zyklen erkennen (ResolutionError::Cycle), fehlende Deps prüfen (MissingPackage)
-    - transitive_deps() + dependents_of()
-
-C6. [x] Store: Bundles (Meta-Pakete)
-    - PackageType::Bundle, BundleManifest { packages, optional } (fsn-pkg/src/manifest.rs)
-    - [bundle] Sektion im manifest.toml
-    - Beispiele: server-minimal, desktop-full
-
-C7. [x] Store: Install-Scripts
-    - PackageHooks: pre_install, post_install, pre_remove, post_remove, pre_upgrade, post_upgrade
-    - PackageInstaller: vollständiger Install/Remove-Lifecycle mit EventBus (fsn-pkg/src/installer.rs)
-    - Dry-run-Modus, skip_hooks, Var-Expansion
-
-C8. [x] Store: CLI komplett
-    - search, info, install, update, rollback, remove, list, sync
-    - rollback: VersionManager aus DB-Records, set_active toggle
-    - sync: Disk-Cache leeren + frischen Katalog fetchen
-
-C9. [x] Store: API komplett
-    - axum-Server in `fsn serve` (127.0.0.1:8080)
-    - GET /api/store/know/catalog, /search?q=, /package/:id
-    - GET /api/store/know/installed, /api/store/know/i18n
-    - CORS aktiviert (Desktop kann direkt verbinden)
-
-C10. [x] Store: Sprachen installierbar
-    - i18n set: nach Download → InstalledPackageRepo (PackageType: language)
-    - Aktive Sprache wird in lang-Marker + DB registriert
-
-C11. [x] Store: Themes installierbar
-    - fsn store theme available / list / install / remove
-    - Dateien → ~/.local/share/fsn/themes/{id}/
-    - DB-Eintrag (PackageType: theme)
-
-C12. [x] Store: Widgets installierbar
-    - fsn store widget available / list / install / remove
-    - Dateien → ~/.local/share/fsn/widgets/{id}/
-    - DB-Eintrag (PackageType: widget)
-
-C13. [x] Store-UI: Backend-API bereit
-    - REST-API (C9) ist die Grundlage für Desktop Store-UI
-    - Desktop verbindet über /api/store/know/* und rendert Store-Seite
+I3. [ ] Builder-UI im Desktop
+    - Drag & Drop YAML
+    - Variablen-Editor mit Typ-Dropdown
+    - Rollen-Zuweisung
+    - Validierungs-Anzeige (✅ ⚠️ ❌)
+    - "Publish to Store" Button
 ```
 
-## Phase D: S3-Storage-Layer
+## Phase J: Message Bus
 
 ```
-D1. [x] S3-Server in Node einbauen
-    - s3s 0.13 + s3s-fs: S3-API auf Port 9000
-    - Lokales Dateisystem als Backend (s3s-fs)
-    - Startet automatisch mit `fsn serve`
-    - Crate: cli/crates/fsn-s3/ in FreeSynergy.Node
-
-D2. [x] opendal Integration
-    - SyncBackend trait: lokal / SFTP / Hetzner (S3-kompatibel)
-    - SFTP: feature backend-sftp (opendal/services-sftp)
-    - Hetzner: feature backend-hetzner (opendal/services-s3)
-    - Konfigurierbar in StorageConfig ([storage.sync])
-
-D3. [x] Bucket-Struktur
-    - /profiles/ (öffentlich lesbar)
-    - /backups/ (nur intern)
-    - /media/ (pro Service)
-    - /packages/ (Store-Cache)
-    - /shared/ (geteilte Dateien)
-    - ensure_buckets() beim Server-Start
-
-D4. [x] Öffentliche Profile (Visitenkarten)
-    - NodeProfile (JSON) + Avatar im profiles/-Bucket
-    - ProfileStore: put/get/list/delete + avatar
-    - CLI: fsn storage profile show/set/avatar
-
-D5. [x] Verteilter Storage über mehrere Hosts
-    - FederatedS3Client: opendal-basierter S3-Client
-    - pull_bucket / push_bucket / fetch_profile / fetch_avatar
-    - CLI: fsn storage sync pull/push/fetch-profile
+J1. [ ] Bus-Grundstruktur (Pub/Sub + Direct Messages)
+J2. [ ] Rollen-basierte Adressierung (nie direkt an Service)
+J3. [ ] Subscription-Manager (Rolle + Topic + Instanz-Tag Filter)
+J4. [ ] Nachrichtentypen (Fire&Forget, Guaranteed, Standing Order)
+J5. [ ] Speicherungs-Layer (NoStore, UntilAck, Persistent)
+J6. [ ] Konfigurierbare Default-Zuordnung (regelbasiert, TOML)
+J7. [ ] Standing Orders Engine
+J8. [ ] Bridges (Bus-zu-Bus, Rechte-Kaskade, doppelter Checkpoint)
+J9. [ ] Bus-API (CLI, REST, WebSocket)
 ```
 
-## Phase E: Widgets & Desktop
+## Phase K: Browser
 
 ```
-E1. [x] DraggableWidget (HomeWidgetCard mit Drag-Overlay, Position in SQLite)
-E2. [x] ResizableContainer (HomeWidgetCard Resize-Handle + Overlay, Größe in SQLite)
-E3. [x] Widget-Bearbeitungsmodus (edit_mode, Toolbar mit Add/Clear/Done, Picker-Panel)
-E4. [x] Desktop-Hintergrund (URL, Datei, Farbwähler, 5 Gradient-Presets, Persistenz in fsn-shared.db)
-E5. [x] Basis-Widgets (Clock, SystemInfo, QuickNotes, Messages, MyTasks)
+K1. [ ] Browser-View im Desktop
+    - URL-Leiste
+    - WebView-Rendering (Dioxus WebView)
+    - Tabs für mehrere Seiten
+
+K2. [ ] Download-Handler
+    - Downloads abfangen → S3 /shared/downloads/
+
+K3. [ ] Service-Integration
+    - Klick auf Service im Conductor → öffnet dessen Web-UI im Browser
+    - Auto-Auth: IAM-Token mitschicken
+
+K4. [ ] Lesezeichen + History (SQLite)
 ```
 
-## Phase F: Conductor neu bauen
+## Phase L: Lenses
 
 ```
-F1. [x] Alten Conductor-Code LÖSCHEN
-    - commands/conductor.rs: alten Podman-subprocess Code entfernt
-    - Kein podman container exists, kein podman logs mehr
-    - Neues fsn-conductor Crate (cli/crates/fsn-conductor/)
-
-F2. [x] YAML-Parser (Services, Subservices, Volumes, Networks, Ports)
-    - compose.rs: ComposeFile, ComposeService, EnvVar, ComposeHealthcheck
-    - Environment: list-form + map-form Support
-    - Volumes/Ports: string + longform Support
-    - depends_on: list + map form Support
-
-F3. [x] Variablen-Analyse (Typen, Rollen, Ober-/Unterrollen, Konfidenz)
-    - analysis.rs: VarType (hostname/url/port/secret/email/connection-string/string)
-    - VarRole: Database/Cache/Smtp/Iam/Storage je mit Subkind
-    - Konfidenz 0–100 per Variable, summary() für Reports
-
-F4. [x] Dry-Run + Validierung
-    - validation.rs: ValidationReport mit IssueLevel (Error/Warning/Info)
-    - Checks: fehlende Services, fehlende Images, fehlende Healthchecks,
-      Netzwerk-Konsistenz, Port-Konflikte, Volume-Referenzen, depends_on-Refs
-
-F5. [x] Quadlet-Generator (kein Podman-Socket)
-    - converter.rs: ComposeFile → Vec<ServiceConfig> (fsn-container-Typen)
-    - pipeline.rs: analyze() + install() End-to-End
-    - QuadletManager aus fsn-container schreibt .container Dateien
-    - daemon-reload nach install
-
-F6. [x] Store-Integration (ergänzen, nicht überschreiben)
-    - store_client.rs: enrich() mit 5s Timeout, non-blocking, graceful fallback
-    - POST /api/store/know/{image} → StorePackageMeta
-    - Nur Lücken füllen, conductor-Werte werden nie überschrieben
-
-F7. [x] Instanz-Namen (Benutzer vergibt, Subservices Auto-Prefix)
-    - instance.rs: InstanceName mit Validation [a-z0-9-], max 48 Zeichen
-    - Default: erster Service-Name aus compose file
-    - Sub-Services: "{instance}-{svc}" (außer wenn name == service name)
+L1. [ ] Lens-Datenmodell (SQLite)
+L2. [ ] Lens-View (gruppiert nach Rolle, Summary + Link → öffnet im Browser)
+L3. [ ] Lens als Desktop-Icon
 ```
 
-## Phase G: Message Bus
+## Phase M: Search
 
 ```
-G1. [ ] Bus-Grundstruktur (Pub/Sub + Direct Messages)
-G2. [ ] Rollen-basierte Adressierung (nie direkt an Service)
-G3. [ ] Subscription-Manager (Rolle + Topic + Instanz-Tag Filter)
-G4. [ ] Nachrichtentypen (Fire&Forget, Guaranteed, Standing Order)
-G5. [ ] Speicherungs-Layer (NoStore, UntilAck, Persistent)
-G6. [ ] Konfigurierbare Default-Zuordnung (regelbasiert, TOML)
-G7. [ ] Standing Orders Engine
-G8. [ ] Bridges (Bus-zu-Bus, Rechte-Kaskade, doppelter Checkpoint)
-G9. [ ] Bus-API (CLI, REST, WebSocket)
+M1. [ ] Search-View (Suchfeld, gruppierte Ergebnisse, Preview + Link)
+M2. [ ] Service-Suche (Ebene 1)
+M3. [ ] Host-Suche (Ebene 2, Bus-aggregiert)
+M4. [ ] Föderale Suche (Ebene 3-4, nur mit search-Recht)
 ```
 
-## Phase H: Lenses
+## Phase N: Bots
 
 ```
-H1. [ ] Lens-Datenmodell (SQLite)
-H2. [ ] Lens-View (gruppiert nach Rolle, Summary + Link)
-H3. [ ] Lens als Desktop-Icon
+N1. [ ] Bot-Framework
+N2. [ ] Broadcast-Bot (Telegram)
+N3. [ ] Gatekeeper-Bot
 ```
 
-## Phase I: Search
+## Phase O: Tasks
 
 ```
-I1. [ ] Search-View (Suchfeld, gruppierte Ergebnisse, Preview + Link)
-I2. [ ] Service-Suche (Ebene 1)
-I3. [ ] Host-Suche (Ebene 2, Bus-aggregiert)
-I4. [ ] Föderale Suche (Ebene 3-4, nur mit search-Recht)
+O1. [ ] Data Offers/Accepts
+O2. [ ] Task Builder UI
+O3. [ ] Task-Templates aus Store
 ```
 
-## Phase J: Bots
+## Phase P: Node (Invite, Federation)
 
 ```
-J1. [ ] Bot-Framework
-J2. [ ] Broadcast-Bot (Telegram)
-J3. [ ] Gatekeeper-Bot
+P1. [ ] Invite-System (Token, verschlüsselte TOML, Port pro Einladung)
+P2. [ ] Federation-Grundstruktur (Domain-Pflicht, Auth-Broker)
+P3. [ ] Rechte-Kaskade (read/write/execute/search, Audit-Log)
+P4. [ ] Föderaler Bus (Bridge-Konfiguration)
 ```
 
-## Phase K: Tasks
+## Phase Q: Shortcuts, Menü, Profil, Polish
 
 ```
-K1. [ ] Data Offers/Accepts
-K2. [ ] Task Builder UI
-K3. [ ] Task-Templates aus Store
-```
-
-## Phase L: Node (Invite, Federation)
-
-```
-L1. [ ] Invite-System (Token, verschlüsselte TOML, Port pro Einladung)
-L2. [ ] Federation-Grundstruktur (Domain-Pflicht, Auth-Broker)
-L3. [ ] Rechte-Kaskade (read/write/execute/search, Audit-Log)
-L4. [ ] Föderaler Bus (Bridge-Konfiguration)
-```
-
-## Phase M: Shortcuts, Menü, Profil, Polish
-
-```
-M1. [ ] Action Registry + konfigurierbare Shortcuts
-M2. [ ] Hilfe: Auto-generierte Shortcut-Referenz
-M3. [ ] Menü: JEDER Punkt ruft echte Aktion auf
-M4. [ ] Profil: IAM + editierbar + Account-Linking + S3-Visitenkarte
-M5. [ ] Notification Bell
-M6. [ ] Context-Menüs
-M7. [ ] Animationen konfigurierbar
-M8. [ ] Alle Stubs/toten Code entfernen
+Q1. [ ] Action Registry + konfigurierbare Shortcuts
+Q2. [ ] Hilfe: Auto-generierte Shortcut-Referenz
+Q3. [ ] Menü: JEDER Punkt ruft echte Aktion auf
+Q4. [ ] Profil: IAM + editierbar + Account-Linking + S3-Visitenkarte
+Q5. [ ] Notification Bell
+Q6. [ ] Context-Menüs
+Q7. [ ] Animationen konfigurierbar
+Q8. [ ] Alle Stubs/toten Code entfernen
 ```
 
 ---
@@ -291,17 +204,17 @@ M8. [ ] Alle Stubs/toten Code entfernen
 ## Reihenfolge
 
 ```
-Prio 1:  A1-A4       Fundament (SQLite, X-Button, FsnObject, Scrollbars)
-Prio 2:  B1-B5       Theme-System reparieren
-Prio 3:  C1-C13      Init + Store als Paketmanager
-Prio 4:  D1-D5       S3-Storage-Layer
-Prio 5:  E1-E5       Widgets & Desktop
-Prio 6:  F1-F7       Conductor neu
-Prio 7:  G1-G9       Message Bus
-Prio 8:  H1-H3       Lenses
-Prio 9:  I1-I4       Search
-Prio 10: J1-J3       Bots
-Prio 11: K1-K3       Tasks
-Prio 12: L1-L4       Node (Invite + Federation)
-Prio 13: M1-M8       Polish
+✅ Erledigt: A-F  (Fundament, Themes, Store, S3, Widgets, Conductor)
+
+Prio 1:  G1-G5      Ressourcen-System & Inventory
+Prio 2:  H1-H4      Bridges & Rollen-APIs
+Prio 3:  I1-I3      Resource Builder
+Prio 4:  J1-J9      Message Bus
+Prio 5:  K1-K4      Browser
+Prio 6:  L1-L3      Lenses
+Prio 7:  M1-M4      Search
+Prio 8:  N1-N3      Bots
+Prio 9:  O1-O3      Tasks
+Prio 10: P1-P4      Node (Invite + Federation)
+Prio 11: Q1-Q8      Polish
 ```
