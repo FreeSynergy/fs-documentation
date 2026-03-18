@@ -4,21 +4,39 @@
 
 ---
 
-## Paket-Typen
+## Ressource-Typen
 
-| Typ | Inhalt | Beispiele |
+Alles was der Store verwaltet ist eine **Ressource**. Rust-Enum: `ResourceType` in `fsn-types/src/resources/meta.rs`.
+
+| Typ | Rust-Variant | Inhalt | Beispiele |
+|---|---|---|---|
+| `app` | `App` | FreeSynergy-Kernanwendung (Binary) | Node, Desktop, Init |
+| `container_app` | `ContainerApp` | Container-Service (Podman Compose + Config) | Kanidm, Forgejo, Outline |
+| `bundle` | `Bundle` | Meta-Ressource, fasst beliebige Ressourcen zusammen | server-minimal, desktop-full |
+| `language` | `Language` | Sprach-Snippets (.ftl) | Deutsch, Französisch |
+| `widget` | `Widget` | Desktop-Widget | Uhr, System-Info |
+| `bot` | `Bot` | Bot-Definition | Broadcast, Gatekeeper |
+| `bridge` | `Bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
+| `task` | `Task` | Automatisierungs-Template | "Docs ins Wiki" |
+
+### Theme-Ressourcen (einzeln ladbar)
+
+Ein **Theme** ist kein einzelner Typ, sondern ein **Bundle** aus bis zu 8 Theme-Ressourcen:
+
+| Typ | Rust-Variant | Inhalt |
 |---|---|---|
-| `app` | FreeSynergy-Kernanwendung | Node, Desktop, Conductor |
-| `container` | Service-Modul (Quadlet + Config) | Kanidm, Forgejo, Outline |
-| `bundle` | Meta-Paket, fasst beliebige Pakete zusammen | server-minimal, desktop-full |
-| `language` | Sprach-Snippets (.ftl) | Deutsch, Französisch |
-| `theme` | Visuelles Theme | Midnight Blue, Nordic |
-| `widget` | Desktop-Widget | Uhr, System-Info |
-| `bot` | Bot-Definition | Broadcast, Gatekeeper |
-| `bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
-| `task` | Automatisierungs-Template | "Docs ins Wiki" |
+| `color_scheme` | `ColorScheme` | CSS-Farbpalette (alle Pflicht-Variablen) |
+| `style` | `Style` | Spacing, Radius, Shadows (standardisiertes Schema) |
+| `font_set` | `FontSet` | Schriftart-Dateien + @font-face |
+| `cursor_set` | `CursorSet` | Mauszeiger-Dateien |
+| `icon_set` | `IconSet` | SVG Icon-Sammlung |
+| `button_style` | `ButtonStyle` | Button-Aussehen |
+| `window_chrome` | `WindowChrome` | Titelleisten-Stil |
+| `animation_set` | `AnimationSet` | CSS-Transitions + Keyframes |
 
-**Libraries** (`fsn-*` Crates) sind KEINE eigenständigen Pakete. Sie sind Abhängigkeiten die mit den Anwendungen mitkommen. Sie leben in einem shared-Ordner, Git handled das.
+Ein vollständiges Theme = Bundle das je eine dieser Ressourcen referenziert.
+
+**Libraries** (`fsn-*` Crates) sind KEINE eigenständigen Ressourcen. Sie sind Abhängigkeiten die mit den Anwendungen mitkommen. Sie leben in einem shared-Ordner, Git handled das.
 
 ## Paket-Lifecycle
 

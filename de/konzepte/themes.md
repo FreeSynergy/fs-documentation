@@ -21,7 +21,7 @@ Ein Theme definiert nicht nur Farben, sondern auch:
 
 **Via Store:** Alle anderen Themes kommen aus dem Store (Typ `theme`). Sie können heruntergeladen, installiert und live gewechselt werden — ohne Neustart.
 
-Mitgelieferte Store-Themes (im FreeSynergy.Node.Store vorinstalliert):
+Mitgelieferte Store-Themes (im FreeSynergy.Store vorinstalliert):
 - **Cloud White** — helles, klares Theme
 - **Cupertino** — macOS-inspiriert, hell
 - **Nordic** — Nord-Palette, dunkel

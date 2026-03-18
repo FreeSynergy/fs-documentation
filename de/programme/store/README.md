@@ -404,32 +404,36 @@ Source-Build (Fallback):
     → klont Repo → cargo build --release → wie oben
 ```
 
-### catalog.toml — Die Linkdatei
+### catalog.toml — Zwei Ebenen
 
-Die `catalog.toml` im Store-Repo ist die zentrale Liste aller Pakete mit ihren Repo-URLs. Kein Meta-Repo, nur eine Datei:
+**Root `catalog.toml`** — App-Pakete (Binaries) mit GitHub Release-URLs:
 
 ```toml
 [[packages]]
-id = "node"
-type = "app"
-version = "0.5.0"
-repo = "https://github.com/FreeSynergy/Node"
-path = "apps/node/"
-
-[[packages]]
-id = "conductor"
-type = "app"
-version = "0.3.0"
-repo = "https://github.com/FreeSynergy/Conductor"
-path = "apps/conductor/"
-
-[[packages]]
-id = "browser"
-type = "app"
+id      = "node"
+type    = "app"
 version = "0.1.0"
-repo = "https://github.com/FreeSynergy/Browser"
-path = "apps/browser/"
+repo    = "https://github.com/FreeSynergy/Node"
+
+[packages.distribution]
+linux-x86_64  = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-linux.tar.gz"
+linux-aarch64 = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-aarch64-linux.tar.gz"
+# ... weitere Plattformen
 ```
+
+**`node/catalog.toml`** — Deployment-Module (Container-Apps, i18n):
+
+```toml
+[[packages]]
+id          = "iam/kanidm"
+name        = "Kanidm"
+category    = "deploy.iam"
+version     = "0.1.0"
+icon        = "shared/icons/kanidm.svg"
+path        = "node/modules/iam/kanidm"
+```
+
+Binaries werden **nie** im Store-Repo gespeichert. Jedes Programm hat ein eigenes GitHub-Repo und veröffentlicht Binaries über GitHub Releases wenn ein Git-Tag gepusht wird (`git tag v0.5.0 && git push --tags`).
 
 ---
 
@@ -473,15 +477,18 @@ Store/
 
 | Bereich | Crate | Details |
 |---|---|---|
-| Paket-Typen + Manifest | `fsn-pkg` (`manifest.rs`) | `PackageType` (9 Varianten: app, container, bundle, …), `PackageMeta`, `BundleManifest` |
+| Ressource-Typen + Meta | `fsn-types` (`resources/meta.rs`) | `ResourceType` (16 Varianten), `ResourceMeta`, `ValidationStatus` |
+| Ressource-Structs | `fsn-types` (`resources/*.rs`) | `AppResource`, `ContainerAppResource`, `WidgetResource`, `BotResource`, `BridgeResource`, `BundleResource`, Theme-Ressourcen |
 | Release-Channels | `fsn-pkg` (`channel.rs`) | `ReleaseChannel`: Stable/Testing/Nightly |
 | Versionierung + Rollback | `fsn-pkg` (`versioning.rs`) | `VersionManager`, `VersionRecord`, `RollbackError` |
 | Paket-Signierung | `fsn-crypto` (`signing.rs`, feature: `signing`) | `FsnSigningKey`, `FsnVerifyingKey`, `PackageSignature` — ed25519-dalek v2, SHA-256 |
 | Signatur-Verifikation | `fsn-pkg` (`signing.rs`) | `SignatureVerifier`, `SignaturePolicy` (RequireSigned/TrustUnsigned) |
 | SQLite-Tracking | `fsn-db` (`installed_package.rs`) | `installed_packages` Tabelle — `InstalledPackageRepo` |
-| Store-Client | `fsn-store` | `StoreClient`, `Catalog<M>`, `CatalogCache` |
+| Store-Client (generisch) | `fsn-store` (Lib.Ext) | `StoreClient`, `Catalog<M>`, `Manifest`-Trait, `I18nBundle` |
+| Store-Client (Node) | `fsn-deploy` (`store.rs`) | `StoreClient` (FSN-spezifisch), `StoreEntry` implementiert `Manifest` |
 | Abhängigkeits-Auflösung | `fsn-pkg` (`dependency_resolver.rs`) | `DepGraph`, `DependencyResolver` (Kahn's Algorithmus) |
 | Install-Lifecycle | `fsn-pkg` (`installer.rs`) | `PackageInstaller`, Hooks, `EventBus` |
+| Builder + Validierung | `fsn-builder` (Node) | `fsn-builder validate-store`, `validate`, `analyze`, `fetch-icon`, `publish` |
 
 ## Repo
 
