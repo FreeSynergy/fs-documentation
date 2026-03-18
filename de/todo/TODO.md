@@ -66,50 +66,55 @@ G5. [x] Validate trait für alle Ressource-Typen (fsn-types/resources/validator.
     - 61 Unit-Tests grün
 ```
 
-## Phase H: Bridges & Rollen-APIs
+## Phase H: Bridges & Rollen-APIs ✅
 
 ```
-H1. [ ] Rollen-API-Definitionen (fsn-types)
-    - Standard-Methoden pro Rolle (iam, wiki, git, chat, database, cache, smtp, llm, map, tasks, monitoring)
-    - Parameter-Typen und Rückgabewerte
+H1. [x] Rollen-API-Definitionen (fsn-types/resources/role_api.rs)
+    - Typed request/response structs für alle 11 Rollen
+    - IamUser*, WikiPage*, GitRepo*, ChatChannel*, DbQuery*, Cache*, Mail*, Llm*, Map*, Task*, Alert*
 
-H2. [ ] Bridge-Framework (fsn-bridge Crate)
-    - BridgeMethod: standard_name → http_method + endpoint + mapping
-    - Request/Response Field-Mapping
-    - Bridge-Instanz-Management
+H2. [x] Bridge-Framework (fsn-bridge Crate in FreeSynergy.Lib)
+    - BridgeExecutor: nimmt BridgeResource + base_url, führt HTTP-Calls aus
+    - FieldMapping wird auf Request + Response angewendet
+    - BridgeError Enum
 
-H3. [ ] Erste Bridges implementieren
-    - kanidm-iam-bridge
-    - outline-wiki-bridge
-    - forgejo-git-bridge
+H3. [x] Erste Bridges implementiert (fsn-bridge/src/catalog.rs)
+    - kanidm_iam_bridge() → BridgeResource mit allen 8 IAM-Methoden
+    - outline_wiki_bridge() → BridgeResource mit allen 4 Wiki-Methoden
+    - forgejo_git_bridge() → BridgeResource mit allen 4 Git-Methoden
+    - Alle validieren als ✅ Ok (Tests grün)
 
-H4. [ ] Bus ↔ Inventory ↔ Bridge Integration
-    - Bus fragt Inventory: "Wer hat Rolle X?"
-    - Inventory liefert Bridge-Instanz
-    - Bus ruft Standard-API über Bridge auf
+H4. [x] BridgeDispatcher (Inventory ↔ Bridge Integration)
+    - BridgeDispatcher::execute(role, method, params) → Value
+    - Sucht aktive BridgeInstance im Inventory für gegebene Rolle
+    - Lädt BridgeResource aus Katalog, delegiert an BridgeExecutor
+    - Bus-Integration folgt in Phase J
 ```
 
-## Phase I: Resource Builder
+## Phase I: Resource Builder ✅
 
 ```
-I1. [ ] Builder-CLI (fsn-builder Crate)
-    - fsn builder analyze compose.yml → Variablen-Analyse + Rollen-Erkennung
-    - fsn builder validate ./package/ → Pflichtfelder prüfen
-    - fsn builder publish ./package/ → Signieren + Git-Commit
+I1. [x] Builder-CLI (cli/crates/fsn-builder/)
+    - fsn-builder analyze <compose.yml> → ContainerAppResource (TOML/JSON)
+    - fsn-builder validate <dir> → ✅⚠️❌ mit Message
+    - fsn-builder publish <dir> → signieren + git clone/push zum Store
 
-I2. [ ] Container-App-Analyse-Pipeline
-    - YAML → Services + Subservices erkennen
-    - Variablen → Typ + Rolle + Konfidenz
-    - Service-Verknüpfungen (SMTP_HOST → welcher Service? REDIS_URL → welcher Slot?)
+I2. [x] Container-App-Analyse-Pipeline (fsn-builder/src/analyze.rs)
+    - Docker Compose YAML → ContainerAppResource (vollständig typisiert)
+    - Primary-Service-Erkennung (Infra vs. App)
+    - Variablen-Analyse: Typ (Secret/Url/Hostname/Port/…) + Rolle + Konfidenz
+    - AutoSource: InternalService (Sibling) oder RoleVariable (Inventory)
     - Netzwerk auto-generieren ({servicename}-backend)
     - Volumes → S3-Pfade vorschlagen
+    - 5 Unit-Tests grün
 
-I3. [ ] Builder-UI im Desktop
-    - Drag & Drop YAML
-    - Variablen-Editor mit Typ-Dropdown
-    - Rollen-Zuweisung
-    - Validierungs-Anzeige (✅ ⚠️ ❌)
-    - "Publish to Store" Button
+I3. [x] Builder-UI im Desktop (fsd-studio → fsd-builder umbenannt)
+    - Tab "Container App": YAML-Paste → ContainerAppResource, Variablen-Tabelle
+      mit Typ + Rolle + Pflicht-Badge, Validierungs-Anzeige ✅⚠️❌
+    - Tab "Bridge": BridgeBuilder — Rolle wählen, Methoden-Checkliste, validieren
+    - "Save Locally" + "Publish to Store" Buttons (publish via CLI)
+    - i18n Editor + Resource Browser bleiben erhalten
+    - AI Assist (Ollama) für Metadaten-Anreicherung
 ```
 
 ## Phase J: Message Bus
@@ -205,10 +210,18 @@ Q8. [ ] Alle Stubs/toten Code entfernen
 
 ```
 ✅ Erledigt: A-F  (Fundament, Themes, Store, S3, Widgets, Conductor)
+✅ Erledigt: G    (Ressourcen-System & Inventory)
+✅ Erledigt: H    (Bridges & Rollen-APIs)
+✅ Erledigt: I    (Resource Builder — Builder-UI, CLI, Analyse-Pipeline)
 
-Prio 1:  G1-G5      Ressourcen-System & Inventory
-Prio 2:  H1-H4      Bridges & Rollen-APIs
-Prio 3:  I1-I3      Resource Builder
+Prio 1:  J1-J9      Message Bus
+Prio 2:  K1-K4      Browser
+Prio 3:  L1-L3      Lenses
+Prio 4:  M1-M4      Search
+Prio 5:  N1-N3      Bots
+Prio 6:  O1-O3      Tasks
+Prio 7:  P1-P4      Node (Invite + Federation)
+Prio 8:  Q1-Q8      Polish
 Prio 4:  J1-J9      Message Bus
 Prio 5:  K1-K4      Browser
 Prio 6:  L1-L3      Lenses

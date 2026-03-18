@@ -6,9 +6,9 @@
 
 ## Was Desktop macht
 
-Desktop ist die UI für den Menschen. Es zeigt was Node und Conductor tun, bietet den Store-Browser, den Bot Manager, das Task-System, Widgets und Lenses.
+Desktop ist die UI für den Menschen. Es zeigt was Node und Conductor tun, bietet den Store-Browser, den Bot Manager, das Task-System, Widgets, Lenses und einen eingebetteten [Browser](../browser/README.md).
 
-Desktop ist auch UI für die Services selbst — Web-Interfaces werden eingebettet oder in Tabs geöffnet. Zukünftig: Gehostete Websites, Dokumenten-Betrachter, und mehr.
+Desktop ist auch UI für die Services selbst — Web-Interfaces werden im eingebetteten Browser geöffnet.
 
 ## Sidebar-Tabs
 
@@ -19,8 +19,10 @@ Desktop ist auch UI für die Services selbst — Web-Interfaces werden eingebett
 | 🎛️ Conductor | Service-Konfiguration |
 | 🤖 Bots | Bots BENUTZEN |
 | 🔍 Lenses | Informations-Betrachter |
+| 🌐 Browser | Eingebetteter Web-Browser für Service-UIs |
 | 📦 Store | Pakete installieren |
 | 🔎 Search | Suche über alle Services |
+| 🔨 Builder | Resource Builder (Pakete bauen) |
 | ⚙️ Settings | Themes, Shortcuts, Profil, Layout |
 | ❓ Help | Dokumentation |
 
@@ -28,18 +30,26 @@ Desktop ist auch UI für die Services selbst — Web-Interfaces werden eingebett
 
 | Modus | Technologie |
 |---|---|
-| Desktop (WGUI) | Dioxus Webview |
-| Native (GUI) | Dioxus Blitz/WGPU (experimentell) |
+| Desktop (WGUI) | Dioxus WebView |
 | Web | Dioxus WASM |
-| TUI | Nicht umgesetzt (Dioxus TUI deprecated) |
+| Mobile | Dioxus (Android/iOS — reiner Client) |
 
 ## UI-Objekt-System
 
-Alle sichtbaren Elemente basieren auf dem [FsnObject-System](../../technik/ui-objekte.md). Fenster, Widgets, Modals — alles folgt denselben Regeln für Resize, Drag, Minimize, Close.
+Alle sichtbaren Elemente basieren auf dem [FsnObject-System](../../technik/ui-objekte.md).
 
 ## Eigenständigkeit
 
-Desktop läuft auch offline. Es zeigt gecachte Daten, Widgets (Uhr, Notizen), und lokale Settings. Für Live-Daten braucht es eine Verbindung zu einem Node.
+Desktop läuft auch offline. Für Live-Daten braucht es eine Verbindung zu einem Node.
+
+## Plattformen
+
+| OS | Status |
+|---|---|
+| Linux | ✅ (webkit2gtk) |
+| macOS | ✅ (WKWebView) |
+| Windows | ✅ (WebView2) |
+| Android/iOS | ✅ Reiner Client (per Invite verbinden) |
 
 ## Repo
 
@@ -49,7 +59,7 @@ https://github.com/FreeSynergy/Desktop
 
 | Crate | Zweck |
 |---|---|
-| `dioxus` 0.7.x | UI-Framework |
+| `dioxus` 0.7.x | UI-Framework (inkl. WebView für Browser) |
 | `fsn-ui` | Komponenten-Bibliothek |
 | `fsn-theme` | Theme-System |
 | `fsn-i18n` | Sprach-Snippets |
@@ -59,4 +69,4 @@ https://github.com/FreeSynergy/Desktop
 
 ---
 
-Weiter: [Lenses](../lenses/README.md) | [UI-Objekte](../../technik/ui-objekte.md)
+Weiter: [Browser](../browser/README.md) | [Lenses](../lenses/README.md) | [UI-Objekte](../../technik/ui-objekte.md)
