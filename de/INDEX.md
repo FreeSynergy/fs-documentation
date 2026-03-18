@@ -22,7 +22,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 ### Programme
 - [Init](programme/init/README.md) — Der Bootstrap (installiert den Store)
 - [Node](programme/node/README.md) — Der Projektverwalter + S3-Server
-- [Conductor](programme/conductor/README.md) — Der Service-Orchestrierer (eigenständig)
+- [Container App Manager](programme/conductor/README.md) — Container-Apps verwalten (ehem. Conductor)
 - [Builder](programme/builder/README.md) — Ressourcen bauen & validieren (eigenständig)
 - [Desktop](programme/desktop/README.md) — Die Mensch-Maschine-Schnittstelle
 - [Browser](programme/browser/README.md) — Der eingebettete Web-Browser (eigenständig)
@@ -43,6 +43,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Tasks](konzepte/tasks.md) — Automatisierungs-Pipelines
 - [Bots](konzepte/bots.md) — Bot-Framework
 - [Themes](konzepte/themes.md) — Visuelles Design-System
+- [Manager](konzepte/manager.md) — Kleber zwischen Store und Programmen (Language, Theme, ContainerApp, Icons)
 
 ### Technik
 - [Storage-Layer (S3)](technik/storage.md) — Eigener S3-Server, opendal, Profiles

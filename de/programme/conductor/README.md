@@ -1,16 +1,18 @@
-# Conductor — Der Service-Orchestrierer
+# Container App Manager — Der Container-App-Verwalter
 
-[← Zurück zum Index](../../INDEX.md) | [Node](../node/README.md) | [Store](../store/README.md)
+> **Hinweis:** Früher als "Conductor" bekannt. Umbenannt zu **Container App Manager** weil der Name genau beschreibt was er tut: Container-Apps verwalten. Lebt jetzt in **FreeSynergy.Managers** (`container_app/`).
+
+[← Zurück zum Index](../../INDEX.md) | [Node](../node/README.md) | [Store](../store/README.md) | [Manager](../../konzepte/manager.md)
 
 ---
 
-## Was der Conductor macht
+## Was der Container App Manager macht
 
-Der Conductor nimmt eine YAML-Datei (Docker-Compose, Podman, oder eigenes Format) und verwandelt sie in einen laufenden, konfigurierten Service.
+Der Container App Manager nimmt eine YAML-Datei (Docker-Compose, Podman, oder eigenes Format) und verwandelt sie in einen laufenden, konfigurierten Service.
 
 ## Eigenständigkeit
 
-Der Conductor läuft **komplett alleine** — ohne Node, ohne Store, ohne Internet. Man gibt ihm eine YAML-Datei und er:
+Der Container App Manager läuft **komplett alleine** — ohne Node, ohne Store, ohne Internet. Man gibt ihm eine YAML-Datei und er:
 1. Parst sie
 2. Analysiert sie
 3. Generiert Quadlet-Dateien
@@ -115,16 +117,16 @@ Alles wird gespeichert:
 
 ## Podman: KEIN Socket
 
-Der Conductor nutzt **keinen Podman-Socket**. Container werden ausschließlich verwaltet über:
+Der Container App Manager nutzt **keinen Podman-Socket**. Container werden ausschließlich verwaltet über:
 - **Quadlet-Dateien** (`.container` → systemd-Generator)
 - **systemctl** (start, stop, status, restart)
 - **journalctl** (Logs)
 
 ## Repo
 
-https://github.com/FreeSynergy/Conductor
+https://github.com/FreeSynergy/Managers (Crate: `container_app/`)
 
-Der Conductor ist ein eigenständiges Programm mit eigenem Repo und eigenem Release-Zyklus. Er kann unabhängig von Node eingesetzt werden.
+Der Container App Manager lebt in **FreeSynergy.Managers** und teilt sich das Repo mit den anderen Managern (Language, Theme, Icons). Das alte `FreeSynergy/Conductor` Repo ist archiviert.
 
 ## Bibliotheken
 
