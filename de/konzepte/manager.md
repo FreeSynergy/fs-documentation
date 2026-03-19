@@ -6,17 +6,21 @@
 
 ## Was ein Manager ist
 
-Ein **Manager** ist der Kleber zwischen dem Store (was verfügbar ist) und den Programmen (was sie brauchen). Anstatt dass jedes Programm selbst entscheidet wie es Sprachen, Themes oder Apps verwaltet, ruft es den zuständigen Manager auf.
+Ein **Manager** ist das Bindeglied zwischen dem Store (was möglich ist), dem Inventory (was installiert ist) und den Programmen (was sie brauchen).
 
 ```
-Store ←→ Manager ←→ Programme / UI
+Store → Manager → Inventory ← Programme / UI
 ```
 
-- Der Manager liest den aktuellen Zustand aus dem Store
-- Der Manager bietet eine fertige UI-Komponente an (z.B. Sprachauswahl)
-- Der Manager schreibt Änderungen zurück in den Store (wenn berechtigt)
+- Der Manager liest aus dem Store was verfügbar ist
+- Der Manager führt Aktionen aus (installieren, starten, stoppen, entfernen)
+- **Der Manager schreibt das Ergebnis ins Inventory** — das Inventory ist danach die einzige Wahrheit
+- Das UI zeigt ausschließlich was im Inventory steht — nie direkt was im Store steht
 - Settings ruft Manager auf — hat selbst keine Logik für diese Bereiche
-- Das Inventory empfängt die fertigen, installierten Zustände
+
+**Wichtig:** Ein Paket ist installiert — egal wie. Ob via UI, CLI, API, oder direkt — der Manager schreibt den Eintrag ins Inventory. Das Inventory fragt nicht, wie es dorthin kam.
+
+Siehe: [Die drei Ebenen (Inventory-Konzept)](inventory.md)
 
 ## Warum Manager?
 

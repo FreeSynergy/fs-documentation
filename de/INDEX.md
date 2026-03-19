@@ -36,7 +36,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Ressourcen-System](konzepte/ressourcen.md) — Alles ist eine Ressource (Structs, Typen, Felder)
 - [Rollen-System](konzepte/rollen.md) — Services deklarieren was sie können
 - [Bridges](konzepte/bridges.md) — Standardisierte Rollen-APIs
-- [Inventory](konzepte/inventory.md) — Die lokale Wahrheit (getrennt vom Store)
+- [Inventory](konzepte/inventory.md) — Die lokale Wahrheit: **Store = möglich | Inventory = installiert | Managers = das Wie**
 - [Rechte-Kaskade](konzepte/rechte.md) — Rechte können nur abnehmen
 - [Message Bus](konzepte/bus.md) — Pub/Sub, Rollen-basiert, Bridges
 - [Föderation](konzepte/foederation.md) — Zusammenarbeit zwischen Projekten

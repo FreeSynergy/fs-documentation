@@ -99,12 +99,18 @@ Wenn der Store erreichbar ist:
 3. Container App Manager **ergänzt** seine Analyse — überschreibt NICHTS, füllt nur Lücken
 4. Bei Konflikten: Fragt den Benutzer
 
-### Schritt 6: Speicherung
+### Schritt 6: Speicherung + Inventory-Eintrag
 
-Alles wird gespeichert:
-- In SQLite (`fsn-container-app.db`): Metadaten, Variablen, Status
-- Im Dateisystem: Quadlet-Dateien, Config-Templates unter `services/{paketname}/`
-- Der **Paketname = Hauptservice-Name** aus der YAML
+Nach erfolgreichem Deploy:
+- Quadlet-Dateien + Config-Templates: `services/{paketname}/`
+- **Inventory-Eintrag schreiben** (via `fsn-inventory`):
+  - `InstalledResource` (id, resource_type, version, status: Active)
+  - `ServiceInstance` (name, roles_provided, port, network)
+- Status-Updates bei start/stop/error → `Inventory::update_status()`
+
+Der Paketname = Hauptservice-Name aus der YAML.
+
+**Das Inventory ist danach die einzige Wahrheit.** Das UI zeigt nur, was im Inventory steht. Kein anderes System darf eine eigene Liste führen.
 
 ## Interfaces
 
@@ -150,6 +156,20 @@ https://github.com/FreeSynergy/Desktop (Crate: `crates/fsd-conductor/`)
 | `fsn-store` | Store-Client (optional) |
 | `fsn-error` | Fehlerbehandlung + Auto-Repair |
 
+## Beziehung Store / Inventory / Container App Manager
+
+```
+Store (Was gibt es?)
+  → Container App Manager (Wie wird es installiert/betrieben?)
+    → Inventory (Was ist installiert + Status?)
+      → UI (Zeigt nur Inventory-Inhalte)
+```
+
+- Store: Liefert Metadaten, Rollen, Variablen, Compose-YAML
+- Container App Manager: Analysiert, deployt, konfiguriert, überwacht
+- Inventory: Empfängt den fertigen Zustand — wird vom Container App Manager geschrieben
+- UI: Zeigt ausschließlich Inventory-Inhalte. Grüner Punkt = läuft, Ausgegraut = gestoppt, Roter Punkt = Fehler
+
 ---
 
-Weiter: [Store](../store/README.md) | [Rollen](../../konzepte/rollen.md)
+Weiter: [Store](../store/README.md) | [Inventory](../../konzepte/inventory.md) | [Rollen](../../konzepte/rollen.md)

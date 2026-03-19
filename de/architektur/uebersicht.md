@@ -68,6 +68,30 @@ FreeSynergy basiert auf drei Grundgedanken:
 
 **Regel für eigene Repos:** Ein Programm bekommt ein eigenes Repo wenn es alleine laufen kann — mit eigenem Release-Zyklus und eigener Versionierung. Einzige Ausnahme: Der S3-Server ist Infrastruktur von Node und hat kein eigenes Repo. Shared Libraries leben in `FreeSynergy/Lib`.
 
+## Die drei Ebenen (Store / Inventory / Managers)
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   STORE         Das Mögliche   — Katalog aller verfügbaren         │
+│                 Ressourcen. Git-Repo. Kein Zustand.                 │
+│                                                                     │
+│   INVENTORY     Der Jetzt-Zustand — Was ist installiert, was       │
+│                 läuft, welche Rollen sind aktiv. Einzige Wahrheit.  │
+│                                                                     │
+│   MANAGERS      Das Wie — Container App Manager, Theme Manager,    │
+│                 Language Manager. Führen Aktionen aus und schreiben │
+│                 das Ergebnis ins Inventory.                         │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+**Alles was im UI angezeigt wird, kommt ausschließlich aus dem Inventory.**
+Der Store zeigt was möglich ist. Das Inventory zeigt was da ist.
+Die Manager kümmern sich darum, dass aus dem Möglichen Wirklichkeit wird — und schreiben das Ergebnis ins Inventory.
+
+Siehe: [Inventory-Konzept](../konzepte/inventory.md)
+
 ## Der Installationsweg
 
 ```

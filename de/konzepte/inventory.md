@@ -1,6 +1,33 @@
 # Inventory — Die lokale Wahrheit
 
-[← Zurück zum Index](../INDEX.md) | [Store](../programme/store/README.md) | [Bridges](bridges.md)
+[← Zurück zum Index](../INDEX.md) | [Store](../programme/store/README.md) | [Bridges](bridges.md) | [Manager](manager.md)
+
+---
+
+## Die drei Ebenen — KERN-ARCHITEKTUR-ENTSCHEIDUNG
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Store        = Das Mögliche   — "Was gibt es?"                 │
+│  Inventory    = Der Jetzt-Zustand — "Was ist installiert?"      │
+│  Managers     = Das Wie        — "Wie wird etwas installiert?"  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Diese Trennung ist absolut. Sie darf nie vermischt werden.**
+
+| Ebene | Frage | Datenquelle | Schreibt wer? |
+|---|---|---|---|
+| **Store** | "Was gibt es?" | Git-Repo, Kataloge | Builder, Maintainer |
+| **Inventory** | "Was ist installiert?" | Eigene SQLite | Nur Manager |
+| **Managers** | "Wie macht man das?" | Deployment-Logik | — (Logik, kein Store) |
+
+### Was das bedeutet
+
+- **Alles was im UI angezeigt wird, kommt NUR aus dem Inventory** — nie direkt aus dem Store.
+- **Ein Paket ist installiert — egal wie.** Ob via Container App Manager, Node, manuell, oder Skript: der Manager schreibt den Eintrag ins Inventory. Das Inventory fragt nicht, wie es dort hinkam.
+- **Der Store zeigt was möglich ist.** Das Inventory zeigt was da ist. Beide Sichten sind unabhängig.
+- **Kein Manager darf eine eigene Liste führen.** Jeder Status-Query geht ans Inventory.
 
 ---
 
@@ -81,6 +108,23 @@ pub struct BridgeInstance {
 
 ---
 
+## Status-Anzeige im UI
+
+Jede installierte Ressource hat einen `ResourceStatus`. Das UI nutzt ihn für die visuelle Darstellung:
+
+| Status | Darstellung |
+|---|---|
+| `Active` / `Running` | Icon normal, grüner Punkt |
+| `Stopped` | Icon **ausgegraut**, grauer Punkt |
+| `Error(msg)` | Icon normal, **roter Punkt** |
+| `Updating` / `Installing` | Icon normal, blauer/animierter Punkt |
+
+**Regel:** Das Icon wird ausgegraut wenn der Service gestoppt ist — nicht gelöscht, nicht versteckt. Der Benutzer sieht dass das Paket installiert ist, aber gerade nicht läuft.
+
+Der **Container App Manager** ist dafür zuständig, den Status regelmäßig (via systemctl + healthcheck) zu prüfen und im Inventory zu aktualisieren. Kein anderes System fragt direkt nach dem Container-Status.
+
+---
+
 ## Wer fragt das Inventory?
 
 | Wer | Fragt was |
@@ -101,4 +145,22 @@ Wenn das Inventory sagt "Kanidm läuft auf Port 8443 mit Rolle iam" — dann ist
 
 ---
 
-Weiter: [Store](../programme/store/README.md) | [Bridges](bridges.md) | [Bus](bus.md)
+## Wer schreibt ins Inventory?
+
+**Nur Manager.** Jeder Manager schreibt nach einer erfolgreichen Aktion ins Inventory:
+
+| Aktion | Manager | Inventory-Effekt |
+|---|---|---|
+| Container-App installieren | Container App Manager | `install()` + `add_service()` |
+| Container-App starten | Container App Manager | `status → Running` |
+| Container-App stoppen | Container App Manager | `status → Stopped` |
+| Container-App entfernen | Container App Manager | `uninstall()` + Service löschen |
+| Theme installieren | Theme Manager | `install()` |
+| Sprache installieren | Language Manager | `install()` |
+| Status-Prüfung (periodisch) | Container App Manager | `status → Running / Stopped / Error` |
+
+**Ein Paket ist installiert — egal wie.** Der Manager kümmert sich ums Wie. Das Inventory kennt nur das Ergebnis. Ob die Installation über CLI, API oder UI ausgelöst wurde, ist dem Inventory egal.
+
+---
+
+Weiter: [Store](../programme/store/README.md) | [Bridges](bridges.md) | [Bus](bus.md) | [Manager](manager.md)
