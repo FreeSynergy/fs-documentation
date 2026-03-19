@@ -27,6 +27,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Theme Manager](programme/theme/README.md) — Themes, Farben, Mauszeiger, Fenster-Stil
 - [Icon Manager](programme/icons/README.md) — Icon-Sets verwalten, Repository-Verwaltung, Icon-Picker für alle Programme
 - [Cursor Manager](programme/icons/cursor-manager.md) — Mauszeiger-Sets verwalten, erstellen (manuell + Synthesizer), animierte Cursor
+- [Icon-Set erstellen](programme/icons/icon-set-erstellen.md) — Formular: SVG-Upload, Dark-Varianten, Synthesizer-Integration, Veröffentlichen
 - [Desktop](programme/desktop/README.md) — Die Mensch-Maschine-Schnittstelle
 - [Browser](programme/browser/README.md) — Der eingebettete Web-Browser (eigenständig)
 - [Store](programme/store/README.md) — Der Paketmanager & Das Wissen

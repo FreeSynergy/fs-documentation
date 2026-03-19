@@ -35,11 +35,15 @@ Jede Variable hat ein Farbvorschau-Kästchen und ein editierbares Textfeld mit d
 
 ### Mauszeiger (Cursor)
 
-Auswahl des Mauszeigers aus vier Optionen:
-- **System Default** — Zeiger des Betriebssystems
-- **FreeSynergy** — Angepasster Zeiger im FSN-Stil
-- **Minimal** — Schlichter, kleiner Zeiger
-- **Retro** — Klassischer Stil
+Auswahl des aktiven Cursor-Sets aus allen installierten Sets. Der Theme Manager zeigt:
+
+- Eine Vorschau-Reihe der wichtigsten Slots (`default`, `pointer`, `text`, `busy`, `grab`)
+- Name und Autor des Sets
+- **"Aktivieren"**-Button — übernimmt das Set für das aktuelle Theme
+
+Die vollständige Verwaltung (neue Sets erstellen, Repositories verwalten) liegt im **Cursor Manager** — der Theme Manager ist nur der Auswahl-Punkt.
+
+→ [Cursor Manager](../icons/cursor-manager.md)
 
 ### Fenster-Stil (Chrome)
 
@@ -61,10 +65,35 @@ Drei Einstellungsgruppen:
 
 ---
 
+## Synthesizer-Integration
+
+Wenn ein Dienst mit Rolle `synthesizer.structured` aktiv ist, erscheint in zwei Bereichen ein **"Mit Synthesizer erstellen"**-Button:
+
+### Farben (Theme erstellen)
+
+Im Bereich **Farben** gibt es neben "Als Theme speichern" den Button "Mit Synthesizer erstellen". Der Synthesizer bekommt:
+
+```toml
+[context]
+type    = "theme"
+base    = "dark"           # dark | light
+primary = "#00bcd4"        # optional: Hauptfarbe vorgeben
+```
+
+Er gibt N Farbpaletten-Vorschläge zurück — jeder als vollständiges Set aller CSS-Variablen. Der Nutzer sieht eine Vorschau-Karte pro Vorschlag (Hintergrund + Akzentfarbe + Text) und wählt per Checkbox.
+
+### Fenster-Stil
+
+Für den Fenster-Stil (Window Chrome, Sidebar-Stil, Animationen) ist kein Synthesizer-Button vorgesehen — das sind Auswahl-Optionen aus einem festen Set, kein kreativer Freiformprozess.
+
+→ Vollständige Beschreibung: [Synthesizer-Konzept](../../konzepte/synthesizer.md)
+
+---
+
 ## Repo
 
 https://github.com/FreeSynergy/Desktop (Crate: `crates/fsd-theme/`)
 
 ---
 
-Weiter: [Themes-Konzept](../../konzepte/themes.md) | [CSS-System](../../technik/css.md)
+Weiter: [Themes-Konzept](../../konzepte/themes.md) | [CSS-System](../../technik/css.md) | [Synthesizer](../../konzepte/synthesizer.md) | [Cursor Manager](../icons/cursor-manager.md)
