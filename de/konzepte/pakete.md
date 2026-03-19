@@ -13,7 +13,7 @@ Alles was der Store verwaltet ist eine **Ressource**. Rust-Enum: `ResourceType` 
 | `app` | `App` | FreeSynergy-Kernanwendung (Binary) | Node, Desktop, Init |
 | `container_app` | `ContainerApp` | Container-Service (Podman Compose + Config) | Kanidm, Forgejo, Outline |
 | `bundle` | `Bundle` | Meta-Ressource, fasst beliebige Ressourcen zusammen | server-minimal, desktop-full |
-| `language` | `Language` | Sprach-Snippets (.ftl) | Deutsch, Französisch |
+| `language` | `Language` | Sprach-Snippets (12 TOML-Dateien) | Deutsch, Französisch, Japanisch |
 | `widget` | `Widget` | Desktop-Widget | Uhr, System-Info |
 | `bot` | `Bot` | Bot-Definition | Broadcast, Gatekeeper |
 | `bridge` | `Bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
@@ -79,6 +79,30 @@ Jedes Paket MUSS haben:
 - `icon` (SVG oder Icon-Name; PFLICHT, wenn fehlt → generisches Icon)
 
 **Jedes Paket ist ein Objekt.** Überall wo es angezeigt wird sieht man Icon, Name, Version, Tags.
+
+## Sprachpakete (`language`)
+
+Sprachpakete haben einen erweiterten `[language]`-Block mit Pflichtfeldern für Filter:
+
+```toml
+[language]
+locale       = "de-DE"
+display_name = "Deutsch"
+direction    = "ltr"          # oder "rtl" (ar, fa, ur, ps)
+completeness = 100            # Prozent der übersetzten Keys
+programs     = ["node", "desktop", "init"]
+family       = "Indo-European" # Sprachfamilie (Pflicht)
+continent    = "Europe"        # Kontinent (Pflicht)
+```
+
+`family` und `continent` sind **eigene Felder, keine Tags** — damit sie beim Erstellen eines neuen Pakets nicht vergessen werden können. Mögliche Werte:
+
+- **family:** `Indo-European`, `Afro-Asiatic`, `Sino-Tibetan`, `Dravidian`, `Uralic`, `Turkic`, `Austronesian`, `Niger-Congo`, `Japonic`, `Koreanic`, `Kra-Dai`, `Austroasiatic`
+- **continent:** `Europe`, `Asia`, `Africa`, `Americas`, `Oceania`
+
+Jedes Sprachpaket enthält 12 TOML-Snippet-Dateien (actions, nouns, status, errors, validation, phrases, time, help, labels, confirmations, notifications, meta) und ein eigenes Sprechblasen-Icon (24×24 SVG) mit dem Sprachcode.
+
+Details: [i18n-Technik](../technik/i18n.md)
 
 ## Tags
 
