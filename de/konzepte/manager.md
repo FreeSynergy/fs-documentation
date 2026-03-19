@@ -47,7 +47,7 @@ Alle Manager leben im Repo **FreeSynergy.Managers** (`git@github.com:FreeSynergy
 | `language/` | `fsn-manager-language` | Aktive Sprache lesen, setzen, UI-Picker |
 | `theme/` | `fsn-manager-theme` | Aktives Theme lesen, setzen, UI-Picker |
 | `container_app/` | `fsn-manager-container-app` | Container-Apps installieren, starten, stoppen, entfernen → [Container App Manager](../programme/container_app/README.md) |
-| `icons/` | `fsn-manager-icons` | Icon-Sets kennen, Pfade auflösen, UI Icon-Picker |
+| `icons/` | `fsn-manager-icons` | Icon-Sets verwalten, Repositories, Pfade auflösen, UI Icon-Picker → [Icon Manager](../programme/icons/README.md) |
 | `bots/` | `fsn-manager-bot` | Bots benutzen: Broadcasts senden, Subscriptions, Gatekeeper → [BotManager](../programme/botmanager/README.md) |
 
 ## Verwendung
@@ -91,14 +91,14 @@ Manager können nur dann in den Store schreiben, wenn sie die entsprechende Bere
 
 Siehe: [Rechte-Kaskade](rechte.md)
 
-## Icon-Manager und Icon-Sets
+## Icon Manager und Icon-Sets
 
-Der Icon-Manager liest das `manifest.toml` aus **FreeSynergy.Icons** und weiß welche Sets verfügbar sind. Er löst Icon-Namen zu Dateipfaden auf und stellt einen Icon-Picker zur Verfügung.
+Der Icon Manager liest das `manifest.toml` aus **FreeSynergy.Icons**, kennt alle installierten Sets (Name, Pfad, Icon-Anzahl) und stellt einen wiederverwendbaren Icon-Picker bereit. Er unterstützt mehrere Quell-Repositories analog zum Store.
 
-Neue Icon-Sets werden in FreeSynergy.Icons als eigener Ordner hinzugefügt (z.B. `homarrlabs/`, `simpleicons/`). Der Icon-Manager erkennt sie automatisch über das Manifest.
+Neue Icon-Sets werden in FreeSynergy.Icons als eigener Ordner hinzugefügt (z.B. `homarrlabs/`, `simpleicons/`). Der Icon Manager erkennt sie automatisch über das Manifest.
 
-Siehe: [FreeSynergy.Icons](https://github.com/FreeSynergy/Icons)
+Siehe: [Icon Manager](../programme/icons/README.md) | [Repository Manager](repository-manager.md)
 
 ---
 
-Weiter: [Store](../programme/store/README.md) | [Rechte-Kaskade](rechte.md) | [Themes](themes.md) | [BotManager](../programme/botmanager/README.md) | [Container App Manager](../programme/container_app/README.md)
+Weiter: [Store](../programme/store/README.md) | [Icon Manager](../programme/icons/README.md) | [Repository Manager](repository-manager.md) | [Rechte-Kaskade](rechte.md) | [Themes](themes.md) | [BotManager](../programme/botmanager/README.md) | [Container App Manager](../programme/container_app/README.md)

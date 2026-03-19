@@ -25,6 +25,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Container Manager](programme/container_app/README.md) — Container-Apps verwalten + Build & Publish (Builder ist hier integriert)
 - [Builder](programme/builder/README.md) — **ARCHIVIERT** — Funktionalität jetzt im Container Manager
 - [Theme Manager](programme/theme/README.md) — Themes, Farben, Mauszeiger, Fenster-Stil
+- [Icon Manager](programme/icons/README.md) — Icon-Sets verwalten, Repository-Verwaltung, Icon-Picker für alle Programme
 - [Desktop](programme/desktop/README.md) — Die Mensch-Maschine-Schnittstelle
 - [Browser](programme/browser/README.md) — Der eingebettete Web-Browser (eigenständig)
 - [Store](programme/store/README.md) — Der Paketmanager & Das Wissen
@@ -45,6 +46,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Bots](konzepte/bots.md) — Bot-Framework
 - [Themes](konzepte/themes.md) — Visuelles Design-System
 - [Manager](konzepte/manager.md) — Kleber zwischen Store und Programmen (Language, Theme, ContainerApp, Icons)
+- [Repository Manager](konzepte/repository-manager.md) — Gemeinsame Abstraktion für Repository-Verwaltung (Store, Icons, Bundles)
 
 ### Technik
 - [Storage-Layer (S3)](technik/storage.md) — Eigener S3-Server, opendal, Profiles
