@@ -219,37 +219,38 @@ M4. [ ] Föderale Suche (Ebene 3-4, nur mit search-Recht)
 ## Phase N: Bots
 
 ```
-N1. [ ] fsn-channel Crate (FreeSynergy.Lib)
+N1. [x] fsn-channel Crate (FreeSynergy.Lib)
     - Channel-Trait: create_room, invite, kick, send, delete_room, get_members
     - Inventory-Integration: services_with_role("chat") → aktive Channels
-    - Jeder Adapter implementiert den Trait, Bot-Code ändert sich nie
+    - ChannelRegistry::build(kind, config) + active_channels() via Inventory
     - Adapter (alle hinter Channel-Trait):
-        TelegramChannel   (grammers, UserBot/MTProto — für volle Kontrolle)
-        MatrixChannel     (matrix-sdk)
-        DiscordChannel    (serenity + poise)
-        RocketChatChannel (reqwest, REST + WebSocket)
-        MattermostChannel (reqwest, REST + WebSocket)
-        XmppChannel       (xmpp-rs)
-        ZulipChannel      (reqwest)
-        RevoltChannel     (revolt-rs)
-        NextcloudTalkChannel (reqwest, auto-aktiv wenn Nextcloud installiert)
-        IrcChannel        (irc)
-        SlackChannel      (slack-morphism)
-        TeamsChannel      (reqwest, Bot Framework)
-        ViberChannel      (reqwest)
-        LineChannel       (reqwest)
-        WhatsAppChannel   (reqwest, Meta Business API, eingeschränkt)
-        SignalChannel     (signal-cli, inoffiziell, fragil)
-        ThreemaChannel    (reqwest, Kosten pro Nachricht)
-        WireChannel       (Wire Bot SDK)
-        DiscourseChannel  (reqwest, Foren)
-        LemmyChannel      (reqwest, ActivityPub)
-        MastodonChannel   (megalodon-rs)
+        TelegramChannel      (feature = "telegram", Telegram Bot HTTP API)
+        MatrixChannel        (feature = "matrix", Client-Server API via reqwest)
+        DiscordChannel       (feature = "discord", Discord REST API v10)
+        RocketChatChannel    (REST, immer kompiliert)
+        MattermostChannel    (REST, immer kompiliert)
+        XmppChannel          (feature = "xmpp", REST Bridge)
+        ZulipChannel         (REST, immer kompiliert)
+        RevoltChannel        (REST, immer kompiliert)
+        NextcloudTalkChannel (REST, immer kompiliert)
+        IrcChannel           (feature = "irc", REST Bridge)
+        SlackChannel         (feature = "slack", Slack Web API)
+        TeamsChannel         (REST, Graph API, immer kompiliert)
+        ViberChannel         (REST, Viber Bot API)
+        LineChannel          (REST, LINE Messaging API)
+        WhatsAppChannel      (REST, Meta Cloud API)
+        SignalChannel        (feature = "signal", signal-cli REST API)
+        ThreemaChannel       (REST, Threema Gateway)
+        WireChannel          (REST, Wire Bot API)
+        DiscourseChannel     (REST, Discourse API)
+        LemmyChannel         (REST, Lemmy API v3)
+        MastodonChannel      (REST, Mastodon API v1)
 
-N2. [ ] Messenger-Adapter als Store-Pakete (type = "messenger-adapter")
-    - Jeder Adapter ist ein eigenes Paket (adapter-telegram, adapter-matrix, ...)
+N2. [x] Messenger-Adapter als Store-Pakete (type = "messenger-adapter")
+    - MessengerAdapterResource in fsn-types (ResourceType::MessengerAdapter)
+    - MessengerKind (21 Plattformen), AdapterAuthMethod, ChannelFeature enums
+    - Validate: erfordert tokens_required + ChannelFeature::Send
     - Inventory: services_with_role("chat") liefert aktive Adapter
-    - Nur installierte Adapter erscheinen in der Bot-Konfiguration
     - Store-Verzeichnis: shared/messenger-adapters/
 
 N3. [ ] BotCommand-Trait (FreeSynergy.Lib)
@@ -392,9 +393,11 @@ Q8. [ ] Alle Stubs/toten Code entfernen
 ✅ Erledigt: J    (Message Bus)
 ✅ Erledigt: K    (Browser)
 ✅ Erledigt: L    (Lenses)
+✅ Erledigt: N1   (fsn-channel Crate — Channel-Trait + 21 Adapter)
+✅ Erledigt: N2   (MessengerAdapterResource — Store-Paket-Typ)
 
 Prio 1:  M1-M4      Search
-Prio 2:  N1-N3      Bots
+Prio 2:  N3-N14     Bots (BotCommand-Trait, Bot-Kern, Module, BotManager, …)
 Prio 3:  O1-O3      Tasks
 Prio 4:  P1-P4      Node (Invite + Federation)
 Prio 5:  Q1-Q8      Polish
