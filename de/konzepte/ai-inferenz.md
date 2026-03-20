@@ -112,7 +112,7 @@ Continue.dev in VSCode auf den lokalen Endpunkt zeigen:
 Mistral.rs wird aus `FreeSynergy/mistral.rs` gebaut:
 
 - CI: `.github/workflows/fsn-build.yml`
-- Targets: Linux x86\_64/aarch64, macOS x86\_64 (Accelerate), macOS aarch64 (Metal), Windows x86\_64
+- Targets: Linux x86\_64/aarch64, macOS aarch64 (Metal), Windows x86\_64
 - Release-Tag: `v{version}-cpu`
 
 ```bash
