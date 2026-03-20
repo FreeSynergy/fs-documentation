@@ -114,7 +114,7 @@ I3. [x] Builder-UI im Desktop (fsd-studio → fsd-builder umbenannt)
     - Tab "Bridge": BridgeBuilder — Rolle wählen, Methoden-Checkliste, validieren
     - "Save Locally" + "Publish to Store" Buttons (publish via CLI)
     - i18n Editor + Resource Browser bleiben erhalten
-    - AI Assist (Ollama) für Metadaten-Anreicherung
+    - AI Assist (mistral.rs, Rolle: llm) für Metadaten-Anreicherung
 ```
 
 ## Phase J: Message Bus ✅

@@ -119,9 +119,8 @@ Erscheint nur, wenn in den **Service Roles** ein Eintrag mit dem Schlüssel `"ll
 Bei Klick auf "🤖 AI Translate":
 - Aufklapp-Panel mit Prompt (bis zu 50 fehlende Keys + EN-Referenz, automatisch vorausgefüllt)
 - User kann den Prompt ergänzen (z. B. "Halte technische Begriffe auf Englisch")
-- Sendet an:
-  - `ollama` → `http://localhost:11434/api/generate`, Modell `llama3.2`
-  - alles andere → `http://localhost:8080/v1/chat/completions` (OpenAI-kompatibel)
+- Sendet an: `http://localhost:1234/v1/chat/completions` (OpenAI-kompatibler Endpunkt via mistral.rs)
+  - Modell wird aus der `llm`-Rollen-Konfiguration gelesen
 - Antwort wird als TOML geparst → Vorschlagsliste
 - Einzelne Vorschläge mit ✓ akzeptieren oder "Accept All"
 - Nichts wird automatisch gespeichert

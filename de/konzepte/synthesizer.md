@@ -32,7 +32,7 @@ synthesizer
 
 Die **Manager-Integration** setzt `synthesizer.structured` voraus. Nur wer strukturierte Daten zurückgeben kann, kann ein Formular vorausfüllen.
 
-Ein lokales Sprachmodell (z.B. Ollama mit einem kleinen Modell) kann `synthesizer.text` erfüllen. Ein größeres Modell, das TOML-Strukturen zuverlässig ausgibt, erfüllt zusätzlich `synthesizer.structured`.
+Ein lokales Sprachmodell (z.B. mistral.rs mit einem kleinen Modell) kann `synthesizer.text` erfüllen. Ein größeres Modell, das TOML-Strukturen zuverlässig ausgibt, erfüllt zusätzlich `synthesizer.structured`.
 
 ---
 

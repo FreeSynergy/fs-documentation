@@ -25,7 +25,7 @@ Alle wiederverwendbaren Libraries. Können auch von Drittprojekten (Wiki.rs, Dec
 | `fsn-bus` | Message Bus (Pub/Sub + Direct) | `tokio::broadcast`, `serde_json` |
 | `fsn-channel` | Messenger-Adapter | Feature-flagged (siehe unten) |
 | `fsn-bot` | Bot-Framework | `fsn-bus`, `fsn-channel` |
-| `fsn-llm` | LLM-Integration | `reqwest` (Ollama API) |
+| `fsn-llm` | LLM-Integration | `reqwest` (OpenAI-kompatibler API via mistral.rs) |
 | `fsn-bridge-sdk` | Service-zu-Service-Bridges | `fsn-bus` |
 | `fsn-container` | Quadlet/systemctl-Interface | `tokio::process` |
 | `fsn-template` | Tera-Templates | `tera` |
