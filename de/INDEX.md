@@ -55,6 +55,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Manager](konzepte/manager.md) — Kleber zwischen Store und Programmen (Language, Theme, Container, Icons)
 - [Repository Manager](konzepte/repository-manager.md) — Gemeinsame Abstraktion für Repository-Verwaltung (Store, Icons, Bundles)
 - [Synthesizer](konzepte/synthesizer.md) — Beschreibung → strukturierte Ausgabe: Formular-Vorausfüllung in allen Managern
+- [AI-Inferenz](konzepte/ai-inferenz.md) — Lokale LLMs via Mistral.rs: Installation, Modelle, Workflow mit Claude
 
 ### Technik
 - [Storage-Layer (S3)](technik/storage.md) — Eigener S3-Server, opendal, Profiles
