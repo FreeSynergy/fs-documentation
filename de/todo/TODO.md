@@ -262,7 +262,7 @@ N3. [x] BotCommand-Trait (FreeSynergy.Lib)
     - Bot sammelt Befehle aus allen aktiven Modulen automatisch
     - /help generiert sich selbst aus registrierten Befehlen
 
-N4. [x] Bot-Kern (FreeSynergy.Managers, bots/)
+N4. [x] Bot-Kern (FreeSynergy.Bot)
     - Jede Bot-Instanz läuft als eigener Prozess (eigenes Binary)
     - Runtime: startet, hält Verbindungen zu allen konfigurierten Messengern
     - Module-Loader: lädt bot-Pakete aus Inventory, initialisiert Module
