@@ -68,6 +68,36 @@ FreeSynergy basiert auf drei Grundgedanken:
 
 **Regel für eigene Repos:** Ein Programm bekommt ein eigenes Repo wenn es alleine laufen kann — mit eigenem Release-Zyklus und eigener Versionierung. Einzige Ausnahme: Der S3-Server ist Infrastruktur von Node und hat kein eigenes Repo. Shared Libraries leben in `FreeSynergy/Lib`.
 
+## CLI = API = Objekt-Methoden
+
+**Jede CLI-Aktion ist dieselbe Funktion wie der entsprechende API-Endpoint.**
+
+```
+fsn store install kanidm
+    ↕ identisch mit
+POST /api/store/install {"id": "kanidm"}
+    ↕ identisch mit
+Store::install("kanidm")   ← Rust-Methode
+```
+
+Die CLI ist ein dünner Wrapper der Argumente parsed (clap) und dann die Rust-Methode aufruft. Dieselbe Rust-Methode wird vom API-Server (axum) genutzt. Business-Logik genau einmal — kein doppelter Code.
+
+Das gilt für alle Programme: `fsn store`, `fsn node`, `fsn container`, `fsn bus`, `fsn bot` — alles.
+
+Konsequenz: **Was man per UI machen kann, kann man auch per CLI machen, und umgekehrt.** Die CLI ist keine abgespeckte Version der UI.
+
+## SysInfo
+
+FreeSynergy kennt das System auf dem es läuft. Die `fsn-sysinfo` Library (Teil von `FreeSynergy.Lib`) liefert:
+
+- **Statisch (gecacht):** OS, Architektur, verfügbare Features (PAM, systemd, launchd, Podman, Git, …)
+- **Dynamisch (auf Anfrage):** Festplattenbelegung, RAM, CPU-Temperatur, SMART-Status
+- **Alerting (Bus-Events):** Konfigurierbare Schwellenwerte → `sysinfo.alert.*`
+
+Pakete deklarieren Platform-Anforderungen als Tags (`requires:systemd`, `platform:linux`). Der Store kombiniert diese mit SysInfo und zeigt bei der Installation nur was auf dem aktuellen System möglich ist.
+
+Siehe: [SysInfo-Konzept](../konzepte/sysinfo.md)
+
 ## Die drei Ebenen (Store / Inventory / Managers)
 
 ```

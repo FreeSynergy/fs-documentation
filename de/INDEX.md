@@ -47,6 +47,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Pakete](konzepte/pakete.md) — Store-Paket-System: Kategorien (Server/App/Desktop), Typen, Versionierung
 - [Node-Plattformen](konzepte/node-plattformen.md) — Linux-only Entscheidung, Szenarien (Pi, VPS, WSL2, macOS)
 - [VPN & Netzwerk](konzepte/vpn.md) — WireGuard, Heimzugriff, Node-Mesh, das dezentrale Netz
+- [SysInfo](konzepte/sysinfo.md) — System-Information: Platform-Detection, dynamische Daten, Alerting
 - [Tasks](konzepte/tasks.md) — Automatisierungs-Pipelines
 - [Bots](konzepte/bots.md) — Bot-Framework
 - [Themes](konzepte/themes.md) — Visuelles Design-System

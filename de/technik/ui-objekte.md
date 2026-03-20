@@ -36,6 +36,12 @@ JEDES sichtbare Element ist ein FsnObject. Fenster, Widgets, Modals, Panels — 
 - Fullscreen-Overlay während des Drags (verhindert "Verlieren")
 - Position gespeichert (SQLite)
 
+## Doppelklick auf Titelleiste
+
+- **Doppelklick auf die Titelleiste** → Fenster maximieren
+- Nochmaliger Doppelklick → vorherige Größe und Position wiederherstellen
+- Gilt für alle FsnObject-Fenster (nicht Widgets, Modals oder Panels)
+
 ## Sidebar (Tab-Menü)
 
 Jedes Fenster KANN eine Sidebar haben:

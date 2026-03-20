@@ -207,6 +207,37 @@ L3. [x] Lens als Desktop-Icon
     - app_id_to_label: "lenses" → "Lenses"
 ```
 
+## Phase SysInfo: System-Information
+
+```
+SysInfo1. [ ] fsn-sysinfo Crate (FreeSynergy.Lib)
+    - OsInfo: OS-Typ (Linux/macOS/Windows), Version, Architektur
+    - FeatureDetect: systemd, PAM, launchd, WindowsServices, Podman, Git, SSH
+    - DiskInfo: Partitionen, belegt/frei (on demand)
+    - MemInfo: RAM belegt/frei (on demand)
+    - ThermalInfo: CPU-Temperatur via ACPI/hwmon (Linux), SMC (macOS) (on demand)
+    - SmartInfo: SMART-Status pro Laufwerk via smartctl (on demand, optional)
+    - Cache in ~/.config/fsn/sysinfo.toml (statische Daten, 24h Invalidierung)
+
+SysInfo2. [ ] Alerting
+    - SysInfoAlert Enum: DiskFull, CpuHot, SmartError, MemoryFull
+    - Konfigurierbarer Check-Loop (Standard: alle 5 Minuten)
+    - Veröffentlicht auf Bus: sysinfo.alert.disk, sysinfo.alert.cpu, etc.
+    - Thresholds konfigurierbar in Settings
+
+SysInfo3. [ ] Store-Integration (Platform-Feature-Tags)
+    - Store wertet requires:* und platform:* Tags aus
+    - Kombination mit SysInfo::features() bei Installation
+    - Feature ausgegraut/blockiert wenn Voraussetzung fehlt
+    - UI-Anzeige: Badge "Nur auf Linux" / "PAM nicht verfügbar"
+
+SysInfo4. [ ] CLI
+    - fsn sysinfo          → statische Daten
+    - fsn sysinfo --live   → dynamische Daten
+    - fsn sysinfo --refresh → Cache leeren
+    - fsn sysinfo --check <feature> → einzelnes Feature prüfen
+```
+
 ## Phase M: Search
 
 ```

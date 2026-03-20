@@ -233,6 +233,51 @@ Wer ein UI-Icon an einer anderen Stelle braucht: erst prüfen ob der Name schon 
 
 ---
 
+## Fenster-Standard (Titelleiste)
+
+**Jedes Fenster in FreeSynergy hat dieselbe Titelleiste** — keine Ausnahmen, auch der Desktop selbst nicht.
+
+| Position | Element |
+|---|---|
+| Links oben | Programm-Icon |
+| Mitte | Titel (zentriert) |
+| Rechts | Minimize / Maximize / Close |
+
+**Doppelklick auf die Titelleiste:** Maximiert das Fenster, oder stellt die vorherige Größe wieder her.
+
+---
+
+## Hilfe-Panel (rechts)
+
+**Jedes Fenster hat rechts ein Fragezeichen-Icon.** Wenn der Nutzer mit der Maus auf die rechte Seite fährt (oder auf das Icon klickt), scrollt ein Hilfe-Panel von rechts ins Bild — analog zur Sidebar links.
+
+- **Eingeklappt:** Nur das `?`-Icon sichtbar (gleiche Breite wie die eingeklappte Sidebar)
+- **Ausgeklappt:** Scrollbarer Hilfe-Text zum aktuellen Kontext (300ms Animation, identisch zur Sidebar)
+- Der Text kommt aus den Hilfe-Dateien des jeweiligen Programms
+
+**Jedes Programm ist selbst verantwortlich** für:
+1. Die Hilfe-Inhalte (`.ftl`-Dateien, Kategorie `help`)
+2. Die Übersetzungen dieser Hilfe-Texte
+3. Kontext-sensitive Zuordnung (welcher Panel zeigt welchen Hilfe-Text)
+
+Das `?`-Icon kommt aus dem Standard-Icon-Set: `help.svg`
+
+---
+
+## Desktop-Tabs (Virtuelle Desktops)
+
+Der Desktop hat oben Tabs für virtuelle Desktops — dasselbe Prinzip wie die Fenster-Tabs, nur für den gesamten Desktop.
+
+- **Anzahl** der Desktops: einstellbar in Settings → Desktop → Virtuelle Desktops
+- **Tab-Wechsel-Animation:** Slide-Animation identisch zur Sidebar
+  - Tab nach rechts wechseln → aktueller Desktop gleitet nach links raus, neuer von rechts rein
+  - Tab nach links wechseln → aktueller Desktop gleitet nach rechts raus, neuer von links rein
+- **Standard:** 2 virtuelle Desktops (konfigurierbar)
+
+Das Prinzip gilt überall: **Alles was Tab-ähnlich wechselt, benutzt Slide-Animation in die Richtung des Wechsels.**
+
+---
+
 ## Zusammenfassung
 
 Jeder Cursor, jedes Menüicon hat **einen Namen** — und der Name beschreibt genau was er bedeutet. Nichts anderes. Wer ein neues Set erstellen möchte, nimmt dieses Dokument als Checkliste: alle Dateien nach der Liste benennen, Manifest hinzufügen, hochladen. Der Theme Manager tauscht alles automatisch aus.
@@ -241,4 +286,4 @@ Das ist Standardisierung: nicht weil es schön klingt, sondern weil es die einzi
 
 ---
 
-Weiter: [Themes](themes.md) | [CSS-System](../technik/css.md) | [Icon Manager](../programme/icons/README.md)
+Weiter: [Themes](themes.md) | [CSS-System](../technik/css.md) | [Icon Manager](../programme/icons/README.md) | [UI-Objekt-System](../technik/ui-objekte.md)

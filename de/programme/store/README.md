@@ -315,6 +315,10 @@ fsn store list --outdated
 # Catalog
 fsn store sync
 fsn store sync --offline
+
+# Cache
+fsn store cache refresh    # Pakete neu vom Store laden (Metadaten aktualisieren)
+fsn store cache clear      # Lokalen Cache vollständig leeren
 ```
 
 ## GUI — Store-Oberfläche im Desktop

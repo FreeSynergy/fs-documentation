@@ -97,10 +97,34 @@ Jedes Paket MUSS haben:
 - `category` (server, app, desktop) — Ober-Kategorie für Store-UI-Tabs
 - `type` (container, app, widget, language, bot, bridge, task, bundle) — spezifischer Typ
 - `description` (Kurzbeschreibung)
-- `tags` (für Suche — muss aussagekräftig sein)
+- `tags` (für Suche — muss aussagekräftig sein; inkl. `platform:*` und `requires:*` Tags)
 - `icon` (SVG oder Icon-Name; PFLICHT, wenn fehlt → generisches Icon)
 
 **Jedes Paket ist ein Objekt.** Überall wo es angezeigt wird sieht man Icon, Name, Version, Tags.
+
+## Installations-Pfad
+
+Der Installationspfad wird **nicht im Manifest angegeben**, sondern vom Store deterministisch abgeleitet:
+
+```
+{base_dir}/{category}/{type}/{id}/{id}-{version}/
+```
+
+Beispiele:
+
+| Paket | Kategorie | Typ | Pfad |
+|---|---|---|---|
+| kanidm 1.5.0 | server | container | `/opt/freesynergy/server/container/kanidm/kanidm-1.5.0/` |
+| desktop 0.8.0 | app | app | `~/.local/share/freesynergy/app/app/desktop/desktop-0.8.0/` |
+| midnight-blue 1.0.0 | desktop | bundle | `~/.local/share/freesynergy/desktop/bundle/midnight-blue/midnight-blue-1.0.0/` |
+
+**`base_dir` ist konfigurierbar:**
+- Server-Pakete (category = `server`): Standard `/opt/freesynergy/`
+- User-Pakete (category = `app`, `desktop`): Standard `~/.local/share/freesynergy/`
+
+Das Inventory (SQLite) kennt den vollen Pfad jedes installierten Pakets. Programme die wissen müssen wo ein anderes Paket installiert ist, fragen das Inventory — nie den Pfad selbst ableiten.
+
+**Kein Init-Script nötig.** Der Store liest das Manifest, leitet den Pfad ab, installiert, schreibt ins Inventory. Fertig. Kein vorkompilierter Pfad, kein Hardcode.
 
 ## Sprachpakete (`language`)
 
@@ -129,6 +153,23 @@ Details: [i18n-Technik](../technik/i18n.md)
 ## Tags
 
 Tags sind das primäre Suchinstrument. **Schlechte Tags = Paket unsichtbar.**
+
+### Platform- und Feature-Tags
+
+Neben inhaltlichen Tags gibt es **standardisierte System-Tags** die der Store auswertet:
+
+| Tag | Bedeutung |
+|---|---|
+| `platform:linux` | Nur Linux unterstützt |
+| `platform:macos` | Nur macOS unterstützt |
+| `platform:windows` | Nur Windows unterstützt |
+| `platform:linux+macos` | Linux und macOS, kein Windows |
+| `requires:systemd` | systemd muss laufen |
+| `requires:pam` | PAM muss verfügbar sein |
+| `requires:podman` | Podman muss installiert sein |
+| `requires:git` | Git muss installiert sein |
+
+Der Store kombiniert diese Tags mit [SysInfo](sysinfo.md): Features werden aus- oder abgeblendet wenn die Voraussetzung auf dem aktuellen System nicht erfüllt ist.
 
 Details und Filter-Syntax: [Store](../programme/store/README.md#tag-system)
 

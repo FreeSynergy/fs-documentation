@@ -29,6 +29,15 @@
 | Store: Nichts installierbar | Install-Button funktioniert nicht | Phase C2-C4 |
 | Alter Container Manager-Code | Nutzt Podman-Socket (funktioniert nicht) | Phase E1 |
 
+## Mittel (🟠) — Store UI
+
+| Bug | Beschreibung | Fix |
+|---|---|---|
+| Dropdown öffnet nach oben | Der Dropdown-Button bei installierten Paketen öffnet das Menü nach oben statt nach unten | Dropdown-Richtung fixen: immer nach unten |
+| Löschen-Option falsche Farbe | Der "Löschen"-Eintrag im Dropdown hat keine Hintergrundfarbe; sollte Rot + gleiche Schrift wie die Einträge darüber | Hintergrund rot, Schrift weiß |
+| Kein Bestätigungsdialog beim Löschen | Klick auf "Löschen" löscht sofort ohne Bestätigung | Modal: "Wirklich löschen?" mit Bestätigen / Abbrechen |
+| Detailansicht zeigt Vollständigkeits-Check | Die Detailansicht zeigt ob alle Felder gesetzt sind — das ist für den Nutzer irrelevant. Stattdessen sollen die Paket-Metadaten angezeigt werden (Typ, Pfad, Autor, Tags, Abhängigkeiten usw.) | Detailansicht mit ResourceMeta befüllen |
+
 ## Gering (🟢)
 
 | Bug | Beschreibung | Fix |
