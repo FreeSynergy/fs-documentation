@@ -135,12 +135,12 @@ synthesizer
 
 ## Wie Rollen in der Variablen-Analyse genutzt werden
 
-Wenn der [Container App Manager](../programme/container_app/README.md) eine YAML analysiert und eine Umgebungsvariable `REDIS_URL` findet:
+Wenn der [Container Manager](../programme/container/README.md) eine YAML analysiert und eine Umgebungsvariable `REDIS_URL` findet:
 
 1. Erkennung: `*REDIS*` → Wahrscheinlich Rolle `cache`
 2. Differenzierung: Ist es wirklich Redis, oder ein Redis-kompatibler Service (Dragonfly, KeyDB, Valkey)?
 3. Unterrolle: `cache.redis` ODER `cache.dragonfly` — je nach Image-Name
-4. Im Container App Manager kann der Benutzer dann wählen: "Welcher Cache-Service soll hier eingesetzt werden?" → Dropdown mit allen installierten Services die die Rolle `cache` haben
+4. Im Container Manager kann der Benutzer dann wählen: "Welcher Cache-Service soll hier eingesetzt werden?" → Dropdown mit allen installierten Services die die Rolle `cache` haben
 
 Dasselbe bei Datenbanken:
 - `DATABASE_URL=postgres://...` → Rolle `database.postgres` (MUSS Postgres sein)
@@ -179,4 +179,4 @@ Lens "Meine Gruppe":
 
 ---
 
-Weiter: [Rechte-System](rechte.md) | [Container App Manager](../programme/container_app/README.md)
+Weiter: [Rechte-System](rechte.md) | [Container Manager](../programme/container/README.md)

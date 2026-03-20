@@ -36,8 +36,8 @@ pub struct ResourceMeta {
 ```rust
 pub enum ResourceType {
     // Programme
-    App,              // Node, Desktop, Container App Manager
-    ContainerApp,     // Kanidm, Forgejo, Outline (bringt YAML mit)
+    App,              // Node, Desktop, Container Manager
+    Container,     // Kanidm, Forgejo, Outline (bringt YAML mit)
     
     // Zusammenstellungen
     Bundle,           // Sammlung anderer Ressourcen
@@ -86,7 +86,7 @@ Jede App hat ihre eigenen Sprachdateien, ihr Icon, ihre Dependencies.
 ## Container-App
 
 ```rust
-pub struct ContainerAppResource {
+pub struct ContainerResource {
     pub meta: ResourceMeta,
     pub compose_yaml: String,             // Originale YAML (downloadbar)
     pub services: Vec<ContainerService>,  // Haupt + Subservices
@@ -127,7 +127,7 @@ pub enum AutoSource {
 
 Container-Apps haben **keine eigenen Übersetzungen** — das machen die Leute selbst.
 
-Die YAML wird mitgeliefert und ist separat downloadbar. Der Container App Manager macht daraus Quadlet-Dateien.
+Die YAML wird mitgeliefert und ist separat downloadbar. Der Container Manager macht daraus Quadlet-Dateien.
 
 ---
 

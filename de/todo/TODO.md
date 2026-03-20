@@ -13,7 +13,7 @@
 
 ## Phase A–F: ✅ ERLEDIGT
 
-Siehe Git-History. Fundament, Themes, Store, S3, Widgets, Container App Manager — alles implementiert.
+Siehe Git-History. Fundament, Themes, Store, S3, Widgets, Container Manager — alles implementiert.
 
 ---
 
@@ -21,7 +21,7 @@ Siehe Git-History. Fundament, Themes, Store, S3, Widgets, Container App Manager 
 
 ```
 G1. [x] ResourceMeta Struct (fsn-types/resources/meta.rs)
-    - ResourceType enum (16 Varianten: App, ContainerApp, Bundle, Widget, Bot, Bridge,
+    - ResourceType enum (16 Varianten: App, Container, Bundle, Widget, Bot, Bridge,
       Task, Language, ColorScheme, Style, FontSet, CursorSet, IconSet, ButtonStyle,
       WindowChrome, AnimationSet)
     - ValidationStatus (Ok, Incomplete, Broken) mit badge() ✅⚠️❌
@@ -31,7 +31,7 @@ G1. [x] ResourceMeta Struct (fsn-types/resources/meta.rs)
 G2. [x] Typ-spezifische Structs (fsn-types/resources/)
     - AppResource (platforms, binary_name, locales, cli_commands, api_endpoints,
       roles_provided, roles_required)
-    - ContainerAppResource (compose_yaml, services[], variables[], networks, volumes,
+    - ContainerResource (compose_yaml, services[], variables[], networks, volumes,
       apis, roles_provided, roles_required)
       inkl. ContainerVariable (VarType, AutoSource: InternalService/RoleVariable)
     - WidgetResource (required_roles mit ANY/ALL Modus, data_sources, sizes)
@@ -95,12 +95,12 @@ H4. [x] BridgeDispatcher (Inventory ↔ Bridge Integration)
 
 ```
 I1. [x] Builder-CLI (cli/crates/fsn-builder/)
-    - fsn-builder analyze <compose.yml> → ContainerAppResource (TOML/JSON)
+    - fsn-builder analyze <compose.yml> → ContainerResource (TOML/JSON)
     - fsn-builder validate <dir> → ✅⚠️❌ mit Message
     - fsn-builder publish <dir> → signieren + git clone/push zum Store
 
 I2. [x] Container-App-Analyse-Pipeline (fsn-builder/src/analyze.rs)
-    - Docker Compose YAML → ContainerAppResource (vollständig typisiert)
+    - Docker Compose YAML → ContainerResource (vollständig typisiert)
     - Primary-Service-Erkennung (Infra vs. App)
     - Variablen-Analyse: Typ (Secret/Url/Hostname/Port/…) + Rolle + Konfidenz
     - AutoSource: InternalService (Sibling) oder RoleVariable (Inventory)
@@ -109,7 +109,7 @@ I2. [x] Container-App-Analyse-Pipeline (fsn-builder/src/analyze.rs)
     - 5 Unit-Tests grün
 
 I3. [x] Builder-UI im Desktop (fsd-studio → fsd-builder umbenannt)
-    - Tab "Container App": YAML-Paste → ContainerAppResource, Variablen-Tabelle
+    - Tab "Container": YAML-Paste → ContainerResource, Variablen-Tabelle
       mit Typ + Rolle + Pflicht-Badge, Validierungs-Anzeige ✅⚠️❌
     - Tab "Bridge": BridgeBuilder — Rolle wählen, Methoden-Checkliste, validieren
     - "Save Locally" + "Publish to Store" Buttons (publish via CLI)
@@ -492,7 +492,7 @@ Q8. [ ] Alle Stubs/toten Code entfernen
 ## Reihenfolge
 
 ```
-✅ Erledigt: A-F  (Fundament, Themes, Store, S3, Widgets, Container App Manager)
+✅ Erledigt: A-F  (Fundament, Themes, Store, S3, Widgets, Container Manager)
 ✅ Erledigt: G    (Ressourcen-System & Inventory)
 ✅ Erledigt: H    (Bridges & Rollen-APIs)
 ✅ Erledigt: I    (Resource Builder — Builder-UI, CLI, Analyse-Pipeline)

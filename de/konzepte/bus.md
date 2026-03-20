@@ -136,7 +136,7 @@ Jede Nachricht hat eine Lebensdauer UND eine Speicherung:
 ### Wer bestimmt den Typ?
 
 - **Der Sender** bestimmt den Default-Typ
-- Es gibt eine **konfigurierbare Default-Zuordnung** im Container App Manager (regelbasiert)
+- Es gibt eine **konfigurierbare Default-Zuordnung** im Container Manager (regelbasiert)
 - Regeln: `WENN Event X UND Quelle Y, DANN Typ Z`
 
 ### Standing Orders im Detail
@@ -264,7 +264,7 @@ pub enum StorageType {
 
 ## Konfigurierbare Default-Zuordnung
 
-Im Container App Manager gibt es eine **regelbasierte Liste**:
+Im Container Manager gibt es eine **regelbasierte Liste**:
 
 ```toml
 [[bus.rules]]

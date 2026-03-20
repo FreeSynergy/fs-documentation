@@ -27,7 +27,7 @@ Innerhalb der Kategorien gibt es spezifische **Typen**. Rust-Enum: `ResourceType
 
 | Kategorie | Typ | Rust-Variant | Inhalt | Beispiele |
 |---|---|---|---|---|
-| `server` | `container_app` | `ContainerApp` | Container-Service (Podman + Config) | Kanidm, Forgejo, Outline |
+| `server` | `container` | `Container` | Container-Service (Podman + Config) | Kanidm, Forgejo, Outline |
 | `server` | `bridge` | `Bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
 | `app` | `app` | `App` | FreeSynergy-Binary (Cross-Platform) | Desktop, Init |
 | `desktop` | `widget` | `Widget` | Desktop-Widget | Uhr, System-Info |
@@ -95,7 +95,7 @@ Jedes Paket MUSS haben:
 - `name` (Anzeigename)
 - `version` (SemVer, aus Git-Tag)
 - `category` (server, app, desktop) — Ober-Kategorie für Store-UI-Tabs
-- `type` (container_app, app, widget, language, bot, bridge, task, bundle) — spezifischer Typ
+- `type` (container, app, widget, language, bot, bridge, task, bundle) — spezifischer Typ
 - `description` (Kurzbeschreibung)
 - `tags` (für Suche — muss aussagekräftig sein)
 - `icon` (SVG oder Icon-Name; PFLICHT, wenn fehlt → generisches Icon)
@@ -217,23 +217,23 @@ test     = "curl -f http://localhost:8080/health"
 interval = "30s"
 
 [network]
-auto = "ollama-backend"   # Container App Manager legt internes Netz automatisch an
+auto = "ollama-backend"   # Container Manager legt internes Netz automatisch an
 
 [volumes]
 ollama_data    = { target = "/root/.ollama",        s3_path = "media/ollama" }
 openwebui_data = { target = "/app/backend/data",    s3_path = "media/open-webui" }
 ```
 
-Dieses Manifest plus eine zugehörige `podman-compose.yml` ergibt ein vollständiges Container-App-Paket. Der [Container App Manager](../programme/container_app/README.md) validiert und installiert es, der Store verwaltet Versionen und Abhängigkeiten.
+Dieses Manifest plus eine zugehörige `podman-compose.yml` ergibt ein vollständiges Container-App-Paket. Der [Container Manager](../programme/container/README.md) validiert und installiert es, der Store verwaltet Versionen und Abhängigkeiten.
 
 ---
 
 ## Variable-System (für Container-Pakete)
 
-Variablen haben Basis-Typen und Rollen. Siehe [Container App Manager](../programme/container_app/README.md) für die Analyse und [Rollen](rollen.md) für die Hierarchie.
+Variablen haben Basis-Typen und Rollen. Siehe [Container Manager](../programme/container/README.md) für die Analyse und [Rollen](rollen.md) für die Hierarchie.
 
 Secrets werden mit `age` verschlüsselt. Rollen-typisierte Variablen werden automatisch befüllt wenn ein passender Service installiert ist.
 
 ---
 
-Weiter: [Store](../programme/store/README.md) | [Container App Manager](../programme/container_app/README.md) | [Rollen](rollen.md)
+Weiter: [Store](../programme/store/README.md) | [Container Manager](../programme/container/README.md) | [Rollen](rollen.md)

@@ -22,7 +22,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 ### Programme
 - [Init](programme/init/README.md) — Der Bootstrap (installiert den Store)
 - [Node](programme/node/README.md) — Der Projektverwalter + S3-Server
-- [Container Manager](programme/container_app/README.md) — Container-Apps verwalten + Build & Publish (Builder ist hier integriert)
+- [Container Manager](programme/container/README.md) — Container-Apps verwalten + Build & Publish (Builder ist hier integriert)
 - [Builder](programme/builder/README.md) — **ARCHIVIERT** — Funktionalität jetzt im Container Manager
 - [Language Manager](programme/language/README.md) — Sprache wechseln, Formate, Translation Editor, LLM-Assist
 - [Theme Manager](programme/theme/README.md) — Themes, Farben, Mauszeiger, Fenster-Stil
@@ -51,7 +51,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Bots](konzepte/bots.md) — Bot-Framework
 - [Themes](konzepte/themes.md) — Visuelles Design-System
 - [UI-Standards](konzepte/ui-standards.md) — Mauszeiger-Sets, Aktions-Icons, Menüpunkte: Naming Convention + Austauschbarkeit
-- [Manager](konzepte/manager.md) — Kleber zwischen Store und Programmen (Language, Theme, ContainerApp, Icons)
+- [Manager](konzepte/manager.md) — Kleber zwischen Store und Programmen (Language, Theme, Container, Icons)
 - [Repository Manager](konzepte/repository-manager.md) — Gemeinsame Abstraktion für Repository-Verwaltung (Store, Icons, Bundles)
 - [Synthesizer](konzepte/synthesizer.md) — Beschreibung → strukturierte Ausgabe: Formular-Vorausfüllung in allen Managern
 

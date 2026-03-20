@@ -6,7 +6,7 @@
 
 ## Was Desktop macht
 
-Desktop ist die UI für den Menschen. Es zeigt was Node und Container App Manager tun, bietet den Store-Browser, den Bot Manager, das Task-System, Widgets, Lenses und einen eingebetteten [Browser](../browser/README.md).
+Desktop ist die UI für den Menschen. Es zeigt was Node und Container Manager tun, bietet den Store-Browser, den Bot Manager, das Task-System, Widgets, Lenses und einen eingebetteten [Browser](../browser/README.md).
 
 Desktop ist auch UI für die Services selbst — Web-Interfaces werden im eingebetteten Browser geöffnet.
 
@@ -42,7 +42,7 @@ Pakete definieren selbst, **wo** sie im Sideboard erscheinen (oberer Bereich, Pi
 |---|---|---|
 | 🏠 Home | Oben | Persönliches Dashboard, Widgets, Quick-Launch |
 | 📋 Tasks | Oben | Automatisierungs-Pipelines |
-| 🎛️ Container App Manager | Oben | Service-Konfiguration |
+| 🎛️ Container Manager | Oben | Service-Konfiguration |
 | 🤖 Bots | Oben | [BotManager](../botmanager/README.md) — Broadcasts senden, Gatekeeper verwalten, Status |
 | 🔍 Lenses | Oben | Informations-Betrachter |
 | 🌐 Browser | Oben | Eingebetteter Web-Browser für Service-UIs |

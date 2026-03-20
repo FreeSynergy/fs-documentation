@@ -1,6 +1,6 @@
 # Node — Der Projektverwalter
 
-[← Zurück zum Index](../../INDEX.md) | [Container App Manager](../container_app/README.md) | [Architektur](../../architektur/uebersicht.md)
+[← Zurück zum Index](../../INDEX.md) | [Container Manager](../container/README.md) | [Architektur](../../architektur/uebersicht.md)
 
 ---
 
@@ -11,7 +11,7 @@ Node ist nicht nur ein Verwaltungsprogramm — Node ist der **Knoten im Netz**. 
 Node verwaltet:
 
 - **Hosts** — Server die zum Projekt gehören
-- **Services** — Installation und Verwaltung über den [Container App Manager](../container_app/README.md)
+- **Services** — Installation und Verwaltung über den [Container Manager](../container/README.md)
 - **S3-Storage** — Eingebauter S3-Server ([Storage-Layer](../../technik/storage.md))
 - **Projekte** — Ein Projekt = eine Gruppe von Hosts + Services + Konfiguration
 - **Einladungen** — Join-Tokens für neue Hosts und Desktop-Clients
@@ -30,7 +30,7 @@ Node verwaltet:
 | Windows | ❌ (kein systemd) | ✅ |
 | iOS / Android | ❌ | ✅ (später) |
 
-**Warum Linux-only?** Container App Manager braucht Podman + Quadlet + systemd. Nur Linux hat das. Wenn wir irgendwann andere Plattformen unterstützen wollen, ist Node die **einzige Stelle die geändert werden muss** — alle anderen Programme bleiben unberührt.
+**Warum Linux-only?** Container Manager braucht Podman + Quadlet + systemd. Nur Linux hat das. Wenn wir irgendwann andere Plattformen unterstützen wollen, ist Node die **einzige Stelle die geändert werden muss** — alle anderen Programme bleiben unberührt.
 
 Für Heimnutzer ohne Linux-Server: [Plattform-Szenarien](../../konzepte/node-plattformen.md)
 
@@ -93,4 +93,4 @@ https://github.com/FreeSynergy/Node
 
 ---
 
-Weiter: [Container App Manager](../container_app/README.md) | [Storage-Layer](../../technik/storage.md) | [Installation](../../technik/installation.md)
+Weiter: [Container Manager](../container/README.md) | [Storage-Layer](../../technik/storage.md) | [Installation](../../technik/installation.md)

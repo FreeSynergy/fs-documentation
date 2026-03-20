@@ -8,7 +8,7 @@
 
 Node läuft ausschließlich auf **Linux**. Das ist keine technische Einschränkung — es ist eine bewusste Entscheidung.
 
-**Warum?** Der Container App Manager braucht Podman + Quadlet + systemd. Diese Kombination existiert nur auf Linux. Alles andere würde bedeuten, dass wir für jede Plattform eine andere Container-Lösung bauen müssten — das ist Arbeit ohne Mehrwert.
+**Warum?** Der Container Manager braucht Podman + Quadlet + systemd. Diese Kombination existiert nur auf Linux. Alles andere würde bedeuten, dass wir für jede Plattform eine andere Container-Lösung bauen müssten — das ist Arbeit ohne Mehrwert.
 
 **Was das bedeutet:** Wer einen Node betreiben will, braucht Linux. Wer kein Linux hat, verbindet sich mit einem fremden Node — oder kauft sich eine kleine Linux-Box.
 
@@ -20,7 +20,7 @@ Weil Node die einzige Stelle ist, die weiß wo Container laufen, welche Hosts ex
 
 > **Wenn wir irgendwann macOS oder Windows als Node-Plattform unterstützen wollen, ist es eine Änderung an einer Stelle — Node.**
 
-Desktop, Store, Container App Manager, alle anderen Programme müssen nicht angefasst werden. Node abstrahiert die Plattform vollständig nach oben.
+Desktop, Store, Container Manager, alle anderen Programme müssen nicht angefasst werden. Node abstrahiert die Plattform vollständig nach oben.
 
 ---
 
@@ -52,7 +52,7 @@ Desktop, Store, Container App Manager, alle anderen Programme müssen nicht ange
 ```
 Linux-Server (VPS oder Heimserver)
 └── Node läuft als systemd-Dienst
-    └── Container App Manager verwaltet alle Services
+    └── Container Manager verwaltet alle Services
     └── Desktop-Clients verbinden sich von überall
 ```
 
@@ -63,7 +63,7 @@ Empfehlung für alle die ernsthaft mit FreeSynergy arbeiten wollen.
 ```
 Raspberry Pi 4/5 (35–80€, 5W Stromverbrauch)
 └── Fedora / Debian / Raspberry Pi OS
-    └── Node + Container App Manager
+    └── Node + Container Manager
     └── Läuft 24/7, macht nichts außer Node sein
 ```
 
@@ -171,7 +171,7 @@ pub enum PlatformVariant {
 |---|---|
 | Store-GUI | Server-Tab zeigt Hinweis wenn kein Node verfügbar |
 | Desktop | Entscheidet ob Node-spezifische Features angezeigt werden |
-| Container App Manager | Warnt bei eingeschränkten Plattformen (WSL2, PodmanMachine) |
+| Container Manager | Warnt bei eingeschränkten Plattformen (WSL2, PodmanMachine) |
 | Init | Wählt den richtigen Installationspfad |
 
 SystemInfo wird **nicht persistiert** — es wird bei jedem Start neu ermittelt. Programme die plattformspezifisches Verhalten brauchen, lesen SystemInfo einmalig beim Start und handeln entsprechend.

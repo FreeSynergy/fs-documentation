@@ -25,7 +25,7 @@
 ### Was das bedeutet
 
 - **Alles was im UI angezeigt wird, kommt NUR aus dem Inventory** — nie direkt aus dem Store.
-- **Ein Paket ist installiert — egal wie.** Ob via Container App Manager, Node, manuell, oder Skript: der Manager schreibt den Eintrag ins Inventory. Das Inventory fragt nicht, wie es dort hinkam.
+- **Ein Paket ist installiert — egal wie.** Ob via Container Manager, Node, manuell, oder Skript: der Manager schreibt den Eintrag ins Inventory. Das Inventory fragt nicht, wie es dort hinkam.
 - **Der Store zeigt was möglich ist.** Das Inventory zeigt was da ist. Beide Sichten sind unabhängig.
 - **Kein Manager darf eine eigene Liste führen.** Jeder Status-Query geht ans Inventory.
 
@@ -58,7 +58,7 @@ pub struct Inventory {
 ```rust
 pub struct InstalledResource {
     pub id: String,                   // "kanidm"
-    pub resource_type: ResourceType,  // ContainerApp, Widget, Theme, ...
+    pub resource_type: ResourceType,  // Container, Widget, Theme, ...
     pub version: String,              // "1.5.0"
     pub channel: ReleaseChannel,      // Stable, Testing, Nightly
     pub installed_at: DateTime,
@@ -121,7 +121,7 @@ Jede installierte Ressource hat einen `ResourceStatus`. Das UI nutzt ihn für di
 
 **Regel:** Das Icon wird ausgegraut wenn der Service gestoppt ist — nicht gelöscht, nicht versteckt. Der Benutzer sieht dass das Paket installiert ist, aber gerade nicht läuft.
 
-Der **Container App Manager** ist dafür zuständig, den Status regelmäßig (via systemctl + healthcheck) zu prüfen und im Inventory zu aktualisieren. Kein anderes System fragt direkt nach dem Container-Status.
+Der **Container Manager** ist dafür zuständig, den Status regelmäßig (via systemctl + healthcheck) zu prüfen und im Inventory zu aktualisieren. Kein anderes System fragt direkt nach dem Container-Status.
 
 ---
 
@@ -132,7 +132,7 @@ Der **Container App Manager** ist dafür zuständig, den Status regelmäßig (vi
 | **Bus** | "Wer hat Rolle X?" → Route Events zur richtigen Bridge |
 | **Lenses** | "Welche Services bieten Daten zum Thema Y?" |
 | **Search** | "Welche Services unterstützen search-Recht?" |
-| **Container App Manager** | "Welche Services laufen, welche sind gestoppt?" |
+| **Container Manager** | "Welche Services laufen, welche sind gestoppt?" |
 | **Widgets** | "Sind meine required_roles erfüllt?" |
 | **Store** | "Was ist installiert? Was braucht ein Update?" |
 | **Resource Builder** | "Welche Rollen sind lokal verfügbar für Tests?" |
@@ -151,13 +151,13 @@ Wenn das Inventory sagt "Kanidm läuft auf Port 8443 mit Rolle iam" — dann ist
 
 | Aktion | Manager | Inventory-Effekt |
 |---|---|---|
-| Container-App installieren | Container App Manager | `install()` + `add_service()` |
-| Container-App starten | Container App Manager | `status → Running` |
-| Container-App stoppen | Container App Manager | `status → Stopped` |
-| Container-App entfernen | Container App Manager | `uninstall()` + Service löschen |
+| Container-App installieren | Container Manager | `install()` + `add_service()` |
+| Container-App starten | Container Manager | `status → Running` |
+| Container-App stoppen | Container Manager | `status → Stopped` |
+| Container-App entfernen | Container Manager | `uninstall()` + Service löschen |
 | Theme installieren | Theme Manager | `install()` |
 | Sprache installieren | Language Manager | `install()` |
-| Status-Prüfung (periodisch) | Container App Manager | `status → Running / Stopped / Error` |
+| Status-Prüfung (periodisch) | Container Manager | `status → Running / Stopped / Error` |
 
 **Ein Paket ist installiert — egal wie.** Der Manager kümmert sich ums Wie. Das Inventory kennt nur das Ergebnis. Ob die Installation über CLI, API oder UI ausgelöst wurde, ist dem Inventory egal.
 

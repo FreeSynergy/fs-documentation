@@ -149,7 +149,7 @@ base        = "dark"         # dark | light
 primary     = "#00bcd4"      # optional: Hauptfarbe vorgeben
 ```
 
-### Container App Manager (Konfigurationsvorschlag)
+### Container Manager (Konfigurationsvorschlag)
 
 ```toml
 [context]
@@ -186,7 +186,7 @@ Außerdem ist "Synthesizer" ein bekannter Begriff — jeder der je einen Synthes
 | Frage | Antwort |
 |---|---|
 | Wann erscheint der Button? | Wenn ein Dienst mit `synthesizer.structured` aktiv ist |
-| Welche Manager profitieren? | Alle die Erstellungs-Formulare haben: Cursor, Icons, Theme, Container App |
+| Welche Manager profitieren? | Alle die Erstellungs-Formulare haben: Cursor, Icons, Theme, Container |
 | Ist der Vorschlag bindend? | Nein — immer nur ein Ausgangspunkt, alles editierbar |
 | Kann man mehrere Vorschläge nehmen? | Ja — Checkboxen, dann Übernahme ins Formular |
 | Wo konfigurieren? | Manager-Einstellungen → Synthesizer-Abschnitt |

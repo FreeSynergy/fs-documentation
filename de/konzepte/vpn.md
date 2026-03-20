@@ -152,7 +152,7 @@ Node ist die einzige Stelle die das Netzwerk kennt und verwaltet:
 - Routing zwischen lokalem Netz und VPN-Tunnel
 - Föderations-Verbindungen aufbauen und verwalten
 
-Kein anderes Programm (Desktop, Store, Container App Manager) hat Netzwerk-Zugriff außer über den Node.
+Kein anderes Programm (Desktop, Store, Container Manager) hat Netzwerk-Zugriff außer über den Node.
 
 ---
 

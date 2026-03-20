@@ -46,7 +46,7 @@ Alle Manager leben im Repo **FreeSynergy.Managers** (`git@github.com:FreeSynergy
 |---|---|---|
 | `language/` | `fsn-manager-language` | Aktive Sprache lesen, setzen, UI-Picker |
 | `theme/` | `fsn-manager-theme` | Aktives Theme lesen, setzen, UI-Picker |
-| `container_app/` | `fsn-manager-container-app` | Container-Apps installieren, starten, stoppen, entfernen → [Container App Manager](../programme/container_app/README.md) |
+| `container/` | `fsn-manager-container-app` | Container-Apps installieren, starten, stoppen, entfernen → [Container Manager](../programme/container/README.md) |
 | `icons/` | `fsn-manager-icons` | Icon-Sets verwalten, Repositories, Pfade auflösen, UI Icon-Picker → [Icon Manager](../programme/icons/README.md) |
 | `bots/` | `fsn-manager-bot` | Bots benutzen: Broadcasts senden, Subscriptions, Gatekeeper → [BotManager](../programme/botmanager/README.md) |
 
@@ -67,7 +67,7 @@ Der Manager liefert immer ein konsistentes Ergebnis — unabhängig davon wo er 
 
 ### Shell-Sidebar
 
-In der System-Sektion der Shell-Sidebar gibt es einen **Managers**-Ordner mit fünf Sub-Items: Language, Theme, Icons, Container Apps, Bots. Ein Klick auf den Ordner öffnet die Sub-Ebene (Slide-Animation). Ein Pfeil-Button oben links führt zurück zur Haupt-Ebene.
+In der System-Sektion der Shell-Sidebar gibt es einen **Managers**-Ordner mit fünf Sub-Items: Language, Theme, Icons, Containers, Bots. Ein Klick auf den Ordner öffnet die Sub-Ebene (Slide-Animation). Ein Pfeil-Button oben links führt zurück zur Haupt-Ebene.
 
 Die Folder-Navigation basiert auf `FsnSidebarItem::folder()` aus `FreeSynergy.Lib.UI`:
 
@@ -83,7 +83,7 @@ Items mit nicht-leerem `children`-Feld sind Folder-Items. Klick → Drill-down, 
 
 ### fsd-managers App
 
-Das Crate `fsd-managers` (im Desktop-Repo) stellt die `ManagersApp` bereit — eine eigenständige App im LayoutB-Stil mit eigener Sidebar. Alle fünf Manager (Language, Theme, Icons, Container Apps, Bots) sind als Panels integriert. Die App wird über den App-Key `"app-managers"` registriert und von allen Sidebar-Sub-Items geöffnet.
+Das Crate `fsd-managers` (im Desktop-Repo) stellt die `ManagersApp` bereit — eine eigenständige App im LayoutB-Stil mit eigener Sidebar. Alle fünf Manager (Language, Theme, Icons, Containers, Bots) sind als Panels integriert. Die App wird über den App-Key `"app-managers"` registriert und von allen Sidebar-Sub-Items geöffnet.
 
 ## Berechtigungen
 
@@ -101,4 +101,4 @@ Siehe: [Icon Manager](../programme/icons/README.md) | [Repository Manager](repos
 
 ---
 
-Weiter: [Store](../programme/store/README.md) | [Icon Manager](../programme/icons/README.md) | [Repository Manager](repository-manager.md) | [Rechte-Kaskade](rechte.md) | [Themes](themes.md) | [BotManager](../programme/botmanager/README.md) | [Container App Manager](../programme/container_app/README.md)
+Weiter: [Store](../programme/store/README.md) | [Icon Manager](../programme/icons/README.md) | [Repository Manager](repository-manager.md) | [Rechte-Kaskade](rechte.md) | [Themes](themes.md) | [BotManager](../programme/botmanager/README.md) | [Container Manager](../programme/container/README.md)

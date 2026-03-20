@@ -8,7 +8,7 @@
 
 Der Store ist der **universelle Paketmanager** von FreeSynergy. Vergleichbar mit dnf/apt, aber flexibler. Er verwaltet ALLES: Programme, Services, Themes, Sprachen, Widgets, Bots, Tasks.
 
-Gleichzeitig ist er ein **Wissensspeicher** der allen Programmen hilft — der Container App Manager fragt "Kennst du diesen Service?" und der Store liefert Metadaten, Rollen, Variablen-Typen.
+Gleichzeitig ist er ein **Wissensspeicher** der allen Programmen hilft — der Container Manager fragt "Kennst du diesen Service?" und der Store liefert Metadaten, Rollen, Variablen-Typen.
 
 ## Eigenständigkeit
 
@@ -20,7 +20,7 @@ Der Store funktioniert **ohne jedes andere FreeSynergy-Programm**. Er ist ein Gi
 FreeSynergy.Init (minimales Binary)
   → Klont den Store via gitoxide
     → Store installiert ALLES:
-       Node, Desktop, Container App Manager, Services, Themes, Sprachen, ...
+       Node, Desktop, Container Manager, Services, Themes, Sprachen, ...
 ```
 
 Siehe [Init](../init/README.md).
@@ -33,7 +33,7 @@ Pakete haben eine **Kategorie** (Store-Tab) und einen spezifischen **Typ**:
 
 | Kategorie | Typ | Inhalt | Beispiele |
 |---|---|---|---|
-| `server` | `container_app` | Container-Service (Podman + Config) | Kanidm, Forgejo, Outline |
+| `server` | `container` | Container-Service (Podman + Config) | Kanidm, Forgejo, Outline |
 | `server` | `bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
 | `app` | `app` | FreeSynergy-Binary (Cross-Platform) | Desktop, Init |
 | `desktop` | `widget` | Desktop-Widget | Uhr, System-Info, Nachrichten |
@@ -177,7 +177,7 @@ homepage = "https://kanidm.com"
 source = "https://github.com/FreeSynergy/Store"
 ```
 
-**Jedes Paket ist ein Objekt** mit Icon und Metadaten. Überall wo ein Paket angezeigt wird (Store, Desktop, Container App Manager, Settings) sieht man Icon, Name, Version, Tags.
+**Jedes Paket ist ein Objekt** mit Icon und Metadaten. Überall wo ein Paket angezeigt wird (Store, Desktop, Container Manager, Settings) sieht man Icon, Name, Version, Tags.
 
 Jedes Paket MUSS ein Icon haben. Kein Icon → generisches Icon für den Typ.
 
@@ -272,7 +272,7 @@ GET /api/store/know/compatible?role=iam
 → Welche installierten Services haben diese Rolle?
 ```
 
-Der [Container App Manager](../container_app/README.md) nutzt das bei der YAML-Analyse: "Kennst du diesen Service?" → Store ergänzt Daten, überschreibt NICHT.
+Der [Container Manager](../container/README.md) nutzt das bei der YAML-Analyse: "Kennst du diesen Service?" → Store ergänzt Daten, überschreibt NICHT.
 
 ---
 
@@ -576,7 +576,7 @@ Store/
 | Bereich | Crate | Details |
 |---|---|---|
 | Ressource-Typen + Meta | `fsn-types` (`resources/meta.rs`) | `ResourceType` (16 Varianten), `ResourceMeta`, `ValidationStatus` |
-| Ressource-Structs | `fsn-types` (`resources/*.rs`) | `AppResource`, `ContainerAppResource`, `WidgetResource`, `BotResource`, `BridgeResource`, `BundleResource`, Theme-Ressourcen |
+| Ressource-Structs | `fsn-types` (`resources/*.rs`) | `AppResource`, `ContainerResource`, `WidgetResource`, `BotResource`, `BridgeResource`, `BundleResource`, Theme-Ressourcen |
 | Release-Channels | `fsn-pkg` (`channel.rs`) | `ReleaseChannel`: Stable/Testing/Nightly |
 | Versionierung + Rollback | `fsn-pkg` (`versioning.rs`) | `VersionManager`, `VersionRecord`, `RollbackError` |
 | Paket-Signierung | `fsn-crypto` (`signing.rs`, feature: `signing`) | `FsnSigningKey`, `FsnVerifyingKey`, `PackageSignature` — ed25519-dalek v2, SHA-256 |

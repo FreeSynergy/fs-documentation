@@ -72,7 +72,7 @@ Der Icon-Picker ist eine wiederverwendbare Komponente. Jedes Programm das Icons 
 
 - **Theme Manager** — Icons der einzelnen Programme ändern
 - **Store / Package-Editor** — Icon für ein Paket auswählen
-- **Container App Manager** — Icon eines Services anpassen
+- **Container Manager** — Icon eines Services anpassen
 - **Desktop** — Widget-Icons, Shortcut-Icons
 - **Überall sonst** — wo der Nutzer ein Icon wählen soll
 

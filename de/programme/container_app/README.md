@@ -1,6 +1,6 @@
-# Container App Manager — Der Container-App-Verwalter
+# Container Manager — Der Container-App-Verwalter
 
-> **Hinweis:** Früher als zwei getrennte Programme bekannt (Container App Manager + Builder). Jetzt vereint in einem Programm mit den Bereichen: Installed, Install New, Build & Publish, Logs.
+> **Hinweis:** Früher als zwei getrennte Programme bekannt (Container Manager + Builder). Jetzt vereint in einem Programm mit den Bereichen: Installed, Install New, Build & Publish, Logs.
 
 > Lebt in **FreeSynergy.Desktop** (`crates/fsd-conductor/`). Früher in FreeSynergy.Managers.
 
@@ -8,13 +8,13 @@
 
 ---
 
-## Was der Container App Manager macht
+## Was der Container Manager macht
 
-Der Container App Manager nimmt eine YAML-Datei (Docker-Compose, Podman, oder eigenes Format) und verwandelt sie in einen laufenden, konfigurierten Service.
+Der Container Manager nimmt eine YAML-Datei (Docker-Compose, Podman, oder eigenes Format) und verwandelt sie in einen laufenden, konfigurierten Service.
 
 ## Eigenständigkeit
 
-Der Container App Manager läuft **komplett alleine** — ohne Node, ohne Store, ohne Internet. Man gibt ihm eine YAML-Datei und er:
+Der Container Manager läuft **komplett alleine** — ohne Node, ohne Store, ohne Internet. Man gibt ihm eine YAML-Datei und er:
 1. Parst sie
 2. Analysiert sie
 3. Generiert Quadlet-Dateien
@@ -46,7 +46,7 @@ Eingabe: docker-compose.yml oder Podman-YAML
 
 ### Schritt 3: Variablen-Analyse
 
-Jede Environment-Variable wird analysiert. Der Container App Manager erkennt Typen anhand von **Schlüsselwörtern im Variablennamen**:
+Jede Environment-Variable wird analysiert. Der Container Manager erkennt Typen anhand von **Schlüsselwörtern im Variablennamen**:
 
 | Muster im Namen | Erkannter Basis-Typ | Erkannte Rolle |
 |---|---|---|
@@ -76,7 +76,7 @@ Jede Environment-Variable wird analysiert. Der Container App Manager erkennt Typ
 | `LDAP` | `iam` | `iam.ldap` |
 | `S3`, `MINIO`, `STORAGE` | `storage` | `storage.s3` |
 
-**Wichtig:** Die Erkennung ist eine **Wahrscheinlichkeits-Einschätzung**, keine Garantie. Der Container App Manager gibt Konfidenz an:
+**Wichtig:** Die Erkennung ist eine **Wahrscheinlichkeits-Einschätzung**, keine Garantie. Der Container Manager gibt Konfidenz an:
 
 ```
 SMTP_HOST → hostname, Rolle: smtp.host (Konfidenz: 95%)
@@ -94,9 +94,9 @@ Aus der analysierten YAML werden generiert:
 ### Schritt 5: Store-Integration (optional)
 
 Wenn der Store erreichbar ist:
-1. Container App Manager fragt: "Gibt es `kanidm/server` im Store?"
+1. Container Manager fragt: "Gibt es `kanidm/server` im Store?"
 2. Store antwortet: "Ja, hier sind bekannte Variablen, Rollen, Beschreibungen, Icon"
-3. Container App Manager **ergänzt** seine Analyse — überschreibt NICHTS, füllt nur Lücken
+3. Container Manager **ergänzt** seine Analyse — überschreibt NICHTS, füllt nur Lücken
 4. Bei Konflikten: Fragt den Benutzer
 
 ### Schritt 6: Speicherung + Inventory-Eintrag
@@ -121,11 +121,11 @@ Der Paketname = Hauptservice-Name aus der YAML.
 | CLI | `fsn container-app status kanidm` |
 | CLI | `fsn container-app start kanidm` / `stop` / `restart` |
 | API | `POST /api/container-app/analyze` mit YAML-Body |
-| UI | Container App Manager-View im [Desktop](../desktop/README.md) |
+| UI | Container Manager-View im [Desktop](../desktop/README.md) |
 
 ## Podman: KEIN Socket
 
-Der Container App Manager nutzt **keinen Podman-Socket**. Container werden ausschließlich verwaltet über:
+Der Container Manager nutzt **keinen Podman-Socket**. Container werden ausschließlich verwaltet über:
 - **Quadlet-Dateien** (`.container` → systemd-Generator)
 - **systemctl** (start, stop, status, restart)
 - **journalctl** (Logs)
@@ -156,18 +156,18 @@ https://github.com/FreeSynergy/Desktop (Crate: `crates/fsd-conductor/`)
 | `fsn-store` | Store-Client (optional) |
 | `fsn-error` | Fehlerbehandlung + Auto-Repair |
 
-## Beziehung Store / Inventory / Container App Manager
+## Beziehung Store / Inventory / Container Manager
 
 ```
 Store (Was gibt es?)
-  → Container App Manager (Wie wird es installiert/betrieben?)
+  → Container Manager (Wie wird es installiert/betrieben?)
     → Inventory (Was ist installiert + Status?)
       → UI (Zeigt nur Inventory-Inhalte)
 ```
 
 - Store: Liefert Metadaten, Rollen, Variablen, Compose-YAML
-- Container App Manager: Analysiert, deployt, konfiguriert, überwacht
-- Inventory: Empfängt den fertigen Zustand — wird vom Container App Manager geschrieben
+- Container Manager: Analysiert, deployt, konfiguriert, überwacht
+- Inventory: Empfängt den fertigen Zustand — wird vom Container Manager geschrieben
 - UI: Zeigt ausschließlich Inventory-Inhalte. Grüner Punkt = läuft, Ausgegraut = gestoppt, Roter Punkt = Fehler
 
 ---

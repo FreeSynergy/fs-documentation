@@ -121,7 +121,7 @@ In FreeSynergy erscheinen alle als eine einzige Bot-Instanz.
 `fsn-channel` übersetzt Aktionen intern für jeden Messenger.
 
 **Zugangsdaten** werden nie im Klartext gespeichert — sie landen im Secrets-Store
-(dieselbe Schicht wie bei Container Apps). Bot-Instanzen kriegen nur Referenzen.
+(dieselbe Schicht wie bei Containers). Bot-Instanzen kriegen nur Referenzen.
 
 ---
 
