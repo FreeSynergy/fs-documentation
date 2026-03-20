@@ -222,59 +222,132 @@ M4. [ ] Föderale Suche (Ebene 3-4, nur mit search-Recht)
 N1. [ ] fsn-channel Crate (FreeSynergy.Lib)
     - Channel-Trait: create_room, invite, kick, send, delete_room, get_members
     - Inventory-Integration: services_with_role("chat") → aktive Channels
-    - TelegramChannel (grammers, UserBot/MTProto)
-    - MatrixChannel (matrix-sdk)
-    - DiscordChannel (serenity + poise)
-    - RocketChatChannel (reqwest, REST + WebSocket)
-    - Alle Implementierungen hinter dem Channel-Trait, Control-Bot-Code ändert sich nie
+    - Jeder Adapter implementiert den Trait, Bot-Code ändert sich nie
+    - Adapter (alle hinter Channel-Trait):
+        TelegramChannel   (grammers, UserBot/MTProto — für volle Kontrolle)
+        MatrixChannel     (matrix-sdk)
+        DiscordChannel    (serenity + poise)
+        RocketChatChannel (reqwest, REST + WebSocket)
+        MattermostChannel (reqwest, REST + WebSocket)
+        XmppChannel       (xmpp-rs)
+        ZulipChannel      (reqwest)
+        RevoltChannel     (revolt-rs)
+        NextcloudTalkChannel (reqwest, auto-aktiv wenn Nextcloud installiert)
+        IrcChannel        (irc)
+        SlackChannel      (slack-morphism)
+        TeamsChannel      (reqwest, Bot Framework)
+        ViberChannel      (reqwest)
+        LineChannel       (reqwest)
+        WhatsAppChannel   (reqwest, Meta Business API, eingeschränkt)
+        SignalChannel     (signal-cli, inoffiziell, fragil)
+        ThreemaChannel    (reqwest, Kosten pro Nachricht)
+        WireChannel       (Wire Bot SDK)
+        DiscourseChannel  (reqwest, Foren)
+        LemmyChannel      (reqwest, ActivityPub)
+        MastodonChannel   (megalodon-rs)
 
-N2. [ ] Control-Bot-Kern (FreeSynergy.Node oder eigenes Repo)
-    - Control-Bot-Runtime: startet, hält Verbindung zum Messenger, empfängt Commands
-    - Module-Loader: lädt bot-Pakete aus dem Inventory, initialisiert Module
-    - Command-Dispatcher: /command → passendes Modul, Rechte-Check
+N2. [ ] Messenger-Adapter als Store-Pakete (type = "messenger-adapter")
+    - Jeder Adapter ist ein eigenes Paket (adapter-telegram, adapter-matrix, ...)
+    - Inventory: services_with_role("chat") liefert aktive Adapter
+    - Nur installierte Adapter erscheinen in der Bot-Konfiguration
+    - Store-Verzeichnis: shared/messenger-adapters/
+
+N3. [ ] BotCommand-Trait (FreeSynergy.Lib)
+    - Einheitliche Schnittstelle für alle Bot-Module und Bot-Typen:
+        fn name() → &str
+        fn description() → &str
+        fn required_right() → Right
+        fn execute(ctx: CommandContext) → BotResponse
+    - Bot sammelt Befehle aus allen aktiven Modulen automatisch
+    - /help generiert sich selbst aus registrierten Befehlen
+
+N4. [ ] Bot-Kern (FreeSynergy.Managers, bots/)
+    - Jede Bot-Instanz läuft als eigener Prozess (eigenes Binary)
+    - Runtime: startet, hält Verbindungen zu allen konfigurierten Messengern
+    - Module-Loader: lädt bot-Pakete aus Inventory, initialisiert Module
+    - Command-Dispatcher: /command → passendes Modul, Rechte-Check (FSN, nicht Messenger)
     - Trigger-Engine: Bus-Events → Modul-Handler aufrufen
-    - Bot-Registry in fsn-inventory.db (welcher Bot auf welcher Plattform, welche Module aktiv)
-    - Bus-Client: publiziert Events, empfängt Events (bot.*, chat.*)
-    - Container App Manager konfiguriert Tokens + Gruppen → Control-Bot liest Konfiguration
+    - Bot-Registry in fsn-botmanager.db
+    - Bus-Client: publiziert Events, empfängt Events (bot.*, chat.*, calendar.*)
+    - Secrets: Token-Referenzen aus Secrets-Store, nie Klartext
+    - Steuerung drei Ebenen:
+        FSN-Ebene:        private / group / public
+        Messenger-Ebene:  everyone / admins / nobody
+        Control-Ebene:    optional — nur Control Bot steuert
+    - Rechte pro Funktion pro Gruppe konfigurierbar
+    - Audit-Log: jede Aktion (User/System, Aktion, Ziel, Ergebnis, UTC-Timestamp)
+    - Mitglieder-Interaktion: Menüs / Inline-Tastaturen / DMs je nach Messenger
 
-N3. [ ] Broadcast-Modul (bot-Paket im Store)
+N5. [ ] Control Bot (bot-control Paket im Store)
+    - Kann andere Bot-Instanzen erstellen
+    - Vererbung: gibt Messenger-Accounts + Gruppen + Einstellungen an Kind-Bots weiter
+    - Kind-Bots haben keine eigenen Tokens — kommunizieren über Control Bot
+    - Kind-Bots arbeiten autonom weiter wenn Control Bot offline (Bus-Events puffern)
+    - Control Bot kann auf Logs aller Kind-Bots zugreifen
+
+N6. [ ] Broadcast-Modul (bot-broadcast Paket im Store)
     - /subscribe <topic> Command → Subscription in Bus registrieren
     - /unsubscribe <topic> Command
     - /subscriptions Command → Liste aktiver Subscriptions
     - Bus-Listener: empfängt subscribte Events → sendet in Gruppe
     - Subscription-Storage: SQLite (group_id, topic, messenger)
-    - manifest.toml: type = "bot", parent = "control-bot", triggers = ["*"]
+    - Standalone-fähig (kein Control Bot nötig)
 
-N4. [ ] Gatekeeper-Modul (bot-Paket im Store)
+N7. [ ] Gatekeeper-Modul (bot-gatekeeper Paket im Store)
     - Trigger: chat.join_request → publiziert Event an BotManager
     - /verify <user_id> Command → IAM-Check via Bus (Rolle: iam)
     - /approve <request_id> + /deny <request_id> Commands
     - Join-Request-Queue: SQLite (request_id, user, group, status, iam_result)
-    - IAM-Integration: fragt via Bus-Event (nicht direkt) → Bridge → Kanidm
-    - manifest.toml: required_roles = [{ roles = ["iam"], mode = "ANY" }]
+    - IAM-Integration: via Bus-Event (nicht direkt) → Bridge → Kanidm
+    - required_roles = [{ roles = ["iam"], mode = "ANY" }]
+    - Standalone-fähig
 
-N5. [ ] BotManager-Programm (eigenständig, Repo: FreeSynergy/BotManager)
-    - Bot-Status-View: alle Bots + Status (online/offline/error), aktive Module
-    - Broadcast-View: Empfänger wählen, Nachricht eingeben, senden → bus-Event
-    - Subscriptions-View: welche Gruppe abonniert welche Topics, hinzufügen/entfernen
-    - Gatekeeper-View: offene Beitrittsanfragen, IAM-Status, Genehmigen/Ablehnen
-    - Module-View: installierte Module je Bot, aktiv/inaktiv, Link zum Store
+N8. [ ] Calendar-Modul (bot-calendar Paket im Store)
+    - Bus-Listener: calendar.event.upcoming → postet Erinnerung in Gruppe
+    - /termine Command → zeigt kommende Termine aus Desktop-Calendar
+    - DM-Erinnerungen an Teilnehmer (wenn Rechte vorhanden)
+    - required_roles = [{ roles = ["tasks"], mode = "ANY" }]
+    - Standalone-fähig
+
+N9. [ ] Gruppen-Verwaltung + Filter (im Bot-Programm und BotManager)
+    - Gruppen-Import beim Verbinden eines Messenger-Accounts (bis 500 Gruppen)
+    - Filter: Größe / Aktivität / Name / Messenger / aktive Module / Bot-Status
+    - Manuelle Collections (keine Automatik)
+    - Eine Gruppe kann in mehreren Collections sein
+    - Bulk-Aktionen auf gefilterte Gruppen oder Collections
+
+N10. [ ] Room-Sync-Modul (bot-room-sync Paket im Store)
+    - Räume/Gruppen synchronisieren (gleicher Messenger: vollständig)
+    - Nachrichten-Sync cross-Messenger (via fsn-channel)
+    - Mitglieder-Sync cross-Messenger nur wenn User in IAM mit allen Konten
+    - Standalone-fähig
+
+N11. [ ] BotManager-Programm (FreeSynergy.Managers, bots/)
+    - Dashboard: alle Bot-Instanzen mit Status
+    - Bot-Instanzen erstellen (Meta → Bot-Typ → Messenger → Steuerung)
+    - Fertige Instanz erscheint als eigenes Programm im Desktop (Icon, Name, Widget)
+    - Broadcast-View, Subscriptions-View, Gatekeeper-View, Module-View
+    - Log-View aggregiert (alle Bots)
     - CLI: fsn bot status / broadcast / gatekeeper list / gatekeeper approve <id>
-    - REST-API: /api/bot/* (status, broadcast, gatekeeper, subscriptions, modules)
     - Bus-Client: publiziert bot.*, empfängt chat.join_request + bot.status.response
-    - Rechte-Check: execute für Broadcast/Gatekeeper, write für Subscriptions
 
-N6. [ ] Desktop-Integration
+N12. [ ] Desktop-Integration
     - BotManager als eingebettete App im Desktop (app-botmanager)
+    - Jede Bot-Instanz als eigenes Icon im Launcher (app-bot-<name>)
+    - Optionales Widget je Instanz (Status, letzte Aktivität, Schnellaktionen)
     - Sidebar-Tab 🤖 Bots → öffnet BotManager
-    - BotManager als eigenständiges Fenster startbar (wie Browser, Builder)
 
-N7. [ ] Store-Integration (bot-Pakete)
-    - BotResource vollständig in fsn-types (channels, commands, triggers, tokens_required)
-    - Store-Verzeichnis: shared/bots/ mit Manifest-Beispielen
-    - Store-CLI: fsn store install bot-broadcast / bot-gatekeeper
-    - Store-UI: Bot-Pakete browsebar mit type = "bot" Filter
-    - required_roles → Modul wird inaktiv wenn Rolle fehlt, aktiv wenn Rolle verfügbar
+N13. [ ] Store-Integration (bot- und adapter-Pakete)
+    - BotResource + MessengerAdapterResource in fsn-types
+    - Store-Verzeichnis: shared/bots/ + shared/messenger-adapters/
+    - Store-UI: Bot-Pakete + Adapter-Pakete browsebar (type-Filter)
+    - required_roles → Modul inaktiv wenn Rolle fehlt, auto-aktiv wenn Rolle verfügbar
+    - bundle-bots-all: installiert alle bot-* Pakete
+
+N14. [ ] Updates (manuell, Automatismus folgt später)
+    - Updates über Store manuell einspielen (wie alle anderen Pakete)
+    - TODO (spätere Phase): Update-Benachrichtigung, One-Click-Update, Rollback,
+      Versions-Kompatibilitäts-Check für laufende Instanzen
 ```
 
 ## Phase O: Tasks
