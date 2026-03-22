@@ -284,6 +284,45 @@ OOP6. [x] Settings Manager (fs-desktop/crates/fs-settings/)
     - SettingsApp bekommt optionale packages + on_package_save Props
 ```
 
+## Phase U: Installations-Pfade & Paket-System ✅
+
+```
+U1. [x] InstallPaths — konfigurierbare Basis-Verzeichnisse für alle 17 ResourceTypes
+    - InstallPaths struct (system_base, config_base, font_base, icon_base, cursor_base)
+    - dir_for(rt, name) / config_file_for(rt, name) / install_path_for(rt, name)
+    - Persistenz via ~/.config/fsn/install-paths.toml (TOML serde)
+    - PathMigrator: bewegt Dateien per rename() + copy+delete Fallback (cross-filesystem)
+    - 19 Unit-Tests für alle 17 ResourceType-Varianten + Migration
+
+U2. [x] Installer Trait + InstallerRegistry + 9 Implementierungen (Strategy Pattern)
+    - Installer Trait: check_prerequisites(), install() → InstallReport
+    - AppInstaller, BotInstaller, WidgetInstaller, ThemeInstaller, FontInstaller,
+      IconInstaller, BridgeInstaller, BundleInstaller, ContainerInstaller
+    - InstallerRegistry: stateless, mappt ResourceType → Box<dyn Installer>
+    - Chain of Responsibility: prereq → fetch → install → post-hooks → inventory
+
+U3. [x] Uninstaller Trait (gleiche Structs wie Installer)
+    - Uninstaller Trait: uninstall(name, paths, opts) → Result<()>
+    - UninstallOptions { keep_data, dry_run }
+    - Symmetrische Implementierungen zu Installer (gleiche Structs, beide Traits)
+
+U4. [x] Updater (Template Method Pattern)
+    - Updater { registry, paths }: update(meta, source, current_version, channel, dry_run)
+    - Ablauf: Version-Check → prereq → uninstall keep-data → install neu → verify
+    - BatchUpdateOutcome { updated, skipped, failures } + print_summary()
+
+U5. [x] CLI vollständig
+    - fsn install <name>          → Store-Fetch + InstallerRegistry + DB-Record
+    - fsn install --from <path>   → lokales Paket, ResourceType via resource-type.txt
+    - fsn install --list          → alle installierten Pakete aus DB
+    - fsn install --check <name>  → nur Prerequisite-Check, kein Install
+    - fsn install --dry-run       → zeigt was passieren würde
+    - fsn remove <name> [--keep-data] → UninstallerRegistry + DB deaktivieren
+    - fsn update <name>           → Updater::update + DB-Record neue Version
+    - fsn update --all            → alle aktiven Pakete updaten
+    - fsn config install-root show/set/migrate → Basis-Pfade verwalten + Dateien migrieren
+```
+
 ## Phase M: Search
 
 ```
@@ -593,6 +632,7 @@ Q8. [ ] Alle Stubs/toten Code entfernen
 ✅ Erledigt: N1   (fsn-channel Crate — Channel-Trait + 21 Adapter)
 ✅ Erledigt: N2   (MessengerAdapterResource — Store-Paket-Typ)
 ✅ Erledigt: N9–N14 (Gruppen-Verwaltung, Room-Sync, BotManager-CLI, Desktop/Store-Integration, Updates)
+✅ Erledigt: U    (Installations-Pfade & Paket-System — InstallPaths, Installer/Uninstaller Traits, InstallerRegistry, Updater, CLI vollständig)
 
 Prio 1:  M1-M4      Search
 Prio 2:  —          Bots vollständig erledigt (N1–N14)
