@@ -38,7 +38,8 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 
 ### Konzepte
 - [Ressourcen-System](konzepte/ressourcen.md) — Alles ist eine Ressource (Structs, Typen, Felder)
-- [Rollen-System](konzepte/rollen.md) — Services deklarieren was sie können
+- [Capabilities](konzepte/capabilities.md) — Pakete deklarieren was sie bieten (provides, requires, Bus-Messages, Providers)
+- [Rollen-System](konzepte/rollen.md) — Services deklarieren was sie können (Rollen-Hierarchie)
 - [Bridges](konzepte/bridges.md) — Standardisierte Rollen-APIs
 - [Inventory](konzepte/inventory.md) — Die lokale Wahrheit: **Store = möglich | Inventory = installiert | Managers = das Wie**
 - [Rechte-Kaskade](konzepte/rechte.md) — Rechte können nur abnehmen

@@ -61,49 +61,62 @@ Details zu Typen und Manifest-Felder: [Pakete](../../konzepte/pakete.md)
 
 ## Bundles (Meta-Pakete)
 
-Wie bei dnf group — vordefinierte Sammlungen beliebiger Pakete (Apps, Widgets, Themes, …):
+Bundles sind mehr als dnf groups — sie sind **rekursiv komponierbar** und können Pakete, andere Bundles und Capabilities referenzieren. Damit werden sie zu einer Art "Distribution" für FreeSynergy.
 
-```toml
-[package]
-id = "server-minimal"
-name = "Server Minimal"
-type = "bundle"
-description = "Minimale Server-Installation"
-tags = ["server", "minimal", "node", "container-app", "proxy"]
+    [package]
+    id   = "server"
+    name = "Server"
+    type = "bundle"
+    tags = ["server", "node", "iam", "proxy"]
 
-[bundle]
-packages = [
-    "node",
-    "container-app",
-    "zentinel",
-    "kanidm",
-]
-optional = [
-    "forgejo",
-    "outline",
-    "stalwart",
-]
-```
+    # Konkrete Pakete (mit optionalem Version-Pin)
+    [[bundle.packages]]
+    id      = "fs-node"
+    version = ">=0.5.0"
 
-```toml
-[package]
-id = "desktop-full"
-name = "Desktop Vollständig"
-type = "bundle"
-tags = ["desktop", "full", "themes", "widgets"]
+    [[bundle.packages]]
+    id      = "zentinel"
+    version = "1.2.3"
+    pin     = true      # darf nicht gelöscht werden solange Bundle aktiv
 
-[bundle]
-packages = [
-    "desktop",
-    "theme-midnight-blue",
-    "theme-cloud-white",
-    "theme-nordic",
-    "lang-en",
-    "lang-de",
-    "widget-clock",
-    "widget-sysinfo",
-]
-```
+    # Abstrakte Capabilities (welches Paket das erfüllt, ist egal)
+    [[bundle.capabilities]]
+    name = "iam"
+
+    [[bundle.capabilities]]
+    name = "database.postgres"
+
+    # Andere Bundles (rekursiv!)
+    [[bundle.bundles]]
+    name = "management-tools"
+
+    [[bundle.bundles]]
+    name = "monitoring"
+
+    # Optional
+    [[bundle.optional]]
+    id = "forgejo"
+
+Ein Starter-Bundle für Anfänger referenziert einfach andere Bundles:
+
+    [package]
+    id   = "starter"
+    name = "Starter"
+    type = "bundle"
+
+    [[bundle.bundles]]
+    name = "server"
+
+    [[bundle.bundles]]
+    name = "desktop-full"
+
+    [[bundle.bundles]]
+    name = "essentials"
+
+**Version-Pins:** `pin = true` blockiert das Löschen der gepinnten Version.
+Erst wenn kein aktives Bundle mehr pinnt, kann sie entfernt werden.
+
+Details: [Capabilities](../../konzepte/capabilities.md)
 
 ---
 
@@ -657,21 +670,27 @@ Features die noch nicht implementiert sind, aber zum Store-Konzept gehören:
 
 ## Verzeichnisstruktur
 
-```
-Store/
-├── shared/          ← Für ALLE Programme
-│   ├── i18n/
-│   ├── themes/
-│   ├── widgets/
-│   ├── bots/
-│   └── tasks/
-├── node/            ← Für Node
-│   ├── modules/
-│   └── bridges/
-├── desktop/         ← Für Desktop
-├── bundles/         ← Meta-Pakete (Bundles)
-└── catalog.toml     ← Maschinenlesbarer Gesamt-Index
-```
+    fs-store/
+    ├── init/                  ← Bootstrap-Binary + Quelltext (Download-Eintrag)
+    ├── packages/
+    │   ├── apps/
+    │   │   ├── node/          ← Native Apps für den Node (kanidm, tuwunel, stalwart, zentinel, mistral)
+    │   │   ├── desktop/       ← Desktop-Apps (fs-desktop)
+    │   │   └── browser/       ← Browser-Apps (fs-browser, standalone)
+    │   ├── containers/        ← Container-Definitionen (forgejo, outline, postgres, dragonfly, …)
+    │   ├── widgets/           ← Desktop-Widgets
+    │   ├── themes/            ← UI-Themes (Icon-Sets, Farb-Schemata, Fonts, …)
+    │   ├── icons/             ← Icon-Sets (kuratiert, mit Metadata)
+    │   ├── bots/              ← Bot-Definitionen
+    │   └── i18n/              ← Super-Package (koordiniert via Store)
+    ├── bundles/               ← Rekursive Bundle-Definitionen
+    └── catalog.toml           ← Maschinenlesbarer Gesamt-Index
+
+**Warum `packages/apps/node|desktop|browser/`:**
+Apps werden nach ihrer primären Laufzeitumgebung getrennt. Das ist kein Ausschluss — ein App kann auf mehreren Plattformen laufen — sondern beschreibt wo es primär betrieben wird.
+
+**Warum keine `shared/`-Ebene mehr:**
+Widgets, Themes, Icons, Bots und i18n sind Pakete wie alle anderen. Sie gehören in `packages/`. "Shared" ist keine Kategorie — es ist ein Merkmal der Capability (`[provides] capabilities = ["widget"]`).
 
 ---
 
