@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  link-check:
+    name: Markdown link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check relative links in Markdown files
+        run: |
+          BROKEN=0
+          while IFS= read -r -d '' file; do
+            dir=$(dirname "$file")
+            while IFS= read -r link; do
+              path="${link%%#*}"
+              [ -z "$path" ] && continue
+              target="$dir/$path"
+              if [ ! -e "$target" ]; then
+                echo "Broken link in $file: $link"
+                BROKEN=1
+              fi
+            done < <(grep -oP '\]\(\K[^)]+' "$file" | grep -v '^http' | grep -v '^mailto' | grep -v '^#' || true)
+          done < <(find . -name '*.md' -print0)
+
+          [ "$BROKEN" -ne 0 ] && { echo "Fix broken links."; exit 1; }
+          echo "All links OK."
+
+  index-check:
+    name: INDEX.md completeness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Warn about files missing from INDEX.md
+        run: |
+          MISSING=0
+          while IFS= read -r -d '' f; do
+            fname=$(basename "$f")
+            if ! grep -qF "$fname" de/INDEX.md 2>/dev/null; then
+              echo "Warning: $f not referenced in INDEX.md"
+              MISSING=1
+            fi
+          done < <(find de -name '*.md' ! -name 'INDEX.md' -print0)
+
+          [ "$MISSING" -ne 0 ] && echo "Update INDEX.md to reference all files."
+          # Warning only — does not fail the build
+          exit 0
+
+  gitignore-check:
+    name: .gitignore present
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check .gitignore exists
+        run: |
+          [ -f .gitignore ] || { echo "ERROR: .gitignore missing"; exit 1; }
+          echo ".gitignore present."

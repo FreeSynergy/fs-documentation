@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+echo -e "${YELLOW}[FS] Pre-commit checks (documentation)...${NC}"
+
+fail() { echo -e "${RED}ERROR: $1${NC}"; exit 1; }
+
+# Check for broken relative links in changed Markdown files
+echo "  [1/2] Relative link check..."
+CHANGED_MD=$(git diff --cached --name-only | grep '\.md$' || true)
+
+BROKEN=0
+for file in $CHANGED_MD; do
+  [ -f "$file" ] || continue
+  dir=$(dirname "$file")
+  # Extract relative links (not http/https/mailto)
+  links=$(grep -oP '\]\(\K[^)]+' "$file" | grep -v '^http' | grep -v '^mailto' | grep -v '^#' || true)
+  for link in $links; do
+    # Strip anchor
+    path="${link%%#*}"
+    [ -z "$path" ] && continue
+    target="$dir/$path"
+    if [ ! -e "$target" ]; then
+      echo -e "  ${RED}Broken link in $file: $link${NC}"
+      BROKEN=1
+    fi
+  done
+done
+
+[ "$BROKEN" -ne 0 ] && fail "Fix broken links before committing."
+
+# Check INDEX.md lists all .md files (warn only)
+echo "  [2/2] INDEX.md completeness..."
+ALL_MD=$(find de -name '*.md' ! -name 'INDEX.md' 2>/dev/null | sort)
+MISSING_IN_INDEX=0
+for f in $ALL_MD; do
+  fname=$(basename "$f")
+  if ! grep -qF "$fname" de/INDEX.md 2>/dev/null; then
+    echo -e "  ${YELLOW}Warning: $f not referenced in INDEX.md${NC}"
+    MISSING_IN_INDEX=1
+  fi
+done
+[ "$MISSING_IN_INDEX" -ne 0 ] && echo -e "${YELLOW}  Update INDEX.md to include all files.${NC}"
+
+echo -e "${GREEN}[FS] All checks passed.${NC}"
