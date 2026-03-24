@@ -197,7 +197,7 @@ tags = ["iam", "oidc", "scim", "mfa", "webauthn", "identity", "rust"]
 author = "Kanidm Project"
 license = "MPL-2.0"
 homepage = "https://kanidm.com"
-source = "https://github.com/FreeSynergy/Store"
+source = "https://github.com/FreeSynergy/fs-store"
 ```
 
 **Jedes Paket ist ein Objekt** mit Icon und Metadaten. Überall wo ein Paket angezeigt wird (Store, Desktop, Container Manager, Settings) sieht man Icon, Name, Version, Tags.
@@ -590,12 +590,12 @@ wgui = false
 tui  = false
 
 [distribution]
-linux-x86_64   = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-linux.tar.gz"
-linux-aarch64  = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-aarch64-linux.tar.gz"
-macos-x86_64   = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-macos.tar.gz"
-macos-aarch64  = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-aarch64-macos.tar.gz"
-windows-x86_64 = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-windows.zip"
-source         = "https://github.com/FreeSynergy/Node"
+linux-x86_64   = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-x86_64-linux.tar.gz"
+linux-aarch64  = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-aarch64-linux.tar.gz"
+macos-x86_64   = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-x86_64-macos.tar.gz"
+macos-aarch64  = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-aarch64-macos.tar.gz"
+windows-x86_64 = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-x86_64-windows.zip"
+source         = "https://github.com/FreeSynergy/fs-node"
 ```
 
 ### Installationsfluss
@@ -628,24 +628,36 @@ Source-Build (Fallback):
 id      = "node"
 type    = "app"
 version = "0.1.0"
-repo    = "https://github.com/FreeSynergy/Node"
+repo    = "https://github.com/FreeSynergy/fs-node"
 
 [packages.distribution]
-linux-x86_64  = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-x86_64-linux.tar.gz"
-linux-aarch64 = "https://github.com/FreeSynergy/Node/releases/download/v{version}/fsn-node-aarch64-linux.tar.gz"
+linux-x86_64  = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-x86_64-linux.tar.gz"
+linux-aarch64 = "https://github.com/FreeSynergy/fs-node/releases/download/v{version}/fsn-node-aarch64-linux.tar.gz"
 # ... weitere Plattformen
 ```
 
-**`node/catalog.toml`** — Deployment-Module (Container-Apps, i18n):
+**Namespace-Catalogs** — Je Deployment-Namespace eine eigene `catalog.toml`:
+
+```
+fs-store/
+├── catalog.toml          ← Root: App-Pakete (Binaries) mit GitHub Release-URLs
+├── node/catalog.toml     ← Server-Pakete: native Binaries + Container (kanidm, tuwunel, …)
+├── shared/catalog.toml   ← Plattformübergreifend: Themes, Widgets, Sprachpakete
+├── apps/catalog.toml     ← Standalone-Apps: fs-node, fs-desktop, fs-browser, mistral
+└── desktop/catalog.toml  ← Desktop-Manager-Pakete: fs-managers
+```
+
+Beispiel `node/catalog.toml`:
 
 ```toml
 [[packages]]
-id          = "iam/kanidm"
+id          = "kanidm"
 name        = "Kanidm"
-category    = "deploy.iam"
-version     = "0.1.0"
-icon        = "shared/icons/kanidm.svg"
-path        = "node/modules/iam/kanidm"
+kind        = "native"
+category    = "iam"
+version     = "1.5.0"
+icon        = "packages/apps/node/kanidm/icon.svg"
+path        = "packages/apps/node/kanidm"
 ```
 
 Binaries werden **nie** im Store-Repo gespeichert. Jedes Programm hat ein eigenes GitHub-Repo und veröffentlicht Binaries über GitHub Releases wenn ein Git-Tag gepusht wird (`git tag v0.5.0 && git push --tags`).
@@ -671,26 +683,27 @@ Features die noch nicht implementiert sind, aber zum Store-Konzept gehören:
 ## Verzeichnisstruktur
 
     fs-store/
-    ├── init/                  ← Bootstrap-Binary + Quelltext (Download-Eintrag)
+    ├── catalog.toml           ← Root-Catalog: App-Pakete (Binaries) mit GitHub Release-URLs
+    ├── node/
+    │   └── catalog.toml       ← Server-Pakete: native Binaries + Container-Definitionen
+    ├── shared/
+    │   └── catalog.toml       ← Plattformübergreifend: Themes, Widgets, Sprachpakete (50+ Sprachen)
+    ├── apps/
+    │   └── catalog.toml       ← Standalone-Apps: fs-node, fs-desktop, fs-browser, mistral
+    ├── desktop/
+    │   └── catalog.toml       ← Desktop-Manager-Pakete: fs-managers
     ├── packages/
     │   ├── apps/
-    │   │   ├── node/          ← Native Apps für den Node (kanidm, tuwunel, stalwart, zentinel, mistral)
-    │   │   ├── desktop/       ← Desktop-Apps (fs-desktop)
-    │   │   └── browser/       ← Browser-Apps (fs-browser, standalone)
-    │   ├── containers/        ← Container-Definitionen (forgejo, outline, postgres, dragonfly, …)
-    │   ├── widgets/           ← Desktop-Widgets
-    │   ├── themes/            ← UI-Themes (Icon-Sets, Farb-Schemata, Fonts, …)
-    │   ├── icons/             ← Icon-Sets (kuratiert, mit Metadata)
+    │   │   └── node/          ← Manifeste: kanidm, tuwunel, stalwart, zentinel, mistral, …
+    │   ├── containers/        ← Manifeste: forgejo, outline, postgres, dragonfly, cryptpad, …
+    │   ├── widgets/           ← Manifeste: clock, weather, system-info, messages, …
+    │   ├── themes/            ← Manifeste: midnight-blue, cloud-white, nordic-dark
     │   ├── bots/              ← Bot-Definitionen
-    │   └── i18n/              ← Super-Package (koordiniert via Store)
-    ├── bundles/               ← Rekursive Bundle-Definitionen
-    └── catalog.toml           ← Maschinenlesbarer Gesamt-Index
-
-**Warum `packages/apps/node|desktop|browser/`:**
-Apps werden nach ihrer primären Laufzeitumgebung getrennt. Das ist kein Ausschluss — ein App kann auf mehreren Plattformen laufen — sondern beschreibt wo es primär betrieben wird.
-
-**Warum keine `shared/`-Ebene mehr:**
-Widgets, Themes, Icons, Bots und i18n sind Pakete wie alle anderen. Sie gehören in `packages/`. "Shared" ist keine Kategorie — es ist ein Merkmal der Capability (`[provides] capabilities = ["widget"]`).
+    │   └── i18n/             ← Sprachpaket-Manifeste (am, ar, bg, … yue)
+    ├── bundles/               ← Bundle-Definitionen (zentinel-bundle, …)
+    └── .github/
+        └── workflows/
+            └── validate.yml   ← CI: Manifest-Integrität + Pfad-Validierung
 
 ---
 
@@ -698,22 +711,27 @@ Widgets, Themes, Icons, Bots und i18n sind Pakete wie alle anderen. Sie gehören
 
 | Bereich | Crate | Details |
 |---|---|---|
-| Ressource-Typen + Meta | `fsn-types` (`resources/meta.rs`) | `ResourceType` (16 Varianten), `ResourceMeta`, `ValidationStatus` |
-| Ressource-Structs | `fsn-types` (`resources/*.rs`) | `AppResource`, `ContainerResource`, `WidgetResource`, `BotResource`, `BridgeResource`, `BundleResource`, Theme-Ressourcen |
-| Release-Channels | `fsn-pkg` (`channel.rs`) | `ReleaseChannel`: Stable/Testing/Nightly |
-| Versionierung + Rollback | `fsn-pkg` (`versioning.rs`) | `VersionManager`, `VersionRecord`, `RollbackError` |
-| Paket-Signierung | `fsn-crypto` (`signing.rs`, feature: `signing`) | `FsnSigningKey`, `FsnVerifyingKey`, `PackageSignature` — ed25519-dalek v2, SHA-256 |
-| Signatur-Verifikation | `fsn-pkg` (`signing.rs`) | `SignatureVerifier`, `SignaturePolicy` (RequireSigned/TrustUnsigned) |
-| SQLite-Tracking | `fsn-db` (`installed_package.rs`) | `installed_packages` Tabelle — `InstalledPackageRepo` |
-| Store-Client (generisch) | `fsn-store` (Lib.Ext) | `StoreClient`, `Catalog<M>`, `Manifest`-Trait, `I18nBundle` |
-| Store-Client (Node) | `fsn-deploy` (`store.rs`) | `StoreClient` (FSN-spezifisch), `StoreEntry` implementiert `Manifest` |
-| Abhängigkeits-Auflösung | `fsn-pkg` (`dependency_resolver.rs`) | `DepGraph`, `DependencyResolver` (Kahn's Algorithmus) |
-| Install-Lifecycle | `fsn-pkg` (`installer.rs`) | `PackageInstaller`, Hooks, `EventBus` |
-| Builder + Validierung | `fsn-builder` (Node) | `fsn-builder validate-store`, `validate`, `analyze`, `fetch-icon`, `publish` |
+| Ressource-Typen + Meta | `fs-types` (`resources/meta.rs`) | `ResourceType` (16 Varianten), `ResourceMeta`, `ValidationStatus` |
+| Ressource-Structs | `fs-types` (`resources/*.rs`) | `AppResource`, `ContainerResource`, `WidgetResource`, `BotResource`, `BridgeResource`, `BundleResource`, Theme-Ressourcen |
+| Release-Channels | `fs-pkg` (`channel.rs`) | `ReleaseChannel`: Stable/Testing/Nightly |
+| Versionierung + Rollback | `fs-pkg` (`versioning.rs`) | `VersionManager`, `VersionRecord`, `RollbackError` |
+| Paket-Signierung | `fs-crypto` (`signing.rs`, feature: `signing`) | `FsSigningKey`, `FsVerifyingKey`, `PackageSignature` — ed25519-dalek v2, SHA-256 |
+| Signatur-Verifikation | `fs-pkg` (`signing.rs`) | `SignatureVerifier`, `SignaturePolicy` (RequireSigned/TrustUnsigned) |
+| SQLite-Tracking | `fs-db` (`installed_package.rs`) | `installed_packages` Tabelle — `InstalledPackageRepo` |
+| Store-Client (generisch) | `fs-store` (`fs-libs`) | `StoreClient`, `Catalog<M>`, `Manifest`-Trait, `I18nBundle`, `DiskCache`, `StoreSearch<M>` |
+| Install-Kinds (OOP) | `fs-pkg` (`install_kind.rs`) | `PackageInstallExt`-Trait auf `PackageKind` — jede Art kennt ihren Installationsfluss |
+| Abhängigkeits-Auflösung | `fs-pkg` (`dependency_resolver.rs`) | `DepGraph`, `DependencyResolver` (Kahn's Algorithmus) |
+| Install-Lifecycle | `fs-pkg` (`installer.rs`) | `PackageInstaller`, Hooks, `EventBus` |
+| Store-UI | `fs-store-app` (`fs-apps`) | Dioxus-App: Browser, Wizard, InstalledList, Settings — Provider Pattern |
+| Builder + Validierung | `fs-builder` (`fs-apps`) | Container Builder, YAML-Analyse via `ComposeAnalyzer`, `res.save_to()` |
 
-## Repo
+## Repos
 
-https://github.com/FreeSynergy/Store
+| Bereich | GitHub |
+|---|---|
+| Store-Daten (Kataloge + Manifeste) | https://github.com/FreeSynergy/fs-store |
+| Store-Client + Lib | `fs-store` Crate in https://github.com/FreeSynergy/fs-libs |
+| Store-UI | `fs-store-app` Crate in https://github.com/FreeSynergy/fs-apps |
 
 ---
 
