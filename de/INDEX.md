@@ -18,6 +18,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 
 ### Architektur
 - [Gesamtübersicht](architektur/uebersicht.md) — Wie alles zusammenhängt
+- [Repository-Übersicht](architektur/repositories.md) — Was gehört in welches Repo, Startschicht, Libraries, Adapter-Pattern
 
 ### Programme
 - [Init](programme/init/README.md) — Der Bootstrap (installiert den Store)
@@ -40,10 +41,12 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Ressourcen-System](konzepte/ressourcen.md) — Alles ist eine Ressource (Structs, Typen, Felder)
 - [Capabilities](konzepte/capabilities.md) — Pakete deklarieren was sie bieten (provides, requires, Bus-Messages, Providers)
 - [Rollen-System](konzepte/rollen.md) — Services deklarieren was sie können (Rollen-Hierarchie)
-- [Bridges](konzepte/bridges.md) — Standardisierte Rollen-APIs
+- [Adapter-Pattern](konzepte/adapter.md) — Wie Drittanbieter-Dienste eingebunden werden (ersetzt Bridge)
 - [Inventory](konzepte/inventory.md) — Die lokale Wahrheit: **Store = möglich | Inventory = installiert | Managers = das Wie**
 - [Rechte-Kaskade](konzepte/rechte.md) — Rechte können nur abnehmen
-- [Message Bus](konzepte/bus.md) — Pub/Sub, Rollen-basiert, Bridges
+- [Session](konzepte/session.md) — Aktiver User, offene Programme, Minimize/Restore
+- [Registry](konzepte/registry.md) — Welche Dienste laufen gerade (Capabilities, Adapter-Lookup)
+- [Message Bus](konzepte/bus.md) — Pub/Sub, Rollen-basiert, Config-Events
 - [Bus-API Namespaces](konzepte/bus-api-namespaces.md) — Standardisierte Capability-Adressen (installer::packages::...), Vertragsregeln, Master-Liste
 - [Föderation](konzepte/foederation.md) — Zusammenarbeit zwischen Projekten
 - [Pakete](konzepte/pakete.md) — Store-Paket-System: Kategorien (Server/App/Desktop), Typen, Versionierung
