@@ -6,7 +6,7 @@
 
 ## Was der Store ist
 
-Der Store ist der **universelle Paketmanager** von FreeSynergy. Vergleichbar mit dnf/apt, aber flexibler. Er verwaltet ALLES: Programme, Services, Themes, Sprachen, Widgets, Bots, Tasks.
+Der Store ist der **universelle Paketmanager** von FreeSynergy. Vergleichbar mit dnf/apt, aber flexibler. Er verwaltet ALLES: Programme, Services, Themes, Sprachen, Widgets, Tasks, Icon-Sets.
 
 Gleichzeitig ist er ein **Wissensspeicher** der allen Programmen hilft — der Container Manager fragt "Kennst du diesen Service?" und der Store liefert Metadaten, Rollen, Variablen-Typen.
 
@@ -35,16 +35,17 @@ Es gibt keine Kategorien (Server/App/Desktop) — nur **Typen**. Jedes Paket hat
 |---|---|---|
 | `app` | Native Rust-Binary (Cross-Platform) | Node, Desktop, Browser, Kanidm, Zentinel, Stalwart, Mistral |
 | `container` | Container-App — runtime-agnostisch (Podman oder Docker) | Forgejo, Postgres, Outline, CryptPad |
-| `bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
 | `widget` | Desktop-Widget | Uhr, System-Info, Nachrichten |
 | `language` | Shared Snippets (Mozilla Fluent) | Deutsch, Arabisch |
-| `bot` | Bot-Definition | Broadcast, Gatekeeper |
 | `task` | Automatisierungs-Template | "Docs ins Wiki" |
 | `bundle` | Meta-Paket aus beliebigen Paketen — Root-Level (`bundles/`) | Zentinel |
 | `theme` | Bundle-Unterart: feste Design-Struktur — Root-Level (`themes/`) | Midnight Blue |
 | `bootstrap` | Sondertyp: Init-Binary zum Download (kein Install) | fs-init |
 | `repo` | Store-Repository-Quelle — Installation registriert neue Paketquelle | freesynergy-community |
 | `icon_set` | SVG-Icon-Sammlung — kann Default-Set überschreiben, shareable | freesynergy-default |
+| `external` | Externes Produkt ohne direkten Install (nur Link/Doku) | Drittanbieter-Tools |
+
+**Hinweis:** `bot` und `bridge` sind **keine Pakettypen**. Bots sind API-basiert. Bridges integrieren sich direkt in bestehende Services.
 
 **`app` vs. `container`:**
 - `app` = natives Rust-Binary, kein Container-Runtime nötig: Kanidm, Stalwart, Zentinel, Mistral
@@ -181,8 +182,8 @@ Unterstützte Algorithmen:
 id      = "kanidm"              # Eindeutiger Name (KEIN Typ-Prefix!)
 name    = "Kanidm"              # Anzeigename
 version = "1.4.2"               # SemVer, aus Git-Tag
-type    = "app"                 # app, container, bundle, language, bot, task, bridge,
-                                # widget, bootstrap, repo, icon_set
+type    = "app"                 # app, container, widget, language, task, bundle, theme,
+                                # bootstrap, repo, icon_set, external
 summary = "Identity and access management — OAuth2, OIDC, LDAP, SCIM, WebAuthn"
                                 # max 255 Zeichen — Store-Karte, Suchergebnisse
 icon    = "icon.svg"            # SVG-Datei (PFLICHT)
@@ -221,7 +222,6 @@ Tags sind das **primäre Suchinstrument**. Schlechte Tags = Paket unsichtbar.
 | `container` | Rollen, Unterrollen, kompatible Standards |
 | `language` | Sprach-Code, Region |
 | `widget` | Funktion, Datenquelle |
-| `bot` | Plattform, Funktion |
 | `task` | Quell-Service, Ziel-Service, Funktion |
 | `bundle` | Enthaltene Pakete, Zweck |
 | `icon_set` | Stil, Farbe, Autor |
@@ -306,47 +306,46 @@ Der [Container Manager](../container/README.md) nutzt das bei der YAML-Analyse: 
 
 ## CLI-Interface
 
+Der Store bringt ein **eigenständiges CLI-Binary** mit: `fs-store` (Repo: `FreeSynergy/fs-store`, Crate `fs-store-cli`).
+
+### Implementierte Befehle
+
 ```bash
-# Suche
-fsn store search "mail"
-fsn store search --type container --tag smtp
-fsn store search --type bundle
+# Alle Pakete auflisten (dynamische Spaltenbreiten, ✓ bei installierten)
+fs-store list
+fs-store list --namespace containers
+fs-store list --search "git"
+fs-store list --namespace apps --search kanidm
 
-# Info
-fsn store info kanidm
-fsn store info --version 1.4.0 kanidm
-
-# Installieren
-fsn store install kanidm
-fsn store install kanidm --version 1.4.0
-fsn store install kanidm --keep-previous
-fsn store install kanidm --channel testing
-fsn store install server-minimal              # Bundle
-
-# Update
-fsn store update kanidm
-fsn store update --all
-
-# Rollback
-fsn store rollback kanidm                     # Vorherige Version
-
-# Deinstallieren
-fsn store remove kanidm
-fsn store remove --keep-data kanidm
-fsn store remove --purge kanidm               # Alles weg
+# Detailansicht eines Pakets
+fs-store info kanidm
+fs-store info forgejo
 
 # Installierte Pakete
-fsn store list
-fsn store list --type container
-fsn store list --outdated
+fs-store installed
+```
 
-# Catalog
-fsn store sync
-fsn store sync --offline
+**Source-Auswahl** (Priorität von oben nach unten):
+```bash
+fs-store --local /path/to/Store list    # lokaler Store-Checkout (Dev/CI)
+FS_STORE_LOCAL=/path/to/Store fs-store list  # über Umgebungsvariable
+fs-store list                                # offizieller HTTP-Store (Default)
+```
 
-# Cache
-fsn store cache refresh    # Pakete neu vom Store laden (Metadaten aktualisieren)
-fsn store cache clear      # Lokalen Cache vollständig leeren
+### Geplante Befehle (noch nicht implementiert)
+
+```bash
+# Installieren / Entfernen
+fs-store install kanidm
+fs-store install kanidm --version 1.4.0
+fs-store remove kanidm
+
+# Update
+fs-store update kanidm
+fs-store update --all
+
+# Rollback
+fs-store rollback kanidm
 ```
 
 ## GUI — Store-Oberfläche im Desktop
@@ -361,13 +360,14 @@ Es gibt keine Server/App/Desktop-Tabs mehr. Der Store ist ein einziger Catalogue
 ├──────────┬──────────────────────────────────────────────────────┤
 │  Alle    │                                                      │
 │  App     │   Paketliste                                         │
-│  Bridge  │   (Grid oder Liste, je nach Einstellung)            │
+│  Container│  (Grid oder Liste, je nach Einstellung)            │
 │  Widget  │                                                      │
 │  Theme   │                                                      │
 │  Sprache │                                                      │
-│  Bot     │                                                      │
 │  Task    │                                                      │
 │  Bundle  │                                                      │
+│  Icons   │                                                      │
+│  Extern  │                                                      │
 │  ──────  │                                                      │
 │  Init    │                                                      │
 │  ──────  │                                                      │
@@ -645,9 +645,8 @@ Store/
     ├── i18n/catalog.toml
     ├── icons/catalog.toml               ← Icon-Sets
     ├── repos/catalog.toml               ← Store-Repository-Quellen
-    ├── bots/catalog.toml
     ├── tasks/catalog.toml
-    ├── bridges/catalog.toml
+    ├── external/catalog.toml           ← Externe Produkte (nur Link/Doku)
     └── bundles/catalog.toml
 ```
 
@@ -774,29 +773,46 @@ Features die noch nicht implementiert sind, aber zum Store-Konzept gehören:
 
 ## Implementierung (Crates)
 
-| Bereich | Crate | Details |
-|---|---|---|
-| Ressource-Typen + Meta | `fs-types` (`resources/meta.rs`) | `ResourceType` (16 Varianten), `ResourceMeta`, `ValidationStatus` |
-| Ressource-Structs | `fs-types` (`resources/*.rs`) | `AppResource`, `ContainerResource`, `WidgetResource`, `BotResource`, `BridgeResource`, `BundleResource`, Theme-Ressourcen |
-| Release-Channels | `fs-pkg` (`channel.rs`) | `ReleaseChannel`: Stable/Testing/Nightly |
-| Versionierung + Rollback | `fs-pkg` (`versioning.rs`) | `VersionManager`, `VersionRecord`, `RollbackError` |
-| Paket-Signierung | `fs-crypto` (`signing.rs`, feature: `signing`) | `FsSigningKey`, `FsVerifyingKey`, `PackageSignature` — ed25519-dalek v2, SHA-256 |
-| Signatur-Verifikation | `fs-pkg` (`signing.rs`) | `SignatureVerifier`, `SignaturePolicy` (RequireSigned/TrustUnsigned) |
-| SQLite-Tracking | `fs-db` (`installed_package.rs`) | `installed_packages` Tabelle — `InstalledPackageRepo` |
-| Store-Client (generisch) | `fs-store` (`fs-libs`) | `StoreClient`, `Catalog<M>`, `Manifest`-Trait, `I18nBundle`, `DiskCache`, `StoreSearch<M>` |
-| Install-Kinds (OOP) | `fs-pkg` (`install_kind.rs`) | `PackageInstallExt`-Trait auf `PackageKind` — jede Art kennt ihren Installationsfluss |
-| Abhängigkeits-Auflösung | `fs-pkg` (`dependency_resolver.rs`) | `DepGraph`, `DependencyResolver` (Kahn's Algorithmus) |
-| Install-Lifecycle | `fs-pkg` (`installer.rs`) | `PackageInstaller`, Hooks, `EventBus` |
-| Store-UI | `fs-store-app` (`fs-apps`) | Dioxus-App: Browser, Wizard, InstalledList, Settings — Provider Pattern |
-| Builder + Validierung | `fs-builder` (`fs-apps`) | Container Builder, YAML-Analyse via `ComposeAnalyzer`, `res.save_to()` |
+Der Store lebt vollständig im eigenen Repo `FreeSynergy/fs-store` (seit 2026-03-24):
+
+| Crate | Beschreibung |
+|---|---|
+| `fs-store` (lib) | Kern-Library: `Package`-Trait-Hierarchie, `Inventory`, `StoreReader`, `StoreSource`, `PackageRelease`, `InstallRecord`, i18n-Typen, Settings |
+| `fs-store-cli` | Standalone CLI-Binary (`fs-store`): `list`, `info`, `installed` |
+| `fs-store-app` | Dioxus Desktop-GUI: `StoreContext` (Provider Pattern), `PackageView`-Trait, PackageList/Detail/InstalledList |
+
+### Zentrale Objekte
+
+| Objekt | Zweck |
+|---|---|
+| `Package` (Trait) | Basis-Interface — `id()`, `name()`, `summary()`, `description()`, `releases()`, `help()` |
+| `AppPackage`, `ContainerPackage`, … | Typisierte Implementierungen (9 Typen) — jeweils eigene Felder |
+| `PackageCategory` (Trait, kein Enum) | Open/Closed — 3rd-Party-Extensions ohne Code-Änderung |
+| `Inventory` | Zentrale Hub: Store-Katalog + lokale InstallRecords + Settings |
+| `NamespaceMap` | Alle Pakete nach Namespace gruppiert — 1:1 zum Store-Repo-Layout |
+| `PackageState` | Kombinierte Sicht: verfügbar + installiert + has_update |
+| `StoreReader` | Strategy Pattern: `Local` (Dev/CI) oder `Http` (Produktion) |
+| `InstallRecord` | Ein lokal installierter Package-Stand — mit `VersionPin`, Pfad, Zeitstempel |
+| `BootableInstaller` (Trait) | Sonderfall: USB-Installer aus `init/` — kein `Package` |
+
+### Persistenz
+
+Install-Records werden lokal gespeichert: `settings.storage.data_dir/records.toml`
+
+```
+~/.local/share/freesynergy/store/packages/
+    records.toml        ← alle InstallRecords (TOML)
+    forgejo/            ← Paket-Daten (spätere Phasen)
+    kanidm/
+    ...
+```
 
 ## Repos
 
 | Bereich | GitHub |
 |---|---|
-| Store-Daten (Kataloge + Manifeste) | https://github.com/FreeSynergy/fs-store |
-| Store-Client + Lib | `fs-store` Crate in https://github.com/FreeSynergy/fs-libs |
-| Store-UI | `fs-store-app` Crate in https://github.com/FreeSynergy/fs-apps |
+| Store-Daten (Kataloge + Manifeste) | `FreeSynergy/Store` |
+| Store-Library + CLI + GUI | `FreeSynergy/fs-store` |
 
 ---
 

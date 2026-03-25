@@ -8,20 +8,21 @@
 
 Es gibt keine Kategorien (Server/App/Desktop). Jedes Paket hat genau einen **Typ**. Rust-Enum: `ResourceType` in `fs-types/src/resources/meta.rs`.
 
-| Typ | Rust-Variant | Inhalt | Beispiele |
-|---|---|---|---|
-| `app` | `App` | Native Rust-Binary (Cross-Platform) | Node, Desktop, Browser, Kanidm, Zentinel, Stalwart, Mistral |
-| `container` | `Container` | Container-App — läuft mit Podman **oder** Docker (runtime-agnostisch) | Forgejo, Postgres, Outline, CryptPad |
-| `bridge` | `Bridge` | Service-zu-Service-Adapter | Forgejo→Matrix |
-| `widget` | `Widget` | Desktop-Widget | Uhr, System-Info |
-| `language` | `Language` | Shared Snippets (Mozilla Fluent) | Deutsch, Japanisch |
-| `bot` | `Bot` | Bot-Definition | Broadcast, Gatekeeper |
-| `task` | `Task` | Automatisierungs-Template | "Docs ins Wiki" |
-| `bundle` | `Bundle` | Meta-Ressource, fasst beliebige Pakete zusammen — **Root-Level** (kein Unterverzeichnis von `packages/`) | Zentinel (Proxy + Control Plane) |
-| `theme` | `Theme` | Bundle-Unterart mit fester Design-Struktur — **Root-Level** (`themes/`) | Midnight Blue, Nordic Dark |
-| `bootstrap` | `Bootstrap` | Sondertyp: Init-Binary zum Download (kein Install) | fs-init |
-| `repo` | `Repo` | Store-Repository-Quelle — Installation registriert neue Paketquelle | freesynergy-community |
-| `icon_set` | `IconSet` | SVG-Icon-Sammlung — kann Default-Set überschreiben, shareable | freesynergy-default |
+| Typ | Inhalt | Beispiele |
+|---|---|---|
+| `app` | Native Rust-Binary (Cross-Platform) | Node, Desktop, Browser, Kanidm, Zentinel, Stalwart, Mistral |
+| `container` | Container-App — läuft mit Podman **oder** Docker (runtime-agnostisch) | Forgejo, Postgres, Outline, CryptPad |
+| `widget` | Desktop-Widget | Uhr, System-Info |
+| `language` | Shared Snippets (Mozilla Fluent) | Deutsch, Japanisch |
+| `task` | Automatisierungs-Template | "Docs ins Wiki" |
+| `bundle` | Meta-Ressource, fasst beliebige Pakete zusammen — **Root-Level** (`bundles/`) | Zentinel (Proxy + Control Plane) |
+| `theme` | Bundle-Unterart mit fester Design-Struktur — **Root-Level** (`themes/`) | Midnight Blue, Nordic Dark |
+| `bootstrap` | Sondertyp: Init-Binary zum Download (kein Install) | fs-init |
+| `repo` | Store-Repository-Quelle — Installation registriert neue Paketquelle | freesynergy-community |
+| `icon_set` | SVG-Icon-Sammlung — kann Default-Set überschreiben, shareable | freesynergy-default |
+| `external` | Externes Produkt ohne direkten Install (nur Link/Doku) | Drittanbieter-Tools |
+
+**Hinweis:** `bot` und `bridge` sind **keine Pakettypen**. Bots sind API-basiert. Bridges integrieren sich direkt in bestehende Services.
 
 **`container` vs. `app`:**
 - `app` = natives Rust-Binary (kompiliert, kein Container-Runtime nötig): Kanidm, Stalwart, Zentinel, Mistral
@@ -69,13 +70,13 @@ Jedes installierte Paket implementiert den `Manageable`-Trait (in `fs-pkg/src/ma
 | Methode | Was sie liefert |
 |---|---|
 | `meta()` | Name, Version, Beschreibung, Icon, Kategorie, Autor |
-| `package_type()` | App / Container / Bot / Bridge / … |
+| `package_type()` | App / Container / Widget / Language / … |
 | `is_installed()` | Ob das Paket installiert ist |
 | `run_status()` | Running / Stopped / Starting / Stopping / Error / NotInstalled |
 | `config_fields()` | Alle Konfigurationsfelder mit Typ, Wert, Hilfe-Text |
 | `check_health()` | Health-Checks: Konfigurationsdatei vorhanden? Datenverzeichnis existiert? |
 | `apply_config()` | Konfiguration übernehmen (Key-Value-Map) |
-| `instances()` | Sub-Instanzen (für Bot/Container — z.B. mehrere SMTP-Instanzen) |
+| `instances()` | Sub-Instanzen (z.B. mehrere SMTP-Container parallel) |
 | `build_fields()` | Build-Zeit-Felder (für den Builder-Tab) |
 | `can_start()` / `can_stop()` / `can_persist()` | Welche Aktionen gerade möglich sind |
 
@@ -146,7 +147,7 @@ Jedes Paket MUSS haben:
 - `id` (einzigartiger Name, KEIN Typ-Prefix)
 - `name` (Anzeigename)
 - `version` (SemVer, aus Git-Tag)
-- `type` (app, container, bridge, widget, language, bot, task, bundle, bootstrap, repo, icon_set)
+- `type` (app, container, widget, language, task, bundle, theme, bootstrap, repo, icon_set, external)
 - `summary` (max 255 Zeichen — Store-Karte, Suchergebnisse; fehlt oder > 255 → `Incomplete`)
 - `description` (mittellang, inline im Catalog — Store-Detailansicht; fehlt → `Broken`)
 - `description_file` (Pfad zur `.ftl`-Datei — `help/en/description.ftl`; fehlt → `Broken`)
