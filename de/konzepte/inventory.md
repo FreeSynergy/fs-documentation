@@ -1,16 +1,28 @@
-# Inventory — Die lokale Wahrheit
+# Inventory
 
-[← Zurück zum Index](../INDEX.md) | [Store](../programme/store/README.md) | [Bridges](bridges.md) | [Manager](manager.md)
+[← Zurück zum Index](../INDEX.md) | [Store](../programme/store/README.md) | [Registry](registry.md) | [Adapter-Pattern](adapter.md)
 
 ---
 
-## Die drei Ebenen — KERN-ARCHITEKTUR-ENTSCHEIDUNG
+## Die vier Ebenen — Kern-Architektur-Entscheidung
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  Store        = Das Mögliche   — "Was gibt es?"                 │
-│  Inventory    = Der Jetzt-Zustand — "Was ist installiert?"      │
-│  Managers     = Das Wie        — "Wie wird etwas installiert?"  │
+│  STORE       = Das Mögliche    — "Was gibt es?"                 │
+│               Git-Repo, TOML-Kataloge, Binary-URLs. Kein State. │
+│                                                                 │
+│  INVENTORY   = Der Jetzt-Zustand — "Was ist installiert?"       │
+│               SQLite. Einzige Wahrheitsquelle. Nur Manager      │
+│               schreiben. Alle anderen lesen.                    │
+│                                                                 │
+│  REGISTRY    = Was läuft — "Welche Capabilities sind aktiv?"    │
+│               Services registrieren sich beim Start.            │
+│               Bus fragt Registry für Routing.                   │
+│                                                                 │
+│  MANAGERS    = Das Wie — "Wie wird etwas installiert/konfiguriert?"│
+│               Führen Aktionen aus, schreiben Ergebnis ins       │
+│               Inventory, starten Services die sich in die       │
+│               Registry eintragen.                               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -18,54 +30,57 @@
 
 | Ebene | Frage | Datenquelle | Schreibt wer? |
 |---|---|---|---|
-| **Store** | "Was gibt es?" | Git-Repo, Kataloge | Builder, Maintainer |
-| **Inventory** | "Was ist installiert?" | Eigene SQLite | Nur Manager |
-| **Managers** | "Wie macht man das?" | Deployment-Logik | — (Logik, kein Store) |
-
-### Was das bedeutet
-
-- **Alles was im UI angezeigt wird, kommt NUR aus dem Inventory** — nie direkt aus dem Store.
-- **Ein Paket ist installiert — egal wie.** Ob via Container Manager, Node, manuell, oder Skript: der Manager schreibt den Eintrag ins Inventory. Das Inventory fragt nicht, wie es dort hinkam.
-- **Der Store zeigt was möglich ist.** Das Inventory zeigt was da ist. Beide Sichten sind unabhängig.
-- **Kein Manager darf eine eigene Liste führen.** Jeder Status-Query geht ans Inventory.
+| **Store** | "Was gibt es?" | Git-Repo, TOML | CI/CD, Maintainer |
+| **Inventory** | "Was ist installiert?" | `fs-inventory.db` (SQLite) | Nur Manager |
+| **Registry** | "Was läuft gerade?" | `fs-registry.db` (SQLite) | Services selbst |
+| **Managers** | "Wie macht man es?" | Deployment-Logik | — (Logik, kein Store) |
 
 ---
 
-## Store vs. Inventory
+## Zwei Inventory-Konzepte — klar getrennt
 
-| | Store | Inventory |
-|---|---|---|
-| Frage | "Was gibt es?" | "Was habe ich?" |
-| Datenquelle | Git-Repo, andere Stores, URLs | Nur lokale SQLite |
-| Netzwerk | Ja (Git, HTTP) | Nein (nur lokal) |
-| Inhalt | Katalog aller verfügbaren Ressourcen | Nur installierte Ressourcen + Status |
-| Verantwortung | Validierung, Signatur-Check, Download | Lokaler Zustand, APIs, Bridges |
+Es gibt zwei Dinge die "Inventory" heißen — sie sind verschieden:
 
-Der Store redet mit der Außenwelt. Das Inventory redet nur mit dem lokalen System.
+### 1. `InstallRecord` (Store-intern)
+
+In `fs-store/crates/fs-store/src/inventory.rs` — intern im Store-Prozess.
+
+- Verfolgt: welche Paket-Version ist installiert, Pin-State, Pfad
+- Gespeichert in: `records.toml` (lokal auf dem System)
+- Geschrieben von: `fs-store` selbst (nach erfolgreichem Download + Install)
+- Gelesen von: `fs-store` (für Update-Prüfungen, Version-Anzeige)
+- **Scope:** Nur für das Store-Paket-Management relevant
+
+### 2. `fs-inventory` Service (System-weit)
+
+Das standalone Repo `FreeSynergy/fs-inventory` — der System-weite Wahrheitsspeicher.
+
+- Verfolgt: was ist auf dem Node installiert, welche Services laufen, auf welchen Ports
+- Gespeichert in: `fs-inventory.db` (SQLite, eigene Datei)
+- Geschrieben von: **nur Manager** (nach jeder erfolgreichen Aktion)
+- Gelesen von: allen Programmen (Store, Desktop, Lenses, Bus, Widgets, ...)
+- **Scope:** System-weit, einzige Wahrheitsquelle für den Laufzeit-Zustand
+
+**Regel:** Was im UI angezeigt wird, kommt immer aus `fs-inventory` — nie direkt
+aus `records.toml` oder direkt aus dem Store-Katalog.
 
 ---
 
-## Inventory-Schema
+## fs-inventory Schema
 
-```rust
-pub struct Inventory {
-    pub db: SqlitePool,  // fsn-inventory.db (EIGENE DB)
-}
-```
-
-### Installierte Ressource (JEDER Typ)
+### InstalledResource — jedes installierte Paket
 
 ```rust
 pub struct InstalledResource {
-    pub id: String,                   // "kanidm"
-    pub resource_type: ResourceType,  // Container, Widget, Theme, ...
-    pub version: String,              // "1.5.0"
-    pub channel: ReleaseChannel,      // Stable, Testing, Nightly
-    pub installed_at: DateTime,
-    pub status: ResourceStatus,       // Active, Stopped, Error, Updating
-    pub config_path: PathBuf,
+    pub id: String,                    // "kanidm"
+    pub resource_type: ResourceType,   // App, Container, Theme, Language, ...
+    pub version: String,               // "1.5.0"
+    pub channel: ReleaseChannel,       // Stable, Testing, Nightly
+    pub installed_at: DateTime<Utc>,
+    pub status: ResourceStatus,
+    pub install_path: PathBuf,         // deterministisch abgeleitet
     pub data_path: PathBuf,
-    pub validation: ValidationStatus, // ✅ ⚠️ ❌
+    pub validation: ValidationStatus,
 }
 
 pub enum ResourceStatus {
@@ -77,90 +92,108 @@ pub enum ResourceStatus {
 }
 ```
 
-### Service-Instanz (für Container-Apps)
+### ServiceInstance — für laufende Container-Apps und Native-Services
 
 ```rust
 pub struct ServiceInstance {
-    pub resource_id: String,          // → InstalledResource
-    pub instance_name: String,        // Vom Benutzer vergeben
-    pub roles_provided: Vec<Role>,
-    pub roles_required: Vec<Role>,
-    pub bridges: Vec<BridgeRef>,      // Welche Bridges aktiv
+    pub resource_id: String,           // → InstalledResource
+    pub instance_name: String,         // vom Benutzer vergeben
+    pub capabilities_provided: Vec<String>, // ["iam", "iam.oidc"]
+    pub capabilities_required: Vec<String>, // ["database"]
     pub variables: Vec<ConfiguredVar>,
-    pub network: String,
-    pub status: ServiceStatus,        // Running, Stopped, Error, Starting
+    pub network: Option<String>,
+    pub status: ServiceStatus,         // Running, Stopped, Error, Starting
     pub port: Option<u16>,
     pub s3_paths: Vec<String>,
 }
-```
 
-### Bridge-Instanz
-
-```rust
-pub struct BridgeInstance {
-    pub bridge_id: String,            // "kanidm-iam-bridge"
-    pub role: Role,                   // "iam"
-    pub service_instance: String,     // "main-iam"
-    pub api_base_url: String,         // "http://kanidm:8443"
-    pub status: BridgeStatus,
+pub enum ServiceStatus {
+    Running,
+    Stopped,
+    Starting,
+    Stopping,
+    Error(String),
 }
 ```
+
+**Hinweis:** Die Verbindung zu externen Services (welcher Adapter auf welchem Endpoint)
+wird in `fs-registry` verwaltet — nicht im Inventory. Das Inventory kennt den
+installierten Zustand, die Registry kennt den Laufzeit-Zustand.
 
 ---
 
 ## Status-Anzeige im UI
 
-Jede installierte Ressource hat einen `ResourceStatus`. Das UI nutzt ihn für die visuelle Darstellung:
+Jede installierte Ressource hat einen `ResourceStatus`. Das UI nutzt ihn:
 
 | Status | Darstellung |
 |---|---|
 | `Active` / `Running` | Icon normal, grüner Punkt |
-| `Stopped` | Icon **ausgegraut**, grauer Punkt |
-| `Error(msg)` | Icon normal, **roter Punkt** |
-| `Updating` / `Installing` | Icon normal, blauer/animierter Punkt |
+| `Stopped` | Icon ausgegraut, grauer Punkt |
+| `Error(msg)` | Icon normal, roter Punkt (mit Tooltip) |
+| `Updating` / `Installing` | Icon normal, blauer animierter Punkt |
 
-**Regel:** Das Icon wird ausgegraut wenn der Service gestoppt ist — nicht gelöscht, nicht versteckt. Der Benutzer sieht dass das Paket installiert ist, aber gerade nicht läuft.
-
-Der **Container Manager** ist dafür zuständig, den Status regelmäßig (via systemctl + healthcheck) zu prüfen und im Inventory zu aktualisieren. Kein anderes System fragt direkt nach dem Container-Status.
+**Regel:** Gestoppte Services werden ausgegraut dargestellt — nicht gelöscht,
+nicht versteckt. Der Benutzer sieht dass das Paket installiert ist, aber nicht läuft.
 
 ---
 
-## Wer fragt das Inventory?
+## Wer liest das Inventory?
 
 | Wer | Fragt was |
 |---|---|
-| **Bus** | "Wer hat Rolle X?" → Route Events zur richtigen Bridge |
+| **Store-App** | "Was ist installiert? Was braucht ein Update?" |
+| **Desktop** | "Welche Programme sind installiert?" (für App-Launcher) |
 | **Lenses** | "Welche Services bieten Daten zum Thema Y?" |
-| **Search** | "Welche Services unterstützen search-Recht?" |
-| **Container Manager** | "Welche Services laufen, welche sind gestoppt?" |
-| **Widgets** | "Sind meine required_roles erfüllt?" |
-| **Store** | "Was ist installiert? Was braucht ein Update?" |
-| **Resource Builder** | "Welche Rollen sind lokal verfügbar für Tests?" |
+| **Container Manager** | "Welche Container-Apps sind installiert?" |
+| **Widgets** | "Sind die required_capabilities erfüllt?" |
+| **Theme Manager** | "Welches Theme ist aktiv?" |
+| **Language Manager** | "Welche Sprache ist aktiv?" |
 
----
-
-## Das Inventory ist die EINZIGE Wahrheit
-
-Wenn das Inventory sagt "Kanidm läuft auf Port 8443 mit Rolle iam" — dann ist das so. Kein anderes System darf eine eigene Liste führen. Der Bus fragt immer das Inventory, nie direkt die Services.
+**Der Bus fragt die Registry, nicht das Inventory** — denn der Bus braucht
+"wer läuft gerade auf welchem Endpoint", nicht "wer ist installiert".
+Das ist die Aufgabe der Registry.
 
 ---
 
 ## Wer schreibt ins Inventory?
 
-**Nur Manager.** Jeder Manager schreibt nach einer erfolgreichen Aktion ins Inventory:
+**Nur Manager.** Nach jeder erfolgreichen Aktion schreibt der Manager einen Eintrag:
 
 | Aktion | Manager | Inventory-Effekt |
 |---|---|---|
-| Container-App installieren | Container Manager | `install()` + `add_service()` |
-| Container-App starten | Container Manager | `status → Running` |
-| Container-App stoppen | Container Manager | `status → Stopped` |
-| Container-App entfernen | Container Manager | `uninstall()` + Service löschen |
-| Theme installieren | Theme Manager | `install()` |
-| Sprache installieren | Language Manager | `install()` |
+| App / Container installieren | Container Manager | `insert(InstalledResource)` + `insert(ServiceInstance)` |
+| Service starten | Container Manager | `status → Running` |
+| Service stoppen | Container Manager | `status → Stopped` |
+| App / Container entfernen | Container Manager | `delete(InstalledResource)` + `delete(ServiceInstance)` |
+| Theme installieren | Theme Manager | `insert(InstalledResource)` |
+| Theme aktivieren | Theme Manager | `status → Active` (vorheriges: `Stopped`) |
+| Sprache installieren | Language Manager | `insert(InstalledResource)` |
+| Sprache aktivieren | Language Manager | `status → Active` |
 | Status-Prüfung (periodisch) | Container Manager | `status → Running / Stopped / Error` |
+| Bot-Paket installieren | Bot Manager | `insert(InstalledResource)` |
 
-**Ein Paket ist installiert — egal wie.** Der Manager kümmert sich ums Wie. Das Inventory kennt nur das Ergebnis. Ob die Installation über CLI, API oder UI ausgelöst wurde, ist dem Inventory egal.
+**Ein Paket ist installiert — egal wie.** Ob per CLI, UI oder API:
+der Manager schreibt das Ergebnis. Das Inventory fragt nicht, wie es dort hinkam.
+Kein Manager darf eine eigene parallele Liste führen.
 
 ---
 
-Weiter: [Store](../programme/store/README.md) | [Bridges](bridges.md) | [Bus](bus.md) | [Manager](manager.md)
+## Das Inventory ist die EINZIGE Wahrheit
+
+Wenn das Inventory sagt "Kanidm ist installiert (Version 1.5.0, Status Active)" —
+dann ist das so. Kein anderes System darf seinen eigenen Install-Status verwalten.
+
+Ob Kanidm gerade **erreichbar** ist (läuft der Prozess?) weiß die **Registry** —
+die fragt den Container Manager via Health-Check und aktualisiert ihren Eintrag.
+Inventory und Registry zusammen ergeben das vollständige Bild:
+
+```
+Inventory: "Kanidm 1.5.0 ist installiert"
+Registry:  "Kanidm läuft auf http://kanidm:8443, Capability: iam"
+           → kombiniert: "Kanidm ist installiert UND gerade aktiv"
+```
+
+---
+
+Weiter: [Registry](registry.md) | [Store](../programme/store/README.md) | [Adapter-Pattern](adapter.md) | [Manager](manager.md)
