@@ -42,6 +42,7 @@ FreeSynergy dreht das um: **Die Information steht im Vordergrund, nicht das Werk
 - [Capabilities](konzepte/capabilities.md) — Pakete deklarieren was sie bieten (provides, requires, Bus-Messages, Providers)
 - [Rollen-System](konzepte/rollen.md) — Services deklarieren was sie können (Rollen-Hierarchie)
 - [Adapter-Pattern](konzepte/adapter.md) — Wie Drittanbieter-Dienste eingebunden werden (ersetzt Bridge)
+- [Bridges](konzepte/bridges.md) — **ARCHIVIERT** — ersetzt durch Adapter-Pattern (März 2026)
 - [Inventory](konzepte/inventory.md) — Die lokale Wahrheit: **Store = möglich | Inventory = installiert | Managers = das Wie**
 - [Rechte-Kaskade](konzepte/rechte.md) — Rechte können nur abnehmen
 - [Session](konzepte/session.md) — Aktiver User, offene Programme, Minimize/Restore
