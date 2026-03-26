@@ -118,11 +118,11 @@ C2. [x] FreeSynergy/fs-lenses erstellen
         - Lenses App (Informations-Betrachter)
         - Code-Basis: fs-apps/crates/fs-lenses/
 
-C3. [ ] FreeSynergy/fs-ai erstellen
+C3. [x] FreeSynergy/fs-ai erstellen
         - AI Runtime + Proxy (Schnittstelle zu fs-mistral und anderen LLMs)
         - Code-Basis: fs-apps/crates/fs-ai/ + fs-managers/ai/
 
-C4. [ ] FreeSynergy/fs-container-app erstellen
+C4. [x] FreeSynergy/fs-container-app erstellen
         - Container-App Manager UI
         - Code-Basis: fs-apps/crates/fs-container-app/
 ```
@@ -160,8 +160,8 @@ fs-i18n     — i18n-Primitive (alle Programme sind mehrsprachig)
 
 **Wandert in eigene Repos (bereits vorhanden):**
 ```
-D1. [ ] fs-bus     → bereits eigenes Repo, aus fs-libs entfernen
-D2. [ ] fs-config  → bereits eigenes Repo, aus fs-libs entfernen
+D1. [x] fs-bus     → bereits eigenes Repo, aus fs-libs entfernen
+D2. [x] fs-config  → bereits eigenes Repo, aus fs-libs entfernen
 D3. [ ] fs-db      → neues Repo (Phase C1), aus fs-libs extrahieren
 ```
 
