@@ -39,52 +39,20 @@ Diese Regeln gelten ohne Ausnahme. Kein Commit ohne grüne Gates.
 
 ---
 
-## Phase A: Dokumentation aktualisieren
+## Phase A: Dokumentation aktualisieren ✅ (2026-03-26)
 
 > Ziel: Die Doku spiegelt den aktuellen Ist-Stand wider — keine Phantasie-Inhalte mehr.
 > Jede Seite: erst lesen, dann neu schreiben.
 
 ```
-A1. [ ] architektur/repositories.md — neu schreiben
-        - Neue Repo-Struktur (eigene Repos statt Monorepo)
-        - fs-libs = nur Primitives (types/error/crypto/health/i18n)
-        - fs-bus, fs-db, fs-config = eigenständige Platform-Services
-        - fs-managers Workspace (language/theme/icons/cursor/container/bots/ai)
-        - Tabelle: Repo → Zweck → GitHub-URL → Lokal-Pfad
-
-A2. [ ] architektur/uebersicht.md — neu schreiben
-        - Schichten-Diagramm: Primitives → Platform-Services → Programme → Store
-        - Inventory/Session/Registry als eigenständige Services einzeichnen
-        - fs-node als zentraler Server (Auth, S3, Federation, externer Zugriff)
-
-A3. [ ] konzepte/pakete.md — neu schreiben
-        - Package-Format: [[binaries]] statt binary (mehrere Binaries pro Paket möglich)
-        - capabilities + bus_messages im Katalog-TOML
-        - Drei Ebenen: Store (möglich) | Inventory (installiert) | Registry (läuft)
-        - Archiv-Konzept: Pakete die noch nicht bereit sind landen in packages/archive/
-
-A4. [ ] konzepte/inventory.md — neu schreiben
-        - Zwei verschiedene Inventory-Konzepte klar trennen:
-          1. fs-store intern: InstallRecord (welche Version ist installiert, Pin-State)
-          2. fs-inventory Service: ServiceInstance (läuft auf Port X, hat Rolle Y)
-        - Wer schreibt wohin (Manager → fs-inventory, Store → InstallRecord)
-
-A5. [ ] konzepte/adapter.md — neu schreiben (ersetzt Bridges komplett)
-        - Adapter-Pattern: jeder externe Dienst implementiert einen Trait
-        - Registry als Lookup: wer bietet Capability X?
-        - Kein Bridge-Executor mehr — nur Trait-Impl + Registry-Eintrag
-
-A6. [ ] technik/build-workflow.md — NEU erstellen
-        - Design Pattern → OOP → cargo check → clippy → fmt → tests → commit
-        - Qualitäts-Gates (was muss grün sein vor jedem Push)
-        - GitHub Actions Template (wird für jeden Repo-Typ beschrieben)
-        - Binary-Distribution: Repo → GitHub Release → Store-Katalog → fs-store Download
-
-A7. [ ] INDEX.md — aktualisieren
-        - Alle neuen Seiten eintragen
-        - Veraltete Links korrigieren (Bridges → Adapter, Builder → Container Manager)
-
-A8. [ ] todo/TODO.md — das ist diese Datei, sie ist bereits aktuell
+A1. [x] architektur/repositories.md — neu geschrieben
+A2. [x] architektur/uebersicht.md — neu geschrieben
+A3. [x] konzepte/pakete.md — neu geschrieben ([[binaries]], capabilities, bus_messages)
+A4. [x] konzepte/inventory.md — neu geschrieben (2 Konzepte getrennt, Bridge entfernt)
+A5. [x] konzepte/adapter.md — neu geschrieben (Traits, Mock, Registrierung, Konventionen)
+A6. [x] technik/build-workflow.md — NEU erstellt (Workflow, OOP-Regeln, Quality Gates)
+A7. [x] INDEX.md — aktualisiert (Builder entfernt, neue Seiten, korrekter Repo-Link)
+A8. [x] todo/TODO.md — aktuell
 ```
 
 ---
