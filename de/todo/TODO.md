@@ -66,23 +66,11 @@ fs-managers, fs-bots, fs-icons, fs-inventory, fs-session,
 fs-registry, fs-bus, fs-config, fs-libs, Store, fs-documentation
 ```
 
-**Neu angelegt ✅:** fs-db, fs-lenses, fs-ai, fs-container-app, fs-tasks, fs-auth, fs-i18n
+**Neu angelegt ✅:** fs-db, fs-lenses, fs-ai, fs-container-app, fs-tasks, fs-auth, fs-i18n, fs-info, fs-theme
 **Archiviert ✅:** Libs, Wiki.rs, Wiki.rs.Store
 
 **Neue Repos — noch anzulegen:**
 ```
-C13.[ ] FreeSynergy/fs-info erstellen — System-Info Service
-        - Speicher, CPU, Disk, laufende Services
-        - Wird von Store, Widgets, Desktop, Managers gebraucht
-        - Eigenständig — wie fs-inventory, fs-session, fs-registry
-        - Ob Daemon, Bus-Subscriber oder Library: offen → siehe G8
-
-C17.[ ] FreeSynergy/fs-theme erstellen — Theme-Primitives Library
-        - Farb-Tokens, CSS-Variablen-Namen, Theme-Typen, Lade-Logik
-        - Wird von ALLEN UI-Programmen gebraucht — gehört keinem alleine
-        - Theme-Packages im Store sind die eigentlichen Daten (Farben, Fonts, Icons)
-        - Theme-Manager (fs-managers) wendet sie an
-
 C18.[ ] FreeSynergy/fs-ui erstellen — Basis-UI-Primitives
         - Layout, Spacing, Basis-Widgets (wie GTK-Primitives)
         - Wird von allen UI-Programmen gebraucht
