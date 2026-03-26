@@ -137,20 +137,10 @@ fs-health   — Health-Check-Trait (alle Services implementieren ihn)
 
 ---
 
-**Bereits erledigt ✅:** fs-bus | fs-config | fs-db | fs-auth | fs-federation | fs-i18n | fs-theme → jeweils eigenes Repo
+**Bereits erledigt ✅:** fs-bus | fs-config | fs-db | fs-auth | fs-federation | fs-i18n | fs-theme | fs-ui | fs-components → jeweils eigenes Repo
 
 **Eigene Repos — UI-Schicht (wie GTK/Qt — gehören keinem Programm alleine):**
 ```
-D7. [ ] fs-ui → eigenes Repo (Phase C18)
-        Was: Basis-UI-Primitives (Layout, Spacing, Basis-Widgets)
-        Wer braucht es: alle Programme mit UI
-        Warum eigen: wie KDE Frameworks — nicht Desktop-Eigentum
-
-D8. [ ] fs-components → eigenes Repo (Phase C19)
-        Was: Wiederverwendbare UI-Komponenten (Button, Input, Card, List, ...)
-        Wer braucht es: alle Programme mit UI
-        Warum eigen: kann unabhängig versioniert und erweitert werden
-
 D9. [ ] fs-render → prüfen: wer nutzt es konkret?
         Falls alle UI-Programme → eigenes Repo (wie D7/D8)
         Falls nur Desktop-Shell → nach fs-desktop
@@ -294,7 +284,6 @@ D25.[ ] fs-libs committen + pushen
 **Erledigt ✅:** fs-config, fs-bus, fs-db, fs-inventory, fs-session, fs-registry, fs-init, fs-icons
 
 ```
-E09.[ ] fs-browser  — VORLAGE für alle anderen Programme
 E09.[ ] fs-browser  — VORLAGE für alle anderen Programme
         → erster vollständiger Workflow: Design → OOP → Tests → Clippy → Push
 E10.[ ] fs-store    — Store-Library + Store-App + Store-CLI
