@@ -113,12 +113,7 @@ D24.[ ] fs-bridge-sdk → löschen
 
 ---
 
-**Abschluss:**
-```
-D25.[ ] fs-libs committen + pushen
-        Erst wenn alle Migrationen abgeschlossen und alle abhängigen Repos angepasst sind
-        Erwartetes Ergebnis: fs-libs hat nur noch fs-types, fs-error, fs-crypto, fs-health, fs-core
-```
+**D25 ✅:** fs-libs committed + pushed — enthält jetzt nur fs-types, fs-error, fs-crypto, fs-health, fs-core
 
 ---
 
