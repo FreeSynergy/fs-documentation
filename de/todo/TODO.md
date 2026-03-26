@@ -104,32 +104,12 @@ D19.[ ] Pro Programm: {programm}.ftl in fs-i18n/locales/{lang}/
 
 ---
 
-**Noch zu prüfen (Code lesen, dann entscheiden):**
-```
-D22.[ ] fs-help → Code lesen: ist es eine Library oder ein Programm?
-        Falls Library für alle: eigenes Repo (Phase C25)
-        Falls Desktop-spezifisch: nach fs-desktop
+**D22/D23/D25 ✅:** fs-help + fs-core → eigene Repos; fs-libs hat jetzt nur noch fs-types, fs-error, fs-crypto, fs-health
 
-D23.[ ] fs-core → Code lesen: was ist drin?
-        Vermutung: nur Glue-Code → auflösen und verteilen
-```
-
----
-
-**Löschen:**
+**Offen (blockiert):**
 ```
 D24.[ ] fs-bridge-sdk → löschen
-        Adapter-Pattern hat Bridges ersetzt — kein Nutzen mehr
         Erst löschen wenn fs-registry läuft und alle Bridges migriert sind
-```
-
----
-
-**Abschluss:**
-```
-D25.[ ] fs-libs committen + pushen
-        Erst wenn alle Migrationen abgeschlossen und alle abhängigen Repos angepasst sind
-        Erwartetes Ergebnis: fs-libs hat nur noch fs-types, fs-error, fs-crypto, fs-health
 ```
 
 ---
