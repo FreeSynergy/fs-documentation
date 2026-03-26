@@ -129,17 +129,39 @@ C4. [x] FreeSynergy/fs-container-app erstellen
 
 **Lokales Klonen (fehlende Repos):**
 ```
-C5. [ ] fs-bus lokal klonen nach /home/kal/Server/fs-bus/
-C6. [ ] fs-config lokal klonen nach /home/kal/Server/fs-config/
+C5. [x] fs-bus lokal klonen nach /home/kal/Server/fs-bus/
+C6. [x] fs-config lokal klonen nach /home/kal/Server/fs-config/
 C7. [ ] fs-tasks lokal klonen nach /home/kal/Server/fs-tasks/
         (Repo existiert auf GitHub, aber Inhalt prüfen)
 ```
 
+**Neue Repos — noch anzulegen:**
+```
+C11.[ ] FreeSynergy/fs-auth erstellen — eigenes Repo, Kern-Infrastruktur
+        - Adapter-Pattern: Kanidm ist Referenz-Impl, austauschbar
+        - eigene UI (Login-Maske) + eigenes CLI
+        - läuft auch ohne Netzwerk, auch zuhause auf einem Rechner
+        - wird als erstes nach Installation installiert
+        - fs-node nutzt fs-auth — besitzt es nicht
+
+C12.[ ] FreeSynergy/fs-i18n erstellen — zentrale Übersetzungen aller Programme
+        - Library-Crate (Fluent-Parser, Lade-Logik, LanguageCode) + locales/ zusammen
+        - Struktur: locales/{lang}/common.ftl + {programm}.ftl pro Programm
+        - EINE Stelle für alle Übersetzer — kein .ftl in anderen Repos
+        - Regel: KEIN roher String in Code — nur i18n-Keys, auch bei Snippets
+
+C13.[ ] FreeSynergy/fs-info erstellen — System-Info Service
+        - Läuft als Daemon, antwortet auf Bus-Anfragen
+        - Speicher, CPU, Disk, laufende Services
+        - Wird von Store, Widgets, Desktop, Managers gebraucht
+        - Eigenständig — wie fs-inventory, fs-session, fs-registry
+```
+
 **Alte Repos archivieren (auf GitHub als archived markieren):**
 ```
-C8. [ ] FreeSynergy/Libs → archivieren (ersetzt durch fs-libs)
-C9. [ ] FreeSynergy/Wiki.rs → archivieren (falls nicht mehr aktiv)
-C10.[ ] FreeSynergy/Wiki.rs.Store → archivieren (falls nicht mehr aktiv)
+C14.[ ] FreeSynergy/Libs → archivieren (ersetzt durch fs-libs)
+C15.[ ] FreeSynergy/Wiki.rs → archivieren (falls nicht mehr aktiv)
+C16.[ ] FreeSynergy/Wiki.rs.Store → archivieren (falls nicht mehr aktiv)
 ```
 
 ---
@@ -149,64 +171,92 @@ C10.[ ] FreeSynergy/Wiki.rs.Store → archivieren (falls nicht mehr aktiv)
 > Ziel: fs-libs enthält nur echte, universelle Primitives.
 > Alles Domain-spezifische geht ins zugehörige Programm-Repo.
 
+> **Grundregel:** Crates/Repos werden nur zusammengelegt wenn es einen echten fachlichen
+> Grund gibt, warum etwas zusammengehört — **nicht umgekehrt**.
+> Lieber ein Repo mehr als zu wenig. Kleine, fokussierte Module — wie Linux.
+> **Vor jeder Migration: Begründung schreiben.** "Es ist klein" ist kein Grund zu mergen.
+> **Vorher immer prüfen:** Was braucht dieses Modul? Gibt es schon eine API im Store?
+
 **Bleibt in fs-libs (echte Primitives — alle Programme brauchen sie):**
 ```
 fs-types    — FsValue, FsUrl, SemVer, LanguageCode, FsPort, FsTag
 fs-error    — Basis-Fehler-Infrastruktur
 fs-crypto   — Verschlüsselung (alle brauchen sie)
 fs-health   — Health-Check-Trait (alle Services implementieren ihn)
-fs-i18n     — i18n-Primitive (alle Programme sind mehrsprachig)
 ```
 
-**Wandert in eigene Repos (bereits vorhanden):**
+**Wandert in eigene Repos (bereits vorhanden oder neu):**
 ```
 D1. [x] fs-bus     → bereits eigenes Repo, aus fs-libs entfernen
 D2. [x] fs-config  → bereits eigenes Repo, aus fs-libs entfernen
-D3. [ ] fs-db      → neues Repo (Phase C1), aus fs-libs extrahieren
+D3. [~] fs-db      → neues Repo (Phase C1), aus fs-libs extrahieren — IN ARBEIT
+D4. [ ] fs-i18n    → eigenes Repo (Phase C12), aus fs-libs extrahieren
+        Library-Crate (Parser, Lade-Logik) + locales/ in einem Repo
+        Alle Programme laden Übersetzungen daraus — eine Stelle für Übersetzer
+D5. [ ] fs-auth    → eigenes Repo (Phase C11), aus fs-libs extrahieren
+        Kern-Infrastruktur: läuft auch ohne Netzwerk, auch ohne Node
+        fs-node *nutzt* fs-auth — besitzt es nicht
 ```
 
-**Wandert in Programm-Repos:**
+**Strings aufräumen — Migration zu fs-i18n:**
 ```
-D4. [ ] fs-auth, fs-federation  → nach fs-node
-        (Node verwaltet Auth + Federation)
+D6. [ ] Code-Audit: alle hardcodierten Strings finden (grep nach println!, format!, eprintln!)
+D7. [ ] common.ftl erstellen: gemeinsame Fehlermeldungen
+        error-not-found, error-permission-denied, error-invalid-input, ...
+        → KEINE rohen Strings in Code, immer nur i18n-Keys
+D8. [ ] Pro Programm: eigene {programm}.ftl in fs-i18n/locales/{lang}/
+        Reihenfolge: parallel zu Phase E (je Programm beim Sauber-Machen)
+```
 
-D5. [ ] fs-llm                  → nach fs-ai
-        (AI Runtime braucht LLM-Abstraktion)
+**Wandert in eigene kleine Repos (Begründung: viele Nutzer, nicht nur ein Programm):**
+```
+D9. [ ] fs-sysinfo → eigenes Repo fs-info (NICHT nach fs-node)
+        Begründung: Store, Widgets, Manager, Desktop — alle brauchen System-Info
+        Läuft als Daemon, antwortet auf Bus-Anfragen
+        Wie fs-inventory, fs-session, fs-registry — eigenständiger Service
+        → In Phase C als C13 anlegen
+```
 
-D6. [ ] fs-bot, fs-channel      → nach fs-bots
-        (Bot-Runtime und Messenger-Adapter gehören zusammen)
+**Wandert in Programm-Repos (nur wenn wirklich nur EIN Nutzer):**
+```
+D10.[ ] fs-llm                  → nach fs-ai
+        Begründung: LLM-Abstraktion wird nur von fs-ai gebraucht — prüfen!
 
-D7. [ ] fs-ui, fs-components,
+D11.[ ] fs-bot, fs-channel      → nach fs-bots
+        Begründung: Bot-Runtime + Messenger-Adapter — prüfen ob wirklich nur fs-bots
+
+D12.[ ] fs-ui, fs-components,
         fs-render, fs-theme     → nach fs-desktop
-        (UI-Primitives gehören zum Desktop-Shell)
+        Begründung: UI-Primitives — prüfen ob Manager/Apps sie auch brauchen
 
-D8. [ ] fs-container            → nach fs-managers (container)
-        (Container-Deployment-Logik gehört zum Container Manager)
+D13.[ ] fs-container            → nach fs-managers (container)
+        Begründung: Container-Deployment — prüfen ob fs-node es auch braucht
 
-D9. [ ] fs-pkg, fs-plugin-sdk,
+D14.[ ] fs-pkg, fs-plugin-sdk,
         fs-plugin-runtime       → nach fs-store
-        (Paket-Verwaltung gehört zur Store-Library)
+        Begründung: Paket-Verwaltung — prüfen ob andere Programme es brauchen
 
-D10.[ ] fs-sync                 → prüfen: wer nutzt es?
+D15.[ ] fs-federation           → prüfen: eigenes Repo oder nach fs-node?
+        Begründung nötig: was nutzt Federation außer dem Node?
+        Falls mehrere: eigenes Repo
+
+D16.[ ] fs-sync                 → prüfen: wer nutzt es?
         Falls nur fs-store: nach fs-store
-        Falls mehrere: in fs-libs lassen
+        Falls mehrere: eigenes Repo (nicht in fs-libs lassen)
 
-D11.[ ] fs-sysinfo              → nach fs-node
-        (System-Info ist Server-Aufgabe)
-
-D12.[ ] fs-template             → prüfen: wer nutzt es?
+D17.[ ] fs-template             → prüfen: wer nutzt es?
         Falls nur ein Programm: dort hin
 
-D13.[ ] fs-help                 → nach fs-desktop oder fs-store
-        (Help-System gehört zur UI-Schicht)
+D18.[ ] fs-help                 → prüfen: wer nutzt es?
+        Falls Desktop + andere: eigenes Repo
 
-D14.[ ] fs-bridge-sdk           → löschen (Adapter-Pattern ersetzt Bridges)
+D19.[ ] fs-bridge-sdk           → löschen (Adapter-Pattern ersetzt Bridges)
         Erst löschen wenn fs-registry voll funktioniert
 
-D15.[ ] fs-core                 → prüfen: was ist drin?
+D20.[ ] fs-core                 → prüfen: was ist drin?
         Falls nur Glue-Code: auflösen
 
-D16.[ ] fs-libs committen + pushen (nach allen Migrationen)
+D21.[ ] fs-libs committen + pushen (nach allen Migrationen)
 ```
 
 ---
@@ -237,8 +287,8 @@ D16.[ ] fs-libs committen + pushen (nach allen Migrationen)
 **Reihenfolge:**
 
 ```
-E01.[ ] fs-config   — Konfig-Parsing (klein, klar definiert)
-E02.[ ] fs-bus      — Message Bus (Platform-Service, alle brauchen ihn)
+E01.[x] fs-config   — Konfig-Parsing (klein, klar definiert)
+E02.[x] fs-bus      — Message Bus (Platform-Service, alle brauchen ihn)
 E03.[ ] fs-db       — DB-Abstraktion (nach Phase C1 + D3)
 E04.[ ] fs-inventory — Installiertes verwalten (bereits sauber, Integration prüfen)
 E05.[ ] fs-session  — Session-Management (bereits sauber, Integration prüfen)
