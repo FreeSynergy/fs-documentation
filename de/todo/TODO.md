@@ -137,15 +137,7 @@ fs-health   — Health-Check-Trait (alle Services implementieren ihn)
 
 ---
 
-**Bereits erledigt ✅:** fs-bus | fs-config | fs-db | fs-auth | fs-federation | fs-i18n | fs-theme | fs-ui | fs-components → jeweils eigenes Repo
-
-**Eigene Repos — UI-Schicht (wie GTK/Qt — gehören keinem Programm alleine):**
-```
-D9. [ ] fs-render → prüfen: wer nutzt es konkret?
-        Falls alle UI-Programme → eigenes Repo (wie D7/D8)
-        Falls nur Desktop-Shell → nach fs-desktop
-        Entscheidung nach Blick in den Code
-```
+**Bereits erledigt ✅:** fs-bus | fs-config | fs-db | fs-auth | fs-federation | fs-i18n | fs-theme | fs-ui | fs-components | fs-render → jeweils eigenes Repo
 
 ---
 
