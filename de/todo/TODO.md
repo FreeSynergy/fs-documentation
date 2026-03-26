@@ -304,11 +304,9 @@ D25.[ ] fs-libs committen + pushen
 
 **Reihenfolge:**
 
-**Erledigt ✅:** fs-config, fs-bus
+**Erledigt ✅:** fs-config, fs-bus, fs-db, fs-inventory
 
 ```
-E03.[ ] fs-db       — DB-Abstraktion (nach Phase C1 + D3)
-E04.[ ] fs-inventory — Installiertes verwalten (bereits sauber, Integration prüfen)
 E05.[ ] fs-session  — Session-Management (bereits sauber, Integration prüfen)
 E06.[ ] fs-registry — Capability-Registry (bereits sauber, Integration prüfen)
 E07.[ ] fs-init     — Bootstrap (klein, kritisch)
