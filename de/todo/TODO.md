@@ -55,27 +55,7 @@ Diese Regeln gelten ohne Ausnahme. Kein Commit ohne grüne Gates.
 
 ---
 
-## Phase C: Repositories anlegen und vorbereiten
-
-> Ziel: Jedes Programm hat sein eigenes sauberes Repo auf GitHub, lokal geklont.
-
-**Lokal vorhanden + GitHub ✅ (kein Handlungsbedarf):**
-```
-fs-init, fs-node, fs-desktop, fs-store, fs-browser,
-fs-managers, fs-bots, fs-icons, fs-inventory, fs-session,
-fs-registry, fs-bus, fs-config, fs-libs, Store, fs-documentation
-```
-
-**Neu angelegt ✅:** fs-db, fs-lenses, fs-ai, fs-container-app, fs-tasks, fs-auth, fs-i18n, fs-info, fs-theme, fs-ui, fs-components, fs-federation, fs-llm, fs-channel, fs-packages
-**Archiviert ✅:** Libs, Wiki.rs, Wiki.rs.Store
-
-**Neue Repos — noch anzulegen:**
-```
-C24.[ ] FreeSynergy/fs-container erstellen — Container-Deployment-Library
-        - Container starten, stoppen, verwalten (Library, nicht UI)
-        - Wird von fs-managers/container UND fs-node gebraucht
-        - Achtung: NICHT fs-container-app (das ist die UI, bereits C4)
-```
+## Phase C: Repositories anlegen und vorbereiten ✅ (2026-03-26)
 
 ---
 
@@ -126,14 +106,6 @@ D19.[ ] Pro Programm: {programm}.ftl in fs-i18n/locales/{lang}/
 
 **Noch zu prüfen (Code lesen, dann entscheiden):**
 ```
-D20.[ ] fs-sync → Code lesen: was synchronisiert es und für wen?
-        Falls nur fs-store: nach fs-store
-        Falls mehrere oder unklar: eigenes Repo
-
-D21.[ ] fs-template → Code lesen: wer nutzt es?
-        Falls nur ein Programm: dorthin
-        Falls mehrere: eigenes Repo oder in fs-libs lassen
-
 D22.[ ] fs-help → Code lesen: ist es eine Library oder ein Programm?
         Falls Library für alle: eigenes Repo (Phase C25)
         Falls Desktop-spezifisch: nach fs-desktop
