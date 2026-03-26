@@ -4,6 +4,16 @@
 
 ---
 
+## TODO-Regeln (für Claude-Sessions)
+
+- **TODO.md immer vollständig lesen** zu Beginn jeder Session — auch wenn es Token kostet.
+  Nur so gibt es einen vollständigen Überblick ohne Missverständnisse.
+- **Erledigte Items löschen** — kein [x] behalten. Löschen spart Token in zukünftigen Sessions.
+  Abgeschlossene Phasen werden auf eine Zeile komprimiert.
+- **Vor jeder Aktion:** Was braucht dieses Modul? Store als Single Source of Truth prüfen.
+
+---
+
 ## Qualitäts-Regeln (für ALLE Repos, IMMER)
 
 Diese Regeln gelten ohne Ausnahme. Kein Commit ohne grüne Gates.
@@ -41,58 +51,7 @@ Diese Regeln gelten ohne Ausnahme. Kein Commit ohne grüne Gates.
 
 ## Phase A: Dokumentation aktualisieren ✅ (2026-03-26)
 
-> Ziel: Die Doku spiegelt den aktuellen Ist-Stand wider — keine Phantasie-Inhalte mehr.
-> Jede Seite: erst lesen, dann neu schreiben.
-
-```
-A1. [x] architektur/repositories.md — neu geschrieben
-A2. [x] architektur/uebersicht.md — neu geschrieben
-A3. [x] konzepte/pakete.md — neu geschrieben ([[binaries]], capabilities, bus_messages)
-A4. [x] konzepte/inventory.md — neu geschrieben (2 Konzepte getrennt, Bridge entfernt)
-A5. [x] konzepte/adapter.md — neu geschrieben (Traits, Mock, Registrierung, Konventionen)
-A6. [x] technik/build-workflow.md — NEU erstellt (Workflow, OOP-Regeln, Quality Gates)
-A7. [x] INDEX.md — aktualisiert (Builder entfernt, neue Seiten, korrekter Repo-Link)
-A8. [x] todo/TODO.md — aktuell
-```
-
----
-
 ## Phase B: Store bereinigen ✅ (2026-03-26)
-
-> Ziel: Der Store enthält nur Pakete die tatsächlich existieren oder realistisch bald kommen.
-> Nichts löschen — Phantasie-Pakete in `packages/archive/` verschieben.
-
-```
-B1. [x] packages/archive/ Verzeichnis anlegen
-        - catalog.toml erstellen (namespace: archive, type: archived)
-        - README.md: "Diese Pakete sind noch nicht implementiert.
-          Sie werden hierher verschoben bis ein echtes Repo existiert."
-
-B2. [x] Folgende Pakete nach packages/archive/ verschieben:
-        - apps/builder/     → in Container Manager aufgegangen, kein eigenes Paket mehr
-        - apps/showcase/    → Desktop-interne Entwicklungs-Ansicht, kein Store-Paket
-        - apps/profile/     → Desktop-intern (fs-desktop/crates/fs-profile)
-        - apps/settings/    → Desktop-intern (fs-desktop/crates/fs-settings)
-
-B3. [x] Folgende Pakete behalten, aber Katalog-TOMLs korrigieren:
-        - apps/theme-app/   → nach archive/ (Theme = managers/theme)
-        - apps/managers/    → aufgeteilt: managers/language, managers/theme, managers/icons,
-                               managers/cursor, managers/container, managers/bots, managers/ai
-        - apps/bots/        → Repo-Referenz fs-apps → fs-bots korrigiert
-
-B4. [x] Package-Format upgraden: [[binaries]] einführen
-        - Alle packages/apps/*/catalog.toml auf neues Format umgestellt (24 Dateien)
-        - binary = "..." → [[binaries]] Array
-        - bus = [...] → bus_messages = [...]
-        - capabilities + bus_messages Felder überall ergänzt
-
-B5. [x] Container-Pakete prüfen (packages/containers/)
-        - Alle 10 bleiben: cryptpad, dragonfly, forgejo, openobserver, otel-collector,
-          outline, postgres, pretix, umap, vikunja
-        - Werden als erste installiert — später separat verfeinert
-
-B6. [x] Store/ committen und pushen
-```
 
 ---
 
@@ -107,30 +66,10 @@ fs-managers, fs-bots, fs-icons, fs-tasks, fs-inventory, fs-session,
 fs-registry, fs-bus, fs-config, fs-libs, Store, fs-documentation
 ```
 
-**Fehlende Repos — erstellen:**
+**Repos erstellt ✅:** fs-db, fs-lenses, fs-ai, fs-container-app, fs-bus (geklont), fs-config (geklont)
+
+**Lokales Klonen:**
 ```
-C1. [x] FreeSynergy/fs-db erstellen
-        - DB-Abstraktion (SQLite via sea-orm, gemeinsam für alle Programme)
-        - Workspace: eine Crate fs-db
-        - Aus fs-libs extrahieren: src aus fs-libs/fs-db/
-
-C2. [x] FreeSynergy/fs-lenses erstellen
-        - Lenses App (Informations-Betrachter)
-        - Code-Basis: fs-apps/crates/fs-lenses/
-
-C3. [x] FreeSynergy/fs-ai erstellen
-        - AI Runtime + Proxy (Schnittstelle zu fs-mistral und anderen LLMs)
-        - Code-Basis: fs-apps/crates/fs-ai/ + fs-managers/ai/
-
-C4. [x] FreeSynergy/fs-container-app erstellen
-        - Container-App Manager UI
-        - Code-Basis: fs-apps/crates/fs-container-app/
-```
-
-**Lokales Klonen (fehlende Repos):**
-```
-C5. [x] fs-bus lokal klonen nach /home/kal/Server/fs-bus/
-C6. [x] fs-config lokal klonen nach /home/kal/Server/fs-config/
 C7. [ ] fs-tasks lokal klonen nach /home/kal/Server/fs-tasks/
         (Repo existiert auf GitHub, aber Inhalt prüfen)
 ```
@@ -150,11 +89,11 @@ C12.[ ] FreeSynergy/fs-i18n erstellen — zentrale Übersetzungen aller Programm
         - EINE Stelle für alle Übersetzer — kein .ftl in anderen Repos
         - Regel: KEIN roher String in Code — nur i18n-Keys, auch bei Snippets
 
-C13.[ ] FreeSynergy/fs-info erstellen — System-Info Daemon
-        - Läuft als Daemon, antwortet auf Bus-Anfragen
+C13.[ ] FreeSynergy/fs-info erstellen — System-Info Service
         - Speicher, CPU, Disk, laufende Services
         - Wird von Store, Widgets, Desktop, Managers gebraucht
         - Eigenständig — wie fs-inventory, fs-session, fs-registry
+        - Ob Daemon, Bus-Subscriber oder Library: offen → siehe G8
 
 C17.[ ] FreeSynergy/fs-theme erstellen — Theme-Primitives Library
         - Farb-Tokens, CSS-Variablen-Namen, Theme-Typen, Lade-Logik
@@ -223,13 +162,7 @@ fs-health   — Health-Check-Trait (alle Services implementieren ihn)
 
 ---
 
-**Bereits erledigt:**
-```
-D1. [x] fs-bus    → eigenes Repo (fs-bus), aus fs-libs entfernen
-D2. [x] fs-config → eigenes Repo (fs-config), aus fs-libs entfernen
-```
-
----
+**Bereits erledigt ✅:** fs-bus → eigenes Repo | fs-config → eigenes Repo
 
 **Eigene Repos — in Arbeit / direkt als nächstes:**
 ```
@@ -307,10 +240,10 @@ D13.[ ] fs-bot → nach fs-bots
 **Eigene Repos — Infrastruktur-Dienste (laufen als Daemons, antworten auf Bus):**
 ```
 D14.[ ] fs-sysinfo → eigenes Repo fs-info (Phase C13)
-        Was: System-Info-Daemon (Speicher, CPU, Disk, laufende Services)
+        Was: System-Info (Speicher, CPU, Disk, laufende Services)
         Wer braucht es: Store (ist Platz da?), Widgets, Desktop, Manager
-        Warum eigen: eigenständiger Dienst — wie fs-inventory, fs-session, fs-registry
-        → NICHT nach fs-node. Node kennt den Rechner nicht besser als alle anderen.
+        Warum eigen: mehrere Nutzer — NICHT nach fs-node
+        Ob Daemon, Bus-Subscriber oder Library: offen → siehe G8
 ```
 
 ---
@@ -414,9 +347,9 @@ D25.[ ] fs-libs committen + pushen
 
 **Reihenfolge:**
 
+**Erledigt ✅:** fs-config, fs-bus
+
 ```
-E01.[x] fs-config   — Konfig-Parsing (klein, klar definiert)
-E02.[x] fs-bus      — Message Bus (Platform-Service, alle brauchen ihn)
 E03.[ ] fs-db       — DB-Abstraktion (nach Phase C1 + D3)
 E04.[ ] fs-inventory — Installiertes verwalten (bereits sauber, Integration prüfen)
 E05.[ ] fs-session  — Session-Management (bereits sauber, Integration prüfen)
@@ -549,6 +482,25 @@ G7. fs-db Design
     - Was ist die DB-Abstraktion genau?
     - Welche Programme brauchen sie? (alle die SQLite nutzen)
     - sea-orm als Basis — Schema-Migration-Strategie
+
+G8. Daemon vs. Bus-Subscriber vs. Library — wann brauchen wir was?
+    Hintergrund: fs-info, fs-inventory, fs-session, fs-registry sind als "Daemons"
+    beschrieben — aber wenn wir Event-Handling und Queues über fs-bus haben, brauchen
+    wir dann überhaupt eigene Prozesse?
+
+    Optionen:
+      Library:        direkte Einbindung, kein eigener Prozess, kein Netzwerk-Overhead
+                      Pro: einfach, schnell | Con: jeder Nutzer trägt den Code selbst
+      Bus-Subscriber: Service läuft, hört auf Bus-Messages, antwortet auf Anfragen
+                      Pro: entkoppelt, zentrale Daten | Con: Bus muss laufen
+      Daemon:         eigenständiger Prozess mit eigenem API (HTTP, gRPC, Socket)
+                      Pro: unabhängig vom Bus | Con: ein Prozess mehr
+
+    Zu entscheiden: Ist fs-bus zuverlässig genug als einzigen Kommunikationsweg?
+    Falls ja → Bus-Subscriber reicht für fs-info, fs-inventory etc., kein Daemon nötig
+    Falls nein → Daemon mit Bus-Integration als Fallback
+
+    Betrifft: fs-info (C13/D14), fs-inventory, fs-session, fs-registry
 ```
 
 ---
