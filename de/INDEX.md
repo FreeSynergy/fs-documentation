@@ -32,6 +32,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Lenses](programme/lenses/README.md) — Informations-Betrachter: Daten aus mehreren Services aggregiert
 - [Tasks](programme/tasks/README.md) — Automatisierungs-Pipeline-Editor: Data Offers/Accepts, visuelle Verknüpfung
 - [Search](programme/search/README.md) — Mehrstufige Suche: lokal → Host → föderiert
+- [AI](programme/ai/README.md) — Lokaler LLM-Manager (Mistral.rs, Qwen-Modelle, Editor-Integration)
 - [Bot Manager](programme/botmanager/README.md) — Bots konfigurieren, mit Messengern verbinden, Status überwachen
 - [Container Manager](programme/container/README.md) — Container-Apps installieren, konfigurieren, starten/stoppen
 - [Language Manager](programme/language/README.md) — Sprache wechseln, Formate, Übersetzungs-Editor
