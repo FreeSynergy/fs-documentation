@@ -173,15 +173,13 @@ F3. ✅ fs-bus verdrahten
         RegistryBusHandler: service.# → register / deregister
         4 Integration-Tests grün (fs-bus/tests/bus_wiring.rs)
 
-F4. [ ] fs-session in Desktop einbauen
-        - Desktop öffnet Programm → Session-Eintrag wird angelegt
-        - Minimize → ProgramState::Minimized
-        - Restore → bestehendes Fenster wird aufgemacht (kein Neustart)
+F4. ✅ fs-session in Desktop einbauen
+        SessionTracker in Desktop: open/minimize/restore/close → SessionStore (fire-and-forget)
+        session_tracker Signal via use_effect + spawn initialisiert
 
-F5. [ ] fs-registry → Adapter-Lookup
-        - Service registriert Capability beim Start
-        - Bus fragt Registry: "Wer kann Rolle iam?"
-        - Antwort: Kanidm auf http://kanidm:8443
+F5. ✅ fs-registry → Adapter-Lookup
+        Registry::endpoint_for_capability(capability) → Option<String>
+        4 Tests: returns up service, skips down, returns none, prefers up over down
 
 F6. [ ] End-to-End Test: Paket installieren
         - fs-store-app: Paket auswählen
