@@ -181,13 +181,13 @@ F5. ✅ fs-registry → Adapter-Lookup
         Registry::endpoint_for_capability(capability) → Option<String>
         4 Tests: returns up service, skips down, returns none, prefers up over down
 
-F6. [ ] End-to-End Test: Paket installieren
-        - fs-store-app: Paket auswählen
-        - Download-URL aus Store/-Katalog
-        - Binary wird heruntergeladen + Hash-Verifikation
-        - Eintrag in fs-inventory
-        - Service startet → registriert sich in fs-registry
-        - Bus-Subscriber können ihn finden
+F6. ✅ End-to-End Test: Paket installieren
+        StoreReader: distribution URLs jetzt in PackageRelease gespeichert (fs-store)
+        4 Tests in fs-bus/tests/e2e_install.rs:
+          catalog_manager_has_linux_download_url → URL-Template mit {version} vorhanden
+          install_event_recorded_in_inventory → bus event → inventory entry
+          service_start_event_registered_in_registry → bus event → registry entry
+          full_install_chain → kompletter Flow: catalog → install → start → endpoint_for_capability
 ```
 
 ---
