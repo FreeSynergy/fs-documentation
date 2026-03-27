@@ -2,8 +2,6 @@
 
 > **Hinweis:** Früher als zwei getrennte Programme bekannt (Container Manager + Builder). Jetzt vereint in einem Programm mit den Bereichen: Installed, Install New, Build & Publish, Logs.
 
-> Lebt in **FreeSynergy.Desktop** (`crates/fsd-conductor/`). Früher in FreeSynergy.Managers.
-
 [← Zurück zum Index](../../INDEX.md) | [Node](../node/README.md) | [Store](../store/README.md) | [Manager](../../konzepte/manager.md)
 
 ---
@@ -140,21 +138,25 @@ Im Bereich "Build & Publish" kannst du:
 
 Das separate Builder-Programm gibt es nicht mehr.
 
+## Architektur
+
+| Modul | Zweck |
+|---|---|
+| `app.rs` | `ContainerApp` — Dioxus Root-Komponente, Sidebar + Detail-Ansicht |
+| `status.rs` | `UnitActiveStateDisplay` — Extension-Trait für Status-Anzeige |
+
 ## Repo
 
-https://github.com/FreeSynergy/Desktop (Crate: `crates/fsd-conductor/`)
+`git@github.com:FreeSynergy/fs-container-app.git`
 
 ## Bibliotheken
 
 | Crate | Zweck |
 |---|---|
-| `serde_yaml` | YAML parsen |
-| `tera` | Template-Engine für Configs |
-| `fsn-types` | Shared Types, Rollen |
-| `fsn-config` | TOML laden/speichern |
-| `fsn-db` | SQLite (fsn-container-app.db) |
-| `fsn-store` | Store-Client (optional) |
-| `fsn-error` | Fehlerbehandlung + Auto-Repair |
+| `fs-container` | Container-Abstraktion (Bollard/Docker API) |
+| `fs-components` | Wiederverwendbare UI-Komponenten |
+| `fs-i18n` | Lokalisierte Texte |
+| `fs-error` | Fehlerbehandlung |
 
 ## Beziehung Store / Inventory / Container Manager
 
