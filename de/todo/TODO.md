@@ -175,10 +175,10 @@ F2. ✅ Manager → fs-inventory
         ThemeManager::install_from_store(inventory, id, version) implementiert
         2 Integration-Tests grün: recorded + idempotent upsert
 
-F3. [ ] fs-bus verdrahten
-        - fs-inventory subscribt auf installer::* Bus-Messages
-        - fs-registry subscribt auf service::* Bus-Messages
-        - Test: programm startet → registriert sich im Bus → Registry kennt es
+F3. ✅ fs-bus verdrahten
+        InventoryBusHandler: installer.# → upsert_resource / uninstall
+        RegistryBusHandler: service.# → register / deregister
+        4 Integration-Tests grün (fs-bus/tests/bus_wiring.rs)
 
 F4. [ ] fs-session in Desktop einbauen
         - Desktop öffnet Programm → Session-Eintrag wird angelegt
