@@ -142,16 +142,14 @@ D24.[ ] fs-bridge-sdk → löschen
 
 **Reihenfolge:**
 
-**Erledigt ✅:** fs-config, fs-bus, fs-db, fs-inventory, fs-session, fs-registry, fs-init, fs-icons, fs-browser, fs-store
+**Erledigt ✅:** fs-config, fs-bus, fs-db, fs-inventory, fs-session, fs-registry, fs-init, fs-icons, fs-browser, fs-store, fs-lenses
 
 ```
-E11.[ ] fs-bots     — Bot-Runtime (Workspace mit mehreren Binaries)
 E11.[ ] fs-bots     — Bot-Runtime (Workspace mit mehreren Binaries)
         → Struktur: broadcast-bot, menu-bot, calendar-bot, ... je nach Messenger
 E12.[ ] fs-managers — Alle 7 Manager als Workspace
         → language, theme, icons, cursor, container, bots, ai
         → Reihenfolge: language → theme → icons → cursor → container → bots → ai
-E13.[ ] fs-lenses   — Lenses App (nach Phase C2)
 E14.[ ] fs-tasks    — Tasks App
 E15.[ ] fs-container-app — Container-App Manager UI (nach Phase C4)
 E16.[ ] fs-ai       — AI Runtime + Proxy (nach Phase C3)
