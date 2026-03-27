@@ -1,6 +1,6 @@
 # Lenses — Der Informations-Betrachter
 
-[← Zurück zum Index](../../INDEX.md)
+[← Zurück zum Index](../../INDEX.md) | [Search](../search/README.md)
 
 ---
 
@@ -31,6 +31,17 @@ Jeder Benutzer kann beliebig viele Lenses erstellen. Eine Lens kann als Icon auf
 4. Jeder Service gibt seine Daten zurück (gefiltert nach [Rechten](../../konzepte/rechte.md))
 5. Lens zeigt zusammengefasste Ansicht
 
+## Architektur
+
+| Modul | Zweck |
+|---|---|
+| `model.rs` | `Lens`, `LensItem`, `LensRole` — Domain-Modell |
+| `query.rs` | `LensQueryEngine` — Bus-Anfrage + Demo-Fallback |
+| `app.rs` | `LensesApp` — Dioxus Root-Komponente |
+
+`LensRole` beschreibt den Service-Typ (`Wiki`, `Chat`, `Git`, `Map`, `Tasks`, `Iam`, `Other`).
+`LensQueryEngine` sendet `lens.query` Events auf den Bus. Wenn der Bus nicht erreichbar ist, werden Demo-Daten angezeigt.
+
 ## Unterschied zu Tasks
 
 | Lenses | Tasks |
@@ -39,6 +50,10 @@ Jeder Benutzer kann beliebig viele Lenses erstellen. Eine Lens kann als Icon auf
 | Persönlich (für den Benutzer) | Organisatorisch (für das System) |
 | Lesen | Schreiben/Ausführen |
 | Manuell auslösen | Event-/zeitgesteuert |
+
+## Repo
+
+`git@github.com:FreeSynergy/fs-lenses.git`
 
 ---
 
