@@ -30,6 +30,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Store](programme/store/README.md) — Paketmanager: Katalog lesen, Pakete installieren, Versionen verwalten
 - [Browser](programme/browser/README.md) — Eingebetteter Web-Browser (eigenständig, kein Node nötig)
 - [Lenses](programme/lenses/README.md) — Informations-Betrachter: Daten aus mehreren Services aggregiert
+- [Tasks](programme/tasks/README.md) — Automatisierungs-Pipeline-Editor: Data Offers/Accepts, visuelle Verknüpfung
 - [Search](programme/search/README.md) — Mehrstufige Suche: lokal → Host → föderiert
 - [Bot Manager](programme/botmanager/README.md) — Bots konfigurieren, mit Messengern verbinden, Status überwachen
 - [Container Manager](programme/container/README.md) — Container-Apps installieren, konfigurieren, starten/stoppen
