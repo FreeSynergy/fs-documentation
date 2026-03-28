@@ -211,15 +211,19 @@ G1. fs-auth Design + fs-node Architektur
               Feature-gated: kanidm / bus / ui / cli
 
     NODE — Orchestrierungs-Schichten:
-    G1.5 [ ] fs-node: Grundstruktur
-              AuthGateway    → fs-auth (Protokoll-Traits)
-              S3Provider     → fs-s3 (s3s + opendal — bereits implementiert)
+    G1.5 ✅ fs-node: Grundstruktur (2026-03-28)
+              NodeLayer-Trait: start/stop/name Lifecycle
+              AuthGateway    → fs-auth (OAuthProvider + PamProvider + SsoProvider)
+              S3Provider     → fs-s3 (opendal)
               ServiceProxy   → fs-registry (Capability-Lookup)
-              FederationGate → fs-federation (später, nach Federation-Phase)
-              NodeAPI        → HTTP/gRPC nach außen (Desktop-Client, andere Nodes)
-    G1.6 [ ] fs-node: Einladungs-System (nach G1.5)
-              Token-basierte Node-Einladungen
-              Verschlüsselte TOML-Pakete, Port pro Einladung
+              FederationGate → Trait + disabled placeholder (bis Phase P)
+              NodeServer     → axum HTTP API; `fsn node serve`
+    G1.6 ✅ fs-node: Einladungs-System (2026-03-28)
+              InviteToken: fsn1.… HMAC-signierter Token (node_id|address|expires|nonce)
+              InviteBundle: age-verschlüsseltes TOML-Paket (passphrase-basiert)
+              PortPool: dedizierter Port pro Einladung (konfigurierbarer Range)
+              InviteSystem: create / verify / accept
+              CLI: `fsn node invite create` / `fsn node invite accept`
 
     HINWEIS S3: MinIO wird NICHT verwendet.
     fs-s3 nutzt `s3s` + `s3s-fs` (MIT) als eingebetteten S3-Server.
