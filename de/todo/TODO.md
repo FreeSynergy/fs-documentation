@@ -238,18 +238,22 @@ G2. Desktop Rendering-Architektur
     RENDER-LAYER (GUI):
     G2.1 ✅ fs-render: RenderEngine, FsWidget, FsWindow, FsTheme, FsEvent, AnimationSet — 19 Tests grün (2026-03-27)
     G2.2 ✅ fs-gui-engine-iced — IcedEngine/IcedWindow/IcedWidget/IcedTheme, iced 0.13, 16 Tests grün (2026-03-27)
-    G2.3 [ ] fs-gui-engine-bevy (neues Repo)
-              Bevy ECS als Basis
-              3D-fähig: Workspace-Visualisierungen, animierter Desktop
-              Mischform möglich: Bevy für 3D-Canvas, iced für Dialoge
-              Implementiert alle fs-render Traits
+    G2.3 ✅ fs-gui-engine-bevy (2026-03-28)
+              BevyEngine/BevyWindow/BevyWidget/BevyTheme — alle fs-render Traits
+              FsRenderPlugin: Bevy Plugin, init_resource<WorkspaceScene>, tick_animated_backgrounds
+              WorkspaceScene (Resource) + WorkspaceSceneBuilder (Builder Pattern)
+              WorkspaceNode (Builder: with_icon/at_position/active), WorkspaceLayout (Grid/Circular/Freeform)
+              AnimatedBackground (Component): Particles/Gradient/WaveField/Static + tick/pause/resume
+              25 Unit-Tests + 1 Doc-Test, clippy clean
 
     ANIMATIONS-SYSTEM (Teil von fs-render, Store-erweiterbar):
-    G2.4 [ ] AnimationSet als Store-Paket
-              Vordefiniert: slide-left, slide-right, fade, scale, rotate, ...
-              User-Animationen: WASM-basiert (fs-plugin-sdk)
-              Konfigurierbar je App-Aktion: welche Animation + Geschwindigkeit + aus
-              Im Store veröffentlichbar → Community-Animationen
+    G2.4 ✅ AnimationSet als Store-Paket (2026-03-28)
+              AppAction enum: 16 Standard-Actions + Custom(String)
+              AnimationActionMap: AppAction → AnimationActionEntry (Registry Pattern)
+              DefaultAnimationSet: 7 Animations + 16 Action-Mappings (slide/fade/scale/rotate)
+              AnimationRegistry: load_set / activate / resolve / effective_speed
+              ActionAnimationOverride: per-Action speed + disable
+              8 Tests grün, WASM-Erweiterung via fs-plugin-sdk (später)
 
     BROWSER-LAYER:
     G2.5 [ ] fs-web-engine (neues Repo — Abstraktions-Trait)
