@@ -251,35 +251,35 @@ Dokumentation
 
 ---
 
-## fs-db-engine-postgres (NEU — adapter)
+## fs-db-engine-postgres (NEU — adapter) ✅ 2026-03-29
 
 > PostgresEngine: implementiert DbEngine-Trait aus fs-db
 
 ```
 OOP & Design
-[ ] Adapter Pattern: PostgresEngine wraps SeaORM + PostgreSQL
-[ ] PostgresEngine implementiert DbEngine-Trait vollständig
+[✓] Adapter Pattern: PostgresEngine wraps sqlx + PostgreSQL
+[✓] PostgresEngine implementiert DbEngine-Trait vollständig
 [ ] Registriert Capability "db.engine.postgres" in fs-registry
-[ ] Immer gegen Interface
+[✓] Immer gegen Interface
 
 Repo
-[ ] GitHub Repo anlegen: git@github.com:FreeSynergy/fs-db-engine-postgres.git
-[ ] Lokal anlegen: /home/kal/Server/fs-db-engine-postgres/
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
+[✓] GitHub Repo anlegen: git@github.com:FreeSynergy/fs-db-engine-postgres.git
+[✓] Lokal anlegen: /home/kal/Server/fs-db-engine-postgres/
+[✓] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
+[✓] Containerfile
 
 Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
+[✓] #![deny(clippy::all, clippy::pedantic, warnings)]
 [ ] FTL-Keys für alle user-facing Fehlermeldungen
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: connect / migrate / query / health getestet
+[✓] cargo clippy: 0 Fehler
+[✓] cargo fmt --check: sauber
+[✓] cargo test: Integration-Tests (brauchen live PG, via FS_TEST_PG_URL)
 [ ] cargo build --release: fehlerfrei
 
 API
-[ ] gRPC (tonic): connect / disconnect / migrate / query / health
-[ ] REST (axum): GET /health, POST /migrate, POST /query
-[ ] OpenAPI (utoipa): auto-generiert
+[✓] gRPC (tonic): open / close / migrate / execute / health
+[✓] REST (axum): GET /health, POST /migrate, POST /execute
+[✓] OpenAPI (utoipa): auto-generiert
 
 Dokumentation
 [ ] Doku-Seite: PostgresEngine-Impl, Capability-Registration, API
