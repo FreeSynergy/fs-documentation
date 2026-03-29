@@ -957,38 +957,8 @@ Dokumentation
 > Welche Services + Capabilities laufen?
 
 ```
-OOP & Design
-[✓] Registry Pattern
-[✓] ServiceRegistry-Trait: register / deregister / lookup / list / endpoint_for / set_status
-[✓] endpoint_for_capability(cap) → Option<String>
-[✓] Immer gegen Interface
-
-Repo
-[✓] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[✓] Containerfile
-
-Code-Qualität
-[✓] #![deny(clippy::all, clippy::pedantic, warnings)]
-[✓] FTL-Keys: Fehlermeldungen + Status-Texte (CLI + API-Responses)
-[✓] cargo clippy: 0 Fehler
-[✓] cargo fmt --check: sauber
-[✓] cargo test: 10 Tests (register / deregister / lookup / capability-lookup / set_status)
-[✓] cargo build --release: fehlerfrei
-
-API
-[✓] gRPC: Register / Deregister / List / Lookup / EndpointFor / SetStatus / Health (tonic)
-[✓] REST: POST /services, DELETE /services/{id}, GET /capabilities/{cap}, PUT /services/{id}/status (axum)
-[✓] OpenAPI: auto-generiert (utoipa + Swagger UI)
-
-CLI
-[✓] fs-registry list / lookup {capability} / status
-
-Spezifisch
-[✓] Wenn fertig: D24 (fs-bridge-sdk löschen) unblocked
-
-Dokumentation
+Offen
 [ ] Doku-Seite: ServiceRegistry-Trait, Capabilities, API, CLI
-[ ] commit + push
 ```
 
 ---
