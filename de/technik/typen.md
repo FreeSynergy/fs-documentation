@@ -21,9 +21,9 @@ Alle Primitive implementieren `FsValue` — das ist der **gemeinsame Kontrakt** 
 
 ```rust
 pub trait FsValue: Debug + Send + Sync {
-    fn type_label_key(&self) -> &'static str;   // z.B. "type.url"
-    fn placeholder_key(&self) -> &'static str;  // z.B. "placeholder.url"
-    fn help_key(&self) -> &'static str;          // z.B. "help.url"
+    fn type_label_key(&self) -> &'static str;   // z.B. "type-url"
+    fn placeholder_key(&self) -> &'static str;  // z.B. "placeholder-url"
+    fn help_key(&self) -> &'static str;          // z.B. "help-url"
     fn validate(&self) -> Result<(), &'static str>;
     fn display(&self) -> String;
 }
@@ -31,13 +31,15 @@ pub trait FsValue: Debug + Send + Sync {
 
 **Warum das wichtig ist:** Jedes Input-Feld in der GUI kann `placeholder_key()` und `help_key()` aufrufen — ohne individuellen Hilfetext ist immer ein Standard-Text da. Übersetzt in jeder Sprache.
 
-Alle Schlüssel folgen dem Muster:
+Alle Schlüssel sind gültige FTL-Message-IDs (kebab-case):
 | Methode | Schlüssel-Muster | Beispiel |
 |---|---|---|
-| `type_label_key` | `type.<name>` | `type.url` |
-| `placeholder_key` | `placeholder.<name>` | `placeholder.url` |
-| `help_key` | `help.<name>` | `help.url` |
-| Fehler aus `validate` | `error.validation.<grund>` | `error.validation.url.scheme` |
+| `type_label_key` | `type-<name>` | `type-url` |
+| `placeholder_key` | `placeholder-<name>` | `placeholder-url` |
+| `help_key` | `help-<name>` | `help-url` |
+| Fehler aus `validate` | `error-validation-<grund>` | `error-validation-url-scheme` |
+
+Die zugehörigen Übersetzungen liegen in `fs-i18n/locales/{lang}/types.ftl`.
 
 ---
 
@@ -85,9 +87,9 @@ Semantische Versionsnummer — ersetzt `String` überall wo Versionen verglichen
 
 ```rust
 pub struct SemVer {
-    pub major: u32,
-    pub minor: u32,
-    pub patch: u32,
+    pub major: u16,
+    pub minor: u16,
+    pub patch: u16,
     pub pre: Option<String>,  // "alpha.1", "beta.2", "rc.1"
 }
 ```

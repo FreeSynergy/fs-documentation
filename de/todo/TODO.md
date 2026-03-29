@@ -450,40 +450,6 @@ Dokumentation
 
 ---
 
-## fs-types (Crate in fs-libs)
-
-> Universelle Basis-Typen: FsValue, FsUrl, SemVer, LanguageCode, FsPort, FsTag
-
-```
-OOP & Design
-[ ] Value Object Pattern: alle Typen immutable, Verhalten im Typ
-[ ] Newtype-Wrapper: kein nackter String / u32 durchreichen
-[ ] Traits: Display, From, TryFrom, Serialize, Deserialize für alle Typen
-[ ] Immer gegen Interface — Consumer nutzt Trait-Bounds
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys für alle user-facing Fehlermeldungen (TryFrom-Fehler, Display-Texte)
-    Auch CLI- und Library-Nutzer sehen diese Texte → FTL Pflicht
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: alle Typen round-trip + Display + TryFrom getestet
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
-[ ] u16 für Versionsnummern (nicht u32)
-[ ] FsUrl: valide URL, kein nackter String
-[ ] SemVer: major.minor.patch, Vergleich implementiert
-[ ] LanguageCode: BCP-47
-[ ] FsPort: 1–65535
-
-Dokumentation
-[ ] Doku-Seite: alle Typen, Traits, Verwendungsbeispiele
-[ ] commit + push
-```
-
----
-
 ## fs-error (Crate in fs-libs)
 
 > Basis-Fehler-Infrastruktur
