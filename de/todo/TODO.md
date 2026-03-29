@@ -833,7 +833,7 @@ Spezifisch
 
 Dokumentation
 [x] Doku-Seite: alle Traits, FsView-Pattern (Warum hier?), AppContext, 3D-Erweiterung
-[ ] commit + push
+[x] commit + push
 ```
 
 ---
