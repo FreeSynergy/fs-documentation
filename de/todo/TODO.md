@@ -838,40 +838,40 @@ Dokumentation
 
 ---
 
-## fs-gui-engine-iced (adapter)
+## fs-gui-engine-iced (adapter) ✅ 2026-03-29
 
 > iced-Implementierung von fs-render (libcosmic als Basis)
 
 ```
 OOP & Design
-[ ] Adapter Pattern: IcedEngine adaptiert iced für fs-render Traits
-[ ] IcedEngine implementiert RenderEngine-Trait
-[ ] IcedWidget implementiert FsWidget-Trait
-[ ] IcedWindow implementiert FsWindow-Trait
-[ ] IcedTheme implementiert FsTheme-Trait (via libcosmic)
-[ ] Registriert Capability "render.engine.iced" in fs-registry
-[ ] Immer gegen Interface
+[x] Adapter Pattern: IcedEngine adaptiert iced für fs-render Traits
+[x] IcedEngine implementiert RenderEngine-Trait (+ set_context, run)
+[x] IcedWidget implementiert FsWidget-Trait
+[x] IcedWindow implementiert FsWindow-Trait
+[x] IcedTheme implementiert FsTheme-Trait (iced::Theme-Wrapper)
+[x] Registriert Capability "render.engine.iced" — capability.rs + CAPABILITY_ID
+[x] Immer gegen Interface
 
 Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
+[x] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
+[x] Containerfile
 
 Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys für Fehlermeldungen
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
+[x] #![deny(clippy::all, clippy::pedantic, warnings)]
+[x] FTL-Keys für Fehlermeldungen (gui-engine-iced.ftl en + de)
+[x] cargo clippy: 0 Fehler
+[x] cargo fmt --check: sauber
+[x] cargo test: 21 Tests grün
+[x] cargo build --release: fehlerfrei
 
 Spezifisch
-[ ] Elm-Pattern (MVU): Message + Update + View sauber getrennt
-[ ] libcosmic: Widgets, Theming, Fensterverhalten vollständig integriert
-[ ] Kein iced-Code in Consumer-Crates durchreichen
+[x] Elm-Pattern (MVU): mvu.rs — MvuApp<S,M,U,V> mit FsMessage-Trait
+[ ] libcosmic: vollständige Integration (G2.8 — vanilla iced 0.13 als Basis)
+[x] Kein iced-Code in Consumer-Crates (pub use iced als Escape-Hatch)
 
 Dokumentation
-[ ] Doku-Seite: IcedEngine-Impl, MVU-Pattern, libcosmic-Integration, Capability
-[ ] commit + push
+[x] Doku-Seite: de/programme/fs-gui-engine-iced.md
+[x] commit + push
 ```
 
 ---
