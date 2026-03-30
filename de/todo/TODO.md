@@ -995,44 +995,6 @@ Dokumentation
 
 ---
 
-## fs-help (program)
-
-> Context-sensitive Help Topics
-
-```
-OOP & Design
-[ ] Repository Pattern
-[ ] HelpProvider-Trait: get-topic / search / list-topics / related
-[ ] HelpTopic: id + title + content-key (FTL-Key) + related + tags
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: alle Hilfetexte in locales/{lang}/help.ftl (CLI + UI + API)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-API
-[ ] gRPC: get-topic / search / list-topics / related
-[ ] REST: GET /topics, GET /topics/{id}, GET /search?q=
-[ ] OpenAPI: auto-generiert
-
-CLI
-[ ] fs-help {topic} / search {query} / list
-
-Dokumentation
-[ ] Doku-Seite: HelpProvider-Trait, Topic-Format, FTL-Integration, API, CLI
-[ ] commit + push
-```
-
----
-
 ## fs-packages (program — Workspace: fs-pkg + fs-plugin-sdk + fs-plugin-runtime)
 
 > Package-Typen, Install-Engine, Plugin-SDK, Plugin-Runtime
