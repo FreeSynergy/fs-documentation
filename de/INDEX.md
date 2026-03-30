@@ -37,6 +37,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-help](programme/fs-help.md) — Kontext-sensitives Hilfesystem: HelpSystem, HelpTopic, HelpKind, Volltextsuche
 - [fs-packages](programme/fs-packages.md) — Package-Engine: Manifest, Installer, Setup-Flow, Plugin-SDK, WASM-Runtime
 - [fs-init](programme/fs-init.md) — Bootstrap-Binary: Store klonen via gix, kein System-git nötig
+- [fs-node](programme/fs-node.md) — Node-Server: Deploy-Engine, Auth-Gateway, S3, DNS, Invite-System, gRPC+REST
 
 ### Programme
 - [Init](programme/init/README.md) — Bootstrap: prüft System, lädt Store
