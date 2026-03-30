@@ -33,6 +33,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-sync](programme/fs-sync.md) — CRDT-Sync: SyncDoc, SyncPeer, SyncEngine, WsTransport (Automerge)
 - [fs-channel](programme/fs-channel.md) — Messaging-Abstraktion: Channel-Trait, MatrixAdapter, TelegramAdapter
 - [fs-llm](programme/fs-llm.md) — LLM-Abstraktion: LlmProvider-Trait, Ollama/Claude/OpenAI-compat, Tasks
+- [fs-help](programme/fs-help.md) — Kontext-sensitives Hilfesystem: HelpSystem, HelpTopic, HelpKind, Volltextsuche
 
 ### Programme
 - [Init](programme/init/README.md) — Bootstrap: prüft System, lädt Store
