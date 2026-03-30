@@ -841,28 +841,7 @@ Dokumentation
 
 ---
 
-## fs-documentation
-
-```
-[ ] INDEX.md aktualisieren
-
-Neue Doku-Seiten:
-[ ] Architektur: 3-Stufen-Installation (Init → Store → Bundles → Pakete → Artifacts)
-[ ] Architektur: 4 Package-Typen (bundle / program / adapter / artifact)
-[ ] Architektur: Artifact Global vs. Per-Paket
-[ ] Architektur: Namenskonvention Adapter-Repos
-[ ] Architektur: API-Standard (gRPC + REST + OpenAPI)
-[ ] Architektur: DB-Engine-Strategie
-[ ] Architektur: bootc OS-Images (fs-server + fs-workstation)
-[ ] fs-bootc, fs-db-engine-sqlite, fs-db-engine-postgres
-[ ] fs-llm-mistral, fs-llm-openai
-[ ] fs-channel-matrix, fs-channel-telegram
-[ ] fs-registry, fs-inventory, fs-session, fs-info
-[ ] fs-channel, fs-llm (Trait-Libraries)
-[ ] fs-sync, fs-federation, fs-help
-
-[ ] commit + push
-```
+## fs-documentation ✅ 2026-03-30
 
 ---
 
