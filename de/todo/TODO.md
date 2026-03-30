@@ -711,44 +711,6 @@ Dokumentation
 
 ---
 
-## fs-icons (program)
-
-> Icon-Sets: laden, suchen, nach Theme filtern
-
-```
-OOP & Design
-[ ] Repository Pattern + Strategy (Theme-Filter)
-[ ] IconProvider-Trait: get(id, size) / list() / search(query) / by-theme(id)
-[ ] IconResolver: findet bestes Icon für Name + Größe + Theme
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: Icon-Set-Namen + Beschreibungen + Fehlermeldungen (CLI + UI)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-API
-[ ] gRPC: list / get / search / by-theme / list-sets
-[ ] REST: GET /icons/{id}, GET /icons/search?q=, GET /sets
-[ ] OpenAPI: auto-generiert
-
-CLI
-[ ] fs-icons list / get {id} / search {query} / by-theme {theme-id}
-
-Dokumentation
-[ ] Doku-Seite: IconProvider-Trait, IconSet-Format, Resolver, API, CLI
-[ ] commit + push
-```
-
----
-
 ---
 
 # Gruppe G — Apps (alle G2.9 — iced-Migration)
