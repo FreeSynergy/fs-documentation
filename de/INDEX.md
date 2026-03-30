@@ -35,6 +35,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-llm](programme/fs-llm.md) — LLM-Abstraktion: LlmProvider-Trait, Ollama/Claude/OpenAI-compat, Tasks
 - [fs-help](programme/fs-help.md) — Kontext-sensitives Hilfesystem: HelpSystem, HelpTopic, HelpKind, Volltextsuche
 - [fs-packages](programme/fs-packages.md) — Package-Engine: Manifest, Installer, Setup-Flow, Plugin-SDK, WASM-Runtime
+- [fs-init](programme/fs-init.md) — Bootstrap-Binary: Store klonen via gix, kein System-git nötig
 
 ### Programme
 - [Init](programme/init/README.md) — Bootstrap: prüft System, lädt Store
