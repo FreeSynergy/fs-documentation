@@ -40,6 +40,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-node](programme/fs-node.md) — Node-Server: Deploy-Engine, Auth-Gateway, S3, DNS, Invite-System, gRPC+REST
 - [fs-desktop](programme/fs-desktop.md) — Wayland Shell: DesktopShell, WindowManager, AppLauncher, Settings, Profile (iced/libcosmic)
 - [fs-store](programme/fs-store.md) — Paketmanager: Katalog, Suche, Installation, GUI+CLI, Pointer-Model
+- [fs-icons](programme/fs-icons.md) — SVG-Icon-Sets: homarrlabs, we10x; fs-icons-sync Binary (gix, kein System-git)
 
 ### Programme
 - [Init](programme/init/README.md) — Bootstrap: prüft System, lädt Store
@@ -93,6 +94,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Storage-Layer (S3)](technik/storage.md) — Eigener S3-Server, opendal, Profiles
 - [Datenspeicherung](technik/datenspeicherung.md) — SQLite-Architektur, Datenbank pro Service
 - [fs-db](technik/fs-db.md) — DbEngine-Trait, CrudRepo, MigrationRunner, Strategy Pattern
+- [fs-bus](technik/fs-bus.md) — Async Event Bus: Topic-Routing, Retry, Transforms, Standing Orders, Bridge
 - [fs-config](technik/fs-config.md) — TOML Config Loader/Saver, Validierung, Auto-Repair, FeatureFlags
 - [fs-db-engine-sqlite](technik/fs-db-engine-sqlite.md) — SQLite-Adapter: DbEngine-Trait-Impl, gRPC+REST, Capability "db.engine.sqlite"
 - [fs-db-engine-postgres](technik/fs-db-engine-postgres.md) — PostgreSQL-Adapter: DbEngine-Trait-Impl, gRPC+REST, Capability "db.engine.postgres"

@@ -232,52 +232,7 @@ Dokumentation
 
 ---
 
-## fs-bus (program)
-
-> Async Event Bus: Topic-Routing, Retry, Tera-Transforms
-
-```
-OOP & Design
-[ ] Pub-Sub + Chain of Responsibility (Transforms als Chain)
-[ ] BusPublisher-Trait: publish(topic, payload) → Result
-[ ] BusSubscriber-Trait: subscribe(pattern) → Stream
-[ ] MessageTransform-Trait: transform(msg) → msg
-[ ] RetryPolicy-Trait: Strategy Pattern (exponential / fixed / none)
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: alle Fehlermeldungen + Status-Texte (CLI + UI + Logs)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: publish / subscribe / retry / transform getestet
-[ ] cargo build --release: fehlerfrei
-
-API
-[ ] gRPC (tonic): publish / subscribe / ack / list-topics / unsubscribe
-[ ] Proto-Datei: bus.proto
-[ ] REST (axum): POST /publish, GET /topics, POST /subscribe
-[ ] OpenAPI (utoipa): auto-generiert
-
-Spezifisch
-[ ] G3: Bus-Namespaces dokumentieren (nach Architektur-Gespräch)
-[ ] Topic-Format: {domain}.{action}.{qualifier}
-[ ] Rechte: wer darf welche Topics publizieren / subscriben
-
-CLI
-[ ] fs-bus publish {topic} {payload}
-[ ] fs-bus subscribe {pattern}
-[ ] fs-bus list-topics
-[ ] fs-bus status
-
-Dokumentation
-[ ] Doku-Seite: Traits, Topic-Format, Namespaces, API, CLI
-[ ] commit + push
-```
+## fs-bus (program) ✅ 2026-03-30
 
 ---
 
