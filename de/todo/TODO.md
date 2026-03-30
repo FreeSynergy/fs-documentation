@@ -995,37 +995,6 @@ Dokumentation
 
 ---
 
-## fs-llm (library, kein Container)
-
-> LLM-Abstraktion: definiert LlmAdapter-Trait
-
-```
-OOP & Design
-[ ] Strategy Pattern: LlmAdapter je Modell-Provider austauschbar
-[ ] LlmAdapter-Trait: complete / embed / stream / list-models / health
-[ ] ModelSelector: Strategy Pattern (welches Modell für welche Aufgabe)
-[ ] Immer gegen Interface
-[ ] Konkrete Impl: fs-llm-mistral, fs-llm-openai (eigene Repos)
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Kein Containerfile (reine Trait-Library)
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] Keine FTL (reine Trait-Library)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: Trait-Definitionen + Stub-Impl getestet
-[ ] cargo build --release: fehlerfrei
-
-Dokumentation
-[ ] Doku-Seite: LlmAdapter-Trait, ModelSelector, Wie Adapter-Repos implementieren
-[ ] commit + push
-```
-
----
-
 ## fs-help (program)
 
 > Context-sensitive Help Topics
