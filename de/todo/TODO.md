@@ -426,52 +426,7 @@ Dokumentation
 
 ---
 
-## fs-auth (program)
-
-> 4 Protokoll-Traits + Kanidm-Implementierung
-
-```
-OOP & Design
-[ ] Strategy Pattern: Auth-Backends austauschbar
-[ ] OAuthProvider-Trait: authorize / token / refresh / revoke
-[ ] ScimProvider-Trait: create_user / update_user / delete_user / list_users
-[ ] SsoProvider-Trait: sso_login / validate_session / logout
-[ ] PamProvider-Trait: pam_authenticate / pam_authorize
-[ ] KanidmBackend: Adapter Pattern, implementiert alle 4 Traits
-[ ] Immer gegen Interface — nie Kanidm direkt aufrufen
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: Login / Logout / Fehler / Status (UI + CLI + API-Responses)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: alle 4 Protokoll-Traits + KanidmBackend getestet
-[ ] cargo build --release: fehlerfrei
-
-API
-[ ] gRPC: login / logout / provision / validate / capabilities
-[ ] Proto-Datei: auth.proto
-[ ] REST: POST /login, POST /logout, GET /capabilities, POST /provision
-[ ] OpenAPI: auto-generiert
-
-UI
-[ ] LoginView: FsView-Trait, view.rs (Bindeglied) — nur diese Datei importiert fs-render
-[ ] iced via fs-gui-engine-iced
-
-CLI
-[ ] fs-auth login / logout / status / provision
-
-Bus
-[ ] auth.login / auth.logout / auth.provision Events publizieren
-
-Dokumentation
-[ ] Doku-Seite: 4 Protokoll-Traits, KanidmBackend, LoginView-Pattern, API, CLI, Bus
-[ ] commit + push
-```
+## fs-auth (program) ✅ 2026-03-30
 
 ---
 
@@ -493,42 +448,7 @@ Dokumentation
 
 ---
 
-## fs-container (program)
-
-> Container-Abstraktion (Bollard / Podman)
-
-```
-OOP & Design
-[ ] Adapter Pattern: ContainerAdapter wraps Bollard
-[ ] ContainerEngine-Trait: start / stop / remove / list / logs / status / pull
-[ ] ContainerSpec: Builder Pattern
-[ ] Registriert Capability "container.engine" in fs-registry
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: Status + Fehlermeldungen (CLI + UI + API)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-API
-[ ] gRPC: start / stop / remove / list / logs / status / pull
-[ ] REST: POST /containers, DELETE /containers/{id}, GET /containers/{id}/logs
-[ ] OpenAPI: auto-generiert
-
-CLI
-[ ] fs-container list / start {id} / stop {id} / logs {id} / pull {image}
-
-Dokumentation
-[ ] Doku-Seite: ContainerEngine-Trait, ContainerAdapter, ContainerSpec, API, CLI
-[ ] commit + push
-```
+## fs-container (program) ✅ 2026-03-30
 
 ---
 

@@ -25,6 +25,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Render-Architektur](architektur/render-architektur.md) — GUI-Abstraktion (fs-render), Engines (iced, Bevy), Browser-Engine (Servo), Animations-System
 - [fs-render](programme/fs-render.md) — GUI-Abstraktions-Traits: RenderEngine, FsView, FsWidget, FsWindow, FsTheme, FsEvent, AppContext, AnimationRegistry, Fs3dExtension
 - [fs-gui-engine-iced](programme/fs-gui-engine-iced.md) — iced Render-Engine: IcedEngine, MVU-Muster, IcedTheme, Capability "render.engine.iced"
+- [fs-auth](programme/fs-auth.md) — Auth-Service: OAuthProvider, ScimProvider, SsoProvider, PamProvider + Kanidm-Backend
 - [fs-registry](programme/fs-registry.md) — Service-Registry: ServiceRegistry-Trait, Capability-Lookup, gRPC+REST+CLI
 - [fs-inventory](programme/fs-inventory.md) — Lokales Paket-Inventar: InventoryStore-Trait, InstalledResource, ServiceInstance, gRPC+REST+CLI
 - [fs-session](programme/fs-session.md) — Session-Management: SessionStore-Trait, SqliteSessionStore, SessionTracker, AppSession
