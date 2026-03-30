@@ -281,38 +281,7 @@ Dokumentation
 
 ---
 
-## fs-config (library, kein Container)
-
-> TOML Config Loader/Saver — reine Library, kein Daemon
-
-```
-OOP & Design
-[ ] Repository Pattern: ConfigRepository lädt/speichert
-[ ] ConfigLoader-Trait: load() → Config, save(config) → Result
-[ ] ConfigValidator-Trait: validate(config) → ValidationResult
-[ ] ConfigAutoRepair-Trait: repair(config) → Config
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Kein Containerfile (reine Library)
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: Validierungsfehler + Fehlermeldungen (auch CLI-Nutzer sehen sie)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: load / save / validate / repair getestet
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
-[ ] Config-Changes via Bus: config::changed::* Topics publizieren
-[ ] Kein Daemon — Programme subscriben auf config::changed::*
-
-Dokumentation
-[ ] Doku-Seite: ConfigLoader-Trait, Validierung, Auto-Repair, Bus-Integration
-[ ] commit + push
-```
+## fs-config (library, kein Container) ✅ 2026-03-30
 
 ---
 
@@ -824,58 +793,6 @@ Dokumentation
 # Gruppe F — Programme
 
 ---
-
----
-
-## fs-desktop (program)
-
-> Wayland Shell: Workspace, Window-Management, Settings, Profile
-
-```
-OOP & Design
-[ ] Elm-Pattern MVU: Message / Update / View (iced)
-[ ] DesktopShell: zentrales Objekt
-[ ] WindowManager: Observer Pattern (SessionTracker → Fenster-Events)
-[ ] AppLauncher: Command Pattern
-[ ] AppId-Enum: Strategy Pattern (welches App wird gerendert)
-[ ] Settings-Module: je Modul eigenes Objekt
-[ ] Domain-Objekte kein fs-render — nur view.rs als Bindeglied
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: alle Shell + Settings Texte (UI + CLI)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch — große Dateien aufteilen
-[ ] H10a: fs-gui-workspace/src/desktop.rs (1362 Zeilen)
-          → desktop/shell.rs + desktop/launcher.rs + desktop/workspace.rs + desktop/taskbar.rs
-[ ] H10b: fs-settings/src/desktop_settings.rs (1172 Zeilen)
-          → settings/display.rs + settings/input.rs + settings/power.rs + settings/workspace.rs
-[ ] H10c: fs-settings/src/language.rs (1150 Zeilen)
-          → settings/language/selector.rs + settings/language/download.rs + settings/language/preview.rs
-
-G2.9 — Apps-Integration
-[ ] Desktop zeigt echte Apps sobald jede App auf iced migriert ist
-[ ] Placeholder entfernen wenn App fertig
-
-CLI
-[ ] fs-desktop status / list-windows / launch {app-id}
-
-Langfristig
-[ ] Wayland-Compositor (smithay/libcosmic) — fs-desktop als eigenständiger Compositor
-
-Dokumentation
-[ ] Doku-Seite: Shell-Architektur, Window-Management, Settings-Module, fs-render-Integration, CLI
-[ ] commit + push
-```
 
 ---
 
