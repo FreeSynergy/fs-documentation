@@ -298,33 +298,7 @@ Dokumentation
 
 ---
 
-## fs-crypto (Crate in fs-libs)
-
-> Verschlüsselung für alle FS-Dienste
-
-```
-OOP & Design
-[ ] Strategy Pattern: CryptoProvider-Trait, Algorithmus austauschbar
-[ ] CryptoProvider-Trait: encrypt / decrypt / sign / verify / hash
-[ ] Immer gegen Interface
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys für Fehlermeldungen (auch CLI-Nutzer sehen diese)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: alle Crypto-Ops round-trip getestet
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
-[ ] HMAC-Impl (Invite-Token in fs-node)
-[ ] age-Verschlüsselung (Invite-Bundle in fs-node)
-[ ] Kein unsafe code
-
-Dokumentation
-[ ] Doku-Seite: CryptoProvider-Trait, Algorithmen, Sicherheitshinweise
-[ ] commit + push
-```
+## fs-crypto (Crate in fs-libs) ✅ 2026-03-30
 
 ---
 

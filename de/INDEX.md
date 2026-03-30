@@ -34,6 +34,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-channel](programme/fs-channel.md) — Messaging-Abstraktion: Channel-Trait, MatrixAdapter, TelegramAdapter
 - [fs-llm](programme/fs-llm.md) — LLM-Abstraktion: LlmProvider-Trait, Ollama/Claude/OpenAI-compat, Tasks
 - [fs-help](programme/fs-help.md) — Kontext-sensitives Hilfesystem: HelpSystem, HelpTopic, HelpKind, Volltextsuche
+- [fs-packages](programme/fs-packages.md) — Package-Engine: Manifest, Installer, Setup-Flow, Plugin-SDK, WASM-Runtime
 
 ### Programme
 - [Init](programme/init/README.md) — Bootstrap: prüft System, lädt Store
@@ -91,6 +92,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-llm-mistral](technik/fs-llm-mistral.md) — MistralAdapter: LlmAdapter-Trait-Impl, Capability "llm.mistral"
 - [fs-llm-openai](technik/fs-llm-openai.md) — OpenAiAdapter: LlmAdapter-Trait-Impl, Capability "llm.openai"
 - [fs-error](technik/fs-error.md) — FsError, FsErrorTrait, ErrorSeverity, Repairable, ValidationIssue
+- [fs-crypto](technik/fs-crypto.md) — CryptoProvider-Trait, age, HMAC-SHA256, Ed25519, mTLS, KeyGen, JoinToken
 - [Bibliotheken](technik/bibliotheken.md) — Welche Crates wofür
 - [Typen-System](technik/typen.md) — FsValue, FsUrl, LanguageCode, SemVer, FsPort, FsTag
 - [CSS-System](technik/css.md) — CSS-Variablen, Prefixing, Themes
