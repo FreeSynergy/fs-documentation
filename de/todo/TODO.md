@@ -648,8 +648,8 @@ Spezifisch — große Dateien aufteilen
          → views/language_view.rs + views/theme_view.rs + views/icon_view.rs + …
 
 Bekannter Bug
-[ ] fs-manager-language: alte gix-API (pre gix 0.65)
-        prepare_push + SignatureRef auf neue gix-API migrieren
+[ ] fs-manager-language: gix-API (pre-0.65) in git.rs vollständig migrieren
+    prepare_push + SignatureRef auf neue gix-API aktualisieren
 
 UI
 [ ] iced-Migration: alle Manager-Views als FsView-Trait
@@ -666,8 +666,7 @@ API
 [ ] OpenAPI: auto-generiert
 
 Dokumentation
-[ ] Doku-Seite: Manager-Übersicht, je Manager: Trait + API + CLI, FsView-Pattern
-[ ] commit + push
+[ ] commit + push (nach UI/CLI/API-Implementierung)
 ```
 
 ---
