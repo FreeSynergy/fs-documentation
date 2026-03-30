@@ -975,55 +975,6 @@ Dokumentation
 
 ---
 
-## fs-init (program)
-
-> Installer + Erstkonfigurations-Programm
-
-```
-OOP & Design
-[ ] State Machine: Installer-Phasen als States
-[ ] InstallerStep-Trait: execute / rollback / display_name
-[ ] BootcInstaller: Adapter für bootc install to-disk
-[ ] VariantSelector: Server vs. Workstation (Strategy Pattern)
-[ ] ConfigurationWizard: Chain of Responsibility
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] H12: Workspace-Cargo.toml im Root anlegen (cli/, validator/, migration/ haben eigene)
-[ ] Containerfile (wird als Live-ISO-Payload ausgeführt)
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: alle Installer-Texte, Schritt-Beschreibungen, Fehlermeldungen (UI + CLI)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: alle InstallerStep-Impls getestet
-[ ] cargo build --release: fehlerfrei
-
-UI
-[ ] Installer-Wizard: FsView-Trait (iced via fs-gui-engine-iced)
-[ ] Varianten-Auswahl: Server / Workstation
-[ ] Bundle-Auswahl: welche Pakete installieren?
-[ ] Fortschrittsanzeige pro Schritt
-
-CLI
-[ ] fs-init install --variant server|workstation --disk /dev/sda
-[ ] fs-init configure
-[ ] fs-init status
-
-Spezifisch
-[ ] bootc install to-disk mit korrektem Image aufrufen
-[ ] bootc switch für Remote-Migration
-[ ] Store laden nach erstem Boot
-
-Dokumentation
-[ ] Doku-Seite: Installer-Ablauf, bootc-Integration, InstallerStep-Trait, Bundles, UI, CLI
-[ ] commit + push
-```
-
----
-
 ## fs-node (program)
 
 > Orchestrator: AuthGateway, S3Provider, ServiceProxy, FederationGate, NodeAPI
