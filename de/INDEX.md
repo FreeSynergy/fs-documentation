@@ -38,6 +38,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [fs-packages](programme/fs-packages.md) — Package-Engine: Manifest, Installer, Setup-Flow, Plugin-SDK, WASM-Runtime
 - [fs-init](programme/fs-init.md) — Bootstrap-Binary: Store klonen via gix, kein System-git nötig
 - [fs-node](programme/fs-node.md) — Node-Server: Deploy-Engine, Auth-Gateway, S3, DNS, Invite-System, gRPC+REST
+- [fs-desktop](programme/fs-desktop.md) — Wayland Shell: DesktopShell, WindowManager, AppLauncher, Settings, Profile (iced/libcosmic)
 
 ### Programme
 - [Init](programme/init/README.md) — Bootstrap: prüft System, lädt Store
@@ -91,6 +92,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Storage-Layer (S3)](technik/storage.md) — Eigener S3-Server, opendal, Profiles
 - [Datenspeicherung](technik/datenspeicherung.md) — SQLite-Architektur, Datenbank pro Service
 - [fs-db](technik/fs-db.md) — DbEngine-Trait, CrudRepo, MigrationRunner, Strategy Pattern
+- [fs-config](technik/fs-config.md) — TOML Config Loader/Saver, Validierung, Auto-Repair, FeatureFlags
 - [fs-db-engine-sqlite](technik/fs-db-engine-sqlite.md) — SQLite-Adapter: DbEngine-Trait-Impl, gRPC+REST, Capability "db.engine.sqlite"
 - [fs-db-engine-postgres](technik/fs-db-engine-postgres.md) — PostgreSQL-Adapter: DbEngine-Trait-Impl, gRPC+REST, Capability "db.engine.postgres"
 - [fs-llm-mistral](technik/fs-llm-mistral.md) — MistralAdapter: LlmAdapter-Trait-Impl, Capability "llm.mistral"
