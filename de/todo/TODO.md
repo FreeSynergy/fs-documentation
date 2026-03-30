@@ -316,40 +316,7 @@ Dokumentation
 
 ---
 
-## fs-db (library, kein Container)
-
-> DbEngine-Trait — reine Abstraktion, kein eigener Container
-
-```
-OOP & Design
-[ ] Strategy Pattern: DbEngine ist austauschbar
-[ ] DbEngine-Trait: connect / disconnect / migrate / query / health
-[ ] MigrationRunner-Trait: run() / rollback() / status()
-[ ] Immer gegen Interface — Consumer kennt nur DbEngine-Trait
-[ ] Konkrete Engines kommen als eigene Repos (fs-db-engine-sqlite, fs-db-engine-postgres)
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Kein Containerfile (reine Library)
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: alle DB-Fehlermeldungen (auch CLI-Nutzer sehen sie)
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test: Trait-Definitionen + Stub-Impl getestet
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
-[ ] G7: DbEngine-Trait API final festlegen (vor Umsetzung Gespräch nötig)
-[ ] Feature-Flag: sqlite (default, lädt fs-db-engine-sqlite), postgres
-[ ] Kein direktes SeaORM / sqlx in Consumer-Crates
-[ ] Migration-Dateien: je Engine in ihrem eigenen Repo
-
-Dokumentation
-[ ] Doku-Seite: DbEngine-Trait, MigrationRunner, Wie Engines geladen werden, API
-[ ] commit + push
-```
+## fs-db (library, kein Container) ✅ 2026-03-30
 
 ---
 
