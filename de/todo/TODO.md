@@ -349,73 +349,25 @@ Dokumentation
 
 ---
 
-## fs-ui (library)
-
-> UI-Basis-Komponenten — Migration von Dioxus zu fs-render
+## fs-ui (library) — G2-Migration offen
 
 ```
-OOP & Design
-[ ] Component Pattern: jede Komponente ist ein Objekt
-[ ] Alle Komponenten implementieren FsView-Trait aus fs-render
-[ ] Kein direktes iced / Dioxus in Komponenten
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] H11: Cargo.toml description → nicht mehr "Dioxus UI component library"
-[ ] Kein Containerfile (Library)
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys für alle user-facing Komponentenbeschriftungen
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
+Offen (G2 — nach iced-Migration):
 [ ] Alle Dioxus-Komponenten auf fs-render FsView-Trait migrieren
 [ ] Dioxus-Dependency vollständig entfernen
-
-Dokumentation
 [ ] Doku-Seite: Komponenten-Übersicht, FsView-Pattern, Migration-Status
-[ ] commit + push
 ```
 
 ---
 
-## fs-components (library)
-
-> Wiederverwendbare App-Komponenten
+## fs-components (library) — G2-Migration offen
 
 ```
-OOP & Design
-[ ] Component + Composite Pattern (Komponenten-Baum)
-[ ] Alle Komponenten implementieren FsView-Trait
-[ ] nav.rs: NavItem / NavGroup / NavBar als eigene Objekte — kein Monolith
-[ ] Immer gegen Interface
-
-Repo
-[ ] CLAUDE.md / rustfmt.toml / deny.toml / LICENSE / README.md / assets/icon.svg / package.toml
-[ ] Kein Containerfile (Library)
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys für alle user-facing Texte
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
-[ ] H5: src/nav.rs aufteilen (1204 Zeilen)
-        → nav/item.rs + nav/group.rs + nav/bar.rs + nav/breadcrumb.rs
+Offen (G2 — nach iced-Migration):
+[ ] H5: src/nav.rs aufteilen → nav/item.rs + nav/group.rs + nav/bar.rs + nav/breadcrumb.rs
 [ ] Dioxus-Dependency vollständig entfernen
 [ ] Alle Komponenten auf FsView-Trait migrieren
-
-Dokumentation
 [ ] Doku-Seite: Komponenten-Katalog, FsView-Pattern
-[ ] commit + push
 ```
 
 ---
