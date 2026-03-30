@@ -743,26 +743,14 @@ Dokumentation
 
 ---
 
-## Store/ (Metadaten-Katalog — kein Container, kein Rust-Code)
+## Store/ (Metadaten-Katalog — kein Container, kein Rust-Code) ✅ 2026-03-30
 
 > Nur TOML-Dateien: package.toml je Paket, bundle.toml je Bundle
 
 ```
-[ ] package.toml Format festlegen:
-    [package]   id, name, version, description-en, type (program|adapter|artifact|bundle)
-    [sources]   readme-url, locales-url, binary.{arch}, container
-    [interfaces] grpc-url, rest-url, openapi-url
-
-[ ] bundle.toml Format festlegen:
-    [bundle]    id, name, description-en
-    [[packages]] id, version, optional (true/false)
-
-[ ] Alle bestehenden Pakete auf neues Format migrieren
-[ ] Neue Pakete eintragen: fs-bootc, fs-db-engine-sqlite, fs-db-engine-postgres,
-    fs-llm-mistral, fs-llm-openai, fs-channel-matrix, fs-channel-telegram
-[ ] Bundles anlegen: "server", "workstation", "minimal"
+Offen:
 [ ] README.md: Katalog-Struktur erklären
-[ ] commit + push
+[ ] Alle bestehenden Pakete auf einheitliches Format migrieren (low priority)
 ```
 
 ---
