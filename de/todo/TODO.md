@@ -368,33 +368,7 @@ Dokumentation
 
 ---
 
-## fs-error (Crate in fs-libs)
-
-> Basis-Fehler-Infrastruktur
-
-```
-OOP & Design
-[ ] Composite Error Pattern: FsError wraps domain errors
-[ ] FsError-Trait: code / message / cause / severity
-[ ] Jede Fehler-Domäne implementiert FsError
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys für alle user-facing Fehlermeldungen — auch CLI + Library-Nutzer sehen sie
-[ ] cargo clippy: 0 Fehler
-[ ] cargo fmt --check: sauber
-[ ] cargo test
-[ ] cargo build --release: fehlerfrei
-
-Spezifisch
-[ ] FsError: code (String), message (FTL-Key), severity (Info/Warn/Error/Fatal)
-[ ] From-Impl für häufige std-Fehler
-[ ] thiserror als einzige externe Dependency
-
-Dokumentation
-[ ] Doku-Seite: FsError-Trait, Fehler-Hierarchie, Verwendung
-[ ] commit + push
-```
+## fs-error (Crate in fs-libs) ✅ 2026-03-30
 
 ---
 
