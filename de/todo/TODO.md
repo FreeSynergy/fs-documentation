@@ -165,12 +165,11 @@ Keine offenen Architektur-Gespräche.
 
 ---
 
-## fs-bootc (program) ✅ 2026-03-30
+## fs-bootc (program) ✅ 2026-03-31
 
 ```
-Offen:
-[ ] GitHub Actions: build + push zu ghcr.io/freesynergy/ bei Tag
-[ ] Butane/Ignition-Config für fs-init-Integration
+GitHub Actions build.yml: baut fs-server + fs-workstation OCI bei push/tag, pushes zu ghcr.io/freesynergy/.
+Butane/Ignition: ignition/fs-server.bu + ignition/fs-workstation.bu (fsadmin, node.toml, init.toml, systemd).
 ```
 
 ---
@@ -392,8 +391,8 @@ Daemon mit gRPC (CurrentUser/OpenApps/SessionInfo/Health), SessionStore-Trait + 
 ## fs-info (program) ✅ 2026-03-31
 
 ```
-G8 erledigt: bus_topic auf system::health::degraded migriert + detail_topic (disk/cpu/memory/smart).
-gRPC bereits vollständig (system_info/cpu_usage/memory_info/disk_info).
+G8 erledigt: AlertPublisher (degraded/restored via Bus), GrpcInfo (SystemInfo/CpuUsage/MemoryInfo/DiskInfo/Health),
+CLI (Daemon/System/Cpu/Memory/Disk/Alerts --monitor), proto/info.proto, build.rs, [[bin]] fs-info.
 ```
 
 ---
@@ -749,26 +748,12 @@ Alle committed + gepusht.
 
 ---
 
-## Fork-Repos: Containerfiles + CI
+## Fork-Repos: Containerfiles + CI ✅ 2026-03-31
 
 ```
-Betrifft: fs-kanidm, fs-tuwunel, fs-stalwart, fs-mistral, fs-zentinel, fs-zentinel-plane
-
-Je Fork:
-[ ] Containerfile erstellen (FreeSynergy-Packaging, Konfigurationsstruktur)
-[ ] .github/workflows/sync-upstream.yml (wöchentlich + manuell)
-    → git fetch upstream + git rebase upstream/main
-    → Bei Konflikten: Workflow schlägt fehl + GitHub-Notification
-[ ] .github/workflows/release.yml → ruft fs-ci/release-desktop.yml auf (nur OCI-Image)
-[ ] Store/-Katalog-Eintrag: source = "fork" + upstream-Link
-[ ] commit + push
-
-Reihenfolge nach Priorität:
-[ ] fs-kanidm  (IAM — wird zuerst gebraucht)
-[ ] fs-stalwart (Mail)
-[ ] fs-tuwunel  (Matrix)
-[ ] fs-mistral  (LLM)
-[ ] fs-zentinel + fs-zentinel-plane (Proxy)
+Alle 6 Forks: Containerfile, sync-upstream.yml, fsn-build.yml, Store/-Katalog-Eintrag.
+fs-kanidm: kanidmd; fs-tuwunel: tuwunel + Feature-Flags; fs-stalwart: SMTP/IMAP;
+fs-mistral: CUDA+GPU; fs-zentinel: proxy+gateway; fs-zentinel-plane: placeholder.
 ```
 
 ---
