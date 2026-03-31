@@ -201,7 +201,16 @@ Offen:
 
 ---
 
-## fs-bus (program) ✅ 2026-03-30
+## fs-bus (program) — G3 offen
+
+```
+G3 — Event Topics als Konstanten definieren
+[ ] topics.rs: alle Standard-Topics als pub const (registry::, session::, inventory::, system::, auth::)
+[ ] Payload-Structs in fs-types: ServiceRegisteredEvent, UserLoginEvent, PackageInstalledEvent, etc.
+[ ] fs-types Dependency in fs-bus aufnehmen (falls noch nicht vorhanden)
+[ ] Tests: Topic-Konstanten vollständig, Payload-Serialisierung
+[ ] commit + push
+```
 
 ---
 
@@ -209,7 +218,19 @@ Offen:
 
 ---
 
-## fs-db (library, kein Container) ✅ 2026-03-30
+## fs-db (library, kein Container) — G7 offen
+
+```
+G7 — Repository<T> + Filter<T> implementieren
+[ ] Repository<T>-Trait definieren (find_by_id / find_all / find / save / delete / count / exists)
+[ ] Filter<T> Query Builder implementieren (eq/ne/gt/lt/gte/lte/in_list/like/is_null/and/or/order_by/limit/offset)
+[ ] Migration-Trait finalisieren: apply_pending() / rollback_last() / version()
+[ ] CrudRepo auf neues Repository<T> migrieren oder ablösen
+[ ] SqliteEngine + PostgresEngine: Filter<T> → SQL übersetzen (im jeweiligen Adapter-Repo)
+[ ] Tests: Filter-Builder, Repository-Operationen, Migration-Runner
+[ ] cargo clippy / fmt / test / build --release
+[ ] Doku-Seite aktualisieren + commit + push
+```
 
 ---
 
@@ -349,21 +370,57 @@ Offen (G2 — nach iced-Migration):
 
 ---
 
-## fs-registry (program) ✅ 2026-03-30
+## fs-registry (program) — G8 offen
+
+```
+G8 — Event-Driven Integration
+[ ] Bus-Events subscriben: registry::service::registered / stopped / capability::added / removed
+[ ] Bus-Events publishen: eigene Registrierung beim Start + beim Shutdown
+[ ] Startup-Reihenfolge sicherstellen: fs-bus muss vor fs-registry laufen
+[ ] gRPC: lookup_capability / list_services / list_capabilities
+[ ] Tests: Event-Subscribe + State-Update, gRPC-Calls
+[ ] commit + push
+```
 
 ---
 
-## fs-inventory (program) ✅ 2026-03-30
+## fs-inventory (program) — G8 offen
 
-> Was ist installiert?
+```
+G8 — Event-Driven Integration
+[ ] Bus-Events subscriben: inventory::package::installed / removed / updated
+[ ] State in lokaler DB persistieren (über fs-db Repository<T>)
+[ ] gRPC: list_installed / get_package / is_installed
+[ ] Tests: Event → DB-Eintrag, gRPC-Calls
+[ ] commit + push
+```
 
 ---
 
-## fs-session (program) ✅ 2026-03-30
+## fs-session (program) — G8 offen
+
+```
+G8 — Event-Driven Integration
+[ ] Bus-Events subscriben: session::user::login / logout / app::opened / app::closed
+[ ] Session-State in Memory halten (+ optionale DB-Persistenz)
+[ ] gRPC: current_user / open_apps / session_info
+[ ] Tests: Event → State-Update, gRPC-Calls
+[ ] commit + push
+```
 
 ---
 
-## fs-info (program) ✅ 2026-03-30
+## fs-info (program) — G8 offen
+
+```
+G8 — Event-Driven Integration (nur publishen, kein Subscribe)
+[ ] Health-Alerting: bei Schwellwert-Überschreitung system::health::degraded publishen
+[ ] Bei Normalisierung: system::health::restored publishen
+[ ] Schwellwerte konfigurierbar (via fs-config)
+[ ] gRPC on-demand: system_info / cpu_usage / memory_info / disk_info
+[ ] Tests: Alerting-Logik, gRPC-Calls
+[ ] commit + push
+```
 
 ---
 
@@ -638,9 +695,12 @@ Bekannter Bug
 [ ] fs-manager-language: gix-API (pre-0.65) in git.rs vollständig migrieren
     prepare_push + SignatureRef auf neue gix-API aktualisieren
 
-UI
-[ ] iced-Migration: alle Manager-Views als FsView-Trait
-[ ] G5: gemeinsames Layout-Muster (nach Architektur-Gespräch)
+UI — G5
+[ ] ManagerLayout-Trait in fs-render oder fs-components definieren
+    (sidebar_items / content_for / title — baut auf FsView-Trait auf)
+[ ] Alle Manager implementieren ManagerLayout (view.rs als Bindeglied)
+[ ] Standard-Sidebar-Struktur: Liste → Aktiv → Aktionen → Info
+[ ] Jeder Manager eigenständiges Fenster (kein Master-Manager)
 
 CLI
 [ ] fs-managers language list|set|download
@@ -682,6 +742,77 @@ Offen:
 ---
 
 ## fs-documentation ✅ 2026-03-30
+
+---
+
+---
+
+# Gruppe J — CI/CD (G4)
+
+---
+
+## fs-ci (neues Repo — reusable workflows)
+
+```
+[ ] Repo anlegen: FreeSynergy/fs-ci
+[ ] .github/workflows/ci-check.yml: Clippy + fmt + test + deny (für alle Repos, läuft auf jedem PR)
+[ ] .github/workflows/release-desktop.yml: Linux x2 + Windows x2 + macOS Universal + OCI-Image
+    → Binary-Release auf GitHub + Image push zu ghcr.io/freesynergy/{name}:{tag}
+    → SHA256-Hash je Binary
+    → Auto-PR gegen Store/-Repo (catalog entry aktualisieren)
+[ ] .github/workflows/release-mobile.yml: Android APK/AAB + iOS IPA (separate Phase)
+[ ] CLAUDE.md / README.md
+[ ] commit + push
+```
+
+---
+
+## GitHub Actions — alle bestehenden Repos nachrüsten
+
+```
+Betrifft alle program + adapter Repos:
+[ ] fs-bus, fs-i18n, fs-auth, fs-registry, fs-inventory, fs-session, fs-info, fs-container
+[ ] fs-db-engine-sqlite, fs-db-engine-postgres
+[ ] fs-gui-engine-iced, fs-gui-engine-bevy, fs-web-engine-servo
+[ ] fs-llm-mistral, fs-llm-openai, fs-channel-matrix, fs-channel-telegram
+[ ] fs-render (library — nur ci-check, kein Release-Workflow)
+[ ] fs-libs (library — nur ci-check)
+
+Jeweils:
+[ ] .github/workflows/ci.yml → ruft fs-ci/ci-check.yml auf
+[ ] .github/workflows/release.yml → ruft fs-ci/release-desktop.yml auf
+[ ] commit + push
+```
+
+---
+
+---
+
+# Gruppe K — Forks (G6)
+
+---
+
+## Fork-Repos: Containerfiles + CI
+
+```
+Betrifft: fs-kanidm, fs-tuwunel, fs-stalwart, fs-mistral, fs-zentinel, fs-zentinel-plane
+
+Je Fork:
+[ ] Containerfile erstellen (FreeSynergy-Packaging, Konfigurationsstruktur)
+[ ] .github/workflows/sync-upstream.yml (wöchentlich + manuell)
+    → git fetch upstream + git rebase upstream/main
+    → Bei Konflikten: Workflow schlägt fehl + GitHub-Notification
+[ ] .github/workflows/release.yml → ruft fs-ci/release-desktop.yml auf (nur OCI-Image)
+[ ] Store/-Katalog-Eintrag: source = "fork" + upstream-Link
+[ ] commit + push
+
+Reihenfolge nach Priorität:
+[ ] fs-kanidm  (IAM — wird zuerst gebraucht)
+[ ] fs-stalwart (Mail)
+[ ] fs-tuwunel  (Matrix)
+[ ] fs-mistral  (LLM)
+[ ] fs-zentinel + fs-zentinel-plane (Proxy)
+```
 
 ---
 
@@ -762,19 +893,17 @@ N0. [ ] PostgreSQL State Store (Blocker: fs-db-engine-postgres fertig)
 ## Reihenfolge
 
 ```
-1.  Blocker klären (D24, H2)
-2.  Architektur-Gespräche (G3, G7, G8)
-3.  Neue Repos anlegen (fs-bootc)
-4.  Store/ Katalog: package.toml + bundle.toml Format + Bundles anlegen
-5.  fs-db: DbEngine-Trait final
-6.  fs-i18n: inotify + OCI Artifacts + Global vs. Per-Paket
-7.  fs-bus: gRPC-API + Namespaces (G3)
-8.  Services: fs-auth → fs-registry → fs-inventory → fs-session → fs-info
-9.  GUI: fs-render Doku → fs-gui-engine-iced → fs-gui-engine-bevy
-10. G2.9: Apps iced-Migration (browser → theme-app → lenses → ai →
+1.  fs-ci Repo anlegen (Gruppe J) — Basis für alle weiteren CI/CD-Tasks
+2.  fs-bus: G3 — Event-Topic-Konstanten + Payload-Structs in fs-types
+3.  fs-db: G7 — Repository<T> + Filter<T> implementieren
+4.  Services G8: fs-registry → fs-inventory → fs-session → fs-info
+    (Event-Driven Integration, Bus-Subscribe + Publish)
+5.  GitHub Actions für alle bestehenden Repos nachrüsten (Gruppe J)
+6.  Fork-Repos: Containerfiles + CI (Gruppe K, Reihenfolge: kanidm → stalwart → tuwunel → mistral → zentinel)
+7.  fs-bootc: GitHub Actions + Butane/Ignition-Config
+8.  G2.9: Apps iced-Migration (browser → theme-app → lenses → ai →
           container-app → tasks → bots → builder → managers)
-11. Große Dateien aufteilen (H-Tasks)
-12. fs-desktop: Wayland-Compositor (langfristig)
-13. Architektur-Gespräche (G4, G5, G6)
-14. Langfristig: M, P, R, S, T, Q
+9.  fs-managers G5: ManagerLayout-Trait + alle Manager-Views
+10. Große Dateien aufteilen (H-Tasks)
+11. Langfristig: M, P, R, S, T, Q
 ```
