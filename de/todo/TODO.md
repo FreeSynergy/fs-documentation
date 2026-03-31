@@ -677,13 +677,12 @@ Dokumentation
 
 ---
 
-## Store/ (Metadaten-Katalog — kein Container, kein Rust-Code) ✅ 2026-03-30
+## Store/ (Metadaten-Katalog — kein Container, kein Rust-Code) ✅ 2026-03-31
 
 > Nur TOML-Dateien: package.toml je Paket, bundle.toml je Bundle
 
 ```
 Offen:
-[ ] README.md: Katalog-Struktur erklären
 [ ] Alle bestehenden Pakete auf einheitliches Format migrieren (low priority)
 ```
 
