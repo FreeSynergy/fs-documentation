@@ -751,9 +751,9 @@ Alle committed + gepusht.
 ## Fork-Repos: Containerfiles + CI ✅ 2026-03-31
 
 ```
-Alle 6 Forks: Containerfile, sync-upstream.yml, fsn-build.yml, Store/-Katalog-Eintrag.
-fs-kanidm: kanidmd; fs-tuwunel: tuwunel + Feature-Flags; fs-stalwart: SMTP/IMAP;
-fs-mistral: CUDA+GPU; fs-zentinel: proxy+gateway; fs-zentinel-plane: placeholder.
+Alle 6 Forks: Containerfile + sync-upstream.yml + fsn-build.yml + release.yml (OCI via fs-ci/release-oci.yml).
+Store-Katalog: type="fork" + upstream-Link in allen 6 catalog.toml.
+fs-ci: release-oci.yml reusable workflow hinzugefügt.
 ```
 
 ---
