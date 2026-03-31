@@ -218,18 +218,12 @@ G3 — Event Topics als Konstanten definieren
 
 ---
 
-## fs-db (library, kein Container) — G7 offen
+## fs-db (library, kein Container) ✅ 2026-03-31
 
 ```
-G7 — Repository<T> + Filter<T> implementieren
-[ ] Repository<T>-Trait definieren (find_by_id / find_all / find / save / delete / count / exists)
-[ ] Filter<T> Query Builder implementieren (eq/ne/gt/lt/gte/lte/in_list/like/is_null/and/or/order_by/limit/offset)
-[ ] Migration-Trait finalisieren: apply_pending() / rollback_last() / version()
-[ ] CrudRepo auf neues Repository<T> migrieren oder ablösen
-[ ] SqliteEngine + PostgresEngine: Filter<T> → SQL übersetzen (im jeweiligen Adapter-Repo)
-[ ] Tests: Filter-Builder, Repository-Operationen, Migration-Runner
-[ ] cargo clippy / fmt / test / build --release
-[ ] Doku-Seite aktualisieren + commit + push
+Offen:
+[ ] CrudRepo auf neues Repository<T> migrieren oder ablösen (low priority)
+[ ] SqliteEngine + PostgresEngine: Filter<T> → SQL übersetzen (im jeweiligen Adapter-Repo, nach G8)
 ```
 
 ---
