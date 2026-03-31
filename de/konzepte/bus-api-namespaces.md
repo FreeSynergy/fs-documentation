@@ -189,6 +189,66 @@ Neu:  installer::packages::containers::install { id, version, branch, dry_run }
 
 ---
 
+## Namespace: `events` — System-Ereignisse
+
+Events repräsentieren Fakten — etwas ist passiert. Sie stehen im Vergangenheits-Modus
+(`::registered`, `::login`) und unterscheiden sich dadurch von Kommandos (`::install`).
+
+### Namensschema
+
+```
+{domain}::{entity}::{verb_past}
+    │         │          │
+    │         │          └── Was ist passiert (Vergangenheit)
+    │         └─────────── Welches Objekt
+    └───────────────────── Welcher Service
+```
+
+### Standard-Event-Topics
+
+| Topic | Payload | Beschreibung |
+|---|---|---|
+| `registry::service::registered` | `ServiceRegisteredEvent` | Service hat sich registriert |
+| `registry::service::stopped` | `ServiceStoppedEvent` | Service hat sich abgemeldet |
+| `registry::capability::added` | `CapabilityAddedEvent` | Neue Capability verfügbar |
+| `registry::capability::removed` | `CapabilityRemovedEvent` | Capability nicht mehr verfügbar |
+| `session::user::login` | `UserLoginEvent` | User hat sich angemeldet |
+| `session::user::logout` | `UserLogoutEvent` | User hat sich abgemeldet |
+| `session::app::opened` | `AppOpenedEvent` | App-Fenster wurde geöffnet |
+| `session::app::closed` | `AppClosedEvent` | App-Fenster wurde geschlossen |
+| `inventory::package::installed` | `PackageInstalledEvent` | Paket wurde installiert |
+| `inventory::package::removed` | `PackageRemovedEvent` | Paket wurde entfernt |
+| `inventory::package::updated` | `PackageUpdatedEvent` | Paket wurde aktualisiert |
+| `system::health::degraded` | `HealthDegradedEvent` | System-Health unter Schwellwert |
+| `system::health::restored` | `HealthRestoredEvent` | System-Health wieder normal |
+| `auth::token::expired` | `TokenExpiredEvent` | Auth-Token abgelaufen |
+| `auth::token::renewed` | `TokenRenewedEvent` | Auth-Token erneuert |
+
+### Payload-Regel
+
+Alle Event-Payloads sind **`fs-types`-Structs** — nie raw JSON, nie `serde_json::Value`.
+
+```rust
+// Falsch
+bus.publish("inventory::package::installed", serde_json::json!({ "id": "kanidm" })).await?;
+
+// Richtig
+bus.publish("inventory::package::installed", PackageInstalledEvent {
+    id: "kanidm".into(),
+    version: "1.5.0".into(),
+    installed_at: FsTimestamp::now(),
+}).await?;
+```
+
+### Wer darf publishen / subscriben?
+
+Kein Whitelist, aber Capability-Check über `fs-registry`:
+- **Publishen**: Jeder Service mit einer registrierten Capability in `fs-registry`
+- **Subscriben**: Jeder Service — keine Einschränkung
+- Nicht-registrierte Prozesse (CLI, temporäre Tools) können subscriben aber nicht publishen
+
+---
+
 ## Master-Liste (laufend gepflegt)
 
 Diese Tabelle ist die **einzige Wahrheit** über alle registrierten Namespaces. Neue Namespaces werden hier zuerst eingetragen — bevor der Code geschrieben wird.
@@ -211,6 +271,21 @@ Diese Tabelle ist die **einzige Wahrheit** über alle registrierten Namespaces. 
 | `store::icons` | fs-store | geplant |
 | `store::help` | fs-store | geplant |
 | `store::search` | fs-store | geplant |
+| `registry::service::registered` | fs-registry | geplant |
+| `registry::service::stopped` | fs-registry | geplant |
+| `registry::capability::added` | fs-registry | geplant |
+| `registry::capability::removed` | fs-registry | geplant |
+| `session::user::login` | fs-session | geplant |
+| `session::user::logout` | fs-session | geplant |
+| `session::app::opened` | fs-session | geplant |
+| `session::app::closed` | fs-session | geplant |
+| `inventory::package::installed` | fs-inventory | geplant |
+| `inventory::package::removed` | fs-inventory | geplant |
+| `inventory::package::updated` | fs-inventory | geplant |
+| `system::health::degraded` | fs-info | geplant |
+| `system::health::restored` | fs-info | geplant |
+| `auth::token::expired` | fs-auth | geplant |
+| `auth::token::renewed` | fs-auth | geplant |
 
 ---
 

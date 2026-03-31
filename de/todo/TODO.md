@@ -132,8 +132,9 @@ inotify in fs-i18n: FTL-Dateien hotplugging ohne Restart
 ### DB-Grundregeln
 
 ```
-Immer über fs-db DbEngine-Trait — nie direktes SeaORM oder sqlx
+Immer über fs-db Repository<T> + Filter<T> — kein SQL-String im Consumer-Code
 Konkrete Engine kommt als Artifact (fs-db-engine-sqlite default)
+DbEngine-Trait + direktes SeaORM/sqlx nur in Adapter-Repos (fs-db-engine-*)
 ```
 
 ---
@@ -146,27 +147,15 @@ Keine offenen Blocker.
 
 ## Offene Architektur-Gespräche (vor Umsetzung klären)
 
-```
-[ ] G3: Bus-API Namespaces
-        Welche Topics? Payloads (fs-types)? Wer darf publizieren / subscriben?
+Keine offenen Architektur-Gespräche.
 
-[ ] G4: CI/CD Workflow Template
-        GitHub Actions für program/adapter/artifact Repos
-        Wann bauen? Wie Binaries in Releases? Store-Katalog auto-update?
-
-[ ] G5: fs-managers UI-Design
-        Gemeinsames Layout via fs-render — wie sehen alle Manager gleich aus?
-
-[ ] G6: Forks Build-Strategie
-        Kanidm, Tuwunel, Stalwart, Mistral, Zentinel
-        Nur kompilieren — Upstream-Sync via GitHub Actions?
-
-[ ] G7: fs-db Design final
-        DbEngine-Trait API festlegen, Migration-Strategie über alle Programme
-
-[ ] G8: Daemon vs. Bus-Subscriber vs. Library
-        Betrifft: fs-info, fs-inventory, fs-session, fs-registry
-```
+> G3–G8 geklärt 2026-03-31 — dokumentiert in:
+> - G3: konzepte/bus-api-namespaces.md (Event Topics + Namespaces)
+> - G4: technik/build-workflow.md (Plattformen + CI reusable workflows)
+> - G5: konzepte/manager.md (ManagerLayout-Trait, kein Master-Manager)
+> - G6: technik/forks-build-strategie.md (OCI-only, Upstream-Sync)
+> - G7: technik/fs-db.md (Repository<T> + Filter<T>, kein Raw SQL)
+> - G8: konzepte/event-driven-services.md (Observer via Bus, Startup-Reihenfolge)
 
 ---
 

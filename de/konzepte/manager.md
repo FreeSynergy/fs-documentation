@@ -48,28 +48,74 @@ Nicht jeder Manager macht überall Sinn. Bilder in einem Terminal ergeben keinen
 | `fs-icons` | `fs-manager-icons` | Icon-Sets verwalten, Repositories, Pfade auflösen, UI Icon-Picker → [Icon Manager](../programme/icons/README.md) |
 | `fs-bots` | `fs-manager-bot` | Bots benutzen: Broadcasts senden, Subscriptions, Gatekeeper → [BotManager](../programme/botmanager/README.md) |
 
-## Standardisierter Manager-View (`ManagerView`)
+## Standardisiertes Manager-Layout (G5)
 
-**Jeder Manager sieht gleich aus.** Die Komponente `ManagerView` (in `fs-desktop/crates/fs-managers`) ist die einzige UI für alle Pakete — kein Paket baut eine eigene Manager-Oberfläche.
+**Kein übergeordneter Master-Manager.** Jeder Manager ist ein eigenständiges Programm.
+Aber alle Manager sehen fast gleich aus — dank `ManagerLayout`-Trait in `fs-render`.
 
-### Layout
+### Layout-Prinzip
 
 ```
-┌──────────────────────────────────────────────────┐
-│  Sidebar (Paketliste)  │  Tabs: Info Config Build │
-│                        │                          │
-│  ● kanidm       →      │  [Inhalt des aktiven Tabs]│
-│  ● forgejo             │                          │
-│  ● stalwart     ●      │                          │
-│    ├ smtp               │                          │
-│    └ imap               │                          │
-└──────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│  Sidebar (Navigation)   │  Content-Area              │
+│                         │                            │
+│  [Manager-spezifische   │  [Manager-spezifischer     │
+│   Navigationspunkte]    │   Inhalt]                  │
+│                         │                            │
+│  Gleiche Struktur bei   │  Unterschiedlich je        │
+│  allen Managern         │  Manager-Aufgabe           │
+└──────────────────────────────────────────────────────┘
 ```
 
-- **Linke Sidebar:** Paketliste mit Status-Punkt und Version. Bei Bot/Container-Paketen mit Sub-Instanzen: `→`-Pfeil → Drill-down in Instanzliste. Zurück-Pfeil zeigt die Paketliste wieder.
-- **Info-Tab:** Icon, Name, Version, Beschreibung, Typ, Kategorie, Autor. Status-Badge (Running/Stopped/Error…). Aktions-Buttons (Start/Stop/Persist). Health Checks.
-- **Config-Tab:** Alle Felder aus `Manageable::config_fields()`. Jedes Feld mit Hilfe-Text (Pflicht) und Restart-Warnung falls nötig.
-- **Builder-Tab:** Felder aus `Manageable::build_fields()`. Ersetzt den separaten fs-builder.
+Die Sidebar ist bei allen Managern strukturell gleich aufgebaut (Kategorien, Status-Punkte,
+Drill-down-Navigation). Der Content-Bereich rechts variiert je nach Aufgabe des Managers.
+
+### ManagerLayout-Trait
+
+`ManagerLayout` wird in `fs-render` oder `fs-components` definiert und von jedem
+Manager implementiert — als `FsView`-Trait auf dem Domain-Objekt:
+
+```rust
+// In fs-render / fs-components
+trait ManagerLayout: FsView {
+    fn sidebar_items(&self) -> Vec<Box<dyn FsWidget>>;
+    fn content_for(&self, selection: &Selection) -> Box<dyn FsWidget>;
+    fn title(&self) -> String;
+}
+
+// Im Manager (view.rs — einziges Bindeglied zu fs-render)
+impl ManagerLayout for LanguageManager {
+    fn sidebar_items(&self) -> Vec<Box<dyn FsWidget>> {
+        // Sprachliste, aktive Sprache markiert
+    }
+    fn content_for(&self, selection: &Selection) -> Box<dyn FsWidget> {
+        // Sprach-Details + Download + Aktivieren
+    }
+}
+```
+
+Das Domain-Objekt (`LanguageManager`) importiert **kein** `fs-render` direkt.
+Nur `view.rs` (das Bindeglied) importiert fs-render.
+
+### Standard-Sidebar-Elemente
+
+Jeder Manager hat diese Sidebar-Bereiche (in dieser Reihenfolge):
+
+1. **Liste** — das primäre Objekt (Sprachen, Themes, Icon-Sets, …)
+2. **Aktiv** — was gerade aktiv ist (hervorgehoben)
+3. **Aktionen** — installieren, entfernen, aktualisieren
+4. **Info** — über den Manager selbst (Version, Backend)
+
+Unterschiede zwischen Managern nur dort wo fachlich nötig — sonst identisch.
+
+### Kein Master-Manager
+
+Es gibt **keinen** übergeordneten Manager der alle anderen wrapping. Jeder Manager:
+- ist ein eigenständiges Programm (eigenes Fenster)
+- teilt das gleiche Layout via `ManagerLayout`-Trait
+- wird direkt aus der Shell-Sidebar geöffnet
+
+Die einheitliche Optik entsteht durch den gemeinsamen Trait — nicht durch Aggregation.
 
 ### Das Paket liefert das WAS — der Manager das WIE
 
@@ -80,9 +126,11 @@ Der Manager fragt das Paket via `Manageable`-Trait (siehe [Pakete → Manageable
 
 Der Manager rendert daraus eine fertige Oberfläche. Das Paket hat keinen UI-Code.
 
-### PackageViewModel
+### ManagerViewModel
 
-Da Dioxus-Props `Clone + PartialEq` brauchen und `dyn Manageable` das nicht erfüllt, extrahiert `PackageViewModel::from_manageable()` alle Anzeige-Daten in ein reines Daten-Struct. Die UI arbeitet ausschließlich mit dem ViewModel — nie mit dem Trait-Objekt direkt.
+`ManagerViewModel::from_manageable()` extrahiert alle Anzeige-Daten in ein reines
+Daten-Struct. Die View (`view.rs`) arbeitet ausschließlich mit dem ViewModel —
+nie mit dem Trait-Objekt direkt.
 
 ## Settings Manager (`PackageSettingsView`)
 

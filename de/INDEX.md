@@ -74,7 +74,8 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Registry](konzepte/registry.md) — Welche Services laufen gerade (Capabilities, Endpoints, Adapter-Lookup)
 - [Adapter-Pattern](konzepte/adapter.md) — Drittanbieter-Dienste einbinden via Standard-Traits (ersetzt Bridge)
 - [Message Bus](konzepte/bus.md) — Pub/Sub, Topic-Routing, kein direkter Service-Aufruf
-- [Bus-API Namespaces](konzepte/bus-api-namespaces.md) — Standardisierte Topic-Adressen, Vertragsregeln
+- [Bus-API Namespaces](konzepte/bus-api-namespaces.md) — Standardisierte Topic-Adressen, Event-Topics, Vertragsregeln
+- [Event-Driven Services](konzepte/event-driven-services.md) — Observer via Bus: fs-registry, fs-inventory, fs-session, fs-info; Startup-Reihenfolge
 - [Rollen-System](konzepte/rollen.md) — Capabilities deklarieren (provides/requires), Hierarchie
 - [Capabilities](konzepte/capabilities.md) — Was Pakete anbieten und was sie brauchen
 - [Ressourcen-System](konzepte/ressourcen.md) — Alles ist eine Ressource: Structs, Typen, Felder
@@ -96,7 +97,8 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 
 ### Technik
 - [fs-bootc](technik/fs-bootc.md) — bootc OS-Images: ImageVariant-Trait, ServerImage, WorkstationImage, CLI
-- [Build-Workflow](technik/build-workflow.md) — Design Pattern → OOP → Tests → Clippy → Push, Quality Gates, Binary-Distribution
+- [Build-Workflow](technik/build-workflow.md) — Design Pattern → OOP → Tests → Clippy → Push, Quality Gates, Plattformen (Linux/Win/macOS/Android/iOS), CI reusable workflows
+- [Forks Build-Strategie](technik/forks-build-strategie.md) — OCI-only, Upstream-Sync via GitHub Actions, minimale Patches, Lizenz-Compliance
 - [Storage-Layer (S3)](technik/storage.md) — Eigener S3-Server, opendal, Profiles
 - [Datenspeicherung](technik/datenspeicherung.md) — SQLite-Architektur, Datenbank pro Service
 - [fs-db](technik/fs-db.md) — DbEngine-Trait, CrudRepo, MigrationRunner, Strategy Pattern

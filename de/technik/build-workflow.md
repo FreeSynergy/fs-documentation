@@ -226,31 +226,98 @@ Jedes neue Repo bekommt diese Dateien — in dieser Reihenfolge:
 
 ## Binary-Distribution
 
-Wenn ein Programm fertig ist, wird es über GitHub Releases verteilt:
+Wenn ein Programm fertig ist, wird es über GitHub Releases verteilt.
+
+### Ziel-Plattformen
+
+```
+Desktop / Server (statisch gelinkt):
+  Linux   → x86_64-unknown-linux-musl
+            aarch64-unknown-linux-musl
+  Windows → x86_64-pc-windows-msvc
+            aarch64-pc-windows-msvc
+  macOS   → Universal Binary (x86_64-apple-darwin + aarch64-apple-darwin via lipo)
+
+Mobile (separate CI-Phase — eigene Packaging-Pipeline):
+  Android → APK/AAB  (aarch64-linux-android, armv7-linux-androideabi)
+  iOS     → IPA      (aarch64-apple-ios, App Store Signing erforderlich)
+
+Container (alle Plattformen):
+  OCI-Image → linux/amd64, linux/arm64
+              → ghcr.io/freesynergy/{repo}:{tag}
+```
+
+Desktop/Server und Container werden bei jedem Release-Tag automatisch gebaut.
+Mobile ist eine separate Phase und erfordert zusätzliche Build-Agents (macOS für iOS).
+
+### CI/CD Workflow
 
 ```
 1. git tag v1.0.0 && git push --tags
          │
          ▼
-2. GitHub Actions baut:
-   - Binary für x86_64-unknown-linux-musl (statisch gelinkt)
-   - SHA256-Hash der Binary
-   - GitHub Release mit beiden Dateien
+2. GitHub Actions (reusable workflow aus fs-ci):
+   - Desktop-Binaries für alle 5 Targets bauen (Linux x2, Windows x2, macOS Universal)
+   - macOS: lipo kombiniert x86_64 + aarch64 → Universal Binary
+   - SHA256-Hash je Binary
+   - OCI-Image bauen (linux/amd64 + linux/arm64 via buildx)
+   - OCI-Image pushen zu ghcr.io/freesynergy/{repo}:{tag}
+   - GitHub Release erstellen mit allen Binaries + Hashes
          │
          ▼
-3. Store/-Katalog aktualisieren (manuell oder via CI/CD):
-   packages/apps/{name}/{version}.toml
-     [[binaries]]
-     name   = "{name}"
-     arch   = "x86_64-unknown-linux-musl"
-     url    = "https://github.com/FreeSynergy/{repo}/releases/download/v{version}/..."
-     sha256 = "{hash}"
+3. Store/-Katalog auto-update:
+   - CI öffnet automatisch PR gegen Store/-Repo
+   - packages/apps/{name}/{version}.toml wird aktualisiert
+   - Manuelle Merge-Freigabe (kein blindes Auto-Merge)
          │
          ▼
-4. Store/-Repo committen + pushen
-         │
-         ▼
-5. fs-store (StoreReader) liest beim nächsten Refresh den neuen Eintrag
+4. fs-store (StoreReader) liest beim nächsten Refresh den neuen Eintrag
+```
+
+### Reusable Workflows (fs-ci Repo)
+
+Alle Repos rufen zentrale Workflows auf — kein Copy-Paste von `.github/workflows/`:
+
+```yaml
+# .github/workflows/release.yml (in jedem Repo)
+jobs:
+  release:
+    uses: FreeSynergy/fs-ci/.github/workflows/release-desktop.yml@main
+    with:
+      binary-name: fs-store
+      store-catalog-path: packages/programs/fs-store
+```
+
+Drei Workflow-Templates in `fs-ci`:
+- `release-desktop.yml` — Desktop/Server-Binaries + OCI-Image
+- `release-mobile.yml` — Android APK/AAB + iOS IPA (separate Phase)
+- `ci-check.yml` — Clippy + fmt + test + deny (läuft auf jedem PR)
+
+### Store-Katalog-Eintrag
+
+```toml
+# Store/packages/programs/fs-store/1.0.0.toml
+[[binaries]]
+name   = "fs-store"
+target = "x86_64-unknown-linux-musl"
+url    = "https://github.com/FreeSynergy/fs-store/releases/download/v1.0.0/fs-store-x86_64-linux"
+sha256 = "{hash}"
+
+[[binaries]]
+name   = "fs-store"
+target = "aarch64-unknown-linux-musl"
+url    = "..."
+sha256 = "{hash}"
+
+[[binaries]]
+name   = "fs-store"
+target = "universal-apple-darwin"
+url    = "..."
+sha256 = "{hash}"
+
+[container]
+image  = "ghcr.io/freesynergy/fs-store:1.0.0"
+digest = "sha256:{digest}"
 ```
 
 **Für Pakete mit mehreren Binaries** (z.B. Bots):
