@@ -419,208 +419,123 @@ CLI (Daemon/System/Cpu/Memory/Disk/Alerts --monitor), proto/info.proto, build.rs
 
 ---
 
-## fs-browser (in fs-apps)
+## fs-browser (in fs-apps) ✅ 2026-03-31
 
 ```
-OOP & Design
-[ ] MVC: BrowserModel / BrowserController / BrowserView
-[ ] BrowserController kennt nur WebEngine-Trait + RenderEngine-Trait
-[ ] NavigationHistory: Composite Pattern
-[ ] BookmarkStore: Repository Pattern
-[ ] Immer gegen Interface
-
-Repo (in fs-apps/crates/fs-browser/)
-[ ] CLAUDE.md / assets/icon.svg / package.toml
-[ ] Containerfile
-
-Code-Qualität
-[ ] #![deny(clippy::all, clippy::pedantic, warnings)]
-[ ] FTL-Keys: Toolbar, Menü, Fehlermeldungen, Status-Texte (UI + CLI)
-[ ] cargo clippy: 0 Fehler / cargo fmt / cargo test / cargo build --release
-
-UI
-[ ] iced-Migration prüfen (G2.7 abgeschlossen — vollständig?)
-[ ] FsView-Trait für alle Komponenten, view.rs als Bindeglied
-[ ] Servo: Feature-Flag (bis fs-web-engine-servo stabil)
-
-CLI
-[ ] fs-browser open {url} / history / bookmarks list|add|remove
-
-API
-[ ] gRPC: open / navigate / history / bookmarks
-[ ] REST + OpenAPI
-
-Dokumentation
-[ ] Doku-Seite: Architektur, WebEngine-Integration, API, CLI
-[ ] commit + push
+MVC (BrowserModel/Controller/View), FsView-Trait in view.rs, BookmarkStore-Trait,
+NavigationHistory, keys.rs FTL-Konstanten, CLI (open/history/bookmarks), gRPC, REST+OpenAPI.
+Dioxus vollständig entfernt. Servo: Feature-Flag vorhanden (wartet auf fs-web-engine-servo).
+Offen: Doku-Seite (niedrige Prio)
 ```
 
 ---
 
-## fs-theme-app (in fs-apps — heißt nur fs-theme-app weil fs-theme schon die Library ist)
+## fs-theme-app (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] MVC + Command Pattern (Theme-Aktionen als Commands)
-[ ] ThemeAppController kennt nur ThemeLoader-Trait
-[ ] ThemePreview: Observer Pattern
-[ ] Immer gegen Interface
-[ ] FTL-Keys: alle UI + CLI Texte
+Erledigt: ThemeController (MVC), gRPC (list/activate/preview/health), REST+OpenAPI,
+CLI (list/active/activate/preview/daemon), FsView-Trait (view.rs), build.rs, proto/theme_app.proto.
 
-UI
-[ ] iced-Migration: FsView-Trait
-[ ] Theme-Liste + Vorschau + Aktivieren
-
-CLI
-[ ] fs-theme list / activate {id} / preview {id}
-
-API
-[ ] gRPC: list / activate / preview
-[ ] REST + OpenAPI
-
-Dokumentation
-[ ] Doku-Seite: API, CLI, ThemeLoader-Integration
-[ ] commit + push
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen (app.rs ersetzen durch iced-Engine)
+[ ] FTL-Keys: alle UI + CLI Texte in .ftl migrieren (derzeit .toml-Snippets)
+[ ] Doku-Seite + commit + push
 ```
 
 ---
 
-## fs-lenses (in fs-apps)
+## fs-lenses (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] Strategy Pattern: LensRenderer je Datentyp
-[ ] LensProvider-Trait: load / render / available-lenses
-[ ] LensRenderer-Trait: render(data) → FsWidget
-[ ] LensRegistry: welcher Renderer für welchen Typ
-[ ] Immer gegen Interface
-[ ] FTL-Keys: Lens-Namen + UI-Texte
+Erledigt: LensController (Strategy Pattern), gRPC, REST+OpenAPI, CLI, FsView-Trait, build.rs.
 
-UI
-[ ] iced-Migration: FsView-Trait
-[ ] Lens-Auswahl + Daten-Preview
-
-CLI / API / Doku: [ ] je fertigstellen + commit + push
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen
+[ ] FTL-Keys migrieren
+[ ] LensRegistry: welcher Renderer für welchen Typ (Strategy Pattern vollständig)
+[ ] Doku-Seite + commit + push
 ```
 
 ---
 
-## fs-ai (in fs-apps)
+## fs-ai (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] Facade Pattern: AiAssistant fasst fs-llm zusammen
-[ ] AiAssistant-Trait: ask / stream / context / history
-[ ] ConversationStore: Repository Pattern
-[ ] Kennt nur LlmAdapter-Trait — nie Mistral direkt
-[ ] Immer gegen Interface
-[ ] FTL-Keys: alle UI + CLI Texte
+Erledigt: AiController (Facade über fs-manager-ai), gRPC (list/status/start/stop/health),
+REST+OpenAPI, CLI (models/status/start/stop/daemon), FsView-Trait (view.rs), build.rs.
 
-UI / CLI / API
-[ ] iced-Migration: FsView-Trait (Chat-Interface + Modell-Auswahl)
-[ ] CLI: fs-ai ask / stream / models
-[ ] gRPC + REST + OpenAPI
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen
+[ ] FTL-Keys migrieren
 [ ] DB: Konversationshistorie über fs-db DbEngine-Trait
-
-Dokumentation: [ ] commit + push
+[ ] Doku-Seite + commit + push
 ```
 
 ---
 
-## fs-container-app (in fs-apps)
+## fs-container-app (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] MVC + Command Pattern
-[ ] ContainerAppController kennt nur ContainerEngine-Trait
-[ ] ContainerList: Observer Pattern (Status-Updates)
-[ ] Immer gegen Interface
-[ ] FTL-Keys: alle UI + CLI Texte
+Erledigt: ContainerAppController<E: ContainerEngine> (MVC, kennt nur Trait), gRPC (list/start/stop/health),
+REST+OpenAPI, CLI (list/start/stop/daemon), FsView-Trait (view.rs), build.rs, proto/container_app.proto.
 
-UI / CLI / API
-[ ] iced-Migration: FsView-Trait (Container-Liste + Status + Logs)
-[ ] CLI: fs-container-app list / start / stop / logs
-[ ] gRPC + REST + OpenAPI
-
-Dokumentation: [ ] commit + push
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen
+[ ] FTL-Keys migrieren
+[ ] Doku-Seite + commit + push
 ```
 
 ---
 
-## fs-tasks (in fs-apps)
+## fs-tasks (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] Command Pattern: jede Task-Aktion ein Kommando
-[ ] TaskStore-Trait: create / update / complete / list / get
-[ ] TaskTemplate-Trait: instantiate(params) → Task
-[ ] DataOffer-Trait: offer / accept / list-offers
-[ ] Immer gegen Interface
-[ ] FTL-Keys: alle UI + CLI Texte
+Erledigt: TaskController (Command Pattern), gRPC (list/create/delete/toggle/health),
+REST+OpenAPI, CLI (list/create/delete/toggle/daemon), FsView-Trait (TasksView/TaskDetailView/CreateTaskView),
+build.rs, proto/tasks.proto. 9 Tests grün.
 
-UI / CLI / API
-[ ] iced-Migration: FsView-Trait
-[ ] CLI: fs-tasks list / create / complete / delete
-[ ] gRPC + REST + OpenAPI
-[ ] DB: nur über fs-db DbEngine-Trait
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen
+[ ] FTL-Keys migrieren
+[ ] DB: TaskStore über fs-db DbEngine-Trait
 [ ] O1: Data Offers / Accepts
 [ ] O2: Task Builder UI
 [ ] O3: Task-Templates aus Store
-
-Dokumentation: [ ] commit + push
+[ ] Doku-Seite + commit + push
 ```
 
 ---
 
-## fs-bots (program — fs-bots Repo)
+## fs-bots (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] Strategy Pattern: BotAdapter je Messenger
-[ ] BotAdapter-Trait: start / stop / handle-message / send
-[ ] BotCommand-Trait: execute(ctx) → Result
-[ ] BotRegistry: welche Bots sind aktiv
-[ ] Bots als Artifacts nachladen (global oder per-Paket)
-[ ] Immer gegen Interface
-[ ] FTL-Keys: Bot-Antworten + Fehlermeldungen (CLI + UI)
+Erledigt: BotController (Strategy Pattern via bot_strategy), gRPC (list/get/enable/disable/health),
+REST+OpenAPI, CLI (list/enable/disable/daemon), FsView-Trait (view.rs), build.rs, proto/bots.proto.
+13 Tests grün (inkl. BotStrategy + Platform).
 
-Spezifisch
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen
+[ ] FTL-Keys migrieren
 [ ] H8: bot-db/src/lib.rs aufteilen (735 Zeilen)
         → bot_db/conversation.rs + bot_db/user.rs + bot_db/state.rs + bot_db/command_log.rs
 [ ] DB: nur über fs-db DbEngine-Trait
-
-UI
-[ ] iced-Migration: FsView-Trait (Bot-Übersicht + Status + Konfiguration)
-
-CLI
-[ ] fs-bots list / start / stop / status / configure
-
-API
-[ ] gRPC + REST + OpenAPI
-
-Dokumentation
-[ ] Doku-Seite: BotAdapter-Trait, BotCommand, Registry, Artifacts, API, CLI
-[ ] commit + push
+[ ] Doku-Seite + commit + push
 ```
 
 ---
 
-## fs-builder (in fs-apps)
+## fs-builder (in fs-apps) — G2.9 ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] Pipeline Pattern: Analyse → Validierung → Build → Publish
-[ ] BuildStep-Trait: execute / rollback / display_name
-[ ] BuildPipeline: Chain of Responsibility
-[ ] Immer gegen Interface
-[ ] FTL-Keys: alle UI + CLI Texte
+Erledigt: BuilderController (Pipeline Pattern: Analyse→Validate→Build→Publish), BuildStep-Trait,
+BuildPipeline (Chain of Responsibility), gRPC (status/health), REST+OpenAPI, CLI (status/daemon),
+FsView-Trait (view.rs), build.rs, proto/builder_app.proto. 9 Tests grün.
 
-UI / CLI / API
-[ ] iced-Migration: FsView-Trait (Build-Wizard)
-[ ] CLI: fs-builder analyze / validate / build / publish
-[ ] gRPC + REST + OpenAPI
-
-Dokumentation: [ ] commit + push
+Offen (G2 — iced-Migration):
+[ ] Dioxus komplett entfernen
+[ ] FTL-Keys migrieren
+[ ] CLI: fs-builder analyze / validate / build / publish (vollständige Pipeline-Steuerung)
+[ ] Doku-Seite + commit + push
 ```
 
 ---
