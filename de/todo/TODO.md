@@ -411,15 +411,15 @@ CLI (Daemon/System/Cpu/Memory/Disk/Alerts --monitor), proto/info.proto, build.rs
 
 ---
 
-# Gruppe G — Apps (alle G2.9 — iced-Migration)
+# Gruppe G — Apps (eigene Repos — G2.9 iced-Migration ausstehend)
 
-> Reihenfolge: klein → groß
+> Jede App hat ein eigenes Repo. fs-apps archiviert (2026-04-01).
 > Jede App: UI (FsView-Trait) + CLI + API (gRPC + REST)
 > Domain-Objekte importieren kein fs-render — nur view.rs als Bindeglied
 
 ---
 
-## fs-browser (in fs-apps) ✅ 2026-03-31
+## fs-browser ✅ 2026-04-01
 
 ```
 MVC (BrowserModel/Controller/View), FsView-Trait in view.rs, BookmarkStore-Trait,
@@ -430,7 +430,7 @@ Offen: Doku-Seite (niedrige Prio)
 
 ---
 
-## fs-theme-app (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-theme-app ✅ 2026-04-01
 
 ```
 Erledigt: ThemeController (MVC), gRPC (list/activate/preview/health), REST+OpenAPI,
@@ -444,7 +444,7 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-lenses (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-lenses ✅ 2026-04-01
 
 ```
 Erledigt: LensController (Strategy Pattern), gRPC, REST+OpenAPI, CLI, FsView-Trait, build.rs.
@@ -458,7 +458,7 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-ai (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-ai ✅ 2026-04-01
 
 ```
 Erledigt: AiController (Facade über fs-manager-ai), gRPC (list/status/start/stop/health),
@@ -473,7 +473,7 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-container-app (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-container-app ✅ 2026-04-01
 
 ```
 Erledigt: ContainerAppController<E: ContainerEngine> (MVC, kennt nur Trait), gRPC (list/start/stop/health),
@@ -487,7 +487,7 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-tasks (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-tasks ✅ 2026-04-01
 
 ```
 Erledigt: TaskController (Command Pattern), gRPC (list/create/delete/toggle/health),
@@ -506,7 +506,7 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-bots (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-bots ✅ 2026-04-01
 
 ```
 Erledigt: BotController (Strategy Pattern via bot_strategy), gRPC (list/get/enable/disable/health),
@@ -524,7 +524,7 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-builder (in fs-apps) — G2.9 ✅ 2026-04-01
+## fs-builder ✅ 2026-04-01
 
 ```
 Erledigt: BuilderController (Pipeline Pattern: Analyse→Validate→Build→Publish), BuildStep-Trait,
@@ -540,15 +540,14 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-store (UI-Teil in fs-apps → gehört zu fs-store Repo)
+## fs-store (UI-Teil in fs-store Repo)
 
 > Kein separates fs-store-app — die UI ist Teil von fs-store (Gruppe F)
-> Hier nur die offenen Aufgaben die noch aus fs-apps migriert werden müssen
+> fs-apps wurde archiviert (2026-04-01). install_wizard.rs noch nicht migriert.
 
 ```
-[ ] H9a: install_wizard.rs (606 Zeilen) aus fs-apps in fs-store übernehmen
+[ ] H9a: install_wizard.rs (606 Zeilen) aus fs-apps/archive in fs-store übernehmen
          → wizard/select.rs + wizard/confirm.rs + wizard/progress.rs + wizard/done.rs
-[ ] Dioxus-Code aus fs-apps/fs-store-app vollständig entfernen
 [ ] commit + push
 ```
 
