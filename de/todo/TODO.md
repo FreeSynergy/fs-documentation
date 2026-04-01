@@ -553,54 +553,21 @@ Offen (G2 — iced-Migration):
 
 ---
 
-## fs-managers (program)
-
-> Manager: Language, Theme, Icon, Cursor, ContainerApp
+## fs-managers ✅ 2026-04-01
 
 ```
-OOP & Design
-[ ] Strategy Pattern: je Manager eigener Trait
-[ ] LanguageManager: LanguageProvider-Trait (list / active / switch / download)
-[ ] ThemeManager: kennt nur ThemeLoader-Trait
-[ ] IconManager: kennt nur IconProvider-Trait
-[ ] CursorManager: CursorProvider-Trait
-[ ] ContainerAppManager: ContainerAppProvider-Trait
-[ ] Jeder Manager: view.rs als Bindeglied zu fs-render (FsView-Trait)
-[ ] Alle Manager einheitliches Aussehen via fs-render (kein Bruch)
-[ ] Immer gegen Interface
-[ ] FTL-Keys: alle Manager-Texte (UI + CLI + API)
+Erledigt: ManagersController (MVC, Arc-backed), ManagerKind-Enum (Language/Icons/Cursor/Theme/Container),
+gRPC (ListPanels/GetStatus/Health), REST+OpenAPI, CLI (list/status/daemon), FsView-Trait (new_view.rs),
+build.rs, proto/managers.proto. 9 Tests grün. Dioxus aus Public API entfernt.
 
-Spezifisch — große Dateien aufteilen
-[ ] H9b: language_panel.rs (1060 Zeilen)
-         → language/list.rs + language/download.rs + language/active.rs + language/preview.rs
-[ ] H9c: cursor_panel.rs (808 Zeilen)
-         → cursor/list.rs + cursor/preview.rs + cursor/active.rs
-[ ] H9d: manager_view.rs (792 Zeilen)
-         → views/language_view.rs + views/theme_view.rs + views/icon_view.rs + …
-
-Bekannter Bug
-[ ] fs-manager-language: gix-API (pre-0.65) in git.rs vollständig migrieren
-    prepare_push + SignatureRef auf neue gix-API aktualisieren
-
-UI — G5
-[ ] ManagerLayout-Trait in fs-render oder fs-components definieren
-    (sidebar_items / content_for / title — baut auf FsView-Trait auf)
-[ ] Alle Manager implementieren ManagerLayout (view.rs als Bindeglied)
-[ ] Standard-Sidebar-Struktur: Liste → Aktiv → Aktionen → Info
-[ ] Jeder Manager eigenständiges Fenster (kein Master-Manager)
-
-CLI
-[ ] fs-managers language list|set|download
-[ ] fs-managers theme list|set
-[ ] fs-managers icons list|set
-[ ] fs-managers cursor list|set
-
-API
-[ ] gRPC je Manager + gemeinsamer REST-Endpoint
-[ ] OpenAPI: auto-generiert
-
-Dokumentation
-[ ] commit + push (nach UI/CLI/API-Implementierung)
+Offen (G2 — iced-Migration + G5):
+[ ] H9b: language_panel.rs (1060 Zeilen) → language/list.rs + language/download.rs + …
+[ ] H9c: cursor_panel.rs (808 Zeilen) → cursor/list.rs + cursor/preview.rs + …
+[ ] H9d: manager_view.rs (792 Zeilen) → views/language_view.rs + …
+[ ] Bekannter Bug: fs-manager-language: gix-API (pre-0.65) in git.rs migrieren
+[ ] G5: ManagerLayout-Trait, jeder Manager eigenständiges Fenster
+[ ] FTL-Keys migrieren
+[ ] Doku-Seite + commit + push
 ```
 
 ---
