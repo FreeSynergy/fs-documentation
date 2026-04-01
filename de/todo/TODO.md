@@ -557,13 +557,10 @@ Offen (G2 — iced-Migration):
 
 ```
 Erledigt: ManagersController (MVC, Arc-backed), ManagerKind-Enum (Language/Icons/Cursor/Theme/Container),
-gRPC (ListPanels/GetStatus/Health), REST+OpenAPI, CLI (list/status/daemon), FsView-Trait (new_view.rs),
-build.rs, proto/managers.proto. 9 Tests grün. Dioxus aus Public API entfernt.
+gRPC (ListPanels/GetStatus/Health), REST+OpenAPI, CLI (list/status/daemon), FsView-Trait (view.rs),
+build.rs, proto/managers.proto. 7 Tests grün. Dioxus vollständig entfernt (alle *_panel.rs gelöscht).
 
-Offen (G2 — iced-Migration + G5):
-[ ] H9b: language_panel.rs (1060 Zeilen) → language/list.rs + language/download.rs + …
-[ ] H9c: cursor_panel.rs (808 Zeilen) → cursor/list.rs + cursor/preview.rs + …
-[ ] H9d: manager_view.rs (792 Zeilen) → views/language_view.rs + …
+Offen (G5 + Langfristig):
 [ ] Bekannter Bug: fs-manager-language: gix-API (pre-0.65) in git.rs migrieren
 [ ] G5: ManagerLayout-Trait, jeder Manager eigenständiges Fenster
 [ ] FTL-Keys migrieren
