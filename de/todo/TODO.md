@@ -435,9 +435,9 @@ Offen: Doku-Seite (niedrige Prio)
 ```
 Erledigt: ThemeController (MVC), gRPC (list/activate/preview/health), REST+OpenAPI,
 CLI (list/active/activate/preview/daemon), FsView-Trait (view.rs), build.rs, proto/theme_app.proto.
+Dioxus vollständig entfernt (standalone Repo, kein Dioxus in Cargo.toml).
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen (app.rs ersetzen durch iced-Engine)
+Offen (Langfristig):
 [ ] FTL-Keys: alle UI + CLI Texte in .ftl migrieren (derzeit .toml-Snippets)
 [ ] Doku-Seite + commit + push
 ```
@@ -448,9 +448,9 @@ Offen (G2 — iced-Migration):
 
 ```
 Erledigt: LensController (Strategy Pattern), gRPC, REST+OpenAPI, CLI, FsView-Trait, build.rs.
+Dioxus vollständig entfernt.
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen
+Offen (Langfristig):
 [ ] FTL-Keys migrieren
 [ ] LensRegistry: welcher Renderer für welchen Typ (Strategy Pattern vollständig)
 [ ] Doku-Seite + commit + push
@@ -463,9 +463,9 @@ Offen (G2 — iced-Migration):
 ```
 Erledigt: AiController (Facade über fs-manager-ai), gRPC (list/status/start/stop/health),
 REST+OpenAPI, CLI (models/status/start/stop/daemon), FsView-Trait (view.rs), build.rs.
+Dioxus vollständig entfernt.
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen
+Offen (Langfristig):
 [ ] FTL-Keys migrieren
 [ ] DB: Konversationshistorie über fs-db DbEngine-Trait
 [ ] Doku-Seite + commit + push
@@ -476,11 +476,12 @@ Offen (G2 — iced-Migration):
 ## fs-container-app ✅ 2026-04-01
 
 ```
-Erledigt: ContainerAppController<E: ContainerEngine> (MVC, kennt nur Trait), gRPC (list/start/stop/health),
-REST+OpenAPI, CLI (list/start/stop/daemon), FsView-Trait (view.rs), build.rs, proto/container_app.proto.
+Erledigt: ContainerAppController<E: ContainerEngine> (MVC, kennt nur Trait), async Engine,
+gRPC (list/start/stop/health), REST+OpenAPI, CLI (list/start/stop/daemon),
+FsView-Trait (view.rs), build.rs, proto/container_app.proto.
+Dioxus vollständig entfernt. async ContainerEngine korrekt (ServiceStatus.active_state).
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen
+Offen (Langfristig):
 [ ] FTL-Keys migrieren
 [ ] Doku-Seite + commit + push
 ```
@@ -492,10 +493,9 @@ Offen (G2 — iced-Migration):
 ```
 Erledigt: TaskController (Command Pattern), gRPC (list/create/delete/toggle/health),
 REST+OpenAPI, CLI (list/create/delete/toggle/daemon), FsView-Trait (TasksView/TaskDetailView/CreateTaskView),
-build.rs, proto/tasks.proto. 9 Tests grün.
+build.rs, proto/tasks.proto. 9 Tests grün. Dioxus vollständig entfernt.
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen
+Offen (Langfristig):
 [ ] FTL-Keys migrieren
 [ ] DB: TaskStore über fs-db DbEngine-Trait
 [ ] O1: Data Offers / Accepts
@@ -511,10 +511,9 @@ Offen (G2 — iced-Migration):
 ```
 Erledigt: BotController (Strategy Pattern via bot_strategy), gRPC (list/get/enable/disable/health),
 REST+OpenAPI, CLI (list/enable/disable/daemon), FsView-Trait (view.rs), build.rs, proto/bots.proto.
-13 Tests grün (inkl. BotStrategy + Platform).
+13 Tests grün. Dioxus vollständig entfernt.
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen
+Offen (Langfristig):
 [ ] FTL-Keys migrieren
 [ ] H8: bot-db/src/lib.rs aufteilen (735 Zeilen)
         → bot_db/conversation.rs + bot_db/user.rs + bot_db/state.rs + bot_db/command_log.rs
@@ -529,10 +528,9 @@ Offen (G2 — iced-Migration):
 ```
 Erledigt: BuilderController (Pipeline Pattern: Analyse→Validate→Build→Publish), BuildStep-Trait,
 BuildPipeline (Chain of Responsibility), gRPC (status/health), REST+OpenAPI, CLI (status/daemon),
-FsView-Trait (view.rs), build.rs, proto/builder_app.proto. 9 Tests grün.
+FsView-Trait (view.rs), build.rs, proto/builder_app.proto. 9 Tests grün. Dioxus vollständig entfernt.
 
-Offen (G2 — iced-Migration):
-[ ] Dioxus komplett entfernen
+Offen (Langfristig):
 [ ] FTL-Keys migrieren
 [ ] CLI: fs-builder analyze / validate / build / publish (vollständige Pipeline-Steuerung)
 [ ] Doku-Seite + commit + push
