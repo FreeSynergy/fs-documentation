@@ -72,30 +72,52 @@ Drill-down-Navigation). Der Content-Bereich rechts variiert je nach Aufgabe des 
 
 ### ManagerLayout-Trait
 
-`ManagerLayout` wird in `fs-render` oder `fs-components` definiert und von jedem
-Manager implementiert — als `FsView`-Trait auf dem Domain-Objekt:
+`ManagerLayout` ist in `fs-render/src/manager.rs` definiert und von jedem
+Manager in seinem `view.rs`-Shim implementiert — dem einzigen File das `fs-render` importiert:
 
 ```rust
-// In fs-render / fs-components
-trait ManagerLayout: FsView {
-    fn sidebar_items(&self) -> Vec<Box<dyn FsWidget>>;
-    fn content_for(&self, selection: &Selection) -> Box<dyn FsWidget>;
-    fn title(&self) -> String;
+// In fs-render/src/manager.rs
+pub struct ManagerSidebarItem {
+    pub id: &'static str,
+    pub label: String,
+    pub icon: &'static str,
 }
 
-// Im Manager (view.rs — einziges Bindeglied zu fs-render)
+pub trait ManagerLayout {
+    fn title(&self) -> &'static str;
+    fn sidebar_items(&self) -> Vec<ManagerSidebarItem>;
+    fn content_for(&self, item_id: &str) -> Box<dyn FsWidget>;
+}
+
+// Im Manager (language/src/view.rs — einziges Bindeglied zu fs-render)
 impl ManagerLayout for LanguageManager {
-    fn sidebar_items(&self) -> Vec<Box<dyn FsWidget>> {
-        // Sprachliste, aktive Sprache markiert
+    fn title(&self) -> &'static str { "Language Manager" }
+
+    fn sidebar_items(&self) -> Vec<ManagerSidebarItem> {
+        vec![
+            ManagerSidebarItem { id: "list",     label: t("managers-language-section-list"), icon: "🌐" },
+            ManagerSidebarItem { id: "active",   label: t("managers-language-section-active"), icon: "✓" },
+            ManagerSidebarItem { id: "download", label: t("managers-language-section-download"), icon: "⬇" },
+            ManagerSidebarItem { id: "preview",  label: t("managers-language-section-preview"), icon: "👁" },
+        ]
     }
-    fn content_for(&self, selection: &Selection) -> Box<dyn FsWidget> {
-        // Sprach-Details + Download + Aktivieren
+
+    fn content_for(&self, item_id: &str) -> Box<dyn FsWidget> {
+        match item_id {
+            "list"     => list::widget(self),
+            "active"   => active::widget(self),
+            "download" => download::widget(self),
+            "preview"  => preview::widget(self),
+            _          => fallback_widget(item_id),
+        }
     }
 }
 ```
 
 Das Domain-Objekt (`LanguageManager`) importiert **kein** `fs-render` direkt.
 Nur `view.rs` (das Bindeglied) importiert fs-render.
+
+**Implementiert von (G5 ✅):** LanguageManager, CursorManager, ThemeManager, IconManager, ContainerManager
 
 ### Standard-Sidebar-Elemente
 

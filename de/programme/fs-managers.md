@@ -60,6 +60,36 @@ pub enum NumberFormat { EuropeDot, UsComma, SpaceComma }
 
 ---
 
+## G5 — ManagerLayout-Trait (✅ 2026-04-01)
+
+Jeder Manager hat eine `view.rs` als einziges Bindeglied zu `fs-render`:
+
+| Crate                  | Sektionen                                          |
+|------------------------|----------------------------------------------------|
+| `fs-manager-language`  | list / active / download / preview (4 Module)      |
+| `fs-manager-cursor`    | list / active / preview (3 Module)                 |
+| `fs-manager-theme`     | list / active (in view.rs)                         |
+| `fs-manager-icons`     | list / active (in view.rs)                         |
+| `fs-manager-container` | list / active (running) (in view.rs)               |
+
+Trait-Signatur (in `fs-render/src/manager.rs`):
+```
+ManagerLayout::title()         → &'static str
+ManagerLayout::sidebar_items() → Vec<ManagerSidebarItem>
+ManagerLayout::content_for()   → Box<dyn FsWidget>
+```
+
+FTL-Keys für alle Sektionen in `fs-i18n/locales/{en,de}/managers.ftl`.
+
+---
+
+## H8 — bot-db aufgeteilt (✅ 2026-04-01)
+
+`bot-db/src/lib.rs` (735 Zeilen) → 9 Domain-Module:
+`audit` / `poll` / `room` / `subscription` / `collection` / `join` / `child` / `meta` / `sync`
+
+---
+
 ## Bekannter Bug
 
 `fs-manager-language`: Nutzt alte gix-API (pre-gix 0.65).
