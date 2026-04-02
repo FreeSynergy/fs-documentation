@@ -262,24 +262,9 @@ Offen (Langfristig):
 
 ---
 
-## fs-ui (library) — G2-Migration offen
+## fs-ui (library) ✅ 2026-04-02
 
-```
-Offen (G2 — nach iced-Migration):
-[ ] Alle Dioxus-Komponenten auf fs-render FsView-Trait migrieren
-[ ] Dioxus-Dependency vollständig entfernen
-```
-
----
-
-## fs-components (library) — G2-Migration offen
-
-```
-Offen (G2 — nach iced-Migration):
-[ ] H5: src/nav.rs aufteilen → nav/item.rs + nav/group.rs + nav/bar.rs + nav/breadcrumb.rs
-[ ] Dioxus-Dependency vollständig entfernen
-[ ] Alle Komponenten auf FsView-Trait migrieren
-```
+## fs-components (library) ✅ 2026-04-02
 
 ---
 
