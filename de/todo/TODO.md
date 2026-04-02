@@ -209,34 +209,41 @@ DbEngine-Trait + direktes SeaORM/sqlx nur in Adapter-Repos
 
 ---
 
-## Offene Konzept-Entscheidungen
+## Konzept-Entscheidungen
 
-Alle O1–O5 aus der vorherigen Version wurden am 2026-04-02 entschieden.
-Dokumentiert im Architektur-Überblick oben.
+Alle O1–O7 wurden entschieden (O1–O5: 2026-04-02, O6–O7: 2026-04-02).
 
-Noch offen:
-
-### O6 — Komponenten-Verzeichnis-Struktur
-
-Wo liegen die TOML-Konfigurations-Dateien der Komponenten?
-- Pro Programm: `~/.config/freesynergy/components/{program}/{component}.toml`
-- Global: `/etc/freesynergy/components/{component}.toml`
-- User überschreibt Global?
+### O6 — Komponenten + Paket-Deklaration (entschieden 2026-04-02)
 
 ```
-[ ] Entscheidung: Verzeichnis-Struktur für Komponenten-TOML
-[ ] Entscheidung: Priorität User vs. Global vs. Store-Default
+Komponenten werden im Paket selbst deklariert — in package.toml des jeweiligen Pakets.
+Jedes Paket kennt seine Speicher-Pfade:
+  storage.user   = "~/.local/share/freesynergy/{paket}"   (privat, pro User)
+  storage.global = "/var/lib/freesynergy/{paket}"         (global, systemweit)
+  storage.config = "~/.config/freesynergy/{paket}"        (Konfig, pro User)
+  storage.cache  = "~/.cache/freesynergy/{paket}"         (Cache, pro User)
+
+Komponenten-Deklaration in package.toml:
+  [[component]]
+  id      = "inventory-list"
+  slot    = "fill"           ← bevorzugter Slot
+  wasm    = "components/inventory_list.wasm"
+  config  = "components/inventory_list.toml"   ← Default-Einstellungen
+
+Paket-Dokumentation enthält:
+  - Eigener API-Tab: alle gRPC-Endpoints + REST-Endpoints
+  - Komponenten-Tab: alle Komponenten mit Default-Einstellungen
+  - Storage-Tab: User/Global/Config/Cache Pfade
 ```
 
-### O7 — WASM-Komponenten: Sandbox-Grenzen
-
-Welche Capabilities bekommt eine WASM-Komponente?
-- Lesen: fs-inventory, fs-session, fs-info (via gRPC)
-- Schreiben: nur über Bus-Events (nie direkt)
-- UI-Rendering: nur eigene Slot-Area
+### O7 — WASM-Komponenten: Sandbox-Grenzen (entschieden 2026-04-02)
 
 ```
-[ ] Entscheidung: WASM-Capability-Set für UI-Komponenten
+Lesen:    fs-inventory, fs-session, fs-info — NUR via gRPC (nie direkt)
+Schreiben: NUR via Bus-Events (nie direkt in DB oder Dateisystem)
+UI:       NUR eigene Slot-Area (kein Zugriff auf andere Slots)
+Netzwerk: kein direkter Netzwerkzugriff (alles über FS-Services)
+Falls andere Grenzen nötig werden: in der Session besprechen.
 ```
 
 ---
@@ -305,7 +312,11 @@ Design Pattern: State Machine (WizardStep: Welcome→Capability→Engine→Bundl
 ## 2.1 — Store/ Katalog: Pakete vervollständigen
 
 ```
-[ ] Alle bestehenden Repos auf einheitliches package.toml-Format migrieren
+[ ] package.toml-Format erweitern:
+    - [[component]]-Einträge (id, slot, wasm, config)
+    - [storage]-Sektion (user, global, config, cache Pfade)
+    - [api]-Sektion (gRPC-Endpoints + REST-Endpoints für Doku-Tab)
+[ ] Alle bestehenden Repos auf erweitertes package.toml-Format migrieren
 [ ] Bundles definieren: Minimal | Server | Workstation | Developer
 [ ] Bundle "Workstation": render-engine als required-Artifact mit Engine-Wahl
 [ ] Für jedes program-Paket: artifact-Einträge für container, rpm, deb, flatpak
@@ -365,19 +376,23 @@ Design Pattern: MVC (StoreController, StoreModel, StoreView via FsView-Trait)
 
 ---
 
-## 3.1 — LayoutDescriptor (TOML, O6 + O7 müssen entschieden sein)
+## 3.1 — LayoutDescriptor (TOML)
 
 ```
 Design Pattern: Interpreter (TOML → LayoutDescriptor → Engine-spezifisches Rendering)
 
 [ ] Design Pattern festlegen
-[ ] LayoutDescriptor-Structs (Rust): Shell, Slot, ComponentRef
-[ ] TOML-Format definieren: pro Komponente eine eigene .toml-Datei
-[ ] Verzeichnis-Struktur (O6 muss entschieden sein)
+[ ] LayoutDescriptor-Structs (Rust): Shell, Slot, ComponentRef, StoragePaths
+[ ] TOML-Format: pro Komponente eine eigene .toml-Datei mit Default-Einstellungen
+[ ] Pfade: ~/.config/freesynergy/{paket}/components/{component}.toml (User)
+           /etc/freesynergy/{paket}/components/{component}.toml (Global)
+           User überschreibt Global überschreibt Store-Default
+[ ] StoragePaths aus package.toml lesen (user / global / config / cache)
 [ ] fs-config einbinden: TOML laden + validieren
 [ ] Hot-Reload: inotify überwacht Komponenten-Verzeichnis
 [ ] i18n: alle Labels/Descriptions in FTL
 [ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: konzepte/component-system.md anlegen
 ```
 
 ## 3.2 — WASM-Komponenten-System
@@ -388,12 +403,16 @@ Design Pattern: Plugin (ComponentTrait via fs-plugin-sdk)
 [ ] Design Pattern festlegen
 [ ] ComponentTrait: render(engine_context, slot_bounds) → LayoutElement
 [ ] ComponentId-Registry: Komponente meldet sich beim Start an
-[ ] Sandbox-Grenzen definieren (O7 muss entschieden sein)
+[ ] Sandbox-Grenzen (O7):
+    - Lesen: nur via gRPC zu FS-Services
+    - Schreiben: nur via Bus-Events
+    - UI: nur eigene Slot-Area
 [ ] fs-plugin-runtime: WASM laden + instanziieren
 [ ] Slot-Layout-Algorithmus: top stacken, fill teilt Raum, bottom stacken
 [ ] Responsive: Komponente kennt ihre Mindest-/Maxgröße
-[ ] i18n: ComponentTrait liefert FTL-Key für seinen Namen/Beschreibung
+[ ] i18n: ComponentTrait liefert FTL-Key für Namen/Beschreibung
 [ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: konzepte/wasm-komponenten.md anlegen
 ```
 
 ## 3.3 — Engine-Implementierungen
