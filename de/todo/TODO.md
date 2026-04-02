@@ -54,6 +54,16 @@ Kein Task gilt als erledigt, bevor alle Punkte erfüllt sind:
    → cargo clippy (gleiche Flags wie pre-commit — kein Abweichen)
    → cargo test (alle Tests grün)
    → Erst wenn alle drei grün: Phase / Task abgeschlossen
+
+6. Dokumentation — PFLICHT, nicht optional:
+   → Doku-Seite in fs-documentation/de/ anlegen oder aktualisieren
+   → Neue Konzepte: konzepte/{modul}.md
+   → Neue Programme: programme/{modul}.md
+   → Neue Technik/Architektur: technik/{modul}.md oder architektur/{modul}.md
+   → INDEX.md aktualisieren (Link zur neuen/geänderten Seite)
+   → fs-documentation committen + pushen
+   → Erst danach: das eigentliche Modul-Repo committen + pushen
+   → Gilt für JEDES Modul — keine Ausnahme
 ```
 
 **Wichtig zu clippy/fmt:** Die Einstellungen im Git-Hook sind maßgeblich.
