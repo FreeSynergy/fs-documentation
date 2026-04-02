@@ -55,6 +55,12 @@ Kein Task gilt als erledigt, bevor alle Punkte erfüllt sind:
    → cargo test (alle Tests grün)
    → Erst wenn alle drei grün: Phase / Task abgeschlossen
 
+5b. Bibliotheken aktuell halten (bei jeder Arbeit am Repo):
+   → cargo upgrade --incompatible (cargo-edit) oder cargo update
+   → Breaking Changes prüfen + anpassen
+   → Build + Tests danach wieder grün sicherstellen
+   → Dependency-Updates als separater Commit vor dem Feature-Commit
+
 6. Dokumentation — PFLICHT, nicht optional:
    → Doku-Seite in fs-documentation/de/ anlegen oder aktualisieren
    → Neue Konzepte: konzepte/{modul}.md
