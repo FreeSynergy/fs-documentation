@@ -281,22 +281,22 @@ cargo fmt + clippy + test grün ✅
 ## 1.2 — fs-init: Install-Wizard ✅
 
 ```
-Design Pattern: State Machine (WizardStep-Trait, 7 Schritte)
-Umgesetzt 2026-04-03
+Design Pattern: State Machine (WizardStep-Trait, 8 Schritte)
+Umgesetzt 2026-04-03, überarbeitet 2026-04-03
 
-Welcome → Capability → Engine → Bundle → Confirm → Progress → Done
-Bundle-Auswahl: Minimal | Server | Workstation | Developer
+Welcome → Capability → StoreLoad → Engine → Bundle → Confirm → Progress → Done
+
+StoreLoad: klont Store-Katalog (non-fatal bei Fehler, Fallback Built-in Defaults)
+Bundle-Auswahl: dynamisch aus lokalem Store-Katalog (catalog_reader.rs)
+  BundleChoice/EngineChoice: String-Felder (kein &'static str mehr)
 Render-Engine-Auswahl: iced | bevy | tui | none
 Install-Target: Container | RPM | DEB | AppImage (OS-Detection)
-Store-Clone im Progress-Schritt via gix
+Progress: echte Install-Pipeline (fs-store Pipeline, je Komponente)
+  Adapter werden automatisch mitinstalliert (AdapterInstallStep)
+Done: fs-manager auto-launch + Hinweise auf nächste Schritte
+gix: 0.80 (0.81 noch nicht vollständig auf crates.io)
 i18n: ALLE User-facing Texte als FTL-Keys ✅
 cargo fmt + clippy + test grün ✅
-
-Noch offen (Phase 2):
-[ ] Echte Paket-Installation im Progress-Schritt
-[ ] Adapter immer mitinstallieren
-[ ] Nach Install: Manager startet Konfiguration
-[ ] Bundle-Liste dynamisch aus Store/-Katalog lesen
 ```
 
 ## 1.3 — fs-init: Standalone-Test ✅
