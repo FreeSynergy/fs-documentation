@@ -38,7 +38,9 @@ Design Patterns:
 Objekte:
   Package (Trait)       — Basis-Interface für alle Paket-Typen
   AppPackage            — Native Binaries (gRPC/REST, Capabilites, Storage)
-  ContainerPackage      — Container-Dienste (Ports, Variablen, Features)
+  ContainerPackage      — Container-Dienste (Ports, Variablen, Features, StoragePaths, ApiEndpoint)
+  StoragePaths          — Dateisystem-Pfade eines Pakets (user/global/config/cache)
+  ApiEndpoint           — REST-Endpoint-Metadaten (base, port, proto, description)
   BundlePackage         — Meta-Pakete (Component-Liste + Render-Engine-Wahl)
   ThemePackage          — Visual Themes
   LanguagePackage       — Sprach-Packs
@@ -63,6 +65,7 @@ Install-Pipeline (Pipeline Pattern):
     DownloadStep        — Icon + Artifact aus Store holen
     ValidateStep        — Checksum/Signatur prüfen (Placeholder bis Phase 3)
     InstallFileStep     — Datei schreiben + System-Installer aufrufen
+    BundleInstallStep   — Bundle-Komponenten einzeln installieren (sub-Pipeline)
     AdapterInstallStep  — Adapter automatisch mit installieren
     InventoryStep       — fs-inventory via REST benachrichtigen (best-effort)
     RegistryStep        — fs-registry via REST benachrichtigen (best-effort)
@@ -76,16 +79,35 @@ Install-Pipeline (Pipeline Pattern):
 Jede Installation läuft durch eine geordnete Pipeline:
 
 ```
-Download → Validate → Install → AdapterInstall → Inventory → Registry → Event
+Download → Validate → Install → [BundleInstall] → [AdapterInstall] → Inventory → Registry → Event
 ```
 
 - **Fehler** in einem Step → Pipeline abborten, `PipelineEvent::Failed`
 - **Skip** = Step nicht applicable (z.B. Bundle hat kein File) → weitermachen
 - **Best-effort** Steps (Inventory, Registry, Bus) → nie aborting
 
+**Bundle-Install:** `bundle_components: Vec<InstallRequest>` im `InstallContext`
+wird vom App-Layer befüllt. `BundleInstallStep` iteriert die Komponenten und
+startet für jede eine Sub-Pipeline. Fehlgeschlagene Komponenten werden geloggt
+aber stoppen das Bundle-Install nicht.
+
 Adapter-Auto-Install: wenn ein `program`/`container`-Paket installiert wird,
 installiert der `AdapterInstallStep` automatisch den deklarierten Adapter.
 Der Adapter registriert seine Capability in `fs-registry`.
+
+### Wizard-Schritte (fs-store-app)
+
+```
+wizard/
+├── select.rs        — Paket-Auswahl (Filter + ListWidget)
+├── engine_select.rs — Render-Engine-Wahl für Bundles (EngineSelectStep)
+├── confirm.rs       — Bestätigung + Env-Var-Eingabe
+├── progress.rs      — Live-Fortschritt (PipelineEvent)
+└── done.rs          — Ergebnis (Success | Failed)
+```
+
+`EngineSelectStep` wird nur bei Bundles mit `[[bundle.render_engines]]` angezeigt.
+Vorauswahl: erste Option mit `is_default = true` (normalerweise iced).
 
 ---
 
