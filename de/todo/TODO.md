@@ -181,6 +181,13 @@ gRPC (tonic):     primär — intern + extern, type-safe
 REST (axum):      zusätzlich — universell, Browser-kompatibel
 OpenAPI (utoipa): auto-generiert
 NIE direkte Calls über Repo-Grenzen — immer über gRPC/REST
+
+gRPC-First-Regel (entschieden 2026-04-03):
+  KEIN raw JSON/serde zwischen FS-Services — immer gRPC (tonic + protobuf)
+  REST nur für externe Clients (Browser, 3rd-party Tools)
+  serde/JSON NUR wenn keine Alternative existiert (z.B. Kanidm-REST-API als 3rd-party Fork)
+  Library-Crates (heute noch embedded) → sobald als eigener Container → gRPC-Interface drüber
+  Ausnahmen IMMER kommentieren: // gRPC not possible: external API (Kanidm/Forgejo/...)
 ```
 
 ### OOP-Grundregeln
