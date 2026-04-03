@@ -390,81 +390,54 @@ cargo fmt + clippy + test grün ✅
 
 ---
 
-# Phase 4 — Desktop
+# Phase 4 — Desktop ✅
 
-> Ziel: Vollständige Desktop-Shell mit konfigurierbarem Layout.
-> Läuft auf fs-render + gewählter GUI-Engine.
-> Standard-Checkliste gilt vollständig.
+> Umgesetzt 2026-04-04. Vollständige Desktop-Shell mit konfigurierbarem Layout.
 
 ---
 
-## 4.1 — Desktop-Shell: Layout-System
+## 4.1 ✅ Desktop-Shell: Layout-System
 
-```
-Design Pattern: Composite (ShellLayout enthält Shells, Shells enthalten Slots)
+Composite Pattern: `ShellLayout` → `ShellSection` → `SlotEntry`.
+TOML-Config: `~/.config/freesynergy/desktop/desktop-layout.toml`.
+Default: Topbar(`notification-bell`) + Sidebar(`inventory-list`/`pinned-apps`) + Main + Bottombar(hidden).
 
-[ ] Design Pattern festlegen
-[ ] ShellLayout: Sidebar | Topbar | Bottombar | Main (alle optional)
-[ ] Slot-basierte Konfiguration (aus Phase 3)
-[ ] TOML-Config: desktop-layout.toml (hotpluggable)
-[ ] Default-Layout: Topbar(brand+breadcrumbs+avatar) + Sidebar(inventory+pinned) + Main
-[ ] i18n: ALLE Labels in FTL
-[ ] cargo fmt + clippy + test grün
-```
+## 4.2 ✅ Desktop-Shell: Komponenten einbinden
 
-## 4.2 — Desktop-Shell: Komponenten einbinden
+`SharedComponentRegistry` in `DesktopShell`; `register_standard_components()` registriert Phase-3-Komponenten.
 
-```
-[ ] InventoryList in Sidebar (slot: fill) — aus Phase 3.4
-[ ] PinnedApps in Sidebar (slot: bottom) — aus Phase 3.4
-[ ] SystemInfo in Bottombar (slot: bottom) — aus Phase 3.4
-[ ] NotificationBell in Topbar (slot: top) — aus Phase 3.4
-[ ] SearchBar in Topbar (slot: fill) — aus Phase 3.4
-[ ] cargo fmt + clippy + test grün
-```
+## 4.3 ✅ Desktop-Shell: App-Management
 
-## 4.3 — Desktop-Shell: App-Management
+Observer Pattern: `AppLifecycleBus` mit `SessionLifecycleObserver`. Events: Opened/Closed/Pinned/Unpinned.
+Pin/Unpin via `PackageRegistry::set_pinned`. Sidebar zeigt Pin-Button je App.
 
-```
-Design Pattern: Observer (fs-session beobachtet App-Lifecycle via Bus)
+## 4.4 ✅ Desktop: Settings — Layout-Seite
 
-[ ] Design Pattern festlegen
-[ ] App starten: aus Inventory oder Pinned → FsWindow öffnen
-[ ] FsWindow-Trait (fs-render): pro laufende App ein Fenster
-[ ] fs-session: app::opened / app::closed via Bus
-[ ] Fenster-Liste in Taskbar
-[ ] App anpinnen / lösen (persist in fs-session)
-[ ] i18n: alle Fenster-Titel + Aktionen in FTL
-[ ] cargo fmt + clippy + test grün
-```
+Strategy Pattern: `LayoutSectionStrategy` → `TopbarStrategy`, `SidebarStrategy`, `BottombarStrategy`.
+Settings-Seite `Layout` in `fs-settings` mit TOML-Proxy (keine Zirkelabhängigkeit zu `fs-gui-workspace`).
 
-## 4.4 — Desktop: Settings
+## 4.5 ✅ Desktop: i18n-Abschluss
 
-```
-Design Pattern: Strategy (pro Settings-Seite eigene Strategy-Impl)
-
-[ ] Appearance (Theme-Wahl via fs-theme)
-[ ] Language (Sprache global + per App via fs-i18n)
-[ ] Desktop-Layout konfigurieren (Slot-Belegung via TOML)
-[ ] Service Roles (welcher Service übernimmt welche Funktion)
-[ ] Accounts (IAM via Kanidm)
-[ ] Shortcuts
-[ ] Packages (Store-View)
-[ ] i18n: ALLE Texte in FTL
-[ ] cargo fmt + clippy + test grün
-```
-
-## 4.5 — Desktop: i18n-Abschluss
-
-```
-[ ] fs-settings: alle noch hardcodierten Texte in FTL migrieren
-[ ] fs-theme-app: FTL-Keys migrieren
-[ ] fs-container-app: FTL-Keys migrieren
-[ ] fs-gui-workspace: Shell-Texte vollständig in FTL
-[ ] cargo fmt + clippy + test grün
-```
+`fs-i18n/locales/{en,de}/desktop.ftl` mit allen Shell- und Profil-Keys.
+`SnippetPlugin` + TOML-Snippets aus `fs-gui-workspace` entfernt → `init_with_builtins()`.
+Alle Keys auf Bindestriche migriert (z.B. `shell-menu-about`).
 
 ---
+
+## Offen aus Phase 4 (Folge-Phasen)
+
+```
+[ ] Appearance-Settings (Theme-Wahl via fs-theme)
+[ ] Language-Settings (Sprache global + per App)
+[ ] Service Roles Settings
+[ ] Accounts-Settings (IAM via Kanidm)
+[ ] Shortcuts-Settings
+[ ] Packages-Settings (Store-View)
+[ ] SearchBar in Topbar (slot: fill) — Phase 6
+[ ] Hot-Reload Layout via inotify (Phase 3 HotReloadWatcher)
+[ ] IcedLayoutInterpreter vollständig in Shell-View einbinden
+[ ] OIDC-Login-Flow in fs-settings konfigurierbar
+```
 
 ---
 

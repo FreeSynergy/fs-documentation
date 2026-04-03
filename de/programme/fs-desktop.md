@@ -34,14 +34,42 @@ fs-desktop/crates/
 
 ```
 DesktopShell (Facade)
-    ├── WindowManager     — Observer Pattern (SessionTracker → Fenster-Events)
-    ├── AppLauncher       — Command Pattern
-    ├── SettingsModule    — Strategy Pattern (je Setting-Kategorie)
-    └── ProfileModule     — Repository Pattern
+    ├── ShellLayout           — Composite Pattern (ShellSection → SlotEntry)
+    ├── AppLifecycleBus       — Observer Pattern (Opened/Closed/Pinned/Unpinned)
+    ├── ComponentRegistry     — fs-render Phase-3 Komponenten-Registry
+    ├── WindowManager         — Observer Pattern (SessionTracker → Fenster-Events)
+    ├── AppLauncher           — Command Pattern
+    ├── SettingsModule        — Strategy Pattern (LayoutSectionStrategy je Section)
+    └── ProfileModule         — Repository Pattern
 ```
 
 **Render-Engine:** `iced` via `fs-gui-engine-iced` → `libcosmic` (System76)
 **Pattern:** Elm MVU — Message / Update / View
+
+### Layout-System (Phase 4)
+
+`ShellLayout` (Composite) verwaltet alle Shell-Sektionen:
+
+| Sektion    | Standard           | Sichtbar |
+|------------|--------------------|----------|
+| Topbar     | `notification-bell` (top) | ja |
+| Sidebar    | `inventory-list` (fill), `pinned-apps` (bottom) | ja |
+| Main       | — (App-Content)    | ja |
+| Bottombar  | `system-info` (bottom) | nein |
+
+Config-Datei: `~/.config/freesynergy/desktop/desktop-layout.toml`
+
+### App-Lifecycle-Bus (Phase 4)
+
+```rust
+lifecycle_bus.app_opened("fs-store");   // → AppOpenedPayload → tracing
+lifecycle_bus.app_pinned("fs-store");   // → PinnedApps-Update → Sidebar
+```
+
+### Settings: Layout-Seite (Phase 4)
+
+`LayoutSectionStrategy` (Strategy Pattern) rendert jede Shell-Sektion als Settings-Zeile.
+Concrete Strategies: `TopbarStrategy`, `SidebarStrategy`, `BottombarStrategy`.
 
 ---
 
