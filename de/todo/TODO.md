@@ -315,15 +315,6 @@ Store-Clone ohne laufenden fs-store-Container ✅ (gix, kein System-git)
 
 > Abgeschlossen. Store-Katalog vollständig, Install-Pipeline live, CLI mit install/remove/update.
 
-## Offene Restpunkte aus Phase 2
-
-```
-[ ] Store-UI: Paket-Detail zeigt [storage] + [api] Tabs (Phase 2.3, UI-Teil)
-[ ] Install-Wizard: Engine-Wahl SelectStep implementieren (Phase 2.3, UI-Teil)
-[ ] Bundle-Install: Komponenten iterieren + einzeln installieren (Phase 2.3)
-[ ] Telegram: als reiner Adapter in Store/ eintragen (package.toml)
-[ ] Outline: [storage]+[api] in catalog.toml nachtragen
-```
 
 ---
 
@@ -702,11 +693,13 @@ fs-browser, fs-theme-app, fs-lenses, fs-ai, fs-container-app, fs-tasks, fs-bots,
 fs-store (Wizard H9a-H9d), fs-managers, Store/ Katalog (Basis),
 fs-documentation, fs-ci, GitHub Actions (alle Repos), Fork-Repos (CI)
 
-Phase 2 ✅ 2026-04-03:
+Phase 2 ✅ 2026-04-03 (Restpunkte ✅ 2026-04-03):
 Store/ Katalog: [storage]+[api]+[adapter]+[install_targets] für alle Kern-Pakete,
 Developer-Bundle, Workstation render-engine-Wahl, Wiki.js + Bulwark Mail.
-fs-store: Install-Pipeline (Pipeline Pattern, 7 Steps), CLI install/remove/update,
-i18n FTL-Keys für Pipeline + CLI. cargo fmt + clippy + tests grün.
+Outline + Telegram Adapter: [storage]+[api]+[install_targets] nachgetragen.
+fs-store: Install-Pipeline (7 Steps), BundleInstallStep (Sub-Pipeline),
+EngineSelectStep (Wizard), StoragePaths + ApiEndpoint, Storage/API-Tabs in
+detail_panel, CLI install/remove/update. cargo fmt + clippy + tests grün.
 ```
 
 ---
