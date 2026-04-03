@@ -3,8 +3,8 @@
 [← Zurück zum Index](../INDEX.md)
 
 **Repo:** `FreeSynergy/fs-managers` · `/home/kal/Server/fs-managers/`
-**Typ:** Workspace (7 Manager-Crates)
-**Capabilities:** `managers.language`, `managers.theme`, `managers.icons`, `managers.cursor`, `managers.ai`, `managers.bots`, `managers.container`
+**Typ:** Workspace (10 Manager-Crates)
+**Capabilities:** `managers.language`, `managers.theme`, `managers.icons`, `managers.cursor`, `managers.ai`, `managers.bots`, `managers.container`, `managers.auth`, `managers.zentinel`, `managers.mail`
 
 ---
 
@@ -26,6 +26,9 @@ Jeder Manager ist eine eigenständige Library mit CLI-Binaries, die von `fs-apps
 | `fs-manager-ai`          | `managers.ai`        | LLM-Modelle verwalten (Download, Aktivierung)             |
 | `fs-manager-bots`        | `managers.bots`      | Bot-Instanzen konfigurieren                               |
 | `fs-manager-container`   | `managers.container` | Container-Apps konfigurieren                              |
+| `fs-manager-auth`        | `managers.auth`      | Kanidm-Setup-Wizard + OIDC-Client-Verwaltung              |
+| `fs-manager-zentinel`    | `managers.zentinel`  | Zentinel-Routen-Verwaltung (Facade + Auto-Routing via Bus)|
+| `fs-manager-mail`        | `managers.mail`      | Stalwart-Setup-Wizard + Domain-Konfiguration              |
 
 ---
 
@@ -39,7 +42,10 @@ fs-managers/
 ├── cursor/      — Cursor-Manager
 ├── ai/          — AI-Modell-Manager
 ├── bots/        — Bot-Konfigurations-Manager
-└── container/   — Container-App-Manager
+├── container/   — Container-App-Manager
+├── auth/        — Kanidm-Setup-Wizard (State Machine)
+├── zentinel/    — Zentinel-Routen-Facade (ZentinelManager + BusHandler)
+└── mail/        — Stalwart-Setup-Wizard (State Machine)
 ```
 
 ---

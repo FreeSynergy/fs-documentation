@@ -29,6 +29,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [WASM-Komponenten](konzepte/wasm-komponenten.md) — Plugin-SDK, wasmtime-Runtime, WASI-Sandbox (O7), Store-Distribution
 - [fs-auth](programme/fs-auth.md) — Auth-Service: OAuthProvider, ScimProvider, SsoProvider, PamProvider + Kanidm-Backend + KanidmSetupWizard
 - [fs-zentinel](programme/fs-zentinel.md) — Reverse-Proxy: ZentinelManager (Facade), RouteConfig, Auto-Routing via Bus
+- [fs-mail](programme/fs-mail.md) — Mail-Service: SmtpProvider, ImapProvider, JmapProvider + StalwartBackend + StalwartSetupWizard
 - [fs-registry](programme/fs-registry.md) — Service-Registry: ServiceRegistry-Trait, Capability-Lookup, gRPC+REST+CLI
 - [fs-inventory](programme/fs-inventory.md) — Lokales Paket-Inventar: InventoryStore-Trait, InstalledResource, ServiceInstance, gRPC+REST+CLI
 - [fs-session](programme/fs-session.md) — Session-Management: SessionStore-Trait, SqliteSessionStore, SessionTracker, AppSession
