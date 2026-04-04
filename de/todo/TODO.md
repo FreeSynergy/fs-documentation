@@ -540,22 +540,28 @@ Noch offen:
 [ ] matrix-sdk live Feature: warten auf upstream rustc ≥1.94 Fix (matrix-sdk 0.16)
 ```
 
-## 5.5 — Telegram (externer Kanal — kein eigener Container)
+## 5.5 — Telegram (externer Kanal — kein eigener Container) ✅ 2026-04-04
 
 ```
 Design Pattern: Adapter (TelegramAdapter via fs-channel-telegram)
 
-Hinweis: Telegram läuft EXTERN — FreeSynergy installiert keinen Telegram-Server.
-Nur der Adapter (API-Integration + Bot-Support) wird installiert.
-Nachgeladen wird er automatisch wenn fs-bots oder fs-channel-telegram installiert wird.
+Umgesetzt 2026-04-04
 
-[ ] Design Pattern bestätigen (fs-channel-telegram bereits vorhanden)
-[ ] fs-channel-telegram: TelegramAdapter vollständig implementieren
-[ ] Store-Eintrag: fs-channel-telegram als adapter-Paket
-[ ] fs-bots: Telegram als Bot-Backend (via fs-channel-telegram)
-[ ] Konfiguration: Bot-Token via fs-config + Manager
-[ ] i18n: ALLE Konfig-Texte in FTL
-[ ] cargo fmt + clippy + test grün
+BotChannel-Trait für TelegramAdapter implementiert (polling, send, menus) ✅
+  receive_updates: getUpdates polling mit Offset-Tracking ✅
+  send / send_formatted / send_dm / send_menu: inline keyboards ✅
+ChannelRegistry::build_bot() für Telegram verdrahtet ✅
+TelegramChannelConfig über fs-config (TelegramConfigStore) ✅
+  bot_token_ref als Geheimreferenz (env:VAR / file:PATH) — nie Klartext ✅
+fs-manager-telegram: Setup-Wizard (State Machine, 3 Schritte) ✅
+  fs-telegram setup / status / show / set-token / set-chats ✅
+i18n: fs-i18n/locales/{en,de}/channel-telegram.ftl vollständig ✅
+Store-Catalog: [storage] + [api.grpc] + [api.rest] + [notes] ✅
+cargo fmt + clippy + test grün ✅
+
+Noch offen:
+[ ] Standalone-Test mit echtem Bot-Token (env vars gesetzt)
+[ ] gRPC subscribe: Streaming-Impl (derzeit deferred → REST long-poll)
 ```
 
 ## 5.6 — Forgejo (Git-Server, Self-Hosted)
