@@ -52,12 +52,77 @@ DesktopShell (Facade)
 
 | Sektion    | Standard           | Sichtbar |
 |------------|--------------------|----------|
-| Topbar     | `notification-bell` (top) | ja |
-| Sidebar    | `inventory-list` (fill), `pinned-apps` (bottom) | ja |
-| Main       | — (App-Content)    | ja |
-| Bottombar  | `system-info` (bottom) | nein |
+| Topbar          | `notification-bell` (top)                       | ja   |
+| Sidebar (links) | `inventory-list` (fill), `pinned-apps` (bottom) | ja   |
+| Main            | — (App-Content)                                 | ja   |
+| Sidebar (rechts)| `help-panel` (fill)                             | ja   |
+| Bottombar       | `system-info` (bottom)                          | nein |
 
 Config-Datei: `~/.config/freesynergy/desktop/desktop-layout.toml`
+
+### Sidebar State Machine (Phase 4B)
+
+```
+SidebarState:  Collapsed (48px Icon-Strip) | Expanding | Open (full width)
+SidebarMode:   Auto (collapses on cursor leave) | Pinned (stays open)
+SidebarSide:   Left | Right
+```
+
+**Transitions:**
+
+| Von       | Trigger                     | Nach      |
+|-----------|-----------------------------|-----------|
+| Collapsed | Cursor ≤ Edge + 16px        | Expanding |
+| Expanding | Cursor verbleibt in Zone    | Open      |
+| Open      | Cursor > Full Width + 16px  | Collapsed |
+| Any       | Pin-Button (Pinned Mode)    | stays Open|
+
+**MouseProximityObserver** (`sidebar_state.rs`): prüft X-Koordinate gegen konfigurierten Schwellwert.
+
+### Linke Sidebar — Taskbar
+
+```
+┌──────────────────────┐
+│ ⊞ Launcher    📍     │  ← Launcher + Pin-Button (collapsed: nur ⊞)
+├──────────────────────┤
+│  INSTALLED           │  ← Section-Label (nur expanded)
+│  🌐 Browser          │  ← alle installierten Apps
+│  📦 Store            │
+├──────────────────────┤
+│  PINNED              │  ← Section-Label (nur expanded)
+│  ⭐ Tasks            │  ← pinned Apps
+├──────────────────────┤
+│ ⚙ Settings           │  ← immer sichtbar, fixed bottom
+└──────────────────────┘
+```
+
+### Rechte Sidebar — Help + AI
+
+```
+┌──────────────────────┐
+│ Hilfe            📌  │  ← Titel + Pin-Button
+├──────────────────────┤
+│ [HelpContent]        │  ← LocalHelpTopicSource → AiHelpSource → NoHelpSource
+│                      │    (Strategy Pattern, context-sensitiv)
+├──────────────────────┤
+│ KI fragen…  [Senden] │  ← AiInputBar (nur wenn AI-Capability vorhanden)
+└──────────────────────┘
+```
+
+**HelpSource-Trait** (Strategy Pattern):
+- `LocalHelpTopicSource` — fs-help HelpSystem (in-process)
+- `AiHelpSource` — fs-ai gRPC (stub in Phase 4B, live ab Phase 6)
+- `NoHelpSource` — Fallback
+
+**CapabilityCheck**: prüft `FS_AI_ENDPOINT` env var oder Flag-Datei.
+
+### SVG-Icons (Phase 4B)
+
+`IcedLayoutInterpreter` lädt Icons in dieser Reihenfolge:
+1. `~/.local/share/freesynergy/icons/{name}.svg` (User-Artifact)
+2. `/var/lib/freesynergy/icons/{name}.svg` (System-Artifact)
+3. `<binary-dir>/assets/icons/{name}.svg` (bundled)
+4. Emoji-Fallback (z.B. `⚙` für `settings`, `●` für unbekannte Icons)
 
 ### App-Lifecycle-Bus (Phase 4)
 
@@ -75,29 +140,24 @@ Concrete Strategies: `TopbarStrategy`, `SidebarStrategy`, `BottombarStrategy`.
 
 ## Abhängigkeiten
 
-| Crate              | Zweck                                        |
-|--------------------|----------------------------------------------|
-| `fs-session`       | Welche Apps sind offen? Session-Events       |
-| `fs-render`        | GUI-Abstraktions-Traits                      |
-| `fs-gui-engine-iced` | iced/libcosmic Render-Engine              |
-| `fs-settings`      | Settings persistieren                        |
-| `fs-i18n`          | Lokalisierung aller UI-Texte                 |
-| `fs-theme`         | Theme-Definitionen                           |
+| Crate                | Zweck                                        |
+|----------------------|----------------------------------------------|
+| `fs-session`         | Welche Apps sind offen? Session-Events       |
+| `fs-render`          | GUI-Abstraktions-Traits                      |
+| `fs-gui-engine-iced` | iced/libcosmic Render-Engine                 |
+| `fs-settings`        | Settings persistieren                        |
+| `fs-i18n`            | Lokalisierung aller UI-Texte                 |
+| `fs-theme`           | Theme-Definitionen                           |
+| `fs-help`            | Context-sensitive Help Topics                |
 
 ---
 
-## Bekannte Build-Issues
+## Geplante Erweiterungen
 
-- `libcosmic` (git dependency) hat Inkompatibilitäten mit `cosmic_text` bezüglich Argument-Änderungen in `buffer.set_size()`, `buffer.set_text()`, `buffer.set_metrics()`, `buffer.set_wrap()`.
-- Dies ist ein **upstream Issue** in `libcosmic` — kein Code-Fehler in fs-desktop.
-- Fix: libcosmic-Commit aktualisieren sobald upstream gepatcht.
-
----
-
-## Geplante Erweiterungen (G1+)
-
-| Phase | Inhalt                                               |
-|-------|------------------------------------------------------|
-| G1    | fs-render Traits vollständig implementiert           |
-| G1    | libcosmic upstream Bug gefixt → Build wieder grün    |
-| G2    | Dioxus vollständig entfernt, iced/libcosmic einzige Engine |
+| Phase | Inhalt                                                         |
+|-------|----------------------------------------------------------------|
+| 4B    | Sidebar Hot-Reload via inotify (Phase 3 HotReloadWatcher)      |
+| 4B    | IcedLayoutInterpreter vollständig in Shell-View einbinden      |
+| 5/6   | OIDC-Login-Flow in fs-settings konfigurierbar                  |
+| 6     | SearchBar in Topbar (slot: fill)                               |
+| 6     | AiHelpSource: echte gRPC-Anbindung an fs-ai                    |

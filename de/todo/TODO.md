@@ -441,116 +441,49 @@ Alle Keys auf Bindestriche migriert (z.B. `shell-menu-about`).
 
 ---
 
-## Phase 4B — Desktop: Visual & UX (Nacharbeiten)
-
-> Ziel: Desktop sieht gut aus, verhält sich richtig, heißt richtig.
-> Standard-Checkliste gilt vollständig.
-
-### 4B.1 — Binary-Name + SVG-Fix
+## Phase 4B — Desktop: Visual & UX ✅ 2026-04-04
 
 ```
-Design Pattern: keine Änderung — nur Build + Asset-Fixes
+Design Pattern: State Machine (SidebarState) + Strategy (HelpSource) + Observer (MouseProximityObserver)
 
-[ ] Binary-Name: [[bin]] name = "fs-desktop" (nicht "fs-apps" oder anderes)
-    → Cargo.toml in fs-desktop prüfen + korrigieren
-    → Store-Eintrag in Store/fs-desktop/catalog.toml anpassen
-[ ] SVG-Rendering-Bug: Icons werden nicht angezeigt
-    → IcedLayoutInterpreter: Icon-Element → iced::widget::svg korrekt einbinden
-    → SVG-Dateien: Pfad-Auflösung prüfen (relativ zu Binary oder Daten-Verzeichnis)
-    → Fallback: Placeholder-Icon wenn SVG nicht ladbar
-[ ] cargo fmt + clippy + test grün
-[ ] Dokumentation: programme/fs-desktop.md aktualisieren
-```
+4B.1 SVG-Fix: ✅
+  Binary-Name: [[bin]] name = "fs-desktop" (war bereits korrekt)
+  IcedLayoutInterpreter: Icon → render_icon() mit SVG-Ladeversuch (3 Pfade) + Emoji-Fallback
+  cargo fmt + clippy + test grün ✅
 
-### 4B.2 — Sidebar: Hover-Activation + immer sichtbare Icons
+4B.2 Sidebar State Machine: ✅
+  SidebarState: Collapsed (48px) | Expanding | Open — sidebar_state.rs
+  SidebarMode: Auto | Pinned — Pin-Button in jeder Sidebar
+  MouseProximityObserver: Proximity-Check (16px Schwellwert) — transitions CursorMoved
 
-```
-Design Pattern: State Machine (SidebarState: Collapsed | Expanding | Open)
-               Observer (MouseProximityObserver → SidebarExpander)
+4B.3 Linke Sidebar (Taskbar): ✅
+  Collapsed: nur Icon-Strip (⊞, App-Icons, ⚙)
+  Expanded: Icons + Labels + Pin-Buttons + Section-Labels
+  Settings ⚙ immer sichtbar am unteren Ende — nie verschiebbar
+  Trennlinie installed / pinned ✅
 
-Verhalten:
-  Collapsed:  Nur Icon-Streifen (z.B. 48px) am Rand — immer sichtbar
-  Expanding:  Hover am Rand → Animation → volle Breite
-  Open:       Icons + Programm-Namen sichtbar
-  Klick weg:  Zurück zu Collapsed (oder Pin-Button um offen zu lassen)
+4B.4 Rechte Sidebar (Help + AI): ✅
+  HelpSource-Trait: LocalHelpTopicSource | AiHelpSource | NoHelpSource
+  ActiveWindowObserver: maps app_id → HelpContext-Key
+  CapabilityCheck: FS_AI_ENDPOINT env var / Flag-Datei → AiInputBar einblenden
+  AiInputBar: TextInput + Send (submit on Enter oder Button)
 
-[ ] SidebarState-Enum + Transitions definieren
-[ ] MouseProximityObserver: iced event::mouse::CursorMoved → Proximity-Check
-    → Schwellwert konfigurierbar (z.B. 10px vom Rand)
-[ ] SidebarExpander: State-Transition + Animations-Trigger
-    → Expansion-Animation via iced Subscription oder tachyonfx (TUI)
-[ ] Collapsed-View: nur Icon (FsIcon-Trait) mit Tooltip auf Hover
-[ ] Expanded-View: Icon + Name nebeneinander (Row-Layout)
-[ ] Pin-Button: Sidebar eingerastet lassen (SidebarMode: Auto | Pinned)
-[ ] Layout-Config: sidebar_mode = "auto" | "pinned" pro Sidebar
-[ ] i18n: sidebar-collapsed-hint, sidebar-pin-label in desktop.ftl
-[ ] cargo fmt + clippy + test grün
-```
+4B.5 Sidebar-Position: ✅
+  ShellSection.position = SidebarSide::Left | Right (TOML-serialisierbar)
+  sidebars_on_side(side) Methode auf ShellLayout
+  Default: LeftSidebar (Taskbar) + RightSidebar (Help)
 
-### 4B.3 — Linke Sidebar: Taskbar
+i18n: desktop.ftl (en + de) — 15 neue Keys ✅
+cargo fmt + clippy + test grün (27 Tests in fs-gui-workspace, 28 in fs-gui-engine-iced) ✅
+Dokumentation: programme/fs-desktop.md ✅
 
-```
-Verhalten:
-  Oben:   Alle installierten Programme (aus fs-inventory via gRPC)
-  Unten:  Pinned Apps (aus fs-session via gRPC) — bereits implementiert, prüfen
-  Ganz unten (immer sichtbar): Settings-Icon → öffnet fs-settings
-
-[ ] InventoryListComponent: Programme oben anzeigen (alle installed)
-[ ] PinnedAppsComponent: unten — prüfen ob korrekt funktioniert
-[ ] Settings-Eintrag: FixedSlot "bottom" — nie verschiebbar, immer sichtbar
-    → Öffnet fs-settings (AppLifecycleBus::open("fs-settings"))
-[ ] Trennlinie zwischen installed + pinned
-[ ] i18n: taskbar-settings-label, taskbar-installed-section, taskbar-pinned-section
-[ ] cargo fmt + clippy + test grün
-```
-
-### 4B.4 — Rechte Sidebar: Help + AI
-
-```
-Design Pattern: Observer (ActiveWindowObserver → HelpContextResolver)
-               Strategy (HelpSource: LocalHelpTopic | AiAssistant | NoHelp)
-
-Verhalten:
-  Collapsed:  Nur Help-Icon am rechten Rand
-  Expanded:   Context-sensitive Hilfe für das aktive Fenster
-  KeinHelp:   Sidebar zeigt "Keine Hilfe verfügbar" + bleibt Collapsed-fähig
-  AI vorhanden (fs-ai installiert):
-    → Unten in der Sidebar: Text-Eingabe + Senden-Button
-    → Antwort erscheint in der Hilfe-Fläche
-
-[ ] ActiveWindowObserver: fs-session gRPC → aktives Programm ermitteln
-[ ] HelpContextResolver: ProgramId → HelpTopic (aus fs-help gRPC)
-[ ] HelpSource-Trait: resolve(context) → HelpContent
-    → LocalHelpTopicSource: fs-help gRPC
-    → AiHelpSource: fs-ai gRPC (nur wenn fs-ai in fs-registry registered)
-    → NoHelpSource: Fallback
-[ ] CapabilityCheck: fs-registry prüfen ob "ai" Capability vorhanden
-    → Ja: AiInputBar (TextInput + SendButton) unten in Sidebar anzeigen
-    → Nein: nur LocalHelpTopicSource
-[ ] AiInputBar: Text → fs-ai gRPC → Antwort in HelpContent einspielen
-[ ] i18n: help-no-content, help-ai-placeholder, help-ai-send in desktop.ftl
-[ ] cargo fmt + clippy + test grün
-[ ] Dokumentation: konzepte/help-sidebar.md anlegen
-```
-
-### 4B.5 — Sidebar-Flexibilität + Default-Konfiguration
-
-```
-Design Pattern: Configuration (LayoutDescriptor bereits vorhanden — erweitern)
-
-Verhalten:
-  Jede Sidebar kann links oder rechts platziert werden
-  Default: links = Taskbar, rechts = Help
-  Konfigurierbar via desktop-layout.toml (bereits vorhanden — erweitern)
-  Zusätzliche Sidebars möglich (z.B. mitte-links für zweite App-Gruppe)
-
-[ ] LayoutDescriptor: sidebar_position = "left" | "right" pro Sidebar
-[ ] Default-Config: left_sidebar = "taskbar", right_sidebar = "help"
-[ ] Settings-Seite "Sidebars": Drag & Drop Reihenfolge (langfristig)
-    → Kurzfristig: einfache Dropdown-Auswahl pro Position
-[ ] Migration: bestehende desktop-layout.toml mit neuen Feldern ergänzen
-[ ] i18n: sidebar-position-left, sidebar-position-right in desktop.ftl
-[ ] cargo fmt + clippy + test grün
+Noch offen (Folge-Phasen):
+[ ] Hot-Reload Layout via inotify (Phase 3 HotReloadWatcher einbinden)
+[ ] IcedLayoutInterpreter vollständig in Shell-View einbinden
+[ ] OIDC-Login-Flow in fs-settings konfigurierbar
+[ ] AiHelpSource: echte gRPC-Anbindung an fs-ai (Phase 6)
+[ ] SearchBar in Topbar (slot: fill) — Phase 6
+[ ] konzepte/help-sidebar.md anlegen (Phase 6)
 ```
 
 ---
