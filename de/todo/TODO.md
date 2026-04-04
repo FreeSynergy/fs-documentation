@@ -515,19 +515,29 @@ Noch offen:
 [ ] JMAP-Login-Flow in fs-settings konfigurierbar
 ```
 
-## 5.4 — Tuwunel (Matrix-Messenger)
+## 5.4 — Tuwunel (Matrix-Messenger) ✅ 2026-04-04
 
 ```
-Design Pattern: Adapter (MatrixAdapter via fs-channel-matrix)
+Design Pattern: Adapter (MatrixBotAdapter via fs-channel matrix-bot feature) + State Machine (TuwunelSetupWizard)
 
-[ ] Design Pattern bestätigen (fs-channel-matrix bereits vorhanden)
-[ ] Store-Eintrag: tuwunel (fork) als Container
-[ ] fs-channel-matrix: MatrixAdapter vollständig implementieren
-[ ] IAM: Matrix-Accounts via Kanidm (OIDC)
-[ ] fs-bots: Tuwunel als Bot-Backend (via fs-channel-matrix)
-[ ] i18n: ALLE Konfig-Texte in FTL
-[ ] Standalone-Test: Tuwunel ohne fs-desktop
-[ ] cargo fmt + clippy + test grün
+fs-channel: matrix-bot Feature (CS-API via reqwest, kein matrix-sdk) ✅
+  MatrixBotAdapter: BotChannel impl (polling, send, send_dm, send_menu) ✅
+  ChannelRegistry::build_bot Matrix-Arm ✅
+fs-bots: matrix-bot Feature aktiviert (neben telegram) ✅
+Store: tuwunel catalog.toml (setup + iam_required + manager) ✅
+fs-channel-matrix: keys.rs um ADAPTER_REGISTERED/DEREGISTERED erweitert ✅
+  5 Tests grün ✅
+fs-manager-matrix: TuwunelSetupWizard (State Machine, 6 Schritte) ✅
+  ServerName → TlsCerts → OidcIntegration → Federation → Confirm → Done
+  Kanidm OIDC Pflicht: skip nur für Offline-Tests erlaubt ✅
+  FsView + ManagerLayout (view.rs) ✅
+i18n: fs-i18n/locales/{en,de}/matrix.ftl (alle Wizard-Texte + IAM-Hinweise) ✅
+cargo fmt + clippy + test grün (fs-channel, fs-bots, fs-manager-matrix, fs-channel-matrix) ✅
+Dokumentation: programme/fs-matrix.md + INDEX.md ✅
+
+Noch offen:
+[ ] Standalone-Test mit laufendem Tuwunel-Container (env vars gesetzt)
+[ ] matrix-sdk live Feature: warten auf upstream rustc ≥1.94 Fix (matrix-sdk 0.16)
 ```
 
 ## 5.5 — Telegram (externer Kanal — kein eigener Container)
