@@ -441,6 +441,120 @@ Alle Keys auf Bindestriche migriert (z.B. `shell-menu-about`).
 
 ---
 
+## Phase 4B — Desktop: Visual & UX (Nacharbeiten)
+
+> Ziel: Desktop sieht gut aus, verhält sich richtig, heißt richtig.
+> Standard-Checkliste gilt vollständig.
+
+### 4B.1 — Binary-Name + SVG-Fix
+
+```
+Design Pattern: keine Änderung — nur Build + Asset-Fixes
+
+[ ] Binary-Name: [[bin]] name = "fs-desktop" (nicht "fs-apps" oder anderes)
+    → Cargo.toml in fs-desktop prüfen + korrigieren
+    → Store-Eintrag in Store/fs-desktop/catalog.toml anpassen
+[ ] SVG-Rendering-Bug: Icons werden nicht angezeigt
+    → IcedLayoutInterpreter: Icon-Element → iced::widget::svg korrekt einbinden
+    → SVG-Dateien: Pfad-Auflösung prüfen (relativ zu Binary oder Daten-Verzeichnis)
+    → Fallback: Placeholder-Icon wenn SVG nicht ladbar
+[ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: programme/fs-desktop.md aktualisieren
+```
+
+### 4B.2 — Sidebar: Hover-Activation + immer sichtbare Icons
+
+```
+Design Pattern: State Machine (SidebarState: Collapsed | Expanding | Open)
+               Observer (MouseProximityObserver → SidebarExpander)
+
+Verhalten:
+  Collapsed:  Nur Icon-Streifen (z.B. 48px) am Rand — immer sichtbar
+  Expanding:  Hover am Rand → Animation → volle Breite
+  Open:       Icons + Programm-Namen sichtbar
+  Klick weg:  Zurück zu Collapsed (oder Pin-Button um offen zu lassen)
+
+[ ] SidebarState-Enum + Transitions definieren
+[ ] MouseProximityObserver: iced event::mouse::CursorMoved → Proximity-Check
+    → Schwellwert konfigurierbar (z.B. 10px vom Rand)
+[ ] SidebarExpander: State-Transition + Animations-Trigger
+    → Expansion-Animation via iced Subscription oder tachyonfx (TUI)
+[ ] Collapsed-View: nur Icon (FsIcon-Trait) mit Tooltip auf Hover
+[ ] Expanded-View: Icon + Name nebeneinander (Row-Layout)
+[ ] Pin-Button: Sidebar eingerastet lassen (SidebarMode: Auto | Pinned)
+[ ] Layout-Config: sidebar_mode = "auto" | "pinned" pro Sidebar
+[ ] i18n: sidebar-collapsed-hint, sidebar-pin-label in desktop.ftl
+[ ] cargo fmt + clippy + test grün
+```
+
+### 4B.3 — Linke Sidebar: Taskbar
+
+```
+Verhalten:
+  Oben:   Alle installierten Programme (aus fs-inventory via gRPC)
+  Unten:  Pinned Apps (aus fs-session via gRPC) — bereits implementiert, prüfen
+  Ganz unten (immer sichtbar): Settings-Icon → öffnet fs-settings
+
+[ ] InventoryListComponent: Programme oben anzeigen (alle installed)
+[ ] PinnedAppsComponent: unten — prüfen ob korrekt funktioniert
+[ ] Settings-Eintrag: FixedSlot "bottom" — nie verschiebbar, immer sichtbar
+    → Öffnet fs-settings (AppLifecycleBus::open("fs-settings"))
+[ ] Trennlinie zwischen installed + pinned
+[ ] i18n: taskbar-settings-label, taskbar-installed-section, taskbar-pinned-section
+[ ] cargo fmt + clippy + test grün
+```
+
+### 4B.4 — Rechte Sidebar: Help + AI
+
+```
+Design Pattern: Observer (ActiveWindowObserver → HelpContextResolver)
+               Strategy (HelpSource: LocalHelpTopic | AiAssistant | NoHelp)
+
+Verhalten:
+  Collapsed:  Nur Help-Icon am rechten Rand
+  Expanded:   Context-sensitive Hilfe für das aktive Fenster
+  KeinHelp:   Sidebar zeigt "Keine Hilfe verfügbar" + bleibt Collapsed-fähig
+  AI vorhanden (fs-ai installiert):
+    → Unten in der Sidebar: Text-Eingabe + Senden-Button
+    → Antwort erscheint in der Hilfe-Fläche
+
+[ ] ActiveWindowObserver: fs-session gRPC → aktives Programm ermitteln
+[ ] HelpContextResolver: ProgramId → HelpTopic (aus fs-help gRPC)
+[ ] HelpSource-Trait: resolve(context) → HelpContent
+    → LocalHelpTopicSource: fs-help gRPC
+    → AiHelpSource: fs-ai gRPC (nur wenn fs-ai in fs-registry registered)
+    → NoHelpSource: Fallback
+[ ] CapabilityCheck: fs-registry prüfen ob "ai" Capability vorhanden
+    → Ja: AiInputBar (TextInput + SendButton) unten in Sidebar anzeigen
+    → Nein: nur LocalHelpTopicSource
+[ ] AiInputBar: Text → fs-ai gRPC → Antwort in HelpContent einspielen
+[ ] i18n: help-no-content, help-ai-placeholder, help-ai-send in desktop.ftl
+[ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: konzepte/help-sidebar.md anlegen
+```
+
+### 4B.5 — Sidebar-Flexibilität + Default-Konfiguration
+
+```
+Design Pattern: Configuration (LayoutDescriptor bereits vorhanden — erweitern)
+
+Verhalten:
+  Jede Sidebar kann links oder rechts platziert werden
+  Default: links = Taskbar, rechts = Help
+  Konfigurierbar via desktop-layout.toml (bereits vorhanden — erweitern)
+  Zusätzliche Sidebars möglich (z.B. mitte-links für zweite App-Gruppe)
+
+[ ] LayoutDescriptor: sidebar_position = "left" | "right" pro Sidebar
+[ ] Default-Config: left_sidebar = "taskbar", right_sidebar = "help"
+[ ] Settings-Seite "Sidebars": Drag & Drop Reihenfolge (langfristig)
+    → Kurzfristig: einfache Dropdown-Auswahl pro Position
+[ ] Migration: bestehende desktop-layout.toml mit neuen Feldern ergänzen
+[ ] i18n: sidebar-position-left, sidebar-position-right in desktop.ftl
+[ ] cargo fmt + clippy + test grün
+```
+
+---
+
 # Phase 5 — Ecosystem Services
 
 > Ziel: Kritische Dienste installierbar, konfigurierbar, laufend.
@@ -564,6 +678,110 @@ Noch offen:
 [ ] gRPC subscribe: Streaming-Impl (derzeit deferred → REST long-poll)
 ```
 
+## 5.X — fs-pod-forge: Container YAML Configurator
+
+```
+Design Pattern: Strategy (PodConfigurator-Trait) + Template Method (BasePodConfigurator)
+               Builder (PodManifestBuilder für pod.yml Konstruktion)
+
+Konzept:
+  Jedes Container-Paket bringt seine eigene PodConfigurator-Impl mit (als feature im package).
+  Manager ruft PodConfigurator::generate() auf → valides pod.yml.
+  export_yaml() gibt standalone-fähiges YAML aus (ohne laufende FS-Services).
+  validate() prüft semantische Korrektheit (Ports, Volumes, Env-Vars).
+
+Repos:
+  fs-pod-forge  — Trait-Definition + BasePodConfigurator + Builder
+  Pakete (kanidm, stalwart, etc.) implementieren PodConfigurator jeweils selbst
+
+[ ] Design Pattern festlegen + dokumentieren
+[ ] PodConfigurator-Trait definieren:
+    → generate(config: &PodConfig) -> PodManifest
+    → validate(manifest: &PodManifest) -> ValidationResult
+    → export_yaml(manifest: &PodManifest) -> String  (standalone-fähig)
+    → diff(old: &PodManifest, new: &PodManifest) -> ManifestDiff
+[ ] PodManifest-Typen: Container, Volume, Port, EnvVar, Secret, NetworkPolicy
+[ ] BasePodConfigurator: gemeinsame Logik (Port-Clash-Check, Secret-Referenz-Auflösung)
+[ ] PodManifestBuilder: typsicherer Builder für pod.yml (kein raw YAML String)
+[ ] Manager-Integration: ManagerAction::UpdatePodConfig → PodConfigurator::apply()
+    → podman play kube --replace <generated.yml>
+[ ] SystemdIntegration: generate_systemd_unit() für Container-Service
+    → systemctl enable + start via fs-managers
+[ ] CLI: fs-pod generate <paket> | validate <file> | diff <old> <new>
+[ ] Erste Implementierungen: KanidmPodConfigurator, StalwartPodConfigurator
+[ ] i18n: pod-forge.ftl (alle User-facing Texte)
+[ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: technik/fs-pod-forge.md
+```
+
+## 5.X+1 — fs-app-forge: App Config File Configurator
+
+```
+Design Pattern: Strategy (AppConfigurator-Trait) + Schema-driven UI (ConfigSchema → Form)
+               Visitor (ConfigValidator besucht Schema-Knoten)
+
+Konzept:
+  Jedes Paket bringt seine eigene AppConfigurator-Impl mit.
+  Schema-Prinzip: AppConfigurator::schema() liefert strukturiertes Schema →
+    Manager generiert automatisch das Konfigurations-Formular (kein hardcodiertes UI).
+  apply_changes() schreibt sicher in die Config-Datei (Backup + atomic write).
+  Unterschiedliche Formate: TOML, YAML, HOCON, .env — per Feature-Flag.
+
+Repos:
+  fs-app-forge  — Trait-Definition + ConfigSchema + FormGenerator
+  Pakete implementieren AppConfigurator jeweils selbst
+
+[ ] Design Pattern festlegen + dokumentieren
+[ ] AppConfigurator-Trait definieren:
+    → schema() -> ConfigSchema
+    → read() -> ConfigValues
+    → validate(values: &ConfigValues) -> ValidationResult
+    → apply(changes: ConfigChanges) -> Result<()>  (atomic write + backup)
+    → export() -> String  (lesbare Config-Datei für Standalone-Nutzung)
+[ ] ConfigSchema-Typen: Section, Field (String/Int/Bool/Enum/Secret/Path/List)
+    → Field hat: key, label_key (FTL), description_key (FTL), default, required, validator
+[ ] ConfigFormGenerator: ConfigSchema → LayoutDescriptor (automatisches UI)
+    → Kein hardcodiertes Formular — alles aus Schema generiert
+[ ] Format-Adapter: TomlConfigAdapter, YamlConfigAdapter, EnvConfigAdapter
+[ ] SecretField-Handling: Werte nie im Klartext — Referenz auf env:VAR / file:PATH
+[ ] Manager-Integration: ManagerAction::EditConfig → AppConfigurator::apply()
+[ ] CLI: fs-forge show <paket> | edit <paket> <key>=<val> | export <paket>
+[ ] Erste Implementierungen: KanidmAppConfigurator, StalwartAppConfigurator
+[ ] i18n: app-forge.ftl (alle User-facing Texte)
+[ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: technik/fs-app-forge.md
+```
+
+## 5.X+2 — Manager-Upgrade: Service Controller + Category Manager
+
+```
+Design Pattern: Command (ServiceCommand: Start/Stop/Restart/Enable/Disable)
+               Composite (CategoryManager verwaltet alle Services einer Kategorie)
+
+Konzept:
+  Manager ist nicht nur Konfigurator — er ist der Service Controller seiner Kategorie.
+  IAM-Manager steuert ALLE IAM-Services (Kanidm + Keycloak + ...) über IamProvider-Trait.
+  Manager kennt: PodConfigurator (pod.yml) + AppConfigurator (config files) + SystemdUnit.
+  Category-Sicht: zeigt alle Services desselben Typs — aktive + installierbare.
+
+[ ] ServiceController-Trait: start / stop / restart / enable / disable / status
+    → SystemdServiceController: systemctl via Command (kein direktes systemd-rs)
+    → ContainerServiceController: podman start/stop/restart via fs-container gRPC
+[ ] CategoryManager-Trait: list_all() → alle Services der Kategorie (installed + available)
+    → list_running() → nur aktive Services
+    → get_active() → welcher Service ist gerade "primary" für die Rolle
+[ ] Manager-UI: Tab "Services" — zeigt alle installierten Services der Kategorie
+    → Status-Badge (Running / Stopped / Failed)
+    → Buttons: Start / Stop / Restart / Config (→ AppConfigurator) / Pod (→ PodConfigurator)
+[ ] Role-Switching: IAM kann zwischen Kanidm und Keycloak wechseln (wenn beide installiert)
+    → fs-registry: Capability-Eintrag umschreiben → neuer Primary-Service
+[ ] Update-Check: Manager prüft Store auf neue Versionen → Update-Button
+[ ] Alle bestehenden Manager (fs-manager-auth, fs-manager-mail, etc.) nachrüsten
+[ ] i18n: manager-service-*.ftl Keys ergänzen
+[ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: konzepte/manager-service-controller.md
+```
+
 ## 5.6 — Forgejo (Git-Server, Self-Hosted)
 
 ```
@@ -600,6 +818,64 @@ Zeigt dass das Adapter-System funktioniert wenn zwei Programme denselben Trait i
 ```
 
 ---
+
+---
+
+# Phase 5B — Store: Catalog-Vollständigkeit + Browsability
+
+> Ziel: Alle Programme sind im Store sichtbar + beschreibbar — auch vor der Installation.
+> Store ist der erste Eindruck des Systems. Jedes Paket muss vollständig sein.
+> Standard-Checkliste gilt vollständig.
+
+## 5B.1 — Pflicht-Felder für jeden Store-Eintrag
+
+```
+Design Pattern: Template Method (PackageCatalogValidator prüft Vollständigkeit)
+
+Pflichtfelder pro catalog.toml:
+  [package]
+    name, version, description (kurz, 1 Satz), license
+  [display]
+    title        — Anzeigename (z.B. "Kanidm — Identity & Access Management")
+    summary      — 2-3 Sätze was das Programm macht
+    description  — ausführlich (Markdown) — für Store-Detailseite
+    icon         — Pfad zum SVG-Icon
+    screenshots  — Liste von Screenshot-Pfaden (mindestens 1 wenn GUI)
+    tags         — Kategorien (z.B. ["iam", "auth", "security"])
+    homepage     — Upstream-URL
+    changelog    — Verweis auf CHANGELOG oder Release-Notes
+
+[ ] PackageCatalogValidator: prüft alle Pflichtfelder bei catalog.toml-Parse
+    → Warnung wenn Felder fehlen (kein Hard-Fail bei install, aber im Store sichtbar)
+[ ] Store-UI: "Incomplete" Badge wenn Felder fehlen
+[ ] Alle bestehenden catalog.toml ergänzen:
+    → kanidm, stalwart, tuwunel, zentinel, telegram, outline, wikijs
+    → fs-desktop, fs-init, fs-store, fs-auth, fs-managers
+    → Render-Engines, DB-Engines (als Artifacts)
+[ ] Screenshots-System: Store zeigt Bilder im Detail-Panel
+    → iced: iced::widget::image (PNG) — SVG für Icons, PNG für Screenshots
+[ ] i18n: store-package-incomplete, store-package-no-description in store.ftl
+[ ] cargo fmt + clippy + test grün
+[ ] Dokumentation: technik/store-catalog-spec.md
+```
+
+## 5B.2 — Store-Browsability: Kategorien + Suche vor Installation
+
+```
+Design Pattern: Strategy (BrowseStrategy: Installed | Available | All)
+               Filter (CategoryFilter, TagFilter, SearchFilter)
+
+[ ] BrowseMode: User kann Store öffnen ohne etwas zu installieren
+    → "Verfügbar" Tab: alle Pakete aus Store/ Katalog
+    → "Installiert" Tab: aus fs-inventory
+    → "Updates" Tab: Diff zwischen installiert + Store-Version
+[ ] Kategorie-Navigation: Tags aus catalog.toml → Seitenleiste im Store-UI
+    → IAM / Mail / Chat / Git / Wiki / Desktop / Tools / Engines / Themes / Bots
+[ ] Vorschau-Panel: Beschreibung + Screenshots + Version + License — ohne Install
+[ ] "Installieren"-Button nur wenn fs-init / fs-store Service läuft
+[ ] i18n: store-browse-available, store-browse-installed, store-category-* in store.ftl
+[ ] cargo fmt + clippy + test grün
+```
 
 ---
 
@@ -708,14 +984,20 @@ detail_panel, CLI install/remove/update. cargo fmt + clippy + tests grün.
 ## Reihenfolge
 
 ```
-1.  O6 + O7: offene Konzept-Entscheidungen (Komponenten-Verzeichnis + WASM-Sandbox) ✅
-2.  Phase 5.1: Kanidm (Auth-Grundlage — Blocker für alle anderen Services)
-3.  Phase 5.2: Zentinel (Proxy — Grundlage für Service-Routing)
-4.  Phase 2: Store (Install-Pipeline + Bundle-Katalog) ✅ 2026-04-03
-5.  Phase 1: Bootstrap (fs-init Wizard + Capability-Detection)
-6.  Phase 3: fs-render Component System (Layout-Abstraktion + WASM)
-7.  Phase 4: Desktop (Shell + Komponenten)
-8.  Phase 5.3–5.7: weitere Ecosystem-Services (Stalwart, Tuwunel, Telegram, Forgejo, Outline/Wiki.js)
-9.  Phase 6: Apps & Search
-10. Phase 7: Federation & Infrastruktur
+1.  O6 + O7: offene Konzept-Entscheidungen ✅
+2.  Phase 5.1: Kanidm ✅ | Phase 5.2: Zentinel ✅
+3.  Phase 2: Store ✅ 2026-04-03
+4.  Phase 1: Bootstrap ✅ | Phase 3: fs-render ✅ | Phase 4: Desktop ✅
+5.  Phase 5.3–5.5: Stalwart ✅, Tuwunel ✅, Telegram ✅
+
+--- Aktuell offen ---
+
+6.  Phase 4B: Desktop Visual + UX (Binary-Fix, Sidebar, SVG, Help, AI)
+7.  Phase 5B: Store Catalog-Vollständigkeit + Browsability
+8.  Phase 5.X:  fs-pod-forge (Container YAML Configurator)
+9.  Phase 5.X+1: fs-app-forge (App Config File Configurator)
+10. Phase 5.X+2: Manager-Upgrade (Service Controller + Category Manager)
+11. Phase 5.6: Forgejo | Phase 5.7: Outline + Wiki.js
+12. Phase 6: Apps & Search
+13. Phase 7: Federation & Infrastruktur
 ```
