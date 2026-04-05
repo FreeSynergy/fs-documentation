@@ -190,6 +190,8 @@ Phase 6.1 ✅ Apps: LensRegistry, TaskStore, ConversationStore (alle Strategy Pa
 Phase 6.2 ✅ Search: SearchStrategy (Demo + Bus), SearchView, LensQueryEngine
 Phase 7 ✅  Federation: Rechte-Kaskade, AuditLog, FederationEvent Bus (7 Topics)
            Infrastruktur: Vaultwarden, Ntfy, Element Call im Store
+G1.1  ✅  Navigations-Traits (fs-render): Corner/Side/HoverMag/ProgramView (2026-04-05)
+G1.4  ✅  Program-Modell: caption, ProgramGroup, CompositeIcon-Felder, ProgramViewProvider (2026-04-06)
 ```
 
 ---
@@ -241,46 +243,14 @@ Implementiert in `fs-components/src/navigation_menu.rs` (20 Tests grün, clippy 
 - Alle drei mit `scroll_fallback` für kleine Screens / Mobile
 - i18n: `navigation.ftl` (en + de) um `nav-menu-style-*`, `nav-sidebar-panel-*`, `nav-scroll-more-items` ergänzt
 
-## G1.4 — Program-Modell-Erweiterungen (fs-inventory + fs-store)
+## G1.4 — Program-Modell-Erweiterungen (fs-inventory + fs-store) ✅ 2026-04-06
 
 ```
-Design Pattern: Decorator (caption/label erweitert bestehende InstalledResource)
-               Composite (ProgramGroup = 1 Parent + N Instanzen)
-
-[ ] caption: Option<String> in InstalledResource (fs-inventory)
-      → Anzeigename, unabhängig vom technischen Namen
-      → Notwendig wenn mehrere Versionen/Instanzen des gleichen Programms laufen
-
-[ ] caption: Option<String> in PackageData (fs-store)
-
-[ ] ProgramGroup struct (fs-inventory):
-      parent_id: ResourceId
-      instances: Vec<InstalledResource>
-      group_icon: IconRef
-      → Ein Parent-Icon, N Instanzen auswählbar (z.B. wiki.a, wiki.b, wiki.c)
-
-[ ] CompositeIcon in Store-Paket-Deklaration:
-      primary_icon = "icon.svg"    (Stamm-Programm)
-      secondary_icon = "badge.svg" (Instanz — wird leicht überlappend angezeigt)
-      overlap_factor = 0.3
-      → TOML-konfigurierbar in package.toml
-
-[ ] ProgramViewProvider trait impl für alle bestehenden Programme:
-      Kanidm: Info + Manual + SettingsContainer
-      Stalwart: Info + Manual + SettingsContainer
-      Tuwunel: Info + Manual + SettingsContainer
-      Zentinel: Info + Manual + SettingsContainer
-      Forgejo: Info + Manual + SettingsContainer
-      Outline/Wiki.js: Info + Manual + SettingsContainer
-      Desktop: SettingsConfig + (kein Start, kein Container)
-
-[ ] Info-View: Berechtigungscheck für kritische Aktionen (kill, restart)
-      Eigener Rechner: alle Aktionen
-      Server: nur mit expliziter Berechtigung (fs-auth Rights-Kaskade)
-
-[ ] i18n: inventory.ftl ergänzen (caption, group, views)
-[ ] cargo fmt + clippy + test grün
-[ ] Doku: konzepte/program-views.md
+caption in InstalledResource + PackageData, ProgramGroup struct,
+CompositeIcon-Felder (secondary_icon_path, overlap_factor),
+ProgramViewProvider impl für Kanidm/Stalwart/Tuwunel/Zentinel/Forgejo/Wiki/Desktop,
+InfoViewScope (own-machine vs remote-server), i18n inventory.ftl (en+de),
+Doku: konzepte/program-views.md
 ```
 
 ## G1.5 — Desktop-Shell-Refactor (fs-gui-workspace)

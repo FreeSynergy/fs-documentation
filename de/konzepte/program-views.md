@@ -20,11 +20,17 @@ Jedes Programm deklariert welche Views es anbietet:
 ```rust
 pub trait ProgramViewProvider: Send + Sync {
     fn available_views(&self) -> Vec<ProgramView>;
+    fn supports(&self, view: ProgramView) -> bool;  // Default-Impl enthalten
 }
 ```
 
 Die Titlebar zeigt entsprechende View-Buttons.
 Nur deklarierte Views erscheinen — kein leerer Button für nicht-unterstützte Views.
+
+**Implementiert in:**
+- `fs-render/src/navigation.rs` — Trait + `ProgramView` Enum
+- `fs-managers/{auth,mail,matrix,zentinel,forgejo,wiki}/src/view.rs` — je eine Impl
+- `fs-desktop/crates/fs-gui-workspace/src/view.rs` — Desktop-Impl
 
 ---
 
@@ -127,21 +133,77 @@ Stattdessen: Tiling-Toggle (Fenster anordnen) als erstes Element.
 
 ## Welche Programme bieten welche Views?
 
+Implementiert via `ProgramViewProvider` trait — nur deklarierte Views erscheinen in der Titlebar.
+
 | Programm | Start | Info | Manual | SettingsConfig | SettingsContainer | Binding |
 |---------|-------|------|--------|---------------|------------------|---------|
-| Desktop | — | — | ✓ | ✓ | — | — |
-| Kanidm | ✓ | ✓ | ✓ | — | ✓ | G2 |
-| Stalwart | ✓ | ✓ | ✓ | — | ✓ | G2 |
-| Tuwunel | ✓ | ✓ | ✓ | — | ✓ | G2 |
-| Forgejo | ✓ | ✓ | ✓ | — | ✓ | G2 |
-| Outline / Wiki.js | ✓ | ✓ | ✓ | — | ✓ | G2 |
+| Desktop | — | — | — | ✓ | — | — |
+| Kanidm | — | ✓ | ✓ | — | ✓ | G2 |
+| Stalwart | — | ✓ | ✓ | — | ✓ | G2 |
+| Tuwunel | — | ✓ | ✓ | — | ✓ | G2 |
+| Zentinel | — | ✓ | ✓ | — | ✓ | G2 |
+| Forgejo | — | ✓ | ✓ | — | ✓ | G2 |
+| Outline / Wiki.js | — | ✓ | ✓ | — | ✓ | G2 |
 | Alle Container-Apps | ✓ | ✓ | ✓ | — | ✓ | G2 |
+
+> **Hinweis:** Container-Apps bekommen `Start` zusätzlich sobald `SettingsContainer` befüllt ist.
+> Desktop hat bewusst kein `Start` (läuft immer) und kein `SettingsContainer` (kein Pod).
+
+---
+
+## caption — Anzeigename für Instanzen (G1.4)
+
+Wenn mehrere Instanzen desselben Programms laufen (z.B. drei Wiki-Instanzen),
+braucht jede einen eigenen Anzeigenamen:
+
+```
+InstalledResource.caption = Some("wiki.team-a")
+```
+
+- `caption` ist optional — ohne Caption wird die `id` angezeigt
+- Gesetzt beim Installieren oder nachträglich per Inventory-API
+- Auch in `PackageData.caption` (Store): der Store kann eine Empfehlung mitliefern
+
+---
+
+## ProgramGroup — mehrere Instanzen als Gruppe (G1.4)
+
+Wenn `N` Instanzen desselben Programms laufen, bündelt die `ProgramGroup` sie:
+
+```rust
+pub struct ProgramGroup {
+    pub parent_id: String,           // z.B. "wiki"
+    pub instances: Vec<InstalledResource>,
+    pub group_icon_key: String,      // z.B. "fs:apps/wiki"
+}
+```
+
+Das Desktop-Menü zeigt ein Parent-Icon, darunter aufklappbar die Instanzen.
+Jede Instanz hat ein `CompositeIcon` (primary = Programm-Icon, secondary = Badge).
+
+---
+
+## InfoViewScope — Berechtigungen im Info-Panel (G1.4)
+
+Die Info-View prüft ob kritische Aktionen (kill, restart) erlaubt sind:
+
+```rust
+pub enum InfoViewScope {
+    OwnMachine,    // alle Aktionen erlaubt
+    RemoteServer,  // nur mit fs-auth Rights-Kaskade
+}
+```
+
+- `OwnMachine`: eigener Rechner oder lokale VM → alle Aktionen sichtbar
+- `RemoteServer`: Server → kritische Aktionen nur für Benutzer mit expliziter Berechtigung
+
+Der Desktop bestimmt den Scope aus `fs-registry` (lokal vs. remote).
 
 ---
 
 ## i18n
 
-Alle View-Labels und Beschriftungen in `fs-i18n/locales/{lang}/navigation.ftl`:
+View-Labels in `fs-i18n/locales/{lang}/navigation.ftl`:
 ```
 nav-program-view-start              = Start
 nav-program-view-info               = Info
@@ -149,4 +211,14 @@ nav-program-view-manual             = Handbuch
 nav-program-view-settings-config    = Einstellungen
 nav-program-view-settings-container = Container
 nav-program-view-binding            = Verknüpfung
+```
+
+Caption/Gruppen-Labels in `fs-i18n/locales/{lang}/inventory.ftl`:
+```
+inventory-caption-label     = Anzeigename
+inventory-group-label       = Programmgruppe
+inventory-group-instances   = Instanzen
+inventory-info-action-kill  = Beenden
+inventory-info-action-restart = Neustart
+inventory-info-critical-blocked = Diese Aktion erfordert Administratorrechte.
 ```
