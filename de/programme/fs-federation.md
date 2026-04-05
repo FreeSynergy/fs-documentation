@@ -13,14 +13,17 @@
 `fs-federation` ist die Bibliothek für dezentrale Kommunikation im FreeSynergy-Ökosystem.
 Sie bündelt:
 
-| Protokoll    | Feature-Flag   | Zweck                                             |
-|--------------|----------------|---------------------------------------------------|
-| ActivityPub  | `activitypub`  | Dezentrale Aktivitäts-Feeds (Mastodon-kompatibel) |
-| OIDC         | `oidc`         | OpenID Connect Discovery + Userinfo               |
-| SCIM 2.0     | `scim`         | User/Group-Provisioning zwischen Nodes            |
-| WebFinger    | `webfinger`    | RFC 7033 Ressourcen-Lookup                        |
-| WellKnown    | immer          | `.well-known/` URL-Builder + NodeInfo/HostMeta    |
-| Gate         | immer          | `FederationGate`-Trait (OOP-Interface)            |
+| Modul         | Feature-Flag   | Zweck                                              |
+|---------------|----------------|----------------------------------------------------|
+| `gate`        | immer          | `FederationGate`-Trait — OOP-Interface für alle AP-Ops |
+| `rights`      | immer          | Rechte-Kaskade (Chain-of-Responsibility)           |
+| `audit`       | immer          | Audit-Log Decorator über jeden Gate-Aufruf         |
+| `bus`         | immer          | Bus-Events + Topic-Konstanten für `fs-bus`         |
+| `well_known`  | immer          | `.well-known/` URL-Builder + NodeInfo/HostMeta     |
+| `activitypub` | `activitypub`  | AP-Typen + `activitypub_federation` Re-Exporte     |
+| `oidc`        | `oidc`         | OpenID Connect Discovery + Userinfo                |
+| `scim`        | `scim`         | User/Group-Provisioning zwischen Nodes             |
+| `webfinger`   | `webfinger`    | RFC 7033 Ressourcen-Lookup                         |
 
 ---
 
@@ -29,10 +32,90 @@ Sie bündelt:
 ```
 FederationGate (Trait)
     └── ActivityPubAdapter  — implementiert ActivityPub-Protokoll
+            ↑ gewrappt von
+    AuditingFederationGate  — Decorator: loggt jeden Aufruf
+
+RightsCascade (Trait)       — Chain-of-Responsibility: Allow / Deny / Abstain
+    └── InMemoryRights      — in-memory Impl; nicht persistent
+
+FederationAuditLog (Trait)  — Append-only Audit-Store
+    └── InMemoryAuditLog    — Bounded Ring Buffer (Capacity konfigurierbar)
+
+FederationEvent             — Bus-Event Envelope für fs-bus
+    └── FederationPayload   — getypte Payload-Varianten (7 Stück)
 ```
 
-Consumer-Code (z.B. `fs-node`) kennt **nur** den `FederationGate`-Trait —
-nie die konkrete `ActivityPubAdapter`-Implementierung.
+Consumer-Code (z.B. `fs-node`) kennt **nur** die Traits —
+nie die konkreten Implementierungen.
+
+---
+
+## Rechte-Kaskade (`rights`)
+
+```rust
+let rights = InMemoryRights::new();
+rights.grant("mastodon.social", FederationRight::Follow);
+rights.deny("bad.actor", FederationRight::Follow);
+
+match rights.check("mastodon.social", FederationRight::Follow) {
+    RightsDecision::Allow   => { /* erlaubt */ }
+    RightsDecision::Deny    => { /* verweigert */ }
+    RightsDecision::Abstain => { /* kein Eintrag → Standard des Callers */ }
+}
+```
+
+### `FederationRight`-Varianten
+
+| Recht          | Bedeutung                                       |
+|----------------|-------------------------------------------------|
+| `Follow`       | Remote-Actors dürfen lokalen Actors folgen      |
+| `Deliver`      | Remote-Actors dürfen Activities einliefern      |
+| `FollowBack`   | Lokale Actors dürfen Remote-Actors folgen       |
+| `DeliverTo`    | Lokale Actors dürfen zu Remote-Inboxes liefern  |
+| `Invite`       | Remote-Domain darf uns einladen                 |
+| `InviteOut`    | Wir dürfen die Remote-Domain einladen           |
+
+---
+
+## Audit-Log (`audit`)
+
+```rust
+let log = InMemoryAuditLog::new(1000); // max 1000 Einträge
+let gate = AuditingFederationGate::new(ActivityPubAdapter::new("example.com"), log);
+
+// Jeder Aufruf wird automatisch geloggt:
+gate.follow(&actor).await?;
+
+// Einträge abfragen:
+let recent = gate.audit_log().recent(10);        // neueste 10
+let domain = gate.audit_log().for_domain("mastodon.social");
+```
+
+---
+
+## Bus-Events (`bus`)
+
+```rust
+use fs_federation::bus::{topics, FederationEvent, FederationPayload};
+
+let event = FederationEvent::new(
+    topics::FEDERATION_ACTOR_FOLLOWED,
+    FederationPayload::ActorFollowed { actor: actor.clone() },
+);
+// → auf fs-bus publishen
+```
+
+### Bus-Topics (auch in `fs-bus/src/topics.rs`)
+
+| Topic                             | Auslöser                         |
+|-----------------------------------|----------------------------------|
+| `federation::invite::sent`        | Einladung gesendet               |
+| `federation::invite::accepted`    | Einladung angenommen             |
+| `federation::actor::followed`     | Remote-Actor folgt               |
+| `federation::actor::unfollowed`   | Entfolgen                        |
+| `federation::activity::announced` | Aktivität geteilt                |
+| `federation::rights::updated`     | Rechte geändert                  |
+| `federation::domain::blocked`     | Domain gesperrt                  |
 
 ---
 
@@ -41,54 +124,17 @@ nie die konkrete `ActivityPubAdapter`-Implementierung.
 ```rust
 #[async_trait]
 pub trait FederationGate: Send + Sync {
-    async fn invite(&self, actor: &FederationActor)  -> Result<(), FsError>;
-    async fn accept(&self, actor: &FederationActor)  -> Result<(), FsError>;
-    async fn follow(&self, actor: &FederationActor)  -> Result<(), FsError>;
+    async fn invite(&self, actor: &FederationActor)   -> Result<(), FsError>;
+    async fn accept(&self, actor: &FederationActor)   -> Result<(), FsError>;
+    async fn follow(&self, actor: &FederationActor)   -> Result<(), FsError>;
     async fn unfollow(&self, actor: &FederationActor) -> Result<(), FsError>;
-    async fn announce(&self, activity_id: &str)       -> Result<(), FsError>;
+    async fn announce(&self, activity_id: &str)        -> Result<(), FsError>;
 }
-```
-
-### Methoden
-
-| Methode      | Beschreibung                                              |
-|--------------|-----------------------------------------------------------|
-| `invite`     | Föderations-Einladung an einen Remote-Actor senden        |
-| `accept`     | Eingehende Einladung eines Remote-Actors annehmen         |
-| `follow`     | Remote-Actor abonnieren (Activity-Stream)                 |
-| `unfollow`   | Abo eines Remote-Actors beenden                           |
-| `announce`   | Aktivität an alle Follower boosten/teilen                 |
-
----
-
-## FederationActor
-
-```rust
-pub struct FederationActor {
-    pub id:   String,   // ActivityPub Actor-ID URL
-    pub name: String,   // Anzeigename
-}
-```
-
----
-
-## ActivityPubAdapter
-
-Konkrete Implementierung von `FederationGate`.
-Phase G1+ — alle Methoden sind aktuell Stubs (geben `FsError::internal` zurück).
-
-```rust
-let adapter = ActivityPubAdapter::new("mynode.example.com");
-let actor   = FederationActor { id: "https://remote.example.com/users/alice".into(), name: "Alice".into() };
-
-adapter.follow(&actor).await?;
 ```
 
 ---
 
 ## Features
-
-Cargo.toml-Beispiel:
 
 ```toml
 [dependencies]
@@ -104,10 +150,9 @@ fs-federation = { path = "../fs-federation", features = ["oidc", "webfinger"] }
 
 ---
 
-## Geplante Implementierung (G1+)
+## i18n
 
-| Phase | Inhalt                                      |
-|-------|---------------------------------------------|
-| P2    | Federation-Grundstruktur (HTTP-Signaturen)  |
-| P3    | Rechte-Kaskade + Audit-Log                  |
-| P4    | Föderaler Bus (Aktivitäten über fs-bus)     |
+FTL-Keys in `fs-i18n/locales/{lang}/federation.ftl`:
+- `federation-title`, `-status-*`, `-action-*`, `-right-*`
+- `federation-audit-*` (Protokoll-Beschriftungen)
+- `federation-error-*` (Fehlermeldungen)

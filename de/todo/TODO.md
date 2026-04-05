@@ -793,27 +793,26 @@ Design Pattern: Strategy (SearchStrategy: lokal | registry | host | föderal)
 ## 7.1 — Federation
 
 ```
-Design Pattern: Observer + Decorator (ActivityPub-Events über Bus)
+Design Pattern: Chain-of-Responsibility (Rights) + Decorator (AuditLog) + Observer (Bus)
 
-[ ] Design Pattern festlegen
-[ ] Federation-Grundstruktur (ActivityPub)
-[ ] Rechte-Kaskade + Audit-Log
-[ ] Föderaler Bus
-[ ] WireGuard (nach Federation-Grundstruktur)
-[ ] Hickory DNS (nach Federation-Grundstruktur)
-[ ] i18n: ALLE Texte in FTL
-[ ] cargo fmt + clippy + test grün
+✅ Design Pattern festlegen
+✅ Rechte-Kaskade + Audit-Log (rights/, audit/, InMemoryRights, InMemoryAuditLog)
+✅ Föderaler Bus (bus/, FederationEvent, 7 Topics, fs-bus topics.rs ergänzt)
+✅ i18n: federation.ftl (en + de)
+✅ cargo fmt + clippy + test grün (27 Tests)
+
+[ ] Federation-Grundstruktur (ActivityPub — HTTP-Signaturen, echte AP-Impl, G1+)
+[ ] WireGuard (nach AP-Grundstruktur, G1+)
+[ ] Hickory DNS (nach AP-Grundstruktur, G1+)
 ```
 
 ## 7.2 — Infrastruktur
 
 ```
-[ ] Vaultwarden (Passwort-Manager) — Store-Eintrag + Adapter
-[ ] Ntfy / UnifiedPush (Push-Benachrichtigungen) — Store-Eintrag + Adapter
-[ ] Element Call + coturn (WebRTC für Matrix-Calls) — Store-Eintrag
+✅ Vaultwarden — Store-Eintrag + pod.yml + i18n/en
+✅ Ntfy / UnifiedPush — Store-Eintrag + pod.yml + i18n/en
+✅ Element Call + coturn — Store-Eintrag + pod.yml + i18n/en
 [ ] libcosmic: vollständige Integration in fs-gui-engine-iced (G2.8, langfristig)
-[ ] i18n: ALLE Texte in FTL
-[ ] cargo fmt + clippy + test grün
 ```
 
 ---
@@ -863,5 +862,5 @@ detail_panel, CLI install/remove/update. cargo fmt + clippy + tests grün.
 10. Phase 5.X+2: Manager-Upgrade (Service Controller + Category Manager)
 11. Phase 5.6: Forgejo | Phase 5.7: Outline + Wiki.js ✅ 2026-04-04
 12. Phase 6: Apps & Search
-13. Phase 7: Federation & Infrastruktur
+13. Phase 7: Federation & Infrastruktur ✅ 2026-04-05 (7.1 Rechte+Audit+Bus; 7.2 Vaultwarden+Ntfy+Element Call; AP-Grundstruktur G1+)
 ```

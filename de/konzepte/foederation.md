@@ -68,6 +68,27 @@ Man kann einer Föderation beitreten über:
 
 Siehe [Rechte-System](rechte.md). Zusammengefasst: Rechte können nur abnehmen, nie zunehmen. Alles ist standardmäßig privat. Freigaben müssen explizit gemacht werden.
 
+### Implementierung in `fs-federation`
+
+Die Rechte-Kaskade ist als **Chain-of-Responsibility** in `fs-federation/src/rights/` implementiert:
+
+- `RightsCascade`-Trait — prüft ob eine Remote-Domain ein Recht hat
+- `InMemoryRights` — in-memory Impl (thread-safe, nicht persistent)
+- `RightsDecision`: `Allow` / `Deny` / `Abstain` — das erste Nicht-Abstain gewinnt
+
+Die sechs `FederationRight`-Varianten (Follow, Deliver, FollowBack, DeliverTo, Invite, InviteOut)
+decken alle eingehenden und ausgehenden Föderations-Aktionen ab.
+
+### Audit-Log
+
+Jede Föderations-Aktion wird über `AuditingFederationGate` (Decorator-Pattern) protokolliert.
+`InMemoryAuditLog` hält einen konfigurierbaren Ring-Buffer — Persistenz via `fs-db` liegt beim Caller.
+
+### Bus-Events
+
+Zustandsänderungen der Föderation werden als `FederationEvent` auf `fs-bus` publiziert
+(Topics: `federation::invite::sent`, `federation::actor::followed`, usw.).
+
 ## Föderale Suche
 
 Die [Suche](../programme/search/README.md) in einer Föderation funktioniert in Schichten:
