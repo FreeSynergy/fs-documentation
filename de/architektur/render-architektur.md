@@ -297,6 +297,98 @@ Engine-Auswahl über Settings → aus dem installierten AnimationSet und Engine-
 
 ---
 
+## Navigations-Traits (G1 — NEU)
+
+Desktop-Navigation ist ebenfalls engine-agnostisch.
+Alle Navigations-Strukturen werden als Traits in `fs-render` definiert —
+alle Engines implementieren sie.
+
+### CornerMenuDescriptor + SideMenuDescriptor
+
+```rust
+pub struct CornerMenuDescriptor {
+    pub corner: Corner,                 // TopLeft | TopRight | BottomLeft | BottomRight
+    pub items: Vec<MenuItemDescriptor>,
+    pub indicator: IndicatorStyle,      // QuarterCircle
+}
+
+pub struct SideMenuDescriptor {
+    pub side: Side,                     // Left | Right | Top | Bottom
+    pub items: Vec<MenuItemDescriptor>,
+    pub indicator: IndicatorStyle,      // HalfCircle
+    pub distribution: Distribution,    // Centered | SpreadToEdges
+}
+
+pub struct MenuItemDescriptor {
+    pub id: String,
+    pub icon: CompositeIcon,
+    pub label_key: String,
+    pub action: String,
+    pub sub_items: Vec<MenuItemDescriptor>,  // beliebig tief schachtelbar
+}
+```
+
+### HoverMagnification
+
+```rust
+pub struct HoverMagnification {
+    pub base_size: f32,   // Standard-Größe (konfigurierbar via Settings)
+    pub max_size:  f32,   // Maximale Größe beim direkten Hover
+    pub spread:    f32,   // Wie weit der Effekt auf Nachbarn ausstrahlt
+}
+```
+
+### CompositeIcon
+
+```rust
+pub struct CompositeIcon {
+    pub primary:        IconRef,
+    pub secondary:      Option<IconRef>,  // Instanz-Badge
+    pub overlap_factor: f32,              // 0.0 = kein Überlapp, 1.0 = vollständig
+}
+```
+
+### ProgramView + ProgramViewProvider
+
+```rust
+pub enum ProgramView {
+    Start,
+    Info,
+    Manual,
+    SettingsConfig,
+    SettingsContainer,
+    Binding,           // G2
+}
+
+pub trait ProgramViewProvider: Send + Sync {
+    fn available_views(&self) -> Vec<ProgramView>;
+}
+```
+
+### ActivityEngine
+
+```rust
+pub trait ActivityEngine: Send + Sync {
+    fn activity_id(&self) -> &str;
+    fn activity_name_key(&self) -> &str;
+    fn supported_actions(&self) -> Vec<ActivityAction>;
+    fn default_view(&self) -> ProgramView;
+    fn category(&self) -> ActivityCategory;
+}
+```
+
+### Engine-Implementierungen der Navigation
+
+| Engine | Status |
+|--------|--------|
+| `fs-gui-engine-iced` | G1 (primär) |
+| `fs-gui-engine-tui` | G2 (TUI-Modus, kein Display-Server) |
+| `fs-gui-engine-bevy` | G2 (3D-fähig) |
+
+Engine-Wechsel erfordert **keine App-Code-Änderung** — nur die Engine-Impl ändert sich.
+
+---
+
 ## Plattform-Unterstützung
 
 | Platform | GUI-Engine | Status |

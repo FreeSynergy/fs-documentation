@@ -25,9 +25,6 @@
 
 ## Standard-Checkliste — gilt für JEDE Aufgabe
 
-Jede Phase / jeder Task wird in dieser Reihenfolge bearbeitet.
-Kein Task gilt als erledigt, bevor alle Punkte erfüllt sind:
-
 ```
 1. Design Pattern festlegen (Strategy / MVC / Command / Observer / ...)
    → Entscheidung ZUERST, BEVOR Code geschrieben wird
@@ -73,12 +70,11 @@ Kein Task gilt als erledigt, bevor alle Punkte erfüllt sind:
 ```
 
 **Wichtig zu clippy/fmt:** Die Einstellungen im Git-Hook sind maßgeblich.
-Claude verwendet dieselben Flags wie der Hook — nie abweichende Konfigurationen,
-um Fehler beim Commit zu vermeiden.
+Claude verwendet dieselben Flags wie der Hook — nie abweichende Konfigurationen.
 
 ---
 
-## Architektur-Überblick (Stand 2026-04-02)
+## Architektur-Überblick (Stand 2026-04-05)
 
 ### Grundprinzipien
 
@@ -91,87 +87,24 @@ Everything through the Store:
   Was nicht im Store ist, existiert für das System nicht.
   Pakete, Engines, Themes, Sprachen, Adapter — alles ist ein Store-Artifact.
 
-Engine-Auswahl zur Laufzeit (entschieden 2026-04-02):
+Engine-Auswahl zur Laufzeit:
   fs-info ermittelt Capabilities (display_server, terminal, headless).
-  fs-init zeigt anfangs NUR println! — keine zusätzlichen Libraries.
-  Die Render-Engine wird danach als Artifact aus dem Store geladen.
-  display_server available → GUI (iced oder bevy — User wählt)
-  nur terminal             → TUI
-  headless / SSH           → API + CLI only
+  Render-Engine wird als Artifact aus dem Store geladen.
+  display_server → GUI (iced oder bevy — User wählt)
+  nur terminal   → TUI
+  headless / SSH → API + CLI only
 
-Engine-Wahl im Bundle (entschieden 2026-04-02):
-  Bundles mit UI-Anforderung enthalten "render-engine" als required-Artifact.
-  Beim Install: User wählt aus verfügbaren Engines (Select / Dropdown).
-  Standard-Vorschlag: iced (wenn display_server vorhanden), TUI sonst.
-  Keine Engine ist hartgekodiert.
+Trait-First:
+  Traits definieren — alle Engines (iced, TUI, bevy) implementieren sie.
+  Engine-Wechsel = nur neue Impl, kein App-Code-Wechsel.
+  Domain-Objekte importieren KEIN fs-render.
+  view.rs ist das einzige Bindeglied zwischen Domain + Rendering.
 
-Adapter kommt immer mit:
-  Jedes program-Paket hat einen adapter als Dependency.
-  Store installiert beides zusammen.
-  Adapter registriert Capability in fs-registry.
-
-Deklarative UI-Abstraktion (entschieden 2026-04-02):
-  Layout-Format: TOML (pro Komponente eine eigene .toml-Datei).
-  Hot-Reload via inotify (wie FTL in fs-i18n).
-  Komponenten als WASM-Plugins (fs-plugin-sdk / fs-plugin-runtime).
-  Vorab kompiliert + gecheckt — dynamisch geladen zur Laufzeit.
-  Desktop liefert Basis-Komponenten.
-  Andere Programme können eigene Komponenten/Widgets mitbringen.
-  ComponentId-Registry: Komponente meldet sich beim Start an.
-  Engine (iced/bevy/TUI) interpretiert Layout eigenständig.
-```
-
-### Install-Kette
-
-```
-fs-init
-  1. fs-info: ermittelt Capabilities (display? terminal? headless?)
-  2. Ausgabe: nur println! — keine Bibliotheken außer fs-info
-  3. Lädt Store-Service
-  4. Store zeigt Bundles + Einzelpakete
-  5. User wählt Render-Engine aus verfügbaren (Select in Bundle)
-  6. User wählt Install-Target: Container (bevorzugt) | rpm | deb | flatpak | AppImage
-  7. fs-info schlägt passende Variante vor (OS-Detection)
-  8. Adapter wird IMMER mitinstalliert (nicht optional)
-  9. Manager übernimmt Konfiguration nach Install
-```
-
-### Package-Typen im Store
-
-```
-bundle   — Gruppe von Paketen (z.B. Workstation, Server, Minimal)
-program  — Laufender Dienst (Container bevorzugt)
-adapter  — Implementiert Trait, registriert Capability (kommt mit program)
-artifact — Reine Daten (Sprachen, Themes, DB-Engines, Render-Engines, Bots, WASM-Komponenten)
-fork     — 3rd-party Fork (Kanidm, Tuwunel, Stalwart, Zentinel, ...)
-```
-
-### Deklaratives Komponenten-System (fs-render, entschieden 2026-04-02)
-
-```
-Format: TOML — pro Komponente eine eigene Datei (hotpluggable)
-Hot-Reload: inotify überwacht Komponenten-Verzeichnis
-Implementierung: WASM-Plugins via fs-plugin-sdk + fs-plugin-runtime
-  → Vorab kompiliert + gecheckt (Compile-Time-Sicherheit)
-  → Dynamisch geladen zur Laufzeit (kein Neustart nötig)
-
-Shell-Container: Sidebar | Topbar | Bottombar | Main
-Slots pro Container: top | fill | bottom
-  → mehrere top-Komponenten stacken
-  → fill-Komponenten teilen den verbleibenden Raum
-  → mehrere bottom-Komponenten stacken
-
-Komponente kennt ihre Mindest-/Maxgröße (responsive).
-Neue Komponenten kommen als Store-Artifacts (WASM + TOML-Config).
-```
-
-### Bundle-Definitionen (entschieden 2026-04-02)
-
-```
-Minimal:     fs-init + fs-store + fs-registry + fs-inventory
-Server:      Minimal + fs-auth(Kanidm) + fs-node + Zentinel + Stalwart
-Workstation: Server + Desktop + render-engine(User-Wahl) + fs-managers + Apps
-Developer:   Workstation + Forgejo + erweiterte Manager-Tools
+Activity-First (NEU):
+  Der Mensch denkt in Absichten, nicht in Programmen.
+  Activity Hub zeigt Kategorien — "was will ich tun?" statt "welches Programm?"
+  Jede Activity kann von einem beliebigen Programm angeboten werden
+  (via ActivityEngine-Trait + Adapter).
 ```
 
 ### API-Standard
@@ -181,20 +114,33 @@ gRPC (tonic):     primär — intern + extern, type-safe
 REST (axum):      zusätzlich — universell, Browser-kompatibel
 OpenAPI (utoipa): auto-generiert
 NIE direkte Calls über Repo-Grenzen — immer über gRPC/REST
+serde/JSON nur bei externen APIs (3rd-party Forks: Kanidm, Forgejo, ...)
+```
 
-gRPC-First-Regel (entschieden 2026-04-03):
-  KEIN raw JSON/serde zwischen FS-Services — immer gRPC (tonic + protobuf)
-  REST nur für externe Clients (Browser, 3rd-party Tools)
-  serde/JSON NUR wenn keine Alternative existiert (z.B. Kanidm-REST-API als 3rd-party Fork)
-  Library-Crates (heute noch embedded) → sobald als eigener Container → gRPC-Interface drüber
-  Ausnahmen IMMER kommentieren: // gRPC not possible: external API (Kanidm/Forgejo/...)
+### Package-Typen im Store
+
+```
+bundle   — Gruppe von Paketen (z.B. Workstation, Server, Minimal)
+program  — Laufender Dienst (Container bevorzugt)
+adapter  — Implementiert Trait, registriert Capability (kommt mit program)
+artifact — Reine Daten (Sprachen, Themes, DB-Engines, Render-Engines, WASM-Komponenten)
+fork     — 3rd-party Fork (Kanidm, Tuwunel, Stalwart, Zentinel, ...)
+```
+
+### Bundle-Definitionen
+
+```
+Minimal:     fs-init + fs-store + fs-registry + fs-inventory
+Server:      Minimal + fs-auth(Kanidm) + fs-node + Zentinel + Stalwart
+Workstation: Server + Desktop + render-engine(User-Wahl) + fs-managers + Apps
+Developer:   Workstation + Forgejo + erweiterte Manager-Tools
 ```
 
 ### OOP-Grundregeln
 
 ```
-Design Pattern ZUERST festlegen — Entscheidung vor dem ersten Code
-Traits + Structs definieren — erst dann Impl schreiben
+Design Pattern ZUERST — vor dem ersten Code
+Traits + Structs zuerst, dann Impl
 Traits statt match-Blöcke, Objekte statt Daten
 Immer gegen Interface (Trait) — nie gegen konkrete Impl
 Domain-Objekte importieren KEIN fs-render
@@ -207,7 +153,6 @@ view.rs ist das einzige Bindeglied zwischen Domain + fs-render
 Jeder user-facing Text braucht FTL — KEINE AUSNAHME
 Gilt für: UI, CLI, Fehler, Logs, man-Pages
 "Sieht ein Mensch den Text?" → FTL. Interner Code → kein FTL nötig
-KEINE Stubs / KEIN "erstmal hardcoded" — immer sofort konkret
 Fallback: en (immer eingebaut), weitere Sprachen als Artifacts
 keys.rs: FTL-Konstanten — nie Magic Strings im Code
 ```
@@ -222,617 +167,492 @@ DbEngine-Trait + direktes SeaORM/sqlx nur in Adapter-Repos
 
 ---
 
-## Konzept-Entscheidungen
-
-Alle O1–O7 wurden entschieden (O1–O5: 2026-04-02, O6–O7: 2026-04-02).
-
-### O6 — Komponenten + Paket-Deklaration (entschieden 2026-04-02)
+## Abgeschlossene Phasen (kompakt)
 
 ```
-Komponenten werden im Paket selbst deklariert — in package.toml des jeweiligen Pakets.
-Jedes Paket kennt seine Speicher-Pfade:
-  storage.user   = "~/.local/share/freesynergy/{paket}"   (privat, pro User)
-  storage.global = "/var/lib/freesynergy/{paket}"         (global, systemweit)
-  storage.config = "~/.config/freesynergy/{paket}"        (Konfig, pro User)
-  storage.cache  = "~/.cache/freesynergy/{paket}"         (Cache, pro User)
-
-Komponenten-Deklaration in package.toml:
-  [[component]]
-  id      = "inventory-list"
-  slot    = "fill"           ← bevorzugter Slot
-  wasm    = "components/inventory_list.wasm"
-  config  = "components/inventory_list.toml"   ← Default-Einstellungen
-
-Paket-Dokumentation enthält:
-  - Eigener API-Tab: alle gRPC-Endpoints + REST-Endpoints
-  - Komponenten-Tab: alle Komponenten mit Default-Einstellungen
-  - Storage-Tab: User/Global/Config/Cache Pfade
-```
-
-### O7 — WASM-Komponenten: Sandbox-Grenzen (entschieden 2026-04-02)
-
-```
-Lesen:    fs-inventory, fs-session, fs-info — NUR via gRPC (nie direkt)
-Schreiben: NUR via Bus-Events (nie direkt in DB oder Dateisystem)
-UI:       NUR eigene Slot-Area (kein Zugriff auf andere Slots)
-Netzwerk: kein direkter Netzwerkzugriff (alles über FS-Services)
-Falls andere Grenzen nötig werden: in der Session besprechen.
+Phase 1 ✅  Bootstrap: fs-init (Capability-Detection, Install-Wizard, Standalone-Test)
+Phase 2 ✅  Store: Katalog, Install-Pipeline (7 Steps), CLI install/remove/update, Bundles
+Phase 3 ✅  fs-render: LayoutDescriptor, WASM-Sandbox, iced+TUI Engines, 5 Standard-Komponenten
+Phase 4 ✅  Desktop: Shell-Layout, Komponenten-Registry, App-Management, Settings Layout-Seite, i18n
+Phase 4B ✅ Desktop Visual/UX: Sidebar State Machine, SVG-Icons, Help+AI-Sidebar, HelpSource-Trait
+Phase 5.1 ✅ Kanidm: 4 Protokoll-Traits, KanidmSetupWizard, Desktop-Login
+Phase 5.2 ✅ Zentinel: ZentinelManager (Facade), RouteConfig, Auto-Routing via Bus
+Phase 5.3 ✅ Stalwart: SmtpProvider+ImapProvider+JmapProvider, StalwartSetupWizard
+Phase 5.4 ✅ Tuwunel: MatrixBotAdapter, TuwunelSetupWizard
+Phase 5.5 ✅ Telegram: TelegramAdapter, BotChannel-Trait, fs-manager-telegram
+Phase 5.X ✅ fs-pod-forge: PodConfigurator-Trait, ManifestDiff, Systemd-Units
+Phase 5.X+1 ✅ fs-app-forge: AppConfigurator-Trait, Schema-driven UI, Atomic Write
+Phase 5.X+2 ✅ Manager-Upgrade: ServiceController + CategoryManager Traits
+Phase 5.6 ✅ Forgejo: GitProvider-Trait, ForgejoSetupWizard, ForgejoCategoryController
+Phase 5.7 ✅ Outline + Wiki.js: WikiProvider-Trait (Strategy), beide Adapters
+Phase 5B ✅ Store: PackageCatalogValidator, Tag-Filter, Updates-Tab
+Phase 6.1 ✅ Apps: LensRegistry, TaskStore, ConversationStore (alle Strategy Pattern)
+Phase 6.2 ✅ Search: SearchStrategy (Demo + Bus), SearchView, LensQueryEngine
+Phase 7 ✅  Federation: Rechte-Kaskade, AuditLog, FederationEvent Bus (7 Topics)
+           Infrastruktur: Vaultwarden, Ntfy, Element Call im Store
 ```
 
 ---
 
 ---
 
-# Phase 1 — Bootstrap
+# G1 — Desktop-Neustrukturierung
 
-> Ziel: System kann sich selbst initialisieren und den Store laden.
-> Jedes Teilsystem muss standalone funktionieren.
-> Standard-Checkliste gilt vollständig.
-
----
-
-## 1.1 — fs-init: Capability-Detection ✅
-
-```
-Design Pattern: Strategy (BootstrapStrategy: GUI | TUI | Headless)
-Umgesetzt 2026-04-03
-
-fs-info: WaylandDisplay, X11Display, Terminal Features hinzugefügt
-BootstrapCapability: erkennt display / terminal / container / mode
-GuiBootstrap | TuiBootstrap | HeadlessBootstrap implementiert
-Ausgabe: nur println! — keine zusätzlichen Libraries
-i18n: alle Texte als FTL-Keys in keys.rs (en Fallback hardcoded)
-cargo fmt + clippy + test grün ✅
-```
-
-## 1.2 — fs-init: Install-Wizard ✅
-
-```
-Design Pattern: State Machine (WizardStep-Trait, 8 Schritte)
-Umgesetzt 2026-04-03, überarbeitet 2026-04-03
-
-Welcome → Capability → StoreLoad → Engine → Bundle → Confirm → Progress → Done
-
-StoreLoad: klont Store-Katalog (non-fatal bei Fehler, Fallback Built-in Defaults)
-Bundle-Auswahl: dynamisch aus lokalem Store-Katalog (catalog_reader.rs)
-  BundleChoice/EngineChoice: String-Felder (kein &'static str mehr)
-Render-Engine-Auswahl: iced | bevy | tui | none
-Install-Target: Container | RPM | DEB | AppImage (OS-Detection)
-Progress: echte Install-Pipeline (fs-store Pipeline, je Komponente)
-  Adapter werden automatisch mitinstalliert (AdapterInstallStep)
-Done: fs-manager auto-launch + Hinweise auf nächste Schritte
-gix: 0.80 (0.81 noch nicht vollständig auf crates.io)
-i18n: ALLE User-facing Texte als FTL-Keys ✅
-cargo fmt + clippy + test grün ✅
-```
-
-## 1.3 — fs-init: Standalone-Test ✅
-
-```
-fs-init ohne andere FS-Services startbar ✅
-Nur fs-info als Compile-Time-Dependency ✅
-Store-Clone ohne laufenden fs-store-Container ✅ (gix, kein System-git)
-```
+> Das Desktop-Paradigma wechselt grundlegend:
+> Weg von Programm-zentrischen Sidebars, hin zu Absichts-zentrischen Navigationsmenüs.
+> Activity Hub ersetzt den "Category Starter" — der Mensch denkt in Absichten, nicht in Programmen.
+> Alle Navigations-Komponenten werden als Traits definiert — alle Engines (iced, TUI, bevy)
+> implementieren sie. Engine-Wechsel = keine App-Code-Änderung.
 
 ---
 
----
-
-# Phase 2 — Store ✅ 2026-04-03
-
-> Abgeschlossen. Store-Katalog vollständig, Install-Pipeline live, CLI mit install/remove/update.
-
-
----
-
----
-
-# Phase 3 — fs-render: Component System ✅ 2026-04-03
-
-> Abgeschlossen. Deklaratives Layout mit WASM-Sandbox + 3 Engine-Impls + 5 Standard-Komponenten.
-
-## 3.1 ✅ LayoutDescriptor (TOML)
+## G1.1 — Navigations-Traits (fs-render)
 
 ```
-Design Pattern: Interpreter — TOML → LayoutDescriptor → Engine-spezifisches Rendering
-fs-render: layout.rs (LayoutDescriptor, ShellConfig, SlotConfig, ComponentRef, StoragePaths)
-Layered load: Store-Default < Global < User — fehlende Schichten übersprungen
-Hot-Reload: HotReloadWatcher (notify/inotify) → HotReloadEvent (LayoutChanged/ComponentChanged)
-i18n: fs-i18n/locales/{en,de}/render.ftl — alle User-facing Texte als FTL-Keys
-cargo fmt + clippy + test grün (77 Tests) ✅
-Dokumentation: konzepte/component-system.md ✅
+Design Pattern: Descriptor Pattern (Traits beschreiben Struktur, Engines rendern)
+
+[ ] CornerMenuDescriptor trait:
+      corner: Corner (TopLeft | TopRight | BottomLeft | BottomRight)
+      items: Vec<MenuItemDescriptor>
+      indicator_style: IndicatorStyle (QuarterCircle)
+
+[ ] SideMenuDescriptor trait:
+      side: Side (Left | Right | Top | Bottom)
+      items: Vec<MenuItemDescriptor>
+      indicator_style: IndicatorStyle (HalfCircle)
+      distribution: Distribution (Centered | SpreadToEdges)
+
+[ ] MenuItemDescriptor struct:
+      id, icon, label_key, action, sub_items: Vec<MenuItemDescriptor>
+      → Sub-Items = neue Zeile/Ebene → beliebig tief schachtelbar
+
+[ ] HoverMagnification trait:
+      base_size: f32, max_size: f32, spread: f32
+      → MacOS Dock-Stil: Icon wächst on-hover, Nachbarn vergrößern sich auch
+
+[ ] CompositeIcon struct:
+      primary: IconRef, secondary: Option<IconRef>
+      overlap_factor: f32 (0.0 = kein Überlapp, 1.0 = vollständig überlappt)
+      → Stamm-Icon + Instanz-Icon — immer beide sichtbar
+
+[ ] ProgramView enum:
+      Start     — Programm starten
+      Info      — Titel, Beschreibung, Laufzeit, PIDs, Aktionen (kill/restart/update/...)
+      Manual    — Scrollbare Hilfe-Dokumentation
+      SettingsConfig   — Sofortige Konfig-Änderungen (View, Schrift, Sprache, ...)
+      SettingsContainer — Pod-YAML-Konfig (Restart erforderlich, Instanz kopieren)
+      Binding   — Workflow-Editor: Programm mit anderen verknüpfen (G2)
+
+[ ] ProgramViewProvider trait:
+      available_views() -> Vec<ProgramView>
+      → jede App deklariert welche Views sie anbietet
+
+[ ] i18n: navigation.ftl (en + de)
+[ ] cargo fmt + clippy + test grün
+[ ] Doku: konzepte/navigation-menus.md
 ```
 
-## 3.2 ✅ WASM-Komponenten-System
+## G1.2 — Navigation: iced-Implementierung (fs-gui-engine-iced)
 
 ```
-Design Pattern: Plugin — ComponentTrait + ComponentRegistry
-ComponentTrait: component_id, name_key, description_key, slot_preference, min_width/height, render
-LayoutElement-Baum: Text, Button, Icon, Row, Column, List, Separator, Badge, Spinner, Spacer
-Sandbox-Grenzen O7: gRPC read-only, Bus-Events write-only, eigene Slot-Area, kein Netzwerk
-fs-plugin-runtime: wasmtime + WASI P1 Sandbox (PluginSandbox::minimal/allow_read/allow_write)
-Dokumentation: konzepte/wasm-komponenten.md ✅
-```
+Design Pattern: Interpreter (LayoutDescriptor → iced Element)
+Primär: iced (G1). TUI + bevy folgen automatisch (gleiche Traits, separater Durchgang).
 
-## 3.3 ✅ Engine-Implementierungen
+[ ] CornerMenu rendering:
+      Viertelkreis-Indikator (immer sichtbar — zeigt wo das Menü ist)
+      Radiales Aufklappen: Items erscheinen auf Kreisbogen
+      Standardgröße: konfigurierbar via DesktopConfig (Settings > Ansicht)
 
-```
-iced (fs-gui-engine-iced):
-  iced_aw 0.11 — Spinner (Loading-Animation), Badge (Pills), Card (Panel)
-  IcedLayoutInterpreter: LayoutDescriptor → Element<'static, LayoutMessage>
-  cargo fmt + clippy + test grün (28 Tests) ✅
+[ ] SideMenu rendering:
+      Halbkreis-Indikator (immer sichtbar — zeigt wo das Menü ist)
+      Accordion-Animation: Items klappen von der Mitte nach oben+unten auf
+      Gleichmäßige Verteilung wenn wenige Items (muss Rand nicht berühren)
 
-TUI (fs-gui-engine-tui) — NEU:
-  ratatui 0.30 + tachyonfx 0.25 (fx::fade_from — Fade-In Animationen)
-  TuiLayoutInterpreter → TuiLayoutOutput (Lines + Animations)
-  shell_rects() / center_rects() Layout-Helfer
-  cargo fmt + clippy + test grün ✅
+[ ] HoverMagnification:
+      SVG-Icons skalieren verlustfrei → HoverMagnification kein Problem
+      Nachbar-Icons vergrößern sich proportional
 
-Bevy: langfristig (fs-gui-engine-bevy) — bevy_tweening geplant
-Einschränkungen TUI dokumentiert (kein SVG/Bild)
-```
+[ ] Sub-Menüs: Item-Klick öffnet neue Ebene (weitere Kreisbogen / Accordion-Zeile)
 
-## 3.4 ✅ Standard-Komponenten (für Desktop)
+[ ] Scroll-Fallback: wenn Items nicht reinpassen → scroll (wichtig für Mobile/Smartphone)
 
-```
-5 Komponenten in fs-render/src/components/:
-  InventoryListComponent  — Sidebar/fill — fs-inventory gRPC
-  PinnedAppsComponent     — Sidebar/bottom — fs-session gRPC
-  AppSectionsComponent    — Main/fill — fs-inventory Kategorien
-  SystemInfoComponent     — Bottombar/bottom — fs-info gRPC
-  NotificationBellComponent — Topbar/top — fs-bus Notification
-register_standard_components() — registriert alle 5 beim Start
-SearchBarComponent → Phase 6 (Search)
-cargo fmt + clippy + test grün ✅
-```
+[ ] Icon-Hintergründe: immer transparent (kein Hintergrund-Rect)
 
----
-
----
-
-# Phase 4 — Desktop ✅
-
-> Umgesetzt 2026-04-04. Vollständige Desktop-Shell mit konfigurierbarem Layout.
-
----
-
-## 4.1 ✅ Desktop-Shell: Layout-System
-
-Composite Pattern: `ShellLayout` → `ShellSection` → `SlotEntry`.
-TOML-Config: `~/.config/freesynergy/desktop/desktop-layout.toml`.
-Default: Topbar(`notification-bell`) + Sidebar(`inventory-list`/`pinned-apps`) + Main + Bottombar(hidden).
-
-## 4.2 ✅ Desktop-Shell: Komponenten einbinden
-
-`SharedComponentRegistry` in `DesktopShell`; `register_standard_components()` registriert Phase-3-Komponenten.
-
-## 4.3 ✅ Desktop-Shell: App-Management
-
-Observer Pattern: `AppLifecycleBus` mit `SessionLifecycleObserver`. Events: Opened/Closed/Pinned/Unpinned.
-Pin/Unpin via `PackageRegistry::set_pinned`. Sidebar zeigt Pin-Button je App.
-
-## 4.4 ✅ Desktop: Settings — Layout-Seite
-
-Strategy Pattern: `LayoutSectionStrategy` → `TopbarStrategy`, `SidebarStrategy`, `BottombarStrategy`.
-Settings-Seite `Layout` in `fs-settings` mit TOML-Proxy (keine Zirkelabhängigkeit zu `fs-gui-workspace`).
-
-## 4.5 ✅ Desktop: i18n-Abschluss
-
-`fs-i18n/locales/{en,de}/desktop.ftl` mit allen Shell- und Profil-Keys.
-`SnippetPlugin` + TOML-Snippets aus `fs-gui-workspace` entfernt → `init_with_builtins()`.
-Alle Keys auf Bindestriche migriert (z.B. `shell-menu-about`).
-
----
-
-## Offen aus Phase 4 (Folge-Phasen)
-
-```
-[ ] Appearance-Settings (Theme-Wahl via fs-theme)
-[ ] Language-Settings (Sprache global + per App)
-[ ] Service Roles Settings
-[ ] Accounts-Settings (IAM via Kanidm)
-[ ] Shortcuts-Settings
-[ ] Packages-Settings (Store-View)
-[ ] SearchBar in Topbar (slot: fill) — Phase 6
-[ ] Hot-Reload Layout via inotify (Phase 3 HotReloadWatcher)
-[ ] IcedLayoutInterpreter vollständig in Shell-View einbinden
-[ ] OIDC-Login-Flow in fs-settings konfigurierbar
-```
-
----
-
-## Phase 4B — Desktop: Visual & UX ✅ 2026-04-04
-
-```
-Design Pattern: State Machine (SidebarState) + Strategy (HelpSource) + Observer (MouseProximityObserver)
-
-4B.1 SVG-Fix: ✅
-  Binary-Name: [[bin]] name = "fs-desktop" (war bereits korrekt)
-  IcedLayoutInterpreter: Icon → render_icon() mit SVG-Ladeversuch (3 Pfade) + Emoji-Fallback
-  cargo fmt + clippy + test grün ✅
-
-4B.2 Sidebar State Machine: ✅
-  SidebarState: Collapsed (48px) | Expanding | Open — sidebar_state.rs
-  SidebarMode: Auto | Pinned — Pin-Button in jeder Sidebar
-  MouseProximityObserver: Proximity-Check (16px Schwellwert) — transitions CursorMoved
-
-4B.3 Linke Sidebar (Taskbar): ✅
-  Collapsed: nur Icon-Strip (⊞, App-Icons, ⚙)
-  Expanded: Icons + Labels + Pin-Buttons + Section-Labels
-  Settings ⚙ immer sichtbar am unteren Ende — nie verschiebbar
-  Trennlinie installed / pinned ✅
-
-4B.4 Rechte Sidebar (Help + AI): ✅
-  HelpSource-Trait: LocalHelpTopicSource | AiHelpSource | NoHelpSource
-  ActiveWindowObserver: maps app_id → HelpContext-Key
-  CapabilityCheck: FS_AI_ENDPOINT env var / Flag-Datei → AiInputBar einblenden
-  AiInputBar: TextInput + Send (submit on Enter oder Button)
-
-4B.5 Sidebar-Position: ✅
-  ShellSection.position = SidebarSide::Left | Right (TOML-serialisierbar)
-  sidebars_on_side(side) Methode auf ShellLayout
-  Default: LeftSidebar (Taskbar) + RightSidebar (Help)
-
-i18n: desktop.ftl (en + de) — 15 neue Keys ✅
-cargo fmt + clippy + test grün (27 Tests in fs-gui-workspace, 28 in fs-gui-engine-iced) ✅
-Dokumentation: programme/fs-desktop.md ✅
-
-Noch offen (Folge-Phasen):
-[ ] Hot-Reload Layout via inotify (Phase 3 HotReloadWatcher einbinden)
-[ ] IcedLayoutInterpreter vollständig in Shell-View einbinden
-[ ] OIDC-Login-Flow in fs-settings konfigurierbar
-[ ] AiHelpSource: echte gRPC-Anbindung an fs-ai (Phase 6)
-[ ] SearchBar in Topbar (slot: fill) — Phase 6
-[ ] konzepte/help-sidebar.md anlegen (Phase 6)
-```
-
----
-
-# Phase 5 — Ecosystem Services
-
-> Ziel: Kritische Dienste installierbar, konfigurierbar, laufend.
-> Jeder Dienst standalone — Integration über Adapter + Bus.
-> Standard-Checkliste gilt vollständig.
-
----
-
-## 5.1 — Kanidm ✅ 2026-04-03
-
-```
-Design Pattern: Adapter (4 Protokoll-Traits) + State Machine (KanidmSetupWizard)
-
-fs-auth: KanidmBackend (OAuthProvider, ScimProvider, SsoProvider, PamProvider) ✅
-Store-Eintrag: kanidm als fork-Container + fs-auth-Adapter ✅
-KanidmSetupWizard: Domain → Admin → OidcClients → Confirm → Done ✅
-  → fs-managers/auth (fs-manager-auth)
-PamIdentity: session_token-Feld (Bearer direkt aus PAM Step 3) ✅
-OidcClientManager: Post-Wizard OIDC-Client-Verwaltung + sync_to_kanidm ✅
-Desktop-Login: fs-profile Login-Screen + AuthState (LoggedOut/Authenticating/LoggedIn) ✅
-  → FS_AUTH_URL env var → Login-Screen; leer → Offline-Modus
-Integration-Tests: fs-auth/tests/kanidm_integration.rs (6 Tests, #[ignore]) ✅
-i18n: fs-i18n/locales/{en,de}/auth-setup.ftl ✅ (+ auth-manager-* Keys)
-cargo fmt + clippy + test grün ✅
-
-Noch offen (Phase 4/6):
-[ ] Standalone-Test mit laufendem Kanidm-Container (env vars gesetzt)
-[ ] OIDC-Login-Flow in fs-settings konfigurierbar (Desktop-Settings-Seite)
-```
-
-## 5.2 — Zentinel ✅ 2026-04-03
-
-```
-Design Pattern: Facade (ZentinelManager) + Observer (ZentinelBusHandler)
-
-Store-Einträge: zentinel + zentinel-plane als fork-Pakete ✅
-ZentinelManager: Facade über Zentinel Control Plane API ✅
-RouteConfig + RouteTable + ZentinelBusHandler ✅
-Auto-Routing: registry::service::registered → Zentinel-Route ✅
-Capability → Pfad-Mapping (/auth, /git, /mail, /wiki, /chat, /storage) ✅
-i18n: fs-i18n/locales/{en,de}/zentinel.ftl ✅
-cargo fmt + clippy + test grün (22 Tests) ✅
-
-Noch offen:
-[ ] S3-Integration: Zentinel nutzt opendal für Konfigurations-Storage
-[ ] Standalone-Test mit laufendem Zentinel-Container
-```
-
-## 5.3 — Stalwart + Bulwark Mail (E-Mail) ✅ 2026-04-04
-
-```
-Design Pattern: Adapter (3 Protokoll-Traits) + State Machine (StalwartSetupWizard)
-
-fs-mail: SmtpProvider + ImapProvider + JmapProvider Traits ✅
-  StalwartBackend: implements alle 3 Traits + MailBackend ✅
-  MailCapabilities: mail.smtp / mail.imap / mail.jmap ✅
-  MailEvent: mail.received / mail.sent / mail.adapter.* ✅
-  Features: stalwart (reqwest), bus (fs-bus) ✅
-Store: stalwart catalog.toml — [adapter] + JMAP/web-admin routes ✅
-Store: bulwark catalog.toml — bereits vorhanden ✅
-StalwartSetupWizard: Domain → TlsCerts → OidcIntegration → Confirm → Done ✅
-  ACME (Let's Encrypt) oder manuelle Cert/Key-Pfade ✅
-  Kanidm OIDC (skippable für lokale Accounts) ✅
-i18n: fs-i18n/locales/{en,de}/mail.ftl — alle User-facing Texte ✅
-DNS-Hinweise: MX, SPF, DKIM, DMARC im Manager-UI ✅
-18 Tests (fs-mail) + 15 Tests (fs-manager-mail) ✅
-cargo fmt + clippy + test grün ✅
-Dokumentation: programme/fs-mail.md ✅
-
-Noch offen:
-[ ] Standalone-Test mit laufendem Stalwart-Container (env vars gesetzt)
-[ ] JMAP-Login-Flow in fs-settings konfigurierbar
-```
-
-## 5.4 — Tuwunel (Matrix-Messenger) ✅ 2026-04-04
-
-```
-Design Pattern: Adapter (MatrixBotAdapter via fs-channel matrix-bot feature) + State Machine (TuwunelSetupWizard)
-
-fs-channel: matrix-bot Feature (CS-API via reqwest, kein matrix-sdk) ✅
-  MatrixBotAdapter: BotChannel impl (polling, send, send_dm, send_menu) ✅
-  ChannelRegistry::build_bot Matrix-Arm ✅
-fs-bots: matrix-bot Feature aktiviert (neben telegram) ✅
-Store: tuwunel catalog.toml (setup + iam_required + manager) ✅
-fs-channel-matrix: keys.rs um ADAPTER_REGISTERED/DEREGISTERED erweitert ✅
-  5 Tests grün ✅
-fs-manager-matrix: TuwunelSetupWizard (State Machine, 6 Schritte) ✅
-  ServerName → TlsCerts → OidcIntegration → Federation → Confirm → Done
-  Kanidm OIDC Pflicht: skip nur für Offline-Tests erlaubt ✅
-  FsView + ManagerLayout (view.rs) ✅
-i18n: fs-i18n/locales/{en,de}/matrix.ftl (alle Wizard-Texte + IAM-Hinweise) ✅
-cargo fmt + clippy + test grün (fs-channel, fs-bots, fs-manager-matrix, fs-channel-matrix) ✅
-Dokumentation: programme/fs-matrix.md + INDEX.md ✅
-
-Noch offen:
-[ ] Standalone-Test mit laufendem Tuwunel-Container (env vars gesetzt)
-[ ] matrix-sdk live Feature: warten auf upstream rustc ≥1.94 Fix (matrix-sdk 0.16)
-```
-
-## 5.5 — Telegram (externer Kanal — kein eigener Container) ✅ 2026-04-04
-
-```
-Design Pattern: Adapter (TelegramAdapter via fs-channel-telegram)
-
-Umgesetzt 2026-04-04
-
-BotChannel-Trait für TelegramAdapter implementiert (polling, send, menus) ✅
-  receive_updates: getUpdates polling mit Offset-Tracking ✅
-  send / send_formatted / send_dm / send_menu: inline keyboards ✅
-ChannelRegistry::build_bot() für Telegram verdrahtet ✅
-TelegramChannelConfig über fs-config (TelegramConfigStore) ✅
-  bot_token_ref als Geheimreferenz (env:VAR / file:PATH) — nie Klartext ✅
-fs-manager-telegram: Setup-Wizard (State Machine, 3 Schritte) ✅
-  fs-telegram setup / status / show / set-token / set-chats ✅
-i18n: fs-i18n/locales/{en,de}/channel-telegram.ftl vollständig ✅
-Store-Catalog: [storage] + [api.grpc] + [api.rest] + [notes] ✅
-cargo fmt + clippy + test grün ✅
-
-Noch offen:
-[ ] Standalone-Test mit echtem Bot-Token (env vars gesetzt)
-[ ] gRPC subscribe: Streaming-Impl (derzeit deferred → REST long-poll)
-```
-
-## 5.X — fs-pod-forge: Container YAML Configurator ✅ 2026-04-04
-
-Strategy + Builder + Template Method. PodConfigurator-Trait, PodManifestBuilder,
-BasePodConfigurator, ManifestDiff, ValidationResult, Systemd-Unit-Generierung, fs-pod CLI.
-KanidmPodConfigurator + StalwartPodConfigurator in fs-managers.
-i18n: pod-forge.ftl (en + de). Doku: technik/fs-pod-forge.md.
-
-Offen (G2):
-[ ] Manager-Integration: ManagerAction::UpdatePodConfig → PodConfigurator::apply()
-    → podman play kube --replace <generated.yml>
-
-## 5.X+1 — fs-app-forge: App Config File Configurator ✅ 2026-04-04
-
-Strategy + Schema-driven UI + Visitor. AppConfigurator-Trait, ConfigSchema,
-ConfigFormGenerator, TomlConfigAdapter + YamlConfigAdapter + EnvConfigAdapter,
-atomic write, fs-forge CLI.
-KanidmAppConfigurator + StalwartAppConfigurator in fs-managers.
-i18n: app-forge.ftl (en + de). Doku: technik/fs-app-forge.md.
-
-Offen (G2):
-[ ] Manager-Integration: ManagerAction::EditConfig → AppConfigurator::apply()
-
-## 5.X+2 — Manager-Upgrade: Service Controller + Category Manager ✅
-
-Erledigt 2026-04-04:
-- ServiceController-Trait + SystemdServiceController + ContainerServiceController (podman pod)
-- CategoryManager-Trait + update_available() Default-Methode
-- KanidmIamController, StalwartMailController, TuwunelMessengerController, ZentinelProxyController
-- Services-Tab in allen Manager-Views (auth/mail/matrix/zentinel)
-- Doku: konzepte/manager-service-controller.md aktualisiert
-- cargo fmt + clippy + test grün
-
-Offen (G2):
-[ ] Role-Switching: fs-registry Capability-Eintrag umschreiben wenn set_active() aufgerufen
-[ ] Update-Check: update_available() mit echtem Store-Lookup implementieren
-
-## 5.6 — Forgejo (Git-Server, Self-Hosted) ✅ 2026-04-05
-
-```
-Design Pattern: Adapter (ForgejoAdapter: GitProvider)
-              + State Machine (ForgejoSetupWizard)
-              + Composite (ForgejoCategoryController)
-
-✅ GitProvider-Trait definieren (ForgejoAdapter impl)
-✅ ForgejoSetupWizard: Domain→Ssh→Oidc→S3→Confirm→Done (13 Tests)
-✅ ForgejoConfig + ForgejoConfigStore: TOML-Persistenz unter /etc/freesynergy/forgejo/
-✅ ForgejoCategoryController: ServiceController + CategoryManager (ServiceCategory::Git)
-✅ ForgejoServiceController: wraps ContainerServiceController("pod-forgejo-pod.service")
-✅ i18n: forgejo.ftl (en + de) — Wizard, Config, Services, Nav, Errors
-✅ 4 Unit-Tests in service_controller, 6 in adapter, 13 in wizard grün
-✅ cargo fmt + clippy + test grün
-
-Offen (G2):
-[ ] Store-Eintrag: forgejo als Container-Paket (catalog.toml + pod.yml)
-[ ] S3: Repository-Storage via opendal
-[ ] ForgejoAdapter → fs-registry (Service Role: git) wiring
-```
-
-## 5.7 — Outline + Wiki.js (Dokumentation / Wiki) ✅ 2026-04-04
-
-```
-Design Pattern: Strategy (WikiProvider — OutlineAdapter / WikiJsAdapter)
-              + State Machine (WikiSetupWizard)
-              + Composite (WikiCategoryController — beide Impl.)
-
-✅ WikiProvider-Trait definieren (gemeinsame API für Outline + Wiki.js)
-✅ Store-Eintrag: outline als Container-Paket (Standard-Empfehlung)
-✅ Store-Eintrag: wikijs als Container-Paket (Alternative)
-✅ IAM: Kanidm SSO (OIDC) für beide (pod.yml + OidcConfig im Wizard)
-✅ S3: Datei-Storage via opendal für beide (S3Config im Wizard, optional)
-✅ OutlineAdapter + WikiJsAdapter: beide implementieren WikiProvider-Trait
-✅ Service Role: wiki → wählbar zwischen Outline und Wiki.js (WikiCategoryController)
-✅ i18n: ALLE Konfig-Texte in FTL (en + de in fs-i18n)
-✅ Standalone-Test: 23 Unit-Tests grün (provider, wizard, service_controller)
-✅ cargo fmt + clippy + test grün
-```
-
----
-
----
-
-# Phase 5B — Store: Catalog-Vollständigkeit + Browsability
-
-> Ziel: Alle Programme sind im Store sichtbar + beschreibbar — auch vor der Installation.
-> Store ist der erste Eindruck des Systems. Jedes Paket muss vollständig sein.
-> Standard-Checkliste gilt vollständig.
-
-## 5B.1 — Pflicht-Felder für jeden Store-Eintrag ✅ 2026-04-05
-
-```
-Design Pattern: Template Method (PackageCatalogValidator prüft Vollständigkeit)
-
-✅ PackageCatalogValidator: prüft 5 Pflichtfelder (description, icon, tags, license, homepage)
-   → CatalogIssue enum mit 6 Varianten; is_complete() + validate()
-   → 8 Unit-Tests grün
-✅ PackageData: license, homepage, screenshots, changelog_url ergänzt
-✅ impl_package_data! Makro: 4 neue Delegations-Methoden
-✅ reader.rs: build_package_data() befüllt neue Felder aus catalog.toml
-✅ catalog.toml: screenshots + changelog als RawPackageMeta-Felder
-✅ Store-UI: "Incomplete" Badge (pkg-row__badge--incomplete)
-✅ Detail-Panel: license badge, homepage link, incomplete warning
-✅ i18n: store-package-incomplete + store-issue-missing-* (6 Varianten) in store.ftl (en + de)
-✅ cargo fmt + clippy + test grün
-
-Offen:
-[ ] Alle bestehenden catalog.toml ergänzen:
-    → kanidm, stalwart, tuwunel, zentinel, telegram, outline, wikijs
-    → fs-desktop, fs-init, fs-store, fs-auth, fs-managers
-    → Render-Engines, DB-Engines (als Artifacts)
-[ ] Screenshots-System: Store zeigt Bilder im Detail-Panel
-[ ] Dokumentation: technik/store-catalog-spec.md
-```
-
-## 5B.2 — Store-Browsability: Kategorien + Updates ✅ 2026-04-05
-
-```
-Design Pattern: Strategy (BrowseStrategy: Installed | Available | All)
-               Filter (CategoryFilter, TagFilter, SearchFilter)
-
-✅ StoreState: tag_filter, all_tags(), with_updates(), filtered() mit Tag-Filter
-✅ PackageRow: is_incomplete, license, homepage ergänzt
-✅ Tag-Filter-Leiste: alle unique Tags als klickbare Buttons (PackageList-View)
-✅ Updates-Tab: UpdatesList zeigt Pakete mit verfügbarer neuer Version + count badge
-✅ Tab::Updates in Sidebar
-✅ i18n: store-tab-updates, store-tab-all-tags, store-browse-no-updates, store-browse-update-count
-✅ cargo fmt + clippy + test grün
-
-Offen:
-[ ] BrowseMode: "Verfügbar" Tab (alle Store-Pakete, auch nicht installierte)
-[ ] "Installieren"-Button nur wenn fs-init / fs-store Service läuft
-```
-
----
-
-# Phase 6 — Apps & Search
-
-> Alle Apps: UI (FsView-Trait) + CLI + API (gRPC + REST)
-> Standalone: jede App läuft ohne den Rest
-> Standard-Checkliste gilt vollständig.
-
----
-
-## 6.1 — Apps: Offene Items ✅ 2026-04-05
-
-```
-✅ fs-lenses:     LensRegistry-Trait (Strategy Pattern) mit InMemoryLensRegistry
-                  LensController: Arc<dyn LensRegistry> + refresh() mit update_items()
-                  18 Unit-Tests grün
-✅ fs-tasks:      TaskStore-Trait (Strategy Pattern) mit InMemoryTaskStore + TomlTaskStore
-                  TaskController: Arc<dyn TaskStore>; TomlTaskStore flusht bei jeder Mutation
-                  16 Unit-Tests grün
-✅ fs-ai:         ConversationStore-Trait (Strategy Pattern)
-                  InMemoryConversationStore + TomlConversationStore (~/.config/fsn/ai-history.toml)
-                  AiController: record_exchange/history/clear_history Methoden
-                  5 Unit-Tests grün
-✅ fs-manager-language: gix-API Bug bereits behoben (kompiliert + 10 Tests grün)
-
-Offen:
-[ ] fs-db:    CrudRepo → Repository<T> migrieren (low priority)
-[ ] fs-db:    Filter<T> → SQL übersetzen in Adapter-Repos
-[ ] fs-bots:  bot-db/src/lib.rs aufteilen (735 Zeilen → conversation.rs + user.rs + …)
-[ ] fs-bots:  DB nur über fs-db DbEngine-Trait
-[ ] matrix-sdk: PostgreSQL State Store (wartet auf rustc recursion-overflow Fix upstream)
-```
-
-## 6.2 — Search ✅ 2026-04-05
-
-```
-Design Pattern: Strategy (SearchStrategy: DemoSearchStrategy | BusSearchStrategy)
-
-✅ SearchStrategy-Trait: search(query) -> Vec<LensItem>
-✅ DemoSearchStrategy: deterministische Demo-Items (1 pro Rolle: Wiki, Chat, Git, Tasks)
-✅ BusSearchStrategy: leere Impl für zukünftige fs-bus Integration (G2)
-✅ LensQueryEngine: hält Arc<dyn SearchStrategy>; with_strategy() für Dependency Injection
-✅ SearchView: FsView für ad-hoc Suchergebnisse (query + loading-State + items grouped by role)
-✅ 4 Tests in search.rs, 3 in view.rs grün
-✅ cargo fmt + clippy + test grün
-
-Offen (G2):
-[ ] Service-Suche (lokal, fs-registry)
-[ ] Host-Suche (Bus-aggregiert via BusSearchStrategy)
-[ ] Föderale Suche
-[ ] i18n: ALLE Texte in FTL
+[ ] i18n: alle neuen Texte in navigation.ftl
 [ ] cargo fmt + clippy + test grün
 ```
 
+## G1.3 — Navigation: Komponenten (fs-components)
+
+```
+Design Pattern: Composite (MenuTree) + FsView (Domain → Widget)
+
+[ ] CornerMenu struct + FsView impl
+      field: corner, items, config (Größe, Stil)
+[ ] SideMenu struct + FsView impl
+      field: side, items, config
+[ ] SidebarPanel struct + FsView impl
+      Overlay-Sidebar: kommt über den Inhalt (Bildschirm verschiebt sich NICHT)
+      Gleiche Items wie SideMenu, anderes Aussehen
+      Einstellung: "Menü-Stil: Rund | Sidebar" in Settings > Ansicht
+
+[ ] Alle drei mit scroll-Fallback (kleine Screens / Mobile)
+[ ] i18n: Komponenten-Beschriftungen in navigation.ftl
+[ ] cargo fmt + clippy + test grün
+```
+
+## G1.4 — Program-Modell-Erweiterungen (fs-inventory + fs-store)
+
+```
+Design Pattern: Decorator (caption/label erweitert bestehende InstalledResource)
+               Composite (ProgramGroup = 1 Parent + N Instanzen)
+
+[ ] caption: Option<String> in InstalledResource (fs-inventory)
+      → Anzeigename, unabhängig vom technischen Namen
+      → Notwendig wenn mehrere Versionen/Instanzen des gleichen Programms laufen
+
+[ ] caption: Option<String> in PackageData (fs-store)
+
+[ ] ProgramGroup struct (fs-inventory):
+      parent_id: ResourceId
+      instances: Vec<InstalledResource>
+      group_icon: IconRef
+      → Ein Parent-Icon, N Instanzen auswählbar (z.B. wiki.a, wiki.b, wiki.c)
+
+[ ] CompositeIcon in Store-Paket-Deklaration:
+      primary_icon = "icon.svg"    (Stamm-Programm)
+      secondary_icon = "badge.svg" (Instanz — wird leicht überlappend angezeigt)
+      overlap_factor = 0.3
+      → TOML-konfigurierbar in package.toml
+
+[ ] ProgramViewProvider trait impl für alle bestehenden Programme:
+      Kanidm: Info + Manual + SettingsContainer
+      Stalwart: Info + Manual + SettingsContainer
+      Tuwunel: Info + Manual + SettingsContainer
+      Zentinel: Info + Manual + SettingsContainer
+      Forgejo: Info + Manual + SettingsContainer
+      Outline/Wiki.js: Info + Manual + SettingsContainer
+      Desktop: SettingsConfig + (kein Start, kein Container)
+
+[ ] Info-View: Berechtigungscheck für kritische Aktionen (kill, restart)
+      Eigener Rechner: alle Aktionen
+      Server: nur mit expliziter Berechtigung (fs-auth Rights-Kaskade)
+
+[ ] i18n: inventory.ftl ergänzen (caption, group, views)
+[ ] cargo fmt + clippy + test grün
+[ ] Doku: konzepte/program-views.md
+```
+
+## G1.5 — Desktop-Shell-Refactor (fs-gui-workspace)
+
+```
+Design Pattern: Facade (DesktopShell) + State Machine (MenuState) + Observer (CapabilityObserver)
+
+Bestehende Sidebars werden durch Corner Menus ersetzt.
+wallpaper.rs ist bereits vorhanden → einbinden.
+
+[ ] Default-Layout mit Corner Menus:
+      Oben links:    Task-Menü (alle installierten/laufenden Programme)
+      Unten links:   Settings (SettingsConfig für Desktop)
+      Oben rechts:   Help (General Help + Focus Help)
+      Unten rechts:  AI (nur wenn ActivityEngine-Capability "ai.chat" vorhanden)
+
+[ ] Titlebar-Erweiterung:
+      Standard: Icon | Titel (zentriert) | [−][□][×]
+      NEU:      Icon | Titel (zentriert) | [View-Buttons] | [Tiling-Toggle] | [−][□][×]
+      View-Buttons: wechseln zwischen ProgramViews (Start/Info/Manual/Settings/...)
+      Tiling-Toggle: ordnet offene Fenster automatisch an
+
+[ ] Fullscreen als Standard: Desktop startet immer im Fullscreen-Modus
+
+[ ] Hintergrund (wallpaper.rs einbinden):
+      Einstellbar in Settings > Ansicht: Farbe oder Bild
+      Standard: einfarbig (Desktop-Primärfarbe, dunkel)
+
+[ ] Icon-Hintergründe: transparent (kein weißes/graues Hintergrund-Rect)
+
+[ ] Einstellungen (Settings > Ansicht):
+      Icon-Größe: Schieberegler (Standardgröße 32px, Range 16–64px)
+      Menü-Stil: Rund (Corner/Side Menus) | Sidebar (SidebarPanel)
+      Schriftart: kommt später (G2)
+
+[ ] CapabilityObserver: prüft ob "ai.chat" im fs-registry läuft
+      ja → unten rechts AI-Corner-Menu einblenden
+      nein → unten rechts leer
+
+[ ] i18n: desktop.ftl (alle neuen Texte)
+[ ] cargo fmt + clippy + test grün
+[ ] Doku: programme/fs-desktop.md überarbeiten
+```
+
+## G1.6 — Activity Hub (fs-components + eigene Repos)
+
+```
+Design Pattern: Registry (ActivityHub) + Strategy (ActivityEngine pro Programm)
+               Composite (Activity enthält Sub-Activities)
+
+Kernkonzept: Jede Activity IST ein Program-Angebot.
+Ein Programm kann einen ActivityEngine-Adapter mitbringen und wird damit zur Activity.
+Activity Hub fragt nur den Trait — egal ob Container, eingebettetes Modul oder WASM-Plugin.
+
+[ ] ActivityEngine trait (fs-render):
+      activity_id() -> &str
+      activity_name_key() -> &str
+      supported_actions() -> Vec<ActivityAction>
+        ActivityAction: New | Open | Recent | Browse | Custom(String)
+      default_view() -> ProgramView
+      category() -> ActivityCategory
+        ActivityCategory: Document | Communication | Media | Data | Code | System | Custom(String)
+
+[ ] Activity struct (fs-components):
+      id, icon: CompositeIcon, name_key, category
+      engine: Arc<dyn ActivityEngine>
+      sub_activities: Vec<Activity>
+      → Nesting: "Office" enthält "Write", "Spreadsheet", "Presentation"
+      → "Office" selbst ist eine Activity (eigenes Icon, eigene Aktionen)
+
+[ ] ActivityHub struct (fs-components):
+      activities: Vec<Activity>   (per Store ladbar, per fs-inventory gefiltert)
+      Registry-Methoden: register(activity), by_category(), search(query)
+      Nur installierte Aktivitäten werden angezeigt (fs-inventory gRPC)
+
+[ ] Activity-Views (was in der Activity angezeigt wird):
+      "Neu"              — neues Dokument/Datei/Termin/... erstellen
+      "Zuletzt bearbeitet" — letzte N Elemente (aus fs-session oder Programm)
+      "Programme"        — 2. Ebene: welches Programm für diese Activity nutzen?
+      Standard-Programm pro Activity konfigurierbar
+      Start-View pro Activity konfigurierbar (Einstellung: womit öffne ich die Activity)
+
+[ ] Activity als eigenständiges Programm (optional):
+      Eigener Container + Adapter (Adapter implementiert ActivityEngine)
+      Eigene GUI optional (via FsView-Trait)
+      Im Store als program-Paket mit ActivityEngine-Capability
+      Kann auch eingebettet bleiben (kein eigener Container nötig)
+
+[ ] ActivityHub als Corner-Menu-Entry oder Widget
+      Einstellbar: als Corner Menu | als Desktop-Widget | beides
+
+[ ] i18n: activity-hub.ftl (en + de)
+[ ] cargo fmt + clippy + test grün
+[ ] Doku: konzepte/activity-hub.md
+```
+
+## G1.7 — Content-Komponenten
+
+```
+Design Pattern: Strategy (HelpSource) + Observer (FocusObserver) + Facade (SettingsHub)
+
+[ ] InventoryComponent (fs-render Standard-Komponente erweitern):
+      Zeigt alle installierten Programme (fs-inventory gRPC)
+      Gruppen-Darstellung: ProgramGroup mit aufklappbaren Instanzen
+      Composite-Icons für Instanzen
+      Slot: fill (Sidebar oder Main)
+
+[ ] GeneralHelpComponent:
+      Was kann man auf dieser Maske tun?
+      Welche Aktionen sind verfügbar?
+      Kontext-sensitiv per HelpSystem (fs-help)
+      Jedes Programm pflegt eigene Hilfetexte (.ftl in fs-i18n)
+
+[ ] FocusHelpComponent:
+      Erklärt das Element mit aktuellem Fokus
+      Beispiel: Email-Input → zeigt gültige Zeichen, Format-Beispiel
+      Jedes Input-Element kann Hilfe-Metadaten tragen (help_key: Option<String>)
+      Wird auch in TUI angezeigt (gleiche Traits)
+
+[ ] SettingsConfigComponent (fs-settings):
+      Multi-Section, passt sich Fenster/Programm an
+      Sektionen: Ansicht, Schrift (später), Sprache, Hintergrund, Tastaturkürzel, ...
+      Desktop: zeigt Desktop-spezifische Einstellungen
+      Andere Programme: zeigen ihre programmspezifischen Einstellungen
+      Sofort-Änderung (kein Neustart)
+
+[ ] SettingsContainerComponent (fs-container-app):
+      Pod-YAML-Konfig für Container-Programme
+      Änderung erfordert Restart (Hinweis im UI)
+      Instanz kopieren: Neue Instanz mit gleicher Konfig + anderem Namen
+      Dann: Instanz starten, Instanz stoppen, Instanz löschen
+      Berechtigungscheck: nicht jeder darf Container konfigurieren
+
+[ ] SearchComponent (fs-desktop, Phase 6.2 erweitern):
+      Input-Feld (Schnellsuche über alles)
+      Erweiterter Bereich (aufklappbar):
+        Nach Tags suchen
+        In bestimmtem Programm suchen
+        In Programm-Gruppe suchen
+        Programm-übergreifend suchen
+      Resultat: LensItems gruppiert nach Quelle
+      i18n: search.ftl ergänzen
+
+[ ] AiComponent (fs-ai — NICHT in fs-desktop):
+      Textbox für KI-Chat
+      Nur eingeblendet wenn "ai.chat" Capability vorhanden (fs-registry)
+      Gehört in fs-ai Repo, nicht in allgemeine Komponenten
+      Wird als Corner-Menu-Entry eingebunden (unten rechts)
+
+[ ] i18n: alle Komponenten in passende .ftl-Dateien
+[ ] cargo fmt + clippy + test grün
+```
+
+## G1.8 — Offene Items (konsolidiert aus G0)
+
+```
+Settings-Seiten (fs-settings):
+[ ] Appearance-Settings: Theme-Wahl via fs-theme
+[ ] Language-Settings: Sprache global + per App (fs-manager-language)
+[ ] Service Roles Settings: Dienst-Rollen konfigurieren
+[ ] Accounts-Settings: IAM via Kanidm (OIDC-Login-Flow)
+[ ] Shortcuts-Settings: Tastaturkürzel-Editor
+[ ] Packages-Settings: Store-View direkt in Settings
+
+Desktop-Shell (fs-gui-workspace):
+[ ] Hot-Reload Layout via inotify (Phase 3 HotReloadWatcher einbinden)
+[ ] IcedLayoutInterpreter vollständig in Shell-View einbinden
+[ ] AiHelpSource: echte gRPC-Anbindung an fs-ai
+
+Store (fs-store + Store/):
+[ ] Alle catalog.toml vollständig ergänzen:
+    kanidm, stalwart, tuwunel, zentinel, telegram, outline, wikijs,
+    fs-desktop, fs-init, fs-store, fs-auth, fs-managers,
+    Render-Engines, DB-Engines (als Artifacts)
+[ ] Screenshots-System: Store zeigt Bilder im Detail-Panel
+[ ] Doku: technik/store-catalog-spec.md anlegen
+[ ] BrowseMode: "Verfügbar"-Tab (alle Store-Pakete, auch nicht installierte)
+[ ] "Installieren"-Button nur aktiv wenn fs-store Service läuft
+
+Datenbank (fs-db):
+[ ] CrudRepo → Repository<T> migrieren
+[ ] Filter<T> → SQL in Adapter-Repos übersetzen
+
+Bots (fs-bots):
+[ ] bot-db/src/lib.rs aufteilen: conversation.rs + user.rs + ...
+[ ] DB nur über fs-db DbEngine-Trait
+
+Search (fs-lenses + fs-search):
+[ ] BusSearchStrategy: echte fs-bus Integration (aktuell Demo-Impl)
+[ ] Service-Suche: lokal via fs-registry
+[ ] Host-Suche: Bus-aggregiert via BusSearchStrategy
+[ ] Föderale Suche
+[ ] i18n: ALLE Such-Texte in FTL
+
+Manager-Integration:
+[ ] UpdatePodConfig: ManagerAction::UpdatePodConfig → PodConfigurator::apply()
+    → podman play kube --replace <generated.yml>
+[ ] EditConfig: ManagerAction::EditConfig → AppConfigurator::apply()
+[ ] Role-Switching: fs-registry Capability-Eintrag umschreiben wenn set_active() aufgerufen
+[ ] Update-Check: update_available() mit echtem Store-Lookup implementieren
+
+Forgejo (fs-managers):
+[ ] Store-Eintrag: forgejo catalog.toml + pod.yml
+[ ] S3: Repository-Storage via opendal
+[ ] ForgejoAdapter → fs-registry wiring (Service Role: git)
+
+Standalone-Tests (Container laufen muss):
+[ ] Kanidm-Integration-Test (env vars setzen)
+[ ] Zentinel-Integration-Test (env vars setzen)
+[ ] Stalwart-Integration-Test (env vars setzen)
+[ ] Tuwunel-Integration-Test (env vars setzen)
+[ ] Telegram-Test (echtes Bot-Token)
+[ ] gRPC subscribe Telegram: Streaming-Impl (aktuell REST long-poll)
+
+Technisches Debt (wartet auf Upstream):
+[ ] matrix-sdk live Feature: rustc ≥1.94 Fix (matrix-sdk 0.16)
+[ ] matrix-sdk PostgreSQL State Store (recursion-overflow Fix upstream)
+[ ] Zentinel S3-Integration: opendal für Konfigurations-Storage
+[ ] JMAP-Login-Flow in fs-settings konfigurierbar
+```
+
+## G1.9 — UX-Extras (nach G1.5)
+
+```
+Design Pattern: Decorator (Badges) + Observer (FocusObserver) + Command (QuickSwitch)
+
+[ ] Status-Badges auf Icons:
+      ungelesen (Zahl), Update verfügbar (Punkt), Fehler (Ausrufezeichen), laufend (Kreis)
+      Implementierung: Badge-Overlay auf CompositeIcon
+
+[ ] Thumbnail-Preview bei Hover auf laufende Programme:
+      Mini-Vorschau des Programmfensters im Task-Menü
+
+[ ] Focus Mode:
+      Alles ausblenden — nur ein Fenster sichtbar
+      Toggle im Tiling-Toggle-Button der Titlebar
+
+[ ] Quick Switch Overlay (Alt+Tab-Ersatz):
+      Tastaturkürzel öffnet Overlay mit allen offenen Fenstern
+      Thumbnail-Previews, tastaturnavigierbar
+      FSView-Trait → funktioniert in iced + bevy (nicht TUI)
+
+[ ] Notification Center:
+      Alle Toasts aggregiert abrufbar (Corner Menu oder eigener Bereich)
+      Ungelesene werden markiert
+
+[ ] Workspace Profiles:
+      Layout-Presets speichern (z.B. "Coding", "Writing", "Admin")
+      In Settings > Ansicht verwaltbar
+
+[ ] Touch Gestures (Mobile / Touchscreen):
+      Swipe von Ecke = Corner Menu öffnen
+      Swipe von Kante = Side Menu öffnen
+      Pinch-to-zoom auf Desktop-Hintergrund
+
+[ ] Pinboard Widget:
+      Fixierbare Notizen/Links auf dem Desktop-Hintergrund
+      Als Activity oder als eigenständiges Widget
+
+[ ] Auto Dark/Light:
+      Thema wechselt automatisch je nach Tageszeit
+      Konfigurierbar in Settings > Ansicht (Zeitfenster)
+
+[ ] Breadcrumb in Titlebar:
+      Für Programme mit hierarchischer Navigation (Browser, Store, Docs)
+      Bereits header.rs vorhanden → einbinden
+
+[ ] Global Clipboard History:
+      Alle kopierten Inhalte abrufbar (Text, Bilder, Links)
+      Über Search-Komponente abrufbar (Kategorie "Clipboard")
+      Lokaler Store (verschlüsselt), kein Cloud-Sync
+
+[ ] Window Snap:
+      Automatische Anordnung bei mehreren offenen Fenstern
+      Ergänzt den Tiling-Toggle (manuell vs automatisch)
+      Snap-Zonen: 2er/3er/4er Raster, konfigurierbar
+      Tiling-Toggle: Manuell | Auto-Snap | Focus Mode
+```
+
 ---
 
 ---
 
-# Phase 7 — Federation & Infrastruktur
-
-> Standard-Checkliste gilt vollständig.
-
----
-
-## 7.1 — Federation
+# Reihenfolge
 
 ```
-Design Pattern: Chain-of-Responsibility (Rights) + Decorator (AuditLog) + Observer (Bus)
+--- Aktuell (G1) ---
 
-✅ Design Pattern festlegen
-✅ Rechte-Kaskade + Audit-Log (rights/, audit/, InMemoryRights, InMemoryAuditLog)
-✅ Föderaler Bus (bus/, FederationEvent, 7 Topics, fs-bus topics.rs ergänzt)
-✅ i18n: federation.ftl (en + de)
-✅ cargo fmt + clippy + test grün (27 Tests)
+G1.1  Navigations-Traits (fs-render)       ← Fundament für alle Navigation
+G1.2  iced-Implementierung                 ← erste sichtbare Engine
+G1.3  Navigations-Komponenten (fs-components)
+G1.4  Program-Modell (fs-inventory + fs-store)
+G1.5  Desktop-Shell-Refactor              ← nutzt G1.1–G1.3
+G1.6  Activity Hub                        ← nutzt G1.1–G1.3 + G1.4
+G1.7  Content-Komponenten                 ← parallel zu G1.5
+G1.8  Offene Items konsolidiert           ← parallel wenn möglich
+G1.9  UX-Extras                           ← nach G1.5
 
-[ ] Federation-Grundstruktur (ActivityPub — HTTP-Signaturen, echte AP-Impl, G1+)
-[ ] WireGuard (nach AP-Grundstruktur, G1+)
-[ ] Hickory DNS (nach AP-Grundstruktur, G1+)
+--- Langfristig (G1+) ---
+
+G1+   ActivityPub Federation (7.1 Grundstruktur → echte AP-Impl)
+G1+   WireGuard (nach AP-Grundstruktur)
+G1+   Hickory DNS (nach AP-Grundstruktur)
+
+--- G2 ---
+
+G2    libcosmic: vollständige Integration in fs-gui-engine-iced
+G2    fs-gui-engine-tui: Navigation-Traits implementieren (Corner/Side Menu in TUI)
+G2    fs-gui-engine-bevy: Navigation-Traits implementieren (3D-fähig)
+G2    fs-render + iced/bevy: Dioxus komplett raus (G2 plan)
+G2    ProgramView::Binding — Workflow-Editor (Programme verknüpfen)
 ```
-
-## 7.2 — Infrastruktur
-
-```
-✅ Vaultwarden — Store-Eintrag + pod.yml + i18n/en
-✅ Ntfy / UnifiedPush — Store-Eintrag + pod.yml + i18n/en
-✅ Element Call + coturn — Store-Eintrag + pod.yml + i18n/en
-[ ] libcosmic: vollständige Integration in fs-gui-engine-iced (G2.8, langfristig)
-```
-
----
 
 ---
 
@@ -841,45 +661,5 @@ Design Pattern: Chain-of-Responsibility (Rights) + Decorator (AuditLog) + Observ
 ```
 fs-apps:    archiviert 2026-04-01 (alle Apps in eigene Repos migriert)
 fs-builder: archiviert 2026-04-02 (Funktionalität in fs-managers; Pipeline-Pattern erhalten)
-
-Abgeschlossen (nicht mehr in TODO):
-fs-bootc, fs-libs (5 Primitives), fs-bus, fs-config, fs-db, fs-i18n, fs-theme,
-fs-render (Traits), fs-gui-engine-iced, fs-gui-engine-bevy, fs-web-engine, fs-web-engine-servo,
-fs-auth (Traits), fs-registry, fs-inventory, fs-session, fs-info, fs-container,
-fs-browser, fs-theme-app, fs-lenses, fs-ai, fs-container-app, fs-tasks, fs-bots,
-fs-store (Wizard H9a-H9d), fs-managers, Store/ Katalog (Basis),
-fs-documentation, fs-ci, GitHub Actions (alle Repos), Fork-Repos (CI)
-
-Phase 2 ✅ 2026-04-03 (Restpunkte ✅ 2026-04-03):
-Store/ Katalog: [storage]+[api]+[adapter]+[install_targets] für alle Kern-Pakete,
-Developer-Bundle, Workstation render-engine-Wahl, Wiki.js + Bulwark Mail.
-Outline + Telegram Adapter: [storage]+[api]+[install_targets] nachgetragen.
-fs-store: Install-Pipeline (7 Steps), BundleInstallStep (Sub-Pipeline),
-EngineSelectStep (Wizard), StoragePaths + ApiEndpoint, Storage/API-Tabs in
-detail_panel, CLI install/remove/update. cargo fmt + clippy + tests grün.
-```
-
----
-
-## Reihenfolge
-
-```
-1.  O6 + O7: offene Konzept-Entscheidungen ✅
-2.  Phase 5.1: Kanidm ✅ | Phase 5.2: Zentinel ✅
-3.  Phase 2: Store ✅ 2026-04-03
-4.  Phase 1: Bootstrap ✅ | Phase 3: fs-render ✅ | Phase 4: Desktop ✅
-5.  Phase 5.3–5.5: Stalwart ✅, Tuwunel ✅, Telegram ✅
-
---- Aktuell offen ---
-
-6.  Phase 4B: Desktop Visual + UX (Binary-Fix, Sidebar, SVG, Help, AI)
-7.  Phase 5B: Store Catalog-Vollständigkeit + Browsability ✅ 2026-04-05
-8.  Phase 5.X:  fs-pod-forge (Container YAML Configurator)
-9.  Phase 5.X+1: fs-app-forge (App Config File Configurator)
-10. Phase 5.X+2: Manager-Upgrade (Service Controller + Category Manager)
-11. Phase 5.6: Forgejo ✅ 2026-04-05 | Phase 5.7: Outline + Wiki.js ✅ 2026-04-04
-12. Phase 5B: Store Catalog-Vollständigkeit + Browsability ✅ 2026-04-05
-13. Phase 6.1: Apps (LensRegistry, TaskStore, ConversationStore) ✅ 2026-04-05
-14. Phase 6.2: Search (SearchStrategy, SearchView) ✅ 2026-04-05
-13. Phase 7: Federation & Infrastruktur ✅ 2026-04-05 (7.1 Rechte+Audit+Bus; 7.2 Vaultwarden+Ntfy+Element Call; AP-Grundstruktur G1+)
+CHANGELOG.md: nicht mehr gepflegt (seit 2026-03)
 ```

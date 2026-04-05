@@ -99,6 +99,9 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Bots](konzepte/bots.md) — Bot-Framework, Messenger-Adapter, mehrere Binaries pro Paket
 - [Themes](konzepte/themes.md) — Visuelles Design-System, Theme-Ressourcen
 - [UI-Standards](konzepte/ui-standards.md) — Naming Convention, Aktions-Icons, Menüpunkte
+- [Navigation: Corner & Side Menus](konzepte/navigation-menus.md) — Corner Menus, Side Menus, HoverMagnification, CompositeIcons, Responsive
+- [Activity Hub](konzepte/activity-hub.md) — Absichts-zentrische Navigation, Activities, Nesting, ActivityEngine-Trait, Program-as-Activity
+- [Program Views](konzepte/program-views.md) — Start, Info, Manual, SettingsConfig, SettingsContainer, Binding
 - [Manager](konzepte/manager.md) — Konfigurationswerkzeuge für alle Paket-Kategorien (7 Manager)
 - [Repository Manager](konzepte/repository-manager.md) — Gemeinsame Abstraktion für Repo-Verwaltung
 - [Synthesizer](konzepte/synthesizer.md) — Beschreibung → strukturierte Ausgabe, Formular-Vorausfüllung
