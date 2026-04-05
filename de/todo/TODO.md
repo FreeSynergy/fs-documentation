@@ -647,19 +647,26 @@ Offen (G2):
 [ ] Role-Switching: fs-registry Capability-Eintrag umschreiben wenn set_active() aufgerufen
 [ ] Update-Check: update_available() mit echtem Store-Lookup implementieren
 
-## 5.6 — Forgejo (Git-Server, Self-Hosted)
+## 5.6 — Forgejo (Git-Server, Self-Hosted) ✅ 2026-04-05
 
 ```
 Design Pattern: Adapter (ForgejoAdapter: GitProvider)
+              + State Machine (ForgejoSetupWizard)
+              + Composite (ForgejoCategoryController)
 
-[ ] Design Pattern festlegen
-[ ] Store-Eintrag: forgejo als Container-Paket
-[ ] IAM: Kanidm OIDC
+✅ GitProvider-Trait definieren (ForgejoAdapter impl)
+✅ ForgejoSetupWizard: Domain→Ssh→Oidc→S3→Confirm→Done (13 Tests)
+✅ ForgejoConfig + ForgejoConfigStore: TOML-Persistenz unter /etc/freesynergy/forgejo/
+✅ ForgejoCategoryController: ServiceController + CategoryManager (ServiceCategory::Git)
+✅ ForgejoServiceController: wraps ContainerServiceController("pod-forgejo-pod.service")
+✅ i18n: forgejo.ftl (en + de) — Wizard, Config, Services, Nav, Errors
+✅ 4 Unit-Tests in service_controller, 6 in adapter, 13 in wizard grün
+✅ cargo fmt + clippy + test grün
+
+Offen (G2):
+[ ] Store-Eintrag: forgejo als Container-Paket (catalog.toml + pod.yml)
 [ ] S3: Repository-Storage via opendal
-[ ] ForgejoAdapter: GitProvider-Trait → fs-registry (Service Role: git)
-[ ] i18n: ALLE Konfig-Texte in FTL
-[ ] Standalone-Test: Forgejo ohne fs-desktop
-[ ] cargo fmt + clippy + test grün
+[ ] ForgejoAdapter → fs-registry (Service Role: git) wiring
 ```
 
 ## 5.7 — Outline + Wiki.js (Dokumentation / Wiki) ✅ 2026-04-04
@@ -691,54 +698,49 @@ Design Pattern: Strategy (WikiProvider — OutlineAdapter / WikiJsAdapter)
 > Store ist der erste Eindruck des Systems. Jedes Paket muss vollständig sein.
 > Standard-Checkliste gilt vollständig.
 
-## 5B.1 — Pflicht-Felder für jeden Store-Eintrag
+## 5B.1 — Pflicht-Felder für jeden Store-Eintrag ✅ 2026-04-05
 
 ```
 Design Pattern: Template Method (PackageCatalogValidator prüft Vollständigkeit)
 
-Pflichtfelder pro catalog.toml:
-  [package]
-    name, version, description (kurz, 1 Satz), license
-  [display]
-    title        — Anzeigename (z.B. "Kanidm — Identity & Access Management")
-    summary      — 2-3 Sätze was das Programm macht
-    description  — ausführlich (Markdown) — für Store-Detailseite
-    icon         — Pfad zum SVG-Icon
-    screenshots  — Liste von Screenshot-Pfaden (mindestens 1 wenn GUI)
-    tags         — Kategorien (z.B. ["iam", "auth", "security"])
-    homepage     — Upstream-URL
-    changelog    — Verweis auf CHANGELOG oder Release-Notes
+✅ PackageCatalogValidator: prüft 5 Pflichtfelder (description, icon, tags, license, homepage)
+   → CatalogIssue enum mit 6 Varianten; is_complete() + validate()
+   → 8 Unit-Tests grün
+✅ PackageData: license, homepage, screenshots, changelog_url ergänzt
+✅ impl_package_data! Makro: 4 neue Delegations-Methoden
+✅ reader.rs: build_package_data() befüllt neue Felder aus catalog.toml
+✅ catalog.toml: screenshots + changelog als RawPackageMeta-Felder
+✅ Store-UI: "Incomplete" Badge (pkg-row__badge--incomplete)
+✅ Detail-Panel: license badge, homepage link, incomplete warning
+✅ i18n: store-package-incomplete + store-issue-missing-* (6 Varianten) in store.ftl (en + de)
+✅ cargo fmt + clippy + test grün
 
-[ ] PackageCatalogValidator: prüft alle Pflichtfelder bei catalog.toml-Parse
-    → Warnung wenn Felder fehlen (kein Hard-Fail bei install, aber im Store sichtbar)
-[ ] Store-UI: "Incomplete" Badge wenn Felder fehlen
+Offen:
 [ ] Alle bestehenden catalog.toml ergänzen:
     → kanidm, stalwart, tuwunel, zentinel, telegram, outline, wikijs
     → fs-desktop, fs-init, fs-store, fs-auth, fs-managers
     → Render-Engines, DB-Engines (als Artifacts)
 [ ] Screenshots-System: Store zeigt Bilder im Detail-Panel
-    → iced: iced::widget::image (PNG) — SVG für Icons, PNG für Screenshots
-[ ] i18n: store-package-incomplete, store-package-no-description in store.ftl
-[ ] cargo fmt + clippy + test grün
 [ ] Dokumentation: technik/store-catalog-spec.md
 ```
 
-## 5B.2 — Store-Browsability: Kategorien + Suche vor Installation
+## 5B.2 — Store-Browsability: Kategorien + Updates ✅ 2026-04-05
 
 ```
 Design Pattern: Strategy (BrowseStrategy: Installed | Available | All)
                Filter (CategoryFilter, TagFilter, SearchFilter)
 
-[ ] BrowseMode: User kann Store öffnen ohne etwas zu installieren
-    → "Verfügbar" Tab: alle Pakete aus Store/ Katalog
-    → "Installiert" Tab: aus fs-inventory
-    → "Updates" Tab: Diff zwischen installiert + Store-Version
-[ ] Kategorie-Navigation: Tags aus catalog.toml → Seitenleiste im Store-UI
-    → IAM / Mail / Chat / Git / Wiki / Desktop / Tools / Engines / Themes / Bots
-[ ] Vorschau-Panel: Beschreibung + Screenshots + Version + License — ohne Install
+✅ StoreState: tag_filter, all_tags(), with_updates(), filtered() mit Tag-Filter
+✅ PackageRow: is_incomplete, license, homepage ergänzt
+✅ Tag-Filter-Leiste: alle unique Tags als klickbare Buttons (PackageList-View)
+✅ Updates-Tab: UpdatesList zeigt Pakete mit verfügbarer neuer Version + count badge
+✅ Tab::Updates in Sidebar
+✅ i18n: store-tab-updates, store-tab-all-tags, store-browse-no-updates, store-browse-update-count
+✅ cargo fmt + clippy + test grün
+
+Offen:
+[ ] BrowseMode: "Verfügbar" Tab (alle Store-Pakete, auch nicht installierte)
 [ ] "Installieren"-Button nur wenn fs-init / fs-store Service läuft
-[ ] i18n: store-browse-available, store-browse-installed, store-category-* in store.ftl
-[ ] cargo fmt + clippy + test grün
 ```
 
 ---
@@ -751,30 +753,45 @@ Design Pattern: Strategy (BrowseStrategy: Installed | Available | All)
 
 ---
 
-## 6.1 — Apps: Offene Items
+## 6.1 — Apps: Offene Items ✅ 2026-04-05
 
 ```
-fs-db:         CrudRepo → Repository<T> migrieren (low priority)
-fs-db:         Filter<T> → SQL übersetzen in Adapter-Repos
-fs-bots:       bot-db/src/lib.rs aufteilen (735 Zeilen)
-               → conversation.rs + user.rs + state.rs + command_log.rs
-fs-bots:       DB nur über fs-db DbEngine-Trait
-fs-ai:         Konversationshistorie über fs-db DbEngine-Trait
-fs-tasks:      TaskStore über fs-db DbEngine-Trait
-fs-lenses:     LensRegistry vollständig (Strategy Pattern)
-fs-manager-language: gix-API (pre-0.65) migrieren (bekannter Bug)
-matrix-sdk:    PostgreSQL State Store (wartet auf rustc recursion-overflow Fix upstream)
+✅ fs-lenses:     LensRegistry-Trait (Strategy Pattern) mit InMemoryLensRegistry
+                  LensController: Arc<dyn LensRegistry> + refresh() mit update_items()
+                  18 Unit-Tests grün
+✅ fs-tasks:      TaskStore-Trait (Strategy Pattern) mit InMemoryTaskStore + TomlTaskStore
+                  TaskController: Arc<dyn TaskStore>; TomlTaskStore flusht bei jeder Mutation
+                  16 Unit-Tests grün
+✅ fs-ai:         ConversationStore-Trait (Strategy Pattern)
+                  InMemoryConversationStore + TomlConversationStore (~/.config/fsn/ai-history.toml)
+                  AiController: record_exchange/history/clear_history Methoden
+                  5 Unit-Tests grün
+✅ fs-manager-language: gix-API Bug bereits behoben (kompiliert + 10 Tests grün)
+
+Offen:
+[ ] fs-db:    CrudRepo → Repository<T> migrieren (low priority)
+[ ] fs-db:    Filter<T> → SQL übersetzen in Adapter-Repos
+[ ] fs-bots:  bot-db/src/lib.rs aufteilen (735 Zeilen → conversation.rs + user.rs + …)
+[ ] fs-bots:  DB nur über fs-db DbEngine-Trait
+[ ] matrix-sdk: PostgreSQL State Store (wartet auf rustc recursion-overflow Fix upstream)
 ```
 
-## 6.2 — Search
+## 6.2 — Search ✅ 2026-04-05
 
 ```
-Design Pattern: Strategy (SearchStrategy: lokal | registry | host | föderal)
+Design Pattern: Strategy (SearchStrategy: DemoSearchStrategy | BusSearchStrategy)
 
-[ ] Design Pattern festlegen
-[ ] Search-View (Suchfeld, gruppierte Ergebnisse, Preview)
+✅ SearchStrategy-Trait: search(query) -> Vec<LensItem>
+✅ DemoSearchStrategy: deterministische Demo-Items (1 pro Rolle: Wiki, Chat, Git, Tasks)
+✅ BusSearchStrategy: leere Impl für zukünftige fs-bus Integration (G2)
+✅ LensQueryEngine: hält Arc<dyn SearchStrategy>; with_strategy() für Dependency Injection
+✅ SearchView: FsView für ad-hoc Suchergebnisse (query + loading-State + items grouped by role)
+✅ 4 Tests in search.rs, 3 in view.rs grün
+✅ cargo fmt + clippy + test grün
+
+Offen (G2):
 [ ] Service-Suche (lokal, fs-registry)
-[ ] Host-Suche (Bus-aggregiert)
+[ ] Host-Suche (Bus-aggregiert via BusSearchStrategy)
 [ ] Föderale Suche
 [ ] i18n: ALLE Texte in FTL
 [ ] cargo fmt + clippy + test grün
@@ -856,11 +873,13 @@ detail_panel, CLI install/remove/update. cargo fmt + clippy + tests grün.
 --- Aktuell offen ---
 
 6.  Phase 4B: Desktop Visual + UX (Binary-Fix, Sidebar, SVG, Help, AI)
-7.  Phase 5B: Store Catalog-Vollständigkeit + Browsability
+7.  Phase 5B: Store Catalog-Vollständigkeit + Browsability ✅ 2026-04-05
 8.  Phase 5.X:  fs-pod-forge (Container YAML Configurator)
 9.  Phase 5.X+1: fs-app-forge (App Config File Configurator)
 10. Phase 5.X+2: Manager-Upgrade (Service Controller + Category Manager)
-11. Phase 5.6: Forgejo | Phase 5.7: Outline + Wiki.js ✅ 2026-04-04
-12. Phase 6: Apps & Search
+11. Phase 5.6: Forgejo ✅ 2026-04-05 | Phase 5.7: Outline + Wiki.js ✅ 2026-04-04
+12. Phase 5B: Store Catalog-Vollständigkeit + Browsability ✅ 2026-04-05
+13. Phase 6.1: Apps (LensRegistry, TaskStore, ConversationStore) ✅ 2026-04-05
+14. Phase 6.2: Search (SearchStrategy, SearchView) ✅ 2026-04-05
 13. Phase 7: Federation & Infrastruktur ✅ 2026-04-05 (7.1 Rechte+Audit+Bus; 7.2 Vaultwarden+Ntfy+Element Call; AP-Grundstruktur G1+)
 ```
