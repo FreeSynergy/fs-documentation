@@ -217,35 +217,20 @@ Implementiert in `fs-render/src/navigation.rs` (90 Tests grün, clippy + fmt sau
 - i18n: `navigation.ftl` (en + de)
 - Doku: `konzepte/navigation-menus.md` + `konzepte/program-views.md` aktualisiert
 
-## G1.2 — Navigation: iced-Implementierung (fs-gui-engine-iced)
+## G1.2 — Navigation: iced-Implementierung (fs-gui-engine-iced) ✅ 2026-04-05
 
-```
-Design Pattern: Interpreter (LayoutDescriptor → iced Element)
-Primär: iced (G1). TUI + bevy folgen automatisch (gleiche Traits, separater Durchgang).
-
-[ ] CornerMenu rendering:
-      Viertelkreis-Indikator (immer sichtbar — zeigt wo das Menü ist)
-      Radiales Aufklappen: Items erscheinen auf Kreisbogen
-      Standardgröße: konfigurierbar via DesktopConfig (Settings > Ansicht)
-
-[ ] SideMenu rendering:
-      Halbkreis-Indikator (immer sichtbar — zeigt wo das Menü ist)
-      Accordion-Animation: Items klappen von der Mitte nach oben+unten auf
-      Gleichmäßige Verteilung wenn wenige Items (muss Rand nicht berühren)
-
-[ ] HoverMagnification:
-      SVG-Icons skalieren verlustfrei → HoverMagnification kein Problem
-      Nachbar-Icons vergrößern sich proportional
-
-[ ] Sub-Menüs: Item-Klick öffnet neue Ebene (weitere Kreisbogen / Accordion-Zeile)
-
-[ ] Scroll-Fallback: wenn Items nicht reinpassen → scroll (wichtig für Mobile/Smartphone)
-
-[ ] Icon-Hintergründe: immer transparent (kein Hintergrund-Rect)
-
-[ ] i18n: alle neuen Texte in navigation.ftl
-[ ] cargo fmt + clippy + test grün
-```
+Implementiert in `fs-gui-engine-iced/src/navigation.rs` (18 Tests grün, clippy + fmt sauber).
+- `MenuConfig` — icon_size, max_icon_size, spread, indicator_radius, accent
+- `CornerMenuState` / `SideMenuState` — MVU-kompatibel (open, hovered_idx)
+- `NavMessage` enum — Toggle, ItemEntered, ItemLeft, Action für Corner + Side
+- `update_corner_menu()` / `update_side_menu()` — State-Updater (Dispatcher-freundlich)
+- Indikatoren: asymmetrische border-radius → Viertelkreis (Corner) / Halbkreis (Side)
+- Items: Column von transparenten Buttons; Höhe skaliert per Hover-Magnification
+- Sub-Items: ▶-Suffix auf label_key (Basis für Sub-Ebenen in G1.5)
+- Scroll-Fallback: `scrollable` ab SCROLL_THRESHOLD = 8 Items
+- Icon-Hintergründe: `background: None` → immer transparent
+- keys.rs: NAV_CORNER_INDICATOR, NAV_SIDE_INDICATOR, NAV_ITEM_HAS_SUB
+- Re-exports in lib.rs
 
 ## G1.3 — Navigation: Komponenten (fs-components) ✅ 2026-04-05
 
