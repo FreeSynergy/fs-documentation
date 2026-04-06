@@ -320,7 +320,7 @@ Settings-Seiten (fs-settings):  ← Appearance + Language + ServiceRoles + Packa
 [ ] Shortcuts-Settings: Tastaturkürzel-Editor
 
 Desktop-Shell (fs-gui-workspace):  ← HotReload + IcedLayoutInterpreter ✅ 2026-04-06
-[ ] AiHelpSource: echte gRPC-Anbindung an fs-ai
+    AiHelpSource: REST → POST /ai/chat ✅ 2026-04-06
 
 Store (fs-store + Store/):  ← Screenshots + BrowseMode + Install-Button ✅ 2026-04-06
 [ ] catalog.toml ergänzen: zentinel, telegram, fs-desktop, fs-init,

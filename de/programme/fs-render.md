@@ -192,12 +192,154 @@ pub trait Fs3dExtension {
 
 ---
 
+## Navigation-Traits (G1.1)
+
+Modul `navigation.rs` — Descriptor Pattern. Traits beschreiben die *Struktur* von
+Navigations-Elementen. Engines (iced, TUI, bevy) interpretieren die Deskriptoren
+und produzieren native Widgets. Engine-Wechsel erfordert keine App-Code-Änderung.
+
+### Geometrie-Primitives
+
+| Typ | Varianten | Beschreibung |
+|---|---|---|
+| `Corner` | `TopLeft / TopRight / BottomLeft / BottomRight` | Screen-Ecke für Corner-Menüs |
+| `Side` | `Left / Right / Top / Bottom` | Screen-Kante für Side-Menüs |
+| `IndicatorStyle` | `QuarterCircle / HalfCircle` | Form des immer-sichtbaren Indikators |
+| `Distribution` | `Centered / SpreadToEdges` | Item-Verteilung entlang der Kante |
+
+### Icons
+
+| Typ | Beschreibung |
+|---|---|
+| `IconRef { key: String }` | Namespace-Referenz: `"fs:apps/browser"` — Engine löst zur Renderzeit auf |
+| `CompositeIcon` | Zwei-Schicht-Icon: `primary` + optionales `secondary` mit `overlap_factor ∈ [0.0, 1.0]` |
+
+### Descriptor-Traits
+
+```
+CornerMenuDescriptor  — corner(), items(), indicator_style()
+SideMenuDescriptor    — side(), items(), indicator_style(), distribution()
+HoverMagnification    — base_size(), max_size(), spread(), size_at_distance(d)
+MenuItemDescriptor    — id, icon: CompositeIcon, label_key, action, sub_items (beliebig tief)
+```
+
+### ProgramView + ProgramViewProvider
+
+```rust
+pub enum ProgramView { Start, Info, Manual, SettingsConfig, SettingsContainer, Binding }
+
+pub trait ProgramViewProvider {
+    fn supported_views(&self) -> Vec<ProgramView>;
+    fn default_view(&self)    -> ProgramView;
+}
+```
+
+Programme deklarieren damit, welche Panels (Start, Info, Manual, …) sie anbieten.
+
+---
+
+## Activity Hub (G1.6)
+
+Modul `activity.rs` — Strategy Pattern (ein `ActivityEngine` pro Programm).
+
+```
+ActivityAction    — New / Open / Recent / Browse / Custom(String)
+ActivityCategory  — Document / Communication / Media / Data / Code / System / Custom(String)
+
+ActivityEngine (trait):
+  activity_id()        → &str
+  activity_name_key()  → &str          (FTL-Key)
+  supported_actions()  → Vec<ActivityAction>
+  default_view()       → ProgramView
+  category()           → ActivityCategory
+  can_be_default()     → bool
+```
+
+Die `Activity`-Struct und das `ActivityHub`-Registry leben in `fs-components`.
+
+---
+
+## HelpSource + FocusObserver (G1.7)
+
+Modul `help_source.rs` — Strategy (HelpSource) + Observer (FocusObserver).
+
+```rust
+pub trait HelpSource: Send + Sync {
+    fn context_key(&self) -> &'static str;   // z.B. "store.install"
+    fn action_keys(&self) -> Vec<&'static str>;
+}
+
+pub trait FocusObserver: Send + Sync {
+    fn on_focus(&self, element: FocusedElement);
+    fn focused_element(&self) -> Option<FocusedElement>;
+}
+
+pub struct FocusedElement {
+    pub element_id: String,
+    pub help_key:   Option<String>,  // None → generischer Fallback
+}
+```
+
+Screens implementieren `HelpSource`. Die Shell hält einen `FocusObserver` pro Fenster.
+`GeneralHelpComponent` liest `context_key()` + `action_keys()`;
+`FocusHelpComponent` liest `focused_element()`.
+
+---
+
+## UX-Extras (G1.9)
+
+Modul `ux_extras.rs` — mehrere Patterns, alle engine-agnostisch.
+
+| Typ / Trait | Pattern | Beschreibung |
+|---|---|---|
+| `BadgeKind` | Enum | `Unread(u32)`, `UpdateAvailable`, `Error`, `Running` |
+| `BadgedIcon` | Decorator | `CompositeIcon` + `Vec<BadgeKind>` — `is_visible()`, `unread_count()` |
+| `ThumbnailSource` | Observer | `capture(max_w, max_h)` → `Option<ThumbnailData>` (RGBA) |
+| `WindowLayoutMode` | Enum | `Normal → Tiling → FocusMode → Normal` (zyklisch via `.next()`) |
+| `QuickSwitchCommand` | Command | `open_windows()`, `activate(id)`, `close(id)` — Alt+Tab-Ersatz |
+| `NotificationEntry` | — | `id, level: NotificationLevel, title_key, body_key, timestamp` |
+| `NotificationCenter` | Facade | `push()`, `all()`, `dismiss(id)`, `clear_all()` |
+| `WorkspaceProfile` | — | `id, name_key, layout: WindowLayoutMode, pinned_activities` |
+| `WorkspaceProfileManager` | Strategy | `profiles()`, `active()`, `activate(id)`, `create()`, `remove()` |
+| `ClipboardEntry` | — | `id, preview, kind: Text/Image/File, timestamp` |
+| `ClipboardHistory` | Strategy | `push()`, `all()`, `get(id)`, `remove(id)`, `clear()` |
+| `PinboardEntry` | — | `id, title_key, content_key, color, tags` |
+| `PinboardStore` | Strategy | `pins()`, `add()`, `remove(id)`, `search(query)` |
+| `AutoThemeSchedule` | — | `light_hour`, `dark_hour` |
+| `AutoThemeManager` | Observer | `schedule()`, `set_schedule()`, `current_mode()` |
+| `BreadcrumbItem` | — | `label_key, action` |
+| `BreadcrumbProvider` | Strategy | `breadcrumbs()` — aktiver Navigationspfad |
+| `TouchGesture` | Enum | `Tap / DoubleTap / Swipe(Dir) / Pinch / Rotate` |
+| `TouchHandler` | Observer | `handle(gesture)` |
+| `SnapZone` | — | `id, label_key, rect: (x,y,w,h als f32)` |
+| `WindowSnapManager` | Strategy | `zones()`, `snap(window_id, zone_id)`, `unsnap(window_id)` |
+
+---
+
+## ManagerLayout (manager.rs)
+
+Standard-Sidebar+Content-Layout für alle Manager-Fenster.
+
+```
+ManagerLayout (trait):
+  title()            → String
+  sidebar_items()    → Vec<ManagerSidebarItem>
+  render_section()   → Box<dyn FsWidget>
+
+ManagerSidebarItem: id, label, icon
+Standard-Reihenfolge: List → Active → Actions → Info
+```
+
+Implementiert von Domain-Manager-Typen im jeweiligen `view.rs`-Shim.
+
+---
+
 ## Qualitäts-Gates
 
 ```
 cargo clippy --all-targets -- -D warnings   → 0 Fehler
 cargo fmt --check                           → sauber
-cargo test                                  → 40 Tests, alle grün
+cargo test                                  → 90+ Tests, alle grün
 cargo build --release                       → fehlerfrei
 ```
 

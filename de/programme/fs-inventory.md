@@ -66,6 +66,24 @@ CLI
 | `config_path`  | `String`          | Pfad zur Konfigurationsdatei           |
 | `data_path`    | `String`          | Pfad zum Datenverzeichnis              |
 | `validation`   | `ValidationStatus`| Ok / Incomplete / Failed               |
+| `caption`      | `Option<String>`  | **(G1.4)** Benutzer-Anzeigename bei Mehrfach-Instanzen — z. B. `"wiki.team-a"` vs. `"wiki.team-b"`. Fällt auf `id` zurück wenn `None`. |
+
+### ProgramGroup (G1.4)
+
+Fasst mehrere Instanzen desselben Programms zu einer Gruppe zusammen.
+Die Desktop-Shell rendert die Gruppe als ein Parent-Icon mit Sub-Icons pro Instanz.
+
+```
+ProgramGroup {
+    parent_id:      String,                   — resource_id der Haupt-Instanz
+    instances:      Vec<InstalledResource>,   — alle Instanzen in der Gruppe
+    group_icon_key: String,                   — "namespace:path", z.B. "fs:apps/wiki"
+}
+```
+
+`group_icon_key` verwendet dasselbe Format wie `fs_render::IconRef::key`,
+damit kein `fs-render`-Import in `fs-inventory` nötig ist.
+Conversion zu `IconRef` erfolgt in der Rendering-Schicht.
 
 ### ResourceStatus
 
@@ -213,7 +231,8 @@ CREATE TABLE installed_resources (
     status        TEXT NOT NULL DEFAULT '{"state":"active"}',
     config_path   TEXT NOT NULL DEFAULT '',
     data_path     TEXT NOT NULL DEFAULT '',
-    validation    TEXT NOT NULL DEFAULT 'incomplete'
+    validation    TEXT NOT NULL DEFAULT 'incomplete',
+    caption       TEXT          -- G1.4: Anzeigename bei Mehrfach-Instanzen (NULL = id)
 );
 
 CREATE TABLE service_instances (

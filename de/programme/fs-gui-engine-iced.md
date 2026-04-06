@@ -13,12 +13,15 @@ Implementiert alle `fs-render`-Traits auf Basis der
 ```
 fs-render (Traits — keine Engine-Abhängigkeit)
     └── fs-gui-engine-iced
-            IcedEngine  → implementiert RenderEngine
-            IcedWindow  → implementiert FsWindow
-            IcedWidget  → implementiert FsWidget
-            IcedTheme   → implementiert FsTheme
-            mvu         → Elm-Muster (Model–View–Update)
-            capability  → "render.engine.iced" für fs-registry
+            engine.rs    — IcedEngine  → implementiert RenderEngine
+            window.rs    — IcedWindow  → implementiert FsWindow
+            widget.rs    — IcedWidget  → implementiert FsWidget
+            theme.rs     — IcedTheme   → implementiert FsTheme
+            layout.rs    — IcedLayoutInterpreter: LayoutDescriptor → iced Elements
+            mvu.rs       — Elm-Muster (Model–View–Update), MvuApp
+            navigation.rs— CornerMenu / SideMenu Renderer (G1.2)
+            capability.rs— "render.engine.iced" Capability für fs-registry
+            keys.rs      — FTL-Konstanten (NAV_CORNER_INDICATOR, …)
 ```
 
 **Adapter Pattern**: `IcedEngine` adaptiert die iced-API an die
@@ -94,6 +97,69 @@ Consumer-Crates brauchen kein `iced` in ihrem `Cargo.toml`.
 
 ---
 
+## Navigation-Renderer (G1.2)
+
+Modul `navigation.rs` — Interpreter Pattern: liest `CornerMenuDescriptor` /
+`SideMenuDescriptor` (aus `fs-render`) und produziert iced-Element-Bäume.
+Kein iced-Import entweicht in Consumer-Code.
+
+### `MenuConfig`
+
+Laufzeit-Konfiguration für beide Menü-Typen.
+
+| Feld | Default | Beschreibung |
+|---|---|---|
+| `icon_size` | `32.0` | Basis-Item-Höhe (px) |
+| `max_icon_size` | `48.0` | Max-Höhe bei Hover (Magnification) |
+| `spread` | `2.0` | Falloff-Breite der Magnification |
+| `indicator_radius` | `20.0` | Indikator-Radius (px) |
+| `accent` | `#00E5E5` | FreeSynergy-Cyan für Indikator + aktive Items |
+
+### Zustands-Typen (MVU-kompatibel)
+
+```rust
+pub struct CornerMenuState { pub open: bool, pub hovered_idx: Option<usize> }
+pub struct SideMenuState   { pub open: bool, pub hovered_idx: Option<usize> }
+```
+
+### `NavMessage`
+
+```
+CornerMenuToggle(Corner)               — Menü öffnen/schließen
+CornerMenuItemEntered(Corner, usize)   — Hover: Magnification-Index setzen
+CornerMenuItemLeft(Corner)             — Hover verlassen
+CornerMenuAction(Corner, String)       — Item aktiviert (Action-String)
+
+SideMenuToggle(Side)
+SideMenuItemEntered(Side, usize)
+SideMenuItemLeft(Side)
+SideMenuAction(Side, String)
+```
+
+### State-Updater
+
+```rust
+// Fan-out: jeder Updater ignoriert Nachrichten für andere Menüs
+update_corner_menu(&mut state, corner, &msg);
+update_side_menu  (&mut state, side,   &msg);
+```
+
+### Render-Funktionen
+
+```
+render_corner_menu(descriptor, state, config) → Element<NavMessage>
+render_side_menu  (descriptor, state, config) → Element<NavMessage>
+```
+
+**Visuelles Verhalten:**
+- Indikatoren: asymmetrische `border-radius` → Viertelkreis (Corner) / Halbkreis (Side)
+- Items: Column transparenter Buttons; Höhe skaliert per Hover-Magnification (exponentieller Falloff)
+- Scroll-Fallback: `scrollable` ab `SCROLL_THRESHOLD = 8` Items
+- Sub-Items: `▶`-Suffix auf Label (Basis für weitere Ebenen in G1.5)
+- Icon-Hintergründe: immer transparent
+
+---
+
 ## Capability-Registrierung
 
 Beim Start registriert die Engine die Capability **`render.engine.iced`** in
@@ -135,7 +201,7 @@ wechselt.
 ```
 cargo clippy --all-targets -- -D warnings   → 0 Fehler
 cargo fmt --check                           → sauber
-cargo test                                  → alle grün
+cargo test                                  → 18+ Tests, alle grün
 cargo build --release                       → fehlerfrei
 ```
 
