@@ -195,6 +195,10 @@ G1.4  ✅  Program-Modell: caption, ProgramGroup, CompositeIcon-Felder, ProgramV
 G1.7  ✅  Content-Komponenten: ExpandableGroup, HelpSource, FocusObserver, GeneralHelp, FocusHelp, InventoryList (2026-04-06)
            SettingsConfigComponent (fs-settings), SettingsContainerComponent (fs-container-app)
            AiComponent (fs-ai), SearchComponent (fs-gui-workspace)
+G1.9  ✅  UX-Extras (2026-04-06): BadgedIcon, WindowLayoutMode (Normal/Tiling/Focus),
+           QuickSwitchCommand, NotificationCenter, WorkspaceProfileManager, TouchHandler,
+           PinboardStore, AutoThemeSchedule, BreadcrumbProvider, ClipboardHistory,
+           WindowSnapManager — fs-render + fs-components + fs-gui-workspace + i18n (40 Keys)
 ```
 
 ---
@@ -376,62 +380,9 @@ Technisches Debt (wartet auf Upstream):
 [ ] JMAP-Login-Flow in fs-settings konfigurierbar
 ```
 
-## G1.9 — UX-Extras (nach G1.5)
+## G1.9 — UX-Extras ✅ 2026-04-06
 
-```
-Design Pattern: Decorator (Badges) + Observer (FocusObserver) + Command (QuickSwitch)
-
-[ ] Status-Badges auf Icons:
-      ungelesen (Zahl), Update verfügbar (Punkt), Fehler (Ausrufezeichen), laufend (Kreis)
-      Implementierung: Badge-Overlay auf CompositeIcon
-
-[ ] Thumbnail-Preview bei Hover auf laufende Programme:
-      Mini-Vorschau des Programmfensters im Task-Menü
-
-[ ] Focus Mode:
-      Alles ausblenden — nur ein Fenster sichtbar
-      Toggle im Tiling-Toggle-Button der Titlebar
-
-[ ] Quick Switch Overlay (Alt+Tab-Ersatz):
-      Tastaturkürzel öffnet Overlay mit allen offenen Fenstern
-      Thumbnail-Previews, tastaturnavigierbar
-      FSView-Trait → funktioniert in iced + bevy (nicht TUI)
-
-[ ] Notification Center:
-      Alle Toasts aggregiert abrufbar (Corner Menu oder eigener Bereich)
-      Ungelesene werden markiert
-
-[ ] Workspace Profiles:
-      Layout-Presets speichern (z.B. "Coding", "Writing", "Admin")
-      In Settings > Ansicht verwaltbar
-
-[ ] Touch Gestures (Mobile / Touchscreen):
-      Swipe von Ecke = Corner Menu öffnen
-      Swipe von Kante = Side Menu öffnen
-      Pinch-to-zoom auf Desktop-Hintergrund
-
-[ ] Pinboard Widget:
-      Fixierbare Notizen/Links auf dem Desktop-Hintergrund
-      Als Activity oder als eigenständiges Widget
-
-[ ] Auto Dark/Light:
-      Thema wechselt automatisch je nach Tageszeit
-      Konfigurierbar in Settings > Ansicht (Zeitfenster)
-
-[ ] Breadcrumb in Titlebar:
-      Für Programme mit hierarchischer Navigation (Browser, Store, Docs)
-      Bereits header.rs vorhanden → einbinden
-
-[ ] Global Clipboard History:
-      Alle kopierten Inhalte abrufbar (Text, Bilder, Links)
-      Über Search-Komponente abrufbar (Kategorie "Clipboard")
-      Lokaler Store (verschlüsselt), kein Cloud-Sync
-
-[ ] Window Snap:
-      Automatische Anordnung bei mehreren offenen Fenstern
-      Ergänzt den Tiling-Toggle (manuell vs automatisch)
-      Snap-Zonen: 2er/3er/4er Raster, konfigurierbar
-      Tiling-Toggle: Manuell | Auto-Snap | Focus Mode
+Vollständig implementiert — siehe Abgeschlossene Phasen oben.
 ```
 
 ---
@@ -451,7 +402,7 @@ G1.5  Desktop-Shell-Refactor              ← nutzt G1.1–G1.3
 G1.6  Activity Hub                        ← nutzt G1.1–G1.3 + G1.4
 G1.7  Content-Komponenten                 ← parallel zu G1.5
 G1.8  Offene Items konsolidiert           ← parallel wenn möglich
-G1.9  UX-Extras                           ← nach G1.5
+G1.9  UX-Extras ✅                        ← abgeschlossen 2026-04-06
 
 --- Langfristig (G1+) ---
 

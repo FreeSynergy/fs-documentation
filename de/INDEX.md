@@ -102,6 +102,7 @@ Wenn er tiefer eintauchen will, klickt er sich zum Werkzeug durch — aber erst 
 - [Navigation: Corner & Side Menus](konzepte/navigation-menus.md) — Corner Menus, Side Menus, HoverMagnification, CompositeIcons, Responsive
 - [Activity Hub](konzepte/activity-hub.md) — Absichts-zentrische Navigation, Activities, Nesting, ActivityEngine-Trait, Program-as-Activity
 - [Program Views](konzepte/program-views.md) — Start, Info, Manual, SettingsConfig, SettingsContainer, Binding
+- [UX-Extras (G1.9)](konzepte/ux-extras.md) — Badges, FocusMode, QuickSwitch, NotificationCenter, Snap, Profiles, Clipboard, Pinboard, AutoTheme, Breadcrumb, Touch
 - [Manager](konzepte/manager.md) — Konfigurationswerkzeuge für alle Paket-Kategorien (7 Manager)
 - [Repository Manager](konzepte/repository-manager.md) — Gemeinsame Abstraktion für Repo-Verwaltung
 - [Synthesizer](konzepte/synthesizer.md) — Beschreibung → strukturierte Ausgabe, Formular-Vorausfüllung
