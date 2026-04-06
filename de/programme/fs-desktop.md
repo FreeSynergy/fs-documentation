@@ -234,18 +234,45 @@ Konfigurierbar unter **Settings > Ansicht**:
 
 ---
 
-## Geplante Erweiterungen
+## G1.5 — Desktop Shell Refactor ✅ 2026-04-06
+
+Umgesetzt in `fs-desktop/crates/fs-gui-workspace/src/`:
+
+### Neue Dateien
+
+| Datei | Inhalt |
+|-------|--------|
+| `capability_observer.rs` | `CapabilityObserver` — liest `FS_AI_CAPABILITY` env-var; G1.7: gRPC |
+| `corner_menus.rs` | `TasksMenu`, `SettingsMenu`, `HelpMenu`, `AiMenu` (CornerMenuDescriptor) |
+
+### Geänderte Dateien
+
+| Datei | Änderung |
+|-------|---------|
+| `shell.rs` | Sidebars entfernt; vier Corner-Menu-Overlays; Wallpaper; Titlebar mit View-Buttons + Tiling-Toggle |
+| `lib.rs` | Neue Module registriert + re-exportiert |
+| `main.rs` | Startet via `IcedEngine::run_app_with_sub` |
+
+### Neben-Fixes
+
+| Repo | Änderung |
+|------|---------|
+| `fs-render` | `SlotKind::Sidebar` Variante hinzugefügt |
+| `fs-gui-engine-iced` | `render_element()` für `ExpandableGroup`, `TextInput`, `SearchResult` |
+| `fs-i18n` | `desktop.ftl` (en + de): Corner-Menü-Keys, Titlebar-Keys, Ansicht-Settings-Keys |
+
+---
+
+## Nächste Schritte
 
 → Alle offenen Punkte: [TODO G1](../todo/TODO.md)
 
-Wichtigste nächste Schritte:
-
 | Phase | Inhalt |
 |-------|--------|
-| G1.1 | Navigations-Traits in fs-render |
-| G1.2 | iced-Implementierung der neuen Navigation |
-| G1.3 | Navigations-Komponenten in fs-components |
-| G1.5 | Desktop-Shell-Refactor (Corner Menus statt Sidebars) |
+| G1.4 | Program-Modell: `caption`, `ProgramGroup`, `ProgramViewProvider` per App |
 | G1.6 | Activity Hub |
+| G1.7 | CapabilityObserver: echtes gRPC zu fs-registry |
+| G1.8 | Offene Items konsolidiert |
+| G1.9 | UX-Extras: Status-Badges, Quick-Switch, Focus Mode |
 | G2 | TUI + bevy Navigation-Impls |
 | G2 | libcosmic vollständige Integration |
