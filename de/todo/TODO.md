@@ -332,10 +332,10 @@ Datenbank (fs-db):  ← CrudRepo entfernt + DbRecord für 9 Entities ✅ 2026-04
 Bots (fs-bots):  ← bot-db auf DbEngine-Trait migriert ✅ 2026-04-07
 
 Search (fs-lenses + fs-search):  ← BusSearchStrategy (wire+collect via mpsc+timeout) ✅ 2026-04-07
-[ ] Service-Suche: lokal via fs-registry
-[ ] Host-Suche: Bus-aggregiert via BusSearchStrategy
+    ← RegistrySearchStrategy (lokal via fs-registry) ✅ 2026-04-07
+    ← i18n: alle Keys auf Bindestrich-Format (FTL-konform) ✅ 2026-04-07
+[ ] Host-Suche: Service-seitige search::query Handler (in Manager-Repos)
 [ ] Föderale Suche
-[ ] i18n: ALLE Such-Texte in FTL
 
 Manager-Integration:
 [ ] UpdatePodConfig: ManagerAction::UpdatePodConfig → PodConfigurator::apply()
