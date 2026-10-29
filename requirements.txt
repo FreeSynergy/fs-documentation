@@ -1,0 +1,1 @@
+mkdocs>=1.6.0\nmkdocs-material>=9.5.0\nmkdocs-multilingual>=0.4.0
