@@ -56,8 +56,8 @@ nav:
   - en/: en/
 
 # Extra CSS/JS (optional für spätere Erweiterungen)
-extra_css:
-  - assets/extra.css
+#extra_css:
+#  - assets/extra.css
 
 # Copyright
 copyright: |
@@ -87,8 +87,8 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 # Extra configuration
 extra:
@@ -101,8 +101,7 @@ extra:
       link: https://gitlab.com/freesynergy
       name: FreeSynergy on GitLab (coming soon)
 
-# Aliases (zur einfacheren Navigation)
-alias: docs
+# Directory settings
 docs_dir: docs
 site_dir: site
 
