@@ -44,7 +44,7 @@ nav:
       - Deutsch: de/
       - English: en/
       - Français: fr/
-  -.de/wiki/: de/wiki/
+  - de/wiki/: de/wiki/
   - en/wiki/: en/wiki/
   - fr/wiki/: fr/wiki/
 
