@@ -1,5 +1,3 @@
-# Documentation FreeSynergy (Français)
-
 # 🌍 Documentation FreeSynergy
 
 Bienvenue dans la documentation officielle de **FreeSynergy** — un projet visant à fournir des outils et des connaissances open source pour améliorer la collaboration, le partage de connaissances et l'accessibilité.
@@ -8,9 +6,9 @@ Bienvenue dans la documentation officielle de **FreeSynergy** — un projet visa
 
 Cette documentation est disponible en plusieurs langues :
 
-- 🇫🇷 **Français** : [Version française](../fr/)
-- 🇩🇪 **Deutsch** : [Vers la version allemande](../de/)
-- 🇬🇧 **English** : [To the English version](../en/)
+- 🇫🇷 **Français** : [Version française](index.md)  
+- 🇩🇪 **Deutsch** : [Vers la version allemande](de/)  
+- 🇬🇧 **English** : [To the English version](en/)  
 
 ## 🚀 Ce que vous trouverez ici
 
@@ -32,8 +30,4 @@ Toutes les contributions sont les bienvenues — des corrections mineures aux tu
 
 ---
 
-<<<<<<< HEAD
 *Construit avec [MkDocs](https://www.mkdocs.org/) + [Material Theme](https://squidfunk.github.io/mkdocs-material/). Licence sous [Apache 2.0](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE).*
-=======
-*Construit avec [MkDocs](https://www.mkdocs.org/) + [Material Theme](https://squidfunk.github.io/mkdocs-material/). Licence sous [Apache 2.0](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE).*
->>>>>>> dd17ae0 (Fix mkdocs configuration: replace mkdocs-multilingual with mkdocs-static-i18n and move workflow to correct location)
