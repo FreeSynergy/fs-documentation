@@ -38,16 +38,19 @@ theme:
 plugins:
   - search
   - i18n:
-      default_language: de
       docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      default_language: de
       languages:
-        en:
+        - locale: en
           name: English
           build: true
-        de:
+        - locale: de
           name: Deutsch
           build: true
-        fr:
+        - locale: fr
           name: Français
           build: true
 
