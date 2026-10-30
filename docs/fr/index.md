@@ -32,4 +32,8 @@ Toutes les contributions sont les bienvenues — des corrections mineures aux tu
 
 ---
 
+<<<<<<< HEAD
 *Construit avec [MkDocs](https://www.mkdocs.org/) + [Material Theme](https://squidfunk.github.io/mkdocs-material/). Licence sous [Apache 2.0](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE).*
+=======
+*Construit avec [MkDocs](https://www.mkdocs.org/) + [Material Theme](https://squidfunk.github.io/mkdocs-material/). Licence sous [Apache 2.0](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE).*
+>>>>>>> dd17ae0 (Fix mkdocs configuration: replace mkdocs-multilingual with mkdocs-static-i18n and move workflow to correct location)

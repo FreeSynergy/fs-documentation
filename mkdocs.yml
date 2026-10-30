@@ -37,21 +37,27 @@ theme:
 # Plugins
 plugins:
   - search
-  - multilingual:
+  - i18n:
       default_language: de
+      docs_structure: folder
       languages:
-        - name: English
-          locale: en
+        en:
+          name: English
           build: true
-          directory: en
-        - name: Deutsch
-          locale: de
+        de:
+          name: Deutsch
           build: true
+        fr:
+          name: Français
+          build: true
+<<<<<<< HEAD
           directory: de
         - name: Français
           locale: fr
           build: true
           directory: fr
+=======
+>>>>>>> dd17ae0 (Fix mkdocs configuration: replace mkdocs-multilingual with mkdocs-static-i18n and move workflow to correct location)
 
 # Navigation
 nav:
