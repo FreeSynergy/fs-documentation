@@ -37,30 +37,16 @@ theme:
 # Plugins
 plugins:
   - search
-  - i18n:
-      docs_structure: folder
-      fallback_to_default: true
-      reconfigure_material: true
-      reconfigure_search: true
-      default_language: de
-      languages:
-        - locale: en
-          name: English
-          build: true
-        - locale: de
-          name: Deutsch
-          build: true
-          default: true
-        - locale: fr
-          name: Français
-          build: true
 
 # Navigation
 nav:
-  - Home: index.md
-  - de/: de/
-  - en/: en/
-  - fr/: fr/
+  - Home:
+      - Deutsch: de/
+      - English: en/
+      - Français: fr/
+  -.de/wiki/: de/wiki/
+  - en/wiki/: en/wiki/
+  - fr/wiki/: fr/wiki/
 
 # Extra CSS/JS (optional für spätere Erweiterungen)
 #extra_css:
