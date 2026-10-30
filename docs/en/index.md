@@ -6,9 +6,9 @@ Welcome to the official documentation of **FreeSynergy** — a project aimed at 
 
 This documentation is available in several languages:
 
-- 🇬🇧 **English**: [To the English version](index.md)  
-- 🇩🇪 **Deutsch**: [Zur deutschen Version](de/)  
-- 🇫🇷 **Français**: [Vers la version française](fr/)  
+- 🇬🇧 **English**: [To the English version](/en/)
+- 🇩🇪 **Deutsch**: [Zur deutschen Version](/de/)
+- 🇫🇷 **Français**: [Vers la version française](/fr/)  
 - 🌍 more languages coming soon — contributions welcome!
 
 ## 🚀 What you'll find here

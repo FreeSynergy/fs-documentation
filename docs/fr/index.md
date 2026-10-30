@@ -6,9 +6,9 @@ Bienvenue dans la documentation officielle de **FreeSynergy** — un projet visa
 
 Cette documentation est disponible en plusieurs langues :
 
-- 🇫🇷 **Français** : [Version française](index.md)  
-- 🇩🇪 **Deutsch** : [Vers la version allemande](de/)  
-- 🇬🇧 **English** : [To the English version](en/)  
+- 🇫🇷 **Français** : [Version française](/fr/)
+- 🇩🇪 **Deutsch** : [Vers la version allemande](/de/)
+- 🇬🇧 **English** : [To the English version](/en/)  
 
 ## 🚀 Ce que vous trouverez ici
 
