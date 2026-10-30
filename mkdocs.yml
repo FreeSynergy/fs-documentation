@@ -48,12 +48,17 @@ plugins:
           locale: de
           build: true
           directory: de
+        - name: Français
+          locale: fr
+          build: true
+          directory: fr
 
 # Navigation
 nav:
   - Home: index.md
   - de/: de/
   - en/: en/
+  - fr/: fr/
 
 # Extra CSS/JS (optional für spätere Erweiterungen)
 #extra_css:
