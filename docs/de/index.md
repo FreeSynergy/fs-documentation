@@ -9,6 +9,7 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 
 - 🇩🇪 **Deutsch**: [Zur deutschen Version](../de/)
 - 🇬🇧 **English**: [To the English version](../en/)
+- 🇫🇷 **Français**: [Vers la version française](../fr/)
 - 🌍 Weitere Sprachen folgen — contribute welcome!
 
 ## 🚀 Was du hier findest
@@ -23,7 +24,7 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 Du möchtest helfen? Das ist einfach:
 
 1. **Fork** dieses Repository
-2. Bearbeite oder füge Dokumentation hinzu (in `docs/de/` oder `docs/en/`)
+2. Bearbeite oder füge Dokumentation hinzu (in `docs/de/`, `docs/en/` oder `docs/fr/`)
 3. **Commit & Push**
 4. Erstelle einen **Pull Request**
 
@@ -38,10 +39,10 @@ Willkommen zur Dokumentation von FreeSynergy.
 Dieses Projekt ist in mehreren Sprachen verfügbar:
 - 🇩🇪 **Deutsch**: `./de/`
 - 🇬🇧 **Englisch**: `./en/`
+- 🇫🇷 **Français**: `./fr/`
 
 ## Was ist FreeSynergy?
 
 FreeSynergy ist eine Initiative, um quelloffene Tools und Dokumentationen zu erstellen, die Zusammenarbeit, Wissenstransfer und einfache Zugänglichkeit fördern.
 
 ## Projektstruktur
-
