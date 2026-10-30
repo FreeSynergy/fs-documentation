@@ -50,6 +50,7 @@ plugins:
         - locale: de
           name: Deutsch
           build: true
+          default: true
         - locale: fr
           name: Français
           build: true
