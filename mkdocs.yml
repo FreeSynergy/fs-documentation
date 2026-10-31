@@ -44,9 +44,51 @@ nav:
       - Deutsch: de/
       - English: en/
       - Français: fr/
-  - de/wiki/: de/wiki/
-  - en/wiki/: en/wiki/
-  - fr/wiki/: fr/wiki/
+  - de/apps/wiki/: de/apps/wiki/
+  - en/apps/wiki/: en/apps/wiki/
+  - fr/apps/wiki/: fr/apps/wiki/
+  - de/apps/messenger/: de/apps/messenger/
+  - en/apps/messenger/: en/apps/messenger/
+  - fr/apps/messenger/: fr/apps/messenger/
+  - de/apps/components/: de/apps/components/
+  - en/apps/components/: en/apps/components/
+  - fr/apps/components/: fr/apps/components/
+  - de/apps/marketing/: de/apps/marketing/
+  - en/apps/marketing/: en/apps/marketing/
+  - fr/apps/marketing/: fr/apps/marketing/
+  - de/apps/whiteboards/: de/apps/whiteboards/
+  - en/apps/whiteboards/: en/apps/whiteboards/
+  - fr/apps/whiteboards/: fr/apps/whiteboards/
+  - de/apps/helpdesk/: de/apps/helpdesk/
+  - en/apps/helpdesk/: en/apps/helpdesk/
+  - fr/apps/helpdesk/: fr/apps/helpdesk/
+  - de/apps/projektmanagement/: de/apps/projektmanagement/
+  - en/apps/projektmanagement/: en/apps/projektmanagement/
+  - fr/apps/projektmanagement/: fr/apps/projektmanagement/
+  - de/apps/kontakt/: de/apps/kontakt/
+  - en/apps/kontakt/: en/apps/kontakt/
+  - fr/apps/kontakt/: fr/apps/kontakt/
+  - de/apps/kalender/: de/apps/kalender/
+  - en/apps/kalender/: en/apps/kalender/
+  - fr/apps/kalender/: fr/apps/kalender/
+  - de/apps/desktop/: de/apps/desktop/
+  - en/apps/desktop/: en/apps/desktop/
+  - fr/apps/desktop/: fr/apps/desktop/
+  - de/apps/crm/: de/apps/crm/
+  - en/apps/crm/: en/apps/crm/
+  - fr/apps/crm/: fr/apps/crm/
+  - de/apps/demokratie/: de/apps/demokratie/
+  - en/apps/demokratie/: en/apps/demokratie/
+  - fr/apps/demokratie/: fr/apps/demokratie/
+  - de/apps/maps/: de/apps/maps/
+  - en/apps/maps/: en/apps/maps/
+  - fr/apps/maps/: fr/apps/maps/
+  - de/apps/erp/: de/apps/erp/
+  - en/apps/erp/: en/apps/erp/
+  - fr/apps/erp/: fr/apps/erp/
+  - de/apps/workflows/: de/apps/workflows/
+  - en/apps/workflows/: en/apps/workflows/
+  - fr/apps/workflows/: fr/apps/workflows/
 
 # Extra CSS/JS (optional für spätere Erweiterungen)
 #extra_css:
