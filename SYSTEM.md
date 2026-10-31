@@ -16,8 +16,7 @@ fs-documentation/
 │   │   ├── gestures/       # touch gestures (description/attributes/appearance)
 │   │   ├── animations/     # animations (description/attributes/appearance)
 │   │   └── data/           # standardized data (formats, models, fields, conventions, api)
-│   ├── en/                 # English documentation
-│   ├── fr/                 # French documentation
+│   └── en/                 # English documentation
 │   └── [language]/         # Additional languages
 ├── .github/                # GitHub workflows and templates
 ├── mkdocs.yml             # MkDocs configuration
@@ -50,7 +49,6 @@ All program documentation is organized in **categories** (categories) under `doc
 docs/[language]/apps/
 ├── wiki/                  # Wiki systems
 ├── messenger/            # Instant messaging
-├── components/           # UI components & libraries
 ├── marketing/            # Marketing & analytics tools
 ├── whiteboards/          # Digital whiteboards
 ├── helpdesk/             # Help desk systems
@@ -153,32 +151,9 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 3. Components (UI-Komponenten & Bibliotheken)
-
-**Description**: UI component libraries, design systems, and frontend frameworks
-
-**Programs**:
-- **bootstrap** - Popular CSS framework
-- **tailwindcss** - Utility-first CSS framework
-- **material-ui** - React components implementing Google's Material Design
-- **ant-design** - Enterprise-class UI design language
-- **bulma** - Modern CSS framework based on Flexbox
-- **semantic-ui** - Framework for developing with natural language
-- **foundation** - Responsive front-end framework
-- **chakra-ui** - Simple, modular component library
-- **radix-ui** - Unstyled, accessible components
-- **lit** - Lightweight library for building lightweight web components
-- **alpinejs** - Lightweight JavaScript framework
-- **vue** - Progressive JavaScript framework
-- **react** - Library for building user interfaces
-- **angular** - Platform for mobile and desktop web applications
-- **svelte** - Compiler-based component framework
-
-**What fits**: Any UI library, component system, design system, or frontend framework for web application development.
-
 ---
 
-### 4. Marketing (Marketing & Analytics)
+### 3. Marketing (Marketing & Analytics)
 
 **Description**: Marketing automation, CRM, and analytics tools
 
@@ -203,7 +178,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 5. Whiteboards (Whiteboard-Systeme)
+### 4. Whiteboards (Whiteboard-Systeme)
 
 **Description**: Collaborative digital whiteboards for brainstorming and planning
 
@@ -223,7 +198,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 6. Helpdesk (Help Desk & Support)
+### 5. Helpdesk (Help Desk & Support)
 
 **Description**: Customer support and ticket management systems
 
@@ -244,7 +219,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 7. Project Management (Projektmanagement)
+### 6. Project Management (Projektmanagement)
 
 **Description**: Tools for managing projects, tasks, and teams
 
@@ -269,7 +244,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 8. Contact/CRM (Kontakt/CRM)
+### 7. Contact/CRM (Kontakt/CRM)
 
 **Description**: Customer relationship management and contact management
 
@@ -294,7 +269,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 9. Calendar (Kalender)
+### 8. Calendar (Kalender)
 
 **Description**: Calendar and scheduling systems
 
@@ -319,7 +294,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 10. Desktop (Desktop-Applikationen)
+### 9. Desktop (Desktop-Applikationen)
 
 **Description**: Desktop applications and software
 
@@ -359,7 +334,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 11. CRM (Customer Relationship Management)
+### 10. CRM (Customer Relationship Management)
 
 **Description**: Customer relationship management systems
 
@@ -384,7 +359,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 12. Democracy (Demokratie-Systeme)
+### 11. Democracy (Demokratie-Systeme)
 
 **Description**: Democratic decision-making and participation platforms
 
@@ -404,7 +379,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 13. Maps (Kartensysteme)
+### 12. Maps (Kartensysteme)
 
 **Description**: Mapping and GIS systems
 
@@ -429,7 +404,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 14. ERP (Enterprise Resource Planning)
+### 13. ERP (Enterprise Resource Planning)
 
 **Description**: Enterprise resource planning systems
 
@@ -454,7 +429,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-### 15. Workflows (Workflow-Automatisierung)
+### 14. Workflows (Workflow-Automatisierung)
 
 **Description**: Workflow automation and integration platforms
 
@@ -609,7 +584,7 @@ Each program requires exactly 6 documentation files in German:
 
 ---
 
-### 4. `structure.md` - Struktur & UI/UX
+### 3. `structure.md` - Struktur & UI/UX
 
 **Purpose**: Document UI structure, layout, and user experience
 
@@ -664,7 +639,7 @@ Each program requires exactly 6 documentation files in German:
 
 ---
 
-### 5. `shortcuts.md` - Tastatur-Shortcuts
+### 4. `shortcuts.md` - Tastatur-Shortcuts
 
 **Purpose**: Document all keyboard shortcuts
 
@@ -710,7 +685,7 @@ Each program requires exactly 6 documentation files in German:
 
 ---
 
-### 6. `api.md` - API-Dokumentation
+### 5. `api.md` - API-Dokumentation
 
 **Purpose**: Document the API for program integration
 

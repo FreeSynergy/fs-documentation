@@ -8,7 +8,6 @@ This documentation is available in several languages:
 
 - 🇬🇧 **English**: [To the English version](/en/)
 - 🇩🇪 **Deutsch**: [Zur deutschen Version](/de/)
-- 🇫🇷 **Français**: [Vers la version française](/fr/)  
 - 🌍 more languages coming soon — contributions welcome!
 
 ## 🚀 What you'll find here
@@ -23,7 +22,7 @@ This documentation is available in several languages:
 Want to help? It's easy:
 
 1. **Fork** this repository  
-2. Edit or add documentation (in `docs/de/`, `docs/en/` or `docs/fr/`)  
+2. Edit or add documentation (in `docs/de/` or `docs/en/`)  
 3. **Commit & push**  
 4. Create a **Pull Request**  
 

@@ -15,7 +15,6 @@ All documentation is maintained in multiple languages to ensure global accessibi
 
 - 🇩🇪 **German / Deutsch**: [de/](docs/de/)
 - 🇬🇧 **English**: [en/](docs/en/)
-- 🇫🇷 **French / Français**: [fr/](docs/fr/)
 - 🌍 More languages can be added easily by creating new subdirectories (e.g., `es/`, `it/`, etc.)
 
 ## 📁 Project structure

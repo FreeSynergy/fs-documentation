@@ -29,4 +29,4 @@ Nicht öffentlich dokumentiert.
 
 ## Skin-Hinweis
 
-Für API-getriebene Whiteboard-Skins better **Miro** oder **tldraw** als Pate nehmen; Mural liefert die Moderations-/Sequence-Muster ([components/Abläufe](../../components/)).
+Für API-getriebene Whiteboard-Skins better **Miro** oder **tldraw** als Pate nehmen; Mural liefert die Moderations-/Sequence-Muster ([components/Abläufe](../../../../components/index.md))).

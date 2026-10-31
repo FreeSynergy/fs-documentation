@@ -6,13 +6,13 @@ This directory contains documentation for menu items and editors of various wiki
 
 ## Included Documentation
 
-- [Wiki.js](/de/wiki/skins/wikijs/index.md) - Modern, lightweight wiki software
-- [XWiki](/de/wiki/skins/xwiki/index.md) - Enterprise wiki platform
-- [MediaWiki](/de/wiki/skins/mediawiki/index.md) - The most popular wiki software (Wikipedia)
-- [Tango.io](/de/wiki/skins/tango.io/index.md) - Knowledge management platform
-- [Notion](/de/wiki/skins/notion/index.md) - All-in-one collaboration platform
-- [Confluence](/de/wiki/skins/confluence/index.md) - Enterprise wiki by Atlassian
-- [VSCodium](/de/wiki/skins/vscodium/index.md) - Open-source code editor (VS Code fork)
+- [Wiki.js](/de/apps/wiki/skins/wikijs/index.md) - Modern, lightweight wiki software
+- [XWiki](/de/apps/wiki/skins/xwiki/index.md) - Enterprise wiki platform
+- [MediaWiki](/de/apps/wiki/skins/mediawiki/index.md) - The most popular wiki software (Wikipedia)
+- [Tango.io](/de/apps/wiki/skins/tango.io/index.md) - Knowledge management platform
+- [Notion](/de/apps/wiki/skins/notion/index.md) - All-in-one collaboration platform
+- [Confluence](/de/apps/wiki/skins/confluence/index.md) - Enterprise wiki by Atlassian
+- [VSCodium](/de/apps/wiki/skins/vscodium/index.md) - Open-source code editor (VS Code fork)
 
 ## Directory Structure
 

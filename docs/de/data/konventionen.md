@@ -58,8 +58,8 @@ Jedes Programm in `apps/<kategorie>/skins/<programm>/` bekommt **sieben** Dateie
 ## Sprachkonvention
 
 1. Deutsch (`docs/de/`) ist die Leitversion und wird zuerst geschrieben
-2. Englisch (`docs/en/`) und Französisch (`docs/fr/`) spiegeln die Verzeichnisstruktur
-3. Verzeichnis- und Dateinamen sind sprachunabhängig (gleiches Schema in `de/`, `en/`, `fr/`)
+2. Englisch (`docs/en/`) spiegelt die Verzeichnisstruktur (Französisch pausiert)
+3. Verzeichnis- und Dateinamen sind sprachunabhängig (gleiches Schema in `de/` und `en/`)
 4. Produkt- und Projektnamen bleiben unübersetzt
 5. Fachbegriffe aus UI und API bleiben englisch (`Modal`, `Toast`, `Endpoint`)
 

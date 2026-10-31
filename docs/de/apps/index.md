@@ -9,7 +9,6 @@ Programme sind in **Kategorien** gegliedert. Programme, deren Oberfläche in Fre
 | [Wiki](wiki/) | Wiki- und Wissenssysteme | abgeschlossen (7 Programme) |
 | [Messenger](messenger/) | Chat, E-Mail, soziale Netzwerke | teilweise (7 Programme) |
 | [Desktop](desktop/) | Desktop-Programme, Dashboards, Startseiten | abgeschlossen (12 Programme) |
-| [Components](components/) | UI-Bibliotheken und Frameworks | eigene Elemente-Doku: [components/](../components/) |
 | [Whiteboards](whiteboards/) | Kollaborative Whiteboards | vorgesehen |
 | [Helpdesk](helpdesk/) | Tickets und Support | vorgesehen |
 | [Projektmanagement](projectmanagement/) | Aufgaben, Boards, Projekte | vorgesehen |

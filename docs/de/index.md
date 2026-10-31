@@ -8,7 +8,6 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 
 - 🇩🇪 **Deutsch**: [Zur deutschen Version](/de/)
 - 🇬🇧 **English**: [To the English version](/en/)
-- 🇫🇷 **Français**: [Vers la version française](/fr/)  
 - 🌍 Weitere Sprachen folgen — contribute welcome!
 
 ## 🚀 Was du hier findest
@@ -24,7 +23,6 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 |---------|--------|
 | [Apps](apps/) | Programme je Kategorie, mit Skin-Dokumentation (Menü, Funktionen, Struktur, Shortcuts, API) |
 | [Components](components/) | UI-Elemente: Beschreibung, Aussehen, Attribute (73 Elemente) |
-| [Components-Bibliotheken](apps/components/) | Frameworks und Design-Systeme (Bootstrap, Vue, React, …) |
 | [Gesten](gestures/) | Touch-Interaktionen: Tap, Swipe, Drag, Pinch, Spread, Rotate, Shake |
 | [Animationen](animations/) | Übergänge und Effekte: Fade, Slide, Zoom, Bounce, Flip, Pulse, Skeleton u. a. |
 | [Standardisierte Daten](data/) | Formate, Modelle, Felder, Konventionen und das einheitliche API-Muster |
@@ -34,7 +32,7 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 Du möchtest helfen? Das ist einfach:
 
 1. **Fork** dieses Repository  
-2. Bearbeite oder füge Dokumentation hinzu (in `docs/de/`, `docs/en/` oder `docs/fr/`)  
+2. Bearbeite oder füge Dokumentation hinzu (in `docs/de/` oder `docs/en/`)  
 3. **Commit & Push**  
 4. Erstelle einen **Pull Request**  
 

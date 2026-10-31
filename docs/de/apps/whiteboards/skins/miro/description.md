@@ -28,4 +28,4 @@ Miro ist der virtuelle Workshop-Raum: ein unbegrenztes Whiteboard, in dem Teams 
 ## Für wen geeignet
 
 - Workshop-/Produktteams mit großem Moderationsbedarf
-- FreeSynergy-Skins: Frame/Sticky/Connector-Elemente als Standard-Baustein-Set ([components](../../components/))
+- FreeSynergy-Skins: Frame/Sticky/Connector-Elemente als Standard-Baustein-Set ([components](../../../../components/index.md)))
