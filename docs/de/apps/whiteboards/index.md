@@ -17,6 +17,23 @@ Dieser Bereich enthält Dokumentation für verschiedene Whiteboard- und Kollabor
 - **gitmind** - Mind-Mapping-Tool
 - **mindmeister** - Online Mind-Mapping
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/whiteboards/skins/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [draw.io -](./skins/drawio/index.md) - draw.io -
+- [Excalidraw -](./skins/excalidraw/index.md) - Excalidraw -
+- [Miro](./skins/miro/index.md) - Miro
+- [Mural](./skins/mural/index.md) - Mural
+- [OpenBoard](./skins/openboard/index.md) - OpenBoard
+- [tldraw -](./skins/tldraw/index.md) - tldraw -
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist ein Whiteboard?
 
 Ein Whiteboard ist ein digitales Tool zur visuellen Zusammenarbeit und Brainstorming. Whiteboards ermöglichen:
@@ -59,7 +76,7 @@ Bei der Wahl eines Whiteboard-Tools sollten folgende Kriterien berücksichtigt w
 
 ## Verwandte Kategorien
 
-- [Projektmanagement](../projektmanagement/) - Project Management Tools
+- [Projektmanagement](../projectmanagement/) - Project Management Tools
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
 - [Messenger](../messenger/) - Kommunikation und Chat
 

@@ -14,4 +14,4 @@ docs/[language]/apps/[category]/
 
 ## Documentation du système
 
-Voir [SYSTEM.md](../../SYSTEM.md) pour plus d'informations sur la structure de documentation.
+Voir le fichier SYSTEM.md (racine du dépôt) pour plus d'informations sur la structure de documentation.

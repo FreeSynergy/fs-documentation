@@ -2,29 +2,57 @@
 
 ## Übersicht
 
-Dieser Bereich enthält Dokumentation für verschiedene Desktop-Applikationen und Software.
+Dieser Bereich enthält die Dokumentation für verschiedene Desktop-Applikationen und Software.
+
+## Skin-Dokumentation
+
+Programme ohne eigenes Skin-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
+
+→ [Desktop-Skins](skins/index.md)
+
+Dokumentiert: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
+
+## Dashboard- und Startseiten-Systeme
+
+- **homarr** - Homelab-Dashboard mit Widgets und Docker-Integration
+- **heimdall** - persönliches Dashboard mit Server-Statistiken
+- **homer** - statisches Dashboard aus YAML-Konfiguration
+- **dashy** - ausbaufähiges Dashboard mit Authentifizierung und Widgets
+- **homepage** - Service-Dashboard mit Live-Widgets
+- **gethomepage** - Service-Client-Bibliothek für die Widgets von homepage
+- **launchboard** - kommerzielles No-Code-Dashboard
+- **synology-dsm** - NAS-Portal mit eigener REST-API
+
+## System-Oberflächen (NAS, Virtualisierung, Netzwerk)
+
+Auch diese Programme haben eine desktopartige Oberfläche und sind als Skin dokumentiert:
+
+- **unraid** - NAS-OS mit Array, Docker, VMs und GraphQL-API
+- **proxmox** - Virtualisierungsplattform mit REST-API `/api2/json`
+- **truenas** - ZFS-NAS mit Apps, VMs und JSON-RPC-API v2.0
+- **opnsense** - Firewall und Router mit MVC-REST-API
 
 ## Verfügbare Systeme
 
 - **libreoffice** - Office Suite
-- **firefox** - Web Browser
+- **firefox** - Web-Browser
 - **chrome** - Google Chrome
-- **thunderbird** - E-Mail Client
+- **thunderbird** - E-Mail-Client
 - **krita** - Digitale Malerei
-- **gimp** - Image Editor
-- **inkscape** - Vektor-Grafik Editor
+- **gimp** - Bildbearbeitung
+- **inkscape** - Vektorgrafik-Editor
 - **blender** - 3D Creation Suite
 - **obs-studio** - Video Recording und Streaming
-- **audacity** - Audio Editor
-- **shotcut** - Video Editor
-- **kdenlive** - Video Editor
+- **audacity** - Audio-Editor
+- **shotcut** - Video-Editor
+- **kdenlive** - Video-Editor
 - **vlc** - Media Player
 - **mpv** - Media Player
 - **telegram-desktop** - Desktop Messenger
 - **element-desktop** - Desktop Messaging
 - **discord** - Desktop App
 - **slack** - Desktop App
-- **zoom** - Video Konferenz
+- **zoom** - Video-Konferenz
 - **skype** - Kommunikationsplattform
 
 ## Was ist eine Desktop-Applikation?
@@ -68,7 +96,7 @@ Bei der Wahl einer Desktop-Applikation sollten folgende Kriterien berücksichtig
 
 - [Messenger](../messenger/) - Kommunikation und Chat
 - [Wiki](../wiki/) - Wissensmanagement und Dokumentation
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

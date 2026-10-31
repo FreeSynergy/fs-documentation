@@ -22,6 +22,23 @@ Dieser Bereich enthält Dokumentation für verschiedene Workflow-Automatisierung
 - **traefik** - Reverse Proxy
 - **nifi** - Dataflow Automation
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/workflows/skins/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Apache Airflow](./skins/apache-airflow/index.md) - Apache Airflow
+- [Make](./skins/make/index.md) - Make
+- [n8n](./skins/n8n/index.md) - n8n
+- [Node-RED](./skins/node-red/index.md) - Node-RED
+- [Prefect](./skins/prefect/index.md) - Prefect
+- [Zapier](./skins/zapier/index.md) - Zapier
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist Workflow-Automatisierung?
 
 Workflow-Automatisierung ist der Einsatz von Software zur Automatisierung von wiederkehrenden Aufgaben und Prozessen. Workflow-Automatisierungssysteme umfassen:
@@ -63,9 +80,9 @@ Bei der Wahl eines Workflow-Automatisierungssystems sollten folgende Kriterien b
 
 ## Verwandte Kategorien
 
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [CRM](../kontakt/) - Contact Management
+- [CRM](../contact/) - Contact Management
 
 ## Schnellstart
 

@@ -20,7 +20,7 @@ Eine Gallery ist ein Container-Element, das mehrere Bilder in einem Raster oder 
 | **Masonry** | Unregelmäßige Karten-Anordnung | Foto-Blogs |
 | **Carousel** | Slideshow mit Vor/Zurück | Feature-Galerien |
 | **Lightbox** | Klick öffnet Grossansicht | Bildergalerien |
-| **瀑布** | Verschachtelte Spalten | Pinterest-Stil |
+| **Masonry** | Verschachtelte Spalten | Pinterest-Stil |
 
 ## Größe-Varianten
 

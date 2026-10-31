@@ -63,7 +63,7 @@ Lors du choix d'une bibliothèque UI, considérez les critères suivants :
 ## Catégories connexes
 
 - [Marketing](../marketing/) - Outils marketing et analyses
-- [Gestion de projet](../projektmanagement/) - Outils de gestion de projet
+- [Gestion de projet](../projectmanagement/) - Outils de gestion de projet
 
 ## Démarrage rapide
 

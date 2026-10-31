@@ -10,6 +10,12 @@ This document contains all important information for LLMs/agents working on the 
 fs-documentation/
 ├── docs/                    # Documentation source files
 │   ├── de/                 # German documentation (primary)
+│   │   ├── apps/           # programs, grouped by category
+│   │   │   └── [category]/skins/[program]/   # 7 files per program
+│   │   ├── components/     # UI elements (description/appearance/attributes)
+│   │   ├── gestures/       # touch gestures (description/attributes/appearance)
+│   │   ├── animations/     # animations (description/attributes/appearance)
+│   │   └── data/           # standardized data (formats, models, fields, conventions, api)
 │   ├── en/                 # English documentation
 │   ├── fr/                 # French documentation
 │   └── [language]/         # Additional languages
@@ -48,12 +54,12 @@ docs/[language]/apps/
 ├── marketing/            # Marketing & analytics tools
 ├── whiteboards/          # Digital whiteboards
 ├── helpdesk/             # Help desk systems
-├── projektmanagement/    # Project management
-├── kontakt/              # Contact management (CRM)
-├── kalender/             # Calendar systems
+├── projectmanagement/    # Project management
+├── contact/              # Contact management (CRM)
+├── calendar/             # Calendar systems
 ├── desktop/              # Desktop applications
 ├── crm/                  # Customer relationship management
-├── demokratie/           # Democracy systems
+├── democracy/           # Democracy systems
 ├── maps/                 # Mapping systems
 ├── erp/                  # Enterprise resource planning
 ├── workflows/            # Workflow automation
@@ -68,16 +74,30 @@ docs/[language]/apps/
 
 ### File Naming Conventions
 
-Each program requires exactly **6 documentation files**:
+Each program requires exactly **7 documentation files** (`index.md` plus the 6 core files):
 
 | File | Purpose | German Description |
 |------|---------|-------------------|
+| `index.md` | Entry point | Übersicht + Links auf die 6 Dateien |
 | `menu.md` | Menu structure | Alle Menüpunkte und Navigationsstruktur |
 | `features.md` | Features | Funktionen, Editoren, Haupt-Features |
 | `description.md` | Description | Was das Programm macht, Vorteile, Abgrenzung |
 | `structure.md` | Structure | UI/UX, Fensterstruktur, Layout |
 | `shortcuts.md` | Shortcuts | Alle Tastatur-Shortcuts |
 | `api.md` | API | REST API, GraphQL, Webhooks, SDKs |
+
+### Non-Program Documentation Areas
+
+Areas outside `apps/` use their own, smaller file sets:
+
+| Area | Location | Files per entry |
+|------|----------|-----------------|
+| UI components | `docs/de/components/<group>/<element>/` | `description.md`, `appearance.md`, `attributes.md` (+ `usage.md`, `examples.md` where useful) |
+| Gestures | `docs/de/gestures/<gesture>/` | `description.md`, `attributes.md`, `appearance.md` |
+| Animations | `docs/de/animations/<animation>/` | `description.md`, `attributes.md`, `appearance.md` |
+| Standardized data | `docs/de/data/` | `index.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md` |
+
+Every area has an `index.md` that lists all entries in a table and documents the shared attributes/configuration.
 
 ---
 
@@ -302,6 +322,16 @@ Each program requires exactly **6 documentation files**:
 ### 10. Desktop (Desktop-Applikationen)
 
 **Description**: Desktop applications and software
+
+**Programs with skin documentation** (`apps/desktop/skins/<program>/`):
+- **homarr** - Homelab dashboard with widgets and Docker integration
+- **heimdall** - Personal dashboard with server statistics (Laravel)
+- **homer** - Static dashboard, YAML configuration only
+- **dashy** - Highly configurable dashboard (Vue) with auth and widgets
+- **homepage** - Static service dashboard with live widgets
+- **gethomepage** - Service client library behind homepage
+- **launchboard** - Commercial no-code homelab dashboard
+- **synology-dsm** - Commercial NAS desktop portal (`SYNO.*` REST API)
 
 **Programs**:
 - **libreoffice** - Office suite
@@ -756,6 +786,35 @@ Each program requires exactly 6 documentation files in German:
 
 ---
 
+## 🖱️ Interaction Areas (Gestures and Animations)
+
+### Gestures (`docs/de/gestures/<gesture>/`)
+
+tap, double-tap, long-press, swipe, drag, pinch, spread, rotate, shake
+
+Each gesture: `description.md`, `attributes.md`, `appearance.md`. Shared attributes are listed in `gestures/index.md` (`onTap` … `onShake`, thresholds, `enabled`).
+
+### Animations (`docs/de/animations/<animation>/`)
+
+fade-in, fade-out, slide-in, slide-out, zoom-in, zoom-out, bounce-in, bounce-out, flip, rotate, spin, scale-in, scale-out, collapse, expand, unfold, shake, wiggle, pulse, heartbeat, ripple, highlight, glow, progress, skeleton, typing, elastic, rubber-band, morph, cross-fade, parallax, stagger (32)
+
+Grouped in `animations/index.md` as: entrance, exit, feedback, loop, state change, organization. Shared attributes: `animation`, `duration`, `timingFunction`, `delay`, `iterationCount`, `direction`, `fillMode`, `playState`, plus `respectReducedMotion`.
+
+Note: `gestures/shake` (input: user shakes the device) and `animations/shake` (output: element wobbles as feedback) are deliberately separate documents.
+
+## 📦 Standardized Data (`docs/de/data/`)
+
+| File | Content |
+|------|---------|
+| `index.md` | Overview, models table, data types, basic rules |
+| `formate.md` | JSON, NDJSON, YAML, TOML, CSV/TSV, XML, MessagePack, Parquet, Markdown frontmatter, ICS, VCF, GeoJSON, JSON Schema |
+| `modelle.md` | User, Team, Message, Document, Block, Event, Task, Contact, Location, File, Tag, Comment, Notification, Revision, Integration |
+| `felder.md` | ID, time, naming, communication, enums, permissions, metadata fields; null rules |
+| `konventionen.md` | Naming, file sets, versioning, JSON Schema pattern, validation, i18n, accessibility data |
+| `api.md` | Shared CRUD pattern, response envelope, pagination, filters, error format, sync, webhooks, SDKs |
+
+Program `api.md` files document program-specific deviations from this pattern.
+
 ## 🔗 Cross-Linking Requirements
 
 ### Within a Program's Documentation
@@ -815,10 +874,11 @@ All 6 files should include cross-links to each other:
 
 2. **Create the folder structure**:
    ```bash
-   docs/[language]/apps/[category]/[program-name]/
+   docs/[language]/apps/[category]/skins/[program-name]/
    ```
 
-3. **Create the 6 required files**:
+3. **Create the 7 required files**:
+   - `index.md`
    - `menu.md`
    - `features.md`
    - `description.md`
@@ -826,13 +886,15 @@ All 6 files should include cross-links to each other:
    - `shortcuts.md`
    - `api.md`
 
-4. **Follow the template structure** from existing programs
+4. **Follow the template structure** from existing programs (reference: `docs/de/apps/wiki/skins/mediawiki/`)
 
 5. **Add cross-links** in all files
 
-6. **Update the mkdocs.yml** navigation section if needed
+6. **Update the category `skins/index.md`** with the new program entry
 
-7. **Test the documentation** locally with MkDocs
+7. **Update the mkdocs.yml** navigation section if needed
+
+8. **Test the documentation** locally with MkDocs
 
 ---
 

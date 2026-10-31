@@ -26,3 +26,10 @@ Jedes Element wird in eigenen Verzeichnissen dokumentiert mit:
 - **73 Elemente** insgesamt
 - **97 Markdown-Dateien** dokumentiert
 - Alle Elemente haben mindestens eine `description.md`
+
+## Siehe auch
+
+- [Gesten](../gestures/) - Interaktion der Elemente (Tap, Swipe, Drag, Pinch, Spread, Rotate, Shake)
+- [Animationen](../animations/) - Übergänge und Effekte der Elemente
+- [Standardisierte Daten](../data/) - Felder, Typen und Attribute
+- [Apps](../apps/) - Programme, die diese Elemente verwenden

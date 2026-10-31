@@ -68,7 +68,7 @@ Lors du choix d'une application de bureau, considérez les critères suivants :
 
 - [Messagerie](../messenger/) - Communication et discussion
 - [Wiki](../wiki/) - Gestion des connaissances et documentation
-- [Gestion de projet](../projektmanagement/) - Gestion de projet
+- [Gestion de projet](../projectmanagement/) - Gestion de projet
 
 ## Démarrage rapide
 

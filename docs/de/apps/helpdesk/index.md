@@ -18,6 +18,25 @@ Dieser Bereich enthält Dokumentation für verschiedene Help Desk und Ticketsyst
 - **servertime** - Help Desk Software
 - **kayako** - Customer Support Platform
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/helpdesk/skins/<programm>/`.
+
+**dokumentiert (8 Programme):**
+
+- [Freshdesk](./skins/freshdesk/index.md) - Freshdesk
+- [GLPI](./skins/glpi/index.md) - GLPI
+- [Helodesk](./skins/helodesk/index.md) - Helodesk
+- [Help Scout](./skins/helpscout/index.md) - Help Scout
+- [osTicket](./skins/osticket/index.md) - osTicket
+- [Request Tracker (RT)](./skins/request-tracker/index.md) - Request Tracker (RT)
+- [Zammad](./skins/zammad/index.md) - Zammad
+- [Zendesk](./skins/zendesk/index.md) - Zendesk
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist ein Help Desk?
 
 Ein Help Desk ist ein System zur Verwaltung von Kundenanfragen und Support-Tickets. Help Desk-Systeme umfassen:
@@ -59,9 +78,9 @@ Bei der Wahl eines Help Desk-Systems sollten folgende Kriterien berücksichtigt 
 
 ## Verwandte Kategorien
 
-- [CRM](../kontakt/) - Contact Management
+- [CRM](../contact/) - Contact Management
 - [Messenger](../messenger/) - Kommunikation und Chat
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

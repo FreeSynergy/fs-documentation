@@ -22,6 +22,23 @@ Dieser Bereich enthält Dokumentation für verschiedene CRM-Systeme (Customer Re
 - **sugarcrm** - CRM Platform
 - **roistat** - Marketing Analytics und CRM
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/crm/skins/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [CiviCRM](./skins/civicrm/index.md) - CiviCRM
+- [EspoCRM](./skins/espocrm/index.md) - EspoCRM
+- [HubSpot](./skins/hubspot/index.md) - HubSpot
+- [Pipedrive](./skins/pipedrive/index.md) - Pipedrive
+- [Salesforce](./skins/salesforce/index.md) - Salesforce
+- [SuiteCRM](./skins/suitecrm/index.md) - SuiteCRM
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist CRM?
 
 CRM (Customer Relationship Management) ist ein Konzept zur systematischen Verwaltung von Kundenbeziehungen. CRM-Systeme umfassen:
@@ -65,7 +82,7 @@ Bei der Wahl eines CRM-Systems sollten folgende Kriterien berücksichtigt werden
 
 - [Marketing](../marketing/) - Marketing-Tools und Analytics
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

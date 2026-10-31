@@ -63,9 +63,9 @@ Lors du choix d'un système d'automatisation de flux de travail, considérez les
 
 ## Catégories connexes
 
-- [Gestion de projet](../projektmanagement/) - Gestion de projet
+- [Gestion de projet](../projectmanagement/) - Gestion de projet
 - [Support](../helpdesk/) - Support et systèmes de tickets
-- [CRM](../kontakt/) - Gestion des contacts
+- [CRM](../contact/) - Gestion des contacts
 
 ## Démarrage rapide
 

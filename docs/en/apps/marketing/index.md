@@ -64,9 +64,9 @@ When choosing a marketing tool, consider the following criteria:
 
 ## Related Categories
 
-- [Contact/CRM](../kontakt/) - Contact management
+- [Contact/CRM](../contact/) - Contact management
 - [Helpdesk](../helpdesk/) - Support and ticket systems
-- [Project Management](../projektmanagement/) - Project management
+- [Project Management](../projectmanagement/) - Project management
 
 ## Quick Start
 

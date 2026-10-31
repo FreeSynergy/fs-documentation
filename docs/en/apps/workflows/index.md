@@ -63,9 +63,9 @@ When choosing a workflow automation system, consider the following criteria:
 
 ## Related Categories
 
-- [Project Management](../projektmanagement/) - Project management
+- [Project Management](../projectmanagement/) - Project management
 - [Helpdesk](../helpdesk/) - Support and ticket systems
-- [CRM](../kontakt/) - Contact management
+- [CRM](../contact/) - Contact management
 
 ## Quick Start
 

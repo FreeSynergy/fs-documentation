@@ -22,6 +22,23 @@ Dieser Bereich enthält Dokumentation für verschiedene ERP-Systeme (Enterprise 
 - **ofbiz** - Apache OFBiz
 - **dolibarr** - ERP/CRM für kleine Unternehmen
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/erp/skins/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Axelor](./skins/axelor/index.md) - Axelor
+- [Dolibarr](./skins/dolibarr/index.md) - Dolibarr
+- [ERPNext](./skins/erpnext/index.md) - ERPNext
+- [Odoo](./skins/odoo/index.md) - Odoo
+- [Sage](./skins/sage/index.md) - Sage
+- [Tryton](./skins/tryton/index.md) - Tryton
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist ERP?
 
 ERP (Enterprise Resource Planning) ist eine integrierte Software-Lösung zur Verwaltung aller Geschäftsprozesse eines Unternehmens. ERP-Systeme umfassen:
@@ -63,9 +80,9 @@ Bei der Wahl eines ERP-Systems sollten folgende Kriterien berücksichtigt werden
 
 ## Verwandte Kategorien
 
-- [Kontakt/CRM](../kontakt/) - Contact Management
+- [Kontakt/CRM](../contact/) - Contact Management
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

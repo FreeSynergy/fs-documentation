@@ -63,7 +63,7 @@ When choosing a UI library, consider the following criteria:
 ## Related Categories
 
 - [Marketing](../marketing/) - Marketing tools and analytics
-- [Project Management](../projektmanagement/) - Project management tools
+- [Project Management](../projectmanagement/) - Project management tools
 
 ## Quick Start
 

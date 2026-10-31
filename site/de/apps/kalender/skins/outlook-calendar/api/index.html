@@ -1,0 +1,2462 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for FreeSynergy — multi-language, open-source tools, collaboration, and knowledge transfer.">
+      
+      
+        <meta name="author" content="FreeSynergy Team">
+      
+      
+        <link rel="canonical" href="https://freesynergy.github.io/fs-documentation/de/apps/kalender/skins/outlook-calendar/api/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Outlook Kalender - API Dokumentation - FreeSynergy.Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#outlook-kalender-api-dokumentation" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../../../../.." title="FreeSynergy.Documentation" class="md-header__button md-logo" aria-label="FreeSynergy.Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FreeSynergy.Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Outlook Kalender - API Dokumentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FreeSynergy/fs-documentation" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FreeSynergy/fs-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="FreeSynergy.Documentation" class="md-nav__button md-logo" aria-label="FreeSynergy.Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FreeSynergy.Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FreeSynergy/fs-documentation" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    FreeSynergy/fs-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Français
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/wiki/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/wiki/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/wiki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/wiki/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../messenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/messenger/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/messenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/messenger/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/messenger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/messenger/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/components/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/components/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/components/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/marketing/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/marketing/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/marketing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/marketing/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../whiteboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/whiteboards/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/whiteboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/whiteboards/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/whiteboards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/whiteboards/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../helpdesk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/helpdesk/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/helpdesk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/helpdesk/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/helpdesk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/helpdesk/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projektmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/projektmanagement/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/projektmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/projektmanagement/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/projektmanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/projektmanagement/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kontakt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/kontakt/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/kontakt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/kontakt/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/kontakt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/kontakt/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/kalender/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/kalender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/kalender/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/kalender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/kalender/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/desktop/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/desktop/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/desktop/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../crm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/crm/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/crm/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/crm/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/crm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/crm/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../demokratie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/demokratie/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/demokratie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/demokratie/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/demokratie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/demokratie/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/maps/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/maps/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/maps/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../erp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/erp/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/erp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/erp/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/erp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/erp/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/apps/workflows/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/apps/workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/apps/workflows/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/apps/workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/apps/workflows/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../gestures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/gestures/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/gestures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/gestures/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/gestures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/gestures/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/animations/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/animations/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/animations/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/data/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../en/data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    en/data/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../fr/data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fr/data/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    de/components/
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="outlook-kalender-api-dokumentation">Outlook Kalender - API Dokumentation<a class="headerlink" href="#outlook-kalender-api-dokumentation" title="Permanent link">&para;</a></h1>
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>Der Outlook Kalender wird programmatisch über <strong>Microsoft Graph</strong> bedient: Kalender, Kalendergruppen, Termine, Freigaben, Zeitpläne und Besprechungssuche sind als REST-Ressourcen unter <code>https://graph.microsoft.com/v1.0</code> (und <code>/beta</code>) modelliert. Änderungen lassen sich über <strong>Change Notifications</strong> (Webhooks mit Abonnement) abonnieren. Die ältere <strong>Exchange Web Services</strong>-Schnittstelle (EWS) war über Jahrzehnte der Standard für Kalenderzugriff und ist für Exchange Online abgelöst angekündigt; On-Premises-Exchange-Server bedienen sie weiterhin.</p>
+<p><strong>API-Arten im Überblick</strong></p>
+<table>
+<thead>
+<tr>
+<th>Art</th>
+<th>Verwendung</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Graph REST (<code>/v1.0</code>, <code>/beta</code>)</td>
+<td>Kalender, Termine, Serien, Freigaben, Zeitplan, Besprechungssuche</td>
+<td>✅ Offiziell, empfohlener Weg</td>
+</tr>
+<tr>
+<td>Graph Change Notifications</td>
+<td>Webhooks für neue/geänderte Termine</td>
+<td>✅ Offiziell (Abo-basiert)</td>
+</tr>
+<tr>
+<td>Microsoft Graph Delta (<code>/me/calendar/delta</code>)</td>
+<td>Inkrementelle Änderungen seit letztem Stand</td>
+<td>✅ Offiziell</td>
+</tr>
+<tr>
+<td>Exchange Web Services (EWS)</td>
+<td>Termine, Kalendersichten, Ordner (SOAP/XML)</td>
+<td>⚠️ Veraltet, für Exchange Online abgelöst angekündigt</td>
+</tr>
+<tr>
+<td>MAPI over HTTP, Exchange ActiveSync, IMAP4</td>
+<td>Client-Protokolle (Synchronisation)</td>
+<td>🔒 Nicht als öffentliche Integrations-API gedacht</td>
+</tr>
+<tr>
+<td>CalDAV (<code>/.well-known/caldav</code>)</td>
+<td>Offener Kalenderstandard</td>
+<td>❌ Wird nicht angeboten</td>
+</tr>
+<tr>
+<td>ICS-Import/-Export als API-Endpunkt</td>
+<td>Kalender als <code>.ics</code> ziehen/schieben</td>
+<td>❌ Kein dokumentierter Endpunkt (nur UI-Aktionen)</td>
+</tr>
+<tr>
+<td>Outlook Calendar REST API (<code>api.outlook.com</code>)</td>
+<td>Frühere „Calendar API"</td>
+<td>❌ Eingestellt, durch Graph ersetzt</td>
+</tr>
+<tr>
+<td>Microsoft Bookings API</td>
+<td>Externe Terminbuchung</td>
+<td>⚠️ Eigenes Produkt, Graph-Zugriff eingeschränkt/vorschau</td>
+</tr>
+</tbody>
+</table>
+<h2 id="authentifizierung">Authentifizierung<a class="headerlink" href="#authentifizierung" title="Permanent link">&para;</a></h2>
+<p>Outlook Kalender nutzt OAuth 2.0 / OpenID Connect über <strong>Microsoft Entra ID</strong> (ehem. Azure AD).</p>
+<ul>
+<li><strong>Delegated Access</strong>: Der Nutzer meldet sich an, die App erhält einen Access-Token in seinem Namen. Flow: Authorization Code mit PKCE für Web-/Native-Apps.</li>
+<li><strong>Application Permissions (Client Credentials)</strong>: Daemon-Skripte und Dienste ohne angemeldeten Nutzer; benötigt <code>Calendars.Read</code> bzw. <code>Calendars.ReadWrite</code> mit <strong>Administratorzustimmung</strong> und greift dann auf Postfächer im Mandanten zu (Zugriff muss gezielt konfiguriert werden).</li>
+<li><strong>Scopes</strong>: <code>Calendars.Read</code>, <code>Calendars.ReadWrite</code>, <code>Calendars.ReadWrite.Shared</code>, <code>User.Read</code> für Profilangaben, <code>Mail.Read</code> falls Besprechungsanfragen mitgelesen werden.</li>
+<li><strong>Token-Endpoint</strong>: <code>https://login.microsoftonline.com/&lt;tenant-id&gt;/oauth2/v2.0/token</code></li>
+<li><strong>Access-Token</strong> sind kurzlebig (typisch 60–90 Minuten), Refresh-Token erneuern sie.</li>
+</ul>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<pre><code>Authorization: Bearer &lt;access-token&gt;
+Content-Type: application/json
+Prefer: outlook.timezone=&quot;Europe/Berlin&quot;
+</code></pre>
+<p>Die <code>Prefer</code>-Kopfzeile stellt Datumsangaben in einer Wunschzeitzone zu; ohne sie liefert Graph UTC.</p>
+<h2 id="endpunkte">Endpunkte<a class="headerlink" href="#endpunkte" title="Permanent link">&para;</a></h2>
+<p>Grundpfad: <code>https://graph.microsoft.com/v1.0</code></p>
+<h3 id="kalender">Kalender<a class="headerlink" href="#kalender" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Endpoint</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendars</code></td>
+<td>Eigene Kalender auflisten</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendars/{id}</code></td>
+<td>Einzelnen Kalender lesen</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendars</code></td>
+<td>Kalender anlegen (Name, Farbe, Zeitzone)</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/me/calendars/{id}</code></td>
+<td>Kalender ändern</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/me/calendars/{id}</code></td>
+<td>Kalender löschen</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendar</code></td>
+<td>Standardkalender des Kontos</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendar/groups</code></td>
+<td>Kalendergruppen auflisten</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendar/groups</code></td>
+<td>Kalendergruppe anlegen</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendars/{id}/calendarView?startDateTime=…&amp;endDateTime=…</code></td>
+<td>Termine eines Kalenders im Zeitraum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="termine">Termine<a class="headerlink" href="#termine" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Endpoint</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendar/events</code></td>
+<td>Termine des Standardkalenders (liste)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendar/events/{id}</code></td>
+<td>Einzelnen Termin lesen (<code>$expand=attachments,instances</code> möglich)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendar/events</code></td>
+<td>Termin im Standardkalender anlegen</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><code>/me/calendar/events/{id}</code></td>
+<td>Termin ändern (Serien: <code>seriesMasterId</code> beachten)</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>/me/calendar/events/{id}</code></td>
+<td>Termin löschen</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/events</code></td>
+<td>Termine kontoweit (Alternative zu <code>calendarview</code>)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendarview?startDateTime=2026-10-01T00:00:00Z&amp;endDateTime=2026-10-31T23:59:59Z</code></td>
+<td>Termine im Zeitraum, Serien aufgelöst</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/events/{id}/instances?startDateTime=…&amp;endDateTime=…</code></td>
+<td>Einzelne Termine einer Serie</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/events/{id}/attachments</code></td>
+<td>Anlagen eines Termins</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/events/{id}/attachments</code></td>
+<td>Anlage hinzufügen</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/events/{id}/forward</code></td>
+<td>Termin weiterleiten</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/events/{id}/accept</code> | <code>acceptTentatively</code> | <code>decline</code> | <code>cancel</code> | <code>snooze</code></td>
+<td>Antwortaktionen auf eine Besprechung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zeitplan-besprechungssuche-freigaben">Zeitplan, Besprechungssuche, Freigaben<a class="headerlink" href="#zeitplan-besprechungssuche-freigaben" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Endpoint</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendar/getSchedule</code></td>
+<td>Free/Busy und Termine mehrerer Postfächer im Zeitraum</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendars/{id}/getSchedule</code></td>
+<td>Zeitplan eines konkreten Kalenders</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/findMeetingTimes</code></td>
+<td>Freie Zeiten für Teilnehmer und Räume (Planungsassistent)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendars/{id}/getCalendarPermissions</code></td>
+<td>Wer darf einen Kalender sehen/bearbeiten</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendars/{id}/addCalendarPermission</code></td>
+<td>Freigabe erteilen (Rolle: <code>Reviewer</code>, <code>Author</code>, <code>Editor</code>, <code>Owner</code>, <code>AvailabilityOnly</code>, <code>LimitedDetails</code>)</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/me/calendars/{id}/removeCalendarPermission</code></td>
+<td>Freigabe entziehen</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendars/listCalendarPermissions</code></td>
+<td>Freigaben mehrerer Kalender in einem Aufruf</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/calendar/delta</code></td>
+<td>Änderungen seit dem letzten Stand (inkrementell)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="andere-postfacher-mit-entsprechenden-rechten">Andere Postfächer (mit entsprechenden Rechten)<a class="headerlink" href="#andere-postfacher-mit-entsprechenden-rechten" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Endpoint</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><code>/users/{id}/calendarview?startDateTime=…&amp;endDateTime=…</code></td>
+<td>Zeitplan eines anderen Nutzers lesen</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/users/{id}/events</code></td>
+<td>Termine eines anderen Postfachs</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/users/{id}/events</code></td>
+<td>Termin in fremdem Kalender anlegen (nur mit Delegierten-/Editorrecht)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/groups/{id}/calendar/events</code></td>
+<td>Gruppenkalender (M365-Gruppe)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/me/onlineMeetings</code></td>
+<td>Onlinebesprechungen (Teams) auflösen, <code>joinUrl</code> lesen (eigene Berechtigung)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nutzige-query-parameter">Nützige Query-Parameter<a class="headerlink" href="#nutzige-query-parameter" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$select=subject,start,end,isAllDay,categories</code></td>
+<td>Reduziert die Antwort auf benötigte Felder</td>
+</tr>
+<tr>
+<td><code>$expand=attachments,instances,extensions</code></td>
+<td>Zusätzliche Objekte mitliefern</td>
+</tr>
+<tr>
+<td><code>$filter=start/dateTime ge '2026-10-01T00:00'</code></td>
+<td>Eingrenzung (Datumsfilter nur in <code>calendarview</code> zuverlässig indexiert)</td>
+</tr>
+<tr>
+<td><code>$search="Suchtext"</code></td>
+<td>Volltextsuche, benötigt Header <code>ConsistencyLevel: eventual</code></td>
+</tr>
+<tr>
+<td><code>$orderby=start/dateTime</code></td>
+<td>Sortierung</td>
+</tr>
+<tr>
+<td><code>$top</code> / <code>$skip</code></td>
+<td>Seitengröße/Offset; weitere Seiten über <code>@odata.nextLink</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="beispiele">Beispiele<a class="headerlink" href="#beispiele" title="Permanent link">&para;</a></h2>
+<h3 id="termine-eines-zeitraums-abrufen">Termine eines Zeitraums abrufen<a class="headerlink" href="#termine-eines-zeitraums-abrufen" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">curl -s &quot;https://graph.microsoft.com/v1.0/me/calendarview?\
+startDateTime=2026-11-01T00:00:00Z&amp;endDateTime=2026-11-07T23:59:59Z&amp;\
+\$select=subject,start,end,isAllDay,organizer&amp;\$orderby=start/dateTime&quot; \
+  -H &quot;Authorization: Bearer &lt;access-token&gt;&quot; \
+  -H &quot;Prefer: outlook.timezone=\&quot;Europe/Berlin\&quot;&quot;
+</code></pre>
+<p>Antwort (gekürzt):</p>
+<pre><code class="language-json">{
+  &quot;@odata.context&quot;: &quot;https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.event)&quot;,
+  &quot;@odata.nextLink&quot;: &quot;https://graph.microsoft.com/v1.0/me/calendarview?startDateTime=...&amp;$skip=10&quot;,
+  &quot;value&quot;: [
+    {
+      &quot;id&quot;: &quot;AAMkAGI2AAA=&quot;,
+      &quot;subject&quot;: &quot;Team-Jour fixe&quot;,
+      &quot;isAllDay&quot;: false,
+      &quot;start&quot;: { &quot;dateTime&quot;: &quot;2026-11-03T09:00:00.0000000&quot;, &quot;timeZone&quot;: &quot;Europe/Berlin&quot; },
+      &quot;end&quot;:   { &quot;dateTime&quot;: &quot;2026-11-03T09:30:00.0000000&quot;, &quot;timeZone&quot;: &quot;Europe/Berlin&quot; },
+      &quot;organizer&quot;: { &quot;emailAddress&quot;: { &quot;name&quot;: &quot;Anna Beispiel&quot;, &quot;address&quot;: &quot;anna@example.com&quot; } },
+      &quot;categories&quot;: [&quot;Team&quot;],
+      &quot;isCancelled&quot;: false,
+      &quot;responseStatus&quot;: { &quot;response&quot;: &quot;none&quot;, &quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot; }
+    }
+  ]
+}
+</code></pre>
+<h3 id="termin-anlegen-mit-teilnehmer-und-teams-besprechung">Termin anlegen (mit Teilnehmer und Teams-Besprechung)<a class="headerlink" href="#termin-anlegen-mit-teilnehmer-und-teams-besprechung" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">curl -s -X POST &quot;https://graph.microsoft.com/v1.0/me/calendar/events&quot; \
+  -H &quot;Authorization: Bearer &lt;access-token&gt;&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;subject&quot;: &quot;Workshop Kalender-Anbindung&quot;,
+    &quot;body&quot;: { &quot;contentType&quot;: &quot;html&quot;, &quot;content&quot;: &quot;&lt;p&gt;Agenda: ICS, Graph, Freigaben&lt;/p&gt;&quot; },
+    &quot;start&quot;: { &quot;dateTime&quot;: &quot;2026-11-05T10:00:00&quot;, &quot;timeZone&quot;: &quot;Europe/Berlin&quot; },
+    &quot;end&quot;:   { &quot;dateTime&quot;: &quot;2026-11-05T12:00:00&quot;, &quot;timeZone&quot;: &quot;Europe/Berlin&quot; },
+    &quot;location&quot;: { &quot;displayName&quot;: &quot;Raum 3.4&quot; },
+    &quot;categories&quot;: [&quot;Projekt&quot;],
+    &quot;isOnlineMeeting&quot;: true,
+    &quot;attendees&quot;: [
+      { &quot;emailAddress&quot;: { &quot;address&quot;: &quot;ben@example.com&quot;, &quot;name&quot;: &quot;Ben Beispiel&quot; },
+        &quot;attendeeType&quot;: &quot;required&quot;, &quot;status&quot;: { &quot;response&quot;: &quot;none&quot;, &quot;time&quot;: &quot;0001-01-01T00:00:00Z&quot; } }
+    ],
+    &quot;reminders&quot;: [ { &quot;method&quot;: &quot;email&quot;, &quot;remindersMinutesBeforeStart&quot;: 15 } ],
+    &quot;recurrence&quot;: {
+      &quot;pattern&quot;: { &quot;type&quot;: &quot;weekly&quot;, &quot;dayOfWeeks&quot;: [ &quot;monday&quot; ], &quot;interval&quot;: 2 },
+      &quot;range&quot;: { &quot;type&quot;: &quot;endDate&quot;, &quot;startDate&quot;: &quot;2026-11-05&quot;, &quot;endDate&quot;: &quot;2026-12-24&quot; }
+    }
+  }'
+</code></pre>
+<p>Antwort: <code>201 Created</code> mit dem vollständigen Terminobjekt, darunter <code>id</code>, <code>seriesMasterId</code>, <code>onlineMeeting.joinUrl</code> und <code>webLink</code>.</p>
+<h3 id="webhook-abo-auf-terminanderungen">Webhook-Abo auf Terminänderungen<a class="headerlink" href="#webhook-abo-auf-terminanderungen" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">curl -s -X POST &quot;https://graph.microsoft.com/v1.0/subscriptions&quot; \
+  -H &quot;Authorization: Bearer &lt;access-token&gt;&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;changeType&quot;: &quot;created,updated,deleted&quot;,
+    &quot;notificationURL&quot;: &quot;https://example.org/hooks/outlook-calendar&quot;,
+    &quot;resource&quot;: &quot;/me/events&quot;,
+    &quot;clientState&quot;: &quot;langes-zufälliges-geheimnis&quot;,
+    &quot;lifecycleNotificationURL&quot;: &quot;https://example.org/hooks/outlook-lifecycle&quot;
+  }'
+</code></pre>
+<p>Graph validiert die <code>notificationURL</code> mit einem <code>validationCode</code>-POST; danach liefert es JSON-Nachrichten mit <code>resource</code>, <code>changeType</code> und <code>clientState</code>.</p>
+<h2 id="rate-limits">Rate Limits<a class="headerlink" href="#rate-limits" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Graph drosselt <strong>je App und Postfach</strong>; bei Überschreitung kommt <code>HTTP 429</code> mit <code>Retry-After</code> (Sekunden) – dann exponentiell zurückwarten.</li>
+<li>Für Microsoft Graph wird ein anwendungsbezogener Richtwert von <strong>20.000 Requests pro rollierenden 10 Minuten</strong> genannt; Exchange-Workloads (Kalenderzugriff auf ein Postfach) haben zusätzliche, feinere Grenzwerte. Exakt dokumentierte Werte je Workload: nicht dokumentiert bzw. mandantabhängig.</li>
+<li>Antwort-Header zur Beobachtung: <code>Retry-After</code>, <code>client-request-id</code>, <code>request-id</code>; Drosselungsgründe stehen im Fehlerobjekt (<code>throttlingType</code>).</li>
+<li>Praktische Empfehlung: <code>calendarview</code> mit Zeitraum statt vieler Einzelabfragen, <code>$select</code> nutzen, Änderungen über Delta oder Webhooks statt Polling.</li>
+</ul>
+<h2 id="webhooks-und-ereignisverarbeitung">Webhooks und Ereignisverarbeitung<a class="headerlink" href="#webhooks-und-ereignisverarbeitung" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Change Notifications</strong>: <code>POST /subscriptions</code> auf <code>/me/events</code>, <code>/me/calendars</code> oder <code>/users/{id}/events</code>; Lieferung per HTTPS-POST an die registrierte URL.</li>
+<li><strong>Lebensdauer</strong>: Abonnements laufen ab und müssen verlängert werden (<code>PATCH /subscriptions/{id}</code> mit <code>renewNow</code>). Für Exchange-Ressourcen liegen die Maximalwerte im Bereich mehrerer Tage; genaue Werte sind versionsabhängig (nicht eindeutig dokumentiert).</li>
+<li><strong>Lebenszyklus-Nachrichten</strong>: <code>removed</code>, <code>renewed</code>, <code>expired</code>, <code>missedChanges</code> an die <code>lifecycleNotificationURL</code>.</li>
+<li><strong>Delta-Query</strong> als Webhook-Ersatz: <code>GET /me/calendar/delta</code> liefert Änderungen samt <code>@odata.deltaLink</code> für den nächsten Durchlauf.</li>
+<li><strong>Kein klassischer ausgehender Webhook</strong> aus der Weboberfläche: ohne Graph-App versendet Outlook keine Termin-Ereignisse an Fremd-URLs; Alternativweg ist Power Automate mit Kalender-Trigger.</li>
+</ul>
+<h2 id="sdks-und-client-bibliotheken">SDKs und Client-Bibliotheken<a class="headerlink" href="#sdks-und-client-bibliotheken" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>C#/.NET</strong>: <code>Microsoft.Graph</code> (+ <code>Azure.Identity</code>/MSAL)</li>
+<li><strong>JavaScript/TypeScript</strong>: <code>@microsoft/microsoft-graph-client</code>, <code>@azure/msal-node</code>, <code>@azure/msal-browser</code></li>
+<li><strong>Python</strong>: <code>msgraph-sdk</code> (+ <code>msal</code>)</li>
+<li><strong>Java</strong>: <code>com.microsoft.graph:microsoft-graph</code> (+ <code>msal4j</code>)</li>
+<li><strong>Go</strong>: <code>github.com/microsoftgraph/msgraph-sdk-go</code></li>
+<li><strong>PowerShell</strong>: <code>Microsoft.Graph</code>-Modul (<code>Get-MgUserCalendarView</code>, <code>New-MgUserEvent</code>)</li>
+<li><strong>Low-Code</strong>: Graph-Connectoren in Power Automate, Power Apps und Logic Apps</li>
+</ul>
+<pre><code class="language-bash">npm install @microsoft/microsoft-graph-client @azure/msal-node
+pip install msgraph-sdk msal
+</code></pre>
+<h2 id="vergleich-mit-anderen-kalendersystemen">Vergleich mit anderen Kalendersystemen<a class="headerlink" href="#vergleich-mit-anderen-kalendersystemen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Typischer Einstiegspunkt</th>
+<th>Anmerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outlook Kalender</td>
+<td><code>https://graph.microsoft.com/v1.0/me/calendar/events</code></td>
+<td>OAuth 2.0 mit Entra ID</td>
+</tr>
+<tr>
+<td>Nextcloud Kalender</td>
+<td><code>/.well-known/caldav</code> → CalDAV-Reports (XML)</td>
+<td>Basic/Bearer-Auth, offener Standard</td>
+</tr>
+<tr>
+<td>DAViCal / SabreDAV</td>
+<td>CalDAV-Endpunkt des Servers</td>
+<td>RFC 4791, keine REST-JSON-API</td>
+</tr>
+<tr>
+<td>Google Kalender</td>
+<td><code>https://www.googleapis.com/calendar/v3/calendars</code></td>
+<td>REST + CalDAV</td>
+</tr>
+</tbody>
+</table>
+<h2 id="hinweise-fur-den-betrieb">Hinweise für den Betrieb<a class="headerlink" href="#hinweise-fur-den-betrieb" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>App-Registrierierung in Entra ID</strong> mit minimalen Berechtigungen: nur <code>Calendars.Read</code>, wenn nichts geschrieben wird; <code>Calendars.ReadWrite</code> nur für Postfächer, die tatsächlich benötigt werden.</li>
+<li><strong>Geheimnisse/Zertifikate</strong> mit Ablauf hinterlegen und rotieren; Client Secrets im Klartext sind ein häufiger Audit-Fund.</li>
+<li><strong>Datenregion und Data Boundary</strong>: Zugriffe auf Mandantendaten laufen über die Microsoft-Graph-Endpunkte; für besondere Anforderungen existieren nationale Clouds bzw. Platzhalter-Tenant-Verarbeitung (Details: nicht dokumentiert bzw. vertraglich geregelt).</li>
+<li><strong>EWS-Neuentwicklung vermeiden</strong>: Neue Integrationen gehören auf Microsoft Graph; bestehende EWS-Nutzung: Migration planen (Zeitrahmen mandantabhängig).</li>
+</ul>
+<h2 id="siehe-auch">Siehe auch<a class="headerlink" href="#siehe-auch" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../menu/">menu.md</a></li>
+<li><a href="../features/">features.md</a></li>
+<li><a href="../description/">description.md</a></li>
+<li><a href="../structure/">structure.md</a></li>
+<li><a href="../shortcuts/">shortcuts.md</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 <a href="https://github.com/FreeSynergy" target="_blank" rel="noopener">FreeSynergy</a>
+
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/FreeSynergy" target="_blank" rel="noopener" title="FreeSynergy on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://gitlab.com/freesynergy" target="_blank" rel="noopener" title="FreeSynergy on GitLab (coming soon)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m504 204.6-.7-1.8L433.6 21c-1.4-3.6-3.9-6.6-7.2-8.6-2.4-1.6-5.1-2.5-8-2.8s-5.7.1-8.4 1.1-5.1 2.7-7.1 4.8c-1.9 2.1-3.3 4.7-4.1 7.4l-47 144H161.3l-47.1-144c-.8-2.8-2.2-5.3-4.1-7.4-2-2.1-4.4-3.7-7.1-4.8-2.6-1-5.5-1.4-8.4-1.1s-5.6 1.2-8 2.8c-3.2 2-5.8 5.1-7.2 8.6L9.8 202.8l-.8 1.8c-10 26.2-11.3 55-3.5 82 7.7 26.9 24 50.7 46.4 67.6l.3.2.6.4 106 79.5c38.5 29.1 66.7 50.3 84.6 63.9 3.7 1.9 8.3 4.3 13 4.3s9.3-2.4 13-4.3c17.9-13.5 46.1-34.9 84.6-63.9l106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.indexes", "search.suggest", "search.highlight", "navigation.tracking", "navigation.sections", "toc.integrate"], "search": "../../../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

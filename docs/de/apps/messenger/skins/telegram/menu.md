@@ -31,7 +31,7 @@ Telegram ist ein Cloud-basierter Messenger mit Fokus auf Geschwindigkeit und Sic
   - Nachrichten bearbeiten/löschen
   - Nachrichten markieren
   - Nachrichten zitieren
-  - Nachrichten转发
+  - Nachrichten weiterleiten
   - Medien senden
 
 ### 4. Media-Menü (Mitte)

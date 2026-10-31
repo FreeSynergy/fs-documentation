@@ -19,7 +19,7 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 | **MP4** | Standard-Format, weit verbreitet | Alle Video-Anwendungen |
 | **WEBM** | Open Source, kleine Dateigröße | Web-Applikationen |
 | **OGV** | Open Source-Format | Alternatives Format |
-| **MKV** |容器-Format, viele Streams | Hochwertige Videos |
+| **MKV** | Container-Format, viele Streams | Hochwertige Videos |
 
 ## Größe-Varianten
 

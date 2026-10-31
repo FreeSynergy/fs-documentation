@@ -59,7 +59,7 @@ Lors du choix d'un outil de tableau blanc, considérez les critères suivants :
 
 ## Catégories connexes
 
-- [Gestion de projet](../projektmanagement/) - Outils de gestion de projet
+- [Gestion de projet](../projectmanagement/) - Outils de gestion de projet
 - [Support](../helpdesk/) - Support et systèmes de tickets
 - [Messagerie](../messenger/) - Communication et discussion
 

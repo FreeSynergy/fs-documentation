@@ -18,6 +18,17 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 - 💡 Best Practices & Tipps von der Community
 - 🧩 Erweiterungen, Plugins & Integrationen
 
+## 🗂️ Bereiche
+
+| Bereich | Inhalt |
+|---------|--------|
+| [Apps](apps/) | Programme je Kategorie, mit Skin-Dokumentation (Menü, Funktionen, Struktur, Shortcuts, API) |
+| [Components](components/) | UI-Elemente: Beschreibung, Aussehen, Attribute (73 Elemente) |
+| [Components-Bibliotheken](apps/components/) | Frameworks und Design-Systeme (Bootstrap, Vue, React, …) |
+| [Gesten](gestures/) | Touch-Interaktionen: Tap, Swipe, Drag, Pinch, Spread, Rotate, Shake |
+| [Animationen](animations/) | Übergänge und Effekte: Fade, Slide, Zoom, Bounce, Flip, Pulse, Skeleton u. a. |
+| [Standardisierte Daten](data/) | Formate, Modelle, Felder, Konventionen und das einheitliche API-Muster |
+
 ## 💬 Mitmachen
 
 Du möchtest helfen? Das ist einfach:

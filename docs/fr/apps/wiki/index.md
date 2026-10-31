@@ -48,7 +48,7 @@ Lors du choix d'un système wiki, considérez les critères suivants :
 
 - [Messagerie](../messenger/) - Communication et discussion
 - [Support](../helpdesk/) - Support et systèmes de tickets
-- [Gestion de projet](../projektmanagement/) - Gestion des tâches et des projets
+- [Gestion de projet](../projectmanagement/) - Gestion des tâches et des projets
 - [Bureau](../desktop/) - Applications de bureau pour le travail wiki
 
 ## Démarrage rapide

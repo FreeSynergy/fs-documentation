@@ -72,7 +72,7 @@ X-XWiki-Auth-token: your-auth-token
 | GET | `/rest/authentication/currentuser` | Aktueller Benutzer |
 
 ### JavaScript Client
-XWiki提供JavaScript Client library unter `/jsondoc/` für AJAX-Interaktionen.
+XWiki stellt eine JavaScript Client library bereit unter `/jsondoc/` für AJAX-Interaktionen.
 
 ## Beispiele
 

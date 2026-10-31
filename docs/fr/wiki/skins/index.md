@@ -6,13 +6,13 @@ Ce répertoire contient la documentation des menus et des éditeurs de divers sy
 
 ## Documentation incluse
 
-- [Wiki.js](./wikijs/index.md) - Logiciel wiki moderne et léger
-- [XWiki](./xwiki/index.md) - Plateforme wiki d'entreprise
-- [MediaWiki](./mediawiki/index.md) - Le logiciel wiki le plus populaire (Wikipedia)
-- [Tango.io](./tango.io/index.md) - Plateforme de gestion des connaissances
-- [Notion](./notion/index.md) - Plateforme tout-en-un pour la collaboration
-- [Confluence](./confluence/index.md) - Wiki d'entreprise d'Atlassian
-- [VSCodium](./vscodium/index.md) - Éditeur de code open source (fork de VS Code)
+- [Wiki.js](/de/wiki/skins/wikijs/index.md) - Logiciel wiki moderne et léger
+- [XWiki](/de/wiki/skins/xwiki/index.md) - Plateforme wiki d'entreprise
+- [MediaWiki](/de/wiki/skins/mediawiki/index.md) - Le logiciel wiki le plus populaire (Wikipedia)
+- [Tango.io](/de/wiki/skins/tango.io/index.md) - Plateforme de gestion des connaissances
+- [Notion](/de/wiki/skins/notion/index.md) - Plateforme tout-en-un pour la collaboration
+- [Confluence](/de/wiki/skins/confluence/index.md) - Wiki d'entreprise d'Atlassian
+- [VSCodium](/de/wiki/skins/vscodium/index.md) - Éditeur de code open source (fork de VS Code)
 
 ## Structure de répertoire
 

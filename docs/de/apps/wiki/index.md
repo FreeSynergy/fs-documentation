@@ -48,7 +48,7 @@ Bei der Wahl eines Wiki-Systems sollten folgende Kriterien berücksichtigt werde
 
 - [Messenger](../messenger/) - Kommunikation und Chat
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projektmanagement/) - Aufgaben und Projekte verwalten
+- [Projektmanagement](../projectmanagement/) - Aufgaben und Projekte verwalten
 - [Desktop](../desktop/) - Desktop-Applikationen für die Arbeit mit Wikis
 
 ## Schnellstart

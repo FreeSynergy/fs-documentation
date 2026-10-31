@@ -22,6 +22,24 @@ Dieser Bereich enthält Dokumentation für verschiedene Kartensysteme und GIS-Sy
 - **postgis** - Spatial Database
 - **mapbox-gl-js** - Interaktive Maps
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/maps/skins/<programm>/`.
+
+**dokumentiert (7 Programme):**
+
+- [Leaflet](./skins/leaflet/index.md) - Leaflet
+- [MapLibre](./skins/maplibre/index.md) - MapLibre
+- [OpenStreetMap](./skins/openstreetmap/index.md) - OpenStreetMap
+- [Organic Maps](./skins/organic-maps/index.md) - Organic Maps
+- [OsmAnd](./skins/osmand/index.md) - OsmAnd
+- [QGIS](./skins/qgis/index.md) - QGIS
+- [uMap](./skins/umap/index.md) - uMap
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist ein Kartensystem?
 
 Ein Kartensystem ist eine Software zur Erstellung, Anzeige und Analyse von Karten und geografischen Daten. Kartensysteme umfassen:
@@ -64,7 +82,7 @@ Bei der Wahl eines Kartensystems sollten folgende Kriterien berücksichtigt werd
 ## Verwandte Kategorien
 
 - [ERP](../erp/) - Enterprise Resource Planning
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

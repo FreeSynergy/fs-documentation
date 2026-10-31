@@ -59,7 +59,7 @@ When choosing a whiteboard tool, consider the following criteria:
 
 ## Related Categories
 
-- [Project Management](../projektmanagement/) - Project management tools
+- [Project Management](../projectmanagement/) - Project management tools
 - [Helpdesk](../helpdesk/) - Support and ticket systems
 - [Messenger](../messenger/) - Communication and chat
 

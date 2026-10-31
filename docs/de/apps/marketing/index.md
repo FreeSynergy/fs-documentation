@@ -22,6 +22,23 @@ Dieser Bereich enthält Dokumentation für verschiedene Marketing-Tools, CRM-Sys
 - **sendgrid** - E-Mail Delivery Service
 - **pipedrive** - Sales Pipeline Management
 
+## Skin-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/marketing/skins/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Google Analytics](./skins/google-analytics/index.md) - Google Analytics
+- [Hotjar](./skins/hotjar/index.md) - Hotjar
+- [Mailchimp](./skins/mailchimp/index.md) - Mailchimp
+- [Matomo](./skins/matomo/index.md) - Matomo
+- [Mautic](./skins/mautic/index.md) - Mautic
+- [Plausible](./skins/plausible/index.md) - Plausible
+
+Übersicht: [Skin-Verzeichnis](./skins/index.md)
+
+Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../desktop/skins/index.md) · [Standardisierte Daten](../../data/api.md)
+
 ## Was ist Marketing-Automation?
 
 Marketing-Automation bezeichnet Software-Lösungen zur Automatisierung von Marketing-Prozessen. Sie umfassen:
@@ -64,9 +81,9 @@ Bei der Wahl eines Marketing-Tools sollten folgende Kriterien berücksichtigt we
 
 ## Verwandte Kategorien
 
-- [Kontakt/CRM](../kontakt/) - Kontaktverwaltung
+- [Kontakt/CRM](../contact/) - Kontaktverwaltung
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projektmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

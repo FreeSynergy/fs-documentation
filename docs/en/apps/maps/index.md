@@ -64,7 +64,7 @@ When choosing a mapping system, consider the following criteria:
 ## Related Categories
 
 - [ERP](../erp/) - Enterprise resource planning
-- [Project Management](../projektmanagement/) - Project management
+- [Project Management](../projectmanagement/) - Project management
 
 ## Quick Start
 

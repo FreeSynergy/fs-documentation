@@ -63,9 +63,9 @@ Lors du choix d'un système ERP, considérez les critères suivants :
 
 ## Catégories connexes
 
-- [Contact/CRM](../kontakt/) - Gestion des contacts
+- [Contact/CRM](../contact/) - Gestion des contacts
 - [Support](../helpdesk/) - Support et systèmes de tickets
-- [Gestion de projet](../projektmanagement/) - Gestion de projet
+- [Gestion de projet](../projectmanagement/) - Gestion de projet
 
 ## Démarrage rapide
 

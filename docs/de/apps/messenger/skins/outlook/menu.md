@@ -35,7 +35,7 @@ Outlook ist der beliebteste E-Mail-Client von Microsoft, Teil von Microsoft 365.
 - **Funktion**: Layout und Darstellung
 - **Details**:
   - Aktualisieren
-  - Aktuelles布置 ändern
+  - Aktuelles Layout ändern
   - Sortieren
   - Gruppen
   - Anzeigeoptionen

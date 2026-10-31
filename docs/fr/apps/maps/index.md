@@ -64,7 +64,7 @@ Lors du choix d'un système de cartographie, considérez les critères suivants 
 ## Catégories connexes
 
 - [ERP](../erp/) - Planification des ressources d'entreprise
-- [Gestion de projet](../projektmanagement/) - Gestion de projet
+- [Gestion de projet](../projectmanagement/) - Gestion de projet
 
 ## Démarrage rapide
 

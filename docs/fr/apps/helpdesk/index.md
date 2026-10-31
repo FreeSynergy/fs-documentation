@@ -59,9 +59,9 @@ Lors du choix d'un système d'aide, considérez les critères suivants :
 
 ## Catégories connexes
 
-- [CRM](../kontakt/) - Gestion des contacts
+- [CRM](../contact/) - Gestion des contacts
 - [Messagerie](../messenger/) - Communication et discussion
-- [Gestion de projet](../projektmanagement/) - Gestion de projet
+- [Gestion de projet](../projectmanagement/) - Gestion de projet
 
 ## Démarrage rapide
 
