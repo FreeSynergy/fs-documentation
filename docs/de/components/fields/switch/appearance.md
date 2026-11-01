@@ -57,6 +57,14 @@ Ein Switch ist ein Ein/Aus-Schalter (Toggle).
 | `shadow` | Schatten stärker |
 | `border` | Rand leuchtet auf |
 
+## Reaktiv
+
+- Der Schalter skaliert nicht unter `small` (40 px); die Trefferfläche rundherum bleibt 44 px.
+- In Listen und auf schmalen Bildschirmen steht der Schalter rechtsbündig auf eigener Zeile,
+  das Label bricht links darüber um.
+- Auf Touch-Geräten darf der Knopf auch geschoben werden (`drag`); loslassen schaltet in die
+  nächstliegende Lage.
+
 ## Animationen
 
 | Effekt | Beschreibung |
@@ -71,11 +79,3 @@ Ein Switch ist ein Ein/Aus-Schalter (Toggle).
 │ Feature aktivieren        [   ON   ]    │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Der Schalter skaliert nicht unter `small` (40 px); die Trefferfläche rundherum bleibt 44 px.
-- In Listen und auf schmalen Bildschirmen steht der Schalter rechtsbündig auf eigener Zeile,
-  das Label bricht links darüber um.
-- Auf Touch-Geräten darf der Knopf auch geschoben werden (`drag`); loslassen schaltet in die
-  nächstliegende Lage.

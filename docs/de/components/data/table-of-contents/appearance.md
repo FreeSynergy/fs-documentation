@@ -46,6 +46,15 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 | `color` | Farbe ändert sich |
 | `border-bottom` | Unterstrich erscheint |
 
+## Reaktiv
+
+- Als Randspalte ist die Liste maximal 240 px breit und bleibt beim Scrollen stehen
+  (eigener Scrollbereich, wenn sie höher als der Viewport ist).
+- Unter `small` Bildschirmbreite entfällt die Randspalte; die Variante `aufklappbar`
+  öffnet sich über dem Text und schließt nach der Auswahl.
+- Unterpunkte klappen mit `expand`/`collapse` auf, der aktive Punkt bleibt markiert,
+  auch wenn die Liste selbst gescrollt hat.
+
 ## Collapsible Sections
 
 ```
@@ -59,12 +68,3 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 │ ▶ 3. Kapitel 3                          │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Als Randspalte ist die Liste maximal 240 px breit und bleibt beim Scrollen stehen
-  (eigener Scrollbereich, wenn sie höher als der Viewport ist).
-- Unter `small` Bildschirmbreite entfällt die Randspalte; die Variante `aufklappbar`
-  öffnet sich über dem Text und schließt nach der Auswahl.
-- Unterpunkte klappen mit `expand`/`collapse` auf, der aktive Punkt bleibt markiert,
-  auch wenn die Liste selbst gescrollt hat.

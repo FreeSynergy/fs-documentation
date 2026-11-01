@@ -326,6 +326,11 @@ nav:
               - de/components/fields/file-upload/appearance.md
               - de/components/fields/file-upload/attributes.md
               - de/components/fields/file-upload/usage.md
+          - input-group:
+              - de/components/fields/input-group/description.md
+              - de/components/fields/input-group/appearance.md
+              - de/components/fields/input-group/attributes.md
+              - de/components/fields/input-group/usage.md
           - mention-input:
               - de/components/fields/mention-input/description.md
               - de/components/fields/mention-input/appearance.md

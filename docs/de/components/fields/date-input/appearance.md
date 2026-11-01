@@ -44,6 +44,14 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Das Kalender-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
+  bodenbündig als Vollflächendialog geöffnet.
+- Monatswechsel per `swipe`, der Übergang ist `slide-in`.
+- Die Tagesflächen bleiben auch bei schmalem Raster mindestens 40 px hoch; unter
+  `small` Bildschirmbreite wird das Feld auf `large` gestellt.
+
 ## Kalender-Overlay
 
 ```
@@ -66,11 +74,3 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 │  [01.01.2024] ━━━━━━━━━━━ [15.01.2024] │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Das Kalender-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
-  bodenbündig als Vollflächendialog geöffnet.
-- Monatswechsel per `swipe`, der Übergang ist `slide-in`.
-- Die Tagesflächen bleiben auch bei schmalem Raster mindestens 40 px hoch; unter
-  `small` Bildschirmbreite wird das Feld auf `large` gestellt.

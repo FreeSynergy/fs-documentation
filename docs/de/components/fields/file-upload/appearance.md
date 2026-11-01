@@ -60,15 +60,6 @@ Ein File Upload ist ein Element für Dateiauswahl und Upload.
 | `shadow` | Schatten stärker |
 | `background` | Hintergrund ändert sich |
 
-## Progress-Indicator
-
-```
-┌─────────────────────────────────────────┐
-│ Datei.jpg                               │
-│ ▓▓▓▓▓▓▓▓▓▓░░░░░░  75%                  │
-└─────────────────────────────────────────┘
-```
-
 ## Reaktiv
 
 - Die Drop-Zone wächst mit dem Inhalt: ohne Datei füllt sie die volle Breite,
@@ -77,3 +68,12 @@ Ein File Upload ist ein Element für Dateiauswahl und Upload.
   der Entfernen-Knopf bleibt rechts oben erreichbar.
 - Unter `small` Bildschirmbreite wird die Drop-Zone auf `Full` gestellt und der
   Auslöser als Vollbreiter Button gesetzt.
+
+## Progress-Indicator
+
+```
+┌─────────────────────────────────────────┐
+│ Datei.jpg                               │
+│ ▓▓▓▓▓▓▓▓▓▓░░░░░░  75%                  │
+└─────────────────────────────────────────┘
+```

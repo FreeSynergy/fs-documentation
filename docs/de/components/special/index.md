@@ -16,7 +16,7 @@ Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Kar
 |------------|----------|-----------|-------|--------|
 | [code-editor](./code-editor/) | `base` | `voll`, `nur-lesen`, `vergleich` | - | dokumentiert |
 | [dashboard](./dashboard/) | `base` | `vorlage`, `anordbar`, `bericht` | - | dokumentiert |
-| [embed](./embed/) | `base` | keine | - | dokumentiert |
+| [embed](./embed/) | `base` | `app`, `widget`, `iframe` | - | dokumentiert |
 | [map-view](./map-view/) | `base` | `standort`, `sammlung`, `route` | - | dokumentiert |
 | [whiteboard](./whiteboard/) | `base` | `zeichnung`, `formen`, `notizen`, `vorlage` | - | dokumentiert |
 

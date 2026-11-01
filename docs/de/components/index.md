@@ -9,7 +9,7 @@ Alle Komponenten erben von der **Basisklasse** [base](basics/base.md): geerbte A
 Barrierefreiheit, Dateisatz und Namenskonvention. Eine Komponentendatei
 listet nur ihre **eigenen** Attribute.
 
-## Kategorien (10) — 82 Komponenten
+## Kategorien (10) — 83 Komponenten
 
 ### [basics](./basics/) — Grundlagen (4)
 
@@ -47,11 +47,11 @@ Elemente, die den Zustand einer Anwendung sichtbar machen: Meldungen, Fortschrit
 
 [alert](./feedback/alert/), [badge](./feedback/badge/), [empty-state](./feedback/empty-state/), [progress](./feedback/progress/), [skeleton](./feedback/skeleton/), [spinner](./feedback/spinner/), [toast](./feedback/toast/)
 
-### [fields](./fields/) — Felder (23)
+### [fields](./fields/) — Felder (24)
 
 Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
 
-[checkbox](./fields/checkbox/), [color-input](./fields/color-input/), [combobox](./fields/combobox/), [date-input](./fields/date-input/), [date-picker](./fields/date-picker/), [emoji-picker](./fields/emoji-picker/), [field](./fields/field/), [file-upload](./fields/file-upload/), [mention-input](./fields/mention-input/), [number-input](./fields/number-input/), [otp-input](./fields/otp-input/), [radio-group](./fields/radio-group/), [range-calendar](./fields/range-calendar/), [rating](./fields/rating/), [rich-text-editor](./fields/rich-text-editor/), [search-field](./fields/search-field/), [select](./fields/select/), [slider](./fields/slider/), [switch](./fields/switch/), [tags-input](./fields/tags-input/), [text-input](./fields/text-input/), [textarea](./fields/textarea/), [time-picker](./fields/time-picker/)
+[checkbox](./fields/checkbox/), [color-input](./fields/color-input/), [combobox](./fields/combobox/), [date-input](./fields/date-input/), [date-picker](./fields/date-picker/), [emoji-picker](./fields/emoji-picker/), [field](./fields/field/), [file-upload](./fields/file-upload/), [input-group](./fields/input-group/), [mention-input](./fields/mention-input/), [number-input](./fields/number-input/), [otp-input](./fields/otp-input/), [radio-group](./fields/radio-group/), [range-calendar](./fields/range-calendar/), [rating](./fields/rating/), [rich-text-editor](./fields/rich-text-editor/), [search-field](./fields/search-field/), [select](./fields/select/), [slider](./fields/slider/), [switch](./fields/switch/), [tags-input](./fields/tags-input/), [text-input](./fields/text-input/), [textarea](./fields/textarea/), [time-picker](./fields/time-picker/)
 
 ### [data](./data/) — Daten (11)
 

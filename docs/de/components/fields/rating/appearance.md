@@ -53,6 +53,13 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 | `scale` | Vergrößerung |
 | `transform` | Hebung |
 
+## Reaktiv
+
+- Symbole bleiben mindestens 24 px groß; auf Touch-Geräten wird die Trefferfläche pro Stufe
+  auf 44 px erweitert, ohne dass der Streifen breiter wird.
+- Bei schmalem Raum rutscht die Bewertungszahl unter den Streifen statt daneben.
+- Einmal tippen genügt; `drag` über den Streifen erlaubt feines Nachjustieren, loslassen bestätigt.
+
 ## With Count
 
 ```
@@ -68,10 +75,3 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 │ ⭐⭐⭐⭐☆ (123 Bewertungen)                │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Symbole bleiben mindestens 24 px groß; auf Touch-Geräten wird die Trefferfläche pro Stufe
-  auf 44 px erweitert, ohne dass der Streifen breiter wird.
-- Bei schmalem Raum rutscht die Bewertungszahl unter den Streifen statt daneben.
-- Einmal tippen genügt; `drag` über den Streifen erlaubt feines Nachjustieren, loslassen bestätigt.

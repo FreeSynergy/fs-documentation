@@ -49,15 +49,6 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
 | `background` | Hintergrund ändert sich |
 | `border-bottom` | Unterstrich erscheint |
 
-## Animationen
-
-| Effekt | Beschreibung |
-|--------|--------------|
-| `expand` | Inhalt klappt auf |
-| `collapse` | Inhalt klappt zu |
-| `fade-in` | Inhalt blendet ein |
-| `rotate` | Pfeil dreht um 90 Grad |
-
 ## Reaktiv
 
 - Der Akkordeonstapel ist immer vollbreit; die Kopfzeile wächst mit dem Text,
@@ -66,3 +57,12 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
   linksbündig; die Kopfzeile wird mindestens 44 px hoch.
 - Beim Schließen rücken die folgenden Köpfe ohne Sprung nach, die Scrollposition des
   angeklickten Kopfes bleibt erhalten.
+
+## Animationen
+
+| Effekt | Beschreibung |
+|--------|--------------|
+| `expand` | Inhalt klappt auf |
+| `collapse` | Inhalt klappt zu |
+| `fade-in` | Inhalt blendet ein |
+| `rotate` | Pfeil dreht um 90 Grad |

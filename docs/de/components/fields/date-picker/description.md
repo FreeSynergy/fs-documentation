@@ -54,28 +54,6 @@ ausgewählt und geschrieben werden; welches Datum gemeint ist, bestimmt `dateFie
 - Ziehen eines Eintrags auf einen anderen Tag verschiebt ihn (Schreibrecht vorausgesetzt)
 - Serien (`recurrenceRule` nach RFC 5545) werden aufgelöst angezeigt und als Serie gekennzeichnet
 
-## Datenanbindung
-
-Der Wähler liest über das einheitliche Daten-Muster
-([Daten-API](../../../data/api.md)) und schreibt nach demselben Muster zurück
-(`POST` zum Anlegen, `PATCH` beim Verschieben). Gebunden wird ein Modell plus das Feld,
-das den Tag liefert — deshalb ist der Wähler nicht auf Termine beschränkt:
-
-| Modell | Datumsfeld (`dateField`) | Darstellung am Tag |
-|--------|--------------------------|--------------------|
-| `Event` | `start`, Ende in `end` | Punkt gefüllt, Farbe nach Kalender |
-| `Task` | `dueAt` | Punkt mit Häkchen, wenn `status = done` |
-| `Document` | `createdAt`, `updatedAt` | Strich am unteren Tagrand |
-| `Message` | `createdAt` | Sammelzähler pro Tag |
-| `Revision` | `createdAt` | nur bei expliziter Anforderung |
-| eigenes Modell | beliebiges `date`- oder `datetime`-Feld | wie `Event`, die Beschriftung kommt aus `type` |
-
-Geladen wird immer nur das sichtbare Fenster plus `loadWindow` Monate; Änderungen am
-Bestand folgen dem Fenster über `updatedSince` oder Webhooks
-(`event.created`, `task.updated`). Es gelten die Rechte des Datensatzes: Was die
-Person sehen darf, bestimmt die Quelle — gesperrte Einträge fehlen in Raster und Zähler
-vollständig.
-
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [date-input](../date-input/): das Feld nimmt Tippeingaben an,
@@ -100,6 +78,28 @@ vollständig.
   der Wähler lesend und die Tagesliste ist reine Information.
 - Ohne Kontext (`sources` leer) verhält sich der Wähler wie ein reiner Kalender —
   nicht jedes Datumsfeld braucht eine Anbindung.
+
+## Datenanbindung
+
+Der Wähler liest über das einheitliche Daten-Muster
+([Daten-API](../../../data/api.md)) und schreibt nach demselben Muster zurück
+(`POST` zum Anlegen, `PATCH` beim Verschieben). Gebunden wird ein Modell plus das Feld,
+das den Tag liefert — deshalb ist der Wähler nicht auf Termine beschränkt:
+
+| Modell | Datumsfeld (`dateField`) | Darstellung am Tag |
+|--------|--------------------------|--------------------|
+| `Event` | `start`, Ende in `end` | Punkt gefüllt, Farbe nach Kalender |
+| `Task` | `dueAt` | Punkt mit Häkchen, wenn `status = done` |
+| `Document` | `createdAt`, `updatedAt` | Strich am unteren Tagrand |
+| `Message` | `createdAt` | Sammelzähler pro Tag |
+| `Revision` | `createdAt` | nur bei expliziter Anforderung |
+| eigenes Modell | beliebiges `date`- oder `datetime`-Feld | wie `Event`, die Beschriftung kommt aus `type` |
+
+Geladen wird immer nur das sichtbare Fenster plus `loadWindow` Monate; Änderungen am
+Bestand folgen dem Fenster über `updatedSince` oder Webhooks
+(`event.created`, `task.updated`). Es gelten die Rechte des Datensatzes: Was die
+Person sehen darf, bestimmt die Quelle — gesperrte Einträge fehlen in Raster und Zähler
+vollständig.
 
 ## Siehe auch
 

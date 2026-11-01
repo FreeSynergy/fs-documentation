@@ -49,6 +49,15 @@ Ein Media Player wiedergibt Videos und Audios.
 | `controls` | Controls erscheinen |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Die Fläche hält das Seitenverhältnis der Datei (meist 16:9) und skaliert mit der Breite;
+  `Full` füllt den Viewport, die Steuerleiste bleibt darunter oder darüber.
+- Unter `small` Bildschirmbreite wird die Playlist unter die Fläche gesetzt und die
+  Lautstärke weicht dem Untertitel-Knopf.
+- Die Steuerung blendet im Spielzustand nach drei Sekunden aus (`fade-out`) und kommt bei
+  Zeigerbewegung, Fokus oder Tastendruck zurück.
+
 ## Controls
 
 | Control | Funktion |
@@ -68,12 +77,3 @@ Ein Media Player wiedergibt Videos und Audios.
 │ [⏸]  Titel 3                            │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Fläche hält das Seitenverhältnis der Datei (meist 16:9) und skaliert mit der Breite;
-  `Full` füllt den Viewport, die Steuerleiste bleibt darunter oder darüber.
-- Unter `small` Bildschirmbreite wird die Playlist unter die Fläche gesetzt und die
-  Lautstärke weicht dem Untertitel-Knopf.
-- Die Steuerung blendet im Spielzustand nach drei Sekunden aus (`fade-out`) und kommt bei
-  Zeigerbewegung, Fokus oder Tastendruck zurück.

@@ -43,6 +43,13 @@ Breadcrumbs zeigen den Pfad an (Home > Wiki > Seite > Unterpunkt).
 | `underline` | Unterstrich erscheint |
 | `opacity` | Deckkraft ändert sich |
 
+## Reaktiv
+
+- Der letzte Punkt wird zuerst gekürzt, dann die Mitte: Wurzel und aktueller Ort bleiben
+  immer sichtbar, dazwischen erscheint `…` als Aufklappmenü.
+- Auf schmalen Bildschirmen reicht oft nur `zurueck` — ein Knopf mit dem vorherigen Namen.
+- Der Pfad bricht nicht um; er bleibt einzeilig und wächst mit der verfügbaren Breite.
+
 ## With Icons
 
 ```
@@ -58,10 +65,3 @@ Breadcrumbs zeigen den Pfad an (Home > Wiki > Seite > Unterpunkt).
 │ Home > ... > Seite > Unterpunkt         │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Der letzte Punkt wird zuerst gekürzt, dann die Mitte: Wurzel und aktueller Ort bleiben
-  immer sichtbar, dazwischen erscheint `…` als Aufklappmenü.
-- Auf schmalen Bildschirmen reicht oft nur `zurueck` — ein Knopf mit dem vorherigen Namen.
-- Der Pfad bricht nicht um; er bleibt einzeilig und wächst mit der verfügbaren Breite.

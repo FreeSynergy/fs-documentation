@@ -46,8 +46,10 @@ Einheit. Das eigentliche Feld bleibt eine eigene Komponente.
 - **Nicht verwechseln mit** [search-field](../search-field/): das ist
   eine komplette Eingabekomponente, kein Wrapper.
 
-- **Nicht verwechseln mit** description-list (geplant): Label-Wert-Paare in
-  Detailansichten, ohne Eingabe.
+- **Nicht verwechseln mit** [description-list](../../data/description-list/): Label-Wert-Paare
+  in Detailansichten, ohne Eingabe.
+- **Nicht verwechseln mit** [input-group](../input-group/): die Gruppe sitzt im Feld neben
+  dem Wert, dieser Wrapper außerhalb (Label, Hilfe, Fehler).
 
 ## Best Practices
 

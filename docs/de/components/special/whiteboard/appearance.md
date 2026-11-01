@@ -50,6 +50,15 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 | `scale` | Vergrößerung |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- `Full` füllt den Viewport abzüglich Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
+  und der Ausschnitt scrollt.
+- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen rutscht sie
+  nach unten und die Knöpfe bleiben mindestens 44 px groß.
+- `pinch`/`spread` ändern den Maßstab, `drag` verschiebt die Fläche; die Linienstärke bleibt
+  gleich, die Striche werden nicht dicker.
+
 ## Toolbar-Buttons
 
 | Button | Funktion |
@@ -72,12 +81,3 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─               │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- `Full` füllt den Viewport abzüglich Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
-  und der Ausschnitt scrollt.
-- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen rutscht sie
-  nach unten und die Knöpfe bleiben mindestens 44 px groß.
-- `pinch`/`spread` ändern den Maßstab, `drag` verschiebt die Fläche; die Linienstärke bleibt
-  gleich, die Striche werden nicht dicker.

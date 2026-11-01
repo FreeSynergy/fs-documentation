@@ -48,6 +48,15 @@ Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Die Formatierungsleiste bleibt beim Scrollen oben stehen; passt sie nicht in eine Zeile,
+  rutschen weitere Werkzeuge hinter ein ``+``-Aufklappfeld.
+- Unter `small` Bildschirmbreite wird die Vorschau von `wiki-syntax` zum Reiter statt
+  zur Nebenspalte.
+- Der Editorbereich wächst mit dem Text (`auto-resize`), `Full` füllt die Viewport-Höhe
+  abzüglich Leiste.
+
 ## Toolbar-Buttons
 
 | Button | Funktion |
@@ -72,12 +81,3 @@ Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 │  Dies ist ein Platzhalter...            │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Formatierungsleiste bleibt beim Scrollen oben stehen; passt sie nicht in eine Zeile,
-  rutschen weitere Werkzeuge hinter ein ``+``-Aufklappfeld.
-- Unter `small` Bildschirmbreite wird die Vorschau von `wiki-syntax` zum Reiter statt
-  zur Nebenspalte.
-- Der Editorbereich wächst mit dem Text (`auto-resize`), `Full` füllt die Viewport-Höhe
-  abzüglich Leiste.

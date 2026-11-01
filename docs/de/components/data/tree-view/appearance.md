@@ -50,6 +50,14 @@ Ein Tree View ist eine hierarchische Verzeichnisstruktur mit Ein-/Ausklappen.
 | `background` | Hintergrund ändert sich |
 | `border` | Rand leuchtet auf |
 
+## Reaktiv
+
+- Der Einzug beträgt 16 px pro Ebene; auf schmalen Bildschirmen 12 px, damit auch tiefe
+  Bäume ohne seitliches Scrollen lesbar bleiben.
+- Zu lange Namen werden in der Mitte gekürzt, damit die Erweiterung rechts sichtbar bleibt.
+- Aufklappen animiert mit `expand`; die Scrollposition des angeklickten Knotens bleibt dabei
+  an derselben Stelle.
+
 ## Expand/Collapse
 
 ```
@@ -59,11 +67,3 @@ Ein Tree View ist eine hierarchische Verzeichnisstruktur mit Ein-/Ausklappen.
 │   └─ ─ Datei 2
 └─ ▸ Ordner 2
 ```
-
-## Reaktiv
-
-- Der Einzug beträgt 16 px pro Ebene; auf schmalen Bildschirmen 12 px, damit auch tiefe
-  Bäume ohne seitliches Scrollen lesbar bleiben.
-- Zu lange Namen werden in der Mitte gekürzt, damit die Erweiterung rechts sichtbar bleibt.
-- Aufklappen animiert mit `expand`; die Scrollposition des angeklickten Knotens bleibt dabei
-  an derselben Stelle.

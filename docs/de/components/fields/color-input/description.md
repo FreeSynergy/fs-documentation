@@ -20,12 +20,6 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 - Farb-themes
 - Farb-Code
 
-## Features
-
-- Farbpalette
-- Farbspektrum
-- Hex-Code
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 | **palette** | Raster mit vorausgewählten Farben (Marken- und Themenfarben) |
 | **spectrum** | Freie Wahl über Farbfläche und Farbton-Slider |
 | **code** | nur Textfeld für Hex-, RGB- oder HSL-Wert |
+
+## Features
+
+- Farbpalette
+- Farbspektrum
+- Hex-Code
 
 ## Abgrenzung
 

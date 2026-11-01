@@ -21,12 +21,6 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 - Webseiten
 - Kapitelübersicht
 
-## Features
-
-- Scroll Spy (Markiert aktuelle Section)
-- Click to Scroll (Springen zu Section)
-- Collapsible Sections (Ein/Ausklappen)
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -34,6 +28,12 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 | **randspalte** | neben dem Text, bleibt beim Scrollen stehen |
 | **block** | am Anfang des Textes als Liste |
 | **aufklappbar** | eingeklappter Knopf, Liste klappt darüber auf |
+
+## Features
+
+- Scroll Spy (Markiert aktuelle Section)
+- Click to Scroll (Springen zu Section)
+- Collapsible Sections (Ein/Ausklappen)
 
 ## Abgrenzung
 

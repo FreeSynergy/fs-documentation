@@ -44,6 +44,15 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 | `shadow` | Schatten stärker |
 | `border` | Rand leuchtet auf |
 
+## Reaktiv
+
+- Vierte Spalten ab 1600 px, drei ab 1200 px, zwei ab 800 px, darunter einspaltig;
+  die gespeicherte Reihenfolge bleibt erhalten.
+- Widgets behalten ihre Zeilenspannung, soweit sie in die neue Spaltenzahl passen;
+  sonst wachsen sie in die Höhe.
+- Auf Touch-Geräten beginnt das Verschieben erst nach langem Drücken (`long-press`),
+  die Nachbarrücken mit `reorder` zur Seite.
+
 ## Widget-Typen
 
 | Type | Beschreibung |
@@ -66,12 +75,3 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 │ [Widget 7] [Widget 8] [Widget 9]        │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Vierte Spalten ab 1600 px, drei ab 1200 px, zwei ab 800 px, darunter einspaltig;
-  die gespeicherte Reihenfolge bleibt erhalten.
-- Widgets behalten ihre Zeilenspannung, soweit sie in die neue Spaltenzahl passen;
-  sonst wachsen sie in die Höhe.
-- Auf Touch-Geräten beginnt das Verschieben erst nach langem Drücken (`long-press`),
-  die Nachbarrücken mit `reorder` zur Seite.

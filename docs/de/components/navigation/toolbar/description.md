@@ -31,38 +31,12 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
 | **kontext** | zeigt andere Aktionen, je nachdem was ausgewählt ist |
 | **ribbon** | mehrzeilige Leiste mit benannten Gruppen (Desktop-Programme) |
 
-## Aktionsgruppen
-
-| Art | Beispiele |
-|-----|-----------|
-| **Datei** | Neu, Speichern, Drucken |
-| **Formatierung** | Fett, Kursiv, Unterstrichen |
-| **Navigation** | Zurück, Vor, Aktualisieren |
-| **Suche und Filter** | Suchen, Filtern, Anzeigefelder |
-| **Gefährlich** | Löschen, Verwerfen — nur mit Bestätigung |
-
 ## Features
 
 - Customizable (benutzerdefiniert)
 - Keyboard-Shortcuts
 - Tooltip (bei Hover)
 - Disabled States
-
-## Best Practices
-
-- Nur häufig verwendete Funktionen
-- Konsistente Icon-Größe
-- Hover-Effekt
-- Keyboard-Shortcuts anzeigen
-
-## Positionen
-
-| Position | Beschreibung |
-|----------|--------------|
-| **Top** | Unterhalb der Titelzeile (Standard) |
-| **Sidebar** | In der Seitenleiste |
-| **Floating** | Freischwebend (z.B. im Chat) |
-| **Bottom** | Unten am Bildschirm (Mobile) |
 
 ## Abgrenzung
 
@@ -76,12 +50,35 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
   selbst ist die gesamte Reihe.
 
 ## Best Practices
+- Nur häufig verwendete Funktionen
+- Konsistente Icon-Größe
+- Hover-Effekt
+- Keyboard-Shortcuts anzeigen
 
 - Nur häufig genutzte Aktionen in die Leiste, der Rest ins Menü.
 - Gruppieren und Gruppen trennen; die Reihenfolge über alle Ansichten gleich halten.
 - Jedes Symbol braucht Tooltip mit Tastenkürzel, sonst wird es geraten.
 - Deaktivierte Knöpfe bleiben sichtbar (kein Sprung in der Leiste), aber ohne Wirkung.
 - Auf schmalen Bildschirmen in ein ``+``-Menü übergehen, nicht zusammenquetschen.
+
+## Aktionsgruppen
+
+| Art | Beispiele |
+|-----|-----------|
+| **Datei** | Neu, Speichern, Drucken |
+| **Formatierung** | Fett, Kursiv, Unterstrichen |
+| **Navigation** | Zurück, Vor, Aktualisieren |
+| **Suche und Filter** | Suchen, Filtern, Anzeigefelder |
+| **Gefährlich** | Löschen, Verwerfen — nur mit Bestätigung |
+
+## Positionen
+
+| Position | Beschreibung |
+|----------|--------------|
+| **Top** | Unterhalb der Titelzeile (Standard) |
+| **Sidebar** | In der Seitenleiste |
+| **Floating** | Freischwebend (z.B. im Chat) |
+| **Bottom** | Unten am Bildschirm (Mobile) |
 
 ## Siehe auch
 

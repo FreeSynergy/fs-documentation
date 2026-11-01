@@ -45,6 +45,14 @@ Ein Code Editor ist ein Editor für Quellcode.
 | `line-number` | Zeilennummer hervorheben |
 | `cursor` | Cursor ändern |
 
+## Reaktiv
+
+- Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt waagerecht (`swipe`).
+- Unter `small` Bildschirmbreite wird die Vorschlageliste über die Tastatur-blende gesetzt,
+  der Zeilennummernblock wird schmaler.
+- Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander,
+  die Höhe bleibt pro Hälfte begrenzt.
+
 ## Features
 
 | Feature | Beschreibung |
@@ -62,11 +70,3 @@ Ein Code Editor ist ein Editor für Quellcode.
 | **Dark** | Dunkles Theme |
 | **Light** | Helles Theme |
 | **Custom** | Benutzerdefiniert |
-
-## Reaktiv
-
-- Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt waagerecht (`swipe`).
-- Unter `small` Bildschirmbreite wird die Vorschlageliste über die Tastatur-blende gesetzt,
-  der Zeilennummernblock wird schmaler.
-- Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander,
-  die Höhe bleibt pro Hälfte begrenzt.

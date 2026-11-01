@@ -43,6 +43,14 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 | `shadow` | Schatten stärker |
 | `border` | Rand leuchtet auf |
 
+## Reaktiv
+
+- Unter `small` Bildschirmbreite werden die Optionen einspaltig und Zeile für Zeile
+  mindestens 44 px hoch.
+- Die segmentierte Variante wechselt bei schmalem Raum untereinander; die Trennlinien
+  bleiben erhalten, damit die Gruppe als zusammengehörig erkennbar bleibt.
+- Kartenvarianten stapeln einspaltig, Icon und Beschreibung bleiben linksbündig.
+
 ## With Icons
 
 ```
@@ -52,11 +60,3 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 │ ( ) Option 3   [Icon]                   │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Unter `small` Bildschirmbreite werden die Optionen einspaltig und Zeile für Zeile
-  mindestens 44 px hoch.
-- Die segmentierte Variante wechselt bei schmalem Raum untereinander; die Trennlinien
-  bleiben erhalten, damit die Gruppe als zusammengehörig erkennbar bleibt.
-- Kartenvarianten stapeln einspaltig, Icon und Beschreibung bleiben linksbündig.

@@ -47,6 +47,15 @@ Vertikale Liste: ein Eintrag pro Zeile, volle Breite des Containers.
 | `background` | Hintergrund ändert sich |
 | `border` | Rand leuchtet auf |
 
+## Reaktiv
+
+- Die Liste ist immer vollbreit; die Spaltenanzahl ist nicht Größe-abhängig, sondern die
+  innerzeilige Aufteilung: auf schmalen Bildschirmen rutscht der rechte Teil unter den Text.
+- Sekundäraktionen werden auf Touch-Geräten durch Wischen (`swipe`) erreichbar, nicht durch
+  kleine Knöpfe.
+- Nachladende Listen zeigen am Ende einen `skeleton`-Platzhalter, neue Einträge gleiten mit
+  `stagger` ein.
+
 ## With Icons
 
 ```
@@ -56,12 +65,3 @@ Vertikale Liste: ein Eintrag pro Zeile, volle Breite des Containers.
 │ 📁 Datei 3                              │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Liste ist immer vollbreit; die Spaltenanzahl ist nicht Größe-abhängig, sondern die
-  innerzeilige Aufteilung: auf schmalen Bildschirmen rutscht der rechte Teil unter den Text.
-- Sekundäraktionen werden auf Touch-Geräten durch Wischen (`swipe`) erreichbar, nicht durch
-  kleine Knöpfe.
-- Nachladende Listen zeigen am Ende einen `skeleton`-Platzhalter, neue Einträge gleiten mit
-  `stagger` ein.

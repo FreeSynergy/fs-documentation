@@ -22,6 +22,30 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 | `quickPick` | array[] | `[heute, morgen]` | Schnellauswahl unter dem Raster |
 | `closeOnSelect` | boolean | `true` | nach der Auswahl schließen |
 
+## Events
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `onChange` | function | Datum oder Bereich geändert |
+| `onMonthChange` | function | angezeigter Monat gewechselt, lädt das Fenster nach |
+| `onEntriesLoad` | function | Einträge eines Fensters sind geladen |
+| `onEntryClick` | function | Eintrag in der Tagesliste geöffnet |
+| `onEntryCreate` | function | Eintrag aus der Schnellaufnahme gespeichert |
+| `onEntryUpdate` | function | Eintrag aus der Tagesliste geändert |
+| `onEntryMove` | function | Eintrag auf einen anderen Tag gezogen |
+| `onEntryDelete` | function | Eintrag aus der Tagesliste gelöscht |
+
+## Barrierefreiheit
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `role` | string | `dialog` mit `grid` im Raster, Zellen `gridcell` |
+| `aria-selected` | boolean | markiert den gewählten Tag |
+| `label` | string | Pflicht, z. B. „Termin“ |
+| `aria-label` (Tag) | string | Tag nennt Datum und Einträge, z. B. „14. Oktober, 3 Einträge“ |
+| `role` (Tagesliste) | string | `list` mit `listitem`, Einträge zusätzlich `button` |
+| `aria-busy` | boolean | `true`, während das Fenster nachgeladen wird |
+
 ## Datenanbindung
 
 Ohne `sources` ist der Wähler ein reiner Kalender. Mit `sources` liest er den
@@ -67,30 +91,6 @@ Ein Eintrag in `entries` folgt den [Standardfeldern](../../../data/felder.md).
 | `color` | string \| null | eigener Farbakzent, sonst nach `type` |
 | `done` | boolean | erledigt (Aufgaben), gedämpfte Darstellung |
 | `recurrenceRule` | string \| null | RRULE nach RFC 5545, Serie mit Unterbrechung am Punkt |
-
-## Events
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onChange` | function | Datum oder Bereich geändert |
-| `onMonthChange` | function | angezeigter Monat gewechselt, lädt das Fenster nach |
-| `onEntriesLoad` | function | Einträge eines Fensters sind geladen |
-| `onEntryClick` | function | Eintrag in der Tagesliste geöffnet |
-| `onEntryCreate` | function | Eintrag aus der Schnellaufnahme gespeichert |
-| `onEntryUpdate` | function | Eintrag aus der Tagesliste geändert |
-| `onEntryMove` | function | Eintrag auf einen anderen Tag gezogen |
-| `onEntryDelete` | function | Eintrag aus der Tagesliste gelöscht |
-
-## Barrierefreiheit
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | `dialog` mit `grid` im Raster, Zellen `gridcell` |
-| `aria-selected` | boolean | markiert den gewählten Tag |
-| `label` | string | Pflicht, z. B. „Termin“ |
-| `aria-label` (Tag) | string | Tag nennt Datum und Einträge, z. B. „14. Oktober, 3 Einträge“ |
-| `role` (Tagesliste) | string | `list` mit `listitem`, Einträge zusätzlich `button` |
-| `aria-busy` | boolean | `true`, während das Fenster nachgeladen wird |
 
 ## Geerbt von
 

@@ -20,12 +20,6 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 - Kommentare
 - Messages
 
-## Features
-
-- @-Mention
-- Auto-complete
-- Selected Users
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 | **feld** | eigenes Feld nur für Erwähnungen (z. B. Empfänger) |
 | **inline** | Erwähnung mitten im Fließtext eines Kommentars |
 | **mehrzeilig** | Chat-Editor mit mehreren Zeilen und Erwähnungen |
+
+## Features
+
+- @-Mention
+- Auto-complete
+- Selected Users
 
 ## Abgrenzung
 

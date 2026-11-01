@@ -55,6 +55,16 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 | `scale` | Vergrößerung |
 | `shadow` | Schatten |
 
+## Reaktiv
+
+- Die Leiste ist immer vollbreit und bleibt am unteren Rand stehen; ihr Inhalt wird
+  gleichmäßig auf die Punkte verteilt.
+- Reicht der Platz für Beschriftungen nicht, fällt sie auf `icon only` zurück und der Name
+  erscheint erst nach der Auswahl als Kurztext.
+- Auf großen Bildschirmen wechselt die Anwendung üblicherweise auf
+  [sidebar](../sidebar/) oder [toolbar](../toolbar/); die Leiste bleibt dann erhalten, wenn
+  die Anwendung mobil bleibt, sonst entfällt sie.
+
 ## Max 5 Punkte
 
 ```
@@ -70,13 +80,3 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 | `fade-in` | Beschriftung blendet ein |
 | `scale-in` | aktives Symbol wächst |
 | `slide-in` | Indikator wandert zum aktiven Punkt |
-
-## Reaktiv
-
-- Die Leiste ist immer vollbreit und bleibt am unteren Rand stehen; ihr Inhalt wird
-  gleichmäßig auf die Punkte verteilt.
-- Reicht der Platz für Beschriftungen nicht, fällt sie auf `icon only` zurück und der Name
-  erscheint erst nach der Auswahl als Kurztext.
-- Auf großen Bildschirmen wechselt die Anwendung üblicherweise auf
-  [sidebar](../sidebar/) oder [toolbar](../toolbar/); die Leiste bleibt dann erhalten, wenn
-  die Anwendung mobil bleibt, sonst entfällt sie.

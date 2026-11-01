@@ -45,6 +45,14 @@ Senkrechte Regler sind keine eigene Variante, sondern `orientation = vertikal`.
 | `scale` | Vergrößerung |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Der Track füllt die verfügbare Breite (`Full` in Werkzeugleisten), die Knöpfe bleiben
+  16 px (Desktop) bzw. 24 px (Touch) groß; die Trefferfläche um den Knopf bleibt 44 px.
+- Auf schmalen Bildschirmen rutschen Wert und Skalenenden über bzw. unter den Track,
+  nicht daneben.
+- Ein Tipp auf den Track springt zum getroffenen Punkt, der Knopf folgt `elastic`.
+
 ## With Labels
 
 ```
@@ -66,11 +74,3 @@ Senkrechte Regler sind keine eigene Variante, sondern `orientation = vertikal`.
 │   0                                     │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Der Track füllt die verfügbare Breite (`Full` in Werkzeugleisten), die Knöpfe bleiben
-  16 px (Desktop) bzw. 24 px (Touch) groß; die Trefferfläche um den Knopf bleibt 44 px.
-- Auf schmalen Bildschirmen rutschen Wert und Skalenenden über bzw. unter den Track,
-  nicht daneben.
-- Ein Tipp auf den Track springt zum getroffenen Punkt, der Knopf folgt `elastic`.

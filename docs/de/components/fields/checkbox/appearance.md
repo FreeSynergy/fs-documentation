@@ -43,6 +43,12 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 | `scale` | Vergrößerung |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Bei schmaler Breite rutscht das Label unter die Box; die Trefferfläche bleibt mindestens 44 px hoch.
+- Optionsgruppen werden einspaltig gestapelt, der Einzug der Unterpunkte bleibt erhalten.
+- Auf Touch-Geräten wird die Box auf `large` (28 px) hochskaliert, das Label bleibt in der Schriftgröße von `medium`.
+
 ## With Icons
 
 ```
@@ -52,9 +58,3 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 │ [✓] Option 3   [Icon]                   │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Bei schmaler Breite rutscht das Label unter die Box; die Trefferfläche bleibt mindestens 44 px hoch.
-- Optionsgruppen werden einspaltig gestapelt, der Einzug der Unterpunkte bleibt erhalten.
-- Auf Touch-Geräten wird die Box auf `large` (28 px) hochskaliert, das Label bleibt in der Schriftgröße von `medium`.

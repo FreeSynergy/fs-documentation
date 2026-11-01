@@ -20,12 +20,6 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 - Optionen
 - Einstellungen
 
-## Features
-
-- One Selection
-- Labels
-- Icons
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 | **einzeln** | Klassischer Kreis mit Label untereinander |
 | **toggle** | Optionen als aneinandergrenzende Knöpfe (segmentiert) |
 | **karte** | Optionen als Karten mit Titel und Beschreibung |
+
+## Features
+
+- One Selection
+- Labels
+- Icons
 
 ## Abgrenzung
 

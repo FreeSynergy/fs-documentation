@@ -48,6 +48,15 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Das Feld füllt die Breite des Containers; die Höhe bleibt in Prozent des Viewports begrenzt
+  (maximal 60 %), damit darunter liegende Bedienelemente erreichbar bleiben.
+- Auf schmalen Bildschirmen entfällt der Größen-Ziehgriff (`drag`), die Höhe ergibt sich aus
+  dem Inhalt bis zur Obergrenze.
+- Beim Senden im Chat-Modus fällt das Feld animiert auf eine Zeile zurück (`collapse`-Übergang
+  über `expand`).
+
 ## Auto-resize
 
 ```
@@ -68,12 +77,3 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 | **Valid** | Grün |
 | **Invalid** | Rot |
 | **Warning** | Orange |
-
-## Reaktiv
-
-- Das Feld füllt die Breite des Containers; die Höhe bleibt in Prozent des Viewports begrenzt
-  (maximal 60 %), damit darunter liegende Bedienelemente erreichbar bleiben.
-- Auf schmalen Bildschirmen entfällt der Größen-Ziehgriff (`drag`), die Höhe ergibt sich aus
-  dem Inhalt bis zur Obergrenze.
-- Beim Senden im Chat-Modus fällt das Feld animiert auf eine Zeile zurück (`collapse`-Übergang
-  über `expand`).

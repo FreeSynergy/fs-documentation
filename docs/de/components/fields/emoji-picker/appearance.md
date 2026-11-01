@@ -47,6 +47,13 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 | `scale` | Vergrößerung |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Die Emoji-Raster skaliert mit: 8 Spalten ab 300 px, auf schmalen Geräten 6 Spalten.
+- Kategorienwechsel per `swipe`; die Liste behält ihre Scroll-Position je Kategorie.
+- Unter `small` Bildschirmbreite wird der Picker zur bodenbündigen Vollfläche mit
+  festem Reiter oben; die Kacheln bleiben mindestens 40 px groß.
+
 ## Tabs
 
 | Tab | Emojis |
@@ -68,10 +75,3 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 │  😀  😃  😄  😁  😆  😅  🤣  😂          │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Emoji-Raster skaliert mit: 8 Spalten ab 300 px, auf schmalen Geräten 6 Spalten.
-- Kategorienwechsel per `swipe`; die Liste behält ihre Scroll-Position je Kategorie.
-- Unter `small` Bildschirmbreite wird der Picker zur bodenbündigen Vollfläche mit
-  festem Reiter oben; die Kacheln bleiben mindestens 40 px groß.

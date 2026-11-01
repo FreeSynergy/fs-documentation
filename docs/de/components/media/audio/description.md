@@ -39,13 +39,6 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
 - Timeline-Seek (klicken zum Springen)
 - Wiedergabeliste
 
-## Best Practices
-
-- Immer `controls` anzeigen, außer bei Hintergrund-Audio
-- `muted` bei `autoplay` verwenden (Browser-Anforderung)
-- Alt-Text für Barrierefreiheit bereitstellen
-- Verschiedene Formate für Kompatibilität bereitstellen
-
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [media-player](../media-player/): der Media Player ist die Elternklasse
@@ -54,6 +47,13 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
   Video-Standbild allein ist ein [image](../image/).
 - Eine Sprachnachricht im Chat ist diese Komponente in der Variante `kompakt`, keine eigene
   Komponente.
+
+## Best Practices
+
+- Immer `controls` anzeigen, außer bei Hintergrund-Audio
+- `muted` bei `autoplay` verwenden (Browser-Anforderung)
+- Alt-Text für Barrierefreiheit bereitstellen
+- Verschiedene Formate für Kompatibilität bereitstellen
 
 ## Formate
 

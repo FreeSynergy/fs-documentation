@@ -58,5 +58,6 @@ Shortcut-Dokumentationen der Programme verwendet.
 ## Siehe auch
 
 - [Tooltip](../../overlays/tooltip/)
-- [Konzept und Plan](../../konzept-und-plan.md) (u. a. geplantes `command`)
+- [Command](../../navigation/command/) — Shortcuts suchen und ausführen
+- [Konzept und Plan](../../konzept-und-plan.md)
 - [Basiskomponente](../base/)

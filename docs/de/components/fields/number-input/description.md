@@ -21,13 +21,6 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 - Preise
 - Werte
 
-## Features
-
-- Min/Max-Werte
-- Schrittweite
-- Validierung
-- Auto-formatting
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -35,6 +28,13 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 | **einfach** | Nur Zahlenfeld, Tastatur ohne Schritt-Knöpfe |
 | **stepper** | Feld mit `−` und `+` daneben, Halten beschleunigt |
 | **formatiert** | Wert mit Einheit und lokaler Gruppierung (`1.250 g`) |
+
+## Features
+
+- Min/Max-Werte
+- Schrittweite
+- Validierung
+- Auto-formatting
 
 ## Abgrenzung
 

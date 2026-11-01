@@ -21,13 +21,6 @@ Ein Repeater ist ein Wiederholtes Layout für Listen.
 - Artikel
 - Listen
 
-## Features
-
-- Filter
-- Sort
-- Search
-- Pagination
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -35,6 +28,13 @@ Ein Repeater ist ein Wiederholtes Layout für Listen.
 | **liste** | ein Eintrag pro Zeile (Standard) |
 | **raster** | Einträge als Karten nebeneinander |
 | **eingabe** | wiederholte Formularzeilen, z. B. Positionszeilen mit Hinzufügen/Löschen |
+
+## Features
+
+- Filter
+- Sort
+- Search
+- Pagination
 
 ## Abgrenzung
 

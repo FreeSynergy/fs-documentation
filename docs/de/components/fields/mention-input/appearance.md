@@ -41,6 +41,13 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Die Vorschlagsliste folgt der Cursorposition und klappt nach oben, wenn unten kein Platz ist.
+- Auf schmalen Bildschirmen wird die Liste zur bodenbündigen Leiste über der Tastatur.
+- Chips brechen in die nächste Zeile um; zu lange Namen werden mit Auslassung gekürzt,
+  der Vollname bleibt als Tooltip erhalten.
+
 ## Auto-Complete
 
 ```
@@ -61,10 +68,3 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 │ @John Doe @Jane Smith (2 ausgewählt)    │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Vorschlagsliste folgt der Cursorposition und klappt nach oben, wenn unten kein Platz ist.
-- Auf schmalen Bildschirmen wird die Liste zur bodenbündigen Leiste über der Tastatur.
-- Chips brechen in die nächste Zeile um; zu lange Namen werden mit Auslassung gekürzt,
-  der Vollname bleibt als Tooltip erhalten.

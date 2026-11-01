@@ -51,6 +51,15 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 | `border` | Rand leuchtet auf |
 | `opacity` | Deckkraft ändert sich |
 
+## Reaktiv
+
+- `responsive = true` liefert je Breite eine passende Auflösung; die Anzeigefläche bleibt
+  gleich groß, damit die Seite beim Laden nicht springt.
+- In Rastern und Karten hält `fit = cover` das Seitenverhältnis, `fit = contain` lässt
+  auf schmalen Bildschirmen Rand zu.
+- Hintergrundbilder skalieren mit dem Viewport (`Full`), der Text darüber bleibt bei
+  mindestens 4,5:1 Kontrast — sonst dunkler Schleier darüber.
+
 ## Loading-Zustand
 
 ### Skeleton (Platzhalter)
@@ -89,12 +98,3 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 | `outlined` | Heller Rand, kein Schatten |
 | `elevated` | Starkes Shadow, keine Border |
 | `rounded` | Abgerundete Ecken (8px) |
-
-## Reaktiv
-
-- `responsive = true` liefert je Breite eine passende Auflösung; die Anzeigefläche bleibt
-  gleich groß, damit die Seite beim Laden nicht springt.
-- In Rastern und Karten hält `fit = cover` das Seitenverhältnis, `fit = contain` lässt
-  auf schmalen Bildschirmen Rand zu.
-- Hintergrundbilder skalieren mit dem Viewport (`Full`), der Text darüber bleibt bei
-  mindestens 4,5:1 Kontrast — sonst dunkler Schleier darüber.

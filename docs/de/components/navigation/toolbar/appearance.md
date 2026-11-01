@@ -33,14 +33,6 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 └─────┴─────────────────────────────────────────────┘
 ```
 
-## Beschriftung der Knöpfe
-
-| Form | Beschreibung |
-|------|--------------|
-| **nur Symbol** | Standard, mit Tooltip |
-| **nur Text** | wenn kein eindeutiges Symbol existiert |
-| **Symbol und Text** | neue oder mehrdeutige Aktionen |
-
 ## Größen
 
 | Größe | Icon-Größe | Button-Größe | Verwendung |
@@ -67,14 +59,6 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 | `scale` | Leichte Vergrößerung |
 | `shadow` | Schatten erscheint |
 
-## Separator
-
-```
-┌─────────────────────────────────────────────────────┐
-│ [📄] [✏️] [✂️] ───── [✔️] [❌] [🔍] [⚙️]            │
-└─────────────────────────────────────────────────────┘
-```
-
 ## Reaktiv
 
 - Die Leiste ist vollbreit und bleibt beim Scrollen oben stehen (`geklebt`); der Inhalt der
@@ -83,3 +67,19 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
   das die Gruppen beibehält.
 - Auf Touch-Geräten sind die Knöpfe mindestens 44 px groß; auf großen Bildschirmen kann
   `Symbol und Text` gezeigt werden, auf kleinen nur das Symbol.
+
+## Beschriftung der Knöpfe
+
+| Form | Beschreibung |
+|------|--------------|
+| **nur Symbol** | Standard, mit Tooltip |
+| **nur Text** | wenn kein eindeutiges Symbol existiert |
+| **Symbol und Text** | neue oder mehrdeutige Aktionen |
+
+## Separator
+
+```
+┌─────────────────────────────────────────────────────┐
+│ [📄] [✏️] [✂️] ───── [✔️] [❌] [🔍] [⚙️]            │
+└─────────────────────────────────────────────────────┘
+```

@@ -20,12 +20,6 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 - Kommentare
 - Messages
 
-## Features
-
-- Categories
-- Search
-- Recent
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 | **inline** | Auswahl ist dauerhaft unter dem Feld eingeblendet (Komponiermodus) |
 | **overlay** | Klappe am Cursor, schließt nach der Auswahl |
 | **reaktion** | minimales Raster mit wenigen Emojis über einer Nachricht |
+
+## Features
+
+- Categories
+- Search
+- Recent
 
 ## Abgrenzung
 

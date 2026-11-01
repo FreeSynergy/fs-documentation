@@ -20,12 +20,6 @@ Ein Tags Input ist eine Liste von Tags/Etiketten.
 - Kategorien
 - Schlagworte
 
-## Features
-
-- Auto-complete
-- Filter
-- Remove
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Tags Input ist eine Liste von Tags/Etiketten.
 | **frei** | neuer Tag entsteht aus der Eingabe (Komma oder Enter) |
 | **vorschlag** | nur vorhandene Tags, Auswahl aus Vorschlagsliste |
 | **nur-lesbar** | Tags anzeigen ohne Löschen und Ergänzen |
+
+## Features
+
+- Auto-complete
+- Filter
+- Remove
 
 ## Abgrenzung
 

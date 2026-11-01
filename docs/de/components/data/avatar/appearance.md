@@ -56,15 +56,6 @@ Avatare sind visuelle Repräsentationen von Benutzern, die in verschiedenen Form
 | `shadow` | Schatten wird stärker |
 | `none` | Kein Effekt |
 
-## Status-Badge Positionen
-
-| Position | Beschreibung |
-|----------|--------------|
-| **Bottom-Right** | Unten rechts (Standard) |
-| **Top-Right** | Oben rechts |
-| **Bottom-Left** | Unten links |
-| **Center** | In der Mitte |
-
 ## Reaktiv
 
 - In Listen bleibt der Avatar konstant `small` (32 px), auch auf schmalen Bildschirmen;
@@ -73,6 +64,15 @@ Avatare sind visuelle Repräsentationen von Benutzern, die in verschiedenen Form
   Bildgröße ändert.
 - Lädt das Bild langsam, erscheint zuerst der Initialen-Fallback, das Foto blendet
   anschließend mit `fade-in` ein.
+
+## Status-Badge Positionen
+
+| Position | Beschreibung |
+|----------|--------------|
+| **Bottom-Right** | Unten rechts (Standard) |
+| **Top-Right** | Oben rechts |
+| **Bottom-Left** | Unten links |
+| **Center** | In der Mitte |
 
 ## Styling-Attribute
 

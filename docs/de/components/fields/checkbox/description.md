@@ -20,12 +20,6 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 - Optionen
 - Zustimmung
 
-## Features
-
-- Checked
-- Indeterminate
-- Disabled
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 | **Default** | Standard-Quadrat mit Häkchen |
 | **Toggle** | Kasten ohne Häkchen, Auswahl ist flächig hervorgehoben |
 | **Indeterminate** | Gemischter Zustand – einige, aber nicht alle Unteroptionen ausgewählt |
+
+## Features
+
+- Checked
+- Indeterminate
+- Disabled
 
 ## Abgrenzung
 

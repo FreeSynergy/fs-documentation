@@ -20,12 +20,6 @@ Ein Combobox ist ein Textfeld + Dropdown.
 - Kategorien
 - Suchfeld
 
-## Features
-
-- Typing
-- Selection
-- Auto-complete
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Combobox ist ein Textfeld + Dropdown.
 | **einzeln** | Auswahl aus Vorschlägen, eigener Text nur als Suchfilter |
 | **freitext** | beliebiger Wert erlaubt, Vorschläge sind Angebote |
 | **mehrfach** | mehrere Werte als Tags, Vorschlagsliste bleibt geöffnet |
+
+## Features
+
+- Typing
+- Selection
+- Auto-complete
 
 ## Abgrenzung
 

@@ -13,14 +13,11 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 ```
 
 ## Varianten
-
 | Variante | Aussehen |
 |----------|----------|
 | **palette** | Farbklappe mit Raster aus Farbflächen, kein Slider |
 | **spectrum** | grosse Farbfläche, darunter Farbton- und Transparenz-Slider |
 | **code** | einzeiliges Feld mit Farbklötzchen vor dem Wert |
-
-## Varianten
 
 | Variante | Aussehen |
 |----------|----------|
@@ -60,6 +57,19 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+- Das Auswahl-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
+  statt unter dem Feld als bodenbündige Fläche geöffnet.
+- Die Farbfläche skaliert proportional, der Slider bleibt mindestens 44 px hoch.
+- Unter `small` wird die Variante `code` bevorzugt; Palette und Spektrum bleiben als
+  Vollflächendialog erreichbar.
+
+- Das Auswahl-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
+  statt unter dem Feld als bodenbündige Fläche geöffnet.
+- Die Farbfläche skaliert proportional, der Slider bleibt mindestens 44 px hoch.
+- Unter `small` wird die Variante `code` bevorzugt; Palette und Spektrum bleiben als
+  Vollflächendialog erreichbar.
+
 ## Farbspektrum
 
 ```
@@ -69,19 +79,3 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 │                                         │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Das Auswahl-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
-  statt unter dem Feld als bodenbündige Fläche geöffnet.
-- Die Farbfläche skaliert proportional, der Slider bleibt mindestens 44 px hoch.
-- Unter `small` wird die Variante `code` bevorzugt; Palette und Spektrum bleiben als
-  Vollflächendialog erreichbar.
-
-## Reaktiv
-
-- Das Auswahl-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
-  statt unter dem Feld als bodenbündige Fläche geöffnet.
-- Die Farbfläche skaliert proportional, der Slider bleibt mindestens 44 px hoch.
-- Unter `small` wird die Variante `code` bevorzugt; Palette und Spektrum bleiben als
-  Vollflächendialog erreichbar.

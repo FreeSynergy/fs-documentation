@@ -44,6 +44,15 @@ Ein Tags Input ist eine Liste von Tags/Etiketten.
 | `background` | Hintergrund ändert sich |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Chips brechen in die nächste Zeile um, das Feld wächst in der Höhe; `Full` füllt die Breite
+  des Containers.
+- Auf schmalen Bildschirmen wird die Vorschlagsliste zur bodenbündigen Leiste, die Chips
+  bleiben oben sichtbar.
+- Der Schließen-Knopf ist mindestens 24 px groß; auf Touch-Geräten genügt langes Drücken
+  zum Entfernen, damit der Chip nicht versehentlich verschwindet.
+
 ## Chip-Formen
 
 | Form | Beschreibung |
@@ -65,12 +74,3 @@ Ein Tags Input ist eine Liste von Tags/Etiketten.
 │  +                                      │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Chips brechen in die nächste Zeile um, das Feld wächst in der Höhe; `Full` füllt die Breite
-  des Containers.
-- Auf schmalen Bildschirmen wird die Vorschlagsliste zur bodenbündigen Leiste, die Chips
-  bleiben oben sichtbar.
-- Der Schließen-Knopf ist mindestens 24 px groß; auf Touch-Geräten genügt langes Drücken
-  zum Entfernen, damit der Chip nicht versehentlich verschwindet.

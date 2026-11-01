@@ -54,15 +54,6 @@ Ein Floating Action Button (FAB) ist ein runder Hauptaktion-Button.
 | `shadow` | Schatten stärker |
 | `ripple` | Welleneffekt bei Klick |
 
-## Positionierung
-
-| Position | Beschreibung |
-|----------|--------------|
-| **Bottom Right** | Standard (rechts unten) |
-| **Bottom Left** | Links unten (RTL-Sprachen) |
-| **Center** | In der Mitte (selten) |
-| **Fixed** | Fixiert am Bildschirm |
-
 ## Reaktiv
 
 Der FAB bleibt am Bildschirm verankert (`position: fixed`), damit die Hauptaktion auch beim
@@ -87,6 +78,15 @@ aufwärts scrollen holt ihn mit `pop-in` zurück; auf schmalen Flächen wird er 
 }
 .fab--scroll-hidden { transform: translateY(80px); opacity: 0; }
 ```
+
+## Positionierung
+
+| Position | Beschreibung |
+|----------|--------------|
+| **Bottom Right** | Standard (rechts unten) |
+| **Bottom Left** | Links unten (RTL-Sprachen) |
+| **Center** | In der Mitte (selten) |
+| **Fixed** | Fixiert am Bildschirm |
 
 ## Badge (Mit Anzahl/Status)
 

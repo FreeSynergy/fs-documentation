@@ -20,13 +20,6 @@ Ein Tree View ist eine hierarchische Verzeichnisstruktur mit Ein-/Ausklappen.
 - Kategorien
 - Organigramm
 
-## Features
-
-- Expand/Collapse
-- Checkbox Selection
-- Drag-and-Drop
-- Search
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -35,6 +28,13 @@ Ein Tree View ist eine hierarchische Verzeichnisstruktur mit Ein-/Ausklappen.
 | **icon** | Symbol nach Objekttyp (Ordner, Datei, Kategorie) |
 | **kästchen** | Mehrfachauswahl, Elternknoten halbiert bei Teilauswahl |
 | **verschiebbar** | Knoten per Ziehen umhängen |
+
+## Features
+
+- Expand/Collapse
+- Checkbox Selection
+- Drag-and-Drop
+- Search
 
 ## Abgrenzung
 

@@ -40,5 +40,5 @@
 |----------|------------|
 | Mehr-Menü an Tabellenzeilen | `aktionen`, `trigger="click"` |
 | Datum/Farbe schnell setzen | `formular`, `closeOnAction` |
-| Link-Ziel-Vorschau | hover-card (geplant, Welle 2), sonst `inhalt` mit `trigger="hover"` |
-| Zentrierter Bestätigungsdialog | [modal](../modal/) bzw. alert-dialog (geplant) |
+| Link-Ziel-Vorschau | [hover-card](../hover-card/), sonst `inhalt` mit `trigger="hover"` |
+| Zentrierter Bestätigungsdialog | [modal](../modal/) bzw. [alert-dialog](../alert-dialog/) |

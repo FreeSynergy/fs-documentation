@@ -47,12 +47,6 @@ sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
 - **Nicht verwechseln mit** [tree-view](../../data/tree-view/): hier stehen Ziele und Aktionen,
   dort beliebige Daten.
 
-## Typische Positionen
-
-- Links (Standard bei LTR-Sprachen)
-- Rechts (bei RTL-Sprachen oder spezifischen Layouts)
-- Oben (als Horizontale Leiste - dann meist "Topbar" genannt)
-
 ## Best Practices
 
 - Wichtiges oben, Gruppen mit Überschrift, höchstens zwei Ebenen.
@@ -60,6 +54,12 @@ sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
 - Einklappen merkt sich den Zustand; in der Ikonenleiste braucht jeder Punkt einen Tooltip.
 - Auf kleinen Bildschirmen als Drawer öffnen und nach der Auswahl wieder schließen.
 - Breite per Ziehen ändern nur, wenn die Mindestbreite lesbar bleibt (mindestens 200 px).
+
+## Typische Positionen
+
+- Links (Standard bei LTR-Sprachen)
+- Rechts (bei RTL-Sprachen oder spezifischen Layouts)
+- Oben (als Horizontale Leiste - dann meist "Topbar" genannt)
 
 ## Siehe auch
 

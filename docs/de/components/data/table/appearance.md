@@ -48,6 +48,15 @@ Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
 | `background` | Hintergrund ändert sich |
 | `border` | Rand leuchtet auf |
 
+## Reaktiv
+
+- Die Tabelle füllt die Breite; reicht sie nicht, scrollt sie waagerecht (`swipe`) und die
+  erste Spalte bleibt stehen.
+- Unter `small` Bildschirmbreite werden die Aktionen pro Zeile hinter ein Menü gesetzt und die
+  Kopfzeile bleibt beim vertikalen Scrollen sichtbar.
+- Spaltenbreiten passen per `drag`; Zeilenhöhen wachsen nur, wenn Text umbricht, sonst bleiben
+  sie auf einer Zeile (mindestens 44 px).
+
 ## Sortierung
 
 ```
@@ -59,12 +68,3 @@ Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
 │ 3  │ Bob  │ 28    │ [Bearbeiten] [Lösch] │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Tabelle füllt die Breite; reicht sie nicht, scrollt sie waagerecht (`swipe`) und die
-  erste Spalte bleibt stehen.
-- Unter `small` Bildschirmbreite werden die Aktionen pro Zeile hinter ein Menü gesetzt und die
-  Kopfzeile bleibt beim vertikalen Scrollen sichtbar.
-- Spaltenbreiten passen per `drag`; Zeilenhöhen wachsen nur, wenn Text umbricht, sonst bleiben
-  sie auf einer Zeile (mindestens 44 px).

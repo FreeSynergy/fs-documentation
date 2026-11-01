@@ -43,14 +43,6 @@ Die Abfolge einzelner Bilder ist keine Galerie-Variante mehr, sondern die eigene
 - Lazy Loading (nur sichtbare Bilder laden)
 - Filter (nach Kategorien filtern)
 
-## Best Practices
-
-- Immer `alt`-Text für Barrierefreiheit
-- Lazy Loading für Performance
-- Responsives Layout für Mobile
-- Schnelle Ladezeiten (optimierte Bilder)
-- Clear-Visual-Hierarchy
-
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [carousel](../carousel/): das Karussell zeigt nacheinander,
@@ -59,6 +51,14 @@ Die Abfolge einzelner Bilder ist keine Galerie-Variante mehr, sondern die eigene
   die Galerie ausschließlich Bilder samt Vergrößerung.
 - **Nicht verwechseln mit** [image](../image/): ein einzelnes Bild ist kein Galeriemember.
 - Die Großansicht ist ein Overlay wie [popover](../../overlays/popover/), keine eigene Seite.
+
+## Best Practices
+
+- Immer `alt`-Text für Barrierefreiheit
+- Lazy Loading für Performance
+- Responsives Layout für Mobile
+- Schnelle Ladezeiten (optimierte Bilder)
+- Clear-Visual-Hierarchy
 
 ## Navigation-Attribute
 

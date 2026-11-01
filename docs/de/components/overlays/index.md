@@ -22,7 +22,7 @@ Elemente, die über anderem Inhalt erscheinen und eigenen Fokus bekommen. Sie ha
 | [hover-card](./hover-card/) | `base`, `popover` | `profil`, `dokument`, `vorschau` | `tooltip` | dokumentiert |
 | [modal](./modal/) | `base` | `Small`, `Medium`, `Large`, `Fullscreen` | - | dokumentiert |
 | [popover](./popover/) | `base` | `inhalt`, `aktionen`, `formular` | - | dokumentiert |
-| [tooltip](./tooltip/) | `base` | keine | - | dokumentiert |
+| [tooltip](./tooltip/) | `base` | `top`, `bottom`, `left`, `right`, `auto` | - | dokumentiert |
 
 ## Siehe auch
 

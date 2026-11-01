@@ -32,6 +32,12 @@ COMPONENTS = DOCS / "de" / "components"
 REQUIRED_FILES = ["description.md", "appearance.md", "attributes.md", "usage.md"]
 STECKBRIEF = ["Kategorie", "Erbt von", "Varianten", "Zustände", "Gesten", "Animationen", "Verwandt", "Status"]
 OPTIONAL_STECKBRIEF = ["Rolle"]
+# Steckbrief-Felder, die einen Wert brauchen (`-` gilt als leer).
+FILLED_STECKBRIEF = ["Varianten", "Zustände", "Gesten", "Animationen", "Verwandt"]
+# Paare, deren Aehnlichkeit geprueft und bewusst akzeptiert wurde
+# (docs/de/components/konzept-und-plan.md, Abschnitt 10: combobox = zusaetzlich
+# Freitext und Vorschlaege, select = nur vorhandene Optionen).
+ACCEPTED_PAIRS = {("combobox", "select")}
 SECTIONS = {
     "description.md": ["Beschreibung", "Verwendungszweck", "Varianten", "Features",
                        "Abgrenzung", "Best Practices", "Siehe auch"],
@@ -181,6 +187,10 @@ def main():
                                   f"'{fields.get('Kategorie','')}' != Ordner '{cat}'")
                 if "Status" in fields and "dokumentiert" not in fields["Status"]:
                     notes.append(f"{comp.relative_to(ROOT)}: Status = {fields['Status']}")
+                for key in FILLED_STECKBRIEF:
+                    if fields.get(key, "").strip(" `-") in ("", "\u2013"):
+                        notes.append(f"{comp.relative_to(ROOT)}/description.md: "
+                                     f"Steckbrief-Feld '{key}' ist leer")
             secs = [h for h, _ in sections_of(text)]
             for s in HARD_SECTIONS["description.md"]:
                 if s not in secs:
@@ -237,7 +247,7 @@ def main():
             if not x or not y:
                 continue
             j = len(x & y) / len(x | y)
-            if j >= 0.6:
+            if j >= 0.6 and (a, b) not in ACCEPTED_PAIRS:
                 pairs.append((round(j, 2), a, b))
     for j, a, b in sorted(pairs, reverse=True):
         notes.append(f"Doppelstuecke: {a} und {b} Aehnlichkeit {j}")

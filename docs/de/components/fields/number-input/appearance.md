@@ -44,6 +44,13 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Die Schritt-Knöpfe sind quadratisch und mindestens 32 px, auf Touch-Geräten 44 px;
+  bei `small` Bildschirmbreite werden sie links und außen neben das Feld gestellt.
+- Der Wert bleibt rechtsbündig; zu lange Zahlen kürzen nicht, das Feld wächst mit.
+- Auf Touch-Geräten erscheint die Zifferntastatur, bei `formatiert` ohne Gruppierungszeichen.
+
 ## Step-Buttons
 
 ```
@@ -62,10 +69,3 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 | **Valid** | Grün |
 | **Invalid** | Rot |
 | **Warning** | Orange |
-
-## Reaktiv
-
-- Die Schritt-Knöpfe sind quadratisch und mindestens 32 px, auf Touch-Geräten 44 px;
-  bei `small` Bildschirmbreite werden sie links und außen neben das Feld gestellt.
-- Der Wert bleibt rechtsbündig; zu lange Zahlen kürzen nicht, das Feld wächst mit.
-- Auf Touch-Geräten erscheint die Zifferntastatur, bei `formatiert` ohne Gruppierungszeichen.

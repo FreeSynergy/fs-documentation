@@ -36,6 +36,22 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 - Live-Wechsel
 - Kein Reload nötig
 
+## Abgrenzung
+
+- **Nicht verwechseln mit** [select](../../fields/select/): ein Feldwert bleibt im Formular,
+  die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
+- **Nicht verwechseln mit** [menu](../menu/): das Menü ruft Aktionen auf, dieser Schalter
+  wechselt nur eine Einstellung.
+- Flaggen stehen nicht für Sprachen: Englisch wird in vielen Ländern gesprochen.
+
+## Best Practices
+
+- Sprachnamen in der jeweiligen Sprache schreiben ("Deutsch", "English", "Français").
+- Sprachkurse (`de`, `en`) zeigen statt Flaggen, wenn es um Sprache und nicht um Region geht.
+- Standardsprache aus dem System übernehmen, Auswahl im Profil und am Gerät merken.
+- Ohne Neuladen umschalten; fehlende Überschriften in der Zweitsprache kennzeichnen.
+- Rechts-nach-links-Sprachen mitdenken (Layoutspiegelung), nicht nur übersetzen.
+
 ## Größe-Varianten
 
 | Größe | Verwendung |
@@ -60,22 +76,6 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 | Français | fr | 🇫🇷 |
 | **Español** | es | 🇪🇸 |
 | Italiano | it | 🇮🇹 |
-
-## Abgrenzung
-
-- **Nicht verwechseln mit** [select](../../fields/select/): ein Feldwert bleibt im Formular,
-  die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
-- **Nicht verwechseln mit** [menu](../menu/): das Menü ruft Aktionen auf, dieser Schalter
-  wechselt nur eine Einstellung.
-- Flaggen stehen nicht für Sprachen: Englisch wird in vielen Ländern gesprochen.
-
-## Best Practices
-
-- Sprachnamen in der jeweiligen Sprache schreiben ("Deutsch", "English", "Français").
-- Sprachkurse (`de`, `en`) zeigen statt Flaggen, wenn es um Sprache und nicht um Region geht.
-- Standardsprache aus dem System übernehmen, Auswahl im Profil und am Gerät merken.
-- Ohne Neuladen umschalten; fehlende Überschriften in der Zweitsprache kennzeichnen.
-- Rechts-nach-links-Sprachen mitdenken (Layoutspiegelung), nicht nur übersetzen.
 
 ## Siehe auch
 

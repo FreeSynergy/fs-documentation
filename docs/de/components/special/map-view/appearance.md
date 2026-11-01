@@ -45,6 +45,14 @@ Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
 | `zoom` | Zoom beim Scrollen |
 | `drag` | Verschieben |
 
+## Reaktiv
+
+- Die Karte füllt die verfügbare Breite; als Inline-Karte ist sie mindestens 200 px hoch.
+- Unter `small` Bildschirmbreite werden Zoom- und Stil-Knöpfe zu einer kleinen Leiste unten,
+  die Steuerung bleibt mindestens 44 px groß.
+- Zwei Finger bewegen und skalieren (`drag`, `pinch`); einfaches Scrollen über der Karte
+  verschiebt die Seite, nicht die Karte — Zoom per Scrollen erst nach Klick auf die Karte.
+
 ## Map-Types
 
 | Type | Beschreibung |
@@ -71,11 +79,3 @@ Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
 │  [Satellit] [Hybrid]                    │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Karte füllt die verfügbare Breite; als Inline-Karte ist sie mindestens 200 px hoch.
-- Unter `small` Bildschirmbreite werden Zoom- und Stil-Knöpfe zu einer kleinen Leiste unten,
-  die Steuerung bleibt mindestens 44 px groß.
-- Zwei Finger bewegen und skalieren (`drag`, `pinch`); einfaches Scrollen über der Karte
-  verschiebt die Seite, nicht die Karte — Zoom per Scrollen erst nach Klick auf die Karte.

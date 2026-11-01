@@ -61,6 +61,15 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- In Formularen stehen die Felder auf schmalen Bildschirmen vollbreit unter ihrem Label,
+  Zwei-Spalten-Raster fallen auf eine Spalte zurück.
+- Auf Touch-Geräten wird die Höhe mindestens 44 px; der Text bleibt linksbündig und scrollt
+  innerhalb des Feldes, die Schriftgröße wächst nicht über 16 px (kein Zoom auf Mobil).
+- Das aktive Feld wird über die Tastatur hinweg sichtbar gehalten, die Fehlerzeile rutscht
+  darunter, ohne das nächste Feld zu überdecken.
+
 ## Validation States
 
 | State | Beschreibung |
@@ -79,12 +88,3 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 │                                         │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- In Formularen stehen die Felder auf schmalen Bildschirmen vollbreit unter ihrem Label,
-  Zwei-Spalten-Raster fallen auf eine Spalte zurück.
-- Auf Touch-Geräten wird die Höhe mindestens 44 px; der Text bleibt linksbündig und scrollt
-  innerhalb des Feldes, die Schriftgröße wächst nicht über 16 px (kein Zoom auf Mobil).
-- Das aktive Feld wird über die Tastatur hinweg sichtbar gehalten, die Fehlerzeile rutscht
-  darunter, ohne das nächste Feld zu überdecken.

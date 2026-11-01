@@ -39,16 +39,6 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 - Error-State
 - Validation
 
-## Typen (`type`)
-
-| Typ | Beschreibung |
-|-----|--------------|
-| `text` | Freier Text (Standard) |
-| `email` | E-Mail-Adresse mit Validierung |
-| `url` | Web-Adresse mit Validierung |
-| `phone` | Telefonnummer mit Ländercode |
-| `password` | Maskierte Eingabe |
-
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [textarea](../textarea/): dieses Feld ist einzeilig; Absätze gehören
@@ -68,6 +58,16 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 - Validierung erst nach dem Verlassen des Feldes, Fehler direkt unter dem Feld in Textform.
 - Bei `password` Anzeige-Knopf anbieten, Anforderungen vorher nennen statt beim Absenden zeigen.
 - `maxlength` nur wo nötig; dann Zähler anzeigen.
+
+## Typen (`type`)
+
+| Typ | Beschreibung |
+|-----|--------------|
+| `text` | Freier Text (Standard) |
+| `email` | E-Mail-Adresse mit Validierung |
+| `url` | Web-Adresse mit Validierung |
+| `phone` | Telefonnummer mit Ländercode |
+| `password` | Maskierte Eingabe |
 
 ## Siehe auch
 

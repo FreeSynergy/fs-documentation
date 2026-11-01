@@ -45,7 +45,7 @@ wie groß Inhalte erscheinen, während sie geladen werden.
 - **Nicht verwechseln mit** [spinner](../spinner/): ein Spinner ist ein Signal,
   ein Skeleton ist ein Platzhalter mit Form.
 
-- **Nicht verwechseln mit** empty-state (geplant): empty-state zeigt „keine Daten“,
+- **Nicht verwechseln mit** [empty-state](../empty-state/): empty-state zeigt „keine Daten“,
   Skeleton zeigt „Daten kommen noch“.
 
 - **Nicht verwechseln mit** [progress](../progress/): Progress begleitet eine

@@ -12,6 +12,7 @@ Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei 
 - [**emoji-picker**](./emoji-picker/) – Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 - [**field**](./field/) – Ein Field ist der Wrapper um ein Eingabefeld: Er verbindet Beschriftung, Hilfetext, Fehlermeldung und Pflicht-Markierung zu einer barrierefreien Einheit.
 - [**file-upload**](./file-upload/) – Ein File Upload ist ein Element für Dateiauswahl und Upload.
+- [**input-group**](./input-group/) – Eine Input Group fügt ein Eingabefeld und die Teile, die unmittelbar dazugehören, zu einer zusammenhängenden Fläche zusammen: ein Vorsatz-Zeichen, eine Einheit, ein Dropdown für die Landesvorwahl oder eine Schaltfläche direkt am Feld.
 - [**mention-input**](./mention-input/) – Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 - [**number-input**](./number-input/) – Ein Number Input ist ein Eingabefeld für Zahlen.
 - [**otp-input**](./otp-input/) – Das Einmalpasswortfeld nimmt einen kurzen numerischen Code auf — je Zeichen ein Feld.
@@ -40,6 +41,7 @@ Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei 
 | [emoji-picker](./emoji-picker/) | `base` | `inline`, `overlay`, `reaktion` | - | dokumentiert |
 | [field](./field/) | `base` | `vertikal`, `horizontal`, `inline` | - | dokumentiert |
 | [file-upload](./file-upload/) | `base` | `File Picker`, `Drag & Drop`, `Image Preview` | - | dokumentiert |
+| [input-group](./input-group/) | `base` | `praefix`, `suffix`, `aktion`, `auswahl` | `group` | dokumentiert |
 | [mention-input](./mention-input/) | `base`, `text-input` | `feld`, `inline`, `mehrzeilig` | - | dokumentiert |
 | [number-input](./number-input/) | `base` | `einfach`, `stepper`, `formatiert` | - | dokumentiert |
 | [otp-input](./otp-input/) | `base`, `text-input` | `einzelboxen`, `block` | `group` | dokumentiert |

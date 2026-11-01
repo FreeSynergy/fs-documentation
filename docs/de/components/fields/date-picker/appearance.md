@@ -42,18 +42,6 @@ besteht dann nur aus Monatsraster und Schnellauswahl.
 | `medium` | 36 px | 320 px | vier Zeilen, Punkte 6 px |
 | `large` | 44 px | 400 px | sechs Zeilen, Punkte 6 px |
 
-## Tageseinträge
-
-| Element | Aussehen |
-|---------|----------|
-| Tagemarke | ein Punkt je Eintrag, horizontal gereiht, max. `entryLimit` |
-| Zählermarke | mehr Einträge als `entryLimit`: ein Punkt mit Zahl |
-| Serienmarke | Punkt mit unterbrochenem Rand, Signal für `recurrenceRule` |
-| Erledigt | Punkt abgedämpft, Titel durchgestrichen (`status = done`) |
-| Mehrtägig | Marke setzt sich über die betroffenen Tage als durchgehender Balken fort |
-| Tagesliste | Titel, Uhrzeit bzw. `allDay`, Typ als Punkt; Einträge des gewählten Tages |
-| Schnellaufnahme | eine Zeile mit Titel und Zeitfeld unter der Liste, nur bei `creatable` |
-
 ## Farben und Zustände
 
 | Zustand | Aussehen |
@@ -85,3 +73,15 @@ dem Datensatz (`color`), sonst aus dem Typ.
 - Tagesliste wird unter dem Raster vollständig ausgespielt; die Punkte entfallen, der
   Zähler steht am Wochentag.
 - Langer Druck auf einen Tag öffnet die Schnellaufnahme für diesen Tag.
+
+## Tageseinträge
+
+| Element | Aussehen |
+|---------|----------|
+| Tagemarke | ein Punkt je Eintrag, horizontal gereiht, max. `entryLimit` |
+| Zählermarke | mehr Einträge als `entryLimit`: ein Punkt mit Zahl |
+| Serienmarke | Punkt mit unterbrochenem Rand, Signal für `recurrenceRule` |
+| Erledigt | Punkt abgedämpft, Titel durchgestrichen (`status = done`) |
+| Mehrtägig | Marke setzt sich über die betroffenen Tage als durchgehender Balken fort |
+| Tagesliste | Titel, Uhrzeit bzw. `allDay`, Typ als Punkt; Einträge des gewählten Tages |
+| Schnellaufnahme | eine Zeile mit Titel und Zeitfeld unter der Liste, nur bei `creatable` |

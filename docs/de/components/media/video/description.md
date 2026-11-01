@@ -22,6 +22,14 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 - Live-Streams anzeigen
 - Hintergrund-Videos
 
+## Varianten
+
+| Variante | Beschreibung |
+|----------|--------------|
+| **einzeln** | gewöhnliche Wiedergabe mit voller Steuerung |
+| **hintergrund** | endlos, stumm und ohne Steuerung hinter anderem Inhalt |
+| **live** | Laufender Stream ohne Vorspulen, Zeitangabe durch „live“ ersetzt |
+
 ## Features
 
 - Play/Pause-Button
@@ -32,23 +40,6 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 
 - Qualitätsauswahl
 - Geschwindigkeitseinstellung
-
-## Varianten
-
-| Variante | Beschreibung |
-|----------|--------------|
-| **einzeln** | gewöhnliche Wiedergabe mit voller Steuerung |
-| **hintergrund** | endlos, stumm und ohne Steuerung hinter anderem Inhalt |
-| **live** | Laufender Stream ohne Vorspulen, Zeitangabe durch „live“ ersetzt |
-
-## Formate
-
-| Format | Beschreibung | Verwendung |
-|--------|-------------|------------|
-| **MP4** | Standard-Format, weit verbreitet | Alle Video-Anwendungen |
-| **WEBM** | Open Source, kleine Dateigröße | Web-Applikationen |
-| **OGV** | Open Source-Format | Alternatives Format |
-| **MKV** | Container-Format, viele Streams | Hochwertige Videos |
 
 ## Abgrenzung
 
@@ -66,6 +57,15 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 - Untertitel mitführen — auch für Meetings und Sprachnachrichten.
 - Qualität automatisch wählen und manuell umschaltbar lassen.
 - Auf Mobil inline abspielen (`playsInline`), sonst springt das System in seinen eigenen Player.
+
+## Formate
+
+| Format | Beschreibung | Verwendung |
+|--------|-------------|------------|
+| **MP4** | Standard-Format, weit verbreitet | Alle Video-Anwendungen |
+| **WEBM** | Open Source, kleine Dateigröße | Web-Applikationen |
+| **OGV** | Open Source-Format | Alternatives Format |
+| **MKV** | Container-Format, viele Streams | Hochwertige Videos |
 
 ## Steuerungs-Attribute
 

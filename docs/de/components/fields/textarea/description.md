@@ -20,12 +20,6 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 - Kommentare
 - Beschreibungen
 
-## Features
-
-- Auto-resize
-- Placeholder
-- Validation
-
 ## Varianten
 
 | Variante | Beschreibung |
@@ -33,6 +27,12 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 | **fix** | vorgegebene Höhe, längere Eingabe scrollt im Feld |
 | **mitwachsend** | Höhe wächst mit dem Text bis zu einer Obergrenze |
 | **chat** | wächst bis drei Zeilen, Enter sendet, `Umschalt+Enter` bricht um |
+
+## Features
+
+- Auto-resize
+- Placeholder
+- Validation
 
 ## Abgrenzung
 

@@ -44,6 +44,14 @@ Ein Combobox ist ein Textfeld + Dropdown.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- Die Vorschlagsliste ist maximal `medium` hoch (8 Zeilen) und scrollt sonst;
+  `swipe` bewegt sie auf Touch-Geräten.
+- Passt die Liste nicht unter das Feld, öffnet sie sich nach oben.
+- Auf schmalen Bildschirmen wird die Liste vollbreit über dem Feld gerendert, die
+  Trefferzeilen bleiben mindestens 44 px hoch.
+
 ## Dropdown
 
 ```
@@ -71,11 +79,3 @@ Ein Combobox ist ein Textfeld + Dropdown.
 │  +                                      │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- Die Vorschlagsliste ist maximal `medium` hoch (8 Zeilen) und scrollt sonst;
-  `swipe` bewegt sie auf Touch-Geräten.
-- Passt die Liste nicht unter das Feld, öffnet sie sich nach oben.
-- Auf schmalen Bildschirmen wird die Liste vollbreit über dem Feld gerendert, die
-  Trefferzeilen bleiben mindestens 44 px hoch.

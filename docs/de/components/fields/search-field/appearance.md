@@ -42,6 +42,14 @@ Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten stärker |
 
+## Reaktiv
+
+- In Werkzeugleisten kann das Feld eingeklappt sein; ein Klick auf das Suchsymbol klappt es
+  auf volle Leistenbreite auf (`expand`).
+- Unter `small` Bildschirmbreite wird das Feld vollbreit über der Liste gesetzt, die Filter
+  rutschen hinter einen Aufklapp-Knopf.
+- Vorschlagsliste maximal acht Zeilen, danach scrollt sie; Trefferstellen werden `highlight`et.
+
 ## Clear-Button
 
 ```
@@ -60,11 +68,3 @@ Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
 │  [Reset]                                │
 └─────────────────────────────────────────┘
 ```
-
-## Reaktiv
-
-- In Werkzeugleisten kann das Feld eingeklappt sein; ein Klick auf das Suchsymbol klappt es
-  auf volle Leistenbreite auf (`expand`).
-- Unter `small` Bildschirmbreite wird das Feld vollbreit über der Liste gesetzt, die Filter
-  rutschen hinter einen Aufklapp-Knopf.
-- Vorschlagsliste maximal acht Zeilen, danach scrollt sie; Trefferstellen werden `highlight`et.
