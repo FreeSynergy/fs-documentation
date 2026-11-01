@@ -2,6 +2,25 @@
 
 Felder sind die Bausteine der [Modelle](modelle.md). Sie sind über alle Programme hinweg **gleich benannt**, damit Komponenten, Skins und Workflows ohne Übersetzungsschicht funktionieren.
 
+## Standard-Pate je Feldgruppe
+
+Nach der Regel in [konventionen.md](konventionen.md) braucht jedes Feld einen Beleg. Die ausführliche Herleitung steht in [standards.md](standards.md) und [mappings.md](mappings.md); hier die Kurzfassung pro Abschnitt. ✅ belegt, ⚠️ noch zu belegen.
+
+| Feldgruppe | Pate | Beleg |
+|------------|------|-------|
+| ID-Felder (`id`, `externalId`) | JSContact `uid`, JSCalendar `uid` | ✅ RFC 9553 §2.1.9, RFC 8984 §4.1.2 |
+| Zeitfelder (`createdAt`, `updatedAt`) | JSContact `created`/`updated` (Typ `UTCDateTime`), JSCalendar `created`/`updated`/`sequence` | ✅ RFC 9553 §1.4.5 und §2.1, RFC 8984 §4.1 |
+| Zeitfelder (`start`, `timezone`, `recurrenceRule`) | JSCalendar `start`, `duration`, `timeZone`, `recurrenceRules` | ✅ Feldnamen belegt. **Unsere Format-Regel „ISO 8601 mit Offset" ist damit noch nicht gedeckt** ⚠️ |
+| Namensfelder (`name`, `firstName`, `lastName`) | JSContact `name.components[]` und `name.full`; schema.org `name`, `headline` | ✅ RFC 9553 §2.2.1; schema.org/Name, schema.org/headline |
+| Kommunikationsfelder (`email`, `emails`, `phones`, `handle`) | JSContact `emails`, `phones`, `onlineServices`; vCard `TEL`, `EMAIL`, `IMPP` | ✅ RFC 9553 §2.3; RFC 6350 §6.4 |
+| Status- und Prioritäts-Enums | JSCalendar `priority`, `freeBusyStatus`, `privacy`, `status`, `participationStatus` | ✅ RFC 8984 §4.4 und §5.1.3 |
+| Berechtigungsfelder (`visibility`, `roles`, `permissions`, `scopes`) | **kein Pate gefunden.** Kandidat ODRL (Erreichbarkeit geprüft, Inhalt nicht gelesen) | ⚠️ |
+| Metadatenfelder (`tags`, `locale`, `revision`) | JSContact `keywords`, `language`, `localizations`; JSCalendar `categories`, `keywords`, `color` | ✅ RFC 9553 §2.7 und §2.8; RFC 8984 §4.2 |
+| Inhaltsfelder (`body`, `bodyFormat`, `blocks`) | RFC 9073 `STYLED-DESCRIPTION` (`FMTTYPE`, `DERIVED`), JSCalendar `descriptionContentType` | ✅ RFC 9073 §6.5; RFC 8984 §4.2.3 |
+| UI- und Interaktionsfelder (`ariaLabel`, `role`, …) | das sind **keine** Datenbankfelder — sie gehören in die Komponenten-Doku | ⚠️ Beleg aus HTML/ARIA nicht nachgesehen |
+
+Konsequenz: die Feldnamen in dieser Datei bleiben unsere **interne** Schreibweise. Was beim Export nach außen daraus wird, steht in [mappings.md](mappings.md).
+
 ## ID-Felder
 
 | Feld | Typ | Pflicht | Beschreibung | Beispiel |

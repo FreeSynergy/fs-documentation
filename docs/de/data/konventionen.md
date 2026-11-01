@@ -45,7 +45,21 @@ Jedes Programm in `apps/<kategorie>/skins/<programm>/` bekommt **sieben** Dateie
 
 ### Daten
 
-`data/` mit `index.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`.
+Querschnitts-Dateien direkt in `data/`: `index.md`, `standards.md`, `mappings.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`.
+
+Darunter gilt: **Datendomäne → Standard → Dateien**:
+
+```
+data/<domaene>/index.md                      Übersicht + Tabelle der Standards der Domäne
+data/<domaene>/<standard>/beschreibung.md    allgemeine Beschreibung (was, Umfang, Grenzen)
+data/<domaene>/<standard>/speicherung.md     wie Daten darin gespeichert werden (DB, Dateien, Patches)
+data/<domaene>/<standard>/beispiele.md       optional, bei Bedarf
+data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standardfelder
+```
+
+- Domänenverzeichnisse: lowercase, ASCII (`kontakt`, `identitaet`, `geodaten`)
+- Standardverzeichnisse: offizieller Kurzname, lowercase (`jscontact`, `jscalendar`, `vcard`)
+- Jeder Eintrag endet wie überall mit `## Siehe auch`
 
 ## Links
 
@@ -169,6 +183,8 @@ Beispiel-Dokument dazu:
 - `shortcuts.md` und `api.md` sind nie in anderen Dateien enthalten
 - Fehlende Funktionen werden ausdrücklich benannt („Was X NICHT kann“)
 - Erfundene Shortcuts oder Endpoints sind ein Fehler — lieber „nicht vorhanden“
+- **Standard-Pate:** Jedes Feld in `felder.md` nennt in [standards.md](standards.md) einen Beleg (Standard samt Nummer) oder ist ausdrücklich als **eigene Festlegung** markiert. Ein Feld ohne Beleg und ohne Markierung ist ein Fehler
+- **Keine erfundenen Standard-Nummern:** Eine RFC- oder Spec-Nummer wird nur genannt, wenn sie nachgesehen wurde. ungeprüfte Angaben werden mit ⚠️ gekennzeichnet
 
 ## Siehe auch
 

@@ -4,7 +4,7 @@
 
 Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angezeigt werden können.
 
-## Form-Varianten (CSS)
+## Varianten
 
 ```css
 /* Circular (Rund) */
@@ -33,7 +33,7 @@ Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angeze
 }
 ```
 
-## Größe-Varianten
+## Größen
 
 | Größe | Breite/Höhe | Margin | Verwendung |
 |-------|-------------|--------|------------|
@@ -43,7 +43,7 @@ Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angeze
 | XL | 48px | 0 | Hero-Sectionen |
 | XXL | 64px | 0 | Landing-Pages |
 
-## Farb-Varianten (CSS Variables)
+## Farben und Zustände
 
 ```css
 .icon {
@@ -58,6 +58,24 @@ Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angeze
 .icon-error { --icon-color: var(--error-color); }
 .icon-neutral { --icon-color: var(--neutral-color); }
 ```
+
+## Hover- und Fokus-Effekte
+
+| Effekt | Beschreibung |
+|--------|--------------|
+| `zoom` | Icon wächst auf das 1,1-fache |
+| `border` | Kreis oder Rahmen erscheint hinter dem Icon |
+| `shadow` | leichter Schatten hebt das Icon an |
+| `ring` | Fokus-Ring bei Tastaturnavigation |
+| `none` | keine Rückmeldung (rein dekorative Icons) |
+
+## Reaktiv
+
+- In Werkzeugleisten und auf Mobil wird das Icon eine Stufe größer dargestellt
+  (mindestens 24 px), die Trefferfläche bleibt 44 px.
+- In Fließtext bleibt das Icon auf `small` (16 px) und folgt der Schriftzeile.
+- Skalierung erfolgt proportional; die Konturstärke bleibt ab 16 px lesbar,
+  sonst auf eine vereinfachte Form wechseln.
 
 ## Styling-Attribute
 

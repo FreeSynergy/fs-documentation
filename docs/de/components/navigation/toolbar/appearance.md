@@ -4,7 +4,13 @@
 
 Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
-## Layout-Varianten
+## Varianten
+
+| Variante | Aussehen |
+|----------|----------|
+| **standard** | einzeilige Leiste mit Symbolen |
+| **kontext** | Leiste tauscht ihre Knöpfe, wenn sich die Auswahl ändert |
+| **ribbon** | zwei oder drei Zeilen mit Gruppenüberschriften |
 
 ### Horizontal (Standard)
 ```
@@ -12,14 +18,12 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 │ [📄] [✏️] [✂️] [✔️] [❌] [🔍] [⚙️]                  │
 └─────────────────────────────────────────────────────┘
 ```
-
 ### Floating (Schwebend)
 ```
                     ┌─────────────────────────────┐
                     │ [📄] [✏️] [✂️] [✔️]        │
                     └─────────────────────────────┘
 ```
-
 ### Sidebar (Links/Rechts)
 ```
 ┌─────┬─────────────────────────────────────────────┐
@@ -29,7 +33,15 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 └─────┴─────────────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Beschriftung der Knöpfe
+
+| Form | Beschreibung |
+|------|--------------|
+| **nur Symbol** | Standard, mit Tooltip |
+| **nur Text** | wenn kein eindeutiges Symbol existiert |
+| **Symbol und Text** | neue oder mehrdeutige Aktionen |
+
+## Größen
 
 | Größe | Icon-Größe | Button-Größe | Verwendung |
 |-------|------------|--------------|------------|
@@ -37,7 +49,7 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 | Medium | 24px | 48px | Standard |
 | Large | 32px | 64px | Featured |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -46,15 +58,7 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 | **Danger** | Rot | Gefährliche Aktion |
 | **Disabled** | Grau | Deaktivierte Aktion |
 
-## Button-Varianten
-
-| Variant | Beschreibung |
-|---------|--------------|
-| **Icon Only** | Nur Icon |
-| **Text Only** | Nur Text |
-| **Icon + Text** | Icon und Text |
-
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -70,3 +74,12 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 │ [📄] [✏️] [✂️] ───── [✔️] [❌] [🔍] [⚙️]            │
 └─────────────────────────────────────────────────────┘
 ```
+
+## Reaktiv
+
+- Die Leiste ist vollbreit und bleibt beim Scrollen oben stehen (`geklebt`); der Inhalt der
+  Gruppe rechts rutscht zuerst weg.
+- Passt die Reihe nicht mehr, wandern die übrigen Knöpfe hinter ein ``+``-Aufklappfeld,
+  das die Gruppen beibehält.
+- Auf Touch-Geräten sind die Knöpfe mindestens 44 px groß; auf großen Bildschirmen kann
+  `Symbol und Text` gezeigt werden, auf kleinen nur das Symbol.

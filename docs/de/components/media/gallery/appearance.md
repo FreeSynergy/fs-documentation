@@ -4,9 +4,10 @@
 
 Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kachelansicht.
 
-## Layout-Varianten
+## Varianten
 
 ### Grid (Raster)
+
 ```
 ┌──────────┬──────────┬──────────┐
 │  🖼️    │  🖼️    │  🖼️    │
@@ -18,6 +19,7 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 ```
 
 ### Masonry (Unregelmäßig)
+
 ```
 ┌──────────┬──────────┐
 │  🖼️    │  🖼️    │
@@ -35,15 +37,18 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 └──────────┴──────────┘
 ```
 
-### Carousel (Slideshow)
+### Zeile
+
 ```
-┌─────────────────────────────────────┐
-│ [◀]   🖼️   [▶]                     │
-│          Bild 1                     │
-└─────────────────────────────────────┘
+┌────────┬────────┬────────┬────────┐
+│  🖼️  │  🖼️  │  🖼️  │  🖼️ ▶ │
+└────────┴────────┴────────┴────────┘
 ```
 
+Die Abfolge einzelner Bilder übernimmt [carousel](../carousel/).
+
 ### Lightbox (Großansicht)
+
 ```
 ┌─────────────────────────────────────┐
 │ [✕]                                 │
@@ -55,7 +60,7 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 └─────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Größen
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
@@ -65,7 +70,17 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 | Large | 600px | Featured-Galerien |
 | Full | 800px+ | Hero-Galerien |
 
-## Hover-Effekte
+## Farben und Zustände
+
+| Zustand | Aussehen |
+|---------|----------|
+| `default` | Kachel ohne Rand, Bild füllt die Zelle |
+| `hover` | leichter Zoom, halbtransparente Leiste mit Aktionen |
+| `selected` | 2 px Rand in Primärfarbe |
+| `geöffnet` | Hintergrund abdunkeln, Bild zentriert in der Lightbox |
+| `geladen` | Platzhalter (`skeleton`), bis das Bild da ist |
+
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -73,6 +88,14 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 | `overlay` | Overlay mit Info/Icons |
 | `border` | Rand leuchtet auf |
 | `scale` | Bild skaliert leicht |
+
+## Reaktiv
+
+| Breakpoint | Verhalten |
+|------------|-----------|
+| Desktop (>768px) | Volle Galerie mit Navigation |
+| Tablet (480-768px) | 2 Spalten, kompakt |
+| Mobile (<480px) | 1 Spalte, Carousel |
 
 ## Overlay-Styling
 
@@ -93,11 +116,3 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 | Close | ✕ | Galerie schließen |
 | Fullscreen | ⛶ | Vollbild |
 | Share | 🔗 | Teilen |
-
-## Responsive Verhalten
-
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volle Galerie mit Navigation |
-| Tablet (480-768px) | 2 Spalten, kompakt |
-| Mobile (<480px) | 1 Spalte, Carousel |

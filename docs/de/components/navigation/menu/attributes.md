@@ -7,33 +7,34 @@
 | `items` | array[] | - | Array von Menüpunkten |
 | `activeItem` | string/number | - | Aktiver Menüpunkt |
 | `onChange` | function | - | Event bei Auswahl |
+| `isOpen` | boolean | `false` | Ist geöffnet? |
+| `onToggle` | function | - | Event beim Öffnen/Schließen |
 
-## Verhaltens-Attribute
+## Verhalten
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `variant` | enum | `horizontal` | Stil: `horizontal`, `vertical` |
 | `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
 | `closable` | boolean | `false` | Schließbar? |
-| `disabled` | boolean | `false` | Gesamtes Menu deaktivieren? |
+| `closeOnOutsideClick` | boolean | `true` | Bei Klick außerhalb schließen? |
+| `keyboardNavigation` | boolean | `true` | Keyboard-Navigation? |
+| `animate` | boolean | `true` | Animationen aktivieren? |
+| `animationDuration` | number | `300` | Dauer in ms |
 
-## Styling-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `size` | enum | `medium` | Größe: `small`, `medium`, `large` |
-| `rounded` | boolean | `true` | Abgerundete Ecken? |
+## Darstellung
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `showIcons` | boolean | `false` | Icons anzeigen? |
 | `showLabels` | boolean | `true` | Labels anzeigen? |
-
-## Accessibility (Barrierefreiheit)
+| `color` | enum | `default` | Farbe: `default`, `light`, `primary` |
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `role` | string | ARIA-Rolle: `menubar` |
+| `responsive` | boolean | Responsives Layout? |
+| `hamburgerBreakpoint` | number | Breakpoint für Hamburger |
 
-## Event-Attribute
+## Events
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
@@ -41,9 +42,15 @@
 | `onOpen` | function | Wird beim Öffnen ausgeführt |
 | `onClose` | function | Wird beim Schließen ausgeführt |
 
-## Responsive Attribute
+## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
-| `hamburgerBreakpoint` | number | Breakpoint für Hamburger |
+| `role` | string | ARIA-Rolle: `menubar` |
+| `aria-expanded` | boolean | Ist erweitert? |
+
+## Geerbt von
+
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

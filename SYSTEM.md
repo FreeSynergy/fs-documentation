@@ -12,10 +12,10 @@ fs-documentation/
 │   ├── de/                 # German documentation (primary)
 │   │   ├── apps/           # programs, grouped by category
 │   │   │   └── [category]/skins/[program]/   # 7 files per program
-│   │   ├── components/     # UI elements (description/appearance/attributes)
+│   │   ├── components/     # UI elements: 10 categories + base class (see SYSTEM “UI Components”)
 │   │   ├── gestures/       # touch gestures (description/attributes/appearance)
 │   │   ├── animations/     # animations (description/attributes/appearance)
-│   │   └── data/           # standardized data (formats, models, fields, conventions, api)
+│   │   └── data/           # standardized data (standards, mappings, formats, models, fields, conventions, api)
 │   └── en/                 # English documentation
 │   └── [language]/         # Additional languages
 ├── .github/                # GitHub workflows and templates
@@ -90,10 +90,10 @@ Areas outside `apps/` use their own, smaller file sets:
 
 | Area | Location | Files per entry |
 |------|----------|-----------------|
-| UI components | `docs/de/components/<group>/<element>/` | `description.md`, `appearance.md`, `attributes.md` (+ `usage.md`, `examples.md` where useful) |
+| UI components | `docs/de/components/<category>/<component>/` | `description.md`, `appearance.md`, `attributes.md`, `usage.md` (all four required; `examples.md` was merged into `usage.md`) |
 | Gestures | `docs/de/gestures/<gesture>/` | `description.md`, `attributes.md`, `appearance.md` |
-| Animations | `docs/de/animations/<animation>/` | `description.md`, `attributes.md`, `appearance.md` |
-| Standardized data | `docs/de/data/` | `index.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md` |
+| Animations | `docs/de/animations/<category>/<animation>/` | `description.md`, `attributes.md`, `appearance.md` |
+| Standardized data | `docs/de/data/` + `docs/de/data/<domain>/<standard>/` | Cross-cutting: `index.md`, `standards.md`, `mappings.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`. Per standard: `index.md` (domain), `beschreibung.md`, `speicherung.md` (+ optional `beispiele.md`, `mapping.md`) |
 
 Every area has an `index.md` that lists all entries in a table and documents the shared attributes/configuration.
 
@@ -761,6 +761,65 @@ Each program requires exactly 6 documentation files in German:
 
 ---
 
+## 🧩 UI Components (`docs/de/components/<category>/<component>/`)
+
+Ten categories, each with its own `index.md`; every component lives in a directory of its own:
+
+| Category | Contains | Example components |
+|----------|----------|--------------------|
+| `basics/` | base class and the smallest building blocks | `base.md`, `label`, `separator`, `link`, `kbd` |
+| `actions/` | single actions and groups of actions | `button`, `button-group`, `floating-action-button` |
+| `navigation/` | menus, bars, path navigation, command palette | `menu`, `tabs`, `breadcrumb`, `command` |
+| `containers/` | boxes and layout surfaces | `card`, `panel`, `accordion`, `split-view`, `wizard`, `scroll-area` |
+| `overlays/` | surfaces with their own focus lifetime | `modal`, `drawer`, `popover`, `tooltip`, `context-menu`, `alert-dialog`, `hover-card` |
+| `feedback/` | state made visible | `alert`, `toast`, `progress`, `spinner`, `skeleton`, `badge`, `empty-state` |
+| `fields/` | entering and choosing values | `field`, `text-input`, `select`, `combobox`, `date-picker`, `otp-input` |
+| `data/` | presenting data | `table`, `list-view`, `tree-view`, `timeline`, `chart`, `description-list` |
+| `media/` | playing and showing media | `media-player` (parent of `audio`/`video`), `image`, `icon`, `carousel` |
+| `special/` | composites with their own data model | `embed`, `code-editor`, `whiteboard`, `map-view`, `dashboard` |
+
+**Inheritance model.** `basics/base.md` is the parent class: it defines the inherited
+attributes (`id`, `label`, `visible`, `enabled`, `size`, `theme`, `rounded`, `variant`,
+`state`, `tabIndex`, `onClick`/`onFocus`/`onBlur`, `gesture`, `animation`, ARIA), the size
+scale, the state names, the fixed section order and the naming convention
+(`-input`, `-picker`, `-editor`, `-view`, `-menu`/`-bar`). A component's `attributes.md`
+lists **only its own** attributes and ends with the section `Geerbt von` pointing at the
+base class. Real inheritance is expressed in the `Erbt von` row of the profile table
+(e.g. `audio` → `media-player`, `context-menu` → `menu`).
+
+**File set per component** (fixed order of sections):
+
+| File | Sections |
+|------|----------|
+| `description.md` | profile table → Beschreibung → Verwendungszweck → Varianten → Features → Abgrenzung → Best Practices → Siehe auch |
+| `appearance.md` | Grundlayout → Varianten → Größen → Farben und Zustände → Hover- und Fokus-Effekte → Reaktiv |
+| `attributes.md` | Hauptattribute → Verhalten → Darstellung → Events → Barrierefreiheit → (component specific) → Geerbt von |
+| `usage.md` | Anwendung → Beispiele → Szenarien (the former `examples.md` is merged here) |
+
+**Profile table (Steckbrief).** `description.md` starts with a Markdown table (no YAML
+frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `Zustände`,
+`Gesten`, `Animationen`, `Verwandt`, `Rolle`, `Status`. It makes the cross references to
+`gestures/` and `animations/` machine readable and is the input for the generators.
+
+**Tools** (stdlib only, each supports a dry run without `--apply`):
+
+| Tool | Purpose |
+|------|---------|
+| `tools/gen_component_indexes.py` | writes `components/index.md`, every category `index.md` and the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) from the profile tables; `--check` fails on drift |
+| `tools/check_components.py` | validates the standard: required files, profile fields, required sections, table cell counts, dead links, attributes that belong in the base class, near-duplicate components, pages missing from the nav |
+| `tools/gen_usage_pages.py` | creates missing `usage.md` from the component's own description and attribute tables |
+| `tools/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section; `--blank-lines` normalises blank lines between Markdown blocks |
+| `tools/standardize_sections.py` | renames section headings to the standard names, merges duplicates, reorders sections, repairs attribute tables whose header lacks the `Default` column |
+| `tools/standardize_components.py` | earlier migration: `examples.md` → `usage.md`, strip inherited attributes |
+| `tools/restructure_components.py` | the one-off move into the ten categories plus the merges, rewriting every internal link |
+
+CI runs `check_components.py` and `gen_component_indexes.py --check` before the site build,
+so numbers and navigation cannot drift again.
+
+Relative links inside a component directory use **three** levels for areas outside
+`components/` (`../../../gestures/`) and two levels for a sibling category
+(`../../feedback/toast/`); links inside the same category use one level (`../menu/`).
+
 ## 🖱️ Interaction Areas (Gestures and Animations)
 
 ### Gestures (`docs/de/gestures/<gesture>/`)
@@ -769,11 +828,28 @@ tap, double-tap, long-press, swipe, drag, pinch, spread, rotate, shake
 
 Each gesture: `description.md`, `attributes.md`, `appearance.md`. Shared attributes are listed in `gestures/index.md` (`onTap` … `onShake`, thresholds, `enabled`).
 
-### Animations (`docs/de/animations/<animation>/`)
+### Animations (`docs/de/animations/<category>/<animation>/`)
 
-fade-in, fade-out, slide-in, slide-out, zoom-in, zoom-out, bounce-in, bounce-out, flip, rotate, spin, scale-in, scale-out, collapse, expand, unfold, shake, wiggle, pulse, heartbeat, ripple, highlight, glow, progress, skeleton, typing, elastic, rubber-band, morph, cross-fade, parallax, stagger (32)
+Eight category directories, each with its own `index.md`, each animation in a directory of its own:
 
-Grouped in `animations/index.md` as: entrance, exit, feedback, loop, state change, organization. Shared attributes: `animation`, `duration`, `timingFunction`, `delay`, `iterationCount`, `direction`, `fillMode`, `playState`, plus `respectReducedMotion`.
+| Category | Animations |
+|----------|-----------|
+| `entrance/` | fade-in, slide-in, zoom-in, scale-in, bounce-in, pop-in, expand, unfold (8) |
+| `exit/` | fade-out, slide-out, zoom-out, scale-out, bounce-out, pop-out, collapse (7) |
+| `feedback/` | shake, wiggle, ripple, press, lift, tick-draw, highlight, elastic, rubber-band (9) |
+| `loop/` | spin, pulse, heartbeat, glow (4) |
+| `loading/` | progress, skeleton, typing, dots (4) |
+| `transition/` | flip, rotate, morph, cross-fade, cross-slide, reorder (6) |
+| `movement/` | parallax (1) |
+| `organization/` | stagger, cascade (2) |
+
+Total: **41 animations**, three files each (`description.md`, `attributes.md`, `appearance.md`).
+
+Within the categories, entrance and exit are **families** (mirrored pairs): `fade-in`/`fade-out`, `slide-in`/`slide-out`, `zoom-in`/`zoom-out`, `scale-in`/`scale-out`, `bounce-in`/`bounce-out`, `pop-in`/`pop-out`, `collapse`/`expand`, `rotate`/`spin`, `pulse`/`heartbeat` are documented separately but described as one family driven by `direction` — the 41 documents could collapse to 32 family documents. `animations/index.md` keeps the category table, the tree, the family table and a prioritised list of candidate additions (not yet created).
+
+Relative links inside an animation directory therefore use two levels: `../../index.md` for the animation overview, `../../<category>/<animation>/description.md` for an animation in another category, `../../../components/…` for areas outside `animations/`.
+
+Shared attributes: `animation`, `duration`, `timingFunction`, `delay`, `iterationCount`, `direction`, `fillMode`, `playState`, plus `respectReducedMotion`.
 
 Note: `gestures/shake` (input: user shakes the device) and `animations/shake` (output: element wobbles as feedback) are deliberately separate documents.
 
@@ -782,6 +858,8 @@ Note: `gestures/shake` (input: user shakes the device) and `animations/shake` (o
 | File | Content |
 |------|---------|
 | `index.md` | Overview, models table, data types, basic rules |
+| `standards.md` | Which existing external standard covers which data area; each entry carries a verification status (✅ verified at RFC Editor / w3.org / schema.org, ⚠️ unverified, ❌ proven absent) |
+| `mappings.md` | Our fields ↔ standard fields (JSContact RFC 9553, JSCalendar RFC 8984, vCard RFC 6350, ActivityStreams 2.0, schema.org); naming conflicts and open gaps |
 | `formate.md` | JSON, NDJSON, YAML, TOML, CSV/TSV, XML, MessagePack, Parquet, Markdown frontmatter, ICS, VCF, GeoJSON, JSON Schema |
 | `modelle.md` | User, Team, Message, Document, Block, Event, Task, Contact, Location, File, Tag, Comment, Notification, Revision, Integration |
 | `felder.md` | ID, time, naming, communication, enums, permissions, metadata fields; null rules |

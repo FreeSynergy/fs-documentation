@@ -1,10 +1,7 @@
 # Whiteboard - Aussehen
 
 ## Grundlayout
-
 Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
-
-## Layout
 
 ```
 ┌─────────────────────────────────────────┐
@@ -19,7 +16,16 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 └─────────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Varianten
+
+| Variante | Aussehen |
+|----------|----------|
+| **zeichnung** | Werkzeuge Stift und Radierer, freie Striche |
+| **formen** | Werkzeugkasten mit Figuren und Verbindern |
+| **notizen** | Karten auf der Fläche, farbige Zettel |
+| **vorlage** | vorgezeichnete Flächen, Spalten und Ablaufschienen |
+
+## Größen
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
@@ -28,7 +34,7 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 | Large | 800x600px | Featured |
 | Full | 100% | Volle Breite |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -36,6 +42,13 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 | **Pencil** | Schwarz | Stift |
 | **Shapes** | Farbig | Formen |
 | **Text** | Schrift | Text |
+
+## Hover- und Fokus-Effekte
+
+| Effekt | Beschreibung |
+|--------|--------------|
+| `scale` | Vergrößerung |
+| `shadow` | Schatten stärker |
 
 ## Toolbar-Buttons
 
@@ -49,13 +62,6 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 | **Clear** | Alles löschen |
 | **Export** | Exportieren |
 
-## Hover-Effekte
-
-| Effekt | Beschreibung |
-|--------|--------------|
-| `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
-
 ## Grid-Background
 
 ```
@@ -66,3 +72,12 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─               │
 └─────────────────────────────────────────┘
 ```
+
+## Reaktiv
+
+- `Full` füllt den Viewport abzüglich Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
+  und der Ausschnitt scrollt.
+- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen rutscht sie
+  nach unten und die Knöpfe bleiben mindestens 44 px groß.
+- `pinch`/`spread` ändern den Maßstab, `drag` verschiebt die Fläche; die Linienstärke bleibt
+  gleich, die Striche werden nicht dicker.

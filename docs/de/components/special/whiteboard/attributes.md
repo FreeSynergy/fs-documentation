@@ -7,30 +7,14 @@
 | `toolbar` | array[] | - | Array von Toolbar-Buttons |
 | `onChange` | function | - | Event bei Änderung |
 
-## Verhaltens-Attribute
+## Verhalten
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `interactive` | boolean | `true` | Interaktiv? |
-| `disabled` | boolean | `false` | Deaktiviert? |
 | `grid` | boolean | `true` | Raster anzeigen? |
 
-## Styling-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `size` | enum | `medium` | Größe: `small`, `medium`, `large` |
-| `rounded` | boolean | `true` | Abgerundete Ecken? |
-| `theme` | enum | `default` | Theme: `default`, `dark` |
-
-## Accessibility (Barrierefreiheit)
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `role` | string | ARIA-Rolle: `region` |
-
-## Event-Attribute
+## Events
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
@@ -38,10 +22,16 @@
 | `onClear` | function | Wird beim Löschen ausgeführt |
 | `onExport` | function | Wird beim Exportieren ausgeführt |
 
-## Features-Attribute
+## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
+| `role` | string | ARIA-Rolle: `region` |
+
+## Features-Attribute
+
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `undoRedo` | boolean | `true` | Rückgängig/Wiederherstellen? |
 | `collaborative` | boolean | `false` | Kollaborativ? |
 
@@ -50,3 +40,9 @@
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `exportFormats` | array[] | `['png', 'jpg', 'pdf']` |
+
+## Geerbt von
+
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

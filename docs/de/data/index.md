@@ -10,10 +10,31 @@ Standardisierte Daten beschreiben, in welchen **Formaten**, **Modellen** und **F
 - **Vorhersagbarkeit**: Skins (`apps/<kategorie>/skins/<programm>/api.md`) beschreiben denselben API-Stil
 - **Automatisierung**: Workflows und Webhooks greifen auf stabile Pfade zu
 
-## Datenbereiche
+## Datendomänen (Beschlossen 2026-11-01)
+
+Jede Domäne hat ein Verzeichnis mit eigener `index.md`; jeder Standard darin ein Unterverzeichnis mit `beschreibung.md` + `speicherung.md`.
+
+| Domäne | Verzeichnis | Kanonischer Standard | Weitere Standards |
+|--------|-------------|----------------------|-------------------|
+| Kontaktdaten | [kontakt/](kontakt/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
+| Nachrichten | [messages/](messages/index.md) | AS2 `Note`/`Article` ✅ | JMAP, RFC 5322 |
+| Termine | [events/](events/index.md) | JSCalendar (RFC 8984) ✅ | iCalendar, CalDAV, iTIP |
+| Geodaten | [geodaten/](geodaten/index.md) | GeoJSON (RFC 7946) ✅ | geo:-URI, ISO 19160 |
+| Login / Konten | [login/](login/index.md) | OIDC + SCIM (⚠️ zu belegen) | OAuth 2.0, WebFinger, kanidm |
+| Identität / Web of Trust | [identitaet/](identitaet/index.md) | ❌ keine etablierte Spec – eigene Arbeit | Andockpunkte: AS2 `Relationship`, `publicKey` |
+| Profil | [profil/](profil/index.md) | AS2-`Actor`-Projektion auf JSContact ✅ | schema.org `Person` (⚠️) |
+| Projekte | [projekte/](projekte/index.md) | ❌ keine Spec – eigene Arbeit | Bausteine: JSCalendar-`Task`, W3C Org Ontology |
+
+Als **vorgeschlagen, noch nicht beschlossen**: `aufgaben/` (JSCalendar deckt `Task` bereits ab), `dokumente/` (Block-Struktur = größte Lücke), `dateien/`, `verschlagwortung/` (Web Annotation ✅), `kommentare/`, `benachrichtigungen/`, `organisationen/`.
+
+Der **Envelope** (AS2 + ActivityPub, Beschlüsse in [standards.md](standards.md)) ist querschnittlich und keine eigene Domäne.
+
+## Datenbereiche (Querschnitt)
 
 | Datei | Inhalt |
 |-------|--------|
+| [standards.md](standards.md) | Welche existierenden Standards welchen Datenbereich abdecken (mit Belegen und ungeprüften Punkten) |
+| [mappings.md](mappings.md) | Unsere Felder ↔ Standardfelder (zunächst Contact, Name, Überschrift) |
 | [formate.md](formate.md) | Austauschformate (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
 | [modelle.md](modelle.md) | Standardmodelle (User, Message, Document, Event, Task, Contact, …) |
 | [felder.md](felder.md) | Standardfelder, Typen, Enums, Pflichtfelder |
@@ -59,23 +80,34 @@ Standardisierte Daten beschreiben, in welchen **Formaten**, **Modellen** und **F
 
 ## Grundregeln
 
-1. **IDs sind opaque Strings** — niemals als Nummer interpretieren
+1. **IDs sind opaque Strings** — niemals als Nummer interpretieren; intern ULID, extern absoluter IRI `https://<instanz>/<domaene>/<ulid>` (Beschluss 3)
 2. **Zeiten immer mit Zeitzonen-Offset** oder explizit `allDay: true`
 3. **Leere Werte sind `null`**, nicht `""` (Ausnahme: Textfelder mit Pflicht)
 4. **Enums sind lowercase und Singular** (`active`, nicht `Active`)
 5. **Neue Felder sind additiv** — bestehende Felder werden nicht umbenannt
 6. **Jede Ressource trägt `id`, `createdAt`, `updatedAt`**
+7. **Audience-Regel:** `to`/`cc`/`bto`/`bcc` steuern, wo Kopien landen — sie ersetzen keine Ressourcens-Autorisierung (Beschluss 2)
 
 ## Verzeichnisstruktur
 
 ```
 docs/de/data/
 ├── index.md            (diese Datei)
+├── standards.md        Standards-Register + Beschlüsse 2026-11-01
+├── mappings.md         unsere Felder ↔ Standardfelder
 ├── formate.md          Austauschformate
 ├── modelle.md          Standardmodelle
 ├── felder.md           Standardfelder und Typen
 ├── konventionen.md     Benennungs- und Versionierungsregeln
-└── api.md              einheitliches API-Muster
+├── api.md              einheitliches API-Muster
+├── kontakt/            ├── index.md └── jscontact/{beschreibung,speicherung}.md
+├── messages/           └── index.md
+├── events/             └── index.md
+├── geodaten/           └── index.md
+├── login/              └── index.md
+├── identitaet/         └── index.md
+├── profil/             └── index.md
+└── projekte/           └── index.md
 ```
 
 ## Siehe auch

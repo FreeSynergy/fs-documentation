@@ -9,45 +9,40 @@
 | `content` | string/node | - | Inhalt |
 | `actions` | array[] | - | Array von Action-Objekten |
 
-## Verhaltens-Attribute
+## Verhalten
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `variant` | enum | `default` | Stil: `default`, `flat`, `outlined`, `elevated` |
 | `interactive` | boolean | `false` | Interaktiv? |
-| `disabled` | boolean | `false` | Deaktiviert? |
 
-## Styling-Attribute
+## Darstellung
+
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
+| `responsive` | boolean | `true` | Responsives Layout? |
+
+## Events
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `size` | enum | `medium` | Größe: `small`, `medium`, `large` |
-| `rounded` | boolean | `true` | Abgerundete Ecken? |
-| `theme` | enum | `default` | Theme: `default`, `dark` |
+| `onActionClick` | function | Wird beim Action-Klick ausgeführt |
+
+## Barrierefreiheit
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `role` | string | ARIA-Rolle: `region` |
 
 ## Media-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `media` | string/object | - | Bild/Thumbnail |
 | `mediaPosition` | enum | `top` | Position: `top`, `bottom`, `left` |
 
-## Accessibility (Barrierefreiheit)
+## Geerbt von
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `role` | string | ARIA-Rolle: `region` |
-
-## Event-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onClick` | function | Wird beim Klick ausgeführt |
-| `onActionClick` | function | Wird beim Action-Klick ausgeführt |
-
-## Responsive Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | `true` | Responsives Layout? |
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

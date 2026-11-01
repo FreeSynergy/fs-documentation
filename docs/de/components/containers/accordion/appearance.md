@@ -1,10 +1,7 @@
 # Accordion - Aussehen
 
 ## Grundlayout
-
 Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können.
-
-## Layout
 
 ```
 ┌─────────────────────────────────────────┐
@@ -22,13 +19,13 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Single Expand** | Nur einer offen |
-| **Multiple Expand** | Mehrere offen |
-| **Accordion Group** | Gruppen von Items |
+| Variante | Aussehen |
+|----------|----------|
+| **standard** | Köpfe untereinander, einer offen |
+| **mehrere** | mehrere Inhalte gleichzeitig sichtbar |
+| **einzel** | ein einzelner Kopf ohne Gruppierung |
 
-## Größe-Varianten
+## Größen
 
 | Größe | Schriftgröße | Verwendung |
 |-------|-------------|------------|
@@ -36,7 +33,7 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
 | Medium | 14px | Standard |
 | Large | 16px | Featured |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -44,7 +41,7 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
 | **Inactive Header** | Grau | Inaktiver Header |
 | **Content** | Dunkel | Inhalt |
 
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -56,6 +53,16 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `Fade In` | Einfade-Effekt |
-| `Slide Down` | Schiebe-Effekt nach unten |
-| `Rotate` | Icon rotiert |
+| `expand` | Inhalt klappt auf |
+| `collapse` | Inhalt klappt zu |
+| `fade-in` | Inhalt blendet ein |
+| `rotate` | Pfeil dreht um 90 Grad |
+
+## Reaktiv
+
+- Der Akkordeonstapel ist immer vollbreit; die Kopfzeile wächst mit dem Text,
+  der Inhaltbereich ist höchstens so hoch wie der Viewport.
+- Auf schmalen Bildschirmen rutscht das Pfeilsymbol nach links und der Titel bleibt
+  linksbündig; die Kopfzeile wird mindestens 44 px hoch.
+- Beim Schließen rücken die folgenden Köpfe ohne Sprung nach, die Scrollposition des
+  angeklickten Kopfes bleibt erhalten.

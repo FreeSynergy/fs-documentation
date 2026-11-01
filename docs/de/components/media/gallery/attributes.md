@@ -10,17 +10,7 @@
 | `gap` | number | `16` | Abstand zwischen Bildern |
 | `responsive` | boolean | `true` | Responsives Layout? |
 
-## Carousel-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `autoplay` | boolean | `false` | Auto-Slideshow? |
-| `interval` | number | `5000` | Intervall in ms |
-| `loop` | boolean | `true` | Endlosschleife? |
-| `showNavigation` | boolean | `true` | Vor/Zurück-Buttons? |
-| `showThumbnails` | boolean | `true` | Vorschaubilder? |
-
-## Interaktive Attribute
+## Verhalten
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
@@ -28,6 +18,41 @@
 | `onSwipe` | function | Wird beim Swipe ausgeführt |
 | `onZoom` | function | Wird beim Zoom ausgeführt |
 | `lightBox` | boolean | Lightbox beim Klick öffnen? |
+
+## Darstellung
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `animationDuration` | number | Dauer in ms |
+| `transition` | enum | Übergang: `fade`, `slide`, `scale` |
+| `showLoading` | boolean | Loading-Zustand anzeigen? |
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `aspectRatio` | string | Seitenverhältnis (z.B. "4/3") |
+| `fit` | enum | `cover`, `contain`, `fill` |
+
+## Events
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `onImageLoad` | function | Wird beim Laden des Bildes ausgeführt |
+| `onGalleryChange` | function | Wird bei Galerie-Wechsel ausgeführt |
+
+## Barrierefreiheit
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `aria-live` | string | Live-Ankündigung |
+
+## Carousel-Attribute
+
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
+| `autoplay` | boolean | `false` | Auto-Slideshow? |
+| `interval` | number | `5000` | Intervall in ms |
+| `loop` | boolean | `true` | Endlosschleife? |
+| `showNavigation` | boolean | `true` | Vor/Zurück-Buttons? |
+| `showThumbnails` | boolean | `true` | Vorschaubilder? |
 
 ## Filter-Attribute
 
@@ -37,32 +62,8 @@
 | `searchQuery` | string | Suchanfrage |
 | `showFilter` | boolean | Filter anzeigen? |
 
-## Animation-Attribute
+## Geerbt von
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `animationDuration` | number | Dauer in ms |
-| `transition` | enum | Übergang: `fade`, `slide`, `scale` |
-| `showLoading` | boolean | Loading-Zustand anzeigen? |
-
-## Accessibility (Barrierefreiheit)
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `aria-live` | string | Live-Ankündigung |
-
-## Layout-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aspectRatio` | string | Seitenverhältnis (z.B. "4/3") |
-| `fit` | enum | `cover`, `contain`, `fill` |
-| `rounded` | boolean | Abgerundete Ecken? |
-
-## Event-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onImageLoad` | function | Wird beim Laden des Bildes ausgeführt |
-| `onGalleryChange` | function | Wird bei Galerie-Wechsel ausgeführt |
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

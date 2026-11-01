@@ -4,9 +4,10 @@
 
 Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit an.
 
-## Layout-Varianten
+## Varianten
 
 ### Compact (Kompakt)
+
 ```
 ┌─────────────────────────────────────────┐
 │ [▶]  ▓▓▓▓▓▓▓▓░░░░░░  1:23 / 3:45       │
@@ -14,6 +15,7 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 ```
 
 ### Standard (Standard)
+
 ```
 ┌─────────────────────────────────────────┐
 │ [⏮] [◀] [▶] [▶] [⏭]                   │
@@ -24,13 +26,14 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 ```
 
 ### Minimal (Minimal)
+
 ```
 ┌─────────────────────────────────────────┐
 │ [▶] [🔊]                               │
 └─────────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
@@ -39,7 +42,7 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 | Large | 1280px | Featured-Videos |
 | Full | 1920px | Hero-Videos, Fullscreen |
 
-## Farb-Varianten (CSS Variables)
+## Farben und Zustände
 
 ```css
 .video-player {
@@ -50,6 +53,22 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
   --track-color: rgba(255,255,255,0.3);
 }
 ```
+
+## Hover- und Fokus-Effekte
+
+| Effekt | Beschreibung |
+|--------|--------------|
+| `scale` | Controls skaliert (1.1x) |
+| `opacity` | Deckkraft ändert sich |
+| `border` | Rand leuchtet auf |
+
+## Reaktiv
+
+| Breakpoint | Verhalten |
+|------------|-----------|
+| Desktop (>768px) | Volle Steuerung sichtbar |
+| Tablet (480-768px) | Kompakt-Layout |
+| Mobile (<480px) | Minimal-Layout |
 
 ## Steuerungs-Buttons
 
@@ -76,6 +95,7 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 ## Overlay-Elemente
 
 ### Loading Overlay
+
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
@@ -86,6 +106,7 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 ```
 
 ### Info Overlay
+
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
@@ -95,19 +116,3 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 │                                         │
 └─────────────────────────────────────────┘
 ```
-
-## Hover-Effekte
-
-| Effekt | Beschreibung |
-|--------|--------------|
-| `scale` | Controls skaliert (1.1x) |
-| `opacity` | Deckkraft ändert sich |
-| `border` | Rand leuchtet auf |
-
-## Responsive Verhalten
-
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volle Steuerung sichtbar |
-| Tablet (480-768px) | Kompakt-Layout |
-| Mobile (<480px) | Minimal-Layout |

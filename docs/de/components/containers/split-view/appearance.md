@@ -1,10 +1,7 @@
 # Split View - Aussehen
 
 ## Grundlayout
-
 Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
-
-## Layout
 
 ```
 ┌─────────────────┬──────────────────────┐
@@ -23,14 +20,14 @@ Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
 | **Resizable Split** | Breite per Drag änderbar |
 | **Responsive** | Auto-Adjustierung |
 
-## Größe-Varianten
+## Größen
 
 | Bereich | Breite | Verwendung |
 |---------|--------|------------|
 | **Sidebar** | 250px | Standard |
 | **Content** | Auto | Verbleibender Platz |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -38,14 +35,14 @@ Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
 | **Content** | Hell | Content-Hintergrund |
 | **Separator** | Grau | Trennlinie |
 
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `resize-cursor` | Resize-Cursor |
 | `border` | Rand leuchtet auf |
 
-## Responsive Verhalten
+## Reaktiv
 
 | Breakpoint | Verhalten |
 |------------|-----------|

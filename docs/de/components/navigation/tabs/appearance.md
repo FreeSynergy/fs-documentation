@@ -4,8 +4,7 @@
 
 Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder vertikal platziert werden.
 
-## Layout-Varianten
-
+## Varianten
 ### Horizontal (Standard)
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -16,7 +15,6 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
-
 ### Vertical (Seitlich)
 ```
 ┌────────┬──────────────────────────────────────────┐
@@ -27,15 +25,13 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 └────────┴──────────────────────────────────────────┘
 ```
 
-## Form-Varianten
-
 | Variant | Beschreibung | CSS |
 |---------|-------------|-----|
 | **Default** | Standard-Reiter | `border-radius: 4px 4px 0 0` |
 | **Pill** | Pillenform | `border-radius: 999px` |
 | **Card** | In Karte integriert | `border-radius: 8px` |
 
-## Größe-Varianten
+## Größen
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
@@ -43,7 +39,7 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 | Medium | 48px | Standard-Tabs |
 | Large | 64px | Featured-Tabs |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -52,7 +48,7 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 | **Hover** | Heller | Hover-Zustand |
 | **Disabled** |ausgegraut | Deaktivierte Tabs |
 
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -60,6 +56,14 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 | `border-bottom` | Unterstrich erscheint |
 | `scale` | Leichte Vergrößerung |
 | `shadow` | Schatten erscheint |
+
+## Reaktiv
+
+| Breakpoint | Verhalten |
+|------------|-----------|
+| Desktop (>768px) | Volle Tabs sichtbar |
+| Tablet (480-768px) | Scrollable Tabs |
+| Mobile (<480px) | Drawer oder Accordion |
 
 ## Active-Indicator
 
@@ -79,11 +83,3 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
-
-## Responsive Verhalten
-
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volle Tabs sichtbar |
-| Tablet (480-768px) | Scrollable Tabs |
-| Mobile (<480px) | Drawer oder Accordion |

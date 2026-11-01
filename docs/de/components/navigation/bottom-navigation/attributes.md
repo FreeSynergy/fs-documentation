@@ -8,45 +8,40 @@
 | `activeItem` | string | - | Aktiver Nav-Punkt |
 | `onChange` | function | - | Event bei Auswahl |
 
-## Verhaltens-Attribute
+## Verhalten
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `variant` | enum | `icon-text` | Stil: `icon-text`, `text`, `icon-only` |
-| `disabled` | boolean | `false` | Deaktiviert? |
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `circular` | boolean | `false` | Runde Buttons? |
 
-## Styling-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `size` | enum | `medium` | Größe: `small`, `medium`, `large` |
+## Darstellung
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `color` | enum | `primary` | Farbe: `primary`, `secondary`, `neutral` |
-| `theme` | enum | `default` | Theme: `default`, `dark` |
-
-## Accessibility (Barrierefreiheit)
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `role` | string | ARIA-Rolle: `navigation` |
-
-## Animation-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
 
-## Event-Attribute
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
+| `responsive` | boolean | `true` | Responsives Layout? |
+
+## Events
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `onSelect` | function | Wird bei Auswahl ausgeführt |
 | `onHover` | function | Wird beim Hover ausgeführt |
 
-## Responsive Attribute
+## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `responsive` | boolean | `true` | Responsives Layout? |
+| `role` | string | ARIA-Rolle: `navigation` |
+
+## Geerbt von
+
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

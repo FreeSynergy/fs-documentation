@@ -8,6 +8,32 @@
 | `activeItem` | string/number | - | Aktives Item |
 | `onChange` | function | - | Event bei Wechsel |
 
+## Verhalten
+
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
+| `collapsible` | boolean | `true` | Kollabierbar? |
+
+## Darstellung
+
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
+| `animate` | boolean | `true` | Animationen aktivieren? |
+| `animationDuration` | number | `300` | Dauer in ms |
+
+## Events
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `onExpand` | function | Wird beim Expandieren ausgeführt |
+| `onCollapse` | function | Wird beim Kollabieren ausgeführt |
+
+## Barrierefreiheit
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `role` | string | ARIA-Rolle: `tablist` |
+
 ## Item-Attribute
 
 | Attribut | Typ | Beschreibung |
@@ -15,41 +41,9 @@
 | `id` | string | Eindeutige ID |
 | `header` | string/node | Header-Text |
 | `content` | string/node | Inhalt |
-| `disabled` | boolean | Deaktiviert? |
 
-## Verhaltens-Attribute
+## Geerbt von
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `variant` | enum | `single` | Stil: `single`, `multiple` |
-| `collapsible` | boolean | `true` | Kollabierbar? |
-| `disabled` | boolean | `false` | Gesamtes Accordion deaktivieren? |
-
-## Styling-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `size` | enum | `medium` | Größe: `small`, `medium`, `large` |
-| `rounded` | boolean | `true` | Abgerundete Ecken? |
-| `theme` | enum | `default` | Theme: `default`, `dark` |
-
-## Accessibility (Barrierefreiheit)
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `role` | string | ARIA-Rolle: `tablist` |
-
-## Animation-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `animate` | boolean | `true` | Animationen aktivieren? |
-| `animationDuration` | number | `300` | Dauer in ms |
-
-## Event-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onExpand` | function | Wird beim Expandieren ausgeführt |
-| `onCollapse` | function | Wird beim Kollabieren ausgeführt |
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

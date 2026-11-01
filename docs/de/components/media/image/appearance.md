@@ -4,7 +4,7 @@
 
 Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effekten und Loading-Zuständen.
 
-## Form-Varianten (CSS)
+## Varianten
 
 ```css
 /* Rectangular (Rechteckig) - Standard */
@@ -23,7 +23,7 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 }
 ```
 
-## Größe-Varianten
+## Größen
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
@@ -33,7 +33,16 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 | Large | 600px | Featured-Images |
 | Full | 1920px+ | Hero-Sectionen, Backgrounds |
 
-## Hover-Effekte
+## Farben und Zustände
+
+| Zustand | Aussehen |
+|---------|----------|
+| `default` | Bild füllt die Zelle, leichter Schatten je nach `shadow` |
+| `hover` | Zoom oder Overlay mit Aktionen, gemäß `hoverEffect` |
+| `geladen` | Platzhalter in Grundfarbe bis zum Ladende |
+| `fehler` | Rahmen mit Symbol, Rückfallbild falls gesetzt |
+
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -45,6 +54,7 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 ## Loading-Zustand
 
 ### Skeleton (Platzhalter)
+
 ```
 ┌────────────────────────┐
 │ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ │
@@ -54,6 +64,7 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 ```
 
 ### Spinner (Ladeanimation)
+
 ```
 ┌────────────────────────┐
 │                        │
@@ -70,41 +81,6 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 | `contain` | Bild passt komplett in Container, eventuell Rand | Produktbilder |
 | `fill` | Bild wird gestreckt, um Container zu füllen | Hintergrundbilder |
 
-## Lazy Loading
-
-```jsx
-<Image 
-  src="/images/photo.jpg" 
-  size="medium" 
-  loading="lazy"
-  alt="Beschreibung"
-/>
-```
-
-## Background-Image
-
-```jsx
-<Card 
-  backgroundImage="/images/banner.jpg"
-  backgroundSize="cover"
-  backgroundPosition="center"
-/>
-```
-
-## Responsive Images
-
-```jsx
-<Image 
-  src="/images/photo.jpg"
-  responsive={true}
-  srcSet={[
-    { size: '320w', src: '/images/photo-small.jpg' },
-    { size: '640w', src: '/images/photo-medium.jpg' },
-    { size: '1280w', src: '/images/photo-large.jpg' }
-  ]}
-/>
-```
-
 ## Border & Shadow
 
 | Variant | Beschreibung |
@@ -113,3 +89,12 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 | `outlined` | Heller Rand, kein Schatten |
 | `elevated` | Starkes Shadow, keine Border |
 | `rounded` | Abgerundete Ecken (8px) |
+
+## Reaktiv
+
+- `responsive = true` liefert je Breite eine passende Auflösung; die Anzeigefläche bleibt
+  gleich groß, damit die Seite beim Laden nicht springt.
+- In Rastern und Karten hält `fit = cover` das Seitenverhältnis, `fit = contain` lässt
+  auf schmalen Bildschirmen Rand zu.
+- Hintergrundbilder skalieren mit dem Viewport (`Full`), der Text darüber bleibt bei
+  mindestens 4,5:1 Kontrast — sonst dunkler Schleier darüber.

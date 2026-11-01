@@ -9,45 +9,35 @@
 | `itemsPerPage` | number | 10 | Elemente pro Seite |
 | `onChange` | function | - | Event bei Seitenwechsel |
 
-## Varianten-Attribute
+## Verhalten
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `variant` | enum | `numeric` | Stil: `numeric`, `previous-next`, `load-more`, `infinite-scroll` |
-
-## Verhaltens-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `disabled` | boolean | `false` | Gesamte Pagination deaktivieren? |
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `showTotal` | boolean | `false` | Gesamtanzahl anzeigen? |
 | `showPageSizes` | boolean | `false` | Page-Size-Selector anzeigen? |
 
-## Styling-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `size` | enum | `medium` | Größe: `small`, `medium`, `large` |
-| `rounded` | boolean | `true` | Abgerundete Ecken? |
-| `theme` | enum | `default` | Theme: `default`, `dark` |
-
-## Accessibility (Barrierefreiheit)
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `role` | string | ARIA-Rolle: `navigation` |
-
-## Event-Attribute
+## Events
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `onPageChange` | function | Wird bei Seitenwechsel ausgeführt |
 | `onPageSizeChange` | function | Wird bei Page-Size-Änderung ausgeführt |
 
-## Navigation-Attribute
+## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
+| `role` | string | ARIA-Rolle: `navigation` |
+
+## Navigation-Attribute
+
+| Attribut | Typ | Default | Beschreibung |
+|---|---|---|---|
 | `showFirstLast` | boolean | `false` | First/Last-Buttons anzeigen? |
 | `showEllipsis` | boolean | `true` | Ellipsis anzeigen? |
+
+## Geerbt von
+
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

@@ -1,7 +1,17 @@
 # Bild (Image)
 
-## Beschreibung
+| Feld | Wert |
+|------|------|
+| **Kategorie** | `media` |
+| **Erbt von** | `base` |
+| **Varianten** | `einfach`, `vignette`, `hintergrund` |
+| **Zustände** | `geladen`, `fehler` |
+| **Gesten** | `tap`, `pinch`, `double-tap`, `drag` |
+| **Animationen** | `skeleton`, `fade-in`, `zoom-in` |
+| **Verwandt** | `gallery`, `icon`, `avatar`, `card`, `hover-card` |
+| **Status** | dokumentiert |
 
+## Beschreibung
 Ein Bild-Element zeigt Grafiken, Fotos oder andere visuelle Inhalte an. Es ist eines der grundlegendsten Medien-Elemente in FreeSynergy.
 
 ## Verwendungszweck
@@ -12,7 +22,40 @@ Ein Bild-Element zeigt Grafiken, Fotos oder andere visuelle Inhalte an. Es ist e
 - Background-Images
 - Thumbnails
 
-## Format-Varianten
+## Varianten
+
+| Variante | Beschreibung |
+|----------|--------------|
+| **einfach** | Bild im Inhaltsfluss, eigene Höhe oder Seitenverhältnis |
+| **vignette** | zugeschnittenes Vorschaubild in Listen und Karten |
+| **hintergrund** | Bild hinter anderem Inhalt (`backgroundSize`, `backgroundPosition`) |
+
+Zuschnitt und Form sind keine Varianten, sondern die Attribute `fit` und `shape`.
+
+## Features
+
+- Responsives Bild: passende Auflösung je Breite (`srcSet`, `sizes`)
+- Spätes Laden (`lazy`) mit Platzhalter (`skeleton`) oder Spinner
+- Rückfallebene, wenn die Datei fehlt (`onErrorFallback`)
+- Alt-Text für Screenreader, `role = presentation` bei reiner Zierde
+
+## Abgrenzung
+
+- **Nicht verwechseln mit** [icon](../icon/): Icons sind kleine, einfärbbare Symbole der Oberfläche.
+- **Nicht verwechseln mit** [gallery](../gallery/): eine Galerie ist der Verband mehrerer Bilder
+  samt Großansicht, das Bild ist ein einzelnes Element.
+- **Nicht verwechseln mit** [avatar](../../data/avatar/): ein Avatar identifiziert eine Person.
+- Das Aufziehen auf volle Bildschirmgröße gehört in die Galerie bzw. ein Overlay, nicht ins Bild.
+
+## Best Practices
+
+- Alt-Text beschreibt den Inhalt, nicht den Dateinamen; Zierbilder bekommen kein Alt-Text-Ziel.
+- Immer mehrere Auflösungen anbieten und die Anzeigegröße vorgeben, damit Bilder nicht springen.
+- Seitenverhältnis fest setzen, sonst verrutscht die Seite beim Laden.
+- Klickbare Bilder brauchen ein deutliches Symbol und eine Tastaturalternative.
+- Bei Fehler die Rückfallebene zeigen, nie ein gebrochenes Bild stehen lassen.
+
+## Formate
 
 | Format | Beschreibung | Verwendung |
 |--------|-------------|------------|
@@ -22,16 +65,6 @@ Ein Bild-Element zeigt Grafiken, Fotos oder andere visuelle Inhalte an. Es ist e
 | **WEBP** | Moderne Formate, kleine Dateigröße | Moderne Web-Applikationen |
 | **SVG** | Vektorgraphik, skalierbar | Icons, Logos, Grafiken |
 | **AVIF** | Neuestes Format, sehr klein | Hochwertige Bilder |
-
-## Größe-Varianten
-
-| Größe | Verwendung |
-|-------|------------|
-| **Thumbnail** (100x100) | Listen, Grids |
-| **Small** (200x200) | Profile, kleine Karten |
-| **Medium** (400x400) | Cards, Panels |
-| **Large** (800x800) | Featured-Images |
-| **Full** (1920+) | Hero-Sectionen, Backgrounds |
 
 ## Styling-Attribute
 
@@ -54,37 +87,9 @@ Ein Bild-Element zeigt Grafiken, Fotos oder andere visuelle Inhalte an. Es ist e
 | `border` | Rand leuchtet auf |
 | `shadow` | Schatten wird stärker |
 
-## Lazy Loading
+## Siehe auch
 
-```jsx
-<Image 
-  src="/images/photo.jpg" 
-  size="medium" 
-  loading="lazy" 
-  alt="Beschreibung"
-/>
-```
-
-## Background-Image
-
-```jsx
-<Card 
-  backgroundImage="/images/banner.jpg"
-  backgroundSize="cover"
-  backgroundPosition="center"
-/>
-```
-
-## Responsive Images
-
-```jsx
-<Image 
-  src="/images/photo.jpg"
-  responsive={true}
-  srcSet={[
-    { size: '320w', src: '/images/photo-small.jpg' },
-    { size: '640w', src: '/images/photo-medium.jpg' },
-    { size: '1280w', src: '/images/photo-large.jpg' }
-  ]}
-/>
-```
+- [media – Übersicht](../index.md)
+- [Gallery](../gallery/) — mehrere Bilder mit Großansicht
+- [Icon](../icon/) — Symbol statt Foto
+- [Basiskomponente](../../basics/base/)

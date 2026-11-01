@@ -4,9 +4,10 @@
 
 Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 
-## Layout-Varianten
+## Varianten
 
 ### Numeric (Numerisch)
+
 ```
 ┌─────────────────────────────────────────┐
 │ [◀] 1 2 3 4 5 [▶]                       │
@@ -14,6 +15,7 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 ```
 
 ### Previous/Next
+
 ```
 ┌─────────────────────────────────────────┐
 │ [◀ Zurück] [Weiter ▶]                   │
@@ -21,6 +23,7 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 ```
 
 ### Load More
+
 ```
 ┌─────────────────────────────────────────┐
 │ [Mehr laden]                            │
@@ -28,13 +31,14 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 ```
 
 ### Infinite Scroll
+
 ```
 ┌─────────────────────────────────────────┐
 │ (Automatisch nachladen beim Scrollen)   │
 └─────────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Größen
 
 | Größe | Schriftgröße | Verwendung |
 |-------|-------------|------------|
@@ -42,7 +46,7 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 | Medium | 14px | Standard |
 | Large | 16px | Featured |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -51,6 +55,23 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 | **Hover** | Heller | Hover-Zustand |
 | **Disabled** | Grau | Deaktivierte Buttons |
 
+## Hover- und Fokus-Effekte
+
+| Effekt | Beschreibung |
+|--------|--------------|
+| `background` | Seitenzahl bekommt eine Fläche |
+| `ring` | Fokus-Ring bei Tastaturnavigation |
+| `underline` | Unterstrich beim aktiven Eintrag |
+| `none` | deaktivierte Pfeile ohne Rückmeldung |
+
+## Reaktiv
+
+| Breakpoint | Verhalten |
+|------------|-----------|
+| Desktop (>768px) | Volle Pagination sichtbar |
+| Tablet (480-768px) | Kompakt |
+| Mobile (<480px) | Previous/Next oder Load More |
+
 ## Features
 
 - **Total Items**: Gesamtanzahl der Elemente
@@ -58,11 +79,3 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 - **Items per Page**: Elemente pro Seite
 - **Jump to Page**: Direkt zu Seite springen
 - **Page Size Selector**: Anzahl pro Seite ändern
-
-## Responsive Verhalten
-
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volle Pagination sichtbar |
-| Tablet (480-768px) | Kompakt |
-| Mobile (<480px) | Previous/Next oder Load More |

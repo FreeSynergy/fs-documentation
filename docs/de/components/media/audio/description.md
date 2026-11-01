@@ -1,7 +1,17 @@
 # Audio
 
-## Beschreibung
+| Feld | Wert |
+|------|------|
+| **Kategorie** | `media` |
+| **Erbt von** | `base`, `media-player` |
+| **Varianten** | `einzeln`, `playlist`, `kompakt` |
+| **Zustände** | `spielend`, `pausiert` |
+| **Gesten** | `tap`, `drag` |
+| **Animationen** | `progress`, `pulse` |
+| **Verwandt** | `media-player`, `video`, `progress` |
+| **Status** | dokumentiert |
 
+## Beschreibung
 Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet Steuerungsfunktionen wie Play/Pause und Lautstärke.
 
 ## Verwendungszweck
@@ -12,7 +22,40 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
 - Soundeffekte
 - Anleitungsvideos ohne Video
 
-## Format-Varianten
+## Varianten
+
+| Variante | Beschreibung |
+|----------|--------------|
+| **einzeln** | eine Datei mit voller Steuerung |
+| **playlist** | mehrere Dateien mit vorheriger/nächster und Liste |
+| **kompakt** | Sprachnachricht: Play, Dauer, Fortschritt, keine Lautstärke |
+
+## Features
+
+- Play/Pause-Button
+- Lautstärkeregler
+- Fortschrittsbalken
+- Zeitanzeige (aktueller Zeitpunkt / Gesamtzeit)
+- Timeline-Seek (klicken zum Springen)
+- Wiedergabeliste
+
+## Best Practices
+
+- Immer `controls` anzeigen, außer bei Hintergrund-Audio
+- `muted` bei `autoplay` verwenden (Browser-Anforderung)
+- Alt-Text für Barrierefreiheit bereitstellen
+- Verschiedene Formate für Kompatibilität bereitstellen
+
+## Abgrenzung
+
+- **Nicht verwechseln mit** [media-player](../media-player/): der Media Player ist die Elternklasse
+  mit Steuerung, Playlist und Untertiteln; das Audio-Element erbt davon und zeigt nur Ton.
+- **Nicht verwechseln mit** [video](../video/): ohne Bild ist es Audio, mit Bild Video — ein
+  Video-Standbild allein ist ein [image](../image/).
+- Eine Sprachnachricht im Chat ist diese Komponente in der Variante `kompakt`, keine eigene
+  Komponente.
+
+## Formate
 
 | Format | Beschreibung | Verwendung |
 |--------|-------------|------------|
@@ -34,15 +77,6 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
 | `currentTime` | number | Aktuelle Wiedergabeposition |
 | `duration` | number | Gesamtdauer des Audios |
 
-## Features
-
-- Play/Pause-Button
-- Lautstärkeregler
-- Fortschrittsbalken
-- Zeitanzeige (aktueller Zeitpunkt / Gesamtzeit)
-- Timeline-Seek (klicken zum Springen)
-- Wiedergabeliste
-
 ## Hover-Effekte
 
 | Effekt | Beschreibung |
@@ -51,45 +85,9 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
 | `opacity` | Deckkraft ändert sich |
 | `border` | Rand leuchtet auf |
 
-## Usage Beispiele
+## Siehe auch
 
-### Einfaches Audio
-
-```jsx
-<Audio 
-  src="/audio/podcast.mp3"
-  controls={true}
-  volume={0.8}
-/>
-```
-
-### Autoplay mit Mute
-
-```jsx
-<Audio 
-  src="/audio/intro.mp3"
-  autoplay={true}
-  muted={true}
-  loop={true}
-/>
-```
-
-### Mit Wiedergabeliste
-
-```jsx
-<Audio 
-  playlist={[
-    { title: "Episode 1", src: "/audio/episode1.mp3" },
-    { title: "Episode 2", src: "/audio/episode2.mp3" },
-    { title: "Episode 3", src: "/audio/episode3.mp3" }
-  ]}
-  controls={true}
-/>
-```
-
-## Best Practices
-
-- Immer `controls` anzeigen, außer bei Hintergrund-Audio
-- `muted` bei `autoplay` verwenden (Browser-Anforderung)
-- Alt-Text für Barrierefreiheit bereitstellen
-- Verschiedene Formate für Kompatibilität bereitstellen
+- [media – Übersicht](../index.md)
+- [Media Player](../media-player/) — gemeinsame Steuerung
+- [Video](../video/) — mit Bild
+- [Basiskomponente](../../basics/base/)

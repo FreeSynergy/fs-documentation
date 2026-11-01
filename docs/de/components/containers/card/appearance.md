@@ -1,10 +1,7 @@
 # Card - Aussehen
 
 ## Grundlayout
-
 Eine Card ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen darstellt.
-
-## Layout
 
 ```
 ┌─────────────────────────────┐
@@ -20,24 +17,6 @@ Eine Card ist ein Container-Element, das Inhalte in einer strukturierten Box mit
 └─────────────────────────────┘
 ```
 
-## Größe-Varianten
-
-| Größe | Breite | Verwendung |
-|-------|--------|------------|
-| Small | 200px | In List-Items |
-| Medium | 300px | Standard |
-| Large | 400px | Featured |
-| Full | 100% | Volle Breite |
-
-## Farb-Varianten
-
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Secondary** | Sekundärfarbe | Sekundär |
-| **Danger** | Rot | Gefährlich |
-
 ## Varianten
 
 | Variant | Beschreibung |
@@ -48,7 +27,25 @@ Eine Card ist ein Container-Element, das Inhalte in einer strukturierten Box mit
 | **Elevated** | Stark erhöht mit Schatten |
 | **Media** | Mit Bild/Thumbnail |
 
-## Hover-Effekte
+## Größen
+
+| Größe | Breite | Verwendung |
+|-------|--------|------------|
+| Small | 200px | In List-Items |
+| Medium | 300px | Standard |
+| Large | 400px | Featured |
+| Full | 100% | Volle Breite |
+
+## Farben und Zustände
+
+| Status | Farbe | Beschreibung |
+|--------|-------|--------------|
+| **Default** | Hell | Standard |
+| **Primary** | Primärfarbe | Primär |
+| **Secondary** | Sekundärfarbe | Sekundär |
+| **Danger** | Rot | Gefährlich |
+
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -56,7 +53,7 @@ Eine Card ist ein Container-Element, das Inhalte in einer strukturierten Box mit
 | `transform` | Leichte Hebung |
 | `border` | Rand leuchtet auf |
 
-## Interaktivität
+## Reaktiv
 
 ```css
 .card:hover {

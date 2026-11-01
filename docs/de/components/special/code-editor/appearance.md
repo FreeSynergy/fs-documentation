@@ -1,10 +1,7 @@
 # Code Editor - Aussehen
 
 ## Grundlayout
-
 Ein Code Editor ist ein Editor für Quellcode.
-
-## Layout
 
 ```
 ┌─────────────────────────────────────────┐
@@ -14,7 +11,15 @@ Ein Code Editor ist ein Editor für Quellcode.
 └─────────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Varianten
+
+| Variante | Aussehen |
+|----------|----------|
+| **voll** | Zeilennummern links, Vorschlageliste am Cursor |
+| **nur-lesen** | keine Cursor, Kopieren-Knopf oben rechts |
+| **vergleich** | zwei Hälften, geänderte Zeilen rot und grün markiert |
+
+## Größen
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
@@ -23,7 +28,7 @@ Ein Code Editor ist ein Editor für Quellcode.
 | Large | 600px | Featured |
 | Full | 100% | Volle Breite |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -32,6 +37,13 @@ Ein Code Editor ist ein Editor für Quellcode.
 | **Keyword** | Lila | Schlüsselwörter |
 | **String** | Orange | Strings |
 | **Comment** | Grau | Kommentare |
+
+## Hover- und Fokus-Effekte
+
+| Effekt | Beschreibung |
+|--------|--------------|
+| `line-number` | Zeilennummer hervorheben |
+| `cursor` | Cursor ändern |
 
 ## Features
 
@@ -43,13 +55,6 @@ Ein Code Editor ist ein Editor für Quellcode.
 | **Error Detection** | Fehlererkennung |
 | **Multiple Cursors** | Mehrere Cursor |
 
-## Hover-Effekte
-
-| Effekt | Beschreibung |
-|--------|--------------|
-| `line-number` | Zeilennummer hervorheben |
-| `cursor` | Cursor ändern |
-
 ## Themes
 
 | Theme | Beschreibung |
@@ -57,3 +62,11 @@ Ein Code Editor ist ein Editor für Quellcode.
 | **Dark** | Dunkles Theme |
 | **Light** | Helles Theme |
 | **Custom** | Benutzerdefiniert |
+
+## Reaktiv
+
+- Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt waagerecht (`swipe`).
+- Unter `small` Bildschirmbreite wird die Vorschlageliste über die Tastatur-blende gesetzt,
+  der Zeilennummernblock wird schmaler.
+- Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander,
+  die Höhe bleibt pro Hälfte begrenzt.

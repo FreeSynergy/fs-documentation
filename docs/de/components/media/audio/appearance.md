@@ -4,15 +4,13 @@
 
 Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 
-## Layout-Variationen
-
+## Varianten
 ### Compact (Kompakt)
 ```
 ┌──────────────────────────────┐
 │ [▶]  ▓▓▓▓▓▓▓▓░░░░░  1:23 / 3:45  │
 └──────────────────────────────┘
 ```
-
 ### Standard (Standard)
 ```
 ┌─────────────────────────────────────────┐
@@ -22,37 +20,12 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 │ 0:00                                              3:45 │
 └─────────────────────────────────────────┘
 ```
-
 ### Minimal (Minimal)
 ```
 ┌──────────────┐
 │ [▶] [🔊]    │
 └──────────────┘
 ```
-
-## Farb-Varianten (CSS Variables)
-
-```css
-.audio-player {
-  --primary-color: var(--primary-color);
-  --secondary-color: var(--secondary-color);
-  --hover-color: var(--hover-color);
-  --progress-color: var(--primary-color);
-  --track-color: var(--track-color);
-}
-```
-
-## Größe-Varianten
-
-| Größe | Höhe | Verwendung |
-|-------|------|------------|
-| Compact | 32px | Inline, Chat, Listen |
-| Small | 48px | Cards, Panels |
-| Medium | 64px | Standard |
-| Large | 80px | Featured-Audio |
-| XL | 120px | Hero-Audio |
-
-## Icon-Varianten
 
 | Icon | Funktion |
 |------|----------|
@@ -64,7 +37,29 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 | 🔄 | Wiederholen |
 | 📋 | Wiedergabeliste |
 
-## Hover-Effekte
+## Größen
+
+| Größe | Höhe | Verwendung |
+|-------|------|------------|
+| Compact | 32px | Inline, Chat, Listen |
+| Small | 48px | Cards, Panels |
+| Medium | 64px | Standard |
+| Large | 80px | Featured-Audio |
+| XL | 120px | Hero-Audio |
+
+## Farben und Zustände
+
+```css
+.audio-player {
+  --primary-color: var(--primary-color);
+  --secondary-color: var(--secondary-color);
+  --hover-color: var(--hover-color);
+  --progress-color: var(--primary-color);
+  --track-color: var(--track-color);
+}
+```
+
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -72,6 +67,14 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 | `color` | Farbe ändert sich |
 | `shadow` | Schatten wird stärker |
 | `opacity` | Deckkraft ändert sich |
+
+## Reaktiv
+
+| Breakpoint | Verhalten |
+|------------|-----------|
+| Desktop (>768px) | Volle Steuerung sichtbar |
+| Tablet (480-768px) | Kompakt-Layout |
+| Mobile (<480px) | Minimal-Layout |
 
 ## Progress Bar Styling
 
@@ -85,11 +88,3 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
   transition: width 0.1s ease;
 }
 ```
-
-## Responsive Verhalten
-
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volle Steuerung sichtbar |
-| Tablet (480-768px) | Kompakt-Layout |
-| Mobile (<480px) | Minimal-Layout |

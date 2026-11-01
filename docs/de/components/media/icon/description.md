@@ -1,7 +1,17 @@
 # Icon
 
-## Beschreibung
+| Feld | Wert |
+|------|------|
+| **Kategorie** | `media` |
+| **Erbt von** | `base` |
+| **Varianten** | `outline`, `gefüllt`, `animiert` |
+| **Zustände** | `aktiv` |
+| **Gesten** | `tap`, `long-press` |
+| **Animationen** | `pulse`, `spin`, `highlight` |
+| **Verwandt** | `avatar`, `button`, `badge`, `image`, `emoji-picker` |
+| **Status** | dokumentiert |
 
+## Beschreibung
 Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt visuell repräsentiert. Im Gegensatz zu Icons in anderen Kontexten (z.B. Avatar) stehen Icons hier generisch für Funktionen, Dateitypen oder Aktionen.
 
 ## Verwendungszweck
@@ -9,6 +19,40 @@ Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt v
 - Funktionen visuell kennzeichnen (z.B. 🏠 für "Start")
 - Dateitypen darstellen (z.B. 📄 für PDF, 📸 für Bilder)
 - Aktionen symbolisieren (z.B. ✏️ für Bearbeiten, 🗑️ für Löschen)
+
+## Varianten
+
+| Variante | Beschreibung |
+|----------|--------------|
+| **outline** | Linienzeichnung, Standard in Werkzeugleisten |
+| **gefüllt** | aktive oder betonte Darstellung |
+| **animiert** | bewegt sich (`spin`, `pulse`), z. B. Laden oder Senden |
+
+Form und Größe sind keine Varianten, sondern Attribute `shape` und `size`.
+
+## Features
+
+- SVG, damit stufenlos skalierbar und über die Textfarbe einfärbbar
+- Ein Set pro Anwendung, gemischte Sets wirken unruhig
+- Alt-Text oder `aria-label`, wenn das Icon die einzige Information trägt
+- Reine Zier-Icons werden für Screenreader ausgeblendet
+
+## Abgrenzung
+
+- **Nicht verwechseln mit** [avatar](../../data/avatar/): ein Avatar stellt ein Subjekt dar,
+  ein Icon eine Funktion oder einen Dateityp.
+- **Nicht verwechseln mit** Emojis aus dem [emoji-picker](../../fields/emoji-picker/): Emojis sind
+  Inhalt, Icons sind Bedienoberfläche.
+- **Nicht verwechseln mit** [image](../image/): Icons sind klein, monochrom und Teil der Oberfläche.
+- Ein klickbares Icon ist kein Icon-Element allein, sondern ein
+  [button](../../actions/button/) in der Variante icon-only.
+
+## Best Practices
+
+- Konsistente Icon-Größe innerhalb einer Komponente
+- Kontrast zum Hintergrund gewährleisten
+- Hover-Effekt bei interaktiven Icons
+- Alt-Text für Barrierefreiheit
 
 ## Form-Varianten
 
@@ -35,15 +79,15 @@ Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt v
 | Farbe | Verwendung |
 |-------|------------|
 | **Primär** | Hauptfarbe der Anwendung |
-| **Sekundär** |SECONDARY-Aktionen |
+| **Sekundär** | Nebenaktionen |
 | **Success** | Erfolgs-Meldungen |
 | **Warning** | Warnungen |
 | **Error** | Fehler-Meldungen |
 | **Neutral** | Normale Icons |
 
-## Best Practices
+## Siehe auch
 
-- Konsistente Icon-Größe innerhalb einer Komponente
-- Kontrast zum Hintergrund gewährleisten
-- Hover-Effekt bei interaktiven Icons
-- Alt-Text für Barrierefreiheit
+- [media – Übersicht](../index.md)
+- [Button](../../actions/button/) — icon-only-Buttons
+- [Avatar](../../data/avatar/) — Personen statt Funktionen
+- [Basiskomponente](../../basics/base/)

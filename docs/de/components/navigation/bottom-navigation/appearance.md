@@ -4,9 +4,10 @@
 
 Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
 
-## Layout-Varianten
+## Varianten
 
 ### Active Icon (Aktiver Punkt hervorgehoben)
+
 ```
 ┌─────────────────────────────────────────┐
 │   🏠    📩   📅   👥   ⚙️              │
@@ -15,6 +16,7 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 ```
 
 ### Text Labels (Mit Text)
+
 ```
 ┌─────────────────────────────────────────┐
 │ Home │ Mail │ Cal │ Cont. │ Settings    │
@@ -22,13 +24,14 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 ```
 
 ### Icon Only (Nur Icons)
+
 ```
 ┌─────────────────────────────────────────┐
 │ 🏠  📩  📅  👥  ⚙️                     │
 └─────────────────────────────────────────┘
 ```
 
-## Größe-Varianten
+## Größen
 
 | Größe | Höhe | Icon-Größe | Verwendung |
 |-------|------|------------|------------|
@@ -36,7 +39,7 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 | Medium | 56px | 24px | Standard |
 | Large | 64px | 28px | Viele Punkte |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -44,7 +47,7 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 | **Inactive** | Grau | Inaktive Punkte |
 | **Hover** | Heller | Hover-Zustand |
 
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
@@ -64,6 +67,16 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `Fade In` | Einfade-Effekt |
-| `Scale` | Skalierung |
-| `Slide` | Schiebe-Effekt |
+| `fade-in` | Beschriftung blendet ein |
+| `scale-in` | aktives Symbol wächst |
+| `slide-in` | Indikator wandert zum aktiven Punkt |
+
+## Reaktiv
+
+- Die Leiste ist immer vollbreit und bleibt am unteren Rand stehen; ihr Inhalt wird
+  gleichmäßig auf die Punkte verteilt.
+- Reicht der Platz für Beschriftungen nicht, fällt sie auf `icon only` zurück und der Name
+  erscheint erst nach der Auswahl als Kurztext.
+- Auf großen Bildschirmen wechselt die Anwendung üblicherweise auf
+  [sidebar](../sidebar/) oder [toolbar](../toolbar/); die Leiste bleibt dann erhalten, wenn
+  die Anwendung mobil bleibt, sonst entfällt sie.

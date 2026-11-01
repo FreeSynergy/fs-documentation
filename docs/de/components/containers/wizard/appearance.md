@@ -1,10 +1,7 @@
 # Wizard - Aussehen
 
 ## Grundlayout
-
 Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
-
-## Layout
 
 ```
 ┌─────────────────────────────────────────┐
@@ -25,8 +22,9 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
 | **Horizontal** | Horizontaler Step Indicator |
 | **Vertical** | Vertikaler Step Indicator |
 | **Stepper** | Mit visueller Fortschrittsanzeige |
+| **schrittanzeige** | Nur Anzeige der Schritte, ohne Führung |
 
-## Größe-Varianten
+## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
@@ -35,7 +33,7 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
 | Large | 700px | Große Wizards |
 | Full | 100% | Volle Breite |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -43,16 +41,25 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
 | **Completed Step** | Grün | Abgeschlossener Schritt |
 | **Pending Step** | Grau | Ausstehender Schritt |
 
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `color` | Farbe ändert sich |
 | `border-bottom` | Unterstrich erscheint |
 
-## Animationen
+## Reaktiv
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `Fade In` | Einfade-Effekt |
-| `Slide Right` | Schiebe-Effekt nach rechts |
+Der Schrittwechsel ist ein Schiebe-Übergang: vorwärts von rechts (`slide-in`), rückwärts
+gespiegelt; der Step Indicator folgt mit `progress`. Auf schmaler Fläche wird der vertikale
+Indicator zur Zeile aus Zähler und Leiste, der Inhalt bleibt in einer Spalte.
+
+```css
+.wizard-step        { transition: transform 200ms, opacity 200ms; }
+.wizard-step--in-next { transform: translateX(24px); opacity: 0; }
+.wizard-step--in-prev { transform: translateX(-24px); opacity: 0; }
+
+@media (max-width: 600px) {
+  .wizard--vertical .step-indicator { flex-direction: row; }  /* Zähler + Leiste */
+}
+```

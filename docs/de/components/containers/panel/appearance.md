@@ -1,10 +1,7 @@
 # Panel - Aussehen
 
 ## Grundlayout
-
 Ein Panel ist ein großer Container mit Header, Inhalt und Footer.
-
-## Layout
 
 ```
 ┌─────────────────────────────────────────┐
@@ -28,7 +25,7 @@ Ein Panel ist ein großer Container mit Header, Inhalt und Footer.
 | **Draggable** | Verschiebbar |
 | **Filter** | Mit Filter-Optionen |
 
-## Größe-Varianten
+## Größen
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
@@ -37,7 +34,7 @@ Ein Panel ist ein großer Container mit Header, Inhalt und Footer.
 | Large | 400px | Große Panels |
 | Full | 100% | Volle Breite |
 
-## Farb-Varianten
+## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
@@ -45,9 +42,24 @@ Ein Panel ist ein großer Container mit Header, Inhalt und Footer.
 | **Primary** | Primärfarbe | Primär |
 | **Secondary** | Sekundärfarbe | Sekundär |
 
-## Hover-Effekte
+## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `shadow` | Schatten stärker |
 | `border` | Rand leuchtet auf |
+
+## Reaktiv
+
+Panels richten sich nach dem verfügbaren Platz: nebeneinander, untereinander oder als
+Overlay. Ein Seitenpanel wird auf schmaler Fläche zum [drawer](../../overlays/drawer/),
+sein Inhalt bleibt dabei unverändert.
+
+```css
+.panel-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+.panel-body { overflow: auto; }              /* Inhalt scrollt, Header/Footer bleiben */
+
+@media (max-width: 900px) {
+  .panel-grid { grid-template-columns: 1fr; } /* Panels stapeln untereinander */
+}
+```

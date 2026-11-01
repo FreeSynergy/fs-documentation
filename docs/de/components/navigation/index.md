@@ -1,31 +1,34 @@
-# Navigation
+# navigation (Navigation)
 
-Navigationselemente helfen den Benutzern, sich durch die Anwendung zu bewegen.
+Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Reiter, Seitenleisten und Pfadangaben.
 
 ## Elemente
 
-- **sidebar** - Vertikale Seitenleiste für schnelle Navigation
-- **tabs** - Reiter zum Umschalten zwischen Ansichten
-- **breadcrumb** - Pfadnavigation zur Orientierung
-- **menu** - Klickbare Menüleiste mit Untermenüs
-- **ribbon** - Tab-basierte Symbolleiste (Microsoft-Stil)
-- **toolbar** - Reihe von Buttons für häufige Aktionen
-- **context-menu** - Rechtsklick-Menü
-- **context-toolbar** - Toolbar, die bei Auswahl erscheint
-- **pagination** - Seitennavigation für große Listen
-- **floating-action-button** - Runder Hauptaktion-Button (FAB)
-- **hamburger-menu** - Drei Striche Menü für mobile Navigation
-- **bottom-navigation** - Navigation unten auf dem Bildschirm (Mobile)
+- [**bottom-navigation**](./bottom-navigation/) – Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
+- [**breadcrumb**](./breadcrumb/) – Ein Breadcrumb ist eine Pfadnavigation (Home > Wiki > Seite).
+- [**command**](./command/) – Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste.
+- [**language-switcher**](./language-switcher/) – Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
+- [**menu**](./menu/) – Ein Menü ist eine geordnete Liste von Menüpunkten, die Aktionen auslösen oder Ansichten wechseln.
+- [**pagination**](./pagination/) – Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwischen ihnen.
+- [**sidebar**](./sidebar/) – Die Sidebar ist eine vertikale Navigationssäule, die normalerweise links oder rechts am Rand der Anwendung positioniert ist.
+- [**tabs**](./tabs/) – Tabs sind Reiter zum Umschalten zwischen Ansichten.
+- [**toolbar**](./toolbar/) – Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
-## Weitere Elemente
+## Steckbriefe
 
-- **list** - Einfache vertikale Liste von Elementen
-- **tree-view** - Hierarchische Verzeichnisstruktur mit Ein-/Ausklappen
-- **table** - Tabellarische Darstellung mit Zeilen und Spalten
-- **list-view** - Einfache Listenansicht
-- **grid-view** - Karten/Raster-Darstellung
-- **timeline** - Chronologische Darstellung von Ereignissen
-- **calendar-view** - Kalender-Darstellung mit Terminen
-- **table-of-contents** - Übersicht über Kapitel/Sectionen
-- **slideshow** - Bilder- oder Inhaltsschleife
-- **repeater** - Wiederholtes Layout für Listen
+| Komponente | Erbt von | Varianten | Rolle | Status |
+|------------|----------|-----------|-------|--------|
+| [bottom-navigation](./bottom-navigation/) | `base` | `Active Icon`, `Text Labels`, `Icon Only` | - | dokumentiert |
+| [breadcrumb](./breadcrumb/) | `base` | `pfad`, `gestutzt`, `zurueck` | - | dokumentiert |
+| [command](./command/) | `base` | `palette`, `inline` | `dialog` | dokumentiert |
+| [language-switcher](./language-switcher/) | `base` | `dropdown`, `knopetreihe`, `flaggen`, `kombiniert` | - | dokumentiert |
+| [menu](./menu/) | `base` | `horizontal`, `vertical`, `dropdown`, `menubar`, `hamburger` | `menubar` | dokumentiert |
+| [pagination](./pagination/) | `base` | `zahlen`, `vor-zurueck`, `nachladen`, `endlos` | - | dokumentiert |
+| [sidebar](./sidebar/) | `base` | `angeheftet`, `ikonenleiste`, `einklappbar` | - | dokumentiert |
+| [tabs](./tabs/) | `base` | `reiter`, `pille`, `karte` | - | dokumentiert |
+| [toolbar](./toolbar/) | `base` | `standard`, `kontext`, `ribbon` | - | dokumentiert |
+
+## Siehe auch
+
+- [Komponenten-Übersicht](../index.md)
+- [Basiskomponente](../basics/base/)

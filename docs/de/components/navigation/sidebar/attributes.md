@@ -8,7 +8,13 @@
 | `width` | number/string | `240` | Breite in px oder CSS-Einheit |
 | `collapsed` | boolean | `false` | Sidebar eingeklappt? |
 | `collapsible` | boolean | `true` | Kann der User einklappen? |
-| `theme` | enum | `default` | Theme: `default`, `dark`, `light` |
+
+## Events
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `onSelect` | function | Wird ausgeführt beim Klick |
+| `onToggle` | function | Wird beim Öffnen/Schließen ausgeführt |
 
 ## Menü-Attribute
 
@@ -30,9 +36,8 @@
 | `badge` | string/number | no | Kleiner Badge-Text (z.B. "3") |
 | `children` | array[] | no | Sub-Menüs (Dropdown/Tree) |
 
-## Event-Attribute
+## Geerbt von
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird ausgeführt beim Klick |
-| `onToggle` | function | Wird beim Öffnen/Schließen ausgeführt |
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)

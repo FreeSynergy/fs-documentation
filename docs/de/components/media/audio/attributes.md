@@ -12,6 +12,33 @@
 | `volume` | number | `0.8` | Lautstärke (0-1) |
 | `currentTime` | number | `0` | Startzeit in Sekunden |
 
+## Verhalten
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `onPlay` | function | Wird beim Start ausgeführt |
+| `onPause` | function | Wird beim Pausieren ausgeführt |
+| `onTimeUpdate` | function | Wird bei Zeitaktualisierung ausgeführt |
+| `onEnded` | function | Wird beim Ende ausgeführt |
+| `onVolumeChange` | function | Wird bei Lautstärkeänderung ausgeführt |
+
+## Darstellung
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `showVisualizer` | boolean | Audio-Visualizer anzeigen? |
+| `visualizerStyle` | enum | Stil: `bars`, `waves`, `circle` |
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `responsive` | boolean | Responsive-Layout verwenden? |
+| `compactOnMobile` | boolean | Kompakt-Layout auf Mobile? |
+
+## Barrierefreiheit
+
+| Attribut | Typ | Beschreibung |
+|----------|-----|--------------|
+| `aria-live` | string | Live-Ankündigung: `polite`, `assertive` |
+
 ## Playlist-Attribute
 
 | Attribut | Typ | Beschreibung |
@@ -30,33 +57,8 @@
 | `showProgress` | boolean | Fortschrittsbalken anzeigen? |
 | `showTime` | boolean | Zeitanzeige anzeigen? |
 
-## Interaktive Attribute
+## Geerbt von
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onPlay` | function | Wird beim Start ausgeführt |
-| `onPause` | function | Wird beim Pausieren ausgeführt |
-| `onTimeUpdate` | function | Wird bei Zeitaktualisierung ausgeführt |
-| `onEnded` | function | Wird beim Ende ausgeführt |
-| `onVolumeChange` | function | Wird bei Lautstärkeänderung ausgeführt |
-
-## Accessibility (Barrierefreiheit)
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Beschreibender Text |
-| `aria-live` | string | Live-Ankündigung: `polite`, `assertive` |
-
-## Animation-Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `showVisualizer` | boolean | Audio-Visualizer anzeigen? |
-| `visualizerStyle` | enum | Stil: `bars`, `waves`, `circle` |
-
-## Responsive Attribute
-
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsive-Layout verwenden? |
-| `compactOnMobile` | boolean | Kompakt-Layout auf Mobile? |
+`visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
+`tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
+`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)
