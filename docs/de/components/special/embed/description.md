@@ -4,10 +4,10 @@
 |------|------|
 | **Kategorie** | `special` |
 | **Erbt von** | `base` |
-| **Varianten** | keine |
-| **Zustände** | - |
-| **Gesten** | - |
-| **Animationen** | - |
+| **Varianten** | `app`, `widget`, `iframe` |
+| **Zustände** | `geladen`, `fehler` |
+| **Gesten** | `tap`, `drag` (nur bei `interactive`) |
+| **Animationen** | `fade-in` |
 | **Verwandt** | `map-view`, `whiteboard`, `dashboard`, `base` |
 | **Status** | dokumentiert |
 
@@ -28,13 +28,12 @@ Schnittstelle angesprochen.
 - Eine externe Seite oder einen externen Player einbetten
 
 ## Varianten
+
 | Variante | Beschreibung |
 |----------|--------------|
 | **app** | ein anderes FreeSynergy-Programm im Fenster |
 | **widget** | kleines Programm mit eigener Konfiguration |
 | **iframe** | externe Seite über `src` |
-
-| **app** | ein anderes FreeSynergy-Programm im Fenster |
 
 ## Features
 

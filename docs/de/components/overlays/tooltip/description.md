@@ -4,9 +4,9 @@
 |------|------|
 | **Kategorie** | `overlays` |
 | **Erbt von** | `base` |
-| **Varianten** | keine |
+| **Varianten** | `top`, `bottom`, `left`, `right`, `auto` |
 | **Zustände** | `open` |
-| **Gesten** | - |
+| **Gesten** | `tap`, `long-press` |
 | **Animationen** | `fade-in`, `fade-out` |
 | **Verwandt** | `popover`, `label`, `base`, `field` |
 | **Status** | dokumentiert |
@@ -25,8 +25,12 @@ von selbst.
 
 ## Varianten
 
-Die Variante bestimmt die Andockposition; bei Platzmangel wählt `auto`
-selbst die beste Seite.
+| Variante | Beschreibung |
+|----------|--------------|
+| **top** | über dem Element (Standard) |
+| **bottom** | unter dem Element |
+| **left** / **right** | seitlich |
+| **auto** | wählt bei Platzmangel selbst die beste Seite |
 
 ## Features
 
@@ -38,8 +42,8 @@ selbst die beste Seite.
 
 - **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält
   interaktive Inhalte, ein Tooltip ausschließlich Text.
-
-- **Nicht verwechseln mit** hover-card (geplant, Welle 2): Vorschau als Karte.
+- **Nicht verwechseln mit** [hover-card](../hover-card/): die Hover-Card zeigt eine
+  Vorschau als Karte und bleibt offen, solange der Zeiger im Inhalt bleibt.
 - **Nicht verwechseln mit** [label](../../basics/label/): ein Label ist ständig
   sichtbar und mit dem Element verknüpft.
 
@@ -52,6 +56,7 @@ selbst die beste Seite.
 
 ## Siehe auch
 
+- [overlays – Übersicht](../index.md)
 - [Popover](../popover/)
 - [Basiskomponente](../../basics/base/)
 - [Gesten](../../../gestures/)
