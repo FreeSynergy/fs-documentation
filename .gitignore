@@ -1,0 +1,23 @@
+# Git internals – stay out of search results
+.git/
+
+# MkDocs build output (rebuilt locally / by CI, not source)
+site/
+.mkdocs-cache/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Temporary working scripts
+tools/_tmp_*.py
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
