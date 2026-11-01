@@ -5,9 +5,9 @@
 | **Kategorie** | `feedback` |
 | **Erbt von** | `base` |
 | **Varianten** | `einfach`, `mit-text`, `inline` |
-| **Zustände** | - |
-| **Gesten** | - |
-| **Animationen** | - |
+| **Zustände** | `loading` ist der einzige Zustand |
+| **Gesten** | keine — nicht bedienbar |
+| **Animationen** | `spin`, `pulse` |
 | **Verwandt** | `button`, `progress`, `skeleton`, `base` |
 | **Status** | dokumentiert |
 

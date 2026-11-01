@@ -5,8 +5,8 @@
 | **Kategorie** | `fields` |
 | **Erbt von** | `base` |
 | **Varianten** | `vertikal`, `horizontal`, `inline` |
-| **Zustände** | - |
-| **Gesten** | - |
+| **Zustände** | `error` (Fehlermeldung unter dem Feld) |
+| **Gesten** | `tap` (Label fokussiert das Feld) |
 | **Animationen** | `expand` |
 | **Verwandt** | `label`, `search-field`, `text-input`, `base` |
 | **Status** | dokumentiert |

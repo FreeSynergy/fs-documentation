@@ -5,8 +5,8 @@
 | **Kategorie** | `feedback` |
 | **Erbt von** | `base` |
 | **Varianten** | `text`, `rect`, `circle`, `card`, `list-item`, `table-row`, `avatar` |
-| **Zustände** | - |
-| **Gesten** | - |
+| **Zustände** | `loading` ist der einzige Zustand |
+| **Gesten** | keine — nicht bedienbar |
 | **Animationen** | `pulse` |
 | **Verwandt** | `spinner`, `progress`, `list-view`, `base` |
 | **Status** | dokumentiert |

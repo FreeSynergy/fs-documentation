@@ -5,9 +5,9 @@
 | **Kategorie** | `feedback` |
 | **Erbt von** | `base` |
 | **Varianten** | `status`, `counter`, `dot`, `outline` |
-| **Zustände** | - |
-| **Gesten** | - |
-| **Animationen** | - |
+| **Zustände** | `versteckt` (Zähler 0) |
+| **Gesten** | keine — nicht bedienbar |
+| **Animationen** | `pop-in` (Zähleränderung) |
 | **Verwandt** | `bottom-navigation`, `avatar`, `tags-input`, `alert`, `progress`, `base` |
 | **Status** | dokumentiert |
 

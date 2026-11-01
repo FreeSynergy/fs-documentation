@@ -5,9 +5,9 @@
 | **Kategorie** | `feedback` |
 | **Erbt von** | `base` |
 | **Varianten** | `linear`, `circular`, `mit-label`, `unbestimmt` |
-| **Zustände** | - |
-| **Gesten** | - |
-| **Animationen** | - |
+| **Zustände** | `indeterminate`, `completed` |
+| **Gesten** | keine — reine Anzeige |
+| **Animationen** | `progress`, `pulse` |
 | **Verwandt** | `spinner`, `slider`, `skeleton`, `toast`, `base` |
 | **Status** | dokumentiert |
 

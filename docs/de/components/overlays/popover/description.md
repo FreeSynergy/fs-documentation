@@ -6,7 +6,7 @@
 | **Erbt von** | `base` |
 | **Varianten** | `inhalt`, `aktionen`, `formular` |
 | **Zustände** | `open` |
-| **Gesten** | - |
+| **Gesten** | `tap` |
 | **Animationen** | `expand`, `fade-in` |
 | **Verwandt** | `tooltip`, `modal`, `select`, `context-menu`, `base` |
 | **Status** | dokumentiert |
