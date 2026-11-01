@@ -5,9 +5,9 @@
 | **Kategorie** | `basics` |
 | **Erbt von** | `base` |
 | **Varianten** | `horizontal`, `vertical`, `mit-beschriftung`, `dekorativ`, `inset` |
-| **Zustände** | - |
-| **Gesten** | - |
-| **Animationen** | - |
+| **Zustände** | keine — nicht bedienbar |
+| **Gesten** | keine — nicht bedienbar |
+| **Animationen** | `cross-fade` (Wechsel `vertical` → `horizontal`) |
 | **Verwandt** | `card`, `panel`, `label`, `menu`, `toolbar`, `base` |
 | **Status** | dokumentiert |
 

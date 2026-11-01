@@ -5,9 +5,9 @@
 | **Kategorie** | `basics` |
 | **Erbt von** | `base` |
 | **Varianten** | `standard`, `muted`, `icon`, `unterstrichen` |
-| **Zustände** | - |
-| **Gesten** | - |
-| **Animationen** | - |
+| **Zustände** | `visited`, `current` |
+| **Gesten** | `tap` |
+| **Animationen** | `highlight` |
 | **Verwandt** | `button`, `breadcrumb`, `tabs`, `base` |
 | **Status** | dokumentiert |
 
