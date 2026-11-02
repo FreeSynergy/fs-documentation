@@ -1,318 +1,139 @@
-# Google Kalender - API Dokumentation
+# Google Kalender – API (Calendar REST API v3, Stand: Discovery-Revision 2026‑10‑28)
 
-## Übersicht
+## Versionsstand und Entwicklung
 
-Der programmatische Zugang zu Google Kalender läuft über die **Google Calendar REST API v3** (JSON über HTTPS, Basis `https://www.googleapis.com/calendar/v3`). Zusätzlich existieren **CalDAV** für klassische Kalender-Clients, **ICS-Abonnement- und Embed-URLs** für öffentliche Kalender sowie **Push-Benachrichtigungskanäle** (Webhook-artig). Alle Zugriffe sind an ein Google-Konto bzw. ein Google-Cloud-Projekt mit OAuth 2.0 gebunden; es gibt keine Möglichkeit, die API auf eigener Hardware bereitzustellen.
+- **Aktuelle und einzige offiziell dokumentierte Version: Calendar REST API v3.** Das maschinenlesbare Discovery-Dokument (`https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest`) trägt die **Revision 20261028**; die Entwickler-Dokumentation wurde zuletzt im Herbst 2026 aktualisiert. Der Dienst wird aktiv weiterentwickelt (2026 u. a. neues Quota-Modell zum 1. Mai 2026, Event‑Labels, Focus‑Time-/Out‑of‑Office-/Working‑Location-Felder).
+- Google Calendar ist intensiv in Nutzung (Consumer- und Workspace-Konten); ein Einstellen der API ist nicht erkennbar.
+- **Self-Hosting der API ist nicht möglich** – der Dienst läuft ausschließlich in der Google-Cloud. Eine Calendar API v2 (Altbestand) ist in der aktuellen offiziellen Dokumentation nicht mehr enthalten.
 
-**API-Arten im Überblick**
+| Eigenschaft | Wert |
+|-------------|------|
+| Basis-URL | `https://www.googleapis.com/calendar/v3/` |
+| Batch-Endpunkt | `https://www.googleapis.com/batch/calendar/v3` |
+| Discovery | `https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest` (Revision 20261028) |
+| Format | JSON über HTTPS; `alt` (z. B. `json`), `fields` (Partial Response), `prettyPrint` als globale Parameter |
+| Auth | OAuth 2.0 (`Authorization: Bearer …`), Service Accounts, API-Key nur für öffentliche Kalender |
 
-| Art | Verwendung | Status |
-|-----|------------|--------|
-| REST Calendar API v3 (`https://www.googleapis.com/calendar/v3`) | Kalender, Termine, wiederkehrende Serien, ACL, Farben, Einstellungen, Free/Busy | ✅ Offiziell, vollständig dokumentiert |
-| Batch (`https://www.googleapis.com/batch/calendar/v3`) | Mehrere Aufrufe in einer HTTP-Anfrage (Multipart) | ✅ Offiziell |
-| Push-Kanäle (`…/events/watch`, `…/calendarList/watch`, `…/channels/stop`) | Änderungsbenachrichtigungen an HTTPS-Endpunkt | ✅ Offiziell |
-| CalDAV (RFC 4791) | Kalender-Clients (Thunderbird, Apple Kalender, Evolution, DAVx5) | ✅ Unterstützt, für Workspace-Accounts administrativ freizuschalten |
-| ICS-Abonnement / Embed | Öffentliches Lesen und Einbetten | ✅ Offiziell |
-| Google Tasks API (`https://tasks.googleapis.com/tasks/v1/...`) | Aufgabenliste neben dem Kalender | ✅ Eigener Dienst |
-| Apps Script-Dienst `CalendarApp` | Skriptsteuerung innerhalb des Google-Kontos | ✅ Offiziell |
-| Calendar API v2 | Altbestand | ❌ Eingestellt |
-| GraphQL / OData / eigene Server-API | — | ❌ Nicht vorhanden |
-| API für Terminpläne (Buchungsseiten) | — | ❌ Nicht dokumentiert |
-| Self-Hosting der API/des Servers | — | ❌ Nicht möglich |
+## Authentifizierung und Scopes
 
-**Discovery-Dokument**: `https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest`
+- **OAuth 2.0** ist der Standardweg (Access-Token als Bearer-Header, Refresh-Token für Langzeitintegrationen). Öffentliche Apps mit sensiblen Scopes müssen Googles Verifizierungsprozess durchlaufen.
+- **Service Account + Domain-wide Delegation**: Server-zu-Server-Zugriff auf Kalender einer Workspace-Domäne; Workspace-Administratoren können mit `useAdminAccess` in Kalendern der Organisation handeln.
+- **API-Key** (`?key=…`): nur für lesende Zugriffe auf öffentliche Kalender ohne Nutzerkontext.
+- **Kalender-IDs**: `primary` (Standardkalender des angemeldeten Nutzers), E-Mail-Adresse (Privat-/Gruppen-/Ressourcenkalender), Kalender-ID aus `calendarList.list`.
 
-## Authentifizierung
-
-- **OAuth 2.0** (Standardweg): Access-Token im Header `Authorization: Bearer <token>`, dazu Refresh-Token für langlebige Integrationen. Consent-Screen je Scope.
-- **Service Account mit Domain-wide Delegation**: Server-zu-Server-Zugriff auf Kalender einer Workspace-Domäne; die Delegierung wird in der Admin Console vergeben.
-- **API-Schlüssel**: nur für **lesende** Zugriffe auf **öffentliche** Kalender sinnvoll (`?key=<apikey>`), ohne Nutzerkontext.
-- **CalDAV**: OAuth 2.0 wird empfohlen; klassische Passwort-/App-Passwort-Nutzung ist nur vorhanden, wenn 2-Schritt-Bestätigung und Drittanbieterzugriff es zulassen. Für Workspace muss der Administrator **"Zugriff auf Kalender und Kontakte über Drittanbieter-APIs"** aktivieren.
-- **Session-Cookies** der Web-Oberfläche sind nicht als API-Authentifizierung dokumentiert und für Skripte ungeeignet.
-
-**Scopes (Auswahl)**
+Vollständige offizielle Scope-Liste (Scopes-Seite, Stand 2026‑09; Basis `https://www.googleapis.com/auth/`):
 
 | Scope | Berechtigung |
 |-------|--------------|
-| `https://www.googleapis.com/auth/calendar` | Vollzugriff auf Kalender und Termine |
-| `https://www.googleapis.com/auth/calendar.events` | Termine lesen und schreiben |
-| `https://www.googleapis.com/auth/calendar.events.readonly` | Termine nur lesen |
-| `https://www.googleapis.com/auth/calendar.readonly` | Kalender und Termine nur lesen |
-| `https://www.googleapis.com/auth/calendar.freebusy` | Nur Free/Busy-Abfragen |
-| `https://www.googleapis.com/auth/calendar.settings.readonly` | Kontoeinstellungen lesen |
-| `https://www.googleapis.com/auth/calendar.push` | Push-Benachrichtigungskanäle anlegen/löschen |
+| `calendar` | Alle zugänglichen Kalender einsehen, ändern, teilen, endgültig löschen |
+| `calendar.readonly` | Alle zugänglichen Kalender nur einsehen/herunterladen |
+| `calendar.events` | Termine in allen eigenen Kalendern ansehen und ändern |
+| `calendar.events.readonly` | Termine aller Kalender nur ansehen |
+| `calendar.events.owned` | Termine in Kalendern, die man besitzt, ansehen/ändern/löschen |
+| `calendar.events.owned.readonly` | Termine in eigenen Kalendern nur ansehen |
+| `calendar.events.public.readonly` | Termine öffentlicher Kalender nur ansehen |
+| `calendar.events.freebusy` | Verfügbarkeit (Free/Busy) zugänglicher Kalender sehen |
+| `calendar.freebusy` | Eigene Verfügbarkeit ansehen |
+| `calendar.calendars` | Kalendereigenschaften ansehen/ändern, Sekundärkalender anlegen |
+| `calendar.calendars.readonly` | Kalendereigenschaften nur ansehen |
+| `calendar.calendarlist` | Eigene Kalenderliste einsehen, Kalender hinzufügen/entfernen |
+| `calendar.calendarlist.readonly` | Eigene Kalenderliste nur einsehen |
+| `calendar.acls` | Freigaben eigener Kalender ansehen/ändern |
+| `calendar.acls.readonly` | Freigaben eigener Kalender nur ansehen |
+| `calendar.app.created` | Von der App angelegte Sekundärkalender verwalten |
+| `calendar.settings` | Kalendereinstellungen ansehen und ändern |
+| `calendar.settings.readonly` | Kalendereinstellungen nur ansehen |
+| `calendar.addons.execute` / `.addons.current.event.read` / `.addons.current.event.write` | nur für Calendar-Add-ons |
 
-**Kalender-IDs**: `primary` (Standardkalender des angemeldeten Nutzers), E-Mail-Adresse (Privat- oder Gruppenkalender), Ressourcenkalender-ID (Raum/Gerät), Kalender-ID eines öffentlichen Kalenders.
+Es gibt **keinen** Scope namens `calendar.push` (Push-Kanäle werden mit den normalen Ressourcen-Scopes angelegt).
 
-## Endpunkte
+## Ressourcen und Endpunkte (exakt, Discovery v3 Rev. 20261028)
 
-### Kalenderliste (Sichtbarkeit und Anzeige pro Nutzer)
+| Ressource | Methode | HTTP | Pfad |
+|-----------|---------|------|------|
+| `calendars` | insert | POST | `/calendars` |
+| | get | GET | `/calendars/{calendarId}` |
+| | update / patch | PUT / PATCH | `/calendars/{calendarId}` |
+| | delete | DELETE | `/calendars/{calendarId}` |
+| | clear (alle Termine löschen) | POST | `/calendars/{calendarId}/clear` |
+| | transferOwnership (`newDataOwner`, `useAdminAccess`) | POST | `/calendars/{calendarId}/transferOwnership` |
+| `calendarList` | list | GET | `/users/me/calendarList` |
+| | insert | POST | `/users/me/calendarList` |
+| | get | GET | `/users/me/calendarList/{calendarId}` |
+| | update / patch | PUT / PATCH | `/users/me/calendarList/{calendarId}` |
+| | delete (nur abbestellen) | DELETE | `/users/me/calendarList/{calendarId}` |
+| | watch | POST | `/users/me/calendarList/watch` |
+| `events` | list | GET | `/calendars/{calendarId}/events` |
+| | insert | POST | `/calendars/{calendarId}/events` |
+| | get | GET | `/calendars/{calendarId}/events/{eventId}` |
+| | update / patch | PUT / PATCH | `/calendars/{calendarId}/events/{eventId}` |
+| | delete | DELETE | `/calendars/{calendarId}/events/{eventId}` |
+| | import (Termin ohne Einladungs-Mails übernehmen) | POST | `/calendars/{calendarId}/events/import` |
+| | quickAdd (`text`-Parameter) | POST | `/calendars/{calendarId}/events/quickAdd` |
+| | move (`destination`) | POST | `/calendars/{calendarId}/events/{eventId}/move` |
+| | instances | GET | `/calendars/{calendarId}/events/{eventId}/instances` |
+| | watch | POST | `/calendars/{calendarId}/events/watch` |
+| `acl` | list/insert | GET/POST | `/calendars/{calendarId}/acl` |
+| | get/update/patch/delete | GET/PUT/PATCH/DELETE | `/calendars/{calendarId}/acl/{ruleId}` |
+| | watch | POST | `/calendars/{calendarId}/acl/watch` |
+| `freebusy` | query | POST | `/freeBusy` |
+| `colors` | get (Kalender-/Event-Farbpalette) | GET | `/colors` |
+| `settings` | list | GET | `/users/me/settings` |
+| | get | GET | `/users/me/settings/{setting}` |
+| | watch | POST | `/users/me/settings/watch` |
+| `channels` | stop | POST | `/channels/stop` |
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/calendar/v3/users/{user}/calendarList` | Kalender des Nutzers auflisten (`maxResults`, `pageToken`, `syncToken`, `showDeleted`, `minAccessRole`) |
-| `GET` | `/calendar/v3/users/{user}/calendarList/{calendarId}` | Einzelnen Kalendereintrag lesen |
-| `POST` | `/calendar/v3/users/{user}/calendarList` | Kalender zur eigenen Liste hinzufügen (Abonnement/freigegebener Kalender) |
-| `PATCH` / `PUT` | `/calendar/v3/users/{user}/calendarList/{calendarId}` | Anzeigefarben, Erinnerungsvorgaben, Zusammenfassungs- und Sichtbarkeitsoptionen ändern |
-| `DELETE` | `/calendar/v3/users/{user}/calendarList/{calendarId}` | Kalender aus der eigenen Liste entfernen (nicht löschen) |
-| - | - | Die Rolle des Nutzers wird nicht separat abgefragt, sondern steht als `accessRole` im Kalender- bzw. Calendarlist-Eintrag |
+Hinweise: `calendarList` und `settings` sind fest an `users/me` gebunden – fremde Kalenderlisten sind über die API nicht einsehbar. Ein `events.freeBusy`-Endpunkt existiert in v3 nicht; Free/Busy läuft ausschließlich über `POST /freeBusy`.
 
-### Kalender
+## Wichtige Methodenparameter
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/calendar/v3/users/{user}/calendars/{calendarId}` | Kalender-Metadaten (Zeitzone, Ort, Zugriffsrolle) |
-| `POST` | `/calendar/v3/users/{user}/calendars` | Neuen Kalender anlegen |
-| `PATCH` / `PUT` | `/calendar/v3/users/{user}/calendars/{calendarId}` | Kalender ändern (Name, Zeitzone, Beschreibung, Farbe) |
-| `DELETE` | `/calendar/v3/users/{user}/calendars/{calendarId}` | Kalender löschen (nur Besitzer) |
-| `POST` | `/calendar/v3/users/{user}/calendars/{calendarId}/clear` | Alle Termine eines Kalenders löschen (entleeren) |
+- **`events.list`**: `timeMin`/`timeMax` (RFC 3339), `singleEvents` (Serien zu Einzelterminen auffächern), `orderBy` (`startTime`), `q` (Freitext über Summary, Beschreibung, Ort, Teilnehmer u. a.), `updatedMin`, `showDeleted`, `showHiddenInvitations`, `eventTypes` (wiederholbar), `privateExtendedProperty`/`sharedExtendedProperty`, `maxResults` (Standard 250), `pageToken`, **`syncToken`** (delta-Sync über `nextSyncToken`), `timeZone`, `maxAttendees`, `iCalUID`.
+- **`events.insert`/`update`/`patch`/`import`**: `sendUpdates` (`all` / `externalOnly` / `none`; `sendNotifications` veraltet), `conferenceDataVersion` (0–1, Meet-Konferenzen via `createRequest`), `supportsAttachments` (Dateianhänge), `eventLabelVersion` (0 = `colorId`, 1 = `eventLabelId`). `update` ersetzt immer das ganze Ressourcenobjekt (keine Patch-Semantik); für Teilupdates `get` + ändern + `patch`, Atomarität über ETags.
+- **`events.instances`**: Seiten der wiederkehrenden Serie (`timeMin`/`timeMax`, `originalStart`, max. 250 pro Seite).
+- **`freebusy.query`**: Request `FreeBusyRequest` mit `timeMin`/`timeMax`, `timeZone`, `items` (Kalender/Gruppen), `calendarExpansionMax`, `groupExpansionMax`; Antwort pro Kalender `busy`-Intervalle und optional `errors`, für Gruppen `groups`.
+- **`calendars.*`**: `useAdminAccess` für Workspace-Admins.
+- **Optimistische Sperre**: alle Ressourcen tragen `etag`; offizielle Referenz empfiehlt `get` + `update`/`patch` mit ETag für atomare Änderungen.
 
-### Termine (Events)
+## Datenmodell (Kurzform, Details in structure.md)
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/calendar/v3/calendars/{calendarId}/events` | Termine auflisten (`timeMin`, `timeMax`, `singleEvents=true`, `orderBy=startTime`, `q`, `showDeleted`, `syncToken`, `updatedMin`, `maxResults`, `pageToken`, `timeZones`) |
-| `GET` | `/calendar/v3/calendars/{calendarId}/events/{eventId}` | Einzelnen Termin lesen (`alwaysIncludeEndTime`, `maxAttendees`, `timeZones`) |
-| `POST` | `/calendar/v3/calendars/{calendarId}/events` | Termin anlegen (`sendUpdates=all|none`, `supportsAttachments`) |
-| `PATCH` | `/calendar/v3/calendars/{calendarId}/events/{eventId}` | Termin teilweise ändern |
-| `PUT` | `/calendar/v3/calendars/{calendarId}/events/{eventId}` | Termin vollständig ersetzen |
-| `DELETE` | `/calendar/v3/calendars/{calendarId}/events/{eventId}` | Termin absagen/löschen (`sendUpdates`) |
-| `POST` | `/calendar/v3/calendars/{calendarId}/events/{eventId}/move` | Termin in anderen Kalender verschieben (`targetCalendarId`, `previousStartDateTime`) |
-| `GET` | `/calendar/v3/calendars/{calendarId}/events/{eventId}/instances` | Aufgelöste Instanzen einer Terminserie |
-| `POST` | `/calendar/v3/calendars/{calendarId}/events/watch` | Push-Kanal für Termine dieses Kalenders einrichten |
-| ❌ | - | Kein öffentlicher Import-/Export-Endpunkt für ICS-Dateien dokumentiert; ICS-Import und -Export laufen über die Weboberfläche bzw. über `events.insert` mit eigenen Daten |
+Ressourcen laut Discovery: `Calendar`, `CalendarListEntry`, `Event`, `EventAttendee`, `EventReminder`, `EventDateTime`, `AclRule`, `Setting`, `Channel`, `Colors`, `FreeBusyRequest/Response`, `ConferenceData` (Meet), `EventAttachment`, `EventLabel`, `FocusTimeProperties`, `OutOfOfficeProperties`, `WorkingLocationProperties`, `BirthdayProperties`.
 
-### Berechtigungen (ACL) pro Kalender
+## Push-Benachrichtigungen (Webhooks)
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/calendar/v3/users/{user}/settings` | Kontoeinstellungen des Nutzers auflisten |
-| `GET` | `/calendar/v3/users/{user}/settings/{setting}` | Einzelne Einstellung lesen |
-| `GET` | `/calendar/v3/users/{user}/calendars/{calendarId}/acl` | Freigabeliste eines Kalenders |
-| `GET` | `/calendar/v3/users/{user}/calendars/{calendarId}/acl/{ruleId}` | Einzelne Freigaberegel |
-| `POST` | `/calendar/v3/users/{user}/calendars/{calendarId}/acl` | Freigabe erteilen (`user`, `group`, `domain`, `default` mit Rolle) |
-| `PATCH` / `PUT` | `/calendar/v3/users/{user}/calendars/{calendarId}/acl/{ruleId}` | Rolle ändern (`reader`, `writer`, `owner`, freie/belegte Zeiten via `role`-Wert der API) |
-| `DELETE` | `/calendar/v3/users/{user}/calendars/{calendarId}/acl/{ruleId}` | Freigabe entziehen |
+- Watch-fähige Ressourcen: **Acl, CalendarList, Events, Settings** – je eigener `…/watch`-Endpunkt, ein gemeinsamer Stop-Endpunkt `POST /channels/stop` (mindestens `id` + `resourceId`).
+- Channel-Anfrage: `id` (projekteindeutig, max. 64 Zeichen), `type: "web_hook"`, `address` (**HTTPS mit gültigem, nicht selbstsigniertem Zertifikat**), optional `token` (max. 256 Zeichen) und `expiration` (Unix ms).
+- Antworten liefern `resourceId` (versionsunabhängig) und `resourceUri`; jede Benachrichtigung ist ein HTTPS-POST (User-Agent `APIs-Google`) mit Headern `X-Goog-Channel-ID`, `-Token`, `-Expiration`, `X-Goog-Resource-ID`, `-URI`, `-State` (`sync` | `exists` | `not_exists`), `-Message-Number`.
+- **Die Nachricht enthält keinen Termininhalt** – danach die Änderung selbst über `events.list` mit `syncToken` nachziehen.
+- Empfänger muss 200/201/202/204/102 antworten; bei 500/502/503/504 wiederholt Google mit exponentiellem Backoff, alle anderen Codes gelten als Fehlzustellung.
+- **Keine automatische Verlängerung**: Kanäle vor Ablauf mit neuer `watch`-Anfrage und neuer `id` ersetzen.
 
-### Farben, Free/Busy und Kanäle
+## Limits und Quotas (offizielle Usage-Limits-Seite, Stand: Modell seit 1. Mai 2026)
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/calendar/v3/colors` | Verfügbare Kalender- und Terminfarben (`colorId`) |
-| `POST` | `/calendar/v3/freeBusy` | Belegungszeiten mehrerer Kalender in einem Aufruf |
-| `POST` | `/calendar/v3/users/{user}/calendarList/watch` | Push-Kanal für Kalenderliste einrichten |
-| `POST` | `/calendar/v3/channels/stop` | Push-Kanal beenden (`id`, `resourceId`) |
+| Grenze | Wert |
+|--------|------|
+| Anfragen pro Minute pro Cloud-Projekt | 10.000 |
+| Anfragen pro Minute pro Nutzer pro Projekt | 600 |
+| Tägliche Schwelle pro Projekt (danach geplante Gebühren) | 1.000.000 |
+| Fehlercode bei Überschreitung | HTTP 403/429 `usageLimits` (Sliding-Window; exponentielles Backoff empfohlen) |
 
-## Beispiele
+Zusätzlich **operative Grenzen**, die Google jederzeit anpassen kann (z. B. zu schnelle Schreibvorgänge auf einen einzelnen Kalender). Standardnutzung ist kostenlos; Überschreitungen der Tagesgrenze sollen „später in 2026“ kostenpflichtig werden (mit ≥ 90 Tagen Ankündigung). Quota-Erhöhungen sind in der Google-Cloud-Console beantragbar; Service-Account-Traffic zählt als ein Nutzer. Randnotiz aus der Hilfe: mehr als **400 abonnierte Kalender** in einem Konto verursachen Performance-Probleme.
 
-### Termine eines Zeitraums laden
+## Batching
 
-```bash
-curl -s \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  "https://www.googleapis.com/calendar/v3/calendars/primary/events?singleEvents=true&orderBy=startTime&timeMin=2026-10-27T00:00:00%2B02:00&timeMax=2026-10-31T23:59:59%2B01:00&maxResults=50"
-```
+Mehrere Aufrufe pro HTTP-Anfrage über `POST https://www.googleapis.com/batch/calendar/v3` (Multipart, je Teilaufruf mit eigener Auth/Parametern).
 
-Antwort (gekürzt):
+## Client-Bibliotheken (offizielle Downloads-Seite)
 
-```json
-{
-  "kind": "calendar#events",
-  "etag": "\"1234567890123400\"",
-  "summary": "Hauptkalender",
-  "timeZone": "Europe/Berlin",
-  "updated": "2026-10-27T07:12:03.000Z",
-  "itemsPerPage": 50,
-  "nextSyncToken": "MTcxNzAwMDAwMDAwMDAwMDAwMA",
-  "items": [
-    {
-      "kind": "calendar#event",
-      "etag": "\"3999000000000000\"",
-      "id": "2f8k1a0b9c7d6e5f1a2b3c4d5e",
-      "iCalUID": "2f8k1a0b9c7d6e5f1a2b3c4d5e@google.com",
-      "status": "confirmed",
-      "htmlLink": "https://www.google.com/calendar/event?eid=MmY4azFhMGI5YzdkN2U1ZjFhMmIzYzRkNWU",
-      "created": "2026-10-20T09:00:00.000Z",
-      "updated": "2026-10-26T18:41:22.000Z",
-      "summary": "Team-Meeting",
-      "description": "Sprint-Review, Raum 3",
-      "location": "Raum 3",
-      "start": { "dateTime": "2026-10-27T09:00:00+02:00", "timeZone": "Europe/Berlin" },
-      "end": { "dateTime": "2026-10-27T09:30:00+02:00", "timeZone": "Europe/Berlin" },
-      "creator": { "email": "anna@example.com", "displayName": "Anna" },
-      "organizer": { "email": "anna@example.com", "displayName": "Anna" },
-      "attendees": [
-        { "email": "anna@example.com", "displayName": "Anna", "responseStatus": "accepted", "organizer": true },
-        { "email": "ben@example.com", "displayName": "Ben", "responseStatus": "needsAction" }
-      ],
-      "attendeesOmitted": false,
-      "transparency": "opaque",
-      "visibility": "default",
-      "eventStatus": "confirmed",
-      "reminders": { "useDefault": true },
-      "sequence": 1,
-      "conferenceData": { "entryPoints": [ { "entryPointType": "video", "uri": "https://meet.google.com/abc-defg-hij" } ] }
-    }
-  ]
-}
-```
+Stabil: **Java, JavaScript, .NET, Objective-C (REST), PHP, Python (v1/v2)**. Frühes Stadium: **Dart (Beta), Go, Node.js (Alpha), Ruby (Alpha)**. Alle Bibliotheken unterstützen Bearer-OAuth und Push-Kanal-Hilfen.
 
-### Termin mit Serie und Gästen anlegen
+## Weitere offizielle Schnittstellen
 
-```bash
-curl -s -X POST \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "summary": "1:1 mit Customer",
-    "location": "Meet",
-    "description": "Monatliches Gespräch",
-    "start": { "dateTime": "2026-11-03T14:00:00+01:00", "timeZone": "Europe/Berlin" },
-    "end": { "dateTime": "2026-11-03T14:30:00+01:00", "timeZone": "Europe/Berlin" },
-    "recurrence": [ "RRULE:FREQ=MONTHLY;BYDAY=1MO" ],
-    "attendees": [
-      { "email": "kunde@beispiel.de", "displayName": "Kunde" }
-    ],
-    "reminders": {
-      "useDefault": false,
-      "overrides": [
-        { "method": "popup", "minutes": 10 },
-        { "method": "email", "minutes": 1440 }
-      ]
-    },
-    "extendedProperties": { "private": { "crm_ticket_id": "T-4711" } }
-  }' \
-  "https://www.googleapis.com/calendar/v3/calendars/primary/events?sendUpdates=all"
-```
+- **Google Tasks API** (`https://tasks.googleapis.com/tasks/v1/…`): Aufgaben, die im Kalender-UI neben Terminen erscheinen; eigener Dienst, nicht Teil von v3.
+- **Apps Script-Dienst `CalendarApp`** und **Workspace-Add-ons für Calendar**: Skript-/Erweiterungssteuerung innerhalb des Google-Kontos (`calendar.addons.*`-Scopes).
+- **Google Workspace Events API** (`https://workspaceevents.googleapis.com/v1/subscriptions`, Pub/Sub-basiert): offizieller Workspace-Pub/Sub-Mechanismus; ob Kalender-Ressourcen aktuell subscribed werden können, ist in der geprüften Referenzseite nicht belegt (**nicht verifiziert**).
 
-Antwort enthält den angelegten Termin (u. a. `id`, `iCalUID`, `status`, `created`, `updated`, `htmlLink`).
+## Was es auf API-Ebene NICHT gibt
 
-### Free/Busy abfragen
-
-```bash
-curl -s -X POST \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "timeMin": "2026-11-02T00:00:00Z",
-    "timeMax": "2026-11-03T00:00:00Z",
-    "timeZone": "Europe/Berlin",
-    "items": [ { "id": "primary" }, { "id": "team@beispiel.de" } ]
-  }' \
-  "https://www.googleapis.com/calendar/v3/freeBusy"
-```
-
-Antwort (gekürzt):
-
-```json
-{
-  "kind": "calendar#freeBusy",
-  "timeMin": "2026-11-02T00:00:00.000Z",
-  "timeMax": "2026-11-03T00:00:00.000Z",
-  "calendars": {
-    "primary": { "busy": [ { "start": "2026-11-02T09:00:00Z", "end": "2026-11-02T09:30:00Z" } ] },
-    "team@beispiel.de": { "busy": [ { "start": "2026-11-02T13:00:00Z", "end": "2026-11-02T14:00:00Z" } ] }
-  }
-}
-```
-
-### Öffentlichen Kalender per ICS abonnieren
-
-```
-https://calendar.google.com/calendar/ical/<KALENDER_ID>/public/basic.ics
-```
-
-Einbetten in eine Website:
-
-```
-https://calendar.google.com/calendar/embed?src=<KALENDER_ID>&ctz=Europe%2FBerlin
-```
-
-*(Diese URL-Formate sind die öffentlich genutzten Formen; für eigene Integrationen ist die API der stabilere Weg.)*
-
-### CalDAV
-
-- Client-Konfiguration: Kalender-Clients fragen die Kalender-URL aus den Kalendereinstellungen ab; für Workspace-Accounts muss der Administrator den Drittanbieter-/CalDAV-Zugriff einschalten.
-- Der in der Google-Hilfe genannte CalDAV-Serverpfad lautet in der klassischen Form `https://apidata.googleusercontent.com/caldav/v2/<email>/user`; für aktuelle Kontotypen ist die **genaue Basis-URL nicht eindeutig dokumentiert** - im Zweifel aus der Client-Einrichtung übernehmen.
-- Schreibende CalDAV-Nutzung ist möglich, deckt aber nicht alle Kalender-API-Funktionen ab (Konferenzdaten, Anhänge, Arbeitsort-Attribute).
-
-## Rate Limits
-
-- Google Calendar API nutzt **kontingentbasierte Quotas pro Google-Cloud-Projekt und pro Nutzer** (typischerweise in Anfragen pro 100 Sekunden gemessen). Die konkreten Zahlen hängen vom Projekt und freigeschalteten Kontingenten ab und stehen in der API-Referenz bzw. in **Google Cloud Console → APIs & Dienste → Quotas**; Erhöhungen sind dort beantragbar.
-- Überschreitungen liefern **HTTP 429** mit Fehlergründen wie `userRateLimitExceeded` oder `rateLimitExceeded`; empfohlen ist **exponentielles Backoff mit Jitter**.
-- **ETags** (`If-None-Match`) und **`syncToken`** reduzieren die Last deutlich: nur geänderte Ressourcen werden übertragen. Ein `syncToken` ist zeitlich begrenzt; nach Ablauf ist ein vollständiger Abgleich mit `showDeleted=true` nötig.
-- **Batch-Anfragen** bündeln mehrere Aufrufe (Multipart/`related`); Google begrenzt die Anzahl der Aufrufe pro Batch (je nach API-Dokumentation, üblicherweise einige Dutzend).
-- **Push statt Polling**: Ein `watch`-Kanal auf Termine ersetzt das Intervallabfragen; die Kanallaufzeit ist begrenzt und muss verlängert werden (`events.sync` bzw. erneutes `watch`).
-- Praktische Richtwerte: ein einziges Projekt mit Backoff für Synchronisationsläufe, `maxResults` bis 250, nie mehr als nötig parallel; für Organisationssynchronisation Kalenderlisten- und Termine-Sync getrennt takten.
-
-## Webhooks (Push-Benachrichtigungskanäle)
-
-Google Kalender versendet **keine klassischen Webhooks mit JSON-Nutzlast**, sondern **Ressourcen-Benachrichtigungen** an einen registrierten HTTPS-Endpunkt.
-
-Kanal einrichten:
-
-```bash
-curl -s -X POST \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "id": "sync-2026-teamkalender-01",
-    "type": "web_hook",
-    "token": "<eigenes_geheimnis>",
-    "address": "https://example.com/calendar/notify",
-    "params": { "ttl": "600" }
-  }' \
-  "https://www.googleapis.com/calendar/v3/calendars/team@beispiel.de/events/watch"
-```
-
-Eintreffende Benachrichtigung (Kopfzeilen, Body leer):
-
-```
-POST /calendar/notify
-X-Goog-Channel-ID: sync-2026-teamkalender-01
-X-Goog-Channel-Expiration: 2026-10-28T09:00:00.000Z
-X-Goog-Resource-ID: <resourceId>
-X-Goog-Resource-State: sync
-X-Goog-Resource-URI: https://www.googleapis.com/calendar/v3/calendars/team@beispiel.de/events
-X-Goog-Message-Number: 3
-```
-
-Hinweise:
-- Die Meldung enthält **nicht**, was geändert wurde - der Client muss danach mit `events.list?syncToken=…` nachziehen.
-- **Keine Signatur**: Die Authentizität der Anfrage wird über die Kanal-`id`, den eigenen `token` und die Prüfung der `resourceId` sichergestellt; ein HMAC-Secret wie bei anderen Diensten gibt es nicht.
-- Endpunkt muss öffentlich per HTTPS erreichbar und bei der Registrierung gültig sein.
-- Kanal beenden: `POST /calendar/v3/channels/stop` mit `id` und `resourceId`.
-
-## SDKs und Client-Bibliotheken
-
-| Sprache | Bibliothek |
-|---------|------------|
-| Python | `google-api-python-client` (`build("calendar", "v3", ...)`) |
-| Node.js | `googleapis` (`google.calendar({version: "v3", auth})`) |
-| Java | `google-api-services-calendar` |
-| PHP | `google/apiclient` (`Google\Service\Calendar`) |
-| Ruby | `google-api-client` (`Google::Apis::CalendarV3`) |
-| .NET | `Google.Apis.Calendar.v3` |
-| Go | `google.golang.org/api/calendar/v3` |
-
-- **Discovery-Dokument** als Grundlage für Codegenerierung und OpenAPI-ähnliche Werkzeuge.
-- **Apps Script**: `CalendarApp` (Kalender, Termine, Gäste, Wiederholungen) für Automatisierung innerhalb des Kontos.
-- **CalDAV-Clients** bringen ihre eigenen Bibliotheken mit (Thunderbird, Apple Calendar, Evolution, DAVx5, Radicale-Client-Werkzeuge).
-- **Kein eigenes Kalender-SDK von Google für mobile Apps** im Sinne einer Offline-Datenbank; mobile Integrationen nutzen die REST-API oder den Kalender des Betriebssystems.
-
-## Betriebshinweise
-
-- API in der Google Cloud Console für das Projekt aktivieren und OAuth-Zustimmungsbildschirm konfigurieren.
-- Terminkennung sauber halten: `iCalUID` für Serieneintrag, `id` für Instanz, eigene Schlüssel in `extendedProperties.private` für die Zuordnung zu Quellsystemen.
-- Änderungen an Serienterminen erzeugen neue Instanz-IDs; eine Terminserie ist über `iCalUID` plus `recurrence` wiedererkennbar, nicht über die Einzel-ID.
-- Zeitangaben immer mit Zeitzonen-Offset senden (`dateTime` + `timeZone`), sonst greift die Kalenderzeitzone.
-- Für Gastrechte die Kalender-ACL-Regeln und die Terminfelder `guestsCanModify`, `guestsCanSeeOtherGuests`, `anyoneCanAddSelf` gezielt setzen.
-- Da der Dienst proprietär ist: Exportstrategie (ICS/Takeout) mitplanen, um Vendor-Lock-in zu begrenzen.
-
-## Siehe auch
-
-- [menu.md](menu.md)
-- [features.md](features.md)
-- [description.md](description.md)
-- [structure.md](structure.md)
-- [shortcuts.md](shortcuts.md)
+- **Kein dokumentiertes CalDAV/CardDAV-Angebot.** Google hat CalDAV/CardDAV-Zugang mit Passwort (Less Secure Apps) für Workspace ab 30.09.2024 bzw. kontenübergreifend ab 2025 abgeschaltet; offizielle Entwickler-Dokumentation nennt nur die REST-API. Community-Tools (DAVx⁵) sprechen Google-Endpunkte weiterhin über OAuth an – laut DAVx⁵ „weder von Google noch von DAVx⁵ offiziell unterstützt“ – als Stütze, nicht als Garantie.
+- Kein GraphQL, kein OData, keine eigene Server-/Self-Hosting-Variante, keine API für öffentliche Buchungsseiten („Terminpläne“) – im aktuellen Discovery v3 (Rev. 20261028) existiert weder eine eigene Ressource noch ein `appointment`-Wert für `eventType`; Reservierungsseiten sind reine UI-Funktion.
+- Kein Zugriff auf `users/me`-fremde Kalenderlisten, keine Kalender-Such-API (Freigaben laufen über IDs/E-Mail).

@@ -22,13 +22,13 @@ Eine Datei nach der Fertigstellung mit `[x]` markieren.
 - [x] apps/calendar/skins/davical/structure.md
 
 ### calendar / google-calendar
-- [ ] apps/calendar/skins/google-calendar/api.md
-- [ ] apps/calendar/skins/google-calendar/description.md
-- [ ] apps/calendar/skins/google-calendar/features.md
-- [ ] apps/calendar/skins/google-calendar/index.md
-- [ ] apps/calendar/skins/google-calendar/menu.md
-- [ ] apps/calendar/skins/google-calendar/shortcuts.md
-- [ ] apps/calendar/skins/google-calendar/structure.md
+- [x] apps/calendar/skins/google-calendar/api.md
+- [x] apps/calendar/skins/google-calendar/description.md
+- [x] apps/calendar/skins/google-calendar/features.md
+- [x] apps/calendar/skins/google-calendar/index.md
+- [x] apps/calendar/skins/google-calendar/menu.md
+- [x] apps/calendar/skins/google-calendar/shortcuts.md
+- [x] apps/calendar/skins/google-calendar/structure.md
 
 ### calendar / kalendar
 - [ ] apps/calendar/skins/kalendar/api.md

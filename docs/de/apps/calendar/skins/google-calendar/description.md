@@ -1,59 +1,44 @@
-# Google Kalender - Beschreibung
+# Google Kalender – Beschreibung
 
-## Übersicht
+## Was das Programm macht
 
-Google Kalender ist der Kalender-Baustein von Google: ein Cloud-Kalender für Privatkonten und für Organisationen mit Google Workspace. Er ist als Web-Anwendung (calendar.google.com) und als App für Android und iOS verfügbar und deckt Termine, Serientermine, Aufgaben, Kalenderfreigaben, Ressourcenbuchung und Mehrpersonentermine ab. Der Zugang nach außen läuft über die Calendar REST API v3, CalDAV und ICS-Abonnements.
+Google Kalender (calendar.google.com) ist der Kalender-Dienst von Google: eine Web-Oberfläche plus Apps für Android, iOS, Wear OS und Apple Watch, in der Termine, wiederkehrende Serien, Aufgaben und Mehrpersonentermine über mehrere Kalender hinweg verwaltet werden. Dazu kommen geteilte Kalender mit Berechtigungsstufen, Freigabe-/Abonnementfunktionen, öffentliche Kalender, Reservierungsseiten (Terminpläne, „Appointment schedules“) und organisatorische Kalender inklusive Raum-/Ressourcenkalendern in Google Workspace. Der Dienst läuft ausschließlich in der Google-Cloud; Self-Hosting ist nicht möglich.
 
-## Was Google Kalender macht
-
-Nutzer legen einen oder mehrere Kalender an und tragen Termine mit Anfang, Ende, Ort, Beschreibung, Farbe und Erinnerung ein. Termine können mit Gästen geteilt werden; Google Kalender verschickt Einladungen per E-Mail und verwaltet die Antworten (Ja/Nein/Vielleicht). Wiederholungen, Ausnahmen, Zeitzonen und Arbeitszeiten werden automatisch berücksichtigt. Über die Freigabestufen sehen andere Personen nur belegte Zeiten, alle Details oder dürfen selbst Termine anlegen. Administratoren einer Workspace-Domäne setzen unternehmensweite Richtlinien (externe Freigabe erlauben oder sperren), verwalten Räume und Geräte als Ressourcenkalender und richten Teams-/Gruppenkalender ein. Die Web-Oberfläche zeigt Tag, Woche, Monat, Jahr und Agenda; Termine lassen sich per Drag & Drop verschieben und in der Länge ändern.
+Programmierbar ist er über die **Calendar REST API v3** (JSON/HTTPS), Aufgaben zusätzlich über die separate **Tasks API**; Änderungen lassen sich per Push-Kanälen (Webhooks) empfangen. Termine, Aufgaben und Arbeitsort werden mit Gmail (automatische Reise-/Reservierungstermine), Meet (Konferenzlinks), Tasks (Termine mit Datum erscheinen im Kalender) und – mit passendem Abo – Gemini (Terminvorschläge „Plane für mich“, „Zum Kalender hinzufügen“ aus E-Mails) verknüpft.
 
 ## Vorteile
 
-- **Nahtlose E-Mail-Verzahnung**: Einladungen, Antworten und Meet-Links entstehen direkt aus Gmail und Kalender
-- **Zero Administration im Privatbereich**: kein Server, keine Updates, keine Datenbank
-- **Schnelle Eingabe**: "Schnell erstellen" verarbeitet natürlichsprachliche Terminangaben
-- **Saubere Zeitzonenbehandlung**: Termine bleiben normiert, Anzeige je Zeitzone der Beteiligten, zweite Zeitzone einblendbar
-- **Breite Client-Unterstützung**: Apple Kalender, Thunderbird, Outlook, Evolution, Fantastical, DAVx5 über API/CalDAV/ICS
-- **Ausgereifte REST-API**: JSON, OAuth 2.0 mit feingliedrigen Scopes, Sync-Tokens, Push-Kanäle, Batches
-- **Teamfunktionen**: Freigabestufen, Ressourcen, Arbeitsorte, Fokuszeit, Terminplan-Buchungsseiten
-- **Barrierefreiheit und Themes**: helle/dunkle Oberfläche, Symbolsystem pro Kalender, Tastaturkürzel, Screenreader-Unterstützung
+- **Kein Betriebsaufwand**: nichts zu installieren, updaten oder zu sichern; Konten, Geräte-Sync und Verfügbarkeit übernimmt Google
+- **Kostenlose Basis**: volle Kalenderfunktionen mit privatem Google-Konto; Workspace-Abos ergänzen Verwaltung, Ressourcen und Premium-Buchungsfunktionen
+- **Plattformbreite**: Web, Android, iOS, Wear OS, Apple Watch – automatisch synchronisiert
+- **Terminfindung & Zusammenarbeit**: Freigaben mit vier Berechtigungsstufen („nur Belegung“, „Details sehen“, „Termine ändern“, „teilen verwalten“), „Einen Termin finden“-Ansicht, Einladungen mit Antwort-Status, Gruppenkalender
+- **Reservierungsseiten ohne Zusatz-Apps**: Kunden/Klienten buchen direkt; Premium (bestimmte Google-One-/Workspace-Abos) mit mehreren Seiten, Stripe-Zahlungen, E-Mail-Erinnerungen
+- **Zeit-Werkzeuge**: Fokuszeit (Benachrichtigungen stumm, Besprechungen automatisch ablehnen), „Ihre Zeit im Blick“-Analyse, Arbeitsort/-zeiten für Teams, Dateien an Terminen
+- **Großes Integrations-Ökosystem**: Calendar API v3 mit offiziellen Client-Bibliotheken, Push-Kanälen und Add-ons; Migrationstools u. a. aus Microsoft Exchange/Outlook und IBM Notes
 
-## Abgrenzung zu anderen Systemen
+## Abgrenzung zu vergleichbaren Produkten
 
-### Google Kalender vs. Outlook-Kalender (Microsoft 365 / Exchange)
-- **Organisationstiefe**: Exchange/Outlook bietet Delegationsmodelle, öffentliche Ordner, freigegebene Postfächer und detaillierte Ressourcenverwaltung mit Kapazität und Genehmigungsregeln; Google Kalender hält Freigaben bewusst einfacher
-- **Offline/Client**: Outlook (Desktop) arbeitet mit lokaler Cache-Datei und ist offline voll nutzbar; Google Kalender ist online-zentriert
-- **Protokolle**: Exchange nutzt EWS/Graph und MAPI; Google nutzt Calendar API v3 und CalDAV
-- **Administration**: Workspace-Admin Console vs. Microsoft 365 Admin Center/Exchange Online - beide proprietär, beide Cloud-only
+| System | Unterschied |
+|--------|-------------|
+| **DAViCal** (in dieser Serie dokumentiert) | DAViCal ist der schlanke, selbst gehostete CalDAV-/CardDAV-Backend-Server (PHP/PostgreSQL, RFC 4791) – Datenhoheit, echte ACLs, Scheduling nach Standard, aber eigenes Betreiben. Google Kalender ist das gegenteilige Modell: fertiger SaaS-Komplettclient + proprietäre REST-API, **kein dokumentiertes CalDAV-Angebot** (Passwort-CalDAV wurde 2024/2025 abgeschaltet) |
+| **Nextcloud Calendar** (vorgesehen) | Selbst-gehostete Gruppenware-Oberfläche auf CalDAV-Basis mit voller Datenkontrolle; Google Kalender liefert vergleichbaren Komfort, aber ohne eigene Infrastruktur |
+| **Outlook-Kalender** (vorgesehen) | Microsofts Pendant in Microsoft 365 mit Exchange/Graph-API und Teams-Integration; Google Pendant zu Googles Stack (Gmail/Meet/Tasks) |
+| **Kalendar / Planner** (vorgesehen) | Native Desktop-Clients (KDE), die mit Servern wie DAViCal arbeiten; Google Kalender ist selbst Server *und* Client, aber ohne Offline-Desktop-Client |
 
-### Google Kalender vs. Nextcloud Calendar
-- **Hosting**: Nextcloud läuft auf eigenem Server (Self-Hosting), Google Kalender ausschließlich in der Google-Cloud
-- **Protokoll**: Nextcloud Calendar ist ein CalDAV-Client auf einer Nextcloud-Instanz (Termine in der Instanz-Datenbank, Standard-Backend CalDAV/Sabre); Google Kalender ist ein geschlossener Dienst mit eigener REST-API
-- **Datenschutz**: bei Nextcloud liegen Daten im eigenen Rechenzentrum; bei Google in der Google-Infrastruktur (mit AV-Vertrag für Workspace)
-- **Komfort**: Google punktet bei Vorschlägen, Meet-Integration und Mobil-Apps; Nextcloud bei Kontrolle, Gruppenordnern und Kombination mit Dateien/Tasks
-
-### Google Kalender vs. CalDAV-Selbstbau (Radicale, BAïkal, DAVx5)
-- **Umfang**: Radicale/BAïkal sind reine CalDAV-/CardDAV-Server ohne eigene Kalender-Oberfläche; Google Kalender bringt Oberfläche, Mobile Apps und Vorschlagslogik mit
-- **Rechte**: beim Selbstbau über Dateiberechtigungen bzw. kleine ACL-Tabellen geregelt, bei Google über Freigabestufen und Domänenrichtlinien
-- **Automatisierung**: Selbstbau erlaubt direkten Datenzugriff (SQLite/PostgreSQL, Dateisystem), Google Kalender nur über API und Export
+Kern der Abgrenzung: Google Kalender ist **SaaS aus einer Hand** – sehr hoher Komfort, aber Daten liegen bei Google, der Zugriff läuft über Google-Konten/OAuth, und Standard-Protokolle (CalDAV) sind nicht offiziell vorgesehen. Wer Kalenderdaten souverän betreiben will, fährt mit DAViCal oder Nextcloud besser.
 
 ## Technische Details
 
-- **Backend**: proprietärer Google-Dienst; Server-Code ist nicht offen. Programme der Google-Cloud-Infrastruktur, keine öffentlich dokumentierte Einzelkomponente
-- **Datenbank**: Google-interne Speicherdienste; für Nutzer nicht einsehbar und nicht direkt abfragbar. Persistente Mitnahme nur als ICS-Datei oder über Google Takeout
-- **Frontend**: Web-App (JavaScript-Einzelapplikation im Material-Design-Stil, Roboto-Schrift, Raster-Renderer für Tag/Woche/Monat) sowie native Apps für Android und iOS; das konkrete Framework der Web-App ist nicht öffentlich dokumentiert
-- **Synchronisation**: Calendar REST API v3 (`https://www.googleapis.com/calendar/v3`), CalDAV für Kalender-Clients (für Workspace-Accounts administrativ zu aktivieren), ICS-Abonnement- und Embed-URLs
-- **Authentifizierung**: Google-Konto mit Passwort und 2-Schritt-Bestätigung; OAuth 2.0 (Access-/Refresh-Token) für API-Zugriffe; Workspace-SSO (SAML/OIDC) und Geräteverwaltung über Admin Console; API-Schlüssel nur für öffentliche Kalender-Lesezugriffe
-- **Berechtigungen**: Freigaben als ACL-Regeln pro Kalender (owner, writer, reader, free/busy reader); domänenweite Richtlinien der Admin Console
-- **Client-seitige Erweiterungen**: Google Workspace Add-ons und Apps Script (`CalendarApp`)
-- **Hosting**: ausschließlich Cloud/SaaS; kein Docker-Image, kein On-Premise-Betrieb. Kontomodelle: Privatkonto (kostenlos), Google Workspace Business/Enterprise (kostenpflichtig, mehr Admin- und Compliance-Funktionen)
-- **Datenschutz-Hebel**: Datenexport (ICS/Takeout), Aufbewahrungs- und Löschfristen über Workspace-Admin, Verschlüsselung während Übertragung und in den Google-Rechenzentren; eine Ende-zu-Ende-Verschlüsselung für Kalenderinhalte ist nicht dokumentiert
+- **Architektur**: geschlossener Google-Dienst; Clients (Web/Android/iOS) und Drittanbieter reden die Calendar REST API v3 (`https://www.googleapis.com/calendar/v3`, Discovery-Revision 2026‑10‑28), Aufgaben die Tasks API
+- **Auth**: OAuth 2.0 mit fein gestuften Scopes (`calendar`, `calendar.events`, `calendar.acls`, …), Service Accounts mit Domain-wide Delegation für Workspace, API-Key nur für öffentliche Kalender
+- **Synchronisation**: Sync-Token (deltas), Push-Benachrichtigungskanäle (HTTPS-Webhooks, ohne Inhalt – danach selbst nachziehen), Batch-Endpunkt
+- **Datenaustausch**: ICS-Import/-Export, Kalender-URLs (öffentlich/geheim), Takeout; Einbettung von Kalendern
+- **Grenzen**: Quota-Modell seit 1. Mai 2026 (10.000 Anfragen/min/Projekt, 600/min/Nutzer, Tagesgrenze 1 Mio. mit geplanter Bepreisung „später in 2026“); >400 abonnierte Kalender pro Konto bremsen laut Hilfe
+- **KI**: Gemini-Funktionen nur mit Google-One-/Workspace-Premium-Abos
 
-## Für wen ist Google Kalender geeignet?
+## Für wen geeignet
 
-- **Privatnutzer im Google-Ökosystem**, die Gmail, Android und Kalender ohne Administration verbinden wollen
-- **Kleine und mittlere Teams in Google Workspace**, die Teamkalender, Ressourcenräume und einfache Freigabestufen brauchen
-- **Veranstalter mit externen Teilnehmern**, die buchbare Terminplan-Seiten oder öffentliche ICS-Kalender nutzen
-- **Entwickler**, die Kalenderfunktionen per sauber dokumentierter REST-API anbinden möchten
-- **Weniger geeignet** für Behörden und Firmen mit strikter Datenhoheits-Anforderung, für reine Offline-Arbeitsplätze, für organisationsweite Genehmigungsworkflows und für alle, die den Kalender auf eigener Hardware betreiben müssen (dann Nextcloud Calendar oder ein CalDAV-Server)
+- **Private Nutzer**, die Google Mail/Konten ohnehin nutzen und sofort einen synchronisierten Kalender ohne Verwaltung wollen
+- **Organisationen/Teams auf Google Workspace**: Kalenderfreigaben, Raum-/Ressourcenkalender, Verwaltungsrichtlinien, Migration aus Exchange/Notes
+- **FreeSynergy-Szenario**: als „Skin“ sinnvoll, wenn Termine externer Nutzer über die Calendar API (Push + Sync-Token) eingebunden oder nach Google hinaus gespiegelt werden sollen
+- **Ungeeignet** bei Anforderungen an Datenhoheit/Self-Hosting, CalDAV-Client-Zugang (nur inoffiziell) oder Abhängigkeit von einem einzelnen Anbieter vermeiden wollenden Setups – dort DAViCal (Server) bzw. ein CalDAV-Client

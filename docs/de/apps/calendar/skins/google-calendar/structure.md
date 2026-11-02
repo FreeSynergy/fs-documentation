@@ -1,170 +1,95 @@
-# Google Kalender - Struktur & UI/UX
+# Google Kalender – Struktur (Stand: 2.11.2026)
 
-## Übersicht
+Google Calendar ist Closed Source; Interne Prozess-/Serverarchitektur sind nicht öffentlich. Diese Datei dokumentiert den **offiziell belegbaren** Aufbau: externer Request-Ablauf, öffentliche Ressourcen-/Modulstruktur der API v3, Datenmodell, Konfigurationsoberflächen und Deployment-Realität. Quellen: Discovery v3 (Revision 20261028) + offizielle Hilfeseiten (URLs in [index.md](index.md)).
 
-Google Kalender ist eine Web-Einzelseitenanwendung mit drei Hauptzonen: schmale Kopfzeile, einklappbare Kalender-Seitenleiste links und ein Datumsraster in der Mitte. Termine werden nie in eigenen Fenstern dargestellt, sondern als Popups über dem Raster und als Vollseite beim Bearbeiten. Dazu kommen die Einstellungsseite und die Buchungsseite von Terminplänen.
+## Request-Ablauf
 
-## Seiten-Struktur
+### Nutzung über die Oberfläche
 
-### Hauptansicht (Woche/Tag)
+Browser/Apps (Android, iOS, Wear OS, Apple Watch) → `https://calendar.google.com` bzw. Google-Konto-Sync der Apps → Google-Backend (intern, undokumentiert). Änderungen stehen sofort auf allen Google-Kanälen; ICS-Adressen (öffentlich/geheim je Kalender) dienen externen Clients zum Abo.
 
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│ ☰  Ansicht ▾   ‹  Heute  ›   27. Oktober 2026     🔍  ⚙  ❓  Konto  │  Kopfzeile
-├──────────────┬───────────────────────────────────────────────────────┤
-│ Erstellen +  │ Mo   Di   Mi   Do   Fr   Sa   So                      │
-│              │ ┌────┬────┬────┬────┬────┬────┬────┐                  │
-│ 📅 Mini-Monat│09:00 │▓▓▓│    │    │    │    │    │                  │
-│              │      │Team│    │ ░░ │    │    │    │   Raster:        │
-│ Meine Kalender│ 10:00│    │████│    │    │    │    │   Zeilen =       │
-│  ☑ Primär    │ 11:00│    │████│    │▓▓▓│    │    │   Uhrzeiten,     │
-│  ☑ Projekt A │ 12:00│    │    │    │▓▓▓│    │    │   Spalten = Tage │
-│  ☐ Geburtstage│     │    │    │    │    │ ●  │    │   "Jetzt"-Linie  │
-│              │ ...  │    │    │    │    │    │    │                  │
-│ Andere Kalender│             │    │    │    │    │    │                 │
-│  ☑ Team (geteilt)│          └────┴────┴────┴────┴────┴────┴────┘     │
-│  + hinzufügen│ [Aufgaben]  [Frei/Belegt]                             │
-└──────────────┴───────────────────────────────────────────────────────┘
-```
-
-### Monatsansicht
+### Nutzung über die API v3 (dokumentierter Weg)
 
 ```
-┌───────────────────────────────────────────────────────────┐
-│  Mo  Di  Mi  Do  Fr  Sa  So                               │
-│ ┌────┬────┬────┬────┬────┬────┬────┐                      │
-│ │ 20 │ 21 │ 22 │ 23 │ 24 │ 25 │ 26 │  Zellen pro Tag,    │
-│ │ ●  │ ██ │    │ ▓▓ │    │    │ ○  │  Einträge als       │
-│ ├────┼────┼────┼────┼────┼────┼────┤  Farbchip + Titel;   │
-│ │ 27 │ 28 │ 29 │ 30 │ 31 │  1 │  2 │  Überlauf → "+3     │
-│ │ ███│    │ ▓▓ │ ██ │    │    │    │  weitere"            │
-│ └────┴────┴────┴────┴────┴────┴────┘                      │
-└───────────────────────────────────────────────────────────┘
+1. OAuth-2.0-Handshake:
+   Consent-Screen (Scope-Auswahl) → Zugangs-/Refresh-Token
+   (alternativ: Service Account + Domain-wide Delegation; API-Key nur für öffentliche Kalender)
+
+2. API-Aufrufe:
+   HTTPS + Authorization: Bearer → https://www.googleapis.com/calendar/v3/…
+   Antworten als JSON, je Ressource mit etag (optimistische Sperre)
+
+3. Synchronisation:
+   Vollsynchronisation mit events.list (timeMin/timeMax, singleEvents)
+   → nextSyncToken merken
+   → nächste Änderung als Delta: events.list?syncToken=… (updatedMin, showDeleted)
+
+4. Push statt Polling:
+   POST …/events/watch {id, type:"web_hook", address:"https://…"}
+   → Google sendet header-only POSTs (X-Goog-Resource-State: sync|exists|not_exists)
+   → Empfänger antwortet mit 200/201/202/204/102 und zieht Delta per syncToken nach
+   → Kanal läuft ab und muss mit neuer id erneuert werden; Stop via POST /channels/stop
+
+5. Batching:
+   POST https://www.googleapis.com/batch/calendar/v3 (Multipart mehrerer Aufrufe)
+
+6. Free/Busy:
+   POST /freeBusy {timeMin,timeMax,items:[{id:…}]} → busy-Intervalle je Kalender
+   (Gruppen werden mit expandiert: groupExpansionMax)
 ```
 
-### Schnell-Dialog (Klick ins Raster)
+## Modul-/Ressourcenstruktur (öffentliche API-Oberfläche)
 
-```
-┌────────────────────────────────────────────┐
-│ Termin hinzufügen          ⌄  ✕            │
-│ Titel ____________________________         │
-│ 📅 27. Okt. 2026   🕘 09:00 → 🕙 09:30     │
-│ Kalender ▾ Primär        [ ] Ganztägig     │
-│ [ Mehr Optionen ]        [ Fertig ]        │
-└────────────────────────────────────────────┘
-```
+Acht Ressourcengruppen laut Discovery v3:
 
-### Termin-Editor (Vollseite/Dialog)
+| Gruppe | Zweck |
+|--------|-------|
+| `calendars` | Kalenderstamm (anlegen/ändern/löschen/clear/transferOwnership) |
+| `calendarList` | nutzerbezogene Kalenderliste (`users/me`): Sichtbarkeit, Farben, Erinnerungen, watch |
+| `events` | Termine inkl. import/quickAdd/move/instances/watch |
+| `acl` | Freigaberegeln je Kalender inkl. watch |
+| `freebusy` | Verfügbarkeitsabfrage (POST) |
+| `colors` | Farbpaletten (Kalender/Termine) |
+| `settings` | Nutzeroberfläche-Einstellungen als Key/Value (`users/me/settings`, watch) |
+| `channels` | Push-Kanäle beenden (ein Stop-Endpunkt für alle watch-Ressourcen) |
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│ Termin bearbeiten                                    🗑  ✕   │
-├──────────────────────────────────────────────────────────────┤
-│ Titel                                                        │
-│ Ort · Datum · Uhrzeit · Zeitzone             [Ganztägig]     │
-│ Wiederholung ▾ (täglich/wöchentlich/monatlich/benutzerdef.)  │
-│──────────────────────────────────────────────────────────────│
-│ Gast hinzufügen ────────────────────────  Gäste: Ja/Nein/Viel │
-│ Google-Meet hinzufügen  ·  Raum/Gerät hinzufügen             │
-│ Erinnerung: Pop-up 10 Min. · Kalender · Farbe · Sichtbarkeit  │
-│ Verfügbarkeit: belegt / frei                                 │
-│ Beschreibung (Rich Text) · Anhänge · Arbeitsort/Fokuszeit    │
-│ Gäste dürfen: einladen · ändern · löschen                    │
-│                     [ Abbrechen ]  [ Speichern ]             │
-└──────────────────────────────────────────────────────────────┘
-```
+39 Schemas, u. a.: `Event`, `EventAttendee`, `EventDateTime`, `EventReminder`, `EventAttachment`, `EventLabel`, `EventFocusTimeProperties`, `EventOutOfOfficeProperties`, `EventWorkingLocationProperties`, `EventBirthdayProperties`, `ConferenceData`/`EntryPoint` (Meet), `Calendar`, `CalendarListEntry`, `AclRule`, `Setting`, `Channel`, `Colors`, `FreeBusyRequest/Response`, `FreeBusyCalendar/Group`, `TimePeriod`.
 
-### Termindetail-Popup (Klick auf Termin)
+## Datenmodell
 
-```
-┌──────────────────────────────────────────┐
-│ Team-Meeting                        ⋮  ✕ │
-│ Mo, 27. Okt. · 09:00 - 09:30 (MESZ)      │
-│ 📍 Raum 3 · 🎥 Meet beitreten            │
-│ Gäste:  ● Anna (Ja) ● Ben (Nein) ○ Cira  │
-│ [ Ja ] [ Nein ] [ Vielleicht ]           │
-│ Beschreibung, Anhänge, Kalendereintrags-ID│
-│ ⋮ = Duplizieren · Löschen · Verschieben   │
-└──────────────────────────────────────────┘
-```
+- **Calendar**: `summary`, `description`, `timeZone`, `location`, `conferenceProperties` (erlaubte Konferenztypen), `autoAcceptInvitations`, `dataOwner`, `labelProperties`.
+- **CalendarListEntry** (nutzerspezifische Ansicht desselben Kalenders): `primary`, `selected`, `hidden`, `colorId`/`backgroundColor`/`foregroundColor`, `defaultReminders`, `notificationSettings`, `summaryOverride`, `timeZone`, `deleted`, `accessRole`, `dataOwner`, `autoAcceptInvitations`.
+  *Achtung, verifizierter Schema-Wandel:* die früheren Felder `summaryVisibility` und `subscriptionType` kommen in der Discovery-Revision 20261028 **nicht mehr vor** – ältere Dritt-Doku ist hier überholt.
+- **Zugriffsrollen** (`accessRole`, `AclRule`): `freeBusyReader`, `reader`, `writerWithoutPrivateAccess` (neu: schreiben ohne private Details), `writer`, `owner`; ACL-Scopes: `user`, `group`, `domain`, `default` (public). Wichtige Unterscheidung laut API: **owner-Rolle ≠ dataOwner** (mehrere owner möglich, ein dataOwner; Wechsel via `calendars.transferOwnership`).
+- **Event**:
+  - Zeit: `start`/`end` als `EventDateTime` (`dateTime` mit Offset oder `date` für Ganztage), `endTimeUnspecified`, `recurrence` (RRULE-Zeilen), `originalStartTime`, `recurringEventId`, `sequence`, `created`/`updated`
+  - Identität: `id`, `iCalUID`, `etag`, `htmlLink`
+  - Status/Sicht: `status` (`confirmed`/`tentative`/`cancelled`), `transparency` (`opaque`/`transparent`), `visibility` (`default`/`public`/`private`), `locked`, `privateCopy`
+  - Typen (`eventType`): `default`, `birthday`, `focusTime`, `fromGmail` (nicht erstellbar), `outOfOffice`, `workingLocation` – mit eigenen Property-Blöcken
+  - Teilnehmer: `attendees[]` (`email`, `displayName`, `optional`, `resource`, `organizer`, `self`, `responseStatus` needsAction/declined/accepted/tentative, `additionalGuests`, `comment`), `attendeesOmitted`, Gastschalter (`guestsCanInviteOthers`, `guestsCanModify`, `guestsCanSeeOtherGuests`)
+  - Sonstiges: `reminders` + `reminderOverrides`, `attachments[]` (Drive/URL), `eventLabelId` (Labels via eventLabelVersion=1), `conferenceData` (Meet-Konferenz, `createRequest`), `extendedProperties` (private/shared), `source`, `colorId`, `gadget` (Altbestand)
+- **Setting**: `id`/`value` pro Nutzer (die API-Doku nennt als Beispiel die Zeitzone; die vollständige ID-Liste ist nicht veröffentlicht → **nicht verifiziert**), änderbar über die UI, lesbar/überwachbar über `users/me/settings`.
+- **Channel**: `id`, `resourceId`, `resourceUri`, `address`, `expiration`, `token`, `params`.
 
-### Einstellungsseite
+## Konfiguration
 
-```
-┌──────────────┬────────────────────────────────────────────┐
-│ Allgemein    │  Standardkalender, Wochenstart, Dichte,    │
-│ Ansichten    │  Zeitzonen, Sprache, Aufgaben, …           │
-│ Arbeitszeiten│                                            │
-│ Benachricht. │  (linke Navigation, rechter Formular-      │
-│ Intelligent  │   bereich; eigene URL pro Abschnitt)       │
-│ Import/Export│                                            │
-│ Wiederherst. │                                            │
-│ Kalenderliste│  jeder Kalender einzeln anklickbar         │
-└──────────────┴────────────────────────────────────────────┘
-```
+| Ebene | Wo | Belegte Beispiele |
+|-------|----|-------------------|
+| Nutzer (UI) | Zahnrad → „Einstellungen“ | „Tastenkombinationen aktivieren“, „Ansichtsoptionen“ (Wochenbeginn, benutzerdefinierte Ansicht), „Importieren & Exportieren“ |
+| Nutzer (API) | `settings`-Ressource | Zeitzone u. a. (vollständige Liste nicht veröffentlicht) |
+| Kalender (Stamm) | `calendars` + UI „Einstellungen und Freigabe“ | Name, Zeitzone, Beschreibung, Ort, iCal-Adressen (öffentlich/geheim), Freigabeliste, Export |
+| Kalender (pro Nutzer) | `calendarList` | Farbe, Auswahl/Ausgeblendet, Standarderinnerungen, Benachrichtigungen |
+| Terminplan | UI „Eintragen → Terminplan“ | Termindauer, Verfügbarkeitsfenster, Puffer, Max/Tag, Gästerechte, Zielkalender |
+| Workspace-Admin | Admin-Konsole | Zahlungen für Terminpläne (Stripe) ON/OFF, Time Insights deaktivierbar, Export einschränkbar; LSA/G-Sync-Schalter entfielen 2024/2025 |
+| API-Nutzung | Google-Cloud-Projekt | OAuth-Zustimmungsbildschirm, Scopes, Quota-Verwaltung, API-Key |
 
-### Mobile App (Android/iOS)
+## Deployment
 
-```
-┌──────────────────────────┐
-│ ☰   27. Oktober    🔍 ⚙  │
-│ ─────────────────────────│
-│ 9:00 ┌──────────────┐    │
-│      │ Team-Meeting │    │
-│      │ Raum 3 · Meet│    │
-│ 9:30 └──────────────┘    │
-│10:00 ░░ frei ░░          │
-│      (Zeitleiste)        │
-│──────────────────────────│
-│ Heute · Agenda · Kalender │  untere Navigation /
-└──────────────────────────┘  Kalenderauswahl je nach Version
-```
+- **Ausschließlich Google-SaaS**: kein Server-Image, keine Eigeninstallation, keine On-Premises-Variante; Datenhaltung in Google-Rechenzentren (genaue Region/Redundanz für Kalender publiziert Google nicht → **nicht verifiziert**).
+- UI und Apps werden kontinuierlich ausgerollt (Workspace-Updates-Blog unterscheidet „Rapid Release“ und „Scheduled Release“).
+- API-Stand über Discovery-Revisionen versioniert (aktuell 20261028); Breaking-Change-Schutz über ETags und Versionsparameter (`conferenceDataVersion`, `eventLabelVersion`).
+- Abrechnung/Quota: Standardnutzung kostenlos; Quota-Modell für Projekte ab 1. Mai 2026, Bepreisung oberhalb der Tagesgrenze für „später in 2026“ angekündigt.
 
-## UI/UX
+## Einordnung im FreeSynergy-Kontext
 
-### Design-Prinzipien
-- **Material Design**: flache Flächen, Karten-Popups, abgerundete Ecken, deutliche Primärschaltfläche
-- **Farbcodierung**: jeder Kalender hat Farbe und optional Symbol; Termine übernehmen die Kalenderfarbe
-- **Dichte**: "kompakt" und "normal" für Raster und Agenda
-- **Reduzierte Chrome-Elemente**: Raster dominiert, Werkzeuge erscheinen bei Hover/Fokus
-- **Konsistenz mit Gmail/Meet**: gleiche Kopfzeile, gleiches Kontomenü
-
-### Typografie und Symbole
-- **Schrift**: Roboto, variable Größen (ca. 12 px Rasterbeschriftung bis 18-22 px Titel)
-- **Symbole**: Google-Material-Icons für Erstellen, Suche, Einstellungen, Drei-Punkte-Menüs
-- **Ziffernblatt**: Uhrzeitachse links, Tages-/Wochen-/Monatskopf mit heutiger Markierung
-
-### Interaktionen
-- **Drag & Drop**: Termin am Block greifen und auf Zielzeit ziehen; an der Unterkante ziehen verlängert; Einrasten am Rasterraster (15/30-Minuten-Schritten)
-- **Hover**: freie Zeitfenster zeigen "+"-Symbol, Termine zeigen Stift- und Detailsymbol
-- **Klick**: freies Fenster → Schnell-Dialog; Termin → Detail-Popup; "Mehr Optionen" → Voll-Editor
-- **Animationen**: Popups skalieren/blenden ein, Termine gleiten beim Verschieben in die neue Position, "Jetzt"-Linie wandert, Toast-Meldung mit "Rückgängig" nach Änderungen
-- **Ladezustände**: Skeleton-Plätze im Raster, dezente Fortschrittsanzeige oben
-- **Rückgängig**: nach Verschieben, Löschen undÄndern erscheint ein Rückgängig-Hinweis
-
-### Responsive Design
-- **Desktop (breit)**: Seitenleiste dauerhaft sichtbar, Wochen-/Monatsraster mit allen Spalten
-- **Tablet/schmal**: Seitenleiste wird Overlay, Wochenansicht auf wenige Tage reduziert, Mini-Monat ausgeblendet
-- **Smartphone**: Kopfzeile mit Hamburger und Suche, Raster als Tages-/Zeitleiste, Termine als Karten, Bottom-Navigation; Querdrehen vergrößert das Raster
-- **Desktop-Programm**: existiert nicht; Websicht und mobile Apps sind die einzigen offiziellen Clients
-
-### Barrierefreiheit
-- **Tastatur**: Tab-Reihenfolge über Kopfzeile, Seitenleiste und Termine; offizielle Kurzbefehle (siehe [shortcuts.md](shortcuts.md))
-- **Screenreader**: ARIA-Beschriftungen für Rasterzellen, Termine und Dialoge; Termininformationen als zusammenhängender Text lesbar
-- **Farbfehlsichtigkeit**: Symbole pro Kalender statt nur Farbe, dunkles und helles Farbschema, hohe Kontraste
-- **Zoom und Textgröße**: Browser-Zoom ohne Funktionsverlust, Dichteoption reduziert Überlappungen
-- **Bewegungsreduktion**: Systemweite Reduktion von Animationen wird vom Browser unterstützt; eigene Einstellung in Kalender ist nicht dokumentiert
-
-## Performance
-
-- **Inkrementelles Nachladen**: nur der sichtbare Zeitbereich wird abgerufen (API-Zeitfenster)
-- **Sync-Tokens und ETags**: wiederholte Abfragen liefern nur Änderungen
-- **Raster-Virtualisierung**: lange Zeitachsen rendern nur sichtbare Zeilen
-- **Caching**: Browser-Cache und Client-seitiger Kalenderbestand; Mobil-App hält den aktuellen Zeitraum lokal
-
-## Siehe auch
-
-- [menu.md](menu.md)
-- [features.md](features.md)
-- [shortcuts.md](shortcuts.md)
-- [api.md](api.md)
+Anders als DAViCal (offener Request-Ablauf: PROPFIND/PUT/REPORT nach RFC 4791 gegen eigenen Server) ist Google Calendar nur über den REST-Fluss oben anbindbar: eigene OAuth-App, Sync-Token-Deltas und Watch-Kanäle. Ein Austausch mit CalDAV-Clients ist offiziell nicht vorgesehen; Brücken müssen die Calendar API v3 (oder ICS-Abos im Lesebetrieb) verwenden.

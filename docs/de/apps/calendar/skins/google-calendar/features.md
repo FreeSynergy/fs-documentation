@@ -1,132 +1,65 @@
-# Google Kalender - Funktionen
+# Google Kalender – verifizierte Funktionen (Stand: 2.11.2026)
 
-## Übersicht
+Grundlage: offizielle Hilfeseiten (support.google.com/calendar), offizielles Produktstück workspace.google.com/products/calendar, Calendar-REST-API-v3-Discovery (Revision 20261028) und das offizielle Google-Workspace-Updates-Blog.
 
-Google Kalender verwaltet Termine, wiederkehrende Serien, Aufgaben und Kalenderfreigaben in einer Cloud. Der Schwerpunkt liegt auf Mehrpersonenterminen: Einladungen mit Zu-/Absagen, Konferenzlinks, Anzeigen freier Zeiten und automatische Zeitzonen-Umrechnung. Für Organisationen kommen Teamkalender, Ressourcenkalender, Arbeitsort-Attribute und buchbare Terminpläne dazu.
+## Kalender & Ansichten
 
----
+- Mehrere Kalender pro Konto: eigener Standardkalender plus beliebig viele Sekundärkalender (Produktseite, „Get started“-Hilfe)
+- Ansichten: **Tag, Woche, 4 Tage, Monat, Jahr, Zeitplan (Schedule)** (Hilfe „View your day, week, or month“)
+- Farbmarkierung von Kalendern und Terminen; helles/dunkles/System-Design (Produktseite)
+- Web-Oberfläche, Apps für **Android, iOS, Wear OS, Apple Watch** – automatische Synchronisation (Produktseite); **keine Desktop-App**, sondern Browser (Chrome, Firefox, Safari, Edge) (Hilfe „Get started“); Offline-Nutzung ist dokumentiert (Hilfeseite „Offline verwenden“, Umfang im Detail nicht geprüft)
+- Suche über Freitext (API: `q` über Titel, Beschreibung, Ort, Teilnehmer u. a.)
 
-## 1. Termine und Ereignisse
+## Termine
 
-### Funktionen
-- **Termin anlegen**: Titel, Ort, Anfang/Ende, ganztägig, Kalenderauswahl, Beschreibung (Rich Text), Farbe
-- **Schnell erstellen**: natürlichsprachliche Eingabe wie "Zahnarzt am 12. Mai um 9 Uhr, alle 6 Monate"
-- **Gäste einladen**: E-Mail-Adressen, Antwortstatus (Ja/Nein/Vielleicht/ausstehend), "Gäste können einladen/ändern/löschen", "Nur zeigen, wenn frei"
-- **Konferenzlink**: Google Meet (bei Workspace auch Telefon-Brücken), Raum-/Ressourcenbuchung
-- **Erinnerungen**: Pop-up und E-Mail, mehrere je Termin, Vorgabe pro Kalender
-- **Sichtbarkeit und Verfügbarkeit**: öffentlich/privat/vertraulich, "frei" oder "belegt" (Transparenz)
-- **Anhänge und Links**: Drive-Verknüpfungen, Links in der Beschreibung
-- **Serientermine**: täglich, wöchentlich, monatlich, jährlich, benutzerdefiniert (z. B. "jeden 2. Dienstag"), Ausnahmen einzelner Termine, Änderung "nur diesen / alle nachfolgenden / alle"
-- **Zeitumrechnung**: Termine werden in der viewing-Zeitzone angezeigt; zweite Zeitzone zusätzlich einblendbar
-- **Aufgaben**: eigene Aufgabenliste mit Fälligkeit, Unteraufgaben und Wiederholung (Datenmodell der Tasks)
-- **Zeitblöcke, Fokuszeit, Abwesenheit, Arbeitsort** als besondere Ereignistypen (Workspace)
+- Erstellen/Bearbeiten inkl. **Ganztags-, mehrsprachige beschreibbare Termine, Serientermine** (Wiederholungsmuster, API-Feld `recurrence`), Erinnerungen (Pop-up/E-Mail, API `EventReminder`)
+- Gastauftritt: Einladungen mit Antwortstatus, Organizer/Rollenteilung; Gastsicherheit über `guestsCanInviteOthers`, `guestsCanModify`, `guestsCanSeeOtherGuests` (API-Feld `visibility`, `privateCopy`)
+- **Dateianhänge an Termine** (Drive-Links/URLs; API `supportsAttachments`, `EventAttachment`; Produktseite)
+- **Meet-Konferenzen** automatisch/per Klick (`conferenceData`, `hangoutLink`)
+- **Fokuszeit**: Termin, der Chat-Benachrichtigungen stummschaltet und Besprechungen automatisch ablehnt (Hilfe 11190973; API `focusTimeProperties`)
+- **Abwesenheit (Out of Office)** und **Arbeitsort/-zeiten** als Termin-Eigenschaften für Teams (API `outOfOfficeProperties`, `workingLocationProperties`; Produktseite)
+- Geburtstagstermine als eigener Termintyp (API `birthdayProperties`)
+- „Schnell hinzufügen“ per Freitext (API `events.quickAdd` mit `text`-Parameter)
+- Termin verschieben zwischen Kalendern (API `events.move`)
 
-### Was Google Kalender hier NICHT kann
-- Keine genehmigungspflichtigen Freigabe-Workflows (ein Termin braucht keine mehrstufige Genehmigung)
-- Keine Terminabhängigkeiten, Meilensteine oder Rückwärtsplanung (kein Projektplan)
-- Keine Kapazitätsplanung pro Ressourcenmenge über die einfache Ressourcenbuchung hinaus
-- Keine gemeinsame Live-Bearbeitung desselben Termins durch mehrere Personen (kein gleichzeitiges Editieren mit mehreren aktiven Nutzern)
-- Keine verschachtelten, vererbten Berechtigungen pro Unterordner - Freigaben gelten pro Kalender
+## Zusammenarbeit & Freigaben
 
----
+- Kalender freigeben mit Berechtigungsstufen: **nur Belegung sehen / Details sehen / Termine ändern / teilen verwalten** (Hilfe „Subscribe to someone else’s calendar“)
+- Abonnieren fremder Kalender per E-Mail-Suche oder **URL (ICS-Abonnement öffentlicher Kalender)**; über **400 abonnierte Kalender** → Performance-Probleme (Hilfe 37100)
+- „**Einen Termin finden**“ (Find a time): Vorschläge für freie Zeiten/Räume für Gruppen, Web + Android + iOS (Workspace-Updates-Blog 2016)
+- Organisationskalender und **Räume/Ressourcen** in Google Workspace (FAQ Produktseite; Verwaltung ist Workspace-Admin-Funktion)
+- Erinnerungen/Benachrichtigungen pro Kalender und pro Termin (E-Mail, App-Push; API-Kanäle für Drittanbieter)
 
-## 2. Kalender, Freigaben und Teams
+## Buchung & Organisation
 
-### Funktionen
-- **Mehrere Kalender** pro Konto, plus Unterkalender (eigene Farbe, eigene Freigabe)
-- **Teamkalender** und Gruppenkalender (Google Gruppen als Kalender-ID)
-- **Berechtigungsstufen**: nur freie/belegte Zeiten, alle Details, bearbeiten, verwalten
-- **Domänenweite Vorgaben** durch Workspace-Administratoren (wer darf mit wem teilen, öffentliche Freigabe)
-- **Abonnements**: öffentliche Kalender (Feiertage regional, Sport, Mondphasen), ICS-Abonnement-URL
-- **Import/Export**: ICS-Datei importieren, jeden Kalender als ICS herunterladen; Google Takeout für den Vollexport
-- **Ressourcenkalender**: Räume und Geräte mit Standort, Kapazität und Buchungsrichtlinie (Admin Console)
-- **Wiederherstellen**: versehentliche Änderungen der letzten Zeiträume zurückholen
+- **Reservierungsseiten / Terminpläne (Appointment schedules)**: eigene Buchungsseite mit Verfügbarkeitsfenstern, ohne Zusatz-Apps; **kostenlos für private Google-Konten** (FAQ Produktseite; Hilfe 10729749/11608416)
+- Premium (bestimmte Google-One-/Workspace-Abos): **mehrere Reservierungsseiten, Stripe-Zahlungen, E-Mail-Erinnerungen, Verfügbarkeitsprüfung über mehrere Kalender** (Produktseite; Workspace-Admin-Schalter „Appointment schedules with payments“)
+- **Tasks-Integration**: Aufgaben mit Datum/Uhrzeit erscheinen im Kalender (eigener Dienst Google Tasks) (Produktseite)
+- Automatische Termine aus **Gmail** (Flüge, Hotels, Restaurants) (Produktseite)
+- **„Ihre Zeit im Blick“ (Time Insights)**: Analyse des Meeting-Verhaltens, Workspace-Konten, administrativ abschaltbar (Hilfe 10738043)
+- **Gemini-KI** (Premium-Abos): „Plane für mich“ in Gmail, „Zum Kalender hinzufügen“ aus E-Mails (Produktseite)
+- **Migrationstools** u. a. aus Microsoft Exchange/Outlook und IBM Notes (Produktseite FAQ)
 
-### Was Google Kalender hier NICHT kann
-- Keine lokale/On-Premise-Kopie des Kalenders (kein Self-Hosting, keine eigene Datenbank)
-- Keine mandantenweite Rechteverwaltung mit ROLEn-Vererbung über Organisationseinheiten (nur domänenweite Einstellungen plus Freigabe pro Kalender)
-- Kein "Schreibzugriff auf einzelne Termine" - Rechte gelten immer für den ganzen Kalender
-- Kein verschlüsseltes Ende-zu-Ende-Modell für Termine; Termine liegen in der Google-Cloud
+## Import, Export, Schnittstellen
 
----
+- **ICS-Export** von Kalendern (nur Web, Rechte „Änderungen vornehmen & Freigabe verwalten“ erforderlich) (Hilfe 37111); **ICS-Import** in Google Kalender (Grundfunktion der Import-/Export-Hilfewelt; API-seitig `events.import`)
+- **Calendar REST API v3** (alle Kalender-/Terminoperationen, Sync-Token, Batching, Push-Kanäle) und **Tasks API**; Apps-Script-Dienst `CalendarApp`; Workspace-Add-ons (siehe [api.md](api.md))
 
-## 3. Ansichten und Planungshilfen
+## Was Google Kalender NICHT bietet
 
-### Funktionen
-- **Ansichten**: Tag, Woche, Monat, Jahr, Zeitplan (Agenda), Angepasste Ansicht (mehrere Kalender nebeneinander)
-- **Zeit finden / Frei-belegt-Ansicht**: freie Slots mehrerer Kalender vergleichen
-- **Zeitzonenansicht für internationale Teams** (Uhrzeiten pro Beteiligter bei der Terminsuche)
-- **Arbeitszeiten** als Rasterhintergrund, Wochenende ein-/ausblendbar
-- **Terminpläne**: öffentliche Buchungsseite mit Slot-Definition, Pufferzeiten, Fragebogen (Nachfolger des Google-Buchungssystems)
-- **Mini-Monat**, Farb- und Symbolsystem pro Kalender, Dichtesteuerung
-- **Drucken** über die Druckvorlage des Browsers mit Kalenderoptionen
+- **Kein Self-Hosting**: weder Serversoftware noch lokale Variante; Daten liegen ausschließlich in Google-Rechenzentren
+- **Kein Desktop-Programm** (nur Browser + mobile Apps) – ausdrücklich in der offiziellen Hilfe
+- **Kein offizielles CalDAV/CardDAV** und kein Exchange ActiveSync mehr: Google Sync wurde 2024 eingestellt, CalDAV/CardDAV mit Passwort („weniger sichere Apps“) ab 2024/2025 deaktiviert; offizielle Doku nennt nur die REST-API. Drittanbieter-Endpunkte laufen inoffiziell über OAuth („weder von Google noch von DAVx⁵ offiziell unterstützt“)
+- **Kein offenes Standardprotokoll** für Sync (eigene Sync-Token/Webhook-Kanäle statt RFC 4791 REPORT/Sync wie bei DAViCal)
+- **Die „Ziele“-(Goals-)Funktion wurde eingestellt** (Abschaltung ab November 2022) – in älterer Literatur noch zu finden
+- Aufgaben (Tasks) sind ein **separater, schlanker Dienst**, kein gleichwertiger Termintyp mit Teilnehmern/Serien im Kalenderdatensatz
+- Reservierungsseiten sind **nicht per API verwaltbar** – im aktuellen Discovery v3 (Rev. 20261028) gibt es weder eine eigene Ressource noch einen `appointment`-`eventType`; reine UI-Funktion
+- Workspace-Verwaltungsfeatures (Räume/Ressourcen, Richtlinien, Time Insights für die Org) gibt es **nicht für private Konten**
+- Quoten & Schwellen (10.000/min/Projekt, 600/min/Nutzer, 1 Mio./Tag mit geplanter Bepreisung ab „später 2026“) – keine unbegrenzte Automatisierung
+- Kein End-to-End-verschlüsselter Kalender; „Geheimadressen“-Freigaben ersetzen keine echte Verschlüsselung
 
-### Was Google Kalender hier NICHT kann
-- Keine Gantt-/Kapazitätsdiagramme und keine Auslastungsberichte
-- Keine Timer-/Zeiterfassung (keine Soll-Ist-Zeit, keine Integration in Arbeitszeitkonten ohne Fremdttool)
-- Keine offline voll funktionsfähige Web-Ansicht (nur eingeschränkter Mobil-Cache)
+## Nicht verifiziert
 
----
-
-## 4. Synchronisation und Zugriff von außen
-
-### Funktionen
-- **Calendar REST API v3** (JSON/HTTPS) für Kalender, Termine, ACL, Free/Busy und Push-Kanäle
-- **CalDAV** für Kalender-Clients (in Workspace vom Administrator freizuschalten)
-- **ICS-Abonnement-Links** für öffentliche Kalender, **Embed-URLs** für Websites
-- **Mobile Apps** für Android und iOS mit Widgets, Benachrichtigungen und Material-Design-Oberfläche
-- **Google Assistant / Nest**: Termine abfragen und anlegen
-- **Synchronisation mit Gmail**: Einladungen, "In Kalender suchen", Meet-Erkennung
-
----
-
-## Was Google Kalender NICHT kann (gesamt)
-
-| Bereich | Grenze |
-|---------|--------|
-| Betrieb | Kein Self-Hosting, kein Container/Image, keine eigene Instanz - Google legt Server, Version und Datenhaltung fest |
-| Datenhoheit | Kein direkter Datenbankzugriff; Export nur als ICS/Takeout, keine relationale Abfrage |
-| Offline | Web-App ohne vollständige Offline-Bearbeitung; Mobil nur begrenzt gecacht |
-| Berechtigungen | Recht immer pro Kalender, nicht pro Termin; keine Vererbung, keine Rechte-Ablaufdaten |
-| Workflows | Keine Genehmigungsketten, keine Regeln/Automation im Kalender selbst (nur externe Automatisierung) |
-| Aufgaben | Keine Abhängigkeiten, keine Projekt-/Team-Task-Boards in dem Sinne wie dedizierte Task-Tools |
-| Berichte | Keine Auslastungs-/Überschneidungsberichte, keine Ressourcen-Kapazitätsplanung über simple Buchung hinaus |
-| Client-Erweiterbarkeit | Kein eigenes Pluginsystem in der Oberfläche; Erweiterungen nur über Workspace Add-ons und Apps Script |
-| Barrierefreiheit/Anpassung | Kein freies Theme-System, keine eigenen CSS-Vorgaben, kein White-Label |
-| Terminpläne/API | Für Terminpläne (Buchungsseiten) existiert kein öffentlich dokumentierter Endpunkt der Calendar API v3 (nicht dokumentiert) |
-| Historie | Keine vollständige Versionshistorie eines Termins (nur Seriennummer/Änderungszeitstempel in der API) |
-
----
-
-## Erweiterungen, Plugins und Integrationen
-
-### Google-eigene
-- **Google Workspace Add-ons** (Karten-Oberflächen in Kalender, Gmail, Drive) über den Add-on-SDK-Mechanismus
-- **Apps Script** mit dem Dienst `CalendarApp` (Kalender, Termine, Gäste per Skript lesen und schreiben)
-- **Marketplace-Integrationen** (Workspace Marketplace) für Buchung, Ressourcen, Zeiterfassung
-- **Gmail, Meet, Tasks, Drive, Forms** (Formulare in Terminplänen), **Google Chat** für Meet-Benachrichtigungen
-
-### Gängige Drittanbieter-Anbindung (über API oder CalDAV/ICS)
-- **Automatisierung**: Zapier, Make, IFTTT, Google Apps Script, n8n (Google-Calendar-Node)
-- **Kalender-Clients**: Thunderbird (Provider für Google-Kalender), Apple Kalender, Apple Mail, Microsoft Outlook (Abonnement/Abruf), Evolution, Fantastical, eM Client, DAVx5 (Android, CalDAV)
-- **Planungs- und Buchungs-Tools**: Calendly, YouCanBook.me, Excalibur, Reclaim, Motion, Notion Calendar
-- **Task-Tools**: Todoist, Asana, TickTick (Terminspiegel in Google Kalender)
-- **Hardware**: Android-Smartphones/Wear OS, Pixel Watch, Nest Hub, Chromecast mit Kalenderanzeige
-
-### Eigenbau
-- Client-Bibliotheken von Google für Python, Node.js, Java, PHP, Ruby, .NET, Go (siehe [api.md](api.md))
-- CalDAV-Clients für klassische Kalenderprogramme
-
----
-
-## Shortcuts
-
-siehe [shortcuts.md](shortcuts.md) für alle dokumentierten Tastenkürzel der Web-Ansicht.
-
----
-
-## Empfehlung
-
-- **Für Privatpersonen**: schnellste Terminverwaltung mit Gmail und Mobil-Synchronisation
-- **Für Teams in Workspace**: starke Terminkoordination, Ressourcen, Teamkalender - dafür Administrationsrichtlinien beachten
-- **Weniger geeignet**: wenn Datenhoheit, Self-Hosting, Freigabe-Workflows oder Offline-Fähigkeit Pflicht sind (dann Nextcloud Calendar, Radicale/BAïkal oder Groupware-Systeme prüfen)
+- Das Einstellungs-Feature „Zweite Zeitzone“ in der Web-Oberfläche war lange dokumentiert, der alte Hilfartikel ist umgezogen; Nachweis aus aktueller Primärquelle stand bei Redaktion nicht verfügbar → nicht als verifiziert gelistet
+- Detailumfang der Offline-Nutzung (welche Operationen offline möglich sind)
+- Ob die Workspace Events API inzwischen Kalender-Ressourcen subscriben lässt
