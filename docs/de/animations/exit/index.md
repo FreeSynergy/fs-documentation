@@ -11,12 +11,14 @@ Ausgangsanimationen lassen ein Element verschwinden und seinen Platz frei werden
 - **bounce-out** - vor dem Verschwinden federn
 - **pop-out** - kurz ausholen und wegklappen (Chips, Badges)
 - **collapse** - Höhe oder Breite auf 0 reduzieren (Akkordeon zu)
+- **radial-in** - Punkte wandern zurück zum Anker (Kreismenü schließen)
 
 ## Familien
 
 Jede Zeile hat ihr Gegenstück in [Eingang (entrance)](../entrance/): `fade-out` ↔
 `fade-in`, `slide-out` ↔ `slide-in`, `zoom-out` ↔ `zoom-in`, `scale-out` ↔ `scale-in`,
-`bounce-out` ↔ `bounce-in`, `pop-out` ↔ `pop-in`, `collapse` ↔ `expand`.
+`bounce-out` ↔ `bounce-in`, `pop-out` ↔ `pop-in`, `collapse` ↔ `expand`,
+`radial-in` ↔ `radial-out`.
 
 ## Hinweis zum Layout
 
@@ -28,3 +30,4 @@ reißt die übrige Fläche abrupt auf – das wirkt stärker als jede Ausgangsan
 - [Animationen Übersicht](../index.md)
 - [Eingang (entrance)](../entrance/)
 - [Accordion](../../components/containers/accordion/description.md), [Toast](../../components/feedback/toast/description.md)
+- [Radial Menu](../../components/navigation/radial-menu/description.md) - nutzt `radial-in` beim Schließen

@@ -168,6 +168,11 @@ nav:
               - de/components/navigation/pagination/appearance.md
               - de/components/navigation/pagination/attributes.md
               - de/components/navigation/pagination/usage.md
+          - radial-menu:
+              - de/components/navigation/radial-menu/description.md
+              - de/components/navigation/radial-menu/appearance.md
+              - de/components/navigation/radial-menu/attributes.md
+              - de/components/navigation/radial-menu/usage.md
           - sidebar:
               - de/components/navigation/sidebar/description.md
               - de/components/navigation/sidebar/appearance.md

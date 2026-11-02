@@ -9,7 +9,7 @@ Alle Komponenten erben von der **Basisklasse** [base](basics/base.md): geerbte A
 Barrierefreiheit, Dateisatz und Namenskonvention. Eine Komponentendatei
 listet nur ihre **eigenen** Attribute.
 
-## Kategorien (10) — 83 Komponenten
+## Kategorien (10) — 84 Komponenten
 
 ### [basics](./basics/) — Grundlagen (4)
 
@@ -23,11 +23,11 @@ Action-Elemente lösen eine einzelne Handlung aus oder bündeln zusammengehörig
 
 [button](./actions/button/), [button-group](./actions/button-group/), [floating-action-button](./actions/floating-action-button/)
 
-### [navigation](./navigation/) — Navigation (9)
+### [navigation](./navigation/) — Navigation (10)
 
 Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Reiter, Seitenleisten und Pfadangaben.
 
-[bottom-navigation](./navigation/bottom-navigation/), [breadcrumb](./navigation/breadcrumb/), [command](./navigation/command/), [language-switcher](./navigation/language-switcher/), [menu](./navigation/menu/), [pagination](./navigation/pagination/), [sidebar](./navigation/sidebar/), [tabs](./navigation/tabs/), [toolbar](./navigation/toolbar/)
+[bottom-navigation](./navigation/bottom-navigation/), [breadcrumb](./navigation/breadcrumb/), [command](./navigation/command/), [language-switcher](./navigation/language-switcher/), [menu](./navigation/menu/), [pagination](./navigation/pagination/), [radial-menu](./navigation/radial-menu/), [sidebar](./navigation/sidebar/), [tabs](./navigation/tabs/), [toolbar](./navigation/toolbar/)
 
 ### [containers](./containers/) — Container (6)
 

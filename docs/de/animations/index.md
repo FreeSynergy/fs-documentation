@@ -8,8 +8,8 @@ ein eigenes Verzeichnis mit drei Dateien.
 
 | Kategorie | Verzeichnis | Anzahl | Inhalt |
 |-----------|-------------|--------|--------|
-| Eingang | [entrance](entrance/) | 8 | Elemente erscheinen lassen |
-| Ausgang | [exit](exit/) | 7 | Elemente verschwinden lassen |
+| Eingang | [entrance](entrance/) | 9 | Elemente erscheinen lassen |
+| Ausgang | [exit](exit/) | 8 | Elemente verschwinden lassen |
 | Feedback | [feedback](feedback/) | 9 | Antwort auf eine Eingabe |
 | Endlos | [loop](loop/) | 4 | wiederholte Signale |
 | Laden | [loading](loading/) | 4 | Wartezeit überbrücken |
@@ -17,7 +17,7 @@ ein eigenes Verzeichnis mit drei Dateien.
 | Bewegung | [movement](movement/) | 1 | scrollabhängige Ebenen |
 | Organisation | [organization](organization/) | 2 | Startzeitpunkte über Kinder verteilen |
 
-**41 dokumentierte Animationen** (Stand dieser Datei).
+**43 dokumentierte Animationen** (Stand dieser Datei).
 
 ## Übersicht
 
@@ -64,6 +64,8 @@ ein eigenes Verzeichnis mit drei Dateien.
 | 39 | **Parallax** | movement | Ebenen bewegen sich unterschiedlich schnell |
 | 40 | **Stagger** | organization | Kind-Elemente starten nacheinander versetzt |
 | 41 | **Cascade** | organization | Versetzter Start entlang einer Richtung |
+| 42 | **Radial Out** | entrance | Punkte wachsen radial aus dem Anker heraus (Kreismenü) |
+| 43 | **Radial In** | exit | Punkte wandern zurück zum Anker (Kreismenü) |
 
 ## Baum
 
@@ -75,13 +77,13 @@ Gegenrichtung.
 animations/
 │
 ├── entrance/          fade-in, slide-in, zoom-in, scale-in,
-│                      bounce-in, pop-in, expand, unfold
+│                      bounce-in, pop-in, expand, unfold, radial-out
 │     Transparenz ···· fade          Größe ·········· zoom, scale, bounce, pop
 │     Position ······· slide         Layoutgröße ····· expand      (drop ⁺, wipe ⁺,
 │                                                        swing ⁺, blur ⁺)
 │
 ├── exit/              fade-out, slide-out, zoom-out, scale-out,
-│                      bounce-out, pop-out, collapse
+│                      bounce-out, pop-out, collapse, radial-in
 │     dieselben Familien, Richtung out  (fold ⁺ als Gegenstück zu unfold)
 │
 ├── feedback/          shake, wiggle, ripple, press, lift,
@@ -130,12 +132,13 @@ Abkürzung für `fade` + `direction: in`).
 | `scale` | [scale-in](entrance/scale-in/description.md), [scale-out](exit/scale-out/description.md) | `direction`, `origin` |
 | `bounce` | [bounce-in](entrance/bounce-in/description.md), [bounce-out](exit/bounce-out/description.md) | `direction`, `amplitude`, `bounces` |
 | `pop` | [pop-in](entrance/pop-in/description.md), [pop-out](exit/pop-out/description.md) | `direction`, `overshoot`, `anticipation` |
+| `radial` | [radial-out](entrance/radial-out/description.md), [radial-in](exit/radial-in/description.md) | `direction: in \| out`, `staggerStep`, `ringStep`, `order` |
 | `collapse` | [expand](entrance/expand/description.md), [collapse](exit/collapse/description.md) | `direction`, `dimension: height \| width \| both` |
 | `rotate` | [rotate](transition/rotate/description.md), [spin](loop/spin/description.md) | `iterationCount: infinite` macht aus Rotate ein Spin |
 | `pulse` | [pulse](loop/pulse/description.md), [heartbeat](loop/heartbeat/description.md) | `waveform: pulse \| heartbeat`, `intensity` |
 | `fade` + Weichzeichner | – | bereits abgedeckt: Attribut `blur` in [Fade In](entrance/fade-in/attributes.md) |
 
-**Möglich:** 41 Dokumente → **32 Familien-Dokumente** (9 Paare verschmelzen). Bewusst noch
+**Möglich:** 43 Dokumente → **33 Familien-Dokumente** (10 Paare verschmelzen). Bewusst noch
 nicht gemacht: die Zusammenlegung würde alle Querverweise und die Navigation in
 `mkdocs.yml` erneut ändern. Zusätzlich sind Skeleton/Shimmer und Typing/Dots
 Überschneidungen, die als *Varianten* in den bestehenden Dokumenten geführt werden.
