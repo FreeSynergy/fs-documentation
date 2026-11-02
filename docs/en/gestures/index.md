@@ -126,6 +126,9 @@ gestures:
 | WCAG 2.5.7 Dragging Movements | Drag needs a single-pointer alternative |
 | `touch-action` (CSS) | Control browser-native gestures (pan, pinch-zoom) |
 
+Because gestures are never self-explanatory, the same rule applies everywhere:
+make the same action reachable via button, menu or keyboard as well.
+
 ## See also
 
 - Families: [single](single/) · [multi](multi/) · [device](device/) · [combined](combined/)
