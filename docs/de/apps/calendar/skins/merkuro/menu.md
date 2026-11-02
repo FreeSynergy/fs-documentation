@@ -1,4 +1,4 @@
-# Kalendar / Merkuro – Menü- und Navigationsstruktur (Merkuro Calendar 26.08.2)
+# Merkuro – Menü- und Navigationsstruktur (Merkuro Calendar 26.08.2)
 
 Alle Einträge aus dem QML-/C++-Quelltext des Tarballs 26.08.2 (`src/calendar/calendarapplication.cpp`, `src/components/…`, `src/calendar/qml/…`); Original-Labels englisch zitiert. Fundstellen in [index.md](index.md#quellen).
 

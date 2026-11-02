@@ -61,4 +61,4 @@ Alle URLs relativ zu `{base}/index.php/apps/calendar/` (Kurzform `{base}/apps/ca
 
 ## Kürzel fremder Clients (abgrenzend)
 
-Thunderbird, Thunderbird-Sonnation, Kalendar, Apple Kalender, DAVx⁵ usw. haben **eigene, client-seitige** Kürzel, die nichts mit dieser App zu tun haben – sie wirken nur im jeweiligen Programm, nicht in der Nextcloud-Web-App. Wer per CalDAV (nicht per Web-UI) arbeitet, hat ohnehin keine App-Kürzel; Automatisierung läuft dort über CalDAV-Requests (siehe [api.md](api.md)).
+Thunderbird, Thunderbird-Sonnation, Merkuro, Apple Kalender, DAVx⁵ usw. haben **eigene, client-seitige** Kürzel, die nichts mit dieser App zu tun haben – sie wirken nur im jeweiligen Programm, nicht in der Nextcloud-Web-App. Wer per CalDAV (nicht per Web-UI) arbeitet, hat ohnehin keine App-Kürzel; Automatisierung läuft dort über CalDAV-Requests (siehe [api.md](api.md)).

@@ -1,4 +1,4 @@
-# Kalendar / Merkuro – Funktionen (verifiziert an Merkuro 26.08.2)
+# Merkuro – Funktionen (verifiziert an Merkuro 26.08.2)
 
 Aktuell dokumentierte Version: **Merkuro Calendar 26.08.2** (Kalendar heißt seit KDE Gear 23.08 „Merkuro“). Alle Punkte stammen aus dem Quelltext des Release-Tarballs; Fundstellen in [index.md](index.md#quellen).
 
@@ -37,7 +37,7 @@ Aktuell dokumentierte Version: **Merkuro Calendar 26.08.2** (Kalendar heißt sei
 - Konvergente UI: identische App auf Desktop und **Plasma Mobile** (Kirigami, `Kirigami.Settings.isMobile`-Weichen).
 - Vollständige Übersetzungen (AppData für Dutzende Sprachen).
 
-## Was Kalendar/Merkuro NICHT bietet
+## Was Merkuro NICHT bietet
 
 - **Kein Server, keine Weboberfläche** – reine Desktop-/Mobile-App; öffentliche Freigaben, Einbettung oder Buchungsfremde gibt es nur über den jeweiligen Kalender-Server (z. B. Nextcloud Calendar).
 - **Keine Webhooks/REST-API** und kein SDK für Drittanbieter; Automatisierung nur über D-Bus, CLI-Argumente und Akonadi-Bibliotheken.

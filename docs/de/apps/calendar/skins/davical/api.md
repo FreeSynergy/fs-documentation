@@ -141,7 +141,7 @@ Antwort enthält eine Ticket-URL (`…?ticket=<id>`); Ablaufoptionen wie `Second
 
 - **Python**: `caldav`, `vdirsyncer`, `khal`
 - **Android**: DAVx⁵ (vom Projekt gepflegt mitgetestet)
-- **Desktop**: Thunderbird (Thunderbird-eigenes CalDAV/CardDAV), Evolution, Kalendar, Apple Kalender/Kontakte
+- **Desktop**: Thunderbird (Thunderbird-eigenes CalDAV/CardDAV), Evolution, Merkuro, Apple Kalender/Kontakte
 - **PHP**: AWL-Bibliotheken des Projekts (`XMLDocument`, `DAVResource`); CalDAV-Client-Klassen `inc/caldav-client.php`
 - **JS/Rohe Zugriffe**: `fetch` mit DAV-Methoden (`PROPFIND`/`REPORT`), da keine SDKs gepflegt werden
 

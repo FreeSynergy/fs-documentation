@@ -1,4 +1,4 @@
-# Kalendar → Merkuro Calendar
+# Merkuro Calendar
 
 > **Umbenennung:** Das 2021 als **Kalendar** gestartete KDE-Kalenderprogramm heißt seit **KDE Gear 23.08 (August 2023) Merkuro**; Repos, Binaries und AppStream-ID folgen dem neuen Namen (`pim/merkuro`, `merkuro-calendar`, `org.kde.merkuro.calendar`). Diese Sektion dokumentiert den aktuellen Stand des Nachfolgers.
 
@@ -14,7 +14,7 @@ Merkuro Calendar ist der **moderne Kalender-Client der KDE-Desktop-Umgebung** (Q
 | Datei | Inhalt |
 |-------|--------|
 | [description.md](description.md) | Was das Programm macht, Vorteile, Abgrenzung (u. a. zu Nextcloud Calendar, Davical, KOrganizer), technische Details, Für-wen-geeignet |
-| [features.md](features.md) | Verifizierte Funktionsliste + „Was Kalendar/Merkuro NICHT bietet“ |
+| [features.md](features.md) | Verifizierte Funktionsliste + „Was Merkuro NICHT bietet“ |
 | [api.md](api.md) | D-Bus-Interface `org.kde.calendar.Calendar`, CLI/ICS-Import, Akonadi als Datenschicht, Konfiguration, Versionsstand |
 | [menu.md](menu.md) | Menüstruktur (Datei/Bearifen/Ansicht/Einstellungen, Mobile-Toolbar) aus dem QML-Quelltext |
 | [shortcuts.md](shortcuts.md) | Verifizierte Tastenkürzel der QML-Oberfläche |

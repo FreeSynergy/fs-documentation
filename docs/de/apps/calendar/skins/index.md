@@ -10,7 +10,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 
 - [Baïkal/Davical](./davical/index.md)
 - [Google Kalender](./google-calendar/index.md)
-- [Kalendar](./kalendar/index.md)
+- [Merkuro](./merkuro/index.md)
 - [Nextcloud Calendar](./nextcloud-calendar/index.md)
 - [Outlook Kalender](./outlook-calendar/index.md)
 - [GNOME Planner](./planner/index.md)
@@ -22,7 +22,7 @@ docs/de/apps/calendar/skins/
 ├── index.md              (diese Datei)
 ├── davical/   (index, menu, features, description, structure, shortcuts, api)
 ├── google-calendar/   (index, menu, features, description, structure, shortcuts, api)
-├── kalendar/   (index, menu, features, description, structure, shortcuts, api)
+├── merkuro/   (index, menu, features, description, structure, shortcuts, api)
 ├── nextcloud-calendar/   (index, menu, features, description, structure, shortcuts, api)
 ├── outlook-calendar/   (index, menu, features, description, structure, shortcuts, api)
 └── planner/   (index, menu, features, description, structure, shortcuts, api)

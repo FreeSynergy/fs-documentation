@@ -129,7 +129,7 @@ Die dokumentierten Programme sind abgeschlossen; die noch **vorgesehenen** Kandi
 | Helpdesk | **dokumentiert:** zammad, osticket, glpi, request-tracker, zendesk, freshdesk, helpscout, helodesk |
 | Projektmanagement | **dokumentiert:** trello, jira, asana, redmine, taiga, openproject, planka, wekan — **vorgesehen:** clickup, mon |
 | Kontakt / CRM | **dokumentiert:** nextcloud-contacts, gnome-contacts, kaddressbook, monica, civicrm, suitecrm, espocrm, salesforce, pipedrive, hubspot |
-| Kalender | **dokumentiert:** nextcloud-calendar, davical, google-calendar, outlook-calendar, kalendar, planner — **vorgesehen:** rndc, Thunderbird-events |
+| Kalender | **dokumentiert:** nextcloud-calendar, davical, google-calendar, outlook-calendar, merkuro, planner — **vorgesehen:** rndc, Thunderbird-events |
 | Maps | **dokumentiert:** openstreetmap, leaflet, maplibre, qgis, organic-maps, osmand, umap — **vorgesehen:** maputnik, geojson-io |
 | ERP | **dokumentiert:** erpnext, odoo, dolibarr, axelor, tryton, sage — **vorgesehen:** ofbiz |
 | Workflows | **dokumentiert:** n8n, node-red, apache-airflow, make, zapier, prefect — **vorgesehen:** kestra, activepieces |

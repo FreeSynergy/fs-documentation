@@ -30,7 +30,7 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 - [Baïkal/Davical](./skins/davical/index.md) - Baïkal/Davical
 - [Google Kalender](./skins/google-calendar/index.md) - Google Kalender
-- [Kalendar](./skins/kalendar/index.md) - Kalendar
+- [Merkuro](./skins/merkuro/index.md) - Merkuro (ehemals Kalendar)
 - [Nextcloud Calendar](./skins/nextcloud-calendar/index.md) - Nextcloud Calendar
 - [Outlook Kalender](./skins/outlook-calendar/index.md) - Outlook Kalender
 - [GNOME Planner](./skins/planner/index.md) - GNOME Planner

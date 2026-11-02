@@ -30,14 +30,14 @@ Eine Datei nach der Fertigstellung mit `[x]` markieren.
 - [x] apps/calendar/skins/google-calendar/shortcuts.md
 - [x] apps/calendar/skins/google-calendar/structure.md
 
-### calendar / kalendar
-- [x] apps/calendar/skins/kalendar/api.md
-- [x] apps/calendar/skins/kalendar/description.md
-- [x] apps/calendar/skins/kalendar/features.md
-- [x] apps/calendar/skins/kalendar/index.md
-- [x] apps/calendar/skins/kalendar/menu.md
-- [x] apps/calendar/skins/kalendar/shortcuts.md
-- [x] apps/calendar/skins/kalendar/structure.md
+### calendar / merkuro
+- [x] apps/calendar/skins/merkuro/api.md
+- [x] apps/calendar/skins/merkuro/description.md
+- [x] apps/calendar/skins/merkuro/features.md
+- [x] apps/calendar/skins/merkuro/index.md
+- [x] apps/calendar/skins/merkuro/menu.md
+- [x] apps/calendar/skins/merkuro/shortcuts.md
+- [x] apps/calendar/skins/merkuro/structure.md
 
 ### calendar / nextcloud-calendar
 - [x] apps/calendar/skins/nextcloud-calendar/api.md

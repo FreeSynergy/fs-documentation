@@ -32,7 +32,7 @@ scripts/load_calendar.php datei.ics  # Kalender einspielen
 Die eigentlichen Kalender-Kurzbefehle stellt der Client, nicht DAViCal:
 
 - **Thunderbird (KALENDAR-Tab)**: `D` Tag, `W` Woche, `M` Monat, `N`/`P` vor/zurück, `T` heute, `Ctrl+N` neuer Termin
-- **Kalendar**: `Strg+N` neuer Termin, Blättern mit `←`/`→` in der Monatsansicht
+- **Merkuro**: `Strg+N` neuer Termin, Blättern mit `←`/`→` in der Monatsansicht
 - **Apple Kalender**: `Cmd+N` Neuer Termin, `Cmd+1..6` Ansichten
 - **Evolution**: `Strg+2` Kalender, `Strg+N` neuer Termin
 

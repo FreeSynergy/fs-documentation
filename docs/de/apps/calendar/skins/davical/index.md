@@ -2,7 +2,7 @@
 
 ## Übersicht
 
-DAViCal ist ein CalDAV-/CardDAV-Server in PHP auf PostgreSQL – ein schlanker, protokolltreuer Self-Hosted-Kalender-/Kontaktspeicher mit Web-Administration. Für FreeSynergy ist er der Backend-Skin hinter Kalendar, Thunderbird, DAVx⁵ und Apple-Geräten; gepflegt und aktiv entwickelt (1.1.13, Mai 2026).
+DAViCal ist ein CalDAV-/CardDAV-Server in PHP auf PostgreSQL – ein schlanker, protokolltreuer Self-Hosted-Kalender-/Kontaktspeicher mit Web-Administration. Für FreeSynergy ist er der Backend-Skin hinter Merkuro, Thunderbird, DAVx⁵ und Apple-Geräten; gepflegt und aktiv entwickelt (1.1.13, Mai 2026).
 
 ## Dateistruktur
 

@@ -6,7 +6,7 @@ Google Kalender (calendar.google.com) ist Googles Kalender-Dienst: Web-Oberfläc
 
 ## Dateistruktur
 
-- [description.md](description.md) – Was Google Kalender macht, Vorteile, Abgrenzung zu DAViCal/Nextcloud/Outlook/Kalendar
+- [description.md](description.md) – Was Google Kalender macht, Vorteile, Abgrenzung zu DAViCal/Nextcloud/Outlook/Merkuro
 - [features.md](features.md) – verifizierte Funktionen (Ansichten, Termine, Freigaben, Buchung, Integrationen) + „Was Google Kalender NICHT bietet“
 - [structure.md](structure.md) – Request-/Programmablauf, Datenmodell, Konfiguration, Deployment-Realität
 - [menu.md](menu.md) – Navigationsstruktur der Web-Oberfläche (aus offiziellen Hilfeseiten)

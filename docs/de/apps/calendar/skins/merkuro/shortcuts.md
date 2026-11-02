@@ -1,4 +1,4 @@
-# Kalendar / Merkuro – Tastenkürzel und Workflows (Merkuro Calendar 26.08.2)
+# Merkuro – Tastenkürzel und Workflows (Merkuro Calendar 26.08.2)
 
 Die App registriert Kürzel zentral als **Default-Shortcuts ihrer QAction-Sammlung** (`setDefaultShortcut` in `src/calendar/calendarapplication.cpp` und `src/components/abstractmerkuroapplication.cpp`) – die Liste unten ist damit im Quelltext belegt. Kürzel sind über die KDE-Curtorrc anpassbar (`KAuthorized`-Mechanismus), Standardzustand ist wie folgt. Fundstellen in [index.md](index.md#quellen).
 

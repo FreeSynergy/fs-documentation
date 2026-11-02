@@ -1,4 +1,4 @@
-# Kalendar / Merkuro – Beschreibung
+# Merkuro – Beschreibung
 
 *(Quellbasis: Merkuro 26.08.2, Release Service Okt 2026 – Fundstellen in [index.md](index.md#quellen))*
 
@@ -27,7 +27,7 @@ Die UI ist **konvergent** (Kirigami/QML, Qt 6): auf dem Desktop mit einklappbare
 | **Nextcloud Calendar** | Web-Oberfläche auf einem Nextcloud-Server; Merkuro ist ein nativer Client, der u. a. *mit* Nextcloud-Serversn (via CalDAV) zusammenarbeitet, aber weder Server noch Browser braucht. |
 | **Davical** | reiner CalDAV-Server (Backend); Merkuro ist Client. Kombination Davical + Merkuro (CalDAV-Ressource) ist möglich. |
 | **Google Kalender** | SaaS-Dienst; Merkuro ist ein Client dafür (über Google-Ressource in kdepim-runtime), aber quelloffen und selbstbestimmt mit Akonadi als Datenhaltung. |
-| **KOrganizer** (nicht eigene Sektion) | der klassische, funktionsbreite KDE-Kalender (in Kontact integriert, Widgets-Toolkit); Merkuro/Kalendar ist der bewusst schlankere, QML-basierte Nachfolgebau, der auch mobil funktioniert. |
+| **KOrganizer** (nicht eigene Sektion) | der klassische, funktionsbreite KDE-Kalender (in Kontact integriert, Widgets-Toolkit); Merkuro ist der bewusst schlankere, QML-basierte Nachfolgebau, der auch mobil funktioniert. |
 
 ## Technische Details
 

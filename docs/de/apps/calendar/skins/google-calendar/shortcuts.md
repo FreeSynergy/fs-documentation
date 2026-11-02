@@ -68,7 +68,7 @@ Für Android/iOS listet die Hilfe **keine eigenen Kurzbefehle** – dort gibt es
 Wer Google Kalender in anderen Programmen nutzt, bedient deren Tasten – sie gehören **nicht** zu Google Calendar:
 
 - **Thunderbird:** `D/W/M` Ansichten, `Strg+N` neuer Termin – wirkt auf Google-Daten nur, wenn eine Brücke (Ergänzung) die Calendar API spiegelt; natives CalDAV gibt es bei Google nicht
-- **Kalendar (KDE):** `Strg+N` neuer Termin – setzt ebenfalls eine API-/Sync-Brücke voraus
+- **Merkuro (KDE):** `Strg+N` neuer Termin – setzt ebenfalls eine API-/Sync-Brücke voraus
 - **Outlook/Exchange-Wrapper:** Microsoft-eigene Kürzel, keine Google-Funktion
 
 Alle diese Tasten erzeugen lediglich normale Anfragen an den jeweiligen Client; Google Calendar selbst kennt sie nicht.

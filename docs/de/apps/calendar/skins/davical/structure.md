@@ -3,7 +3,7 @@
 ## Request-Ablauf
 
 ```
-Client (Thunderbird/Kalendar/DAVx⁵/Apple)
+Client (Thunderbird/Merkuro/DAVx⁵/Apple)
    │  HTTPS, HTTP Basic
    ▼
 Apache/nginx (Alias /davical, Rewrites für /.well-known & /principals)

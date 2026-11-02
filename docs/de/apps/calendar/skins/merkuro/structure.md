@@ -1,4 +1,4 @@
-# Kalendar / Merkuro – Struktur (Merkuro Calendar 26.08.2)
+# Merkuro – Struktur (Merkuro Calendar 26.08.2)
 
 Fundstellen zu allen Aussagen in [index.md](index.md#quellen) (Quelltext-Tarball 26.08.2).
 

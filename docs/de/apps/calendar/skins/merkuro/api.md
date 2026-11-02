@@ -1,4 +1,4 @@
-# Kalendar / Merkuro – API (Merkuro Calendar 26.08.2, Stand: 2026‑11‑02)
+# Merkuro – API (Merkuro Calendar 26.08.2, Stand: 2026‑11‑02)
 
 ## Namensgebung zuerst (wichtig für diese Sektion)
 
