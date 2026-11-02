@@ -33,7 +33,7 @@ Die Liste hängt an der oberen Kante; ein Indikator wächst aus dem Rand hervor.
 
 ## Dauer
 
-- Zonen bis Threshold: folgt dem Finger
+- Zonen bis Threshold: folgt den Fingern
 - Ein-/Ausblenden: 200–300ms
 - Ladezeit: unbegrenzt bis Antwort
 

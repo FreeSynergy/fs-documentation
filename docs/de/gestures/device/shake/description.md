@@ -6,6 +6,11 @@ Ein Shake ist ein schnelles Hin- und Herbewegen des Geräts oder eines Elements.
 Die Geste wird meist über den Beschleunigungssensor (Accelerometer) erkannt, bei
 Maus/Touchpad auch über eine schnelle horizontale Bewegung des Zeigers.
 
+## Fingeranzahl
+
+Keine – die Sensorik misst die Gerätebewegung, eine Berührung ist nicht
+beteiligt.
+
 ## Verwendung
 
 - Undo / Verwerfen (Klassiker: „Schütteln zum Rückgängigmachen“)

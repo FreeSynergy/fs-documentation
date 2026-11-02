@@ -13,7 +13,7 @@ fs-documentation/
 │   │   ├── apps/           # programs, grouped by category
 │   │   │   └── [category]/skins/[program]/   # 7 files per program
 │   │   ├── components/     # UI elements: 10 categories + base class (see SYSTEM “UI Components”)
-│   │   ├── gestures/       # touch gestures: 4 families (single/multi/device/combined), each with description/attributes/appearance
+│   │   ├── gestures/       # touch gestures: 6 families (tap/swipe/transform/special/device/combined), each with description/attributes/appearance
 │   │   ├── animations/     # animations (description/attributes/appearance)
 │   │   └── data/           # standardized data (standards, mappings, formats, models, fields, conventions, api)
 │   └── en/                 # English documentation
@@ -828,20 +828,22 @@ Relative links inside a component directory use **three** levels for areas outsi
 
 ### Gestures (`docs/de/gestures/<category>/<gesture>/`)
 
-Four family directories, each with its own `index.md`, each gesture in a directory of its own:
+Six family directories, each with its own `index.md`, each gesture in a directory of its own:
 
 | Category | Gestures |
 |----------|----------|
-| `single/` (Ein-Finger-Gesten) | tap, double-tap, long-press, swipe, flick, drag, edge-swipe, force-press, hover, draw-gesture (10) |
-| `multi/` (Mehrfinger-Gesten) | pinch, spread, rotate, multi-finger-tap, multi-finger-long-press, multi-finger-swipe (6) |
+| `tap/` (Tipp-Gesten) | tap, double-tap, long-press, force-press, multi-finger-tap, multi-finger-long-press (6) |
+| `swipe/` (Wisch-Gesten) | swipe, flick, drag, edge-swipe, multi-finger-swipe, draw-gesture (6) |
+| `transform/` (Transformations-Gesten) | pinch, spread, rotate (3) |
+| `special/` (Spezielle Gesten) | hover, fingerprint (2) |
 | `device/` (Geräte-Gesten) | shake, tilt, flip, wave (4) |
 | `combined/` (Kombinations-Gesten) | pull-to-refresh, drag-and-drop (2) |
 
-Total: **22 gestures**, three files each (`description.md`, `attributes.md`, `appearance.md`).
+Total: **23 gestures**, three files each (`description.md`, `attributes.md`, `appearance.md`).
 
-Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer “which pointer(s) or sensor act”. In `multi/` the number of fingers is a **configuration value** (`pointerCount`), not part of a gesture's identity: spreading with five fingers or rotating with three are the same gestures, so an extra finger count never adds a new gesture — only new behaviour (direction, action, sensor) does.
+Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer **how the gesture moves**, never how many fingers do it. Finger count is not part of a gesture's identity: in `transform/` and in the multi-finger variants the number of fingers is a **configuration value** (`pointerCount`) — spreading with five fingers or rotating with three are the same gestures, so an extra finger count never adds a new gesture; only new behaviour (direction, action, sensor) does.
 
-Pointer counts are a **device limit**, not a gesture identity: a touch sensor reports every simultaneous contact (typically 5–10). Every `single/` gesture is therefore **multipoint-capable** (recognised on the primary pointer or the centroid of all pointers) — “single” is the minimum, not the maximum. `multi/` gestures never run single-point (distance/angle need at least two pointers). The two exceptions without multipoint are `draw-gesture` (one path = one stroke; more fingers draw separate paths) and `hover` (no contact, one hovering pointer). `device/` gestures have no pointers at all. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
+Pointer counts are a **device limit**, not a gesture identity: a touch sensor reports every simultaneous contact (typically 5–10). The base gestures of `tap/`, `swipe/` and `combined/` are therefore **multipoint-capable** (recognised on the primary pointer or the centroid of all pointers) — “one finger” is the minimum, not the maximum. `transform/` gestures and the multi-finger variants never run single-point (distance/angle need at least two pointers). The three exceptions without multipoint are `draw-gesture` (one path = one stroke; more fingers draw separate paths), `hover` (no contact, one hovering pointer) and `fingerprint` (the sensor reads exactly one finger pad). `device/` gestures have no pointers at all. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
 
 Shared attributes: per-gesture callbacks (`onTap` … `onDrop`), thresholds (`tapThreshold`, `longPressThreshold`, `swipeThreshold`, `velocityThreshold`, `edgeSize`, `pointerCount`, `shakeThreshold`, `deadZone`, `matchThreshold`), `enabled`, plus `alternativeAction` for every gesture (WCAG 2.5.1 pointer gestures, 2.5.4 motion actuation, 2.5.7 dragging movements).
 

@@ -7,6 +7,10 @@ accelerometer (orientation relative to gravity) or the gyroscope. With a pen,
 `PointerEvent.tiltX`/`tiltY` measures the inclination of the pen – the same
 idea, a different axis.
 
+## Finger Count
+
+None – the sensors measure the device movement; no touch is involved.
+
 ## Usage
 
 - Tilting as control (games, steering, compass)

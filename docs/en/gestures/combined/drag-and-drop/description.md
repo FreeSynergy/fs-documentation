@@ -8,6 +8,10 @@ released on a drop zone (drop target). iOS uses long-press-to-grab, desktop
 more often instant dragging; on the web: the HTML5 drag & drop API and pointer
 events with `setPointerCapture`.
 
+## Finger Count
+
+1 up to the device limit – follows its base gesture drag.
+
 ## Usage
 
 - Moving files/elements between areas (lists, folders, boards)

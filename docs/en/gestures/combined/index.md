@@ -30,5 +30,5 @@ supplement `pull-to-refresh` with an explicit refresh button.
 ## See also
 
 - [Gesture overview](../index.md)
-- [Drag](../single/drag/description.md) - base gesture of drag-and-drop
+- [Drag](../swipe/drag/description.md) - base gesture of drag-and-drop
 - [Reorder animation](../../animations/transition/reorder/description.md) - answer to drag-and-drop

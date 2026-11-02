@@ -8,6 +8,10 @@ bewegt und auf einer Ablagezone (Drop Target) losgelassen. iOS nutzt
 Long-Press-zum-Greifen, Desktop eher sofortiges Ziehen; Web: HTML5 Drag &
 Drop API und Pointer-Events mit `setPointerCapture`.
 
+## Fingeranzahl
+
+Von 1 bis zur Gerätegrenze – folgt der Basisgeste drag.
+
 ## Verwendung
 
 - Dateien/Elemente zwischen Bereichen verschieben (Listen, Ordner, Boards)

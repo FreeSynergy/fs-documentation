@@ -7,6 +7,11 @@ Beschleunigungssensor (Orientierung relativ zur Schwerkraft) oder Gyroskop.
 Beim Stift misst `PointerEvent.tiltX`/`tiltY` die Neigung des Stifts – dieselbe
 Idee, andere Achse.
 
+## Fingeranzahl
+
+Keine – die Sensorik misst die Gerätebewegung, eine Berührung ist nicht
+beteiligt.
+
 ## Verwendung
 
 - Neigen als Steuerung (Spiele, Lenkung, Kompass)

@@ -33,7 +33,7 @@ The list hangs at the top edge; an indicator grows out of the edge.
 
 ## Duration
 
-- Up to the threshold: follows the finger
+- Up to the threshold: follows the fingers
 - Showing/hiding: 200–300ms
 - Loading time: unlimited until the response
 

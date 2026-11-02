@@ -4,6 +4,10 @@
 
 A shake is a quick back-and-forth movement of the device or of an element. The gesture is usually detected via the accelerometer; with mouse/touchpad it is also detected via a quick horizontal movement of the pointer.
 
+## Finger Count
+
+None – the sensors measure the device movement; no touch is involved.
+
 ## Usage
 
 - Undo / discard (classic: "shake to undo")

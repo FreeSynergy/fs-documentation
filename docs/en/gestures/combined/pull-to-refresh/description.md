@@ -9,6 +9,10 @@ refresh.
 
 Android reference: `SwipeRefreshLayout`, iOS: `UIRefreshControl`.
 
+## Finger Count
+
+1 up to the device limit – follows its base gesture drag.
+
 ## Usage
 
 - Refreshing feeds/lists (email, social, chat)

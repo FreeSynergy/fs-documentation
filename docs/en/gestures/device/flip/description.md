@@ -7,6 +7,10 @@ facing up). Detection runs via the accelerometer: the direction of gravity
 tips from "display points away from the ground" to "display points to the
 ground".
 
+## Finger Count
+
+None – the sensors measure the device movement; no touch is involved.
+
 ## Usage
 
 - Muting a call (classic: turning the phone over = answer and mute)

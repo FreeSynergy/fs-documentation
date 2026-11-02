@@ -9,6 +9,10 @@ Loslassen startet die Aktualisierung.
 
 Android-Referenz: `SwipeRefreshLayout`, iOS: `UIRefreshControl`.
 
+## Fingeranzahl
+
+Von 1 bis zur Gerätegrenze – folgt der Basisgeste drag.
+
 ## Verwendung
 
 - Feed-/Listen-Aktualisierung (E-Mail, Social, Chat)

@@ -78,14 +78,18 @@ nav:
   - en/apps/workflows/: en/apps/workflows/index.md
   - de/gestures/:
       - de/gestures/index.md
-      - de/gestures/single/: de/gestures/single/index.md
-      - de/gestures/multi/: de/gestures/multi/index.md
+      - de/gestures/tap/: de/gestures/tap/index.md
+      - de/gestures/swipe/: de/gestures/swipe/index.md
+      - de/gestures/transform/: de/gestures/transform/index.md
+      - de/gestures/special/: de/gestures/special/index.md
       - de/gestures/device/: de/gestures/device/index.md
       - de/gestures/combined/: de/gestures/combined/index.md
   - en/gestures/:
       - en/gestures/index.md
-      - en/gestures/single/: en/gestures/single/index.md
-      - en/gestures/multi/: en/gestures/multi/index.md
+      - en/gestures/tap/: en/gestures/tap/index.md
+      - en/gestures/swipe/: en/gestures/swipe/index.md
+      - en/gestures/transform/: en/gestures/transform/index.md
+      - en/gestures/special/: en/gestures/special/index.md
       - en/gestures/device/: en/gestures/device/index.md
       - en/gestures/combined/: en/gestures/combined/index.md
   - de/animations/:

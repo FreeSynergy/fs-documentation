@@ -8,6 +8,10 @@ front camera with gesture recognition. The gesture became known through "wave
 to answer" (Pixel wave to answer, taking a call by waving) and "air gestures"
 in Android Auto.
 
+## Finger Count
+
+No touch – the sensor reads the hand in front of the device.
+
 ## Usage
 
 - Answering/declining a call without screen contact (hands occupied)

@@ -30,5 +30,5 @@ ergänzen.
 ## Siehe auch
 
 - [Gesten Übersicht](../index.md)
-- [Drag](../single/drag/description.md) - Basisgeste von drag-and-drop
+- [Drag](../swipe/drag/description.md) - Basisgeste von drag-and-drop
 - [Reorder-Animation](../../animations/transition/reorder/description.md) - Antwort auf Drag-and-drop

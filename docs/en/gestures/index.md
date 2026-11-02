@@ -4,16 +4,18 @@ Touch gestures are interaction methods for touchscreen devices (and related
 pointers: mouse, pen, motion sensors). Gestures are **inputs** – the visual
 answer to them is an [animation](../animations/index.md).
 
-Gestures are grouped into four families (mirroring the animation categories).
+Gestures are grouped into six families (mirroring the animation categories).
 
 ## Families
 
 | Family | Principle | Gestures |
 |--------|-----------|----------|
-| `single` (single-pointer) | From one pointer, mostly replaces clicks – all multipoint-capable | 10 |
-| `multi` (multi-pointer) | Two+ pointers (never one), the count is a setting, transforms content | 6 |
-| `device` | Movement of the device itself (sensors, no pointers) | 4 |
-| `combined` | Composite gestures with their own logic | 2 |
+| [Tap (tap)](tap/) | Short touch without a path, mostly replaces clicks – from one finger, multipoint-capable | 6 |
+| [Swipe (swipe)](swipe/) | Guided movement in one direction – from one finger, multipoint-capable | 6 |
+| [Transform (transform)](transform/) | Two+ pointers relative to each other (never one), the count is a setting, transforms content | 3 |
+| [Special (special)](special/) | No classic touched element: hover, biometric sensor | 2 |
+| [Device (device)](device/) | Movement of the device itself (sensors, no pointers) | 4 |
+| [Combined (combined)](combined/) | Composite gestures with their own logic | 2 |
 
 ## Pointer Count: Single-Point and Multipoint
 
@@ -21,27 +23,34 @@ A touch sensor reports every simultaneous contact; depending on the device,
 five to ten fingers are detected at once. From this follow the rules for all
 gestures:
 
-- **Single-point gestures are multipoint-capable.** Tap, double tap, long
-  press, swipe, flick, drag, edge swipe and force press work with any number
-  of fingers up to the device limit – recognised on the primary pointer or on
-  the centre of all pointers. “Single” is the minimum, not the maximum.
+- **The base gestures are multipoint-capable.** Tap, double tap, long press,
+  force press, swipe, flick, drag, edge swipe and the combined gestures work
+  with any number of fingers up to the device limit – recognised on the
+  primary pointer or on the centre of all pointers. “One finger” is the
+  minimum, not the maximum.
 - **Multipoint always covers every finger count.** A gesture carries no limit
   of its own; the ceiling is always the device limit.
-- **Multi gestures cannot run single-point.** Pinch, spread and rotate
-  require two pointers by necessity (distance and angle only exist from two
-  on), and the multi-finger variants do by definition.
-- **Two exceptions without multipoint:** `draw-gesture` (one path is one
-  connected stroke – further fingers create their own, separate paths) and
-  `hover` (no contact; a hovering multi-finger pointer does not exist).
+- **Transform and multi-finger gestures cannot run single-point.** Pinch,
+  spread and rotate require two pointers by necessity (distance and angle
+  only exist from two on), and the multi-finger variants of tap, long press
+  and swipe do by definition.
+- **Three exceptions without multipoint:** `draw-gesture` (one path is one
+  connected stroke – further fingers create their own, separate paths),
+  `hover` (no contact; a hovering multi-finger pointer does not exist) and
+  `fingerprint` (the sensor reads exactly one finger pad).
 - **Device gestures know no pointer count:** shake, tilt, flip and wave run
   on sensors, touches play no role.
 
 | Family / Gesture | Single-Point | Multipoint | Basis |
 |------------------|--------------|------------|-------|
-| single (all but draw-gesture, hover) | ✓ | ✓ up to device limit | primary pointer / pointer centre |
-| single: draw-gesture | ✓ | ✗ | one path = one stroke |
-| single: hover | ✓ | ✗ | only one hovering pointer |
-| multi (all) | ✗ | ✓ up to device limit | at least two pointers needed |
+| tap: tap, double-tap, long-press, force-press | ✓ | ✓ up to device limit | primary pointer / pointer centre |
+| tap: multi-finger variants | ✗ | ✓ from two | at least two fingers needed |
+| swipe: swipe, flick, drag, edge-swipe | ✓ | ✓ up to device limit | primary pointer / pointer centre |
+| swipe: draw-gesture | ✓ | ✗ | one path = one stroke |
+| swipe: multi-finger-swipe | ✗ | ✓ from two | at least two fingers needed |
+| transform (all) | ✗ | ✓ up to device limit | at least two pointers needed |
+| special: hover | ✓ | ✗ | only one hovering pointer |
+| special: fingerprint | ✓ (exactly one) | ✗ | sensor reads one finger pad |
 | device (all) | not applicable | not applicable | sensors instead of pointers |
 | combined | ✓ | ✓ | follows its base gestures (drag) |
 
@@ -49,22 +58,23 @@ gestures:
 
 | Gesture | Family | Description | Usage |
 |---------|--------|-------------|-------|
-| **Tap** | single | Brief touch | Button click, item selection |
-| **Double Tap** | single | Two quick touches | Zoom, open |
-| **Long Press** | single | Long touch | Context menu, marking |
-| **Swipe** | single | Swiping in one direction | Navigation, switching |
-| **Flick** | single | Fast swipe with lift-off momentum | Throw-scrolling |
-| **Drag** | single | Dragging while pressed | Reorder, scroll |
-| **Edge Swipe** | single | Swipe from the screen edge | Back, system bars |
-| **Force Press** | single | Pressure via pressure sensor | Peek & pop, context |
-| **Hover** | single | Pointer over element without contact | Tooltip, preview |
-| **Draw Gesture** | single | Drawing a shape/letter | Shortcuts, commands |
-| **Pinch** | multi | Pulling pointers together (from two) | Zoom out |
-| **Spread** | multi | Moving pointers apart (from two) | Zoom in |
-| **Rotate** | multi | Turning pointers (from two) | Rotation |
-| **Multi-Finger Tap** | multi | Tapping with several fingers | Secondary action |
-| **Multi-Finger Long Press** | multi | Long press with several fingers | Secondary menu, multiselect |
-| **Multi-Finger Swipe** | multi | Swiping with several fingers | App/workspace switching |
+| **Tap** | tap | Brief touch | Button click, item selection |
+| **Double Tap** | tap | Two quick touches | Zoom, open |
+| **Long Press** | tap | Long touch | Context menu, marking |
+| **Force Press** | tap | Pressure via pressure sensor | Peek & pop, context |
+| **Multi-Finger Tap** | tap | Tapping with several fingers | Secondary action |
+| **Multi-Finger Long Press** | tap | Long press with several fingers | Secondary menu, multiselect |
+| **Swipe** | swipe | Swiping in one direction | Navigation, switching |
+| **Flick** | swipe | Fast swipe with lift-off momentum | Throw-scrolling |
+| **Drag** | swipe | Dragging while pressed | Reorder, scroll |
+| **Edge Swipe** | swipe | Swipe from the screen edge | Back, system bars |
+| **Multi-Finger Swipe** | swipe | Swiping with several fingers | App/workspace switching |
+| **Draw Gesture** | swipe | Drawing a shape/letter | Shortcuts, commands |
+| **Pinch** | transform | Pulling pointers together (from two) | Zoom out |
+| **Spread** | transform | Moving pointers apart (from two) | Zoom in |
+| **Rotate** | transform | Turning pointers (from two) | Rotation |
+| **Hover** | special | Pointer over element without contact | Tooltip, preview |
+| **Fingerprint** | special | Touching a biometric sensor | Unlocking, authorising |
 | **Shake** | device | Quick back-and-forth movement | Undo, error feedback, reshuffle |
 | **Tilt** | device | Tilting the device | Steering, parallax |
 | **Flip** | device | Turning the device over | Mute, do not disturb |
@@ -86,6 +96,7 @@ gestures:
 | `onEdgeSwipe` | function | Executed on Edge Swipe |
 | `onForcePress` | function | Executed on Force Press |
 | `onHoverStart` / `onHoverEnd` | function | Hover starts/ends |
+| `onFingerprint` / `onFingerprintFail` | function | Fingerprint scan succeeds / no match |
 | `onDrawGesture` | function | Executed after a recognized shape |
 | `onPinch` | function | Executed on Pinch |
 | `onSpread` | function | Executed on Spread |
@@ -109,7 +120,7 @@ gestures:
 | `swipeThreshold` | number | Minimum distance for Swipe |
 | `velocityThreshold` | number | Minimum velocity for Flick in px/s |
 | `edgeSize` | number | Width of the edge zone for Edge Swipe in px |
-| `pointerCount` | number | Minimum pointer count for the gesture (single: 1, multi: 2 or 3 …) – limited above by the device |
+| `pointerCount` | number | Minimum pointer count for the gesture (base gestures: 1, transform and multi-finger gestures: 2 or 3 …) – limited above by the device |
 | `shakeThreshold` | number | Minimum acceleration/movement for Shake |
 | `minShakes` | number | Minimum number of direction changes for Shake |
 | `deadZone` | number | Degree tolerance for Tilt |
@@ -131,5 +142,5 @@ make the same action reachable via button, menu or keyboard as well.
 
 ## See also
 
-- Families: [single](single/) · [multi](multi/) · [device](device/) · [combined](combined/)
+- Families: [tap](tap/) · [swipe](swipe/) · [transform](transform/) · [special](special/) · [device](device/) · [combined](combined/)
 - [Animations](../animations/index.md) — Shake, Wiggle as feedback to gestures

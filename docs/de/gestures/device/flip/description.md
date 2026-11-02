@@ -7,6 +7,11 @@ Rückseite nach oben). Erkennung über Beschleunigungssensor: Die
 Schwerkahrungsrichtung kippt von „Display zeigt vom Boden weg“ zu „Display
 zeigt zum Boden“.
 
+## Fingeranzahl
+
+Keine – die Sensorik misst die Gerätebewegung, eine Berührung ist nicht
+beteiligt.
+
 ## Verwendung
 
 - Anruf stummschalten (Klassiker: Handy umdrehen = Anruf annehmen und stumm)

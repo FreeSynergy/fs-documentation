@@ -38,7 +38,7 @@ Jedes Programm in `apps/<kategorie>/skins/<programm>/` bekommt **sieben** Dateie
 ### Gesten
 
 `gestures/<kategorie>/<geste>/` mit `description.md`, `attributes.md`, `appearance.md`
-(Kategorien: `single`, `multi`, `device`, `combined`).
+(Kategorien: `tap`, `swipe`, `transform`, `special`, `device`, `combined`).
 
 ### Animationen
 

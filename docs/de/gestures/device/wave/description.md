@@ -8,6 +8,10 @@ Frontkamera mit Gestenerkennung. Bekannt wurde die Geste durch „Winken zum
 Annehmen“ (Pixel Wave to Answer, Anruf annehmen per Winken) und
 „Air Gestures“ in Android Auto.
 
+## Fingeranzahl
+
+Keine Berührung – der Sensor erkennt die Hand vor dem Gerät.
+
 ## Verwendung
 
 - Anruf annehmen/ablehnen ohne Bildschirmkontakt (Hände beschäftigt)
