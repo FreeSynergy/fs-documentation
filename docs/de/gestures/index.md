@@ -11,10 +11,39 @@ Kategorien):
 
 | Familie | Prinzip | Gesten |
 |---------|---------|--------|
-| [Ein-Finger (single)](single/) | Ein Finger/Zeiger, meist Ersatz für Klicks | 10 |
-| [Mehrfinger (multi)](multi/) | Zwei+ Zeiger, Anzahl ist Einstellung, transformieren Inhalt | 6 |
-| [Gerät (device)](device/) | Bewegung des Geräts selbst (Sensoren) | 4 |
+| [Ein-Finger (single)](single/) | Ab einem Zeiger, meist Ersatz für Klicks – alle multipointfähig | 10 |
+| [Mehrfinger (multi)](multi/) | Zwei+ Zeiger (nie einer), Anzahl ist Einstellung, transformieren Inhalt | 6 |
+| [Gerät (device)](device/) | Bewegung des Geräts selbst (Sensoren, keine Zeiger) | 4 |
 | [Kombinationen (combined)](combined/) | Zusammengesetzte Gesten mit Eigenlogik | 2 |
+
+## Zeigeranzahl: Single-Point und Multipoint
+
+Ein Touchsensor meldet jeden gleichzeitigen Kontakt; je nach Gerät werden
+fünf bis zehn Finger gleichzeitig erkannt. Daraus gilt für alle Gesten:
+
+- **Single-Point-Gesten sind multipointfähig.** Tap, Double Tap, Long Press,
+  Swipe, Flick, Drag, Edge Swipe und Force Press funktionieren mit beliebig
+  vielen Fingern bis zur Gerätegrenze – erkannt am Primärzeiger bzw. am
+  Mittelpunkt aller Zeiger. „Single“ meint die Mindestzahl, nicht die Höchstzahl.
+- **Multipoint gilt immer für alle Fingerzahlen.** Eine Geste hat kein eigenes
+  Fingerlimit; oberste Grenze ist stets die Gerätegrenze.
+- **Multi-Gesten sind im Single-Point nicht ausführbar.** Pinch, Spread und
+  Rotate brauchen zwingend zwei Zeiger (Abstand und Winkel existieren erst ab
+  zwei), die Mehrfinger-Varianten per Definition ebenfalls.
+- **Zwei Ausnahmen ohne Multipoint:** `draw-gesture` (ein Pfad ist ein
+  zusammenhängender Strich – weitere Finger erzeugen eigene, getrennte Pfade)
+  und `hover` (ohne Kontakt; ein schwebender Mehrfinger-Zeiger existiert nicht).
+- **Geräte-Gesten kennen keine Zeigerzahl:** shake, tilt, flip und wave laufen
+  über Sensoren, Berührungen spielen keine Rolle.
+
+| Familie / Geste | Single-Point | Multipoint | Grundlage |
+|-----------------|--------------|------------|-----------|
+| single (alle außer draw-gesture, hover) | ✓ | ✓ bis Gerätegrenze | Primärzeiger / Zeiger-Mittelpunkt |
+| single: draw-gesture | ✓ | ✗ | ein Pfad = ein Strich |
+| single: hover | ✓ | ✗ | nur ein schwebender Zeiger |
+| multi (alle) | ✗ | ✓ bis Gerätegrenze | mindestens zwei Zeiger nötig |
+| device (alle) | entfällt | entfällt | Sensorik statt Zeiger |
+| combined | ✓ | ✓ | folgt den Basisgesten (Drag) |
 
 ## Alle Gesten
 
@@ -80,7 +109,7 @@ Kategorien):
 | `swipeThreshold` | number | Minimaler Abstand für Swipe |
 | `velocityThreshold` | number | Mindestgeschwindigkeit für Flick in px/s |
 | `edgeSize` | number | Breite der Randzone für Edge Swipe in px |
-| `pointerCount` | number | Mindestanzahl Finger für Mehrfinger-Gesten (2, 3, 4, 5 …) |
+| `pointerCount` | number | Mindestanzahl Zeiger der Geste (single: 1, multi: 2 oder 3 …) – nach oben durch das Gerät begrenzt |
 | `shakeThreshold` | number | Minimale Beschleunigung/Bewegung für Shake |
 | `minShakes` | number | Minimale Anzahl Richtungswechsel für Shake |
 | `deadZone` | number | Grad-Toleranz für Tilt |

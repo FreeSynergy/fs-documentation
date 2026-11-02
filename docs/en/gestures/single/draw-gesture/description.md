@@ -40,6 +40,13 @@ needs a single-finger alternative.
 | **Template Matching** | Similarity to stored templates ($1/$2-Un recognizer) |
 | **Primitives** | Combine stroke, arc, circle as building blocks |
 
+## Pointer Count
+
+One path is one connected stroke: the gesture is tied to **one pointer**. If
+several fingers touch down at once, several separate paths emerge – that is
+two single draw gestures (or an unknown pattern), not multipoint of the same
+gesture.
+
 ## Difference from Swipe
 
 - **Swipe**: a directed distance, the direction decides

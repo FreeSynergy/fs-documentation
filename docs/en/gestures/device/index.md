@@ -3,6 +3,9 @@
 Device gestures do not detect a touch but a **movement of the device itself**
 via acceleration and gyro sensors (accelerometer, gyroscope).
 
+The pointer count plays no role: single-point and multipoint do not exist
+here, no finger touches anything.
+
 ## Elements
 
 - **shake** - quick back-and-forth movement (undo, error feedback)
@@ -29,5 +32,5 @@ feedback (vibration) only with consent and switchable off (`hapticFeedback`,
 ## See also
 
 - [Gesture overview](../index.md)
-- [Shake animation](../../../de/animations/feedback/shake/description.md) - the same pattern as output feedback (German)
-- [Wiggle animation](../../../de/animations/feedback/wiggle/description.md) - hold the device still, the element wobbles (German)
+- [Shake animation](../../animations/feedback/shake/description.md) - the same pattern as output feedback
+- [Wiggle animation](../../animations/feedback/wiggle/description.md) - hold the device still, the element wobbles

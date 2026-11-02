@@ -16,6 +16,11 @@ swipe" and a "four-finger swipe" are the same multi-finger-swipe with a
 different `pointerCount`. New gestures arise only from new behaviour (a new
 direction, a new action, a new sensor), not from additional fingers.
 
+**Single-point is excluded**: with a single pointer neither distance nor angle
+exists, so pinch, spread and rotate – and the multi-finger variants by
+definition – are physically impossible with one finger. As with every
+gesture, the ceiling is the device limit (typically five to ten fingers).
+
 ## Elements
 
 - **pinch** - pointers pull together (zoom out), from two fingers up
@@ -37,11 +42,11 @@ direction, a new action, a new sensor), not from additional fingers.
 
 ## Finger Count
 
-| Gesture | Default `pointerCount` | Also works with |
-|---------|------------------------|-----------------|
-| pinch / spread / rotate | 2 | 3, 4, 5 fingers |
-| multi-finger-tap / multi-finger-long-press | 2 | 3, 4, 5 fingers |
-| multi-finger-swipe | 3 | 2 or 4 fingers |
+| Gesture | Default `pointerCount` | Also works with | Single-Point |
+|---------|------------------------|-----------------|------------|
+| pinch / spread / rotate | 2 | 3, 4, 5 … fingers (device limit) | ✗ |
+| multi-finger-tap / multi-finger-long-press | 2 | 3, 4, 5 … fingers (device limit) | ✗ |
+| multi-finger-swipe | 3 | 2 or 4 fingers | ✗ |
 
 ## Accessibility
 
@@ -54,4 +59,4 @@ input field.
 
 - [Gesture overview](../index.md)
 - [Single-finger gestures](../single/) - single alternative to all of these
-- [Transformations](../../../de/animations/transition/) - visual answer to rotate & zoom (German)
+- [Transformations](../../animations/transition/) - visual answer to rotate & zoom

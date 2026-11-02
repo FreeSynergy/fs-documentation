@@ -37,8 +37,8 @@ Gestetyp.
 
 ## Unterschied zu Long Press
 
-- **Long Press**: ein Finger, Primär-Kontextmenü
-- **Multi-Finger Long Press**: zwei oder mehr Finger, Sekundär-/Multiselect-Kontext
+- **Long Press**: ab einem Finger (Standard: einer), Primär-Kontextmenü
+- **Multi-Finger Long Press**: verlangt mindestens zwei Finger (`pointerCount`), Sekundär-/Multiselect-Kontext
 
 ## Barrierefreiheit
 

@@ -3,6 +3,9 @@
 Geräte-Gesten erkennen keine Berührung, sondern eine **Bewegung des Geräts
 selbst** über Beschleunigungs- und Gyrosensor (Accelerometer, Gyroscope).
 
+Die Zeigeranzahl spielt keine Rolle: Single-Point und Multipoint existieren
+hier nicht, kein Finger wird berührt.
+
 ## Elemente
 
 - **shake** - schnelles Hin- und Herbewegen (Undo, Fehler-Feedback)

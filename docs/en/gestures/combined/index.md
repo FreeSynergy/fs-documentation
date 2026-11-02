@@ -5,6 +5,9 @@ interplay of gesture and context (list, list + time). They are documented
 in their own right because they have their own attributes and cancellation
 rules.
 
+The pointer count follows the base gestures (drag): both gestures work with
+one as well as several fingers (multipoint-capable up to the device limit).
+
 ## Elements
 
 - **pull-to-refresh** - pulling down at the top boundary of a list (refresh)
@@ -28,4 +31,4 @@ supplement `pull-to-refresh` with an explicit refresh button.
 
 - [Gesture overview](../index.md)
 - [Drag](../single/drag/description.md) - base gesture of drag-and-drop
-- [Reorder animation](../../../de/animations/transition/reorder/description.md) - answer to drag-and-drop (German)
+- [Reorder animation](../../animations/transition/reorder/description.md) - answer to drag-and-drop

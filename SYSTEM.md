@@ -30,6 +30,10 @@ fs-documentation/
 - **Primary language**: German (`de/`)
 - All documentation must be created in **German** first
 - English translations (`en/`) and French translations (`fr/`) are maintained as needed
+- **Never link across languages**: in `en/` every cross-reference points to the
+  same language tree (`en → en`), never to `de/` – even when the target file
+  does not exist there yet, because the translation will follow. Language
+  switching happens only through the switcher in the `index.md` files
 - New languages can be added by creating subdirectories (e.g., `es/`, `it/`, etc.)
 
 ### Documentation Generation
@@ -835,7 +839,9 @@ Four family directories, each with its own `index.md`, each gesture in a directo
 
 Total: **22 gestures**, three files each (`description.md`, `attributes.md`, `appearance.md`).
 
-Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer “which pointer(s) or sensor act”. In `multi/` the number of fingers is a **configuration value** (`pointerCount`), not part of a gesture's identity: spreading with five fingers or rotating with three are the same gestures, so an extra finger count never adds a new gesture — only new behaviour (direction, action, sensor) does. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
+Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer “which pointer(s) or sensor act”. In `multi/` the number of fingers is a **configuration value** (`pointerCount`), not part of a gesture's identity: spreading with five fingers or rotating with three are the same gestures, so an extra finger count never adds a new gesture — only new behaviour (direction, action, sensor) does.
+
+Pointer counts are a **device limit**, not a gesture identity: a touch sensor reports every simultaneous contact (typically 5–10). Every `single/` gesture is therefore **multipoint-capable** (recognised on the primary pointer or the centroid of all pointers) — “single” is the minimum, not the maximum. `multi/` gestures never run single-point (distance/angle need at least two pointers). The two exceptions without multipoint are `draw-gesture` (one path = one stroke; more fingers draw separate paths) and `hover` (no contact, one hovering pointer). `device/` gestures have no pointers at all. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
 
 Shared attributes: per-gesture callbacks (`onTap` … `onDrop`), thresholds (`tapThreshold`, `longPressThreshold`, `swipeThreshold`, `velocityThreshold`, `edgeSize`, `pointerCount`, `shakeThreshold`, `deadZone`, `matchThreshold`), `enabled`, plus `alternativeAction` for every gesture (WCAG 2.5.1 pointer gestures, 2.5.4 motion actuation, 2.5.7 dragging movements).
 

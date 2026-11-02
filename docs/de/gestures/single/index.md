@@ -1,8 +1,19 @@
 # Ein-Finger-Gesten (single)
 
-Ein-Finger-Gesten werden mit genau einem Finger (oder einem einzelnen Zeiger:
-Maus, Stift) ausgeführt. Sie sind die häufigste Gesten-Familie und ersetzen
+Ein-Finger-Gesten brauchen **mindestens einen** Finger (oder einen einzelnen
+Zeiger: Maus, Stift). Sie sind die häufigste Gesten-Familie und ersetzen
 weitgehend Klick-Interaktionen.
+
+## Multipoint
+
+Weil der Sensor jeden Kontakt meldet, ist **jede Geste dieser Familie auch
+multipointfähig**: Tippen, Wischen oder Ziehen klappt mit zwei, drei oder mehr
+Fingern bis zur Gerätegrenze, erkannt am Primärzeiger bzw. Mittelpunkt. Die
+Mindestanzahl stellt `pointerCount` ein (hier `1`).
+
+Nur zwei Gesten der Familie bleiben an einen Zeiger gebunden:
+**draw-gesture** (mehrere Finger zeichnen mehrere getrennte Pfade, kein
+Multipoint) und **hover** (ohne Kontakt gibt es keinen Mehrfinger-Schwebezeiger).
 
 ## Elemente
 
@@ -39,5 +50,5 @@ eine Alternative aus dieser Familie.
 ## Siehe auch
 
 - [Gesten Übersicht](../index.md)
-- [Mehrfinger-Gesten](../multi/) - pinching, drehen, zwei Finger
+- [Mehrfinger-Gesten](../multi/) - pinching, drehen, zwei Finger (Mindestgrenze: zwei)
 - [Kombinationen](../combined/) - drag-and-drop, pull-to-refresh

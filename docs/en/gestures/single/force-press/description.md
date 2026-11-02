@@ -48,4 +48,4 @@ compatible hardware.
 ## See also
 
 - [Long Press](../long-press/description.md) - fallback without a pressure sensor
-- [Press animation](../../../../de/animations/feedback/press/description.md) (German)
+- [Press animation](../../../animations/feedback/press/description.md)

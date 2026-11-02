@@ -16,7 +16,7 @@ This section contains documentation for various CRM (Customer Relationship Manag
 
 ## Skin Documentation
 
-Programmes in this category follow the wiki schema (seven files per programme: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `apps/crm/skins/<programme>/`. The detailed skin documentation currently exists in German: [/de/apps/crm/](/de/apps/crm/index.md).
+Programmes in this category follow the wiki schema (seven files per programme: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under [/en/apps/crm/skins/](/en/apps/crm/skins/); the detailed skin documents are translated there one by one.
 
 ## What is a CRM?
 

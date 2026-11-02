@@ -1,8 +1,19 @@
 # Single-Finger Gestures (single)
 
-Single-finger gestures are performed with exactly one finger (or a single
-pointer: mouse, pen). They are the most common gesture family and largely
-replace click interactions.
+Single-finger gestures need **at least one** finger (or a single pointer:
+mouse, pen). They are the most common gesture family and largely replace
+click interactions.
+
+## Multipoint
+
+Because the sensor reports every contact, **every gesture in this family is
+also multipoint-capable**: tapping, swiping or dragging works with two, three
+or more fingers up to the device limit, recognised on the primary pointer or
+centre point. `pointerCount` sets the minimum (here `1`).
+
+Only two gestures of the family stay tied to one pointer: **draw-gesture**
+(several fingers draw several separate paths, no multipoint) and **hover**
+(without contact there is no multi-finger hovering pointer).
 
 ## Elements
 
@@ -39,5 +50,5 @@ draw-gesture always need an alternative from this family.
 ## See also
 
 - [Gesture overview](../index.md)
-- [Multi-finger gestures](../multi/) - pinching, turning, several fingers
+- [Multi-finger gestures](../multi/) - pinching, turning, several fingers (minimum: two)
 - [Combinations](../combined/) - drag-and-drop, pull-to-refresh

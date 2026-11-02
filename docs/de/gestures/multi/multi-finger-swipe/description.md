@@ -41,8 +41,8 @@ Ob mit zwei, drei oder vier Fingern gewischt wird, ist eine Einstellung
 
 ## Unterschied zu Swipe
 
-- **Swipe**: ein Finger, App-interne Navigation
-- **Multi-Finger Swipe**: zwei oder mehr Finger, meist System-/App-Wechsel-Ebene
+- **Swipe**: ab einem Finger (Standard: einer), App-interne Navigation
+- **Multi-Finger Swipe**: verlangt mindestens zwei Finger (`pointerCount`), meist System-/App-Wechsel-Ebene
 
 ## Unterschied zu Pinch
 

@@ -33,8 +33,8 @@ type: tapping with two, three, or five fingers is the same gesture.
 
 ## Difference from Tap
 
-- **Tap**: one finger, primary action
-- **Multi-Finger Tap**: two or more fingers, secondary action
+- **Tap**: from one pointer up (default: one), primary action
+- **Multi-Finger Tap**: requires at least two pointers (`pointerCount`), secondary action
 
 ## Difference from Pinch/Spread
 

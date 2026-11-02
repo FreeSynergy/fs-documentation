@@ -23,6 +23,12 @@ iOS provides the `UIHoverGestureRecognizer` for this, on the web:
 - Showing/hiding: 100–300ms with a delay (usually 300–700ms against accidental triggering)
 - As long as the pointer is over the element: active indefinitely
 
+## Pointer Count
+
+Hover is tied to exactly **one hovering pointer** – multipoint is not possible
+here: on pure touchscreens hover is missing entirely, and with a mouse or pen
+only one pointer hovers at a time.
+
 ## Detection
 
 | Method | Description |

@@ -12,6 +12,11 @@ funktioniert mit fünf Fingern, drehen (rotate) mit drei, der Mehrfinger-Wisch
 auch mit zwei. Erkannt wird aus Distanz, Winkel und Bewegung der Zeiger –
 nicht aus ihrer Zahl. Die Mindestanzahl stellt `pointerCount` ein.
 
+Der **Single-Point ist ausgeschlossen**: mit einem einzigen Zeiger existieren
+weder Abstand noch Winkel, deshalb sind pinch, spread und rotate wie auch die
+Mehrfinger-Varianten mit einem Finger physikalisch nicht ausführbar. Nach oben
+gilt wie bei allen Gesten die Gerätegrenze (typisch fünf bis zehn Finger).
+
 Eine weitere Zähl-Stufe erzeugt deshalb **keine neue Geste**: „Drei-Finger-
 Wisch“ und „Vier-Finger-Wisch“ sind derselbe multi-finger-swipe mit anderem
 `pointerCount`. Neue Gesten entstehen nur durch neues Verhalten (neue Richtung,
@@ -38,11 +43,11 @@ neue Aktion, neuer Sensor), nicht durch zusätzliche Finger.
 
 ## Fingeranzahl
 
-| Geste | Default `pointerCount` | Funktioniert ebenso mit |
-|-------|------------------------|-------------------------|
-| pinch / spread / rotate | 2 | 3, 4, 5 Fingern |
-| multi-finger-tap / multi-finger-long-press | 2 | 3, 4, 5 Fingern |
-| multi-finger-swipe | 3 | 2 oder 4 Fingern |
+| Geste | Default `pointerCount` | Funktioniert ebenso mit | Single-Point |
+|-------|------------------------|-------------------------|------------|
+| pinch / spread / rotate | 2 | 3, 4, 5 … Fingern (Gerätegrenze) | ✗ |
+| multi-finger-tap / multi-finger-long-press | 2 | 3, 4, 5 … Fingern (Gerätegrenze) | ✗ |
+| multi-finger-swipe | 3 | 2 oder 4 Fingern | ✗ |
 
 ## Barrierefreiheit
 

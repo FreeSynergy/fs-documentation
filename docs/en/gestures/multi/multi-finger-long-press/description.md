@@ -37,8 +37,8 @@ gesture type.
 
 ## Difference from Long Press
 
-- **Long Press**: one finger, primary context menu
-- **Multi-Finger Long Press**: two or more fingers, secondary/multiselect context
+- **Long Press**: from one pointer up (default: one), primary context menu
+- **Multi-Finger Long Press**: requires at least two pointers (`pointerCount`), secondary/multiselect context
 
 ## Accessibility
 

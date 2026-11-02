@@ -40,6 +40,13 @@ immer eine Ein-Finger-Alternative.
 | **Template Matching** | Ähnlichkeit zu gespeicherten Vorlagen ($1/$2-Un recognizer) |
 | **Primitives** | Strich, Bogen, Kreis als Bausteine kombinieren |
 
+## Zeigeranzahl
+
+Ein Pfad ist ein zusammenhängender Strich: Die Geste ist an **einen Zeiger**
+gebunden. Setzen mehrere Finger gleichzeitig auf, entstehen mehrere getrennte
+Pfade – das sind zwei einzelne Draw Gestures (oder ein unbekanntes Muster),
+kein Multipoint derselben Geste.
+
 ## Unterschied zu Swipe
 
 - **Swipe**: gerichtete Strecke, Richtung entscheidet

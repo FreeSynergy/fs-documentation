@@ -47,4 +47,4 @@ browser's back gesture.
 ## See also
 
 - [Swipe](../swipe/description.md)
-- [Navigation Sidebar](../../../../de/components/navigation/sidebar/description.md) (German)
+- [Navigation Sidebar](../../../components/navigation/sidebar/description.md)

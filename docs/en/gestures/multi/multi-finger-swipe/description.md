@@ -41,8 +41,8 @@ Whether two, three, or four fingers do the swiping is a setting
 
 ## Difference from Swipe
 
-- **Swipe**: one finger, app-internal navigation
-- **Multi-Finger Swipe**: two or more fingers, usually the system/app-switching level
+- **Swipe**: from one pointer up (default: one), app-internal navigation
+- **Multi-Finger Swipe**: requires at least two pointers (`pointerCount`), usually the system/app-switching level
 
 ## Difference from Pinch
 

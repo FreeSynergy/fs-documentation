@@ -4,6 +4,9 @@ Kombinations-Gesten setzen sich aus einfachen Gesten zusammen oder entstehen
 aus dem Zusammenspiel von Geste und Kontext (Liste, Liste + Zeit). Sie werden
 eigenständig dokumentiert, weil sie eigene Attribute und Abbruchregeln haben.
 
+Die Zeigeranzahl folgt den Basisgesten (Drag): Beide Gesten sind mit einem wie
+mit mehreren Fingern ausführbar (multipointfähig bis zur Gerätegrenze).
+
 ## Elemente
 
 - **pull-to-refresh** - Ziehen nach unten an der Listen-Obergrenze (Aktualisieren)

@@ -32,8 +32,8 @@ Gestetyp: Tippen mit zwei, drei oder fünf Fingern ist dieselbe Geste.
 
 ## Unterschied zu Tap
 
-- **Tap**: ein Finger, Primäraktion
-- **Multi-Finger Tap**: zwei oder mehr Finger, Sekundäraktion
+- **Tap**: ab einem Finger (Standard: einer), Primäraktion
+- **Multi-Finger Tap**: verlangt mindestens zwei Finger (`pointerCount`), Sekundäraktion
 
 ## Unterschied zu Pinch/Spread
 

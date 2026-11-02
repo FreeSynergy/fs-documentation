@@ -24,6 +24,12 @@ iOS stellt dafür die `UIHoverGestureRecognizer` bereit, Web:
 - Ein-/Ausblenden: 100–300ms mit Delay (meist 300–700ms gegen versehentliches Triggern)
 - Solange Zeiger über Element: unbegrenzt aktiv
 
+## Zeigeranzahl
+
+Hover ist an genau **einen schwebenden Zeiger** gebunden – Multipoint ist hier
+nicht möglich: Auf reinen Touchscreens fehlt Hover völlig, bei Maus und Stift
+schwebt jeweils nur ein Zeiger.
+
 ## Erkennung
 
 | Methode | Beschreibung |

@@ -10,10 +10,40 @@ Gestures are grouped into four families (mirroring the animation categories).
 
 | Family | Principle | Gestures |
 |--------|-----------|----------|
-| `single` (single-pointer) | One finger/pointer, mostly replaces clicks | 10 |
-| `multi` (multi-pointer) | Two+ pointers, the count is a setting, transforms content | 6 |
-| `device` | Movement of the device itself (sensors) | 4 |
+| `single` (single-pointer) | From one pointer, mostly replaces clicks – all multipoint-capable | 10 |
+| `multi` (multi-pointer) | Two+ pointers (never one), the count is a setting, transforms content | 6 |
+| `device` | Movement of the device itself (sensors, no pointers) | 4 |
 | `combined` | Composite gestures with their own logic | 2 |
+
+## Pointer Count: Single-Point and Multipoint
+
+A touch sensor reports every simultaneous contact; depending on the device,
+five to ten fingers are detected at once. From this follow the rules for all
+gestures:
+
+- **Single-point gestures are multipoint-capable.** Tap, double tap, long
+  press, swipe, flick, drag, edge swipe and force press work with any number
+  of fingers up to the device limit – recognised on the primary pointer or on
+  the centre of all pointers. “Single” is the minimum, not the maximum.
+- **Multipoint always covers every finger count.** A gesture carries no limit
+  of its own; the ceiling is always the device limit.
+- **Multi gestures cannot run single-point.** Pinch, spread and rotate
+  require two pointers by necessity (distance and angle only exist from two
+  on), and the multi-finger variants do by definition.
+- **Two exceptions without multipoint:** `draw-gesture` (one path is one
+  connected stroke – further fingers create their own, separate paths) and
+  `hover` (no contact; a hovering multi-finger pointer does not exist).
+- **Device gestures know no pointer count:** shake, tilt, flip and wave run
+  on sensors, touches play no role.
+
+| Family / Gesture | Single-Point | Multipoint | Basis |
+|------------------|--------------|------------|-------|
+| single (all but draw-gesture, hover) | ✓ | ✓ up to device limit | primary pointer / pointer centre |
+| single: draw-gesture | ✓ | ✗ | one path = one stroke |
+| single: hover | ✓ | ✗ | only one hovering pointer |
+| multi (all) | ✗ | ✓ up to device limit | at least two pointers needed |
+| device (all) | not applicable | not applicable | sensors instead of pointers |
+| combined | ✓ | ✓ | follows its base gestures (drag) |
 
 ## All Gestures
 
@@ -79,7 +109,7 @@ Gestures are grouped into four families (mirroring the animation categories).
 | `swipeThreshold` | number | Minimum distance for Swipe |
 | `velocityThreshold` | number | Minimum velocity for Flick in px/s |
 | `edgeSize` | number | Width of the edge zone for Edge Swipe in px |
-| `pointerCount` | number | Minimum number of fingers for multi-finger gestures (2, 3, 4, 5 …) |
+| `pointerCount` | number | Minimum pointer count for the gesture (single: 1, multi: 2 or 3 …) – limited above by the device |
 | `shakeThreshold` | number | Minimum acceleration/movement for Shake |
 | `minShakes` | number | Minimum number of direction changes for Shake |
 | `deadZone` | number | Degree tolerance for Tilt |
