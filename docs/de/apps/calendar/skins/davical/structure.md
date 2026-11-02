@@ -1,60 +1,56 @@
-# Baïkal/Davical - Struktur und UI/UX
+# DAViCal – Struktur (Stand 1.1.13)
 
-## Systemstruktur
-
-```
-Client (Thunderbird/Kalendar/iOS)
-        │  HTTPS (Basic-Auth)
-        ▼
-Reverse Proxy (TLS)
-        │
-┌───────┴─────────────────────────┐
-│ PHP-Anwendung                   │
-│ ├── /  → DAV-Endpunkt (dav.php)│   PROPFIND/REPORT/PUT/DELETE
-│ ├── /admin/ → Web-Administration│   Benutzer, Kalender, Settings
-│ └── Settings/ (config, SQLite)  │
-└───────┬─────────────────────────┘
-        ▼
-MySQL/MariaDB oder SQLite
-```
-
-## Admin-Web-UI
+## Request-Ablauf
 
 ```
-┌────────────────────────────────────────────────┐
-│ Baïkal                      [admin] [logout]   │
-├──────────┬─────────────────────────────────────┤
-│ Users    │  Benutzerliste (Tabelle)            │
-│ Calendars│  ┌────────────────────────────────┐ │
-│ Addr-Books│ │ anna   admin ▢  aktiv ✔  [edit]│ │
-│ Shares   │ │ ben    admin ▢  aktiv ✔  [edit]│ │
-│ Settings │  └────────────────────────────────┘ │
-│          │  [+ Add User]                       │
-└──────────┴─────────────────────────────────────┘
+Client (Thunderbird/Kalendar/DAVx⁵/Apple)
+   │  HTTPS, HTTP Basic
+   ▼
+Apache/nginx (Alias /davical, Rewrites für /.well-known & /principals)
+   ▼
+htdocs/caldav.php  ── Front-Controller für alles DAV-mäßige
+   ├─ always.php        → Konfiguration laden, Logging
+   ├─ HTTPAuthSession   → Authentifizierung (DB/LDAP/PAM/Kerberos/Session)
+   ├─ CalDAVRequest     → Pfad/Methode sammeln, DAV-Header senden
+   └─ inc/caldav-<METHODE>.php → PROPFIND, REPORT-<typ>, PUT-<format>, …
+   ▼
+PostgreSQL (Objekte, Rechte, Sync-Historie)
 ```
 
-- Schlichte Tabellen-UI, kein Responsive-Layout im Detail — auf Mobilgeräten gut nutzbar, aber nicht optimiert
-- Standard-Sprache Englisch; deutsch nicht offiziell übersetzt
+Nebeneinstiege: `public.php` (anonym, nur öffentlich lesbare Sammlungen), `feed.php`, `freebusy.php`, `tz.php`, `metrics.php`, `autodiscover-handler.php`, `well-known.php` (inkl. iSchedule).
 
-## Request-/Speicherstruktur
+## Verzeichnisse des Quellbaums
 
-- Jeder Kalender ist ein DAV-„Collection"-Objekt; jedes Ereignis eine eigene Zeile mit `caldav_data` (ICS-Fragment) + ETag + Sync-Token-Historie
-- Änderungen laufen über `PUT`/`DELETE` pro UID — atomare Einzeloperationen
+| Verzeichnis | Inhalt |
+|-------------|--------|
+| `htdocs/` | Front-Controller (`caldav.php`, `admin.php`, `index.php`, `setup.php`, `upgrade.php`, `tools.php`), CSS/JS |
+| `inc/` | Methoden-/REPORT-Handler (`caldav-*.php`), Sessionen, Principal-/Ressourcenklassen, Treiber (`drivers_ldap.php` …), `ui/` für Browser/Editor-Seiten |
+| `dba/` | PostgreSQL-Schema (`davical.sql`), Patches, `update-davical-database`, `create-database.sh` |
+| `config/` | Apache-Beispiel (`apache-davical.conf`), `example-config.php` |
+| `scripts/` | CLI: LDAP-Sync, Kalender-Import/Export, Alarm-/TZ-Pflege, `davical-cli` |
+| `zonedb/`, `po/` | Zeitzonendaten, Übersetzungen |
+
+## Konfiguration
+
+Der Rechner sucht beim Start der Reihe nach:
+`/etc/davical/<SERVER_NAME>-conf.php` → `/etc/davical/config.php` → `/usr/local/etc/davical/…`
+Vorlage ist `config/example-config.php` (Objekt `$c`: Datenbank, Auth-Treiber, Scheduling, Bind, Metriken, Debug).
+
+## PostgreSQL-Schema (Auszug)
+
+- **Principals**: `principal`, `principal_type` (Benutzer/Ressource/Gruppe/Raum), `group_member`
+- **Sammlungen/Objekte**: `collection`, `caldav_data` (ICS/vCard-Rohdaten), `calendar_item` (parset, für REPORTs), `addressbook_resource`, `property`, `locks`
+- **Rechte**: `grants` (ACL-Bits inkl. Scheduling-Privilegien)
+- **Sync**: `sync_tokens`, `sync_changes` (CTag-/Sync-Token-Historie)
+- **Tickets**: `access_ticket`, `freebusy_ticket`
+- **Bind-Abos**: `dav_binding`
+- **Zeitzonen**: `timezones`, `tz_aliases`, `tz_localnames`
+
+Migration: `dba/update-davical-database` wendet die Patches unter `dba/patches/` automatisch an.
 
 ## Deployment-Formen
 
-| Form | Beschreibung |
-|------|--------------|
-| Klassisch | Apache/nginx + PHP-FPM, Composer-Installation |
-| Docker | `ckulka/baikal:nginx` (TLS am Proxy) |
-| Shared Hosting | funktioniert wegen reiner PHP-Ausführung oft ohne Shell |
-
-## Accessibility
-
-- Admin-UI: einfache HTML-Tabellen und Formulare, bildschirmleser-tauglich; Kontrast Standard-Bootstrap-artig
-- Der Endnutzer-Alltag läuft über Clients — Accessibility hängt dort am jeweiligen Client
-
-## Performance
-
-- `REPORT`-Abfragen mit kleinem Zeitraum bleiben schnell (Index auf Kalender/Zeiten)
-- Sehr große Kalender (> 50 MB ICS) bremsen `GET` des Gesamtordners — inkrementelle Sync Token nutzen
+- **Apache + PHP-FPM** (Referenz): `Alias /davical /usr/share/davical/htdocs` plus die mitgelieferten Rewrite-Regeln; CSP-Header für UI-Seiten bereits im Beispiel
+- **nginx + PHP-FPM**: üblich (entspricht dem Apache-Alias); DAV-Methoden müssen ans PHP-Skript durchgereicht werden
+- **Debian/Ubuntu**: Paket `davical` (1.1.13-2 Stand Mai 2026), PostgreSQL-Lokalnutzung typisch; Gentoo-Sunrise, Arch-Wiki-Anleitung vorhanden
+- TLS immer über Reverse Proxy; kein eigener Token/OAuth-Stack

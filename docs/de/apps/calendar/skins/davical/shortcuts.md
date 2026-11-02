@@ -1,31 +1,39 @@
-# Baïkal/Davical - Tastatur-Shortcuts
+# DAViCal – Kurzbefehle (Stand 1.1.13)
 
-## Übersicht
+## Web-Oberfläche
 
-Die Baïkal-Administration ist eine klassische HTML-Formular-App **ohne eigene Tastatur-Shortcuts**. Der DAV-Endpunkt hat keine Oberfläche. Es gelten die Browser-Standardtasten; verbreitet angenommene Shortcuts existieren nicht.
+DAViCal bringt **eigene Tastaturkurzbefehle nicht mit** – die Weboberfläche (Principal-/Collection-Browser und -Editoren) ist klassisches server-gerendertes HTML ohne Tastenbelegungen (`accesskey`/`keydown` sind im Code nicht vorhanden). Browser-eigene Bedienung (Tab/Enter, Browser-Shortcuts) gilt unverändert.
 
-> Stand: aktuelle Baïkal-/Davical-Releases. Kurzfristige Änderungen sind möglich; nach Updates sollte diese Liste geprüft werden.
+## Direct-URLs als „Abkürzungen"
 
-## Browser-Standard (Admin-UI)
+Häufige Seiten lassen sich über feste URLs direkt ansteuern (Basis `/davical`):
 
-| Shortcut | Funktion |
-|----------|----------|
-| `Tab` / `Shift+Tab` | Formularfelder ansteuern |
-| `Enter` | Formular absenden (Speichern) |
-| `Esc` | Bestätigungsdialog abbrechen (Browser-Confirm) |
-| `Ctrl+F` | Text auf der Seite suchen |
-| `Strg+R` / `F5` | Listen neu laden |
-| `Alt+←` / `Alt+→` | Browser zurück/vor |
+| URL | Ziel |
+|-----|------|
+| `/davical/index.php` | Principal-Übersicht / Login |
+| `/davical/admin.php?action=browse&t=principal&type=1` | Benutzerliste |
+| `/davical/admin.php?action=browse&t=principal&type=3` | Gruppenliste |
+| `/davical/admin.php?action=edit&t=principal` | Neuen Principal anlegen |
+| `/davical/admin.php?action=browse&t=external` | Externe Kalender-Abos (BIND) |
+| `/davical/tools.php` | Import-/LDAP-Sync-Werkzeuge |
+| `/davical/upgrade.php` | Datenbank-Migration |
 
-## Client-Seite (Kurzreferenz)
+## Wartungs-Einzeiler (CLI)
 
-Kalender-Shortcuts entstehen erst im jeweiligen DAV-Client und sind dort dokumentiert:
+```sh
+dba/update-davical-database          # Schema aktualisieren
+scripts/tz-update.php                # Zeitzonen nachziehen
+scripts/sync-remote-caldav.php       # Counter-Abgleich mit Gegenstelle
+scripts/load_calendar.php datei.ics  # Kalender einspielen
+```
 
-- Thunderbird: `Ctrl+D` neuer Termin, `T` heute
-- Kalendar: siehe [Kalendar shortcuts](../kalendar/shortcuts.md)
-- Nextcloud Calendar: `N` neuer Termin, `T` heute
+## Kurzbefehle in den Calendern (Client-Seite)
 
-## Ausdrücklich nicht vorhanden
+Die eigentlichen Kalender-Kurzbefehle stellt der Client, nicht DAViCal:
 
-- Keine Shortcuts zum Anlegen von Benutzern/Kalendern in der Admin-UI (Formulare nur per Klick)
-- Keine Kommandozeilen-Kurzformen außer den regulären CLI-Skripten (`baikal.php`, Davical-`updater.php`)
+- **Thunderbird (KALENDAR-Tab)**: `D` Tag, `W` Woche, `M` Monat, `N`/`P` vor/zurück, `T` heute, `Ctrl+N` neuer Termin
+- **Kalendar**: `Strg+N` neuer Termin, Blättern mit `←`/`→` in der Monatsansicht
+- **Apple Kalender**: `Cmd+N` Neuer Termin, `Cmd+1..6` Ansichten
+- **Evolution**: `Strg+2` Kalender, `Strg+N` neuer Termin
+
+Alle Befehle gehören zum jeweiligen Client und wirken auf DAViCal nur als normale CalDAV-Operationen (`PUT`/`REPORT`).

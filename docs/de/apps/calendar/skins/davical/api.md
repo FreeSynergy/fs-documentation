@@ -1,53 +1,98 @@
-# Baïkal/Davical - API Dokumentation
+# DAViCal – API (Version 1.1.13)
 
-## Übersicht
+## Übersicht und Status
 
-Die API von Baïkal/Davical **ist** das CalDAV-/CardDAV-Protokoll (RFC 4791/6352 über HTTP). Eine zusätzliche REST-Verwaltungs-API existiert nicht — Administration läuft über Web-UI und CLI. Genau diese Protokollreinheit macht den Server zum Referenz-Backend für standardisierte Kalender-/Kontaktdaten.
+DAViCal ist ein CalDAV-/CardDAV-Server in PHP mit PostgreSQL. **Die API von DAViCal ist das DAV-Protokoll selbst** – es gibt keine REST-API. Diese Dokumentation basiert auf dem Quellcode des aktuellen Release **1.1.13 (11. Mai 2026)**; das Projekt wird aktiv weiterentwickelt (Debian-Paketierung 1.1.13-2, Mai 2026).
 
-**API-Arten im Überblick**
+Versionshistorisch wichtig: Ein XML-RPC-Zugang, den manche Alt-Dokumentationen erwähnen, ist in den Release-Tags ab 0.9.9.8 bis heute **nicht enthalten** – aktuelle Administration läuft über Web-UI, Skripte und Datenbank.
 
-| Art | Verwendung | Status |
-|-----|------------|--------|
-| CalDAV (PROPFIND/REPORT/PUT/DELETE) | Kalender lesen/schreiben | offiziell |
-| CardDAV (PROPFIND/REPORT/PUT/DELETE) | Adressbücher | offiziell |
-| WebDAV-Sync (RFC 6578) | inkrementelle Änderungen via Sync-Token | offiziell |
-| REST-Admin-API | — | ❌ Nicht vorhanden (nur Web-UI/CLI) |
-| Webhooks / Push | — | ❌ Nicht vorhanden |
+**API-Oberflächen im Überblick (1.1.13)**
+
+| Oberfläche | Zweck | Status |
+|-----------|-------|--------|
+| CalDAV (RFC 4791) | Kalender lesen/schreiben | offiziell |
+| CardDAV (RFC 6352) | Adressbücher | offiziell |
+| WebDAV + Sync (RFC 4918/6578) | Sammlungen, `sync-collection` | offiziell |
+| RFC 3744 ACL | Rechteverwaltung | offiziell |
+| Scheduling (RFC 6638) | Einladungen via Inbox/Outbox | offiziell |
+| iSchedule (CalConnect, Draft 01) | signiertes Scheduling, Domain Keys | offiziell (aktiviert über `enable_scheduling`) |
+| Tickets (draft-ito-dav-ticket-00) | tokenbasierte Freigaben | proprietäre Erweiterung |
+| `BIND` | externe Kalender einbinden (Subscription) | proprietäre Erweiterung |
+| Atom-Feed (`feed.php`) | Feed über Sammlungsänderungen | offiziell |
+| FreeBusy (`freebusy.php`) | Belegungsabfrage per HTTP-Parameter | offiziell |
+| Timezone-Service (`tz.php`) | VTIMEZONE-Lookup | offiziell |
+| Prometheus-Metriken (`metrics.php`) | Monitoring | offiziell |
+| Autodiscover | Outlook-/ActiveSync-Entdeckung | offiziell |
+| REST-Admin-API / Webhooks | — | ❌ existieren nicht |
+
+## DAV-Compliance (OPTIONS-Antwort)
+
+Der Server sendet (Quelle: `htdocs/caldav.php`):
+
+```
+DAV: 1, 2, 3, access-control, calendar-access, calendar-schedule,
+     extended-mkcol, bind, addressbook
+```
+
+Je nach Konfiguration zusätzlich: `calendar-auto-schedule` (wenn `enable_auto_schedule`) und `calendar-proxy` (standardmäßig aktiv, abschaltbar über `disable_caldav_proxy`). Öffentlich-lesbare Zugänge antworten reduziert mit `DAV: 1, 2, calendar-access`.
+
+## Endpunkte und URL-Struktur
+
+Front-Controller ist `caldav.php`; typische Apache-Konfiguration bindet DAViCal unter `/davical` ein:
+
+| URL | Bedeutung |
+|-----|-----------|
+| `/.well-known/caldav` | `301` auf Principal-Wurzel |
+| `/.well-known/carddav` | `301` auf Principal-Wurzel |
+| `/.well-known/timezone` | `301` auf `tz.php` (mit Query-Parametern) |
+| `/.well-known/…` (übrige) | iSchedule `GET`/`POST`, falls `enable_scheduling` |
+| `/autodiscover/autodiscover.xml` | Autodiscover (Outlook) |
+| `/davical/caldav.php/<user>/` | Principal (Standardpfad unter Serverwurzel) |
+| `/davical/caldav.php/<user>/<calendar>/` | Kalender-/Adressbuch-Sammlung |
+| `/davical/caldav.php/<user>/<proxy-user>/…` | Principal-Proxy-Zugriff (`calendar-proxy`) |
+| `/davical/feed.php/<sammlung>/` | Atom-Feed der letzten Änderungen |
+| `/davical/freebusy.php/<user>/?start=…&end=…` | FreeBusy als HTTP |
+| `/davical/tz.php?action=…&tzid=…` | Timezone-Service (`urn:ietf:params:xml:ns:timezone-service`) |
+| `/davical/metrics.php` | Prometheus-Format (`text/plain; version=0.4.0`) |
+
+Apache-Rewrite-Beispiele aus dem Projekt mappen zusätzlich `/principals/users/…`, `/principals/resources/…`, `/calendars/__uids__/…` und `/addressbooks/__uids__/…` auf die Principal-Pfade.
 
 ## Authentifizierung
 
-- **HTTP Basic** über TLS; Principal-Tabelle in der Datenbank
-- Optional offene Registrierung (legt Principal über das Registrierungsformular an)
-- Keine Token, kein OAuth — Passwörter gehören in den Client-Keyring
+- **HTTP Basic** gegen Principal-Tabelle in PostgreSQL; optional per E-Mail-Adresse als Benutzerkennung (`by_email`)
+- **Keine Tokens/OAuth** im Kern; alternative Auth-Treiber: LDAP (inkl. SASL-Binds und Gruppen-Sync), PAM, Kerberos/GSSAPI, externe PHP-Session; IMAP-Treiber wurde 2024 entfernt
+- **Tickets** (`?ticket=…` im Query): befristete Zugangsberechtigungen ohne Login (siehe MKTICKET)
+- Öffentlich-lesbare Sammlungen sind ohne Authentifizierung lesbar (`PublicSession`)
 
-## Discovery und Basis-Endpunkte
+## Unterstützte HTTP-Methoden (pro Sammlungstyp)
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/.well-known/caldav` | Redirect auf Principal-URL |
-| `GET` | `/.well-known/carddav` | Redirect auf Principal-URL |
-| `PROPFIND` | `/` (Depth 0) | `current-user-principal` ermitteln |
-| `PROPFIND` | `<principal>` (Depth 1) | `calendar-home-set`, `addressbook-home-set` |
-| `PROPFIND` | `<calendar-home>` (Depth 1) | Kalenderliste: `displayname`, `calendar-color`, Rechte |
-| `OPTIONS` | `/` | `DAV: 1,2,3, calendar-access, addressbook` |
+Grundmenge: `OPTIONS`, `PROPFIND`, `REPORT`, `DELETE`, `LOCK`, `UNLOCK`, `MOVE`.
 
-## Kalenderoperationen
+| Methode | Gilt für | Zweck |
+|---------|----------|-------|
+| `GET`, `HEAD`, `PUT` | Kalender, Adressbücher, Inbox | Objekt (`<uid>.ics`/`.vcf`) lesen/schreiben; `PUT` unterscheidet `text/calendar`, `text/vcard`, `text/x-vcard` |
+| `POST` | Schedule-Outbox | iMIP-/iSchedule-Versand; auch `POST` mit `text/vcard` oder `add-member` |
+| `PROPPATCH` | Principal, Kalender | Displayname, Farbe, Rechte-Eigenschaften |
+| `MKCOL`, `MKCALENDAR` | Principal-/Collection-Ebene | Sammlungen anlegen (`extended-mkcol`) |
+| `ACL` | Kalender, Collections, Principal | RFC-3744-Rechte setzen |
+| `MKTICKET`, `DELTICKET` | Kalender, Collections, Outbox | Ticket erzeugen/löschen |
+| `BIND` | Principal, Collections | externe Sammlungs-Subscription |
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `MKCALENDAR` | `<calendar-home>/name/` | neuen Kalender anlegen |
-| `REPORT` | `<calendar-url>` | `calendar-query` (Zeitraum) oder `sync-collection` |
-| `PUT` | `<calendar-url>/<uid>.ics` | Ereignis anlegen/ändern (If-Match / If-None-Match) |
-| `GET` | `<calendar-url>/<uid>.ics` | einzelnes Ereignis inkl. ETag |
-| `DELETE` | `<calendar-url>/<uid>.ics` | Ereignis löschen |
-| `PROPPATCH` | `<calendar-url>` | Kalendername/-farbe ändern |
+## Unterstützte REPORTs
+
+| REPORT | Namespace |
+|--------|-----------|
+| `calendar-query`, `calendar-multiget`, `free-busy-query` | `urn:ietf:params:xml:ns:caldav` |
+| `addressbook-query`, `addressbook-multiget` | `urn:ietf:params:xml:ns:carddav` |
+| `sync-collection` (RFC 6578, Sync-Token) | `DAV:` |
+| `principal-property-search`, `principal-search-property-set`, `principal-match`, `expand-property` | `DAV:` |
+
+Unbekannte REPORT-Typen antworten mit `403 Precondition Failed` auf `DAV::supported-report`.
 
 ## Beispiel: Ereignis anlegen
 
-Request:
-
 ```http
-PUT /dav.php/calendars/anna/work/standup-2026-11-02.ics HTTP/1.1
+PUT /davical/caldav.php/anna/work/standup-2026-11-02.ics HTTP/1.1
 Host: dav.example.org
 If-None-Match: *
 Content-Type: text/calendar; charset=utf-8
@@ -65,37 +110,41 @@ END:VEVENT
 END:VCALENDAR
 ```
 
-Response: `HTTP/1.1 201 Created` mit `ETag`.
+Antwort `201 Created` mit `ETag`; Änderungen laufen über `PUT` mit `If-Match`, Löschungen über `DELETE`.
 
-## Beispiel: calendar-query
+## Beispiel: MKTICKET (tokenbasierter Zugang)
+
+Folgt dem eingestellten Draft `draft-ito-dav-ticket-00` (Xythos/Cosmo-Variante, Namespace `http://www.xythos.com/namespaces/StorageServer`):
 
 ```xml
-<C:calendar-query xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
-  <D:prop><D:getetag/><C:calendar-data/></D:prop>
-  <C:comp name="VCALENDAR"><C:comp name="VEVENT"/></C:comp>
-  <C:timerange start="20261101T000000Z" end="20261108T000000Z"/>
-</C:calendar-query>
+<ticketinfo xmlns="http://www.xythos.com/namespaces/StorageServer">
+  <timeout>Seconds-3600</timeout>
+  <visits>Unlimited</visits>
+  <privilege><read/></privilege>
+</ticketinfo>
 ```
 
-Antwort als `D:multistatus` mit ICS-Daten je Ereignis.
+Antwort enthält eine Ticket-URL (`…?ticket=<id>`); Ablaufoptionen wie `Seconds-3600`, `Uses-10`. Standardprivileg ohne Angabe: `read-free-busy`. Benötigt `DAV::bind`-Recht.
 
-## Rate Limits
+## Administration (keine API)
 
-Eingebaute Limits: ❌. Absicherung über Reverse Proxy (nginx `limit_req`) und Fail2ban gegen Basic-Auth-Bruteforce.
+- **Web-UI**: `index.php` (Web-Calender/Login), `admin.php` (Benutzer, Kollektionen, Rechte, Einstellungen), `setup.php`, `upgrade.php`, `tools.php`, `help.php`
+- **Skripte/CLI**: `dba/update-davical-database`, `dba/create-database.sh`, `scripts/davical-cli` (Perl), `scripts/load_calendar.php`, `export_calendar.php`, `sync-remote-caldav.php`, `cron-sync-ldap.php`, `archive-old-events.php`, `refresh-alarms.php`, `tz-update.php`
+- Ein programmatischer Fernwartungs-Endpunkt (REST/XML-RPC) existiert in 1.1.13 nicht
 
-## Administration („Admin-API")
+## Rate Limits und Metriken
 
-- **Web-UI** `/admin/`: Benutzer, Kalender, Adressbücher, Freigaben, Einstellungen
-- **CLI**: `baikal.php` (Setup/Wartung), Davical-Core-Skripte
-- Direkte Datenbankänderungen sind nicht unterstützt (Sync-Token-Caching)
+- Eingebaute Rate Limits: ❌ (nur Credential-Erfolg/Fehler-Caching seit 2024); Schutz über Reverse Proxy (nginx `limit_req`) und Fail2ban
+- `metrics.php` liefert Prometheus-Metriken; Zugriff absicherbar über `metrics_collectors` (IP-Whitelist) und `metrics_require_user`; Stil via `metrics_style` (`counters`/`memcache`/`both`)
 
-## SDKs und Clients
+## Clients und SDKs
 
-- **Python**: `caldav`, `vdirsyncer`
-- **PHP**: Davical-Core `Cal::DAV::Server` (im Server selbst)
-- **JS**: `js-calendav`, `ts-caldav`, oder rohes `fetch` mit DAV-Methoden
-- **CLI**: `vdirsyncer`, `khal`
+- **Python**: `caldav`, `vdirsyncer`, `khal`
+- **Android**: DAVx⁵ (vom Projekt gepflegt mitgetestet)
+- **Desktop**: Thunderbird (Thunderbird-eigenes CalDAV/CardDAV), Evolution, Kalendar, Apple Kalender/Kontakte
+- **PHP**: AWL-Bibliotheken des Projekts (`XMLDocument`, `DAVResource`); CalDAV-Client-Klassen `inc/caldav-client.php`
+- **JS/Rohe Zugriffe**: `fetch` mit DAV-Methoden (`PROPFIND`/`REPORT`), da keine SDKs gepflegt werden
 
 ## Skin-Hinweis
 
-FreeSynergy-Skins mit „Davical-Backend" sprechen dieselben RFC-Endpunkte; Felder/Modelle: [Event-Modell](../../../../data/modelle.md), [ICS-Format](../../../../data/formate.md).
+FreeSynergy-Skins mit DAViCal-Backend sprechen exakt diese RFC-Endpunkte; Datenmodelle: [Event-Modell](../../../../data/modelle.md), [ICS-Format](../../../../data/formate.md).

@@ -1,36 +1,37 @@
-# Baïkal/Davical - Menüpunkte
+# DAViCal – Menü (Web-Oberfläche 1.1.13)
 
-## Übersicht
+## Einstieg
 
-Baïkal/Davical hat zwei Oberflächen: den **DAV-Endpunkt** (protokollgetrieben, kein Menü) und die **Web-Administration** unter `/admin/`. Die Menüpunkte beziehen sich auf die Administration.
+DAViCal hat keine App-artige Navigation; die Weboberfläche ist ein seit 2006 gewachsenes Browser/Editor-System (AWL-Framework). Startseite `index.php` zeigt nach Login („Log On Please") die Principal-Übersicht; von dort zu Personen → deren Kalender-/Adressbuch-Sammlungen.
 
-## Admin-Web-UI (Hauptmenü)
+## Hauptmenü (jede Seite)
 
-| Menüpunkt | Beschreibung |
-|-----------|--------------|
-| Users | Benutzer anlegen/löschen, Passwort, Admin-Recht, Suspend |
-| Calendars | Kalender je Benutzer: Name, Beschreibung, Farbe, Schreibrecht (read-write/read) |
-| Subscriptions | abonnierte Kalender (Share-Links, Lesezugriff) verwalten |
-| Address Books | CardDAV-Adressbücher je Benutzer anlegen/freigeben |
-| User-specific shares | Kalender-/Adressbuch-Freigaben zwischen Benutzern |
-| Settings | Instanzname, Registrierung offen/geschlossen, Kalenderlimits, Timeout |
-| Baïkal UI / Davical-Modus | UI-Umschalter: Baïkal verteilt ein eigenes Frontend über Davical; „classic Davical" zeigt die alte Admin-Maske |
+| Menüpunkt | Ziel | Unterpunkte |
+|-----------|------|-------------|
+| **Home** | `index.php` | **Logout** |
+| **User Functions** | Principal-Browser (`admin.php?action=browse&t=principal&type=1`) | **View My Details** (eigener Principal-Datensatz) · **List Users** · **List Resources** · **List Groups** · **List Rooms** |
+| **Administration** (nur Admins) | — | **Setup** (`setup.php`) · **Upgrade Database** (`upgrade.php`) · **Tools** (`tools.php`: Kalender importieren, LDAP-Synchronisation) · **List External Calendars** (BIND-Abos) · **iSchedule Configuration** (`iSchedule.php`) |
+| **Help** | `help.php` (Hilfe zum aktuellen Bildschirm) | **DAViCal Homepage** · **DAViCal Wiki** · **Request Feature** · **Report Bug** (GitLab-Issues) |
 
-## Kontext-Menüs / Aktionen
+Zusätzlich im Menü **User Functions** für Admins: **Inactive Principals**, **Create Principal** (neuer Benutzer, Ressource oder Gruppe).
 
-- **User bearbeiten** - Anzeigename, Admin-Schalter, Passwort-Reset
-- **Kalender löschen** - löscht Kalender und alle Ereignisse (unwiderruflich)
-- **Share-Link erzeugen** - öffentlicher Lese-Link für einen Kalender
-- **Principal sperren** - Benutzer deaktivieren, ohne Daten zu löschen
+## Principal-Browser
 
-## Rollen
+Spalten: ID (Link zur Bearbeitung), Name, Display Name, EMail, „Is Member of", „Has Members" (nur Gruppen). Filter nach Typ (Benutzer/Ressource/Gruppe/Raum) und Aktivstatus.
 
-| Rolle | Sichtbare Menüs |
-|-------|-----------------|
-| Admin | alle Menüs, auch Settings |
-| Normaler Benutzer | keine Admin-UI — Zugriff nur über CalDAV-/CardDAV-Clients |
+## Principal-Editor
 
-## DAV-Endpunkte (für Clients, kein Menü)
+Felder u. a.: Principal-ID (nur lesbar/neu), Preferred Language (Locale-Auswahl), Full Name, E-Mail (eindeutig; Identifikator für Invitations/FreeBusy), Typ, **Administrator**-Schalter („full rights to the whole DAViCal System"), Passwörter je nach Auth-Treiber.
 
-- `/.well-known/caldav` und `/.well-known/carddav` - Discovery
-- `/dav.php` bzw. `/` (Rewrite) - CalDAV-/CardDAV-Wurzel
+## Collection-Editor
+
+- Anzeige/Bearbeitung: Displayname, Typ (Kalender/Adressbuch), öffentlich-lesbar
+- **ICS/vCard-Upload**: Datei ersetzt die Sammlung oder wird angehängt (`Append`)
+- Externe Bind-URLs werden angezeigt (abonnierter Kalender)
+- **Rechte-Matrix** je Principal mit DAViCal-Privilegien: Read, Write Metadata, Write Data, Override a Lock, Read/Write Access Controls, Create Events/Collections (bind), Delete Events/Collections (unbind), Read Free/Busy Information, „All privileges"/„Write"-Sammelrechte sowie je sieben Scheduling-Rechte (Deliver/Send Invitation/Reply, Query/Send Free-Busy)
+
+## Hinweise
+
+- Kein eigenes Menü für Termine: Kalenderführung passiert in den DAV-Clients
+- Admin-Zugang kann per Domain/Port/Rolle eingeschränkt werden (`restrict_admin_domain`, `restrict_admin_port`, `restrict_admin_roles`)
+- Deutsch als UI-Sprache vorhanden (po-/Übersetzungsanteil im Projekt, `supported_locales`)
