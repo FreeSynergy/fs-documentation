@@ -1,104 +1,91 @@
-# Nextcloud Calendar - Menüpunkte
+# Nextcloud Calendar – Menü- und Navigationsstruktur (v6.6.4)
 
-## Übersicht
+Alle Einträge sind dem Quelltext des Tags v6.6.4 entnommen (Komponenten unter `src/views/Calendar.vue`, `src/components/AppNavigation/…`, `src/views/EditFull.vue`; englische Original-Labels zitiert, deutsche Übersetzung kann abweichen). Fundstellen in [index.md](index.md#quellen).
 
-Nextcloud Calendar hat keine klassische Menüleiste. Bedient wird über die Nextcloud-Kopfzeile (App-Wechsel, Benutzermenü), eine linke Kalender-Seitenleiste mit Plus-Menü, eine Werkzeugleiste für die Zeitansichten sowie Dialoge für Ereignis, Freigabe und Einstellungen. Welche Punkte sichtbar sind, hängt von der Rolle ab (Administrator, angemeldeter Nutzer, Empfänger eines öffentlichen Links, extern eingeladene Person).
+## Gesamtlayout der Web-App
 
-## Hauptmenüpunkte (Kopfzeile und Werkzeugleiste)
+```
+Nextcloud-Header (Server: App-Liste, Avatar, Suche)
+└── Calendar-App (NcContent)
+    ├── linke Seitenleiste (NcAppNavigation)
+    │   ├── Kopf: Ereignisfilter, Datumsauswahl, Neuer Termin, Heute, Ansichtsmenü
+    │   ├── Liste: Kalender, Abos, Vorschläge, Buchungen, Papierkorb
+    │   └── Fuß: Kalendereinstellungen
+    ├── Hauptbereich: Kalender-Raster (FullCalendar) + Umschalter „Unscheduled tasks“
+    └── Editor-Ebene: schneller Editor / Detail-Editor / Modals
+```
 
-### 1. App-Starter (Symbol oben links)
-- **Funktion**: Wechsel zwischen den Nextcloud-Apps (Dateien, Kalender, Kontakte, Talk, Mail, Aufgaben u. a.)
-- **Details**:
-  - Raster-Symbol öffnet die App-Liste, angepinnte Apps stehen in der Kopfzeile
-  - Nextcloud-Suche (Kopfzeile) findet auch Termine, sofern „Suche auf dem Server" aktiviert ist
+## Seitenleiste – Kopfzeile (`AppNavigationHeader.vue`)
 
-### 2. Plus-Menü „Neu" (Seitenleiste)
-- **Funktion**: Objekte anlegen
-- **Details**:
-  - **Neues Ereignis**: Termin mit Titel, Datum, Ort, Teilnehmern
-  - **Neuer Kalender**: eigener Kalender mit Farbe
-  - **Neue Kalendergruppe**: mehrere Kalender gemeinsam sortieren
-  - **Neue Verfügbarkeit / Umfrage („Zeiten finden")**: Slot-Umfrage für Terminfindung
-  - **Abwesenheit** anlegen (neuere Versionen, (nicht dokumentiert, ob immer sichtbar))
+- Suchfeld **„Filter events …“** (filtert Termine in der aktuellen Ansicht)
+- **Datumsauswahl** (Date Picker, `AppNavigationHeaderDatePicker`)
+- **„New event“** (`AppNavigationHeaderNewEvent`, nur eingeloggte Nutzer)
+- **„Today“** (Heute-Button)
+- **Ansichtsmenü** (`AppNavigationHeaderViewMenu`): **Day / Week / Month / Year / List** – exakt die fünf FullCalendar-Views der Routen (`timeGridDay`, `timeGridWeek`, `dayGridMonth`, `multiMonthYear`, `listMonth`)
 
-### 3. Ansichts-Umschalter (Werkzeugleiste)
-- **Funktion**: Zeitdarstellung wählen
-- **Details**:
-  - Tag, Woche, Arbeitswoche, Monat, Agenda (Terminliste)
-  - Zurück / Heute / Weiter und Datumseingabe zum Springen
-  - Standardansicht in den persönlichen Einstellungen festlegbar
+## Seitenleiste – Liste (`CalendarList.vue`)
 
-### 4. „Einstellungen und Filter" (rechts in der Werkzeugleiste)
-- **Funktion**: Anzeige und Suche steuern
-- **Details**:
-  - Suche im Kalender (clientseitig oder „Suche auf dem Server")
-  - Geburtstagskalender und Feiertagskalender ein-/ausblenden
-  - Ereignisse nach Typ filtern, Seitenleiste ein-/ausklappen
-  - „Kalenderliste initial einklappen"
+- Abschnitt **„My calendars“** mit „Add new“-Menü (`CalendarListNew.vue`):
+  - **New calendar** (neuer Kalender)
+  - **New calendar with task list** (Kalender mit Aufgabenliste)
+  - **New subscription from link (read-only)** (WebCal-Abo aus `http(s)://`, `webcal(s)://`-Link)
+  - **Add public holiday calendar** (Feiertagskalender)
+  - **Add custom public calendar** (eigener öffentlicher Kalender)
+- **Kalendereinträge** (`CalendarListItem.vue`, Kontextmenü je Kalender):
+  - **Disable/Enable calendar** (ein-/ausblenden)
+  - Beschriftungen **„Shared with you by …“** / **„Delegated to you by …“**
+  - **Copy public link** (öffentlichen Link kopieren)
+  - **Edit and share calendar** bzw. **Edit calendar** (`EditCalendarModal`: Details, Teilen mit Nutzern/Gruppen/Circles, **PublishCalendar** für die öffentliche Freigabe, Internal link, Löschen)
+- Abschnitt **öffentliche Kalender** (`PublicCalendarListItem.vue`)
+- **Meeting-Vorschläge**: `ProposalEditor` + `ProposalList` (nur eingeloggt)
+- **Terminbuchungen**: `AppointmentConfigList.vue` („New appointment config“-Einstieg, Buchungslinks verwalten)
+- **Papierkorb** (`Trashbin.vue`, erscheint bei gelöschten Objekten/Kalendern)
 
-### 5. Kalender-Seitenleiste (links)
-- **Funktion**: Kalender sichtbar schalten, verwalten, teilen
-- **Details**:
-  - Checkbox pro Kalender blendet ein/aus, Farbpunkt setzt die Farbe
-  - Symbolsymbole am Eintrag: **Teilen** (Personen/Symbole), **Bearbeiten** (Kalendereinstellungen), **Mehr** (Herunterladen als ICS, Löschen)
-  - Gruppenkalender (Teamkalender je Nextcloud-Gruppe) mit eigenem Symbol, Abos mit Globus-Symbol und Aktualisieren-Knopf
-  - Geburtstags- und Feiertagskalender erscheinen automatisch (ausblendbar)
+## Seitenleiste – Fuß (`Settings.vue`)
 
-### 6. Benutzermenü (oben rechts)
-- **Funktion**: Konto, Darstellung, Abmeldung
-- **Details**:
-  - **Einstellungen** → Abschnitt „Kalender": Wochenanfang, Zeitzone, Standardansicht
-  - Darstellung (hell/dunkel/System) und Sprache gelten instanzweit
-  - Für Administratoren zusätzlich: Verwaltungsmenü (Nutzer, Apps, Server)
+Einstiegspunkt **„Calendar settings“**, darunter Gruppen:
 
-## Kontext- und Klick-Menüs
+- **General**: voreingestellter Kalender für eingehende Einladungen (*Default calendar for incoming invitations*), **Availability settings** (eigene Erreichbarkeit), **CalDAV**-Block mit kopierbaren URLs: **CalDAV URL** und **Server Address for iOS and macOS**
+- **Appearance**: **Birthday calendar**, **Tasks in calendar**, **Weekends**, **Week numbers**, **Limit number of events shown in Month view**, **Density in Day and Week View**
+- **Editing**: **Default reminder for part-day events**, **Default reminder for full-day events**, **Simple event editor** (Option: „More details“ öffnet den Detail-Editor)
+- **Files**: Anlage-Ordner für Termin-Anlagen (`SettingsAttachmentsFolder.vue`)
+- **Delegation**: Delegierende/Delegationen mit Lese-/Schreibrecht verwalten (`SettingsDelegationSection.vue`)
+- **ICS-Import** (`SettingsImportSection.vue`, Import-Bildschirm mit Fortschritt pro Datei)
+- **Tastaturkürzel-Übersicht** (`ShortcutOverview.vue`)
 
-### Klick auf einen freien Slot (Tages-/Wochenansicht)
-- Öffnet den Ereignis-Editor mit vorausgefüllter Uhrzeit
-- Aufziehen über mehrere Slots erstellt den Termin direkt in dieser Zeitspanne (Drag & Drop)
+## Hauptbereich
 
-### Klick auf ein Ereignis
-- Öffnet den Ereignis-Editor: Details, Teilnehmer (mit Zu-/Absage-Status), Erinnerungen, Anhänge, Kommentare, Talk-Link
-- Für Eingeladene erscheint **Antworten** (Annehmen / Vorläufig / Ablehnen)
+- **Kalender-Raster** (`CalendarGrid.vue`): FullCalendar mit Vor-/Zurück und Zeitsprung (Datumsauswahl sitzt in der Seitenleisten-Kopfzeile), Termine per Drag & Drop verschieb-/resizebar.
+- **„Show unscheduled tasks“**-Umschalter (NcActions-Button) öffnet rechte Seitenleiste **„Unscheduled tasks“** (`UnscheduledTasksList.vue`).
+- Leere Ansicht `EmptyCalendar.vue`, wenn kein Kalender vorhanden ist.
 
-### Rechtsklick
-- Nextcloud Calendar bietet **kein dokumentiertes Rechtsklick-Menü** in der Rasteransicht
-- Aktionen (Teilen, Umbenennen, Löschen, Export) liegen an den Kalender-Einträgen der Seitenleiste bzw. im Dialog
+## Termin-Editor
 
-## Wichtige Dialoge
+**Schneller Editor** (`EditSimple.vue`): Titel, Start/Ende/Dauer, Kalender, ganztägig, „More details“-Übergang.
 
-### Ereignis-Editor
-- Titel, Zeitbereich, ganztägig, Zeitzone, Wiederholung (RRULE), Erinnerungen (Popup/E-Mail)
-- Kalender-Auswahl, Privat-/Geschäftsstatus (Termin/busy), Ort, Notiz
-- Teilnehmer: Nextcloud-Nutzer, Gruppen, Kreise (Circles), E-Mail-Adressen; Raum-/Ressourcenbuchung
-- Reiter für Anhänge und Kommentare, Talk-Besprechung verknüpfen
+**Detail-Editor** (`EditFull.vue`, Titel **„Detailed event editor“**):
 
-### Freigabe-Dialog (Teilen)
-- Empfänger: Benutzer, Gruppen, Kreise
-- Berechtigungsstufen: **nur Verfügbarkeiten**, **kann anzeigen**, **kann bearbeiten**
-- Öffentlicher Link: Kalender als Abo-Link, optional Passwort (je nach Serverkonfiguration)
+- Actions-Menü oben rechts: **Copy link**, **Export** (ICS-Download, serverseitig sperbar via `hideEventExport`), **Duplicate**, **Delete** – bei Serien zusätzlich **Delete this occurrence** / **Delete this and future occurrences** / **Delete entire series**
+- Kopf: Titel, Kalender-Picker mit Farbe, ganztägig-Schalter
+- Abschnitte (Komponentenordner `src/components/Editor/`):
+  - **Properties** (Zeit/Zeitzone, Ort, Ressourcen/Räume, Beschreibung, Kategorie-Flags)
+  - **Repeat** (Wiederholungs-Editor)
+  - **Alarm** (Erinnerungen, mehrere, Zeiteinheiten)
+  - **Invitees** (Teilnehmer verwalten; Abschnittsname **„Managing shared access“**; Free/Busy-Einblendung, Slotvorschläge)
+  - **Attachments** (Dateianhänge aus Files)
+  - **Add Talk conversation** (Konferenzraum anlegen/verknüpfen)
+  - Einladungs-Annahmebuttons (**InvitationResponseButtons**: annehmen/vorläufig/ablehnen)
+- Speichern-Buttons (`SaveButtons.vue`), Verwerfen-Bestätigung (**Discard changes?**)
 
-### Kalendereinstellungen
-- Name, Farbe, Beschreibung, Zeitzone des Kalenders, Herunterladen (ICS), Löschen
+## Öffentliche/ eingebettete Ansichten (eigene Navigation)
 
-## Menüs nach Rolle
+- `/p/{token}`: Nextcloud-Header mit Kalendername + Ansichtsmenü (keine Seitenleisten-Bearbeitung).
+- `/embed/{token}`: `EmbedTopNavigation.vue`/`EmbedHeader.vue` – schlanleiste mit Titel, Ansichtsumschalter, „Open in Nextcloud“-Einstieg.
+- **Buchungsseite** (`/appointments/{userId}`, `/appointment/{token}`): Slotliste + Formular, keine Kalender-Navigation.
+- **Abstimmungsseite** (`/calendar/proposal/{token}`): Vorschlag mit Kandidatenterminen und Voting-UI, eigene Minimalnavigation (`ProposalPublic.vue`).
 
-### Administrator
-- Keine eigenen Kalender-Menüs: Kalender ist pro Nutzer dieselbe Oberfläche
-- Rechnerweite Aufgaben in der Nextcloud-Verwaltung: Apps aktivieren/aktualisieren, Nutzerverwaltung, DAV- und Gruppenkalender-Einstellungen (config.php), Speicher- und Berechtigungs-App
-- Einsicht in **fremde Kalender ist bewusst nicht vorgesehen** (Datenschutz)
+## Server-seitige Einstiegspunkte außerhalb der App
 
-### Angemeldeter Nutzer
-- Volle Funktionen: eigene Kalender, Veranstaltungen, Umfragen, Freigaben, Abos
-- Gruppenkalender der eigenen Gruppen automatisch sichtbar (nur mit Bearbeitungsrecht änderbar)
-
-### Empfänger öffentlicher Links / Gast
-- Öffentlich geteilter Kalender im Browser ohne eigene Anmeldung (schreibgeschützt)
-- Keine Seitenleisten-Verwaltung, keine Freigaben
-
-### Extern eingeladene Person (ohne Konto)
-- Erhält E-Mail mit ICS-Einladung; Annehmen/Ablehnen über den Mail-Client oder Nextcloud-Link
-
-## Shortcuts
-
-Die vorhandene Tastatursteuerung (Dialoge, Formulare, Browser-Tasten) ist in [shortcuts.md](shortcuts.md) beschrieben - inklusive der klar als nicht dokumentiert markierten Tasten.
+- Nextcloud-**Dashboard**: Widget „kommende Termine“ (`CalendarWidget.php`).
+- **Kontakte-Menü/Avatar**: Verfügbarkeitsanzeige (`ContactsMenuAvailability.vue`).
+- **Profilseite**: Link „Termine buchen“ (Profile-Link-Action `AppointmentsAction.php`).

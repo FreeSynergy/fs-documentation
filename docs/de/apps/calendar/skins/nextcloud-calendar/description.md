@@ -1,52 +1,39 @@
-# Nextcloud Calendar - Beschreibung
+# Nextcloud Calendar – Beschreibung
 
-## Übersicht
+*(Quellbasis: nextcloud/calendar v6.6.4, 2026‑10‑26 – Details und Fundstellen in [index.md](index.md#quellen))*
 
-Nextcloud Calendar ist die Kalender-Anwendung der quelloffenen Collaborations-Plattform Nextcloud. Sie ist kein Einzelprogramm, sondern eine App innerhalb einer Nextcloud-Instanz: Der Server hält die Kalenderdaten, die Weboberfläche zeigt sie, und CalDAV verbindet alle Geräte. Lizenz: AGPL, komplett open source.
+## Was das Programm macht
 
-## Was Nextcloud Calendar macht
+Nextcloud Calendar ist die **Kalender-Web-App des Nextcloud-Servers**: eine Weboberfläche zum Anlegen, Bearbeiten, Teilen und Einsehen von Terminen und Serien, deren Daten komplett in einem **CalDAV-Backend (sabre/dav) des Nextcloud-Servers** liegen. Die App selbst ist nur der Client – Kalender, Objekte und Freigaben sind normale CalDAV-Ressourcen, auf die parallel auch Desktop- und Handy-Clients (Thunderbird, DAVx⁵, Apple Kalender …) zugreifen.
 
-Nutzer legen Kalender an und tragen Termine ein - als Web-Oberfläche im Browser. Die Daten liegen in der Nextcloud-Datenbank und werden über ein eingebautes CalDAV-Backend (sabre/dav) allen Clients bereitgestellt. Termine lassen sich mit anderen Nextcloud-Nutzern, Gruppen und externen E-Mail-Adressen teilen; Einladungen laufen als ICS/iTIP über den Mail-Versand des Servers. Teamkalender entstehen automatisch für jede Benutzergruppe. Für die Terminfindung gibt es Verfügbarkeitsumfragen („Zeiten finden") und die Talk-Terminbuchung; Konferenzräume werden über die Ressourcen-App gebucht. Abos holen fremde Kalender (ICS/WebCal/CalDAV) auf den Server.
+Funktionen der Weboberfläche (v6.6.4): Tag-/Woche-/Monats-/Liste-/Jahresansichten (FullCalendar), Schnellerstellung, Vollbild-Editor mit Teilnehmern, Erinnerungen, Anlagen, Wiederholungen, Zeitzonen, Suche, Wochentag-Ansicht mit Ressourcen-Timeline, Geburtstagskalender (aus Contacts), WebCal-Abos, Aufgaben/Deck-Karten mit Fälligkeitsdatum, öffentliche Kalender- und Embed-Ansichten, **Terminbuchung per Link** (Appointment-Config mit Slot-Berechnung) und **Meeting-Vorschläge** (Doodle-artige Terminumfragen mit Abstimmungslink, seit der 6.x-Serie).
 
 ## Vorteile
 
-- **Datenhoheit**: alles auf dem eigenen Server, DSGVO-tauglich, kein Werbedienst
-- **Echter CalDAV-Server**: Apple Kalender, Thunderbird, Evolution, DAVx⁵ und Standard-Bibliotheken funktionieren ohne Zusatzsoftware
-- **Groupware-Baukasten**: Kontakte (Geburtstage), Mail (ICS-Einladungen), Talk (Videos, Terminumfragen), Dateien (Anhänge), Aufgaben nahtlos verbunden
-- **Keine Installationskosten pro Nutzer**: eine Instanz, ein Login für alles (Single Sign-On)
-- **Teamkalender und Freigabestufen** inklusive Verfügbarkeits-only-Ansicht als Privatsphäre-Stufe
-- **Öffentliche Links und Abos** für Feiertags-, Site- oder Vereinskalender
-- **Aktive Entwicklung**: regelmäßige Releases zusammen mit dem Nextcloud-Major
+- **Selbst gehostet, offene Standards:** alles RFC 5545/4791-konform über `remote.php/dav`; kein proprietäres Datenformat, beliebige CalDAV-Clients möglich.
+- **Tiefe Integration in die Nextcloud-Suite:** Contacts (Teilnehmer-Autocomplete, Geburtstagskalender), Talk (Konferenzraum mit einem Klick, Verfügbarkeit im Contacts-Menü), Tasks/Deck (Fälligkeiten im Kalender), Circles/Gruppen (Gruppenkalender), Dashboard-Widget, Links-Vorschau (ReferenceProvider), Profil-Link zu Terminbuchungen.
+- **Browser-Buchungsseite ohne Gegenkonto:** fremde Personen buchen Slots über einen Link; optional Bestätigungs-E-Mail-Schritt.
+- **Kein Lock-in:** Daten bleiben auf dem eigenen Server; die App ist AGPL-Quelltext und lässt sich austauschen, solange der CalDAV-Server bleibt.
+- **Aktive Entwicklung:** regelmäßige Releases (6.6.4 Okt 2026), gepflegte Abhängigkeiten, Support über help.nextcloud.com.
 
-## Abgrenzung zu anderen Systemen
+## Abgrenzung zu vergleichbaren Produkten
 
-### Nextcloud Calendar vs. Google Calendar
-- **Google Calendar** ist ein öffentlicher Cloud-Dienst mit Komfortfunktionen (automatische Termine aus Mails, „Scheduling-Links", KI-Vorschläge); **Nextcloud Calendar** ist self-hosted ohne diese Komfortfunktionen, dafür mit voller Datenkontrolle
-- **Google** bindet Geräte über sein eigenes Konto ein, **Nextcloud** über den offenen CalDAV-Standard
-- **Google** ist (in der Basisversion) kostenlos, **Nextcloud** kostet Server-Betrieb und Pflege
-
-### Nextcloud Calendar vs. SOGo
-- **SOGo** ist eine klassische Groupware mit eigenem Web-Client und zusätzlich MAPI/ActiveSync - Outlook und Outlook Mobile binden nativ an; **Nextcloud Calendar** bietet „nur" CalDAV/CardDAV
-- **SOGo** ist Kalender/Mail/Adressbuch in einem Paket, **Nextcloud** will die komplette Plattform (Dateien, Chat, Büro) sein
-- **Nextcloud** hat die modernere Oberfläche und mehr Ökosystem, **SOGo** die stärkere Exchange-Kompatibilität
-
-### Nextcloud Calendar vs. Radicale
-- **Radicale** ist ein purer CalDAV-/CardDAV-Server ohne eigene Kalender-Oberfläche; **Nextcloud Calendar** bringt die komplette Web-UI, Freigaben, Umfragen und Teamkalender mit
-- **Radicale** ist minimalistisch und in Minuten aufgesetzt, **Nextcloud** ist eine volle Plattform mit PHP-Datenbank und Wartungsaufwand
-- Wer nur Sync braucht, fährt mit Radicale leichter; wer UI und Kollaboration braucht, braucht Nextcloud
+| Produkt | Art | Unterschied zu Nextcloud Calendar |
+|---------|-----|-----------------------------------|
+| **Davical** (in dieser Doku beschrieben) | reiner CalDAV/CardDAV-Server (PostgreSQL) | Davical ist nur das Backend ohne eigene Weboberfläche; Nextcloud Calendar umgekehrt nur das Frontend ohne eigenes Backend. Kombinationen aus beliebiger CalDAV-Server-App + Kalender-UI sind bei Nextcloud nicht vorgesehen – die App setzt den Nextcloud-Server mit seinem `dav`-App-Backend voraus. |
+| **Google Kalender** (in dieser Doku beschrieben) | SaaS mit proprietärer REST-API | Google: Cloud-Dienst mit Push-Webhooks, ML-Funktionen, riesigem Ökosystem, aber Datenhoheit beim Anbieter. Nextcloud Calendar: volle Datenhoheit, keine Push-Webhooks, dafür CalDAV als neutraler Standard und Integration in selbst gehostete Groupware. |
+| **Nextcloud „ appointments“-App** | externe Buchungs-App | Die Kalender-App bringt eigene Buchungsseiten bereits mit; die ältere separierte appointments-App ist eine Alternative für Spezialfälle. |
+| Desktop-/Mobile-Kalender (KOrganizer, Thunderbird, Apple Kalender) | native Einzelplatz-Clients | Greifen oft auf dieselbe Nextcloud-Datenbank zu; die Web-App punktet mit Freigaben, öffentlichen Seiten, Buchung und Meeting-Umfragen ohne installierbaren Client. |
 
 ## Technische Details
 
-- **Backend**: PHP (Nextcloud Server, aktuell 8.x-Anforderungen), Kalender-App als Server-App; DAV-Schicht auf sabre/dav (sabre/vobject für ICS-Auswertung)
-- **Datenbank**: MySQL/MariaDB oder PostgreSQL (Standard), SQLite für Kleinstinstanzen, Oracle in Enterprise-Umgebungen; Kalenderdaten in den Tabellen `calendars`/`calendarobjects` des CalDAV-Backends
-- **Frontend**: Vue.js-App im Browser; die Zeit-Raster basieren auf FullCalendar, ICS-Parsing u. a. mit ical.js und der offiziellen Bibliothek `@nextcloud/calendar-js` (Regelwerk für Wiederholungen)
-- **Authentifizierung**: Nextcloud-Konto mit Session im Browser; für CalDAV-Clients **App-Passwörter** (besonders mit Zwei-Faktor-Authentifizierung); optional SAML/OIDC/Keycloak als Identitätsanbieter; CalDAV-Standard ist HTTP Basic Auth
-- **Kalender-Protokoll**: CalDAV (RFC 4791) inkl. Sync-Report (RFC 5995) und Free-Busy-Query; Einladungen nach iTIP, E-Mail-Versand über den Server
-- **Hosting**: self-hosted (bare metal, Docker/Compose, offizielle Helm-Charts für Kubernetes, Snap) oder bei Managed-Anbietern (Hetzner, Netcup u. v. m.) bzw. Nextcloud GmbH (Hub); die Kalender-App ist in aktuellen Nextcloud-Versionen standardmäßig aktiviert
+- **Frontend:** Vue 3 + Pinia + vue-router, FullCalendar 6.1.21 (DayGrid/TimeGrid/List/MultiMonth + Resource-Timeline), eigene Bibliotheken `@nextcloud/cdav-library` (CalDAV-Client), `ical.js`/`@nextcloud/calendar-js` (ICS-Modellierung), Bau mit rspack; PHP-Teil nach Nextcloud AppFramework (Controller/Service/Db).
+- **Backend-Zugriff:** ausschließlich CalDAV unter `{base}/remote.php/dav/` (siehe [api.md](api.md)); eigene Datenbanktabellen nur für Buchungs-Konfigurationen, Buchungen und Meeting-Vorschläge (`calendar_proposal_*`).
+- **Server-Haken:** Dashboard-Widget, Referenz-Provider, Profil-aktion, Notifier (Notifications-App), Background-Job `CleanUpOutdatedBookingsJob`, Notify-Push-Listener für Live-Sync der Tabs, User-Migrator.
+- **Laufzeit:** App v6.6.4 erfordert Nextcloud 32–35 und PHP 8.1–8.5 (Angaben aus `appinfo/info.xml`).
+- **Kalender-Arten im UI:** persönliche, Gruppen-/Circles-Kalender (über serverseitige “Calendar”-Kollaboration), Geburtstagskalender, WebCal-Abos, öffentliche Freigaben (read/write, Link mit Token).
 
-## Für wen ist Nextcloud Calendar geeignet?
+## Für wen geeignet
 
-- **Unternehmen, Behörden und Vereine mit Datenschutzauflagen**, die Kalender nicht an US-Clouds geben wollen
-- **Bestehende Nextcloud-Nutzer**: Kalender + Talk + Mail + Dateien aus einem Login
-- **Teams mit internen Räumen und Gruppenkalendern**, die Terminumfragen ohne Zusatzdienste brauchen
-- **Weniger geeignet** für Exchange-/Outlook-zentrierte Firmen (kein MAPI/ActiveSync) und für Nutzer, die „es einfach nur bei Google anmelden" möchten - der Server-Betrieb will gepflegt sein
+- **Geeignet:** Organisationen und Privaten, die Groupware selbst hosten (Nextcloud-Instanz vorhanden oder geplant), Wert auf Datenhoheit und Standard-Clients legen, Terminbuchung für Kundinnen/Termine und interne Terminumfragen ohne Zusatzdienste brauchen.
+- **Weniger geeignet:** Nutzer ohne eigenen Server (dann lieber Google/Outlook), reine CalDAV-Setups ohne Nextcloud (dann Davical + beliebiger Client), und alle, die Push-Webhooks/Workflow-Automation der Kalender-API erwarten – die liefert diese Konstellation nicht.
