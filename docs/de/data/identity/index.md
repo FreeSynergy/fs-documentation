@@ -6,7 +6,8 @@ Wer ist ein Akteur — und wem darf man glauben? Ansatz: **Web of Trust mit Tref
 
 | Stück | Beleg | Rolle bei FreeSynergy |
 |-------|-------|-----------------------|
-| ❌ **keine etablierte WoT-Spec gefunden** | ❌ | eigene/mitgestaltete Spec — unser Spec-Kandidat Nr. 2 nach Block/Dokument |
+| ❌ **keine etablierte WoT-Spec im Standardisierungsgremium** | ❌ | eigene/mitgestaltete Spec — unser Spec-Kandidat Nr. 2 nach Block/Dokument |
+| **WoT Spec v0.1.0-draft (real-life-org/web-of-trust)** | ✅ Repo gesichtet 2026-11-02 | kombiniert W3C Verifiable Credentials + DIDComm v2.1 + Ed25519 + ECIES; `did:key`; Grundsatz „Verification ≠ Trust“; Nachfolger RLTP (Gen 3). Alle Fakten in [standards.md → Nachrecherche](../standards.md) — **nicht erneut herunterladen** |
 | **AS2-Typ `Relationship`** (Vocabulary) | ✅ Vokabular gelesen | formaler Andockpunkt für Aussagen wie „A beglaubigt B für PGP-Key K“ |
 | **ActivityPub `publicKey` am Akteur** | ✅ Vokabular gelesen | Schlüssel, an den Beglaubigungen andocken |
 | **Signatur-Mechanismen für ActivityPub-Objekte** | ❌ (alte Referenz war 404, siehe Korrekturliste) | muss vor jeder Verwendung neu recherchiert werden |
@@ -19,10 +20,10 @@ Wer ist ein Akteur — und wem darf man glauben? Ansatz: **Web of Trust mit Tref
 
 ## Offene Punkte
 
-- Standard von Antons Projekt sichten und in dieser Domäne als `mapping.md` auf `Relationship`/`publicKey` abbilden
-- Signatur-Recherche (welcher Mechanismus ist real belegt?)
+- ~~Antons Repo sichten~~ → **erledigt 2026-11-02**, Fakten in standards.md; als `mapping.md` auf `Relationship`/`publicKey` abbilden ist noch offen
+- Signatur-Recherche (welcher Mechanismus ist real belegt?) — Antons Stack liefert Indizien (Ed25519, JWS, UCAN-inspiriert), W3C-DIDs/VC noch ⚠️
 
 ## Siehe auch
 
 - [standards.md → Korrekturliste](../standards.md) (Signatur-Referenz 404)
-- [profil/](../profil/index.md), [login/](../login/index.md)
+- [profile/](../profile/index.md), [login/](../login/index.md)

@@ -6,7 +6,7 @@ Was man **von sich zeigen möchte** — die öffentlich sichtbare, publikumsgest
 
 Ein Profil ist **keine zweite Kopie der Personendaten**, sondern eine **Projektion**:
 
-- Speicherechte Daten: JSContact-`Card` in [kontakt/](../kontakt/)
+- Speicherechte Daten: JSContact-`Card` in [contacts/](../contacts/)
 - Soziale Identität: AS2-`Actor` (`id` = URI nach Beschluss 3, `name`, `preferredUsername`, `publicKey`)
 - Sichtbarkeit: **Audience-Felder** `to`/`cc`/`bto`/`bcc` entscheiden, welche Felder an wen herausgegeben werden — Offenlegungssteuerung, keine Zugriffskontrolle (Beschluss 2)
 
@@ -26,5 +26,5 @@ Ein Profil ist **keine zweite Kopie der Personendaten**, sondern eine **Projekti
 
 ## Siehe auch
 
-- [kontakt/](../kontakt/index.md), [identitaet/](../identitaet/index.md)
+- [contacts/](../contacts/index.md), [identity/](../identity/index.md)
 - [standards.md → Aktivitäten](../standards.md)

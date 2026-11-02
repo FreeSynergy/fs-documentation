@@ -16,14 +16,14 @@ Jede Domäne hat ein Verzeichnis mit eigener `index.md`; jeder Standard darin ei
 
 | Domäne | Verzeichnis | Kanonischer Standard | Weitere Standards |
 |--------|-------------|----------------------|-------------------|
-| Kontaktdaten | [kontakt/](kontakt/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
-| Nachrichten | [messages/](messages/index.md) | AS2 `Note`/`Article` ✅ | JMAP, RFC 5322 |
+| Kontaktdaten | [contacts/](contacts/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
+| Nachrichten | [messages/](messages/index.md) | AS2 `Note`/`Article` ✅ | JMAP, RFC 5322, MLS (⚠️) |
 | Termine | [events/](events/index.md) | JSCalendar (RFC 8984) ✅ | iCalendar, CalDAV, iTIP |
-| Geodaten | [geodaten/](geodaten/index.md) | GeoJSON (RFC 7946) ✅ | geo:-URI, ISO 19160 |
-| Login / Konten | [login/](login/index.md) | OIDC + SCIM (⚠️ zu belegen) | OAuth 2.0, WebFinger, kanidm |
-| Identität / Web of Trust | [identitaet/](identitaet/index.md) | ❌ keine etablierte Spec – eigene Arbeit | Andockpunkte: AS2 `Relationship`, `publicKey` |
-| Profil | [profil/](profil/index.md) | AS2-`Actor`-Projektion auf JSContact ✅ | schema.org `Person` (⚠️) |
-| Projekte | [projekte/](projekte/index.md) | ❌ keine Spec – eigene Arbeit | Bausteine: JSCalendar-`Task`, W3C Org Ontology |
+| Geodaten | [geodata/](geodata/index.md) | GeoJSON (RFC 7946) ✅ | geo:-URI, ISO 19160 |
+| Login / Konten | [login/](login/index.md) | OIDC ✅ (2026-11-02), OAuth 6749 ✅, WebAuthn ✅ | SCIM (⚠️), WebFinger, kanidm |
+| Identität / Web of Trust | [identity/](identity/index.md) | WoT Spec v0.1.0-draft (VC, DIDComm, did:key) ✅ gesichtet | Andockpunkte: AS2 `Relationship`, `publicKey` |
+| Profil | [profile/](profile/index.md) | AS2-`Actor`-Projektion auf JSContact ✅ | schema.org `Person` (⚠️) |
+| Projekte | [projects/](projects/index.md) | ❌ keine offene Daten-Spec – eigene Arbeit | ISO 21502 (Prozess) ✅, MSPDI (De-facto) ✅, JSCalendar-`Task` |
 
 Als **vorgeschlagen, noch nicht beschlossen**: `aufgaben/` (JSCalendar deckt `Task` bereits ab), `dokumente/` (Block-Struktur = größte Lücke), `dateien/`, `verschlagwortung/` (Web Annotation ✅), `kommentare/`, `benachrichtigungen/`, `organisationen/`.
 
@@ -100,14 +100,14 @@ docs/de/data/
 ├── felder.md           Standardfelder und Typen
 ├── konventionen.md     Benennungs- und Versionierungsregeln
 ├── api.md              einheitliches API-Muster
-├── kontakt/            ├── index.md └── jscontact/{beschreibung,speicherung}.md
-├── messages/           └── index.md
-├── events/             └── index.md
-├── geodaten/           └── index.md
-├── login/              └── index.md
-├── identitaet/         └── index.md
-├── profil/             └── index.md
-└── projekte/           └── index.md
+├── contacts/           ├── index.md └── jscontact/{beschreibung,speicherung}.md
+├── messages/           ┐
+├── events/             │ jede Domäne:
+├── geodata/            │ index.md + description.md
+├── login/              │ + technical.md + standards.md
+├── identity/           │ + examples.md
+├── profile/            │
+└── projects/           ┘
 ```
 
 ## Siehe auch

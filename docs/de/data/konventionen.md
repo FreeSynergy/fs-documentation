@@ -68,7 +68,8 @@ data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standar
 - Verweise über Bereiche hinweg: relativ mit `../` (von `data/` aus: `[Gesten](../gestures/)`)
 - Kategorien-Index immer als Verzeichnislink (von `data/` aus: `[Messenger](../apps/messenger/)`)
 - Jede Datei endet mit einem `## Siehe auch`-Abschnitt
-- Keine Links auf Dateien, die nicht existieren
+- Keine Links auf Dateien, die nicht existieren – Ausnahme: Querverweise
+  innerhalb der eigenen Sprachversion (Regel 6 der Sprachkonvention)
 
 ## Sprachkonvention
 
@@ -77,6 +78,11 @@ data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standar
 3. Verzeichnis- und Dateinamen sind sprachunabhängig (gleiches Schema in `de/` und `en/`)
 4. Produkt- und Projektnamen bleiben unübersetzt
 5. Fachbegriffe aus UI und API bleiben englisch (`Modal`, `Toast`, `Endpoint`)
+6. **Nie sprachübergreifend verlinken:** In `en/` (und späteren Sprachen) zeigt
+   jeder Querverweis auf die eigene Sprachversion (`en → en`), niemals auf
+   `de/` – auch wenn die Zieldatei dort noch nicht existiert; die Übersetzung
+   folgt noch. Sprachwechsel erfolgt ausschließlich über die Sprachumschaltung
+   in `index.md`
 
 ## Versionierung und Kompatibilität
 

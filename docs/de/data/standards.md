@@ -149,18 +149,56 @@ Die frühere offene Entscheidung „Reichweite“ ist mit Beschluss 1+4 beantwor
 
 ## Domänen-Verzeichnisse
 
-Jede Datendomäne hat ein Verzeichnis mit `index.md`; jeder Standard darin ein Unterverzeichnis mit `beschreibung.md` + `speicherung.md` (Schema analog zu Komponenten):
+Jede Datendomäne hat ein Verzeichnis mit `index.md`, `description.md`, `technical.md`, `standards.md`, `examples.md` (Festlegung 2026-11-02, siehe [anforderungen.md → §4](anforderungen.md)); jeder Standard darin zusätzlich ein Unterverzeichnis mit `beschreibung.md` + `speicherung.md` (Schema analog zu Komponenten):
 
 | Domäne | Verzeichnis |
 |--------|-------------|
-| Kontaktdaten | [kontakt/](kontakt/index.md) |
+| Kontaktdaten | [contacts/](contacts/index.md) |
 | Nachrichten | [messages/](messages/index.md) |
 | Termine | [events/](events/index.md) |
-| Geodaten | [geodaten/](geodaten/index.md) |
+| Geodaten | [geodata/](geodata/index.md) |
 | Login / Konten | [login/](login/index.md) |
-| Identität (Web of Trust) | [identitaet/](identitaet/index.md) |
-| Profil | [profil/](profil/index.md) |
-| Projekte | [projekte/](projekte/index.md) |
+| Identität (Web of Trust) | [identity/](identity/index.md) |
+| Profil | [profile/](profile/index.md) |
+| Projekte | [projects/](projects/index.md) |
+
+## Nachrecherche 2026-11-02 — Belege stehen vollständig hier, nicht erneut herunterladen
+
+> **Regel (ausdrückliche Anweisung 2026-11-02):** Alles, was hier abgerufen und aufgeschrieben wurde, ist im Dokument vollständig festgehalten. **Es muss nicht erneut aus dem Web geladen werden.** Nachrecherchieren nur, wenn ein Eintrag ausdrücklich mit ⚠️ als ungeprüft markiert ist.
+
+### Login: OIDC, OAuth, WebAuthn (am 2026-11-02 direkt abgerufen)
+
+| Standard | Beleg | Was belegt ist (Zitat/Auszug, damit kein Nachladen nötig ist) |
+|----------|-------|---------------------------------------------------------------|
+| **OpenID Connect Core 1.0, incorporating errata set 2** | ✅ abgerufen 2026-11-02 bei `openid.net/specs/openid-connect-core-1_0.html` | „OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It enables Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User.“ Autoren: Sakimura, Bradley, Jones, de Medeiros, Mortimore; final mit errata set 2, **15.12.2023**. Kernstücke: ID Token, Authorization Code Flow, Token Endpoint, ID-Token-Validierung, Claims über den End-User. → **⚠️ auf ✅ gezogen** |
+| **The OAuth 2.0 Authorization Framework, RFC 6749** | ✅ abgerufen 2026-11-02 bei `rfc-editor.org/rfc/rfc6749` | Oktober 2012, Proposed Standard, obsoletes RFC 5849 (OAuth 1.0). Der RFC-Editor vermerkt Aktualisierungen durch **RFC 8252** (Native Apps), **RFC 8996** (Deprecating TLS 1.0/1.1) und **RFC 9700** (Best Current Practices für OAuth-Sicherheit). → **⚠️ auf ✅ gezogen** |
+| **Web Authentication: An API for accessing Public Key Credentials – Level 2 (WebAuthn)** | ✅ abgerufen 2026-11-02 bei `w3.org/TR/webauthn-2/` | W3C Recommendation **08.04.2021**. Zitat Abstract: „This specification defines an API enabling the creation and use of strong, attested, scoped, public key-based credentials by web applications, for the purpose of strongly authenticating users.“ Credentials sind pro Relying Party scoped. **Neu in unser Login-Register aufgenommen.** |
+| **SCIM, RFC 7643/7644** | ⚠️ **weiterhin ungeprüft** (Abruf am 2026-11-02 zeitlich abgebrochen) | Nicht nachgeladen auf Anweisung. Vor Verwendung belegen. |
+
+### Identität / Web of Trust: Antons Repo gesichtet (abgerufen 2026-11-02, `github.com/real-life-org/web-of-trust`)
+
+Faktenstand (vollständig aufgeschrieben, **nicht erneut herunterladen**):
+
+- Selbstbeschreibung: „A decentralized trust infrastructure for real-life communities. People meet in person, verify each other's identity via QR code, and build reputation through attestations over time. No central server sees your data. Everything is end-to-end encrypted and stored locally.“
+- **Grundsatz: Verification ≠ Trust.** Verifikation bestätigt nur „das ist wirklich diese Person“ (persönliches Treffen + QR-Scan). Vertrauen entsteht erst durch **Attestations über die Zeit**. Das deckt exakt unsere vorläufige Regel 1 in [identity/index.md](identity/index.md) (Beglaubigungen sind eigene Objekte).
+- **Protokoll: „WoT Spec“ v0.1.0-draft** — kombiniert **W3C Verifiable Credentials**, **DIDComm v2.1**, **Ed25519** und **ECIES**.
+- Identitätsschlüssel: **BIP39-Mnemonic** (12 Wörter) → HKDF-Master-Key → **Ed25519** (Signatur) + **X25519** (Key Agreement); DID-Methode **`did:key`** (W3C DIDs).
+- Verschlüsselung: AES-256-GCM (CRDT-Updates, Gruppeninhalte), X25519-ECIES asymmetrisch, GroupKeys; Relays sehen nur Chiffretext.
+- Architektur: CRDT-basiert (Yjs default, Automerge-Alternative); Dienste `wot-relay` (WebSocket, ACK+Outbox), `wot-vault` (verschlüsseltes Backup), `wot-profiles` (öffentliche Profil-Auffindbarkeit, JWS-signiert); Autorisierung **UCAN-inspiriert**, offline-verifizierbar.
+- Generation 2 (dieses Repo, ~2044 Commits am 2026-11-02) hat einen Nachfolger: **Real Life Trust Protocol (RLTP), Gen 3**, in `real-life-org/trust-protocol`. Fixes laufen Richtung Gen 3.
+- **Unsere Andockpunkte:** Attestation ↔ AS2-`Relationship`-Objekt; `did:key`/Ed25519 ↔ `publicKey` am Actor; `wot-profiles` ↔ unsere `profile/`-Projektion; RLTP beobachten.
+- **Folge für das Register:** W3C **DID Core** und **VC Data Model** sind durch Antons Spec belegt *zitiert*; die W3C-Dokumente selbst sind noch ⚠️ (nicht abgerufen).
+
+### Projekte: Standardsuche 2026-11-02 (Suchergebnisse, Titelbeleg — nicht im Volltext gelesen)
+
+| Kandidat | Beleg | Einordnung |
+|----------|-------|------------|
+| **ISO 21502:2020 „Project, programme and portfolio management — Guidance on project management“** (ISO/TC 258) | ✅ Existenz belegt (ISO-OBP-Register Nr. 74947, TC-258-Seite) | **Prozess-Leitfaden, kein Datenformat.** Für uns als Vokabular-/Rollenreferenz nützlich, nicht als Speichermodell. |
+| **MSPDI — Microsoft Office Project 2007 XML Data Interchange Schema (`mspdi_pj12.xsd`)** | ✅ Existenz belegt (Microsoft-Learn-Doku zu Task-Elementen, Kalendern; Dauern in Zehntelsekunden) | **De-facto-Austauschformat**, kein offener Standardisierungsgremium-Standard. Import/Export-Target-Kandidat. |
+| **W6C XML Schema** | ⚠️ weiterhin unbelegt (in der Suche nicht aufgetaucht) | Nicht weiter verwenden, bis belegt. |
+| **JSON-Xchange für Boards/Tasks (RFC/W3C)** | ❌ erneut nichts gefunden | Unser **Spec-Kandidat Nr. 3 bleibt bestehen**; Basis bleibt JSCalendar-`Task` (✅). |
+
+**Ergebnis für offene Frage 6.1:** Einen offenen ISO/DIN/RFC/W3C-**Datenstandard** für Projekt-/Board-Strukturen gibt es nicht; ISO 21502 ist Prozessführung, MSPDI ist proprietärer De-facto-Export. → eigene Spec, mit JSCalendar-`Task` als Task-Objekt.
 
 ## Siehe auch
 
