@@ -6,7 +6,7 @@ Reorder lässt Listenelemente weich ihre Plätze tauschen, wenn sich ihre Reihen
 
 ## Verwendung
 
-- Ziehen und Ablegen in Listen, siehe [drag](../../../gestures/drag/description.md)
+- Ziehen und Ablegen in Listen, siehe [drag](../../../gestures/single/drag/description.md)
 - Sortieren nach Datum, Name oder Priorität
 - Filter setzen: herausgefilterte Elemente verschwinden, die übrigen rücken nach
 - Aufgaben in einer anderen Spalte oder Gruppe einordnen

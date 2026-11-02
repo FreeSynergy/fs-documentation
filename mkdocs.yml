@@ -74,7 +74,12 @@ nav:
   - en/apps/erp/: en/apps/erp/index.md
   - de/apps/workflows/: de/apps/workflows/index.md
   - en/apps/workflows/: en/apps/workflows/index.md
-  - de/gestures/: de/gestures/index.md
+  - de/gestures/:
+      - de/gestures/index.md
+      - de/gestures/single/: de/gestures/single/index.md
+      - de/gestures/multi/: de/gestures/multi/index.md
+      - de/gestures/device/: de/gestures/device/index.md
+      - de/gestures/combined/: de/gestures/combined/index.md
   - en/gestures/: en/gestures/index.md
   - de/animations/:
       - de/animations/index.md

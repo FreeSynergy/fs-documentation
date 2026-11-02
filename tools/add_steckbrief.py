@@ -138,7 +138,7 @@ def build_row(comp, cat, name):
     states = [s for s in words(app_text + "\n" + attrs_text, STATE_WORDS) if s not in BASE_STATES]
     state_text = ", ".join(f"`{s}`" for s in states[:6]) if states else "-"
 
-    gesture_names = sorted(p.name for p in (DOCS / "gestures").glob("*") if p.is_dir())
+    gesture_names = sorted(p.parent.name for p in (DOCS / "gestures").glob("*/*/description.md"))
     anim_names = sorted(p.parent.name for p in (DOCS / "animations").glob("*/*/description.md")
                         if p.parent.name not in ANIM_IGNORE)
     gest = words(desc + "\n" + usage_text + "\n" + app_text + "\n" + attrs_text, gesture_names)

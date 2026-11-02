@@ -369,8 +369,10 @@ Dazu die noch leeren Steckbrief-Felder: **Zustände 19, Gesten 21, Animationen 1
 betroffen sind vor allem die jungen Komponenten aus Welle 1 und 2 (`button`, `button-group`,
 `label`, `link`, `separator`, `kbd`, `field`, `badge`, `progress`, `spinner`, `skeleton`,
 `tooltip`, `popover`, `embed`) sowie die oben genannten neun.
-Erlaubte Namen: Gesten aus `docs/de/gestures/` (`tap`, `double-tap`, `long-press`, `drag`,
-`swipe`, `pinch`, `spread`, `rotate`, `shake`), Animationen aus `docs/de/animations/`
+Erlaubte Namen: Gesten aus `docs/de/gestures/<kategorie>/` (`tap`, `double-tap`, `long-press`,
+`drag`, `swipe`, `flick`, `edge-swipe`, `force-press`, `hover`, `draw-gesture`, `pinch`,
+`spread`, `rotate`, `two-finger-tap`, `two-finger-long-press`, `three-finger-swipe`,
+`shake`, `tilt`, `flip`, `wave`, `pull-to-refresh`, `drag-and-drop`), Animationen aus `docs/de/animations/`
 (`fade-in`, `expand`, `slide-in`, `stagger`, `collapse`, `highlight`, `press`, `pulse`,
 `spin`, `progress`, `skeleton`, `tick-draw`, `reorder`, …).
 

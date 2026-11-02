@@ -23,7 +23,7 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 |---------|--------|
 | [Apps](apps/) | Programme je Kategorie, mit Skin-Dokumentation (Menü, Funktionen, Struktur, Shortcuts, API) |
 | [Components](components/) | UI-Elemente: Beschreibung, Aussehen, Attribute (73 Elemente) |
-| [Gesten](gestures/) | Touch-Interaktionen: Tap, Swipe, Drag, Pinch, Spread, Rotate, Shake |
+| [Gesten](gestures/) | Touch-Interaktionen in 4 Familien: single (Tap, Swipe, Drag …), multi (Pinch, Rotate …), device (Shake, Tilt …), combined (Drag and Drop …) |
 | [Animationen](animations/) | Übergänge und Effekte: Fade, Slide, Zoom, Bounce, Flip, Pulse, Skeleton u. a. |
 | [Standardisierte Daten](data/) | Formate, Modelle, Felder, Konventionen und das einheitliche API-Muster |
 

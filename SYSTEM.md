@@ -13,7 +13,7 @@ fs-documentation/
 │   │   ├── apps/           # programs, grouped by category
 │   │   │   └── [category]/skins/[program]/   # 7 files per program
 │   │   ├── components/     # UI elements: 10 categories + base class (see SYSTEM “UI Components”)
-│   │   ├── gestures/       # touch gestures (description/attributes/appearance)
+│   │   ├── gestures/       # touch gestures: 4 families (single/multi/device/combined), each with description/attributes/appearance
 │   │   ├── animations/     # animations (description/attributes/appearance)
 │   │   └── data/           # standardized data (standards, mappings, formats, models, fields, conventions, api)
 │   └── en/                 # English documentation
@@ -91,7 +91,7 @@ Areas outside `apps/` use their own, smaller file sets:
 | Area | Location | Files per entry |
 |------|----------|-----------------|
 | UI components | `docs/de/components/<category>/<component>/` | `description.md`, `appearance.md`, `attributes.md`, `usage.md` (all four required; `examples.md` was merged into `usage.md`) |
-| Gestures | `docs/de/gestures/<gesture>/` | `description.md`, `attributes.md`, `appearance.md` |
+| Gestures | `docs/de/gestures/<category>/<gesture>/` | `description.md`, `attributes.md`, `appearance.md` |
 | Animations | `docs/de/animations/<category>/<animation>/` | `description.md`, `attributes.md`, `appearance.md` |
 | Standardized data | `docs/de/data/` + `docs/de/data/<domain>/<standard>/` | Cross-cutting: `index.md`, `standards.md`, `mappings.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`. Per standard: `index.md` (domain), `beschreibung.md`, `speicherung.md` (+ optional `beispiele.md`, `mapping.md`) |
 
@@ -822,11 +822,22 @@ Relative links inside a component directory use **three** levels for areas outsi
 
 ## 🖱️ Interaction Areas (Gestures and Animations)
 
-### Gestures (`docs/de/gestures/<gesture>/`)
+### Gestures (`docs/de/gestures/<category>/<gesture>/`)
 
-tap, double-tap, long-press, swipe, drag, pinch, spread, rotate, shake
+Four family directories, each with its own `index.md`, each gesture in a directory of its own:
 
-Each gesture: `description.md`, `attributes.md`, `appearance.md`. Shared attributes are listed in `gestures/index.md` (`onTap` … `onShake`, thresholds, `enabled`).
+| Category | Gestures |
+|----------|----------|
+| `single/` (Ein-Finger-Gesten) | tap, double-tap, long-press, swipe, flick, drag, edge-swipe, force-press, hover, draw-gesture (10) |
+| `multi/` (Mehrfinger-Gesten) | pinch, spread, rotate, two-finger-tap, two-finger-long-press, three-finger-swipe (6) |
+| `device/` (Geräte-Gesten) | shake, tilt, flip, wave (4) |
+| `combined/` (Kombinations-Gesten) | pull-to-refresh, drag-and-drop (2) |
+
+Total: **22 gestures**, three files each (`description.md`, `attributes.md`, `appearance.md`).
+
+Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer “which pointer(s) or sensor act”. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
+
+Shared attributes: per-gesture callbacks (`onTap` … `onDrop`), thresholds (`tapThreshold`, `longPressThreshold`, `swipeThreshold`, `velocityThreshold`, `edgeSize`, `pointerCount`, `shakeThreshold`, `deadZone`, `matchThreshold`), `enabled`, plus `alternativeAction` for every gesture (WCAG 2.5.1 pointer gestures, 2.5.4 motion actuation, 2.5.7 dragging movements).
 
 ### Animations (`docs/de/animations/<category>/<animation>/`)
 
