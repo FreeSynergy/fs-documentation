@@ -1,241 +1,82 @@
-# Outlook Kalender - API Dokumentation
+# Outlook-Kalender – API (Microsoft Graph v1.0, Stand: 2026-11-02)
 
-## Übersicht
+## Versionsstand und Entwicklung
 
-Der Outlook Kalender wird programmatisch über **Microsoft Graph** bedient: Kalender, Kalendergruppen, Termine, Freigaben, Zeitpläne und Besprechungssuche sind als REST-Ressourcen unter `https://graph.microsoft.com/v1.0` (und `/beta`) modelliert. Änderungen lassen sich über **Change Notifications** (Webhooks mit Abonnement) abonnieren. Die ältere **Exchange Web Services**-Schnittstelle (EWS) war über Jahrzehnte der Standard für Kalenderzugriff und ist für Exchange Online abgelöst angekündigt; On-Premises-Exchange-Server bedienen sie weiterhin.
+- **Produkt aktiv:** Outlook-Kalender (Outlook on the web / neues Outlook für Windows / Outlook für Mac / Outlook für iOS & Android) mit Backend **Exchange Online** wird aktiv entwickelt; die Kalender-API heißt **Microsoft Graph** (`v1.0` stabil, `beta` Vorschau).
+- **Nachfolger-Ablösung EWS:** Exchange Web Services erhalten seit 2018 keine Funktionsupdates mehr; in Exchange Online wurde **Oktober 2026 mit der Abschaltung begonnen** („starts to be disabled globally for all organizations"), **April 2027 ist EWS vollständig deaktiviert**. On-Premises-**Exchange Server** sind von der Abschaltung nicht betroffen. (Offizielle Deprecation-Seite, Fundstelle unten.)
+- **Graph-Grundlagen:** REST-API auf Basis von **OAuth 2.0** (Authentifizierung), **OData 4.0** und **JSON**; anwendungsseitig eng gefächerte Berechtigungen möglich.
 
-**API-Arten im Überblick**
+| API-Ebene | Basis-URL | Status (Stand 2026-11-02) |
+|-----------|-----------|---------------------------|
+| Microsoft Graph v1.0 | `https://graph.microsoft.com/v1.0/` | offiziell, stabil, aktiv entwickelt |
+| Microsoft Graph beta | `https://graph.microsoft.com/beta/` | Vorschau, nicht produktionsversprochen |
+| EWS (Exchange Online) | `https://outlook.office365.com/EWS/Exchange.asmx` | Abschaltung läuft: ab Okt 2026 tenantweise Aus, Apr 2027 komplett aus |
+| EWS (Exchange Server on-prem) | `{server}/EWS/Exchange.asmx` | weiterhin vorhanden, eigene Doku, hier nicht dokumentiert |
+| Webhooks | Graph change notifications | vorhanden (siehe unten) – Gegenstück zu „keine Webhooks" bei Nextcloud Calendar |
 
-| Art | Verwendung | Status |
-|-----|------------|--------|
-| Microsoft Graph REST (`/v1.0`, `/beta`) | Kalender, Termine, Serien, Freigaben, Zeitplan, Besprechungssuche | ✅ Offiziell, empfohlener Weg |
-| Graph Change Notifications | Webhooks für neue/geänderte Termine | ✅ Offiziell (Abo-basiert) |
-| Microsoft Graph Delta (`/me/calendar/delta`) | Inkrementelle Änderungen seit letztem Stand | ✅ Offiziell |
-| Exchange Web Services (EWS) | Termine, Kalendersichten, Ordner (SOAP/XML) | ⚠️ Veraltet, für Exchange Online abgelöst angekündigt |
-| MAPI over HTTP, Exchange ActiveSync, IMAP4 | Client-Protokolle (Synchronisation) | 🔒 Nicht als öffentliche Integrations-API gedacht |
-| CalDAV (`/.well-known/caldav`) | Offener Kalenderstandard | ❌ Wird nicht angeboten |
-| ICS-Import/-Export als API-Endpunkt | Kalender als `.ics` ziehen/schieben | ❌ Kein dokumentierter Endpunkt (nur UI-Aktionen) |
-| Outlook Calendar REST API (`api.outlook.com`) | Frühere „Calendar API" | ❌ Eingestellt, durch Graph ersetzt |
-| Microsoft Bookings API | Externe Terminbuchung | ⚠️ Eigenes Produkt, Graph-Zugriff eingeschränkt/vorschau |
+## Kalender-Ressourcen und Endpunkte (Graph v1.0)
 
-## Authentifizierung
+Alle folgenden Methoden/Properties sind auf den offiziellen Resource-Seiten `calendar` bzw. `event` (graph-rest-1.0) verifiziert.
 
-Outlook Kalender nutzt OAuth 2.0 / OpenID Connect über **Microsoft Entra ID** (ehem. Azure AD).
+### Kalender (`calendar`-Ressource, Namespace `microsoft.graph`)
 
-- **Delegated Access**: Der Nutzer meldet sich an, die App erhält einen Access-Token in seinem Namen. Flow: Authorization Code mit PKCE für Web-/Native-Apps.
-- **Application Permissions (Client Credentials)**: Daemon-Skripte und Dienste ohne angemeldeten Nutzer; benötigt `Calendars.Read` bzw. `Calendars.ReadWrite` mit **Administratorzustimmung** und greift dann auf Postfächer im Mandanten zu (Zugriff muss gezielt konfiguriert werden).
-- **Scopes**: `Calendars.Read`, `Calendars.ReadWrite`, `Calendars.ReadWrite.Shared`, `User.Read` für Profilangaben, `Mail.Read` falls Besprechungsanfragen mitgelesen werden.
-- **Token-Endpoint**: `https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token`
-- **Access-Token** sind kurzlebig (typisch 60–90 Minuten), Refresh-Token erneuern sie.
+- Container für Events; gehört einem Nutzer oder ist der Standardkalender einer Microsoft-365-Gruppe.
+- **Methoden:** `List calendars`, `Create calendar`, `Get calendar`, `Update calendar`, `Delete calendar`, `Permanently delete`, **`Get delta`** (inkrementelle Änderungserkennung), **`List calendar view`** (Zeitfenster-Abfrage liefert Occurrences, Ausnahmen und Einzeltermine einer Serie – `GET /me/calendarview?startDateTime=…&endDateTime=…` bzw. pro Kalender), `List events`, `Create event`, **`Get free/busy schedule`** (`getSchedule` für Nutzer, Verteilerlisten, Ressourcen), **`Find meeting times`** (`findMeetingTimes`: Terminvorschläge aus Verfügbarkeit der Teilnehmer), Extended Properties (single-/multi-value).
+- **Eigenschaften (u. a.):** `canEdit`, `canShare`, `canViewPrivateItems`, `changeKey` (Versions-/Konkurrenzschutz), `color` (11 enum-Werte `auto…maxColor`) + `hexColor`, `isDefaultCalendar`, `name`, `allowedOnlineMeetingProviders` / `defaultOnlineMeetingProvider` (`teamsForBusiness` u. a.).
+- **Gruppenkalender-Grenzen (offiziell dokumentiert):** Kalendergruppen (`calendarGroups`) nur für Nutzerkalender; Meeting-Anfragen für Gruppen akzeptiert Outlook automatisch; annehmen/ablehnen und Erinnerungen nur bei Nutzerkalendern.
 
-### Header
+### Termine (`event`-Ressource)
 
-```
-Authorization: Bearer <access-token>
-Content-Type: application/json
-Prefer: outlook.timezone="Europe/Berlin"
-```
+- **Methoden:** list/create/get/update/delete, `Permanently delete` (in Purge-Freigabeordner), **`Get delta`**, **`Forward`**, **`Cancel`** (Absage an alle Teilnehmer), **`Accept` / `TentativelyAccept` / `Decline`**, **`DismissReminder` / `SnoozeReminder`**, **`List event instances`** (Einzeltermine einer Serie), **Attachments** (`List attachments`, `Add attachment`), Open Extensions, Extended Properties.
+- **Eigenschaften (verifizierter Auszug):** `subject`, `start`/`end` (`DateTimeTimeZone`), `isAllDay`, `isOnlineMeeting` + `onlineMeeting` (Join-Infos, Read-only), `attendees` (max. **500** Teilnehmer/Empfänger je Ereignis inkl. eventMessage), `organizer`, `isOrganizer`, `isDraft`, `isCancelled`, `cancelledOccurrences` (Verwaiste Instanzen einer Serie), `seriesMasterId` (Serien-Master), `iCalUId` (kalendarübergreifende UID, pro Occurrence unterschiedlich), `patternedRecurrence` (Wiederholungsmuster), `reminderMinutesBeforeStart`/`isReminderOn`, `location` + `locations`, `body` (HTML/Text), `categories`, `importance`, `hideAttendees`, `allowNewTimeProposals` (Teilnehmer dürfen neue Zeit vorschlagen), `responseStatus`, `showAs` (Free/Busy-Zustand), `changeKey`, `webLink`.
+- **ID-Verhalten:** `id` wechselt standardmäßig beim Verschieben zwischen Containern; mit Header `Prefer: IdType="ImmutableId"` bleiben IDs stabil – wichtig für Verknüpfungen in Fremdsystemen.
 
-Die `Prefer`-Kopfzeile stellt Datumsangaben in einer Wunschzeitzone zu; ohne sie liefert Graph UTC.
+### Teilnahmesteuerung und Verfügbarkeit
 
-## Endpunkte
+- RSVP über `accept`/`tentativelyAccept`/`decline` (nur Nutzerkalender), Organisator-Aktionen `cancel`/`forward`.
+- Free/Busy: `getSchedule` (Batch für mehrere Nutzer/Ressourcen), `findMeetingTimes` (Slot-Vorschläge inkl. Ort), `showAs`-Feld je Termin.
 
-Grundpfad: `https://graph.microsoft.com/v1.0`
+## Authentifizierung und Berechtigungen
 
-### Kalender
+- **OAuth 2.0** über die Microsoft-Identitätsplattform (Arbeits-/Schulkonto via Entra ID; Privatkonto via Microsoft-Konto); App-Registrierung nötig, keine Passwort-Weitergabe an die App. (Grundlagen-Seite bestätigt; die **Scope-Namen** `Calendars.Read`, `Calendars.ReadWrite` sind der Standard der Graph-Doku, wurden in diesem Durchlauf aber **nicht** separat auf der Permissions-Referenz seitenweise verifiziert – nachlesen unter `learn.microsoft.com/graph/permissions-reference`.)
+- Delegierte Berechtigungen (Nutzerkontext) und applikationsweite Berechtigungen (Tenant, mit Admin-Einwilligung) – beides existiert für Kalender; die feingranulare Einzelkalender-App-Authentifizierung („single calendar permission") ist ein Legacy-EWS-Konzept und wandert zu Graph-Äquivalenten (Parity-Roadmap auf der EWS-Seite).
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/me/calendars` | Eigene Kalender auflisten |
-| `GET` | `/me/calendars/{id}` | Einzelnen Kalender lesen |
-| `POST` | `/me/calendars` | Kalender anlegen (Name, Farbe, Zeitzone) |
-| `PATCH` | `/me/calendars/{id}` | Kalender ändern |
-| `DELETE` | `/me/calendars/{id}` | Kalender löschen |
-| `GET` | `/me/calendar` | Standardkalender des Kontos |
-| `GET` | `/me/calendar/groups` | Kalendergruppen auflisten |
-| `POST` | `/me/calendar/groups` | Kalendergruppe anlegen |
-| `GET` | `/me/calendars/{id}/calendarView?startDateTime=…&endDateTime=…` | Termine eines Kalenders im Zeitraum |
+## Push / Webhooks
 
-### Termine
+Graph bietet **echte Change Notifications per Webhook-Subscription** (Ressource z. B. `/me/events`), verifiziert an der offiziellen „Receive change notifications through webhooks"-Seite:
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/me/calendar/events` | Termine des Standardkalenders (liste) |
-| `GET` | `/me/calendar/events/{id}` | Einzelnen Termin lesen (`$expand=attachments,instances` möglich) |
-| `POST` | `/me/calendar/events` | Termin im Standardkalender anlegen |
-| `PATCH` | `/me/calendar/events/{id}` | Termin ändern (Serien: `seriesMasterId` beachten) |
-| `DELETE` | `/me/calendar/events/{id}` | Termin löschen |
-| `GET` | `/me/events` | Termine kontoweit (Alternative zu `calendarview`) |
-| `GET` | `/me/calendarview?startDateTime=2026-10-01T00:00:00Z&endDateTime=2026-10-31T23:59:59Z` | Termine im Zeitraum, Serien aufgelöst |
-| `GET` | `/me/events/{id}/instances?startDateTime=…&endDateTime=…` | Einzelne Termine einer Serie |
-| `GET` | `/me/events/{id}/attachments` | Anlagen eines Termins |
-| `POST` | `/me/events/{id}/attachments` | Anlage hinzufügen |
-| `POST` | `/me/events/{id}/forward` | Termin weiterleiten |
-| `POST` | `/me/events/{id}/accept` \| `acceptTentatively` \| `decline` \| `cancel` \| `snooze` | Antwortaktionen auf eine Besprechung |
+- Öffentlich erreichbarer **HTTPS-Endpunkt** nötig; Subscription mit `changeType` (created/updated/deleted) auf die Ressourcen-URL.
+- **Zustellung:** 2xx-Antwort innerhalb **3 s** = zugestellt; sonst Retry mit exponentiellem Backoff **bis 4 h**; empfohlen: Validierung + Queue + `202 Accepted`.
+- **Endpunkt-Gesundheit:** >10 % Antworten >3 s in 10 min ⇒ Endpunkt gilt als „slow" (Versand um 10 min verzögert); >15 % >10 s ⇒ „drop" (10 min Verwurfe; verlorene Notifications sind nicht wiederherstellbar).
+- **Lifecycle:** Access-Token des Endpunkts läuft ~1 h; Subscriptionen müssen erneuert werden (Renewal/Lifecycle-Notifications), sonst enden die Zustellungen.
+- Alternative Ziel-Infrastruktur für große Volumina: **Event Hubs / Event Grid** statt HTTP-Endpunkt.
+- Die eigentliche Benachrichtigung enthält nur die geänderte Ressourcen-ID – Details danach per `GET` abholen (Delta-Query als Pull-Alternative).
 
-### Zeitplan, Besprechungssuche, Freigaben
+## Limits
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `POST` | `/me/calendar/getSchedule` | Free/Busy und Termine mehrerer Postfächer im Zeitraum |
-| `POST` | `/me/calendars/{id}/getSchedule` | Zeitplan eines konkreten Kalenders |
-| `POST` | `/me/findMeetingTimes` | Freie Zeiten für Teilnehmer und Räume (Planungsassistent) |
-| `GET` | `/me/calendars/{id}/getCalendarPermissions` | Wer darf einen Kalender sehen/bearbeiten |
-| `POST` | `/me/calendars/{id}/addCalendarPermission` | Freigabe erteilen (Rolle: `Reviewer`, `Author`, `Editor`, `Owner`, `AvailabilityOnly`, `LimitedDetails`) |
-| `POST` | `/me/calendars/{id}/removeCalendarPermission` | Freigabe entziehen |
-| `GET` | `/me/calendars/listCalendarPermissions` | Freigaben mehrerer Kalender in einem Aufruf |
-| `GET` | `/me/calendar/delta` | Änderungen seit dem letzten Stand (inkrementell) |
+- **Throttling:** HTTP **429** mit **`Retry-After`**-Header; Drosselung hängt von Tenant- und App-weitem Volumen ab, Schreiblast wird eher gedrosselt als Lesezugriff; Graph-SDKs behandeln `Retry-After` automatisch. Für Massenextraktion empfiehlt Microsoft **Microsoft Graph Data Connect** statt der REST-API.
+- Die Exchange-spezifischen Zahlenwerke (requests je Rollfenster) liegen auf einer separaten „Service-specific limits"-Seite, die am Recherchetag **nicht erreichbar** war (404) – konkrete Zahlen hier daher **nicht verifiziert**.
+- Harte fachliche Grenze: **500 Teilnehmer** pro Termin/Empfängerkreis (Event-Ressource).
 
-### Andere Postfächer (mit entsprechenden Rechten)
+## SDKs und Clients
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `GET` | `/users/{id}/calendarview?startDateTime=…&endDateTime=…` | Zeitplan eines anderen Nutzers lesen |
-| `GET` | `/users/{id}/events` | Termine eines anderen Postfachs |
-| `POST` | `/users/{id}/events` | Termin in fremdem Kalender anlegen (nur mit Delegierten-/Editorrecht) |
-| `GET` | `/groups/{id}/calendar/events` | Gruppenkalender (M365-Gruppe) |
-| `GET` | `/me/onlineMeetings` | Onlinebesprechungen (Teams) auflösen, `joinUrl` lesen (eigene Berechtigung) |
+- **Microsoft Graph SDKs** für .NET, Java, JavaScript/TypeScript, PowerShell und Go (SDK-Familie offiziell; Retry-Handler in den SDKs bestätigt; Sprachliste aus der SDK-Übersicht, im Detail nicht nachgeprüft).
+- Referenz-Explorer: Graph Explorer (learn.microsoft.com/graph/api/overview).
+- Da Exchange Online CAL-Standard-Groupware ist: Kalender-Einbindung real praktisch immer Graph; klassische CalDAV-Clients (Thunderbird, DAVx⁵) finden an Outlook.com/Exchange Online **keinen** CalDAV-Zugang (siehe features.md).
 
-### Nützige Query-Parameter
+## Abgrenzung / Warnungen
 
-| Parameter | Wirkung |
-|-----------|---------|
-| `$select=subject,start,end,isAllDay,categories` | Reduziert die Antwort auf benötigte Felder |
-| `$expand=attachments,instances,extensions` | Zusätzliche Objekte mitliefern |
-| `$filter=start/dateTime ge '2026-10-01T00:00'` | Eingrenzung (Datumsfilter nur in `calendarview` zuverlässig indexiert) |
-| `$search="Suchtext"` | Volltextsuche, benötigt Header `ConsistencyLevel: eventual` |
-| `$orderby=start/dateTime` | Sortierung |
-| `$top` / `$skip` | Seitengröße/Offset; weitere Seiten über `@odata.nextLink` |
+- **EWS- Skripte brechen:** Jede Integration auf EWS (auch Drittanbieter-Connectoren) ist ab der tenantweisen Abschaltung (Okt 2026–Apr 2027) tot; Migration zwingend auf Graph. Microsoft stellt EWS-Usage-Reports, EWS-Code-Analyzer und eine Migrations-Roadmap bereit; einige EWS-Fähigkeiten (Public-Folder-CRUD, Discovery-Mailbox) kommen **nie** in Graph.
+- Die frühere „Office 365 REST API" (`office365.com/api/v1.0`) ist durch Graph ersetzt (Learn-Konzeptseite verweist ausschließlich auf Graph).
+- Graph-Endpunkte sind versionsgebunden (`v1.0` vs. `beta`); nur `v1.0` ist produktionsversprochen.
+- Privatkonto (outlook.com): Graph funktioniert ebenfalls mit Microsoft-Konten (Delegation), Details/Verfügbarkeit einzelner Endpunkte für Consumer sind auf der Doku-Seite nicht separat ausgewiesen – **nicht verifiziert**.
 
-## Beispiele
+## Quellen (Fundstellen, abgerufen 2026-11-02)
 
-### Termine eines Zeitraums abrufen
-
-```bash
-curl -s "https://graph.microsoft.com/v1.0/me/calendarview?\
-startDateTime=2026-11-01T00:00:00Z&endDateTime=2026-11-07T23:59:59Z&\
-\$select=subject,start,end,isAllDay,organizer&\$orderby=start/dateTime" \
-  -H "Authorization: Bearer <access-token>" \
-  -H "Prefer: outlook.timezone=\"Europe/Berlin\""
-```
-
-Antwort (gekürzt):
-
-```json
-{
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.event)",
-  "@odata.nextLink": "https://graph.microsoft.com/v1.0/me/calendarview?startDateTime=...&$skip=10",
-  "value": [
-    {
-      "id": "AAMkAGI2AAA=",
-      "subject": "Team-Jour fixe",
-      "isAllDay": false,
-      "start": { "dateTime": "2026-11-03T09:00:00.0000000", "timeZone": "Europe/Berlin" },
-      "end":   { "dateTime": "2026-11-03T09:30:00.0000000", "timeZone": "Europe/Berlin" },
-      "organizer": { "emailAddress": { "name": "Anna Beispiel", "address": "anna@example.com" } },
-      "categories": ["Team"],
-      "isCancelled": false,
-      "responseStatus": { "response": "none", "time": "0001-01-01T00:00:00Z" }
-    }
-  ]
-}
-```
-
-### Termin anlegen (mit Teilnehmer und Teams-Besprechung)
-
-```bash
-curl -s -X POST "https://graph.microsoft.com/v1.0/me/calendar/events" \
-  -H "Authorization: Bearer <access-token>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "subject": "Workshop Kalender-Anbindung",
-    "body": { "contentType": "html", "content": "<p>Agenda: ICS, Graph, Freigaben</p>" },
-    "start": { "dateTime": "2026-11-05T10:00:00", "timeZone": "Europe/Berlin" },
-    "end":   { "dateTime": "2026-11-05T12:00:00", "timeZone": "Europe/Berlin" },
-    "location": { "displayName": "Raum 3.4" },
-    "categories": ["Projekt"],
-    "isOnlineMeeting": true,
-    "attendees": [
-      { "emailAddress": { "address": "ben@example.com", "name": "Ben Beispiel" },
-        "attendeeType": "required", "status": { "response": "none", "time": "0001-01-01T00:00:00Z" } }
-    ],
-    "reminders": [ { "method": "email", "remindersMinutesBeforeStart": 15 } ],
-    "recurrence": {
-      "pattern": { "type": "weekly", "dayOfWeeks": [ "monday" ], "interval": 2 },
-      "range": { "type": "endDate", "startDate": "2026-11-05", "endDate": "2026-12-24" }
-    }
-  }'
-```
-
-Antwort: `201 Created` mit dem vollständigen Terminobjekt, darunter `id`, `seriesMasterId`, `onlineMeeting.joinUrl` und `webLink`.
-
-### Webhook-Abo auf Terminänderungen
-
-```bash
-curl -s -X POST "https://graph.microsoft.com/v1.0/subscriptions" \
-  -H "Authorization: Bearer <access-token>" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "changeType": "created,updated,deleted",
-    "notificationURL": "https://example.org/hooks/outlook-calendar",
-    "resource": "/me/events",
-    "clientState": "langes-zufälliges-geheimnis",
-    "lifecycleNotificationURL": "https://example.org/hooks/outlook-lifecycle"
-  }'
-```
-
-Graph validiert die `notificationURL` mit einem `validationCode`-POST; danach liefert es JSON-Nachrichten mit `resource`, `changeType` und `clientState`.
-
-## Rate Limits
-
-- Graph drosselt **je App und Postfach**; bei Überschreitung kommt `HTTP 429` mit `Retry-After` (Sekunden) – dann exponentiell zurückwarten.
-- Für Microsoft Graph wird ein anwendungsbezogener Richtwert von **20.000 Requests pro rollierenden 10 Minuten** genannt; Exchange-Workloads (Kalenderzugriff auf ein Postfach) haben zusätzliche, feinere Grenzwerte. Exakt dokumentierte Werte je Workload: nicht dokumentiert bzw. mandantabhängig.
-- Antwort-Header zur Beobachtung: `Retry-After`, `client-request-id`, `request-id`; Drosselungsgründe stehen im Fehlerobjekt (`throttlingType`).
-- Praktische Empfehlung: `calendarview` mit Zeitraum statt vieler Einzelabfragen, `$select` nutzen, Änderungen über Delta oder Webhooks statt Polling.
-
-## Webhooks und Ereignisverarbeitung
-
-- **Change Notifications**: `POST /subscriptions` auf `/me/events`, `/me/calendars` oder `/users/{id}/events`; Lieferung per HTTPS-POST an die registrierte URL.
-- **Lebensdauer**: Abonnements laufen ab und müssen verlängert werden (`PATCH /subscriptions/{id}` mit `renewNow`). Für Exchange-Ressourcen liegen die Maximalwerte im Bereich mehrerer Tage; genaue Werte sind versionsabhängig (nicht eindeutig dokumentiert).
-- **Lebenszyklus-Nachrichten**: `removed`, `renewed`, `expired`, `missedChanges` an die `lifecycleNotificationURL`.
-- **Delta-Query** als Webhook-Ersatz: `GET /me/calendar/delta` liefert Änderungen samt `@odata.deltaLink` für den nächsten Durchlauf.
-- **Kein klassischer ausgehender Webhook** aus der Weboberfläche: ohne Graph-App versendet Outlook keine Termin-Ereignisse an Fremd-URLs; Alternativweg ist Power Automate mit Kalender-Trigger.
-
-## SDKs und Client-Bibliotheken
-
-- **C#/.NET**: `Microsoft.Graph` (+ `Azure.Identity`/MSAL)
-- **JavaScript/TypeScript**: `@microsoft/microsoft-graph-client`, `@azure/msal-node`, `@azure/msal-browser`
-- **Python**: `msgraph-sdk` (+ `msal`)
-- **Java**: `com.microsoft.graph:microsoft-graph` (+ `msal4j`)
-- **Go**: `github.com/microsoftgraph/msgraph-sdk-go`
-- **PowerShell**: `Microsoft.Graph`-Modul (`Get-MgUserCalendarView`, `New-MgUserEvent`)
-- **Low-Code**: Graph-Connectoren in Power Automate, Power Apps und Logic Apps
-
-```bash
-npm install @microsoft/microsoft-graph-client @azure/msal-node
-pip install msgraph-sdk msal
-```
-
-## Vergleich mit anderen Kalendersystemen
-
-| System | Typischer Einstiegspunkt | Anmerkung |
-|--------|--------------------------|-----------|
-| Outlook Kalender | `https://graph.microsoft.com/v1.0/me/calendar/events` | OAuth 2.0 mit Entra ID |
-| Nextcloud Kalender | `/.well-known/caldav` → CalDAV-Reports (XML) | Basic/Bearer-Auth, offener Standard |
-| DAViCal / SabreDAV | CalDAV-Endpunkt des Servers | RFC 4791, keine REST-JSON-API |
-| Google Kalender | `https://www.googleapis.com/calendar/v3/calendars` | REST + CalDAV |
-
-## Hinweise für den Betrieb
-
-- **App-Registrierierung in Entra ID** mit minimalen Berechtigungen: nur `Calendars.Read`, wenn nichts geschrieben wird; `Calendars.ReadWrite` nur für Postfächer, die tatsächlich benötigt werden.
-- **Geheimnisse/Zertifikate** mit Ablauf hinterlegen und rotieren; Client Secrets im Klartext sind ein häufiger Audit-Fund.
-- **Datenregion und Data Boundary**: Zugriffe auf Mandantendaten laufen über die Microsoft-Graph-Endpunkte; für besondere Anforderungen existieren nationale Clouds bzw. Platzhalter-Tenant-Verarbeitung (Details: nicht dokumentiert bzw. vertraglich geregelt).
-- **EWS-Neuentwicklung vermeiden**: Neue Integrationen gehören auf Microsoft Graph; bestehende EWS-Nutzung: Migration planen (Zeitrahmen mandantabhängig).
-
-## Siehe auch
-
-- [menu.md](menu.md)
-- [features.md](features.md)
-- [description.md](description.md)
-- [structure.md](structure.md)
-- [shortcuts.md](shortcuts.md)
+- EWS-Abschaltung (offiziell): `https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online` – Timeline 2018/2023/2026/2027, Midnight-Blizzard-Kontext, Parity-Lücken-Tabelle, Tools.
+- `calendar`-Ressource: `https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0` – Methoden (inkl. calendarView, delta, getSchedule, findMeetingTimes), Properties, Gruppenkalender-Grenzen.
+- `event`-Ressource: `https://learn.microsoft.com/en-us/graph/api/resources/event?view=graph-rest-1.0` – Methoden (inkl. accept/decline/instances/attachments/delta), Properties (iCalUId, seriesMasterId, cancelledOccurrences, changeKey, allowNewTimeProposals …), 500-Teilnehmer-Limit, `IdType="ImmutableId"`.
+- Webhooks: `https://learn.microsoft.com/en-us/graph/change-notifications-delivery-webhooks?view=graph-rest-1.0` – 3-s-Fenster, 4-h-Retries, slow/drop-Schwellen, Lifecycle, Event Hubs/Event Grid.
+- Throttling: `https://learn.microsoft.com/en-us/graph/throttling` – 429/Retry-After, Graph Data Connect, SDK-Handler.
+- Graph-Outlook-API-Konzept: `https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/office-365-rest-apis-for-mail-calendars-and-contacts` (zuletzt aktualisiert 2021-10-11) – OAuth 2.0, OData 4.0, JSON, Ablösung der alten REST-API.
+- Nicht erreichbar am Recherchetag: Graph-„Service-specific limits"-Seite (mehrere Kandidat-URLs 404) – Zahlen bewusst nicht übernommen.

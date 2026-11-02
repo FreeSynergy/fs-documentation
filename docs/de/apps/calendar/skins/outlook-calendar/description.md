@@ -1,61 +1,40 @@
-# Outlook Kalender - Beschreibung
+# Outlook-Kalender – Beschreibung
 
-## Übersicht
+*(Quellbasis: Microsoft Graph v1.0 Ressourcen-Doku, offizielle EWS-Deprecation-Seite, offizielle Tastaturkürzel-Seite von support.microsoft.com; Stand 2026-11-02 – Details und Fundstellen in [index.md](index.md#quellen))*
 
-Outlook Kalender ist der Kalender-Baustein von Microsoft 365: Termine, Besprechungen, Aufgaben und Ressourcen liegen im Exchange-Postfach und werden in Outlook im Web, Outlook für Windows und Mac, Outlook Mobile und Outlook Classic angezeigt. Der Kalender ist kein Einzelprogramm, sondern Teil einer Groupware – E-Mail, Kontakte und Besprechungsabstimmung teilen sich dieselbe Datenbasis.
+## Was das Programm macht
 
-## Was Outlook Kalender macht
+**Outlook-Kalender** ist die Kalenderkomponente von Microsofts Outlook-Linie: dieselbe Kalenderfunktion erscheint in **Outlook on the web** (outlook.com privat bzw. outlook.office.com für Organisationen), im **neuen Outlook für Windows** (Web-Codebasis als Desktop-App), im **klassischen Outlook für Windows** (MAPI-Desktop-Client, Teil von Microsoft 365/Office), in **Outlook für Mac** und in **Outlook für iOS/Android**. Gespeichert werden Termine im Postfach des Backends **Exchange Online** (Microsoft 365); Zugriffsschicht für Automatisierung ist die **Microsoft-Graph-REST-API** (OAuth 2.0, OData/JSON).
 
-Termine und wiederkehrende Serien werden angelegt, mit Teilnehmern und Räumen verknüpft und als Besprechungsanfragen versendet. Free/Busy-Zeiten der Kollegen erscheinen im Planungsassistenten, Freigabestufen regeln, wer einen Kalender nur liest oder bearbeitet. Alle Objekte sind über Microsoft Graph programmatisch erreichbar; für den Austausch mit anderen Kalendern dient das iCalendar-Format (ICS-Import, Terminlinks, Google-Kalender-Abgleich).
+Kernfunktionen: Termine und Wiederholungsserien, Einladungen mit RSVP (annehmen/vorläufig/ablehnen), Free/Busy-Abfragen und Terminfindung (`getSchedule`, `findMeetingTimes`), Erinnerungen, Dateianhänge, Kalenderfarben und -freigaben, Online-Besprechungen mit Teams, To-Do-Aufgaben, mehrere Kalender und Kalendergruppen je Postfach. Für Drittsysteme gibt es **echte Webhooks** über Graph change notifications – ein klarer Unterschied zu Nextcloud Calendar und DAViCal, die keine Push-Hooks bieten.
 
 ## Vorteile
 
-- **Ein Postfach, alle Geräte**: Web, Windows, Mac, iOS, Android zeigen denselben Stand
-- **E-Mail und Kalender verzahnt**: Besprechungsanfragen, Antworten, Anlagen und Aufgaben in einem Ablauf
-- **Ressourcenbuchung**: Besprechungsräume und Equipment als Postfach mit Buchungsrichtlinien
-- **Free/Busy und Planungsassistent** mandantenweit, auch über Organisationsbeziehungen
-- **Rechte abgestuft**: von „nur Verfügbarkeit" bis „Vollzugriff", dazu Delegiertenzugriff
-- **Compliance und Verwaltung**: Aufbewahrungsrichtlinien, Audit-Log, Conditional Access, MFA
-- **Breite API**: Microsoft Graph mit Terminen, Kalendern, Gruppen, Freigaben, Zeitplan und Webhooks
-- **Besprechungstools am Termin**: Teams-Besprechung mit einem Klick, Add-ins wie FindTime oder Zoom
-- **Barrierefreiheit und Mehrsprachigkeit** auf dem Stand der Microsoft-365-Oberflächen
+- **Plattformweite Reichweite:** Ein Kalenderobjekt, das Desktop (Windows/Mac), Web und Mobile (eigene Outlook-Apps) mit demselben Backend bedient; in Unternehmen meist bereits durch Microsoft-365-Lizenzen vorhanden.
+- **Terminfindung eingebaut:** Free/Busy über Nutzer/Ressourcen hinweg, Slot-Vorschläge (`findMeetingTimes`), Assistent für die Terminplanung im klassischen Client, Teilnehmer dürfen Gegenvorschläge machen (`allowNewTimeProposals`).
+- **Organisationsfunktionen:** Freigaben mit Rechtestufen, Kalender veröffentlichen, Ressourcen (Räume/Ausstattung) alsbuchbare Objekte, Teams-Konferenz per Schalter.
+- **Integrationslage:** Graph mit OAuth-Scopes, Webhooks, Delta-Queries und SDKs – deutlich reichhaltigere API als bei CalDAV-Servern üblich (dafür proprietär und an Microsoft-Identitäten gebunden).
+- **Aktuell erzwungener Modernisierungsschub:** EWS wird in Exchange Online abgeschaltet (Okt 2026–Apr 2027); alle Integrationen landen zwangsläufig auf Graph.
 
-## Abgrenzung zu anderen Kalendersystemen
+## Abgrenzung zu vergleichbaren Produkten
 
-### Outlook Kalender vs. Google Kalender
-- **Outlook** ist an Exchange-Postfächer und Entra-ID-Identitäten gebunden, **Google Kalender** an Google-Konten
-- **Outlook** hat Ressourcenpostfächer und Delegiertenzugriff für Unternehmen, **Google Kalender** dafür unkomplizierte öffentliche ICS-Feeds
-- **Outlook** punktet mit Free/Busy im Unternehmen und Microsoft-365-Verwaltung, **Google Kalender** mit einfacher Freigabe nach außen und starker Websuche
-- Beide sind Cloud-Dienste ohne Self-Hosting
-
-### Outlook Kalender vs. Nextcloud Kalender
-- **Nextcloud** ist self-hosted mit **CalDAV** (`/.well-known/caldav`) und damit mit jedem offenen Client nutzbar, **Outlook** bietet kein CalDAV
-- **Nextcloud** gehört datenschutzrechtlich komplett dem Betreiber, **Outlook** folgt den M365-Datenregionszusagen
-- **Outlook** hat mehr Komfortfunktionen (Ressourcen, Planungsassistent, Onlinebesprechungen), **Nextcloud** dafür volle Datenhoheit und einfache App-Passung
-- Nextcloud-Installation erfordert eigenen Betrieb, Outlook ist bezogene Lizenzware
-
-### Outlook Kalender vs. DAViCal / SabreDAV (CalDAV-Server)
-- **DAViCal/SabreDAV** sind reine Kalender-/Kontaktserver (PostgreSQL bzw. PHP-Bibliothek) ohne eigene Oberfläche im großen Stil, **Outlook** bringt Clients, Mobile-Vertrieb und Admin-Werkzeuge mit
-- **CalDAV-Server** sind frei konfigurierbar und beliebig skalierbar, **Outlook** ist in Struktur und Rechten an die Mandantsorganisation gebunden
-- Für Gruppen ohne Microsoft-365-Lizenzen sind CalDAV-Server günstiger, für M365-Landschaften ist Outlook Kalender die naheliegende Wahl
+| Produkt (in dieser Doku) | Unterschied |
+|--------------------------|-------------|
+| **Google Kalender** | Beide sind SaaS mit proprietärer API + Webhooks. Outlook liegt im Microsoft-Stack (Exchange/Teams/Entra), Google im Google-Stack (Gmail/Meet); Graph ist OData/JSON mit OAuth, Google nutzt Discovery/REST. Outlook punktet mit Ressourcen-/Raumbuchung im Unternehmenskontext, Google mit stärkerem Consumer-Ökosystem und Terminbuchungs-Seiten. |
+| **Nextcloud Calendar** | Nextcloud: selbst gehoster Weboberfläche auf CalDAV mit offenen Standards, Datenhoheit, eigenen Buchung-/Proposal-Objekten, aber **keinen** Webhooks. Outlook: Cloud-Dienst, keine Datenhoheit, dafür Webhooks, Ressourcenverwaltung und tiefe Teams-Integration. |
+| **DAViCal** | DAViCal ist nur CalDAV-/CardDAV-Backend ohne Oberfläche; Outlook-Kalender ist das Gegenteil: fertige Clients + proprietäres Backend, **ohne** CalDAV-Zugang für externe Clients. |
+| **Merkuro** | Merkuro ist nativer KDE-Client, der u. a. **gegen** Groupware-Server (auch Exchange/kopfzeilenweise via kdepim-runtime-Ressource) arbeitet; Outlook-Kalender stellt selbst Server **und** Clients. |
+| **GNOME Planner** (vorgesehen) | Planner ist schlanker Task-/Kalender-Client; Outlook-Kalender ist Unternehmens-Groupware. |
 
 ## Technische Details
 
-- **Plattformen**: Browser (Outlook im Web), Windows (neues Outlook, Outlook Classic), macOS, iOS, Android
-- **Backend**: Exchange Online (Postfachdienste von Microsoft 365); lokal alternativ Exchange Server als eigene Produktlinie inkl. Hybridbetrieb
-- **Datenspeicher**: Exchange-Postfach (Kalenderordner, Termine als iCalendar-artige Objekte); die genaue Speicherengine von Exchange Online ist öffentlich nicht dokumentiert
-- **Frontends**: Outlook im Web (Web-App, Fluent-Design), neues Outlook für Windows (Web-Technologie verpackt), Outlook Classic (Win32, MAPI/HTTP, OST-Cache), Outlook für Mac, Outlook Mobile (iOS/Android)
-- **Schnittstellen**: Microsoft Graph REST (`/v1.0`, `/beta`), Exchange Web Services (veraltet, für Exchange Online abgelöst angekündigt), MAPI over HTTP, Exchange ActiveSync, IMAP4 (Kalenderordner), ICS-Import
-- **Protokolle/Formate**: iCalendar (RFC 5545) als Austauschformat, MIME für Besprechungsanfragen
-- **Authentifizierung**: OAuth 2.0 / OpenID Connect über Microsoft Entra ID, delegated und application permissions (`Calendars.Read`, `Calendars.ReadWrite`), MFA/Conditional Access, MSAL-Bibliotheken
-- **Autorisierung**: RBAC im Mandant (Exchange-Rollen), Freigabestufen pro Kalender, App-Rechte mit Administratorzustimmung
-- **Hosting**: ausschließlich Cloud (Microsoft 365, Datenregions-/Data-Boundary-Zusagen) bzw. Outlook.com für Privatkonten; **kein Self-Hosting**
-- **Lizenz**: kostenpflichtig im Business-Umfeld (Microsoft-365-Plan), privat mit Outlook.com-Konto kostenlos nutzbar
+- **Backend:** Exchange Online (Postfachspeicher mit Kalenderordner-Modell); Kalender-/Terminelemente sind Postfachobjekte, nicht ICS-Dateien. On-Premises-Variante: Exchange Server (eigene Lebenslinien).
+- **API:** Microsoft Graph `v1.0`/`beta`; Ressourcen `calendar`, `event`, `calendarGroup`; Aktionen (accept/decline/cancel/instances), `delta`-Queries, `changeKey`-Konkurrenzschutz, `Prefer: IdType="ImmutableId"`. Webhooks über Subscriptions mit Lifecycle-Erneuerung.
+- **Auth:** OAuth 2.0 (Entra ID bzw. Microsoft-Konto), keine Basic-Auth für Drittzugriffe; Admin-Einwilligung für mandantenweite Scopes.
+- **Konnektoren-Historie:** EAS/MAPI/EWS als ältere Protokolle; EWS-Abschaltung Exchange Online aktiv, ältere Protokolle für kostenlose Outlook.com-Konten seit Anfang 2025 entfallen (Details nicht verifiziert).
+- **Clients:** neues Outlook für Windows (ersetzt seit 2023 schrittweise Windows-Mail/-Kalender-Apps; kostenlose Konten seit Januar 2025 nicht mehr zurückstufbar – Sekundärquelle), klassisches Outlook für Windows bleibt für Enterprise im Sortiment; Outlook für Mac nutzt eigenes Store-Format ohne CalDAV.
 
-## Für wen ist Outlook Kalender geeignet?
+## Für wen geeignet
 
-- **Unternehmen mit Microsoft 365**: Raumplanung, Delegation, Free/Busy und Compliance sind direkt nutzbar
-- **IT-Administrationen**, die Kalender über Entra-ID und Exchange-Rollen steuern müssen
-- **Entwickler**, die Termine automatisieren wollen (Graph, Power Automate, Change Notifications)
-- **Privatanwender** mit Microsoft-Konto für Mail, Kalender und Aufgaben aus einer Hand
-- **Weniger geeignet** für Self-Hosting-Umgebungen, offene CalDAV-Landschaften und stark regulierte Umfelder, in denen Daten die eigene Infrastruktur nicht verlassen dürfen – dort passen Nextcloud Kalender, DAViCal oder SabreDAV besser
+- **Geeignet:** Organisationen und Einzelpersonen im Microsoft-365-Umfeld, die Termine, Ressourcenbuchung, Teams-Meetings und API-Automatisierung (Graph mit Webhooks) aus einer Hand wollen; IT, die OAuth/Entra-Identitäten ohnehinBetriebenBetrieb pflegt.
+- **Weniger geeignet:** Selbsthosts mit Datenhoheits-Anspruch (dann Nextcloud Calendar/DAViCal), offene Standard-Clients (Thunderbird, DAVx⁵, Merkuro finden keinen CalDAV-Zugang zu Outlook-Konten), und Privatkonto-Nutzer, die third-party-Mailclients nutzen wollen (Protokollzugänge entzogen).

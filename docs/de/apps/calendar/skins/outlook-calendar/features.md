@@ -1,155 +1,49 @@
-# Outlook Kalender - Funktionen
+# Outlook-Kalender – Funktionen (verifiziert an Microsoft Graph v1.0 + offizieller Hilfe, 2026-11-02)
 
-## Übersicht
+Grundlage: `event`-/`calendar`-Ressourcen von Microsoft Graph v1.0, die offizielle Tastaturkürzel-Seite (deckt neues Outlook, klassisches Outlook und Outlook on the web ab) und offizielle Hilfeartikel. Fundstellen in [index.md](index.md#quellen). Als UI-Elemente, die nur aus der Kürzel-Liste erschlossen sind, gekennzeichnete Punkte sind Funktionsbelege, keine erfundenen Menüs.
 
-Der Outlook Kalender verwaltet Termine, Besprechungen, Aufgaben und Ressourcen in Exchange-Postfächern. Er ist mit E-Mail, Kontakten und Besprechungstools verknüpft, läuft in Web, Desktop und Mobil praktisch identisch und stellt alle Daten über Microsoft Graph programmatisch bereit. Der Austausch mit Fremdsystemen erfolgt über ICS-Dateien, Abonnements und den Google-Kalender-Abgleich.
+## Termine und Serien
 
----
+- Termine mit Titel, Rumpf (HTML/Text), Ort (+ mehrfache `locations`), Kategorien (`categories`), Priorität (`importance`), ganztägig (`isAllDay`), **eigene Zeitzone je Termin** (`DateTimeTimeZone`, `start`/`end`).
+- **Wiederholungsserien** (`patternedRecurrence`) mit Einzel-Instanz-Verwaltung: Instanzen auflisten (`instances`), einzelne Occurrences löschen/ändern, `cancelledOccurrences` und `seriesMasterId` zur Serienbuchung; `iCalUId` als RFC-5545-UID.
+- **Erinnerungen** pro Termin (`isReminderOn`, Minuten vor Beginn) mit Snooze/Zurückweisen als Aktionen (`snoozeReminder`, `dismissReminder`); im klassischen Outlook zusätzlich Reminder-Fenster (Kürzel `Alt+V,M`) und Erinnerungs-Sound konfigurierbar.
+- **Dateianhänge** an Termine (`attachments`-Sammlung: Hinzufügen/Auflisten).
+- Entwürfe für Meeting-Aktualisierungen (`isDraft` – Änderungen noch nicht an Teilnehmer versendet).
+- Privatsphäre/Vertraulichkeit: `sensitivity`- und `private`-Darstellung über `showAs`-Status (Free/Busy-Tarnung), `hideAttendees` (jeder Teilnehmer sieht nur sich selbst).
 
-## 1. Termine und Besprechungen
+## Teilnehmer und Meetings
 
-### Funktionen
-- **Termine und Ereignisse**: mit Beginn/Ende, ganztägig, Zeitzone pro Termin
-- **Besprechungen mit Teilnehmern**: erforderlich, optional, Ressourcen; Einladungen als Besprechungsanfragen
-- **Antwortstatus**: Annehmen, Vorläufig annehmen, Ablehnen, Terminvorschlag senden; Nachverfolgung im Organizer-Kalender
-- **Wiederholungen**: täglich, wöchentlich, monatlich, jährlich, benutzerdefiniert (Serien mit Ausnahmen)
-- **Erinnerungen** (Popup/Benachrichtigung), **Kategorien/Farben**, **Anzeigen als** (Free/Busy, Abwesend, Abwesend mit Vertretung)
-- **Anlagen** im Termin, Notizen, **Terminsache/Richtlinien** (vertraulich, privat)
-- **Raum- und Equipmentbuchung** über Ressourcenpostfächer mit Autoverteilung und Buchungsrichtlinien
-- **Arbeitszeiten** und Abwesenheitsstatus, Free/Busy-Anzeige für Kollegen
+- **Einladungen** an Nutzer mit RSVP: annehmen / vorläuig / ablehnen (`accept`, `tentativelyAccept`, `decline`), Organisator kann absagen (`cancel`) und weiterleiten (`forward`).
+- **Zeitvorschläge durch Teilnehmer** (`allowNewTimeProposals`) – Gegenstück zu Meeting-Umfragen anderer Produkte.
+- **Free/Busy:** `getSchedule` (Belegung mehrerer Nutzer/Ressourcen/Verteiler abfragen) und **`findMeetingTimes`** (automatische Terminvorschläge aus Teilnehmer-Verfügbarkeit); im klassischen Outlook der **Assistent für die Terminplanung** (`Alt+X`).
+- **Online-Besprechungen:** `isOnlineMeeting` + `onlineMeeting` (Join-Link/Meeting-Infos); erlaubte Anbieter je Kalender über `allowedOnlineMeetingProviders` – praktisch **Teams** (`teamsForBusiness`); keine Zoom/Meet-Integration im Produkt.
+- **Ressourcen:** Räume/Ausstattungen als CalDAV-lose Exchange-Ressourcen über dasselbe Postfachmodell (`getSchedule` unterstützt Ressourcentypen).
+- Grenze: max. **500 Teilnehmer** pro Termin.
 
-#### Was diese Funktion NICHT kann
-- Keine doppelte Buchung in denselben Raum ohne Freigabe der Buchungsrichtlinie
-- Keine Terminserien mit unbegrenzt vielen Ausnahmen: sehr lange Serien werden beim Export/Import in anderen Systemen häufig fehlerhaft dargestellt
-- Keine direkte Bearbeitung in fremden Kalendern ohne die Freigabestufen Author/Editor/Owner
+## Kalenderverwaltung und Freigabe
 
----
+- Mehrere Kalender je Postfach, Kalenderordner/-gruppen, Farben (11 Theme-Farben + `hexColor`), Standardkalender markierbar, `changeKey` als Versionierung.
+- **Freigaben** mit Rechtestufen (canViewPrivateItems/canEdit/canShare als API-Abbild): Im klassischen Outlook per Kürzel belegt: „Freigegebenen Kalender hinzufügen" (`Alt+H,O,C`), „Kalender freigeben" (`Alt+H,S,C`), Ordner-Freigaberechte bearbeiten (`Alt+H,F,P`), **Kalender online veröffentlichen** (`Alt+H,P,O`).
+- **Klassischer Outlook:** Kalender per E-Mail versenden (`Alt+H,E`).
+- **Scheduling-Links/Buchung:** Die Produktlinie löst öffentliche Buchung über die separate App **Microsoft Bookings** – die Kalender-App selbst hat keine eigene Buchungsseite wie Nextcloud Calendar oder Google-Terminbuchung (Buchung extern, daher hier als Grenze notiert).
+- **To Do/Aufgaben:** eigene To-Do-Ansicht im Client (`Ctrl+5` in der Navigationsliste des klassischen Outlook) – Aufgaben liegen bei Microsoft To Do, nicht als VTodo im Kalenderpostfach wie bei CalDAV-Servern.
 
-## 2. Planungsassistent und Zeitsuche
+## Clients und Ansichten
 
-### Funktionen
-- **Planungsassistent**: Wochenansicht mit Free/Busy-Zeilen aller Pflicht- und Optionalteilnehmer
-- **Konfliktanzeige** und Vorschlag für die nächste freie Zeit
-- **Ressourcensuche** (Verfügbarkeit von Räumen nach Kapazität/Ausstattung)
-- **Arbeitszeitfenster** und Zeitzonen der Teilnehmer
+- **Neues Outlook / Outlook on the web:** Ansichten Tag, Arbeitswoche, Woche, Monat, 3-Tage, Listenansicht (aus der offiziellen Kürzel-Tabelle: `Strg+Alt+1` Tag, `Strg+Alt+2` Woche/Arbeitswoche, `Strg+Alt+4`/`Alt+ =` Monat, `Alt+3` 3-Tage; Listenansicht ohne Kürzel); „Heute" `Alt+Shift+Y/Home`.
+- **Klassisches Outlook (Windows):** Feinere Tagesraster 1–10 Tage (`Alt+1`…`Alt+0`), Ganze Woche/Vollwoche, Monatsansicht, Datumsnavigator, „Nächste 7 Tage".
+- **Sync über Geräte:** Exchange-Postfach-Sync (EAS/mobile Outlook-Apps); Outlook für iOS/Android als eigene Apps.
+- **Live-Updates:** Push-artige Aktualisierung der Clients über Exchange-Protokolle; für Drittsysteme echte **Webhooks** über Graph change notifications (siehe api.md).
+- **Kalender-Sharing-Modernisierung (2026):** Umstellung der Kalenderfreigabe von MAPI auf ein REST-Modell läuft tenantweise (Sekundärquellen office365itpros.com 2026-05, admin365.blog 2026-07 – als Sekundärquelle gekennzeichnet).
 
-#### Was diese Funktion NICHT kann
-- Keine echte Mehrsprachigkeits-/Präferenzoptimung („bevorzugt vormittags") wie in dedizierten Terminplanern
-- Keine Teilnehmerauflösung über Mandantengrenzen ohne Organisationsbeziehung bzw. Gastfreigabe
+## Was Outlook-Kalender NICHT bietet
 
----
-
-## 3. Mehrere Kalender, Freigaben, Abonnements
-
-### Funktionen
-- **Mehrere Kalender pro Postfach** plus Kalendergruppen, Überlagerung im selben Kalenderblatt
-- **Freigaben** mit abgestuften Rechten: nur Verfügbarkeit, Titel und Ort, Details, bearbeiten, Vollzugriff
-- **Abonnement von Kalenderfeeds** (Feiertage, Sport, von Microsoft angebotene Feeds)
-- **ICS-Import**: Kalenderdateien (`.ics`) in einen eigenen Kalender laden
-- **Geburtstagskalender** aus Active-Directory-/Entra-Daten
-
----
-
-## 4. ICS-Veröffentlichung und Export
-
-### Funktionen
-- **ICS als Datenaustauschformat** für Import und Weitergabe von Terminen
-- **ICS-Download/Export** aus Clients (in der Weboberfläche als „Speichern unter" bzw. Download-Funktion vorhanden; Umfang ist versionsabhängig — genaue Limits: nicht dokumentiert)
-- **Terminlinks** für einzelne Termine
-- **Kalender-Abo-Links** bei freigegebenen Kalendern; externe Clients nutzen Exchange ActiveSync oder MAPI statt ICS-Abos
-- **Wichtig**: Die frühere Funktion „Kalender im Web veröffentlichen" (öffentliche ICS-URL) wurde eingestellt; ein öffentliches ICS-Abo eines Outlook-Kalenders ist in aktuellen Versionen nicht vorgesehen (Stand: nicht dokumentiert, ob neu aufgelegt)
-
-#### Was diese Funktion NICHT kann
-- Kein CalDAV-Endpunkt (`/.well-known/caldav`) und kein CardDAV
-- Keine öffentliche, anonym abonnierbare ICS-URL für Produktivkalender
-- Keine fortlaufende Synchronisation bei importierten ICS-Dateien: ein Import ist eine einmalige Übernahme, kein Abo
-
----
-
-## 5. Aufgaben, To Do und E-Mail-Verknüpfung
-
-### Funktionen
-- **To Do**: Aufgaben mit Fälligkeitsdatum, Flagge in der E-Mail, „Heute"-Liste, Synchronisation über Outlook Mobile und To Do
-- **Verfolgte E-Mails** erscheinen im Kalender-/Aufgabenbereich
-- **Vom Termin aus** E-Mail an Teilnehmer senden, Besprechungsprotokoll nachbereiten
-
----
-
-## 6. Synchronisation und Clients
-
-### Funktionen
-- **Exchange Online** als eine Datenquelle für Web, Windows (neu und Classic), Mac, iOS, Android
-- **Exchange ActiveSync (EAS)**, **MAPI over HTTP**, **Exchange Web Services** (veraltet), **Microsoft Graph**
-- **Google-Kalender-Abgleich** (Bidirektional für Microsoft-365-Kalender, lizenzabhängig)
-- **Offline-Caching** im Desktop-Client (Cache-Zeitraum administrativ einstellbar)
-- **IMAP-Zugriff** auf Kalenderordner für ältere Drittanwendungen
-
----
-
-## 7. Ansichten, Drucken, Benachrichtigungen
-
-- Ansichten: Tag, Arbeitswoche, Woche, Monat, Terminübersicht (Agenda), Jahr
-- Filter nach Kategorie, Besprechungstyp, Teilnahmestatus
-- Druckdialog mit Layouts (Tag, Woche, Monat, Termindetail) und „Kalender drucken"-Assistent
-- Push-/E-Mail-Benachrichtigungen, Erinnerungen, Besprechungsantworten
-- Suchergebnisse mit Datumseingrenzung und Volltext
-
----
-
-## Was Outlook Kalender NICHT kann
-
-- **Nicht self-hostbar**: Es gibt keinen downloadbaren Kalender-Server für den eigenen Betrieb. Daten liegen in Exchange Online; lokal nur Exchange Server (On-Premises) als andere Produktlinie.
-- **Kein CalDAV/CardDAV**: Third-Party-Clients (Thunderbird mit Ox, Evolution, Geary, CalDAV-Sync-Apps) können nicht direkt angebunden werden; Behelfe sind Google-Kalender-Abgleich oder Brückenwerkzeuge.
-- **Kein offenes Abo-Format für Fremde**: keine dauerhafte öffentliche ICS-Feed-URL wie bei Google Kalender oder Nextcloud.
-- **Keine echten Offline-Schreibrechte im Web**: Änderungen ohne Verbindung werden in der Weboberfläche nicht unbegrenzt nachgeführt (Desktop-Client mit OST-Cache ausnehmen).
-- **Keine Kalender ohne Lizenzpflicht im Business-Kontext**: Funktionsumfang (Ressourcen, Planungsassistent mandantenübergreifend, Teams-Onlinebesprechungen) hängt am Microsoft-365-Plan.
-- **Keine vollwertige Terminbuchung für Externe**: Kunden-Terminbuchung mit Selbstbedienung ist Microsoft Bookings (eigene Lizenz/Produkt), nicht der Kalender selbst.
-- **Keine direkte ICS-API**: Export/Import sind UI-Aktionen; ein dokumentierter Graph-Endpunkt für „Kalender als ICS herunterladen" existiert nicht.
-- **Keine echte Echtzeit-Kollaboration** an einem Termin: Bei paralleler Bearbeitung gewinnt die zuletzt gespeicherte Fassung; Konflikte werden nicht wie in Dokumenten-Editoren zusammengeführt.
-- **Keine freie Datenhoheit**: Aufbewahrung, Löschfristen und Datenregion folgen den M365-Zusagen des Mandanten; eine eigene Datenbank ist nicht zugänglich.
-- **Kein durchgängig identischer Funktionsstand** in allen Clients: Outlook im Web, neues Outlook, Outlook Classic und Mobile unterscheiden sich bei Import, Druck und Verwaltungsdetails.
-
----
-
-## Erweiterungen, Add-ins und Integrationen
-
-### Microsoft-eigene Integrationen
-- **Microsoft Teams**: Onlinebesprechung am Termin, Teams-Besprechungskanal im Kalender
-- **Microsoft Bookings**: öffentliche Terminbuchungsseite für Kunden (separates Produkt)
-- **To Do / Planner / Lists**: Aufgabenbezug aus Terminen
-- **Power Automate**: Trigger „Neuer Termin" / „Termin erstellt oder geändert" und Aktionen zum Anlegen von Terminen (Graph-basiert)
-- **Microsoft Graph-Connectoren** in Power Apps und Logic Apps
-- **Visio/Excel-Export** über eigene Skripte auf Graph-Daten
-
-### Add-ins (Erweiterungen im Client)
-- **FindTime** (Umfrage zur Terminfindung)
-- **Zoom Workplace**: Onlinebesprechungsschaltfläche im Terminformular
-- **Add-ins nach Office-JavaScript-API**: eigene Schaltflächen im Terminformular, Datenabgleich mit Fremdsystemen
-- Verwaltet über den Add-in-Katalog bzw. vom Tenant-Administrator bereitgestellt
-
-### Integrationen in Drittumgebung
-- **Google Kalender**: bidirektionaler Abgleich für Microsoft-365-Kalender
-- **Apple Kalender / iCloud**: Synchronisation über das Outlook-Mobile-Konto bzw. Exchange ActiveSync
-- **ICS-Dateien**: Import in Outlook, Export aus Outlook, Konvertierung über iCalendar-Werkzeuge
-- **Kalender-Skripte**: PowerShell mit Microsoft.Graph-Modul, Python/Node mit Graph-SDKs
-- **Brückenwerkzeuge für CalDAV**: Drittanbieter (zum Beispiel Outlook CalDav Synchronizer für Outlook Classic und CalDAV-Server) — keine Microsoft-Funktion
-- **CRM-/Helpdesk-Anbindung**: über Connectoren oder Graph (Beispiel: Termine zu Tickets, Kontakten oder Projekten verknüpfen)
-
-### Entwicklung
-- **Microsoft Graph API** (Kalender, Termine, Kalendergruppen, Freigaben, Zeitplan) — siehe [api.md](api.md)
-- **Change Notifications (Webhooks)** für neue und geänderte Termine
-- **Add-in-Entwicklung** mit dem Office-Add-in-Framework
-
----
-
-## Shortcuts
-
-siehe [shortcuts.md](shortcuts.md) für die dokumentierten Tasten und die als fehlend markierten Kombinationen.
-
----
-
-## Empfehlung
-
-- **Für Unternehmen mit Microsoft 365**: die natürliche Wahl, weil Ressourcen, Free/Busy und Compliance greifen
-- **Für offene Landschaften (Linux, CalDAV, Self-Hosting)**: nur mit Abgleich oder Brücke sinnvoll, besser ein CalDAV-basiertes System
-- **Für öffentliche Kalender (Verein, Campus, Events)**: ein CalDAV- oder ICS-Feed-orientiertes System verwenden
+- **Kein CalDAV/CardDAV** in den Outlook-Clients: „Outlook für Mac unterstützt nicht die CalDAV- oder CardDAV-Internetstandards" (offizieller Hilfeartikel, Fundstelle index.md). An Outlook.com/Exchange Online gibt es für externe CalDAV-Clients keinen offiziellen Zugang; Drittanbieter-Connectoren (z. B. Outlook CalDav Synchronizer) inoffiziell.
+- **Privatkonto-Zugänge entzogen:** Für kostenlose Outlook.com-Kontone wurden die Protokolle EAS/MAPI/CalDAV zum Januar 2025 abgeschaltet (technische Umstellung auf das neue Outlook; Primärquelle der Support-Seite war am Recherchetag nicht erreichbar – als Sekundärinformation aus techcommunity-Beitrag gekennzeichnet, **im Detail nicht verifiziert**).
+- **Kein Self-Hosting:** Outlook.com ist reiner Dienst; ein selbst betriebenes Gegenstück wäre Exchange Server (on-prem) oder ein CalDAV-Server (davical in dieser Serie).
+- **Keine eigene Terminbuchungs-Seite** (wie Google-Terminbuchung / Nextcloud Booking) – dafür separate Bookings-App.
+- **Keine Meeting-Umfrage als Kalender-Feature** im Stil von Doodle: dem Outlook-Kalender fehlt ein äquivalentes „Vorschläge zur Abstimmung stellen"-Objekt (Nextcloud Calendar bietet das als Proposals, Google Kalender „Umfragen"); dem Outlook-Termin fehlt ein Abstimmungs-Modell – `allowNewTimeProposals` ist nur der Einzel-Vorschlag eines Teilnehmers. (Als Grenzziehung nach Quellenlage der Ressourcen-Seiten formuliert.)
+- **Keine Drittanbieter-Konferenzanbieter** außer Teams (siehe `allowedOnlineMeetingProviders`).
+- **Keine offene ICS-API für Dritte:** Termine sind Postfachobjekte (MAPI/Graph), kein ICS-Objektspeicher wie bei CalDAV-Servern; Import/Export ist Client-Funktion (ICS-Dateien importierbar), nicht Standard-Objektformat der Server-API.
+- **EWS-Abhängigkeiten brechen** (Abschaltung Exchange Online Okt 2026–Apr 2027).
+- **Keine Client-API für eigene Add-ins im neuen Outlook wie im klassischen:** COM-Add-ins/VBA/Macro-Kürzel (`Alt+F11`, `Alt+F8`) existieren nur im klassischen Outlook (offizielle Kürzel-Seite listet sie unter „classic Outlook").

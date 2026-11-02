@@ -1,28 +1,37 @@
-# Outlook Kalender Dokumentation
+# Outlook-Kalender – Dokumentation
 
-## Übersicht
+Kalenderkomponente der Microsoft-Outlook-Linie: Web-App (outlook.com / Outlook on the web), neues und klassisches Outlook für Windows, Outlook für Mac und iOS/Android – Daten im Postfach von **Exchange Online**, Automatisierung über **Microsoft Graph v1.0** (REST/OAuth/OData). Markantes API-Merkmal im Serienvergleich: **echte Webhooks** (Graph change notifications) – und eine hart gezogene Protokollgrenze: **kein CalDAV**, EWS-Abschaltung in Exchange Online laufend (Okt 2026–Apr 2027).
 
-Outlook Kalender ist der Kalender-Dienst von Microsoft: Termine, Besprechungen, Aufgaben und Ressourcen liegen im Postfach von Exchange Online (Microsoft 365) und werden in Outlook im Web, Outlook für Windows und Mac, Outlook Mobile sowie im klassischen Outlook-Desktop angezeigt. Verwaltet wird über die Weboberfläche und die desktopüblichen Kalendermasken, programmatisiert über Microsoft Graph; der Austausch mit Fremdsystemen läuft über das iCalendar-Format (ICS) sowie die Clientprotokolle Exchange ActiveSync und MAPI.
+- **Kategorie:** calendar (SaaS-Groupware-Oberfläche + proprietäre API)
+- **Lizenz:** proprietär (Microsoft-Dienst; Clients teils mit Microsoft-365-Abo, Web-Apps für Privatkonten kostenfrei)
+- **Aktuell dokumentierte Version:** Microsoft Graph **v1.0** (stabil) + beta; Client-Stand „neues Outlook für Windows“ / Outlook on the web, Prüfdatum **2026-11-02**
+- **Entwicklungsstatus:** hochaktiv (Schrittveröffentlichungen; EWS→Graph-Migration erzwungen; Kalender-Sharing-Migration MAPI→REST 2026)
 
-## Dateistruktur
+## Dateistruktur dieser Sektion
 
-- [menu.md](menu.md) - Startleiste, Befehlsleiste, Kalenderliste, Kontextmenüs, Rollen
-- [features.md](features.md) - Termine, Planungsassistent, Freigaben, ICS-Veröffentlichung, Grenzen
-- [description.md](description.md) - Beschreibung und Abgrenzung zu Google Kalender, Nextcloud Kalender und DAViCal
-- [structure.md](structure.md) - Ansichten, Dialoge, Drag & Drop, Responsive Design, Accessibility
-- [shortcuts.md](shortcuts.md) - dokumentierte Tasten und klar als fehlend markierte Shortcuts
-- [api.md](api.md) - Microsoft Graph, Exchange Web Services, Change Notifications, ICS
+| Datei | Inhalt |
+|-------|--------|
+| [description.md](description.md) | Was das Programm macht, Vorteile, Abgrenzung (u. a. zu Google Kalender, Nextcloud Calendar, Davical, Merkuro), technische Details, Für-wen-geeignet |
+| [features.md](features.md) | Verifizierte Funktionsliste + „Was Outlook-Kalender NICHT bietet“ |
+| [api.md](api.md) | Graph v1.0: Kalender-/Event-Endpunkte, Auth/Scopes, Webhooks, Limits, SDKs, EWS-Abschaltung |
+| [menu.md](menu.md) | Navigationsstruktur (neues Outlook, klassisches Outlook, Admin-Ebene) aus offiziellen Layout-Artikeln |
+| [shortcuts.md](shortcuts.md) | Offizielle Tastenkürzel (neues/klassisches Outlook, Web) + Direkt-Workflows |
+| [structure.md](structure.md) | Bauschichten, Datenmodell (changeKey/iCalUId/Serien), Konfiguration, Deployment |
 
-## Systemesteckbrief
+## Quellen
 
-| Feld | Wert |
-|------|------|
-| Kategorie | Kalender-Systeme |
-| Hersteller | Microsoft |
-| Lizenz | kommerziell (Microsoft 365), privat über Outlook.com |
-| Backend | Exchange Online (Postfachdienste) |
-| API | Microsoft Graph (`/v1.0`, `/beta`), Exchange Web Services (veraltet) |
-| Austauschformate | iCalendar (ICS), Exchange ActiveSync, MAPI over HTTP |
-| CalDAV / CardDAV | ❌ Nicht vorgesehen |
-| Self-Hosting | ❌ Nicht möglich (Exchange Server lokal nur als On-Premises-Hybrid) |
-| Authentifizierung | OAuth 2.0 / OpenID Connect über Microsoft Entra ID |
+Alle Aussagen vom offiziellen Quelltext der Doku-Seiten; Prüfdatum 2026-11-02. **Outlook ist Closed Source – Primärquelle sind daher die offiziellen API-/Hilfeseiten von Microsoft (nicht Quelltext-Dateien wie bei den Open-Source-Skins dieser Serie).**
+
+1. **EWS-Deprecation (offiziell):** `https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online` – Timeline (2018/2023/Okt 2026/Apr 2027), Midnight Blizzard, Parity-Lücken, Tools.
+2. **Graph calendar-Ressource:** `https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0` – Methoden inkl. calendarView/delta/getSchedule/findMeetingTimes, Properties, Gruppen-Grenzen.
+3. **Graph event-Ressource:** `https://learn.microsoft.com/en-us/graph/api/resources/event?view=graph-rest-1.0` – Aktionen, Properties (iCalUId, seriesMasterId, cancelledOccurrences, changeKey, allowNewTimeProposals, webLink), 500-Teilnehmer-Limit, ImmutableId.
+4. **Graph Webhooks:** `https://learn.microsoft.com/en-us/graph/change-notifications-delivery-webhooks?view=graph-rest-1.0` – Zustellvertrag (3 s, 4 h Retry), slow/drop, Lifecycle, Event Hubs/Event Grid.
+5. **Graph-Throttling:** `https://learn.microsoft.com/en-us/graph/throttling` – 429/Retry-After, Graph Data Connect.
+6. **Graph-Outlook-API-Konzept:** `https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/office-365-rest-apis-for-mail-calendars-and-contacts` (Stand 2021-10-11) – OAuth2/OData/JSON.
+7. **Tastenkürzel (offiziell):** `https://support.microsoft.com/en-us/accessibility/outlook/keyboard-shortcuts-for-outlook` – Tabs New Outlook / Classic Outlook / Web; Kalender-, Navigations-, VBA-Kürzel.
+8. **Layout (offiziell):** `https://support.microsoft.com/en-us/accessibility/outlook/use-a-screen-reader-to-explore-and-navigate-outlook-calendar` – Regionen des neuen Outlook (Nav-Leiste, Ribbon, Navigationsfenster, Toolbar) und des klassischen Outlook (Folder pane, Ribbon, Statusleiste), Settings-Unterreiter.
+9. **CalDAV-Grenze (offiziell):** `https://support.microsoft.com/en-us/outlook/sync-your-icloud-calendar-with-outlook-for-mac` – „Outlook for Mac doesn't support the CalDAV or CardDAV Internet standards“.
+10. **Sekundärquellen (als solche gekennzeichnet):** techcommunity-Beitrag „Outlook for Windows: Timelines…“ (kostenlose Konten ab Jan 2025 kein Rückweg zum klassischen Outlook); office365itpros.com 2026-05 + admin365.blog 2026-07 (Kalender-Sharing MAPI→REST, Frist März 2027); petri.com/windowsforum (EAS ≥ 16.1 ab 2026).
+11. **Nicht verifiziert (bewusst offengehalten):** Graph-„Service-specific limits“-Zahlen (Seite am Recherchetag 404); Scope-Einzelheiten aus permissions-reference; Protokoll-Abschaltungsdetails für kostenlose Outlook.com-Konten (Support-Seite nicht erreichbar); Mac-Kürzel; Consumer-Verfügbarkeit einzelner Graph-Endpunkte.
+
+Wiederholungs-Rezept: Seiten 1–5+7–9 direkt abrufen (lernen/support.microsoft.com sind ohne Login erreichbar; ältere /office/-Slugs von support.microsoft.com teils 404/403 – dann /accessibility/-Pfade verwenden); Änderungen an EWS-Timeline und Graph-Ressourcenseiten mit dieser Doku abgleichen; Sekundärquellen auf neue Stände prüfen.

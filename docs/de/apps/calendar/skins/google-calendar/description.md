@@ -21,9 +21,9 @@ Programmierbar ist er über die **Calendar REST API v3** (JSON/HTTPS), Aufgaben 
 | System | Unterschied |
 |--------|-------------|
 | **DAViCal** (in dieser Serie dokumentiert) | DAViCal ist der schlanke, selbst gehostete CalDAV-/CardDAV-Backend-Server (PHP/PostgreSQL, RFC 4791) – Datenhoheit, echte ACLs, Scheduling nach Standard, aber eigenes Betreiben. Google Kalender ist das gegenteilige Modell: fertiger SaaS-Komplettclient + proprietäre REST-API, **kein dokumentiertes CalDAV-Angebot** (Passwort-CalDAV wurde 2024/2025 abgeschaltet) |
-| **Nextcloud Calendar** (vorgesehen) | Selbst-gehostete Gruppenware-Oberfläche auf CalDAV-Basis mit voller Datenkontrolle; Google Kalender liefert vergleichbaren Komfort, aber ohne eigene Infrastruktur |
-| **Outlook-Kalender** (vorgesehen) | Microsofts Pendant in Microsoft 365 mit Exchange/Graph-API und Teams-Integration; Google Pendant zu Googles Stack (Gmail/Meet/Tasks) |
-| **Merkuro / Planner** (vorgesehen) | Native Desktop-Clients (KDE), die mit Servern wie DAViCal arbeiten; Google Kalender ist selbst Server *und* Client, aber ohne Offline-Desktop-Client |
+| **Nextcloud Calendar** (in dieser Serie dokumentiert) | Selbst-gehostete Gruppenware-Oberfläche auf CalDAV-Basis mit voller Datenkontrolle; Google Kalender liefert vergleichbaren Komfort, aber ohne eigene Infrastruktur |
+| **Outlook-Kalender** (in dieser Serie dokumentiert) | Microsofts Pendant in Microsoft 365 mit Exchange/Graph-API und Teams-Integration; Google Pendant zu Googles Stack (Gmail/Meet/Tasks) |
+| **Merkuro** (in dieser Serie dokumentiert) / Planner (vorgesehen) | Native Desktop-Clients (KDE), die mit Servern wie DAViCal arbeiten; Google Kalender ist selbst Server *und* Client, aber ohne Offline-Desktop-Client |
 
 Kern der Abgrenzung: Google Kalender ist **SaaS aus einer Hand** – sehr hoher Komfort, aber Daten liegen bei Google, der Zugriff läuft über Google-Konten/OAuth, und Standard-Protokolle (CalDAV) sind nicht offiziell vorgesehen. Wer Kalenderdaten souverän betreiben will, fährt mit DAViCal oder Nextcloud besser.
 

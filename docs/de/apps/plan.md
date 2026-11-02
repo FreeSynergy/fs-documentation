@@ -49,13 +49,13 @@ Eine Datei nach der Fertigstellung mit `[x]` markieren.
 - [x] apps/calendar/skins/nextcloud-calendar/structure.md
 
 ### calendar / outlook-calendar
-- [ ] apps/calendar/skins/outlook-calendar/api.md
-- [ ] apps/calendar/skins/outlook-calendar/description.md
-- [ ] apps/calendar/skins/outlook-calendar/features.md
-- [ ] apps/calendar/skins/outlook-calendar/index.md
-- [ ] apps/calendar/skins/outlook-calendar/menu.md
-- [ ] apps/calendar/skins/outlook-calendar/shortcuts.md
-- [ ] apps/calendar/skins/outlook-calendar/structure.md
+- [x] apps/calendar/skins/outlook-calendar/api.md
+- [x] apps/calendar/skins/outlook-calendar/description.md
+- [x] apps/calendar/skins/outlook-calendar/features.md
+- [x] apps/calendar/skins/outlook-calendar/index.md
+- [x] apps/calendar/skins/outlook-calendar/menu.md
+- [x] apps/calendar/skins/outlook-calendar/shortcuts.md
+- [x] apps/calendar/skins/outlook-calendar/structure.md
 
 ### calendar / planner
 - [ ] apps/calendar/skins/planner/api.md

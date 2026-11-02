@@ -1,135 +1,41 @@
-# Outlook Kalender - Struktur & UI/UX
+# Outlook-Kalender – Struktur (Stand: 2026-11-02)
 
-## Übersicht
+Fundstellen in [index.md](index.md#quellen). Markierungen: *(verifiziert)* = direkt auf der zitierten offiziellen Seite abgelesen; *(Sekundär)* = Community-/Fachblog-Quelle; *(nicht verifiziert)* = allgemein bekannt, aber in diesem Durchlauf nicht belegt.
 
-Outlook Kalender ist nach demselben Grundmuster aufgebaut wie die übrigen Microsoft-365-Oberflächen: links die Modulleiste und die Kalenderliste, oben die Befehlsleiste, in der Mitte das Kalenderblatt, rechts bzw. als Ebene darüber Detailformulare. Web, neues Outlook für Windows und Outlook für Mac sind identisch aufgebaut; Outlook Classic nutzt die klassische Windows-Fensterstruktur mit Registerblättern.
+## Bauschichten (Request-Ablauf)
 
-## Fenster-Struktur
+1. **Clients:** neues Outlook für Windows (Web-Codebasis als Windows-App – teilt sich Menüs/Kürzel weitgehend mit Outlook on the web *(verifiziert über identische Kürzel-/Layoutartikel)*), Outlook on the web (outlook.com privat bzw. outlook.office.com Organisation), klassisches Outlook für Windows (MAPI-Vollclient, Ribbon/COM-Add-ins/VBA *(verifiziert: VBA-Kürzel nur im „Classic“-Teil der Kürzelseite)*), Outlook für Mac, Outlook für iOS/Android.
+2. **Zugriffsschicht:** **Microsoft Graph v1.0/beta** (REST, OAuth 2.0, OData 4.0/JSON) als moderne API *(verifiziert)*; älter: EWS (Abschaltung Exchange Online Okt 2026→Apr 2027 *(verifiziert)*), EAS (mobil; ab 2026 nur noch EAS ≥ 16.1 *(Sekundär: petri.com/windowsforum)*), MAPI (klassischer Desktop).
+3. **Backend:** Exchange Online – Termine sind **Postfachobjekte** im Kalenderordner-Modell, kein ICS-Dateispeicher wie bei CalDAV-Servern. Auf each Objekt ein **`changeKey`** für Konkurrenzschutz *(verifiziert an calendar-/event-Ressource)*.
+4. **Ereignis-Pipeline für Integrationen:** Graph-**Change-Notifications** (Webhook-Subscriptions mit Lifecycle-Erneuerung) oder Delta-Queries als Pull *(verifiziert)*.
 
-### Hauptbereich (Outlook im Web / neues Outlook)
+## Datenmodell (Graph-Ressourcen, verifiziert)
 
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│  App-Startleiste | Suche                                 Konto  Zahn│
-├────┬──────────────┬──────────────────────────────────────────────────┤
-│    │ Kalenderliste│  Befehlsleiste: Neues Ereignis | Ansicht | Heute │
-│ P  │ ○ Meine Kal.│  Filter | Drucken | Teilen                        │
-│ o  │ ─────────    ├──────────────────────────────────────────────────┤
-│ s  │ ■ Privat     │  Datumsleiste  ◀  Oktober 2026  ▶   [Heute]     │
-│ t  │ ■ Arbeit     │ ┌────┬────┬────┬────┬────┬────┬────┐            │
-│    │ ■ Projekt A  │ 08 │09  │10  │11  │12  │13  │14  │            │
-│ T  │ ─────────    │    │▓▓  │    │▓▓▓ │    │    │    │            │
-│ o   │ Freigegeben │    │▓▓  │    │▓▓▓ │    │    │    │            │
-│    │ ■ Vertretung│    │    │    │    │    │    │    │            │
-│    │ ─────────    │    │    │    │    │    │    │    │            │
-│ +  │ Feiertage    │    └────┴────┴────┴────┴────┴────┘            │
-│    │ [Hinzufügen] │  Terminübersicht / Agenda unten oder rechts      │
-└────┴──────────────┴──────────────────────────────────────────────────┘
-```
+- **`calendar`** – Ordner über Terminen; Eigenschaften u. a. `name`, `color`/`hexColor`, `isDefaultCalendar`, `canEdit`/`canShare`/`canViewPrivateItems`, `changeKey`, `allowedOnlineMeetingProviders`; gruppierbar in `calendarGroups` (nur Nutzerkalender).
+- **`event`** – `id` (mutable; `Prefer: IdType="ImmutableId"` für stabile IDs), **`iCalUId`** (UID pro Occurrence), **`seriesMasterId`** + **`cancelledOccurrences`** (Serienmodell: Master ↔ Occurrences ↔ Ausnahmen), `start`/`end` als `DateTimeTimeZone`, `isAllDay`, `patternedRecurrence`, `attendees` (≤ 500), `responseStatus`, `showAs` (Free/Busy), `isOnlineMeeting`/`onlineMeeting`, `attachments`, `categories`, `isDraft`, `webLink`, `body`, `location`/`locations`, `allowNewTimeProposals`, `hideAttendees`, `importance`, `changeKey`.
+- **Aktionen als Modellbestandteil:** `accept`/`tentativelyAccept`/`decline`/`cancel`/`forward`, `snoozeReminder`/`dismissReminder`, `instances`, `getSchedule`, `findMeetingTimes`, `delta`.
+- **Ressourcen (Räume/Ausstattung):** über `getSchedule` als eigene Objektart ansprechbar *(verifiziert an getSchedule-Beschreibung: „users, distributions lists, or resources“)*.
 
-### Bereiche
+## Modul-/Oberflächenstruktur der Clients
 
-| Bereich | Position | Inhalt |
-|---------|----------|--------|
-| Modulleiste | links (mobil unten) | Post, Kalender, Personen, To Do, Weitere Apps |
-| Kalenderliste | links | Eigene Kalender, Gruppen, Freigaben, Feiertage, Hinzufügen |
-| Befehlsleiste | oben | Neues Ereignis, Ansicht, Heute, Filter, Drucken, Teilen |
-| Kalenderblatt | Mitte | Raster nach Zeit (Tag/Woche/Monat), Terminblöcke |
-| Detailformular | Overlay/Rechts | Termin- oder Ereignisfeld, Planungsassistent als Reiter |
-| Such- und Kontobereich | oben rechts | Volltextsuche, Konto, Einstellungen |
+- **Neues Outlook / OWA:** horizontale Navigationsleiste (Suche, My Day, Benachrichtigungen, Hilfe, Einstellungen) → Ribbon-Reiter (Home u. a.) → linkes Navigationsfenster (New event, Datumsauswahl, Kalenderliste; ganz links Umschalter Mail/Calendar/Contacts/To Do) → Kalenderbereich mit Toolbar (Monats-Picker, Ansichten Day/Work week/Week/Month/Today, Share) *(alle Regionen verifiziert im Screenreader-Artikel)*.
+- **Klassisches Outlook:** Ribbon + Folder pane (Kalenderordner, Feiertags-/Shared-Kalender) + Kalenderansicht + Statusleiste *(verifiziert)*; Calendar-Settings-Dialog, Assistent für die Terminplanung, Erinnerungsfenster *(verifiziert über Access-Key-Kürzel)*.
+- **Settings-Fenster (neues Outlook):** Reiter *Calendar* mit Unterreitern; belegte Punkte: Arbeitszeiten/-tage, Abwesenheitsnotizen, Standard-Erinnerungszeit *(verifiziert)*.
 
-### Detailformular (Termin)
+## Konfiguration
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│  Betreff                                    [Senden] [?] [X] │
-├──────────────────────────────────────────────────────────────┤
-│  Titel · Ort · Beginn · Ende · Ganztägig · Zeitzone          │
-│  Kategorie (Farbe) · Erinnerung · Anzeigen als               │
-│  Teilnehmer: erforderlich / optional / Ressourcen            │
-│  Onlinebesprechung (Teams) · Wiederholung · Anlagen          │
-├──────────────────────────────────────────────────────────────┤
-│  Reiter:  Formularelemente  |  Planungsassistent             │
-└──────────────────────────────────────────────────────────────┘
-```
+- **Nutzer:** Kalenderfarben/-listen, Standarderinnerung, Arbeitszeit/-tage, Ansicht (UI; per Graph `calendar`-PATCH bzw. Postfacheinstellungen).
+- **Admin (Exchange Online):** Postfach- und Ordnerberechtigungen per PowerShell/EAC, Freigabe-/Verfügbarkeitsrichtlinien zwischen Mandanten (Cross-Tenant Access Policy, Migrationsartikel auf learn.microsoft.com), Ressourcenpostfächer. *(Existenz verifiziert über learn-Artikel; Einzelparameter nicht abgelesen.)*
+- **App-Registrierung (Entwickler):** OAuth-Scopes, Webhook-Endpunkt (HTTPS, 3-s-Antwort), Subscription-Renewal – Details in [api.md](api.md).
 
-### Planungsassistent
+## Deployment
 
-```
-┌────────────────────────────────────────────────────────────────┐
-│  Woche: 12.10. ─ 16.10.   [Auto-Vorschlag]  [Konflikt: 2]      │
-├──────────┬─────────────────────────────────────────────────────┤
-│ Anna     │ ░░░░│      │████│        │        │        │        │
-│ Ben      │     │░░░░░░│████│        │████████│        │        │
-│ Raum 3.4 │     │      │████│        │  frei  │        │        │
-└──────────┴─────────────────────────────────────────────────────┘
-```
+- **SaaS:** Microsoft 365 / Exchange Online; Outlook on the web ohne Installation; neues Outlook für Windows als vorinstallierter/pushbarer Client. **On-prem:** Exchange Server (ältere Protokolle inklusive EWS dort weiter aktiv – eigene Support-Lebenslinien *(Randnotiz, im Detail nicht verifiziert)*).
+- **Client-Migration ( timelines ):** neues Outlook ersetzt schrittweise Mail-/Kalender-Apps von Windows; kostenlose Outlook.com-Konten können **seit Januar 2025 nicht mehr zum klassischen Outlook zurückwechseln** *(Sekundär: techcommunity-Beitrag)*; die Kalenderfreigabe wird 2026 tenantweise von MAPI auf ein **REST-Modell** umgestellt *(Sekundär: office365itpros.com 2026-05, admin365.blog 2026-07; Abschlussfrist März 2027 genannt)*.
+- **Protokoll-Härtung 2026:** EWS-Abschaltung Exchange Online (Okt 2026 Start, Apr 2027 komplett) *(verifiziert)*; EAS-Clients < 16.1 blockiert *(Sekundär)*.
 
-### Layout-Varianten
+## Betriebshinweise
 
-1. **Standard**: Modulleiste + Kalenderliste + Kalenderblatt
-2. **Kompakt**: Kalenderliste als Einblendung, Kalenderblatt breit
-3. **Mobile**: untere Modulleiste, Kalenderliste als Drawer, Wochen-/Tagesansicht
-4. **Outlook Classic**: Menüband (Register „Kalender"), Ordnerliste links, drei Ansichtspläne (Spalte, Karte, Vorschau)
-
-## UI/UX
-
-### Design-Prinzipien
-
-- **Fluent Design**: Flächen, Kanten, dezente Schatten, Akzentfarbe aus dem Theme
-- **Dichte Information**: viele Termine gleichzeitig sichtbar, ohne Dialogflut
-- **Direktpfad statt Menüsuche**: wichtigste Aktionen in der Befehlsleiste
-- **Konsistenz**: gleiche Bedienung in Web, neuem Outlook und Mac
-
-### Farb- und Typografie-System
-
-- **Hell/Dunkel/System** als Farbschema, hoher Kontrast als Windows-Modus
-- **Kategoriefarben** pro Kalender und pro Termin, frei benennbar
-- **Arbeitszeit** und Feiertage als hinterlegte Flächen im Raster
-- Klare Hierarchie: Datumsleiste größer als Uhrzeitachse, Terminblocktitel fett
-
-### Interaktionen
-
-- **Drag & Drop im Kalenderblatt**: Termin verschieben (Minutenrastrierung, meist 15-/30-Minuten-Schritte)
-- **Ziehen an der Unterkante**: Dauer ändern
-- **Ziehen über die Zeitachse**: neuen Termin durch Aufziehen anlegen
-- **Strg/Cmd + Ziehen**: Termin kopieren
-- **Ziehen zwischen Kalendern**: Termin in anderen Kalender verschieben
-- **Rechtsklick**: Kontextmenü mit Bearbeiten, Duplizieren, Verschieben, Link kopieren
-- **Multi-Select** mit `Shift`/`Strg` für Serienaktionen (Löschen, Kategorie)
-- **Animationen**: Overlay-Flyouts gleiten ein, Terminblöcke blenden beim Umzug kurz aus/ein, Sparrow/Skelett beim Laden; Reduktion der Bewegung über die Systemeinstellung „Bewegung reduzieren"
-- **Auto-Speichern** bei Feldänderungen im Overlay-Formular; vollständiges Formular explizit mit **Senden**
-
-### Responsive Design
-
-- **Desktop**: volle Kalenderliste, Monats-/Wochenansicht, Planungsassistent
-- **Schmales Browserfenster**: Kalenderliste klappt zur Einblendung, Befehlsleiste bündelt seltene Aktionen in „…"
-- **Tablet**: Touch-Ziehen, größere Trefferflächen, Tages-/Wochenansicht bevorzugt
-- **Telefon / Outlook Mobile**: untere Navigationsleiste, Agenda-Liste, Termin als Vollbildformular
-- **Schrift skalierbar**: Browser-Zoom ohne Funktionsverlust, Layout bricht in Spalten um
-
-### Barrierefreiheit
-
-- **Tastatur**: Tab-Reihenfolge durch Raster, Liste und Formular; `Esc` schließt Overlays
-- **Screenreader**: ARIA-Bezeichnungen für Terminblöcke, Datum und Antwortstatus
-- **Fokusindikator** sichtbar, Fokus fängt in Dialogen
-- **Kontrast**: Dark Theme und Windows-High-Contrast
-- **Alt-Texte/Beschriftungen** für Symbole in der Befehlsleiste
-- **Reduzierte Bewegung** folgt der Betriebssystemvorgabe
-- **Diktat und Vergrößerung** über die Betriebssystem-Werkzeuge
-
-## Performance
-
-- **Lazy Loading**: Kalenderblätter laden den sichtbaren Zeitraum, Blättern lädt nach
-- **Caching**: Desktop-Clients halten Kalender lokal (OST/Cache), Web-Client nutzt Sitzungs-Cache
-- **Paginierung** bei Suchergebnissen und Calenderviews (auch über `@odata.nextLink` in der API)
-- **Debounce** in Suche und Teilnehmerauswahl
-- **Free/Busy-Cache** im Planungsassistenten, damit viele Teilnehmer schnell darstellbar bleiben
-
-## Siehe auch
-
-- [menu.md](menu.md)
-- [features.md](features.md)
-- [description.md](description.md)
-- [shortcuts.md](shortcuts.md)
-- [api.md](api.md)
+- Webhook-Endpunkte brauchen Betriebs-SLA (3-s-Antwort, 4-h-Retries, slow/drop-Verhalten) oder Event Hubs/Event Grid *(verifiziert)*.
+- Integrationen müssen auf **immutable IDs** und `changeKey`-Konfliktbehandlung achten *(verifiziert)*.
+- EWS-Restbestände frühzeitig migrieren; Microsoft bietet EWS-Usage-Reports und EWS-Code-Analyzer *(verifiziert)*.
