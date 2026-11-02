@@ -58,13 +58,13 @@ Eine Datei nach der Fertigstellung mit `[x]` markieren.
 - [x] apps/calendar/skins/outlook-calendar/structure.md
 
 ### calendar / planner
-- [ ] apps/calendar/skins/planner/api.md
-- [ ] apps/calendar/skins/planner/description.md
-- [ ] apps/calendar/skins/planner/features.md
-- [ ] apps/calendar/skins/planner/index.md
-- [ ] apps/calendar/skins/planner/menu.md
-- [ ] apps/calendar/skins/planner/shortcuts.md
-- [ ] apps/calendar/skins/planner/structure.md
+- [x] apps/calendar/skins/planner/api.md
+- [x] apps/calendar/skins/planner/description.md
+- [x] apps/calendar/skins/planner/features.md
+- [x] apps/calendar/skins/planner/index.md
+- [x] apps/calendar/skins/planner/menu.md
+- [x] apps/calendar/skins/planner/shortcuts.md
+- [x] apps/calendar/skins/planner/structure.md
 
 ## contact
 
