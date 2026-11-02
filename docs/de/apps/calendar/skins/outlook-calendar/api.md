@@ -22,14 +22,17 @@ Alle folgenden Methoden/Properties sind auf den offiziellen Resource-Seiten `cal
 
 - Container für Events; gehört einem Nutzer oder ist der Standardkalender einer Microsoft-365-Gruppe.
 - **Methoden:** `List calendars`, `Create calendar`, `Get calendar`, `Update calendar`, `Delete calendar`, `Permanently delete`, **`Get delta`** (inkrementelle Änderungserkennung), **`List calendar view`** (Zeitfenster-Abfrage liefert Occurrences, Ausnahmen und Einzeltermine einer Serie – `GET /me/calendarview?startDateTime=…&endDateTime=…` bzw. pro Kalender), `List events`, `Create event`, **`Get free/busy schedule`** (`getSchedule` für Nutzer, Verteilerlisten, Ressourcen), **`Find meeting times`** (`findMeetingTimes`: Terminvorschläge aus Verfügbarkeit der Teilnehmer), Extended Properties (single-/multi-value).
-- **Eigenschaften (u. a.):** `canEdit`, `canShare`, `canViewPrivateItems`, `changeKey` (Versions-/Konkurrenzschutz), `color` (11 enum-Werte `auto…maxColor`) + `hexColor`, `isDefaultCalendar`, `name`, `allowedOnlineMeetingProviders` / `defaultOnlineMeetingProvider` (`teamsForBusiness` u. a.).
+- **Eigenschaften (vollständig belegt):** `canEdit`, `canShare`, `canViewPrivateItems`, `changeKey` (Versions-/Konkurrenzschutz), `color` (11 enum-Werte `auto…maxColor`) + `hexColor`, `isDefaultCalendar`, `isRemovable`, `isSharedWithMe` (per Outlook-Client geteilter Kalender), `isTallyingResponses` (Response-Tracking nur im Primärkalender), `name`, `owner` (emailAddress), `allowedOnlineMeetingProviders` / `defaultOnlineMeetingProvider` (`teamsForBusiness` u. a.).
+- **Freigaben als Modell:** die Assoziation **`calendarPermissions`** (Ressource `calendarPermission`) führt die Rechte der Nutzer, mit denen der Kalender geteilt ist – Freigabe ist also auch über die API ablesbar/verwaltbar (Start/Ende der Freigabe erfolgt im Outlook-Client, Rücknahme auch über `calendarPermission`).
 - **Gruppenkalender-Grenzen (offiziell dokumentiert):** Kalendergruppen (`calendarGroups`) nur für Nutzerkalender; Meeting-Anfragen für Gruppen akzeptiert Outlook automatisch; annehmen/ablehnen und Erinnerungen nur bei Nutzerkalendern.
 
 ### Termine (`event`-Ressource)
 
 - **Methoden:** list/create/get/update/delete, `Permanently delete` (in Purge-Freigabeordner), **`Get delta`**, **`Forward`**, **`Cancel`** (Absage an alle Teilnehmer), **`Accept` / `TentativelyAccept` / `Decline`**, **`DismissReminder` / `SnoozeReminder`**, **`List event instances`** (Einzeltermine einer Serie), **Attachments** (`List attachments`, `Add attachment`), Open Extensions, Extended Properties.
-- **Eigenschaften (verifizierter Auszug):** `subject`, `start`/`end` (`DateTimeTimeZone`), `isAllDay`, `isOnlineMeeting` + `onlineMeeting` (Join-Infos, Read-only), `attendees` (max. **500** Teilnehmer/Empfänger je Ereignis inkl. eventMessage), `organizer`, `isOrganizer`, `isDraft`, `isCancelled`, `cancelledOccurrences` (Verwaiste Instanzen einer Serie), `seriesMasterId` (Serien-Master), `iCalUId` (kalendarübergreifende UID, pro Occurrence unterschiedlich), `patternedRecurrence` (Wiederholungsmuster), `reminderMinutesBeforeStart`/`isReminderOn`, `location` + `locations`, `body` (HTML/Text), `categories`, `importance`, `hideAttendees`, `allowNewTimeProposals` (Teilnehmer dürfen neue Zeit vorschlagen), `responseStatus`, `showAs` (Free/Busy-Zustand), `changeKey`, `webLink`.
+- **Eigenschaften (verifizierter Auszug):** `subject`, `start`/`end` (`DateTimeTimeZone`), `isAllDay`, `isOnlineMeeting` + `onlineMeeting` (Join-Infos, Read-only), `attendees` (max. **500** Teilnehmer/Empfänger je Ereignis inkl. eventMessage), `organizer`, `isOrganizer`, `isDraft`, `isCancelled`, `cancelledOccurrences` (Verwaiste Instanzen einer Serie), `seriesMasterId` (Serien-Master), `iCalUId` (kalendarübergreifende UID, pro Occurrence unterschiedlich), `recurrence` (Typ `PatternedRecurrence`; Wiederholungsmuster), `type` (`singleInstance`/`occurrence`/`exception`/`seriesMaster`), `transactionId` (clientseitige Idempotenz-Kennung gegen doppelte POSTs beim Anlegen), `reminderMinutesBeforeStart`/`isReminderOn`, `location` + `locations`, `body` (HTML/Text), `categories`, `importance`, `hideAttendees`, `allowNewTimeProposals` (Teilnehmer dürfen neue Zeit vorschlagen), `responseStatus`, `responseRequested`, `showAs` (`free`/`tentative`/`busy`/`oof`/`workingElsewhere`/`unknown`), `sensitivity` (`normal`/`personal`/`private`/`confidential`), `changeKey`, `webLink`.
+- **Online-Meeting-Detail:** `onlineMeetingProvider` (`unknown`/`teamsForBusiness`/`skypeForBusiness`/`skypeForConsumer`) ist nach dem Setzen **nicht mehr änderbar**; `onlineMeetingUrl` ist als **Deprecation-Kandidat** markiert – der Join-Link kommt über `onlineMeeting.joinUrl`.
 - **ID-Verhalten:** `id` wechselt standardmäßig beim Verschieben zwischen Containern; mit Header `Prefer: IdType="ImmutableId"` bleiben IDs stabil – wichtig für Verknüpfungen in Fremdsystemen.
+- **Deep Links (dokumentiert, aus `webLink`-Beschreibung):** aktuelle Form `https://outlook.office365.com/calendar/item/{event-id}` (Organisationskonto) bzw. `https://outlook.live.com/calendar/item/{event-id}` (Microsoft-Konto); die alte `…/owa/?itemid=…&path=/calendar/item`-Form öffnet nur ältere Web-Versionen; der Link funktioniert **nicht im iFrame** und fordert sonst zum Login auf.
 
 ### Teilnahmesteuerung und Verfügbarkeit
 
@@ -38,8 +41,21 @@ Alle folgenden Methoden/Properties sind auf den offiziellen Resource-Seiten `cal
 
 ## Authentifizierung und Berechtigungen
 
-- **OAuth 2.0** über die Microsoft-Identitätsplattform (Arbeits-/Schulkonto via Entra ID; Privatkonto via Microsoft-Konto); App-Registrierung nötig, keine Passwort-Weitergabe an die App. (Grundlagen-Seite bestätigt; die **Scope-Namen** `Calendars.Read`, `Calendars.ReadWrite` sind der Standard der Graph-Doku, wurden in diesem Durchlauf aber **nicht** separat auf der Permissions-Referenz seitenweise verifiziert – nachlesen unter `learn.microsoft.com/graph/permissions-reference`.)
-- Delegierte Berechtigungen (Nutzerkontext) und applikationsweite Berechtigungen (Tenant, mit Admin-Einwilligung) – beides existiert für Kalender; die feingranulare Einzelkalender-App-Authentifizierung („single calendar permission") ist ein Legacy-EWS-Konzept und wandert zu Graph-Äquivalenten (Parity-Roadmap auf der EWS-Seite).
+- **OAuth 2.0** über die Microsoft-Identitätsplattform (Arbeits-/Schulkonto via Entra ID; Privatkonto via Microsoft-Konto); App-Registrierung nötig, keine Passwort-Weitergabe an die App.
+- **Calendars-Scopes (verifiziert an der Permissions-Referenz, Abruf 2026-11-02):**
+
+| Scope | Kategorie | Zweck (gekürzt) |
+|-------|-----------|-----------------|
+| `Calendars.Read` | App + delegiert | Termine in allen Kalendern / Nutzerkalendern lesen |
+| `Calendars.ReadBasic` | delegiert | Termine lesen, **ohne** `body`/Anhänge/Extensions |
+| `Calendars.ReadBasic.All` | App | Basisdetails über alle Postfächer |
+| `Calendars.ReadWrite` | App + delegiert | Termine anlegen/lesen/ändern/löschen |
+| `Calendars.Read.Shared` / `Calendars.ReadWrite.Shared` | delegiert | einbezogen: **Delegaten- und freigegebene Kalender** |
+| `Calendars.Read.All` / `Calendars.ReadWrite.All` | App | exklusiv für **Arbeitszeiten & Orte** (work hours/locations) aller Nutzer |
+
+- **Privatkonto:** die delegierten Scopes `Calendars.Read`, `Calendars.ReadBasic`, `Calendars.ReadWrite` (und `.Read.Shared`) sind laut Permissions-Seite ausdrücklich **mit persönlichen Microsoft-Konten konsentierbar** – Graph ist für outlook.com-Privatkonten offiziell vorgesehen.
+- **Applikationsweite Scopes** (App-Kategorie) verlangen Admin-Einwilligung; Administratoren können per **application access policy** den App-Zugriff auf bestimmte Postfächer eingrenzen (bei mehreren Scopes dokumentiert).
+- Die feingranulare Einzelkalender-App-Authentifizierung („single calendar permission") ist ein Legacy-EWS-Konzept und wandert zu Graph-Äquivalenten (Parity-Roadmap auf der EWS-Seite).
 
 ## Push / Webhooks
 
@@ -69,14 +85,15 @@ Graph bietet **echte Change Notifications per Webhook-Subscription** (Ressource 
 - **EWS- Skripte brechen:** Jede Integration auf EWS (auch Drittanbieter-Connectoren) ist ab der tenantweisen Abschaltung (Okt 2026–Apr 2027) tot; Migration zwingend auf Graph. Microsoft stellt EWS-Usage-Reports, EWS-Code-Analyzer und eine Migrations-Roadmap bereit; einige EWS-Fähigkeiten (Public-Folder-CRUD, Discovery-Mailbox) kommen **nie** in Graph.
 - Die frühere „Office 365 REST API" (`office365.com/api/v1.0`) ist durch Graph ersetzt (Learn-Konzeptseite verweist ausschließlich auf Graph).
 - Graph-Endpunkte sind versionsgebunden (`v1.0` vs. `beta`); nur `v1.0` ist produktionsversprochen.
-- Privatkonto (outlook.com): Graph funktioniert ebenfalls mit Microsoft-Konten (Delegation), Details/Verfügbarkeit einzelner Endpunkte für Consumer sind auf der Doku-Seite nicht separat ausgewiesen – **nicht verifiziert**.
+- Privatkonto (outlook.com): die Calendars-Delegations-Scopes sind für persönliche Microsoft-Konten dokumentiert (siehe Auth-Tabelle); Verfügbarkeit einzelner Komfort-Endpunkte (z. B. `findMeetingTimes`) für Consumer ist trotzdem nicht separat ausgewiesen – **nicht verifiziert**.
 
 ## Quellen (Fundstellen, abgerufen 2026-11-02)
 
 - EWS-Abschaltung (offiziell): `https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online` – Timeline 2018/2023/2026/2027, Midnight-Blizzard-Kontext, Parity-Lücken-Tabelle, Tools.
-- `calendar`-Ressource: `https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0` – Methoden (inkl. calendarView, delta, getSchedule, findMeetingTimes), Properties, Gruppenkalender-Grenzen.
-- `event`-Ressource: `https://learn.microsoft.com/en-us/graph/api/resources/event?view=graph-rest-1.0` – Methoden (inkl. accept/decline/instances/attachments/delta), Properties (iCalUId, seriesMasterId, cancelledOccurrences, changeKey, allowNewTimeProposals …), 500-Teilnehmer-Limit, `IdType="ImmutableId"`.
+- `calendar`-Ressource: `https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0` (zuletzt aktualisiert **2026-10-15**, komplett gelesen) – Methoden (inkl. calendarView, delta, getSchedule, findMeetingTimes), Properties inkl. `calendarPermissions`, Gruppenkalender-Grenzen.
+- `event`-Ressource: `https://learn.microsoft.com/en-us/graph/api/resources/event?view=graph-rest-1.0` (zuletzt aktualisiert 2025-05-15, komplett gelesen) – Methoden (inkl. accept/decline/instances/attachments/delta), Properties (iCalUId, seriesMasterId, cancelledOccurrences, changeKey, allowNewTimeProposals, recurrence, type, transactionId, sensitivity …), 500-Teilnehmer-Limit, `IdType="ImmutableId"`, webLink-URL-Formate.
 - Webhooks: `https://learn.microsoft.com/en-us/graph/change-notifications-delivery-webhooks?view=graph-rest-1.0` – 3-s-Fenster, 4-h-Retries, slow/drop-Schwellen, Lifecycle, Event Hubs/Event Grid.
 - Throttling: `https://learn.microsoft.com/en-us/graph/throttling` – 429/Retry-After, Graph Data Connect, SDK-Handler.
 - Graph-Outlook-API-Konzept: `https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/office-365-rest-apis-for-mail-calendars-and-contacts` (zuletzt aktualisiert 2021-10-11) – OAuth 2.0, OData 4.0, JSON, Ablösung der alten REST-API.
+- Graph-Berechtigungen: `https://learn.microsoft.com/en-us/graph/permissions-reference` (Calendars-Abschnitt, Offset-Abruf 2026-11-02) – Scopes, Personal-Konto-Konsent, application access policy.
 - Nicht erreichbar am Recherchetag: Graph-„Service-specific limits"-Seite (mehrere Kandidat-URLs 404) – Zahlen bewusst nicht übernommen.

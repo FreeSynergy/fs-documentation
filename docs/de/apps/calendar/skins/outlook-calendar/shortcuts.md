@@ -57,7 +57,7 @@ Alle Kürzel stammen aus dem offiziellen Artikel „Keyboard shortcuts for Outlo
 
 ## Direkt-URL/Deep-Link-Workflows
 
-- Der offizielle Artikel belegt **keine** Direkt-URL-Formate für Kalender-Deep-Links; Graph liefert als Termin-Eigenschaft **`webLink`** („Open in Outlook Web App“-URL des Termins) – verifiziert an der event-Ressource. Manuelles Zusammenbauen von outlook.live.com-/outlook.office.com-Kalender-URLs ist undocumented → hier nicht spezifiziert.
+- Deep-Link-Formate sind über die `webLink`-Beschreibung der event-Ressource **offiziell dokumentiert**: aktuelle Form `https://outlook.office365.com/calendar/item/{event-id}` (Arbeits-/Schulkonto) bzw. `https://outlook.live.com/calendar/item/{event-id}` (Privatkonto), `{event-id}` = URL-kodierte Event-`id`. Die alte `…/owa/?itemid=…&path=/calendar/item`-Form öffnet nur ältere Web-Versionen; Links funktionieren nicht im iFrame und fordern andernfalls zum Login auf.
 
 ## Kürzel fremder Clients (abgrenzend)
 

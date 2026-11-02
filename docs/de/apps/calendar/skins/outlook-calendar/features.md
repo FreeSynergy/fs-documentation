@@ -5,24 +5,24 @@ Grundlage: `event`-/`calendar`-Ressourcen von Microsoft Graph v1.0, die offiziel
 ## Termine und Serien
 
 - Termine mit Titel, Rumpf (HTML/Text), Ort (+ mehrfache `locations`), Kategorien (`categories`), Priorität (`importance`), ganztägig (`isAllDay`), **eigene Zeitzone je Termin** (`DateTimeTimeZone`, `start`/`end`).
-- **Wiederholungsserien** (`patternedRecurrence`) mit Einzel-Instanz-Verwaltung: Instanzen auflisten (`instances`), einzelne Occurrences löschen/ändern, `cancelledOccurrences` und `seriesMasterId` zur Serienbuchung; `iCalUId` als RFC-5545-UID.
+- **Wiederholungsserien** (`recurrence`, Typ `PatternedRecurrence`; Event-Typ-Feld `type`: singleInstance/occurrence/exception/seriesMaster) mit Einzel-Instanz-Verwaltung: Instanzen auflisten (`instances`), einzelne Occurrences löschen/ändern, `cancelledOccurrences` und `seriesMasterId` zur Serienbuchung; `iCalUId` als RFC-5545-UID.
 - **Erinnerungen** pro Termin (`isReminderOn`, Minuten vor Beginn) mit Snooze/Zurückweisen als Aktionen (`snoozeReminder`, `dismissReminder`); im klassischen Outlook zusätzlich Reminder-Fenster (Kürzel `Alt+V,M`) und Erinnerungs-Sound konfigurierbar.
 - **Dateianhänge** an Termine (`attachments`-Sammlung: Hinzufügen/Auflisten).
 - Entwürfe für Meeting-Aktualisierungen (`isDraft` – Änderungen noch nicht an Teilnehmer versendet).
-- Privatsphäre/Vertraulichkeit: `sensitivity`- und `private`-Darstellung über `showAs`-Status (Free/Busy-Tarnung), `hideAttendees` (jeder Teilnehmer sieht nur sich selbst).
+- Privatsphäre/Vertraulichkeit: `sensitivity` (`normal`/`personal`/`private`/`confidential`) und `showAs`-Status (`free`/`tentative`/`busy`/`oof`/`workingElsewhere`/`unknown`) als Free/Busy-Tarnung, `hideAttendees` (jeder Teilnehmer sieht nur sich selbst).
 
 ## Teilnehmer und Meetings
 
 - **Einladungen** an Nutzer mit RSVP: annehmen / vorläuig / ablehnen (`accept`, `tentativelyAccept`, `decline`), Organisator kann absagen (`cancel`) und weiterleiten (`forward`).
 - **Zeitvorschläge durch Teilnehmer** (`allowNewTimeProposals`) – Gegenstück zu Meeting-Umfragen anderer Produkte.
 - **Free/Busy:** `getSchedule` (Belegung mehrerer Nutzer/Ressourcen/Verteiler abfragen) und **`findMeetingTimes`** (automatische Terminvorschläge aus Teilnehmer-Verfügbarkeit); im klassischen Outlook der **Assistent für die Terminplanung** (`Alt+X`).
-- **Online-Besprechungen:** `isOnlineMeeting` + `onlineMeeting` (Join-Link/Meeting-Infos); erlaubte Anbieter je Kalender über `allowedOnlineMeetingProviders` – praktisch **Teams** (`teamsForBusiness`); keine Zoom/Meet-Integration im Produkt.
+- **Online-Besprechungen:** `isOnlineMeeting` + `onlineMeeting` (Join-Link über `onlineMeeting.joinUrl`; das alte `onlineMeetingUrl` ist Deprecation-Kandidat), Anbieter nach Wahl **nicht mehr umstellbar**; erlaubte Anbieter je Kalender über `allowedOnlineMeetingProviders` – praktisch **Teams** (`teamsForBusiness`); keine Zoom/Meet-Integration im Produkt.
 - **Ressourcen:** Räume/Ausstattungen als CalDAV-lose Exchange-Ressourcen über dasselbe Postfachmodell (`getSchedule` unterstützt Ressourcentypen).
 - Grenze: max. **500 Teilnehmer** pro Termin.
 
 ## Kalenderverwaltung und Freigabe
 
-- Mehrere Kalender je Postfach, Kalenderordner/-gruppen, Farben (11 Theme-Farben + `hexColor`), Standardkalender markierbar, `changeKey` als Versionierung.
+- Mehrere Kalender je Postfach, Kalenderordner/-gruppen, Farben (11 Theme-Farben + `hexColor`), Standardkalender markierbar, `changeKey` als Versionierung; Freigaben sind über die Assoziation **`calendarPermissions`** API-seitig ablesbar (`isSharedWithMe` kennzeichnet empfangene Freigaben).
 - **Freigaben** mit Rechtestufen (canViewPrivateItems/canEdit/canShare als API-Abbild): Im klassischen Outlook per Kürzel belegt: „Freigegebenen Kalender hinzufügen" (`Alt+H,O,C`), „Kalender freigeben" (`Alt+H,S,C`), Ordner-Freigaberechte bearbeiten (`Alt+H,F,P`), **Kalender online veröffentlichen** (`Alt+H,P,O`).
 - **Klassischer Outlook:** Kalender per E-Mail versenden (`Alt+H,E`).
 - **Scheduling-Links/Buchung:** Die Produktlinie löst öffentliche Buchung über die separate App **Microsoft Bookings** – die Kalender-App selbst hat keine eigene Buchungsseite wie Nextcloud Calendar oder Google-Terminbuchung (Buchung extern, daher hier als Grenze notiert).
