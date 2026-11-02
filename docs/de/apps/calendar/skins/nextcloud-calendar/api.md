@@ -85,7 +85,7 @@ Ressource `appointmentConfig` auf `/v1/appointment_configs`:
 - `PUT /v1/appointment_configs/{id}` – ändern
 - `DELETE /v1/appointment_configs/{id}` – löschen
 
-Feldschema `create` (validiert in `AppointmentConfigController::create`): `name`, `description`, `location`, `visibility` (`PUBLIC`/`CONFIRMED`), `targetCalendarUri`, `availability` = `{ timezoneId, slots: { MO…SU: [ {start,end} ] } }`, `length`, `increment`, `preparationDuration`, `followupDuration`, `timeBeforeNextSlot`, `dailyMax`, `calendarFreeBusyUris`, `start`, `end`, `futureLimit` (Sekunden bzw. Unix-Timestamps).
+Feldschema `create` (validiert in `AppointmentConfigController::create`): `name`, `description`, `location`, `visibility` (`PUBLIC`/`CONFIRMED`), `targetCalendarUri`, `availability` = `{ timezoneId, slots: { MO…SU: [ {start,end} ] } }`, `length`, `increment`, `preparationDuration`, `followupDuration`, `timeBeforeNextSlot`, `dailyMax`, `calendarFreeBusyUris`, `start`, `end`, `futureLimit` (Sekunden bzw. Unix-Timestamps), `createTalkRoom` (optionale bool, legt direkt einen Talk-Raum an).
 
 ### Meeting-Proposals (OCS-API, Serie 6.x)
 

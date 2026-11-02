@@ -51,7 +51,7 @@ Alle Punkte sind im Quelltext des Release-Tags v6.6.4 belegt; Fundstellen in [in
 - **Live-Sync der Tabs** über die Notify-Push-App (`calendar_sync`-Nachricht bei Objektänderungen).
 - **Verfügbarkeit im Kontakte-Menü** der Server-UI (`ContactsMenuAvailability.vue`).
 - Einstellungen: Zeitzone, Wochenanfang- und Standardansicht-Optionen, Wochenend-/Kalenderwochennummern-Schalter, Terminlimit-Popover, Geburtstags-/Aufgaben-/Popover-Schalter, Anlagen-Ordner.
-- Auf Deutsch und vielen weiteren Sprachen lokalisiert (Ordner `l10n`, ~40 Sprachen).
+- Auf Deutsch und vielen weiteren Sprachen lokalisiert (Ordner `l10n`, 185 Sprachen).
 - Berechtigungsmodell: keine App-eigenen Rechte – Nextcloud-Nutzerrechte + CalDAV-ACLs; öffentliche Bereiche token-basiert.
 
 ## Was Nextcloud Calendar NICHT bietet
