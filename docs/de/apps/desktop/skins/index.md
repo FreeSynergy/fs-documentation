@@ -100,27 +100,44 @@ Dieses Schema gilt für **alle** Kategorien:
 | Kategorie | Skin-Status |
 |-----------|-------------|
 | Wiki | abgeschlossen (7 Programme) |
-| Messenger | teilweise (7 Programme dokumentiert) |
+| Messenger | abgeschlossen (7 Programme) |
 | Desktop | abgeschlossen (12 Programme) |
+| Whiteboards | abgeschlossen (6 Programme) |
+| Helpdesk | abgeschlossen (8 Programme) |
+| Projektmanagement | abgeschlossen (8 Programme) |
+| Kontakt | abgeschlossen (4 Programme) |
+| CRM | abgeschlossen (6 Programme) |
+| Kalender | abgeschlossen (6 Programme) |
+| Maps | abgeschlossen (7 Programme) |
+| ERP | abgeschlossen (6 Programme) |
+| Workflows | abgeschlossen (6 Programme) |
+| Demokratie | abgeschlossen (6 Programme) |
+| Marketing | abgeschlossen (6 Programme) |
+| Marktplätze | abgeschlossen (6 Programme) |
+| Foto-Galerien | abgeschlossen (8 Programme) |
+| Streaming | abgeschlossen (10 Programme) |
 | Components | eigenes Schema (`description`/`appearance`/`attributes`) |
-| Whiteboards, Helpdesk, Projektmanagement, Kontakt, Kalender, CRM, Demokratie, Maps, ERP, Workflows, Marketing | Skin-Dokumentation vorgesehen |
 
 ## Nachziehen (Kandidaten je Kategorie)
 
-Die folgenden Programme sind für die Skin-Dokumentation vorgesehen und werden nach demselben Schema ergänzt:
+Die dokumentierten Programme sind abgeschlossen; die noch **vorgesehenen** Kandidaten werden nach demselben Schema ergänzt:
 
 | Kategorie | Kandidaten |
 |-----------|------------|
 | Desktop | **dokumentiert:** homarr, heimdall, homer, dashy, homepage, gethomepage, launchboard, synology-dsm, unraid, proxmox, truenas, opnsense — **vorgesehen:** pfsense, chrome, windows-11, macos-finder, gnome-shell, kde-plasma, windows-start, raycast, alfred, launchy, fluent-search, ulauncher, powerlauncher, wox, flow-launcher, keeweb, obsidian, logseq |
-| Whiteboards | excalidraw, miro, mural, jamboard, tldraw, drawio, openboard, figjam |
-| Helpdesk | zammad, osticket, glpi, request-tracker, zendesk, freshdesk, helpscout |
-| Projektmanagement | trello, jira, asana, redmine, taiga, openproject, planka, wekan, clickup, mon |
-| Kontakt / CRM | nextcloud-contacts, civicrm, suitecrm, espocrm, monica, pipedrive, hubspot |
-| Kalender | nextcloud-calendar, davical, rndc, Thunderbird-events, google-calendar, outlook-calendar |
-| Maps | openstreetmap, leaflet, maplibre, qgis, maputnik, geojson-io |
-| ERP | erpnext, odoo, dolibarr, axelor, tryton, ofbiz |
-| Workflows | n8n, node-red, kestra, airflow, make, zapier, activepieces |
-| Demokratie | decidim, consul, liquider, pol.is, society |
+| Whiteboards | **dokumentiert:** excalidraw, miro, mural, tldraw, drawio, openboard — **vorgesehen:** jamboard, figjam |
+| Helpdesk | **dokumentiert:** zammad, osticket, glpi, request-tracker, zendesk, freshdesk, helpscout, helodesk |
+| Projektmanagement | **dokumentiert:** trello, jira, asana, redmine, taiga, openproject, planka, wekan — **vorgesehen:** clickup, mon |
+| Kontakt / CRM | **dokumentiert:** nextcloud-contacts, gnome-contacts, kaddressbook, monica, civicrm, suitecrm, espocrm, salesforce, pipedrive, hubspot |
+| Kalender | **dokumentiert:** nextcloud-calendar, davical, google-calendar, outlook-calendar, kalendar, planner — **vorgesehen:** rndc, Thunderbird-events |
+| Maps | **dokumentiert:** openstreetmap, leaflet, maplibre, qgis, organic-maps, osmand, umap — **vorgesehen:** maputnik, geojson-io |
+| ERP | **dokumentiert:** erpnext, odoo, dolibarr, axelor, tryton, sage — **vorgesehen:** ofbiz |
+| Workflows | **dokumentiert:** n8n, node-red, apache-airflow, make, zapier, prefect — **vorgesehen:** kestra, activepieces |
+| Demokratie | **dokumentiert:** decidim, consul, adhocracy4, circo, liquid-feedback, polis — **vorgesehen:** liquider, society |
+| Marketing | **dokumentiert:** matomo, plausible, google-analytics, hotjar, mailchimp, mautic |
+| Marktplätze | **dokumentiert:** ebay, etsy, kleinanzeigen, sharetribe, cs-cart-multivendor, arcemall |
+| Foto-Galerien | **dokumentiert:** photoprism, immich, lychee, piwigo, nextcloud-photos, librephotos, coppermine, damselfly |
+| Streaming | **dokumentiert:** obs-studio, ffmpeg, gstreamer, mediamtx, nginx-rtmp-module, restreamer, restream, mistserver, ant-media-server, wowza |
 
 ## Hinweise
 

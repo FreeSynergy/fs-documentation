@@ -135,24 +135,29 @@ Jedes Projektverzeichnis enthält **sechs** Dateien:
 ## Kategorien-System
 
 **Bitte beachte:** Dieses System gilt für ALLE Kategorien in diesem Projekt:
-- Wiki (abgeschlossen)
-- Messenger (abgeschlossen)
-- Whiteboards (kommend)
-- Helpdesk (kommend)
-- Projektmanagement (kommend)
-- Kontakt (kommend)
-- Kalender (kommend)
-- Desktop (kommend)
-- CRM (kommend)
-- Demokratie (kommend)
-- Maps (kommend)
-- ERP (kommend)
-- Workflows (kommend)
+- Wiki (abgeschlossen, 7 Programme)
+- Messenger (abgeschlossen, 7 Programme)
+- Desktop (abgeschlossen, 12 Programme)
+- Whiteboards (abgeschlossen, 6 Programme)
+- Helpdesk (abgeschlossen, 8 Programme)
+- Projektmanagement (abgeschlossen, 8 Programme)
+- Kontakt (abgeschlossen, 4 Programme)
+- Kalender (abgeschlossen, 6 Programme)
+- CRM (abgeschlossen, 6 Programme)
+- Demokratie (abgeschlossen, 6 Programme)
+- Maps (abgeschlossen, 7 Programme)
+- ERP (abgeschlossen, 6 Programme)
+- Workflows (abgeschlossen, 6 Programme)
+- Marketing (abgeschlossen, 6 Programme)
+- Marktplätze (abgeschlossen, 6 Programme)
+- Foto-Galerien (abgeschlossen, 8 Programme)
+- Streaming (abgeschlossen, 10 Programme)
 
-**Jede Anwendung in jeder Kategorie erhält immer 6 Dateien:**
-1. menu.md
-2. features.md
-3. description.md
-4. structure.md
-5. shortcuts.md (immer separat!)
-6. api.md (REST, GraphQL, etc.)
+**Jede Anwendung in jeder Kategorie erhält immer 7 Dateien:**
+1. index.md (Übersicht und Links)
+2. menu.md
+3. features.md
+4. description.md
+5. structure.md
+6. shortcuts.md (immer separat!)
+7. api.md (REST, GraphQL, etc.)

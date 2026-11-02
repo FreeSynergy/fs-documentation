@@ -7,19 +7,22 @@ Programme sind in **Kategorien** gegliedert. Programme, deren Oberfläche in Fre
 | Kategorie | Inhalt | Skin-Dokumentation |
 |-----------|--------|--------------------|
 | [Wiki](wiki/) | Wiki- und Wissenssysteme | abgeschlossen (7 Programme) |
-| [Messenger](messenger/) | Chat, E-Mail, soziale Netzwerke | teilweise (7 Programme) |
+| [Messenger](messenger/) | Chat, E-Mail, soziale Netzwerke | abgeschlossen (7 Programme) |
 | [Desktop](desktop/) | Desktop-Programme, Dashboards, Startseiten | abgeschlossen (12 Programme) |
-| [Whiteboards](whiteboards/) | Kollaborative Whiteboards | vorgesehen |
-| [Helpdesk](helpdesk/) | Tickets und Support | vorgesehen |
-| [Projektmanagement](projectmanagement/) | Aufgaben, Boards, Projekte | vorgesehen |
-| [Kontakt](contact/) | Kontaktpflege | vorgesehen |
-| [CRM](crm/) | Kundenbeziehungen | vorgesehen |
-| [Kalender](calendar/) | Termine und Planung | vorgesehen |
-| [Maps](maps/) | Karten und Geodaten | vorgesehen |
-| [ERP](erp/) | Ressourcenplanung | vorgesehen |
-| [Workflows](workflows/) | Automatisierung und Integration | vorgesehen |
-| [Demokratie](democracy/) | Beteiligungsplattformen | vorgesehen |
-| [Marketing](marketing/) | Marketing und Analytics | vorgesehen |
+| [Whiteboards](whiteboards/) | Kollaborative Whiteboards | abgeschlossen (6 Programme) |
+| [Helpdesk](helpdesk/) | Tickets und Support | abgeschlossen (8 Programme) |
+| [Projektmanagement](projectmanagement/) | Aufgaben, Boards, Projekte | abgeschlossen (8 Programme) |
+| [Kontakt](contact/) | Kontaktpflege | abgeschlossen (4 Programme) |
+| [CRM](crm/) | Kundenbeziehungen | abgeschlossen (6 Programme) |
+| [Kalender](calendar/) | Termine und Planung | abgeschlossen (6 Programme) |
+| [Maps](maps/) | Karten und Geodaten | abgeschlossen (7 Programme) |
+| [ERP](erp/) | Ressourcenplanung | abgeschlossen (6 Programme) |
+| [Workflows](workflows/) | Automatisierung und Integration | abgeschlossen (6 Programme) |
+| [Demokratie](democracy/) | Beteiligungsplattformen | abgeschlossen (6 Programme) |
+| [Marketing](marketing/) | Marketing und Analytics | abgeschlossen (6 Programme) |
+| [Marktplätze](marketplace/) | Marktplatz-Software und fremde Marktplätze | abgeschlossen (6 Programme) |
+| [Foto-Galerien](gallery/) | Bild- und Videosammlungen | abgeschlossen (8 Programme) |
+| [Streaming](streaming/) | Encoder, Medienserver, Multistreaming | abgeschlossen (10 Programme) |
 
 ## Skin-Schema
 
