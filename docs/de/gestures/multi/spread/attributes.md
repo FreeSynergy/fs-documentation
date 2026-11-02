@@ -2,28 +2,29 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Typ | Default | Beschreibung |
+|-----------|-----|---------|--------------|
 | `onSpread` | function | - | Wird beim Spread ausgeführt |
 
 ## Feedback-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Typ | Beschreibung |
+|-----------|------|--------------|
 | `showZoomFactor` | boolean | `false` | Zoom-Faktor anzeigen? |
 | `scaleElement` | boolean | `true` | Element skaliert? |
 
 ## Threshold-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Typ | Beschreibung |
+|-----------|------|--------------|
 | `spreadThreshold` | number | `20` | Min. Distanz in px |
+| `pointerCount` | number | `2` | Mindestanzahl beteiligter Finger |
 | `minScale` | number | `0.5` | Min. Zoom-Faktor |
 | `maxScale` | number | `2.0` | Max. Zoom-Faktor |
 
 ## Accessibility (Barrierefreiheit)
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Typ | Beschreibung |
+|-----------|------|--------------|
 | `aria-label` | string | Beschreibender Text |
 | `role` | string | ARIA-Rolle: `slider` |

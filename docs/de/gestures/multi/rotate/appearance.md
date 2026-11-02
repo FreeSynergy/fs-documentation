@@ -2,7 +2,8 @@
 
 ## Grundlayout
 
-Rotate ist das Drehen von zwei Fingern um einen Mittelpunkt.
+Rotate ist das Drehen der Finger um einen Mittelpunkt - mindestens zwei,
+beliebig viele mehr.
 
 ## Visuelles Feedback
 
@@ -25,7 +26,7 @@ Rotate ist das Drehen von zwei Fingern um einen Mittelpunkt.
 
 ## Richtung
 
-- Zwei Finger drehen im Uhrzeigersinn oder gegen den Uhrzeigersinn
+- Zwei oder mehr Finger drehen im Uhrzeigersinn oder gegen den Uhrzeigersinn
 
 ## Winkel
 

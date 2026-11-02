@@ -2,7 +2,11 @@
 
 ## Beschreibung
 
-Pinch ist das Zusammenziehen von zwei Fingern.
+Pinch ist das Zusammenziehen der Finger auf dem Bildschirm - mindestens zwei,
+beliebig viele mehr.
+
+Die Anzahl spielt keine Rolle: mit drei, vier oder fünf Fingern ist es dieselbe
+Geste, gewertet wird die Abnahme des Abstands zwischen den Zeigern.
 
 ## Verwendung
 
@@ -11,7 +15,7 @@ Pinch ist das Zusammenziehen von zwei Fingern.
 
 ## Richtung
 
-- Zwei Finger bewegen sich zueinander
+- Zwei oder mehr Finger bewegen sich zueinander
 
 ## Distanz
 

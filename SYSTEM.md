@@ -829,13 +829,13 @@ Four family directories, each with its own `index.md`, each gesture in a directo
 | Category | Gestures |
 |----------|----------|
 | `single/` (Ein-Finger-Gesten) | tap, double-tap, long-press, swipe, flick, drag, edge-swipe, force-press, hover, draw-gesture (10) |
-| `multi/` (Mehrfinger-Gesten) | pinch, spread, rotate, two-finger-tap, two-finger-long-press, three-finger-swipe (6) |
+| `multi/` (Mehrfinger-Gesten) | pinch, spread, rotate, multi-finger-tap, multi-finger-long-press, multi-finger-swipe (6) |
 | `device/` (Geräte-Gesten) | shake, tilt, flip, wave (4) |
 | `combined/` (Kombinations-Gesten) | pull-to-refresh, drag-and-drop (2) |
 
 Total: **22 gestures**, three files each (`description.md`, `attributes.md`, `appearance.md`).
 
-Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer “which pointer(s) or sensor act”. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
+Within a family the gestures mirror each other (tap/double-tap, pinch/spread, swipe/flick/edge-swipe); the families answer “which pointer(s) or sensor act”. In `multi/` the number of fingers is a **configuration value** (`pointerCount`), not part of a gesture's identity: spreading with five fingers or rotating with three are the same gestures, so an extra finger count never adds a new gesture — only new behaviour (direction, action, sensor) does. Relative links inside a gesture directory use two levels: `../../index.md` for the gesture overview, `../../<category>/<gesture>/description.md` for a gesture in another family, `../../../animations/…` for areas outside `gestures/`.
 
 Shared attributes: per-gesture callbacks (`onTap` … `onDrop`), thresholds (`tapThreshold`, `longPressThreshold`, `swipeThreshold`, `velocityThreshold`, `edgeSize`, `pointerCount`, `shakeThreshold`, `deadZone`, `matchThreshold`), `enabled`, plus `alternativeAction` for every gesture (WCAG 2.5.1 pointer gestures, 2.5.4 motion actuation, 2.5.7 dragging movements).
 

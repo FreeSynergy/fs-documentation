@@ -82,7 +82,12 @@ nav:
       - de/gestures/multi/: de/gestures/multi/index.md
       - de/gestures/device/: de/gestures/device/index.md
       - de/gestures/combined/: de/gestures/combined/index.md
-  - en/gestures/: en/gestures/index.md
+  - en/gestures/:
+      - en/gestures/index.md
+      - en/gestures/single/: en/gestures/single/index.md
+      - en/gestures/multi/: en/gestures/multi/index.md
+      - en/gestures/device/: en/gestures/device/index.md
+      - en/gestures/combined/: en/gestures/combined/index.md
   - de/animations/:
       - de/animations/index.md
       - de/animations/entrance/: de/animations/entrance/index.md

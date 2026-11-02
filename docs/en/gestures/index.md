@@ -11,7 +11,7 @@ Gestures are grouped into four families (mirroring the animation categories).
 | Family | Principle | Gestures |
 |--------|-----------|----------|
 | `single` (single-pointer) | One finger/pointer, mostly replaces clicks | 10 |
-| `multi` (multi-pointer) | Two or more fingers, transforms content | 6 |
+| `multi` (multi-pointer) | Two+ pointers, the count is a setting, transforms content | 6 |
 | `device` | Movement of the device itself (sensors) | 4 |
 | `combined` | Composite gestures with their own logic | 2 |
 
@@ -29,12 +29,12 @@ Gestures are grouped into four families (mirroring the animation categories).
 | **Force Press** | single | Pressure via pressure sensor | Peek & pop, context |
 | **Hover** | single | Pointer over element without contact | Tooltip, preview |
 | **Draw Gesture** | single | Drawing a shape/letter | Shortcuts, commands |
-| **Pinch** | multi | Pulling two fingers together | Zoom out |
-| **Spread** | multi | Moving two fingers apart | Zoom in |
-| **Rotate** | multi | Turning two fingers | Rotation |
-| **Two-Finger Tap** | multi | Tapping with two fingers | Secondary action |
-| **Two-Finger Long Press** | multi | Long press with two fingers | Secondary menu, multiselect |
-| **Three-Finger Swipe** | multi | Swiping with three fingers | App/workspace switching |
+| **Pinch** | multi | Pulling pointers together (from two) | Zoom out |
+| **Spread** | multi | Moving pointers apart (from two) | Zoom in |
+| **Rotate** | multi | Turning pointers (from two) | Rotation |
+| **Multi-Finger Tap** | multi | Tapping with several fingers | Secondary action |
+| **Multi-Finger Long Press** | multi | Long press with several fingers | Secondary menu, multiselect |
+| **Multi-Finger Swipe** | multi | Swiping with several fingers | App/workspace switching |
 | **Shake** | device | Quick back-and-forth movement | Undo, error feedback, reshuffle |
 | **Tilt** | device | Tilting the device | Steering, parallax |
 | **Flip** | device | Turning the device over | Mute, do not disturb |
@@ -60,9 +60,9 @@ Gestures are grouped into four families (mirroring the animation categories).
 | `onPinch` | function | Executed on Pinch |
 | `onSpread` | function | Executed on Spread |
 | `onRotate` | function | Executed on Rotate |
-| `onTwoFingerTap` | function | Executed on Two-Finger Tap |
-| `onTwoFingerLongPress` | function | Executed on Two-Finger Long Press |
-| `onThreeFingerSwipe` | function | Executed on Three-Finger Swipe |
+| `onMultiFingerTap` | function | Executed on Multi-Finger Tap |
+| `onMultiFingerLongPress` | function | Executed on Multi-Finger Long Press |
+| `onMultiFingerSwipe` | function | Executed on Multi-Finger Swipe |
 | `onShake` | function | Executed on Shake |
 | `onTilt` | function | Executed on tilt |
 | `onFlip` | function | Executed on Flip |
@@ -79,7 +79,7 @@ Gestures are grouped into four families (mirroring the animation categories).
 | `swipeThreshold` | number | Minimum distance for Swipe |
 | `velocityThreshold` | number | Minimum velocity for Flick in px/s |
 | `edgeSize` | number | Width of the edge zone for Edge Swipe in px |
-| `pointerCount` | number | Number of fingers for multi-finger gestures |
+| `pointerCount` | number | Minimum number of fingers for multi-finger gestures (2, 3, 4, 5 …) |
 | `shakeThreshold` | number | Minimum acceleration/movement for Shake |
 | `minShakes` | number | Minimum number of direction changes for Shake |
 | `deadZone` | number | Degree tolerance for Tilt |
@@ -98,5 +98,5 @@ Gestures are grouped into four families (mirroring the animation categories).
 
 ## See also
 
-- [Shake](device/shake/description.md) - documented in English
+- Families: [single](single/) · [multi](multi/) · [device](device/) · [combined](combined/)
 - [Animations](../animations/index.md) — Shake, Wiggle as feedback to gestures

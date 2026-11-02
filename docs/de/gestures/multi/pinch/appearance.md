@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Pinch ist das Zusammenziehen von zwei Fingern.
+Pinch ist das Zusammenziehen der Finger - mindestens zwei, beliebig viele mehr.
 
 ## Visuelles Feedback
 
@@ -25,7 +25,7 @@ Pinch ist das Zusammenziehen von zwei Fingern.
 
 ## Richtung
 
-- Zwei Finger bewegen sich zueinander
+- Zwei oder mehr Finger bewegen sich zueinander
 
 ## Distanz
 

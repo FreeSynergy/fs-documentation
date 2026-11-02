@@ -4,14 +4,27 @@ Mehrfinger-Gesten verwenden zwei oder mehr Finger gleichzeitig
 (Multitouch). Sie transformieren meist Inhalt (Zoom, Rotation) statt zu
 navigieren.
 
+## Anzahl ist Konfiguration, kein Gestetyp
+
+Jede Geste dieser Familie arbeitet **ab zwei Zeigern** und ist unabhängig
+davon, ob mit zwei, drei oder fünf Fingern gearbeitet wird: strecken (spread)
+funktioniert mit fünf Fingern, drehen (rotate) mit drei, der Mehrfinger-Wisch
+auch mit zwei. Erkannt wird aus Distanz, Winkel und Bewegung der Zeiger –
+nicht aus ihrer Zahl. Die Mindestanzahl stellt `pointerCount` ein.
+
+Eine weitere Zähl-Stufe erzeugt deshalb **keine neue Geste**: „Drei-Finger-
+Wisch“ und „Vier-Finger-Wisch“ sind derselbe multi-finger-swipe mit anderem
+`pointerCount`. Neue Gesten entstehen nur durch neues Verhalten (neue Richtung,
+neue Aktion, neuer Sensor), nicht durch zusätzliche Finger.
+
 ## Elemente
 
-- **pinch** - zwei Finger zusammenziehen (Zoom out)
-- **spread** - zwei Finger auseinanderziehen (Zoom in)
-- **rotate** - zwei Finger drehen (Rotieren)
-- **two-finger-tap** - Berührung mit zwei Fingern (Sekundäraktion)
-- **two-finger-long-press** - langen Druck mit zwei Fingern (Sekundär-Menü)
-- **three-finger-swipe** - Wischen mit drei Fingern (Systemnavigation)
+- **pinch** - Zeiger ziehen sich zusammen (Zoom out), ab zwei Fingern
+- **spread** - Zeiger ziehen sich auseinander (Zoom in), ab zwei Fingern
+- **rotate** - Zeiger drehen um einen Mittelpunkt (Rotieren), ab zwei Fingern
+- **multi-finger-tap** - Berührung mit mehreren Fingern (Sekundäraktion)
+- **multi-finger-long-press** - langer Druck mit mehreren Fingern (Sekundär-Menü, Multiselect)
+- **multi-finger-swipe** - Wischen mit mehreren Fingern (Systemnavigation)
 
 ## Zuordnung
 
@@ -20,8 +33,16 @@ navigieren.
 | Inhalt verkleinern | pinch |
 | Inhalt vergrößern | spread |
 | Objekt drehen | rotate |
-| Rechte Maustaste ersetzen | two-finger-tap, two-finger-long-press |
-| App-/Desktop-Wechsel | three-finger-swipe |
+| Rechte Maustaste ersetzen | multi-finger-tap, multi-finger-long-press |
+| App-/Desktop-Wechsel | multi-finger-swipe |
+
+## Fingeranzahl
+
+| Geste | Default `pointerCount` | Funktioniert ebenso mit |
+|-------|------------------------|-------------------------|
+| pinch / spread / rotate | 2 | 3, 4, 5 Fingern |
+| multi-finger-tap / multi-finger-long-press | 2 | 3, 4, 5 Fingern |
+| multi-finger-swipe | 3 | 2 oder 4 Fingern |
 
 ## Barrierefreiheit
 

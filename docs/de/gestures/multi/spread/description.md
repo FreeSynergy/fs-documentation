@@ -2,7 +2,11 @@
 
 ## Beschreibung
 
-Spread ist das Auseinanderziehen von zwei Fingern.
+Spread (Strecken) ist das Auseinanderziehen der Finger auf dem Bildschirm -
+mindestens zwei, beliebig viele mehr.
+
+Die Anzahl spielt keine Rolle: mit drei, vier oder fünf Fingern ist es
+dieselbe Geste, gewertet wird die Zunahme des Abstands zwischen den Zeigern.
 
 ## Verwendung
 
@@ -11,7 +15,7 @@ Spread ist das Auseinanderziehen von zwei Fingern.
 
 ## Richtung
 
-- Zwei Finger bewegen sich voneinander weg
+- Zwei oder mehr Finger bewegen sich voneinander weg
 
 ## Distanz
 

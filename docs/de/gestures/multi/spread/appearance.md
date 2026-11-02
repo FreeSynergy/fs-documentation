@@ -2,7 +2,8 @@
 
 ## Grundlayout
 
-Spread ist das Auseinanderziehen von zwei Fingern.
+Spread (Strecken) ist das Auseinanderziehen der Finger - mindestens zwei,
+beliebig viele mehr.
 
 ## Visuelles Feedback
 
@@ -25,7 +26,7 @@ Spread ist das Auseinanderziehen von zwei Fingern.
 
 ## Richtung
 
-- Zwei Finger bewegen sich voneinander weg
+- Zwei oder mehr Finger bewegen sich voneinander weg
 
 ## Distanz
 

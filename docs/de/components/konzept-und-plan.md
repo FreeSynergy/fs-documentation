@@ -371,7 +371,7 @@ betroffen sind vor allem die jungen Komponenten aus Welle 1 und 2 (`button`, `bu
 `tooltip`, `popover`, `embed`) sowie die oben genannten neun.
 Erlaubte Namen: Gesten aus `docs/de/gestures/<kategorie>/` (`tap`, `double-tap`, `long-press`,
 `drag`, `swipe`, `flick`, `edge-swipe`, `force-press`, `hover`, `draw-gesture`, `pinch`,
-`spread`, `rotate`, `two-finger-tap`, `two-finger-long-press`, `three-finger-swipe`,
+`spread`, `rotate`, `multi-finger-tap`, `multi-finger-long-press`, `multi-finger-swipe`,
 `shake`, `tilt`, `flip`, `wave`, `pull-to-refresh`, `drag-and-drop`), Animationen aus `docs/de/animations/`
 (`fade-in`, `expand`, `slide-in`, `stagger`, `collapse`, `highlight`, `press`, `pulse`,
 `spin`, `progress`, `skeleton`, `tick-draw`, `reorder`, …).

@@ -12,7 +12,7 @@ Kategorien):
 | Familie | Prinzip | Gesten |
 |---------|---------|--------|
 | [Ein-Finger (single)](single/) | Ein Finger/Zeiger, meist Ersatz für Klicks | 10 |
-| [Mehrfinger (multi)](multi/) | Zwei+ Finger, transformieren Inhalt | 6 |
+| [Mehrfinger (multi)](multi/) | Zwei+ Zeiger, Anzahl ist Einstellung, transformieren Inhalt | 6 |
 | [Gerät (device)](device/) | Bewegung des Geräts selbst (Sensoren) | 4 |
 | [Kombinationen (combined)](combined/) | Zusammengesetzte Gesten mit Eigenlogik | 2 |
 
@@ -30,12 +30,12 @@ Kategorien):
 | **Force Press** | single | Druck mit Drucksensor | Peek & Pop, Kontext |
 | **Hover** | single | Zeiger über Element ohne Kontakt | Tooltip, Vorschau |
 | **Draw Gesture** | single | Zeichne Form/Buchstabe | Verknüpfungen, Befehle |
-| **Pinch** | multi | Zwei Finger zusammenziehen | Zoom out |
-| **Spread** | multi | Zwei Finger auseinanderziehen | Zoom in |
-| **Rotate** | multi | Zwei Finger drehen | Rotieren |
-| **Two-Finger Tap** | multi | Tippen mit zwei Fingern | Sekundäraktion (Rechtsklick) |
-| **Two-Finger Long Press** | multi | Langdruck mit zwei Fingern | Sekundär-Menü, Multiselect |
-| **Three-Finger Swipe** | multi | Wischen mit drei Fingern | App-/Workspace-Wechsel |
+| **Pinch** | multi | Zeiger zusammenziehen (ab zwei) | Zoom out |
+| **Spread** | multi | Zeiger auseinanderziehen (ab zwei) | Zoom in |
+| **Rotate** | multi | Zeiger drehen (ab zwei) | Rotieren |
+| **Multi-Finger Tap** | multi | Tippen mit mehreren Fingern | Sekundäraktion (Rechtsklick) |
+| **Multi-Finger Long Press** | multi | Langdruck mit mehreren Fingern | Sekundär-Menü, Multiselect |
+| **Multi-Finger Swipe** | multi | Wischen mit mehreren Fingern | App-/Workspace-Wechsel |
 | **Shake** | device | Schnelles Hin- und Herbewegen | Undo, Fehler-Feedback |
 | **Tilt** | device | Kippen des Geräts | Steuerung, Parallax |
 | **Flip** | device | Gerät umdrehen | Stummschalten, Nicht stören |
@@ -61,9 +61,9 @@ Kategorien):
 | `onPinch` | function | Wird beim Pinch ausgeführt |
 | `onSpread` | function | Wird beim Spread ausgeführt |
 | `onRotate` | function | Wird beim Rotate ausgeführt |
-| `onTwoFingerTap` | function | Wird beim Zwei-Finger-Tap ausgeführt |
-| `onTwoFingerLongPress` | function | Wird beim Zwei-Finger-Langdruck ausgeführt |
-| `onThreeFingerSwipe` | function | Wird beim Drei-Finger-Wisch ausgeführt |
+| `onMultiFingerTap` | function | Wird beim Multi-Finger-Tap ausgeführt |
+| `onMultiFingerLongPress` | function | Wird beim Multi-Finger-Langdruck ausgeführt |
+| `onMultiFingerSwipe` | function | Wird beim Multi-Finger-Swipe ausgeführt |
 | `onShake` | function | Wird beim Shake ausgeführt |
 | `onTilt` | function | Wird bei Neigung ausgeführt |
 | `onFlip` | function | Wird beim Umdrehen ausgeführt |
@@ -80,7 +80,7 @@ Kategorien):
 | `swipeThreshold` | number | Minimaler Abstand für Swipe |
 | `velocityThreshold` | number | Mindestgeschwindigkeit für Flick in px/s |
 | `edgeSize` | number | Breite der Randzone für Edge Swipe in px |
-| `pointerCount` | number | Fingeranzahl für Multi-Finger-Gesten |
+| `pointerCount` | number | Mindestanzahl Finger für Mehrfinger-Gesten (2, 3, 4, 5 …) |
 | `shakeThreshold` | number | Minimale Beschleunigung/Bewegung für Shake |
 | `minShakes` | number | Minimale Anzahl Richtungswechsel für Shake |
 | `deadZone` | number | Grad-Toleranz für Tilt |
