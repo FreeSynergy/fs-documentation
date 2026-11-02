@@ -1,48 +1,68 @@
-# Kalendar - Menüpunkte
+# Kalendar / Merkuro – Menü- und Navigationsstruktur (Merkuro Calendar 26.08.2)
 
-## Übersicht
+Alle Einträge aus dem QML-/C++-Quelltext des Tarballs 26.08.2 (`src/calendar/calendarapplication.cpp`, `src/components/…`, `src/calendar/qml/…`); Original-Labels englisch zitiert. Fundstellen in [index.md](index.md#quellen).
 
-Kalendar arbeitet — typisch für Kirigami-Apps — mit einer schmalen Kopfzeile, einer Seitenleiste und Inline-Menüs statt klassischer Menüleiste. Alle Funktionen sind über Seitenleiste, Kontextmenüs und das Hamburger-Menü erreichbar.
+## Desktop: Menüleiste (abschaltbar, `showMenubar`)
 
-## Hauptnavigation (Seitenleiste / Hamburger-Menü)
+Die Menüs stammen aus `src/components/qml/` und werden durch die zentral registrierten `QAction`s der `mainCollection()` gefüllt:
 
-| Menüpunkt | Beschreibung |
-|-----------|--------------|
-| Agenden | Listenansicht aller anstehenden Ereignisse (Standardansicht) |
-| Tag | Tagesansicht mit Stundenraster |
-| Woche | Wochenübersicht |
-| Monat | Monatskacheln mit Ereignispunkten |
-| Kalender hinzufügen | Neues Kalender-Backend anlegen (CalDAV, lokal, Geburtstage, Feiertage) |
-| Einstellungen | Anzeige, Farben, Standardkalender, Benachrichtigungen |
+- **File**: *Quit Merkuro*
+- **Edit**: *Undo Text*, *Redo Text*, *Cut*, *Copy*, *Paste*, *Delete*, *Select All* (Textfeld-Standardaktionen)
+- **Window**: *Enter/Exit Full Screen*
+- **Settings**: u. a. *Show Menubar* (Umschalter), *Manage Tags…*
+- **Help**: *Merkuro Handbook*
+- Dazu die von der App-Klasse registrierten Aktionen (unten), die in Menüleiste/Werkzeugleiste erscheinen; Standard-Menübausteine (Thema, Kurzübersicht …) kommen aus Kirigami Addons.
 
-## Kalender-Verwaltung
+## Zentrale Aktionen (`CalendarApplication::setupActions`)
 
-Über die Kalenderliste in der Seitenleiste:
+### Ansichten (gegenseitig exklusive Gruppe, Shortcuts in [shortcuts.md](shortcuts.md))
 
-- **Kalender auswählen/abwählen** - Sichtbarkeit ein/aus
-- **Kalender bearbeiten** - Name, Farbe, Standardkalender
-- **Kalender entfernen** - Abonnement oder lokaler Kalender löschen
-- **Aktualisieren** - CalDAV-Kalender neu synchronisieren (Akonadi)
+| Aktion | Standard-Kürzel |
+|--------|-----------------|
+| *Month View* | Strg+1 |
+| *Week View* | Strg+2 |
+| *Work Week View* | Strg+2 (Quelltext so – gleiches Kürzel wie Week View, Kollision im Code) |
+| *3 Day View* | Strg+3 |
+| *Day View* | Strg+4 |
+| *Schedule View* | Strg+5 |
+| *Tasks View* | Strg+6 |
 
-## Ereignis-Kontextmenü (Rechtsklick / Long-Press)
+### Navigation
 
-| Eintrag | Beschreibung |
-|---------|--------------|
-| Bearbeiten | Ereignis-Dialog öffnen |
-| Duplizieren | Kopie mit gleichem Inhalt anlegen |
-| Verschieben | Per Drag & Drop oder Dialog verschieben |
-| Löschen | Ereignis löschen (Serien: alle/kommende/dieses) |
-| Erledigt markieren | Status auf erledigt setzen |
+- *Backwards*, *Forwards* (im Aufgabenansicht-Modus deaktiviert), *To Today*, *To Date…*
 
-## Neues Ereignis (Quick-Add)
+### Erstellen / Import / Bearbeitung
 
-Das Schnellanlage-Feld akzeptiert Natürlichsprache-Eingaben: `Mittagessen morgen 12:30 1h mit Anna` erzeugt Titel, Start, Dauer und Teilnehmer.
+- *New Event…*, *New Task…* (ohne Default-Kürzel registriert), *Import Calendar…*
+- *Undo*, *Redo* (Termin-/Aufgabenänderungen)
 
-## Menüs nach Rolle
+### Aufgabenansicht-Feinsteuerung
 
-Kalendar ist ein Einzelplatz-Programm: Es gibt **keine Rollen-Menüs**. Rechte ergeben sich aus den CalDAV-Ordnern des Servers (Leserecht vs. Schreibrecht): readonly-Kalender zeigen keine Anlage-/Bearbeitungspunkte.
+- Sortierung: *Alphabetically*, *By Due Date*, *By Priority Level*
+- Reihenfolge: *Ascending order*, *Descending Order*
+- Filter: *Show Completed Tasks*, *Show Today Only*
 
-## Hinweis
+### Sonstiges
 
-- **Keine klassische Menüdatei**: Kalendar hat keine Menüleisten wie KOrganizer; die obigen Punkte entsprechen den Panels und Kontextmenüs der aktuellen Versionen (Kirigami 2 / KDE Gear).
-- Änderungen am Server (Kalenderfreigaben, Zugriffsrechte) erscheinen erst nach der nächsten Akonadi-Synchronisation.
+- *Refresh All* (F5), *Manage Tags…*, Anwendungssprache wechseln (*switch_application_language*)
+
+## Mobil (Plasma Mobile / Touch)
+
+- **BottomToolBar** (`src/calendar/qml/BottomToolBar.qml`): Umschalter **Month / 3-Day / Day / Schedule / Tasks** + „New Event“-Aktion.
+- Navigation über **Kirigami-Seiten-Stack** (`pageStack.layers`): Editoren und Einstellungen werden als Ebenen übereinander geschoben; Wisch-Gesten zwischen Monats-/Wochenrastern (Swipeable-Modi).
+- Keine klassische Menüleiste; Aktionen erreichen das UI über Global-Drawer und ToolBar-Menüs.
+
+## Seitenleiste / Global Drawer (`MainDrawer.qml`)
+
+- Abschnitt **Kalender/Collections** (Sichtbarkeit pro Kalender, Farben) und Abschnitt **Tags** (`collectionsSectionExpanded`, `tagsSectionExpanded` in `kalendarrc`).
+- Darunter Einstieg in **Einstellungen** mit Seiten:
+  - **ViewSettingsPage** (Ansichts-Feineinstellungen),
+  - **Configure Availability / FreeBusySettingsPage** („Publish your availability information automatically“, Mindestabstand in Minuten),
+  - **SourceSettingsPage** (Kalenderquellen),
+  - **ConfigurationsView** (Gesamtübersicht),
+  - Kontenverwaltung über `SystemAccountsForm`/Akonadi-Ressourcen.
+- Termininfo erscheint als **Drawer** (`IncidenceInfoDrawer`) oder Pop-up (`useIncidenceInfoPopup`), Bearbeiten als Dialog (Desktop) bzw. Seite (Mobil).
+
+## Externer Einstiegspunkt
+
+- Über D-Bus kann ein Termin per `showIncidenceByUid` direkt geöffnet werden (siehe [api.md](api.md)); Dateisystem-Aufruf `merkuro-calendar datei.ics` öffnet den Importdialog statt eines Menüs.

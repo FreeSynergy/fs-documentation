@@ -1,50 +1,47 @@
-# Kalendar - Funktionen
+# Kalendar / Merkuro – Funktionen (verifiziert an Merkuro 26.08.2)
 
-## Hauptfunktionen
+Aktuell dokumentierte Version: **Merkuro Calendar 26.08.2** (Kalendar heißt seit KDE Gear 23.08 „Merkuro“). Alle Punkte stammen aus dem Quelltext des Release-Tarballs; Fundstellen in [index.md](index.md#quellen).
 
-### Kalender und Ansichten
-- Agenden-, Tages-, Wochen- und Monatsansicht
-- Mehrere Kalender parallel (CalDAV, lokal, Geburtstage, Feiertage)
-- Farbcodierung je Kalender, Sichtbarkeit je Kalender schaltbar
-- Suchfeld für Ereignisse und Teilnehmer
+## Ansichten
 
-### Ereigniserfassung
-- Schnellerfassung per Natürlichsprache (Datum, Uhrzeit, Dauer, Teilnehmer)
-- Dialog mit Titel, Ort, Zeiten, ganztägig, Wiederholung, Erinnerung, Kategorien
-- Zuweisung an einen Zielkalender; Standardkalender konfigurierbar
-- Drag & Drop zum Verschieben und Verändern von Zeitspannen
+- Sieben Betriebsarten laut `CalendarApplication::Mode`-Enum: **Monat, Woche, 3 Tage, Tag, Terminplan (Schedule), Aufgaben, Arbeitswoche**; Umschalten über Menü/Shortcuts, Vorwärts/Rückwärts/Heute.
+- **Wischbare Monats-/Wochen-/Terminplan-Raster** (Swipeable- und Basic-Varianten umschaltbar in `kalendarrc`), Wochennummern, ausrichtbare/benannte Wochentagsköpfe.
+- **Terminplan-Ansicht** als Liste kommender Termine (Wochen-Header, leere Tage ausblendbar).
+- **Aufgabenansicht** als Baum (Unteraufgaben), Sortierung nach Fälligkeit/Alphabet/Priorität, auf-/absteigend, erledigte ein-/ausblenden.
+- Termininfo wahlweise als **Pop-up oder Drawer** (`useIncidenceInfoPopup`).
+- Abschießbare Seitenleiste mit Kalender-/Tags-Abschnitten (`MainDrawer`), auf Mobil Bottom-Toolbar.
 
-### Synchronisation
-- CalDAV über Akonadi (Nextcloud, Kolab, Fastmail, ownCloud, gnome.org ...)
-- Automatische und manuelle Aktualisierung
-- Geburtstagskalender aus den Kontakten (KAddressBook/Akonadi)
-- Regionale Feiertage als Abonnement
+## Termine, Aufgaben, Journale
 
-### Benachrichtigungen
-- Erinnerungen als Systembenachrichtigung (freie Vorlaufzeit je Ereignis)
-- Auf Plasma Mobile zusätzlich Sperrbildschirm-/Benachrichtigungsintegration
+- **Termin-Editor** (Desktop als Dialog, mobil als Seite): Titel, Beschreibung, Start/Ende, **ganztägig**, **Zeitzone je Termin**, Kalender-/Sammlungs­wahl.
+- **Wiederholungen**: nie/täglich/wöchentlich/monatlich/jährlich/**benutzerdefiniert** (RRULE), „Every“-Intervall, „On“-Regel, Ende (nie/Datum/nach n Vorkommen), **Ausnahmen (Exdate)**.
+- **Teilnehmer** aus Kontakten oder manuell (Name/E-Mail), Status, **RSVP anfordern**.
+- **Erinnerungen** (Reminders mit Zeiteinheit), **Priorität 1–9**, **Fortschritt %** (Tasks), **Tags/Kategorien**, **Dateianhänge**.
+- Auch **Journal-Einträge (VJOURNAL)** und **Unteraufgaben** im Editor.
+- **Undo/Redo** für Änderungen (Signale der App-Klasse).
+- **ICS-Import**: Dateien/URLs als Argument, Doppelklick auf `.ics` (`MimeType=text/calendar`), Import-Bestätigung.
 
-## Was Kalendar NICHT kann
+## Kalender und Quellen
 
-- **Keine Ressourcen-/Raumbuchung** (das kann KOrganizer mit Groupware nicht, Outlook schon)
-- **Keine Terminfindung/Terminumfragen** (dafür Nextcloud Circles/Polls oder Doodle)
-- **Keine Recurrence-Ausnahmen bearbeiten** im kleinen Dialog (Einschränkungen bei Serien)
-- **Keine Zeitzonen-Umschaltung** im UI (Events werden in LOCAL-Zeit des Geräts angezeigt)
-- **Keine Aufgabenverwaltung** mit Fälligkeiten — Kalendar zeigt nur Kalenderereignisse; für Aufgaben ist ToDo (KDE PIM) zuständig
-- **Keine Server-Komponente**: Kalendar ist nur Client; Freigaben und Zugriffsrechte immer Sache des CalDAV-Servers
-- **Keine ICS-Import/Export-Buttons** in jeder Version gleich — Stand der aktuellen Version prüfen (KAlCalismasse-Dateien können aber geöffnet werden)
+- Datenhaltung über **Akonadi**: lokale Kalender + Online-Kalender (**Nextcloud, Google Calendar, Outlook, CalDAV u. v. m.**) über Ressourcen aus `kdepim-runtime`; Kontenpflege teils über `SystemAccountsForm`/Akonadi-Einstellungen.
+- **Feiertage nach Region** (KF6::Holidays; `showHolidaysInCalendarViews`, `holidayRegions`), Feiertagszeile in Wochenansicht.
+- Aufgaben (VTodos) einblendbar in allen Kalenderansichten, inkl. Unteraufgaben.
+- **Verfügbarkeits-Veröffentlichung (Free/Busy)**: automatische Veröffentlichung mit einstellbarem Mindestabstand (Minuten) konfigurierbar (`FreeBusySettingsPage`) – Basis, damit Andere bei Einladungen die Belegung sehen.
+- **Orts-Karten** optional (QtLocation; `enableMaps`, Marker-Typ Kreis/Pin) für Veranstaltungsorte.
+- **Mail-Integration** als optionale Brücke zur Mail-Komponente der Suite (`enableMailIntegration`).
 
-## Erweiterungen und Integrationen
+## Konfiguration und Integration
 
-| Integration | Weg |
-|-------------|-----|
-| Kontakte (Geburtstage) | Akonadi-Adressbuch |
-| Aufgaben | KDE PIM ToDo (separate App, gleiches Backend) |
-| E-Mail-Einladungen | KMail/Kontact via iMIP (iTIP in E-Mail) |
-| Kalender-Freigaben | serverseitig (z.B. Nextcloud-Freigabe, zeigt in Kalendar als Kalender) |
-| Plasma Wallet / Keyring | Zugangsdaten für CalDAV |
+- KConfig-Datei **`kalendarrc`** mit feinen Ansichtsoptionen (Rastermodi, Kopfzeilen, Wochennummern, Randbreiten, Dimmung vergangener Termine, zuletzt geöffnete Ansicht …).
+- **D-Bus**: `showIncidenceByUid` zum gezielten Öffnen eines Termins (Details in [api.md](api.md)); Single-Instance.
+- Konvergente UI: identische App auf Desktop und **Plasma Mobile** (Kirigami, `Kirigami.Settings.isMobile`-Weichen).
+- Vollständige Übersetzungen (AppData für Dutzende Sprachen).
 
-## Technical Hooks
+## Was Kalendar/Merkuro NICHT bietet
 
-- **Desktop-Dateien/URLs**: `webcal://`-Links und `.ics`-Dateien können mit Kalendar geöffnet werden
-- **Kalender-Abo per Link**: Einfügen einer CalDAV-URL legt einen neuen Kalender an
+- **Kein Server, keine Weboberfläche** – reine Desktop-/Mobile-App; öffentliche Freigaben, Einbettung oder Buchungsfremde gibt es nur über den jeweiligen Kalender-Server (z. B. Nextcloud Calendar).
+- **Keine Webhooks/REST-API** und kein SDK für Drittanbieter; Automatisierung nur über D-Bus, CLI-Argumente und Akonadi-Bibliotheken.
+- **Keine Terminbuchungsseiten / keine Terminumfragen** (Doodle-artige Vorschläge existieren nicht; auch kein Slot-Finder für gemeinsame Verfügbarkeit – eine „gemeinsame freie Zeit finden“-Funktion wurde in 26.08.2 nicht gefunden).
+- **Keine eigenen Push-Benachrichtigungen über lokale Erinnerungen hinaus** – Erinnerungen laufen über Akonadi/KDE-Benachrichtigungen; browserbasierte Alarme wie beim Webkalender entfallen.
+- **Keine Kalender-Serversynchronisation zu Dritt-Servern über CalDAV hinaus** (keine Exchange-MAPI/Google-API-Spezialfunktionen wie Kalender-Delegation oder Ressourcenbuchung; diese hängen an den kdepim-runtime-Ressourcen, nicht an Merkuro).
+- **Keine Team-Funktionen** (Kommentare an Terminen, Freigabe-Abstufungen etc. sind nicht in der App; was der Server bietet, zeigt Merkuro nur soweit Akonadi es abbildet – **nicht verifiziert**, in 26.08.2 keine entsprechenden UI-Elemente gefunden).

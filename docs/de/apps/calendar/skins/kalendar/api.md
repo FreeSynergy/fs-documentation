@@ -1,92 +1,77 @@
-# Kalendar - API Dokumentation
+# Kalendar / Merkuro – API (Merkuro Calendar 26.08.2, Stand: 2026‑11‑02)
 
-## Übersicht
+## Namensgebung zuerst (wichtig für diese Sektion)
 
-Kalendar stellt **keine eigene API** bereit — es ist ein reiner Client. Die programmatischen Schnittstellen sind die Standards, auf die es zugreift: CalDAV/CardDAV (RFC 4791/6352) gegen den jeweiligen Server, KAlCalismasse/ICS als Dateiformat und D-Bus/Akonadi nur intern. Für einen FreeSynergy-Skin ist deshalb die **CalDAV-Schnittstelle des angebundenen Servers** die relevante API.
+Das unter dem Namen **Kalendar** begonnene KDE-Kalenderprogramm wurde **mit KDE Gear 23.08 (August 2023) in Merkuro umbenannt**, weil die App über Termine hinauswuchs (Kontakte, geplante E‑Mail-Integration). Repo und Releases laufen seither unter `pim/merkuro` (Invent) bzw. `KDE/merkuro` (GitHub); das GitHub-Mirror `KDE/kalendar` endet beim letzten Kalendar-Tag v23.04.3. Die Produktentwicklung lebt vollständig weiter: aktuellster Release ist **Merkuro 26.08.2** (KDE Release Service, Tag 2026‑10‑08), letzter Aktivitätscommit 2026‑11‑02. Diese Dokumentation beschreibt den Nachfolgezustand.
 
-**API-Arten im Überblick**
+## Versionsstand und Entwicklung
 
-| Art | Verwendung | Status |
-|-----|------------|--------|
-| CalDAV (HTTP, RFC 4791) | Kalender lesen/schreiben (der eigentliche Datenweg) | Standard, serverseitig |
-| `.ics`-Dateien / `webcal://` | Import, Export, Kalenderabos | Standard |
-| D-Bus / Akonadi | interne Prozesskommunikation unter KDE | intern, nicht für Skin-Integration empfohlen |
-| Eigene REST-API | — | ❌ Nicht vorhanden |
-| Webhooks | — | ❌ Nicht vorhanden (ereignisseitig nur serverseitige Push/Benachrichtigungen) |
+| Eigenschaft | Wert |
+|-------------|------|
+| Aktuelle Version | **26.08.2** (`RELEASE_SERVICE_VERSION` in `CMakeLists.txt`), Release Service 26.08 vom Oktober 2026 |
+| Versionsschema | YY.MM.x seit KDE Release Service (ehemals 22.12, 23.04 …) |
+| Entwicklung | aktiv (Maintainer Carl Schwan, Clau Cambra; tägliche Commits; Bugs über bugs.kde.org, Produkt „merkuro“) |
+| Lizenz | GPL‑3.0-or-later (`KAboutData … KAboutLicense::GPL_V3`) |
+| Plattform | KDE/Qt: Qt ≥ 6.9, KDE Frameworks ≥ 6.25, KDE-PIM-Bibliotheken 6.8.2 (Akonadi, AkonadiCalendar, AkonadiContact, KCalCore …) |
+| Programme der Suite | `merkuro-calendar`, `merkuro-contact`, `merkuro-mail`, `merkurolauncher` – diese Doku behandelt `merkuro-calendar` |
 
-## Authentifizierung
+## Grundarchitektur für die API-Frage
 
-- **Basic / Digest Auth** über HTTPS (Basic nur mit TLS)
-- **OAuth 2.0** bei Servern, die das verlangen (z.B. persönliche google-Kalender via OAuth-Client — Kalendar nutzt dazu die KDE-Integration/Passwort-Agent)
-- **App-Passwörter** bei Two-Factor-Servern (Nextcloud, Fastmail)
-- Passwörter liegen im **KWallet/Plasma-Wallet**, nicht in Konfigurationsdateien
+Merkuro Calendar ist ein **reiner Desktop-Client ohne eigenen Netzwerk-Server und ohne eigene REST-/HTTP-API**. Termine und Aufgaben hält nicht die App, sondern der **Akonadi-PIM-Dienst** (eigene lokale Datenbank + Synchronisations-Ressourcen aus `kdepim-runtime`: CalDAV, Google, Exchange/WebDAV …). Jede „Integration“ läuft daher über eine dieser drei Ebenen:
 
-## CalDAV-Endpunkte (RFC 4791, serverabhängig)
+1. D-Bus-Schnittstelle der laufenden App (unten),
+2. Akonadi als Datenschicht (Agent-API/Ressourcen),
+3. CLI-Argumente (ICS-Import).
 
-Discovery: `GET /.well-known/caldav` → 3xx auf Principal-URL.
+## D-Bus-Schnittstelle der App (verifiziert an 26.08.2)
 
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| `PROPFIND` | `/` (Principal) | Kalendersätze (`calendar-home-set`) ermitteln |
-| `PROPFIND` | `<calendar-home>` | Kalenderliste mit Namen, Farbe (`calendar-color`), Rechten (`read-write`/`read`) |
-| `GET` | `<calendar-url>?content-type=text/calendar` | Kalender als ICS-Strom abrufen |
-| `REPORT` | `<calendar-url>` | `calendar-query`: Ereignisse im Zeitraum (`DAV:prop`, `C:comp filter: VEVENT`) |
-| `PUT` | `<calendar-url>/<uid>.ics` | Ereignis anlegen/ändern |
-| `DELETE` | `<calendar-url>/<uid>.ics` | Ereignis löschen |
-| `GET` | `<calendar-url>/<uid>.ics?ETag` | Einzelnes Ereignis (If-Match bei Änderung) |
+- **Single-Instance:** `KDBusService(KDBusService::Unique)` in `src/calendar/main.cpp`; der Bus-Name leitet sich vom Desktop-Dateinamen ab (`org.kde.merkuro.calendar`). Ein zweiter Start aktiviert die laufende Instanz und übergibt Argumente (`activateRequested`).
+- **Registriertes Objekt:** `/Calendar` im Session-Bus (`QDBusConnection::sessionBus().registerObject(u"/Calendar", this)` in `calendarapplication.cpp`).
+- **Interface `org.kde.calendar.Calendar`** (introspektierbar über `src/calendar/org.kde.calendar.Calendar.xml`):
 
-## Beispiel: calendar-query
+| Methode | Signaturen | Zweck |
+|---------|-----------|-------|
+| `showIncidenceByUid` | `uid: s`, `occurrence: QDateTime` (Marshalling `((iii)(iiii)i)`), `xdgActivationToken: s` | Öffnet/anwendend den Termin einer iCal-**UID** (mit optionalem Wiederholungs-Instant); der Activation-Token folgt dem XDG-Activation-Standard für fokussierendes Öffnen |
 
-Request:
+Beispiel:
 
-```http
-REPORT /remote.php/dav/calendars/anna/privat/ HTTP/1.1
-Host: cloud.example.org
-Depth: 1
-Content-Type: application/xml
-
-<?xml version="1.0"?>
-<C:calendar-query xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
-  <D:prop><D:getetag/><C:calendar-data/></D:prop>
-  <C:comp name="VCALENDAR"><C:comp name="VEVENT"/></C:comp>
-  <C:timerange start="20261101T000000Z" end="20261108T000000Z"/>
-</C:calendar-query>
+```bash
+qdbus org.kde.merkuro.calendar /Calendar \
+  org.kde.calendar.Calendar.showIncidenceByUid \
+  "uid-1234@example" "$(date -u +%Y-%m-%dT%H:%M:%S)" ""
 ```
 
-Response (Auszug):
+(Das exakte Marshalling des QDateTime-Arguments kann je nach qdbus-Version Anpassung erfordern – das Interface selbst ist Quelltext-verifiziert.)
 
-```xml
-<?xml version="1.0"?>
-<D:multistatus xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
-  <D:response>
-    <D:href>/remote.php/dav/calendars/anna/privat/8f1c2.ics</D:href>
-    <D:propstat><D:prop>
-      <D:getetag>"etag-17"</D:getetag>
-      <C:calendar-data>BEGIN:VCALENDAR ... BEGIN:VEVENT
-SUMMARY:Standup
-DTSTART:20261102T090000Z
-DTEND:20261102T091500Z
-END:VEVENT END:VCALENDAR</C:calendar-data>
-    </D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat>
-  </D:response>
-</D:multistatus>
-```
+## CLI / Datei-Assoziation
 
-## Rate Limits
+- Start: `merkuro-calendar [PFAD|URL …]`. Positionale Argumente werden im laufenden Betrieb an den **ICS-Importer** durchgereicht (`Importer::importCalendarFromFile` in `main.cpp`/`importer.cpp`); beim Erststart importiert derselbe Weg über `Importer`.
+- Desktop-Datei: `Exec=merkuro-calendar %u`, `MimeType=text/calendar`, `SingleMainWindow=true`, Kategorie `Office;Calendar` – die App ist als Standard-Handler für `.ics` registrierbar (`xdg-mime default org.kde.merkuro.calendar.desktop text/calendar`).
+- Standard-KDE-Optionen via `KAboutData` (`--help`, `--version`, Qt-/KF-Flags). Eigene Sonderflags existieren in 26.08.2 nicht.
 
-Clientseitig keine; serverseitig je nach CalDAV-Server (Nextcloud-Bruteforce-Schutz, Kolab-Limits). Kalendar/Akonadi synchronisieren inkrementell über ETags — wenige Requests pro Intervall.
+## Datenschicht: Akonadi (die eigentliche Kalender-API)
 
-## Webhooks und Push
+- Merkuro liest/schreibt ausschließlich über **Akonadi**: `Akonadi::ETMCalendar` (App hält einen `ETMCalendar::Ptr`), Akonadi-Agenten, D-Bus-Dienst `org.freedesktop.Akonadi.*`.
+- **Konsolensteuerung:** `akonadictl start|stop|restart|status` (Akonadi, nicht Merkuro). Nach Installation von `kdepim-runtime` empfiehlt die offizielle README ein `akonadictl restart`, damit Online-Ressourcen (CalDAV & Co.) erscheinen.
+- **Programmatische Nutzung:** C++/Qt-Bibliotheken `Akonadi`, `AkonadiCalendar`, `AkonadiContact`, `KCalCore` (gleiche Schicht, mit der Merkuro selbst baut) – ein sprachunabhängiges öffentliches API der App existiert nicht.
+- **Online-Kalender** (Nextcloud, Google, Outlook, CalDAV) werden von Ressourcen aus `kdepim-runtime` synchronisiert; deren Zugangsdaten/Protokolle sind deren API, nicht Merkuros.
 
-- ❌ Kalendar-seitig nicht vorhanden
-- Serverseitig: CalDAV-Sync-Erweiterung (RFC 5995) bzw. Push (Nextcloud Notifications) — die Clients lösen dann ein `REPORT` aus
+## Konfiguration (Dateiebene)
 
-## SDKs und Client-Bibliotheken
+- KConfig-Datei **`kalendarrc`** (`calendarconfig.kcfg`): Gruppen `General` (u. a. `showMenubar`, `enableMaps`, `enableMailIntegration`, `lastOpenedView`), `GeneralView` (Feiertage `showHolidaysInCalendarViews`, `holidayRegions`, Aufgaben ein/aus), `MonthView`/`WeekView`/`ScheduleView` (Darstellung, Wochennummern), `TaskView` (Sortierung DueTime/Alphabetically/Priority).
+- Konten/Collections liegen nicht in Merkuro, sondern bei Akonadi (`~/.local/share/akonadi/`).
 
-- **libkcalcore / KCalCore** (C++): KAlCalismasse-Parsen, von Kalendar genutzt
-- **Python**: `caldav`, `caldav`-Bibliotheken (RFC-4791-Client) — gleicher Datenweg wie Kalendar
-- **JavaScript**: `js-calendav` bzw. Fetch mit `REPORT` — für FreeSynergy-Skins der empfohlene Weg
+## Webhooks / Push
 
-## Skin-Hinweis
+- **Nicht vorhanden und nicht vorgesehen.** Aktualisierungen kommen aus Akonadi-Ressourcen (Client-seitiges Polling/Sync der jeweiligen Online-Kalender); Merkuro bietet keine Endpunkte für Dritte.
 
-Ein Kalendar-Skin bildet primär die **Oberfläche** nach (Ansichten, Schnellerfassung, Seitenleiste) und spricht datenseitig dieselbe CalDAV-API wie Kalendar selbst — siehe [Standardisierte Daten: ICS](../../../../data/formate.md) und [Event-Modell](../../../../data/modelle.md).
+## Limits
+
+- App-seitig keine dokumentierten Rate-Limits; praktisch relevant sind die Limits der angebundenen Kalenderdienste (über kdepim-runtime-Ressourcen) und die Akonadi-Datenbank.
+
+## Quellen (Fundstellen, alle 26.08.2)
+
+- Offizielles Release-Archiv: `https://download.kde.org/stable/release-service/26.08.2/src/merkuro-26.08.2.tar.xz` (abgerufen 2026‑11‑02; lokal gelesen: `CMakeLists.txt`, `README.md`, `src/calendar/{main.cpp,calendarapplication.{h,cpp},calendarconfig.kcfg,org.kde.calendar.Calendar.xml,org.kde.merkuro.calendar.desktop,org.kde.merkuro.calendar.metainfo.xml}`, `src/{launcher,mail,contacts}/CMakeLists.txt`).
+- GitLab-API Projekt-/Tagliste `pim/merkuro` (`https://invent.kde.org/api/v4/projects/pim%2Fmerkuro/repository/tags`): neuster Tag `v26.08.2` (2026‑10‑08); Projekt `pim/kalendar` leitet auf `pim/merkuro` (Projekt-ID 7106, `last_activity_at` 2026‑11‑02).
+- Offizielle Produktseiten: `https://apps.kde.org/merkuro.calendar/` („Merkuro Calendar“; früher „Kalendar“), README-Zeile „Merkuro was formerly known as Kalendar.“ im Quelltext.
+- Umbenennungs-Berichterstattung zur Release-Serie: KDE-Gear-23.08-Ankündigungen („Kalendar Becoming Merkuro“, Aug 2023; linuxiac/phoronix als Sekundärquellen).
