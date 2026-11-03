@@ -11,6 +11,9 @@ Zweite Runde am selben Tag: Abgleich und Kollision, Schenken gegenüber Freigebe
 markieren", Gruppengröße. Antworten des Nutzers sind in **§15–§17** festgehalten; die daraus
 entstandenen offenen Punkte stehen in §18, 11–19.
 
+Dritte Runde, gleicher Tag: **Plan-Fragen** (Reihenfolge, Abbruchkriterium, Manifest, Register,
+Code-Repos) mit nachgemessenem Ist-Zustand — **§19**.
+
 Legende: **gesetzt** = entschieden, nicht mehr offen · **offen** = wartet auf Entscheidung ·
 **Idee** = noch nicht geprüft · Belege wie in `data/standards.md` (✅ abgerufen, ⚠️ ungeprüft).
 
@@ -680,6 +683,115 @@ Nr. 11–19 aus der zweiten (Abgleich, Teilen, Gruppen, „frei").
 19. Drei Zustände des **Frei-Markierens** (§17): werden sie als **drei Felder**, ein Enum, oder
     als ODRL-Policy mit leerem Inhalt gespeichert?
 
+## 19. Plan-Fragen — dritte Runde (2026-11-03)
+
+Kein Datenmodell, sondern **der Plan selbst**: Reihenfolge, Aufwand, Abbruchkriterium, Werkzeuge.
+Vorher der Stand, wie er auf der Festplatte wirklich ist — gemessen, nicht geschätzt.
+
+**Ist-Zustand (2026-11-03 nachgemessen)**
+
+| Bereich | Ist |
+|---|---|
+| Skin-Doku in `de/` | 562 Dateien unter `programs/apps/` (11 Kategorien), 220 unter `programs/suites/` (5), 87 unter `programs/platform/` |
+| Abgearbeitet laut `temp/apps-plan.md` | **42 von 869** Zeilen mit `[x]` — das ist genau calendar (6 Masken × 7 Dateien) |
+| Dateien vorhanden, **ohne** Haken | **520** — nach der Vorlage heißt das: geschrieben, aber **nicht an Primärquellen verifiziert** |
+| `temp/apps-plan.md` selbst | veraltet: alle 869 Zeilen zeigen auf `apps/…`; die Dateien liegen seit dem `programs/`-Umzug unter `programs/…`. Zeile 8 (`apps/index.md`) fehlt **an jedem** Ort |
+| `temp/apps-prompt-vorlage.md` | verweist auf `docs/de/apps/plan.md` und `docs/de/apps/PROMPT-VORLAGE.md` — **beide Pfade existieren nicht mehr** |
+| `de/` gegen `en/` | 1491 Dateien `de`, 478 `en`; `docs/en/components/` (355 Dateien) ist **uncommitted** (`??` in git) |
+| Prüfer | `check_components.py` ✅ bestanden (84 Komponenten), `gen_component_indexes.py --check` ✅; für `data/` gibt es **keinen** Prüfer, und in CI laufen nur diese beiden |
+| Ableitungslisten aus §1 (Pflichtmenge / Kür) | **existieren nicht.** „Pflichtmenge" kommt im ganzen Repo nur in diesem Blatt vor |
+
+**die Fragen — P1 bis P4 entscheiden, ob der Plan tragfähig ist; P5 bis P8 sind die fehlenden
+Stücke daran**
+
+**P1 — Was bedeutet der Haken im Plan?**
+42 Zeilen sind `[x]`, aber 520 Dateien sind geschrieben und stehen ohne Haken. Wenn `[x]`
+**verifiziert** heißt (die Vorlage verlangt Primärquellen, und sie warnt ausdrücklich vor
+fabriziertem Bestand — davical war mit Baïkal vermischt), dann sind 520 geschriebene Dateien
+unverifiziert und der Plan ist ehrlich. Wenn `[x]` **geschrieben** heißt, ist der Plan kaputt.
+Das muss zuerst geklärt werden, weil es die Menge der Restarbeit um Faktor 10 ändert.
+
+**P2 — Wie viele Masken braucht die Pflichtmenge wirklich?**
+§1 sagt: Schnittmenge aller Skins = Pflichtmenge, Vereinigung = Kür. Bei 119 Masken ist die
+Schnittmenge nach wenigen Masken pro Kategorie praktisch eingefroren — die 827 restlichen Dateien
+bringen dann fast keine neuen Anforderungen mehr. **Vorschlag des Agenten:** Abbruchkriterium
+pro Kategorie (z. B. 3–5 Masken, dann Schnittmenge einfrieren, Rest nur als Stichprobe oder
+beim konkreten Bedarf). Ohne dieses Kriterium sind 827 Dateien das Ziel statt das Mittel — und
+das wäre der Hauptgrund, warum der Plan nie fertig wird.
+
+**P3 — Wo landen Pflichtmenge und Kür?**
+Sie sind der Input für §9 (Fähigkeiten) und §10 (Datenanschluss pro Component), und es gibt
+keinen Ort für sie. Kandidaten: `data/anforderungen.md` wächst mit, oder ein eigener Zweig
+(`requirements/`). **Solange der Ort fehlt, ist jede weitere Skin-Datei Arbeit ohne Ergebnis.**
+
+**P4 — Was ist die kleinste Scheibe, bevor die Grundmaske anfangen kann?**
+§1 setzt: die Grundmaske wird vom Nutzer gebaut und ist die Referenz. Vier Dinge muss er dafür
+in der Hand haben: **Manifest** (P5), **Fähigkeitenliste** (P6), **Adressform** (P7),
+**Datenanschluss** (§10 / §18 Nr. 10). Alles andere (Abgleich, Rechte, Grabsteine) kann später
+kommen — ohne diese vier ist die erste Maske eine Vermutung.
+
+**P5 — Das Manifest ist unbeschrieben.**
+§2 benutzt es zweimal („Version im Manifest", „Build-Time-Vertrag"), aber keine Datei im Repo
+beschreibt es (nachgesehen: „Manifest" kommt nur hier und in fremden Skin-Dokus vor). Welche
+Felder? Programm-ID, Programm-Version, Masken-ID, benötigte Komponenten, benötigte Fähigkeiten,
+zulässige Fassungs-Spanne. Ohne Manifest hat die Grundmaske **keine Schnittstelle**, und die
+offene Frage aus §2 (Server entwickelt das Programm hinter einer installierten Maske weiter) ist
+nicht entscheidbar, weil nicht definiert ist, was verglichen wird.
+
+**P6 — Was ist eine Fähigkeit, und ist die Liste geschlossen?**
+Vor §18 Nr. 4 (wer meldet Fähigkeiten) kommt diese Frage. Eine **geschlossene, zentrale** Liste
+(„Objekt öffnen", „Datensatz bearbeiten", „Termin auswählen" …) ist die Bedingung dafür, dass das
+Register auflösen und der Masken-Prüfer aus §13 feststellen kann, dass eine Maske eine Fähigkeit
+nicht anbietet. Eine freie Liste pro Programm macht beides unprüfbar.
+
+**P7 — Adressform: zwei Ebenen oder eine?**
+§14 will `fs:calendar/day/2026-11-14`, §6 (Beschluss 3) hat `https://<instanz>/<domaene>/<ulid>`.
+Vermutung des Agenten: bewusst **zwei** Ebenen — Absichtsadresse intern, IRI nach außen. Dann
+fehlt die Abbildung zwischen beiden, und das Register braucht den einen Schlüssel. Kleine Frage,
+blockiert aber Register und Sprung aus dem Widget.
+
+**P8 — Register: Plattform oder Server?**
+§13 macht es zur Voraussetzung für Install-Nachfrage und für den Sprung aus einem Widget ins
+Programm; beschrieben ist es nirgends. Ebene 6 (Plattform) oder Teil des Servers (§3)?
+
+**P9 — Der Datenzweig hat eine unbeantwortete Bitte von 2026-11-02.**
+`data/anforderungen.md` §6 Nr. 4: „**bitte bestätigen oder verwerfen**" für *kein eigenes
+`person/`-Verzeichnis* (Begründung: JSContact-Card mit Rolle `individual` + `sub` aus `login/` +
+`profile/` decken die Person ab, `person/` wäre eine Projektion ohne eigene Daten). Dazu zwei
+offene Haken in §7: **App-Dateninventur → Zuordnung in Domänen** und **`identity/mapping.md`**.
+Alle drei sind billig und sind direkter Zulauf zu P3.
+
+**P10 — Braucht `data/` einen Prüfer?**
+Komponenten haben einen (`check_components.py`, läuft in CI), der Datenzweig nicht. Muster:
+`scripts/data/check_data.py` zählt und meldet — Felder ohne Pate (heute: `visibility`, `roles`,
+`permissions`, `scopes` in `felder.md` Zeile 17, ⚠️), Modelle, die nicht in der `index.md`-Tabelle
+stehen, Domänen ohne Pflichtdateien. Damit wird „kein Pate gefunden" eine **Zahl, die sinken
+muss**, statt eines Satzes.
+
+**P11 — `en/`: Beschluss 5 oder Bestand?**
+Komponenten-Plan, Beschluss 5: „englische Spiegelung erst nach Abschluss der deutschen Version".
+`docs/en/components/` mit 355 Dateien liegt trotzdem schon da und ist **nicht committet**.
+Dazu die 9 defekten Links in `en/` aus `todo/qwen.md`. Drei Möglichkeiten: committen und
+mitpflegen, weg und am Ende neu, oder als Stand der Dinge committet lassen. Entschieden werden
+muss es, sonst übersetzt der Übersetzer gegen eine Wand.
+
+**P12 — Wo entsteht der Code?**
+In `temp/` steht nichts über Code-Repos (nachgesehen). CONVENTIONS §1 sagt nur: gleiche Schale in
+jedem Repo, Code-Repos ohne Doku. §3 („ein Server, einmal installiert") und §5 („ein geteilter
+Crate für die Regeln") deuten auf mindestens zwei Repos: einer für Server/Plattform-Crates, einer
+für die Grundmaske. Namen und Grenze wären vor der Grundmaske zu nennen — sonst entsteht das
+dritte Repo nebenbei.
+
+**Reihenfolge, die der Agent vorschlagen würde** (nur Vorschlag, Entscheidung liegt beim Nutzer)
+
+1. P1 klären (eine Zeile), dann P2 — ohne Abbruchkriterium ist der Rest des Plans nicht
+   bezahlbar.
+2. P4 und P5–P7: Manifest, Fähigkeitenliste, Adressform. Das ist der engste Pfad zur
+   Grundmaske und unabhängig von Variante A/B (§18 Nr. 1) und von Turso (Nr. 2).
+3. P3 und P9: Ort für die abgeleiteten Listen, dazu die drei billigen Datenzweig-Erledigungen.
+4. Der Datenzweig-Kram (§18 Nr. 16–19, Grabsteine, `sequence`) kann bis nach der Grundmaske
+   warten — **außer** P7, weil die Adresse in der Maske schon benutzt wird.
+
 ## Siehe auch
 
 - `conventions/CONVENTIONS.md` §2 (sechs Ebenen), §3 (Components-Zuordnung)
@@ -687,7 +799,8 @@ Nr. 11–19 aus der zweiten (Abgleich, Teilen, Gruppen, „frei").
 - `data/index.md`, `data/modelle.md`, `data/felder.md`, `data/mappings.md`, `data/api.md`,
   `data/formate.md`, `data/standards.md`
 - `interactions/gestures/index.md`
-- `temp/apps-plan.md`, `temp/components-konzept-und-plan.md`
+- `temp/apps-plan.md`, `temp/components-konzept-und-plan.md`, `temp/apps-prompt-vorlage.md`
+- `todo/qwen.md` (offene Struktur-Aufgaben, u. a. defekte Links in `en/`)
 
 Normen, die in §15–§17 neu belegt wurden (noch nicht in `data/standards.md` eingetragen —
 nachziehen, wenn ein Punkt daraus in `docs/` wandert): RFC 9110 (409/412, `If-Match`),
