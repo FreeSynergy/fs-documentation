@@ -109,10 +109,14 @@ Beides hat Vor- und Nachteile; Entscheidung steht noch aus. Klar ist in beiden F
 
 ## 4. Datenbank-Kandidat Turso / libSQL — Belegstand 2026-11-03
 
-Der Nutzer tendiert zu Turso; bei Supabase. Nachstand:
+Der Nutzer tendiert zu Turso und erinnerte „von Supabase". Nachstand: Turso kam **nicht** von
+Supabase (der libSQL-Fork stammt von ChiselStrike); die Verbindung zu Supabase ist offenbar
+die Übernahme von 2026-10-02. Nachstand:
 
-- ✅ **Supabase hat Turso gekauft**, angekündigt am 2026-10-02, zusammen mit einer
-  150-Millionen-Runde. Beide Seiten sagen, für Bestandsnutzer ändere sich nichts.
+- ⚠️ **Supabase hat Turso gekauft**, angekündigt am 2026-10-02, zusammen mit einer
+  150-Millionen-Runde; beide Seiten sagen, für Bestandsnutzer ändere sich nichts.
+  **Einzelne Zweitquelle, noch nicht bei Supabase oder Turso selbst nachgelesen** — vor einer
+  Infrastruktur-Entscheidung prüfen.
   <https://layerbase.com/blog/supabase-acquires-turso>
 - ✅ **libSQL ist die gepflegte Gegenwart, Turso Database die Zukunft:** libSQL ist der
   SQLite-Fork mit Produktionseinsatz; Turso Database ist ein **Neuschreiben von SQLite in
@@ -404,6 +408,7 @@ Nummeriert, damit Antworten hier eingetragen werden können.
   beide eine Migration wollen?
 2. **Zieht Turso Database (Rust-Neuschreiben, „ohne Server, ohne Verbindung") oder libSQL**
   (§4)? Und: brauche ich echtes Offline-Schreiben (private Beta) statt Schreib-Delegation?
+  Vorab die Übernahme durch Supabase und der Reifegrad direkt bei Turso prüfen (beides ⚠️).
 3. Bleibt **`movable`** im Widget — ist Ziehen auf einen anderen Tag Bearbeiten oder Auswählen?
 4. Wer meldet Fähigkeiten: **Programm bei jeder Anfrage** mit, oder **Maske fragt beim Start
   ab** und merkt sie sich? (Nach §2 eher zweiteres, weil Build-Time-Vertrag.)
