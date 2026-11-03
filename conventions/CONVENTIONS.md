@@ -1,4 +1,4 @@
-# KONVENTIONEN
+# CONVENTIONS
 
 Dieses Verzeichnis ist das **Gedächtnis des Repos**. Ein Agent (qwen, Übersetzer, Opus)
 liest **zuerst** diese Datei. Es gibt kein Session-Gedächtnis über Sitzungen hinweg –
@@ -15,10 +15,10 @@ Stand: 2026-11-03
   In `fs-documentation` kommen nur Dokumentationen hin – auch technische. Offen und
   transparent, kein bezahlter Anteil.
 - Alles außerhalb von `docs/` ist Repo-Unterstützung und wird **nicht** gebaut:
-  `konventionen/` (Regeln), `todo/` (Aufgaben), `temp/` (unsortiert), `scripts/` (Werkzeuge).
+  `conventions/` (Regeln), `todo/` (Aufgaben), `temp/` (unsortiert), `scripts/` (Werkzeuge).
 - Grundsatz: **Plan, Beschluss, Vorgabe, Entwurf, Werkzeug → nicht in `docs/`.**
 
-Dieselbe Schale (`konventionen/`, `todo/`, `temp/`, `scripts/`) steht in **jedem** Repo.
+Dieselbe Schale (`conventions/`, `todo/`, `temp/`, `scripts/`) steht in **jedem** Repo.
 Andere Repos (Code) enthalten keine Doku, bestenfalls Hilfs-Doku.
 
 ## 2. Architektur – sechs Ebenen
@@ -142,7 +142,7 @@ Eintrag im gleichen Muster: `Aufgabe · Ebene · Dateien · Status`.
 
 - Nach jeder Änderung: **commit und push** (immer).
 - **Keine eigenen Agenten anlegen.** Bei Bedarf legt der Nutzer etwas Neues an.
-- Beschlüsse als nummerierte ADRs in `konventionen/decisions/` (Format: Kontext →
+- Beschlüsse als nummerierte ADRs in `conventions/decisions/` (Format: Kontext →
   Entscheidung → Folgen, mit Verweis auf betroffene Doku).
 
 ## 9. Sprach- und Link-Technik (wichtig fürs Umbauen)

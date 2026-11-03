@@ -3,10 +3,10 @@
 Modell: qwen3.8 · Scope: Struktur, Konventionen, physische Umzüge
 
 ## erledigt
-- Repo-Schale angelegt: `konventionen/`, `todo/`, `temp/`, `scripts/` (2026-11-03)
+- Repo-Schale angelegt: `conventions/`, `todo/`, `temp/`, `scripts/` (2026-11-03)
 - `tools/` → `scripts/`, Wegwerf-Skripte weg, Einmal-Migrationen → `scripts/_archive/` (2026-11-03)
 - Nicht-Doku-Arbeitsdateien nach `temp/` (2026-11-03)
-- KONVENTIONEN.md + ADRs 0001–0004 (2026-11-03)
+- CONVENTIONS.md + ADRs 0001–0004 (2026-11-03)
 - `scripts/migrate_links.py` geschrieben und getestet (2026-11-03)
 - `interactions/` umgesetzt: gestures + animations (de+en) umgezogen, 63 Links, Nav (2026-11-03)
 
@@ -14,5 +14,5 @@ Modell: qwen3.8 · Scope: Struktur, Konventionen, physische Umzüge
 - `programs/` aus `apps/`: Level apps/suites/platform vergeben, Kategorien zuordnen, Verweise + Nav (mit migrate_links) · Ebene 4–6 · Status: offen
 - `interactions/index.md` als Landing-Page ergaenzen · Status: offen (optional)
 - `components/` Bänder primitives/widgets/workbenches physisch umsetzen + `gen_component_indexes.py` ans Band-Modell anpassen · Ebene 1–3 · Status: offen
-- `SYSTEM.md` aufloesen: normative Teile nach konventionen/, Rest nach docs/de Beitragend · Status: offen
+- `SYSTEM.md` aufloesen: normative Teile nach conventions/, Rest nach docs/de Beitragend · Status: offen
 - `crates/` (untracked) später nach `programs/platform/` · Status: offen

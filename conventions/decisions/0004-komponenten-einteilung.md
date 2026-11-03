@@ -7,7 +7,7 @@ sortiert nach Ebene. Die Grenze widget↔workbench war unklar.
 ## Entscheidung
 Test-Frage: *Kennt der Baustein seine Inhalte beim Bauen?* ja → widget, nein → workbench;
 primitive = nicht weiter zerlegbar. Die vollständige Zuordnung steht in
-`konventionen/KONVENTIONEN.md` §3. Festgelegte Grenzfälle:
+`conventions/CONVENTIONS.md` §3. Festgelegte Grenzfälle:
 
 - `*-picker`, `range-calendar` → widget
 - Overlays → widget (eigene Lebensdauer, kein offenes Editieren)
