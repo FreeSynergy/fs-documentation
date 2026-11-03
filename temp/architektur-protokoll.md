@@ -7,6 +7,10 @@ oder in einen ADR wandert, bleibt er hier stehen und bekommt einen Verweis.
 
 Stand: 2026-11-03 · Quelle: Gespräch Nutzer ↔ Agent (Kalender-Fall → Masken-Modell → Datenhaltung)
 
+Zweite Runde am selben Tag: Abgleich und Kollision, Schenken gegenüber Freigeben, „als frei
+markieren", Gruppengröße. Antworten des Nutzers sind in **§15–§17** festgehalten; die daraus
+entstandenen offenen Punkte stehen in §18, 11–19.
+
 Legende: **gesetzt** = entschieden, nicht mehr offen · **offen** = wartet auf Entscheidung ·
 **Idee** = noch nicht geprüft · Belege wie in `data/standards.md` (✅ abgerufen, ⚠️ ungeprüft).
 
@@ -227,14 +231,18 @@ Fehlern verhalten darf, und gehört in die Doku.
   „**kein Pate gefunden**, Kandidat ODRL (Erreichbarkeit geprüft, Inhalt nicht gelesen)" ⚠️.
 - **ODRL** ist deshalb kein exotischer Wunsch, sondern die W3C-Sprache dafür, welche Daten von
   wem wofür genutzt werden dürfen — inklusive der Umgangsregeln. Passt zum Maßstab
-  „Standards" und wäre gewonnen statt erfunden. **Inhaltlich noch nicht gelesen** — muss vor
-  der Abbildung belegt werden.
+  „Standards" und wäre gewonnen statt erfunden. **Inhalt jetzt gelesen** ✅ — Klassen und die
+  Unterscheidung `Offer`/`Agreement` stehen in §17.
 - **Kopie oder Verweis?** Zwei mögliche Grundformen, beide brauchbar:
 
   | Form | Verhalten | Preis |
   |------|-----------|-------|
   | **Kopie mit Herkunft** | Arbeitskopie in der eigenen DB, offline nutzbar | kann veralten, braucht Abgleich |
   | **Live-Verweis per IRI** | immer aktuell | Gegenstelle muss erreichbar sein |
+
+  **Stand der zweiten Runde (§16): es ist keine Wahl zwischen beiden.** Beide Formen gehören ins
+  Modell, weil der Nutzer zwei verschiedene Handlungen hat — **Schenken** (Kopie, weg) und
+  **Freigeben** (bleibt an mich gebunden). Die Frage aus §15, Nr. 6 ist damit beantwortet.
 
   Vermutung des Agenten: **Kopie mit Herkunft** plus Delta-Abgleich — dafür spricht alles
   Lokale im Modell, und `Revision / Version` in `modelle.md` ist der richtige Unterbau. Dann
@@ -399,9 +407,230 @@ Modell zu diesem Widget passt, und die Programm-Doku kann sagen, welcher Anschlu
   Programm springen kann. Das Widget darf das Programm dabei **nicht kennen**: es feuert eine
   Absicht, die Plattform löst auf.
 
-## 15. Offene Fragen
+## 15. Abgleich — Primary, Kollision, Grabstein
 
-Nummeriert, damit Antworten hier eingetragen werden können.
+Die Mesh-Frage aus der ersten Runde („was ist ein Primary, wenn zwei Instanzen denselben Termin
+bearbeiten?") ist beantwortet — aber die Antwort ist **nicht** „einer gewinnt automatisch".
+Der Nutzer unterscheidet drei Situationen, und die dritte ist die technisch schwere.
+
+**gesetzt — Fall 1: Server ist schon da, das Programm kommt später**
+
+- **Wer zuerst da war, dessen Datensatz gilt.** Der Spätere wird nicht still überschrieben.
+- Der Ankömmling (das Programm) bekommt eine Rückfrage: **Da ist ein Fehler — überschreiben,
+  ändern oder abbrechen?** Drei Antworten, keine vierte stumm.
+- Technik dahinter: das ist ein **bedingtes Schreiben**. Der Server lehnt ab, wenn die Fassung,
+  die das Programm annimmt, nicht die aktuelle ist — HTTP **409 (Conflict)** bzw. **412
+  (Precondition Failed)** mit `ETag`/`If-Match` ✅ (RFC 9110 §15.5.10, §13.1.1). Ohne diese
+  Bedingung gewinnt immer der zuletzt Schreibende, lautlos.
+
+**gesetzt — Fall 2: beide kommen gleichzeitig, Inhalte sind verschieden**
+
+- Der Server meldet über **eines** der beiden Programme: derselbe Satz wird zweimal aufgespielt,
+  und die beiden sind **unterschiedlich**.
+- Der **Mensch** entscheidet, welche Fassung er haben will — **und was mit der anderen
+  passiert**. Beides ist Teil der Frage, nicht Restmüll.
+- Acceptiert: bei sehr vielen Programmen wird das Arbeit. „Wer das nicht sofort verbindet, darf
+  sich nicht wundern, wenn er dann aufräumen muss." — **Aufräumen ist ein akzeptierter Preis
+  für Offline**, kein Grund, das Modell zu verbiegen.
+
+**gesetzt — Fall 3: der Server war mal da, der Datensatz ist dort gelöscht, ein Client hat ihn
+noch**
+
+- Das ist **keine sichere Sache**, deshalb: **letztes Datum prüfen** und das Programm fragt —
+  gibt aber eine **Empfehlung** ab, nicht nur eine Frage.
+  - Löschen ist ** später** passiert → empfohlen: hier auch löschen.
+  - Anlegen/Ändern ist ** später** passiert → empfohlen: dort wieder einfügen.
+- Diese Empfehlung gilt **nur, wenn der Datensatz schon mal da war.** War er nie da: einfach
+  einfügen bzw. kopieren, ohne Rückfrage.
+
+**die technische Folge, die alles trägt: der Grabstein**
+
+„War nie da" und „war da und ist weg" sind im Moment nicht unterscheidbar — aber genau diese
+Unterscheidung verlangt Fall 3. Ohne Grabstein rät das Programm in der Hälfte der Fälle falsch.
+
+- ✅ AS2 hat den Typ **`Tombstone`** mit `formerType` und `deleted` (Vocabulary, Object Types,
+  Beispiel 60): „a content object that has been deleted … signify that there used to be an object at this
+  position". <https://www.w3.org/TR/activitystreams-vocabulary/>
+- ✅ ActivityPub §6.4: beim `Delete` **MAY** der Server das Objekt durch einen Grabstein
+  ersetzen; wird das gelöschte Objekt angefordert, **SHOULD** er **410 Gone** mit Grabstein
+  antworten, sonst 404. <https://www.w3.org/TR/activitypub/>
+- **Idee:** Grabsteine sind keine Nebennotiz, sondern eine eigene Tabelle pro Domäne (oder eine
+  gemeinsame pro Instanz) mit `id`, `formerType`, `deleted`, `deletedBy`. Löschen wird sonst zu
+  „Zeile fehlt", und „fehlt" ist mehrdeutig.
+
+**Idee — Kollision ist ein Zustand, kein Dialog**
+
+Eine Rückfrage, die niemand beantwortet, ist keine Entscheidung. Wenn die Frage nur in einem
+Modal hängt, ist der Konflikt beim nächsten Neustart weg und die Daten still gemischt.
+Vermutung: ein Konflikt ist ein **Zustand am Datensatz** (Konflikt-Markierung plus eigene Liste,
+in der man sie sammelt) — damit „nicht sofort" legal ist und „später aufräumen" (Fall 2) ein
+Ziel hat statt einer Lücke.
+
+**Belegstand für Fassungszähler — das kann man erben statt erfinden**
+
+- ✅ **JSCalendar `sequence`** (RFC 8984 §4.1.7): anfangs 0, **MUST bei jeder Änderung um eins
+  hoch**, außer bei `participants`. <https://www.rfc-editor.org/rfc/rfc8984>
+- ✅ **iTIP RFC 5546 §5.3** regelt dasselbe für Kalender: Folge 5 gegen vorhandene Folge 2 →
+  **aktualisieren**; Folge 2 gegen vorhandene Folge 5 → **MUST NOT überschreiben**. Das ist ein
+  fertiges Regelwerk für „welche Fassung gewinnt", für das wir nichts erfinden müssen.
+  <https://www.rfc-editor.org/rfc/rfc5546>
+- ✅ **JMAP RFC 8620**: `state` pro Datensatz, `ifInState` beim Ändern, Fehler **`stateMismatch`**,
+  und `updatedSince`/`oldState`/`newState` beim Nachziehen. Genau das Muster „welche Fassung habe
+  ich, und hat sich die Welt seitdem bewegt". <https://www.rfc-editor.org/rfc/rfc8620>
+
+**offen — Punkte, die die Antwort nicht auflöst**
+
+1. **„ändern" ist unklar.** Überschreiben · zusammenführen · eigene Fassung als Zweig
+   behalten? Drei verschiedene Dinge, und die Auswahl entscheidet, ob `Revision/Version`
+   pro geteiltem Objekt mitwandern muss (vgl. §18, Nr. 6).
+2. **Wo wohnt die Rückfrage — Server oder Maske?** Vermutung: **Server** entscheidet, Maske
+   zeigt. Sonst löst jedes der 84 Programme dieselbe Kollision anders, und eine Maske könnte
+   Konflikte einfach unterdrücken (widerspricht §5: große Prüfung da, wo die Daten liegen).
+3. **„letztes Datum" ist auf zwei Rechnern nicht sicher.** Uhren laufen auseinander, und ein
+   zurückgestelltes Handy lügt. Entweder akzeptiert man das (mit Rückfrage als Netz) oder der
+   Vergleich bekommt einen **Zähler pro Datensatz** (`sequence`) und die Frage „kennt diese
+   Fassung meine Fassung?" — nicht nur ein Zeitstempel. **Das ist der Punkt, den ich beim
+   nächsten Mal zuerst klären möchte.**
+4. **Wie lange bleiben Grabsteine?** Für immer frisst Platz, ein Verfallsdatum bricht die
+   Unterscheidung aus Fall 3 wieder auf. Braucht eine Regel (z. B. so lang wie die längste
+   Offline-Zeit, die man versprechen will).
+5. **Fall „Server ist ganz weg"** (nicht nur ein Datensatz) ist damit noch nicht behandelt.
+   Die Instanz steht in der ID (§6, Beschluss 3), also sind die Daten noch zuordenbar — aber
+   ob man einer wiedergekehrten Instanz ihre alten Datensatz-Identitäten noch glaubt, ist eine
+   Vertrauensfrage (siehe `data/identity/`, WoT).
+
+**Was das für „Primary" heißt**
+
+Der Begriff ist in zwei Bedeutungen aufgetaucht und muss getrennt werden:
+
+| Bedeutung | Quelle | Antwort dieser Runde |
+|---|---|---|
+| **Schreibprimär** (wo schreibt die Replik hin) | Turso/libSQL, §4 | bleibt eine Technikfrage (§18, Nr. 2) |
+| **Wer hat recht** | Mesh-Frage | **kein automatischer Gewinner** außer Reihenfolge in Fall 1; sonst fragt das Programm |
+
+Der Satz „Schreiben setzt das Primary voraus" aus §4 gilt also nur für die Technik-Ebene. Für die
+Wahrheit gilt: **Reihenfolge entscheidet einmal, danach entscheidet der Mensch.**
+
+## 16. Schenken und Freigeben — zwei Grundformen; Gruppe = Liste
+
+Die Frage „Kopie mit Herkunft oder Live-Verweis?" (§8, §18 Nr. 6) war falsch gestellt. Der
+Nutzer hat **zwei Handlungen**, und sie verhalten sich gegenteilig:
+
+| | **Schenken / Geschenk** | **Freigeben** |
+|---|---|---|
+| was passiert | eine Kopie geht zum Empfänger, die Nachricht mailt man an eine Person oder eine Gruppe | wie im Messenger: bleibt an den Geber gebunden |
+| weitergeben | der Empfänger darf, er hat eine eigene Kopie | hat er kopiert und weitergeleitet, ist sie außer Reichweite |
+| zurücknehmen | **nicht möglich** — „ich habe meine Daten abgegeben" | **ja**: lösche ich sie, ist sie auch beim anderen weg |
+| Grundform | **Kopie mit Herkunft** | **Verweis mit Bindung** (Löschen pflanzt sich fort) |
+
+**gesetzt — Freigaben können Abgabe verlangen**
+
+Bei Umfrage und Buchhaltung kann man Leute **verpflichten, etwas abzugeben**. Dann wird eine
+Kopie von der Person gemacht — **nicht alles, sondern alles, was man dafür braucht.** Und es gibt
+die Achse **anonym oder nicht**.
+
+- Das ist ein dritter Fall neben Schenken und Freigeben: eine **Forderung** (der Geber ist der
+  Empfänger). AS2-Muster dafür: `Invite`/`Question`/`Offer` mit `target` ✅ (Vocabulary, Beispiele
+  23–24), Annahme mit `Accept`, Ablehnung mit `Reject`.
+- „nicht alles, nur was man dafür braucht" braucht eine **Teilmenge pro Anfrage** — nicht
+  „Kontakt ja/nein", sondern „diese Felder". Das ist ein Feld-Modell-Thema, kein Rechte-Thema,
+  und es berührt `data/felder.md`.
+
+**gesetzt — Gruppe ist eine Liste, wie bei E-Mail**
+
+Ich schreibe Leute an oder Gruppen; die Gruppe ist **nichts anderes als eine Liste**.
+
+- ✅ AS2 `Group` („formal or informal collective of Actors"), `audience` = „total population of
+  entities for which the object can be considered to be relevant", `to/cc/bto/bcc` steuern, wo
+  Kopien landen (Vocabulary §3.3, §4) ✅.
+- ✅ ActivityPub: die **Followers-Collection** ist ein üblicher Ziel-Korb beim Senden; Server
+  liefern nur an die Adressen in `to/bto/cc/bcc/audience` ✅. Die Liste lebt also als Collection
+  am Server, nicht als Attribut am Datensatz.
+- **Folge, noch nicht ausgesprochen:** bei einer **Schenkung** gilt die Liste **im Augenblick des
+  Sendens**. Ändert sich die Mitgliedschaft danach, ändert das an den verteilten Kopien nichts —
+  das ist korrekt und billig: eine Gruppe muss nicht weiterexistieren, damit ihre Gaben stimmen.
+- **Bei Freigaben ist es umgekehrt**: dort muss eine Mitgliedschaftsänderung **sofort** wirken
+  (wer aus der Tanzgruppe austritt, darf den Termin nicht weiter sehen). Genau hier entscheidet
+  sich, ob Gruppen **gezählt** werden müssen oder als Liste genügen: **zum Schicken reicht die
+  Liste, zum Widerruf braucht man die Zugehörigkeit.**
+- Der Dedup-Satz aus §8 („sie bekommt nur einen Datensatz") bleibt davon unberührt und bleibt
+  eine Anforderung an die Objektidentität über mehrere Gruppen hinweg.
+
+**offen — Gruppengröße (die Frage ist offen geblieben)**
+
+Klar ist nur der trivialste Fall (die Frau in zwei Gruppen). Offen: Tanzgruppe 40, Verein 400,
+Firma 2000. Konkret hängen davon drei Dinge ab:
+
+1. **Widerruf.** „Alle Freigaben einer Gruppe neu schreiben" ist bei 2000 Leuten und 50 000
+   Objekten nicht machbar. Lösung kann nur sein: **Freigabe zeigt auf die Gruppe**, und die
+   Zugehörigkeit wird bei der Prüfung nachgeschlagen — nicht in die Freigabe ausgeschrieben.
+2. **Abzählen** („wer hat das gesehen?") geht nur, wenn die Freigabe ein eigenes Objekt ist.
+   Eine Zeile „geteilt mit Gruppe Y" an meinem Kontakt kann man nicht abzählen.
+3. **Rechtlich/sozial:** braucht eine Gruppenmitgliedschaft Zustimmung, Sichtbarkeit, Verwaltung
+   durch jemand anderen als den Gruppeninhaber?
+
+**offen — Attribut oder eigene Domäne?** Die Frage aus der ersten Runde ist damit nicht
+entschieden, aber die Antwort neigt sich klar: **eigenes Modell**, denn Abzählen, Widerrufen und
+Gruppieren (Punkt 1 und 2) sind mit einem Attribut nicht machbar. Ein Kandidatenname für
+`data/modelle.md` wäre `Share`/`Grant` plus `Group`/`Membership`. Das schließt die in §8
+benannte **einzige echte Lücke** in `modelle.md`.
+
+## 17. „Als frei markieren" — Ansage, nicht Regel
+
+Antwort des Nutzers: **„Wenn ich meine Daten abgebe, dann gebe ich sie ab. Der Serverbetreiber
+kann damit machen, was er möchte. Er sollte nur vorher sagen, was er damit vorhat. Das kann man
+mit AS2 abbilden."** Das ist die konsequente Fortsetzung der Vertrauensgrenze aus §8: die Regel
+endet am eigenen Server.
+
+**gesetzt**
+
+- Nach der Abgabe gibt es **keine durchsetzbare Regel mehr**, nur Vertrauen.
+- Was es gibt, ist eine **vorherige Ansage** der Absicht. Eine Ansage ist kein Zwang.
+
+**die Unterscheidung, die man daraus machen muss — drei Zustände, kein Boolesch**
+
+§8 sagt „Direkt geben **und** die Daten als frei markieren". „Frei" deckt drei verschiedene
+Dinge ab, und sie sind getrennt speicherbar:
+
+| Zustand | heißt | fehlt dann |
+|---|---|---|
+| **kein Kanal** | kein Abo, keine Regelbeziehung — nur dieser einen Stelle gegeben | die Beziehung |
+| **keine Umgangsregel** | keine Regel an der Kopie; jeder darf weitergeben | die Regel |
+| **kein Anspruch** | Public Domain / gemeinfrei — auch rechtlich nichts vorzubehalten | der Anspruch |
+
+„Kein Kanal" und „keine Regel" sind verschieden: ein einzelnes Geschenk ohne Regel ist **nicht**
+daselbe wie gemeinfrei.
+
+**wie man es abbildet — zwei Ebenen, nicht eine**
+
+- **Ansage (menschenlesbar, am Angebot):** AS2 `Offer`/`Announce` mit `name`/`summary`/`content`
+  (und `*Map` für Sprachen), `audience` für den angesprochenen Kreis ✅. Das ist die
+  Absichts-Erklärung, die der Nutzer fordert. **Nicht durchsetzbar** — genau richtig.
+- **Regel (maschinenlesbar, an der Kopie, solange ich sie halte):** **ODRL**. Beleg jetzt
+  gelesen (zuvor ⚠️): ODRL Information Model kennt `Permission` (Fähigkeit, eine `Action` auf
+  einem `Asset` auszuüben), `Prohibition` (Unfähigkeit), **`Duty`** (Pflicht als Vorbedingung
+  einer Erlaubnis), `Constraint`, `Party` und **`PartyCollection`**, `assigner`/`assignee`, und
+  die Unterklasse **`Agreement`** = „Regeln, die vom `assigner` an `assignee`-Parteien
+  **gewährt** werden" ✅.
+  <https://www.w3.org/TR/odrl-model/>
+- ✅ Der feine Unterschied passt exakt auf unsere zwei Handlungen: ODRL **`Offer`** stellt Regeln
+  für einen weiteren Kreis **bereit, gewährt aber keine Regeln**; **`Agreement`** gewährt sie.
+  Übersetzt: **Angebot mit Ansage** gegenüber **tatsächlicher Abgabe**.
+
+**offen**
+
+1. Wird ODRL als Pate angenommen (Nr. 7 bleibt)? Jetzt mit Inhalt gelesen, also entscheidbar; die
+   Frage ist nur noch, wie viel der ODRL-Klassen wir wirklich brauchen — vermutlich
+   `Policy`/`Agreement`/`Offer` + `Permission`/`Prohibition`/`Duty`, nicht den ganzen Kern.
+2. **Wer sagt die Absicht?** Die Ansage ist eine Erklärung des Gebers. Ob der Betreiber sie
+   beantworten muss („ich tue X damit"), ist eine Produktfrage, keine Datenfrage.
+3. **Pate für „kein Anspruch"** (Public Domain) ist nicht gesucht — Kandidaten (Lizenz-Kenn-
+   zeichnung) sind **nicht geprüft** ⚠️.
+
+## 18. Offene Fragen
+
+Nummeriert, damit Antworten hier eingetragen werden können. Nr. 1–10 aus der ersten Runde,
+Nr. 11–19 aus der zweiten (Abgleich, Teilen, Gruppen, „frei").
 
 1. **Variante A oder B** (§3): eine Zentrale Datenbank, oder eigene Datenbank je Programm mit
   dem Server als Abgabestelle? Wer ist Herr über das Schema, wenn zwei Programme beim Start
@@ -414,14 +643,42 @@ Nummeriert, damit Antworten hier eingetragen werden können.
   ab** und merkt sie sich? (Nach §2 eher zweiteres, weil Build-Time-Vertrag.)
 5. Was ist die **eine Inhaltsrepräsentation** für Texte — Block-Array oder String mit Markup?
   Inklusive Überschriftenstufe und der Abbildung zwischen beiden (§11).
-6. **Kopie mit Herkunft** oder **Live-Verweis** als Grundform des Teilens (§8)? Wandern
-  `Revision/Version` pro geteiltem Objekt mit?
-7. Wird **ODRL** als Pate für Umgangsregeln angenommen? Inhaltlich noch nicht gelesen.
+6. ~~Kopie mit Herkunft oder Live-Verweis?~~ → **erledigt, beide** (§16): Schenken = Kopie,
+  Freigeben = Verweis mit Bindung. **Offen bleibt der Rest der Nummer:** wandert
+  `Revision/Version` pro geteiltem Objekt mit (hängt an Nr. 12)?
+7. Wird **ODRL** als Pate für Umgangsregeln angenommen? Inhalt ist gelesen (§17) — es fehlt nur
+  noch die Ja/Nein-Entscheidung und der Umfang (welche Klassen).
 8. **Zeiger- und Eingabezweig** (Maus, Tastatur, Stift) neben den Touch-Gesten: eigene Familie
   oder Querschnitt durch alle Familien (§12)?
 9. Gehört die **Kommandoliste** pro Programm in `docs/`? Wohin — eigene Datei neben
   `menu.md`/`features.md`, oder ein neuer Zweig?
 10. **Datenanschluss pro Component** (§10): eigene Tabelle in `attributes.md` oder eigene Datei?
+
+**aus der zweiten Runde (Abgleich, Teilen, Gruppen, „frei")**
+
+11. **Woran erkennt das Programm, ob es eine Fassung schon mal gesehen hat** — Zeitstempel oder
+    Zähler? Uhren sind über zwei Rechner unsicher (§15, offen 3). Meine Empfehlung: pro
+    geteiltem Objekt `sequence` (JSCalendar) oder `state` (JMAP), der Zeitstempel wird nur die
+    **Empfehlung**, nicht die Entscheidung.
+12. Was heißen die drei Antworten aus Fall 1 genau: **überschreiben · zusammenführen · eigene
+    Fassung behalten**? Und was heißt „ändern" in Fall 2 — dieselben drei, oder mehr?
+13. **Wie lange bleiben Grabsteine**, und liegen sie pro Domäne oder pro Instanz (§15, offen 4)?
+14. Ist ein **Konflikt ein Zustand am Datensatz** mit eigener Liste, oder nur ein Dialog
+    (§15, Idee)? Wenn Zustand: welches Widget zeigt ihn (`alert`? `list-view`? beides?).
+15. **Fall „Server ist ganz weg"** statt einzelner Datensatz: glaubt man einer wiedergekehrten
+    Instanz ihre alten IDs (§15, offen 5)? Hat das etwas mit `data/identity/` (WoT) zu tun oder
+    ist es bewusst Plattform-Ebene 6?
+16. **Wie groß kann eine Gruppe werden**, und **braucht Mitgliedschaft Zustimmung** (§16)?
+    Entscheidend für die Frage, ob Freigaben auf Gruppen **zeigen** (billig, sofort widerrufbar)
+    oder Mitgliedschaften **ausgeschrieben** werden (abzählbar, teuer beim Widerruf).
+17. **Eigenes Modell für Freigaben** (`Share`/`Grant` + `Group`/`Membership`) — Name und
+    Aufnahme in `data/modelle.md`? Das wäre das **sechzehnte** Modell und schließt die Lücke
+    aus §8.
+18. Bei der **Abgabepflicht** (Umfrage, Buchhaltung): wie beschreibt man die **Teilmenge** der
+    Felder, die man verlangt, und was heißt **anonym** technisch (Kopie ohne
+    `attributedTo`/`actor`)?
+19. Drei Zustände des **Frei-Markierens** (§17): werden sie als **drei Felder**, ein Enum, oder
+    als ODRL-Policy mit leerem Inhalt gespeichert?
 
 ## Siehe auch
 
@@ -431,3 +688,9 @@ Nummeriert, damit Antworten hier eingetragen werden können.
   `data/formate.md`, `data/standards.md`
 - `interactions/gestures/index.md`
 - `temp/apps-plan.md`, `temp/components-konzept-und-plan.md`
+
+Normen, die in §15–§17 neu belegt wurden (noch nicht in `data/standards.md` eingetragen —
+nachziehen, wenn ein Punkt daraus in `docs/` wandert): RFC 9110 (409/412, `If-Match`),
+RFC 5546 iTIP §5.3 (Fassungszähler), RFC 8620 JMAP (`state`, `ifInState`, `stateMismatch`),
+AS2 `Tombstone`/`Group`/`Offer`/`audience`, ActivityPub §6.4 (Grabstein, 410 Gone),
+ODRL Information Model.
