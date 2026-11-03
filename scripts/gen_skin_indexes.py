@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Erzeugt skins/index.md je Programmkategorie und aktualisiert den
-Skin-Dokumentation-Abschnitt in <kategorie>/index.md.
+"""Erzeugt masks/index.md je Programmkategorie und aktualisiert den
+Masken-Dokumentation-Abschnitt in <kategorie>/index.md.
 
 Seit dem programs-Umzug liegen die Kategorien dreistufig:
-    docs/de/programs/<ebene>/<kategorie>/skins/<programm>/
+    docs/de/programs/<ebene>/<kategorie>/masks/<programm>/
 ebene = apps | suites | platform. Der Pfadtext in den erzeugten Dateien folgt
 dieser Struktur (frueher: docs/de/apps/<kategorie>/...).
 
-Kategorien ohne skins/-Ordner werden uebersprungen, ebenso von Hand gepflegte
-skins/index.md (erkennbar am fehlen der "Verwandte Bereiche"-Ueberschrift) —
+Kategorien ohne masks/-Ordner werden uebersprungen, ebenso von Hand gepflegte
+masks/index.md (erkennbar am fehlen der "Verwandte Bereiche"-Ueberschrift) —
 die werden nicht ueberschrieben.
 
 Laeuft idempotent; kann nach jeder Welle erneut ausgefuehrt werden.
@@ -25,7 +25,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
 LEVELS = ["apps", "suites", "platform"]
 
 # Signatur dieses Skripts: nur Dateien mit dieser Einleitung werden ueberschrieben.
-# wiki/, messenger/ und desktop/skins/index.md sind von Hand gepflegt und breiter —
+# wiki/, messenger/ und desktop/masks/index.md sind von Hand gepflegt und breiter —
 # die bleiben unberuehrt.
 GENERATOR_INTRO = ("Dieses Verzeichnis enthält die Dokumentation der Programme dieser "
                    "Kategorie nach dem Wiki-Schema")
@@ -72,9 +72,9 @@ def rel(path, base):
 
 def gen_skin_index(level, cat, entries):
     cat_dir = os.path.join(ROOT, level, cat)
-    skin_dir = os.path.join(cat_dir, "skins")
+    mask_dir = os.path.join(cat_dir, "masks")
     lines = [
-        f"# {cat.capitalize()} Skin-Dokumentation",
+        f"# {cat.capitalize()} Masken-Dokumentation",
         "",
         "## Übersicht",
         "",
@@ -82,7 +82,7 @@ def gen_skin_index(level, cat, entries):
         "Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API — sieben Dateien pro Programm.",
         "",
         "Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, "
-        "deren Oberfläche und Schnittstellen als Skin nachgebildet bzw. angebunden werden.",
+        "deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.",
         "",
         "## Enthaltene Dokumentationen",
         "",
@@ -94,7 +94,7 @@ def gen_skin_index(level, cat, entries):
         "## Verzeichnisstruktur",
         "",
         "```",
-        f"docs/de/programs/{level}/{cat}/skins/",
+        f"docs/de/programs/{level}/{cat}/masks/",
         "├── index.md              (diese Datei)",
     ]
     for i, (prog, _) in enumerate(entries):
@@ -126,12 +126,12 @@ def gen_skin_index(level, cat, entries):
         "## Verwandte Bereiche",
         "",
         f"- [Kategorie-Übersicht](../) – Überblick über diese Programmkategorie",
-        f"- [Wiki-Skins]({rel(os.path.join(ROOT, 'apps', 'wiki', 'skins'), skin_dir)}) – Referenzschema dieser Dokumentation",
-        f"- [Desktop-Skins]({rel(os.path.join(ROOT, 'platform', 'desktop', 'skins'), skin_dir)}) – gleiche Dateistruktur",
-        f"- [Standardisierte Daten]({rel(os.path.join(ROOT, '..', 'data'), skin_dir)}) – Felder und Modelle für alle Skin-APIs",
+        f"- [Wiki-Masken]({rel(os.path.join(ROOT, 'apps', 'wiki', 'masks'), mask_dir)}) – Referenzschema dieser Dokumentation",
+        f"- [Desktop-Masken]({rel(os.path.join(ROOT, 'platform', 'desktop', 'masks'), mask_dir)}) – gleiche Dateistruktur",
+        f"- [Standardisierte Daten]({rel(os.path.join(ROOT, '..', 'data'), mask_dir)}) – Felder und Modelle für alle Masken-APIs",
         "",
     ]
-    path = os.path.join(skin_dir, "index.md")
+    path = os.path.join(mask_dir, "index.md")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
@@ -139,9 +139,9 @@ def gen_skin_index(level, cat, entries):
 
 def category_block_authored(text):
     """True, wenn der Skin-Abschnitt diesem Skript folgt (oder noch fehlt)."""
-    if "## Skin-Dokumentation" not in text:
+    if "## Masken-Dokumentation" not in text:
         return True
-    return bool(re.search(r"## Skin-Dokumentation.*?Referenzschema:.*?$", text, re.S | re.M))
+    return bool(re.search(r"## Masken-Dokumentation.*?Referenzschema:.*?$", text, re.S | re.M))
 
 
 def update_category_index(level, cat, entries):
@@ -149,20 +149,20 @@ def update_category_index(level, cat, entries):
     path = os.path.join(cat_dir, "index.md")
     with open(path, encoding="utf-8") as fh:
         text = fh.read()
-    links = "\n".join(f"- [{t}](skins/{p}/index.md) - {t}" for p, t in entries)
+    links = "\n".join(f"- [{t}](masks/{p}/index.md) - {t}" for p, t in entries)
     block = (
-        "## Skin-Dokumentation\n\n"
+        "## Masken-Dokumentation\n\n"
         "Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: "
         "`index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter "
-        f"`programs/{level}/{cat}/skins/<programm>/`.\n\n"
+        f"`programs/{level}/{cat}/masks/<programm>/`.\n\n"
         f"**dokumentiert ({len(entries)} Programme):**\n\n"
         f"{links}\n\n"
-        "Übersicht: [Skin-Verzeichnis](skins/index.md)\n\n"
-        f"Referenzschema: [Wiki-Skins]({rel(os.path.join(ROOT, 'apps', 'wiki', 'skins', 'index.md'), cat_dir)})"
-        f" · [Desktop-Skins]({rel(os.path.join(ROOT, 'platform', 'desktop', 'skins', 'index.md'), cat_dir)})"
+        "Übersicht: [Masken-Verzeichnis](masks/index.md)\n\n"
+        f"Referenzschema: [Wiki-Masken]({rel(os.path.join(ROOT, 'apps', 'wiki', 'masks', 'index.md'), cat_dir)})"
+        f" · [Desktop-Masken]({rel(os.path.join(ROOT, 'platform', 'desktop', 'masks', 'index.md'), cat_dir)})"
         f" · [Standardisierte Daten]({rel(os.path.join(ROOT, '..', 'data', 'api.md'), cat_dir)})"
     )
-    pattern = re.compile(r"## Skin-Dokumentation.*?Referenzschema:.*?$", re.S | re.M)
+    pattern = re.compile(r"## Masken-Dokumentation.*?Referenzschema:.*?$", re.S | re.M)
     if pattern.search(text):
         text = pattern.sub(block, text, count=1)
     else:
@@ -172,7 +172,7 @@ def update_category_index(level, cat, entries):
     return path
 
 def generator_authored(skin_index):
-    """True, wenn skins/index.md diesem Skript gehoert (oder noch fehlt)."""
+    """True, wenn masks/index.md diesem Skript gehoert (oder noch fehlt)."""
     if not os.path.isfile(skin_index):
         return True
     with open(skin_index, encoding="utf-8") as fh:
@@ -181,19 +181,19 @@ def generator_authored(skin_index):
 def main():
     done, skipped, protected = [], [], []
     for level, cat in categories():
-        skins = os.path.join(ROOT, level, cat, "skins")
-        if not os.path.isdir(skins):
+        masks = os.path.join(ROOT, level, cat, "masks")
+        if not os.path.isdir(masks):
             skipped.append(f"{level}/{cat}")
             continue
-        if not generator_authored(os.path.join(skins, "index.md")):
-            protected.append(f"{level}/{cat} (skins/index.md)")
+        if not generator_authored(os.path.join(masks, "index.md")):
+            protected.append(f"{level}/{cat} (masks/index.md)")
             continue
         cat_index = os.path.join(ROOT, level, cat, "index.md")
         with open(cat_index, encoding="utf-8") as fh:
             if not category_block_authored(fh.read()):
-                protected.append(f"{level}/{cat} (Skin-Abschnitt von Hand)")
+                protected.append(f"{level}/{cat} (Masken-Abschnitt von Hand)")
                 continue
-        entries = titles_from_index(skins)
+        entries = titles_from_index(masks)
         if not entries:
             skipped.append(f"{level}/{cat}")
             continue
@@ -204,7 +204,7 @@ def main():
     if protected:
         print("Von Hand gepflegt (nicht angefasst): " + ", ".join(protected))
     if skipped:
-        print("Ohne Skins (übersprungen): " + ", ".join(skipped))
+        print("Ohne Masken (übersprungen): " + ", ".join(skipped))
 
 if __name__ == "__main__":
     sys.exit(main())

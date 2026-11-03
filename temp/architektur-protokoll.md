@@ -792,6 +792,86 @@ dritte Repo nebenbei.
 4. Der Datenzweig-Kram (§18 Nr. 16–19, Grabsteine, `sequence`) kann bis nach der Grundmaske
    warten — **außer** P7, weil die Adresse in der Maske schon benutzt wird.
 
+## 20. Antworten des Nutzers auf §19 (vierte Runde, 2026-11-03)
+
+Der Nutzer hat P1–P6 beantwortet; P8–P12 bleiben offen. Die Antworten sind hier
+festgehalten, das Beschlossene steht als ADR in `conventions/decisions/`.
+
+**P1 — der Haken** ✅ geklärt: `[x]` heißt **verifiziert** — die Programme wurden noch mal
+überprüft und das Projekt ist dadurch konkreter geworden (Beispiel: Google arbeitet kaum nach
+Standards, macht sein eigenes Ding; OSS versucht Standards zu stützen, die großen proprietären
+kaum oder dagegen — OOXML). Die Skin-Dokus sind kein Selbstzweck, sondern ein **Spiegel**: wer
+macht was, wie, und wo liegt das gesellschaftliche Problem. `[x]` heißt: nicht nur eben etwas
+gemacht, sondern die Daten besser überprüft. → ADR 0006; Plan-Legende in `temp/apps-plan.md`
+(komplette Pfade, 520 erhaltene Dateien als `[~]` markiert).
+
+**P2 — Abbruchkriterium** ✅: **mindestens 3 Projekte/Masken** pro Kategorie, dann reicht die
+Datenbasis, um anzufangen. Ablauf pro Kategorie: Daten sammeln → **zuerst Standards suchen, die
+das Bild abbilden (Muss, absolute Priorität)** → dann Crates suchen, die das tragen → dann 3
+Programme zum Nachbauen aussuchen: **2 nicht-OSS, 1 OSS** (kann variieren). Begründung: Für OSS
+gibt es schon genug; nachgebaut werden die Programme, die **Standards setzen und nicht offen für
+OSS sind**. Suiten und Plattformen werden vorab auf Apps heruntergerechnet (stabile Basis), dann
+wird aus Apps der Baukasten nach oben zusammengesetzt. → ADR 0006
+
+**P3 — Ort der Pflichtmenge** ✅: **pro Programmkategorie eine fast leere Datei** — dort landet
+später, was unser Programm kann und braucht (Beispiel messages). Reihenfolge bis zum Programm:
+UI-Härtung über Blinc (erste visuelle Anlaufstelle) → Daten + Standards (erste Anlaufstelle für
+„was brauchen wir") → Crates → erst dann am Programm arbeiten. → Ort: `requirements.md` pro
+Kategorie unter `programs/<ebene>/<kategorie>/`; Muster vorgearbeitet in
+`temp/ableitungen/calendar-requirements.md`.
+
+**P4 — Brückenprinzip** ✅: von **zwei Seiten** bauen — Aussehen/Ideen von oben (vorhandene
+Programme kopieren), Daten + Standardisierung von unten; in der Mitte treffen sich
+Toleranzen und Erweiterungen (das Mehr, das ein einzelnes Programm nicht hat). Umwerfen und
+Verändern ist bei der Planung erlaubt. → Vorgehen steht in ADR 0006.
+
+**P5 — Manifest:** vom Nutzer abgeleitet aus dem Gesamtanliegen, hier festgehalten (dem Manifest
+vorangestellt als Erklärung):
+
+> Die Idee ist, eine Software zu schreiben, die frei ist, sehr viele Möglichkeiten schafft, schnell
+> ist (Rust), und die Menschen dort abholt, wo sie sind. Menschen interessiert nicht, ob es eine
+> API gibt oder ob OOXML oder ODF gespeichert wird — sie wollen das, was sie gelernt haben,
+> dorthin klicken, wo sie wollen, und ein Ergebnis haben. Wenn wir Standards setzen, die andere
+> nachprogrammieren können, ist es gleich, ob mein Programm oder ein anderes benutzt wird. Es muss
+> weder auf Geld noch auf Downloads programmiert werden: Es kann Software geben, bei der egal ist,
+> ob sie benutzt wird — aber Menschen können sich, wenn sie wollen, selbst einbringen. Die Großen
+> haben viele Möglichkeiten, Menschen auszubeuten, Armut und Diskriminierung auszunutzen, und Macht
+> und Geld immer im Vorteil; Menschen, die ausgegrenzt werden, sollen ebenso sicher, schnell und
+> anständig arbeiten können. Kleine Vereine können mitmachen und aus Kleinem etwas Großes machen.
+> Einfachheit stellt den Menschen in den Vordergrund, nicht umgekehrt. Niemand sollte darüber
+> nachdenken müssen, ob es klappt, ob Software zu teuer ist oder in welchem Format gespeichert
+> wird: Wenn ich eine Datei erstelle, gebe ich sie dem Programm direkt — statt „wird in ODF
+> wird“, oder „für Word geschrieben“ zu schreiben, sage ich, für welches Programm sie ist.
+> Entlastung der KIs: das Rad nicht neu erfinden — einmal gemacht, können alle es sofort nutzen.
+> Deshalb freie Lizenz. Mir ist egal, wer weiterentwickelt: Software, KI, Menschen sind frei, es zu
+> nutzen — und wiederzuverwenden. Macht es jemand besser? Ein Baustein wird verändert, alles
+> funktioniert besser.
+
+⚠️ **Konflikt, Entscheidung nötig:** Dieser Text sagt **MIT** („Deshalb MIT Lizenz“), repo und
+Website sagen **Apache 2.0** (`LICENSE`, README-Badge, `docs/de/index.md`). Beide sind
+permissiv; Apache 2.0 bringt eine ausdrückliche Patenterteilung und Namensschutz, MIT ist kürzer.
+Eine Zeile reicht: MIT **oder** Apache 2.0.
+
+**P6 — Fähigkeitenliste: beides** ✅: die Liste wird **zentral dokumentiert** (geschlossen als
+Kern, erweiterbar) und ist **abfragbar über API, CLI, MCP** — Standard versteht sich. Damit kann
+das Register auflösen und der Masken-Prüfer (§13) feststellen, dass eine Maske eine Fähigkeit
+nicht anbietet. → Muster vorgearbeitet in `temp/ableitungen/faehigkeiten.md` (Begriffsschicht +
+Ablauf + offene Punkte; keine fertige Liste).
+
+**Aus der Antwort P2 neu — Umbau der Doku (2026-11-03):**
+
+- **`skins/` → `masks/`** (Unterordner unter `programs/<ebene>/<kategorie>/`). Der Begriff
+  „Maske" (§2) trägt die Doku; Skin bleibt nur als historische Notiz in Altdaten.
+- **Englisch zuerst**: `en/` ist die erste Sprache der Doku (Weitergabe an Dritte), `de/` zweite.
+  Der Textverkehr bleibt deutsch. `de/`-Bestand wird mitgezogen, beide Sprachen möglichst gleich
+  halten. Das
+  kehrt `data/anforderungen.md` §1 und ADR-0002-Folge um; die 355 uncommitteten `en/components/`-
+  Dateien (P11) sind damit Bestand, nicht Ballast — **empfohlen: committen**.
+- **Blinc ist gesetzt** (GUI.md-Fazit „Hauptfavorit" + Nutzerentscheid): jetzt abgleichen, was die
+  84 Komponenten in Blinc können und wie das echte Usage aussieht. → neue Dokuseite
+  `programs/platform/crates/blinc.md` + Todo-Liste.
+- **Mehr Programme** werden gebraucht — der Plan ist offen, Kategorien wachsen.
+
 ## Siehe auch
 
 - `conventions/CONVENTIONS.md` §2 (sechs Ebenen), §3 (Components-Zuordnung)
