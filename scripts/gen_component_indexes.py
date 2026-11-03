@@ -162,8 +162,8 @@ def components_page(data):
               "- **usage.md** – Anwendung, Szenarien und Beispiele", "",
               "Die Listen und Zahlen auf dieser Seite erzeugt `scripts/gen_component_indexes.py`."
               " `scripts/check_components.py` prüft den Standard.", "", "## Siehe auch", "",
-              "- [Gesten](../gestures/) und [Animationen](../animations/)",
-              "- [Standardisierte Daten](../data/)", "- [Apps](../apps/)", ""]
+              "- [Gesten](../interactions/gestures/) und [Animationen](../interactions/animations/)",
+              "- [Standardisierte Daten](../data/)", "- [Programs](../programs/)", ""]
     return "\n".join(lines).rstrip() + "\n"
 
 

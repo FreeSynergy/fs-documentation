@@ -14,7 +14,7 @@
 
 | Thema | Wo es liegt | Warum |
 |-------|-------------|-------|
-| Wiki-Seiten, Beiträge mit Blöcken | [../apps/wiki/](../../apps/wiki/index.md) bzw. geplante Domäne `dokumente/` | Dokumente sind redigierbare Werke, Nachrichten sind vergängliche Äußerungen |
+| Wiki-Seiten, Beiträge mit Blöcken | [../apps/wiki/](../../programs/apps/wiki/index.md) bzw. geplante Domäne `dokumente/` | Dokumente sind redigierbare Werke, Nachrichten sind vergängliche Äußerungen |
 | Tag/Kommentar **auf einem Textteil** | W3C Web Annotation Model (✅) — Selektor `TextQuoteSelector` | Der Text wird nicht umgeschrieben |
 | iTIP-Einladung und -Antwort | [events/](../events/index.md) | Protokollnachrichten, kein Chat |
 | Benachrichtigungen (Notification) | eigene Domäne noch offen ([index.md → vorgeschlagen](../index.md)) | eine Notification zeigt auf eine Nachricht, ist aber nicht sie |

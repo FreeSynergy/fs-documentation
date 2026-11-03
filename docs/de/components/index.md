@@ -86,4 +86,4 @@ Die Listen und Zahlen auf dieser Seite erzeugt `scripts/gen_component_indexes.py
 
 - [Gesten](../interactions/gestures/) und [Animationen](../interactions/animations/)
 - [Standardisierte Daten](../data/)
-- [Apps](../apps/)
+- [Programs](../programs/)

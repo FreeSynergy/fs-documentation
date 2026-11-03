@@ -283,5 +283,5 @@ client.tasks.update(
 - [Standardfelder](felder.md)
 - [Datenformate](formate.md)
 - [Konventionen](konventionen.md)
-- [Desktop-Skins — API-Beispiele](../apps/desktop/skins/)
-- [Workflows](../apps/workflows/)
+- [Desktop-Skins — API-Beispiele](../programs/platform/desktop/skins/)
+- [Workflows](../programs/suites/workflows/)

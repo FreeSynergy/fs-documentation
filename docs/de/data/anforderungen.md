@@ -28,7 +28,7 @@ Dazu die bereits bestehenden Domänen: `contacts/` (Kontaktmodelle), `identity/`
 
 > „Schau Dir die Apps an — und schau an, was da gespeichert werden könnte. Das alles muss irgendwie standardisiert werden. Herausfinden, was wohin gehört.“
 
-→ Nächster konkreter Schritt: **Dateninventur pro App** in [docs/de/apps/](../apps/) (jede App hat bzw. bekommt eine `api.md`), Zuordnung der gefundenen Daten zu den Domänen. Ergebnis kommt in dieses Dokument bzw. in die jeweilige Domäne.
+→ Nächster konkreter Schritt: **Dateninventur pro App** in [docs/de/programs/](../programs/) (jede App hat bzw. bekommt eine `api.md`), Zuordnung der gefundenen Daten zu den Domänen. Ergebnis kommt in dieses Dokument bzw. in die jeweilige Domäne.
 
 ## 4. Struktur pro Domäne (neu festgelegt 2026-11-02)
 

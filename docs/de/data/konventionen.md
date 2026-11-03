@@ -66,7 +66,7 @@ data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standar
 
 - Querverweise innerhalb eines Programms: relativ (`[api.md](api.md)`)
 - Verweise über Bereiche hinweg: relativ mit `../` (von `data/` aus: `[Gesten](../interactions/gestures/)`)
-- Kategorien-Index immer als Verzeichnislink (von `data/` aus: `[Messenger](../apps/messenger/)`)
+- Kategorien-Index immer als Verzeichnislink (von `data/` aus: `[Messenger](../programs/apps/messenger/)`)
 - Jede Datei endet mit einem `## Siehe auch`-Abschnitt
 - Keine Links auf Dateien, die nicht existieren – Ausnahme: Querverweise
   innerhalb der eigenen Sprachversion (Regel 6 der Sprachkonvention)

@@ -63,12 +63,10 @@ def is_external_or_anchor(target):
         return True
     if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):  # http:, mailto:, ...
         return True
-    if target.startswith("/"):  # absolut ab docs-root -> nicht unsere Relativ-Logik
-        return True
-    return False
+    return False  # '/' (abs ab docs-root) wird separat behandelt
 
 
-def rewrite_file(path, moves, dry):
+def rewrite_file(path, moves, dry, docs_root):
     with open(path, "r", encoding="utf-8") as fh:
         text = fh.read()
     old_file = path
@@ -90,14 +88,21 @@ def rewrite_file(path, moves, dry):
             link, a = link.split("#", 1)
             anchor = "#" + a
         trailing = link.endswith("/")
-        # Ziel relativ zur ALTEN Dateiposition (Dateien liegen noch alt auf Platte)
-        target_old = normalize(os.path.join(old_dir, link)) if link else old_dir
-        target_new = forward(target_old, moves)
-        if target_new == target_old and os.path.dirname(forward(old_file, moves)) == old_dir:
-            return m.group(0)  # nichts bewegt
-        new_link = os.path.relpath(target_new, new_dir).replace(os.sep, "/")
-        if new_link == ".":
-            new_link = "./"
+        if link.startswith("/"):  # absolut ab docs-root
+            cand = normalize(os.path.join(docs_root, link.lstrip("/")))
+            target_new = forward(cand, moves)
+            if target_new == cand:
+                return m.group(0)
+            new_link = "/" + os.path.relpath(target_new, docs_root).replace(os.sep, "/")
+        else:
+            # Ziel relativ zur ALTEN Dateiposition (Dateien liegen noch alt auf Platte)
+            target_old = normalize(os.path.join(old_dir, link)) if link else old_dir
+            target_new = forward(target_old, moves)
+            if target_new == target_old and new_dir == old_dir:
+                return m.group(0)  # nichts bewegt
+            new_link = os.path.relpath(target_new, new_dir).replace(os.sep, "/")
+            if new_link == ".":
+                new_link = "./"
         if trailing and not new_link.endswith("/"):
             new_link += "/"
         new_inner = new_link + anchor + title
@@ -130,7 +135,7 @@ def main():
             if not n.endswith(".md"):
                 continue
             fp = normalize(os.path.join(dirpath, n))
-            ch = rewrite_file(fp, moves, args.dry_run or args.check)
+            ch = rewrite_file(fp, moves, args.dry_run or args.check, docs_root)
             if ch:
                 files += 1
                 total += len(ch)

@@ -6,13 +6,13 @@ This directory contains documentation for menu items and editors of various wiki
 
 ## Included Documentation
 
-- [Wiki.js](/en/apps/wiki/skins/wikijs/index.md) - Modern, lightweight wiki software
-- [XWiki](/en/apps/wiki/skins/xwiki/index.md) - Enterprise wiki platform
-- [MediaWiki](/en/apps/wiki/skins/mediawiki/index.md) - The most popular wiki software (Wikipedia)
-- [Tango.io](/en/apps/wiki/skins/tango.io/index.md) - Knowledge management platform
-- [Notion](/en/apps/wiki/skins/notion/index.md) - All-in-one collaboration platform
-- [Confluence](/en/apps/wiki/skins/confluence/index.md) - Enterprise wiki by Atlassian
-- [VSCodium](/en/apps/wiki/skins/vscodium/index.md) - Open-source code editor (VS Code fork)
+- [Wiki.js](/en/programs/apps/wiki/skins/wikijs/index.md) - Modern, lightweight wiki software
+- [XWiki](/en/programs/apps/wiki/skins/xwiki/index.md) - Enterprise wiki platform
+- [MediaWiki](/en/programs/apps/wiki/skins/mediawiki/index.md) - The most popular wiki software (Wikipedia)
+- [Tango.io](/en/programs/apps/wiki/skins/tango.io/index.md) - Knowledge management platform
+- [Notion](/en/programs/apps/wiki/skins/notion/index.md) - All-in-one collaboration platform
+- [Confluence](/en/programs/apps/wiki/skins/confluence/index.md) - Enterprise wiki by Atlassian
+- [VSCodium](/en/programs/apps/wiki/skins/vscodium/index.md) - Open-source code editor (VS Code fork)
 
 ## Directory Structure
 

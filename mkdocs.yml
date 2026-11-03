@@ -43,39 +43,39 @@ nav:
   - Home:
       - Deutsch: de/index.md
       - English: en/index.md
-  - de/apps/: de/apps/index.md
-  - de/apps/wiki/: de/apps/wiki/index.md
-  - en/apps/wiki/: en/apps/wiki/index.md
-  - de/apps/messenger/: de/apps/messenger/index.md
-  - en/apps/messenger/: en/apps/messenger/index.md
-  - de/apps/marketing/: de/apps/marketing/index.md
-  - en/apps/marketing/: en/apps/marketing/index.md
-  - de/apps/whiteboards/: de/apps/whiteboards/index.md
-  - en/apps/whiteboards/: en/apps/whiteboards/index.md
-  - de/apps/helpdesk/: de/apps/helpdesk/index.md
-  - en/apps/helpdesk/: en/apps/helpdesk/index.md
-  - de/apps/projectmanagement/: de/apps/projectmanagement/index.md
-  - en/apps/projectmanagement/: en/apps/projectmanagement/index.md
-  - de/apps/contact/: de/apps/contact/index.md
-  - en/apps/contact/: en/apps/contact/index.md
-  - de/apps/calendar/: de/apps/calendar/index.md
-  - en/apps/calendar/: en/apps/calendar/index.md
-  - de/apps/desktop/: de/apps/desktop/index.md
-  - en/apps/desktop/: en/apps/desktop/index.md
-  - de/apps/crm/: de/apps/crm/index.md
-  - en/apps/crm/: en/apps/crm/index.md
-  - de/apps/democracy/: de/apps/democracy/index.md
-  - de/apps/marketplace/: de/apps/marketplace/index.md
-  - de/apps/gallery/: de/apps/gallery/index.md
-  - de/apps/streaming/: de/apps/streaming/index.md
-  - en/apps/democracy/: en/apps/democracy/index.md
-  - de/apps/maps/: de/apps/maps/index.md
-  - de/apps/maps/standpunkte: de/apps/maps/standpunkte.md
-  - en/apps/maps/: en/apps/maps/index.md
-  - de/apps/erp/: de/apps/erp/index.md
-  - en/apps/erp/: en/apps/erp/index.md
-  - de/apps/workflows/: de/apps/workflows/index.md
-  - en/apps/workflows/: en/apps/workflows/index.md
+  - de/programs/: de/programs/index.md
+  - de/programs/apps/wiki/: de/programs/apps/wiki/index.md
+  - en/programs/apps/wiki/: en/programs/apps/wiki/index.md
+  - de/programs/apps/messenger/: de/programs/apps/messenger/index.md
+  - en/programs/apps/messenger/: en/programs/apps/messenger/index.md
+  - de/programs/apps/marketing/: de/programs/apps/marketing/index.md
+  - en/programs/apps/marketing/: en/programs/apps/marketing/index.md
+  - de/programs/apps/whiteboards/: de/programs/apps/whiteboards/index.md
+  - en/programs/apps/whiteboards/: en/programs/apps/whiteboards/index.md
+  - de/programs/apps/helpdesk/: de/programs/apps/helpdesk/index.md
+  - en/programs/apps/helpdesk/: en/programs/apps/helpdesk/index.md
+  - de/programs/apps/projectmanagement/: de/programs/apps/projectmanagement/index.md
+  - en/programs/apps/projectmanagement/: en/programs/apps/projectmanagement/index.md
+  - de/programs/apps/contact/: de/programs/apps/contact/index.md
+  - en/programs/apps/contact/: en/programs/apps/contact/index.md
+  - de/programs/apps/calendar/: de/programs/apps/calendar/index.md
+  - en/programs/apps/calendar/: en/programs/apps/calendar/index.md
+  - de/programs/apps/gallery/: de/programs/apps/gallery/index.md
+  - de/programs/apps/streaming/: de/programs/apps/streaming/index.md
+  - de/programs/apps/maps/: de/programs/apps/maps/index.md
+  - de/programs/apps/maps/standpunkte: de/programs/apps/maps/standpunkte.md
+  - en/programs/apps/maps/: en/programs/apps/maps/index.md
+  - de/programs/suites/crm/: de/programs/suites/crm/index.md
+  - en/programs/suites/crm/: en/programs/suites/crm/index.md
+  - de/programs/suites/democracy/: de/programs/suites/democracy/index.md
+  - en/programs/suites/democracy/: en/programs/suites/democracy/index.md
+  - de/programs/suites/marketplace/: de/programs/suites/marketplace/index.md
+  - de/programs/suites/erp/: de/programs/suites/erp/index.md
+  - en/programs/suites/erp/: en/programs/suites/erp/index.md
+  - de/programs/suites/workflows/: de/programs/suites/workflows/index.md
+  - en/programs/suites/workflows/: en/programs/suites/workflows/index.md
+  - de/programs/platform/desktop/: de/programs/platform/desktop/index.md
+  - en/programs/platform/desktop/: en/programs/platform/desktop/index.md
   - de/interactions/gestures/:
       - de/interactions/gestures/index.md
       - de/interactions/gestures/tap/: de/interactions/gestures/tap/index.md

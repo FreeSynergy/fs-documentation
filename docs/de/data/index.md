@@ -115,5 +115,5 @@ docs/de/data/
 - [Komponenten](../components/) — Attribute und Datentypen der UI-Elemente
 - [Gesten](../interactions/gestures/) — Interaktionsdaten (Schwellwerte, Callbacks)
 - [Animationen](../interactions/animations/) — Animationsattribute und -dauern
-- [Apps](../apps/) — Programme mit eigener `api.md` pro Skin
-- [Desktop-Skins](../apps/desktop/skins/) — Beispiel für API-Dokumentation nach Muster
+- [Programs](../programs/) — Programme mit eigener `api.md` pro Skin
+- [Desktop-Skins](../programs/platform/desktop/skins/) — Beispiel für API-Dokumentation nach Muster
