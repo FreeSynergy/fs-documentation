@@ -32,7 +32,7 @@ Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
 !!! info "Einordnung"
     Der in Bibliotheken übliche Baustein `resizable` ist keine eigene Komponente, sondern
     die Variante `Resizable Split` dieser Komponente (Entscheidungsregel in
-    [Basiskomponente](../../basics/base/): gleicher Datensatz, anderes Verhalten beim Ziehen).
+    [Basiskomponente](../../../primitives/basics/base.md): gleicher Datensatz, anderes Verhalten beim Ziehen).
 
 ## Features
 
@@ -74,4 +74,4 @@ Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
 ## Siehe auch
 
 - [containers – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

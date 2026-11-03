@@ -57,4 +57,4 @@ Ein Repeater ist ein Wiederholtes Layout für Listen.
 - [data – Übersicht](../index.md)
 - [List View](../list-view/) — reine Ansicht ohne Steuerung
 - [Pagination](../../navigation/pagination/) — Seitennavigation
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

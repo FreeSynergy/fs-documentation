@@ -41,9 +41,9 @@ Ein Media Player wiedergibt Videos und Audios.
 - Diese Komponente ist die **Elternklasse** von [audio](../audio/) und [video](../video/):
   Steuerung, Playlist und Untertitel sind hier definiert, die beiden Kinder nennen nur ihre
   Unterschiede (Plan Abschnitt 4, Zeile 13).
-- **Nicht verwechseln mit** [embed](../../special/embed/): ein eingebetteter Player einer fremden
+- **Nicht verwechseln mit** [embed](../../../workbenches/special/embed/): ein eingebetteter Player einer fremden
   Plattform ist kein eigener Wiedergeber.
-- **Nicht verwechseln mit** [progress](../../feedback/progress/): dort ist der Balken eine Anzeige,
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): dort ist der Balken eine Anzeige,
   hier ist er eine Sprungmarke in der Datei.
 
 ## Best Practices
@@ -58,5 +58,5 @@ Ein Media Player wiedergibt Videos und Audios.
 
 - [media – Übersicht](../index.md)
 - [Audio](../audio/) und [Video](../video/) — die beiden Kinder
-- [Embed](../../special/embed/) — Player anderer Anbieter
-- [Basiskomponente](../../basics/base/)
+- [Embed](../../../workbenches/special/embed/) — Player anderer Anbieter
+- [Basiskomponente](../../../primitives/basics/base.md)

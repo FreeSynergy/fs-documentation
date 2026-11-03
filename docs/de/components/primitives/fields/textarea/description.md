@@ -38,9 +38,9 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 
 - **Nicht verwechseln mit** [text-input](../text-input/): hier stehen Absätze und lange Sätze,
   dort genau eine Zeile.
-- **Nicht verwechseln mit** [rich-text-editor](../rich-text-editor/): dieses Feld speichert reinen
+- **Nicht verwechseln mit** [rich-text-editor](../../../workbenches/fields/rich-text-editor/): dieses Feld speichert reinen
   Text ohne Formatierung.
-- **Nicht verwechseln mit** [code-editor](../../special/code-editor/): Fließtext braucht keine
+- **Nicht verwechseln mit** [code-editor](../../../workbenches/special/code-editor/): Fließtext braucht keine
   Zeilennummern und keine Syntaxhervorhebung.
 
 ## Best Practices
@@ -55,5 +55,5 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 
 - [fields – Übersicht](../index.md)
 - [Text Input](../text-input/) — einzeilig
-- [Rich Text Editor](../rich-text-editor/) — formatierter Text
-- [Basiskomponente](../../basics/base/)
+- [Rich Text Editor](../../../workbenches/fields/rich-text-editor/) — formatierter Text
+- [Basiskomponente](../../basics/base.md)

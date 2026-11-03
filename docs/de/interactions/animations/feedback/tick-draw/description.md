@@ -7,7 +7,7 @@ Tick Draw zeichnet ein Erfolgshäkchen als Linie: Der Strich folgt einem vorbere
 ## Verwendung
 
 - Bestätigung nach dem Speichern, Senden oder Synchronisieren
-- Abhaken einer Aufgabe in der Liste, siehe [checkbox](../../../../components/fields/checkbox/description.md)
+- Abhaken einer Aufgabe in der Liste, siehe [checkbox](../../../../components/primitives/fields/checkbox/description.md)
 - Abschluss eines Schritts in einem Assistenten
 - Auswahl bestätigen (Mehrfachauswahl, Filter)
 - Häkchen auf einem Bild oder Dateisymbol (erledigt, geprüft)

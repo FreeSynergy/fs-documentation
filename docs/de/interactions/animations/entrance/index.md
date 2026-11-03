@@ -27,5 +27,5 @@ Gemeinsame Attribute wie `duration`, `timingFunction` und `fillMode` stehen in d
 - [Animationen Übersicht](../index.md)
 - [Ausgang (exit)](../exit/)
 - [Organisation (organization)](../organization/) - gestaffelter Start mehrerer Eingänge
-- [Toast](../../../components/feedback/toast/description.md), [Modal](../../../components/overlays/modal/description.md)
-- [Radial Menu](../../../components/navigation/radial-menu/description.md) - nutzt `radial-out` beim Öffnen
+- [Toast](../../../components/primitives/feedback/toast/description.md), [Modal](../../../components/widgets/overlays/modal/description.md)
+- [Radial Menu](../../../components/widgets/navigation/radial-menu/description.md) - nutzt `radial-out` beim Öffnen

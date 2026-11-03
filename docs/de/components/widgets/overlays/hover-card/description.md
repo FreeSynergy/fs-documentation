@@ -55,4 +55,4 @@ wieder, wenn der Zeiger abzieht.
 
 - [Tooltip](../tooltip/)
 - [Popover](../popover/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

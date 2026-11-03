@@ -66,4 +66,4 @@ Oberbau für Leisten, Aufklappmenüs und das Mobilmenü.
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

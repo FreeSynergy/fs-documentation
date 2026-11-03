@@ -41,9 +41,9 @@ Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
 
 - **Nicht verwechseln mit** [alert](../alert/): ein Toast verschwindet von selbst und verlangt
   keine Reaktion; eine Alert-Meldung bleibt, bis sie geschlossen oder behoben ist.
-- **Nicht verwechseln mit** [alert-dialog](../../overlays/alert-dialog/): wenn der Nutzer
+- **Nicht verwechseln mit** [alert-dialog](../../../widgets/overlays/alert-dialog/): wenn der Nutzer
   entscheiden muss, ist ein Dialog nötig — ein Toast überbrückt keine Entscheidung.
-- **Nicht verwechseln mit** [popover](../../overlays/popover/): ein Popover ist an ein Element
+- **Nicht verwechseln mit** [popover](../../../widgets/overlays/popover/): ein Popover ist an ein Element
   gebunden, der Toast an eine Bildecke.
 - **Nicht verwechseln mit** [badge](../badge/): ein Badge markiert dauerhaft, ein Toast meldet
   einmalig ein Ereignis.
@@ -68,5 +68,5 @@ Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
 
 - [feedback – Übersicht](../index.md)
 - [Alert](../alert/) — Meldung, die stehen bleibt
-- [Alert Dialog](../../overlays/alert-dialog/) — wenn der Nutzer entscheiden muss
-- [Basiskomponente](../../basics/base/)
+- [Alert Dialog](../../../widgets/overlays/alert-dialog/) — wenn der Nutzer entscheiden muss
+- [Basiskomponente](../../basics/base.md)

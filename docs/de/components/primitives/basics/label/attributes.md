@@ -1,7 +1,7 @@
 # Label (Beschriftung) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/). Das `label`-Attribut der Basisklasse ist hier der
+[base](../base.md). Das `label`-Attribut der Basisklasse ist hier der
 sichtbare Inhalt.
 
 ## Hauptattribute
@@ -29,4 +29,4 @@ das verknüpfte Element.
 ## Geerbt von
 
 `id`, `label`, `visible`, `size`, `theme`, `state`, `aria-*` →
-[Basiskomponente](../base/)
+[Basiskomponente](../base.md)

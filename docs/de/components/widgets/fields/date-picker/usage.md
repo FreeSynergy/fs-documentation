@@ -7,7 +7,7 @@
 
 ## Anwendung
 
-Der Wähler hängt an einem [date-input](../date-input/). Tippen ins Feld öffnet das
+Der Wähler hängt an einem [date-input](../../../primitives/fields/date-input/). Tippen ins Feld öffnet das
 Overlay; das gewählte Datum steht anschließend im Feld.
 
 Ist `sources` gesetzt, ist der Wähler zusätzlich ein kleiner Kalender: Er fragt beim
@@ -75,7 +75,7 @@ Je Quelle darf ein anderes Datumsfeld zählen; die Angabe pro Quelle überschrei
 
 ## Daten laden und schreiben
 
-| Vorgang | Anfrage nach [Daten-API](../../../data/api.md) |
+| Vorgang | Anfrage nach [Daten-API](../../../../data/api.md) |
 |---------|------------------------------------------------|
 | Overlay öffnet | `GET /api/v1/events?filter=start:gte:2026-11-01;start:lte:2026-12-31&fields=id,title,start,end,type&limit=100` |
 | Monatswechsel | dieselbe Anfrage für das neue Fenster, Auslösung über `onMonthChange` |
@@ -85,7 +85,7 @@ Je Quelle darf ein anderes Datumsfeld zählen; die Angabe pro Quelle überschrei
 | Löschen aus der Liste | `DELETE /api/v1/events/{id}` (Soft-Delete) |
 
 Ein geladener Ausschnitt sieht pro Eintrag so aus wie in
-[Standardfelder](../../../data/felder.md) beschrieben:
+[Standardfelder](../../../../data/felder.md) beschrieben:
 
 ```json
 {

@@ -67,4 +67,4 @@ Die Card (Karte) ist ein Container-Element, das Inhalte in einer strukturierten 
 - [containers – Übersicht](../index.md)
 - [Panel](../panel/) — Rahmen für Bedienung
 - [Grid View](../../data/grid-view/) — Karten anordnen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

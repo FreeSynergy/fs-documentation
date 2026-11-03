@@ -56,4 +56,4 @@ Ein Switch ist ein Ein/Aus-Schalter (Toggle).
 - [fields – Übersicht](../index.md)
 - [Checkbox](../checkbox/) — Auswahl mit Speichern
 - [Badge](../../feedback/badge/) — Zustand anzeigen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

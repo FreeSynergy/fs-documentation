@@ -58,4 +58,4 @@ Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwis
 - [navigation – Übersicht](../index.md)
 - [Repeater](../../data/repeater/) — Liste inklusive Seitennavigation
 - [Scroll Area](../../containers/scroll-area/) — endlose Scrollfläche
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

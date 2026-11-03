@@ -55,7 +55,7 @@ Komponente überhaupt und der Ausgangspunkt fast jeder Interaktion in FreeSynerg
 
 - Genau **ein** `primary` pro Ansicht; Aktionen in Dialogen rechtsbündig.
 - Label als Verb ("Speichern" statt "OK").
-- `danger` nur mit Bestätigung, z. B. per [alert-dialog](../../overlays/alert-dialog/).
+- `danger` nur mit Bestätigung, z. B. per [alert-dialog](../../../widgets/overlays/alert-dialog/).
 - Icon-only-Buttons brauchen immer `aria-label` und Tooltip.
 
 ## Siehe auch
@@ -63,4 +63,4 @@ Komponente überhaupt und der Ausgangspunkt fast jeder Interaktion in FreeSynerg
 - [Button Group](../button-group/)
 - [Link](../../basics/link/)
 - [Spinner](../../feedback/spinner/) (Ladezustand)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

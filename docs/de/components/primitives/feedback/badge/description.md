@@ -27,7 +27,7 @@ Es wird anderen Elementen auf- oder beigestellt und ist selbst nicht bedienbar.
 | Variante | Beschreibung |
 |----------|--------------|
 | **status** | Einfarbige Fläche mit Text, z. B. „offen“ |
-| **counter** | Zähler, z. B. an [bottom-navigation](../../navigation/bottom-navigation/) |
+| **counter** | Zähler, z. B. an [bottom-navigation](../../../widgets/navigation/bottom-navigation/) |
 | **dot** | nur ein Punkt, wenn der Platz minimal ist |
 | **outline** | Rahmen statt Füllung, für schwache Hinweise |
 
@@ -35,7 +35,7 @@ Es wird anderen Elementen auf- oder beigestellt und ist selbst nicht bedienbar.
 
 - Zählerobergrenze mit „99+“-Darstellung
 - Fünf Statusfarben, unabhängig vom Theme lesbar
-- Kombinierbar mit [avatar](../../data/avatar/) und Icons
+- Kombinierbar mit [avatar](../../../widgets/data/avatar/) und Icons
 
 ## Abgrenzung
 
@@ -45,7 +45,7 @@ Es wird anderen Elementen auf- oder beigestellt und ist selbst nicht bedienbar.
 - **Nicht verwechseln mit** [alert](../alert/): eine Meldung ist ein
   Textblock, ein Badge ein Kurzmarker.
 
-- **Nicht verwechseln mit** [avatar](../../data/avatar/): ein Avatar stellt eine
+- **Nicht verwechseln mit** [avatar](../../../widgets/data/avatar/): ein Avatar stellt eine
   Person oder ein Objekt dar.
 
 ## Best Practices
@@ -58,5 +58,5 @@ Es wird anderen Elementen auf- oder beigestellt und ist selbst nicht bedienbar.
 
 - [Progress](../progress/)
 - [Alert](../alert/)
-- [Avatar](../../data/avatar/)
-- [Basiskomponente](../../basics/base/)
+- [Avatar](../../../widgets/data/avatar/)
+- [Basiskomponente](../../basics/base.md)

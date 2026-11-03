@@ -57,6 +57,6 @@ Shortcut-Dokumentationen der Programme verwendet.
 
 ## Siehe auch
 
-- [Tooltip](../../overlays/tooltip/)
-- [Command](../../navigation/command/) — Shortcuts suchen und ausführen
-- [Basiskomponente](../base/)
+- [Tooltip](../../../widgets/overlays/tooltip/)
+- [Command](../../../widgets/navigation/command/) — Shortcuts suchen und ausführen
+- [Basiskomponente](../base.md)

@@ -87,7 +87,7 @@ Areas outside `apps/` use their own, smaller file sets:
 
 | Area | Location | Files per entry |
 |------|----------|-----------------|
-| UI components | `docs/de/components/<category>/<component>/` | `description.md`, `appearance.md`, `attributes.md`, `usage.md` (all four required; `examples.md` was merged into `usage.md`) |
+| UI components | `docs/de/components/<band>/<category>/<component>/` | `description.md`, `appearance.md`, `attributes.md`, `usage.md` (all four required; `examples.md` was merged into `usage.md`) |
 | Gestures | `docs/de/gestures/<category>/<gesture>/` | `description.md`, `attributes.md`, `appearance.md` |
 | Animations | `docs/de/animations/<category>/<animation>/` | `description.md`, `attributes.md`, `appearance.md` |
 | Standardized data | `docs/de/data/` + `docs/de/data/<domain>/<standard>/` | Cross-cutting: `index.md`, `standards.md`, `mappings.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`. Per standard: `index.md` (domain), `beschreibung.md`, `speicherung.md` (+ optional `beispiele.md`, `mapping.md`) |
@@ -758,9 +758,11 @@ Each program requires exactly 6 documentation files in German:
 
 ---
 
-## 🧩 UI Components (`docs/de/components/<category>/<component>/`)
+## 🧩 UI Components (`docs/de/components/<band>/<category>/<component>/`)
 
-Ten categories, each with its own `index.md`; every component lives in a directory of its own:
+Three bands (= levels, ADR 0001/0004): `primitives/`, `widgets/`, `workbenches/`. Inside each
+band the ten type categories keep their meaning, each with its own `index.md`; every component
+lives in a directory of its own. The binding component → band is `conventions/CONVENTIONS.md` §3:
 
 | Category | Contains | Example components |
 |----------|----------|--------------------|
@@ -802,10 +804,11 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `Zust�
 
 | Tool | Purpose |
 |------|---------|
-| `scripts/gen_component_indexes.py` | writes `components/index.md`, every category `index.md` and the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) from the profile tables; `--check` fails on drift |
-| `scripts/check_components.py` | validates the standard: required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
-| `scripts/migrate_links.py` | rewrites relative **and** absolute markdown links after a directory move; run before `git mv`; `--dry-run`/`--check` |
-| `scripts/gen_skin_indexes.py` | builds skin `index.md` per program (needs update to `programs/<level>/`) |
+| `scripts/gen_component_indexes.py` | writes `components/index.md`, the band and category `index.md` files and the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) from the profile tables; checks the component → band assignment; `--check` fails on drift |
+| `scripts/check_components.py` | validates the standard: band assignment, required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
+| `scripts/migrate_links.py` | rewrites relative **and** absolute markdown links after a directory move given as `OLD=NEW`; run before `git mv`; `--dry-run`/`--check` |
+| `scripts/fix_links.py` | re-resolves every internal link against a name registry built from `docs/`; run after `git mv` with `--force` — no depth arithmetic needed; `--dry-run`/`--check` |
+| `scripts/gen_skin_indexes.py` | builds skin `index.md` per category under `programs/<level>/<category>/skins/` and refreshes the Skin-Dokumentation block; skips hand-maintained skin indexes |
 | `scripts/gen_usage_pages.py` | creates missing `usage.md` from description + attribute tables |
 | `scripts/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section |
 | `scripts/standardize_sections.py` | renames/merges/reorders section headings, repairs `Default` column |
@@ -813,9 +816,12 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `Zust�
 CI runs `check_components.py` and `gen_component_indexes.py --check` before the site build,
 so numbers and navigation cannot drift again.
 
-Relative links inside a component directory use **three** levels for areas outside
-`components/` (`../../../gestures/`) and two levels for a sibling category
-(`../../feedback/toast/`); links inside the same category use one level (`../menu/`).
+Relative links inside a component directory use **four** levels for areas outside
+`components/` (`../../../../interactions/gestures/`), three levels for a component in
+another band (`../../../primitives/basics/base.md`) and one or two levels inside the
+same band (`../text-input/`, `../index.md`). After any move that changes directory
+depth, run `scripts/fix_links.py --force` — it re-anchors every link by name, so the
+depth arithmetic never has to be done by hand.
 
 ## 🖱️ Interaction Areas (Gestures and Animations)
 

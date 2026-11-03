@@ -6,8 +6,8 @@ Lift hebt ein Element bei Hover oder Fokus scheinbar an: Es wandert 1–2 px nac
 
 ## Verwendung
 
-- Karten und Kacheln als Anzeige, dass sie klickbar sind, siehe [card](../../../../components/containers/card/description.md)
-- Zeilen in Listen und Tabellen beim Überfahren, siehe [list-view](../../../../components/data/list-view/description.md)
+- Karten und Kacheln als Anzeige, dass sie klickbar sind, siehe [card](../../../../components/widgets/containers/card/description.md)
+- Zeilen in Listen und Tabellen beim Überfahren, siehe [list-view](../../../../components/widgets/data/list-view/description.md)
 - Buttons mit Sekundärdarstellung, die beim Hover hervortreten
 - Fokusdarstellung bei Tastaturbedienung (statt nur Rahmen)
 - Drag-Quelle, die ihren Zustand beim Aufnehmen bestätigt

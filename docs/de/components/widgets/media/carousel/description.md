@@ -59,4 +59,4 @@ bereit, gewechselt per Knopf, Wisch oder automatisch.
 - [media – Übersicht](../index.md)
 - [Gallery](../gallery/) — viele Bilder auf einmal
 - [Grid View](../../data/grid-view/) — Raster statt Abfolge
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

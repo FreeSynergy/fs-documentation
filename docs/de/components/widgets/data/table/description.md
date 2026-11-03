@@ -60,4 +60,4 @@ Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
 - [data – Übersicht](../index.md)
 - [List View](../list-view/) — freie Zeilen
 - [Tree View](../tree-view/) — Hierarchie statt flache Liste
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

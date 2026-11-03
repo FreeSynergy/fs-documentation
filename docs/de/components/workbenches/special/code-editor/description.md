@@ -39,7 +39,7 @@ Ein Code Editor ist ein Editor für Quellcode.
 
 - **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
   formatted Text, hier Quelltext. Wiki-Syntax ist eine Variante des Texteditors, nicht hiervon.
-- **Nicht verwechseln mit** [textarea](../../fields/textarea/): ohne Zeilennummern,
+- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): ohne Zeilennummern,
   Hervorhebung und Klammerschluss ist es einfach ein Textfeld.
 - Ausgabe von Programmen ist keine Editor-Aufgabe — sie gehört in eine Ergebnisanzeige.
 
@@ -56,4 +56,4 @@ Ein Code Editor ist ein Editor für Quellcode.
 - [special – Übersicht](../index.md)
 - [Rich Text Editor](../../fields/rich-text-editor/) — formatierter Text
 - [Whiteboard](../whiteboard/) — Skizzen statt Code
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

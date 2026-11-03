@@ -33,7 +33,7 @@ Jedes Programm in `apps/<kategorie>/skins/<programm>/` bekommt **sieben** Dateie
 
 ### Komponenten
 
-`components/<gruppe>/<element>/` mit `description.md`, `appearance.md`, `attributes.md` und bei Bedarf `usage.md`, `examples.md`.
+`components/<band>/<gruppe>/<element>/` mit `description.md`, `appearance.md`, `attributes.md` und `usage.md`. Bänder = Ebenen: `primitives`, `widgets`, `workbenches`.
 
 ### Gesten
 

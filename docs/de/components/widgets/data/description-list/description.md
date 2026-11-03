@@ -34,7 +34,7 @@ eines Datensatzes. Sie ist lesen optimiert und nicht zum Bearbeiten gedacht.
 ## Features
 
 - Werte dürfen eigene Bausteine enthalten: [avatar](../avatar/),
-  [badge](../../feedback/badge/), [link](../../basics/link/), [tag](../../fields/tags-input/)
+  [badge](../../../primitives/feedback/badge/), [link](../../../primitives/basics/link/), [tag](../../../primitives/fields/tags-input/)
 - Fehlende Werte bleiben als Platzhalter sichtbar oder werden ausgeblendet
 - Gruppen mit Zwischenüberschriften für lange Detailansichten
 - Kopieren eines Wertes über ein Icon pro Zeile
@@ -43,7 +43,7 @@ eines Datensatzes. Sie ist lesen optimiert und nicht zum Bearbeiten gedacht.
 
 - **Nicht verwechseln mit** [table](../table/): eine Tabelle vergleicht viele Datensätze
   nach gleichen Feldern, die Beschreibungsliste zeigt ein Objekt.
-- **Nicht verwechseln mit** [field](../../fields/field/): Felder bearbeiten Werte,
+- **Nicht verwechseln mit** [field](../../../primitives/fields/field/): Felder bearbeiten Werte,
   diese Liste stellt sie dar.
 
 ## Best Practices
@@ -55,5 +55,5 @@ eines Datensatzes. Sie ist lesen optimiert und nicht zum Bearbeiten gedacht.
 ## Siehe auch
 
 - [Table](../table/)
-- [Field](../../fields/field/)
-- [Basiskomponente](../../basics/base/)
+- [Field](../../../primitives/fields/field/)
+- [Basiskomponente](../../../primitives/basics/base.md)

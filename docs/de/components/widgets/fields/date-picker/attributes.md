@@ -1,7 +1,7 @@
 # Date Picker (Datumsauswahl) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
@@ -49,7 +49,7 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 ## Datenanbindung
 
 Ohne `sources` ist der Wähler ein reiner Kalender. Mit `sources` liest er den
-Datenbestand über das Muster in [Daten-API](../../../data/api.md).
+Datenbestand über das Muster in [Daten-API](../../../../data/api.md).
 
 | Attribut | Typ | Default | Beschreibung |
 |----------|-----|---------|--------------|
@@ -78,7 +78,7 @@ Datenbestand über das Muster in [Daten-API](../../../data/api.md).
 
 ## Eintragsobjekt
 
-Ein Eintrag in `entries` folgt den [Standardfeldern](../../../data/felder.md).
+Ein Eintrag in `entries` folgt den [Standardfeldern](../../../../data/felder.md).
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
@@ -96,4 +96,4 @@ Ein Eintrag in `entries` folgt den [Standardfeldern](../../../data/felder.md).
 
 `id`, `visible`, `enabled`, `size`, `theme`, `rounded`, `state`, `tabIndex`,
 `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../basics/base/)
+[Basiskomponente](../../../primitives/basics/base.md)

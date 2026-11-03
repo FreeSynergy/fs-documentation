@@ -41,7 +41,7 @@ Ein Combobox ist ein Textfeld + Dropdown.
   einem eingegebenen Text – das ist der entscheidende Unterschied (Plan Abschnitt 4, Zeile 5).
 - **Nicht verwechseln mit** [search-field](../search-field/): ein Suchfeld löst eine Suche aus
   und verändert die Ansicht, die Combobox schreibt einen Wert ins Formular.
-- **Nicht verwechseln mit** [command](../../navigation/command/): die Befehlspalette ist ein
+- **Nicht verwechseln mit** [command](../../../widgets/navigation/command/): die Befehlspalette ist ein
   vollflächiges Overlay für Aktionen, keine Feld-Eingabe.
 
 ## Best Practices
@@ -57,4 +57,4 @@ Ein Combobox ist ein Textfeld + Dropdown.
 - [fields – Übersicht](../index.md)
 - [Select (Auswahlliste)](../select/) — die reine Auswahlliste
 - [Search Field](../search-field/) — Suche statt Wertauswahl
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

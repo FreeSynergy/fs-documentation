@@ -1,7 +1,7 @@
 # Link (Verweis) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../base.md).
 
 ## Hauptattribute
 
@@ -38,4 +38,4 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 
 `id`, `label`, `visible`, `enabled`/`disabled`, `size`, `theme`, `state`,
 `tabIndex`, `onFocus`, `onBlur`, `gesture`, `aria-*` →
-[Basiskomponente](../base/)
+[Basiskomponente](../base.md)

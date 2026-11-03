@@ -1,7 +1,7 @@
 # Button Group (Schaltflächengruppe) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../../basics/base.md).
 
 ## Hauptattribute
 
@@ -39,4 +39,4 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 
 `id`, `label`, `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../basics/base/)
+[Basiskomponente](../../basics/base.md)

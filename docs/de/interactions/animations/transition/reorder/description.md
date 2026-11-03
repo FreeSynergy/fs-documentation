@@ -10,7 +10,7 @@ Reorder lässt Listenelemente weich ihre Plätze tauschen, wenn sich ihre Reihen
 - Sortieren nach Datum, Name oder Priorität
 - Filter setzen: herausgefilterte Elemente verschwinden, die übrigen rücken nach
 - Aufgaben in einer anderen Spalte oder Gruppe einordnen
-- Kanban- und Board-Ansichten, siehe [board](../../../../components/special/index.md)
+- Kanban- und Board-Ansichten, siehe [list-view](../../../../components/widgets/data/index.md)
 - Anhänge und Bilder in einer Galerie neu anordnen
 
 ## Dauer

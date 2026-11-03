@@ -59,4 +59,4 @@ Eine List View ist eine einfache Listenansicht von Elementen.
 - [data – Übersicht](../index.md)
 - [Table](../table/) — Spaltenvergleich
 - [Grid View](../grid-view/) — Karten statt Zeilen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

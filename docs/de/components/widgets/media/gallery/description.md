@@ -49,7 +49,7 @@ Die Abfolge einzelner Bilder ist keine Galerie-Variante mehr, sondern die eigene
   die Galerie nebeneinander (Plan Abschnitt 4, Zeile 14).
 - **Nicht verwechseln mit** [grid-view](../../data/grid-view/): das Raster zeigt beliebige Objekte,
   die Galerie ausschließlich Bilder samt Vergrößerung.
-- **Nicht verwechseln mit** [image](../image/): ein einzelnes Bild ist kein Galeriemember.
+- **Nicht verwechseln mit** [image](../../../primitives/media/image/): ein einzelnes Bild ist kein Galeriemember.
 - Die Großansicht ist ein Overlay wie [popover](../../overlays/popover/), keine eigene Seite.
 
 ## Best Practices
@@ -93,4 +93,4 @@ Die Abfolge einzelner Bilder ist keine Galerie-Variante mehr, sondern die eigene
 ## Siehe auch
 
 - [media – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

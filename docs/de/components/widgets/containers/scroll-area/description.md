@@ -56,4 +56,4 @@ Konstante Höhe auf.
 
 - [Split View](../split-view/)
 - [List View](../../data/list-view/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

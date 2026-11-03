@@ -75,4 +75,4 @@ die Variante `einzel` dieses Akkordeons: `items` mit einem Eintrag und
 - [containers – Übersicht](../index.md)
 - [Panel](../panel/) — eigenständiger Bereich
 - [Tabs](../../navigation/tabs/) — immer nur ein Inhalt
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

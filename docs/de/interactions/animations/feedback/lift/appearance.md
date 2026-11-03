@@ -37,4 +37,4 @@ Das Element verlässt seine Layout-Position nicht, sondern wird nur in der Darst
 - [Animationen Übersicht](../../index.md)
 - [Press](../press/description.md)
 - [Highlight](../highlight/description.md)
-- [Card](../../../../components/containers/card/description.md)
+- [Card](../../../../components/widgets/containers/card/description.md)

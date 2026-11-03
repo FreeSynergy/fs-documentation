@@ -39,7 +39,7 @@
 | Effekt | Beschreibung |
 |--------|--------------|
 | `ring` | Primärring auf der aktiven Box |
-| `shake` | bei falschem Code, siehe [shake](../../../interactions/animations/feedback/shake/) |
+| `shake` | bei falschem Code, siehe [shake](../../../../interactions/animations/feedback/shake/) |
 
 ## Reaktiv
 

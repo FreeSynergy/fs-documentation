@@ -1,7 +1,7 @@
 # Tooltip (Kurzinfo) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
@@ -45,4 +45,4 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `rounded`, `animation`, `aria-*` →
-[Basiskomponente](../../basics/base/)
+[Basiskomponente](../../../primitives/basics/base.md)

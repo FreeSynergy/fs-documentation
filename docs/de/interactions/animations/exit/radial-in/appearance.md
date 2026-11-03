@@ -40,4 +40,4 @@ ausbleicht. Ringe lösen sich von außen nach innen auf.
 
 - [Animationen Übersicht](../../index.md)
 - [Radial Out](../../entrance/radial-out/description.md)
-- [Radial Menu](../../../../components/navigation/radial-menu/description.md)
+- [Radial Menu](../../../../components/widgets/navigation/radial-menu/description.md)

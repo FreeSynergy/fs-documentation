@@ -47,7 +47,7 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
   das Modal durch das Overlay selbst.
 - **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs sind frei umschaltbar, der
   Wizard führt durch eine Folge und prüft vor dem Weitergehen.
-- **Nicht verwechseln mit** [progress](../../feedback/progress/): die Fortschrittsbalken-
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): die Fortschrittsbalken-
   Komponente zeigt nur einen Anteil; der Step Indicator zeigt Position, Erledigtes und
   Ausstehendes pro Schritt.
 - Die Variante `schrittanzeige` (früher `stepper`) führt nicht — sie zeigt nur Schritte an.
@@ -76,4 +76,4 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
 ## Siehe auch
 
 - [containers – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

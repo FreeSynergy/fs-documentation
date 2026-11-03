@@ -55,4 +55,4 @@ Ein Tags Input ist eine Liste von Tags/Etiketten.
 - [fields – Übersicht](../index.md)
 - [Badge](../../feedback/badge/) — Anzeige ohne Bearbeitung
 - [Mention Input](../mention-input/) — Kontakte statt Begriffe
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

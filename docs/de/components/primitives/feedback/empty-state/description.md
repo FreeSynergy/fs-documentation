@@ -54,4 +54,4 @@ ersten Inhalt. Er ersetzt die leere Liste durch eine kurze Aussage und eine Akti
 
 - [Skeleton](../skeleton/)
 - [Alert](../alert/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

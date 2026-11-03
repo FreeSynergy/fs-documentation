@@ -43,8 +43,8 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
 - **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
   Text, hier eine Fläche.
-- **Nicht verwechseln mit** [map-view](../map-view/): die Zeichenfläche hat keinen Geo-Bezug.
-- **Nicht verwechseln mit** [gallery](../../media/gallery/): ein Whiteboard erzeugt Inhalte,
+- **Nicht verwechseln mit** [map-view](../../../widgets/special/map-view/): die Zeichenfläche hat keinen Geo-Bezug.
+- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): ein Whiteboard erzeugt Inhalte,
   eine Galerie zeigt vorhandene.
 
 ## Best Practices
@@ -60,5 +60,5 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
 - [special – Übersicht](../index.md)
 - [Rich Text Editor](../../fields/rich-text-editor/) — Text statt Fläche
-- [Map View](../map-view/) — Fläche mit Geo-Bezug
-- [Basiskomponente](../../basics/base/)
+- [Map View](../../../widgets/special/map-view/) — Fläche mit Geo-Bezug
+- [Basiskomponente](../../../primitives/basics/base.md)

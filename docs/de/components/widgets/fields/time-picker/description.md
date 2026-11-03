@@ -39,7 +39,7 @@ unpassende Zeiten.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [date-input](../date-input/) mit `type = "time"`:
+- **Nicht verwechseln mit** [date-input](../../../primitives/fields/date-input/) mit `type = "time"`:
   dort wird getippt, hier wird ausgewählt.
 - **Nicht verwechseln mit** [range-calendar](../range-calendar/): das wählt Tage,
   nicht Uhrzeiten.
@@ -52,5 +52,5 @@ unpassende Zeiten.
 ## Siehe auch
 
 - [Date Picker](../date-picker/)
-- [Date Input](../date-input/)
-- [Basiskomponente](../../basics/base/)
+- [Date Input](../../../primitives/fields/date-input/)
+- [Basiskomponente](../../../primitives/basics/base.md)

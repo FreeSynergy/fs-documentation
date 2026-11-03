@@ -60,4 +60,4 @@ Grid View ist eine Karten/Raster-Darstellung von Elementen.
 - [data – Übersicht](../index.md)
 - [List View](../list-view/) — Zeilen statt Karten
 - [Gallery](../../media/gallery/) — Medien mit Vergrößerung
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

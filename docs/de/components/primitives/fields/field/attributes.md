@@ -1,7 +1,7 @@
 # Field (Feld-Wrapper) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/). Das umschlossene Feld bringt seine eigenen
+[base](../../basics/base.md). Das umschlossene Feld bringt seine eigenen
 Attribute mit. Das geerbte `label` wird vom Wrapper an das Feld weitergegeben.
 
 ## Hauptattribute
@@ -39,4 +39,4 @@ Es werden keine eigenen Events genutzt; das Feld erzeugt die Events.
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `state`, `animation`, `aria-*` →
-[Basiskomponente](../../basics/base/)
+[Basiskomponente](../../basics/base.md)

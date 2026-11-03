@@ -1,7 +1,7 @@
 # Kbd (Tastenkennung) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../base.md).
 
 ## Hauptattribute
 
@@ -26,4 +26,4 @@ Es werden keine Events genutzt; das Abhören von Tasten gehört zur Anwendung.
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `rounded`, `state`, `aria-*` →
-[Basiskomponente](../base/)
+[Basiskomponente](../base.md)

@@ -39,11 +39,11 @@ Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [embed](../embed/): eine fremde Kartenanwendung wird eingebettet,
+- **Nicht verwechseln mit** [embed](../../../workbenches/special/embed/): eine fremde Kartenanwendung wird eingebettet,
   diese Komponente zeichnet selbst (OpenStreetMap, Leaflet).
 - Die zugehörige Ortsliste ist eine [list-view](../../data/list-view/), der Marker ein
-  [icon](../../media/icon/) — beides eigene Komponenten.
-- Eine Karte ohne Geo-Bezug (Grundriss, Lageplan) ist ein [image](../../media/image/).
+  [icon](../../../primitives/media/icon/) — beides eigene Komponenten.
+- Eine Karte ohne Geo-Bezug (Grundriss, Lageplan) ist ein [image](../../../primitives/media/image/).
 
 ## Best Practices
 
@@ -56,6 +56,6 @@ Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
 ## Siehe auch
 
 - [special – Übersicht](../index.md)
-- [Embed](../embed/) — fremde Kartendienste
+- [Embed](../../../workbenches/special/embed/) — fremde Kartendienste
 - [List View](../../data/list-view/) — Ortsliste
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

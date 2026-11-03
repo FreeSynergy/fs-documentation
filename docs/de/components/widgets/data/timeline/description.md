@@ -44,7 +44,7 @@ Eine Timeline ist eine chronologische Darstellung von Ereignissen.
   und zeigt Belegung, die Zeitlinie zeigt Reihenfolge ohne Skala.
 - **Nicht verwechseln mit** [wizard](../../containers/wizard/): der Assistent führt durch noch offene Schritte,
   die Zeitlinie schaut auf Vergangenes zurück.
-- **Nicht verwechseln mit** [progress](../../feedback/progress/): ein Balken zeigt einen Anteil,
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): ein Balken zeigt einen Anteil,
   die Zeitlinie zeigt die einzelnen Punkte.
 - Eine [list-view](../list-view/) ist zeitlos und umsortierbar; die Zeitlinie bleibt chronologisch.
 
@@ -76,4 +76,4 @@ Eine Timeline ist eine chronologische Darstellung von Ereignissen.
 - [data – Übersicht](../index.md)
 - [Calendar View](../calendar-view/) — Belegung auf Zeitskala
 - [Wizard](../../containers/wizard/) — offene Schritte führen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

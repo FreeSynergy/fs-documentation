@@ -34,7 +34,7 @@ sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
 ## Features
 
 - Gruppen mit Köpfen und Trennern
-- Zähler oder Status an den Punkten ([badge](../../feedback/badge/))
+- Zähler oder Status an den Punkten ([badge](../../../primitives/feedback/badge/))
 - Profilkopf oben, Einstellungen unten
 - durchsuchbar bei vielen Punkten, Tastaturnavigation mit Pfeiltasten
 
@@ -66,4 +66,4 @@ sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
 - [navigation – Übersicht](../index.md)
 - [Drawer](../../overlays/drawer/) — Seitenleiste als Overlay
 - [Menu](../menu/) — Menüpunkte in der Leiste
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

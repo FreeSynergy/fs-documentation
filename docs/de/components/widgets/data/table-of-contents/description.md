@@ -73,4 +73,4 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 - [data – Übersicht](../index.md)
 - [Tree View](../tree-view/) — Datenhierarchie
 - [Sidebar](../../navigation/sidebar/) — Ansicht wechseln
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

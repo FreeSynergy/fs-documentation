@@ -66,4 +66,4 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 - [overlays – Übersicht](../index.md)
 - [Sidebar](../../navigation/sidebar/) — dauerhafte Seitenleiste
 - [Modal](../modal/) — zentriertes Overlay
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

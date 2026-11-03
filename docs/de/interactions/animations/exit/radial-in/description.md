@@ -31,4 +31,4 @@ weggewesen. Der Ankerkern selbst bleibt am längsten stehen oder verschwindet zu
 - Pop Out klappt ein einzelnes Element an seiner Position weg; Radial In bewegt alle
   Punkte zurück zum gemeinsamen Anker — der Weg nach innen zeigt, wo das Menü herkam.
 - Nach `onAnimateEnd` wird das Menü aus dem Layout genommen; bis dahin bleibt der
-  Trefferbereich bestehen (Wegfahr-Toleranz des [Radial Menu](../../../../components/navigation/radial-menu/description.md)).
+  Trefferbereich bestehen (Wegfahr-Toleranz des [Radial Menu](../../../../components/widgets/navigation/radial-menu/description.md)).

@@ -29,5 +29,5 @@ reißt die übrige Fläche abrupt auf – das wirkt stärker als jede Ausgangsan
 
 - [Animationen Übersicht](../index.md)
 - [Eingang (entrance)](../entrance/)
-- [Accordion](../../../components/containers/accordion/description.md), [Toast](../../../components/feedback/toast/description.md)
-- [Radial Menu](../../../components/navigation/radial-menu/description.md) - nutzt `radial-in` beim Schließen
+- [Accordion](../../../components/widgets/containers/accordion/description.md), [Toast](../../../components/primitives/feedback/toast/description.md)
+- [Radial Menu](../../../components/widgets/navigation/radial-menu/description.md) - nutzt `radial-in` beim Schließen

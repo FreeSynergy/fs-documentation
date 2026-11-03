@@ -1,75 +1,85 @@
 # UI-Komponenten & Elemente
 
 Diese Dokumentation beschreibt die UI-Elemente, die in FreeSynergy-Programmen
-verwendet werden.
+verwendet werden. Sie sind nach Ebene sortiert: `primitives` → `widgets` →
+`workbenches` (Beschlüsse 0001 und 0004); die Typgruppen (basics, fields, …)
+bleiben innerhalb der Bänder erhalten.
 
 ## Grundlagen
 
-Alle Komponenten erben von der **Basisklasse** [base](basics/base.md): geerbte Attribute, Größen-Raster, Zustände,
+Alle Komponenten erben von der **Basisklasse** [base](primitives/basics/base.md): geerbte Attribute, Größen-Raster, Zustände,
 Barrierefreiheit, Dateisatz und Namenskonvention. Eine Komponentendatei
 listet nur ihre **eigenen** Attribute.
 
-## Kategorien (10) — 84 Komponenten
+## Bänder (3) — 84 Komponenten, 10 Typgruppen
 
-### [basics](./basics/) — Grundlagen (4)
+### [primitives](./primitives/) — Grundbausteine (34)
 
-Grundlagen, von denen alle anderen Komponenten ausgehen: die Basisklasse mit ihren geerbten Attributen, Zuständen und Tokens sowie die kleinsten Bausteine.
+Nicht weiter zerlegbar: ein Wert, eine Geste, ein Zustand. Kein Band enthält Inhalte, die es erst zur Laufzeit bekommt.
 
-[kbd](./basics/kbd/), [label](./basics/label/), [link](./basics/link/), [separator](./basics/separator/)
+#### [basics](./primitives/basics/) — Grundlagen (4)
 
-### [actions](./actions/) — Aktionen (3)
+[kbd](./primitives/basics/kbd/), [label](./primitives/basics/label/), [link](./primitives/basics/link/), [separator](./primitives/basics/separator/)
 
-Action-Elemente lösen eine einzelne Handlung aus oder bündeln zusammengehörige Handlungen. Sie verändern Daten oder Zustände, aber nicht die Adresse.
+#### [actions](./primitives/actions/) — Aktionen (3)
 
-[button](./actions/button/), [button-group](./actions/button-group/), [floating-action-button](./actions/floating-action-button/)
+[button](./primitives/actions/button/), [button-group](./primitives/actions/button-group/), [floating-action-button](./primitives/actions/floating-action-button/)
 
-### [navigation](./navigation/) — Navigation (10)
+#### [feedback](./primitives/feedback/) — Rückmeldung (7)
 
-Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Reiter, Seitenleisten und Pfadangaben.
+[alert](./primitives/feedback/alert/), [badge](./primitives/feedback/badge/), [empty-state](./primitives/feedback/empty-state/), [progress](./primitives/feedback/progress/), [skeleton](./primitives/feedback/skeleton/), [spinner](./primitives/feedback/spinner/), [toast](./primitives/feedback/toast/)
 
-[bottom-navigation](./navigation/bottom-navigation/), [breadcrumb](./navigation/breadcrumb/), [command](./navigation/command/), [language-switcher](./navigation/language-switcher/), [menu](./navigation/menu/), [pagination](./navigation/pagination/), [radial-menu](./navigation/radial-menu/), [sidebar](./navigation/sidebar/), [tabs](./navigation/tabs/), [toolbar](./navigation/toolbar/)
+#### [fields](./primitives/fields/) — Felder (18)
 
-### [containers](./containers/) — Container (6)
+[checkbox](./primitives/fields/checkbox/), [color-input](./primitives/fields/color-input/), [combobox](./primitives/fields/combobox/), [date-input](./primitives/fields/date-input/), [field](./primitives/fields/field/), [input-group](./primitives/fields/input-group/), [mention-input](./primitives/fields/mention-input/), [number-input](./primitives/fields/number-input/), [otp-input](./primitives/fields/otp-input/), [radio-group](./primitives/fields/radio-group/), [rating](./primitives/fields/rating/), [search-field](./primitives/fields/search-field/), [select](./primitives/fields/select/), [slider](./primitives/fields/slider/), [switch](./primitives/fields/switch/), [tags-input](./primitives/fields/tags-input/), [text-input](./primitives/fields/text-input/), [textarea](./primitives/fields/textarea/)
 
-Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, aufklappbare Gruppen, geteilte Ansichten und Assistenten.
+#### [media](./primitives/media/) — Medien (2)
 
-[accordion](./containers/accordion/), [card](./containers/card/), [panel](./containers/panel/), [scroll-area](./containers/scroll-area/), [split-view](./containers/split-view/), [wizard](./containers/wizard/)
+[icon](./primitives/media/icon/), [image](./primitives/media/image/)
 
-### [overlays](./overlays/) — Overlays (7)
+### [widgets](./widgets/) — Bausteine mit bekanntem Inhalt (45)
 
-Elemente, die über anderem Inhalt erscheinen und eigenen Fokus bekommen. Sie haben eine eigene Lebensdauer und schließen mit `Esc` oder Klick außerhalb.
+Kennt seine Inhalte beim Bauen: bindet ein bekanntes Datenmodell, hat endliche Kinder und eigenen Zustand.
 
-[alert-dialog](./overlays/alert-dialog/), [context-menu](./overlays/context-menu/), [drawer](./overlays/drawer/), [hover-card](./overlays/hover-card/), [modal](./overlays/modal/), [popover](./overlays/popover/), [tooltip](./overlays/tooltip/)
+#### [navigation](./widgets/navigation/) — Navigation (10)
 
-### [feedback](./feedback/) — Rückmeldung (7)
+[bottom-navigation](./widgets/navigation/bottom-navigation/), [breadcrumb](./widgets/navigation/breadcrumb/), [command](./widgets/navigation/command/), [language-switcher](./widgets/navigation/language-switcher/), [menu](./widgets/navigation/menu/), [pagination](./widgets/navigation/pagination/), [radial-menu](./widgets/navigation/radial-menu/), [sidebar](./widgets/navigation/sidebar/), [tabs](./widgets/navigation/tabs/), [toolbar](./widgets/navigation/toolbar/)
 
-Elemente, die den Zustand einer Anwendung sichtbar machen: Meldungen, Fortschritt, Ladezustände und Kennzeichnungen.
+#### [containers](./widgets/containers/) — Container (6)
 
-[alert](./feedback/alert/), [badge](./feedback/badge/), [empty-state](./feedback/empty-state/), [progress](./feedback/progress/), [skeleton](./feedback/skeleton/), [spinner](./feedback/spinner/), [toast](./feedback/toast/)
+[accordion](./widgets/containers/accordion/), [card](./widgets/containers/card/), [panel](./widgets/containers/panel/), [scroll-area](./widgets/containers/scroll-area/), [split-view](./widgets/containers/split-view/), [wizard](./widgets/containers/wizard/)
 
-### [fields](./fields/) — Felder (24)
+#### [overlays](./widgets/overlays/) — Overlays (7)
 
-Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
+[alert-dialog](./widgets/overlays/alert-dialog/), [context-menu](./widgets/overlays/context-menu/), [drawer](./widgets/overlays/drawer/), [hover-card](./widgets/overlays/hover-card/), [modal](./widgets/overlays/modal/), [popover](./widgets/overlays/popover/), [tooltip](./widgets/overlays/tooltip/)
 
-[checkbox](./fields/checkbox/), [color-input](./fields/color-input/), [combobox](./fields/combobox/), [date-input](./fields/date-input/), [date-picker](./fields/date-picker/), [emoji-picker](./fields/emoji-picker/), [field](./fields/field/), [file-upload](./fields/file-upload/), [input-group](./fields/input-group/), [mention-input](./fields/mention-input/), [number-input](./fields/number-input/), [otp-input](./fields/otp-input/), [radio-group](./fields/radio-group/), [range-calendar](./fields/range-calendar/), [rating](./fields/rating/), [rich-text-editor](./fields/rich-text-editor/), [search-field](./fields/search-field/), [select](./fields/select/), [slider](./fields/slider/), [switch](./fields/switch/), [tags-input](./fields/tags-input/), [text-input](./fields/text-input/), [textarea](./fields/textarea/), [time-picker](./fields/time-picker/)
+#### [fields](./widgets/fields/) — Felder (5)
 
-### [data](./data/) — Daten (11)
+[date-picker](./widgets/fields/date-picker/), [emoji-picker](./widgets/fields/emoji-picker/), [file-upload](./widgets/fields/file-upload/), [range-calendar](./widgets/fields/range-calendar/), [time-picker](./widgets/fields/time-picker/)
 
-Elemente, die Daten darstellen: Listen, Tabellen, Raster, Bäume, Zeitachsen und Diagramme. Sie bearbeiten Werte, sondern zeigen sie — zum Ändern kommen die [Felder](../fields/) zum Einsatz.
+#### [data](./widgets/data/) — Daten (11)
 
-[avatar](./data/avatar/), [calendar-view](./data/calendar-view/), [chart](./data/chart/), [description-list](./data/description-list/), [grid-view](./data/grid-view/), [list-view](./data/list-view/), [repeater](./data/repeater/), [table](./data/table/), [table-of-contents](./data/table-of-contents/), [timeline](./data/timeline/), [tree-view](./data/tree-view/)
+[avatar](./widgets/data/avatar/), [calendar-view](./widgets/data/calendar-view/), [chart](./widgets/data/chart/), [description-list](./widgets/data/description-list/), [grid-view](./widgets/data/grid-view/), [list-view](./widgets/data/list-view/), [repeater](./widgets/data/repeater/), [table](./widgets/data/table/), [table-of-contents](./widgets/data/table-of-contents/), [timeline](./widgets/data/timeline/), [tree-view](./widgets/data/tree-view/)
 
-### [media](./media/) — Medien (7)
+#### [media](./widgets/media/) — Medien (5)
 
-Elemente, die Medien wiedergeben oder darstellen. `media-player` ist die Elternklasse von `audio` und `video`.
+[audio](./widgets/media/audio/), [video](./widgets/media/video/), [media-player](./widgets/media/media-player/), [carousel](./widgets/media/carousel/), [gallery](./widgets/media/gallery/)
 
-[audio](./media/audio/), [carousel](./media/carousel/), [gallery](./media/gallery/), [icon](./media/icon/), [image](./media/image/), [media-player](./media/media-player/), [video](./media/video/)
+#### [special](./widgets/special/) — Spezielle Elemente (1)
 
-### [special](./special/) — Spezielle Elemente (5)
+[map-view](./widgets/special/map-view/)
 
-Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Karten und Ansichten, die es bei generischen Bibliotheken nicht gibt.
+### [workbenches](./workbenches/) — Offene Arbeitsflaechen (5)
 
-[code-editor](./special/code-editor/), [dashboard](./special/dashboard/), [embed](./special/embed/), [map-view](./special/map-view/), [whiteboard](./special/whiteboard/)
+Erhält seinen Inhalt erst zur Laufzeit: offene Fläche, die selbst primitives und widgets aufnehmen darf.
+
+#### [fields](./workbenches/fields/) — Felder (1)
+
+[rich-text-editor](./workbenches/fields/rich-text-editor/)
+
+#### [special](./workbenches/special/) — Spezielle Elemente (4)
+
+[code-editor](./workbenches/special/code-editor/), [dashboard](./workbenches/special/dashboard/), [embed](./workbenches/special/embed/), [whiteboard](./workbenches/special/whiteboard/)
 
 ## Was ist hier dokumentiert?
 
@@ -77,7 +87,7 @@ Jede Komponente hat einen festen Dateisatz:
 
 - **description.md** – Steckbrief, Beschreibung, Verwendungszweck, Varianten, Abgrenzung
 - **appearance.md** – Aussehen: Layout, Größen, Farben, Zustände, Reaktiv
-- **attributes.md** – nur **eigene** Attribute + Verweis auf `basics/base.md`
+- **attributes.md** – nur **eigene** Attribute + Verweis auf `primitives/basics/base.md`
 - **usage.md** – Anwendung, Szenarien und Beispiele
 
 Die Listen und Zahlen auf dieser Seite erzeugt `scripts/gen_component_indexes.py`. `scripts/check_components.py` prüft den Standard.

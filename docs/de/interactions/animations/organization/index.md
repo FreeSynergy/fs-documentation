@@ -23,4 +23,4 @@ Die eigentliche Bewegung kommt aus einer anderen Kategorie:
 
 - [Animationen Übersicht](../index.md)
 - [Eingang (entrance)](../entrance/), [Ausgang (exit)](../exit/)
-- [grid-view](../../../components/data/grid-view/description.md) - Raster gestaffelt aufbauen
+- [grid-view](../../../components/widgets/data/grid-view/description.md) - Raster gestaffelt aufbauen

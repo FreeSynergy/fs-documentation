@@ -40,7 +40,12 @@ Eine Calendar View zeigt Termine in einem Kalender an.
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [date-picker](../../fields/date-picker/): diese Ansicht zeigt Termine,
-  sie wählt kein Datum aus.
+  sie wählt kein Datum aus. Der gezeigte Kern ist derselbe — Raster, Marken, Einträge nach
+  Typ und Farbe — die Ansicht ist nur größer und hat Platz für Zeiträume.
+- **Kein Menü, kein Export.** Die Ansicht ist ein Widget (Ebene 2). Eine Kalender-App
+  (Ebene 4) bettet sie im ganzen Bildschirm und bringt Menü, Sichten, Bearbeiten, Export
+  und Ausgabeformate erst mit — die Ansicht selbst bleibt dieselbe, sie wird nicht
+  noch einmal gebaut.
 - **Nicht verwechseln mit** [range-calendar](../../fields/range-calendar/): dort wählt man einen Zeitraum
   als Filter, hier ist der Zeitraum die Ansicht.
 - **Nicht verwechseln mit** [timeline](../timeline/): eine Zeitlinie erklärt Abläufe,
@@ -60,4 +65,4 @@ Eine Calendar View zeigt Termine in einem Kalender an.
 - [data – Übersicht](../index.md)
 - [List View](../list-view/) — Agenda ohne Zeitskala
 - [Range Calendar](../../fields/range-calendar/) — Zeitraum wählen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

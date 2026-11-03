@@ -54,4 +54,4 @@ Zeiger erkannt.
 ## Siehe auch
 
 - [Swipe](../swipe/description.md)
-- [Navigation Sidebar](../../../../components/navigation/sidebar/description.md)
+- [Navigation Sidebar](../../../../components/widgets/navigation/sidebar/description.md)

@@ -60,4 +60,4 @@ bekannt ist. Er ist die kleinste Form der Rückmeldung.
 - [Progress](../progress/)
 - [Skeleton](../skeleton/)
 - [Button](../../actions/button/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

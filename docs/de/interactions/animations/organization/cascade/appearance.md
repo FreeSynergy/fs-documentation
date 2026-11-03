@@ -37,4 +37,4 @@ Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander, aber die 
 - [Animationen Übersicht](../../index.md)
 - [Stagger](../stagger/description.md)
 - [Expand](../../entrance/expand/description.md)
-- [grid-view](../../../../components/data/grid-view/description.md)
+- [grid-view](../../../../components/widgets/data/grid-view/description.md)

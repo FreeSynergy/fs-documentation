@@ -36,9 +36,9 @@ Ein File Upload ist ein Element für Dateiauswahl und Upload.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [image](../../media/image/): das Bild zeigt eine vorhandene Datei,
+- **Nicht verwechseln mit** [image](../../../primitives/media/image/): das Bild zeigt eine vorhandene Datei,
   der Upload bringt Dateien erst ins System.
-- **Nicht verwechseln mit** [progress](../../feedback/progress/): der Fortschrittsbalken ist hier
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): der Fortschrittsbalken ist hier
   nur eingebettet; dargestellt wird er von `progress`.
 - Der Upload nimmt Dateien entgegen, er verwaltet sie nicht – die Liste liegt in
   [list-view](../../data/list-view/).
@@ -55,6 +55,6 @@ Ein File Upload ist ein Element für Dateiauswahl und Upload.
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Image](../../media/image/) — Anzeige hochgeladener Bilder
-- [Progress](../../feedback/progress/) — Fortschrittsbalken
-- [Basiskomponente](../../basics/base/)
+- [Image](../../../primitives/media/image/) — Anzeige hochgeladener Bilder
+- [Progress](../../../primitives/feedback/progress/) — Fortschrittsbalken
+- [Basiskomponente](../../../primitives/basics/base.md)

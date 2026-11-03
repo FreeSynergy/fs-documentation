@@ -39,11 +39,11 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [date-picker](../date-picker/): das Datumsfeld nimmt auch getippte
+- **Nicht verwechseln mit** [date-picker](../../../widgets/fields/date-picker/): das Datumsfeld nimmt auch getippte
   Werte an und ist Teil des Formulars; der Picker ist das reine Auswahl-Overlay ohne Texteingabe.
-- **Nicht verwechseln mit** [calendar-view](../../data/calendar-view/): die Kalenderansicht zeigt
+- **Nicht verwechseln mit** [calendar-view](../../../widgets/data/calendar-view/): die Kalenderansicht zeigt
   Termine, sie wählt kein Datum aus.
-- **Nicht verwechseln mit** [range-calendar](../range-calendar/): hier werden Anfang **und** Ende
+- **Nicht verwechseln mit** [range-calendar](../../../widgets/fields/range-calendar/): hier werden Anfang **und** Ende
   gewählt, nicht ein Einzelwert.
 
 ## Best Practices
@@ -57,6 +57,6 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Date Picker](../date-picker/) — Auswahl per Overlay
-- [Time Picker](../time-picker/) — Uhrzeitauswahl
-- [Basiskomponente](../../basics/base/)
+- [Date Picker](../../../widgets/fields/date-picker/) — Auswahl per Overlay
+- [Time Picker](../../../widgets/fields/time-picker/) — Uhrzeitauswahl
+- [Basiskomponente](../../basics/base.md)

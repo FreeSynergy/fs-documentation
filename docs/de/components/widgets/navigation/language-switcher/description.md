@@ -38,7 +38,7 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [select](../../fields/select/): ein Feldwert bleibt im Formular,
+- **Nicht verwechseln mit** [select](../../../primitives/fields/select/): ein Feldwert bleibt im Formular,
   die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
 - **Nicht verwechseln mit** [menu](../menu/): das Menü ruft Aktionen auf, dieser Schalter
   wechselt nur eine Einstellung.
@@ -80,6 +80,6 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Select](../../fields/select/) — Wert in einem Formular
+- [Select](../../../primitives/fields/select/) — Wert in einem Formular
 - [Toolbar](../toolbar/) — üblicher Ort des Schalters
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

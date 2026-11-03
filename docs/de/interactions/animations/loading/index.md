@@ -24,4 +24,4 @@ Ladeanimationen überbrücken eine Wartezeit und beantworten drei verschiedene F
 
 - [Animationen Übersicht](../index.md)
 - [Endlos (loop)](../loop/) - dauerhafte Signale ohne Ladebezug
-- [Liste (list-view)](../../../components/data/list-view/description.md) - Skeleton in Listen
+- [Liste (list-view)](../../../components/widgets/data/list-view/description.md) - Skeleton in Listen

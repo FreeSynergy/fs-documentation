@@ -13,7 +13,7 @@
 | **Status** | dokumentiert |
 
 !!! info "Standardisierung"
-    Der Aktionsfächer des [floating-action-button](../../actions/floating-action-button/)
+    Der Aktionsfächer des [floating-action-button](../../../primitives/actions/floating-action-button/)
     (`expanded`) und das kreisförmige Rechtsklick-Menü sind Varianten **einer**
     Komponente: `radial-menu` mit `variant: facher` bzw. `variant: kontext`. Der FAB
     bleibt die *eine* Hauptaktion der Ansicht; er verankert nur das Kreismenü
@@ -48,7 +48,7 @@ Fächer geklemmt.
 
 - wiederkehrende Aktionen an fester Stelle, bedient aus dem Muskelgedächtnis
 - Aktionen am Zeiger (Rechtsklick, Langdruck) als runde Variante des Kontextmenüs
-- Schnellzugriff in Flächen-Programmen: [whiteboard](../../special/whiteboard/),
+- Schnellzugriff in Flächen-Programmen: [whiteboard](../../../workbenches/special/whiteboard/),
   [map-view](../../special/map-view/), Editoren
 - Ecken- und Kantenmenüs, die bei Hover wachsen und ihre Unterpunkte nach außen schieben
 - Launcher in der Bildschirmmitte auf Touch-, Kiosk- und Großbild-Oberflächen
@@ -85,7 +85,7 @@ Fächer geklemmt.
 - **Nicht verwechseln mit** [context-menu](../../overlays/context-menu/): beide erscheinen am
   Zeiger und tragen dieselben Aktionen — das Kontextmenü als Liste, das Kreismenü im Kreis.
   Beide haben die Rolle `menu`.
-- **Nicht verwechseln mit** [floating-action-button](../../actions/floating-action-button/):
+- **Nicht verwechseln mit** [floating-action-button](../../../primitives/actions/floating-action-button/):
   der FAB trägt die *eine* Hauptaktion, das Kreismenü mehrere gleichrangige. Der Fächer des
   FABs ist die Variante `facher`.
 - **Nicht verwechseln mit** [toolbar](../toolbar/): die Toolbar ist dauerhaft sichtbar,
@@ -114,6 +114,6 @@ Fächer geklemmt.
 - [navigation – Übersicht](../index.md)
 - [Menu](../menu/) — Elternklasse
 - [Context Menu](../../overlays/context-menu/) — dieselben Punkte, linear
-- [Floating Action Button](../../actions/floating-action-button/) — Anker für `facher`
-- [radial-out](../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../interactions/animations/exit/radial-in/)
-- [Basiskomponente](../../basics/base/)
+- [Floating Action Button](../../../primitives/actions/floating-action-button/) — Anker für `facher`
+- [radial-out](../../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../../interactions/animations/exit/radial-in/)
+- [Basiskomponente](../../../primitives/basics/base.md)

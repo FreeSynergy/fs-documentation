@@ -74,4 +74,4 @@ Ein Panel ist ein großer Container mit Header, Inhalt und Footer. Unterscheidet
 ## Siehe auch
 
 - [containers – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

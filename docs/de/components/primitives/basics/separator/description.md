@@ -41,8 +41,8 @@ tragen oder rein dekorativ sein.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** dem Rand von [card](../../containers/card/) oder
-  [panel](../../containers/panel/): deren Rahmen gehört zum Container.
+- **Nicht verwechseln mit** dem Rand von [card](../../../widgets/containers/card/) oder
+  [panel](../../../widgets/containers/panel/): deren Rahmen gehört zum Container.
 
 - **Nicht verwechseln mit** Abstandhaltern (spacer): die trennen ohne Linie.
 - Ein Trenner im Menü ist ein Separator mit Rolle `separator` in der Menügruppe.
@@ -57,6 +57,6 @@ tragen oder rein dekorativ sein.
 ## Siehe auch
 
 - [Label](../label/)
-- [Menu](../../navigation/menu/)
-- [Toolbar](../../navigation/toolbar/)
-- [Basiskomponente](../base/)
+- [Menu](../../../widgets/navigation/menu/)
+- [Toolbar](../../../widgets/navigation/toolbar/)
+- [Basiskomponente](../base.md)

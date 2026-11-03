@@ -36,7 +36,7 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [emoji-picker](../emoji-picker/): beide öffnen ein Auswahl-Overlay,
+- **Nicht verwechseln mit** [emoji-picker](../../../widgets/fields/emoji-picker/): beide öffnen ein Auswahl-Overlay,
   der Emoji-Picker wählt Zeichen, dieser Farbwerte.
 - Der eigentliche Overlay-Charakter (Farbfläche außerhalb des Feldes) macht die Farbe
   nicht zu einem reinen Feld: Das Feld selbst ist `code`, der Rest verhält sich wie ein Picker.
@@ -53,4 +53,4 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

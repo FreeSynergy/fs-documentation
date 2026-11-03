@@ -58,5 +58,5 @@ nur für Screenreader.
 ## Siehe auch
 
 - [Field](../../fields/field/)
-- [Basiskomponente](../base/)
+- [Basiskomponente](../base.md)
 - [Separator](../separator/)

@@ -44,7 +44,7 @@ Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion g
   dauerhaft, das Kontextmenü nur auf Zuruf (`long-press`, Rechtsklick).
 - **Nicht verwechseln mit** [popover](../popover/): ein Popover trägt Inhalt oder ein Formular,
   das Kontextmenü ausschließlich eine Aktionsliste.
-- **Nicht verwechseln mit** [select](../../fields/select/): hier wird ein Feldwert gesetzt,
+- **Nicht verwechseln mit** [select](../../../primitives/fields/select/): hier wird ein Feldwert gesetzt,
   dort eine Aktion ausgeführt.
 - Das Overflow-Menü (drei Punkte) ist die Variante für kleine Flächen, keine eigene Komponente.
 
@@ -67,4 +67,4 @@ Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion g
 - [overlays – Übersicht](../index.md)
 - [Menu](../../navigation/menu/) — Elternklasse
 - [Popover](../popover/) — Inhalt statt Aktionsliste
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

@@ -32,5 +32,5 @@ feedback (vibration) only with consent and switchable off (`hapticFeedback`,
 ## See also
 
 - [Gesture overview](../index.md)
-- [Shake animation](../../animations/feedback/shake/description.md) - the same pattern as output feedback
+- [Shake animation](shake/description.md) - the same pattern as output feedback
 - [Wiggle animation](../../animations/feedback/wiggle/description.md) - hold the device still, the element wobbles

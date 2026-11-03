@@ -46,7 +46,7 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
   Overlay am Klickpunkt, die Variante `kontext` bleibt im Layout stehen.
 - **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): eine Leiste enthält
   Aktionen, eine Navigation enthält Ziele.
-- Zusammengehörige Knopfpaare sind eine [button-group](../../actions/button-group/), die Leiste
+- Zusammengehörige Knopfpaare sind eine [button-group](../../../primitives/actions/button-group/), die Leiste
   selbst ist die gesamte Reihe.
 
 ## Best Practices
@@ -83,6 +83,6 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Button Group](../../actions/button-group/) — zusammengehörige Knöpfe
+- [Button Group](../../../primitives/actions/button-group/) — zusammengehörige Knöpfe
 - [Menu](../menu/) — Befehle im Menü
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

@@ -53,4 +53,4 @@ nebeneinander, damit der Beginn im linken und das Ende im rechten Monat liegen k
 
 - [Date Picker](../date-picker/)
 - [Calendar View](../../data/calendar-view/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

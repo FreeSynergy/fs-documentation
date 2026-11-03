@@ -39,7 +39,7 @@ Eine Auswahlliste: das Feld zeigt den gewählten Wert, die Optionen liegen hinte
 
 - **Nicht verwechseln mit** [combobox](../combobox/): hier kann nur gewählt werden, was die Liste
   bietet; die Combobox lässt zusätzlich Freitext zu (Plan Abschnitt 4, Zeile 5).
-- **Nicht verwechseln mit** [context-menu](../../overlays/context-menu/): ein Kontextmenü ruft
+- **Nicht verwechseln mit** [context-menu](../../../widgets/overlays/context-menu/): ein Kontextmenü ruft
   Aktionen auf, diese Liste setzt einen Feldwert.
 - **Nicht verwechseln mit** nativer Auswahlliste: `native-select` ist eine Variante, die das
   System-Overlay des Betriebssystems benutzt.
@@ -58,4 +58,4 @@ Eine Auswahlliste: das Feld zeigt den gewählten Wert, die Optionen liegen hinte
 - [fields – Übersicht](../index.md)
 - [Combobox](../combobox/) — Liste mit Freitext
 - [Radio Group](../radio-group/) — kurze Optionslisten
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

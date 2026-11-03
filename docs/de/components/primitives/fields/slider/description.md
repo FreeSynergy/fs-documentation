@@ -58,4 +58,4 @@ Ein Slider ist ein Wertebereich mit Schieberegler.
 - [fields – Übersicht](../index.md)
 - [Number Input](../number-input/) — genauen Wert eingeben
 - [Progress](../../feedback/progress/) — Fortschritt anzeigen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

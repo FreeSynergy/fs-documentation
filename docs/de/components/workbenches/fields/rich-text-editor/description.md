@@ -40,7 +40,7 @@ Ein Rich Text Editor ist ein Editor für formatierten Text.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [textarea](../textarea/): das mehrzeilige Feld speichert reinen Text,
+- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): das mehrzeilige Feld speichert reinen Text,
   dieser Editor speichert Formatierung als Struktur.
 - **Nicht verwechseln mit** [code-editor](../../special/code-editor/): dort steht Quellcode mit
   Syntaxhervorhebung im Vordergrund, hier das Druckbild.
@@ -58,6 +58,6 @@ Ein Rich Text Editor ist ein Editor für formatierten Text.
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Textarea](../textarea/) — reinen Text bearbeiten
+- [Textarea](../../../primitives/fields/textarea/) — reinen Text bearbeiten
 - [Code Editor](../../special/code-editor/) — Quellcode
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

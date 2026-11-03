@@ -39,9 +39,9 @@ Form und Größe sind keine Varianten, sondern Attribute `shape` und `size`.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [avatar](../../data/avatar/): ein Avatar stellt ein Subjekt dar,
+- **Nicht verwechseln mit** [avatar](../../../widgets/data/avatar/): ein Avatar stellt ein Subjekt dar,
   ein Icon eine Funktion oder einen Dateityp.
-- **Nicht verwechseln mit** Emojis aus dem [emoji-picker](../../fields/emoji-picker/): Emojis sind
+- **Nicht verwechseln mit** Emojis aus dem [emoji-picker](../../../widgets/fields/emoji-picker/): Emojis sind
   Inhalt, Icons sind Bedienoberfläche.
 - **Nicht verwechseln mit** [image](../image/): Icons sind klein, monochrom und Teil der Oberfläche.
 - Ein klickbares Icon ist kein Icon-Element allein, sondern ein
@@ -89,5 +89,5 @@ Form und Größe sind keine Varianten, sondern Attribute `shape` und `size`.
 
 - [media – Übersicht](../index.md)
 - [Button](../../actions/button/) — icon-only-Buttons
-- [Avatar](../../data/avatar/) — Personen statt Funktionen
-- [Basiskomponente](../../basics/base/)
+- [Avatar](../../../widgets/data/avatar/) — Personen statt Funktionen
+- [Basiskomponente](../../basics/base.md)

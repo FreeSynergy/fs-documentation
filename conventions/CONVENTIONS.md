@@ -54,12 +54,33 @@ Jede Ebene hat ihren eigenen `index.md`.
 - widget: *kennt seine Inhalte beim Bauen* (bindet ein bekanntes `data/`-Modell), endliche Kinder, eigener Zustand
 - workbench: *erhält Inhalte erst zur Laufzeit*, offen, darf selbst primitives+widgets aufnehmen
 
+### Grenze Bauebene ↔ Laufebene (beschlossen 2026-11-03, ADR 0005)
+
+App und Widget sind **derselbe Kern in unterschiedlicher Größe**. Die App bettet das Widget
+ganzzahlig und baut keine zweite Darstellung. Was die App zusätzlich bringt, ist die Hülle:
+
+| | Widget (Ebene 2) | App (Ebene 4) |
+|---|---|---|
+| Ergebnis | ein **Wert** (Tag, Zeitraum, Auswahl) für ein Feld | ein lauffähiges Programm |
+| Fläche | eingebettet, Größe vom Aufrufer | ganzer Bildschirm, eigene Aufteilung |
+| Menü, Toolbar | nein | ja |
+| Fenster, Adresse, Sichten | nein | ja |
+| Bearbeiten | nur im Dienst des Wertes, bei Schreibrecht | eigene Bearbeitungsflächen |
+| Export, Ausgabeformate, Druck | nein | ja (ICS, CSV, Drucklayout) |
+| Einstellungen, Weckrufe, Teilen | nein | ja |
+
+Faustregel: *Alles, was das Widget zeigt, kann die App größer.* Alles, was ein Menü, eine
+Adresse, eine Datei oder eine Einstellung braucht, ist App. Wächst einem Widget das an,
+verlässt es die Bauebene (offen + lauffähig → `workbenches/`, mit Menü und Fenster →
+`programs/apps/`). Darstellung wird nicht doppelt beschrieben: sie steht im Widget, die
+App-Doku hält nur die Hülle fest.
+
 ## 3. Komponenten-Einteilung (beschlossen 2026-11-03)
 
 Zuordnung der 84 Komponenten. Bei Abweichung beim physischen Umsortieren korrigieren.
 
 **primitives/**
-- basics: `base`, `kbd`, `label`, `separator`
+- basics: `base`, `kbd`, `label`, `link`, `separator`
 - actions: `button`, `button-group`, `floating-action-button`
 - feedback: `alert`, `badge`, `empty-state`, `progress`, `skeleton`, `spinner`, `toast`
 - fields: `checkbox`, `color-input`, `combobox`, `date-input`, `field`, `input-group`,
@@ -74,6 +95,7 @@ Zuordnung der 84 Komponenten. Bei Abweichung beim physischen Umsortieren korrigi
 - overlays: `alert-dialog`, `context-menu`, `drawer`, `hover-card`, `modal`, `popover`, `tooltip`
 - data: `avatar`, `calendar-view`, `chart`, `description-list`, `grid-view`, `list-view`,
   `repeater`, `table`, `table-of-contents`, `timeline`, `tree-view`
+- fields (aus fields): `file-upload`
 - pickers (aus fields): `date-picker`, `emoji-picker`, `range-calendar`, `time-picker`
 - media (Player): `audio`, `video`, `media-player`, `carousel`, `gallery`
 - special: `map-view`
@@ -89,6 +111,9 @@ Festgelegte Grenzfälle:
 - `dashboard`, `embed` → **workbench** (offener Container / fremder Inhalt)
 - `rich-text-editor` → **workbench** (offene Editierfläche)
 - `combobox`, `tags-input`, `search-field`, `mention-input` → **primitive** (Feldfamilie)
+- `link` → **primitive** (zerlegbar wie `label`/`kbd`, bei Umzug 2026-11-03 ergänzt)
+- `file-upload` → **widget** (endliche Kinder: Picker, Dropfläche, Vorschau; eigene
+  Zustände; keine offene Bearbeitungsfläche — bei Umzug 2026-11-03 ergänzt)
 
 ## 4. Sprache
 

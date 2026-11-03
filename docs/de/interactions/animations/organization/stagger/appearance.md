@@ -35,4 +35,4 @@ Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander versetzt â
 
 - [Animationen Ãœbersicht](../../index.md)
 - [Parallax](../../movement/parallax/description.md)
-- [list-view](../../../../components/data/list-view/description.md)
+- [list-view](../../../../components/widgets/data/list-view/description.md)

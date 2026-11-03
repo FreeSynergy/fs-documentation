@@ -55,4 +55,4 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 - [fields – Übersicht](../index.md)
 - [Checkbox](../checkbox/) — Mehrfachauswahl
 - [Select](../select/) — Auswahlliste
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

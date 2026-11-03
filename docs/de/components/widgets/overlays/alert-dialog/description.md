@@ -16,7 +16,7 @@
 
 Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird. Er ist die
 Kombination aus [modal](../modal/) (eigener Fokus, blockiert dahinterliegenden Inhalt)
-und [alert](../../feedback/alert/) (Meldung mit Typ und Aktion).
+und [alert](../../../primitives/feedback/alert/) (Meldung mit Typ und Aktion).
 
 ## Verwendungszweck
 
@@ -42,7 +42,7 @@ und [alert](../../feedback/alert/) (Meldung mit Typ und Aktion).
 
 - **Nicht verwechseln mit** [modal](../modal/): ein Modal ist ein beliebiger Dialog,
   der Bestätigungsdialog hat genau zwei Auswege und blockiert `Esc`-Verlust nicht.
-- **Nicht verwechseln mit** [toast](../../feedback/toast/): ein Toast meldet nach der Tat
+- **Nicht verwechseln mit** [toast](../../../primitives/feedback/toast/): ein Toast meldet nach der Tat
   und bietet Rückgängig an, der Dialog fragt vorher.
 
 ## Best Practices
@@ -54,5 +54,5 @@ und [alert](../../feedback/alert/) (Meldung mit Typ und Aktion).
 ## Siehe auch
 
 - [Modal](../modal/)
-- [Alert](../../feedback/alert/)
-- [Basiskomponente](../../basics/base/)
+- [Alert](../../../primitives/feedback/alert/)
+- [Basiskomponente](../../../primitives/basics/base.md)

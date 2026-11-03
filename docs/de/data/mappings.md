@@ -106,7 +106,7 @@ Zwei Stellen in dieser Dokumentation beschreiben Inhalt bereits **verschieden** 
 
 | Fundstelle | Was dort steht |
 |------------|----------------|
-| `components/inputs/rich-text-editor/attributes.md` | Attribut `value`, Typ `string`, Beschreibung „Wert (HTML)" |
+| `components/workbenches/fields/rich-text-editor/attributes.md` | Attribut `value`, Typ `string`, Beschreibung „Wert (HTML)" |
 | `data/modelle.md`, Modell `Block` | `type` mit Werten `text`, `heading`, `image`, `table`, `code`, `callout`; typabhängige Attribute in `props`; `content` als `array[] \| markdown`; weiter `order`, `align` |
 
 Drei Folgen, die wir bereinigen müssen, bevor „Überschrift → `name`" funktionieren kann:

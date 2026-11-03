@@ -41,10 +41,10 @@ Die Form ist keine Variante, sondern wird über `shape` (`circular`, `square`, `
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [icon](../../media/icon/): ein Icon steht für einen Befehl oder eine
+- **Nicht verwechseln mit** [icon](../../../primitives/media/icon/): ein Icon steht für einen Befehl oder eine
   Sache, ein Avatar stellt ein Subjekt dar.
-- **Nicht verwechseln mit** [image](../../media/image/): Bilder zeigen Inhalt, Avatare identifizieren.
-- Das Statusbadge neben dem Avatar ist ein [badge](../../feedback/badge/), nicht Teil des Avatars.
+- **Nicht verwechseln mit** [image](../../../primitives/media/image/): Bilder zeigen Inhalt, Avatare identifizieren.
+- Das Statusbadge neben dem Avatar ist ein [badge](../../../primitives/feedback/badge/), nicht Teil des Avatars.
 
 ## Best Practices
 
@@ -73,4 +73,4 @@ Avatare können Status-Badges anzeigen:
 ## Siehe auch
 
 - [data – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

@@ -7,7 +7,7 @@ Press senkt ein Element beim Drücken minimal ab (`scale` etwa 0.97) und hebt di
 ## Verwendung
 
 - Buttons, Icons und Chips bei gedrückter Taste oder Finger
-- Karten und Zeilen, die beim Antippen aktivierbar sind, siehe [card](../../../../components/containers/card/description.md)
+- Karten und Zeilen, die beim Antippen aktivierbar sind, siehe [card](../../../../components/widgets/containers/card/description.md)
 - Tasten einer Werkzeugleiste und Segmentsteuerungen
 - Umschalten von Schaltern (zusätzlich zum Zustandswechsel)
 - Touchscreens, wo es keinen Hover-Zustand gibt

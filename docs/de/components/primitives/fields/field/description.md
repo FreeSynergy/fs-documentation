@@ -46,7 +46,7 @@ Einheit. Das eigentliche Feld bleibt eine eigene Komponente.
 - **Nicht verwechseln mit** [search-field](../search-field/): das ist
   eine komplette Eingabekomponente, kein Wrapper.
 
-- **Nicht verwechseln mit** [description-list](../../data/description-list/): Label-Wert-Paare
+- **Nicht verwechseln mit** [description-list](../../../widgets/data/description-list/): Label-Wert-Paare
   in Detailansichten, ohne Eingabe.
 - **Nicht verwechseln mit** [input-group](../input-group/): die Gruppe sitzt im Feld neben
   dem Wert, dieser Wrapper außerhalb (Label, Hilfe, Fehler).
@@ -62,5 +62,5 @@ Einheit. Das eigentliche Feld bleibt eine eigene Komponente.
 
 - [Label](../../basics/label/)
 - [Text Input](../text-input/)
-- [Basiskomponente](../../basics/base/)
-- [Standardisierte Daten](../../data/)
+- [Basiskomponente](../../basics/base.md)
+- [Standardisierte Daten](../../../widgets/data/)

@@ -45,7 +45,7 @@ Vorschau oder ein kurzes Formular. Es ist an ein Auslöser-Element gedockt,
 - **Nicht verwechseln mit** [modal](../modal/): ein Modal blockiert
   und zentriert; ein Popover bleibt am Auslöser und lässt das Übrige bedienbar.
 
-- **Nicht verwechseln mit** [dropdown](../../fields/select/): ein Dropdown
+- **Nicht verwechseln mit** [dropdown](../../../primitives/fields/select/): ein Dropdown
   wählt einen Wert aus einer Liste, ein Popover trägt beliebigen Inhalt.
 
 - **Nicht verwechseln mit** [context-menu](../context-menu/): das
@@ -62,4 +62,4 @@ Vorschau oder ein kurzes Formular. Es ist an ein Auslöser-Element gedockt,
 - [Tooltip](../tooltip/)
 - [Modal](../modal/)
 - [Context Menu](../context-menu/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

@@ -44,7 +44,7 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
 - **Nicht verwechseln mit** [media-player](../media-player/): der Media Player ist die Elternklasse
   mit Steuerung, Playlist und Untertiteln; das Audio-Element erbt davon und zeigt nur Ton.
 - **Nicht verwechseln mit** [video](../video/): ohne Bild ist es Audio, mit Bild Video — ein
-  Video-Standbild allein ist ein [image](../image/).
+  Video-Standbild allein ist ein [image](../../../primitives/media/image/).
 - Eine Sprachnachricht im Chat ist diese Komponente in der Variante `kompakt`, keine eigene
   Komponente.
 
@@ -90,4 +90,4 @@ Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten. Es bietet S
 - [media – Übersicht](../index.md)
 - [Media Player](../media-player/) — gemeinsame Steuerung
 - [Video](../video/) — mit Bild
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

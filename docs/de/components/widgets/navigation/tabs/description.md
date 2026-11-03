@@ -42,7 +42,7 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten.
   zeigt eine Ebene in einer Hierarchie.
 - **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): die wechselt die Ansicht,
   Reiter wechseln nur den Inhalt **innerhalb** der Ansicht.
-- Eine Auswahl für ein Formular ist eine [radio-group](../../fields/radio-group/), keine Reiterleiste.
+- Eine Auswahl für ein Formular ist eine [radio-group](../../../primitives/fields/radio-group/), keine Reiterleiste.
 
 ## Best Practices
 
@@ -57,4 +57,4 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten.
 - [navigation – Übersicht](../index.md)
 - [Accordion](../../containers/accordion/) — Bereiche untereinander
 - [Bottom Navigation](../bottom-navigation/) — Ansichtswechsel
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

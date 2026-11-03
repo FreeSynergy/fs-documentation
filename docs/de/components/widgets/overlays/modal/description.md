@@ -61,4 +61,4 @@ Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 - [overlays – Übersicht](../index.md)
 - [Alert Dialog](../alert-dialog/) — Bestätigung ohne Inhalt
 - [Drawer](../drawer/) — Overlay an der Kante
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

@@ -67,4 +67,4 @@ Ein Alert ist eine Status-Meldung (Info, Warning, Error, Success).
 ## Siehe auch
 
 - [feedback – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

@@ -40,5 +40,5 @@ Der kürzeste Weg zum Punkt ist zugleich die Richtung, die ausgewählt wird.
 
 - [Animationen Übersicht](../../index.md)
 - [Radial In](../../exit/radial-in/description.md)
-- [Radial Menu](../../../../components/navigation/radial-menu/description.md)
+- [Radial Menu](../../../../components/widgets/navigation/radial-menu/description.md)
 - [Stagger](../../organization/stagger/description.md)

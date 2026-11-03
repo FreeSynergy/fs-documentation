@@ -49,4 +49,4 @@
 | Alle Formularfelder | immer ein Field-Wrapper |
 | Reine Beschriftung ohne Eingabe | [label](../../basics/label/) genügt |
 | Suche in Leisten | `inline` ohne `help` |
-| Detailansicht ohne Eingabe | [description-list](../../data/description-list/) |
+| Detailansicht ohne Eingabe | [description-list](../../../widgets/data/description-list/) |

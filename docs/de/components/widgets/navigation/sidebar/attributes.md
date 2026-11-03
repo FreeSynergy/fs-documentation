@@ -40,4 +40,4 @@
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../basics/base/)
+`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)

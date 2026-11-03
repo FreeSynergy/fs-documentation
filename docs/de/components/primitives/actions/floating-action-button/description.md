@@ -44,7 +44,7 @@ Ein Floating Action Button (FAB) ist ein runder Hauptaktion-Button, der meist re
   Aktionen gehören in eine Gruppe oder ein Menü, nicht in mehrere FABs nebeneinander.
 - Sekundäre Aktionen öffnet der FAB als Aktionsfächer (`expanded`), nicht als zweiter FAB.
 - Auf großen Desktop-Flächen ist der FAB verzichtbar; dort gehört die Aktion in
-  [toolbar](../../navigation/toolbar/) oder in die Kopfzeile.
+  [toolbar](../../../widgets/navigation/toolbar/) oder in die Kopfzeile.
 
 ## Best Practices
 
@@ -64,4 +64,4 @@ Ein Floating Action Button (FAB) ist ein runder Hauptaktion-Button, der meist re
 ## Siehe auch
 
 - [actions – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

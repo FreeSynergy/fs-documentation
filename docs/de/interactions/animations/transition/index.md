@@ -28,4 +28,4 @@ Wechsel nachvollziehbar.
 
 - [Animationen Übersicht](../index.md)
 - [Eingang (entrance)](../entrance/), [Ausgang (exit)](../exit/)
-- [Tabs](../../../components/navigation/tabs/description.md), [Accordion](../../../components/containers/accordion/description.md)
+- [Tabs](../../../components/widgets/navigation/tabs/description.md), [Accordion](../../../components/widgets/containers/accordion/description.md)

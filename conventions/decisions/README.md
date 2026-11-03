@@ -11,3 +11,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0002 | Sprache: Identifikatoren englisch, Prosa deutsch | akzeptiert |
 | 0003 | Repo-Schale und Skript-Schattenbaum | akzeptiert |
 | 0004 | Komponenten-Einteilung primitives/widgets/workbenches | akzeptiert |
+| 0005 | App und Widget: derselbe Kern, unterschiedliche Ebene | akzeptiert |

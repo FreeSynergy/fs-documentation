@@ -58,4 +58,4 @@ Das Trennzeichen ist keine Variante, sondern das Attribut `separator` (`›`, `/
 - [navigation – Übersicht](../index.md)
 - [Tree View](../../data/tree-view/) — die Hierarchie selbst
 - [Menu](../menu/) — Aufklappmenü zwischen den Ebenen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

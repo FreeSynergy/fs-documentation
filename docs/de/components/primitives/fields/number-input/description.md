@@ -56,4 +56,4 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 - [fields – Übersicht](../index.md)
 - [Slider](../slider/) — gleitende Wertewahl
 - [Text Input](../text-input/) — Zeichenketten statt Zahlen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

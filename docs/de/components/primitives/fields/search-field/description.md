@@ -41,7 +41,7 @@ Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
 
 - **Nicht verwechseln mit** [combobox](../combobox/): das Suchfeld verändert eine Ansicht oder
   liefert Ergebnisse, die Combobox schreibt einen Wert in ein Formularfeld.
-- **Nicht verwechseln mit** [command](../../navigation/command/): die Befehlspalette startet
+- **Nicht verwechseln mit** [command](../../../widgets/navigation/command/): die Befehlspalette startet
   Aktionen und ist ein vollflächiges Overlay, das Suchfeld filtert Inhalte einer Ansicht.
 - **Nicht verwechseln mit** [text-input](../text-input/): ohne Such-Icon, ohne Leeren-Knopf und
   ohne Sofortauslösung ist es einfach ein Textfeld.
@@ -59,5 +59,5 @@ Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
 
 - [fields – Übersicht](../index.md)
 - [Combobox](../combobox/) — Wert auswählen statt filtern
-- [Command](../../navigation/command/) — Befehle starten
-- [Basiskomponente](../../basics/base/)
+- [Command](../../../widgets/navigation/command/) — Befehle starten
+- [Basiskomponente](../../basics/base.md)

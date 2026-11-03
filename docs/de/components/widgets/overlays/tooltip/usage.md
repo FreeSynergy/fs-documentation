@@ -41,5 +41,5 @@
 |----------|------------|
 | Icon-only-Button | Tooltip plus `aria-label` |
 | Abgeschnittener Tabellenwert | `placement="top"`, `delay={0}` |
-| Erklärtext zu einem Feld | lieber [field](../../fields/field/) mit `help` |
+| Erklärtext zu einem Feld | lieber [field](../../../primitives/fields/field/) mit `help` |
 | Inhalt mit Buttons oder Links | [popover](../popover/), kein Tooltip |

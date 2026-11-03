@@ -53,4 +53,4 @@ Es unterstützt Einfügen aus der Zwischenablage und Autofill aus dem Betriebssy
 ## Siehe auch
 
 - [Text Input](../text-input/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

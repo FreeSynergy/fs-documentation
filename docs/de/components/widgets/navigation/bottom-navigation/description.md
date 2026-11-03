@@ -48,7 +48,7 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
   diese Leiste gehört an den unteren Rand kleiner Bildschirme.
 - **Nicht verwechseln mit** [toolbar](../toolbar/): eine Werkzeugleiste enthält Aktionen,
   diese Leiste enthält Ziele.
-- Eine einzelne Hauptaktion gehört zum [floating-action-button](../../actions/floating-action-button/).
+- Eine einzelne Hauptaktion gehört zum [floating-action-button](../../../primitives/actions/floating-action-button/).
 
 ## Best Practices
 
@@ -62,4 +62,4 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 - [navigation – Übersicht](../index.md)
 - [Tabs](../tabs/) — Inhalt innerhalb einer Ansicht
 - [Sidebar](../sidebar/) — Navigation am Rand
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

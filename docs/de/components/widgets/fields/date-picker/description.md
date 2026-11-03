@@ -15,11 +15,11 @@
 ## Beschreibung
 
 Der Datumswähler öffnet ein Kalenderoverlay, in dem ein Datum oder ein Bereich
-ausgewählt wird. Er ergänzt das [date-input](../date-input/), das die Eingabe durch
+ausgewählt wird. Er ergänzt das [date-input](../../../primitives/fields/date-input/), das die Eingabe durch
 Tippen ermöglicht.
 
 Über das reine Auswählen hinaus ist der Wähler an die **Daten angebunden**: Er liest den
-standardisierten Datenbestand (siehe [Standardisierte Daten](../../../data/)) und zeigt
+standardisierten Datenbestand (siehe [Standardisierte Daten](../../data/)) und zeigt
 in den Tagen die Einträge, die auf diesem Tag liegen — Termine, Aufgaben mit
 Fälligkeit, Dokumente mit Erstellungsdatum. Der gewählte Tag öffnet die Tagesliste,
 und über die Schnellaufnahme werden Einträge dort direkt angelegt oder per Ziehen auf
@@ -56,12 +56,15 @@ ausgewählt und geschrieben werden; welches Datum gemeint ist, bestimmt `dateFie
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [date-input](../date-input/): das Feld nimmt Tippeingaben an,
+- **Nicht verwechseln mit** [date-input](../../../primitives/fields/date-input/): das Feld nimmt Tippeingaben an,
   der Wähler zeigt den Kalender.
-- **Nicht verwechseln mit** [calendar-view](../../data/calendar-view/): die Ansicht ist
-  das Planungswerkzeug mit Wochen- und Tagesraster, Zeitleiste und Umbrechen von
-  Zeiträumen; der Wähler bleibt ein Auswahl-Overlay, das Einträge nur **kompakt**
-  mitzeigt (Punkte, Tagesliste, Schnellaufnahme) und als Ergebnis ein Datum liefert.
+- **Nicht verwechseln mit** [calendar-view](../../data/calendar-view/): beides zeigt
+  Einträge auf Tagen — der Kern ist derselbe, die Größe ist es nicht. Der Wähler bleibt
+  ein Auswahl-Overlay, das Einträge nur **kompakt** mitzeigt (Punkte, Tagesliste,
+  Schnellaufnahme) und als Ergebnis ein Datum liefert; die Ansicht ist das Planungswerkzeug
+  mit Wochen- und Tagesraster, Zeitleiste und Umbrechen von Zeiträumen. Menü, Sichten,
+  Export und Einstellungen gehören zu keiner von beiden — sie bringt erst die
+  Kalender-App mit, die beide Bausteine aufnimmt.
 - **Nicht verwechseln mit** [list-view](../../data/list-view/): eine Liste zeigt
   Einträge ohne Datumsschwerpunkt, die Tagesliste des Wählers hängt am gewählten Tag.
 
@@ -73,7 +76,7 @@ ausgewählt und geschrieben werden; welches Datum gemeint ist, bestimmt `dateFie
 - Nie den ganzen Bestand laden: nur das Fenster mit `loadWindow`, pro Tag höchstens
   `entryLimit` Einträge, der Rest als „+ n weitere“.
 - Zeiten mit Zeitzonen-Offset, Ganztagesdaten mit `allDay = true`
-  (siehe [Standardfelder](../../../data/felder.md)).
+  (siehe [Standardfelder](../../../../data/felder.md)).
 - `creatable` und `movable` nur einschalten, wenn das Schreibrecht besteht; sonst bleibt
   der Wähler lesend und die Tagesliste ist reine Information.
 - Ohne Kontext (`sources` leer) verhält sich der Wähler wie ein reiner Kalender —
@@ -82,7 +85,7 @@ ausgewählt und geschrieben werden; welches Datum gemeint ist, bestimmt `dateFie
 ## Datenanbindung
 
 Der Wähler liest über das einheitliche Daten-Muster
-([Daten-API](../../../data/api.md)) und schreibt nach demselben Muster zurück
+([Daten-API](../../../../data/api.md)) und schreibt nach demselben Muster zurück
 (`POST` zum Anlegen, `PATCH` beim Verschieben). Gebunden wird ein Modell plus das Feld,
 das den Tag liefert — deshalb ist der Wähler nicht auf Termine beschränkt:
 
@@ -103,10 +106,10 @@ vollständig.
 
 ## Siehe auch
 
-- [Date Input](../date-input/)
+- [Date Input](../../../primitives/fields/date-input/)
 - [Range Calendar](../range-calendar/)
 - [Calendar View](../../data/calendar-view/)
-- [Termine — Datendomäne](../../../data/events/)
-- [Standardfelder](../../../data/felder.md)
-- [Daten-API](../../../data/api.md)
-- [Basiskomponente](../../basics/base/)
+- [Termine — Datendomäne](../../../../data/events/)
+- [Standardfelder](../../../../data/felder.md)
+- [Daten-API](../../../../data/api.md)
+- [Basiskomponente](../../../primitives/basics/base.md)

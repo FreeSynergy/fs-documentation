@@ -1,7 +1,7 @@
 # Progress (Fortschrittsanzeige) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../../basics/base.md).
 
 ## Hauptattribute
 
@@ -40,4 +40,4 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `rounded`, `state`, `animation`, `aria-*` →
-[Basiskomponente](../../basics/base/)
+[Basiskomponente](../../basics/base.md)

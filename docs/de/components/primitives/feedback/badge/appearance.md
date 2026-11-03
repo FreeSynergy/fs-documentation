@@ -55,7 +55,7 @@ einer kurzen Ein-/Ausblend-Animation, wenn sich der Wert ändert.
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tooltip` | optional Kurzerklärung des Status (siehe [tooltip](../../overlays/tooltip/)) |
+| `tooltip` | optional Kurzerklärung des Status (siehe [tooltip](../../../widgets/overlays/tooltip/)) |
 | – | eigener Hover ist nicht vorgesehen |
 
 ## Reaktiv

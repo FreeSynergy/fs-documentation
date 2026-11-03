@@ -38,4 +38,4 @@ Der Haken sitzt in einer vorbereiteten Fläche (Kreis oder Kästchen) und wird a
 - [Animationen Übersicht](../../index.md)
 - [Ripple](../ripple/description.md)
 - [Highlight](../highlight/description.md)
-- [Checkbox](../../../../components/fields/checkbox/description.md)
+- [Checkbox](../../../../components/primitives/fields/checkbox/description.md)

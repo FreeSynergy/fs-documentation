@@ -26,7 +26,7 @@ sind gerundet.
 
 ## Größen
 
-Anschluss an das Größen-Raster der [Basiskomponente](../../basics/base/):
+Anschluss an das Größen-Raster der [Basiskomponente](../../basics/base.md):
 
 | Größe | Höhe | Icon im Anbauteil | Schrift |
 |-------|------|-------------------|---------|

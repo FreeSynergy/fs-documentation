@@ -53,4 +53,4 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

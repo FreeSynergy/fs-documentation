@@ -39,10 +39,10 @@ der Flächen erkennbar.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [toolbar](../../navigation/toolbar/): eine Werkzeugleiste
+- **Nicht verwechseln mit** [toolbar](../../../widgets/navigation/toolbar/): eine Werkzeugleiste
   versammelt unabhängige Werkzeuge, eine Gruppe teilt sich einen Wert oder eine Aktion.
 
-- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs wechseln Ansichten,
+- **Nicht verwechseln mit** [tabs](../../../widgets/navigation/tabs/): Tabs wechseln Ansichten,
   Segmente setzen eine Eigenschaft.
 
 - **Nicht verwechseln mit** [tags-input](../../fields/tags-input/): dort entstehen
@@ -60,6 +60,6 @@ der Flächen erkennbar.
 ## Siehe auch
 
 - [Button](../button/)
-- [Toolbar](../../navigation/toolbar/)
-- [Tabs](../../navigation/tabs/)
-- [Basiskomponente](../../basics/base/)
+- [Toolbar](../../../widgets/navigation/toolbar/)
+- [Tabs](../../../widgets/navigation/tabs/)
+- [Basiskomponente](../../basics/base.md)

@@ -1,7 +1,7 @@
 # Input Group (Feldgruppe) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/). Das eingebaute Feld bringt seine eigenen Attribute mit
+[base](../../basics/base.md). Das eingebaute Feld bringt seine eigenen Attribute mit
 ([text-input](../text-input/)).
 
 ## Hauptattribute
@@ -40,4 +40,4 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 
 `id`, `visible`, `enabled`, `size`, `theme`, `rounded`, `variant`, `state`, `tabIndex`,
 `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../basics/base/)
+[Basiskomponente](../../basics/base.md)

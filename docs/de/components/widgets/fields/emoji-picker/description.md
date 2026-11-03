@@ -36,9 +36,9 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [mention-input](../mention-input/): eine Erwähnung wählt eine Person
+- **Nicht verwechseln mit** [mention-input](../../../primitives/fields/mention-input/): eine Erwähnung wählt eine Person
   aus einem Datensatz aus und erzeugt eine Verknüpfung, ein Emoji ist nur ein Zeichen.
-- **Nicht verwechseln mit** [icon](../../media/icon/): Emojis gehören zum Inhalt, Icons zur
+- **Nicht verwechseln mit** [icon](../../../primitives/media/icon/): Emojis gehören zum Inhalt, Icons zur
   Bedienoberfläche. Für Buttons und Menüs immer `icon` verwenden.
 - Der Picker wählt aus, er erzeugt keine eigenen Inhalte.
 
@@ -53,6 +53,6 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Mention Input](../mention-input/) — Personen statt Zeichen
-- [Rich Text Editor](../rich-text-editor/) — Chat- und Kommentar-Eingabe
-- [Basiskomponente](../../basics/base/)
+- [Mention Input](../../../primitives/fields/mention-input/) — Personen statt Zeichen
+- [Rich Text Editor](../../../workbenches/fields/rich-text-editor/) — Chat- und Kommentar-Eingabe
+- [Basiskomponente](../../../primitives/basics/base.md)

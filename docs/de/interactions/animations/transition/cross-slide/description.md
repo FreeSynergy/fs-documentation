@@ -6,7 +6,7 @@ Cross Slide tauscht zwei Elemente am selben Platz, indem beide gleichzeitig quer
 
 ## Verwendung
 
-- Tab-Inhalte wechseln, siehe [tabs](../../../../components/navigation/index.md)
+- Tab-Inhalte wechseln, siehe [tabs](../../../../components/widgets/navigation/index.md)
 - Seiten eines Assistenten vor und zurück blättern
 - Karussell und Kalender Monat für Monat schieben
 - Monats-, Wochen- und Tagesansicht im Kalender umschalten

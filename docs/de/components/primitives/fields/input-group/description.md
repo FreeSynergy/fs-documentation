@@ -68,4 +68,4 @@ Nachbarteile erklären oder begrenzen ihn.
 - [fields – Übersicht](../index.md)
 - [Text Input](../text-input/) — das Feld in der Gruppe
 - [Field](../field/) — Beschriftung und Fehlermeldung außerhalb
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

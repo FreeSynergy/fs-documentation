@@ -86,7 +86,7 @@ Geometrie statt Lineal: Punkte werden über **Winkel** und **Radius** gesetzt.
 | `medium` | 36 px | 40 px | 72 px | 124 px | Standard am Desktop |
 | `large` | 44 px | 48 px | 88 px | 148 px | Touch, Kiosk, Controller |
 
-`large` entspricht der Mindesttrefferfläche aus der [Basiskomponente](../../basics/base/).
+`large` entspricht der Mindesttrefferfläche aus der [Basiskomponente](../../../primitives/basics/base.md).
 Auf Touch-Oberflächen ist `small` ungeeignet, weil die Punkte im Ring einander berühren.
 
 ## Farben und Zustände
@@ -100,7 +100,7 @@ Auf Touch-Oberflächen ist `small` ungeeignet, weil die Punkte im Ring einander 
 | **dimmed** | gesättigt → 40 % Deckkraft | Punkt gehört nicht zum aktiven Zweig |
 | **pinned** | dezenter Schattenschein | Menü bleibt nach Klick offen |
 | **disabled** | ausgegraut, keine Kontur | Punkt nicht wählbar |
-| **loading** | [spinner](../../feedback/spinner/) im Punkt | Ziel wird noch geladen |
+| **loading** | [spinner](../../../primitives/feedback/spinner/) im Punkt | Ziel wird noch geladen |
 
 ## Hover- und Fokus-Effekte
 
@@ -183,4 +183,4 @@ Regeln für die Eckzahl:
 - [Radial Menu – Beschreibung](./description.md)
 - [Attribute](./attributes.md)
 - [Verwendung](./usage.md)
-- [radial-out](../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../interactions/animations/exit/radial-in/)
+- [radial-out](../../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../../interactions/animations/exit/radial-in/)

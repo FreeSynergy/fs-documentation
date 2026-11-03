@@ -62,4 +62,4 @@ oder dass sie läuft, ohne dass der Wert bekannt ist.
 - [Spinner](../spinner/)
 - [Skeleton](../skeleton/)
 - [Toast](../toast/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

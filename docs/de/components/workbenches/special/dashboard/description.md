@@ -37,11 +37,11 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [grid-view](../../data/grid-view/): das Raster zeigt gleichartige
+- **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): das Raster zeigt gleichartige
   Einträge, das Dashboard unterschiedliche Widgets in unterschiedlichen Größen.
-- **Nicht verwechseln mit** [card](../../containers/card/): die Karte ist ein Baustein,
+- **Nicht verwechseln mit** [card](../../../widgets/containers/card/): die Karte ist ein Baustein,
   das Dashboard ist die Anordnung mehrerer Bausteine samt Einstellung.
-- **Nicht verwechseln mit** [chart](../../data/chart/): gezeichnet wird im Diagramm,
+- **Nicht verwechseln mit** [chart](../../../widgets/data/chart/): gezeichnet wird im Diagramm,
   hier wird nur platziert.
 
 ## Best Practices
@@ -55,6 +55,6 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 ## Siehe auch
 
 - [special – Übersicht](../index.md)
-- [Card](../../containers/card/) — der Baustein
-- [Chart](../../data/chart/) — das Diagramm
-- [Basiskomponente](../../basics/base/)
+- [Card](../../../widgets/containers/card/) — der Baustein
+- [Chart](../../../widgets/data/chart/) — das Diagramm
+- [Basiskomponente](../../../primitives/basics/base.md)

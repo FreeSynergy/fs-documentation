@@ -35,4 +35,4 @@ Graue Platzhalterformen (Balken, Kreise, Blöcke) in den Maßen des späteren In
 
 - [Animationen Übersicht](../../index.md)
 - [Progress](../progress/description.md)
-- [Listen-Komponenten](../../../../components/data/index.md)
+- [Listen-Komponenten](../../../../components/widgets/data/index.md)

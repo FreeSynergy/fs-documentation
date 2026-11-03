@@ -7,9 +7,9 @@ Der Nutzer erkennt die kommende Struktur, bevor die Daten eintreffen, und beim E
 
 ## Verwendung
 
-- Listenansichten vor dem ersten Dateneingang, siehe [list-view](../../../../components/data/list-view/description.md)
-- Rasteransichten beim Nachladen, siehe [grid-view](../../../../components/data/grid-view/description.md)
-- Tabellen beim Seitenaufbau, siehe [table](../../../../components/data/table/description.md)
+- Listenansichten vor dem ersten Dateneingang, siehe [list-view](../../../../components/widgets/data/list-view/description.md)
+- Rasteransichten beim Nachladen, siehe [grid-view](../../../../components/widgets/data/grid-view/description.md)
+- Tabellen beim Seitenaufbau, siehe [table](../../../../components/widgets/data/table/description.md)
 - Detailseiten und Karten, die asynchron befüllt werden
 - Ladezustände: Ersatz für Spinner, wenn das Layout der Inhalte bekannt ist
 

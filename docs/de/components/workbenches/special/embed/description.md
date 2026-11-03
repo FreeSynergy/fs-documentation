@@ -47,7 +47,7 @@ Schnittstelle angesprochen.
 - **Nicht verwechseln mit** `app-embed`, `widget-embed` und `iframe-embed`: diese drei
   früheren Eigenkomponenten sind als `source`-Werte in `embed` aufgegangen.
 
-- **Nicht verwechseln mit** [map-view](../map-view/) und [whiteboard](../whiteboard/):
+- **Nicht verwechseln mit** [map-view](../../../widgets/special/map-view/) und [whiteboard](../whiteboard/):
   das sind eigene Komponenten mit eigener Datenstruktur, keine Einbettung.
 
 - **Nicht verwechseln mit** [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe):
@@ -68,4 +68,4 @@ Schnittstelle angesprochen.
 ## Siehe auch
 
 - [Dashboard](../dashboard/) — Embeds als Bausteine
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

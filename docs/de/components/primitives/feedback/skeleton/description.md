@@ -64,5 +64,5 @@ wie groß Inhalte erscheinen, während sie geladen werden.
 
 - [Spinner](../spinner/)
 - [Progress](../progress/)
-- [List View](../../data/list-view/)
-- [Basiskomponente](../../basics/base/)
+- [List View](../../../widgets/data/list-view/)
+- [Basiskomponente](../../basics/base.md)

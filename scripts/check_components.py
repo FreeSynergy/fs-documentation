@@ -1,29 +1,34 @@
 #!/usr/bin/env python3
 """Prueft den Komponentenbestand gegen den Standard aus
-docs/de/components/basics/base.md und docs/de/components/konzept-und-plan.md.
+docs/de/components/primitives/basics/base.md und conventions/CONVENTIONS.md.
+
+Layout: components/<band>/<typgruppe>/<komponente>/ (Bänder nach ADR 0004).
 
 Geprueft werden:
-1. Pflichtdateien           description.md, appearance.md, attributes.md, usage.md
-2. Steckbrief               Pflichtfelder in description.md, Kategorie stimmt mit dem Ordner
-3. Pflichtabschnitte        und ihre Reihenfolge pro Datei
-4. Tabellen                 Zeilen mit anderer Zellenzahl als die Kopfzeile (Render-Verlust)
-5. Links                    interne Links, die ins Leere laufen
-6. Basisklasse              Attribute, die in >= 60 % der Komponenten stehen, aber nicht in base.md
-7. Doppelstuecke            Attribut-Aehnlichkeit (Jaccard) ueber 0,6
-8. mkdocs.yml               Komponenten, die in der Navigation fehlen
+1. Band-Zuordnung           jede Komponente liegt im von CONVENTIONS.md §3 vorgegebenen Band
+2. Pflichtdateien           description.md, appearance.md, attributes.md, usage.md
+3. Steckbrief               Pflichtfelder in description.md, Kategorie stimmt mit dem Ordner
+4. Pflichtabschnitte        und ihre Reihenfolge pro Datei
+5. Tabellen                 Zeilen mit anderer Zellenzahl als die Kopfzeile (Render-Verlust)
+6. Links                    interne Links, die ins Leere laufen
+7. Basisklasse              Attribute, die in >= 60 % der Komponenten stehen, aber nicht in base.md
+8. Doppelstuecke            Attribut-Aehnlichkeit (Jaccard) ueber 0,6
+9. mkdocs.yml               Komponenten, die in der Navigation fehlen
 
-Fehler (exit 1) sind: fehlende Dateien, fehlender Steckbrief, fehlende Pflichtabschnitte,
-kaputte Links, Tabellen-Schreibfehler. Absichtslos Benanntes und Doppelstuecke sind
-Hinweise. Mit --strict werden auch Hinweise zu Fehlern.
+Fehler (exit 1) sind: falsches Band, fehlende Dateien, fehlender Steckbrief, fehlende
+Pflichtabschnitte, kaputte Links, Tabellen-Schreibfehler. Absichtslos Benanntes und
+Doppelstuecke sind Hinweise. Mit --strict werden auch Hinweise zu Fehlern.
 
 Aufruf:
-    python3 tools/check_components.py
-    python3 tools/check_components.py --strict
+    python3 scripts/check_components.py
+    python3 scripts/check_components.py --strict
 """
 import argparse
 import re
 import sys
 from pathlib import Path
+
+import gen_component_indexes as gen
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -64,7 +69,6 @@ def cells_of(line):
         s = s[:-1]
     return [c.strip() for c in CELL_SPLIT.split(s)]
 LINK_RE = re.compile(r"\]\(([^)\s#]+)(#[^)]*)?\)")
-SKIP_DIRS = {"basics"}  # base.md ist selbst die Elternklasse
 
 
 def sections_of(text):
@@ -153,19 +157,31 @@ def main():
     args = ap.parse_args()
 
     errors, notes = [], []
-    comps = sorted(d for d in COMPONENTS.glob("*/*") if d.is_dir())
+    comps = sorted(d for d in COMPONENTS.glob("*/*/*") if d.is_dir())
     counts = {}
     all_attrs = {}
     nav_text = (ROOT / "mkdocs.yml").read_text(encoding="utf-8")
 
     base_attrs = set()
-    base_file = COMPONENTS / "basics" / "base.md"
+    base_file = COMPONENTS / "primitives" / "basics" / "base.md"
     if base_file.is_file():
         base_attrs = attr_names(base_file.read_text(encoding="utf-8"))
 
+    want_band = {}
+    for band, groups in gen.ASSIGNMENT.items():
+        for cat, names in groups.items():
+            for name in names:
+                want_band[f"{cat}/{name}"] = band
+
     for comp in comps:
-        cat, name = comp.parent.name, comp.name
-        counts.setdefault(cat, []).append(name)
+        band, cat, name = comp.parent.parent.name, comp.parent.name, comp.name
+        counts.setdefault(f"{band}/{cat}", []).append(name)
+
+        expected = want_band.get(f"{cat}/{name}")
+        if expected is None:
+            errors.append(f"{comp.relative_to(ROOT)}: in CONVENTIONS.md §3 nicht zugeordnet")
+        elif expected != band:
+            errors.append(f"{comp.relative_to(ROOT)}: falsches Band, erwartet {expected}/")
 
         for f in REQUIRED_FILES:
             if not (comp / f).is_file():
@@ -225,7 +241,8 @@ def main():
         if attrs.is_file():
             all_attrs[name] = attr_names(attrs.read_text(encoding="utf-8"))
 
-        if f"de/components/{cat}/{name}/" not in nav_text and f"de/components/{cat}/{name}" not in nav_text:
+        if f"de/components/{band}/{cat}/{name}/" not in nav_text \
+                and f"de/components/{band}/{cat}/{name}" not in nav_text:
             notes.append(f"{comp.relative_to(ROOT)}: nicht in mkdocs.yml (nav)")
 
     # Basisklasse: Attribute, die fast alle listen, aber nicht in base.md stehen
@@ -236,7 +253,8 @@ def main():
         if hit >= 0.6 * n and attr not in base_attrs:
             common.append((hit, attr))
     for hit, attr in sorted(common, reverse=True):
-        notes.append(f"Attribut `{attr}` steht in {hit}/{n} Komponenten, aber nicht in basics/base.md")
+        notes.append(f"Attribut `{attr}` steht in {hit}/{n} Komponenten, "
+                     "aber nicht in primitives/basics/base.md")
 
     # Doppelstuecke
     names = sorted(all_attrs)
@@ -252,9 +270,9 @@ def main():
     for j, a, b in sorted(pairs, reverse=True):
         notes.append(f"Doppelstuecke: {a} und {b} Aehnlichkeit {j}")
 
-    print("Kategorien:")
+    print("Bänder / Typgruppen:")
     for cat in sorted(counts):
-        print(f"  {cat:12s} {len(counts[cat]):3d}  {', '.join(sorted(counts[cat]))}")
+        print(f"  {cat:26s} {len(counts[cat]):3d}  {', '.join(sorted(counts[cat]))}")
     print(f"\nKomponenten gesamt: {sum(len(v) for v in counts.values())}")
 
     if errors:

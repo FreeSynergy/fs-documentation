@@ -43,10 +43,10 @@ Er ist das Navigationselement schlechthin.
 - **Nicht verwechseln mit** [button](../../actions/button/): ein Button löst
   eine Aktion ohne Adresswechsel aus.
 
-- **Nicht verwechseln mit** [breadcrumb](../../navigation/breadcrumb/): der
+- **Nicht verwechseln mit** [breadcrumb](../../../widgets/navigation/breadcrumb/): der
   Breadcrumb zeigt einen Pfad, seine Einträge sind Links.
 
-- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs wechseln eine
+- **Nicht verwechseln mit** [tabs](../../../widgets/navigation/tabs/): Tabs wechseln eine
   Ansicht innerhalb derselben Seite.
 
 ## Best Practices
@@ -59,5 +59,5 @@ Er ist das Navigationselement schlechthin.
 ## Siehe auch
 
 - [Button](../../actions/button/)
-- [Breadcrumb](../../navigation/breadcrumb/)
-- [Basiskomponente](../base/)
+- [Breadcrumb](../../../widgets/navigation/breadcrumb/)
+- [Basiskomponente](../base.md)

@@ -59,4 +59,4 @@ Ein Tree View ist eine hierarchische Verzeichnisstruktur mit Ein-/Ausklappen.
 - [data – Übersicht](../index.md)
 - [List View](../list-view/) — flache Daten
 - [Menu](../../navigation/menu/) — Aktionen statt Struktur
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

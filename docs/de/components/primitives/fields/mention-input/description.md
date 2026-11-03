@@ -47,11 +47,11 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 - Vorschlagsliste erst nach `@` und einem weiteren Zeichen öffnen, Treffer nach Nähe sortieren.
 - Eine eingefügte Erwähnung mit einer einzigen Rücktaste löschen (atomar behandeln).
 - Sichtbar immer der Anzeigename, intern die Kontakt-ID – niemals den Namen speichern.
-- Bei `long-press` die Kontaktkarte öffnen ([hover-card](../../overlays/hover-card/) am Desktop).
+- Bei `long-press` die Kontaktkarte öffnen ([hover-card](../../../widgets/overlays/hover-card/) am Desktop).
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
 - [Tags Input](../tags-input/) — freie Begriffe statt Kontakte
-- [Emoji Picker](../emoji-picker/) — Zeichen einfügen
-- [Basiskomponente](../../basics/base/)
+- [Emoji Picker](../../../widgets/fields/emoji-picker/) — Zeichen einfügen
+- [Basiskomponente](../../basics/base.md)

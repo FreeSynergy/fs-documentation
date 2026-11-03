@@ -74,4 +74,4 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 - [fields – Übersicht](../index.md)
 - [Field](../field/) — Label, Hilfe und Fehlermeldung
 - [Textarea](../textarea/) — mehrzeilig
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

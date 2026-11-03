@@ -56,4 +56,4 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 - [fields – Übersicht](../index.md)
 - [Slider](../slider/) — kontinuierliche Skala
 - [Badge](../../feedback/badge/) — Zahl statt Streifen
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

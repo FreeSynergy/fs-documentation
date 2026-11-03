@@ -43,9 +43,9 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 
 - **Nicht verwechseln mit** [table](../table/): die Tabelle ist die verlässliche Zahlenansicht,
   das Diagramm nur die ergänzende Form. Beides zusammen ist richtig, das Diagramm allein nicht.
-- **Nicht verwechseln mit** [progress](../../feedback/progress/): ein Balken zeigt einen Anteil,
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): ein Balken zeigt einen Anteil,
   ein Diagramm vergleicht Werte.
-- **Nicht verwechseln mit** [dashboard](../../special/dashboard/): das Dashboard ordnet mehrere
+- **Nicht verwechseln mit** [dashboard](../../../workbenches/special/dashboard/): das Dashboard ordnet mehrere
   Diagramme und Karten, es zeichnet selbst nichts.
 
 ## Best Practices
@@ -61,5 +61,5 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 
 - [data – Übersicht](../index.md)
 - [Table](../table/) — Zahlen in Zeilen und Spalten
-- [Dashboard](../../special/dashboard/) — mehrere Diagramme anordnen
-- [Basiskomponente](../../basics/base/)
+- [Dashboard](../../../workbenches/special/dashboard/) — mehrere Diagramme anordnen
+- [Basiskomponente](../../../primitives/basics/base.md)

@@ -42,9 +42,9 @@ Zuschnitt und Form sind keine Varianten, sondern die Attribute `fit` und `shape`
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [icon](../icon/): Icons sind kleine, einfärbbare Symbole der Oberfläche.
-- **Nicht verwechseln mit** [gallery](../gallery/): eine Galerie ist der Verband mehrerer Bilder
+- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): eine Galerie ist der Verband mehrerer Bilder
   samt Großansicht, das Bild ist ein einzelnes Element.
-- **Nicht verwechseln mit** [avatar](../../data/avatar/): ein Avatar identifiziert eine Person.
+- **Nicht verwechseln mit** [avatar](../../../widgets/data/avatar/): ein Avatar identifiziert eine Person.
 - Das Aufziehen auf volle Bildschirmgröße gehört in die Galerie bzw. ein Overlay, nicht ins Bild.
 
 ## Best Practices
@@ -90,6 +90,6 @@ Zuschnitt und Form sind keine Varianten, sondern die Attribute `fit` und `shape`
 ## Siehe auch
 
 - [media – Übersicht](../index.md)
-- [Gallery](../gallery/) — mehrere Bilder mit Großansicht
+- [Gallery](../../../widgets/media/gallery/) — mehrere Bilder mit Großansicht
 - [Icon](../icon/) — Symbol statt Foto
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../basics/base.md)

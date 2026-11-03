@@ -44,7 +44,7 @@ von selbst.
   interaktive Inhalte, ein Tooltip ausschließlich Text.
 - **Nicht verwechseln mit** [hover-card](../hover-card/): die Hover-Card zeigt eine
   Vorschau als Karte und bleibt offen, solange der Zeiger im Inhalt bleibt.
-- **Nicht verwechseln mit** [label](../../basics/label/): ein Label ist ständig
+- **Nicht verwechseln mit** [label](../../../primitives/basics/label/): ein Label ist ständig
   sichtbar und mit dem Element verknüpft.
 
 ## Best Practices
@@ -58,6 +58,6 @@ von selbst.
 
 - [overlays – Übersicht](../index.md)
 - [Popover](../popover/)
-- [Basiskomponente](../../basics/base/)
-- [Gesten](../../../interactions/gestures/)
-- [Animationen](../../../interactions/animations/)
+- [Basiskomponente](../../../primitives/basics/base.md)
+- [Gesten](../../../../interactions/gestures/)
+- [Animationen](../../../../interactions/animations/)

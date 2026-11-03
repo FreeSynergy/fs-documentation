@@ -1,7 +1,7 @@
 # Separator (Trennlinie) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../../basics/base/).
+[base](../base.md).
 
 ## Hauptattribute
 
@@ -28,4 +28,4 @@ Es werden keine Events genutzt; ein Separator ist reine Anzeige.
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `aria-*` →
-[Basiskomponente](../base/)
+[Basiskomponente](../base.md)

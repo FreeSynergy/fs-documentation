@@ -46,8 +46,8 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 - Das Video erbt von [media-player](../media-player/) und nennt hier nur, was dazukommt:
   Bildfläche, Vorschaubild und Vollbild.
 - **Nicht verwechseln mit** [audio](../audio/): ohne Bild ist es Audio — das Standbild allein ist
-  ein [image](../image/).
-- **Nicht verwechseln mit** [embed](../../special/embed/): Videos fremder Plattformen werden
+  ein [image](../../../primitives/media/image/).
+- **Nicht verwechseln mit** [embed](../../../workbenches/special/embed/): Videos fremder Plattformen werden
   eingebettet, nicht abgespielt.
 
 ## Best Practices
@@ -85,4 +85,4 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 - [media – Übersicht](../index.md)
 - [Media Player](../media-player/) — gemeinsame Steuerung
 - [Audio](../audio/) — ohne Bild
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)

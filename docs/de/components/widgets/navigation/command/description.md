@@ -40,7 +40,7 @@ Tastenkürzel statt durch Menüsuche.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [search-field](../../fields/search-field/): Suche findet Inhalte,
+- **Nicht verwechseln mit** [search-field](../../../primitives/fields/search-field/): Suche findet Inhalte,
   die Palette führt Aktionen aus.
 - **Nicht verwechseln mit** [menu](../menu/): Menüs zeigen das Angebot vollständig,
   die Palette nur passende Treffer.
@@ -53,6 +53,6 @@ Tastenkürzel statt durch Menüsuche.
 
 ## Siehe auch
 
-- [Search Field](../../fields/search-field/)
+- [Search Field](../../../primitives/fields/search-field/)
 - [Menu](../menu/)
-- [Basiskomponente](../../basics/base/)
+- [Basiskomponente](../../../primitives/basics/base.md)
