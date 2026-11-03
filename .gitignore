@@ -15,7 +15,11 @@ venv/
 env/
 
 # Temporary working scripts
-tools/_tmp_*.py
+scripts/_tmp_*.py
+
+# Third-party tool downloads / research artifacts (not source)
+.research-planner/
+*.tmp
 
 # OS / editor cruft
 .DS_Store

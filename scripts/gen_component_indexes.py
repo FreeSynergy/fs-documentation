@@ -9,8 +9,8 @@ Die Zahlen stimmen damit immer mit dem Bestand ueberein (Konzept Abschnitt 8).
 Einleitungsabsaetze sind im Skript hinterlegt, damit sie bei jedem Lauf gleich bleiben.
 
 Aufruf:
-    python3 tools/gen_component_indexes.py             # schreiben
-    python3 tools/gen_component_indexes.py --check     # Pruefen (CI), exit 1 bei Abweichung
+    python3 scripts/gen_component_indexes.py             # schreiben
+    python3 scripts/gen_component_indexes.py --check     # Pruefen (CI), exit 1 bei Abweichung
 """
 import argparse
 import re
@@ -160,9 +160,8 @@ def components_page(data):
               "- **appearance.md** – Aussehen: Layout, Größen, Farben, Zustände, Reaktiv",
               "- **attributes.md** – nur **eigene** Attribute + Verweis auf `basics/base.md`",
               "- **usage.md** – Anwendung, Szenarien und Beispiele", "",
-              "Die Listen und Zahlen auf dieser Seite erzeugt `tools/gen_component_indexes.py`."
-              " `tools/check_components.py` prüft den Standard.", "", "## Siehe auch", "",
-              "- [Konzept und Plan](konzept-und-plan.md) – Standardisierung, Kategorien, Merges",
+              "Die Listen und Zahlen auf dieser Seite erzeugt `scripts/gen_component_indexes.py`."
+              " `scripts/check_components.py` prüft den Standard.", "", "## Siehe auch", "",
               "- [Gesten](../gestures/) und [Animationen](../animations/)",
               "- [Standardisierte Daten](../data/)", "- [Apps](../apps/)", ""]
     return "\n".join(lines).rstrip() + "\n"
@@ -230,7 +229,7 @@ def main():
 
     total = sum(len(v) for v in data.values())
     if args.check and stale:
-        print("Veraltet (Bitte tools/gen_component_indexes.py ausführen):")
+        print("Veraltet (Bitte scripts/gen_component_indexes.py ausführen):")
         for s in stale:
             print(f"  - {s}")
         return 1

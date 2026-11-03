@@ -80,11 +80,10 @@ Jede Komponente hat einen festen Dateisatz:
 - **attributes.md** – nur **eigene** Attribute + Verweis auf `basics/base.md`
 - **usage.md** – Anwendung, Szenarien und Beispiele
 
-Die Listen und Zahlen auf dieser Seite erzeugt `tools/gen_component_indexes.py`. `tools/check_components.py` prüft den Standard.
+Die Listen und Zahlen auf dieser Seite erzeugt `scripts/gen_component_indexes.py`. `scripts/check_components.py` prüft den Standard.
 
 ## Siehe auch
 
-- [Konzept und Plan](konzept-und-plan.md) – Standardisierung, Kategorien, Merges
 - [Gesten](../gestures/) und [Animationen](../animations/)
 - [Standardisierte Daten](../data/)
 - [Apps](../apps/)

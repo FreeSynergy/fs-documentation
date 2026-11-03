@@ -13,7 +13,7 @@ Sie definiert Attribute, Zustände und Abschnitte, die *jede* Komponente erbt.
 
 Jede `description.md` beginnt mit dieser Tabelle. Sie ist bewusst keine YAML-Frontmatter
 (Frontmatter wurde in diesem Repo bewusst entfernt), sondern eine Markdown-Tabelle:
-sie ist für Menschen lesbar **und** kann von `tools/check_components.py` ausgewertet werden.
+sie ist für Menschen lesbar **und** kann von `scripts/check_components.py` ausgewertet werden.
 
 | Feld | Bedeutung | Beispiel (`search-field`) |
 |------|-----------|---------------------------|
