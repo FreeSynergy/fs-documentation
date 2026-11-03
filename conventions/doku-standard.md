@@ -1,6 +1,8 @@
 # FreeSynergy Documentation System
 
-This document contains all important information for LLMs/agents working on the FreeSynergy documentation project.
+Authoring standard for the documentation. Durable rules and decisions live in
+[`CONVENTIONS.md`](CONVENTIONS.md) and `decisions/`. This file describes the concrete
+file sets and layout agents must follow when writing docs.
 
 ## 📚 Project Structure and Conventions
 
@@ -8,22 +10,21 @@ This document contains all important information for LLMs/agents working on the 
 
 ```
 fs-documentation/
-├── docs/                    # Documentation source files
-│   ├── de/                 # German documentation (primary)
-│   │   ├── apps/           # programs, grouped by category
-│   │   │   └── [category]/skins/[program]/   # 7 files per program
-│   │   ├── components/     # UI elements: 10 categories + base class (see SYSTEM “UI Components”)
-│   │   ├── gestures/       # touch gestures: 6 families (tap/swipe/transform/special/device/combined), each with description/attributes/appearance
-│   │   ├── animations/     # animations (description/attributes/appearance)
-│   │   └── data/           # standardized data (standards, mappings, formats, models, fields, conventions, api)
-│   └── en/                 # English documentation
-│   └── [language]/         # Additional languages
-├── .github/                # GitHub workflows and templates
-├── mkdocs.yml             # MkDocs configuration
-├── requirements.txt       # Python dependencies
-├── LICENSE                # Apache 2.0 license
-└── SYSTEM.md              # This file - system documentation
+├── docs/                    # NUR veroeffentlichte Doku (mkdocs -> site/)
+│   ├── de/                 # Deutsch (Quelle)
+│   │   ├── components/     # Bauebene: primitives/ widgets/ workbenches/
+│   │   ├── programs/       # Laufebene: apps/ suites/ platform/  (Skin: 7 Dateien/Programm)
+│   │   ├── interactions/   # gestures/ + animations/  (Querschnitt)
+│   │   └── data/           # standardisierte Daten (standards, mappings, formate, modelle, felder, konventionen, api)
+│   └── en/                 # englische Doku (Auto-Uebersetzung aus de/)
+├── conventions/            # Regeln + Gedaechtnis (CONVENTIONS.md, decisions/, doku-standard.md)
+├── todo/                   # Aufgaben je Modell (qwen / translator / opus)
+├── temp/                   # unsortiert
+├── scripts/                # Generatoren/Pruefer (Schattenbaum)
+├── .github/  ·  mkdocs.yml  ·  requirements.txt  ·  LICENSE
 ```
+
+Nur `docs/` wird gebaut. Alles andere ist Repo-Unterstuetzung und erscheint nicht auf der Site.
 
 ### Language Requirements
 
@@ -45,28 +46,20 @@ fs-documentation/
 
 ## 🗂️ Category Structure
 
-All program documentation is organized in **categories** (categories) under `docs/[language]/apps/`.
+All program documentation lives under `docs/[language]/programs/`, grouped by **level**
+(see ADR 0001), each category holding `skins/[program]/` with 7 files per program.
 
-### Existing Categories
+### Levels and categories
 
 ```
-docs/[language]/apps/
-├── wiki/                  # Wiki systems
-├── messenger/            # Instant messaging
-├── marketing/            # Marketing & analytics tools
-├── whiteboards/          # Digital whiteboards
-├── helpdesk/             # Help desk systems
-├── projectmanagement/    # Project management
-├── contact/              # Contact management (CRM)
-├── calendar/             # Calendar systems
-├── desktop/              # Desktop applications
-├── crm/                  # Customer relationship management
-├── democracy/           # Democracy systems
-├── maps/                 # Mapping systems
-├── erp/                  # Enterprise resource planning
-├── workflows/            # Workflow automation
-└── [new categories]/     # Additional categories
+docs/[language]/programs/
+├── apps/       # Ebene 4 – calendar, contact, gallery, helpdesk, maps, marketing,
+│               #   messenger, projectmanagement, streaming, whiteboards, wiki
+├── suites/     # Ebene 5 – crm, democracy, erp, marketplace, workflows
+└── platform/   # Ebene 6 – desktop, crates
 ```
+
+Neue Kategorie der passenden Ebene zuordnen; Level-Grenze = „laeuft es allein?“.
 
 ### Folder Naming Conventions
 
@@ -809,13 +802,13 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `Zust�
 
 | Tool | Purpose |
 |------|---------|
-| `tools/gen_component_indexes.py` | writes `components/index.md`, every category `index.md` and the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) from the profile tables; `--check` fails on drift |
-| `tools/check_components.py` | validates the standard: required files, profile fields, required sections, table cell counts, dead links, attributes that belong in the base class, near-duplicate components, pages missing from the nav |
-| `tools/gen_usage_pages.py` | creates missing `usage.md` from the component's own description and attribute tables |
-| `tools/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section; `--blank-lines` normalises blank lines between Markdown blocks |
-| `tools/standardize_sections.py` | renames section headings to the standard names, merges duplicates, reorders sections, repairs attribute tables whose header lacks the `Default` column |
-| `tools/standardize_components.py` | earlier migration: `examples.md` → `usage.md`, strip inherited attributes |
-| `tools/restructure_components.py` | the one-off move into the ten categories plus the merges, rewriting every internal link |
+| `scripts/gen_component_indexes.py` | writes `components/index.md`, every category `index.md` and the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) from the profile tables; `--check` fails on drift |
+| `scripts/check_components.py` | validates the standard: required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
+| `scripts/migrate_links.py` | rewrites relative **and** absolute markdown links after a directory move; run before `git mv`; `--dry-run`/`--check` |
+| `scripts/gen_skin_indexes.py` | builds skin `index.md` per program (needs update to `programs/<level>/`) |
+| `scripts/gen_usage_pages.py` | creates missing `usage.md` from description + attribute tables |
+| `scripts/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section |
+| `scripts/standardize_sections.py` | renames/merges/reorders section headings, repairs `Default` column |
 
 CI runs `check_components.py` and `gen_component_indexes.py --check` before the site build,
 so numbers and navigation cannot drift again.

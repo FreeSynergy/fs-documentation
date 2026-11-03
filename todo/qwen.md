@@ -11,9 +11,9 @@ Modell: qwen3.8 · Scope: Struktur, Konventionen, physische Umzüge
 - `interactions/` umgesetzt: gestures + animations (de+en) umgezogen, 63 Links, Nav (2026-11-03)
 - `conventions/` umbenannt (konventionen -> conventions, KONVENTIONEN.md -> CONVENTIONS.md) (2026-11-03)
 - `programs/` umgesetzt: apps(11)/suites(5)/platform(desktop+crates), 473 Links, Nav; `crates/` -> platform (2026-11-03)
+- `SYSTEM.md` → `conventions/doku-standard.md` ueberfuehrt, Blöcke aktualisiert, Verweise nachgezogen (2026-11-03)
 
 ## offen
 - `scripts/gen_skin_indexes.py` an `programs/<level>/` anpassen (ROOT + Pfadtexte), dann Skin-Indizes neu erzeugen (Pfadnotizen `docs/de/apps/...` sind veraltet, aber keine defekten Links) · Status: offen
 - `interactions/index.md` als Landing-Page ergaenzen · Status: offen (optional)
 - `components/` Bänder primitives/widgets/workbenches physisch umsetzen + `gen_component_indexes.py` ans Band-Modell anpassen · Ebene 1–3 · Status: offen
-- `SYSTEM.md` aufloesen: normative Teile nach conventions/, Rest nach docs/de Beitragend · Status: offen

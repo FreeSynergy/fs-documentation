@@ -14,4 +14,4 @@ docs/[language]/apps/[category]/
 
 ## System Documentation
 
-See the SYSTEM.md file in the repository root for more information about the documentation structure.
+See `conventions/doku-standard.md` in the repository root for more information about the documentation structure.

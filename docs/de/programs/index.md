@@ -51,7 +51,7 @@ Referenzbeispiele: [Wiki/Skins](apps/wiki/skins/), [Messenger/Skins](apps/messen
 
 ## Neue Programme anlegen
 
-1. Kategorie wählen (Kategorien und Beispiele sind in `SYSTEM.md` im Projektstamm beschrieben)
+1. Kategorie und Ebene wählen (Levels und Beispiele siehe `conventions/doku-standard.md` im Projektstamm)
 2. Verzeichnis `apps/<kategorie>/skins/<programm>/` anlegen
 3. Sieben Dateien nach dem Schema oben schreiben (Deutsch zuerst)
 4. `apps/<kategorie>/skins/index.md` um den Eintrag ergänzen

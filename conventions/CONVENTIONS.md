@@ -5,6 +5,8 @@ liest **zuerst** diese Datei. Es gibt kein Session-Gedächtnis über Sitzungen h
 deshalb gilt: **jede neue Festlegung wird sofort hier eingetragen.** Was hier steht,
 gültig für alle Repos, bis ausdrücklich geändert.
 
+Das konkrete Dateisatz- und Layout-Handwerk steht in `doku-standard.md` (hier im Verzeichnis).
+
 Stand: 2026-11-03
 
 ---
