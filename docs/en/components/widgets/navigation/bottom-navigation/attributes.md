@@ -1,47 +1,47 @@
-# Bottom Navigation - Attribute
+# Bottom Navigation - Attributes
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Nav-Objekten (id, icon, label) |
-| `activeItem` | string | - | Aktiver Nav-Punkt |
-| `onChange` | function | - | Event bei Auswahl |
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
+| `items` | array[] | - | array of nav objects (id, icon, label) |
+| `activeItem` | string | - | active nav item |
+| `onChange` | function | - | event on selection |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `circular` | boolean | `false` | Runde Buttons? |
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `circular` | boolean | `false` | round buttons? |
 
-## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `color` | enum | `primary` | Farbe: `primary`, `secondary`, `neutral` |
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `animate` | boolean | `true` | Animationen aktivieren? |
-| `animationDuration` | number | `300` | Dauer in ms |
+## Presentation
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `color` | enum | `primary` | colour: `primary`, `secondary`, `neutral` |
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `animate` | boolean | `true` | enable animations? |
+| `animationDuration` | number | `300` | duration in ms |
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `responsive` | boolean | `true` | Responsives Layout? |
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `responsive` | boolean | `true` | responsive layout? |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird bei Auswahl ausgeführt |
-| `onHover` | function | Wird beim Hover ausgeführt |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `onSelect` | function | runs on selection |
+| `onHover` | function | runs on hover |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `navigation` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `navigation` |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

@@ -1,6 +1,6 @@
-# Command (Befehlspalette) - Aussehen
+# Command (Befehlspalette) - Appearance
 
-## Grundlayout
+## Base layout
 
 ```
         ┌────────────────────────────────────────┐
@@ -15,39 +15,39 @@
         └────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **palette** | Overlay mittig, 640 px breit, dunkler Hintergrund dahinter |
 | **inline** | ohne Hintergrund, Breite der Elternbox |
 
-## Größen
+## Sizes
 
-| Größe | Eingabehöhe | Zeilenhöhe | Max. Treffer |
-|-------|-------------|------------|--------------|
+| Size | Eingabehöhe | Zeilenhöhe | Max. Treffer |
+| ------- | ------------- | ------------ | -------------- |
 | `small` | 32 px | 28 px | 6 |
 | `medium` | 40 px | 34 px | 10 |
 | `large` | 48 px | 40 px | 14 |
 
-## Farben und Zustände
+## Colours and states
 
-| Zustand | Aussehen |
-|---------|----------|
+| State | Appearance |
+| --------- | ---------- |
 | `default` | Eingabefeld hell, Trefferliste neutral |
 | `open` | Fokus im Eingabefeld, erster Treffer markiert |
 | `hover` | Zeilenhintergrund eine Stufe dunkler |
 | `empty` | Hinweis „Kein Treffer“ plus Vorschläge |
 | `loading` | Skeleton in der Trefferliste |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `reveal` | Kürzel rechts in der Zeile, dezent |
 | `ring` | Markierung des aktiven Treffers über die ganze Zeile |
 
-## Reaktiv
+## Responsive
 
 - Auf schmalen Bildschirmen füllt die Palette die volle Breite und Höhe.
 - Die Trefferliste scrollt; Eingabezeile bleibt oben stehen.

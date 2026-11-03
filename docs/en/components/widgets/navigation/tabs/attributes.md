@@ -1,48 +1,48 @@
 # Tabs - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `tabs` | array[] | - | Array von Tab-Objekten (id, label, content) |
 | `activeTab` | string/number | - | Aktiver Tab (id) |
 | `onChange` | function | - | Event bei Tab-Wechsel |
 | `position` | enum | `top` | Position: `top`, `bottom`, `left`, `right` |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `closable` | boolean | `false` | Tabs schließbar? |
 | `scrollable` | boolean | `false` | Scrollbar? |
 | `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
 
-## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `showIcons` | boolean | `false` | Icons anzeigen? |
+## Presentation
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `showIcons` | boolean | `false` | show icons? |
 | `showLabels` | boolean | `true` | Labels anzeigen? |
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `responsive` | boolean | responsive layout? |
 | `hideLabelsOnMobile` | boolean | Labels auf Mobile verstecken? |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onSelect` | function | Wird beim Selektieren ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| `onClose` | function | runs when closed |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `tablist` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `tablist` |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

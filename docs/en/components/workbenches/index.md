@@ -16,10 +16,10 @@ Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Kar
 
 [code-editor](./special/code-editor/), [dashboard](./special/dashboard/), [embed](./special/embed/), [whiteboard](./special/whiteboard/)
 
-## Siehe auch
+## See also
 
-- [Komponenten-Übersicht](../index.md)
-- [Basisklasse](../primitives/basics/base.md)
+- [Component overview](../index.md)
+- [Base class](../primitives/basics/base.md)
 - [primitives](../primitives/) – Grundbausteine
 - [widgets](../widgets/) – Bausteine mit bekanntem Inhalt
-- [Gesten](../../interactions/gestures/) und [Animationen](../../interactions/animations/)
+- [Gestures](../../interactions/gestures/) und [Animations](../../interactions/animations/)

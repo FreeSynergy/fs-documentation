@@ -1,6 +1,6 @@
-# Popover (Inhaltspopover) - Aussehen
+# Popover (Inhaltspopover) - Appearance
 
-## Grundlayout
+## Base layout
 
 ```
                      ┌──────────────────────┐
@@ -10,40 +10,40 @@
       Auslöser       └──────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **inhalt** | Fläche mit Text/Bild, gleiche Fläche wie `card` |
 | **aktionen** | vertikale Aktionsliste mit Hover-Flächen |
 | **formular** | Fläche mit Feldern und Bestätigungsbutton |
 
-## Größen
+## Sizes
 
-| Größe | Breite |
-|-------|--------|
+| Size | Width |
+| ------- | -------- |
 | `small` | bis 220 px |
 | `medium` | bis 320 px |
 | `large` | bis 480 px |
 
 Die Höhe folgt dem Inhalt und wird bei Überlänge scrollbar.
 
-## Farben und Zustände
+## Colours and states
 
-| Teil | Farbe |
-|------|-------|
+| Teil | Colour |
+| ------ | ------- |
 | Fläche | Kartenfarbe plus Schatten (eine Stufe höher als `card`) |
 | `arrow` | wie Fläche |
 | Aktionen | Hover wie Menüpunkte |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `fade-in` / `expand` | kurzes Einblenden aus Richtung des Auslösers |
 | `focus-trap` | Tab kreist innerhalb des Popovers, solange es offen ist |
 
-## Reaktiv
+## Responsive
 
 - Auf schmalen Bildschirmen wird das Popover zu einer Bodenschublade
   (volle Breite, von unten) – dieselbe Komponente, andere Presentation.

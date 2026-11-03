@@ -1,10 +1,10 @@
-# Pagination - Aussehen
+# Pagination - Appearance
 
-## Grundlayout
+## Base layout
 
 Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 
-## Varianten
+## Variants
 
 ### Numeric (Numerisch)
 
@@ -38,36 +38,36 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 └─────────────────────────────────────────┘
 ```
 
-## Größen
+## Sizes
 
-| Größe | Schriftgröße | Verwendung |
-|-------|-------------|------------|
+| Size | Font size | Use |
+| ------- | ------------- | ------------ |
 | Small | 12px | Inline |
 | Medium | 14px | Standard |
 | Large | 16px | Featured |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Active** | Primärfarbe | Aktuelle Seite |
 | **Inactive** | Grau | Inaktive Seiten |
-| **Hover** | Heller | Hover-Zustand |
+| **Hover** | Heller | hover state |
 | **Disabled** | Grau | Deaktivierte Buttons |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `background` | Seitenzahl bekommt eine Fläche |
 | `ring` | Fokus-Ring bei Tastaturnavigation |
 | `underline` | Unterstrich beim aktiven Eintrag |
 | `none` | deaktivierte Pfeile ohne Rückmeldung |
 
-## Reaktiv
+## Responsive
 
-| Breakpoint | Verhalten |
-|------------|-----------|
+| Breakpoint | Behaviour |
+| ------------ | ----------- |
 | Desktop (>768px) | Volle Pagination sichtbar |
 | Tablet (480-768px) | Kompakt |
 | Mobile (<480px) | Previous/Next oder Load More |

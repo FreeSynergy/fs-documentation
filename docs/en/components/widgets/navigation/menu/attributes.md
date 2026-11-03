@@ -1,56 +1,56 @@
 # Menu (Menü) - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `items` | array[] | - | Array von Menüpunkten |
 | `activeItem` | string/number | - | Aktiver Menüpunkt |
-| `onChange` | function | - | Event bei Auswahl |
+| `onChange` | function | - | event on selection |
 | `isOpen` | boolean | `false` | Ist geöffnet? |
 | `onToggle` | function | - | Event beim Öffnen/Schließen |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `variant` | enum | `horizontal` | Stil: `horizontal`, `vertical` |
 | `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
 | `closable` | boolean | `false` | Schließbar? |
 | `closeOnOutsideClick` | boolean | `true` | Bei Klick außerhalb schließen? |
 | `keyboardNavigation` | boolean | `true` | Keyboard-Navigation? |
-| `animate` | boolean | `true` | Animationen aktivieren? |
-| `animationDuration` | number | `300` | Dauer in ms |
+| `animate` | boolean | `true` | enable animations? |
+| `animationDuration` | number | `300` | duration in ms |
 
-## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `showIcons` | boolean | `false` | Icons anzeigen? |
+## Presentation
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `showIcons` | boolean | `false` | show icons? |
 | `showLabels` | boolean | `true` | Labels anzeigen? |
 | `color` | enum | `default` | Farbe: `default`, `light`, `primary` |
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `responsive` | boolean | responsive layout? |
 | `hamburgerBreakpoint` | number | Breakpoint für Hamburger |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onSelect` | function | Wird beim Selektieren ausgeführt |
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| `onOpen` | function | runs when opened |
+| `onClose` | function | runs when closed |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `menubar` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `menubar` |
 | `aria-expanded` | boolean | Ist erweitert? |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

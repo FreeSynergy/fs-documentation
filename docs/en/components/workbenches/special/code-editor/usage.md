@@ -1,11 +1,11 @@
-# Code Editor (Code-Editor) - Verwendung
+# Code Editor (Code-Editor) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
     Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
     ersetzt.
 
-## Anwendung
+## Application
 
 Ein Code Editor ist ein Editor für Quellcode.
 
@@ -13,7 +13,7 @@ Ein Code Editor ist ein Editor für Quellcode.
 - Programmierung
 - Skripte
 
-## Beispiele
+## Examples
 
 ### Code
 

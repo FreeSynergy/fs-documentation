@@ -1,13 +1,13 @@
 # Standardized Data
 
-Standardized data describe in which **formats**, **models**, and **fields** FreeSynergy programs, components, and skins exchange information.
+Standardized data describe in which **formats**, **models**, and **fields** FreeSynergy programs, components, and masks exchange information.
 
 ## Why Standardization?
 
 - **Interoperability**: Messenger, wiki, calendar, and desktop dashboards use the same field names
 - **Reusability**: Components (`table`, `list-view`, `calendar-view`) work with any model
 - **Migration capability**: Data can be moved between programs (export/import)
-- **Predictability**: Skins (`apps/<category>/skins/<program>/api.md`) describe the same API style
+- **Predictability**: Masks (`programs/<level>/<category>/masks/<program>/api.md`) describe the same API style
 - **Automation**: Workflows and webhooks access stable paths
 
 ## Data Areas
@@ -82,5 +82,5 @@ docs/en/data/
 
 - [Gestures](../interactions/gestures/index.md) — interaction data (thresholds, callbacks)
 - [Animations](../interactions/animations/index.md) — animation attributes and durations
-- [Wiki](../programs/apps/wiki/index.md) — program with its own skins
-- [Messenger](../programs/apps/messenger/index.md) — program with its own skins
+- [Wiki](../programs/apps/wiki/index.md) — program with its own masks
+- [Messenger](../programs/apps/messenger/index.md) — program with its own masks

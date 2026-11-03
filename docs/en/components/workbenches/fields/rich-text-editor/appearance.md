@@ -1,6 +1,6 @@
-# Rich Text Editor - Aussehen
+# Rich Text Editor - Appearance
 
-## Grundlayout
+## Base layout
 Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 
 ```
@@ -15,40 +15,40 @@ Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **wysiwyg** | Formatierungsleiste oben, Text wie im Druckbild |
 | **wiki-syntax** | Syntaxfeld links, Vorschau rechts (oder als Reiter) |
 
-## Größen
+## Sizes
 
-| Größe | Höhe | Verwendung |
-|-------|------|------------|
+| Size | Height | Use |
+| ------- | ------ | ------------ |
 | Small | 200px | Inline |
 | Medium | 400px | Standard |
 | Large | 600px | Featured |
 | Full | 100% | Volle Breite |
 
-## Farben und Zustände
+## Colours and states
 
-| Zustand | Aussehen |
-|---------|----------|
+| State | Appearance |
+| --------- | ---------- |
 | `default` | heller Grund, randloser Textbereich |
 | `focus` | Rand in Primärfarbe, Cursor sichtbar |
 | `unspeichert` | kleiner Punkt am Rand, Speichern-Knopf hervorgehoben |
 | `error` | roter Rand, betroffene Stelle unterstrichen |
 | `disabled` | grauer Grund, Leiste ausgegraut |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+| Effect | Description |
+| -------- | -------------- |
+| `border` | the border lights up |
+| `shadow` | stronger shadow |
 
-## Reaktiv
+## Responsive
 
 - Die Formatierungsleiste bleibt beim Scrollen oben stehen; passt sie nicht in eine Zeile,
   rutschen weitere Werkzeuge hinter ein ``+``-Aufklappfeld.
@@ -59,13 +59,13 @@ Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 
 ## Toolbar-Buttons
 
-| Button | Funktion |
-|--------|----------|
+| Button | Function |
+| -------- | ---------- |
 | **B** | Fett |
 | **I** | Kursiv |
 | **U** | Unterstrichen |
 | ** Strikes** | Durchgestrichen |
-| ** Color** | Farbe |
+| ** Color** | Colour |
 | ** Heading** | Überschriften |
 | ** List** | Listen |
 | ** Link** | Links |

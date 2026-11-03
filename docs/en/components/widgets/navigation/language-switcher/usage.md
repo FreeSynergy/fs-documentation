@@ -1,4 +1,4 @@
-# Language Switcher - Verwendung
+# Language Switcher - Usage
 
 ## Einfacher Language Switcher
 
@@ -39,7 +39,7 @@
 </Header>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <LanguageSwitcher 
@@ -53,9 +53,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Header-Wechsel
+## Example 1: Header-Wechsel
 
 ```
 ┌─────────────────────────────────────────┐
@@ -64,7 +64,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Einstellungen
+## Example 2: Einstellungen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -78,7 +78,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Dropdown
+## Example 3: Dropdown
 
 ```
 ┌─────────────────────────────────────────┐
@@ -92,7 +92,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Flaggen-Buttons
+## Example 4: Flaggen-Buttons
 
 ```
 ┌─────────────────────────────────────────┐
@@ -100,7 +100,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Auto-Detect
+## Example 5: Auto-Detect
 
 ```
 ┌─────────────────────────────────────────┐

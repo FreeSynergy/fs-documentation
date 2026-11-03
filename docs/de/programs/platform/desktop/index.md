@@ -8,7 +8,7 @@ Dieser Bereich enthält die Dokumentation für verschiedene Desktop-Applikatione
 
 Programme ohne eigenes Skin-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
 
-→ [Desktop-Skins](skins/index.md)
+→ [Desktop-Skins](masks/index.md)
 
 Dokumentiert: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
 

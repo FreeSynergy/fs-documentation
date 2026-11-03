@@ -1,4 +1,4 @@
-# Tabs - Verwendung
+# Tabs - Usage
 
 ## Einfache Tabs
 
@@ -14,7 +14,7 @@
 />
 ```
 
-## Mit Icons
+## With icons
 
 ```jsx
 <Tabs 
@@ -47,7 +47,7 @@
 />
 ```
 
-## In Card
+## In a card
 
 ```jsx
 <Card>
@@ -59,7 +59,7 @@
 </Card>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <Tabs 
@@ -69,9 +69,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Einstellungen-Tabs
+## Example 1: Einstellungen-Tabs
 
 ```
 ┌─────────────────────────────────────────┐
@@ -83,7 +83,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Profil-Tabs
+## Example 2: Profil-Tabs
 
 ```
 ┌─────────────────────────────────────────┐
@@ -95,7 +95,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Form-Tabs
+## Example 3: Form-Tabs
 
 ```
 ┌─────────────────────────────────────────┐
@@ -107,7 +107,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Chat-Tabs
+## Example 4: Chat-Tabs
 
 ```
 ┌─────────────────────────────────────────┐
@@ -119,7 +119,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Dokumentation-Tabs
+## Example 5: Dokumentation-Tabs
 
 ```
 ┌─────────────────────────────────────────┐

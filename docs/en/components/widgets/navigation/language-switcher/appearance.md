@@ -1,10 +1,10 @@
-# Language Switcher - Aussehen
+# Language Switcher - Appearance
 
-## Grundlayout
+## Base layout
 
 Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
 
-## Varianten
+## Variants
 
 ### Dropdown
 
@@ -34,30 +34,30 @@ Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
 └─────────────────────────────────────────┘
 ```
 
-## Größen
+## Sizes
 
-| Größe | Verwendung |
-|-------|------------|
+| Size | Use |
+| ------- | ------------ |
 | Small | In der Header-Leiste (24px) |
 | Medium | In den Einstellungen (48px) |
 | Large | Auf der Startseite (64px) |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Default** | Normal | Standard-Style |
 | **Active** | Primärfarbe | Aktive Sprache |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `scale` | Vergrößerung |
-| `color` | Farbe ändert sich |
-| `shadow` | Schatten stärker |
+| `color` | the colour changes |
+| `shadow` | stronger shadow |
 
-## Reaktiv
+## Responsive
 
 - In der Kopf- und Werkzeugleiste steht der Schalter in `small`; wird der Platz knapp,
   bleibt nur das Sprachkürzel (`DE`) übrig, der Name entfällt.

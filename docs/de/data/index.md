@@ -7,7 +7,7 @@ Standardisierte Daten beschreiben, in welchen **Formaten**, **Modellen** und **F
 - **Interoperabilität**: Messenger, Wiki, Kalender und Desktop-Dashboards nutzen dieselben Feldnamen
 - **Wiederverwendbarkeit**: Komponenten (`table`, `list-view`, `calendar-view`) funktionieren mit jedem Modell
 - **Migrationsfähigkeit**: Daten lassen sich zwischen Programmen migrieren (Export/Import)
-- **Vorhersagbarkeit**: Skins (`apps/<kategorie>/skins/<programm>/api.md`) beschreiben denselben API-Stil
+- **Vorhersagbarkeit**: Skins (`apps/<kategorie>/masks/<programm>/api.md`) beschreiben denselben API-Stil
 - **Automatisierung**: Workflows und Webhooks greifen auf stabile Pfade zu
 
 ## Datendomänen (Beschlossen 2026-11-01)
@@ -116,4 +116,4 @@ docs/de/data/
 - [Gesten](../interactions/gestures/) — Interaktionsdaten (Schwellwerte, Callbacks)
 - [Animationen](../interactions/animations/) — Animationsattribute und -dauern
 - [Programs](../programs/) — Programme mit eigener `api.md` pro Skin
-- [Desktop-Skins](../programs/platform/desktop/skins/) — Beispiel für API-Dokumentation nach Muster
+- [Desktop-Skins](../programs/platform/desktop/masks/) — Beispiel für API-Dokumentation nach Muster

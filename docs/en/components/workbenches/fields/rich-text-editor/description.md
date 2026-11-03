@@ -1,32 +1,32 @@
-# Rich Text Editor (Rich-Text-Editor)
+# Rich Text Editor
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `fields` |
-| **Erbt von** | `base`, `textarea` |
-| **Varianten** | `wysiwyg`, `wiki-syntax` |
-| **Zustände** | `unspeichert`, `error` |
-| **Gesten** | `tap`, `double-tap`, `long-press`, `drag` |
-| **Animationen** | `fade-in`, `highlight` |
-| **Verwandt** | `textarea`, `code-editor`, `whiteboard`, `emoji-picker` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `fields` |
+| **Inherits from** | `base`, `textarea` |
+| **Variants** | `wysiwyg`, `wiki-syntax` |
+| **States** | `unspeichert`, `error` |
+| **Gestures** | `tap`, `double-tap`, `long-press`, `drag` |
+| **Animations** | `fade-in`, `highlight` |
+| **Related** | `textarea`, `code-editor`, `whiteboard`, `emoji-picker` |
+| **State** | documented |
 
 !!! info "Standardisierung"
     Die frühere Komponente `wiki-editor` ist als Variante in `rich-text-editor` aufgegangen: `wysiwyg` und `wiki-syntax`.
 
-## Beschreibung
+## Description
 Ein Rich Text Editor ist ein Editor für formatierten Text.
 
-## Verwendungszweck
+## Purpose
 
 - Dokumente
 - Artikel
 - Nachrichten
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **wysiwyg** | Formatieren wie im Druckbild (Standard) |
 | **wiki-syntax** | Editor mit Wiki-Syntax (Markdown) und Vorschau |
 
@@ -38,7 +38,7 @@ Ein Rich Text Editor ist ein Editor für formatierten Text.
 - Links
 - Images
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): das mehrzeilige Feld speichert reinen Text,
   dieser Editor speichert Formatierung als Struktur.
@@ -55,9 +55,9 @@ Ein Rich Text Editor ist ein Editor für formatierten Text.
 - Zwischenzustand automatisch sichern und den Speicherpunkt sichtbar machen (`unspeichert`).
 - `wiki-syntax` immer mit Vorschau-Schalter, damit die Syntax lesbar bleibt.
 
-## Siehe auch
+## See also
 
-- [fields – Übersicht](../index.md)
+- [fields – overview](../index.md)
 - [Textarea](../../../primitives/fields/textarea/) — reinen Text bearbeiten
 - [Code Editor](../../special/code-editor/) — Quellcode
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

@@ -1,29 +1,29 @@
-# Dashboard (Dashboard)
+# Dashboard
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `special` |
-| **Erbt von** | `base` |
-| **Varianten** | `vorlage`, `anordbar`, `bericht` |
-| **Zustände** | `bearbeiten`, `leer` |
-| **Gesten** | `drag`, `tap`, `long-press` |
-| **Animationen** | `reorder`, `cascade`, `stagger` |
-| **Verwandt** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `special` |
+| **Inherits from** | `base` |
+| **Variants** | `vorlage`, `anordbar`, `bericht` |
+| **States** | `bearbeiten`, `leer` |
+| **Gestures** | `drag`, `tap`, `long-press` |
+| **Animations** | `reorder`, `cascade`, `stagger` |
+| **Related** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
-## Verwendungszweck
+## Purpose
 
 - Übersicht
 - Analytics
 - Project
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **vorlage** | feste Anordnung, vom Anwender nicht veränderbar |
 | **anordbar** | Widgets verschieben, Größe ändern, eigene Auswahl |
 | **bericht** | reine Anzeige ohne Bearbeiten-Modus, für geteilte Ansichten |
@@ -35,7 +35,7 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 - Resize
 - Customize
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): das Raster zeigt gleichartige
   Einträge, das Dashboard unterschiedliche Widgets in unterschiedlichen Größen.
@@ -52,9 +52,9 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 - Jeder Widget-Ladezustand einzeln behandeln, die Seite nicht komplett sperren.
 - Anordnung je Person speichern und ein Zurücksetzen anbieten.
 
-## Siehe auch
+## See also
 
-- [special – Übersicht](../index.md)
+- [special – overview](../index.md)
 - [Card](../../../widgets/containers/card/) — der Baustein
 - [Chart](../../../widgets/data/chart/) — das Diagramm
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

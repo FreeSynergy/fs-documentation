@@ -1,6 +1,6 @@
-# Drawer (Seitenleiste) - Aussehen
+# Drawer (Seitenleiste) - Appearance
 
-## Grundlayout
+## Base layout
 Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 
 ```
@@ -16,40 +16,40 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variant | Position | Beschreibung |
-|---------|----------|--------------|
+| Variant | Position | Description |
+| --------- | ---------- | -------------- |
 | **Left Drawer** | Links | Links |
 | **Right Drawer** | Rechts | Rechts |
 | **Bottom Drawer** | Unten | Unten |
 | **Full Drawer** | Voll | Vollständig |
 
-## Größen
+## Sizes
 
-| Größe | Breite/Höhe | Verwendung |
-|-------|-------------|------------|
+| Size | Width/height | Use |
+| ------- | ------------- | ------------ |
 | Small | 200px | Wenige Elemente |
 | Medium | 300px | Standard |
 | Large | 400px | Viele Elemente |
 | Full | 100% | Volle Breite/Höhe |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Background** | Hell | Hintergrund |
 | **Header** | Hell | Titelzeile |
 | **Overlay** | Dunkel | Hintergrund abdunkeln |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| Effect | Description |
+| -------- | -------------- |
+| `shadow` | stronger shadow |
+| `border` | the border lights up |
 
-## Reaktiv
+## Responsive
 
 Der Drawer gleitet von der Kante herein (`slide-in`) und überdeckt den Inhalt mit
 Schatten; auf breiter Fläche kann er dauerhaft offen stehen und teilt den Raum dann wie

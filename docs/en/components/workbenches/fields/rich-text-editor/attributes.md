@@ -1,48 +1,48 @@
 # Rich Text Editor - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `value` | string | - | Wert (HTML) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | event on change |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `placeholder` | string | `null` | Placeholder-Text |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onSave` | function | Wird beim Speichern ausgeführt |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `textbox` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `textbox` |
 
 ## Toolbar-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `showToolbar` | boolean | `true` | Toolbar anzeigen? |
 | `toolbarButtons` | array[] | - | Array von Buttons |
 
-## Features-Attribute
+## Features attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `enableImages` | boolean | `true` | Bilder erlauben? |
 | `enableLinks` | boolean | `true` | Links erlauben? |
 | `enableCode` | boolean | `true` | Code erlauben? |
 | `enablePreview` | boolean | `true` | Vorschau erlauben? |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

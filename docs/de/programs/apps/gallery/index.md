@@ -17,19 +17,38 @@ Foto-Galerien verwalten Bild- und Videosammlungen: Sie indexieren Bestände, erz
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/gallery/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/gallery/masks/<programm>/`.
 
 **dokumentiert (8 Programme):**
 
-- [Coppermine](skins/coppermine/index.md) - Coppermine
-- [Damselfly](skins/damselfly/index.md) - Damselfly
-- [Immich](skins/immich/index.md) - Immich
-- [LibrePhotos](skins/librephotos/index.md) - LibrePhotos
-- [Lychee](skins/lychee/index.md) - Lychee
-- [Nextcloud Photos](skins/nextcloud-photos/index.md) - Nextcloud Photos
-- [PhotoPrism](skins/photoprism/index.md) - PhotoPrism
-- [Piwigo](skins/piwigo/index.md) - Piwigo
+- [Coppermine](masks/coppermine/index.md) - Coppermine
+- [Damselfly](masks/damselfly/index.md) - Damselfly
+- [Immich](masks/immich/index.md) - Immich
+- [LibrePhotos](masks/librephotos/index.md) - LibrePhotos
+- [Lychee](masks/lychee/index.md) - Lychee
+- [Nextcloud Photos](masks/nextcloud-photos/index.md) - Nextcloud Photos
+- [PhotoPrism](masks/photoprism/index.md) - PhotoPrism
+- [Piwigo](masks/piwigo/index.md) - Piwigo
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/gallery/masks/<programm>/`.
+
+**dokumentiert (8 Programme):**
+
+- [Coppermine](masks/coppermine/index.md) - Coppermine
+- [Damselfly](masks/damselfly/index.md) - Damselfly
+- [Immich](masks/immich/index.md) - Immich
+- [LibrePhotos](masks/librephotos/index.md) - LibrePhotos
+- [Lychee](masks/lychee/index.md) - Lychee
+- [Nextcloud Photos](masks/nextcloud-photos/index.md) - Nextcloud Photos
+- [PhotoPrism](masks/photoprism/index.md) - PhotoPrism
+- [Piwigo](masks/piwigo/index.md) - Piwigo
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

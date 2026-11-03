@@ -24,20 +24,20 @@ Dieser Bereich enthält Dokumentation für verschiedene Workflow-Automatisierung
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/workflows/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/workflows/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [Apache Airflow](skins/apache-airflow/index.md) - Apache Airflow
-- [Make](skins/make/index.md) - Make
-- [n8n](skins/n8n/index.md) - n8n
-- [Node-RED](skins/node-red/index.md) - Node-RED
-- [Prefect](skins/prefect/index.md) - Prefect
-- [Zapier](skins/zapier/index.md) - Zapier
+- [Apache Airflow](masks/apache-airflow/index.md) - Apache Airflow
+- [Make](masks/make/index.md) - Make
+- [n8n](masks/n8n/index.md) - n8n
+- [Node-RED](masks/node-red/index.md) - Node-RED
+- [Prefect](masks/prefect/index.md) - Prefect
+- [Zapier](masks/zapier/index.md) - Zapier
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../../apps/wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist Workflow-Automatisierung?
 
@@ -95,3 +95,20 @@ Bei der Wahl eines Workflow-Automatisierungssystems sollten folgende Kriterien b
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Workflow-Automatisierungssysteme.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/workflows/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Apache Airflow](masks/apache-airflow/index.md) - Apache Airflow
+- [Make](masks/make/index.md) - Make
+- [n8n](masks/n8n/index.md) - n8n
+- [Node-RED](masks/node-red/index.md) - Node-RED
+- [Prefect](masks/prefect/index.md) - Prefect
+- [Zapier](masks/zapier/index.md) - Zapier
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

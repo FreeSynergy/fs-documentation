@@ -1,4 +1,4 @@
-# Popover (Inhaltspopover) - Verwendung
+# Popover (Inhaltspopover) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
@@ -34,10 +34,10 @@
 <Popover open={menuOpen} onClose={() => setMenuOpen(false)} content={rowMenu} />
 ```
 
-## Szenarien
+## Scenarios
 
 | Szenario | Empfehlung |
-|----------|------------|
+| ---------- | ------------ |
 | Mehr-Menü an Tabellenzeilen | `aktionen`, `trigger="click"` |
 | Datum/Farbe schnell setzen | `formular`, `closeOnAction` |
 | Link-Ziel-Vorschau | [hover-card](../hover-card/), sonst `inhalt` mit `trigger="hover"` |

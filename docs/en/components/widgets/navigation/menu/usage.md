@@ -1,4 +1,4 @@
-# Menu (Menü) - Verwendung
+# Menu (Menü) - Usage
 
 ## Einfaches Menu
 
@@ -54,7 +54,7 @@
 </Header>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <Menu 
@@ -64,9 +64,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Hauptnavigation
+## Example 1: Hauptnavigation
 
 ```
 ┌─────────────────────────────────────────┐
@@ -74,7 +74,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Sidebar-Menu
+## Example 2: Sidebar-Menu
 
 ```
 ┌─────────┐
@@ -88,7 +88,7 @@
 └─────────┘
 ```
 
-## Beispiel 3: Dropdown-Menu
+## Example 3: Dropdown-Menu
 
 ```
 ┌─────────────────────────────────────────┐
@@ -99,7 +99,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Mobile-Menu (Hamburger)
+## Example 4: Mobile-Menu (Hamburger)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -107,7 +107,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Tab-Menu
+## Example 5: Tab-Menu
 
 ```
 ┌─────────────────────────────────────────┐

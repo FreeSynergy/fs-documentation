@@ -1,6 +1,6 @@
-# Context Menu (Rechtsklick-Menü) - Aussehen
+# Context Menu (Rechtsklick-Menü) - Appearance
 
-## Grundlayout
+## Base layout
 Ein Context Menu wird durch Rechtsklick oder lange Touch-Aktion geöffnet.
 
 ```
@@ -14,40 +14,40 @@ Ein Context Menu wird durch Rechtsklick oder lange Touch-Aktion geöffnet.
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Auslöser | Aussehen |
-|----------|----------|----------|
+| Variant | Auslöser | Appearance |
+| ---------- | ---------- | ---------- |
 | **Standard** | Rechtsklick (Desktop) | Menü am Zeiger |
 | **Long Press** | lange Touch-Aktion | Menü über dem Objekt, Full-Width auf schmaler Fläche |
 | **Overflow Menu** | Klick auf drei Punkte | Menü unter der Schaltfläche |
 
-## Größen
+## Sizes
 
-| Größe | Breite | Schriftgröße | Verwendung |
-|-------|--------|-------------|------------|
+| Size | Width | Font size | Use |
+| ------- | -------- | ------------- | ------------ |
 | Small | 150px | 12px | Wenige Optionen |
 | Medium | 200px | 14px | Standard |
 | Large | 250px | 16px | Viele Optionen |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Active** | Primärfarbe | Aktiver Menüpunkt |
-| **Hover** | Heller | Hover-Zustand |
+| **Hover** | Heller | hover state |
 | **Disabled** | Grau | Deaktivierte Optionen |
 | **Danger** | Rot | Gefährliche Aktionen |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `background` | Hintergrund ändert sich |
-| `color` | Farbe ändert sich |
+| `color` | the colour changes |
 | `border-radius` | Ecken abgerundet |
 
-## Reaktiv
+## Responsive
 
 Das Menü klappt von der Auslösungsstelle weg und wechselt die Seite, wenn zum Bildschirmrand
 zu wenig Platz ist (`pop-in` von der jeweiligen Ecke). Ist es höher als der freie Raum,
@@ -63,7 +63,7 @@ scrollt es selbst; der Auslösepunkt bleibt sichtbar.
 ## Icons
 
 | Icon | Bedeutung |
-|------|-----------|
+| ------ | ----------- |
 | 📋 | Bearbeiten |
 | 📄 | Kopieren |
 | 🗑️ | Löschen |

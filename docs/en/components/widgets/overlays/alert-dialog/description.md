@@ -1,33 +1,33 @@
-# Alert Dialog (Bestätigungsdialog)
+# Alert Dialog
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `overlays` |
-| **Erbt von** | `base`, `modal` |
-| **Varianten** | `bestaetigung`, `zerstoererisch` |
-| **Zustände** | `open`, `loading` |
-| **Gesten** | `tap` |
-| **Animationen** | `fade-in`, `scale-in` |
-| **Verwandt** | `modal`, `alert`, `toast` |
-| **Rolle** | `alertdialog` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `overlays` |
+| **Inherits from** | `base`, `modal` |
+| **Variants** | `bestaetigung`, `zerstoererisch` |
+| **States** | `open`, `loading` |
+| **Gestures** | `tap` |
+| **Animations** | `fade-in`, `scale-in` |
+| **Related** | `modal`, `alert`, `toast` |
+| **Role** | `alertdialog` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 
 Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird. Er ist die
 Kombination aus [modal](../modal/) (eigener Fokus, blockiert dahinterliegenden Inhalt)
 und [alert](../../../primitives/feedback/alert/) (Meldung mit Typ und Aktion).
 
-## Verwendungszweck
+## Purpose
 
 - Zerstörerische Aktionen absichern (Löschen, Verlassen, Verwerfen)
 - Aktionen ohne Rückgabeweg bestätigen (Senden, Veröffentlichen)
 - Shortcuts ausführen, die nicht rückgängig gemacht werden können
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **bestaetigung** | neutrale Frage, Bestätigungs- und Abbrechen-Button |
 | **zerstoererisch** | Fehlerfarbe, Bestätigungs-Button erst nach Eingabe möglich |
 
@@ -38,7 +38,7 @@ und [alert](../../../primitives/feedback/alert/) (Meldung mit Typ und Aktion).
 - Ladezustand blockiert beide Aktionen, während die Anfrage läuft
 - Kein eigenes Schließen-Symbol: entschieden wird mit einer der zwei Aktionen
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [modal](../modal/): ein Modal ist ein beliebiger Dialog,
   der Bestätigungsdialog hat genau zwei Auswege und blockiert `Esc`-Verlust nicht.
@@ -51,8 +51,8 @@ und [alert](../../../primitives/feedback/alert/) (Meldung mit Typ und Aktion).
 - Bestätigungs-Button als Verb („Verwerfen“), nie „OK“.
 - Rückgängige Aktionen nicht abfragen — stattdessen Toast mit Rückgängig.
 
-## Siehe auch
+## See also
 
 - [Modal](../modal/)
 - [Alert](../../../primitives/feedback/alert/)
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

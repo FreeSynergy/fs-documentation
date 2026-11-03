@@ -1,29 +1,29 @@
 # Sidebar
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `angeheftet`, `ikonenleiste`, `einklappbar` |
-| **Zustände** | `geöffnet`, `geschlossen` |
-| **Gesten** | `tap`, `drag`, `long-press`, `swipe` |
-| **Animationen** | `expand`, `collapse`, `slide-in` |
-| **Verwandt** | `menu`, `bottom-navigation`, `drawer`, `toolbar`, `tree-view` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `angeheftet`, `ikonenleiste`, `einklappbar` |
+| **States** | `geöffnet`, `geschlossen` |
+| **Gestures** | `tap`, `drag`, `long-press`, `swipe` |
+| **Animations** | `expand`, `collapse`, `slide-in` |
+| **Related** | `menu`, `bottom-navigation`, `drawer`, `toolbar`, `tree-view` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Die Sidebar ist eine vertikale Navigationssäule, die normalerweise links oder rechts am Rand der Anwendung positioniert ist. Sie bietet schnellen Zugriff auf Hauptfunktionen und wird oft in Desktop-Anwendungen und Messenger verwendet.
 
-## Verwendungszweck
+## Purpose
 
 - Schneller Zugriff auf Hauptfunktionen
 - Organisation von Menüpunkten in Gruppen
 - Anzeige von Statusinformationen (z.B. Benutzerprofil, Nachrichtenzähler)
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **angeheftet** | dauerhaft am Rand, Contentbereich daneben |
 | **ikonenleiste** | schmale Leiste mit Symbolen, Namen erst bei Hover oder Auswahl |
 | **einklappbar** | breit mit Namen, per Knopf auf die Ikonenleiste reduziert |
@@ -38,7 +38,7 @@ sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
 - Profilkopf oben, Einstellungen unten
 - durchsuchbar bei vielen Punkten, Tastaturnavigation mit Pfeiltasten
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [drawer](../../overlays/drawer/): der Drawer überdeckt den Inhalt,
   die Seitenleiste nimmt ihm dauerhaft Platz weg.
@@ -61,9 +61,9 @@ sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
 - Rechts (bei RTL-Sprachen oder spezifischen Layouts)
 - Oben (als Horizontale Leiste - dann meist "Topbar" genannt)
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
+- [navigation – overview](../index.md)
 - [Drawer](../../overlays/drawer/) — Seitenleiste als Overlay
 - [Menu](../menu/) — Menüpunkte in der Leiste
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

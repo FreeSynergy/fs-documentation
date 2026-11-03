@@ -1,34 +1,34 @@
-# Breadcrumb (Brotkrümel)
+# Breadcrumb
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `pfad`, `gestutzt`, `zurueck` |
-| **Zustände** | `aktiv`, `gestutzt` |
-| **Gesten** | `tap`, `long-press` |
-| **Animationen** | `expand`, `fade-in` |
-| **Verwandt** | `menu`, `sidebar`, `tree-view`, `pagination`, `tabs` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `pfad`, `gestutzt`, `zurueck` |
+| **States** | `aktiv`, `gestutzt` |
+| **Gestures** | `tap`, `long-press` |
+| **Animations** | `expand`, `fade-in` |
+| **Related** | `menu`, `sidebar`, `tree-view`, `pagination`, `tabs` |
+| **State** | documented |
 
-## Beschreibung
-Ein Breadcrumb ist eine Pfadnavigation (Home > Wiki > Seite).
+## Description
+A breadcrumb is a path navigation (Home > Wiki > Page).
 
-## Verwendungszweck
+## Purpose
 
-- Pfad anzeigen
+- Showing the path
 - Navigation
-- Orientierung
+- Orientation
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
-| **pfad** | vollständige Folge von der Wurzel bis zum aktuellen Ort |
-| **gestutzt** | lange Pfade zeigen in der Mitte `…` mit Aufklappmenü |
-| **zurueck** | nur der vorherige Schritt als Knopf (schmale Bildschirme) |
+| Variant | Description |
+| ---------- | -------------- |
+| **pfad** | full sequence from the root to the current location |
+| **gestutzt** | long paths show `…` in the middle with an expandable menu |
+| **zurueck** | only the previous step as a button (narrow screens) |
 
-Das Trennzeichen ist keine Variante, sondern das Attribut `separator` (`›`, `/`, `>`).
+The separator is not a variant but the attribute `separator` (`›`, `/`, `>`).
 
 ## Features
 
@@ -36,26 +36,26 @@ Das Trennzeichen ist keine Variante, sondern das Attribut `separator` (`›`, `/
 - Separator
 - Active State
 
-## Abgrenzung
+## Distinction
 
-- **Nicht verwechseln mit** [sidebar](../sidebar/) oder [menu](../menu/): die zeigen, was es gibt,
-  der Brotpfad nur den zurückgelegten Weg zum aktuellen Ort.
-- **Nicht verwechseln mit** [pagination](../pagination/): dort blättert man in einer Liste,
-  hier wechselt man Ebenen.
-- **Nicht verwechseln mit** [tabs](../tabs/): Tabs wechseln den Inhalt einer Ansicht,
-  sie zeigen keine Hierarchie.
+- **Do not confuse with** [sidebar](../sidebar/) or [menu](../menu/): those show what exists,
+  the breadcrumb only the route already travelled to the current location.
+- **Do not confuse with** [pagination](../pagination/): there one pages through a list,
+  here one changes levels.
+- **Do not confuse with** [tabs](../tabs/): tabs switch the content of one view,
+  they show no hierarchy.
 
 ## Best Practices
 
-- Der aktuelle Ort ist kein Link — er ist schon da.
-- Wurzel immer sichtbar lassen, lange Wege in der Mitte kürzen.
-- Namen genau wie im Baum verwenden, nicht umformulieren.
-- Als eigenes Landmark beschriften (`aria-label="Brotpfad"`), aktueller Punkt mit `aria-current`.
-- Trennzeichen in der ganzen Anwendung einheitlich halten.
+- The current location is not a link — one is already there.
+- Always keep the root visible; shorten long paths in the middle.
+- Use the names exactly as in the tree, do not reword them.
+- Label it as its own landmark (`aria-label="Breadcrumb"`), current entry with `aria-current`.
+- Keep the separator consistent across the whole application.
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
-- [Tree View](../../data/tree-view/) — die Hierarchie selbst
-- [Menu](../menu/) — Aufklappmenü zwischen den Ebenen
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [navigation – overview](../index.md)
+- [Tree View](../../data/tree-view/) — the hierarchy itself
+- [Menu](../menu/) — expandable menu between the levels
+- [Base component](../../../primitives/basics/base.md)

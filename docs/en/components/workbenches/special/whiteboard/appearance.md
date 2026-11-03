@@ -1,6 +1,6 @@
-# Whiteboard - Aussehen
+# Whiteboard - Appearance
 
-## Grundlayout
+## Base layout
 Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
 ```
@@ -16,41 +16,41 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **zeichnung** | Werkzeuge Stift und Radierer, freie Striche |
 | **formen** | Werkzeugkasten mit Figuren und Verbindern |
 | **notizen** | Karten auf der Fläche, farbige Zettel |
 | **vorlage** | vorgezeichnete Flächen, Spalten und Ablaufschienen |
 
-## Größen
+## Sizes
 
-| Größe | Breite/Höhe | Verwendung |
-|-------|-------------|------------|
+| Size | Width/height | Use |
+| ------- | ------------- | ------------ |
 | Small | 400x300px | Inline |
 | Medium | 600x400px | Standard |
 | Large | 800x600px | Featured |
 | Full | 100% | Volle Breite |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Background** | Weiß/Grün | Hintergrund |
 | **Pencil** | Schwarz | Stift |
 | **Shapes** | Farbig | Formen |
 | **Text** | Schrift | Text |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
+| `shadow` | stronger shadow |
 
-## Reaktiv
+## Responsive
 
 - `Full` füllt den Viewport abzüglich Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
   und der Ausschnitt scrollt.
@@ -61,13 +61,13 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
 ## Toolbar-Buttons
 
-| Button | Funktion |
-|--------|----------|
+| Button | Function |
+| -------- | ---------- |
 | **Pencil** | Stift |
 | **Eraser** | Radiergummi |
 | **Shapes** | Formen |
 | **Text** | Text |
-| **Color** | Farbe |
+| **Color** | Colour |
 | **Clear** | Alles löschen |
 | **Export** | Exportieren |
 

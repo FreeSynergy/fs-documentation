@@ -15,17 +15,34 @@ Marktplätze sind Plattformen, auf denen **verschiedene Menschen und Organisatio
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/marketplace/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/marketplace/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [Arcemall](skins/arcemall/index.md) - Arcemall
-- [CS-Cart Multi-Vendor](skins/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
-- [eBay](skins/ebay/index.md) - eBay
-- [Etsy](skins/etsy/index.md) - Etsy
-- [Kleinanzeigen](skins/kleinanzeigen/index.md) - Kleinanzeigen
-- [Sharetribe](skins/sharetribe/index.md) - Sharetribe
+- [Arcemall](masks/arcemall/index.md) - Arcemall
+- [CS-Cart Multi-Vendor](masks/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
+- [eBay](masks/ebay/index.md) - eBay
+- [Etsy](masks/etsy/index.md) - Etsy
+- [Kleinanzeigen](masks/kleinanzeigen/index.md) - Kleinanzeigen
+- [Sharetribe](masks/sharetribe/index.md) - Sharetribe
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../../apps/wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/marketplace/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Arcemall](masks/arcemall/index.md) - Arcemall
+- [CS-Cart Multi-Vendor](masks/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
+- [eBay](masks/ebay/index.md) - eBay
+- [Etsy](masks/etsy/index.md) - Etsy
+- [Kleinanzeigen](masks/kleinanzeigen/index.md) - Kleinanzeigen
+- [Sharetribe](masks/sharetribe/index.md) - Sharetribe
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

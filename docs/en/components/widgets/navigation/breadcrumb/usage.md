@@ -1,4 +1,4 @@
-# Breadcrumb - Verwendung
+# Breadcrumb - Usage
 
 ## Einfaches Breadcrumb
 
@@ -12,7 +12,7 @@
 />
 ```
 
-## Mit Icons
+## With icons
 
 ```jsx
 <Breadcrumb 
@@ -55,7 +55,7 @@
 </Header>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <Breadcrumb 
@@ -64,9 +64,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Wiki-Page
+## Example 1: Wiki-Page
 
 ```
 ┌─────────────────────────────────────────┐
@@ -78,7 +78,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Datei-Explorer
+## Example 2: Datei-Explorer
 
 ```
 ┌─────────────────────────────────────────┐
@@ -90,7 +90,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: E-Commerce
+## Example 3: E-Commerce
 
 ```
 ┌─────────────────────────────────────────┐
@@ -102,7 +102,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Benutzer-Profile
+## Example 4: Benutzer-Profile
 
 ```
 ┌─────────────────────────────────────────┐
@@ -114,7 +114,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Dokument-Management
+## Example 5: Dokument-Management
 
 ```
 ┌─────────────────────────────────────────┐

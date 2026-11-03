@@ -1,10 +1,10 @@
-# navigation (Navigation)
+# navigation
 
 Band [widgets](../) – kennt seine Inhalte beim Bauen.
 
 Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Reiter, Seitenleisten und Pfadangaben.
 
-## Elemente
+## Elements
 
 - [**bottom-navigation**](./bottom-navigation/) – Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
 - [**breadcrumb**](./breadcrumb/) – Ein Breadcrumb ist eine Pfadnavigation (Home > Wiki > Seite).
@@ -17,23 +17,23 @@ Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten
 - [**tabs**](./tabs/) – Tabs sind Reiter zum Umschalten zwischen Ansichten.
 - [**toolbar**](./toolbar/) – Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
-## Steckbriefe
+## Profiles
 
-| Komponente | Erbt von | Varianten | Rolle | Status |
-|------------|----------|-----------|-------|--------|
-| [bottom-navigation](./bottom-navigation/) | `base` | `Active Icon`, `Text Labels`, `Icon Only` | - | dokumentiert |
-| [breadcrumb](./breadcrumb/) | `base` | `pfad`, `gestutzt`, `zurueck` | - | dokumentiert |
-| [command](./command/) | `base` | `palette`, `inline` | `dialog` | dokumentiert |
-| [language-switcher](./language-switcher/) | `base` | `dropdown`, `knopetreihe`, `flaggen`, `kombiniert` | - | dokumentiert |
-| [menu](./menu/) | `base` | `horizontal`, `vertical`, `dropdown`, `menubar`, `hamburger` | `menubar` | dokumentiert |
-| [pagination](./pagination/) | `base` | `zahlen`, `vor-zurueck`, `nachladen`, `endlos` | - | dokumentiert |
-| [radial-menu](./radial-menu/) | `base`, `menu` | `ring`, `sektoren`, `facher`, `launcher`, `kontext` | `menu` | dokumentiert |
-| [sidebar](./sidebar/) | `base` | `angeheftet`, `ikonenleiste`, `einklappbar` | - | dokumentiert |
-| [tabs](./tabs/) | `base` | `reiter`, `pille`, `karte` | - | dokumentiert |
-| [toolbar](./toolbar/) | `base` | `standard`, `kontext`, `ribbon` | - | dokumentiert |
+| Component | Inherits from | Variants | Role | State |
+| ------------ | ---------- | ----------- | ------- | -------- |
+| [bottom-navigation](./bottom-navigation/) | `base` | `Active Icon`, `Text Labels`, `Icon Only` | - | documented |
+| [breadcrumb](./breadcrumb/) | `base` | `pfad`, `gestutzt`, `zurueck` | - | documented |
+| [command](./command/) | `base` | `palette`, `inline` | `dialog` | documented |
+| [language-switcher](./language-switcher/) | `base` | `dropdown`, `knopetreihe`, `flaggen`, `kombiniert` | - | documented |
+| [menu](./menu/) | `base` | `horizontal`, `vertical`, `dropdown`, `menubar`, `hamburger` | `menubar` | documented |
+| [pagination](./pagination/) | `base` | `zahlen`, `vor-zurueck`, `nachladen`, `endlos` | - | documented |
+| [radial-menu](./radial-menu/) | `base`, `menu` | `ring`, `sektoren`, `facher`, `launcher`, `kontext` | `menu` | documented |
+| [sidebar](./sidebar/) | `base` | `angeheftet`, `ikonenleiste`, `einklappbar` | - | documented |
+| [tabs](./tabs/) | `base` | `reiter`, `pille`, `karte` | - | documented |
+| [toolbar](./toolbar/) | `base` | `standard`, `kontext`, `ribbon` | - | documented |
 
-## Siehe auch
+## See also
 
-- [Komponenten-Übersicht](../../index.md)
+- [Component overview](../../index.md)
 - [Band widgets](../)
-- [Basiskomponente](../../primitives/basics/base.md)
+- [Base component](../../primitives/basics/base.md)

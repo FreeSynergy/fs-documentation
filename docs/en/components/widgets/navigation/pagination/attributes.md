@@ -1,43 +1,43 @@
 # Pagination - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `currentPage` | number | 1 | Aktuelle Seite |
 | `totalItems` | number | - | Gesamtanzahl |
 | `itemsPerPage` | number | 10 | Elemente pro Seite |
 | `onChange` | function | - | Event bei Seitenwechsel |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `showTotal` | boolean | `false` | Gesamtanzahl anzeigen? |
 | `showPageSizes` | boolean | `false` | Page-Size-Selector anzeigen? |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onPageChange` | function | Wird bei Seitenwechsel ausgeführt |
 | `onPageSizeChange` | function | Wird bei Page-Size-Änderung ausgeführt |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `navigation` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `navigation` |
 
-## Navigation-Attribute
+## Navigation attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `showFirstLast` | boolean | `false` | First/Last-Buttons anzeigen? |
 | `showEllipsis` | boolean | `true` | Ellipsis anzeigen? |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

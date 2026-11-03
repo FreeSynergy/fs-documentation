@@ -1,11 +1,11 @@
-# Whiteboard (Whiteboard) - Verwendung
+# Whiteboard (Whiteboard) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
     Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
     ersetzt.
 
-## Anwendung
+## Application
 
 Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
@@ -13,7 +13,7 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 - Planung
 - Kollaboration
 
-## Beispiele
+## Examples
 
 ### Brainstorming
 

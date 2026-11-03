@@ -1,29 +1,29 @@
-# Language Switcher (Sprachumschalter)
+# Language Switcher
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `dropdown`, `knopetreihe`, `flaggen`, `kombiniert` |
-| **Zustände** | `aktiv` |
-| **Gesten** | `tap` |
-| **Animationen** | `expand`, `fade-in` |
-| **Verwandt** | `select`, `menu`, `toolbar`, `bottom-navigation` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `dropdown`, `knopetreihe`, `flaggen`, `kombiniert` |
+| **States** | `aktiv` |
+| **Gestures** | `tap` |
+| **Animations** | `expand`, `fade-in` |
+| **Related** | `select`, `menu`, `toolbar`, `bottom-navigation` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 
-## Verwendungszweck
+## Purpose
 
 - Spracheinstellungen ändern
 - Mehrsprachigkeit
 - Regionale Anpassung
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **dropdown** | aktuelle Sprache plus Aufklappliste |
 | **knopetreihe** | jede Sprache als eigener Knopf (bis drei Sprachen) |
 | **flaggen** | nur Zeichen, mit Tooltip |
@@ -36,7 +36,7 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 - Live-Wechsel
 - Kein Reload nötig
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [select](../../../primitives/fields/select/): ein Feldwert bleibt im Formular,
   die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
@@ -54,32 +54,32 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 
 ## Größe-Varianten
 
-| Größe | Verwendung |
-|-------|------------|
+| Size | Use |
+| ------- | ------------ |
 | Small | In der Header-Leiste |
 | Medium | In den Einstellungen |
 | Large | Auf der Startseite |
 
 ## Farb-Varianten
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Default** | Normal | Standard-Style |
 | **Active** | Primärfarbe | Aktive Sprache |
 
 ## Sprachen
 
 | Sprache | Code | Flagge |
-|---------|------|--------|
+| --------- | ------ | -------- |
 | Deutsch | de | 🇩🇪 |
 | English | en | 🇬🇧 |
 | Français | fr | 🇫🇷 |
 | **Español** | es | 🇪🇸 |
 | Italiano | it | 🇮🇹 |
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
+- [navigation – overview](../index.md)
 - [Select](../../../primitives/fields/select/) — Wert in einem Formular
 - [Toolbar](../toolbar/) — üblicher Ort des Schalters
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

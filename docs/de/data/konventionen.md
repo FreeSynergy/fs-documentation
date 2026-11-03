@@ -19,7 +19,7 @@ Konventionen halten Dokumentation und Daten über alle Kategorien hinweg konsist
 
 ### Programme (Skins)
 
-Jedes Programm in `apps/<kategorie>/skins/<programm>/` bekommt **sieben** Dateien:
+Jedes Programm in `apps/<kategorie>/masks/<programm>/` bekommt **sieben** Dateien:
 
 | Datei | Inhalt |
 |-------|--------|

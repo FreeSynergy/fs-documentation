@@ -24,20 +24,20 @@ Dieser Bereich enthält Dokumentation für verschiedene CRM-Systeme (Customer Re
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/crm/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/crm/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [CiviCRM](skins/civicrm/index.md) - CiviCRM
-- [EspoCRM](skins/espocrm/index.md) - EspoCRM
-- [HubSpot](skins/hubspot/index.md) - HubSpot
-- [Pipedrive](skins/pipedrive/index.md) - Pipedrive
-- [Salesforce](skins/salesforce/index.md) - Salesforce
-- [SuiteCRM](skins/suitecrm/index.md) - SuiteCRM
+- [CiviCRM](masks/civicrm/index.md) - CiviCRM
+- [EspoCRM](masks/espocrm/index.md) - EspoCRM
+- [HubSpot](masks/hubspot/index.md) - HubSpot
+- [Pipedrive](masks/pipedrive/index.md) - Pipedrive
+- [Salesforce](masks/salesforce/index.md) - Salesforce
+- [SuiteCRM](masks/suitecrm/index.md) - SuiteCRM
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../../apps/wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist CRM?
 
@@ -95,3 +95,20 @@ Bei der Wahl eines CRM-Systems sollten folgende Kriterien berücksichtigt werden
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen CRM-Systeme.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/crm/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [CiviCRM](masks/civicrm/index.md) - CiviCRM
+- [EspoCRM](masks/espocrm/index.md) - EspoCRM
+- [HubSpot](masks/hubspot/index.md) - HubSpot
+- [Pipedrive](masks/pipedrive/index.md) - Pipedrive
+- [Salesforce](masks/salesforce/index.md) - Salesforce
+- [SuiteCRM](masks/suitecrm/index.md) - SuiteCRM
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

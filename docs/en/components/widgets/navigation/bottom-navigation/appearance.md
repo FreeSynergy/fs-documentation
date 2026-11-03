@@ -1,12 +1,13 @@
-# Bottom Navigation (Mobile) - Aussehen
+# Bottom Navigation - Appearance
 
-## Grundlayout
+## Base layout
 
-Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
+Bottom navigation is a navigation at the bottom of the screen, typical for
+mobile-first design.
 
-## Varianten
+## Variants
 
-### Active Icon (Aktiver Punkt hervorgehoben)
+### Active Icon (the active item is highlighted)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -15,7 +16,7 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 └─────────────────────────────────────────┘
 ```
 
-### Text Labels (Mit Text)
+### Text Labels (with text)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -23,7 +24,7 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 └─────────────────────────────────────────┘
 ```
 
-### Icon Only (Nur Icons)
+### Icon Only (icons only)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -31,41 +32,41 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 └─────────────────────────────────────────┘
 ```
 
-## Größen
+## Sizes
 
-| Größe | Höhe | Icon-Größe | Verwendung |
-|-------|------|------------|------------|
-| Small | 48px | 20px | Wenige Punkte |
+| Size | Height | Icon size | Use |
+|------|--------|-----------|-----|
+| Small | 48px | 20px | Few items |
 | Medium | 56px | 24px | Standard |
-| Large | 64px | 28px | Viele Punkte |
+| Large | 64px | 28px | Many items |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Active** | Primärfarbe | Aktiver Punkt |
-| **Inactive** | Grau | Inaktive Punkte |
-| **Hover** | Heller | Hover-Zustand |
+| State | Colour | Description |
+|-------|--------|-------------|
+| **Active** | primary colour | active item |
+| **Inactive** | grey | inactive items |
+| **Hover** | lighter | hover state |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
-| `scale` | Vergrößerung |
-| `shadow` | Schatten |
+| Effect | Description |
+|--------|-------------|
+| `color` | the colour changes |
+| `scale` | enlargement |
+| `shadow` | shadow |
 
-## Reaktiv
+## Responsive
 
-- Die Leiste ist immer vollbreit und bleibt am unteren Rand stehen; ihr Inhalt wird
-  gleichmäßig auf die Punkte verteilt.
-- Reicht der Platz für Beschriftungen nicht, fällt sie auf `icon only` zurück und der Name
-  erscheint erst nach der Auswahl als Kurztext.
-- Auf großen Bildschirmen wechselt die Anwendung üblicherweise auf
-  [sidebar](../sidebar/) oder [toolbar](../toolbar/); die Leiste bleibt dann erhalten, wenn
-  die Anwendung mobil bleibt, sonst entfällt sie.
+- The bar is always full width and stays at the bottom edge; its content is spread
+  evenly over the items.
+- When there is not enough room for labels it falls back to `icon only` and the name
+  appears as a short text only after the item is chosen.
+- On large screens the application usually switches to [sidebar](../sidebar/) or
+  [toolbar](../toolbar/); the bar is kept when the application stays mobile, otherwise
+  it is dropped.
 
-## Max 5 Punkte
+## Max 5 items
 
 ```
 ┌─────────────────────────────────────────┐
@@ -73,10 +74,10 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 └─────────────────────────────────────────┘
 ```
 
-## Animationen
+## Animations
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `fade-in` | Beschriftung blendet ein |
-| `scale-in` | aktives Symbol wächst |
-| `slide-in` | Indikator wandert zum aktiven Punkt |
+| Effect | Description |
+|--------|-------------|
+| `fade-in` | the label fades in |
+| `scale-in` | the active symbol grows |
+| `slide-in` | the indicator travels to the active item |

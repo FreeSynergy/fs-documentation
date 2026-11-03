@@ -1,29 +1,29 @@
-# Code Editor (Code-Editor)
+# Code Editor
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `special` |
-| **Erbt von** | `base` |
-| **Varianten** | `voll`, `nur-lesen`, `vergleich` |
-| **Zustände** | `ungespeichert`, `fehler` |
-| **Gesten** | `tap`, `double-tap`, `long-press`, `drag` |
-| **Animationen** | `highlight`, `fade-in` |
-| **Verwandt** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `special` |
+| **Inherits from** | `base` |
+| **Variants** | `voll`, `nur-lesen`, `vergleich` |
+| **States** | `ungespeichert`, `fehler` |
+| **Gestures** | `tap`, `double-tap`, `long-press`, `drag` |
+| **Animations** | `highlight`, `fade-in` |
+| **Related** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Code Editor ist ein Editor für Quellcode.
 
-## Verwendungszweck
+## Purpose
 
 - Code
 - Programmierung
 - Skripte
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **voll** | bearbeiten mit Hervorhebung, Vervollständigung und Fehlermarkierung |
 | **nur-lesen** | hervorgehobener Code zum Ansehen und Kopieren |
 | **vergleich** | zwei Versionen nebeneinander, Unterschiede markiert |
@@ -35,7 +35,7 @@ Ein Code Editor ist ein Editor für Quellcode.
 - Auto-completion
 - Error Detection
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
   formatted Text, hier Quelltext. Wiki-Syntax ist eine Variante des Texteditors, nicht hiervon.
@@ -51,9 +51,9 @@ Ein Code Editor ist ein Editor für Quellcode.
 - Ungespeicherte Änderungen deutlich markieren, Schließen rückfragen.
 - Shortcuts an der üblichen Stelle dokumentieren (`Strg+/`, `Strg+F`, `Strg+D`).
 
-## Siehe auch
+## See also
 
-- [special – Übersicht](../index.md)
+- [special – overview](../index.md)
 - [Rich Text Editor](../../fields/rich-text-editor/) — formatierter Text
 - [Whiteboard](../whiteboard/) — Skizzen statt Code
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

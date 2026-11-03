@@ -1,29 +1,29 @@
-# Tabs (Reiter)
+# Tabs
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `reiter`, `pille`, `karte` |
-| **Zustände** | `aktiv` |
-| **Gesten** | `tap`, `swipe`, `long-press` |
-| **Animationen** | `slide-in`, `highlight` |
-| **Verwandt** | `bottom-navigation`, `accordion`, `breadcrumb`, `radio-group`, `carousel` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `reiter`, `pille`, `karte` |
+| **States** | `aktiv` |
+| **Gestures** | `tap`, `swipe`, `long-press` |
+| **Animations** | `slide-in`, `highlight` |
+| **Related** | `bottom-navigation`, `accordion`, `breadcrumb`, `radio-group`, `carousel` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Tabs sind Reiter zum Umschalten zwischen Ansichten.
 
-## Verwendungszweck
+## Purpose
 
 - Ansichten
 - Kategorien
 - Optionen
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **reiter** | klassische Reiter mit Unterstreichung des aktiven |
 | **pille** | abgerundete Fläche, passt in Werkzeugleisten |
 | **karte** | Reiter sitzen auf einer Karte, der Rahmen gehört zum Inhalt |
@@ -34,7 +34,7 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten.
 - Closable
 - Keyboard-Navigation
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [accordion](../../containers/accordion/): Reiter zeigen immer nur einen
   Bereich, das Akkordeon mehrere untereinander.
@@ -52,9 +52,9 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten.
 - Schließen-Knopf nur, wenn Reiter geöffnete Dokumente darstellen (z. B. Editoren).
 - Zu lange Titel kürzen und den vollen Namen als Tooltip zeigen.
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
+- [navigation – overview](../index.md)
 - [Accordion](../../containers/accordion/) — Bereiche untereinander
 - [Bottom Navigation](../bottom-navigation/) — Ansichtswechsel
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

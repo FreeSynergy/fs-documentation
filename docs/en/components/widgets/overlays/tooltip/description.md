@@ -1,32 +1,32 @@
-# Tooltip (Kurzinfo)
+# Tooltip
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `overlays` |
-| **Erbt von** | `base` |
-| **Varianten** | `top`, `bottom`, `left`, `right`, `auto` |
-| **Zustände** | `open` |
-| **Gesten** | `tap`, `long-press` |
-| **Animationen** | `fade-in`, `fade-out` |
-| **Verwandt** | `popover`, `label`, `base`, `field` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `overlays` |
+| **Inherits from** | `base` |
+| **Variants** | `top`, `bottom`, `left`, `right`, `auto` |
+| **States** | `open` |
+| **Gestures** | `tap`, `long-press` |
+| **Animations** | `fade-in`, `fade-out` |
+| **Related** | `popover`, `label`, `base`, `field` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 
 Ein Tooltip zeigt eine kurze Erklärung zu einem Element – als Text, ohne
 interaktiven Inhalt. Er erscheint bei Hover oder Langdruck und verschwindet
 von selbst.
 
-## Verwendungszweck
+## Purpose
 
 - Erklärung von Icon-only-Buttons und abgekürzten Werten
 - Kurzer Zusatz zu einem Feld (nicht als Ersatz für ein Label)
 - Vollständiger Text, wenn ein Feld den Inhalt nur anzeigt
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **top** | über dem Element (Standard) |
 | **bottom** | unter dem Element |
 | **left** / **right** | seitlich |
@@ -38,7 +38,7 @@ von selbst.
 - Pfeil (`arrow`) markiert das Bezugselement
 - Mobil: Auslösung per Langdruck
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält
   interaktive Inhalte, ein Tooltip ausschließlich Text.
@@ -54,10 +54,10 @@ von selbst.
 - Tastaturnutzer erreichen den Tooltip über `focus`.
 - Icon-only-Buttons brauchen zusätzlich ein `aria-label`.
 
-## Siehe auch
+## See also
 
-- [overlays – Übersicht](../index.md)
+- [overlays – overview](../index.md)
 - [Popover](../popover/)
-- [Basiskomponente](../../../primitives/basics/base.md)
-- [Gesten](../../../../interactions/gestures/)
-- [Animationen](../../../../interactions/animations/)
+- [Base component](../../../primitives/basics/base.md)
+- [Gestures](../../../../interactions/gestures/)
+- [Animations](../../../../interactions/animations/)

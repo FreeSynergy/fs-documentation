@@ -26,7 +26,7 @@ Programme sind in **Kategorien** gegliedert. Programme, deren Oberfläche in Fre
 
 ## Skin-Schema
 
-Jede Skin-Dokumentation liegt in `apps/<kategorie>/skins/<programm>/` und enthält:
+Jede Skin-Dokumentation liegt in `apps/<kategorie>/masks/<programm>/` und enthält:
 
 | Datei | Inhalt |
 |-------|--------|
@@ -38,7 +38,7 @@ Jede Skin-Dokumentation liegt in `apps/<kategorie>/skins/<programm>/` und enthä
 | `shortcuts.md` | Alle Tastatur-Shortcuts (immer separat) |
 | `api.md` | API-Art, Auth, Endpunkte, Beispiele, Rate Limits, SDKs |
 
-Referenzbeispiele: [Wiki/Skins](apps/wiki/skins/), [Messenger/Skins](apps/messenger/skins/), [Desktop/Skins](platform/desktop/skins/).
+Referenzbeispiele: [Wiki/Skins](apps/wiki/masks/), [Messenger/Skins](apps/messenger/masks/), [Desktop/Skins](platform/desktop/masks/).
 
 ## Querverweise auf Systembereiche
 
@@ -52,7 +52,7 @@ Referenzbeispiele: [Wiki/Skins](apps/wiki/skins/), [Messenger/Skins](apps/messen
 ## Neue Programme anlegen
 
 1. Kategorie und Ebene wählen (Levels und Beispiele siehe `conventions/doku-standard.md` im Projektstamm)
-2. Verzeichnis `apps/<kategorie>/skins/<programm>/` anlegen
+2. Verzeichnis `apps/<kategorie>/masks/<programm>/` anlegen
 3. Sieben Dateien nach dem Schema oben schreiben (Deutsch zuerst)
-4. `apps/<kategorie>/skins/index.md` um den Eintrag ergänzen
+4. `apps/<kategorie>/masks/index.md` um den Eintrag ergänzen
 5. Fehlende Funktionen ausdrücklich benennen — nichts erfinden

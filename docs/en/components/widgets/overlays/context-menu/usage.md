@@ -1,4 +1,4 @@
-# Context Menu - Verwendung
+# Context Menu - Usage
 
 ## Einfaches Context Menu
 
@@ -38,7 +38,7 @@
 </ListItem>
 ```
 
-## Mit Icons
+## With icons
 
 ```jsx
 <ContextMenu 
@@ -50,7 +50,7 @@
 />
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <ContextMenu 
@@ -61,9 +61,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Datei-Explorer
+## Example 1: Datei-Explorer
 
 ```
 └─ Rechtsklick auf Datei ───────────────┐
@@ -76,7 +76,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Chat-Kontext
+## Example 2: Chat-Kontext
 
 ```
 └─ Rechtsklick auf Nachricht ───────────┐
@@ -89,7 +89,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Tab-Kontext
+## Example 3: Tab-Kontext
 
 ```
 └─ Rechtsklick auf Tab ─────────────────┐
@@ -101,7 +101,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: List-Item-Kontext
+## Example 4: List-Item-Kontext
 
 ```
 └─ Rechtsklick auf List-Item ───────────┐
@@ -113,7 +113,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Dashboard-Kontext
+## Example 5: Dashboard-Kontext
 
 ```
 └─ Rechtsklick auf Widget ──────────────┐

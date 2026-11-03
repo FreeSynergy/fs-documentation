@@ -1,4 +1,4 @@
-# Modal (Modaler Dialog) - Verwendung
+# Modal (Modaler Dialog) - Usage
 
 ## Einfaches Modal
 
@@ -35,7 +35,7 @@
 </Modal>
 ```
 
-## In App
+## In an app
 
 ```jsx
 <App>
@@ -50,7 +50,7 @@
 </App>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <Modal 
@@ -62,9 +62,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Bestätigungs-Modal
+## Example 1: Bestätigungs-Modal
 
 ```
 ┌─────────────────────────────────────────┐
@@ -78,7 +78,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Formular-Modal
+## Example 2: Formular-Modal
 
 ```
 ┌─────────────────────────────────────────┐
@@ -94,7 +94,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Info-Modal
+## Example 3: Info-Modal
 
 ```
 ┌─────────────────────────────────────────┐
@@ -108,7 +108,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Fehler-Modal
+## Example 4: Fehler-Modal
 
 ```
 ┌─────────────────────────────────────────┐

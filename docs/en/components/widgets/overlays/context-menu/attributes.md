@@ -1,51 +1,51 @@
 # Context Menu - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `items` | array[] | - | Array von Menüpunkten |
-| `onSelect` | function | - | Event bei Auswahl |
+| `onSelect` | function | - | event on selection |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `closable` | boolean | `true` | Schließbar? |
 | `keyboardShortcuts` | boolean | `true` | Keyboard-Shortcuts? |
 
-## Darstellung
+## Presentation
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `position` | object | { x, y } |
 | `anchorEl` | DOM element | Anchor-Element |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `onOpen` | function | runs when opened |
+| `onClose` | function | runs when closed |
 | `onItemClick` | function | Wird beim Klick ausgeführt |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `menu` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `menu` |
 
-## Item-Attribute
+## Item attributes
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `id` | string | Eindeutige ID |
 | `label` | string | Menüpunkt-Label |
 | `icon` | string | Icon-Name |
 | `danger` | boolean | Gefährliche Aktion? |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

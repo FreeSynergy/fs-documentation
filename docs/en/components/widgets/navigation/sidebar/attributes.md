@@ -1,9 +1,9 @@
 # Sidebar - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `position` | enum | `left` | Position: `left`, `right` |
 | `width` | number/string | `240` | Breite in px oder CSS-Einheit |
 | `collapsed` | boolean | `false` | Sidebar eingeklappt? |
@@ -11,24 +11,24 @@
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onSelect` | function | Wird ausgeführt beim Klick |
 | `onToggle` | function | Wird beim Öffnen/Schließen ausgeführt |
 
 ## Menü-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `items` | array[] | Array von Menüpunkten |
 | `groups` | array[] | Array von Menügruppen |
-| `showIcons` | boolean | Icons anzeigen? |
+| `showIcons` | boolean | show icons? |
 | `showLabels` | boolean | Text labels anzeigen? |
 
 ## Item-Attribute (pro Menüpunkt)
 
-| Attribut | Typ | Erforderlich | Beschreibung |
-|----------|-----|--------------|--------------|
+| Attribute | Type | Erforderlich | Description |
+| ---------- | ----- | -------------- | -------------- |
 | `id` | string | yes | Eindeutige ID |
 | `label` | string | yes | Anzeigetext |
 | `icon` | string | no | Icon-Name (z.B. "mdi:mail") |
@@ -36,8 +36,8 @@
 | `badge` | string/number | no | Kleiner Badge-Text (z.B. "3") |
 | `children` | array[] | no | Sub-Menüs (Dropdown/Tree) |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

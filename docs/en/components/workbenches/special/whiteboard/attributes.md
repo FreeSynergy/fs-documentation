@@ -1,48 +1,48 @@
 # Whiteboard - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `toolbar` | array[] | - | Array von Toolbar-Buttons |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | event on change |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `interactive` | boolean | `true` | Interaktiv? |
 | `grid` | boolean | `true` | Raster anzeigen? |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onDraw` | function | Wird beim Zeichnen ausgeführt |
 | `onClear` | function | Wird beim Löschen ausgeführt |
 | `onExport` | function | Wird beim Exportieren ausgeführt |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `region` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `region` |
 
-## Features-Attribute
+## Features attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `undoRedo` | boolean | `true` | Rückgängig/Wiederherstellen? |
 | `collaborative` | boolean | `false` | Kollaborativ? |
 
 ## Export-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `exportFormats` | array[] | `['png', 'jpg', 'pdf']` |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

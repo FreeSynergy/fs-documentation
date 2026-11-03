@@ -1,10 +1,10 @@
-# Tabs - Aussehen
+# Tabs - Appearance
 
-## Grundlayout
+## Base layout
 
 Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder vertikal platziert werden.
 
-## Varianten
+## Variants
 ### Horizontal (Standard)
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -25,42 +25,42 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 └────────┴──────────────────────────────────────────┘
 ```
 
-| Variant | Beschreibung | CSS |
-|---------|-------------|-----|
+| Variant | Description | CSS |
+| --------- | ------------- | ----- |
 | **Default** | Standard-Reiter | `border-radius: 4px 4px 0 0` |
 | **Pill** | Pillenform | `border-radius: 999px` |
 | **Card** | In Karte integriert | `border-radius: 8px` |
 
-## Größen
+## Sizes
 
-| Größe | Höhe | Verwendung |
-|-------|------|------------|
+| Size | Height | Use |
+| ------- | ------ | ------------ |
 | Small | 32px | Inline-Tabs |
 | Medium | 48px | Standard-Tabs |
 | Large | 64px | Featured-Tabs |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Active** | Primärfarbe | Aktiver Tab |
 | **Inactive** | Grau | Inaktiver Tab |
-| **Hover** | Heller | Hover-Zustand |
-| **Disabled** |ausgegraut | Deaktivierte Tabs |
+| **Hover** | Heller | hover state |
+| **Disabled** | ausgegraut | Deaktivierte Tabs |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
-| `border-bottom` | Unterstrich erscheint |
+| Effect | Description |
+| -------- | -------------- |
+| `color` | the colour changes |
+| `border-bottom` | an underline appears |
 | `scale` | Leichte Vergrößerung |
 | `shadow` | Schatten erscheint |
 
-## Reaktiv
+## Responsive
 
-| Breakpoint | Verhalten |
-|------------|-----------|
+| Breakpoint | Behaviour |
+| ------------ | ----------- |
 | Desktop (>768px) | Volle Tabs sichtbar |
 | Tablet (480-768px) | Scrollable Tabs |
 | Mobile (<480px) | Drawer oder Accordion |

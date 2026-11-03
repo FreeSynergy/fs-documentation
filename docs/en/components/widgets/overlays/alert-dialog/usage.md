@@ -1,16 +1,16 @@
-# Alert Dialog (Bestätigungsdialog) - Verwendung
+# Alert Dialog (Bestätigungsdialog) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
     Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
     ersetzt.
 
-## Anwendung
+## Application
 
 Der Dialog erscheint aus einer Aktion heraus und hält sie zurück, bis entschieden ist.
 Er wird einmal pro Programmfenster verwaltet, nicht pro Button.
 
-## Beispiele
+## Examples
 
 ### Zerstörerische Aktion absichern
 
@@ -26,10 +26,10 @@ Er wird einmal pro Programmfenster verwaltet, nicht pro Button.
              confirmLabel="Endgültig löschen" onConfirm={remove} />
 ```
 
-## Szenarien
+## Scenarios
 
 | Szenario | Empfehlung |
-|----------|------------|
+| ---------- | ------------ |
 | Aktion ist rückgängig machbar | kein Dialog, Toast mit Rückgängig |
 | Objekt mit vielen Bezügen löschen | `destructive` + `confirmWord` |
 | Formular mit Änderungen verlassen | Dialog mit drei Aktionen (Speichern, Verwerfen, Abbrechen) |

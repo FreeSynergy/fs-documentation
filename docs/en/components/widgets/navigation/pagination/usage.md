@@ -1,4 +1,4 @@
-# Pagination - Verwendung
+# Pagination - Usage
 
 ## Numerische Pagination
 
@@ -59,7 +59,7 @@
 />
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <Pagination 
@@ -70,9 +70,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Tabellarische Daten
+## Example 1: Tabellarische Daten
 
 ```
 ┌─────────────────────────────────────────┐
@@ -87,7 +87,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Produktsuche
+## Example 2: Produktsuche
 
 ```
 ┌─────────────────────────────────────────┐
@@ -96,7 +96,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Load More
+## Example 3: Load More
 
 ```
 ┌─────────────────────────────────────────┐
@@ -108,7 +108,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Infinite Scroll
+## Example 4: Infinite Scroll
 
 ```
 ┌─────────────────────────────────────────┐
@@ -119,7 +119,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Mit Page Size
+## Example 5: Mit Page Size
 
 ```
 ┌─────────────────────────────────────────┐

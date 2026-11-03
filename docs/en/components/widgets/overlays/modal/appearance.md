@@ -1,6 +1,6 @@
-# Modal (Modaler Dialog) - Aussehen
+# Modal (Modaler Dialog) - Appearance
 
-## Grundlayout
+## Base layout
 Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 
 ```
@@ -16,19 +16,19 @@ Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variant | Größe | Beschreibung |
-|---------|-------|--------------|
+| Variant | Size | Description |
+| --------- | ------- | -------------- |
 | **Small** | 300px | Formulare, Bestätigungen |
 | **Medium** | 500px | Bearbeitungsdialoge |
 | **Large** | 700px | Komplette Ansichten |
 | **Fullscreen** | 100% | Komplette Ansicht |
 
-## Größen
+## Sizes
 
-| Größe | Breite | Höhe | Verwendung |
-|-------|--------|------|------------|
+| Size | Width | Height | Use |
+| ------- | -------- | ------ | ------------ |
 | Small | 300px | automatisch | Bestätigung, kurzer Text |
 | Medium | 500px | automatisch | Standard |
 | Large | 700px | automatisch | Formulare, Listen |
@@ -36,23 +36,23 @@ Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 
 Obergrenze sind 85 % der Viewport-Höhe; der Inhalt scrollt, Kopf- und Fußzeile bleiben stehen.
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Overlay** | Dunkel | Hintergrund abdunkeln |
 | **Header** | Hell | Titelzeile |
 | **Content** | Hell | Inhalt |
 | **Footer** | Hell | Aktionen |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| Effect | Description |
+| -------- | -------------- |
+| `shadow` | stronger shadow |
+| `border` | the border lights up |
 
-## Reaktiv
+## Responsive
 
 Das Overlay legt sich über die Seite, sperrt den Hintergrund-Scroll und hält den Fokus im
 Dialog (Escape schließt, Tab kreist innerhalb). Auf schmaler Fläche wird das Modal automatisch

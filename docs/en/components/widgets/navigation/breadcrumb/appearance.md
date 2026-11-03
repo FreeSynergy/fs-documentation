@@ -1,7 +1,7 @@
-# Breadcrumb - Aussehen
+# Breadcrumb - Appearance
 
-## Grundlayout
-Breadcrumbs zeigen den Pfad an (Home > Wiki > Seite > Unterpunkt).
+## Base layout
+Breadcrumbs show the path (Home > Wiki > Page > Sub-item).
 
 ```
 ┌─────────────────────────────────────────┐
@@ -9,46 +9,46 @@ Breadcrumbs zeigen den Pfad an (Home > Wiki > Seite > Unterpunkt).
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Default** | Mit Pfeil-Separator (>) |
-| **Arrow** | Mit Pfeil (→) |
-| **Slash** | Mit Schrägstrich (/) |
-| **Chevron** | Mit spitzen Klammern (›) |
+| Variant | Description |
+| --------- | -------------- |
+| **Default** | with arrow separator (>) |
+| **Arrow** | with arrow (→) |
+| **Slash** | with slash (/) |
+| **Chevron** | with angle brackets (›) |
 
-## Größen
+## Sizes
 
-| Größe | Schriftgröße | Verwendung |
-|-------|-------------|------------|
+| Size | Font size | Use |
+| ------- | ------------- | ------------ |
 | Small | 12px | Inline |
 | Medium | 14px | Standard |
 | Large | 16px | Featured |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Home** | Primärfarbe | Start |
-| **Active** | Dunkel | Aktueller Pfad |
-| **Inactive** | Grau | Nicht aktuelle Pfade |
-| **Hover** | Heller | Hover-Zustand |
+| State | Colour | Description |
+| -------- | ------- | -------------- |
+| **Home** | Primary colour | start |
+| **Active** | Dark | current path |
+| **Inactive** | Grey | inactive paths |
+| **Hover** | Lighter | hover state |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
-| `underline` | Unterstrich erscheint |
-| `opacity` | Deckkraft ändert sich |
+| Effect | Description |
+| -------- | -------------- |
+| `color` | the colour changes |
+| `underline` | an underline appears |
+| `opacity` | the opacity changes |
 
-## Reaktiv
+## Responsive
 
-- Der letzte Punkt wird zuerst gekürzt, dann die Mitte: Wurzel und aktueller Ort bleiben
-  immer sichtbar, dazwischen erscheint `…` als Aufklappmenü.
-- Auf schmalen Bildschirmen reicht oft nur `zurueck` — ein Knopf mit dem vorherigen Namen.
-- Der Pfad bricht nicht um; er bleibt einzeilig und wächst mit der verfügbaren Breite.
+- The last entry is shortened first, then the middle: the root and the current location
+  always stay visible, with `…` appearing in between as an expandable menu.
+- On narrow screens `zurueck` is often enough — one button showing the previous name.
+- The path never wraps; it stays on one line and grows with the available width.
 
 ## With Icons
 
@@ -58,7 +58,7 @@ Breadcrumbs zeigen den Pfad an (Home > Wiki > Seite > Unterpunkt).
 └─────────────────────────────────────────┘
 ```
 
-## Collapsed Breadcrumbs (bei wenig Platz)
+## Collapsed Breadcrumbs (in tight spaces)
 
 ```
 ┌─────────────────────────────────────────┐

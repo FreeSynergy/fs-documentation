@@ -1,85 +1,85 @@
-# Radial Menu (Kreismenü) - Attribute
+# Radial Menu - Attributes
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Menüpunkten; Unterpunkte im Feld `children` |
-| `activeItem` | string/number | - | Aktiver Punkt — seine Unterpunkte erscheinen im nächsten Ring |
-| `onChange` | function | - | Event bei Auswahl |
-| `isOpen` | boolean | `false` | Ist geöffnet? |
-| `onToggle` | function | - | Event beim Öffnen/Schließen |
+| Attribute | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `items` | array[] | - | array of menu items; sub-items in the `children` field |
+| `activeItem` | string/number | - | active item — its sub-items appear in the next ring |
+| `onChange` | function | - | event on selection |
+| `isOpen` | boolean | `false` | is it open? |
+| `onToggle` | function | - | event on opening/closing |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribute | Type | Default | Description |
 |---|---|---|---|
-| `variant` | enum | `ring` | Bauform: `ring`, `sektoren`, `facher`, `launcher`, `kontext` |
-| `anchor` | string | `center` | Anker: `center`, `top`, `right`, `bottom`, `left`, `top-right` …, Koordinaten `{x, y}`, CSS-Selektor, `pointer` oder `fab` |
-| `levels` | number | `2` | Anzahl Ringe (Ebenen), höchstens 3 |
-| `trigger` | enum | `hover` | Auslösung: `hover`, `tap`, `long-press`, `right-click` |
-| `hoverDelay` | number | `100` | ms, bevor Hover öffnet |
-| `closeDelay` | number | `200` | Wegfahr-Toleranz in ms; Menü schließt erst danach |
-| `clamp` | boolean | `true` | Vollkreis am Rand zum Viertel-/Halbfächer klemmen? |
-| `pinnable` | boolean | `true` | Klick hält das Menü offen (`pinned`) |
-| `dimInactive` | boolean | `false` | Alle Ringe außer dem aktiven dämpfen? |
-| `keyboardNavigation` | boolean | `true` | Pfeiltasten, `Enter`, `Esc`? |
-| `animate` | boolean | `true` | Animationen aktivieren? |
-| `animationDuration` | number | `220` | Dauer in ms (siehe [radial-out](../../../../interactions/animations/entrance/radial-out/)) |
+| `variant` | enum | `ring` | form: `ring`, `sektoren`, `facher`, `launcher`, `kontext` |
+| `anchor` | string | `center` | anchor: `center`, `top`, `right`, `bottom`, `left`, `top-right` …, coordinates `{x, y}`, CSS selector, `pointer` or `fab` |
+| `levels` | number | `2` | number of rings (levels), at most 3 |
+| `trigger` | enum | `hover` | trigger: `hover`, `tap`, `long-press`, `right-click` |
+| `hoverDelay` | number | `100` | ms before hover opens |
+| `closeDelay` | number | `200` | travel tolerance in ms; the menu only closes afterwards |
+| `clamp` | boolean | `true` | clamp a full circle at an edge into a quarter/half fan? |
+| `pinnable` | boolean | `true` | a click keeps the menu open (`pinned`) |
+| `dimInactive` | boolean | `false` | dim all rings except the active one? |
+| `keyboardNavigation` | boolean | `true` | arrow keys, `Enter`, `Esc`? |
+| `animate` | boolean | `true` | enable animations? |
+| `animationDuration` | number | `220` | duration in ms (see [radial-out](../../../../interactions/animations/entrance/radial-out/)) |
 
-## Geometrie
+## Geometry
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `radius` | number | `72` | Radius Ring 1 (Ankermitte → Punktmitte) |
-| `ringGap` | number | `12` | Abstand zweier Ringe zueinander |
-| `itemSize` | number | `40` | Durchmesser eines Punktes |
-| `startAngle` | number | `0` | Ausrichtung des ersten Punktes (0° = oben) |
-| `sweepAngle` | number | `360` | Winkelbereich des Ringes (`clamp` reduziert ihn) |
-| `coneAngle` | number | `90` | Winkelbereich, in dem der Unterpunkt-Ring erscheint |
+| Attribute | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `radius` | number | `72` | radius of ring 1 (anchor centre → item centre) |
+| `ringGap` | number | `12` | distance between two rings |
+| `itemSize` | number | `40` | diameter of an item |
+| `startAngle` | number | `0` | alignment of the first item (0° = up) |
+| `sweepAngle` | number | `360` | angular range of the ring (`clamp` reduces it) |
+| `coneAngle` | number | `90` | angular range in which the sub-item ring appears |
 
-## Darstellung
+## Presentation
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribute | Type | Default | Description |
 |---|---|---|---|
 | `size` | enum | `medium` | `small`, `medium`, `large` |
-| `shape` | enum | `kreis` | Form der Punkte: `kreis`, `quadrat`, `abgerundet`, `squircle`, `dreieck`, `fuenfeck`, `sechseck`, `achteck`, `vieleck`, `keil`, `bluete`, `stern` |
-| `sides` | number | `6` | Eckzahl bei `vieleck` (3–12) |
-| `cornerRadius` | number | `0` | Eckrundung: `0` = scharf, halbe Seitenlänge = kreisnah |
-| `rotation` | number | `0` | dreht die Form, damit eine Ecke/Zacke nach außen zeigt |
-| `showLabels` | boolean | `false` | Beschriftung dauerhaft; sonst nur am aktiven Punkt (`label-reveal`) |
-| `color` | enum | `default` | Farbe: `default`, `light`, `primary` |
+| `shape` | enum | `kreis` | shape of the items: `kreis`, `quadrat`, `abgerundet`, `squircle`, `dreieck`, `fuenfeck`, `sechseck`, `achteck`, `vieleck`, `keil`, `bluete`, `stern` |
+| `sides` | number | `6` | corner count for `vieleck` (3–12) |
+| `cornerRadius` | number | `0` | corner rounding: `0` = sharp, half the side length = close to a circle |
+| `rotation` | number | `0` | turns the shape so a corner/point faces outwards |
+| `showLabels` | boolean | `false` | label permanently visible; otherwise only on the active item (`label-reveal`) |
+| `color` | enum | `default` | colour: `default`, `light`, `primary` |
 
-## Hover-Effekte
+## Hover effects
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribute | Type | Default | Description |
 |---|---|---|---|
-| `grow` | boolean | `true` | Punkt wächst auf 110 % |
-| `shift` | number | `6` | Punkt wandert radial nach außen (px) |
-| `lift` | boolean | `true` | Schatten wächst, Punkt hebt sich |
-| `glow` | boolean | `false` | Leuchten um den aktiven Punkt |
-| `morphShape` | boolean | `false` | Form des aktiven Punktes wechselt weich |
-| `ringRotate` | boolean | `false` | Ring dreht, bis der aktive Punkt oben steht |
+| `grow` | boolean | `true` | item grows to 110 % |
+| `shift` | number | `6` | item moves radially outwards (px) |
+| `lift` | boolean | `true` | shadow grows, item lifts |
+| `glow` | boolean | `false` | glow around the active item |
+| `morphShape` | boolean | `false` | shape of the active item changes smoothly |
+| `ringRotate` | boolean | `false` | ring rotates until the active item is at the top |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird bei Auswahl eines Punktes ausgeführt |
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
-| `onLevelChange` | function | Wird beim Wechsel des aktiven Ringes ausgeführt |
+| Attribute | Type | Description |
+|-----------|------|-------------|
+| `onSelect` | function | runs when an item is selected |
+| `onOpen` | function | runs on opening |
+| `onClose` | function | runs on closing |
+| `onLevelChange` | function | runs when the active ring changes |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `menu` |
-| `aria-expanded` | boolean | Ist das Menü geöffnet? |
-| `aria-haspopup` | boolean | Punkt hat Unterpunkte |
+| Attribute | Type | Description |
+|-----------|------|-------------|
+| `role` | string | ARIA role: `menu` |
+| `aria-expanded` | boolean | is the menu open? |
+| `aria-haspopup` | boolean | item has sub-items |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

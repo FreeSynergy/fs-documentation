@@ -19,20 +19,20 @@ Dieser Bereich enthält Dokumentation für verschiedene Whiteboard- und Kollabor
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/whiteboards/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/whiteboards/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [draw.io](skins/drawio/index.md) - draw.io
-- [Excalidraw](skins/excalidraw/index.md) - Excalidraw
-- [Miro](skins/miro/index.md) - Miro
-- [Mural](skins/mural/index.md) - Mural
-- [OpenBoard](skins/openboard/index.md) - OpenBoard
-- [tldraw](skins/tldraw/index.md) - tldraw
+- [draw.io](masks/drawio/index.md) - draw.io
+- [Excalidraw](masks/excalidraw/index.md) - Excalidraw
+- [Miro](masks/miro/index.md) - Miro
+- [Mural](masks/mural/index.md) - Mural
+- [OpenBoard](masks/openboard/index.md) - OpenBoard
+- [tldraw](masks/tldraw/index.md) - tldraw
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist ein Whiteboard?
 
@@ -91,3 +91,20 @@ Bei der Wahl eines Whiteboard-Tools sollten folgende Kriterien berücksichtigt w
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Whiteboard-Tools.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/whiteboards/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [draw.io](masks/drawio/index.md) - draw.io
+- [Excalidraw](masks/excalidraw/index.md) - Excalidraw
+- [Miro](masks/miro/index.md) - Miro
+- [Mural](masks/mural/index.md) - Mural
+- [OpenBoard](masks/openboard/index.md) - OpenBoard
+- [tldraw](masks/tldraw/index.md) - tldraw
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

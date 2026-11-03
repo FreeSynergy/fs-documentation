@@ -24,20 +24,20 @@ Dieser Bereich enthält Dokumentation für verschiedene ERP-Systeme (Enterprise 
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/erp/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/erp/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [Axelor](skins/axelor/index.md) - Axelor
-- [Dolibarr](skins/dolibarr/index.md) - Dolibarr
-- [ERPNext](skins/erpnext/index.md) - ERPNext
-- [Odoo](skins/odoo/index.md) - Odoo
-- [Sage](skins/sage/index.md) - Sage
-- [Tryton](skins/tryton/index.md) - Tryton
+- [Axelor](masks/axelor/index.md) - Axelor
+- [Dolibarr](masks/dolibarr/index.md) - Dolibarr
+- [ERPNext](masks/erpnext/index.md) - ERPNext
+- [Odoo](masks/odoo/index.md) - Odoo
+- [Sage](masks/sage/index.md) - Sage
+- [Tryton](masks/tryton/index.md) - Tryton
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../../apps/wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist ERP?
 
@@ -95,3 +95,20 @@ Bei der Wahl eines ERP-Systems sollten folgende Kriterien berücksichtigt werden
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen ERP-Systeme.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/erp/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Axelor](masks/axelor/index.md) - Axelor
+- [Dolibarr](masks/dolibarr/index.md) - Dolibarr
+- [ERPNext](masks/erpnext/index.md) - ERPNext
+- [Odoo](masks/odoo/index.md) - Odoo
+- [Sage](masks/sage/index.md) - Sage
+- [Tryton](masks/tryton/index.md) - Tryton
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

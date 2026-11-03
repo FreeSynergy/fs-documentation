@@ -1,32 +1,32 @@
-# Popover (Inhaltspopover)
+# Popover
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `overlays` |
-| **Erbt von** | `base` |
-| **Varianten** | `inhalt`, `aktionen`, `formular` |
-| **Zustände** | `open` |
-| **Gesten** | `tap` |
-| **Animationen** | `expand`, `fade-in` |
-| **Verwandt** | `tooltip`, `modal`, `select`, `context-menu`, `base` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `overlays` |
+| **Inherits from** | `base` |
+| **Variants** | `inhalt`, `aktionen`, `formular` |
+| **States** | `open` |
+| **Gestures** | `tap` |
+| **Animations** | `expand`, `fade-in` |
+| **Related** | `tooltip`, `modal`, `select`, `context-menu`, `base` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 
 Ein Popover ist ein kleines Overlay mit interaktivem Inhalt: Aktionen, eine
 Vorschau oder ein kurzes Formular. Es ist an ein Auslöser-Element gedockt,
 übernimmt aber – anders als ein Modal – nicht den ganzen Bildschirm.
 
-## Verwendungszweck
+## Purpose
 
 - Sekundäraktionen an einem Eintrag (mehr-Menü mit Buttons)
 - Schnelleingaben ohne Seitenwechsel (Datum setzen, Label zuweisen)
 - Detailvorschau zu einem Eintrag (Kurzfassung vor dem Öffnen)
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **inhalt** | Text, Bilder oder Vorschau, keine Formulareingabe |
 | **aktionen** | Liste von Aktionen (Abgrenzung zu context-menu: fester Auslöser) |
 | **formular** | kleines Formular, z. B. Datum oder Farbe setzen |
@@ -37,7 +37,7 @@ Vorschau oder ein kurzes Formular. Es ist an ein Auslöser-Element gedockt,
 - Schließen per Klick außerhalb, Escape oder Aktion im Popover
 - Andockposition wie beim [tooltip](../tooltip/)
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [tooltip](../tooltip/): Tooltip = nur Text, nie
   interaktiv.
@@ -57,9 +57,9 @@ Vorschau oder ein kurzes Formular. Es ist an ein Auslöser-Element gedockt,
 - `aria-expanded` am Auslöser ist Pflicht.
 - Kein voller Dialog-Ersatz: für mehr als ~5 Eingabefelder ein `modal` verwenden.
 
-## Siehe auch
+## See also
 
 - [Tooltip](../tooltip/)
 - [Modal](../modal/)
 - [Context Menu](../context-menu/)
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

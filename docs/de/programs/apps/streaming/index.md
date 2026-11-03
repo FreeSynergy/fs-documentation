@@ -19,21 +19,42 @@ Streaming-Systeme nehmen Live- oder vorproduziertes Videomaterial an, verarbeite
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/streaming/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/streaming/masks/<programm>/`.
 
 **dokumentiert (10 Programme):**
 
-- [Ant Media Server](skins/ant-media-server/index.md) - Ant Media Server
-- [FFmpeg](skins/ffmpeg/index.md) - FFmpeg
-- [GStreamer](skins/gstreamer/index.md) - GStreamer
-- [MediaMTX](skins/mediamtx/index.md) - MediaMTX
-- [MistServer](skins/mistserver/index.md) - MistServer
-- [nginx-rtmp-module](skins/nginx-rtmp-module/index.md) - nginx-rtmp-module
-- [OBS Studio](skins/obs-studio/index.md) - OBS Studio
-- [Restream](skins/restream/index.md) - Restream
-- [Restreamer](skins/restreamer/index.md) - Restreamer
-- [Wowza Streaming Engine](skins/wowza/index.md) - Wowza Streaming Engine
+- [Ant Media Server](masks/ant-media-server/index.md) - Ant Media Server
+- [FFmpeg](masks/ffmpeg/index.md) - FFmpeg
+- [GStreamer](masks/gstreamer/index.md) - GStreamer
+- [MediaMTX](masks/mediamtx/index.md) - MediaMTX
+- [MistServer](masks/mistserver/index.md) - MistServer
+- [nginx-rtmp-module](masks/nginx-rtmp-module/index.md) - nginx-rtmp-module
+- [OBS Studio](masks/obs-studio/index.md) - OBS Studio
+- [Restream](masks/restream/index.md) - Restream
+- [Restreamer](masks/restreamer/index.md) - Restreamer
+- [Wowza Streaming Engine](masks/wowza/index.md) - Wowza Streaming Engine
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/streaming/masks/<programm>/`.
+
+**dokumentiert (10 Programme):**
+
+- [Ant Media Server](masks/ant-media-server/index.md) - Ant Media Server
+- [FFmpeg](masks/ffmpeg/index.md) - FFmpeg
+- [GStreamer](masks/gstreamer/index.md) - GStreamer
+- [MediaMTX](masks/mediamtx/index.md) - MediaMTX
+- [MistServer](masks/mistserver/index.md) - MistServer
+- [nginx-rtmp-module](masks/nginx-rtmp-module/index.md) - nginx-rtmp-module
+- [OBS Studio](masks/obs-studio/index.md) - OBS Studio
+- [Restream](masks/restream/index.md) - Restream
+- [Restreamer](masks/restreamer/index.md) - Restreamer
+- [Wowza Streaming Engine](masks/wowza/index.md) - Wowza Streaming Engine
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

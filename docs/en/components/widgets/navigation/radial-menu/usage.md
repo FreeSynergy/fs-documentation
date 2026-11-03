@@ -1,4 +1,4 @@
-# Radial Menu (Kreismenü) - Verwendung
+# Radial Menu (Kreismenü) - Usage
 
 ## Eckenmenü mit Hover (oben rechts)
 
@@ -104,9 +104,9 @@ Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bilds
 // Pfeiltasten: im Ring herum · Enter: eine Ebene hinein · Esc: zurück bzw. schließen
 ```
 
-## Beispiele
+## Examples
 
-### Beispiel 1: Eckmenü, drei Zustände
+### Example 1: Eckmenü, drei Zustände
 
 ```
 geschlossen        Hover                Unterpunkt aktiv
@@ -115,7 +115,7 @@ geschlossen        Hover                Unterpunkt aktiv
   Ecke)        ╲    wandert aus)   ╲   aus ◆ heraus)
 ```
 
-### Beispiel 2: Launcher mit zwei Ringen
+### Example 2: Launcher mit zwei Ringen
 
 ```
         ○  ○  ○
@@ -123,7 +123,7 @@ geschlossen        Hover                Unterpunkt aktiv
         ○  ◆  ○              des aktiven ◆, im coneAngle sichtbar)
 ```
 
-### Beispiel 3: Speed-Dial unten rechts
+### Example 3: Speed-Dial unten rechts
 
 ```
                       ┌──────────────┐
@@ -133,7 +133,7 @@ geschlossen        Hover                Unterpunkt aktiv
                       └──────────────┘
 ```
 
-## Siehe auch
+## See also
 
 - [Radial Menu – Beschreibung](./description.md)
 - [Attribute](./attributes.md)

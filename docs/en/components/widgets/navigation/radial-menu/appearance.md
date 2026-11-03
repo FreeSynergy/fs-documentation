@@ -1,9 +1,9 @@
-# Radial Menu (Kreismenü) - Aussehen
+# Radial Menu - Appearance
 
-## Grundlayout
+## Base layout
 
-Ein Punkt sitzt auf dem Kreis um den Anker, nicht in einer Reihe. Der Ankerkern ist
-meist inaktiv; er ist der Ausgangspunkt aller Richtungen.
+An item sits on the circle around the anchor, not in a row. The anchor core is usually
+inactive; it is the starting point of all directions.
 
 ```
                         ○
@@ -11,176 +11,175 @@ meist inaktiv; er ist der Ausgangspunkt aller Richtungen.
               ○                 ○
           ○        ◆       ◆        ○
         ○                              ○
-       ○            ◆   ●   ◆          ○      ●  Anker (Mitte, inaktiv)
-        ○                              ○      ◆ Punkte in Ring 1
-          ○        ◆       ◆        ○          ○ Punkte in Ring 2
+       ○            ◆   ●   ◆          ○      ●  anchor (centre, inactive)
+        ○                              ○      ◆ items in ring 1
+          ○        ◆       ◆        ○          ○ items in ring 2
               ○                 ○
                    ○         ○
                         ○
 ```
 
-Geometrie statt Lineal: Punkte werden über **Winkel** und **Radius** gesetzt.
+Geometry instead of a ruler: items are placed by **angle** and **radius**.
 
-| Größe | Bedeutung |
-|-------|-----------|
-| `radius` | Abstand Ankermitte → Punktmitte (Ring 1) |
-| `ringGap` | Abstand zweier Ringe zueinander |
-| `itemSize` | Durchmesser eines Punktes |
-| Winkelschritt | `sweepAngle / items` — bei 6 Punkten und Vollkreis 60° |
-| `startAngle` | Ausrichtung des ersten Punktes (0° = oben) |
-| `coneAngle` | Winkelbereich, in dem ein Unterpunkt-Ring erscheint |
+| Size | Meaning |
+|------|---------|
+| `radius` | distance anchor centre → item centre (ring 1) |
+| `ringGap` | distance between two rings |
+| `itemSize` | diameter of an item |
+| angle step | `sweepAngle / items` — with 6 items and a full circle 60° |
+| `startAngle` | alignment of the first item (0° = up) |
+| `coneAngle` | angular range in which a sub-item ring appears |
 
-## Varianten
+## Variants
 
-### ring (Standard)
+### ring (default)
 
 ```
-        ◆          ◆              Punkte liegen auf einem Kreis,
-            \      |              jeder Punkt ist eine eigene
-             \     |              trefferbare Fläche
+        ◆          ◆              items lie on a circle,
+            \      |              each item is its own
+             \     |              hittable surface
         ◆ ──  ●  ── ◆
                     |
         ◆          ◆
 ```
 
-### sektoren (Pie-Menu)
+### sektoren (pie menu)
 
 ```
-   ╲   │   ╱        Segmente füllen den Ring, die Mitte bleibt
-    ╲  │  ╱         leer. Getroffen ist ein Segment über seinen
-  ─────●───────     Winkelbereich — nicht über die Punktmitte.
-    ╱  │  ╲         Deshalb funktionieren auch kleine Zeiger-
-   ╱   │   ╲        bewegungen zuverlässig.
+   ╲   │   ╱        segments fill the ring, the centre stays
+    ╲  │  ╱         empty. A segment is hit via its
+  ─────●───────     angular range — not via the item centre.
+    ╱  │  ╲         That is why even small pointer
+   ╱   │   ╲        movements work reliably.
 ```
 
-### facher (Speed-Dial an Ecke oder Kante)
+### facher (speed dial at a corner or edge)
 
 ```
-   ┌───┬──────────────          Anker oben rechts, Ring nur als
-   │ ●  ╲         │             Viertel- bzw. Halbfächer nach
-   │  ◆   ╲   ○   │             innen geklemmt
+   ┌───┬──────────────          anchor top right, ring clamped
+   │ ●  ╲         │             inwards as a quarter or half
+   │  ◆   ╲   ○   │             fan
    │   ◆    ╲     │
    └──────────────┘
 ```
 
-### launcher (Mittig, mehrere Ringe)
+### launcher (centred, several rings)
 
 ```
-        ○   ○   ○             Ring 2 = Unterpunkte des aktiven
-      ○  ◆  ●  ◆  ○           Punktes. Nur der aktive Zweig
-        ○   ◆   ○             öffnet den nächsten Ring.
+        ○   ○   ○             ring 2 = sub-items of the active
+      ○  ◆  ●  ◆  ○           item. Only the active branch
+        ○   ◆   ○             opens the next ring.
 ```
 
-### kontext (an der Zeigerposition)
+### kontext (at the pointer position)
 
 ```
-   Rechtsklick ──►  ● an der Zeigerstelle,
-                    Ringe wachsen von dort nach außen
+   right-click ──►  ● at the pointer position,
+                    rings grow outwards from there
 ```
 
-## Größen
+## Sizes
 
-| Größe | Anker-Ø | Punkt-Ø | Radius R1 | Radius R2 | Verwendung |
-|-------|---------|---------|-----------|-----------|------------|
-| `small` | 28 px | 32 px | 56 px | 96 px | dichte Flächen, Karte, Whiteboard |
-| `medium` | 36 px | 40 px | 72 px | 124 px | Standard am Desktop |
-| `large` | 44 px | 48 px | 88 px | 148 px | Touch, Kiosk, Controller |
+| Size | Anchor Ø | Item Ø | Radius R1 | Radius R2 | Use |
+|------|----------|--------|-----------|-----------|-----|
+| `small` | 28 px | 32 px | 56 px | 96 px | dense surfaces, map, whiteboard |
+| `medium` | 36 px | 40 px | 72 px | 124 px | standard on desktop |
+| `large` | 44 px | 48 px | 88 px | 148 px | touch, kiosk, controller |
 
-`large` entspricht der Mindesttrefferfläche aus der [Basiskomponente](../../../primitives/basics/base.md).
-Auf Touch-Oberflächen ist `small` ungeeignet, weil die Punkte im Ring einander berühren.
+`large` matches the minimum hit area from the [base component](../../../primitives/basics/base.md).
+On touch surfaces `small` is unsuitable because the items in the ring touch each other.
 
-## Farben und Zustände
+## Colours and states
 
-| Zustand | Aussehen | Beschreibung |
-|---------|----------|--------------|
-| **default** | Primärton, gesättigt | Punkt im offenen Ring |
-| **hover** | heller, leicht größer | Zeiger steht auf dem Punkt |
-| **active** | Akzentfarbe, gefüllter Kern | Punkt gewählt bzw. sein Zweig geöffnet |
-| **focus** | 2 px Ringsichtlinie außen | Punkt über Tastatur erreicht |
-| **dimmed** | gesättigt → 40 % Deckkraft | Punkt gehört nicht zum aktiven Zweig |
-| **pinned** | dezenter Schattenschein | Menü bleibt nach Klick offen |
-| **disabled** | ausgegraut, keine Kontur | Punkt nicht wählbar |
-| **loading** | [spinner](../../../primitives/feedback/spinner/) im Punkt | Ziel wird noch geladen |
+| State | Appearance | Description |
+|-------|------------|-------------|
+| **default** | primary tone, saturated | item in an open ring |
+| **hover** | lighter, slightly larger | pointer stands on the item |
+| **active** | accent colour, filled core | item selected or its branch opened |
+| **focus** | 2 px ring outline outside | item reached via keyboard |
+| **dimmed** | saturated → 40 % opacity | item does not belong to the active branch |
+| **pinned** | subtle shadow glow | menu stays open after a click |
+| **disabled** | greyed out, no outline | item not selectable |
+| **loading** | [spinner](../../../primitives/feedback/spinner/) in the item | target is still loading |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `grow` | Punkt wächst auf 110 % (`scaleOnHover`) |
-| `shift` | Punkt wandert 4–8 px radial nach außen (`shiftOnHover`) |
-| `lift` | Schatten wächst, Punkt hebt sich vom Ring ab |
-| `glow` | Leuchten um die Kontur des aktiven Punktes |
-| `morph` | Form des aktiven Punktes wechselt weich (Kreis → Sechseck) |
-| `ring-rotate` | ganzer Ring dreht ein Stück, damit der aktive Punkt nach oben zeigt |
-| `label-reveal` | Beschriftung erscheint erst am aktivierten Punkt |
-| `sector-lift` | in `sektoren`: Segment springt als Keil aus dem Ring heraus |
+| Effect | Description |
+|--------|-------------|
+| `grow` | item grows to 110 % (`scaleOnHover`) |
+| `shift` | item moves 4–8 px radially outwards (`shiftOnHover`) |
+| `lift` | shadow grows, item lifts off the ring |
+| `glow` | glow around the outline of the active item |
+| `morph` | shape of the active item changes smoothly (circle → hexagon) |
+| `ring-rotate` | the whole ring rotates a little so the active item points up |
+| `label-reveal` | the label only appears on the activated item |
+| `sector-lift` | in `sektoren`: the segment pops out of the ring as a wedge |
 
-## Reaktiv
+## Responsive
 
-| Bereich | Verhalten |
-|---------|-----------|
-| Desktop | Öffnen bei Hover (`trigger: hover`), Unterpunkte im nächsten Ring |
-| Tablet | Öffnen per Tipp, Unterpunkte nach zweitem Tipp |
-| Mobile (< 600 px) | ein Ring, `large`, Auswahl durch Drücken–Ziehen–Loslassen |
-| Schmaler Rand | `clamp`: Vollkreis wird zum Viertel- oder Halbfächer |
-| `prefers-reduced-motion` | `radial-out` → `fade-in`, kein Wachstum, keine Mitrotation |
-| Sehr große Flächen (Whiteboard, Karte) | bis drei Ringe, `launcher` frei positionierbar |
+| Breakpoint | Behaviour |
+|------------|-----------|
+| desktop | open on hover (`trigger: hover`), sub-items in the next ring |
+| tablet | open by tap, sub-items after a second tap |
+| mobile (< 600 px) | one ring, `large`, selection by press–drag–release |
+| narrow edge | `clamp`: the full circle becomes a quarter or half fan |
+| `prefers-reduced-motion` | `radial-out` → `fade-in`, no growth, no co-rotation |
+| very large surfaces (whiteboard, map) | up to three rings, `launcher` freely positionable |
 
-## Formen und Ecken
+## Shapes and corners
 
-Form und Eckzahl tragen Information — sie sind nicht nur Dekoration.
+Shape and number of corners carry information — they are not just decoration.
 
-| Form (`shape`) | Ecken | Beschreibung | Verwendung |
-|----------------|-------|--------------|------------|
-| `kreis` | – | glatte Kreisfläche | Standard in allen Ringen |
-| `quadrat` | 4 | Vieleck mit `cornerRadius = 0` | eckige Oberflächen, Rasteroptik |
-| `abgerundet` | 4 | Vieleck mit weich gerundeten Ecken | Brücke zwischen eckig und rund |
-| `squircle` | 4 | Superellipse: durchgehend weich verrundet | Symbol-Optik, Touch-Flächen |
-| `dreieck` | 3 | mit `rotation` auf eine Ecke nach außen | weist die Richtung des Punktes |
-| `fuenfeck` | 5 | Fünfeck | Auszeichnung eines Sonderpunktes |
-| `sechseck` | 6 | parkettierbar, Nachbarn schließen bündig | mehrere Menüs nebeneinander, Honigwaben |
-| `achteck` | 8 | Vieleck mit acht Ecken | Abgrenzung ohne Kreis zu wirken |
-| `vieleck` | `sides` = 3–12 | regelmäßiges Vieleck mit einstellbarer Eckzahl | Eckzahl zeigt Punkteanzahl des Ringes |
-| `keil` | 2 Ecken + Bogen | Tortensegment (`sektoren`) | Richtungsauswahl, große Trefferfläche |
-| `bluete` | n Wellen | welliger Rand, eine Welle je Nachbarpunkt | Rand zählt die Punkte des Ringes |
-| `stern` | 2n Zacken | Zacken zeigen zu den Nachbarn | nur der aktive Punkt eines Ringes |
+| Shape (`shape`) | Corners | Description | Use |
+|-----------------|---------|-------------|-----|
+| `kreis` | – | smooth circular surface | standard in all rings |
+| `quadrat` | 4 | polygon with `cornerRadius = 0` | angular surfaces, grid look |
+| `abgerundet` | 4 | polygon with softly rounded corners | bridge between angular and round |
+| `squircle` | 4 | superellipse: smoothly rounded throughout | icon look, touch surfaces |
+| `dreieck` | 3 | with `rotation` so one corner points outwards | indicates the direction of the item |
+| `fuenfeck` | 5 | pentagon | marking of a special item |
+| `sechseck` | 6 | tessellatable, neighbours fit flush | several menus side by side, honeycombs |
+| `achteck` | 8 | polygon with eight corners | distinguishing without looking like a circle |
+| `vieleck` | `sides` = 3–12 | regular polygon with adjustable corner count | corner count shows the number of items in the ring |
+| `keil` | 2 corners + arc | pie segment (`sektoren`) | direction selection, large hit area |
+| `bluete` | n waves | wavy edge, one wave per neighbouring item | the edge counts the items in the ring |
+| `stern` | 2n points | points face the neighbours | only the active item of a ring |
 
-Regeln für die Eckzahl:
+Rules for the corner count:
 
-- `sides` wächst von 3 (Dreieck) über 4, 5, 6, 8 bis 12. Ab etwa 8 Ecken **und**
-  `cornerRadius > 0` liest sich die Form als Kreis — für eine unterscheidbare
-  Silhouette also entweder höchstens 6 Ecken oder scharfe Ecken behalten.
-- `cornerRadius` steuert die Rundung unabhängig davon: `0` = scharfe Ecke,
-  halbe Seitenlänge = stark verrundet, darüber wächst die Form Richtung Kreis.
-  Ein Quadrat mit der halben Seitenlänge als Radius ist ein Kreis — die Rundung ist
-  also ein Kontinuum, keine Umschaltung.
-- Eckzahl als Information fassen: 3 Ecken = „Richtung“, 6 Ecken = „Gruppe“,
-  `sides = items` = „so viele Punkte hat dieser Ring“. Sonst bleibt die Form neutral.
-- Nur der **aktive** Punkt wechselt seine Form (`morph`), die übrigen bleiben konstant —
-  sonst flackert der ganze Ring.
-- `rotation` dreht die Form, damit eine Ecke, Zacke oder Welle nach außen zum Ring zeigt.
-- Der Ankerkern (`●`) behält immer die Grundform; ändert er seine Form, wirkt das Menü
-  selbst als Aktion.
+- `sides` grows from 3 (triangle) through 4, 5, 6, 8 up to 12. From about 8 corners **and**
+  `cornerRadius > 0` the shape reads as a circle — so for a distinguishable silhouette either
+  keep at most 6 corners or keep sharp corners.
+- `cornerRadius` controls the rounding independently of that: `0` = sharp corner, half the
+  side length = strongly rounded, beyond that the shape grows towards a circle. A square with
+  half its side length as radius is a circle — the rounding is a continuum, not a switch.
+- Grasp the corner count as information: 3 corners = "direction", 6 corners = "group",
+  `sides = items` = "this many items the ring has". Otherwise the shape stays neutral.
+- Only the **active** item changes its shape (`morph`), the others stay constant —
+  otherwise the whole ring flickers.
+- `rotation` turns the shape so that a corner, point or wave faces outwards towards the ring.
+- The anchor core (`●`) always keeps the basic shape; if it changes shape, the menu itself
+  reads as an action.
 
-## Ringe und Ebenen
+## Rings and levels
 
-| Ebene | Ring | Radius | Inhalt |
-|-------|------|--------|--------|
-| 1 | Ring 1 | `radius` | Hauptpunkte des Menüs |
-| 2 | Ring 2 | `radius + itemSize + ringGap` | Unterpunkte des aktiven Punktes |
-| 3 | Ring 3 | `radius + 2 · (itemSize + ringGap)` | Unter-Unterpunkte |
+| Level | Ring | Radius | Content |
+|-------|------|--------|---------|
+| 1 | ring 1 | `radius` | main items of the menu |
+| 2 | ring 2 | `radius + itemSize + ringGap` | sub-items of the active item |
+| 3 | ring 3 | `radius + 2 · (itemSize + ringGap)` | sub-sub-items |
 
-- Nur der aktive Zweig öffnet den nächsten Ring; die übrigen Punkte bleiben im bisherigen Ring.
-- Die Punkte eines neuen Ringes erscheinen im **Winkelbereich** ihres Elternpunktes
-  (`coneAngle`), nicht verteilt über den ganzen Kreis.
-- Ein Punkt darf tiefer liegen, als der Anker weit vom Rand entfernt ist — dann greift
-  `clamp` und der Ring wird zum Fächer.
-- Geschwister des aktiven Punktes werden `dimmed`, ihr Winkelbereich bleibt aber trefferbar
-  (direkter Wechsel ohne Umweg über den Anker).
+- Only the active branch opens the next ring; the other items stay in the previous ring.
+- The items of a new ring appear in the **angular range** of their parent item
+  (`coneAngle`), not spread over the whole circle.
+- An item may not lie deeper than the anchor is far from the edge — then `clamp` kicks in
+  and the ring becomes a fan.
+- Siblings of the active item become `dimmed`, but their angular range stays hittable
+  (direct switch without a detour via the anchor).
 
-## Siehe auch
+## See also
 
-- [Radial Menu – Beschreibung](./description.md)
-- [Attribute](./attributes.md)
-- [Verwendung](./usage.md)
-- [radial-out](../../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../../interactions/animations/exit/radial-in/)
+- [Radial Menu – description](./description.md)
+- [Attributes](./attributes.md)
+- [Usage](./usage.md)
+- [radial-out](../../../../interactions/animations/entrance/radial-out/) and [radial-in](../../../../interactions/animations/exit/radial-in/)

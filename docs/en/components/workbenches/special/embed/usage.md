@@ -1,4 +1,4 @@
-# Embed (Einbettung) - Verwendung
+# Embed (Einbettung) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
@@ -25,10 +25,10 @@
        onMessage={updateDashboard} />
 ```
 
-## Szenarien
+## Scenarios
 
 | Szenario | Empfehlung |
-|----------|------------|
+| ---------- | ------------ |
 | Fremde Seite ohne Skripte | `source = "iframe"`, `sandbox` eng setzen |
 | eigenes Programm im Dashboard | `source = "app"`, Kopfzeile des einbettenden Programms ausblenden |
 | kleiner Baustein in einer Liste | `size = "small"`, `interactive = false` |

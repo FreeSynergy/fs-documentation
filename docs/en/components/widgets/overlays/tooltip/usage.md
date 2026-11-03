@@ -1,4 +1,4 @@
-# Tooltip (Kurzinfo) - Verwendung
+# Tooltip (Kurzinfo) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
@@ -35,10 +35,10 @@
 </ToolbarItem>
 ```
 
-## Szenarien
+## Scenarios
 
 | Szenario | Empfehlung |
-|----------|------------|
+| ---------- | ------------ |
 | Icon-only-Button | Tooltip plus `aria-label` |
 | Abgeschnittener Tabellenwert | `placement="top"`, `delay={0}` |
 | Erklärtext zu einem Feld | lieber [field](../../../primitives/fields/field/) mit `help` |

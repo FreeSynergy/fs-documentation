@@ -1,16 +1,16 @@
-# Command (Befehlspalette) - Verwendung
+# Command (Befehlspalette) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
     Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
     ersetzt.
 
-## Anwendung
+## Application
 
 Die Palette wird einmal pro Programmfenster angelegt und ist global über das Kürzel
 erreichbar. Sie erhält die Befehle der aktuell aktiven Ansicht.
 
-## Beispiele
+## Examples
 
 ### Palette im Programmfenster
 
@@ -24,10 +24,10 @@ erreichbar. Sie erhält die Befehle der aktuell aktiven Ansicht.
 <Command commands={viewCommands} open={paletteOpen} onClose={close} />
 ```
 
-## Szenarien
+## Scenarios
 
 | Szenario | Empfehlung |
-|----------|------------|
+| ---------- | ------------ |
 | Desktop-Client | `hotkey = "ctrl+k"`, Palette zentriert |
 | Mobile | `inline` in der Seitenleiste, kein Kürzel |
 | Befehl nicht gefunden | Hinweis mit Vorschlägen statt leerer Liste |

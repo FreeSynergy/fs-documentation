@@ -1,119 +1,118 @@
-# Radial Menu (Kreismenü)
+# Radial Menu
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base`, `menu` |
-| **Varianten** | `ring`, `sektoren`, `facher`, `launcher`, `kontext` |
-| **Zustände** | `open`, `expanded`, `dimmed`, `pinned` |
-| **Gesten** | `tap`, `long-press`, `drag`, `rotate` |
-| **Animationen** | `radial-out`, `radial-in`, `stagger`, `lift`, `morph` |
-| **Verwandt** | `menu`, `context-menu`, `floating-action-button`, `toolbar`, `command` |
-| **Rolle** | `menu` |
-| **Status** | dokumentiert |
+| Field | Value |
+|-------|-------|
+| **Category** | `navigation` |
+| **Inherits from** | `base`, `menu` |
+| **Variants** | `ring`, `sektoren`, `facher`, `launcher`, `kontext` |
+| **States** | `open`, `expanded`, `dimmed`, `pinned` |
+| **Gestures** | `tap`, `long-press`, `drag`, `rotate` |
+| **Animations** | `radial-out`, `radial-in`, `stagger`, `lift`, `morph` |
+| **Related** | `menu`, `context-menu`, `floating-action-button`, `toolbar`, `command` |
+| **Role** | `menu` |
+| **State** | documented |
 
-!!! info "Standardisierung"
-    Der Aktionsfächer des [floating-action-button](../../../primitives/actions/floating-action-button/)
-    (`expanded`) und das kreisförmige Rechtsklick-Menü sind Varianten **einer**
-    Komponente: `radial-menu` mit `variant: facher` bzw. `variant: kontext`. Der FAB
-    bleibt die *eine* Hauptaktion der Ansicht; er verankert nur das Kreismenü
+!!! info "Standardisation"
+    The action fan of the [floating-action-button](../../../primitives/actions/floating-action-button/)
+    (`expanded`) and the circular right-click menu are variants of **one**
+    component: `radial-menu` with `variant: facher` or `variant: kontext`. The FAB
+    remains the *one* main action of the view; it merely anchors the circular menu
     (`anchor: "fab"`).
 
-## Beschreibung
+## Description
 
-Ein Radial Menu (Kreismenü) ordnet Menüpunkte um einen Mittelpunkt herum an. Der Anker
-sitzt in der Mitte, die Punkte liegen auf einem Ring. Hat ein Punkt Unterpunkte, erscheinen
-diese im **nächsten Ring** um den ersten herum: aus zwei Ebenen werden zwei Ringe, aus drei
-Ebenen drei. Der Ankerpunkt selbst ist meist inaktiv und dient nur als Ausgangspunkt.
+A radial menu (circular menu) arranges menu items around a centre point. The anchor
+sits in the middle, the items lie on a ring. If an item has sub-items, they appear in
+the **next ring** around the first one: two levels become two rings, three levels
+become three. The anchor point itself is usually inactive and only serves as a starting point.
 
-Ausgewählt wird über die **Richtung** zum Punkt, nicht über die Strecke. Der Zeiger muss
-deshalb nur kurz in die richtige Richtung wandern — der Punkt ist auch dann treffbar, wenn
-er weiter weg liegt. Wiederholung führt zum Muskelgedächtnis: erfahrene Nutzer wählen den
-Punkt, ohne das Menü anzusehen.
+Selection happens by **direction** towards the item, not by distance. The pointer therefore
+only has to travel briefly in the right direction — the item remains hittable even when it
+lies further away. Repetition leads to muscle memory: experienced users pick the item
+without looking at the menu.
 
-Der Anker ist frei wählbar: Ecke, Kantenmitte, Bildschirmmitte, freie Koordinaten, die
-Position eines anderen Elements oder der Zeiger selbst. Dasselbe Element steht deshalb oben
-rechts genauso gut wie mittig in der Fläche; am Rand wird der Vollkreis automatisch zum
-Fächer geklemmt.
+The anchor is freely choosable: corner, edge midpoint, screen centre, free coordinates, the
+position of another element, or the pointer itself. The same element therefore works just as
+well in the top right as in the middle of the surface; at an edge the full circle is
+automatically clamped into a fan.
 
-!!! note "Herkunft"
-    Radiale Menüs sind nicht neu: der erste dokumentierte Fall ist PIXIE (1969), der erste
-    Messvergleich mit linearen Menüs (1988) zeigte rund 15 % kürzere Auswahlzeit bei
-    weniger Fehlern. Die bekannteste Bauform ist das **Pie Menu** mit Tortensegmenten um
-    eine leere Mitte (unaktivierter Kern, Richtungsauswahl); das **Marking Menu** ist die
-    verwandte Geste ohne sichtbares Menü. `sektoren` ist die Pie-Bauform, `ring` die heute
-    übliche Bauform mit einzelnen Punktflächen.
+!!! note "Origin"
+    Radial menus are nothing new: the first documented case is PIXIE (1969), the first
+    measured comparison with linear menus (1988) showed around 15 % shorter selection time
+    with fewer errors. The best-known form is the **Pie Menu** with pie segments around an
+    empty centre (inactive core, direction selection); the **Marking Menu** is the related
+    gesture without a visible menu. `sektoren` is the pie form, `ring` the form common today
+    with individual item surfaces.
 
-## Verwendungszweck
+## Purpose
 
-- wiederkehrende Aktionen an fester Stelle, bedient aus dem Muskelgedächtnis
-- Aktionen am Zeiger (Rechtsklick, Langdruck) als runde Variante des Kontextmenüs
-- Schnellzugriff in Flächen-Programmen: [whiteboard](../../../workbenches/special/whiteboard/),
-  [map-view](../../special/map-view/), Editoren
-- Ecken- und Kantenmenüs, die bei Hover wachsen und ihre Unterpunkte nach außen schieben
-- Launcher in der Bildschirmmitte auf Touch-, Kiosk- und Großbild-Oberflächen
-- Menüführung auf Controllern und Stylus (Richtung statt Zielgenauigkeit)
+- recurring actions in a fixed place, driven from muscle memory
+- actions at the pointer (right-click, long-press) as the round variant of the context menu
+- quick access in surface-based programs: [whiteboard](../../../workbenches/special/whiteboard/),
+  [map-view](../../special/map-view/), editors
+- corner and edge menus that grow on hover and push their sub-items outwards
+- launcher in the screen centre on touch, kiosk and large-screen surfaces
+- menu navigation on controllers and stylus (direction instead of aiming precision)
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
-| **ring** | Punktflächen auf einem Ring um den Anker — Standard, 3–8 Punkte |
-| **sektoren** | Tortensegmente um eine leere Mitte (Pie-Menu): Auswahl nach Winkelbereich, sehr große Trefferflächen |
-| **facher** | Ringstück statt Vollkreis (Halb- oder Viertelkreis) aus einer Ecke oder Kante heraus, auch als Speed-Dial |
-| **launcher** | frei stehender Kreis, meist in der Bildschirmmitte, mit Unterpunkten in weiteren Ringen |
-| **kontext** | erscheint an der Zeigerposition (Rechtsklick, Langdruck) |
+| Variant | Description |
+|---------|-------------|
+| **ring** | item surfaces on a ring around the anchor — default, 3–8 items |
+| **sektoren** | pie segments around an empty centre (pie menu): selected by angular range, very large hit areas |
+| **facher** | ring segment instead of a full circle (half or quarter circle) emerging from a corner or edge, also as a speed dial |
+| **launcher** | free-standing circle, usually in the screen centre, with sub-items in further rings |
+| **kontext** | appears at the pointer position (right-click, long-press) |
 
 ## Features
 
-- **Ringe pro Ebene** — Unterpunkte eines Punktes erscheinen im nächsten Ring (`levels`, höchstens drei)
-- **Freier Anker** — neun Rand- und Eckenpositionen, Bildschirmmitte, freie Koordinaten, `anchor` auf ein anderes Element, oder Zeigerposition
-- **Klemmung am Rand** — `clamp` macht aus dem Vollkreis an Ecke oder Kante einen Viertel- bzw. Halbfächer; der ganze Ring bleibt sichtbar
-- **Hover** — Punkt wächst, wandert ein Stück nach außen und wirft Schatten; seine Unterpunkte fächern sich gestaffelt nach außen auf
-- **Wegfahr-Toleranz** — `closeDelay` lässt den Zeiger zwischen den Ringen wandern, ohne dass das Menü schließen würde
-- **Formen** — Kreis, Vieleck mit 3–12 Ecken, Squircle, Keil, Blüte (siehe [Formen und Ecken](./appearance.md#formen-und-ecken))
-- **Richtungsselektion** — in `sektoren` gilt der Punkt als getroffen, sobald der Zeiger in seinem Winkelbereich ist
-- **Tastatur** — Pfeiltasten gehen im Ring herum, `Enter` eine Ebene hinein, `Esc` zurück; 4er- und 8er-Ringe liegen auf den Pfeiltasten
-- **Anheftbar** — Klick hält das Menü offen (`pinned`), sonst schließt es beim Verlassen des Bereichs
-- **Ring-Hervorhebung** — `dimInactive` dämpft alle Ringe außer dem aktiven
+- **A ring per level** — a point's sub-items appear in the next ring (`levels`, at most three)
+- **Free anchor** — nine edge and corner positions, screen centre, free coordinates, `anchor` pointing at another element, or the pointer position
+- **Edge clamping** — `clamp` turns the full circle into a quarter or half fan at a corner or edge; the whole ring stays visible
+- **Hover** — the item grows, moves a little outwards and casts a shadow; its sub-items fan out outwards in a stagger
+- **Travel tolerance** — `closeDelay` lets the pointer travel between the rings without the menu closing
+- **Shapes** — circle, polygon with 3–12 corners, squircle, wedge, flower (see [Shapes and corners](./appearance.md#shapes-and-corners))
+- **Direction selection** — in `sektoren` an item counts as hit as soon as the pointer is inside its angular range
+- **Keyboard** — arrow keys move around the ring, `Enter` goes one level in, `Esc` goes back; 4- and 8-item rings sit on the arrow keys
+- **Pinnable** — a click keeps the menu open (`pinned`), otherwise it closes when the area is left
+- **Ring emphasis** — `dimInactive` dims every ring except the active one
 
-## Abgrenzung
+## Distinction
 
-- **Nicht verwechseln mit** [menu](../menu/): das lineare Menü folgt der Lese-Reihenfolge und
-  eignet sich für lange und dynamische Listen; das Kreismenü folgt **Richtungen** und lebt von
-  einer kleinen, immer gleichen Punktezahl.
-- **Nicht verwechseln mit** [context-menu](../../overlays/context-menu/): beide erscheinen am
-  Zeiger und tragen dieselben Aktionen — das Kontextmenü als Liste, das Kreismenü im Kreis.
-  Beide haben die Rolle `menu`.
-- **Nicht verwechseln mit** [floating-action-button](../../../primitives/actions/floating-action-button/):
-  der FAB trägt die *eine* Hauptaktion, das Kreismenü mehrere gleichrangige. Der Fächer des
-  FABs ist die Variante `facher`.
-- **Nicht verwechseln mit** [toolbar](../toolbar/): die Toolbar ist dauerhaft sichtbar,
-  das Kreismenü kommt auf Zuruf (Hover, Tipp, Rechtsklick) und verschwindet wieder.
-- **Nicht verwechseln mit** [command](../command/): die Befehlspalette sucht aus vielen
-  Befehlen; das Kreismenü zeigt eine feste, gelernte Auswahl ohne Suche.
+- **Do not confuse with** [menu](../menu/): the linear menu follows reading order and suits
+  long and dynamic lists; the circular menu follows **directions** and relies on a small,
+  always identical number of items.
+- **Do not confuse with** [context-menu](../../overlays/context-menu/): both appear at the
+  pointer and carry the same actions — the context menu as a list, the circular menu in a
+  circle. Both have the role `menu`.
+- **Do not confuse with** [floating-action-button](../../../primitives/actions/floating-action-button/):
+  the FAB carries the *one* main action, the circular menu several equal ones. The FAB's fan
+  is the variant `facher`.
+- **Do not confuse with** [toolbar](../toolbar/): the toolbar is permanently visible, the
+  circular menu appears on demand (hover, tap, right-click) and disappears again.
+- **Do not confuse with** [command](../command/): the command palette searches among many
+  commands; the circular menu shows a fixed, learned selection without search.
 
 ## Best Practices
 
-- 3–12 Punkte pro Ring; über 8 Punkte lieber Sektoren oder einen zweiten Ring.
-- Höchstens drei Ringe: jeder Ring vergrößert Fläche und Zeigerweg.
-- Richtungen programmweit gleich halten (z. B. oben = Neu, rechts = Teilen) — darauf beruht
-  der ganze Vorteil; eine umgestellte Reihenfolge kostet die Nutzer ihre Geschwindigkeit.
-- `hoverDelay` 80–150 ms, `closeDelay` 150–250 ms — ohne Toleranz schließt das Menü,
-  sobald der Zeiger zum Unterpunkt wandert.
-- Auf Touch: **drücken – ziehen – loslassen** statt Hover; Hover-Menüs brauchen dort
-  `trigger: tap`.
-- Kein Kreismenü für lange, dynamische oder unbekannte Listen — dafür lineare Menüs oder
-  [command](../command/).
-- Beschriftung erst im aktiven Segment oder als [tooltip](../../overlays/tooltip/);
-  ein Vollkreis mit dauerhaften Labels wird unlesbar.
-- Bei `prefers-reduced-motion`: `radial-out` → `fade-in`, Wachstum und Mitrotation abschalten.
+- 3–12 items per ring; above 8 items prefer sectors or a second ring.
+- At most three rings: each ring enlarges both the area and the pointer path.
+- Keep directions identical across the whole program (e.g. up = New, right = Share) — the
+  entire advantage rests on this; a reordered layout costs users their speed.
+- `hoverDelay` 80–150 ms, `closeDelay` 150–250 ms — without tolerance the menu closes as
+  soon as the pointer travels to the sub-item.
+- On touch: **press – drag – release** instead of hover; hover menus need `trigger: tap` there.
+- No circular menu for long, dynamic or unfamiliar lists — use linear menus or
+  [command](../command/) for those.
+- Labels only in the active segment or as a [tooltip](../../overlays/tooltip/);
+  a full circle with permanent labels becomes unreadable.
+- With `prefers-reduced-motion`: `radial-out` → `fade-in`, switch off growth and co-rotation.
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
-- [Menu](../menu/) — Elternklasse
-- [Context Menu](../../overlays/context-menu/) — dieselben Punkte, linear
-- [Floating Action Button](../../../primitives/actions/floating-action-button/) — Anker für `facher`
-- [radial-out](../../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../../interactions/animations/exit/radial-in/)
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [navigation – overview](../index.md)
+- [Menu](../menu/) — parent class
+- [Context Menu](../../overlays/context-menu/) — the same items, linear
+- [Floating Action Button](../../../primitives/actions/floating-action-button/) — anchor for `facher`
+- [radial-out](../../../../interactions/animations/entrance/radial-out/) and [radial-in](../../../../interactions/animations/exit/radial-in/)
+- [Base component](../../../primitives/basics/base.md)

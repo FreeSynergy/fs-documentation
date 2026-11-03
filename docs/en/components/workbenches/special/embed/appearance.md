@@ -1,6 +1,6 @@
-# Embed (Einbettung) - Aussehen
+# Embed (Einbettung) - Appearance
 
-## Grundlayout
+## Base layout
 
 ```
 ┌──────────────────────────────────────────────┐
@@ -15,28 +15,28 @@
 Die Kopfzeile entfällt bei `showTitle = false`; das Vollbild- und das Öffnen-Symbol
 erscheinen erst bei Hover oder Fokus.
 
-## Varianten
+## Variants
 
-| `source` | Aussehen |
-|----------|----------|
+| `source` | Appearance |
+| ---------- | ---------- |
 | **app** | wie ein eigenes Programmfenster, ohne eigene Navigationsleiste |
 | **widget** | kompakte Fläche, füllhöhenbegrenzt, seltener Rahmen |
 | **iframe** | fremde Seite randlos, Kopfzeile nur bei `showTitle = true` |
 
-## Größen
+## Sizes
 
-| Größe | Bedeutung |
-|-------|-----------|
+| Size | Bedeutung |
+| ------- | ----------- |
 | `small` | Zeilenhöhe 280 px, z. B. in Listen |
 | `medium` | 480 px Höhe, Standard in Seiten |
 | `large` | füllt die verfügbare Höhe, für Dashboards |
 
 Zusätzlich bestimmt `ratio` das Seitenverhältnis (`auto`, `16:9`, `4:3`, `1:1`).
 
-## Farben und Zustände
+## Colours and states
 
-| Zustand | Aussehen |
-|---------|----------|
+| State | Appearance |
+| --------- | ---------- |
 | `default` | Fläche mit Grundfarbe, dezenter 1 px Rahmen |
 | `hover` | Kopfzeilen-Symbole werden sichtbar |
 | `focus` | 2 px Fokus-Ring um die Gesamtfläche |
@@ -44,14 +44,14 @@ Zusätzlich bestimmt `ratio` das Seitenverhältnis (`auto`, `16:9`, `4:3`, `1:1`
 | `error` | Fehlerhinweis in der Fläche, Ursache und Verweis nach außen |
 | `disabled` | Fläche abgeblendet, Bedienung gesperrt |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `reveal` | Kopfzeilen-Werkzeuge erscheinen erst bei Hover oder Fokus |
 | `ring` | Fokus-Ring markiert die gesamte Einbettung |
 
-## Reaktiv
+## Responsive
 
 - Bei schmalem Fenster wird die Fläche vollbreit, die Kopfzeile bleibt einzeilig.
 - Bei `responsive = false` behält die Fläche ihre feste Höhe und bekommt Seitenlauf.

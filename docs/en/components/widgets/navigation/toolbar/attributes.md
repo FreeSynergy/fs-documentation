@@ -1,9 +1,9 @@
 # Toolbar - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `buttons` | array[] | - | Array von Button-Objekten |
 | `variant` | enum | `default` | Stil: `default`, `floating`, `sidebar` |
 | `position` | enum | `top` | Position: `top`, `bottom`, `left`, `right` |
@@ -11,12 +11,12 @@
 | `activeTab` | string | - | Aktiver Tab |
 | `onChange` | function | - | Event bei Tab-Wechsel |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `showLabels` | boolean | `true` | Labels anzeigen? |
-| `showIcons` | boolean | `true` | Icons anzeigen? |
+| `showIcons` | boolean | `true` | show icons? |
 | `collapsed` | boolean | `false` | Eingeklappt? |
 | `autoHide` | boolean | `true` | Automatisch ausblenden? |
 | `target` | DOM element | - | Ziel-Element |
@@ -28,8 +28,8 @@
 | `size` | enum | `standard` | Größe: `compact`, `standard`, `large` |
 
 ## Events
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onButtonClick` | function | Wird beim Button-Klick ausgeführt |
 | `onExpand` | function | Wird beim Erweitern ausgeführt |
 | `onCollapse` | function | Wird beim Einklappen ausgeführt |
@@ -37,27 +37,27 @@
 | `onSelect` | function | Wird beim Selektieren ausgeführt |
 | `onMinimize` | function | Wird beim Minimieren ausgeführt |
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `keyboardShortcuts` | boolean | `true` | Keyboard-Shortcuts aktivieren? |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `toolbar` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `toolbar` |
 
 ## Button-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `id` | string | Eindeutige ID |
 | `icon` | string | Icon-Name |
 | `label` | string | Button-Label |
 | `variant` | enum | `primary`, `secondary`, `danger` |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

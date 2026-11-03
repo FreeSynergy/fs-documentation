@@ -1,6 +1,6 @@
-# Bottom Navigation - Verwendung
+# Bottom Navigation - Usage
 
-## Einfache Bottom Navigation
+## Simple bottom navigation
 
 ```jsx
 <BottomNavigation 
@@ -33,7 +33,7 @@
 />
 ```
 
-## In App
+## In an app
 
 ```jsx
 <AppShell>
@@ -46,7 +46,7 @@
 </AppShell>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <BottomNavigation 
@@ -56,9 +56,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Mail-App
+## Example 1: mail app
 
 ```
 ┌─────────────────────────────────────────┐
@@ -67,7 +67,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Chat-App
+## Example 2: chat app
 
 ```
 ┌─────────────────────────────────────────┐
@@ -76,7 +76,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: E-Commerce
+## Example 3: E-Commerce
 
 ```
 ┌─────────────────────────────────────────┐
@@ -85,7 +85,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Social Media
+## Example 4: Social Media
 
 ```
 ┌─────────────────────────────────────────┐
@@ -94,7 +94,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Dashboard
+## Example 5: Dashboard
 
 ```
 ┌─────────────────────────────────────────┐

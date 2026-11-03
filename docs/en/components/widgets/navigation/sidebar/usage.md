@@ -1,4 +1,4 @@
-# Sidebar - Verwendung
+# Sidebar - Usage
 
 ## Einfache Sidebar
 
@@ -83,9 +83,9 @@ Sidebar {
 - **CRM**: Kunden, Kontakte, Aufgaben
 - **ERP**: Buchhaltung, Lager, Lieferanten
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Messenger Sidebar (ähnlich Element/Discord)
+## Example 1: Messenger Sidebar (ähnlich Element/Discord)
 
 ```
 ┌──────────────────────────┐
@@ -106,7 +106,7 @@ Sidebar {
 └──────────────────────────┘
 ```
 
-## Beispiel 2: Desktop Shell
+## Example 2: Desktop Shell
 
 ```
 ┌──────────────────────────┐
@@ -128,7 +128,7 @@ Sidebar {
 └──────────────────────────┘
 ```
 
-## Beispiel 3: CRM mit Sub-Menüs
+## Example 3: CRM mit Sub-Menüs
 
 ```
 ┌──────────────────────────┐

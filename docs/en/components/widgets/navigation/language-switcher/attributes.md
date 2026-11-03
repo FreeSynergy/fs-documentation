@@ -1,51 +1,51 @@
 # Language Switcher - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `languages` | array[] | - | Array von Sprachen |
 | `currentLanguage` | string | - | Aktuelle Sprache |
 | `onChange` | function | - | Event bei Sprachwechsel |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `onOpen` | function | runs when opened |
+| `onClose` | function | runs when closed |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `combobox` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `combobox` |
 
 ## Sprach-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `code` | string | Sprachcode (z.B. 'de', 'en') |
 | `label` | string | Anzeigename |
 | `flag` | string | Flaggen-Emoji |
 
 ## Varianten-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `showCurrentLanguage` | boolean | `true` | Aktuelle Sprache anzeigen? |
 | `showFlags` | boolean | `true` | Flaggen anzeigen? |
 
-## Features-Attribute
+## Features attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `autoDetect` | boolean | `false` | Automatische Erkennung? |
 | `persist` | boolean | `true` | Einstellung speichern? |
 | `reload` | boolean | `false` | Seite neu laden? |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

@@ -1,10 +1,10 @@
-# Menu (Menü) - Aussehen
+# Menu (Menü) - Appearance
 
-## Grundlayout
+## Base layout
 
 Ein Menu ist eine klickbare Menüleiste, die oft oben platziert wird.
 
-## Varianten
+## Variants
 
 ### Horizontal (Standard)
 
@@ -25,36 +25,36 @@ Ein Menu ist eine klickbare Menüleiste, die oft oben platziert wird.
 └─────────┘
 ```
 
-## Größen
+## Sizes
 
-| Größe | Höhe | Schriftgröße | Verwendung |
-|-------|------|-------------|------------|
+| Size | Height | Font size | Use |
+| ------- | ------ | ------------- | ------------ |
 | Small | 32px | 12px | Inline |
 | Medium | 48px | 14px | Standard |
 | Large | 64px | 16px | Featured |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Active** | Primärfarbe | Aktiver Menüpunkt |
 | **Inactive** | Grau | Inaktive Menüpunkte |
-| **Hover** | Heller | Hover-Zustand |
-| **Disabled** |ausgegraut | Deaktivierte Menüpunkte |
+| **Hover** | Heller | hover state |
+| **Disabled** | ausgegraut | Deaktivierte Menüpunkte |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
+| Effect | Description |
+| -------- | -------------- |
+| `color` | the colour changes |
 | `background` | Hintergrund ändert sich |
-| `border-bottom` | Unterstrich erscheint |
+| `border-bottom` | an underline appears |
 | `shadow` | Schatten erscheint |
 
-## Reaktiv
+## Responsive
 
-| Breakpoint | Verhalten |
-|------------|-----------|
+| Breakpoint | Behaviour |
+| ------------ | ----------- |
 | Desktop (>768px) | Volles Menu sichtbar |
 | Mobile (<480px) | Hamburger-Menu |
 

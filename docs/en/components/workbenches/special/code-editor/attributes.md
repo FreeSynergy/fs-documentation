@@ -1,49 +1,49 @@
 # Code Editor - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `value` | string | - | Wert (Code) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | event on change |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `language` | string | `javascript` | Sprache |
 | `readOnly` | boolean | `false` | Nur-Lese-Modus? |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onKeyDown` | function | Wird bei Tastendruck ausgeführt |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `onKeyDown` | function | runs on a key press |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `textbox` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `textbox` |
 
-## Features-Attribute
+## Features attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `showLineNumbers` | boolean | `true` | Zeilennummern anzeigen? |
 | `showGutter` | boolean | `true` | Gutter anzeigen? |
 | `autoCompletion` | boolean | `true` | Autovervollständigung aktivieren? |
 
 ## Editor-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `lineHeight` | number | `1.5` | Zeilenhöhe |
-| `fontSize` | number | `14` | Schriftgröße |
+| `fontSize` | number | `14` | Font size |
 | `tabSize` | number | `2` | Tab-Größe |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

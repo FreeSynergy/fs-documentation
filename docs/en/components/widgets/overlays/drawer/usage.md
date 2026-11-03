@@ -1,4 +1,4 @@
-# Drawer (Seitenleiste) - Verwendung
+# Drawer (Seitenleiste) - Usage
 
 ## Einfacher Drawer
 
@@ -15,7 +15,7 @@
 </Drawer>
 ```
 
-## In App
+## In an app
 
 ```jsx
 <AppShell>
@@ -51,7 +51,7 @@
 </Drawer>
 ```
 
-## Mit Event-Handlern
+## With event handlers
 
 ```jsx
 <Drawer 
@@ -62,9 +62,9 @@
 />
 ```
 
-## Beispiele
+## Examples
 
-## Beispiel 1: Mobile-Menu
+## Example 1: Mobile-Menu
 
 ```
 ┌─────────────────────────────────────────┐
@@ -81,7 +81,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Filter-Drawer
+## Example 2: Filter-Drawer
 
 ```
 ┌─────────────────────────────────────────┐
@@ -100,7 +100,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Profil-Drawer
+## Example 3: Profil-Drawer
 
 ```
 ┌─────────────────────────────────────────┐
@@ -115,7 +115,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Sidebar (Links)
+## Example 4: Sidebar (Links)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -131,7 +131,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Checkout-Drawer
+## Example 5: Checkout-Drawer
 
 ```
 ┌─────────────────────────────────────────┐

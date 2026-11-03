@@ -1,6 +1,6 @@
-# Alert Dialog (Bestätigungsdialog) - Aussehen
+# Alert Dialog (Bestätigungsdialog) - Appearance
 
-## Grundlayout
+## Base layout
 
 ```
 ┌───────────────────────────────────┐
@@ -13,38 +13,38 @@
 └───────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **bestaetigung** | Primärfarbe im Bestätigungs-Button, Titel neutral |
 | **zerstoererisch** | Titelleiste und Button in Fehlerfarbe |
 
-## Größen
+## Sizes
 
-| Größe | Breite | Höhenabstand |
-|-------|--------|--------------|
+| Size | Width | Höhenabstand |
+| ------- | -------- | -------------- |
 | `small` | 360 px | 12 px |
 | `medium` | 480 px | 16 px |
 | `large` | 640 px | 20 px |
 
-## Farben und Zustände
+## Colours and states
 
-| Zustand | Aussehen |
-|---------|----------|
+| State | Appearance |
+| --------- | ---------- |
 | `default` | Fläche mit Rahmen, Hintergrund dahinter abgedunkelt |
 | `open` | Fokus auf Abbrechen, 2 px Fokus-Ring |
 | `loading` | Spinner im Bestätigungs-Button, beide Buttons gesperrt |
 | `disabled` | Fläche abgeblendet, keine Aktion möglich |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `tone` | Buttonfläche dunkler bei Hover |
 | `scrim` | Abgedunkelte Fläche hinter dem Dialog, nicht klickbar |
 
-## Reaktiv
+## Responsive
 
 - Auf Mobilgeräten füllt der Dialog die Breite und sitzt am unteren Rand.
 - Lange Begründungen scrollen im Inhalt, die Buttons bleiben sichtbar.

@@ -1,47 +1,47 @@
 # Breadcrumb - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Breadcrumb-Objekten (label, href, icon) |
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
+| `items` | array[] | - | array of breadcrumb objects (label, href, icon) |
 | `separator` | string | `>` | Separator: `>`, `>`, `/`, `›`, `•` |
-| `activeIndex` | number | - | Aktueller Index (für Highlighting) |
-| `collapsed` | boolean | `false` | Eingeklappt bei wenig Platz? |
+| `activeIndex` | number | - | current index (for highlighting) |
+| `collapsed` | boolean | `false` | collapsed when space is tight? |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onHomeClick` | function | - | Wird beim Klick auf Home ausgeführt |
-| `truncate` | boolean | `false` | Kürzen bei wenig Platz? |
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
+| `onHomeClick` | function | - | runs when home is clicked |
+| `truncate` | boolean | `false` | shorten when space is tight? |
 
-## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `showIcons` | boolean | `false` | Icons anzeigen? |
-| `color` | string | `neutral` | Farbe |
+## Presentation
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `showIcons` | boolean | `false` | show icons? |
+| `color` | string | `neutral` | Colour |
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
-| `truncateBreakpoint` | number | Breakpoint für Kürzen |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `responsive` | boolean | responsive layout? |
+| `truncateBreakpoint` | number | breakpoint for shortening |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onNavigate` | function | Wird bei Navigation ausgeführt |
-| `onTruncate` | function | Wird beim Kürzen ausgeführt |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `onNavigate` | function | runs on navigation |
+| `onTruncate` | function | runs when the path is shortened |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `navigation` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `navigation` |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

@@ -1,13 +1,13 @@
-# Toolbar (Symbolleiste) - Aussehen
+# Toolbar (Symbolleiste) - Appearance
 
-## Grundlayout
+## Base layout
 
 Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **standard** | einzeilige Leiste mit Symbolen |
 | **kontext** | Leiste tauscht ihre Knöpfe, wenn sich die Auswahl ändert |
 | **ribbon** | zwei oder drei Zeilen mit Gruppenüberschriften |
@@ -33,33 +33,33 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 └─────┴─────────────────────────────────────────────┘
 ```
 
-## Größen
+## Sizes
 
-| Größe | Icon-Größe | Button-Größe | Verwendung |
-|-------|------------|--------------|------------|
+| Size | Icon size | Button-Größe | Use |
+| ------- | ------------ | -------------- | ------------ |
 | Small | 16px | 32px | Inline |
 | Medium | 24px | 48px | Standard |
 | Large | 32px | 64px | Featured |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Primary** | Primärfarbe | Hauptaktion |
 | **Secondary** | Sekundärfarbe | Sekundäre Aktion |
 | **Danger** | Rot | Gefährliche Aktion |
 | **Disabled** | Grau | Deaktivierte Aktion |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
+| Effect | Description |
+| -------- | -------------- |
+| `color` | the colour changes |
 | `background` | Hintergrund ändert sich |
 | `scale` | Leichte Vergrößerung |
 | `shadow` | Schatten erscheint |
 
-## Reaktiv
+## Responsive
 
 - Die Leiste ist vollbreit und bleibt beim Scrollen oben stehen (`geklebt`); der Inhalt der
   Gruppe rechts rutscht zuerst weg.
@@ -70,8 +70,8 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
 ## Beschriftung der Knöpfe
 
-| Form | Beschreibung |
-|------|--------------|
+| Form | Description |
+| ------ | -------------- |
 | **nur Symbol** | Standard, mit Tooltip |
 | **nur Text** | wenn kein eindeutiges Symbol existiert |
 | **Symbol und Text** | neue oder mehrdeutige Aktionen |

@@ -1,29 +1,29 @@
-# Modal (Modaler Dialog)
+# Modal
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `overlays` |
-| **Erbt von** | `base` |
-| **Varianten** | `Small`, `Medium`, `Large`, `Fullscreen` |
-| **Zustände** | `open`, `dirty` |
-| **Gesten** | `tap`, `swipe` |
-| **Animationen** | `fade-in`, `pop-in`, `slide-out` |
-| **Verwandt** | `alert-dialog`, `drawer`, `popover`, `wizard` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `overlays` |
+| **Inherits from** | `base` |
+| **Variants** | `Small`, `Medium`, `Large`, `Fullscreen` |
+| **States** | `open`, `dirty` |
+| **Gestures** | `tap`, `swipe` |
+| **Animations** | `fade-in`, `pop-in`, `slide-out` |
+| **Related** | `alert-dialog`, `drawer`, `popover`, `wizard` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 
-## Verwendungszweck
+## Purpose
 
 - Bestätigungen
 - Formulare
 - Bearbeitungsdialoge
 
-## Varianten
+## Variants
 
-| Variant | Größe | Beschreibung |
-|---------|-------|--------------|
+| Variant | Size | Description |
+| --------- | ------- | -------------- |
 | **Small** | - | Formulare, Bestätigungen |
 | **Medium** | - | Bearbeitungsdialoge |
 | **Large** | - | Komplette Ansichten |
@@ -37,7 +37,7 @@ Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 - Close
 - Dismissible
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [alert-dialog](../alert-dialog/): der Alert-Dialog fragt eine
   Entscheidung ab, hat kaum Inhalt und ist nicht durch Klick außerhalb schließbar; das Modal
@@ -56,9 +56,9 @@ Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 - Accessibility
 - Feedback
 
-## Siehe auch
+## See also
 
-- [overlays – Übersicht](../index.md)
+- [overlays – overview](../index.md)
 - [Alert Dialog](../alert-dialog/) — Bestätigung ohne Inhalt
 - [Drawer](../drawer/) — Overlay an der Kante
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

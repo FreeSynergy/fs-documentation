@@ -1,6 +1,6 @@
-# Dashboard - Aussehen
+# Dashboard - Appearance
 
-## Grundlayout
+## Base layout
 Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
 ```
@@ -13,38 +13,38 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **vorlage** | Widgets ohne Greifpunkte, Raster unveränderlich |
 | **anordbar** | Greifpunkt oben links, Rahmen zum Ziehen, Rasterlinien im Bearbeiten-Modus |
 | **bericht** | wie `vorlage`, ohne Bearbeiten-Knopf, dafür Drucken/Aktualisieren |
 
-## Größen
+## Sizes
 
-| Größe | Breite | Verwendung |
-|-------|--------|------------|
+| Size | Width | Use |
+| ------- | -------- | ------------ |
 | Small | 800px | Kleines Dashboard |
 | Medium | 1200px | Standard |
 | Large | 1600px | Großes Dashboard |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Background** | Hell | Hintergrund |
 | **Widget** | Weiß | Widget-Hintergrund |
 | **Border** | Grau | Rand |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| Effect | Description |
+| -------- | -------------- |
+| `shadow` | stronger shadow |
+| `border` | the border lights up |
 
-## Reaktiv
+## Responsive
 
 - Vierte Spalten ab 1600 px, drei ab 1200 px, zwei ab 800 px, darunter einspaltig;
   die gespeicherte Reihenfolge bleibt erhalten.
@@ -55,8 +55,8 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
 ## Widget-Typen
 
-| Type | Beschreibung |
-|------|--------------|
+| Type | Description |
+| ------ | -------------- |
 | **Card** | Karte |
 | **Chart** | Diagramm |
 | **List** | Liste |

@@ -1,11 +1,11 @@
-# Dashboard (Dashboard) - Verwendung
+# Dashboard (Dashboard) - Usage
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
     Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
     ersetzt.
 
-## Anwendung
+## Application
 
 Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
@@ -13,7 +13,7 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 - Analytics
 - Project
 
-## Beispiele
+## Examples
 
 ### Übersicht
 
@@ -33,6 +33,6 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 <Dashboard widgets={eintraege} responsive={true} />
 ```
 
-## Hinweise
+## Notes
 
 - Gesten: `drag`

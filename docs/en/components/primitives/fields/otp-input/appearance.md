@@ -39,7 +39,7 @@
 | Effect | Description |
 |--------|-------------|
 | `ring` | primary ring on the active box |
-| `shake` | on a wrong code, see [shake](../../../../interactions/animations/feedback/shake/) |
+| `shake` | on a wrong code, see [shake](../../../../interactions/gestures/device/shake/) |
 
 ## Responsive
 

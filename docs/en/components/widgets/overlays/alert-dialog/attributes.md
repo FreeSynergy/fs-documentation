@@ -3,19 +3,19 @@
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `title` | string | - | Frage als Titel |
 | `message` | string | - | Auswirkung in einem Satz |
 | `confirmLabel` | string | `Bestätigen` | Verb des Bestätigungs-Buttons |
 | `cancelLabel` | string | `Abbrechen` | Verb des Abbrechen-Buttons |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `destructive` | boolean | `false` | zerstörerische Variante (Fehlerfarbe) |
 | `confirmWord` | string | `null` | Wort, das zum Bestätigen getippt werden muss |
 | `busy` | boolean | `false` | Anfrage läuft, Aktionen gesperrt |
@@ -24,21 +24,21 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onConfirm` | function | Bestätigt |
 | `onCancel` | function | Abgebrochen oder `Esc` |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `role` | string | `alertdialog` | - |
 | `aria-describedby` | string | - | id des Meldungstextes |
 | `initialFocus` | enum | `cancel` | zuerst fokussierter Button |
 
-## Geerbt von
+## Inherited from
 
 `id`, `visible`, `enabled`, `size`, `theme`, `rounded`, `state`, `tabIndex`,
 `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../../primitives/basics/base.md)
+[Base component](../../../primitives/basics/base.md)

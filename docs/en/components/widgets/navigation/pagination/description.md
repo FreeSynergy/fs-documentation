@@ -1,29 +1,29 @@
-# Pagination (Seitennavigation)
+# Pagination
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `zahlen`, `vor-zurueck`, `nachladen`, `endlos` |
-| **Zustände** | `aktiv` |
-| **Gesten** | `tap`, `swipe` |
-| **Animationen** | `fade-in`, `progress` |
-| **Verwandt** | `repeater`, `list-view`, `table`, `scroll-area`, `tabs` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `zahlen`, `vor-zurueck`, `nachladen`, `endlos` |
+| **States** | `aktiv` |
+| **Gestures** | `tap`, `swipe` |
+| **Animations** | `fade-in`, `progress` |
+| **Related** | `repeater`, `list-view`, `table`, `scroll-area`, `tabs` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwischen ihnen.
 
-## Verwendungszweck
+## Purpose
 
 - Große Datenmengen übersichtlich darstellen
 - Performance verbessern (nur sichtbare Daten laden)
 - Benutzerfreundlichkeit erhöhen
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **zahlen** | Seitenzahlen mit aktueller Seite und `…` |
 | **vor-zurueck** | nur vorherige und nächste Seite |
 | **nachladen** | angehängte Portion auf Knopfdruck |
@@ -37,7 +37,7 @@ Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwis
 - Jump to Page (direkt zu Seite springen)
 - Page Size Selector (Anzahl pro Seite ändern)
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [tabs](../tabs/): Tabs wechseln den Inhalt, hier bleibt es dieselbe
   Liste in Portionen.
@@ -53,9 +53,9 @@ Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwis
 - `endlos` nur, wo kein bestimmter Punkt gesucht wird; zum gezielten Springen gehören Zahlen.
 - Mit den Pfeiltasten bedienbar, aktuelle Seite mit `aria-current`.
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
+- [navigation – overview](../index.md)
 - [Repeater](../../data/repeater/) — Liste inklusive Seitennavigation
 - [Scroll Area](../../containers/scroll-area/) — endlose Scrollfläche
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

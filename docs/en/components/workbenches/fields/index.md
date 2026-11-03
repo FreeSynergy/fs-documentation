@@ -1,21 +1,21 @@
-# fields (Felder)
+# fields
 
 Band [workbenches](../) – erhält Inhalte erst zur Laufzeit.
 
 Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
 
-## Elemente
+## Elements
 
 - [**rich-text-editor**](./rich-text-editor/) – Ein Rich Text Editor ist ein Editor für formatierten Text.
 
-## Steckbriefe
+## Profiles
 
-| Komponente | Erbt von | Varianten | Rolle | Status |
-|------------|----------|-----------|-------|--------|
-| [rich-text-editor](./rich-text-editor/) | `base`, `textarea` | `wysiwyg`, `wiki-syntax` | - | dokumentiert |
+| Component | Inherits from | Variants | Role | State |
+| ------------ | ---------- | ----------- | ------- | -------- |
+| [rich-text-editor](./rich-text-editor/) | `base`, `textarea` | `wysiwyg`, `wiki-syntax` | - | documented |
 
-## Siehe auch
+## See also
 
-- [Komponenten-Übersicht](../../index.md)
+- [Component overview](../../index.md)
 - [Band workbenches](../)
-- [Basiskomponente](../../primitives/basics/base.md)
+- [Base component](../../primitives/basics/base.md)

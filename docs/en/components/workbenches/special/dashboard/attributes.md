@@ -1,50 +1,50 @@
 # Dashboard - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `widgets` | array[] | - | Array von Widgets |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `dragAndDrop` | boolean | `true` | Drag & Drop aktivieren? |
-| `responsive` | boolean | `true` | Responsives Layout? |
+| `responsive` | boolean | `true` | responsive layout? |
 
-## Darstellung
+## Presentation
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `columns` | number | `3` | Anzahl Spalten |
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `columns` | number | `3` | number of columns |
 | `gap` | number | `16` | Abstand zwischen Widgets |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onWidgetMove` | function | Wird beim Verschieben ausgeführt |
 | `onWidgetResize` | function | Wird beim Resizen ausgeführt |
 | `onWidgetRemove` | function | Wird beim Entfernen ausgeführt |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `region` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `region` |
 
 ## Widget-Attribute
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `id` | string | Eindeutige ID |
 | `type` | string | Widget-Typ |
 | `title` | string | Titel |
 | `content` | string/node | Inhalt |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

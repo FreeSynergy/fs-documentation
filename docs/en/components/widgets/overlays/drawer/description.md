@@ -1,29 +1,29 @@
-# Drawer (Seitenleiste)
+# Drawer
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `overlays` |
-| **Erbt von** | `base` |
-| **Varianten** | `Left Drawer`, `Right Drawer`, `Bottom Drawer`, `Full Drawer` |
-| **Zustände** | `open`, `peek` |
-| **Gesten** | `swipe`, `tap`, `drag` |
-| **Animationen** | `slide-in`, `slide-out` |
-| **Verwandt** | `sidebar`, `modal`, `split-view`, `menu` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `overlays` |
+| **Inherits from** | `base` |
+| **Variants** | `Left Drawer`, `Right Drawer`, `Bottom Drawer`, `Full Drawer` |
+| **States** | `open`, `peek` |
+| **Gestures** | `swipe`, `tap`, `drag` |
+| **Animations** | `slide-in`, `slide-out` |
+| **Related** | `sidebar`, `modal`, `split-view`, `menu` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 
-## Verwendungszweck
+## Purpose
 
 - Navigation
 - Filter
 - Profile
 
-## Varianten
+## Variants
 
-| Variant | Position | Beschreibung |
-|---------|----------|--------------|
+| Variant | Position | Description |
+| --------- | ---------- | -------------- |
 | **Left Drawer** | Links | Links |
 | **Right Drawer** | Rechts | Rechts |
 | **Bottom Drawer** | Unten | Unten |
@@ -41,7 +41,7 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 - Close
 - Dismissible
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [sidebar](../../navigation/sidebar/): die Seitenleiste gehört
   dauerhaft zum Layout; der Drawer kommt auf Zuruf und überdeckt den Inhalt.
@@ -61,9 +61,9 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 - Accessibility
 - Feedback
 
-## Siehe auch
+## See also
 
-- [overlays – Übersicht](../index.md)
+- [overlays – overview](../index.md)
 - [Sidebar](../../navigation/sidebar/) — dauerhafte Seitenleiste
 - [Modal](../modal/) — zentriertes Overlay
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

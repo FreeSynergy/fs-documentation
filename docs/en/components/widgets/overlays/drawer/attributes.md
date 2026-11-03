@@ -1,44 +1,44 @@
 # Drawer (Seitenleiste) - Attribute
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `title` | string | - | Titel |
 | `isOpen` | boolean | `false` | Ist geöffnet? |
 | `onClose` | function | - | Event beim Schließen |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
 | `position` | enum | `left` | Position: `left`, `right`, `top`, `bottom` |
 | `closable` | boolean | `true` | Schließbar? |
 | `overlay` | boolean | `true` | Overlay anzeigen? |
 | `overlayClosable` | boolean | `true` | Klick auf Overlay schließt? |
 
-## Darstellung
+## Presentation
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `animate` | boolean | `true` | Animationen aktivieren? |
-| `animationDuration` | number | `300` | Dauer in ms |
+| Attribute | Type | Default | Description |
+| --- | --- | --- | --- |
+| `animate` | boolean | `true` | enable animations? |
+| `animationDuration` | number | `300` | duration in ms |
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `onOpen` | function | runs when opened |
+| `onClose` | function | runs when closed |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | ARIA-Rolle: `dialog` |
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
+| `role` | string | ARIA role: `dialog` |
 
-## Geerbt von
+## Inherited from
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base component](../../../primitives/basics/base.md)

@@ -24,21 +24,21 @@ Dieser Bereich enthält Dokumentation für verschiedene Kartensysteme und GIS-Sy
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/maps/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/maps/masks/<programm>/`.
 
 **dokumentiert (7 Programme):**
 
-- [Leaflet](skins/leaflet/index.md) - Leaflet
-- [MapLibre](skins/maplibre/index.md) - MapLibre
-- [OpenStreetMap](skins/openstreetmap/index.md) - OpenStreetMap
-- [Organic Maps](skins/organic-maps/index.md) - Organic Maps
-- [OsmAnd](skins/osmand/index.md) - OsmAnd
-- [QGIS](skins/qgis/index.md) - QGIS
-- [uMap](skins/umap/index.md) - uMap
+- [Leaflet](masks/leaflet/index.md) - Leaflet
+- [MapLibre](masks/maplibre/index.md) - MapLibre
+- [OpenStreetMap](masks/openstreetmap/index.md) - OpenStreetMap
+- [Organic Maps](masks/organic-maps/index.md) - Organic Maps
+- [OsmAnd](masks/osmand/index.md) - OsmAnd
+- [QGIS](masks/qgis/index.md) - QGIS
+- [uMap](masks/umap/index.md) - uMap
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist ein Kartensystem?
 
@@ -95,3 +95,21 @@ Bei der Wahl eines Kartensystems sollten folgende Kriterien berücksichtigt werd
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Kartensysteme.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/maps/masks/<programm>/`.
+
+**dokumentiert (7 Programme):**
+
+- [Leaflet](masks/leaflet/index.md) - Leaflet
+- [MapLibre](masks/maplibre/index.md) - MapLibre
+- [OpenStreetMap](masks/openstreetmap/index.md) - OpenStreetMap
+- [Organic Maps](masks/organic-maps/index.md) - Organic Maps
+- [OsmAnd](masks/osmand/index.md) - OsmAnd
+- [QGIS](masks/qgis/index.md) - QGIS
+- [uMap](masks/umap/index.md) - uMap
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

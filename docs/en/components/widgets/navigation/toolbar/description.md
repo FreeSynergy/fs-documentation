@@ -1,32 +1,32 @@
-# Toolbar (Symbolleiste)
+# Toolbar
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `standard`, `kontext`, `ribbon` |
-| **Zustände** | `aktiv`, `geklebt` |
-| **Gesten** | `tap`, `long-press`, `drag` |
-| **Animationen** | `expand`, `collapse`, `fade-in` |
-| **Verwandt** | `button`, `button-group`, `menu`, `context-menu`, `rich-text-editor` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `standard`, `kontext`, `ribbon` |
+| **States** | `aktiv`, `geklebt` |
+| **Gestures** | `tap`, `long-press`, `drag` |
+| **Animations** | `expand`, `collapse`, `fade-in` |
+| **Related** | `button`, `button-group`, `menu`, `context-menu`, `rich-text-editor` |
+| **State** | documented |
 
 !!! info "Standardisierung"
     Die früheren Komponenten `context-toolbar` und `ribbon` sind als Varianten in `toolbar` aufgegangen: `standard`, `kontext`, `ribbon`.
 
-## Beschreibung
+## Description
 Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird oft direkt unter der Titelzeile platziert.
 
-## Verwendungszweck
+## Purpose
 
 - Schneller Zugriff auf häufige Funktionen
 - Konsolidierung von Aktionen in einer Leiste
 - Visuelle Organisation von Tools
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **standard** | feste Leiste mit den häufigen Aktionen |
 | **kontext** | zeigt andere Aktionen, je nachdem was ausgewählt ist |
 | **ribbon** | mehrzeilige Leiste mit benannten Gruppen (Desktop-Programme) |
@@ -38,7 +38,7 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
 - Tooltip (bei Hover)
 - Disabled States
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [menu](../menu/): das Menü verbirgt Befehle hinter einer Beschriftung,
   die Leiste zeigt sie sofort als Symbol.
@@ -64,7 +64,7 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
 ## Aktionsgruppen
 
 | Art | Beispiele |
-|-----|-----------|
+| ----- | ----------- |
 | **Datei** | Neu, Speichern, Drucken |
 | **Formatierung** | Fett, Kursiv, Unterstrichen |
 | **Navigation** | Zurück, Vor, Aktualisieren |
@@ -73,16 +73,16 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird o
 
 ## Positionen
 
-| Position | Beschreibung |
-|----------|--------------|
+| Position | Description |
+| ---------- | -------------- |
 | **Top** | Unterhalb der Titelzeile (Standard) |
 | **Sidebar** | In der Seitenleiste |
 | **Floating** | Freischwebend (z.B. im Chat) |
 | **Bottom** | Unten am Bildschirm (Mobile) |
 
-## Siehe auch
+## See also
 
-- [navigation – Übersicht](../index.md)
+- [navigation – overview](../index.md)
 - [Button Group](../../../primitives/actions/button-group/) — zusammengehörige Knöpfe
 - [Menu](../menu/) — Befehle im Menü
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

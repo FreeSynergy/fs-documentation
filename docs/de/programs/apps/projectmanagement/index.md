@@ -24,22 +24,22 @@ Dieser Bereich enthält Dokumentation für verschiedene Projektmanagement-Tools.
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/projectmanagement/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/projectmanagement/masks/<programm>/`.
 
 **dokumentiert (8 Programme):**
 
-- [Asana](skins/asana/index.md) - Asana
-- [Jira](skins/jira/index.md) - Jira
-- [OpenProject](skins/openproject/index.md) - OpenProject
-- [Planka](skins/planka/index.md) - Planka
-- [Redmine](skins/redmine/index.md) - Redmine
-- [Taiga](skins/taiga/index.md) - Taiga
-- [Trello](skins/trello/index.md) - Trello
-- [Wekan](skins/wekan/index.md) - Wekan
+- [Asana](masks/asana/index.md) - Asana
+- [Jira](masks/jira/index.md) - Jira
+- [OpenProject](masks/openproject/index.md) - OpenProject
+- [Planka](masks/planka/index.md) - Planka
+- [Redmine](masks/redmine/index.md) - Redmine
+- [Taiga](masks/taiga/index.md) - Taiga
+- [Trello](masks/trello/index.md) - Trello
+- [Wekan](masks/wekan/index.md) - Wekan
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist Projektmanagement?
 
@@ -98,3 +98,22 @@ Bei der Wahl eines Projektmanagement-Tools sollten folgende Kriterien berücksic
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Projektmanagement-Tools.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/projectmanagement/masks/<programm>/`.
+
+**dokumentiert (8 Programme):**
+
+- [Asana](masks/asana/index.md) - Asana
+- [Jira](masks/jira/index.md) - Jira
+- [OpenProject](masks/openproject/index.md) - OpenProject
+- [Planka](masks/planka/index.md) - Planka
+- [Redmine](masks/redmine/index.md) - Redmine
+- [Taiga](masks/taiga/index.md) - Taiga
+- [Trello](masks/trello/index.md) - Trello
+- [Wekan](masks/wekan/index.md) - Wekan
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

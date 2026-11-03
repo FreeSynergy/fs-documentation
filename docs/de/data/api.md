@@ -1,6 +1,6 @@
 # Daten-API (standardisiert)
 
-Alle Programme stellen ihre Daten nach demselben Muster bereit, damit Workflows, Importe und Skins ohne Sonderbehandlung funktionieren. Konkret dokumentierte Abweichungen stehen in der `api.md` des jeweiligen Programms (`apps/<kategorie>/skins/<programm>/api.md`).
+Alle Programme stellen ihre Daten nach demselben Muster bereit, damit Workflows, Importe und Skins ohne Sonderbehandlung funktionieren. Konkret dokumentierte Abweichungen stehen in der `api.md` des jeweiligen Programms (`apps/<kategorie>/masks/<programm>/api.md`).
 
 ## Übersicht
 
@@ -283,5 +283,5 @@ client.tasks.update(
 - [Standardfelder](felder.md)
 - [Datenformate](formate.md)
 - [Konventionen](konventionen.md)
-- [Desktop-Skins — API-Beispiele](../programs/platform/desktop/skins/)
+- [Desktop-Skins — API-Beispiele](../programs/platform/desktop/masks/)
 - [Workflows](../programs/suites/workflows/)

@@ -20,22 +20,22 @@ Dieser Bereich enthält Dokumentation für verschiedene Help Desk und Ticketsyst
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/helpdesk/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/helpdesk/masks/<programm>/`.
 
 **dokumentiert (8 Programme):**
 
-- [Freshdesk](skins/freshdesk/index.md) - Freshdesk
-- [GLPI](skins/glpi/index.md) - GLPI
-- [Helodesk](skins/helodesk/index.md) - Helodesk
-- [Help Scout](skins/helpscout/index.md) - Help Scout
-- [osTicket](skins/osticket/index.md) - osTicket
-- [Request Tracker (RT)](skins/request-tracker/index.md) - Request Tracker (RT)
-- [Zammad](skins/zammad/index.md) - Zammad
-- [Zendesk](skins/zendesk/index.md) - Zendesk
+- [Freshdesk](masks/freshdesk/index.md) - Freshdesk
+- [GLPI](masks/glpi/index.md) - GLPI
+- [Helodesk](masks/helodesk/index.md) - Helodesk
+- [Help Scout](masks/helpscout/index.md) - Help Scout
+- [osTicket](masks/osticket/index.md) - osTicket
+- [Request Tracker (RT)](masks/request-tracker/index.md) - Request Tracker (RT)
+- [Zammad](masks/zammad/index.md) - Zammad
+- [Zendesk](masks/zendesk/index.md) - Zendesk
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist ein Help Desk?
 
@@ -93,3 +93,22 @@ Bei der Wahl eines Help Desk-Systems sollten folgende Kriterien berücksichtigt 
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Help Desk-Systeme.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/helpdesk/masks/<programm>/`.
+
+**dokumentiert (8 Programme):**
+
+- [Freshdesk](masks/freshdesk/index.md) - Freshdesk
+- [GLPI](masks/glpi/index.md) - GLPI
+- [Helodesk](masks/helodesk/index.md) - Helodesk
+- [Help Scout](masks/helpscout/index.md) - Help Scout
+- [osTicket](masks/osticket/index.md) - osTicket
+- [Request Tracker (RT)](masks/request-tracker/index.md) - Request Tracker (RT)
+- [Zammad](masks/zammad/index.md) - Zammad
+- [Zendesk](masks/zendesk/index.md) - Zendesk
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

@@ -1,29 +1,29 @@
-# Whiteboard (Whiteboard)
+# Whiteboard
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `special` |
-| **Erbt von** | `base` |
-| **Varianten** | `zeichnung`, `formen`, `notizen`, `vorlage` |
-| **Zustände** | `gemeinsam`, `offline` |
-| **Gesten** | `drag`, `tap`, `double-tap`, `pinch`, `spread` |
-| **Animationen** | `highlight`, `fade-in` |
-| **Verwandt** | `rich-text-editor`, `image`, `map-view`, `dashboard` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `special` |
+| **Inherits from** | `base` |
+| **Variants** | `zeichnung`, `formen`, `notizen`, `vorlage` |
+| **States** | `gemeinsam`, `offline` |
+| **Gestures** | `drag`, `tap`, `double-tap`, `pinch`, `spread` |
+| **Animations** | `highlight`, `fade-in` |
+| **Related** | `rich-text-editor`, `image`, `map-view`, `dashboard` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
-## Verwendungszweck
+## Purpose
 
 - Brainstorming
 - Planung
 - Kollaboration
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **zeichnung** | freies Zeichnen mit Stift und Radierer |
 | **formen** | Rechtecke, Pfeile und Verbinder, einrastend |
 | **notizen** | Notizzettel als Karten auf der Fläche |
@@ -39,7 +39,7 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 - Export
 - Collaboration
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
   Text, hier eine Fläche.
@@ -56,9 +56,9 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 - Formen rasten ein und zeigen Ausrichtungslinien, sonst wird nichts lesbar.
 - Export als Bild **und** als bearbeitbare Daten, damit später weitergearbeitet werden kann.
 
-## Siehe auch
+## See also
 
-- [special – Übersicht](../index.md)
+- [special – overview](../index.md)
 - [Rich Text Editor](../../fields/rich-text-editor/) — Text statt Fläche
 - [Map View](../../../widgets/special/map-view/) — Fläche mit Geo-Bezug
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

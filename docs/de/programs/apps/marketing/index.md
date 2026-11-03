@@ -24,20 +24,20 @@ Dieser Bereich enthält Dokumentation für verschiedene Marketing-Tools, CRM-Sys
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/marketing/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/marketing/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [Google Analytics](skins/google-analytics/index.md) - Google Analytics
-- [Hotjar](skins/hotjar/index.md) - Hotjar
-- [Mailchimp](skins/mailchimp/index.md) - Mailchimp
-- [Matomo](skins/matomo/index.md) - Matomo
-- [Mautic](skins/mautic/index.md) - Mautic
-- [Plausible](skins/plausible/index.md) - Plausible
+- [Google Analytics](masks/google-analytics/index.md) - Google Analytics
+- [Hotjar](masks/hotjar/index.md) - Hotjar
+- [Mailchimp](masks/mailchimp/index.md) - Mailchimp
+- [Matomo](masks/matomo/index.md) - Matomo
+- [Mautic](masks/mautic/index.md) - Mautic
+- [Plausible](masks/plausible/index.md) - Plausible
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist Marketing-Automation?
 
@@ -96,3 +96,20 @@ Bei der Wahl eines Marketing-Tools sollten folgende Kriterien berücksichtigt we
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Marketing-Tools.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/marketing/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Google Analytics](masks/google-analytics/index.md) - Google Analytics
+- [Hotjar](masks/hotjar/index.md) - Hotjar
+- [Mailchimp](masks/mailchimp/index.md) - Mailchimp
+- [Matomo](masks/matomo/index.md) - Matomo
+- [Mautic](masks/mautic/index.md) - Mautic
+- [Plausible](masks/plausible/index.md) - Plausible
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

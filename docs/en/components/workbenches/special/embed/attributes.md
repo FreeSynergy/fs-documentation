@@ -3,12 +3,12 @@
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `source` | enum | `iframe` | Art der Einbettung: `app`, `widget`, `iframe` |
-| `src` | string | - | Quell-URL (nur `source = iframe`) |
+| `src` | string | - | source URL (nur `source = iframe`) |
 | `appId` | string | - | Programm-id (nur `source = app`) |
 | `config` | object | - | Konfiguration des eingebetteten Inhalts |
 | `title` | string | - | Titel der Kopfzeile |
@@ -16,10 +16,10 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 | `borderColor` | string | `#ccc` | Rand-Farbe |
 | `widgetId` | string | - | Widget-ID |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `responsive` | boolean | `true` | Fläche passt sich der Breite an |
 | `interactive` | boolean | `true` | Eingaben im eingebetteten Inhalt erlauben |
 | `ratio` | enum | `auto` | Seitenverhältnis: `auto`, `16:9`, `4:3`, `1:1` |
@@ -28,27 +28,27 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onLoad` | function | Inhalt ist bereit |
 | `onError` | function | Inhalt konnte nicht geladen werden |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `role` | string | `region` bei `app` und `widget`, `iframe` bei `iframe` |
 | `title` | string | dient zugleich als benennender Text für Hilfstechnologien |
 
 ## Kommunikation
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `postMessage` | boolean | `false` | Nachrichtenaustausch mit dem Inhalt |
 | `origin` | string | - | erlaubte Herkunft, Pflicht bei `postMessage` |
 
-## Geerbt von
+## Inherited from
 
 `id`, `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../../primitives/basics/base.md)
+[Base component](../../../primitives/basics/base.md)

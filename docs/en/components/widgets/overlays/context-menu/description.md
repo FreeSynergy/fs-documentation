@@ -1,29 +1,29 @@
-# Context Menu (Rechtsklick-Menü)
+# Context Menu
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `overlays` |
-| **Erbt von** | `base`, `menu` |
-| **Varianten** | `Standard`, `Long Press`, `Overflow Menu` |
-| **Zustände** | `open`, `sub-open` |
-| **Gesten** | `tap`, `long-press` |
-| **Animationen** | `pop-in`, `fade-out` |
-| **Verwandt** | `menu`, `toolbar`, `popover`, `select` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `overlays` |
+| **Inherits from** | `base`, `menu` |
+| **Variants** | `Standard`, `Long Press`, `Overflow Menu` |
+| **States** | `open`, `sub-open` |
+| **Gestures** | `tap`, `long-press` |
+| **Animations** | `pop-in`, `fade-out` |
+| **Related** | `menu`, `toolbar`, `popover`, `select` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion geöffnet und bietet kontextbezogene Optionen.
 
-## Verwendungszweck
+## Purpose
 
 - Kontextbezogene Aktionen anzeigen
 - Weniger wichtige Funktionen verstecken
 - Schneller Zugriff auf Aktionen für ausgewählte Elemente
 
-## Varianten
+## Variants
 
-| Variant | Beschreibung |
-|---------|--------------|
+| Variant | Description |
+| --------- | -------------- |
 | **Standard** | Rechtsklick-Menü (Desktop) |
 | **Long Press** | Lange Touch-Aktion (Mobile) |
 | **Overflow Menu** | Drei-Punkte-Menü |
@@ -35,7 +35,7 @@ Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion g
 - Keyboard-Navigation
 - Accessibility (Barrierefreiheit)
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [menu](../../navigation/menu/): ein Menü hängt an einer
   Navigationsleiste und führt meist zu Ansichten; das Kontextmenü ruft Aktionen für das
@@ -62,9 +62,9 @@ Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion g
 - **Disabled Items** - Deaktivierte Optionen
 - **Icons** - Icons für visuelle Orientierung
 
-## Siehe auch
+## See also
 
-- [overlays – Übersicht](../index.md)
+- [overlays – overview](../index.md)
 - [Menu](../../navigation/menu/) — Elternklasse
 - [Popover](../popover/) — Inhalt statt Aktionsliste
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

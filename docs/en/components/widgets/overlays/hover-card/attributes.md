@@ -3,18 +3,18 @@
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
-## Hauptattribute
+## Main attributes
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `target` | string | - | id oder Verweis auf das Ziel der Vorschau |
 | `content` | object | - | vorbefüllte Felder der Karte |
 | `placement` | enum | `top` | Seite der Karte: `top`, `bottom`, `left`, `right` |
 
-## Verhalten
+## Behaviour
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribute | Type | Default | Description |
+| ---------- | ----- | --------- | -------------- |
 | `openDelay` | number | `300` | Verzögerung bis zum Öffnen in ms |
 | `closeDelay` | number | `150` | Verzögerung bis zum Schließen in ms |
 | `pressDuration` | number | `500` | Langdruck in ms, der die Karte auf Touch öffnet |
@@ -22,21 +22,21 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 
 ## Events
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `onOpen` | function | Karte erscheint |
 | `onClose` | function | Karte verschwindet |
 
-## Barrierefreiheit
+## Accessibility
 
-| Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| Attribute | Type | Description |
+| ---------- | ----- | -------------- |
 | `role` | string | `tooltip` |
 | `aria-describedby` | string | id der Karte, auf den der Auslöser zeigt |
 | `focusable` | boolean | Karte ist über Tastatur erreichbar, wenn `interactive` |
 
-## Geerbt von
+## Inherited from
 
 `id`, `visible`, `enabled`, `size`, `theme`, `rounded`, `state`, `tabIndex`,
 `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../../primitives/basics/base.md)
+[Base component](../../../primitives/basics/base.md)

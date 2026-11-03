@@ -19,20 +19,20 @@ Dieser Bereich enthält Dokumentation für verschiedene Demokratie- und Beteilig
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/democracy/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/democracy/masks/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [Adhocracy4](skins/adhocracy4/index.md) - Adhocracy4
-- [Circo](skins/circo/index.md) - Circo
-- [Consul](skins/consul/index.md) - Consul
-- [Decidim](skins/decidim/index.md) - Decidim
-- [LiquidFeedback](skins/liquid-feedback/index.md) - LiquidFeedback
-- [Pol.is](skins/polis/index.md) - Pol.is
+- [Adhocracy4](masks/adhocracy4/index.md) - Adhocracy4
+- [Circo](masks/circo/index.md) - Circo
+- [Consul](masks/consul/index.md) - Consul
+- [Decidim](masks/decidim/index.md) - Decidim
+- [LiquidFeedback](masks/liquid-feedback/index.md) - LiquidFeedback
+- [Pol.is](masks/polis/index.md) - Pol.is
 
-Übersicht: [Skin-Verzeichnis](skins/index.md)
+Übersicht: [Skin-Verzeichnis](masks/index.md)
 
-Referenzschema: [Wiki-Skins](../../apps/wiki/skins/index.md) · [Desktop-Skins](../../platform/desktop/skins/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Was ist Demokratie-System?
 
@@ -88,3 +88,20 @@ Bei der Wahl eines Demokratie-Systems sollten folgende Kriterien berücksichtigt
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Demokratie-Systeme.
+
+## Masken-Dokumentation
+
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/democracy/masks/<programm>/`.
+
+**dokumentiert (6 Programme):**
+
+- [Adhocracy4](masks/adhocracy4/index.md) - Adhocracy4
+- [Circo](masks/circo/index.md) - Circo
+- [Consul](masks/consul/index.md) - Consul
+- [Decidim](masks/decidim/index.md) - Decidim
+- [LiquidFeedback](masks/liquid-feedback/index.md) - LiquidFeedback
+- [Pol.is](masks/polis/index.md) - Pol.is
+
+Übersicht: [Masken-Verzeichnis](masks/index.md)
+
+Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)

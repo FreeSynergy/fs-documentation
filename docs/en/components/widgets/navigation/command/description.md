@@ -1,33 +1,33 @@
-# Command (Befehlspalette)
+# Command
 
-| Feld | Wert |
-|------|------|
-| **Kategorie** | `navigation` |
-| **Erbt von** | `base` |
-| **Varianten** | `palette`, `inline` |
-| **Zustände** | `open`, `empty` |
-| **Gesten** | `tap`, `type` |
-| **Animationen** | `fade-in`, `expand` |
-| **Verwandt** | `search-field`, `menu`, `modal` |
-| **Rolle** | `dialog` |
-| **Status** | dokumentiert |
+| Field | Value |
+| ------ | ------ |
+| **Category** | `navigation` |
+| **Inherits from** | `base` |
+| **Variants** | `palette`, `inline` |
+| **States** | `open`, `empty` |
+| **Gestures** | `tap`, `type` |
+| **Animations** | `fade-in`, `expand` |
+| **Related** | `search-field`, `menu`, `modal` |
+| **Role** | `dialog` |
+| **State** | documented |
 
-## Beschreibung
+## Description
 
 Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste.
 Sie startet Programme, wechselt Ansichten und führt Aktionen aus — erreicht durch
 Tastenkürzel statt durch Menüsuche.
 
-## Verwendungszweck
+## Purpose
 
 - Schneller Zugriff auf Programme und Ansichten im Desktop-Client
 - Aktionen ausführen, ohne den Kontext zu verlassen
 - Kurzhilfe: welche Befehle in dieser Ansicht verfügbar sind
 
-## Varianten
+## Variants
 
-| Variante | Beschreibung |
-|----------|--------------|
+| Variant | Description |
+| ---------- | -------------- |
 | **palette** | zentriertes Overlay, per `Strg`/`Cmd` + `K` |
 | **inline** | Palette eingebettet in eine Seitenleiste oder Werkzeugleiste |
 
@@ -38,7 +38,7 @@ Tastenkürzel statt durch Menüsuche.
 - Letzte und häufige Befehle stehen oben, auch ohne Eingabe
 - Tastaturnavigation: `Pfeil hoch/runter`, `Enter` ausführen, `Esc` schließen
 
-## Abgrenzung
+## Distinction
 
 - **Nicht verwechseln mit** [search-field](../../../primitives/fields/search-field/): Suche findet Inhalte,
   die Palette führt Aktionen aus.
@@ -51,8 +51,8 @@ Tastenkürzel statt durch Menüsuche.
 - Pro Befehl ein Kürzel anzeigen, wenn eines existiert.
 - Ergebnisse nach 50 Treffern abschneiden und zum Präzisieren auffordern.
 
-## Siehe auch
+## See also
 
 - [Search Field](../../../primitives/fields/search-field/)
 - [Menu](../menu/)
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base component](../../../primitives/basics/base.md)

@@ -1,0 +1,96 @@
+# Wiki Mask Documentation
+
+## Overview
+
+This directory documents the masks (rebuildable surface and interfaces) of foreign wiki systems and developer tools — menu items, features, editors, structure. The programs themselves are not FreeSynergy developments.
+
+## Included Documentation
+
+- [Wiki.js](/en/programs/apps/wiki/masks/wikijs/index.md) - Modern, lightweight wiki software
+- [XWiki](/en/programs/apps/wiki/masks/xwiki/index.md) - Enterprise wiki platform
+- [MediaWiki](/en/programs/apps/wiki/masks/mediawiki/index.md) - The most popular wiki software (Wikipedia)
+- [Tango.io](/en/programs/apps/wiki/masks/tango.io/index.md) - Knowledge management platform
+- [Notion](/en/programs/apps/wiki/masks/notion/index.md) - All-in-one collaboration platform
+- [Confluence](/en/programs/apps/wiki/masks/confluence/index.md) - Enterprise wiki by Atlassian
+- [VSCodium](/en/programs/apps/wiki/masks/vscodium/index.md) - Open-source code editor (VS Code fork)
+
+## Directory Structure
+
+```
+docs/en/programs/apps/wiki/masks/
+├── index.md              (this file)
+├── wikijs/
+│   ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+├── xwiki/
+│   ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+├── mediawiki/
+│   ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+├── tango.io/
+│   ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+├── notion/
+│   ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+├── confluence/
+│   ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+└── vscodium/
+    ├── menu.md
+│   ├── features.md
+│   ├── description.md
+│   └── structure.md
+```
+
+## Content of Each Documentation
+
+Each project directory contains four files:
+
+### menu.md
+- All main menu items
+- Context menus
+- User rights-dependent menus
+
+### features.md
+- Editor features
+- What the editor can do
+- What the editor CANNOT do
+- Extensions and plugins
+- Shortcuts
+
+### description.md
+- What the program does
+- Advantages
+- Differentiation from other systems
+- Technical details
+- Who the program is suitable for
+
+### structure.md
+- Window structure
+- UI/UX design
+- Editor structure
+- Responsive design
+- Accessibility
+
+## Notes
+
+- All documentation is written in English
+- Status: the `en` mirror of this category is incomplete — only this index exists; the
+  program folders are still only documented under `docs/de/` (see `todo/translator.md`)
+- Content is suitable for users and administrators
+- Editor descriptions include syntax highlighting, snippets, Git integration, and extensions
+- VSCodium is an open-source VS Code fork with identical features but without Microsoft telemetry

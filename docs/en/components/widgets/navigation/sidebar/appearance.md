@@ -1,6 +1,6 @@
-# Sidebar - Aussehen
+# Sidebar - Appearance
 
-## Grundlayout
+## Base layout
 
 ```
 ┌─────────────┐
@@ -20,47 +20,47 @@
 └─────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **angeheftet** | volle Breite mit Namen, Inhalt rückt daneben |
 | **ikonenleiste** | schmaler Streifen mit Symbolen, kein Text |
 | **einklappbar** | breit, Klappknopf im Kopf; zugeklappt wie `ikonenleiste` |
 
-## Größen
+## Sizes
 
-| Größe | Breite | Icon | Schrift | Verwendung |
-|-------|--------|------|---------|------------|
+| Size | Width | Icon | Schrift | Use |
+| ------- | -------- | ------ | --------- | ------------ |
 | Desktop | 240 px | 20 px | 14 px | Standard |
 | eingeklappt | 64 px | 20 px | – | Ikonenleiste |
 | mobil | 100 % | 20 px | 14 px | Overlay (Drawer) |
 
 Abstände pro Punkt: 12 px oben/unten, 16 px links; Gruppenaustand 8 px.
 
-## Farben und Zustände
+## Colours and states
 
-| Element | Farbe | Hinweis |
-|---------|-------|---------|
+| Element | Colour | Hinweis |
+| --------- | ------- | --------- |
 | Hintergrund | `--sidebar-bg` | Meist dunkler als Hauptinhalt |
 | Text | `--sidebar-text` | Kontrast zum Hintergrund |
 | Hover | `--sidebar-hover` | subtile Hervorhebung |
 | Active | `--sidebar-active` | deutliche Markierung |
 | Divider | `--sidebar-divider` | Trennlinie zwischen Gruppen |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `background` | Punkt bekommt eine Fläche, Text bleibt lesbar |
 | `ring` | Fokus-Ring bei Tastaturnavigation |
 | `tooltip` | Name erscheint bei Hover an der Ikonenleiste |
 | `indicator` | schmaler Balken am linken Rand des aktiven Punkts |
 
-## Reaktiv
+## Responsive
 
-| Breakpoint | Verhalten |
-|------------|-----------|
+| Breakpoint | Behaviour |
+| ------------ | ----------- |
 | Desktop (>768px) | Volle Sidebar sichtbar |
 | Tablet (480-768px) | Optional collapsed oder Drawer |
 | Mobile (<480px) | Drawer oder Bottom Navigation |

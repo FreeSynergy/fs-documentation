@@ -1,6 +1,6 @@
-# Code Editor - Aussehen
+# Code Editor - Appearance
 
-## Grundlayout
+## Base layout
 Ein Code Editor ist ein Editor für Quellcode.
 
 ```
@@ -11,41 +11,41 @@ Ein Code Editor ist ein Editor für Quellcode.
 └─────────────────────────────────────────┘
 ```
 
-## Varianten
+## Variants
 
-| Variante | Aussehen |
-|----------|----------|
+| Variant | Appearance |
+| ---------- | ---------- |
 | **voll** | Zeilennummern links, Vorschlageliste am Cursor |
 | **nur-lesen** | keine Cursor, Kopieren-Knopf oben rechts |
 | **vergleich** | zwei Hälften, geänderte Zeilen rot und grün markiert |
 
-## Größen
+## Sizes
 
-| Größe | Höhe | Verwendung |
-|-------|------|------------|
+| Size | Height | Use |
+| ------- | ------ | ------------ |
 | Small | 200px | Inline |
 | Medium | 400px | Standard |
 | Large | 600px | Featured |
 | Full | 100% | Volle Breite |
 
-## Farben und Zustände
+## Colours and states
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| State | Colour | Description |
+| -------- | ------- | -------------- |
 | **Background** | Dunkel | Dunkles Theme |
 | **Text** | Hell | Text-Farbe |
 | **Keyword** | Lila | Schlüsselwörter |
 | **String** | Orange | Strings |
 | **Comment** | Grau | Kommentare |
 
-## Hover- und Fokus-Effekte
+## Hover and focus effects
 
-| Effekt | Beschreibung |
-|--------|--------------|
+| Effect | Description |
+| -------- | -------------- |
 | `line-number` | Zeilennummer hervorheben |
 | `cursor` | Cursor ändern |
 
-## Reaktiv
+## Responsive
 
 - Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt waagerecht (`swipe`).
 - Unter `small` Bildschirmbreite wird die Vorschlageliste über die Tastatur-blende gesetzt,
@@ -55,8 +55,8 @@ Ein Code Editor ist ein Editor für Quellcode.
 
 ## Features
 
-| Feature | Beschreibung |
-|---------|--------------|
+| Feature | Description |
+| --------- | -------------- |
 | **Syntax Highlighting** | Farbige Hervorhebung |
 | **Line Numbers** | Zeilennummern |
 | **Auto-completion** | Autovervollständigung |
@@ -65,8 +65,8 @@ Ein Code Editor ist ein Editor für Quellcode.
 
 ## Themes
 
-| Theme | Beschreibung |
-|-------|--------------|
+| Theme | Description |
+| ------- | -------------- |
 | **Dark** | Dunkles Theme |
 | **Light** | Helles Theme |
 | **Custom** | Benutzerdefiniert |
