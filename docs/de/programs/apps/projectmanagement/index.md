@@ -24,7 +24,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Projektmanagement-Tools.
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/projectmanagement/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/projectmanagement/skins/<programm>/`.
 
 **dokumentiert (8 Programme):**
 

@@ -8,17 +8,17 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 
 ## Enthaltene Dokumentationen
 
-- [draw.io -](drawio/index.md)
-- [Excalidraw -](excalidraw/index.md)
+- [draw.io](drawio/index.md)
+- [Excalidraw](excalidraw/index.md)
 - [Miro](miro/index.md)
 - [Mural](mural/index.md)
 - [OpenBoard](openboard/index.md)
-- [tldraw -](tldraw/index.md)
+- [tldraw](tldraw/index.md)
 
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/whiteboards/skins/
+docs/de/programs/apps/whiteboards/skins/
 ├── index.md              (diese Datei)
 ├── drawio/   (index, menu, features, description, structure, shortcuts, api)
 ├── excalidraw/   (index, menu, features, description, structure, shortcuts, api)

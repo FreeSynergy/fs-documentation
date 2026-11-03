@@ -19,7 +19,7 @@ Streaming-Systeme nehmen Live- oder vorproduziertes Videomaterial an, verarbeite
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/streaming/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/streaming/skins/<programm>/`.
 
 **dokumentiert (10 Programme):**
 
@@ -30,8 +30,8 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 - [MistServer](skins/mistserver/index.md) - MistServer
 - [nginx-rtmp-module](skins/nginx-rtmp-module/index.md) - nginx-rtmp-module
 - [OBS Studio](skins/obs-studio/index.md) - OBS Studio
-- [Restream](skins/restream/index.md) - Restream (SaaS)
-- [Restreamer](skins/restreamer/index.md) - Docker Restreamer
+- [Restream](skins/restream/index.md) - Restream
+- [Restreamer](skins/restreamer/index.md) - Restreamer
 - [Wowza Streaming Engine](skins/wowza/index.md) - Wowza Streaming Engine
 
 Übersicht: [Skin-Verzeichnis](skins/index.md)

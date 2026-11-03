@@ -22,7 +22,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/streaming/skins/
+docs/de/programs/apps/streaming/skins/
 ├── index.md              (diese Datei)
 ├── ant-media-server/   (index, menu, features, description, structure, shortcuts, api)
 ├── ffmpeg/   (index, menu, features, description, structure, shortcuts, api)

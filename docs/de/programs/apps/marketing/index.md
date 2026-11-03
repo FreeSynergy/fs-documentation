@@ -24,7 +24,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Marketing-Tools, CRM-Sys
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/marketing/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/marketing/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 

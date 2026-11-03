@@ -20,7 +20,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/gallery/skins/
+docs/de/programs/apps/gallery/skins/
 ├── index.md              (diese Datei)
 ├── coppermine/   (index, menu, features, description, structure, shortcuts, api)
 ├── damselfly/   (index, menu, features, description, structure, shortcuts, api)

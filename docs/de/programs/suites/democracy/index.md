@@ -19,7 +19,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Demokratie- und Beteilig
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/democracy/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/democracy/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 

@@ -19,7 +19,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/maps/skins/
+docs/de/programs/apps/maps/skins/
 ├── index.md              (diese Datei)
 ├── leaflet/   (index, menu, features, description, structure, shortcuts, api)
 ├── maplibre/   (index, menu, features, description, structure, shortcuts, api)

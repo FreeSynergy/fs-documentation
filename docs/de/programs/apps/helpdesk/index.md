@@ -20,7 +20,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Help Desk und Ticketsyst
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/helpdesk/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/helpdesk/skins/<programm>/`.
 
 **dokumentiert (8 Programme):**
 

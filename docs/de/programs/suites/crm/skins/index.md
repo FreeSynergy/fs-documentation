@@ -18,7 +18,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/crm/skins/
+docs/de/programs/suites/crm/skins/
 ├── index.md              (diese Datei)
 ├── civicrm/   (index, menu, features, description, structure, shortcuts, api)
 ├── espocrm/   (index, menu, features, description, structure, shortcuts, api)

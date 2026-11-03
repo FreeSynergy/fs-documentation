@@ -24,7 +24,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Kartensysteme und GIS-Sy
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/maps/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/maps/skins/<programm>/`.
 
 **dokumentiert (7 Programme):**
 

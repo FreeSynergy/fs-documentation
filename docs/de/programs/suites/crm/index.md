@@ -24,7 +24,7 @@ Dieser Bereich enthält Dokumentation für verschiedene CRM-Systeme (Customer Re
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/crm/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/crm/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 

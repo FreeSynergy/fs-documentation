@@ -18,7 +18,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/democracy/skins/
+docs/de/programs/suites/democracy/skins/
 ├── index.md              (diese Datei)
 ├── adhocracy4/   (index, menu, features, description, structure, shortcuts, api)
 ├── circo/   (index, menu, features, description, structure, shortcuts, api)

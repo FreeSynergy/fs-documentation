@@ -24,7 +24,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Kontakt- und CRM-Systeme
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/contact/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/contact/skins/<programm>/`.
 
 **dokumentiert (4 Programme):**
 

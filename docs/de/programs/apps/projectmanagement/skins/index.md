@@ -20,7 +20,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/projectmanagement/skins/
+docs/de/programs/apps/projectmanagement/skins/
 ├── index.md              (diese Datei)
 ├── asana/   (index, menu, features, description, structure, shortcuts, api)
 ├── jira/   (index, menu, features, description, structure, shortcuts, api)

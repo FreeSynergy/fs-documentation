@@ -24,15 +24,15 @@ Dieser Bereich enthält Dokumentation für verschiedene Kalender- und Zeitmanage
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/calendar/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/calendar/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [Baïkal/Davical](skins/davical/index.md) - Baïkal/Davical
+- [DAViCal](skins/davical/index.md) - DAViCal
 - [Google Kalender](skins/google-calendar/index.md) - Google Kalender
-- [Merkuro](skins/merkuro/index.md) - Merkuro (ehemals Kalendar)
+- [Merkuro Calendar](skins/merkuro/index.md) - Merkuro Calendar
 - [Nextcloud Calendar](skins/nextcloud-calendar/index.md) - Nextcloud Calendar
-- [Outlook Kalender](skins/outlook-calendar/index.md) - Outlook Kalender
+- [Outlook-Kalender](skins/outlook-calendar/index.md) - Outlook-Kalender
 - [GNOME Planner](skins/planner/index.md) - GNOME Planner
 
 Übersicht: [Skin-Verzeichnis](skins/index.md)

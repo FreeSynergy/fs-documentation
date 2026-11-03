@@ -15,7 +15,7 @@ Marktplätze sind Plattformen, auf denen **verschiedene Menschen und Organisatio
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/marketplace/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/marketplace/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 

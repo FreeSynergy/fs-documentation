@@ -16,7 +16,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/contact/skins/
+docs/de/programs/apps/contact/skins/
 ├── index.md              (diese Datei)
 ├── gnome-contacts/   (index, menu, features, description, structure, shortcuts, api)
 ├── kaddressbook/   (index, menu, features, description, structure, shortcuts, api)

@@ -18,7 +18,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/marketing/skins/
+docs/de/programs/apps/marketing/skins/
 ├── index.md              (diese Datei)
 ├── google-analytics/   (index, menu, features, description, structure, shortcuts, api)
 ├── hotjar/   (index, menu, features, description, structure, shortcuts, api)

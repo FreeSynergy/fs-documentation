@@ -19,16 +19,16 @@ Dieser Bereich enthält Dokumentation für verschiedene Whiteboard- und Kollabor
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/whiteboards/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/whiteboards/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 
-- [draw.io -](skins/drawio/index.md) - draw.io -
-- [Excalidraw -](skins/excalidraw/index.md) - Excalidraw -
+- [draw.io](skins/drawio/index.md) - draw.io
+- [Excalidraw](skins/excalidraw/index.md) - Excalidraw
 - [Miro](skins/miro/index.md) - Miro
 - [Mural](skins/mural/index.md) - Mural
 - [OpenBoard](skins/openboard/index.md) - OpenBoard
-- [tldraw -](skins/tldraw/index.md) - tldraw -
+- [tldraw](skins/tldraw/index.md) - tldraw
 
 Übersicht: [Skin-Verzeichnis](skins/index.md)
 

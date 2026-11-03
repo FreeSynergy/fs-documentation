@@ -18,7 +18,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/workflows/skins/
+docs/de/programs/suites/workflows/skins/
 ├── index.md              (diese Datei)
 ├── apache-airflow/   (index, menu, features, description, structure, shortcuts, api)
 ├── make/   (index, menu, features, description, structure, shortcuts, api)

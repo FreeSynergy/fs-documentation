@@ -24,7 +24,7 @@ Dieser Bereich enthält Dokumentation für verschiedene Workflow-Automatisierung
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/workflows/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/workflows/skins/<programm>/`.
 
 **dokumentiert (6 Programme):**
 

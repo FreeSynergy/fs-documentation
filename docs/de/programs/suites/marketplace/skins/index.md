@@ -18,7 +18,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/marketplace/skins/
+docs/de/programs/suites/marketplace/skins/
 ├── index.md              (diese Datei)
 ├── arcemall/   (index, menu, features, description, structure, shortcuts, api)
 ├── cs-cart-multivendor/   (index, menu, features, description, structure, shortcuts, api)

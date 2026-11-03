@@ -17,11 +17,11 @@ Foto-Galerien verwalten Bild- und Videosammlungen: Sie indexieren Bestände, erz
 
 ## Skin-Dokumentation
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `apps/gallery/skins/<programm>/`.
+Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/gallery/skins/<programm>/`.
 
 **dokumentiert (8 Programme):**
 
-- [Coppermine](skins/coppermine/index.md) - Coppermine Photo Gallery
+- [Coppermine](skins/coppermine/index.md) - Coppermine
 - [Damselfly](skins/damselfly/index.md) - Damselfly
 - [Immich](skins/immich/index.md) - Immich
 - [LibrePhotos](skins/librephotos/index.md) - LibrePhotos

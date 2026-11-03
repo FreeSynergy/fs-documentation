@@ -20,7 +20,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/helpdesk/skins/
+docs/de/programs/apps/helpdesk/skins/
 ├── index.md              (diese Datei)
 ├── freshdesk/   (index, menu, features, description, structure, shortcuts, api)
 ├── glpi/   (index, menu, features, description, structure, shortcuts, api)

@@ -18,7 +18,7 @@ Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen
 ## Verzeichnisstruktur
 
 ```
-docs/de/apps/erp/skins/
+docs/de/programs/suites/erp/skins/
 ├── index.md              (diese Datei)
 ├── axelor/   (index, menu, features, description, structure, shortcuts, api)
 ├── dolibarr/   (index, menu, features, description, structure, shortcuts, api)
