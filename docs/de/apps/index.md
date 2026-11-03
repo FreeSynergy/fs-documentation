@@ -45,8 +45,8 @@ Referenzbeispiele: [Wiki/Skins](wiki/skins/), [Messenger/Skins](messenger/skins/
 | Bereich | Bezug zu Programmen |
 |---------|---------------------|
 | [Komponenten](../components/) | UI-Elemente, die in den Oberflächen verwendet werden |
-| [Gesten](../gestures/) | Interaktionen in Touch-Oberflächen |
-| [Animationen](../animations/) | Übergänge und Feedback in den Oberflächen |
+| [Gesten](../interactions/gestures/) | Interaktionen in Touch-Oberflächen |
+| [Animationen](../interactions/animations/) | Übergänge und Feedback in den Oberflächen |
 | [Standardisierte Daten](../data/) | Felder, Modelle und das API-Muster aller Programme |
 
 ## Neue Programme anlegen

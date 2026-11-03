@@ -59,5 +59,5 @@ von selbst.
 - [overlays – Übersicht](../index.md)
 - [Popover](../popover/)
 - [Basiskomponente](../../basics/base/)
-- [Gesten](../../../gestures/)
-- [Animationen](../../../animations/)
+- [Gesten](../../../interactions/gestures/)
+- [Animationen](../../../interactions/animations/)

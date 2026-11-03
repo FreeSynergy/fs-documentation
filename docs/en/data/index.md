@@ -80,7 +80,7 @@ docs/en/data/
 
 ## See also
 
-- [Gestures](../gestures/index.md) — interaction data (thresholds, callbacks)
-- [Animations](../animations/index.md) — animation attributes and durations
+- [Gestures](../interactions/gestures/index.md) — interaction data (thresholds, callbacks)
+- [Animations](../interactions/animations/index.md) — animation attributes and durations
 - [Wiki](../apps/wiki/index.md) — program with its own skins
 - [Messenger](../apps/messenger/index.md) — program with its own skins

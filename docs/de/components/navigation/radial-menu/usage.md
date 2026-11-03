@@ -137,5 +137,5 @@ geschlossen        Hover                Unterpunkt aktiv
 
 - [Radial Menu – Beschreibung](./description.md)
 - [Attribute](./attributes.md)
-- [radial-out](../../../animations/entrance/radial-out/) und [radial-in](../../../animations/exit/radial-in/)
+- [radial-out](../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../interactions/animations/exit/radial-in/)
 - [Floating Action Button](../../actions/floating-action-button/)

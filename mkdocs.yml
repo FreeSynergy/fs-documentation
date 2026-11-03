@@ -76,33 +76,33 @@ nav:
   - en/apps/erp/: en/apps/erp/index.md
   - de/apps/workflows/: de/apps/workflows/index.md
   - en/apps/workflows/: en/apps/workflows/index.md
-  - de/gestures/:
-      - de/gestures/index.md
-      - de/gestures/tap/: de/gestures/tap/index.md
-      - de/gestures/swipe/: de/gestures/swipe/index.md
-      - de/gestures/transform/: de/gestures/transform/index.md
-      - de/gestures/special/: de/gestures/special/index.md
-      - de/gestures/device/: de/gestures/device/index.md
-      - de/gestures/combined/: de/gestures/combined/index.md
-  - en/gestures/:
-      - en/gestures/index.md
-      - en/gestures/tap/: en/gestures/tap/index.md
-      - en/gestures/swipe/: en/gestures/swipe/index.md
-      - en/gestures/transform/: en/gestures/transform/index.md
-      - en/gestures/special/: en/gestures/special/index.md
-      - en/gestures/device/: en/gestures/device/index.md
-      - en/gestures/combined/: en/gestures/combined/index.md
-  - de/animations/:
-      - de/animations/index.md
-      - de/animations/entrance/: de/animations/entrance/index.md
-      - de/animations/exit/: de/animations/exit/index.md
-      - de/animations/feedback/: de/animations/feedback/index.md
-      - de/animations/loop/: de/animations/loop/index.md
-      - de/animations/loading/: de/animations/loading/index.md
-      - de/animations/transition/: de/animations/transition/index.md
-      - de/animations/movement/: de/animations/movement/index.md
-      - de/animations/organization/: de/animations/organization/index.md
-  - en/animations/: en/animations/index.md
+  - de/interactions/gestures/:
+      - de/interactions/gestures/index.md
+      - de/interactions/gestures/tap/: de/interactions/gestures/tap/index.md
+      - de/interactions/gestures/swipe/: de/interactions/gestures/swipe/index.md
+      - de/interactions/gestures/transform/: de/interactions/gestures/transform/index.md
+      - de/interactions/gestures/special/: de/interactions/gestures/special/index.md
+      - de/interactions/gestures/device/: de/interactions/gestures/device/index.md
+      - de/interactions/gestures/combined/: de/interactions/gestures/combined/index.md
+  - en/interactions/gestures/:
+      - en/interactions/gestures/index.md
+      - en/interactions/gestures/tap/: en/interactions/gestures/tap/index.md
+      - en/interactions/gestures/swipe/: en/interactions/gestures/swipe/index.md
+      - en/interactions/gestures/transform/: en/interactions/gestures/transform/index.md
+      - en/interactions/gestures/special/: en/interactions/gestures/special/index.md
+      - en/interactions/gestures/device/: en/interactions/gestures/device/index.md
+      - en/interactions/gestures/combined/: en/interactions/gestures/combined/index.md
+  - de/interactions/animations/:
+      - de/interactions/animations/index.md
+      - de/interactions/animations/entrance/: de/interactions/animations/entrance/index.md
+      - de/interactions/animations/exit/: de/interactions/animations/exit/index.md
+      - de/interactions/animations/feedback/: de/interactions/animations/feedback/index.md
+      - de/interactions/animations/loop/: de/interactions/animations/loop/index.md
+      - de/interactions/animations/loading/: de/interactions/animations/loading/index.md
+      - de/interactions/animations/transition/: de/interactions/animations/transition/index.md
+      - de/interactions/animations/movement/: de/interactions/animations/movement/index.md
+      - de/interactions/animations/organization/: de/interactions/animations/organization/index.md
+  - en/interactions/animations/: en/interactions/animations/index.md
   - de/data/: de/data/index.md
   - en/data/: en/data/index.md
 # BEGIN components nav

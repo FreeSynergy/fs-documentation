@@ -115,5 +115,5 @@ Fächer geklemmt.
 - [Menu](../menu/) — Elternklasse
 - [Context Menu](../../overlays/context-menu/) — dieselben Punkte, linear
 - [Floating Action Button](../../actions/floating-action-button/) — Anker für `facher`
-- [radial-out](../../../animations/entrance/radial-out/) und [radial-in](../../../animations/exit/radial-in/)
+- [radial-out](../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../interactions/animations/exit/radial-in/)
 - [Basiskomponente](../../basics/base/)

@@ -183,4 +183,4 @@ Regeln für die Eckzahl:
 - [Radial Menu – Beschreibung](./description.md)
 - [Attribute](./attributes.md)
 - [Verwendung](./usage.md)
-- [radial-out](../../../animations/entrance/radial-out/) und [radial-in](../../../animations/exit/radial-in/)
+- [radial-out](../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../interactions/animations/exit/radial-in/)

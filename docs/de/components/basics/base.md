@@ -21,8 +21,8 @@ sie ist für Menschen lesbar **und** kann von `scripts/check_components.py` ausg
 | **Erbt von** | Elternklassen, von `base` ausgehend | `base`, `text-input` |
 | **Varianten** | Varianten auf derselben Seite | `simple`, `autocomplete`, `filter` |
 | **Zustände** | zustätzliche Zustände gegenüber `base` | `loading`, `error` |
-| **Gesten** | Bezug zu [Gesten](../../gestures/) | `tap`, `type` |
-| **Animationen** | Bezug zu [Animationen](../../animations/) | `fade-in`, `expand` |
+| **Gesten** | Bezug zu [Gesten](../../interactions/gestures/) | `tap`, `type` |
+| **Animationen** | Bezug zu [Animationen](../../interactions/animations/) | `fade-in`, `expand` |
 | **Verwandt** | Abgrenzung und Querverweise | `search-input`, `combobox` |
 | **Status** | `dokumentiert` / `nur Skizze` / `fehlt` | `dokumentiert` |
 
@@ -79,8 +79,8 @@ pro Zustand visuell ändert; Komponenten dürfen eigene Zustände ergänzen.
 | `onClick` | function | Auslösen per Zeiger oder Tastatur |
 | `onFocus` | function | Fokus erhalten |
 | `onBlur` | function | Fokus verloren |
-| `gesture` | string[] | unterstützte Gesten (siehe [Gesten](../../gestures/)) |
-| `animation` | string | Übergang beim Ein-/Ausblenden (siehe [Animationen](../../animations/)) |
+| `gesture` | string[] | unterstützte Gesten (siehe [Gesten](../../interactions/gestures/)) |
+| `animation` | string | Übergang beim Ein-/Ausblenden (siehe [Animationen](../../interactions/animations/)) |
 
 ### Barrierefreiheit
 
@@ -130,5 +130,5 @@ Attributnamen `camelCase` englisch.
 
 - [Basics – Übersicht](./index.md)
 - [Komponenten-Übersicht](../index.md)
-- [Gesten](../../gestures/) und [Animationen](../../animations/)
+- [Gesten](../../interactions/gestures/) und [Animationen](../../interactions/animations/)
 - [Standardisierte Daten](../../data/) — gleiche Idee, nur für Felder und Typen
