@@ -9,10 +9,11 @@ Modell: qwen3.8 · Scope: Struktur, Konventionen, physische Umzüge
 - CONVENTIONS.md + ADRs 0001–0004 (2026-11-03)
 - `scripts/migrate_links.py` geschrieben und getestet (2026-11-03)
 - `interactions/` umgesetzt: gestures + animations (de+en) umgezogen, 63 Links, Nav (2026-11-03)
+- `conventions/` umbenannt (konventionen -> conventions, KONVENTIONEN.md -> CONVENTIONS.md) (2026-11-03)
+- `programs/` umgesetzt: apps(11)/suites(5)/platform(desktop+crates), 473 Links, Nav; `crates/` -> platform (2026-11-03)
 
 ## offen
-- `programs/` aus `apps/`: Level apps/suites/platform vergeben, Kategorien zuordnen, Verweise + Nav (mit migrate_links) · Ebene 4–6 · Status: offen
+- `scripts/gen_skin_indexes.py` an `programs/<level>/` anpassen (ROOT + Pfadtexte), dann Skin-Indizes neu erzeugen (Pfadnotizen `docs/de/apps/...` sind veraltet, aber keine defekten Links) · Status: offen
 - `interactions/index.md` als Landing-Page ergaenzen · Status: offen (optional)
 - `components/` Bänder primitives/widgets/workbenches physisch umsetzen + `gen_component_indexes.py` ans Band-Modell anpassen · Ebene 1–3 · Status: offen
 - `SYSTEM.md` aufloesen: normative Teile nach conventions/, Rest nach docs/de Beitragend · Status: offen
-- `crates/` (untracked) später nach `programs/platform/` · Status: offen
