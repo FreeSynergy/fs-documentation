@@ -35,20 +35,20 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | confluence | programs/apps/wiki/masks/confluence/structure.md | [ ] offen |
 | contact (Index) | programs/apps/contact/index.md | [x] übersetzt |
 | contact Masks (Index) | programs/apps/contact/masks/index.md | [x] übersetzt |
-| coppermine | programs/apps/gallery/masks/coppermine/api.md | [ ] offen |
-| coppermine | programs/apps/gallery/masks/coppermine/description.md | [ ] offen |
-| coppermine | programs/apps/gallery/masks/coppermine/features.md | [ ] offen |
+| coppermine | programs/apps/gallery/masks/coppermine/api.md | [x] übersetzt |
+| coppermine | programs/apps/gallery/masks/coppermine/description.md | [x] übersetzt |
+| coppermine | programs/apps/gallery/masks/coppermine/features.md | [x] übersetzt |
 | coppermine | programs/apps/gallery/masks/coppermine/index.md | [x] übersetzt |
-| coppermine | programs/apps/gallery/masks/coppermine/menu.md | [ ] offen |
-| coppermine | programs/apps/gallery/masks/coppermine/shortcuts.md | [ ] offen |
-| coppermine | programs/apps/gallery/masks/coppermine/structure.md | [ ] offen |
-| damselfly | programs/apps/gallery/masks/damselfly/api.md | [ ] offen |
-| damselfly | programs/apps/gallery/masks/damselfly/description.md | [ ] offen |
-| damselfly | programs/apps/gallery/masks/damselfly/features.md | [ ] offen |
+| coppermine | programs/apps/gallery/masks/coppermine/menu.md | [x] übersetzt |
+| coppermine | programs/apps/gallery/masks/coppermine/shortcuts.md | [x] übersetzt |
+| coppermine | programs/apps/gallery/masks/coppermine/structure.md | [x] übersetzt |
+| damselfly | programs/apps/gallery/masks/damselfly/api.md | [x] übersetzt |
+| damselfly | programs/apps/gallery/masks/damselfly/description.md | [x] übersetzt |
+| damselfly | programs/apps/gallery/masks/damselfly/features.md | [x] übersetzt |
 | damselfly | programs/apps/gallery/masks/damselfly/index.md | [x] übersetzt |
-| damselfly | programs/apps/gallery/masks/damselfly/menu.md | [ ] offen |
-| damselfly | programs/apps/gallery/masks/damselfly/shortcuts.md | [ ] offen |
-| damselfly | programs/apps/gallery/masks/damselfly/structure.md | [ ] offen |
+| damselfly | programs/apps/gallery/masks/damselfly/menu.md | [x] übersetzt |
+| damselfly | programs/apps/gallery/masks/damselfly/shortcuts.md | [x] übersetzt |
+| damselfly | programs/apps/gallery/masks/damselfly/structure.md | [x] übersetzt |
 | drawio | programs/apps/whiteboards/masks/drawio/api.md | [ ] offen |
 | drawio | programs/apps/whiteboards/masks/drawio/description.md | [ ] offen |
 | drawio | programs/apps/whiteboards/masks/drawio/features.md | [ ] offen |
@@ -130,13 +130,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | hotjar | programs/apps/marketing/masks/hotjar/menu.md | [ ] offen |
 | hotjar | programs/apps/marketing/masks/hotjar/shortcuts.md | [ ] offen |
 | hotjar | programs/apps/marketing/masks/hotjar/structure.md | [ ] offen |
-| immich | programs/apps/gallery/masks/immich/api.md | [ ] offen |
-| immich | programs/apps/gallery/masks/immich/description.md | [ ] offen |
-| immich | programs/apps/gallery/masks/immich/features.md | [ ] offen |
+| immich | programs/apps/gallery/masks/immich/api.md | [x] übersetzt |
+| immich | programs/apps/gallery/masks/immich/description.md | [x] übersetzt |
+| immich | programs/apps/gallery/masks/immich/features.md | [x] übersetzt |
 | immich | programs/apps/gallery/masks/immich/index.md | [x] übersetzt |
-| immich | programs/apps/gallery/masks/immich/menu.md | [ ] offen |
-| immich | programs/apps/gallery/masks/immich/shortcuts.md | [ ] offen |
-| immich | programs/apps/gallery/masks/immich/structure.md | [ ] offen |
+| immich | programs/apps/gallery/masks/immich/menu.md | [x] übersetzt |
+| immich | programs/apps/gallery/masks/immich/shortcuts.md | [x] übersetzt |
+| immich | programs/apps/gallery/masks/immich/structure.md | [x] übersetzt |
 | jira | programs/apps/projectmanagement/masks/jira/api.md | [ ] offen |
 | jira | programs/apps/projectmanagement/masks/jira/description.md | [ ] offen |
 | jira | programs/apps/projectmanagement/masks/jira/features.md | [ ] offen |
@@ -481,15 +481,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [ ] offen |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [ ] offen |
 
-Dateien gesamt: 468 · übersetzt: 107 · offen: 361
+Dateien gesamt: 468 · übersetzt: 125 · offen: 343
 
 ## Offen
 
 - [ ] **ant-media-server** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **asana** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **confluence** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **coppermine** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **damselfly** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **drawio** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **excalidraw** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **ffmpeg** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -500,7 +498,6 @@ Dateien gesamt: 468 · übersetzt: 107 · offen: 361
 - [ ] **helodesk** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **helpscout** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **hotjar** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **immich** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **leaflet** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **librephotos** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
