@@ -158,20 +158,20 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | leaflet | programs/apps/maps/masks/leaflet/menu.md | [ ] offen |
 | leaflet | programs/apps/maps/masks/leaflet/shortcuts.md | [ ] offen |
 | leaflet | programs/apps/maps/masks/leaflet/structure.md | [ ] offen |
-| librephotos | programs/apps/gallery/masks/librephotos/api.md | [ ] offen |
-| librephotos | programs/apps/gallery/masks/librephotos/description.md | [ ] offen |
-| librephotos | programs/apps/gallery/masks/librephotos/features.md | [ ] offen |
+| librephotos | programs/apps/gallery/masks/librephotos/api.md | [x] übersetzt |
+| librephotos | programs/apps/gallery/masks/librephotos/description.md | [x] übersetzt |
+| librephotos | programs/apps/gallery/masks/librephotos/features.md | [x] übersetzt |
 | librephotos | programs/apps/gallery/masks/librephotos/index.md | [x] übersetzt |
-| librephotos | programs/apps/gallery/masks/librephotos/menu.md | [ ] offen |
-| librephotos | programs/apps/gallery/masks/librephotos/shortcuts.md | [ ] offen |
-| librephotos | programs/apps/gallery/masks/librephotos/structure.md | [ ] offen |
-| lychee | programs/apps/gallery/masks/lychee/api.md | [ ] offen |
-| lychee | programs/apps/gallery/masks/lychee/description.md | [ ] offen |
-| lychee | programs/apps/gallery/masks/lychee/features.md | [ ] offen |
+| librephotos | programs/apps/gallery/masks/librephotos/menu.md | [x] übersetzt |
+| librephotos | programs/apps/gallery/masks/librephotos/shortcuts.md | [x] übersetzt |
+| librephotos | programs/apps/gallery/masks/librephotos/structure.md | [x] übersetzt |
+| lychee | programs/apps/gallery/masks/lychee/api.md | [x] übersetzt |
+| lychee | programs/apps/gallery/masks/lychee/description.md | [x] übersetzt |
+| lychee | programs/apps/gallery/masks/lychee/features.md | [x] übersetzt |
 | lychee | programs/apps/gallery/masks/lychee/index.md | [x] übersetzt |
-| lychee | programs/apps/gallery/masks/lychee/menu.md | [ ] offen |
-| lychee | programs/apps/gallery/masks/lychee/shortcuts.md | [ ] offen |
-| lychee | programs/apps/gallery/masks/lychee/structure.md | [ ] offen |
+| lychee | programs/apps/gallery/masks/lychee/menu.md | [x] übersetzt |
+| lychee | programs/apps/gallery/masks/lychee/shortcuts.md | [x] übersetzt |
+| lychee | programs/apps/gallery/masks/lychee/structure.md | [x] übersetzt |
 | mailchimp | programs/apps/marketing/masks/mailchimp/api.md | [ ] offen |
 | mailchimp | programs/apps/marketing/masks/mailchimp/description.md | [ ] offen |
 | mailchimp | programs/apps/marketing/masks/mailchimp/features.md | [ ] offen |
@@ -254,13 +254,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/menu.md | [x] übersetzt |
 | nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/shortcuts.md | [x] übersetzt |
 | nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/structure.md | [x] übersetzt |
-| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/api.md | [ ] offen |
-| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/description.md | [ ] offen |
-| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/features.md | [ ] offen |
+| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/api.md | [x] übersetzt |
+| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/description.md | [x] übersetzt |
+| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/features.md | [x] übersetzt |
 | nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/index.md | [x] übersetzt |
-| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/menu.md | [ ] offen |
-| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/shortcuts.md | [ ] offen |
-| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/structure.md | [ ] offen |
+| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/menu.md | [x] übersetzt |
+| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/shortcuts.md | [x] übersetzt |
+| nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/structure.md | [x] übersetzt |
 | nginx-rtmp-module | programs/apps/streaming/masks/nginx-rtmp-module/api.md | [ ] offen |
 | nginx-rtmp-module | programs/apps/streaming/masks/nginx-rtmp-module/description.md | [ ] offen |
 | nginx-rtmp-module | programs/apps/streaming/masks/nginx-rtmp-module/features.md | [ ] offen |
@@ -324,20 +324,20 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | osticket | programs/apps/helpdesk/masks/osticket/menu.md | [ ] offen |
 | osticket | programs/apps/helpdesk/masks/osticket/shortcuts.md | [ ] offen |
 | osticket | programs/apps/helpdesk/masks/osticket/structure.md | [ ] offen |
-| photoprism | programs/apps/gallery/masks/photoprism/api.md | [ ] offen |
-| photoprism | programs/apps/gallery/masks/photoprism/description.md | [ ] offen |
-| photoprism | programs/apps/gallery/masks/photoprism/features.md | [ ] offen |
+| photoprism | programs/apps/gallery/masks/photoprism/api.md | [x] übersetzt |
+| photoprism | programs/apps/gallery/masks/photoprism/description.md | [x] übersetzt |
+| photoprism | programs/apps/gallery/masks/photoprism/features.md | [x] übersetzt |
 | photoprism | programs/apps/gallery/masks/photoprism/index.md | [x] übersetzt |
-| photoprism | programs/apps/gallery/masks/photoprism/menu.md | [ ] offen |
-| photoprism | programs/apps/gallery/masks/photoprism/shortcuts.md | [ ] offen |
-| photoprism | programs/apps/gallery/masks/photoprism/structure.md | [ ] offen |
-| piwigo | programs/apps/gallery/masks/piwigo/api.md | [ ] offen |
-| piwigo | programs/apps/gallery/masks/piwigo/description.md | [ ] offen |
-| piwigo | programs/apps/gallery/masks/piwigo/features.md | [ ] offen |
+| photoprism | programs/apps/gallery/masks/photoprism/menu.md | [x] übersetzt |
+| photoprism | programs/apps/gallery/masks/photoprism/shortcuts.md | [x] übersetzt |
+| photoprism | programs/apps/gallery/masks/photoprism/structure.md | [x] übersetzt |
+| piwigo | programs/apps/gallery/masks/piwigo/api.md | [x] übersetzt |
+| piwigo | programs/apps/gallery/masks/piwigo/description.md | [x] übersetzt |
+| piwigo | programs/apps/gallery/masks/piwigo/features.md | [x] übersetzt |
 | piwigo | programs/apps/gallery/masks/piwigo/index.md | [x] übersetzt |
-| piwigo | programs/apps/gallery/masks/piwigo/menu.md | [ ] offen |
-| piwigo | programs/apps/gallery/masks/piwigo/shortcuts.md | [ ] offen |
-| piwigo | programs/apps/gallery/masks/piwigo/structure.md | [ ] offen |
+| piwigo | programs/apps/gallery/masks/piwigo/menu.md | [x] übersetzt |
+| piwigo | programs/apps/gallery/masks/piwigo/shortcuts.md | [x] übersetzt |
+| piwigo | programs/apps/gallery/masks/piwigo/structure.md | [x] übersetzt |
 | planka | programs/apps/projectmanagement/masks/planka/api.md | [ ] offen |
 | planka | programs/apps/projectmanagement/masks/planka/description.md | [ ] offen |
 | planka | programs/apps/projectmanagement/masks/planka/features.md | [ ] offen |
@@ -481,7 +481,7 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [ ] offen |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [ ] offen |
 
-Dateien gesamt: 468 · übersetzt: 125 · offen: 343
+Dateien gesamt: 468 · übersetzt: 155 · offen: 313
 
 ## Offen
 
@@ -500,8 +500,6 @@ Dateien gesamt: 468 · übersetzt: 125 · offen: 343
 - [ ] **hotjar** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **leaflet** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **librephotos** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **lychee** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mailchimp** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **maplibre** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **maps (Index)** (1): standpunkte.md
@@ -512,7 +510,6 @@ Dateien gesamt: 468 · übersetzt: 125 · offen: 343
 - [ ] **miro** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mistserver** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mural** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **nextcloud-photos** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **nginx-rtmp-module** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **notion** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **obs-studio** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -522,8 +519,6 @@ Dateien gesamt: 468 · übersetzt: 125 · offen: 343
 - [ ] **organic-maps** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **osmand** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **osticket** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **photoprism** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **piwigo** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **planka** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **plausible** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **qgis** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
