@@ -70,22 +70,22 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | ffmpeg | programs/apps/streaming/masks/ffmpeg/menu.md | [ ] offen |
 | ffmpeg | programs/apps/streaming/masks/ffmpeg/shortcuts.md | [ ] offen |
 | ffmpeg | programs/apps/streaming/masks/ffmpeg/structure.md | [ ] offen |
-| freshdesk | programs/apps/helpdesk/masks/freshdesk/api.md | [ ] offen |
-| freshdesk | programs/apps/helpdesk/masks/freshdesk/description.md | [ ] offen |
-| freshdesk | programs/apps/helpdesk/masks/freshdesk/features.md | [ ] offen |
+| freshdesk | programs/apps/helpdesk/masks/freshdesk/api.md | [x] übersetzt |
+| freshdesk | programs/apps/helpdesk/masks/freshdesk/description.md | [x] übersetzt |
+| freshdesk | programs/apps/helpdesk/masks/freshdesk/features.md | [x] übersetzt |
 | freshdesk | programs/apps/helpdesk/masks/freshdesk/index.md | [x] übersetzt |
-| freshdesk | programs/apps/helpdesk/masks/freshdesk/menu.md | [ ] offen |
-| freshdesk | programs/apps/helpdesk/masks/freshdesk/shortcuts.md | [ ] offen |
-| freshdesk | programs/apps/helpdesk/masks/freshdesk/structure.md | [ ] offen |
+| freshdesk | programs/apps/helpdesk/masks/freshdesk/menu.md | [x] übersetzt |
+| freshdesk | programs/apps/helpdesk/masks/freshdesk/shortcuts.md | [x] übersetzt |
+| freshdesk | programs/apps/helpdesk/masks/freshdesk/structure.md | [x] übersetzt |
 | gallery (Index) | programs/apps/gallery/index.md | [x] übersetzt |
 | gallery Masks (Index) | programs/apps/gallery/masks/index.md | [x] übersetzt |
-| glpi | programs/apps/helpdesk/masks/glpi/api.md | [ ] offen |
-| glpi | programs/apps/helpdesk/masks/glpi/description.md | [ ] offen |
-| glpi | programs/apps/helpdesk/masks/glpi/features.md | [ ] offen |
+| glpi | programs/apps/helpdesk/masks/glpi/api.md | [x] übersetzt |
+| glpi | programs/apps/helpdesk/masks/glpi/description.md | [x] übersetzt |
+| glpi | programs/apps/helpdesk/masks/glpi/features.md | [x] übersetzt |
 | glpi | programs/apps/helpdesk/masks/glpi/index.md | [x] übersetzt |
-| glpi | programs/apps/helpdesk/masks/glpi/menu.md | [ ] offen |
-| glpi | programs/apps/helpdesk/masks/glpi/shortcuts.md | [ ] offen |
-| glpi | programs/apps/helpdesk/masks/glpi/structure.md | [ ] offen |
+| glpi | programs/apps/helpdesk/masks/glpi/menu.md | [x] übersetzt |
+| glpi | programs/apps/helpdesk/masks/glpi/shortcuts.md | [x] übersetzt |
+| glpi | programs/apps/helpdesk/masks/glpi/structure.md | [x] übersetzt |
 | gnome-contacts | programs/apps/contact/masks/gnome-contacts/api.md | [x] übersetzt |
 | gnome-contacts | programs/apps/contact/masks/gnome-contacts/description.md | [x] übersetzt |
 | gnome-contacts | programs/apps/contact/masks/gnome-contacts/features.md | [x] übersetzt |
@@ -107,22 +107,22 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | gstreamer | programs/apps/streaming/masks/gstreamer/menu.md | [ ] offen |
 | gstreamer | programs/apps/streaming/masks/gstreamer/shortcuts.md | [ ] offen |
 | gstreamer | programs/apps/streaming/masks/gstreamer/structure.md | [ ] offen |
-| helodesk | programs/apps/helpdesk/masks/helodesk/api.md | [ ] offen |
-| helodesk | programs/apps/helpdesk/masks/helodesk/description.md | [ ] offen |
-| helodesk | programs/apps/helpdesk/masks/helodesk/features.md | [ ] offen |
+| helodesk | programs/apps/helpdesk/masks/helodesk/api.md | [x] übersetzt |
+| helodesk | programs/apps/helpdesk/masks/helodesk/description.md | [x] übersetzt |
+| helodesk | programs/apps/helpdesk/masks/helodesk/features.md | [x] übersetzt |
 | helodesk | programs/apps/helpdesk/masks/helodesk/index.md | [x] übersetzt |
-| helodesk | programs/apps/helpdesk/masks/helodesk/menu.md | [ ] offen |
-| helodesk | programs/apps/helpdesk/masks/helodesk/shortcuts.md | [ ] offen |
-| helodesk | programs/apps/helpdesk/masks/helodesk/structure.md | [ ] offen |
+| helodesk | programs/apps/helpdesk/masks/helodesk/menu.md | [x] übersetzt |
+| helodesk | programs/apps/helpdesk/masks/helodesk/shortcuts.md | [x] übersetzt |
+| helodesk | programs/apps/helpdesk/masks/helodesk/structure.md | [x] übersetzt |
 | helpdesk (Index) | programs/apps/helpdesk/index.md | [x] übersetzt |
 | helpdesk Masks (Index) | programs/apps/helpdesk/masks/index.md | [x] übersetzt |
-| helpscout | programs/apps/helpdesk/masks/helpscout/api.md | [ ] offen |
-| helpscout | programs/apps/helpdesk/masks/helpscout/description.md | [ ] offen |
-| helpscout | programs/apps/helpdesk/masks/helpscout/features.md | [ ] offen |
+| helpscout | programs/apps/helpdesk/masks/helpscout/api.md | [x] übersetzt |
+| helpscout | programs/apps/helpdesk/masks/helpscout/description.md | [x] übersetzt |
+| helpscout | programs/apps/helpdesk/masks/helpscout/features.md | [x] übersetzt |
 | helpscout | programs/apps/helpdesk/masks/helpscout/index.md | [x] übersetzt |
-| helpscout | programs/apps/helpdesk/masks/helpscout/menu.md | [ ] offen |
-| helpscout | programs/apps/helpdesk/masks/helpscout/shortcuts.md | [ ] offen |
-| helpscout | programs/apps/helpdesk/masks/helpscout/structure.md | [ ] offen |
+| helpscout | programs/apps/helpdesk/masks/helpscout/menu.md | [x] übersetzt |
+| helpscout | programs/apps/helpdesk/masks/helpscout/shortcuts.md | [x] übersetzt |
+| helpscout | programs/apps/helpdesk/masks/helpscout/structure.md | [x] übersetzt |
 | hotjar | programs/apps/marketing/masks/hotjar/api.md | [ ] offen |
 | hotjar | programs/apps/marketing/masks/hotjar/description.md | [ ] offen |
 | hotjar | programs/apps/marketing/masks/hotjar/features.md | [ ] offen |
@@ -317,13 +317,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | osmand | programs/apps/maps/masks/osmand/menu.md | [ ] offen |
 | osmand | programs/apps/maps/masks/osmand/shortcuts.md | [ ] offen |
 | osmand | programs/apps/maps/masks/osmand/structure.md | [ ] offen |
-| osticket | programs/apps/helpdesk/masks/osticket/api.md | [ ] offen |
-| osticket | programs/apps/helpdesk/masks/osticket/description.md | [ ] offen |
-| osticket | programs/apps/helpdesk/masks/osticket/features.md | [ ] offen |
+| osticket | programs/apps/helpdesk/masks/osticket/api.md | [x] übersetzt |
+| osticket | programs/apps/helpdesk/masks/osticket/description.md | [x] übersetzt |
+| osticket | programs/apps/helpdesk/masks/osticket/features.md | [x] übersetzt |
 | osticket | programs/apps/helpdesk/masks/osticket/index.md | [x] übersetzt |
-| osticket | programs/apps/helpdesk/masks/osticket/menu.md | [ ] offen |
-| osticket | programs/apps/helpdesk/masks/osticket/shortcuts.md | [ ] offen |
-| osticket | programs/apps/helpdesk/masks/osticket/structure.md | [ ] offen |
+| osticket | programs/apps/helpdesk/masks/osticket/menu.md | [x] übersetzt |
+| osticket | programs/apps/helpdesk/masks/osticket/shortcuts.md | [x] übersetzt |
+| osticket | programs/apps/helpdesk/masks/osticket/structure.md | [x] übersetzt |
 | photoprism | programs/apps/gallery/masks/photoprism/api.md | [x] übersetzt |
 | photoprism | programs/apps/gallery/masks/photoprism/description.md | [x] übersetzt |
 | photoprism | programs/apps/gallery/masks/photoprism/features.md | [x] übersetzt |
@@ -481,7 +481,7 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [ ] offen |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [ ] offen |
 
-Dateien gesamt: 468 · übersetzt: 155 · offen: 313
+Dateien gesamt: 468 · übersetzt: 185 · offen: 283
 
 ## Offen
 
@@ -491,12 +491,8 @@ Dateien gesamt: 468 · übersetzt: 155 · offen: 313
 - [ ] **drawio** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **excalidraw** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **ffmpeg** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **freshdesk** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **glpi** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **google-analytics** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **gstreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **helodesk** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **helpscout** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **hotjar** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **leaflet** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -518,7 +514,6 @@ Dateien gesamt: 468 · übersetzt: 155 · offen: 313
 - [ ] **openstreetmap** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **organic-maps** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **osmand** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **osticket** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **planka** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **plausible** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **qgis** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
