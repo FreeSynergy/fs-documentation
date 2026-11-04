@@ -10,3 +10,4 @@ Source of truth: `.research-blinc/crates/blinc_cn/src/components/` (+ `blinc_lay
 | 3 | number-input | [x] |
 | 4 | select | [x] |
 | 5 | combobox | [x] |
+| 6 | checkbox | [x] |
