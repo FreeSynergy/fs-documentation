@@ -93,13 +93,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | gnome-contacts | programs/apps/contact/masks/gnome-contacts/menu.md | [x] übersetzt |
 | gnome-contacts | programs/apps/contact/masks/gnome-contacts/shortcuts.md | [x] übersetzt |
 | gnome-contacts | programs/apps/contact/masks/gnome-contacts/structure.md | [x] übersetzt |
-| google-analytics | programs/apps/marketing/masks/google-analytics/api.md | [ ] offen |
-| google-analytics | programs/apps/marketing/masks/google-analytics/description.md | [ ] offen |
-| google-analytics | programs/apps/marketing/masks/google-analytics/features.md | [ ] offen |
+| google-analytics | programs/apps/marketing/masks/google-analytics/api.md | [x] übersetzt |
+| google-analytics | programs/apps/marketing/masks/google-analytics/description.md | [x] übersetzt |
+| google-analytics | programs/apps/marketing/masks/google-analytics/features.md | [x] übersetzt |
 | google-analytics | programs/apps/marketing/masks/google-analytics/index.md | [x] übersetzt |
-| google-analytics | programs/apps/marketing/masks/google-analytics/menu.md | [ ] offen |
-| google-analytics | programs/apps/marketing/masks/google-analytics/shortcuts.md | [ ] offen |
-| google-analytics | programs/apps/marketing/masks/google-analytics/structure.md | [ ] offen |
+| google-analytics | programs/apps/marketing/masks/google-analytics/menu.md | [x] übersetzt |
+| google-analytics | programs/apps/marketing/masks/google-analytics/shortcuts.md | [x] übersetzt |
+| google-analytics | programs/apps/marketing/masks/google-analytics/structure.md | [x] übersetzt |
 | gstreamer | programs/apps/streaming/masks/gstreamer/api.md | [ ] offen |
 | gstreamer | programs/apps/streaming/masks/gstreamer/description.md | [ ] offen |
 | gstreamer | programs/apps/streaming/masks/gstreamer/features.md | [ ] offen |
@@ -123,13 +123,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | helpscout | programs/apps/helpdesk/masks/helpscout/menu.md | [x] übersetzt |
 | helpscout | programs/apps/helpdesk/masks/helpscout/shortcuts.md | [x] übersetzt |
 | helpscout | programs/apps/helpdesk/masks/helpscout/structure.md | [x] übersetzt |
-| hotjar | programs/apps/marketing/masks/hotjar/api.md | [ ] offen |
-| hotjar | programs/apps/marketing/masks/hotjar/description.md | [ ] offen |
-| hotjar | programs/apps/marketing/masks/hotjar/features.md | [ ] offen |
+| hotjar | programs/apps/marketing/masks/hotjar/api.md | [x] übersetzt |
+| hotjar | programs/apps/marketing/masks/hotjar/description.md | [x] übersetzt |
+| hotjar | programs/apps/marketing/masks/hotjar/features.md | [x] übersetzt |
 | hotjar | programs/apps/marketing/masks/hotjar/index.md | [x] übersetzt |
-| hotjar | programs/apps/marketing/masks/hotjar/menu.md | [ ] offen |
-| hotjar | programs/apps/marketing/masks/hotjar/shortcuts.md | [ ] offen |
-| hotjar | programs/apps/marketing/masks/hotjar/structure.md | [ ] offen |
+| hotjar | programs/apps/marketing/masks/hotjar/menu.md | [x] übersetzt |
+| hotjar | programs/apps/marketing/masks/hotjar/shortcuts.md | [x] übersetzt |
+| hotjar | programs/apps/marketing/masks/hotjar/structure.md | [x] übersetzt |
 | immich | programs/apps/gallery/masks/immich/api.md | [x] übersetzt |
 | immich | programs/apps/gallery/masks/immich/description.md | [x] übersetzt |
 | immich | programs/apps/gallery/masks/immich/features.md | [x] übersetzt |
@@ -172,13 +172,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | lychee | programs/apps/gallery/masks/lychee/menu.md | [x] übersetzt |
 | lychee | programs/apps/gallery/masks/lychee/shortcuts.md | [x] übersetzt |
 | lychee | programs/apps/gallery/masks/lychee/structure.md | [x] übersetzt |
-| mailchimp | programs/apps/marketing/masks/mailchimp/api.md | [ ] offen |
-| mailchimp | programs/apps/marketing/masks/mailchimp/description.md | [ ] offen |
-| mailchimp | programs/apps/marketing/masks/mailchimp/features.md | [ ] offen |
+| mailchimp | programs/apps/marketing/masks/mailchimp/api.md | [x] übersetzt |
+| mailchimp | programs/apps/marketing/masks/mailchimp/description.md | [x] übersetzt |
+| mailchimp | programs/apps/marketing/masks/mailchimp/features.md | [x] übersetzt |
 | mailchimp | programs/apps/marketing/masks/mailchimp/index.md | [x] übersetzt |
-| mailchimp | programs/apps/marketing/masks/mailchimp/menu.md | [ ] offen |
-| mailchimp | programs/apps/marketing/masks/mailchimp/shortcuts.md | [ ] offen |
-| mailchimp | programs/apps/marketing/masks/mailchimp/structure.md | [ ] offen |
+| mailchimp | programs/apps/marketing/masks/mailchimp/menu.md | [x] übersetzt |
+| mailchimp | programs/apps/marketing/masks/mailchimp/shortcuts.md | [x] übersetzt |
+| mailchimp | programs/apps/marketing/masks/mailchimp/structure.md | [x] übersetzt |
 | maplibre | programs/apps/maps/masks/maplibre/api.md | [x] übersetzt |
 | maplibre | programs/apps/maps/masks/maplibre/description.md | [x] übersetzt |
 | maplibre | programs/apps/maps/masks/maplibre/features.md | [x] übersetzt |
@@ -191,20 +191,20 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | maps Masks (Index) | programs/apps/maps/masks/index.md | [x] übersetzt |
 | marketing (Index) | programs/apps/marketing/index.md | [x] übersetzt |
 | marketing Masks (Index) | programs/apps/marketing/masks/index.md | [x] übersetzt |
-| matomo | programs/apps/marketing/masks/matomo/api.md | [ ] offen |
-| matomo | programs/apps/marketing/masks/matomo/description.md | [ ] offen |
-| matomo | programs/apps/marketing/masks/matomo/features.md | [ ] offen |
+| matomo | programs/apps/marketing/masks/matomo/api.md | [x] übersetzt |
+| matomo | programs/apps/marketing/masks/matomo/description.md | [x] übersetzt |
+| matomo | programs/apps/marketing/masks/matomo/features.md | [x] übersetzt |
 | matomo | programs/apps/marketing/masks/matomo/index.md | [x] übersetzt |
-| matomo | programs/apps/marketing/masks/matomo/menu.md | [ ] offen |
-| matomo | programs/apps/marketing/masks/matomo/shortcuts.md | [ ] offen |
-| matomo | programs/apps/marketing/masks/matomo/structure.md | [ ] offen |
-| mautic | programs/apps/marketing/masks/mautic/api.md | [ ] offen |
-| mautic | programs/apps/marketing/masks/mautic/description.md | [ ] offen |
-| mautic | programs/apps/marketing/masks/mautic/features.md | [ ] offen |
+| matomo | programs/apps/marketing/masks/matomo/menu.md | [x] übersetzt |
+| matomo | programs/apps/marketing/masks/matomo/shortcuts.md | [x] übersetzt |
+| matomo | programs/apps/marketing/masks/matomo/structure.md | [x] übersetzt |
+| mautic | programs/apps/marketing/masks/mautic/api.md | [x] übersetzt |
+| mautic | programs/apps/marketing/masks/mautic/description.md | [x] übersetzt |
+| mautic | programs/apps/marketing/masks/mautic/features.md | [x] übersetzt |
 | mautic | programs/apps/marketing/masks/mautic/index.md | [x] übersetzt |
-| mautic | programs/apps/marketing/masks/mautic/menu.md | [ ] offen |
-| mautic | programs/apps/marketing/masks/mautic/shortcuts.md | [ ] offen |
-| mautic | programs/apps/marketing/masks/mautic/structure.md | [ ] offen |
+| mautic | programs/apps/marketing/masks/mautic/menu.md | [x] übersetzt |
+| mautic | programs/apps/marketing/masks/mautic/shortcuts.md | [x] übersetzt |
+| mautic | programs/apps/marketing/masks/mautic/structure.md | [x] übersetzt |
 | mediamtx | programs/apps/streaming/masks/mediamtx/api.md | [ ] offen |
 | mediamtx | programs/apps/streaming/masks/mediamtx/description.md | [ ] offen |
 | mediamtx | programs/apps/streaming/masks/mediamtx/features.md | [ ] offen |
@@ -346,13 +346,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | planka | programs/apps/projectmanagement/masks/planka/shortcuts.md | [ ] offen |
 | planka | programs/apps/projectmanagement/masks/planka/structure.md | [ ] offen |
 | planner (Reparatur) | programs/apps/calendar/masks/planner/api.md | [x] übersetzt |
-| plausible | programs/apps/marketing/masks/plausible/api.md | [ ] offen |
-| plausible | programs/apps/marketing/masks/plausible/description.md | [ ] offen |
-| plausible | programs/apps/marketing/masks/plausible/features.md | [ ] offen |
+| plausible | programs/apps/marketing/masks/plausible/api.md | [x] übersetzt |
+| plausible | programs/apps/marketing/masks/plausible/description.md | [x] übersetzt |
+| plausible | programs/apps/marketing/masks/plausible/features.md | [x] übersetzt |
 | plausible | programs/apps/marketing/masks/plausible/index.md | [x] übersetzt |
-| plausible | programs/apps/marketing/masks/plausible/menu.md | [ ] offen |
-| plausible | programs/apps/marketing/masks/plausible/shortcuts.md | [ ] offen |
-| plausible | programs/apps/marketing/masks/plausible/structure.md | [ ] offen |
+| plausible | programs/apps/marketing/masks/plausible/menu.md | [x] übersetzt |
+| plausible | programs/apps/marketing/masks/plausible/shortcuts.md | [x] übersetzt |
+| plausible | programs/apps/marketing/masks/plausible/structure.md | [x] übersetzt |
 | projectmanagement (Index) | programs/apps/projectmanagement/index.md | [x] übersetzt |
 | projectmanagement Masks (Index) | programs/apps/projectmanagement/masks/index.md | [x] übersetzt |
 | qgis | programs/apps/maps/masks/qgis/api.md | [x] übersetzt |
@@ -481,7 +481,7 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [x] übersetzt |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [x] übersetzt |
 
-Dateien gesamt: 468 · übersetzt: 246 · offen: 222
+Dateien gesamt: 468 · übersetzt: 282 · offen: 186
 
 ## Offen
 
@@ -491,13 +491,8 @@ Dateien gesamt: 468 · übersetzt: 246 · offen: 222
 - [ ] **drawio** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **excalidraw** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **ffmpeg** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **google-analytics** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **gstreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **hotjar** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **mailchimp** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **matomo** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **mautic** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mediamtx** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mediawiki** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **miro** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -509,7 +504,6 @@ Dateien gesamt: 468 · übersetzt: 246 · offen: 222
 - [ ] **openboard** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **openproject** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **planka** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **plausible** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **redmine** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **restream** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **restreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
