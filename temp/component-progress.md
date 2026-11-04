@@ -37,3 +37,12 @@ Source of truth: `.research-blinc/crates/blinc_cn/src/components/` (+ `blinc_lay
 | 30 | skeleton | [x] |
 | 31 | toast | [x] |
 | 32 | empty-state | [!] none |
+| 33 | modal | [x] (cn::dialog) |
+| 34 | alert-dialog | [x] |
+| 35 | drawer | [x] |
+| 36 | sheet | [x] |
+| 37 | popover | [x] |
+| 38 | tooltip | [x] |
+| 39 | hover-card | [x] |
+| 40 | context-menu | [x] |
+| 41 | menu | [x] (dropdown_menu / menubar / navigation_menu) |
