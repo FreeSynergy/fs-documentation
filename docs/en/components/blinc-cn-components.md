@@ -774,3 +774,245 @@ No direct Blinc equivalent. There is no empty-state primitive. Compose one from 
 
 #### Deutsch
 Kein direktes Blinc-Äquivalent. Es gibt kein Empty-State-Primitiv. Zusammensetzen aus `cn::icon`, `cn::label` und `cn::button` in einer zentrierten Spalte — oder in einer `cn::card`, wenn der Zustand in einem Panel liegt.
+
+---
+
+### modal
+
+#### English
+A centred modal dialog over a dimmed backdrop, driven through the overlay stack. It is imperative: build it inside a handler and `.show()` it, which returns an `OverlayHandle` for programmatic closing.
+
+**Create:**
+    cn::dialog()
+
+No create parameters — content is supplied through the builder.
+
+Builder methods: `.title(text)`, `.description(text)`, `.content(child_fn)`, `.footer(child_fn)`, `.size(DialogSize)` (`Small` 400px / `Medium` 500px / `Large` 600px / `Full` 800px max-width), `.confirm_text(text)`, `.cancel_text(text)`, `.confirm_destructive(flag)`, `.hide_cancel()`, `.on_confirm(cb)`, `.on_cancel(cb)`, `.on_close(cb)`, `.class(name)`, `.id(id)`, `.show() -> OverlayHandle`.
+
+#### Deutsch
+Ein zentrierter modaler Dialog über einem abgedunkelten Hintergrund, gesteuert über den Overlay-Stack. Er ist imperativ: im Handler aufbauen und `.show()` aufrufen — das gibt ein `OverlayHandle` zum programmatischen Schließen zurück.
+
+**Create:**
+    cn::dialog()
+
+Keine Create-Parameter — der Inhalt kommt aus dem Builder.
+
+Builder-Methoden: `.title(text)`, `.description(text)`, `.content(kind_fn)`, `.footer(kind_fn)`, `.size(DialogSize)` (`Small` 400 px / `Medium` 500 px / `Large` 600 px / `Full` 800 px maximale Breite), `.confirm_text(text)`, `.cancel_text(text)`, `.confirm_destructive(flag)`, `.hide_cancel()`, `.on_confirm(cb)`, `.on_cancel(cb)`, `.on_close(cb)`, `.class(name)`, `.id(id)`, `.show() -> OverlayHandle`.
+
+---
+
+### alert-dialog
+
+#### English
+A simplified modal for confirmations and interruptions: title, description and one confirm button, with the same backdrop and dismissal behaviour as `cn::dialog`.
+
+**Create:**
+    cn::alert_dialog()
+
+No create parameters.
+
+Builder methods: `.title(text)`, `.description(text)`, `.confirm_text(text)`, `.on_confirm(cb)`, `.size(DialogSize)`, `.show() -> OverlayHandle`.
+
+#### Deutsch
+Ein vereinfachter Modal für Bestätigungen und Unterbrechungen: Titel, Beschreibung und ein Bestätigungsbutton, mit demselben Hintergrund- und Abbruchverhalten wie `cn::dialog`.
+
+**Create:**
+    cn::alert_dialog()
+
+Keine Create-Parameter.
+
+Builder-Methoden: `.title(text)`, `.description(text)`, `.confirm_text(text)`, `.on_confirm(cb)`, `.size(DialogSize)`, `.show() -> OverlayHandle`.
+
+---
+
+### drawer
+
+#### English
+A panel that slides in from the left or right edge, used for navigation and detail panes. Built imperatively and shown through the overlay stack.
+
+**Create:**
+    cn::drawer()
+
+No create parameters. Shorthands: `cn::drawer_left()`, `cn::drawer_right()`.
+
+Builder methods: `.side(DrawerSide)` (`Left` default / `Right`), `.size(DrawerSize)` (`Narrow` 240px / `Medium` 280px / `Wide` 320px), `.title(text)`, `.header(child_fn)`, `.child(child_fn)` / `.child_builder(builder)`, `.footer(child_fn)`, `.show_close(flag)`, `.on_close(cb)`, `.class(name)`, `.id(id)`, `.show() -> OverlayHandle`.
+
+#### Deutsch
+Ein Panel, das von links oder rechts hereingleitet, für Navigation und Detailbereiche. Es wird imperativ aufgebaut und über den Overlay-Stack gezeigt.
+
+**Create:**
+    cn::drawer()
+
+Keine Create-Parameter. Kurzformen: `cn::drawer_left()`, `cn::drawer_right()`.
+
+Builder-Methoden: `.side(DrawerSide)` (`Left` Standard / `Right`), `.size(DrawerSize)` (`Narrow` 240 px / `Medium` 280 px / `Wide` 320 px), `.title(text)`, `.header(kind_fn)`, `.child(kind_fn)` / `.child_builder(builder)`, `.footer(kind_fn)`, `.show_close(flag)`, `.on_close(cb)`, `.class(name)`, `.id(id)`, `.show() -> OverlayHandle`.
+
+---
+
+### sheet
+
+#### English
+A slide-in panel anchored to any of the four edges — a drawer with more room, including a full-screen option. Built imperatively and shown through the overlay stack.
+
+**Create:**
+    cn::sheet()
+
+No create parameters. Shorthands: `cn::sheet_left()`, `cn::sheet_right()`, `cn::sheet_top()`, `cn::sheet_bottom()`.
+
+Builder methods: `.side(SheetSide)` (`Left` / `Right` default / `Top` / `Bottom`), `.size(SheetSize)` (`Small` 320px / `Medium` 400px / `Large` 540px for left-right, 200/300/400px for top-bottom, `Full` for the viewport), `.title(text)`, `.description(text)`, `.content(child_fn)`, `.footer(child_fn)`, `.show_close(flag)`, `.on_close(cb)`, `.show() -> OverlayHandle`.
+
+#### Deutsch
+Ein Slide-in-Panel an einer der vier Kanten — ein Drawer mit mehr Platz, inklusive Vollbild-Option. Wird imperativ aufgebaut und über den Overlay-Stack gezeigt.
+
+**Create:**
+    cn::sheet()
+
+Keine Create-Parameter. Kurzformen: `cn::sheet_left()`, `cn::sheet_right()`, `cn::sheet_top()`, `cn::sheet_bottom()`.
+
+Builder-Methoden: `.side(SheetSide)` (`Left` / `Right` Standard / `Top` / `Bottom`), `.size(SheetSize)` (`Small` 320 px / `Medium` 400 px / `Large` 540 px bei links-rechts, 200/300/400 px bei oben-unten, `Full` für den Viewport), `.title(text)`, `.description(text)`, `.content(kind_fn)`, `.footer(kind_fn)`, `.show_close(flag)`, `.on_close(cb)`, `.show() -> OverlayHandle`.
+
+---
+
+### popover
+
+#### English
+A floating panel anchored to a trigger element you build yourself. The trigger function receives whether the popover is open so it can reflect the state, and `.content()` supplies the panel.
+
+**Create:**
+    cn::popover(trigger_fn)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `trigger_fn` | `Fn(bool) -> Div` | Builds the trigger element; the argument says whether the popover is currently open. |
+
+Builder methods: `.content(content_fn)` (required), `.side(PopoverSide)` (`Top` / `Bottom` default / `Right` / `Left`), `.align(PopoverAlign)` (`Start` default / `Center` / `End`), `.offset(px)` (default 4.0), `.class(name)`, `.id(id)`, `.with_key(trigger_fn, key)`.
+
+#### Deutsch
+Ein schwebendes Panel, verankert an einem selbst gebauten Auslöse-Element. Die Trigger-Funktion erhält, ob der Popover offen ist, und `.content()` liefert das Panel.
+
+**Create:**
+    cn::popover(trigger_fn)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `trigger_fn` | `Fn(bool) -> Div` | Baut das Auslöse-Element; das Argument zeigt an, ob der Popover gerade offen ist. |
+
+Builder-Methoden: `.content(kind_fn)` (erforderlich), `.side(PopoverSide)` (`Top` / `Bottom` Standard / `Right` / `Left`), `.align(PopoverAlign)` (`Start` Standard / `Center` / `End`), `.offset(px)` (Standard 4,0), `.class(name)`, `.id(id)`, `.with_key(trigger_fn, key)`.
+
+---
+
+### tooltip
+
+#### English
+A short hover label attached to a trigger element, with adjustable delay and placement. Unlike the popover it carries plain text rather than arbitrary content.
+
+**Create:**
+    cn::tooltip(trigger_fn)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `trigger_fn` | `Fn(bool) -> Div` | Builds the trigger element; the argument says whether the tooltip is showing. |
+
+Builder methods: `.text(text)` (required; `impl IntoReactive<String>`), `.side(TooltipSide)` (`Top` default / `Bottom` / `Right` / `Left`), `.align(TooltipAlign)` (`Start` / `Center` default / `End`), `.open_delay_ms(ms)`, `.close_delay_ms(ms)`, `.offset(px)`, `.class(name)`, `.id(id)`, `.with_key(trigger_fn, key)`.
+
+#### Deutsch
+Ein kurzer Hover-Hinweis an einem Auslöse-Element, mit einstellbarer Verzögerung und Platzierung. Anders als der Popover trägt er reinen Text statt beliebiger Inhalte.
+
+**Create:**
+    cn::tooltip(trigger_fn)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `trigger_fn` | `Fn(bool) -> Div` | Baut das Auslöse-Element; das Argument zeigt an, ob der Hinweis gerade sichtbar ist. |
+
+Builder-Methoden: `.text(text)` (erforderlich; `impl IntoReactive<String>`), `.side(TooltipSide)` (`Top` Standard / `Bottom` / `Right` / `Left`), `.align(TooltipAlign)` (`Start` / `Center` Standard / `End`), `.open_delay_ms(ms)`, `.close_delay_ms(ms)`, `.offset(px)`, `.class(name)`, `.id(id)`, `.with_key(trigger_fn, key)`.
+
+---
+
+### hover-card
+
+#### English
+A preview card that opens when the pointer rests on the trigger — like a popover with arbitrary content, but hover-driven with open/close delays.
+
+**Create:**
+    cn::hover_card(trigger_fn)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `trigger_fn` | `Fn(bool) -> Div` | Builds the trigger element; the argument says whether the card is open. |
+
+Builder methods: `.content(content_fn)` (required), `.side(HoverCardSide)` (`Top` / `Bottom` default / `Right` / `Left`), `.align(HoverCardAlign)` (`Start` default / `Center` / `End`), `.open_delay_ms(ms)`, `.close_delay_ms(ms)`, `.offset(px)`, `.class(name)`, `.id(id)`, `.with_key(trigger_fn, key)`.
+
+#### Deutsch
+Eine Vorschaukarte, die sich öffnet, wenn der Zeiger auf dem Auslöse-Element ruht — wie ein Popover mit beliebigen Inhalten, aber per Hover mit Öffnungs-/Schließverzögerung.
+
+**Create:**
+    cn::hover_card(trigger_fn)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `trigger_fn` | `Fn(bool) -> Div` | Baut das Auslöse-Element; das Argument zeigt an, ob die Karte offen ist. |
+
+Builder-Methoden: `.content(kind_fn)` (erforderlich), `.side(HoverCardSide)` (`Top` / `Bottom` Standard / `Right` / `Left`), `.align(HoverCardAlign)` (`Start` Standard / `Center` / `End`), `.open_delay_ms(ms)`, `.close_delay_ms(ms)`, `.offset(px)`, `.class(name)`, `.id(id)`, `.with_key(trigger_fn, key)`.
+
+---
+
+### context-menu
+
+#### English
+A right-click menu positioned at explicit coordinates, usually the pointer position from the event context. Items carry click handlers, shortcuts, icons, separators and nested submenus.
+
+**Create:**
+    cn::context_menu()
+
+No create parameters — call `.at(x, y)` to place it.
+
+Builder methods: `.at(x, y)`, `.item(label, on_click)`, `.item_with_shortcut(label, shortcut, on_click)`, `.item_with_icon(label, svg, on_click)`, `.item_disabled(label)`, `.separator()`, `.submenu(label, builder_fn)` (the builder receives a `SubmenuBuilder` with the same `.item*`/`.separator` methods), `.add_item(ContextMenuItem)`, `.min_width(width)`, `.class(name)`, `.id(id)`, `.show() -> OverlayHandle`.
+`ContextMenuItem` is public: `ContextMenuItem::new(label).on_click(f).shortcut(s).icon(svg).disabled()`, plus `ContextMenuItem::separator()` and `.submenu(items)`.
+
+#### Deutsch
+Ein Rechtsklick-Menü an expliziten Koordinaten, üblicherweise der Zeigerposition aus dem Event-Kontext. Einträge haben Klick-Handler, Tastenkürzel, Icons, Trenner und verschachtelte Untermenüs.
+
+**Create:**
+    cn::context_menu()
+
+Keine Create-Parameter — zum Platzieren `.at(x, y)` aufrufen.
+
+Builder-Methoden: `.at(x, y)`, `.item(label, on_click)`, `.item_with_shortcut(label, shortcut, on_click)`, `.item_with_icon(label, svg, on_click)`, `.item_disabled(label)`, `.separator()`, `.submenu(label, builder_fn)` (der Builder erhält einen `SubmenuBuilder` mit denselben `.item*`-/`.separator`-Methoden), `.add_item(ContextMenuItem)`, `.min_width(width)`, `.class(name)`, `.id(id)`, `.show() -> OverlayHandle`.
+`ContextMenuItem` ist öffentlich: `ContextMenuItem::new(label).on_click(f).shortcut(s).icon(svg).disabled()`, dazu `ContextMenuItem::separator()` und `.submenu(items)`.
+
+---
+
+### menu
+
+#### English
+There is no single `menu` component — the name covers three: `cn::dropdown_menu(label)` for a trigger-button menu, `cn::menubar()` for an application menu bar, and `cn::navigation_menu()` for site/app navigation. All share the same row vocabulary (`.item`, `.item_with_shortcut`, `.item_with_icon`, `.item_disabled`, `.separator`, `.submenu`).
+
+**Create:**
+    cn::dropdown_menu(label)
+    cn::menubar()
+    cn::navigation_menu()
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `label` | `impl Into<String>` | Trigger button text for the dropdown; use `cn::dropdown_menu_custom(trigger_fn)` for a custom trigger. Menubar and navigation menu take no argument. |
+
+Dropdown builder: `.item(label, on_click)`, `.item_with_shortcut(label, shortcut, f)`, `.item_with_icon(label, svg, f)`, `.item_disabled(label)`, `.separator()`, `.submenu(label, builder_fn)`, `.position(DropdownPosition)` (`Bottom` default/`Top`/`Right`/`Left`), `.align(DropdownAlign)` (`Start` default/`Center`/`End`), `.offset(px)`, `.min_width(width)`.
+Menubar builder: `.menu(label, builder_fn)` (per top-level menu), `.menu_custom(trigger, builder_fn)`, `.trigger_mode(MenuTriggerMode)` (`Click` default/`Hover`), `.trigger_style(MenuTriggerStyle)`.
+Navigation menu builder: `.item(label, on_click)`, `.trigger(label, content_fn)` (dropdown panel of nav content), `.min_content_width(width)`; links via `cn::navigation_link(label).description(text).on_click(f)`.
+
+#### Deutsch
+Es gibt keine einzelne Komponente `menu` — der Name fasst drei zusammen: `cn::dropdown_menu(label)` für ein Trigger-Button-Menü, `cn::menubar()` für eine Anwendungs-Menüleiste und `cn::navigation_menu()` für die Seiten-/App-Navigation. Alle teilen dieselbe Eintragssprache (`.item`, `.item_with_shortcut`, `.item_with_icon`, `.item_disabled`, `.separator`, `.submenu`).
+
+**Create:**
+    cn::dropdown_menu(label)
+    cn::menubar()
+    cn::navigation_menu()
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `label` | `impl Into<String>` | Trigger-Text des Dropdowns; für einen eigenen Trigger `cn::dropdown_menu_custom(trigger_fn)`. Menüleiste und Navigationsmenü haben kein Argument. |
+
+Dropdown-Builder: `.item(label, on_click)`, `.item_with_shortcut(label, shortcut, f)`, `.item_with_icon(label, svg, f)`, `.item_disabled(label)`, `.separator()`, `.submenu(label, builder_fn)`, `.position(DropdownPosition)` (`Bottom` Standard/`Top`/`Right`/`Left`), `.align(DropdownAlign)` (`Start` Standard/`Center`/`End`), `.offset(px)`, `.min_width(width)`.
+Menubar-Builder: `.menu(label, builder_fn)` (pro Top-Level-Menü), `.menu_custom(trigger, builder_fn)`, `.trigger_mode(MenuTriggerMode)` (`Click` Standard/`Hover`), `.trigger_style(MenuTriggerStyle)`.
+Navigationsmenü-Builder: `.item(label, on_click)`, `.trigger(label, content_fn)` (Dropdown-Panel mit Navigationsinhalt), `.min_content_width(width)`; Links über `cn::navigation_link(label).description(text).on_click(f)`.
