@@ -151,13 +151,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | kaddressbook | programs/apps/contact/masks/kaddressbook/menu.md | [x] übersetzt |
 | kaddressbook | programs/apps/contact/masks/kaddressbook/shortcuts.md | [x] übersetzt |
 | kaddressbook | programs/apps/contact/masks/kaddressbook/structure.md | [x] übersetzt |
-| leaflet | programs/apps/maps/masks/leaflet/api.md | [ ] offen |
-| leaflet | programs/apps/maps/masks/leaflet/description.md | [ ] offen |
-| leaflet | programs/apps/maps/masks/leaflet/features.md | [ ] offen |
+| leaflet | programs/apps/maps/masks/leaflet/api.md | [x] übersetzt |
+| leaflet | programs/apps/maps/masks/leaflet/description.md | [x] übersetzt |
+| leaflet | programs/apps/maps/masks/leaflet/features.md | [x] übersetzt |
 | leaflet | programs/apps/maps/masks/leaflet/index.md | [x] übersetzt |
-| leaflet | programs/apps/maps/masks/leaflet/menu.md | [ ] offen |
-| leaflet | programs/apps/maps/masks/leaflet/shortcuts.md | [ ] offen |
-| leaflet | programs/apps/maps/masks/leaflet/structure.md | [ ] offen |
+| leaflet | programs/apps/maps/masks/leaflet/menu.md | [x] übersetzt |
+| leaflet | programs/apps/maps/masks/leaflet/shortcuts.md | [x] übersetzt |
+| leaflet | programs/apps/maps/masks/leaflet/structure.md | [x] übersetzt |
 | librephotos | programs/apps/gallery/masks/librephotos/api.md | [x] übersetzt |
 | librephotos | programs/apps/gallery/masks/librephotos/description.md | [x] übersetzt |
 | librephotos | programs/apps/gallery/masks/librephotos/features.md | [x] übersetzt |
@@ -179,15 +179,15 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | mailchimp | programs/apps/marketing/masks/mailchimp/menu.md | [ ] offen |
 | mailchimp | programs/apps/marketing/masks/mailchimp/shortcuts.md | [ ] offen |
 | mailchimp | programs/apps/marketing/masks/mailchimp/structure.md | [ ] offen |
-| maplibre | programs/apps/maps/masks/maplibre/api.md | [ ] offen |
-| maplibre | programs/apps/maps/masks/maplibre/description.md | [ ] offen |
-| maplibre | programs/apps/maps/masks/maplibre/features.md | [ ] offen |
+| maplibre | programs/apps/maps/masks/maplibre/api.md | [x] übersetzt |
+| maplibre | programs/apps/maps/masks/maplibre/description.md | [x] übersetzt |
+| maplibre | programs/apps/maps/masks/maplibre/features.md | [x] übersetzt |
 | maplibre | programs/apps/maps/masks/maplibre/index.md | [x] übersetzt |
-| maplibre | programs/apps/maps/masks/maplibre/menu.md | [ ] offen |
-| maplibre | programs/apps/maps/masks/maplibre/shortcuts.md | [ ] offen |
-| maplibre | programs/apps/maps/masks/maplibre/structure.md | [ ] offen |
+| maplibre | programs/apps/maps/masks/maplibre/menu.md | [x] übersetzt |
+| maplibre | programs/apps/maps/masks/maplibre/shortcuts.md | [x] übersetzt |
+| maplibre | programs/apps/maps/masks/maplibre/structure.md | [x] übersetzt |
 | maps (Index) | programs/apps/maps/index.md | [x] übersetzt |
-| maps (Index) | programs/apps/maps/standpunkte.md | [ ] offen |
+| maps (Index) | programs/apps/maps/standpunkte.md | [x] übersetzt |
 | maps Masks (Index) | programs/apps/maps/masks/index.md | [x] übersetzt |
 | marketing (Index) | programs/apps/marketing/index.md | [x] übersetzt |
 | marketing Masks (Index) | programs/apps/marketing/masks/index.md | [x] übersetzt |
@@ -296,27 +296,27 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | openproject | programs/apps/projectmanagement/masks/openproject/menu.md | [ ] offen |
 | openproject | programs/apps/projectmanagement/masks/openproject/shortcuts.md | [ ] offen |
 | openproject | programs/apps/projectmanagement/masks/openproject/structure.md | [ ] offen |
-| openstreetmap | programs/apps/maps/masks/openstreetmap/api.md | [ ] offen |
-| openstreetmap | programs/apps/maps/masks/openstreetmap/description.md | [ ] offen |
-| openstreetmap | programs/apps/maps/masks/openstreetmap/features.md | [ ] offen |
+| openstreetmap | programs/apps/maps/masks/openstreetmap/api.md | [x] übersetzt |
+| openstreetmap | programs/apps/maps/masks/openstreetmap/description.md | [x] übersetzt |
+| openstreetmap | programs/apps/maps/masks/openstreetmap/features.md | [x] übersetzt |
 | openstreetmap | programs/apps/maps/masks/openstreetmap/index.md | [x] übersetzt |
-| openstreetmap | programs/apps/maps/masks/openstreetmap/menu.md | [ ] offen |
-| openstreetmap | programs/apps/maps/masks/openstreetmap/shortcuts.md | [ ] offen |
-| openstreetmap | programs/apps/maps/masks/openstreetmap/structure.md | [ ] offen |
-| organic-maps | programs/apps/maps/masks/organic-maps/api.md | [ ] offen |
-| organic-maps | programs/apps/maps/masks/organic-maps/description.md | [ ] offen |
-| organic-maps | programs/apps/maps/masks/organic-maps/features.md | [ ] offen |
+| openstreetmap | programs/apps/maps/masks/openstreetmap/menu.md | [x] übersetzt |
+| openstreetmap | programs/apps/maps/masks/openstreetmap/shortcuts.md | [x] übersetzt |
+| openstreetmap | programs/apps/maps/masks/openstreetmap/structure.md | [x] übersetzt |
+| organic-maps | programs/apps/maps/masks/organic-maps/api.md | [x] übersetzt |
+| organic-maps | programs/apps/maps/masks/organic-maps/description.md | [x] übersetzt |
+| organic-maps | programs/apps/maps/masks/organic-maps/features.md | [x] übersetzt |
 | organic-maps | programs/apps/maps/masks/organic-maps/index.md | [x] übersetzt |
-| organic-maps | programs/apps/maps/masks/organic-maps/menu.md | [ ] offen |
-| organic-maps | programs/apps/maps/masks/organic-maps/shortcuts.md | [ ] offen |
-| organic-maps | programs/apps/maps/masks/organic-maps/structure.md | [ ] offen |
-| osmand | programs/apps/maps/masks/osmand/api.md | [ ] offen |
-| osmand | programs/apps/maps/masks/osmand/description.md | [ ] offen |
-| osmand | programs/apps/maps/masks/osmand/features.md | [ ] offen |
+| organic-maps | programs/apps/maps/masks/organic-maps/menu.md | [x] übersetzt |
+| organic-maps | programs/apps/maps/masks/organic-maps/shortcuts.md | [x] übersetzt |
+| organic-maps | programs/apps/maps/masks/organic-maps/structure.md | [x] übersetzt |
+| osmand | programs/apps/maps/masks/osmand/api.md | [x] übersetzt |
+| osmand | programs/apps/maps/masks/osmand/description.md | [x] übersetzt |
+| osmand | programs/apps/maps/masks/osmand/features.md | [x] übersetzt |
 | osmand | programs/apps/maps/masks/osmand/index.md | [x] übersetzt |
-| osmand | programs/apps/maps/masks/osmand/menu.md | [ ] offen |
-| osmand | programs/apps/maps/masks/osmand/shortcuts.md | [ ] offen |
-| osmand | programs/apps/maps/masks/osmand/structure.md | [ ] offen |
+| osmand | programs/apps/maps/masks/osmand/menu.md | [x] übersetzt |
+| osmand | programs/apps/maps/masks/osmand/shortcuts.md | [x] übersetzt |
+| osmand | programs/apps/maps/masks/osmand/structure.md | [x] übersetzt |
 | osticket | programs/apps/helpdesk/masks/osticket/api.md | [x] übersetzt |
 | osticket | programs/apps/helpdesk/masks/osticket/description.md | [x] übersetzt |
 | osticket | programs/apps/helpdesk/masks/osticket/features.md | [x] übersetzt |
@@ -355,13 +355,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | plausible | programs/apps/marketing/masks/plausible/structure.md | [ ] offen |
 | projectmanagement (Index) | programs/apps/projectmanagement/index.md | [x] übersetzt |
 | projectmanagement Masks (Index) | programs/apps/projectmanagement/masks/index.md | [x] übersetzt |
-| qgis | programs/apps/maps/masks/qgis/api.md | [ ] offen |
-| qgis | programs/apps/maps/masks/qgis/description.md | [ ] offen |
-| qgis | programs/apps/maps/masks/qgis/features.md | [ ] offen |
+| qgis | programs/apps/maps/masks/qgis/api.md | [x] übersetzt |
+| qgis | programs/apps/maps/masks/qgis/description.md | [x] übersetzt |
+| qgis | programs/apps/maps/masks/qgis/features.md | [x] übersetzt |
 | qgis | programs/apps/maps/masks/qgis/index.md | [x] übersetzt |
-| qgis | programs/apps/maps/masks/qgis/menu.md | [ ] offen |
-| qgis | programs/apps/maps/masks/qgis/shortcuts.md | [ ] offen |
-| qgis | programs/apps/maps/masks/qgis/structure.md | [ ] offen |
+| qgis | programs/apps/maps/masks/qgis/menu.md | [x] übersetzt |
+| qgis | programs/apps/maps/masks/qgis/shortcuts.md | [x] übersetzt |
+| qgis | programs/apps/maps/masks/qgis/structure.md | [x] übersetzt |
 | redmine | programs/apps/projectmanagement/masks/redmine/api.md | [ ] offen |
 | redmine | programs/apps/projectmanagement/masks/redmine/description.md | [ ] offen |
 | redmine | programs/apps/projectmanagement/masks/redmine/features.md | [ ] offen |
@@ -420,13 +420,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | trello | programs/apps/projectmanagement/masks/trello/menu.md | [ ] offen |
 | trello | programs/apps/projectmanagement/masks/trello/shortcuts.md | [ ] offen |
 | trello | programs/apps/projectmanagement/masks/trello/structure.md | [ ] offen |
-| umap | programs/apps/maps/masks/umap/api.md | [ ] offen |
-| umap | programs/apps/maps/masks/umap/description.md | [ ] offen |
-| umap | programs/apps/maps/masks/umap/features.md | [ ] offen |
+| umap | programs/apps/maps/masks/umap/api.md | [x] übersetzt |
+| umap | programs/apps/maps/masks/umap/description.md | [x] übersetzt |
+| umap | programs/apps/maps/masks/umap/features.md | [x] übersetzt |
 | umap | programs/apps/maps/masks/umap/index.md | [x] übersetzt |
-| umap | programs/apps/maps/masks/umap/menu.md | [ ] offen |
-| umap | programs/apps/maps/masks/umap/shortcuts.md | [ ] offen |
-| umap | programs/apps/maps/masks/umap/structure.md | [ ] offen |
+| umap | programs/apps/maps/masks/umap/menu.md | [x] übersetzt |
+| umap | programs/apps/maps/masks/umap/shortcuts.md | [x] übersetzt |
+| umap | programs/apps/maps/masks/umap/structure.md | [x] übersetzt |
 | vscodium | programs/apps/wiki/masks/vscodium/api.md | [ ] offen |
 | vscodium | programs/apps/wiki/masks/vscodium/description.md | [ ] offen |
 | vscodium | programs/apps/wiki/masks/vscodium/features.md | [ ] offen |
@@ -481,7 +481,7 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [x] übersetzt |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [x] übersetzt |
 
-Dateien gesamt: 468 · übersetzt: 203 · offen: 265
+Dateien gesamt: 468 · übersetzt: 246 · offen: 222
 
 ## Offen
 
@@ -495,10 +495,7 @@ Dateien gesamt: 468 · übersetzt: 203 · offen: 265
 - [ ] **gstreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **hotjar** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **leaflet** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mailchimp** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **maplibre** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **maps (Index)** (1): standpunkte.md
 - [ ] **matomo** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mautic** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mediamtx** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -511,12 +508,8 @@ Dateien gesamt: 468 · übersetzt: 203 · offen: 265
 - [ ] **obs-studio** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **openboard** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **openproject** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **openstreetmap** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **organic-maps** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **osmand** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **planka** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **plausible** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **qgis** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **redmine** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **restream** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **restreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -524,7 +517,6 @@ Dateien gesamt: 468 · übersetzt: 203 · offen: 265
 - [ ] **tango.io** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **tldraw** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **trello** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **umap** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **vscodium** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **wekan** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **wikijs** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
