@@ -144,13 +144,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | jira | programs/apps/projectmanagement/masks/jira/menu.md | [ ] offen |
 | jira | programs/apps/projectmanagement/masks/jira/shortcuts.md | [ ] offen |
 | jira | programs/apps/projectmanagement/masks/jira/structure.md | [ ] offen |
-| kaddressbook | programs/apps/contact/masks/kaddressbook/api.md | [ ] offen |
-| kaddressbook | programs/apps/contact/masks/kaddressbook/description.md | [ ] offen |
-| kaddressbook | programs/apps/contact/masks/kaddressbook/features.md | [ ] offen |
+| kaddressbook | programs/apps/contact/masks/kaddressbook/api.md | [x] übersetzt |
+| kaddressbook | programs/apps/contact/masks/kaddressbook/description.md | [x] übersetzt |
+| kaddressbook | programs/apps/contact/masks/kaddressbook/features.md | [x] übersetzt |
 | kaddressbook | programs/apps/contact/masks/kaddressbook/index.md | [x] übersetzt |
-| kaddressbook | programs/apps/contact/masks/kaddressbook/menu.md | [ ] offen |
-| kaddressbook | programs/apps/contact/masks/kaddressbook/shortcuts.md | [ ] offen |
-| kaddressbook | programs/apps/contact/masks/kaddressbook/structure.md | [ ] offen |
+| kaddressbook | programs/apps/contact/masks/kaddressbook/menu.md | [x] übersetzt |
+| kaddressbook | programs/apps/contact/masks/kaddressbook/shortcuts.md | [x] übersetzt |
+| kaddressbook | programs/apps/contact/masks/kaddressbook/structure.md | [x] übersetzt |
 | leaflet | programs/apps/maps/masks/leaflet/api.md | [ ] offen |
 | leaflet | programs/apps/maps/masks/leaflet/description.md | [ ] offen |
 | leaflet | programs/apps/maps/masks/leaflet/features.md | [ ] offen |
@@ -233,13 +233,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | mistserver | programs/apps/streaming/masks/mistserver/menu.md | [ ] offen |
 | mistserver | programs/apps/streaming/masks/mistserver/shortcuts.md | [ ] offen |
 | mistserver | programs/apps/streaming/masks/mistserver/structure.md | [ ] offen |
-| monica | programs/apps/contact/masks/monica/api.md | [ ] offen |
-| monica | programs/apps/contact/masks/monica/description.md | [ ] offen |
-| monica | programs/apps/contact/masks/monica/features.md | [ ] offen |
+| monica | programs/apps/contact/masks/monica/api.md | [x] übersetzt |
+| monica | programs/apps/contact/masks/monica/description.md | [x] übersetzt |
+| monica | programs/apps/contact/masks/monica/features.md | [x] übersetzt |
 | monica | programs/apps/contact/masks/monica/index.md | [x] übersetzt |
-| monica | programs/apps/contact/masks/monica/menu.md | [ ] offen |
-| monica | programs/apps/contact/masks/monica/shortcuts.md | [ ] offen |
-| monica | programs/apps/contact/masks/monica/structure.md | [ ] offen |
+| monica | programs/apps/contact/masks/monica/menu.md | [x] übersetzt |
+| monica | programs/apps/contact/masks/monica/shortcuts.md | [x] übersetzt |
+| monica | programs/apps/contact/masks/monica/structure.md | [x] übersetzt |
 | mural | programs/apps/whiteboards/masks/mural/api.md | [ ] offen |
 | mural | programs/apps/whiteboards/masks/mural/description.md | [ ] offen |
 | mural | programs/apps/whiteboards/masks/mural/features.md | [ ] offen |
@@ -247,13 +247,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | mural | programs/apps/whiteboards/masks/mural/menu.md | [ ] offen |
 | mural | programs/apps/whiteboards/masks/mural/shortcuts.md | [ ] offen |
 | mural | programs/apps/whiteboards/masks/mural/structure.md | [ ] offen |
-| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/api.md | [ ] offen |
-| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/description.md | [ ] offen |
-| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/features.md | [ ] offen |
+| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/api.md | [x] übersetzt |
+| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/description.md | [x] übersetzt |
+| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/features.md | [x] übersetzt |
 | nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/index.md | [x] übersetzt |
-| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/menu.md | [ ] offen |
-| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/shortcuts.md | [ ] offen |
-| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/structure.md | [ ] offen |
+| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/menu.md | [x] übersetzt |
+| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/shortcuts.md | [x] übersetzt |
+| nextcloud-contacts | programs/apps/contact/masks/nextcloud-contacts/structure.md | [x] übersetzt |
 | nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/api.md | [ ] offen |
 | nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/description.md | [ ] offen |
 | nextcloud-photos | programs/apps/gallery/masks/nextcloud-photos/features.md | [ ] offen |
@@ -481,7 +481,7 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [ ] offen |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [ ] offen |
 
-Dateien gesamt: 468 · übersetzt: 89 · offen: 379
+Dateien gesamt: 468 · übersetzt: 107 · offen: 361
 
 ## Offen
 
@@ -502,7 +502,6 @@ Dateien gesamt: 468 · übersetzt: 89 · offen: 379
 - [ ] **hotjar** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **immich** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **kaddressbook** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **leaflet** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **librephotos** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **lychee** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -515,9 +514,7 @@ Dateien gesamt: 468 · übersetzt: 89 · offen: 379
 - [ ] **mediawiki** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **miro** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mistserver** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **monica** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mural** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **nextcloud-contacts** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **nextcloud-photos** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **nginx-rtmp-module** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **notion** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
