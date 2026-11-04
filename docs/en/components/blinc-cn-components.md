@@ -418,3 +418,359 @@ Kein eigenständiges Datumsfeld; Blincs Datumsauswahl ist `cn::calendar` — ein
 | `value` | `Signal<Option<CalendarDay>>` | Reaktives gewähltes Datum (`CalendarDay::new(Jahr, Monat, Tag)` oder `CalendarDay::today()`); `None` = nichts ausgewählt. |
 
 Builder-Methoden: `.today(day)` (was als heute gilt), `.week_start(weekday)` (0 = Sonntag), `.min_year(year)`, `.max_year(year)`, `.events(events)` (`impl IntoReactive<Vec<CalendarEvent>>`; `CalendarEvent::new(day, titel).kind(k).icon(svg)`), `.on_change(callback)`, `.class(name)`, `.id(id)`.
+
+---
+
+### label
+
+#### English
+A caption for a control or a group of controls. The text may be a plain string or a signal that updates it in place; `required()` appends the required marker.
+
+**Create:**
+    cn::label(text)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `text` | `impl IntoReactive<String>` | Caption — a string or a `Signal<String>` followed in place. |
+
+Builder methods: `.size(LabelSize)` (`Small` 12px / `Medium` 14px / `Large` 16px), `.required()`, `.disabled(flag)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Eine Beschriftung für ein Steuerelement oder eine Steuerelementgruppe. Der Text kann ein String oder ein Signal sein, das ihn vor Ort aktualisiert; `.required()` ergänzt die Pflichtfeld-Markierung.
+
+**Create:**
+    cn::label(text)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `text` | `impl IntoReactive<String>` | Beschriftung — ein String oder ein `Signal<String>`, das vor Ort verfolgt wird. |
+
+Builder-Methoden: `.size(LabelSize)` (`Small` 12 px / `Medium` 14 px / `Large` 16 px), `.required()`, `.disabled(flag)`, `.class(name)`, `.id(id)`.
+
+---
+
+### kbd
+
+#### English
+A key-cap styled inline label for keyboard shortcuts, e.g. `Ctrl` `K`.
+
+**Create:**
+    cn::kbd(text)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `text` | `impl IntoReactive<String>` | The key or shortcut to show. |
+
+Builder methods: `.size(KbdSize)` (`Small` 10px / `Medium` 12px / `Large` 14px text), `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Eine wie eine Taste gestaltete Inline-Beschriftung für Tastaturkürzel, z. B. `Ctrl` `K`.
+
+**Create:**
+    cn::kbd(text)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `text` | `impl IntoReactive<String>` | Anzuzeigende Taste bzw. Kombination. |
+
+Builder-Methoden: `.size(KbdSize)` (`Small` 10 px / `Medium` 12 px / `Large` 14 px Text), `.class(name)`, `.id(id)`.
+
+---
+
+### separator
+
+#### English
+A thin dividing line, horizontal by default, used to group content.
+
+**Create:**
+    cn::separator()
+
+No parameters. Call `.vertical()` or `.horizontal()` for the orientation (`SeparatorOrientation`). Sizing and colour: `.w(width)`, `.h(height)`, `.m/mx/my/mt/mb/ml/mr(margin)`, `.bg(color)`, `.opacity(value)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Eine dünne Trennlinie, standardmäßig waagerecht, zur Gruppierung von Inhalt.
+
+**Create:**
+    cn::separator()
+
+Keine Parameter. Ausrichtung mit `.vertical()` oder `.horizontal()` (`SeparatorOrientation`). Größe und Farbe: `.w(width)`, `.h(height)`, `.m/mx/my/mt/mb/ml/mr(margin)`, `.bg(color)`, `.opacity(value)`, `.class(name)`, `.id(id)`.
+
+---
+
+### link
+
+#### English
+A clickable hyperlink that opens a URL. Lives in `blinc_layout`, not `cn::`, and is also reachable through the `open_url(url)` free function when you only need the navigation.
+
+**Create:**
+    blinc_layout::widgets::link::link(label, url)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `label` | `impl Into<String>` | Visible link text. |
+| `url` | `impl Into<String>` | Target URL opened on click. |
+
+Builder methods: `.on_click(handler)` (replaces the default open behaviour), `.text_color(color)`, `.font_size(size)`, `.underline(flag)` / `.no_underline()` / `.underline_on_hover()`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Ein anklickbarer Hyperlink, der eine URL öffnet. Er liegt in `blinc_layout`, nicht in `cn::`, und ist über die freie Funktion `open_url(url)` erreichbar, wenn nur die Navigation gebraucht wird.
+
+**Create:**
+    blinc_layout::widgets::link::link(label, url)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `label` | `impl Into<String>` | Sichtbarer Linktext. |
+| `url` | `impl Into<String>` | Ziel-URL, die beim Klick geöffnet wird. |
+
+Builder-Methoden: `.on_click(handler)` (ersetzt das Standardverhalten), `.text_color(color)`, `.font_size(size)`, `.underline(flag)` / `.no_underline()` / `.underline_on_hover()`, `.class(name)`, `.id(id)`.
+
+---
+
+### button
+
+#### English
+The standard action button, with six visual variants, a size ladder (including icon-only and custom dimensions), an optional leading or trailing icon, and a click handler.
+
+**Create:**
+    cn::button(label)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `label` | `impl IntoReactive<String>` | Button text — a string or a `Signal<String>` followed in place. |
+
+Builder methods: `.variant(ButtonVariant)` (`Primary` default, `Secondary`, `Destructive`, `Outline`, `Ghost`, `Link`), `.size(ButtonSize)` (`Small`/`Medium` default/`Large`, `Icon` for square icon-only, `Custom(width, height)`), `.icon(svg_markup)`, `.icon_position(IconPosition)` (`Start`/`End`), `.icon_size(px)`, `.color(color)`, `.disabled(flag)`, `.on_click(handler)`, `.with_key(key, label)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Der Standard-Aktionsbutton mit sechsoptischen Varianten, einer Größentreppe (inkl. nur-Icon und eigenen Maßen), optionalem führendem oder folgendem Icon und Klick-Handler.
+
+**Create:**
+    cn::button(label)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `label` | `impl IntoReactive<String>` | Button-Text — ein String oder ein `Signal<String>`, das vor Ort verfolgt wird. |
+
+Builder-Methoden: `.variant(ButtonVariant)` (`Primary` Standard, `Secondary`, `Destructive`, `Outline`, `Ghost`, `Link`), `.size(ButtonSize)` (`Small`/`Medium` Standard/`Large`, `Icon` als quadratischer Icon-Button, `Custom(width, height)`), `.icon(svg_markup)`, `.icon_position(IconPosition)` (`Start`/`End`), `.icon_size(px)`, `.color(color)`, `.disabled(flag)`, `.on_click(handler)`, `.with_key(key, label)`, `.class(name)`, `.id(id)`.
+
+---
+
+### button-group
+
+#### English
+No component named button-group; the closest is `cn::toggle_group(value)` — a row of mutually exclusive toggle items where the selected value is held in a `Signal<String>`. Multi-select is not implemented yet, and single toggles exist as `cn::toggle`.
+
+**Create:**
+    cn::toggle_group(value)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `value` | `Signal<String>` | Reactive value of the active item; set to the item's value on click. |
+
+Builder methods: `.item(ToggleItem)` — built with `cn::toggle_item(value).label(l).icon(svg).aria_label(a).disabled(flag)` —, `.variant(ToggleVariant)` (`Default`/`Outline`), `.size(ToggleSize)` (`Small`/`Medium`/`Large`), `.gap(px)`, `.disabled(flag)`, `.on_change(handler)`, `.key(key)`.
+
+#### Deutsch
+Keine Komponente namens button-group; am nächsten kommt `cn::toggle_group(value)` — eine Zeile sich gegenseitig ausschließender Toggle-Elemente, deren gewählter Wert in einem `Signal<String>` liegt. Mehrfachauswahl ist noch nicht umgesetzt, Einzel-Toggles gibt es als `cn::toggle`.
+
+**Create:**
+    cn::toggle_group(value)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `value` | `Signal<String>` | Reaktiver Wert des aktiven Eintrags; wird beim Klick auf den Elementwert gesetzt. |
+
+Builder-Methoden: `.item(ToggleItem)` — erzeugt mit `cn::toggle_item(value).label(l).icon(svg).aria_label(a).disabled(flag)` —, `.variant(ToggleVariant)` (`Default`/`Outline`), `.size(ToggleSize)` (`Small`/`Medium`/`Large`), `.gap(px)`, `.disabled(flag)`, `.on_change(handler)`, `.key(key)`.
+
+---
+
+### floating-action-button
+
+#### English
+No direct Blinc equivalent. There is no FAB primitive. Closest workaround: a `cn::button("…").size(ButtonSize::Custom(56.0, 56.0)).icon(svg)` (or `ButtonSize::Icon`) placed in an absolutely positioned wrapper near the corner of the view.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Es gibt kein FAB-Primitiv. Nächste Lösung: ein `cn::button("…").size(ButtonSize::Custom(56.0, 56.0)).icon(svg)` (oder `ButtonSize::Icon`) in einem absolut positionierten Container nahe der Ecke der Ansicht.
+
+---
+
+### alert
+
+#### English
+An inline status banner. `cn::alert(message)` is the one-line form; `cn::alert_box()` is the fuller block with a title and description.
+
+**Create:**
+    cn::alert(message)
+    cn::alert_box()
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `message` | `impl IntoReactive<String>` | The alert text; bind a signal and the message follows it. (`alert` only) |
+
+Builder methods — `alert`: `.variant(AlertVariant)` (`Default`/`Info`, `Success`, `Warning`, `Destructive`/`Error`), `.class(name)`, `.id(id)`.
+`alert_box` (no create argument): `.title(text)`, `.description(text)`, `.variant(…)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Ein inline angezeigter Statusbanner. `cn::alert(message)` ist die einzeilige Form; `cn::alert_box()` ist der ausführlichere Block mit Titel und Beschreibung.
+
+**Create:**
+    cn::alert(message)
+    cn::alert_box()
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `message` | `impl IntoReactive<String>` | Alert-Text; an ein Signal gebunden folgt der Text mit. (nur `alert`) |
+
+Builder-Methoden — `alert`: `.variant(AlertVariant)` (`Default`/`Info`, `Success`, `Warning`, `Destructive`/`Error`), `.class(name)`, `.id(id)`.
+`alert_box` (kein Create-Argument): `.title(text)`, `.description(text)`, `.variant(…)`, `.class(name)`, `.id(id)`.
+
+---
+
+### badge
+
+#### English
+A small status label or counter pill. It has independent colour semantics (`BadgeVariant`) and fill treatment (`BadgeStyle`), plus an optional icon on either side.
+
+**Create:**
+    cn::badge(label)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `label` | `impl Into<String>` | Text shown in the badge. For a reactive label use `.reactive_label(Reactive<String>)`. |
+
+Builder methods: `.variant(BadgeVariant)` (`Default` accent, `Secondary`, `Success`, `Warning`, `Destructive`), `.style(BadgeStyle)` (`Soft` default tinted fill, `Solid`, `Outline`), `.icon(icon)`, `.icon_position(IconPosition)` (`Start`/`End`), `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Eine kleine Status- oder Zähler-Medaille. Sie hat unabhängige Farbsymbolik (`BadgeVariant`) und Füllstil (`BadgeStyle`) sowie optional ein Icon auf einer der beiden Seiten.
+
+**Create:**
+    cn::badge(label)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `label` | `impl Into<String>` | Text in der Medaille. Für einen reaktiven Text `.reactive_label(Reactive<String>)` verwenden. |
+
+Builder-Methoden: `.variant(BadgeVariant)` (`Default` Akzent, `Secondary`, `Success`, `Warning`, `Destructive`), `.style(BadgeStyle)` (`Soft` Standard mit Getön, `Solid`, `Outline`), `.icon(icon)`, `.icon_position(IconPosition)` (`Start`/`End`), `.class(name)`, `.id(id)`.
+
+---
+
+### progress
+
+#### English
+A horizontal progress bar filled to a percentage. Bind a signal to watch the value change; `cn::progress_indeterminate()` renders the looping "busy" bar with no value.
+
+**Create:**
+    cn::progress(value)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `value` | `impl IntoReactive<f32>` | Fill percentage in `0..=100` — a number, `Signal<f32>` or `Computed`. |
+
+Builder methods: `.size(ProgressSize)` (`Small` 4px / `Medium` 8px / `Large` 12px height), `.w(width)`, `.indicator_color(color)`, `.track_color(color)`, `.rounded(radius)`, `.class(name)`, `.id(id)`.
+
+**Variant:** `cn::progress_indeterminate()` — same builder methods, no value argument.
+
+#### Deutsch
+Ein waagerechter Fortschrittsbalken, gefüllt bis zu einem Prozentsatz. Ein Signal gebunden verfolgt Wertänderungen; `cn::progress_indeterminate()` rendert den laufenden "Beschäftigt"-Balken ohne Wert.
+
+**Create:**
+    cn::progress(value)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `value` | `impl IntoReactive<f32>` | Füllgrad in `0..=100` — eine Zahl, ein `Signal<f32>` oder ein `Computed`. |
+
+Builder-Methoden: `.size(ProgressSize)` (`Small` 4 px / `Medium` 8 px / `Large` 12 px Höhe), `.w(width)`, `.indicator_color(color)`, `.track_color(color)`, `.rounded(radius)`, `.class(name)`, `.id(id)`.
+
+**Variante:** `cn::progress_indeterminate()` — gleiche Builder-Methoden, ohne Wert-Argument.
+
+---
+
+### spinner
+
+#### English
+A rotating loading indicator, sized by preset and colourable separately from its track.
+
+**Create:**
+    cn::spinner()
+
+No parameters.
+
+Builder methods: `.size(SpinnerSize)` (`Small` 16px / `Medium` 24px / `Large` 32px), `.color(color)`, `.track_color(color)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Ein rotierendes Lade-Indikator-Element, nach Preset skaliert und getrennt von seiner Spur einfärbbar.
+
+**Create:**
+    cn::spinner()
+
+Keine Parameter.
+
+Builder-Methoden: `.size(SpinnerSize)` (`Small` 16 px / `Medium` 24 px / `Large` 32 px), `.color(color)`, `.track_color(color)`, `.class(name)`, `.id(id)`.
+
+---
+
+### skeleton
+
+#### English
+A placeholder block that shimmers while content loads. Use the default rectangle, or `cn::skeleton_circle(size)` for avatars and initials.
+
+**Create:**
+    cn::skeleton()
+    cn::skeleton_circle(size)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `size` | `f32` | Diameter of the circle (`skeleton_circle` only). |
+
+Builder methods: `.w(width)`, `.h(height)`, `.w_full()`, `.rounded(radius)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Ein Platzhalterblock, der beim Laden schimmert. Standard ist das Rechteck; für Avatare und Initialen `cn::skeleton_circle(size)`.
+
+**Create:**
+    cn::skeleton()
+    cn::skeleton_circle(size)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `size` | `f32` | Durchmesser des Kreises (nur `skeleton_circle`). |
+
+Builder-Methoden: `.w(width)`, `.h(height)`, `.w_full()`, `.rounded(radius)`, `.class(name)`, `.id(id)`.
+
+---
+
+### toast
+
+#### English
+A transient notification pushed into a corner tray. Built with a title and optional description, action button or custom body, then `.show()` returns a handle that can dismiss it. `toast_success` / `toast_warning` / `toast_error` set the variant in one call.
+
+**Create:**
+    cn::toast(title)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `title` | `impl Into<String>` | Headline of the toast. |
+
+Builder methods: `.description(text)`, `.body(content_fn)` / `cn::toast_custom(content_fn)`, `.variant(ToastVariant)` (`Default`, `Success`, `Warning`, `Destructive`), `.duration_ms(ms)`, `.persistent()`, `.corner(Corner)` (which screen corner the tray sits in), `.action(label, callback)`, `.show_close(flag)`, `.show() -> ToastHandle`.
+
+#### Deutsch
+Eine kurzlebige Meldung, die in eine Eckablage eingeblendet wird. Sie wird mit Titel sowie optionalem Beschreibungstext, Aktionsbutton oder eigenem Inhalt aufgebaut; `.show()` gibt ein Handle zum Schließen zurück. `toast_success` / `toast_warning` / `toast_error` setzen die Variante direkt.
+
+**Create:**
+    cn::toast(title)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `title` | `impl Into<String>` | Überschrift der Meldung. |
+
+Builder-Methoden: `.description(text)`, `.body(inhalt_fn)` / `cn::toast_custom(inhalt_fn)`, `.variant(ToastVariant)` (`Default`, `Success`, `Warning`, `Destructive`), `.duration_ms(ms)`, `.persistent()`, `.corner(Corner)` (Ecke der Ablage), `.action(label, callback)`, `.show_close(flag)`, `.show() -> ToastHandle`.
+
+---
+
+### empty-state
+
+#### English
+No direct Blinc equivalent. There is no empty-state primitive. Compose one from `cn::icon`, `cn::label` and a `cn::button`, wrapped in a centred column — or a `cn::card` when the state sits inside a panel.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Es gibt kein Empty-State-Primitiv. Zusammensetzen aus `cn::icon`, `cn::label` und `cn::button` in einer zentrierten Spalte — oder in einer `cn::card`, wenn der Zustand in einem Panel liegt.
