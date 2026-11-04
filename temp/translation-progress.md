@@ -369,13 +369,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | redmine | programs/apps/projectmanagement/masks/redmine/menu.md | [ ] offen |
 | redmine | programs/apps/projectmanagement/masks/redmine/shortcuts.md | [ ] offen |
 | redmine | programs/apps/projectmanagement/masks/redmine/structure.md | [ ] offen |
-| request-tracker | programs/apps/helpdesk/masks/request-tracker/api.md | [ ] offen |
-| request-tracker | programs/apps/helpdesk/masks/request-tracker/description.md | [ ] offen |
-| request-tracker | programs/apps/helpdesk/masks/request-tracker/features.md | [ ] offen |
+| request-tracker | programs/apps/helpdesk/masks/request-tracker/api.md | [x] übersetzt |
+| request-tracker | programs/apps/helpdesk/masks/request-tracker/description.md | [x] übersetzt |
+| request-tracker | programs/apps/helpdesk/masks/request-tracker/features.md | [x] übersetzt |
 | request-tracker | programs/apps/helpdesk/masks/request-tracker/index.md | [x] übersetzt |
-| request-tracker | programs/apps/helpdesk/masks/request-tracker/menu.md | [ ] offen |
-| request-tracker | programs/apps/helpdesk/masks/request-tracker/shortcuts.md | [ ] offen |
-| request-tracker | programs/apps/helpdesk/masks/request-tracker/structure.md | [ ] offen |
+| request-tracker | programs/apps/helpdesk/masks/request-tracker/menu.md | [x] übersetzt |
+| request-tracker | programs/apps/helpdesk/masks/request-tracker/shortcuts.md | [x] übersetzt |
+| request-tracker | programs/apps/helpdesk/masks/request-tracker/structure.md | [x] übersetzt |
 | restream | programs/apps/streaming/masks/restream/api.md | [ ] offen |
 | restream | programs/apps/streaming/masks/restream/description.md | [ ] offen |
 | restream | programs/apps/streaming/masks/restream/features.md | [ ] offen |
@@ -466,22 +466,22 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | xwiki | programs/apps/wiki/masks/xwiki/menu.md | [ ] offen |
 | xwiki | programs/apps/wiki/masks/xwiki/shortcuts.md | [ ] offen |
 | xwiki | programs/apps/wiki/masks/xwiki/structure.md | [ ] offen |
-| zammad | programs/apps/helpdesk/masks/zammad/api.md | [ ] offen |
-| zammad | programs/apps/helpdesk/masks/zammad/description.md | [ ] offen |
-| zammad | programs/apps/helpdesk/masks/zammad/features.md | [ ] offen |
+| zammad | programs/apps/helpdesk/masks/zammad/api.md | [x] übersetzt |
+| zammad | programs/apps/helpdesk/masks/zammad/description.md | [x] übersetzt |
+| zammad | programs/apps/helpdesk/masks/zammad/features.md | [x] übersetzt |
 | zammad | programs/apps/helpdesk/masks/zammad/index.md | [x] übersetzt |
-| zammad | programs/apps/helpdesk/masks/zammad/menu.md | [ ] offen |
-| zammad | programs/apps/helpdesk/masks/zammad/shortcuts.md | [ ] offen |
-| zammad | programs/apps/helpdesk/masks/zammad/structure.md | [ ] offen |
-| zendesk | programs/apps/helpdesk/masks/zendesk/api.md | [ ] offen |
-| zendesk | programs/apps/helpdesk/masks/zendesk/description.md | [ ] offen |
-| zendesk | programs/apps/helpdesk/masks/zendesk/features.md | [ ] offen |
+| zammad | programs/apps/helpdesk/masks/zammad/menu.md | [x] übersetzt |
+| zammad | programs/apps/helpdesk/masks/zammad/shortcuts.md | [x] übersetzt |
+| zammad | programs/apps/helpdesk/masks/zammad/structure.md | [x] übersetzt |
+| zendesk | programs/apps/helpdesk/masks/zendesk/api.md | [x] übersetzt |
+| zendesk | programs/apps/helpdesk/masks/zendesk/description.md | [x] übersetzt |
+| zendesk | programs/apps/helpdesk/masks/zendesk/features.md | [x] übersetzt |
 | zendesk | programs/apps/helpdesk/masks/zendesk/index.md | [x] übersetzt |
-| zendesk | programs/apps/helpdesk/masks/zendesk/menu.md | [ ] offen |
-| zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [ ] offen |
-| zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [ ] offen |
+| zendesk | programs/apps/helpdesk/masks/zendesk/menu.md | [x] übersetzt |
+| zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [x] übersetzt |
+| zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [x] übersetzt |
 
-Dateien gesamt: 468 · übersetzt: 185 · offen: 283
+Dateien gesamt: 468 · übersetzt: 203 · offen: 265
 
 ## Offen
 
@@ -518,7 +518,6 @@ Dateien gesamt: 468 · übersetzt: 185 · offen: 283
 - [ ] **plausible** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **qgis** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **redmine** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **request-tracker** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **restream** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **restreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **taiga** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
@@ -531,8 +530,6 @@ Dateien gesamt: 468 · übersetzt: 185 · offen: 283
 - [ ] **wikijs** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **wowza** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **xwiki** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **zammad** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **zendesk** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 
 ## Unvollständig / Reparatur
 

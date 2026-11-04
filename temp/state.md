@@ -1,15 +1,14 @@
 # STATE – Apps translation de → en
 
-- Current component number: 6
-- Next component to do: gallery / immich (files remaining: features, menu, structure, shortcuts, api; description.md already written)
-- Last 3 components completed: coppermine (7/7), damselfly (7/7), immich-description
-- Progress: 119 of 468 files translated. Done so far:
+- Current component number: 11 (gallery finished: coppermine, damselfly, immich, librephotos, lychee, nextcloud-photos, photoprism, piwigo)
+- Next component to do: helpdesk / freshdesk (then glpi, helodesk, helpscout, osticket, request-tracker, zammad, zendesk)
+- Last 3 components completed: photoprism (7/7), piwigo (7/7), gallery category complete
+- Progress: 155 of 468 files translated. Done so far:
   - Step 4 repair: en/programs/apps/calendar/masks/planner/api.md (complete, 142 lines)
-  - Step 5: ALL index.md of the 9 in-scope categories (category index + masks index + per-app index)
-  - contact: 30/30 complete (gnome-contacts, kaddressbook, monica, nextcloud-contacts)
-  - gallery: coppermine 7/7, damselfly 7/7, immich 1/7
-- Remaining apps (6 detail files each: api, description, features, menu, shortcuts, structure):
-  gallery: immich, librephotos, lychee, nextcloud-photos, photoprism, piwigo
+  - Step 5: ALL index.md of the 9 in-scope categories
+  - contact: 30/30 complete
+  - gallery: 56/56 complete (all 8 apps)
+- Remaining apps (6 detail files each: api, description, features, menu, shortcuts, structure; index.md already done):
   helpdesk: freshdesk, glpi, helodesk, helpscout, osticket, request-tracker, zammad, zendesk
   maps: leaflet, maplibre, openstreetmap, organic-maps, osmand, qgis, umap
   marketing: google-analytics, hotjar, mailchimp, matomo, mautic, plausible
@@ -20,15 +19,22 @@
   wiki: confluence, mediawiki, notion, tango.io, vscodium, wikijs, xwiki
 - Rules / conventions to keep applying:
   - Mirror structure 1:1; never add or drop content.
-  - Do NOT translate paths, filenames, CLI, code blocks, table pipes.
-  - ASCII boxes: keep total line width byte-identical to DE (regenerate with python, verify len()).
-  - Terminology: Skin-Hinweis -> "Skin note"; Abgrenzung zu X -> "How it differs from X" (app index)
-    / "Differentiation" (description.md); "Was X NICHT kann" -> "What X does NOT do";
+  - Do NOT translate paths, filenames, CLI, code blocks, table pipes, example payloads.
+  - ASCII boxes: normalise EN to the dominant DE width with
+    `python3 temp/check-box-width.py --fix <de> <en>` after every structure.md.
+  - Terminology: Skin-Hinweis -> "Skin note"; Abgrenzung -> "Differentiation" (description.md)
+    / "How it differs from X" (app index); "Was X NICHT kann" -> "What X does NOT do";
     "Stand:" -> "State:"; "Fundstellen" -> "Locations"; "Übersicht" -> "Overview";
-    "Verwandte Bereiche" -> "Related areas"; "Enthaltene Dokumentationen" -> "Included documentation".
-  - In category masks/index.md EN files keep the `docs/de/...` tree line and "written in German"
-    verbatim (paths not translated).
-- Tooling: `python3 temp/update-progress.py` regenerates temp/translation-progress.md from the
-  filesystem (run after every app). German-prose check: temp/find_german_prose.py WORDS list.
-- Push status: OK (origin/main == main after last push). Commit after ~5 components, then push;
+    "Verwandte Bereiche" -> "Related areas"; "Enthaltene Dokumentationen" -> "Included documentation";
+    "Für wen geeignet" -> "Who it suits"; "Vorteile" -> "Advantages"; "Technische Details" -> "Technical details";
+    "Hauptfunktionen" -> "Main features"; "Erweiterungen und Integrationen" -> "Extensions and integrations";
+    "Weg" -> "Method"; "Menüs nach Rolle" -> "Menus by role"; "Nicht vorhanden (bewusst)" -> "Not present (deliberately)";
+    "Angenommen" -> "Assumed"; "Kernendpunkte" -> "Core endpoints"; "Rate Limits" -> "Rate limits";
+    "SDKs und Client-Bibliotheken" -> "SDKs and client libraries"; "Struktur und UI/UX" -> "Structure and UI/UX";
+    "Oberfläche" -> "Interface"; "Tastatur-Shortcuts" -> "Keyboard shortcuts"; "Menüpunkte" -> "Menu items";
+    "API Dokumentation" -> "API documentation"; "Funktionen" -> "Features"; "Beschreibung" -> "Description";
+    "Was das Programm macht" -> "What the program does".
+- Tooling: `python3 temp/update-progress.py` (run after every app). German check:
+  `python3 temp/find_german_prose.py <file>` per file (0 = clean).
+- Push status: OK (last push e76f9f57 -> origin/main). Commit after ~5 components, then push;
   if push fails: wait 5s, retry, retry once more, else note "PUSH FAILED" here and keep working.
