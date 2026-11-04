@@ -46,3 +46,10 @@ Source of truth: `.research-blinc/crates/blinc_cn/src/components/` (+ `blinc_lay
 | 39 | hover-card | [x] |
 | 40 | context-menu | [x] |
 | 41 | menu | [x] (dropdown_menu / menubar / navigation_menu) |
+| 42 | card | [x] |
+| 43 | accordion | [x] |
+| 44 | collapsible | [x] |
+| 45 | scroll-area | [x] |
+| 46 | split-view | [x] (resizable_group/panel) |
+| 47 | panel | [!] none (div) |
+| 48 | wizard | [!] none |

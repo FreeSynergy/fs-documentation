@@ -1016,3 +1016,167 @@ Es gibt keine einzelne Komponente `menu` — der Name fasst drei zusammen: `cn::
 Dropdown-Builder: `.item(label, on_click)`, `.item_with_shortcut(label, shortcut, f)`, `.item_with_icon(label, svg, f)`, `.item_disabled(label)`, `.separator()`, `.submenu(label, builder_fn)`, `.position(DropdownPosition)` (`Bottom` Standard/`Top`/`Right`/`Left`), `.align(DropdownAlign)` (`Start` Standard/`Center`/`End`), `.offset(px)`, `.min_width(width)`.
 Menubar-Builder: `.menu(label, builder_fn)` (pro Top-Level-Menü), `.menu_custom(trigger, builder_fn)`, `.trigger_mode(MenuTriggerMode)` (`Click` Standard/`Hover`), `.trigger_style(MenuTriggerStyle)`.
 Navigationsmenü-Builder: `.item(label, on_click)`, `.trigger(label, content_fn)` (Dropdown-Panel mit Navigationsinhalt), `.min_content_width(width)`; Links über `cn::navigation_link(label).description(text).on_click(f)`.
+
+---
+
+### card
+
+#### English
+A bordered, themed surface for grouped content. The card itself takes children; `card_header`, `card_content` and `card_footer` are the standard structural parts you put inside it.
+
+**Create:**
+    cn::card()
+    cn::card_header().title(t).description(d)
+    cn::card_content().child(c)
+    cn::card_footer().child(c)
+
+No create parameters.
+
+Builder methods — `card`: `.child(content)` (repeatable), `.w(width)`, `.h(height)`, `.w_full()`, `.p/px/py(padding)`, `.m(margin)`, `.shadow_md()`, `.shadow_lg()`, `.bg(color)`, `.class(name)`, `.id(id)`.
+`card_header`: `.title(text)`, `.description(text)` (`impl IntoReactive<String>` each).
+`card_content` / `card_footer`: `.child(content)`.
+
+#### Deutsch
+Eine gerahmte, themierte Fläche für gruppierten Inhalt. Die Card nimmt Kinder an; `card_header`, `card_content` und `card_footer` sind die Standard-Bausteine darin.
+
+**Create:**
+    cn::card()
+    cn::card_header().title(t).description(d)
+    cn::card_content().child(c)
+    cn::card_footer().child(c)
+
+Keine Create-Parameter.
+
+Builder-Methoden — `card`: `.child(content)` (wiederholbar), `.w(width)`, `.h(height)`, `.w_full()`, `.p/px/py(padding)`, `.m(margin)`, `.shadow_md()`, `.shadow_lg()`, `.bg(color)`, `.class(name)`, `.id(id)`.
+`card_header`: `.title(text)`, `.description(text)` (je `impl IntoReactive<String>`).
+`card_content` / `card_footer`: `.child(content)`.
+
+---
+
+### accordion
+
+#### English
+Stacked sections where clicking a header expands its body. By default one section is open at a time; `multi_open()` allows several, and `item_with_state` binds a section's open state to your own `Signal<bool>`.
+
+**Create:**
+    cn::accordion()
+
+No create parameters.
+
+Builder methods: `.item(key, label, content_fn)`, `.item_with_state(key, label, is_open, content_fn)` (`is_open: Signal<bool>`), `.multi_open()` (switches `AccordionMode::Single` → `Multi`), `.default_open(key)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Gestapelte Abschnitte, deren Inhalt sich per Klick auf die Kopfzeile öffnet. Standardmäßig ist ein Abschnitt offen; `multi_open()` erlaubt mehrere, und `item_with_state` bindet den geöffneten Zustand an ein eigenes `Signal<bool>`.
+
+**Create:**
+    cn::accordion()
+
+Keine Create-Parameter.
+
+Builder-Methoden: `.item(key, label, content_fn)`, `.item_with_state(key, label, is_open, content_fn)` (`is_open: Signal<bool>`), `.multi_open()` (wechselt `AccordionMode::Single` → `Multi`), `.default_open(key)`, `.class(name)`, `.id(id)`.
+
+---
+
+### collapsible
+
+#### English
+A single show/hide region driven by an open signal. `cn::collapsible(is_open)` is just the animated body; `cn::collapsible_section(label, is_open, content)` adds the bordered trigger header on top.
+
+**Create:**
+    cn::collapsible(is_open)
+    cn::collapsible_section(trigger_label, is_open, content_fn)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `is_open` | `Signal<bool>` | Reactive open state; the builder also exposes `.toggle()` and `.set_open(open)` to drive it. |
+| `trigger_label` | `impl Into<String>` | Header text of the section variant. |
+| `content_fn` | content builder | The body that folds open and closed. |
+
+Builder methods (`collapsible`): `.content(content_fn)`, `.toggle()`, `.set_open(open)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Ein einzelner Ein-/Ausblendbereich, gesteuert über ein Öffnungssignal. `cn::collapsible(is_open)` ist nur der animierte Inhalt; `cn::collapsible_section(label, is_open, content)` setzt den gerahmten Trigger-Kopf darüber.
+
+**Create:**
+    cn::collapsible(is_open)
+    cn::collapsible_section(trigger_label, is_open, content_fn)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `is_open` | `Signal<bool>` | Reaktiver Öffnungszustand; der Builder bietet zusätzlich `.toggle()` und `.set_open(open)`. |
+| `trigger_label` | `impl Into<String>` | Kopfzeilentext der Sections-Variante. |
+| `content_fn` | Content-Builder | Der Inhalt, der auf- und zugeklappt wird. |
+
+Builder-Methoden (`collapsible`): `.content(content_fn)`, `.toggle()`, `.set_open(open)`, `.class(name)`, `.id(id)`.
+
+---
+
+### scroll-area
+
+#### English
+A clipped, scrollable viewport with themed scrollbars. Direction, scrollbar visibility, thumb and track colours are all configurable, and the content is added as children.
+
+**Create:**
+    cn::scroll_area()
+
+No create parameters.
+
+Builder methods: `.child(content)`, `.direction(ScrollDirection)` with shorthands `.vertical()` (default) / `.horizontal()` / `.both_directions()`, `.scrollbar(ScrollbarVisibility)` (`Always`, `Hover`, `Auto` default, `Never`), `.size(ScrollAreaSize)` (`Small` 4px / `Medium` 6px / `Large` 10px scrollbar width), `.scrollbar_width(width)`, `.thumb_color(color)`, `.track_color(color)`, `.bounce(flag)` / `.no_bounce()`, `.w(width)`, `.h(height)`, `.rounded(radius)`, `.bg(color)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Ein beschnittener, scrollbarer Viewport mit themierten Scrollbalken. Richtung, Sichtbarkeit, Daumen- und Spur­farbe sind konfigurierbar; der Inhalt wird als Kind hinzugefügt.
+
+**Create:**
+    cn::scroll_area()
+
+Keine Create-Parameter.
+
+Builder-Methoden: `.child(content)`, `.direction(ScrollDirection)` mit Kurzformen `.vertical()` (Standard) / `.horizontal()` / `.both_directions()`, `.scrollbar(ScrollbarVisibility)` (`Always`, `Hover`, `Auto` Standard, `Never`), `.size(ScrollAreaSize)` (`Small` 4 px / `Medium` 6 px / `Large` 10 px Balkenbreite), `.scrollbar_width(width)`, `.thumb_color(color)`, `.track_color(color)`, `.bounce(flag)` / `.no_bounce()`, `.w(width)`, `.h(height)`, `.rounded(radius)`, `.bg(color)`, `.class(name)`, `.id(id)`.
+
+---
+
+### split-view
+
+#### English
+Resizable panes side by side (or stacked). The group holds the panes and picks the divider direction with `ResizeDirection`; each panel declares its initial size and its min/max limits.
+
+**Create:**
+    cn::resizable_group()
+    cn::resizable_panel()
+
+No create parameters. Panels are handed to the group with `.panel(...)`.
+
+Builder methods — group: `.direction(ResizeDirection)` (`Horizontal` default, panes side by side / `Vertical`, stacked) with shorthands `.horizontal()` / `.vertical()`, `.panel(panel_builder)` (repeatable), `.handle_thickness(px)`, `.on_resize(callback)`, `.key(key)`, `.class(name)`, `.id(id)`, `.build()`.
+Panel: `.default_size(px)`, `.min_size(px)`, `.max_size(px)`, `.flex(factor)` / `.flex_grow()` (`PanelSize::Flex`, default `Flex(1.0)`), `.child(content)`, `.id(id)`.
+
+#### Deutsch
+Größenveränderliche Panels nebeneinander oder untereinander. Die Gruppe hält die Panels und wählt die Richtung des Teilers über `ResizeDirection`; jedes Panel deklariert Anfangsgröße sowie Min-/Max-Grenzen.
+
+**Create:**
+    cn::resizable_group()
+    cn::resizable_panel()
+
+Keine Create-Parameter. Panels werden der Gruppe mit `.panel(...)` übergeben.
+
+Builder-Methoden — Gruppe: `.direction(ResizeDirection)` (`Horizontal` Standard, Panels nebeneinander / `Vertical`, untereinander) mit Kurzformen `.horizontal()` / `.vertical()`, `.panel(panel_builder)` (wiederholbar), `.handle_thickness(px)`, `.on_resize(callback)`, `.key(key)`, `.class(name)`, `.id(id)`, `.build()`.
+Panel: `.default_size(px)`, `.min_size(px)`, `.max_size(px)`, `.flex(factor)` / `.flex_grow()` (`PanelSize::Flex`, Standard `Flex(1.0)`), `.child(content)`, `.id(id)`.
+
+---
+
+### panel
+
+#### English
+No direct Blinc equivalent. A plain panel is just `blinc_layout`'s `div()` — set width, padding, background and radius directly (`div().w(320.0).p(16.0).bg(color).rounded(8.0)`). Reach for `cn::card()` when you want the themed surface and shadow for free.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Ein einfaches Panel ist schlicht `div()` aus `blinc_layout` — Breite, Padding, Hintergrund und Radius direkt setzen (`div().w(320.0).p(16.0).bg(color).rounded(8.0)`). Für die themierte Fläche mit Schattierung `cn::card()` verwenden.
+
+---
+
+### wizard
+
+#### English
+No direct Blinc equivalent. There is no multi-step wizard primitive. Build it from `cn::tabs` for the step header (disabled until reachable), a state machine in your own signal for the current step, and `cn::button` for back/next.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Es gibt kein Wizard-Primitiv. Zusammensetzen aus `cn::tabs` für den Schritt-Header (bis zur Erreichbarkeit deaktiviert), einer eigenen Zustandsmaschine im Signal für den aktuellen Schritt und `cn::button` für zurück/weiter.
