@@ -1,26 +1,27 @@
-# navigation
+# navigation (Navigation)
 
-Band [widgets](../) – kennt seine Inhalte beim Bauen.
+Band [widgets](../) – knows its contents when it is built.
 
-Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Reiter, Seitenleisten und Pfadangaben.
+Elements that show or switch the way through the program: menus, bars, tabs,
+sidebars and path indications.
 
 ## Elements
 
-- [**bottom-navigation**](./bottom-navigation/) – Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
-- [**breadcrumb**](./breadcrumb/) – Ein Breadcrumb ist eine Pfadnavigation (Home > Wiki > Seite).
-- [**command**](./command/) – Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste.
-- [**language-switcher**](./language-switcher/) – Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
-- [**menu**](./menu/) – Ein Menü ist eine geordnete Liste von Menüpunkten, die Aktionen auslösen oder Ansichten wechseln.
-- [**pagination**](./pagination/) – Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwischen ihnen.
-- [**radial-menu**](./radial-menu/) – Ein Radial Menu (Kreismenü) ordnet Menüpunkte um einen Mittelpunkt herum an.
-- [**sidebar**](./sidebar/) – Die Sidebar ist eine vertikale Navigationssäule, die normalerweise links oder rechts am Rand der Anwendung positioniert ist.
-- [**tabs**](./tabs/) – Tabs sind Reiter zum Umschalten zwischen Ansichten.
-- [**toolbar**](./toolbar/) – Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
+- [**bottom-navigation**](./bottom-navigation/) – Bottom navigation is navigation at the bottom of the screen, typical for mobile-first design.
+- [**breadcrumb**](./breadcrumb/) – A breadcrumb is a path navigation (Home > Wiki > Page).
+- [**command**](./command/) – The command palette is an overlay with an input field and a list of matches.
+- [**language-switcher**](./language-switcher/) – A language switcher is a UI element for changing the application language.
+- [**menu**](./menu/) – A menu is an ordered list of menu items that trigger actions or switch views.
+- [**pagination**](./pagination/) – Pagination splits a long list into portions and offers switching between them.
+- [**radial-menu**](./radial-menu/) – A radial menu (circular menu) arranges menu items around a centre point.
+- [**sidebar**](./sidebar/) – The sidebar is a vertical navigation column, normally positioned on the left or right edge of the application.
+- [**tabs**](./tabs/) – Tabs are tabs for switching between views.
+- [**toolbar**](./toolbar/) – A toolbar is a row of buttons/icons for frequent actions.
 
 ## Profiles
 
-| Component | Inherits from | Variants | Role | State |
-| ------------ | ---------- | ----------- | ------- | -------- |
+| Component | Inherits from | Variants | Role | Status |
+|-----------|---------------|----------|------|--------|
 | [bottom-navigation](./bottom-navigation/) | `base` | `Active Icon`, `Text Labels`, `Icon Only` | - | documented |
 | [breadcrumb](./breadcrumb/) | `base` | `pfad`, `gestutzt`, `zurueck` | - | documented |
 | [command](./command/) | `base` | `palette`, `inline` | `dialog` | documented |

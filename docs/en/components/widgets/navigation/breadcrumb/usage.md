@@ -25,7 +25,7 @@
 />
 ```
 
-## Mit Separator
+## With separator
 
 ```jsx
 <Breadcrumb 
@@ -70,10 +70,10 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home > Wiki > Dokumentation > Komponenten│
+│ Home > Wiki > Documentation > Components │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Dokumentations-Inhalt                 │
+│   Documentation content                 │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -97,19 +97,19 @@
 │ 🏠 Home > 🛍️ Shop > 📦 Produkte         │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Produktübersicht                      │
+│   Product overview                      │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Example 4: Benutzer-Profile
+## Example 4: user profiles
 
 ```
 ┌─────────────────────────────────────────┐
-│ 👥 Nutzer > 🧑 John Doe > 📝 Beiträge   │
+│ 👥 Users > 🧑 John Doe > 📝 Posts        │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Beiträge anzeigen                     │
+│   Show posts                            │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -118,10 +118,10 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ 📁 Dokumente > 📄 Verträge > 2024       │
+│ 📁 Documents > 📄 Contracts > 2024       │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Vertrags-Übersicht                    │
+│   Contract overview                     │
 │                                         │
 └─────────────────────────────────────────┘
 ```

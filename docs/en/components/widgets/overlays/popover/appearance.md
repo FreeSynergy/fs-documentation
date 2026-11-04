@@ -1,51 +1,51 @@
-# Popover (Inhaltspopover) - Appearance
+# Popover - Appearance
 
 ## Base layout
 
 ```
                      ┌──────────────────────┐
-   ┌──────┐          │ ✎  Umbenennen        │
-   │  ⋯   │ ◀─────── │ ⎘  Duplizieren       │
-   └──────┘          │ 🗑  Löschen           │
-      Auslöser       └──────────────────────┘
+   ┌──────┐          │ ✎  Rename            │
+   │  ⋯   │ ◀─────── │ ⎘  Duplicate         │
+   └──────┘          │ 🗑  Delete            │
+      trigger        └──────────────────────┘
 ```
 
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **inhalt** | Fläche mit Text/Bild, gleiche Fläche wie `card` |
-| **aktionen** | vertikale Aktionsliste mit Hover-Flächen |
-| **formular** | Fläche mit Feldern und Bestätigungsbutton |
+|---------|------------|
+| **inhalt** | surface with text/image, same surface as `card` |
+| **aktionen** | vertical action list with hover areas |
+| **formular** | surface with fields and a confirm button |
 
 ## Sizes
 
 | Size | Width |
-| ------- | -------- |
-| `small` | bis 220 px |
-| `medium` | bis 320 px |
-| `large` | bis 480 px |
+|------|-------|
+| `small` | up to 220 px |
+| `medium` | up to 320 px |
+| `large` | up to 480 px |
 
-Die Höhe folgt dem Inhalt und wird bei Überlänge scrollbar.
+The height follows the content and becomes scrollable when it overflows.
 
 ## Colours and states
 
-| Teil | Colour |
-| ------ | ------- |
-| Fläche | Kartenfarbe plus Schatten (eine Stufe höher als `card`) |
-| `arrow` | wie Fläche |
-| Aktionen | Hover wie Menüpunkte |
+| Part | Colour |
+|------|--------|
+| surface | card colour plus shadow (one step higher than `card`) |
+| `arrow` | same as the surface |
+| actions | hover like menu items |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `fade-in` / `expand` | kurzes Einblenden aus Richtung des Auslösers |
-| `focus-trap` | Tab kreist innerhalb des Popovers, solange es offen ist |
+|--------|-------------|
+| `fade-in` / `expand` | short fade-in coming from the trigger's direction |
+| `focus-trap` | Tab circles inside the popover while it is open |
 
 ## Responsive
 
-- Auf schmalen Bildschirmen wird das Popover zu einer Bodenschublade
-  (volle Breite, von unten) – dieselbe Komponente, andere Presentation.
+- On narrow screens the popover becomes a bottom drawer (full width, from below) —
+  the same component, different presentation.
 
-- Kippt automatisch, wenn kein Platz nach der Wunschseite ist.
+- It flips automatically when there is no space on the desired side.

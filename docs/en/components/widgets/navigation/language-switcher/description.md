@@ -1,7 +1,7 @@
 # Language Switcher
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `navigation` |
 | **Inherits from** | `base` |
 | **Variants** | `dropdown`, `knopetreihe`, `flaggen`, `kombiniert` |
@@ -12,65 +12,65 @@
 | **State** | documented |
 
 ## Description
-Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
+A language switcher is a UI element for changing the application language.
 
 ## Purpose
 
-- Spracheinstellungen ändern
-- Mehrsprachigkeit
-- Regionale Anpassung
+- Changing language settings
+- Multilingualism
+- Regional adaptation
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **dropdown** | aktuelle Sprache plus Aufklappliste |
-| **knopetreihe** | jede Sprache als eigener Knopf (bis drei Sprachen) |
-| **flaggen** | nur Zeichen, mit Tooltip |
-| **kombiniert** | Knopfreihe mit `…`-Dropdown für weitere Sprachen |
+|---------|-------------|
+| **dropdown** | current language plus a drop-down list |
+| **knopetreihe** | each language as its own button (up to three languages) |
+| **flaggen** | only symbols, with a tooltip |
+| **kombiniert** | row of buttons with a `…` drop-down for further languages |
 
 ## Features
 
-- Automatische Erkennung
-- Persistente Einstellung
-- Live-Wechsel
-- Kein Reload nötig
+- Automatic detection
+- Persistent setting
+- Live switching
+- No reload needed
 
 ## Distinction
 
-- **Nicht verwechseln mit** [select](../../../primitives/fields/select/): ein Feldwert bleibt im Formular,
-  die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
-- **Nicht verwechseln mit** [menu](../menu/): das Menü ruft Aktionen auf, dieser Schalter
-  wechselt nur eine Einstellung.
-- Flaggen stehen nicht für Sprachen: Englisch wird in vielen Ländern gesprochen.
+- **Do not confuse with** [select](../../../primitives/fields/select/): a field value stays in the
+  form, the language applies to the whole application and is remembered permanently.
+- **Do not confuse with** [menu](../menu/): a menu invokes actions, this switch only changes one
+  setting.
+- Flags do not stand for languages: English is spoken in many countries.
 
 ## Best Practices
 
-- Sprachnamen in der jeweiligen Sprache schreiben ("Deutsch", "English", "Français").
-- Sprachkurse (`de`, `en`) zeigen statt Flaggen, wenn es um Sprache und nicht um Region geht.
-- Standardsprache aus dem System übernehmen, Auswahl im Profil und am Gerät merken.
-- Ohne Neuladen umschalten; fehlende Überschriften in der Zweitsprache kennzeichnen.
-- Rechts-nach-links-Sprachen mitdenken (Layoutspiegelung), nicht nur übersetzen.
+- Write language names in the language itself ("Deutsch", "English", "Français").
+- Show language codes (`de`, `en`) instead of flags when it is about language and not region.
+- Take the default language from the system, remember the selection in the profile and on the device.
+- Switch without reloading; mark headings missing in the secondary language.
+- Account for right-to-left languages (mirrored layout), do not only translate.
 
-## Größe-Varianten
+## Size variants
 
 | Size | Use |
-| ------- | ------------ |
-| Small | In der Header-Leiste |
-| Medium | In den Einstellungen |
-| Large | Auf der Startseite |
+|------|-----|
+| Small | in the header bar |
+| Medium | in the settings |
+| Large | on the start page |
 
-## Farb-Varianten
+## Colour variants
 
 | State | Colour | Description |
-| -------- | ------- | -------------- |
-| **Default** | Normal | Standard-Style |
-| **Active** | Primärfarbe | Aktive Sprache |
+|-------|--------|-------------|
+| **Default** | normal | standard style |
+| **Active** | primary colour | active language |
 
-## Sprachen
+## Languages
 
-| Sprache | Code | Flagge |
-| --------- | ------ | -------- |
+| Language | Code | Flag |
+|----------|------|------|
 | Deutsch | de | 🇩🇪 |
 | English | en | 🇬🇧 |
 | Français | fr | 🇫🇷 |
@@ -80,6 +80,6 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 ## See also
 
 - [navigation – overview](../index.md)
-- [Select](../../../primitives/fields/select/) — Wert in einem Formular
-- [Toolbar](../toolbar/) — üblicher Ort des Schalters
+- [Select](../../../primitives/fields/select/) — a value in a form
+- [Toolbar](../toolbar/) — the usual place for the switch
 - [Base component](../../../primitives/basics/base.md)

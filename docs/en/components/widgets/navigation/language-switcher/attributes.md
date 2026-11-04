@@ -1,48 +1,48 @@
-# Language Switcher - Attribute
+# Language Switcher - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `languages` | array[] | - | Array von Sprachen |
-| `currentLanguage` | string | - | Aktuelle Sprache |
-| `onChange` | function | - | Event bei Sprachwechsel |
+|-----------|------|---------|-------------|
+| `languages` | array[] | - | array of languages |
+| `currentLanguage` | string | - | current language |
+| `onChange` | function | - | event on language change |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
+|-----------|------|-------------|
 | `onOpen` | function | runs when opened |
 | `onClose` | function | runs when closed |
 
 ## Accessibility
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
+|-----------|------|-------------|
 | `role` | string | ARIA role: `combobox` |
 
-## Sprach-Attribute
+## Language attributes
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `code` | string | Sprachcode (z.B. 'de', 'en') |
-| `label` | string | Anzeigename |
-| `flag` | string | Flaggen-Emoji |
+|-----------|------|-------------|
+| `code` | string | language code (e.g. 'de', 'en') |
+| `label` | string | display name |
+| `flag` | string | flag emoji |
 
-## Varianten-Attribute
-
-| Attribute | Type | Default | Description |
-| --- | --- | --- | --- |
-| `showCurrentLanguage` | boolean | `true` | Aktuelle Sprache anzeigen? |
-| `showFlags` | boolean | `true` | Flaggen anzeigen? |
-
-## Features attributes
+## Variant attributes
 
 | Attribute | Type | Default | Description |
-| --- | --- | --- | --- |
-| `autoDetect` | boolean | `false` | Automatische Erkennung? |
-| `persist` | boolean | `true` | Einstellung speichern? |
-| `reload` | boolean | `false` | Seite neu laden? |
+|---|---|---|---|
+| `showCurrentLanguage` | boolean | `true` | show the current language? |
+| `showFlags` | boolean | `true` | show flags? |
+
+## Feature attributes
+
+| Attribute | Type | Default | Description |
+|---|---|---|---|
+| `autoDetect` | boolean | `false` | automatic detection? |
+| `persist` | boolean | `true` | save the setting? |
+| `reload` | boolean | `false` | reload the page? |
 
 ## Inherited from
 

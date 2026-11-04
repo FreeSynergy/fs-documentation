@@ -14,7 +14,7 @@
 />
 ```
 
-## Mit Dropdown
+## With a dropdown
 
 ```jsx
 <LanguageSwitcher 

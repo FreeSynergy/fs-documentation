@@ -2,7 +2,7 @@
 
 ## Base layout
 
-Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder vertikal platziert werden.
+Tabs are tabs for switching between views. They can be placed horizontally or vertically.
 
 ## Variants
 ### Horizontal (Standard)
@@ -11,15 +11,15 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 │ Tab 1 │ Tab 2 │ Tab 3 │ Tab 4                      │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
-│   Inhalt der aktiven Tab                           │
+│   Content of the active tab                        │
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
-### Vertical (Seitlich)
+### Vertical (side)
 ```
 ┌────────┬──────────────────────────────────────────┐
 │ Tab 1  │                                          │
-│ Tab 2  │   Inhalt der aktiven Tab                │
+│ Tab 2  │   Content of the active tab              │
 │ Tab 3  │                                          │
 │ Tab 4  │                                          │
 └────────┴──────────────────────────────────────────┘
@@ -43,10 +43,10 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 
 | State | Colour | Description |
 | -------- | ------- | -------------- |
-| **Active** | Primärfarbe | Aktiver Tab |
-| **Inactive** | Grau | Inaktiver Tab |
-| **Hover** | Heller | hover state |
-| **Disabled** | ausgegraut | Deaktivierte Tabs |
+| **Active** | primary colour | active tab |
+| **Inactive** | grey | inactive tab |
+| **Hover** | lighter | hover state |
+| **Disabled** | greyed out | disabled tabs |
 
 ## Hover and focus effects
 
@@ -54,16 +54,16 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten. Sie können horizontal oder 
 | -------- | -------------- |
 | `color` | the colour changes |
 | `border-bottom` | an underline appears |
-| `scale` | Leichte Vergrößerung |
-| `shadow` | Schatten erscheint |
+| `scale` | slight enlargement |
+| `shadow` | a shadow appears |
 
 ## Responsive
 
 | Breakpoint | Behaviour |
 | ------------ | ----------- |
-| Desktop (>768px) | Volle Tabs sichtbar |
-| Tablet (480-768px) | Scrollable Tabs |
-| Mobile (<480px) | Drawer oder Accordion |
+| Desktop (>768px) | full tabs visible |
+| Tablet (480-768px) | scrollable tabs |
+| Mobile (<480px) | drawer or accordion |
 
 ## Active-Indicator
 

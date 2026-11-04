@@ -1,41 +1,41 @@
-# Command (Befehlspalette) - Attribute
+# Command - Attributes
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Only **own** attributes. Everything else comes from the base class, see
 [base](../../../primitives/basics/base.md).
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `commands` | array[] | - | Befehle mit Titel, Gruppe, Kürzel und Ziel |
-| `query` | string | `""` | eingegebener Suchtext |
-| `open` | boolean | `false` | Palette ist sichtbar |
+|-----------|------|---------|-------------|
+| `commands` | array[] | - | commands with title, group, shortcut and target |
+| `query` | string | `""` | entered search text |
+| `open` | boolean | `false` | the palette is visible |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `hotkey` | string | `ctrl+k` | Tastenkürzel zum Öffnen |
-| `grouped` | boolean | `true` | Treffer nach Gruppe anzeigen |
-| `maxResults` | number | `50` | Obergrenze der Treffer |
-| `recentCount` | number | `5` | zuletzt genutzte Befehle ohne Eingabe |
+|-----------|------|---------|-------------|
+| `hotkey` | string | `ctrl+k` | keyboard shortcut for opening |
+| `grouped` | boolean | `true` | show hits grouped |
+| `maxResults` | number | `50` | upper limit of hits |
+| `recentCount` | number | `5` | recently used commands without input |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `onQuery` | function | Suchtext geändert |
-| `onSelect` | function | Befehl ausgeführt |
-| `onOpen` | function | Palette geöffnet |
-| `onClose` | function | Palette geschlossen |
+|-----------|------|-------------|
+| `onQuery` | function | search text changed |
+| `onSelect` | function | command executed |
+| `onOpen` | function | palette opened |
+| `onClose` | function | palette closed |
 
 ## Accessibility
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
+|-----------|------|-------------|
 | `role` | string | `dialog` |
-| `aria-activedescendant` | string | id des markierten Treffers |
-| `label` | string | Pflicht, z. B. „Befehle suchen“ |
+| `aria-activedescendant` | string | id of the marked hit |
+| `label` | string | required, e.g. "Search commands" |
 
 ## Inherited from
 

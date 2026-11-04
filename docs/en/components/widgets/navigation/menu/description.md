@@ -1,7 +1,7 @@
 # Menu
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `navigation` |
 | **Inherits from** | `base` |
 | **Variants** | `horizontal`, `vertical`, `dropdown`, `menubar`, `hamburger` |
@@ -12,56 +12,56 @@
 | **Role** | `menubar` |
 | **State** | documented |
 
-!!! info "Standardisierung"
-    Die frühere Komponente `hamburger-menu` ist als Variante in `menu` aufgegangen:
-    `dropdown`, `menubar`, `hamburger` (eingeklapptes Mobilmenü).
+!!! info "Standardisation"
+    The former component `hamburger-menu` became a variant of `menu`:
+    `dropdown`, `menubar`, `hamburger` (collapsed mobile menu).
 
 ## Description
 
-Ein Menü ist eine geordnete Liste von Menüpunkten, die Aktionen auslösen oder
-Ansichten wechseln. Punkte können Untermenüs besitzen. Ein Menü ist der gemeinsame
-Oberbau für Leisten, Aufklappmenüs und das Mobilmenü.
+A menu is an ordered list of menu items that trigger actions or switch views. Items can
+have submenus. A menu is the shared superstructure for bars, drop-down menus and the
+mobile menu.
 
 ## Purpose
 
-- Programmweite Navigation in einer Leiste (`menubar`, `horizontal`)
-- Aktionen gebündelt anbieten, ohne die Fläche vollzustellen (`dropdown`)
-- Navigation in der Seitenleiste (`vertical`)
-- Navigation auf kleinen Bildschirmen (`hamburger`)
+- Program-wide navigation in a bar (`menubar`, `horizontal`)
+- Offering actions bundled without cluttering the surface (`dropdown`)
+- Navigation in the sidebar (`vertical`)
+- Navigation on small screens (`hamburger`)
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **horizontal** | Leiste über dem Inhalt, Standard im Desktop |
-| **vertical** | Liste nebeneinander mit Inhalt, in Seitenleisten |
-| **dropdown** | Punkte erscheinen erst beim Öffnen |
-| **menubar** | mehrere Menüs nebeneinander, je mit Untermenü |
-| **hamburger** | eingeklapptes Menü mit Icon, Mobile und schmale Fenster |
+|---------|-------------|
+| **horizontal** | bar above the content, standard on desktop |
+| **vertical** | list next to the content, in sidebars |
+| **dropdown** | items only appear when opened |
+| **menubar** | several menus side by side, each with a submenu |
+| **hamburger** | collapsed menu with an icon, mobile and narrow windows |
 
 ## Features
 
-- Untermenüs mit beliebigem Tiefgang
-- Tastaturnavigation (Pfeiltasten, `Esc`, Pfeiltaste nach rechts öffnet Unteremenü)
-- Gruppen und Trennlinien zwischen Punkten (`separator`)
-- Symbole und Beschriftungen einzeln schaltbar
-- Öffnet und schließt mit Animation; Klick außerhalb schließt
+- Submenus with arbitrary depth
+- Keyboard navigation (arrow keys, `Esc`, right arrow opens the submenu)
+- Groups and separators between items (`separator`)
+- Icons and labels individually toggleable
+- Opens and closes with an animation; a click outside closes it
 
 ## Distinction
 
-- **Nicht verwechseln mit** [context-menu](../../overlays/context-menu/): das Kontextmenü gehört zum
-  angeklickten Objekt und erscheint an der Zeigerposition (andere ARIA-Rolle).
-- **Nicht verwechseln mit** [tabs](../tabs/): Reiter wechseln innerhalb einer Ansicht,
-  ein Menü wechselt Adressen oder führt Aktionen aus.
-- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): feste
-  Hauptbereiche auf Mobilgeräten, immer sichtbar.
+- **Do not confuse with** [context-menu](../../overlays/context-menu/): the context menu belongs to
+  the clicked object and appears at the pointer position (different ARIA role).
+- **Do not confuse with** [tabs](../tabs/): tabs switch within one view, a menu changes addresses
+  or carries out actions.
+- **Do not confuse with** [bottom-navigation](../bottom-navigation/): fixed main areas on mobile
+  devices, always visible.
 
 ## Best Practices
 
-- Höchstens sieben Punkte pro Ebene; mehr gruppieren.
-- Zerstörerische Aktionen nicht im Hauptmenü, sondern im Kontext des Objekts.
-- Auf Mobilgeräten das Menü nicht doppelt anbieten (Hamburger *oder* Seitenleiste).
-- Menüpunkte mit Verb beginnen; für den aktiven Punkt `aria-current` bzw. `activeItem`.
+- At most seven items per level; group anything more.
+- Destructive actions do not belong in the main menu but in the context of the object.
+- On mobile devices do not offer the menu twice (hamburger *or* sidebar).
+- Menu items start with a verb; use `aria-current` or `activeItem` for the active item.
 
 ## See also
 

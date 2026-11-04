@@ -1,7 +1,7 @@
 # Toolbar
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `navigation` |
 | **Inherits from** | `base` |
 | **Variants** | `standard`, `kontext`, `ribbon` |
@@ -11,78 +11,81 @@
 | **Related** | `button`, `button-group`, `menu`, `context-menu`, `rich-text-editor` |
 | **State** | documented |
 
-!!! info "Standardisierung"
-    Die früheren Komponenten `context-toolbar` und `ribbon` sind als Varianten in `toolbar` aufgegangen: `standard`, `kontext`, `ribbon`.
+!!! info "Standardisation"
+    The former components `context-toolbar` and `ribbon` became variants of `toolbar`:
+    `standard`, `kontext`, `ribbon`.
 
 ## Description
-Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen. Sie wird oft direkt unter der Titelzeile platziert.
+A toolbar is a row of buttons/icons for frequent actions. It is often placed directly below
+the title bar.
 
 ## Purpose
 
-- Schneller Zugriff auf häufige Funktionen
-- Konsolidierung von Aktionen in einer Leiste
-- Visuelle Organisation von Tools
+- Quick access to frequent functions
+- Consolidating actions in one bar
+- Visual organisation of tools
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **standard** | feste Leiste mit den häufigen Aktionen |
-| **kontext** | zeigt andere Aktionen, je nachdem was ausgewählt ist |
-| **ribbon** | mehrzeilige Leiste mit benannten Gruppen (Desktop-Programme) |
+|---------|-------------|
+| **standard** | fixed bar with the frequent actions |
+| **kontext** | shows different actions depending on what is selected |
+| **ribbon** | multi-row bar with named groups (desktop programs) |
 
 ## Features
 
-- Customizable (benutzerdefiniert)
-- Keyboard-Shortcuts
-- Tooltip (bei Hover)
-- Disabled States
+- Customizable
+- Keyboard shortcuts
+- Tooltip (on hover)
+- Disabled states
 
 ## Distinction
 
-- **Nicht verwechseln mit** [menu](../menu/): das Menü verbirgt Befehle hinter einer Beschriftung,
-  die Leiste zeigt sie sofort als Symbol.
-- **Nicht verwechseln mit** [context-menu](../../overlays/context-menu/): das Kontextmenü ist ein
-  Overlay am Klickpunkt, die Variante `kontext` bleibt im Layout stehen.
-- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): eine Leiste enthält
-  Aktionen, eine Navigation enthält Ziele.
-- Zusammengehörige Knopfpaare sind eine [button-group](../../../primitives/actions/button-group/), die Leiste
-  selbst ist die gesamte Reihe.
+- **Do not confuse with** [menu](../menu/): the menu hides commands behind a label, the bar
+  shows them immediately as an icon.
+- **Do not confuse with** [context-menu](../../overlays/context-menu/): the context menu is an
+  overlay at the click point, the variant `kontext` stays in the layout.
+- **Do not confuse with** [bottom-navigation](../bottom-navigation/): a bar contains actions,
+  a navigation contains destinations.
+- Button pairs that belong together are a [button-group](../../../primitives/actions/button-group/);
+  the bar itself is the whole row.
 
 ## Best Practices
-- Nur häufig verwendete Funktionen
-- Konsistente Icon-Größe
-- Hover-Effekt
-- Keyboard-Shortcuts anzeigen
 
-- Nur häufig genutzte Aktionen in die Leiste, der Rest ins Menü.
-- Gruppieren und Gruppen trennen; die Reihenfolge über alle Ansichten gleich halten.
-- Jedes Symbol braucht Tooltip mit Tastenkürzel, sonst wird es geraten.
-- Deaktivierte Knöpfe bleiben sichtbar (kein Sprung in der Leiste), aber ohne Wirkung.
-- Auf schmalen Bildschirmen in ein ``+``-Menü übergehen, nicht zusammenquetschen.
+- Only frequently used functions
+- Consistent icon size
+- Hover effect
+- Show keyboard shortcuts
 
-## Aktionsgruppen
+- Only frequent actions in the bar, the rest goes into the menu.
+- Group and separate groups; keep the order identical across all views.
+- Every icon needs a tooltip with its shortcut, otherwise users have to guess.
+- Disabled buttons stay visible (no jump in the bar), but have no effect.
+- On narrow screens move into a `+` menu, do not squeeze the buttons together.
 
-| Art | Beispiele |
-| ----- | ----------- |
-| **Datei** | Neu, Speichern, Drucken |
-| **Formatierung** | Fett, Kursiv, Unterstrichen |
-| **Navigation** | Zurück, Vor, Aktualisieren |
-| **Suche und Filter** | Suchen, Filtern, Anzeigefelder |
-| **Gefährlich** | Löschen, Verwerfen — nur mit Bestätigung |
+## Action groups
 
-## Positionen
+| Type | Examples |
+|------|----------|
+| **File** | New, Save, Print |
+| **Formatting** | Bold, Italic, Underline |
+| **Navigation** | Back, Forward, Refresh |
+| **Search and filter** | Search, Filter, display fields |
+| **Dangerous** | Delete, Discard — only with confirmation |
+
+## Positions
 
 | Position | Description |
-| ---------- | -------------- |
-| **Top** | Unterhalb der Titelzeile (Standard) |
-| **Sidebar** | In der Seitenleiste |
-| **Floating** | Freischwebend (z.B. im Chat) |
-| **Bottom** | Unten am Bildschirm (Mobile) |
+|----------|-------------|
+| **Top** | below the title bar (standard) |
+| **Sidebar** | in the sidebar |
+| **Floating** | free-floating (e.g. in chat) |
+| **Bottom** | at the bottom of the screen (mobile) |
 
 ## See also
 
 - [navigation – overview](../index.md)
-- [Button Group](../../../primitives/actions/button-group/) — zusammengehörige Knöpfe
-- [Menu](../menu/) — Befehle im Menü
+- [Button Group](../../../primitives/actions/button-group/) — buttons that belong together
+- [Menu](../menu/) — commands in the menu
 - [Base component](../../../primitives/basics/base.md)

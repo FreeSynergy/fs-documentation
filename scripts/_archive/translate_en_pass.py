@@ -142,7 +142,7 @@ PHRASES = [
      "Band [workbenches](../) – receives its contents only at runtime."),
     (r"^Band \[widgets\]\(\.\./\) – kennt seine Inhalte beim Bauen\.$",
      "Band [widgets](../) – knows its contents when it is built."),
-    (r"^Band \[primitives\]\(\.\./\) – [^"]*\.$",
+    (r"^Band \[primitives\]\(\.\./\) – nicht weiter zerlegbar\.$",
      "Band [primitives](../) – cannot be broken down further."),
 
     (r"Ist geöffnet\?", "is open?"),

@@ -2,7 +2,7 @@
 
 ## Base layout
 
-Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
+A language switcher shows the current language and allows switching.
 
 ## Variants
 
@@ -37,31 +37,31 @@ Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
 ## Sizes
 
 | Size | Use |
-| ------- | ------------ |
-| Small | In der Header-Leiste (24px) |
-| Medium | In den Einstellungen (48px) |
-| Large | Auf der Startseite (64px) |
+|------|-----|
+| Small | in the header bar (24px) |
+| Medium | in the settings (48px) |
+| Large | on the start page (64px) |
 
 ## Colours and states
 
 | State | Colour | Description |
-| -------- | ------- | -------------- |
-| **Default** | Normal | Standard-Style |
-| **Active** | Primärfarbe | Aktive Sprache |
+|-------|--------|-------------|
+| **Default** | normal | standard style |
+| **Active** | primary colour | active language |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `scale` | Vergrößerung |
+|--------|-------------|
+| `scale` | enlargement |
 | `color` | the colour changes |
-| `shadow` | stronger shadow |
+| `shadow` | the shadow gets stronger |
 
 ## Responsive
 
-- In der Kopf- und Werkzeugleiste steht der Schalter in `small`; wird der Platz knapp,
-  bleibt nur das Sprachkürzel (`DE`) übrig, der Name entfällt.
-- Auf schmalen Bildschirmen wechselt die Knopfreihe zur Variante `kombiniert`; der Rest
-  der Sprachen steckt im Dropdown.
-- Längere Sprachnamen (`Español`, `Português`) kürzen nicht, sie bestimmen die Breite des
-  Schalters — deshalb in Leisten das Kürzel bevorzugen.
+- In the header and toolbar the switch sits in `small`; if space gets tight, only the
+  language code (`DE`) remains and the name is dropped.
+- On narrow screens the button row switches to the variant `kombiniert`; the remaining
+  languages sit in the drop-down.
+- Longer language names (`Español`, `Português`) are not truncated, they determine the
+  width of the switch — which is why bars prefer the code.

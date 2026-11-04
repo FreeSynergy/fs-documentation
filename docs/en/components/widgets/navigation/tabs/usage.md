@@ -5,9 +5,9 @@
 ```jsx
 <Tabs 
   tabs={[
-    { id: 'tab1', label: 'Tab 1', content: 'Inhalt 1' },
-    { id: 'tab2', label: 'Tab 2', content: 'Inhalt 2' },
-    { id: 'tab3', label: 'Tab 3', content: 'Inhalt 3' }
+    { id: 'tab1', label: 'Tab 1', content: 'Content 1' },
+    { id: 'tab2', label: 'Tab 2', content: 'Content 2' },
+    { id: 'tab3', label: 'Tab 3', content: 'Content 3' }
   ]}
   activeTab="tab1"
   onChange={(id) => setActiveTab(id)}
@@ -71,26 +71,26 @@
 
 ## Examples
 
-## Example 1: Einstellungen-Tabs
+## Example 1: settings tabs
 
 ```
 ┌─────────────────────────────────────────┐
-│ Allgemein │ Sicherheit │ Benutzer      │
+│ General │ Security │ Users             │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Einstellungen anzeigen                │
+│   Show settings                         │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Example 2: Profil-Tabs
+## Example 2: profile tabs
 
 ```
 ┌─────────────────────────────────────────┐
-│ Overview │ Beiträge │ Fotos │ Freunde   │
+│ Overview │ Posts │ Photos │ Friends     │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Profil-Inhalt                         │
+│   Profile content                       │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -99,35 +99,35 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ Schritt 1 │ Schritt 2 │ Schritt 3       │
+│ Step 1 │ Step 2 │ Step 3                │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Formular-Inhalt                       │
+│   Form content                          │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Example 4: Chat-Tabs
+## Example 4: chat tabs
 
 ```
 ┌─────────────────────────────────────────┐
-│ Chat │ Gruppen │ Anfragen │ Archiv      │
+│ Chat │ Groups │ Requests │ Archive      │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Chat-Inhalt                           │
+│   Chat content                          │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Example 5: Dokumentation-Tabs
+## Example 5: documentation tabs
 
 ```
 ┌─────────────────────────────────────────┐
-│ Übersicht │ Installation │ Usage         │
-│ API       │ Beispiel      │                 │
+│ Overview │ Installation │ Usage         │
+│ API      │ Example      │               │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Dokumentations-Inhalt                 │
+│   Documentation content                 │
 │                                         │
 └─────────────────────────────────────────┘
 ```

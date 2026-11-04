@@ -1,7 +1,7 @@
 # Tooltip
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `overlays` |
 | **Inherits from** | `base` |
 | **Variants** | `top`, `bottom`, `left`, `right`, `auto` |
@@ -13,46 +13,45 @@
 
 ## Description
 
-Ein Tooltip zeigt eine kurze Erklärung zu einem Element – als Text, ohne
-interaktiven Inhalt. Er erscheint bei Hover oder Langdruck und verschwindet
-von selbst.
+A tooltip shows a short explanation of an element — as text, without interactive
+content. It appears on hover or long-press and disappears by itself.
 
 ## Purpose
 
-- Erklärung von Icon-only-Buttons und abgekürzten Werten
-- Kurzer Zusatz zu einem Feld (nicht als Ersatz für ein Label)
-- Vollständiger Text, wenn ein Feld den Inhalt nur anzeigt
+- Explaining icon-only buttons and abbreviated values
+- A short addition to a field (not as a replacement for a label)
+- Full text when a field only displays its content
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **top** | über dem Element (Standard) |
-| **bottom** | unter dem Element |
-| **left** / **right** | seitlich |
-| **auto** | wählt bei Platzmangel selbst die beste Seite |
+|---------|-------------|
+| **top** | above the element (standard) |
+| **bottom** | below the element |
+| **left** / **right** | to the side |
+| **auto** | picks the best side itself when space is tight |
 
 ## Features
 
-- Verzögerung (`delay`) gegen versehentliches Auslösen
-- Pfeil (`arrow`) markiert das Bezugselement
-- Mobil: Auslösung per Langdruck
+- Delay (`delay`) against accidental triggering
+- Arrow (`arrow`) marks the reference element
+- Mobile: triggered by long-press
 
 ## Distinction
 
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält
-  interaktive Inhalte, ein Tooltip ausschließlich Text.
-- **Nicht verwechseln mit** [hover-card](../hover-card/): die Hover-Card zeigt eine
-  Vorschau als Karte und bleibt offen, solange der Zeiger im Inhalt bleibt.
-- **Nicht verwechseln mit** [label](../../../primitives/basics/label/): ein Label ist ständig
-  sichtbar und mit dem Element verknüpft.
+- **Do not confuse with** [popover](../popover/): a popover contains interactive content,
+  a tooltip only text.
+- **Do not confuse with** [hover-card](../hover-card/): the hover card shows a preview as a
+  card and stays open as long as the pointer stays in the content.
+- **Do not confuse with** [label](../../../primitives/basics/label/): a label is permanently
+  visible and linked to the element.
 
 ## Best Practices
 
-- Unter 100 Zeichen; Sätze statt Absätze.
-- Nie entscheidende Information ausschließlich im Tooltip verstecken.
-- Tastaturnutzer erreichen den Tooltip über `focus`.
-- Icon-only-Buttons brauchen zusätzlich ein `aria-label`.
+- Under 100 characters; sentences rather than paragraphs.
+- Never hide decisive information exclusively in the tooltip.
+- Keyboard users reach the tooltip via `focus`.
+- Icon-only buttons additionally need an `aria-label`.
 
 ## See also
 

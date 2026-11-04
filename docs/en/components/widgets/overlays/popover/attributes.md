@@ -1,45 +1,45 @@
-# Popover (Inhaltspopover) - Attribute
+# Popover - Attributes
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Only **own** attributes. Everything else comes from the base class, see
 [base](../../../primitives/basics/base.md).
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `content` | slot | - | Inhalt des Popovers (Aktionen, Text, Formular) |
-| `open` | boolean | `false` | geöffnet? (gesteuert) |
+|-----------|------|---------|-------------|
+| `content` | slot | - | content of the popover (actions, text, form) |
+| `open` | boolean | `false` | open? (controlled) |
 | `variant` | enum | `inhalt` | `inhalt`, `aktionen`, `formular` |
 
 ## Behaviour
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
+|-----------|------|---------|-------------|
 | `trigger` | enum | `click` | `click`, `hover`, `focus` |
 | `placement` | enum | `bottom` | `top`, `right`, `bottom`, `left`, `auto` |
 | `dismiss` | enum | `beides` | `click-outside`, `escape`, `beides`, `none` |
-| `arrow` | boolean | `true` | Pfeil zum Auslöser |
-| `offset` | number | `8` | Abstand zum Auslöser in px |
+| `arrow` | boolean | `true` | arrow pointing at the trigger |
+| `offset` | number | `8` | distance to the trigger in px |
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `autoFocus` | boolean | `true` | Fokus beim Öffnen in das Popover legen |
-| `returnFocus` | boolean | `true` | Fokus beim Schließen zum Auslöser zurück |
-| `closeOnAction` | boolean | `false` | nach einer Aktion im Popover schließen |
+|-----------|------|---------|-------------|
+| `autoFocus` | boolean | `true` | put focus into the popover when opening |
+| `returnFocus` | boolean | `true` | return focus to the trigger when closing |
+| `closeOnAction` | boolean | `false` | close after an action inside the popover |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `onOpen` | function | Popover wurde geöffnet |
-| `onClose` | function | Popover wurde geschlossen |
+|-----------|------|-------------|
+| `onOpen` | function | the popover was opened |
+| `onClose` | function | the popover was closed |
 
 ## Accessibility
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `role` | string | `dialog` bei `variant="formular"`, sonst `presentation` |
-| – | – | Auslöser erhält `aria-expanded` und `aria-controls` |
-| – | – | Popover erhält eine Beschriftung (`aria-label` oder Überschrift) |
+|-----------|------|-------------|
+| `role` | string | `dialog` for `variant="formular"`, otherwise `presentation` |
+| – | – | the trigger gets `aria-expanded` and `aria-controls` |
+| – | – | the popover gets a label (`aria-label` or a heading) |
 
 ## Inherited from
 

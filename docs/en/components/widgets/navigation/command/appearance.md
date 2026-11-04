@@ -1,31 +1,31 @@
-# Command (Befehlspalette) - Appearance
+# Command - Appearance
 
 ## Base layout
 
 ```
         ┌────────────────────────────────────────┐
-        │ 🔍  Aufgabe anlegen…                   │
+        │ 🔍  Create task…                       │
         ├────────────────────────────────────────┤
-        │ Aktionen                               │
-        │   Aufgabe anlegen               Strg N │
-        │ Ansichten                                │
-        │   Zum Kalender wechseln         Strg 3 │
-        │ Programme                                │
-        │   Whiteboard öffnen             Strg W │
+        │ Actions                                │
+        │   Create task                   Ctrl N │
+        │ Views                                  │
+        │   Switch to calendar            Ctrl 3 │
+        │ Programs                               │
+        │   Open whiteboard               Ctrl W │
         └────────────────────────────────────────┘
 ```
 
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **palette** | Overlay mittig, 640 px breit, dunkler Hintergrund dahinter |
-| **inline** | ohne Hintergrund, Breite der Elternbox |
+|---------|------------|
+| **palette** | overlay centred, 640 px wide, dark background behind it |
+| **inline** | no background, width of the parent box |
 
 ## Sizes
 
-| Size | Eingabehöhe | Zeilenhöhe | Max. Treffer |
-| ------- | ------------- | ------------ | -------------- |
+| Size | Input height | Row height | Max. hits |
+|------|--------------|------------|-----------|
 | `small` | 32 px | 28 px | 6 |
 | `medium` | 40 px | 34 px | 10 |
 | `large` | 48 px | 40 px | 14 |
@@ -33,21 +33,21 @@
 ## Colours and states
 
 | State | Appearance |
-| --------- | ---------- |
-| `default` | Eingabefeld hell, Trefferliste neutral |
-| `open` | Fokus im Eingabefeld, erster Treffer markiert |
-| `hover` | Zeilenhintergrund eine Stufe dunkler |
-| `empty` | Hinweis „Kein Treffer“ plus Vorschläge |
-| `loading` | Skeleton in der Trefferliste |
+|-------|------------|
+| `default` | input field light, hit list neutral |
+| `open` | focus in the input field, first hit marked |
+| `hover` | row background one step darker |
+| `empty` | notice "No match" plus suggestions |
+| `loading` | skeleton in the hit list |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `reveal` | Kürzel rechts in der Zeile, dezent |
-| `ring` | Markierung des aktiven Treffers über die ganze Zeile |
+|--------|-------------|
+| `reveal` | shortcut on the right of the row, subtle |
+| `ring` | marking of the active hit across the whole row |
 
 ## Responsive
 
-- Auf schmalen Bildschirmen füllt die Palette die volle Breite und Höhe.
-- Die Trefferliste scrollt; Eingabezeile bleibt oben stehen.
+- On narrow screens the palette fills the full width and height.
+- The hit list scrolls; the input row stays pinned at the top.

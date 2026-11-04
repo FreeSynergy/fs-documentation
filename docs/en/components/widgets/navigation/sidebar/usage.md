@@ -1,50 +1,50 @@
 # Sidebar - Usage
 
-## Einfache Sidebar
+## Simple sidebar
 
 ```
 ┌──────────────────┐
 │  🏠 Dashboard    │
-│  📩 Nachrichten  │
-│  📅 Termine      │
-│  ──────────────── │
-│  👤 Profil       │
-│  ⚙️ Einstellungen │
+│  📩 Messages     │
+│  📅 Appointments │
+│  ────────────────│
+│  👤 Profile      │
+│  ⚙️ Settings     │
 └──────────────────┘
 ```
 
-## Sidebar mit Gruppen
+## Sidebar with groups
 
 ```
 ┌──────────────────┐
-│ ⭐ Hauptmenü     │
+│ ⭐ Main menu     │
 ├──────────────────┤
 │  🏠 Dashboard    │
-│  📩 Nachrichten  │
+│  📩 Messages     │
 ├──────────────────┤
-│ 📊 Daten         │
+│ 📊 Data          │
 ├──────────────────┤
-│  📅 Kalender     │
-│  📋 Aufgaben     │
+│  📅 Calendar     │
+│  📋 Tasks        │
 └──────────────────┘
 ```
 
-## Sidebar mit Sub-Menüs
+## Sidebar with sub-menus
 
 ```
 ┌────────────────────┐
-│ 📁 Dateien         │
-│   ├─ Dokumente     │
-│   ├─ Bilder        │
-│   └─ Musik         │
+│ 📁 Files           │
+│   ├─ Documents     │
+│   ├─ Images        │
+│   └─ Music         │
 ├────────────────────┤
-│ 🛠️ Einstellungen   │
-│   ├─ Allgemein     │
-│   └─ Sicherheit    │
+│ 🛠️ Settings        │
+│   ├─ General       │
+│   └─ Security      │
 └────────────────────┘
 ```
 
-## Code-Beispiel (Pseudocode)
+## Code example (pseudocode)
 
 ```rust
 Sidebar {
@@ -59,7 +59,7 @@ Sidebar {
         },
         MenuItem {
             id: "messages",
-            label: "Nachrichten",
+            label: "Messages",
             icon: "email",
             path: "/messages",
             badge: Some("3")
@@ -67,7 +67,7 @@ Sidebar {
     ],
     groups: vec![
         MenuGroup {
-            label: "Daten",
+            label: "Data",
             items: vec![
                 MenuItem { /* ... */ }
             ]
@@ -76,81 +76,81 @@ Sidebar {
 }
 ```
 
-## Integration in Programme
+## Integration in programs
 
-- **Messenger**: Server-Navigation, Kanäle, Kontakte
-- **Desktop**: App-Übersicht, Einstellungen, Profile
-- **CRM**: Kunden, Kontakte, Aufgaben
-- **ERP**: Buchhaltung, Lager, Lieferanten
+- **Messenger**: server navigation, channels, contacts
+- **Desktop**: app overview, settings, profiles
+- **CRM**: customers, contacts, tasks
+- **ERP**: accounting, warehouse, suppliers
 
 ## Examples
 
-## Example 1: Messenger Sidebar (ähnlich Element/Discord)
+## Example 1: messenger sidebar (similar to Element/Discord)
 
 ```
 ┌──────────────────────────┐
 │  🔵 FreeSynergy          │
 ├──────────────────────────┤
-│  📩 Alle Nachrichten     │
-│  💬 Privatchat           │
-│  📊 Team-Kanal           │
-│  🎮 Gaming-Channel       │
+│  📩 All messages         │
+│  💬 Private chat         │
+│  📊 Team channel         │
+│  🎮 Gaming channel       │
 ├──────────────────────────┤
-│  👥 Kontakte             │
-│  📅 Termine              │
+│  👥 Contacts             │
+│  📅 Appointments         │
 ├──────────────────────────┤
 │  ──────────────────────  │
-│  🏠 Workspace             │
-│  ⚙️ Einstellungen        │
-│  ❓ Hilfe                │
+│  🏠 Workspace            │
+│  ⚙️ Settings             │
+│  ❓ Help                 │
 └──────────────────────────┘
 ```
 
-## Example 2: Desktop Shell
+## Example 2: desktop shell
 
 ```
 ┌──────────────────────────┐
 │     🖥️ FreeSynergy       │
 ├──────────────────────────┤
-│  🏠 Startseite           │
-│  📁 Dateien              │
-│  📷 Fotos                │
-│  🎵 Musik                │
+│  🏠 Start page           │
+│  📁 Files                │
+│  📷 Photos               │
+│  🎵 Music                │
 │  🎥 Videos               │
 ├──────────────────────────┤
-│  📧 E-Mail               │
-│  📅 Kalender             │
-│  👥 Kontakte             │
+│  📧 E-mail               │
+│  📅 Calendar             │
+│  👥 Contacts             │
 ├──────────────────────────┤
 │  🛠️ System               │
-│  🔧 Einstellungen        │
+│  🔧 Settings             │
 │  ❓ Support              │
 └──────────────────────────┘
 ```
 
-## Example 3: CRM mit Sub-Menüs
+## Example 3: CRM with sub-menus
 
 ```
 ┌──────────────────────────┐
-│ 📊 Übersicht             │
+│ 📊 Overview              │
 ├──────────────────────────┤
-│ 👥 Kunden                │
-│   ├─ Aktive Kunden       │
-│   ├─ Inaktive Kunden     │
-│   └─ Lieferanten         │
+│ 👥 Customers             │
+│   ├─ Active customers    │
+│   ├─ Inactive customers  │
+│   └─ Suppliers           │
 ├──────────────────────────┤
-│ 📋 Aufgaben              │
-│   ├─ Offene Aufgaben     │
-│   ├─ Erledigte Aufgaben  │
-│   └─ Termine             │
+│ 📋 Tasks                 │
+│   ├─ Open tasks          │
+│   ├─ Done tasks          │
+│   └─ Appointments        │
 ├──────────────────────────┤
-│ 💰 Finanzen              │
-│   ├─ Rechnungen          │
-│   └─ Ausgaben            │
+│ 💰 Finance               │
+│   ├─ Invoices            │
+│   └─ Expenses            │
 └──────────────────────────┘
 ```
 
-## Interaktive Beispiele
+## Interactive examples
 
-Zwei Beispiele sind als Demo vorgesehen und noch nicht angelegt: eine Sidebar mit
-Dropdown-Gruppen und eine Sidebar, deren Gruppen sich ein- und ausklappen lassen.
+Two examples are planned as demos and not yet created: a sidebar with dropdown groups
+and a sidebar whose groups can be collapsed and expanded.

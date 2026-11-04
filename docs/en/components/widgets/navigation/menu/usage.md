@@ -1,6 +1,6 @@
-# Menu (Menü) - Usage
+# Menu - Usage
 
-## Einfaches Menu
+## Simple menu
 
 ```jsx
 <Menu 
@@ -14,7 +14,7 @@
 />
 ```
 
-## Mit Dropdowns
+## With dropdowns
 
 ```jsx
 <Menu 
@@ -32,7 +32,7 @@
 />
 ```
 
-## Vertical Menu
+## Vertical menu
 
 ```jsx
 <Menu 
@@ -42,7 +42,7 @@
 />
 ```
 
-## In Header
+## In a header
 
 ```jsx
 <Header>
@@ -66,7 +66,7 @@
 
 ## Examples
 
-## Example 1: Hauptnavigation
+## Example 1: main navigation
 
 ```
 ┌─────────────────────────────────────────┐
@@ -74,32 +74,32 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 2: Sidebar-Menu
+## Example 2: sidebar menu
 
 ```
 ┌─────────┐
 │ 🏠 Home │
 │ 📚 Wiki │
 │ 💬 Chat │
-│ 📅 Kal. │
+│ 📅 Cal. │
 │ 👥 Prof.│
 ├─────────┤
-│ ⚙️ Einst.│
+│ ⚙️ Set. │
 └─────────┘
 ```
 
-## Example 3: Dropdown-Menu
+## Example 3: dropdown menu
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home │ Produkte ▼ │ Lösungen ▼ │ Kontakt │
+│ Home │ Products ▼ │ Solutions ▼ │ Contact│
 ├─────────────────────────────────────────┤
-│   Untermenü                             │
-│   Untermenü 2                           │
+│   Submenu                               │
+│   Submenu 2                             │
 └─────────────────────────────────────────┘
 ```
 
-## Example 4: Mobile-Menu (Hamburger)
+## Example 4: mobile menu (hamburger)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -107,14 +107,14 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 5: Tab-Menu
+## Example 5: tab menu
 
 ```
 ┌─────────────────────────────────────────┐
 │ Tab 1 │ Tab 2 │ Tab 3 │ Tab 4          │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Inhalt                                │
+│   Content                               │
 │                                         │
 └─────────────────────────────────────────┘
 ```

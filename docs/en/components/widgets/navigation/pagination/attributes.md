@@ -7,7 +7,7 @@
 | `currentPage` | number | 1 | Aktuelle Seite |
 | `totalItems` | number | - | Gesamtanzahl |
 | `itemsPerPage` | number | 10 | Elemente pro Seite |
-| `onChange` | function | - | Event bei Seitenwechsel |
+| `onChange` | function | - | event on page change |
 
 ## Behaviour
 
@@ -20,8 +20,8 @@
 
 | Attribute | Type | Description |
 | ---------- | ----- | -------------- |
-| `onPageChange` | function | Wird bei Seitenwechsel ausgeführt |
-| `onPageSizeChange` | function | Wird bei Page-Size-Änderung ausgeführt |
+| `onPageChange` | function | runs on a page change |
+| `onPageSizeChange` | function | runs when the page size changes |
 
 ## Accessibility
 

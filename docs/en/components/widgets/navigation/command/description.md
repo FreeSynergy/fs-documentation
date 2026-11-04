@@ -1,7 +1,7 @@
 # Command
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `navigation` |
 | **Inherits from** | `base` |
 | **Variants** | `palette`, `inline` |
@@ -14,42 +14,42 @@
 
 ## Description
 
-Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste.
-Sie startet Programme, wechselt Ansichten und führt Aktionen aus — erreicht durch
-Tastenkürzel statt durch Menüsuche.
+The command palette is an overlay with an input field and a list of matches. It starts
+programs, switches views and carries out actions — reached via a keyboard shortcut instead
+of searching through menus.
 
 ## Purpose
 
-- Schneller Zugriff auf Programme und Ansichten im Desktop-Client
-- Aktionen ausführen, ohne den Kontext zu verlassen
-- Kurzhilfe: welche Befehle in dieser Ansicht verfügbar sind
+- Quick access to programs and views in the desktop client
+- Carrying out actions without leaving the context
+- Short help: which commands are available in this view
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **palette** | zentriertes Overlay, per `Strg`/`Cmd` + `K` |
-| **inline** | Palette eingebettet in eine Seitenleiste oder Werkzeugleiste |
+|---------|-------------|
+| **palette** | centred overlay, via `Ctrl`/`Cmd` + `K` |
+| **inline** | palette embedded in a sidebar or toolbar |
 
 ## Features
 
-- Suchbegriffe werden entkontextet gestartet („neue Aufgabe“ findet das Ziel)
-- Treffer gruppiert nach Programm, Ansicht und Aktion
-- Letzte und häufige Befehle stehen oben, auch ohne Eingabe
-- Tastaturnavigation: `Pfeil hoch/runter`, `Enter` ausführen, `Esc` schließen
+- Search terms are started out of context ("new task" finds the target)
+- Matches grouped by program, view and action
+- Recent and frequent commands sit at the top, even without input
+- Keyboard navigation: `arrow up/down`, `Enter` runs, `Esc` closes
 
 ## Distinction
 
-- **Nicht verwechseln mit** [search-field](../../../primitives/fields/search-field/): Suche findet Inhalte,
-  die Palette führt Aktionen aus.
-- **Nicht verwechseln mit** [menu](../menu/): Menüs zeigen das Angebot vollständig,
-  die Palette nur passende Treffer.
+- **Do not confuse with** [search-field](../../../primitives/fields/search-field/): search finds content,
+  the palette carries out actions.
+- **Do not confuse with** [menu](../menu/): menus show the whole offering, the palette only
+  matching hits.
 
 ## Best Practices
 
-- Befehle nach Verb Objekt benennen („Aufgabe anlegen“, nicht „Neu“).
-- Pro Befehl ein Kürzel anzeigen, wenn eines existiert.
-- Ergebnisse nach 50 Treffern abschneiden und zum Präzisieren auffordern.
+- Name commands verb then object ("Create task", not "New").
+- Show one shortcut per command if one exists.
+- Cut the results off after 50 hits and ask the user to be more precise.
 
 ## See also
 

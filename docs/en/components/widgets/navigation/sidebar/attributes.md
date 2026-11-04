@@ -1,40 +1,40 @@
-# Sidebar - Attribute
+# Sidebar - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `position` | enum | `left` | Position: `left`, `right` |
-| `width` | number/string | `240` | Breite in px oder CSS-Einheit |
-| `collapsed` | boolean | `false` | Sidebar eingeklappt? |
-| `collapsible` | boolean | `true` | Kann der User einklappen? |
+| `position` | enum | `left` | position: `left`, `right` |
+| `width` | number/string | `240` | width in px or a CSS unit |
+| `collapsed` | boolean | `false` | sidebar collapsed? |
+| `collapsible` | boolean | `true` | can the user collapse it? |
 
 ## Events
 
 | Attribute | Type | Description |
 | ---------- | ----- | -------------- |
-| `onSelect` | function | Wird ausgeführt beim Klick |
-| `onToggle` | function | Wird beim Öffnen/Schließen ausgeführt |
+| `onSelect` | function | runs on click |
+| `onToggle` | function | runs on opening/closing |
 
-## Menü-Attribute
+## Menu attributes
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `items` | array[] | Array von Menüpunkten |
-| `groups` | array[] | Array von Menügruppen |
+|-----------|------|-------------|
+| `items` | array[] | array of menu items |
+| `groups` | array[] | array of menu groups |
 | `showIcons` | boolean | show icons? |
-| `showLabels` | boolean | Text labels anzeigen? |
+| `showLabels` | boolean | show text labels? |
 
-## Item-Attribute (pro Menüpunkt)
+## Item attributes (per menu item)
 
-| Attribute | Type | Erforderlich | Description |
-| ---------- | ----- | -------------- | -------------- |
-| `id` | string | yes | Eindeutige ID |
-| `label` | string | yes | Anzeigetext |
-| `icon` | string | no | Icon-Name (z.B. "mdi:mail") |
-| `path` | string | no | Ziel-Pfad/Navigation |
-| `badge` | string/number | no | Kleiner Badge-Text (z.B. "3") |
-| `children` | array[] | no | Sub-Menüs (Dropdown/Tree) |
+| Attribute | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `id` | string | yes | unique ID |
+| `label` | string | yes | display text |
+| `icon` | string | no | icon name (e.g. "mdi:mail") |
+| `path` | string | no | target path/navigation |
+| `badge` | string/number | no | small badge text (e.g. "3") |
+| `children` | array[] | no | sub-menus (dropdown/tree) |
 
 ## Inherited from
 

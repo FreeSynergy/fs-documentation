@@ -1,46 +1,46 @@
-# Tooltip (Kurzinfo) - Attribute
+# Tooltip - Attributes
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Only **own** attributes. Everything else comes from the base class, see
 [base](../../../primitives/basics/base.md).
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `content` | string | - | angezeigter Text, kein HTML und keine Aktionen |
+|-----------|------|---------|-------------|
+| `content` | string | - | displayed text, no HTML and no actions |
 | `placement` | enum | `auto` | `top`, `right`, `bottom`, `left`, `auto` |
-| `open` | boolean | `null` | gesteuerte Sichtbarkeit (`null` = automatisch) |
+| `open` | boolean | `null` | controlled visibility (`null` = automatic) |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
+|-----------|------|---------|-------------|
 | `trigger` | enum | `hover` | `hover`, `focus`, `longpress` |
-| `delay` | number | `400` | Verzögerung vor dem Einblenden in ms |
-| `hideDelay` | number | `100` | Verzögerung vor dem Ausblenden in ms |
+| `delay` | number | `400` | delay before fading in, in ms |
+| `hideDelay` | number | `100` | delay before fading out, in ms |
 
 ## Presentation
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `arrow` | boolean | `true` | Pfeil zum Bezugselement |
-| `maxWidth` | number | `240` | maximale Breite in px |
-| `offset` | number | `8` | Abstand zum Element in px |
+|-----------|------|---------|-------------|
+| `arrow` | boolean | `true` | arrow pointing at the reference element |
+| `maxWidth` | number | `240` | maximum width in px |
+| `offset` | number | `8` | distance to the element in px |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `onShow` | function | Tooltip wurde angezeigt |
-| `onHide` | function | Tooltip wurde verborgen |
+|-----------|------|-------------|
+| `onShow` | function | the tooltip was shown |
+| `onHide` | function | the tooltip was hidden |
 
 ## Accessibility
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
+|-----------|------|-------------|
 | `role` | string | `tooltip` |
-| – | – | Das Bezugselement erhält `aria-describedby` auf den Tooltip |
-| – | – | Interaktiver Inhalt ist nicht zulässig |
+| – | – | the reference element gets `aria-describedby` pointing at the tooltip |
+| – | – | interactive content is not allowed |
 
 ## Inherited from
 

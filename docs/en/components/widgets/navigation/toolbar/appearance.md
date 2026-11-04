@@ -1,30 +1,30 @@
-# Toolbar (Symbolleiste) - Appearance
+# Toolbar - Appearance
 
 ## Base layout
 
-Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
+A toolbar is a row of buttons/icons for frequent actions.
 
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **standard** | einzeilige Leiste mit Symbolen |
-| **kontext** | Leiste tauscht ihre Knöpfe, wenn sich die Auswahl ändert |
-| **ribbon** | zwei oder drei Zeilen mit Gruppenüberschriften |
+|---------|------------|
+| **standard** | single-row bar with icons |
+| **kontext** | the bar swaps its buttons when the selection changes |
+| **ribbon** | two or three rows with group headings |
 
-### Horizontal (Standard)
+### Horizontal (standard)
 ```
 ┌─────────────────────────────────────────────────────┐
 │ [📄] [✏️] [✂️] [✔️] [❌] [🔍] [⚙️]                  │
 └─────────────────────────────────────────────────────┘
 ```
-### Floating (Schwebend)
+### Floating
 ```
                     ┌─────────────────────────────┐
                     │ [📄] [✏️] [✂️] [✔️]        │
                     └─────────────────────────────┘
 ```
-### Sidebar (Links/Rechts)
+### Sidebar (left/right)
 ```
 ┌─────┬─────────────────────────────────────────────┐
 │     │ [📄] [✏️] [✂️] [✔️] [❌] [🔍] [⚙️]         │
@@ -35,46 +35,46 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
 ## Sizes
 
-| Size | Icon size | Button-Größe | Use |
-| ------- | ------------ | -------------- | ------------ |
-| Small | 16px | 32px | Inline |
-| Medium | 24px | 48px | Standard |
-| Large | 32px | 64px | Featured |
+| Size | Icon size | Button size | Use |
+|------|-----------|-------------|-----|
+| Small | 16px | 32px | inline |
+| Medium | 24px | 48px | standard |
+| Large | 32px | 64px | featured |
 
 ## Colours and states
 
 | State | Colour | Description |
-| -------- | ------- | -------------- |
-| **Primary** | Primärfarbe | Hauptaktion |
-| **Secondary** | Sekundärfarbe | Sekundäre Aktion |
-| **Danger** | Rot | Gefährliche Aktion |
-| **Disabled** | Grau | Deaktivierte Aktion |
+|-------|--------|-------------|
+| **Primary** | primary colour | main action |
+| **Secondary** | secondary colour | secondary action |
+| **Danger** | red | dangerous action |
+| **Disabled** | grey | disabled action |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
+|--------|-------------|
 | `color` | the colour changes |
-| `background` | Hintergrund ändert sich |
-| `scale` | Leichte Vergrößerung |
-| `shadow` | Schatten erscheint |
+| `background` | the background changes |
+| `scale` | slight enlargement |
+| `shadow` | a shadow appears |
 
 ## Responsive
 
-- Die Leiste ist vollbreit und bleibt beim Scrollen oben stehen (`geklebt`); der Inhalt der
-  Gruppe rechts rutscht zuerst weg.
-- Passt die Reihe nicht mehr, wandern die übrigen Knöpfe hinter ein ``+``-Aufklappfeld,
-  das die Gruppen beibehält.
-- Auf Touch-Geräten sind die Knöpfe mindestens 44 px groß; auf großen Bildschirmen kann
-  `Symbol und Text` gezeigt werden, auf kleinen nur das Symbol.
+- The bar is full width and stays at the top while scrolling (`geklebt`); the content of the
+  group on the right slides away first.
+- If the row no longer fits, the remaining buttons move behind a `+` drop-down field that
+  keeps the groups.
+- On touch devices the buttons are at least 44 px large; on large screens `icon and text`
+  can be shown, on small ones only the icon.
 
-## Beschriftung der Knöpfe
+## Button labelling
 
 | Form | Description |
-| ------ | -------------- |
-| **nur Symbol** | Standard, mit Tooltip |
-| **nur Text** | wenn kein eindeutiges Symbol existiert |
-| **Symbol und Text** | neue oder mehrdeutige Aktionen |
+|------|-------------|
+| **icon only** | standard, with a tooltip |
+| **text only** | when no unambiguous icon exists |
+| **icon and text** | new or ambiguous actions |
 
 ## Separator
 

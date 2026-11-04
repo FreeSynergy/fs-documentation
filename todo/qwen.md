@@ -25,3 +25,6 @@ Modell: qwen3.8 · Scope: Struktur, Konventionen, physische Umzüge
 - Steckbrief-Felder leer: Zustaende 19, Gesten 21, Animationen 16; 16 optionale Abschnitte in 9 Komponenten · Status: offen (Inhalt, nicht Struktur)
 - Kaputtes Verzeichnis aufraeumen: `docs/de/components/fields/otp-input/input-group/` (vier Doku-Dateien liegen verschachtelt in otp-input, die echte Komponente ist `fields/input-group/`) · `check_components.py` meldet dazu 12 Fehler · Status: offen
 - `calendar-view` ist noch nicht standardisiert (usage.md ohne Szenarien, attributes.md ohne Datenanbindung, Steckbrief-Felder leer) — an das Muster von `date-picker` (commit 3c037a2) anziehen · Status: offen
+
+## Hinweis
+- Eigene Agenten werden nicht automatisch angelegt. Neue Aufgabe/Modell = neue Liste hier.

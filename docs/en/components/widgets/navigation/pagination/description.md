@@ -12,22 +12,22 @@
 | **State** | documented |
 
 ## Description
-Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwischen ihnen.
+Pagination splits a long list into portions and offers switching between them.
 
 ## Purpose
 
-- Große Datenmengen übersichtlich darstellen
-- Performance verbessern (nur sichtbare Daten laden)
-- Benutzerfreundlichkeit erhöhen
+- Presenting large amounts of data clearly
+- Improving performance (only loading visible data)
+- Increasing usability
 
 ## Variants
 
 | Variant | Description |
 | ---------- | -------------- |
-| **zahlen** | Seitenzahlen mit aktueller Seite und `…` |
-| **vor-zurueck** | nur vorherige und nächste Seite |
-| **nachladen** | angehängte Portion auf Knopfdruck |
-| **endlos** | Portion lädt automatisch beim Erreichen des listenendes |
+| **zahlen** | page numbers with the current page and `…` |
+| **vor-zurueck** | only previous and next page |
+| **nachladen** | appended portion on a button press |
+| **endlos** | the portion loads automatically when the end of the list is reached |
 
 ## Features
 
@@ -39,23 +39,23 @@ Seitennavigation teilt eine lange Liste in Portionen und bietet den Wechsel zwis
 
 ## Distinction
 
-- **Nicht verwechseln mit** [tabs](../tabs/): Tabs wechseln den Inhalt, hier bleibt es dieselbe
-  Liste in Portionen.
-- **Nicht verwechseln mit** [scroll-area](../../containers/scroll-area/): die Scrollfläche ist der
-  Rahmen, die Seitennavigation entscheidet, was darin nachgeladen wird.
-- In [repeater](../../data/repeater/) ist diese Komponente bereits enthalten — nicht doppelt bauen.
+- **Do not confuse with** [tabs](../tabs/): tabs switch the content, here it stays the same list
+  in portions.
+- **Do not confuse with** [scroll-area](../../containers/scroll-area/): the scroll area is the
+  frame, pagination decides what gets loaded into it.
+- In [repeater](../../data/repeater/) this component is already included — do not build it twice.
 
 ## Best Practices
 
-- Mindestens 25 Elemente pro Seite, sonst ist Blättern langsamer als Scrollen.
-- Gesamtzahl und aktuellen Bereich anzeigen ("41–80 von 312").
-- Nach dem Seitenwechsel nach oben scrollen, sonst beginnt die neue Seite halb sichtbar.
-- `endlos` nur, wo kein bestimmter Punkt gesucht wird; zum gezielten Springen gehören Zahlen.
-- Mit den Pfeiltasten bedienbar, aktuelle Seite mit `aria-current`.
+- At least 25 items per page, otherwise paging is slower than scrolling.
+- Show the total count and the current range ("41–80 of 312").
+- Scroll to the top after changing the page, otherwise the new page starts half visible.
+- Use `endlos` only where no specific item is being searched for; targeted jumping needs numbers.
+- Operable with the arrow keys, current page with `aria-current`.
 
 ## See also
 
 - [navigation – overview](../index.md)
-- [Repeater](../../data/repeater/) — Liste inklusive Seitennavigation
-- [Scroll Area](../../containers/scroll-area/) — endlose Scrollfläche
+- [Repeater](../../data/repeater/) — list including pagination
+- [Scroll Area](../../containers/scroll-area/) — endless scroll area
 - [Base component](../../../primitives/basics/base.md)

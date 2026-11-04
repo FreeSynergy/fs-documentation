@@ -1,8 +1,8 @@
-# Menu (Menü) - Appearance
+# Menu - Appearance
 
 ## Base layout
 
-Ein Menu ist eine klickbare Menüleiste, die oft oben platziert wird.
+A menu is a clickable menu bar, often placed at the top.
 
 ## Variants
 
@@ -37,34 +37,34 @@ Ein Menu ist eine klickbare Menüleiste, die oft oben platziert wird.
 
 | State | Colour | Description |
 | -------- | ------- | -------------- |
-| **Active** | Primärfarbe | Aktiver Menüpunkt |
-| **Inactive** | Grau | Inaktive Menüpunkte |
-| **Hover** | Heller | hover state |
-| **Disabled** | ausgegraut | Deaktivierte Menüpunkte |
+| **Active** | primary colour | active menu item |
+| **Inactive** | grey | inactive menu items |
+| **Hover** | lighter | hover state |
+| **Disabled** | greyed out | disabled menu items |
 
 ## Hover and focus effects
 
 | Effect | Description |
 | -------- | -------------- |
 | `color` | the colour changes |
-| `background` | Hintergrund ändert sich |
+| `background` | the background changes |
 | `border-bottom` | an underline appears |
-| `shadow` | Schatten erscheint |
+| `shadow` | a shadow appears |
 
 ## Responsive
 
 | Breakpoint | Behaviour |
 | ------------ | ----------- |
-| Desktop (>768px) | Volles Menu sichtbar |
-| Mobile (<480px) | Hamburger-Menu |
+| Desktop (>768px) | full menu visible |
+| Mobile (<480px) | hamburger menu |
 
-## Dropdown-Menu
+## Dropdown menu
 
 ```
 ┌─────────────────────────────────────────┐
 │ Home │ About ▼ │ Services ▼ │ Contact   │
 ├─────────────────────────────────────────┤
-│   Untermenü                             │
-│   Untermenü 2                           │
+│   Submenu                               │
+│   Submenu 2                             │
 └─────────────────────────────────────────┘
 ```

@@ -1,7 +1,7 @@
 # Sidebar
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `navigation` |
 | **Inherits from** | `base` |
 | **Variants** | `angeheftet`, `ikonenleiste`, `einklappbar` |
@@ -12,58 +12,60 @@
 | **State** | documented |
 
 ## Description
-Die Sidebar ist eine vertikale Navigationssäule, die normalerweise links oder rechts am Rand der Anwendung positioniert ist. Sie bietet schnellen Zugriff auf Hauptfunktionen und wird oft in Desktop-Anwendungen und Messenger verwendet.
+The sidebar is a vertical navigation column, normally positioned on the left or right edge
+of the application. It gives quick access to main functions and is often used in desktop
+applications and messengers.
 
 ## Purpose
 
-- Schneller Zugriff auf Hauptfunktionen
-- Organisation von Menüpunkten in Gruppen
-- Anzeige von Statusinformationen (z.B. Benutzerprofil, Nachrichtenzähler)
+- Quick access to main functions
+- Organising menu items into groups
+- Showing status information (e.g. user profile, message counter)
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **angeheftet** | dauerhaft am Rand, Contentbereich daneben |
-| **ikonenleiste** | schmale Leiste mit Symbolen, Namen erst bei Hover oder Auswahl |
-| **einklappbar** | breit mit Namen, per Knopf auf die Ikonenleiste reduziert |
+|---------|-------------|
+| **angeheftet** | permanently at the edge, content area next to it |
+| **ikonenleiste** | narrow bar with icons, names only on hover or selection |
+| **einklappbar** | wide with names, reduced to the icon bar by a button |
 
-Auf kleinen Bildschirmen wird die Seitenleiste zum [drawer](../../overlays/drawer/),
-sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
+On small screens the sidebar becomes a [drawer](../../overlays/drawer/), it is then an
+overlay and no longer pushes the content aside.
 
 ## Features
 
-- Gruppen mit Köpfen und Trennern
-- Zähler oder Status an den Punkten ([badge](../../../primitives/feedback/badge/))
-- Profilkopf oben, Einstellungen unten
-- durchsuchbar bei vielen Punkten, Tastaturnavigation mit Pfeiltasten
+- Groups with headings and separators
+- Counters or status on the items ([badge](../../../primitives/feedback/badge/))
+- Profile header at the top, settings at the bottom
+- Searchable with many items, keyboard navigation with arrow keys
 
 ## Distinction
 
-- **Nicht verwechseln mit** [drawer](../../overlays/drawer/): der Drawer überdeckt den Inhalt,
-  die Seitenleiste nimmt ihm dauerhaft Platz weg.
-- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): die eine sitzt am Rand,
-  die andere am unteren Rand kleiner Bildschirme.
-- **Nicht verwechseln mit** [tree-view](../../data/tree-view/): hier stehen Ziele und Aktionen,
-  dort beliebige Daten.
+- **Do not confuse with** [drawer](../../overlays/drawer/): the drawer covers the content,
+  the sidebar permanently takes space away from it.
+- **Do not confuse with** [bottom-navigation](../bottom-navigation/): one sits at the edge,
+  the other at the bottom edge of small screens.
+- **Do not confuse with** [tree-view](../../data/tree-view/): here are destinations and actions,
+  there arbitrary data.
 
 ## Best Practices
 
-- Wichtiges oben, Gruppen mit Überschrift, höchstens zwei Ebenen.
-- Der aktive Punkt ist dauerhaft zu erkennen (Fläche plus Text, nicht nur Farbe).
-- Einklappen merkt sich den Zustand; in der Ikonenleiste braucht jeder Punkt einen Tooltip.
-- Auf kleinen Bildschirmen als Drawer öffnen und nach der Auswahl wieder schließen.
-- Breite per Ziehen ändern nur, wenn die Mindestbreite lesbar bleibt (mindestens 200 px).
+- Important things at the top, groups with a heading, at most two levels.
+- The active item is recognisable permanently (area plus text, not only colour).
+- Collapsing remembers the state; in the icon bar every item needs a tooltip.
+- On small screens open it as a drawer and close it again after the selection.
+- Only resize the width by dragging if the minimum width stays readable (at least 200 px).
 
-## Typische Positionen
+## Typical positions
 
-- Links (Standard bei LTR-Sprachen)
-- Rechts (bei RTL-Sprachen oder spezifischen Layouts)
-- Oben (als Horizontale Leiste - dann meist "Topbar" genannt)
+- Left (standard for LTR languages)
+- Right (for RTL languages or specific layouts)
+- Top (as a horizontal bar – then usually called a "topbar")
 
 ## See also
 
 - [navigation – overview](../index.md)
-- [Drawer](../../overlays/drawer/) — Seitenleiste als Overlay
-- [Menu](../menu/) — Menüpunkte in der Leiste
+- [Drawer](../../overlays/drawer/) — sidebar as an overlay
+- [Menu](../menu/) — menu items in the bar
 - [Base component](../../../primitives/basics/base.md)

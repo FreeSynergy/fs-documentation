@@ -7,8 +7,8 @@
 │  Logo/Title │
 ├─────────────┤
 │  📩 Mail    │
-│  📅 Kalend. │
-│  👥 Kont.   │
+│  📅 Calend. │
+│  👥 Contacts│
 ├─────────────┤
 │  📝 Wiki    │
 │  💬 Chat    │
@@ -16,7 +16,7 @@
 ├─────────────┤
 │  ─────────  │
 │  👤 User    │
-│  ⚙️ Einst.  │
+│  ⚙️ Settings│
 └─────────────┘
 ```
 
@@ -24,48 +24,49 @@
 
 | Variant | Appearance |
 | ---------- | ---------- |
-| **angeheftet** | volle Breite mit Namen, Inhalt rückt daneben |
-| **ikonenleiste** | schmaler Streifen mit Symbolen, kein Text |
-| **einklappbar** | breit, Klappknopf im Kopf; zugeklappt wie `ikonenleiste` |
+| **angeheftet** | full width with names, content moves next to it |
+| **ikonenleiste** | narrow strip with icons, no text |
+| **einklappbar** | wide, collapse button in the header; collapsed like `ikonenleiste` |
 
 ## Sizes
 
-| Size | Width | Icon | Schrift | Use |
-| ------- | -------- | ------ | --------- | ------------ |
-| Desktop | 240 px | 20 px | 14 px | Standard |
-| eingeklappt | 64 px | 20 px | – | Ikonenleiste |
-| mobil | 100 % | 20 px | 14 px | Overlay (Drawer) |
+| Size | Width | Icon | Font | Use |
+|------------|-------|------|------|-------------------|
+| desktop | 240 px | 20 px | 14 px | standard |
+| collapsed | 64 px | 20 px | – | icon bar |
+| mobile | 100 % | 20 px | 14 px | overlay (drawer) |
 
-Abstände pro Punkt: 12 px oben/unten, 16 px links; Gruppenaustand 8 px.
+Spacing per item: 12 px above/below, 16 px on the left; group indent 8 px.
 
 ## Colours and states
 
-| Element | Colour | Hinweis |
-| --------- | ------- | --------- |
-| Hintergrund | `--sidebar-bg` | Meist dunkler als Hauptinhalt |
-| Text | `--sidebar-text` | Kontrast zum Hintergrund |
-| Hover | `--sidebar-hover` | subtile Hervorhebung |
-| Active | `--sidebar-active` | deutliche Markierung |
-| Divider | `--sidebar-divider` | Trennlinie zwischen Gruppen |
+| Element | Colour | Note |
+|---------|--------|------|
+| background | `--sidebar-bg` | usually darker than the main content |
+| text | `--sidebar-text` | contrast against the background |
+| hover | `--sidebar-hover` | subtle emphasis |
+| active | `--sidebar-active` | clear marking |
+| divider | `--sidebar-divider` | separator between groups |
 
 ## Hover and focus effects
 
 | Effect | Description |
 | -------- | -------------- |
-| `background` | Punkt bekommt eine Fläche, Text bleibt lesbar |
-| `ring` | Fokus-Ring bei Tastaturnavigation |
-| `tooltip` | Name erscheint bei Hover an der Ikonenleiste |
-| `indicator` | schmaler Balken am linken Rand des aktiven Punkts |
+| `background` | the item gets a filled area, the text stays readable |
+| `ring` | focus ring during keyboard navigation |
+| `tooltip` | the name appears on hover in the icon bar |
+| `indicator` | narrow bar on the left edge of the active item |
 
 ## Responsive
 
 | Breakpoint | Behaviour |
 | ------------ | ----------- |
-| Desktop (>768px) | Volle Sidebar sichtbar |
-| Tablet (480-768px) | Optional collapsed oder Drawer |
-| Mobile (<480px) | Drawer oder Bottom Navigation |
+| Desktop (>768px) | full sidebar visible |
+| Tablet (480-768px) | optionally collapsed or a drawer |
+| Mobile (<480px) | drawer or bottom navigation |
 
-Die Leiste scrollt eigenständig (`scroll-area`), Kopf- und Fußbereich bleiben stehen.
-- Beim Einklappen schrumpft die Breite, die Schrift verschwindet zuerst, Symbole bleiben
-  an derselben Stelle (`expand`/`collapse`).
-- Unter 480 px wird die Leiste zum Overlay ohne Restbreite; der Inhalt rückt nicht mehr.
+The bar scrolls independently (`scroll-area`), the header and footer stay in place.
+- When collapsing, the width shrinks; the text disappears first, the icons stay in the
+  same place (`expand`/`collapse`).
+- Below 480 px the bar becomes an overlay with no remaining width; the content is no
+  longer pushed aside.

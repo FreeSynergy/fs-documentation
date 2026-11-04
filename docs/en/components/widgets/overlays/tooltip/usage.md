@@ -1,19 +1,18 @@
-# Tooltip (Kurzinfo) - Usage
+# Tooltip - Usage
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    The examples are kept syntax-neutral. Once the implementation switches to Rust and
+    Blinc, the `usage.md` examples will be replaced in a separate pass.
 
-## Icon-only-Button erklären
+## Explaining an icon-only button
 
 ```jsx
-<IconButton icon="settings" aria-label="Einstellungen">
-  <Tooltip content="Einstellungen öffnen" placement="top" />
+<IconButton icon="settings" aria-label="Settings">
+  <Tooltip content="Open settings" placement="top" />
 </IconButton>
 ```
 
-## Vollständiger Text für abgeschnittenen Wert
+## Full text for a truncated value
 
 ```jsx
 <TableCell value={shortTitle}>
@@ -21,25 +20,25 @@
 </TableCell>
 ```
 
-## Tastaturkürzel zeigen
+## Showing a keyboard shortcut
 
 ```jsx
-<Tooltip content="Speichern (Strg + S)" delay={0} />
+<Tooltip content="Save (Ctrl + S)" delay={0} />
 ```
 
-## Mobil per Langdruck
+## On mobile via long-press
 
 ```jsx
 <ToolbarItem icon="filter">
-  <Tooltip content="Filtern" trigger="longpress" />
+  <Tooltip content="Filter" trigger="longpress" />
 </ToolbarItem>
 ```
 
 ## Scenarios
 
-| Szenario | Empfehlung |
-| ---------- | ------------ |
-| Icon-only-Button | Tooltip plus `aria-label` |
-| Abgeschnittener Tabellenwert | `placement="top"`, `delay={0}` |
-| Erklärtext zu einem Feld | lieber [field](../../../primitives/fields/field/) mit `help` |
-| Inhalt mit Buttons oder Links | [popover](../popover/), kein Tooltip |
+| Scenario | Recommendation |
+|----------|----------------|
+| icon-only button | tooltip plus `aria-label` |
+| truncated table value | `placement="top"`, `delay={0}` |
+| explanatory text for a field | rather [field](../../../primitives/fields/field/) with `help` |
+| content with buttons or links | [popover](../popover/), no tooltip |

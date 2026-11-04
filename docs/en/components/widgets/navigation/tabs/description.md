@@ -12,21 +12,21 @@
 | **State** | documented |
 
 ## Description
-Tabs sind Reiter zum Umschalten zwischen Ansichten.
+Tabs are tabs for switching between views.
 
 ## Purpose
 
-- Ansichten
-- Kategorien
-- Optionen
+- Views
+- Categories
+- Options
 
 ## Variants
 
 | Variant | Description |
 | ---------- | -------------- |
-| **reiter** | klassische Reiter mit Unterstreichung des aktiven |
-| **pille** | abgerundete Fläche, passt in Werkzeugleisten |
-| **karte** | Reiter sitzen auf einer Karte, der Rahmen gehört zum Inhalt |
+| **reiter** | classic tabs with the active one underlined |
+| **pille** | rounded filled area, fits in toolbars |
+| **karte** | tabs sit on a card, the frame belongs to the content |
 
 ## Features
 
@@ -36,25 +36,25 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten.
 
 ## Distinction
 
-- **Nicht verwechseln mit** [accordion](../../containers/accordion/): Reiter zeigen immer nur einen
-  Bereich, das Akkordeon mehrere untereinander.
-- **Nicht verwechseln mit** [breadcrumb](../breadcrumb/): Reiter wechseln Inhalte, der Brotpfad
-  zeigt eine Ebene in einer Hierarchie.
-- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): die wechselt die Ansicht,
-  Reiter wechseln nur den Inhalt **innerhalb** der Ansicht.
-- Eine Auswahl für ein Formular ist eine [radio-group](../../../primitives/fields/radio-group/), keine Reiterleiste.
+- **Do not confuse with** [accordion](../../containers/accordion/): tabs always show only one
+  area, the accordion several stacked below each other.
+- **Do not confuse with** [breadcrumb](../breadcrumb/): tabs switch content, the breadcrumb
+  shows one level in a hierarchy.
+- **Do not confuse with** [bottom-navigation](../bottom-navigation/): that switches the view,
+  tabs only switch the content **inside** the view.
+- A selection for a form is a [radio-group](../../../primitives/fields/radio-group/), not a tab bar.
 
 ## Best Practices
 
-- Zwei bis sieben Reiter; darüber gehört die Auswahl in eine Liste oder Navigation.
-- Inhalte beim Wechsel behalten (nicht neu laden), Scrollposition je Reiter merken.
-- Pfeiltasten zum Wechseln, `role="tab"` und `aria-selected` für Screenreader.
-- Schließen-Knopf nur, wenn Reiter geöffnete Dokumente darstellen (z. B. Editoren).
-- Zu lange Titel kürzen und den vollen Namen als Tooltip zeigen.
+- Two to seven tabs; beyond that the selection belongs in a list or navigation.
+- Keep the content when switching (do not reload), remember the scroll position per tab.
+- Arrow keys to switch, `role="tab"` and `aria-selected` for screen readers.
+- Close button only when tabs represent open documents (e.g. editors).
+- Truncate titles that are too long and show the full name as a tooltip.
 
 ## See also
 
 - [navigation – overview](../index.md)
-- [Accordion](../../containers/accordion/) — Bereiche untereinander
-- [Bottom Navigation](../bottom-navigation/) — Ansichtswechsel
+- [Accordion](../../containers/accordion/) — areas stacked below each other
+- [Bottom Navigation](../bottom-navigation/) — switching views
 - [Base component](../../../primitives/basics/base.md)

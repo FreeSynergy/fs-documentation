@@ -2,11 +2,11 @@
 
 ## Base layout
 
-Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
+Pagination is a navigation for large lists that splits data into pages.
 
 ## Variants
 
-### Numeric (Numerisch)
+### Numeric
 
 ```
 ┌─────────────────────────────────────────┐
@@ -50,32 +50,32 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 
 | State | Colour | Description |
 | -------- | ------- | -------------- |
-| **Active** | Primärfarbe | Aktuelle Seite |
-| **Inactive** | Grau | Inaktive Seiten |
-| **Hover** | Heller | hover state |
-| **Disabled** | Grau | Deaktivierte Buttons |
+| **Active** | primary colour | current page |
+| **Inactive** | grey | inactive pages |
+| **Hover** | lighter | hover state |
+| **Disabled** | grey | disabled buttons |
 
 ## Hover and focus effects
 
 | Effect | Description |
 | -------- | -------------- |
-| `background` | Seitenzahl bekommt eine Fläche |
-| `ring` | Fokus-Ring bei Tastaturnavigation |
-| `underline` | Unterstrich beim aktiven Eintrag |
-| `none` | deaktivierte Pfeile ohne Rückmeldung |
+| `background` | the page number gets a filled area |
+| `ring` | focus ring during keyboard navigation |
+| `underline` | underline on the active entry |
+| `none` | disabled arrows without feedback |
 
 ## Responsive
 
 | Breakpoint | Behaviour |
 | ------------ | ----------- |
-| Desktop (>768px) | Volle Pagination sichtbar |
-| Tablet (480-768px) | Kompakt |
+| Desktop (>768px) | full pagination visible |
+| Tablet (480-768px) | compact |
 | Mobile (<480px) | Previous/Next oder Load More |
 
 ## Features
 
-- **Total Items**: Gesamtanzahl der Elemente
-- **Current Page**: Aktuelle Seite
-- **Items per Page**: Elemente pro Seite
-- **Jump to Page**: Direkt zu Seite springen
+- **Total Items**: total number of items
+- **Current Page**: current page
+- **Items per Page**: items per page
+- **Jump to Page**: jump straight to a page
 - **Page Size Selector**: Anzahl pro Seite ändern

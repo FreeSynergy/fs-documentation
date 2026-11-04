@@ -5,6 +5,3 @@ Modell: Opus · Scope: schweres Zeug – Architektur-Plan, Programmierung, Code-
 
 ## offen
 - (noch keine)
-
-## Hinweis
-- Eigene Agenten werden nicht automatisch angelegt. Neue Aufgabe/Modell = neue Liste hier.

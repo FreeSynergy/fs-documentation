@@ -5,23 +5,23 @@
 ```jsx
 <Toolbar 
   buttons={[
-    { id: 'new', icon: 'plus', label: 'Neu', onClick: ... },
-    { id: 'save', icon: 'save', label: 'Speichern', onClick: ... },
-    { id: 'delete', icon: 'trash', label: 'Löschen', onClick: ... }
+    { id: 'new', icon: 'plus', label: 'New', onClick: ... },
+    { id: 'save', icon: 'save', label: 'Save', onClick: ... },
+    { id: 'delete', icon: 'trash', label: 'Delete', onClick: ... }
   ]}
 />
 ```
 
-## Mit Separatoren
+## With separators
 
 ```jsx
 <Toolbar 
   buttons={[
-    { id: 'new', icon: 'plus', label: 'Neu' },
-    { id: 'open', icon: 'folder', label: 'Öffnen' },
+    { id: 'new', icon: 'plus', label: 'New' },
+    { id: 'open', icon: 'folder', label: 'Open' },
     { separator: true },
-    { id: 'copy', icon: 'copy', label: 'Kopieren' },
-    { id: 'paste', icon: 'paste', label: 'Einfügen' }
+    { id: 'copy', icon: 'copy', label: 'Copy' },
+    { id: 'paste', icon: 'paste', label: 'Paste' }
   ]}
 />
 ```
@@ -72,7 +72,7 @@
 ```
 ┌─────────────────────────────────────────────────────┐
 │ [Neu] [Öffnen] [Speichern] [Exportieren]           │
-│ [Zurück] [Vor] [Zoom-] [Zoom+] [100%]              │
+│ [Back] [Fwd] [Zoom-] [Zoom+] [100%]               │
 └─────────────────────────────────────────────────────┘
 ```
 

@@ -1,23 +1,24 @@
 # overlays
 
-Band [widgets](../) – kennt seine Inhalte beim Bauen.
+Band [widgets](../) – knows its contents when it is built.
 
-Elemente, die über anderem Inhalt erscheinen und eigenen Fokus bekommen. Sie haben eine eigene Lebensdauer und schließen mit `Esc` oder Klick außerhalb.
+Elements that appear above other content and get their own focus. They have their own
+lifecycle and close with `Esc` or a click outside.
 
 ## Elements
 
-- [**alert-dialog**](./alert-dialog/) – Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird.
-- [**context-menu**](./context-menu/) – Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion geöffnet und bietet kontextbezogene Optionen.
-- [**drawer**](./drawer/) – Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
-- [**hover-card**](./hover-card/) – Die Vorschaukarte zeigt zu einem Verweis die wichtigsten Informationen zum Ziel — ohne die Adresse zu wechseln.
-- [**modal**](./modal/) – Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
-- [**popover**](./popover/) – Ein Popover ist ein kleines Overlay mit interaktivem Inhalt: Aktionen, eine Vorschau oder ein kurzes Formular.
-- [**tooltip**](./tooltip/) – Ein Tooltip zeigt eine kurze Erklärung zu einem Element – als Text, ohne interaktiven Inhalt.
+- [**alert-dialog**](./alert-dialog/) – A confirmation dialog asks before an action is carried out.
+- [**context-menu**](./context-menu/) – A context menu is opened by right-click or a long touch action and offers context-related options.
+- [**drawer**](./drawer/) – A drawer is a side overlay window (collapsible).
+- [**hover-card**](./hover-card/) – The preview card shows the most important information about the target of a reference — without changing the address.
+- [**modal**](./modal/) – A modal is an overlay window with focus on content.
+- [**popover**](./popover/) – A popover is a small overlay with interactive content: actions, a preview or a short form.
+- [**tooltip**](./tooltip/) – A tooltip shows a short explanation of an element – as text, without interactive content.
 
 ## Profiles
 
 | Component | Inherits from | Variants | Role | State |
-| ------------ | ---------- | ----------- | ------- | -------- |
+|-----------|---------------|----------|------|-------|
 | [alert-dialog](./alert-dialog/) | `base`, `modal` | `bestaetigung`, `zerstoererisch` | `alertdialog` | documented |
 | [context-menu](./context-menu/) | `base`, `menu` | `Standard`, `Long Press`, `Overflow Menu` | - | documented |
 | [drawer](./drawer/) | `base` | `Left Drawer`, `Right Drawer`, `Bottom Drawer`, `Full Drawer` | - | documented |

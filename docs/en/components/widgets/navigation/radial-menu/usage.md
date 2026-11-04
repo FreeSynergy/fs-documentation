@@ -1,9 +1,9 @@
-# Radial Menu (Kreismenü) - Usage
+# Radial Menu - Usage
 
-## Eckenmenü mit Hover (oben rechts)
+## Corner menu with hover (top right)
 
-Der Klassiker: Punkte sitzen in der Ecke, wachsen bei Hover und schieben ihre
-Unterpunkte nach innen in die Fläche (`clamp` macht aus dem Vollkreis einen Fächer).
+The classic: items sit in the corner, grow on hover and push their sub-items inwards into
+the surface (`clamp` turns the full circle into a fan).
 
 ```jsx
 <RadialMenu
@@ -11,22 +11,22 @@ Unterpunkte nach innen in die Fläche (`clamp` macht aus dem Vollkreis einen Fä
   variant="facher"
   trigger="hover"
   items={[
-    { id: 'neu', icon: 'plus', label: 'Neu' },
-    { id: 'teilen', icon: 'share', label: 'Teilen',
+    { id: 'new', icon: 'plus', label: 'New' },
+    { id: 'share', icon: 'share', label: 'Share',
       children: [
-        { id: 'link', icon: 'link', label: 'Link kopieren' },
-        { id: 'mail', icon: 'mail', label: 'E-Mail' }
+        { id: 'link', icon: 'link', label: 'Copy link' },
+        { id: 'mail', icon: 'mail', label: 'E-mail' }
       ] },
-    { id: 'einstellungen', icon: 'cog', label: 'Einstellungen' }
+    { id: 'settings', icon: 'cog', label: 'Settings' }
   ]}
   onSelect={(id) => run(id)}
 />
 ```
 
-## Freier Anker mitten in der Fläche
+## Free anchor in the middle of the surface
 
-Anker auf freie Koordinaten oder auf ein anderes Element setzen — das Menü erscheint
-dort, wo der Nutzer arbeitet (Whiteboard, Karte, Editor).
+Set the anchor to free coordinates or to another element — the menu appears where the user
+works (whiteboard, map, editor).
 
 ```jsx
 <RadialMenu
@@ -36,24 +36,24 @@ dort, wo der Nutzer arbeitet (Whiteboard, Karte, Editor).
   items={palette}
 />
 
-<RadialMenu anchor="#avatar-42" items={personenAktionen} />
+<RadialMenu anchor="#avatar-42" items={personActions} />
 ```
 
-## Unterpunkte im nächsten Ring
+## Sub-items in the next ring
 
-Hover auf einem Punkt öffnet dessen `children` im zweiten Ring; bei drei Ebenen
-entspricht `levels={3}` drei Ringen.
+Hovering an item opens its `children` in the second ring; with three levels
+`levels={3}` corresponds to three rings.
 
 ```jsx
 <RadialMenu
   anchor="center"
   levels={3}
-  activeItem={hoveredItem}      // Kinder erscheinen im nächsten Ring
+  activeItem={hoveredItem}      // children appear in the next ring
   dimInactive
   items={[
-    { id: 'dokument', icon: 'file', children: [
-        { id: 'umbenennen', icon: 'pencil' },
-        { id: 'versionen', icon: 'history', children: [
+    { id: 'document', icon: 'file', children: [
+        { id: 'rename', icon: 'pencil' },
+        { id: 'versions', icon: 'history', children: [
             { id: 'v1', label: 'v1' },
             { id: 'v2', label: 'v2' }
         ] }
@@ -62,30 +62,30 @@ entspricht `levels={3}` drei Ringen.
 />
 ```
 
-## Sektoren statt Punkte (Pie-Menu)
+## Sectors instead of items (pie menu)
 
-Große Trefferflächen, Auswahl rein über die Richtung — gut auf Touch und Controllern.
+Large hit areas, selection purely by direction — good on touch and controllers.
 
 ```jsx
 <RadialMenu
   variant="sektoren"
   trigger="long-press"
-  items={werkzeugModi}
+  items={toolModes}
 />
 ```
 
-## Kontextmenü am Zeiger
+## Context menu at the pointer
 
-Rechtsklick öffnet dasselbe Menü an der Zeigerposition — die runde Variante des
+A right-click opens the same menu at the pointer position — the round variant of the
 [context-menu](../../overlays/context-menu/).
 
 ```jsx
-<RadialMenu variant="kontext" items={kontextAktionen} />
+<RadialMenu variant="kontext" items={contextActions} />
 ```
 
-## Speed-Dial am Floating Action Button
+## Speed dial on the floating action button
 
-Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bildschirmmitte.
+The FAB anchors the circular menu (`anchor: "fab"`), the fan clamps towards the screen centre.
 
 ```jsx
 <FloatingActionButton icon="plus" />
@@ -93,49 +93,49 @@ Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bilds
   anchor="fab"
   variant="facher"
   trigger="tap"
-  items={schnellzugriff}
+  items={quickAccess}
 />
 ```
 
-## Tastatursteuerung
+## Keyboard control
 
 ```jsx
 <RadialMenu keyboardNavigation items={items} />
-// Pfeiltasten: im Ring herum · Enter: eine Ebene hinein · Esc: zurück bzw. schließen
+// arrow keys: around the ring · Enter: one level in · Esc: back or close
 ```
 
 ## Examples
 
-### Example 1: Eckmenü, drei Zustände
+### Example 1: corner menu, three states
 
 ```
-geschlossen        Hover                Unterpunkt aktiv
+closed             hover                sub-item active
     ●          ╲      ◆             ╲    ◆ ○
- (Punkt in     ╲    (wächst,      ╲   (Ring 2 fächert
-  Ecke)        ╲    wandert aus)   ╲   aus ◆ heraus)
+ (item in       ╲    (grows,      ╲   (ring 2 fans
+  corner)       ╲    moves out)   ╲   out of ◆)
 ```
 
-### Example 2: Launcher mit zwei Ringen
+### Example 2: launcher with two rings
 
 ```
         ○  ○  ○
-      ○  ◆  ●  ◆  ○        ● Anker · ◆ Ring 1 · ○ Ring 2 (Kinder
-        ○  ◆  ○              des aktiven ◆, im coneAngle sichtbar)
+      ○  ◆  ●  ◆  ○        ● anchor · ◆ ring 1 · ○ ring 2 (children
+        ○  ◆  ○              of the active ◆, visible inside coneAngle)
 ```
 
-### Example 3: Speed-Dial unten rechts
+### Example 3: speed dial bottom right
 
 ```
                       ┌──────────────┐
-                      │        ○   ◆ │   Anker = Ecke unten rechts,
-                      │      ○   ◆   │   Ring als Halbfächer nach
-                      │    ○   ◆  ●  │   innen geklemmt
+                      │        ○   ◆ │   anchor = corner bottom right,
+                      │      ○   ◆   │   ring clamped inwards as a
+                      │    ○   ◆  ●  │   half fan
                       └──────────────┘
 ```
 
 ## See also
 
-- [Radial Menu – Beschreibung](./description.md)
-- [Attribute](./attributes.md)
-- [radial-out](../../../../interactions/animations/entrance/radial-out/) und [radial-in](../../../../interactions/animations/exit/radial-in/)
+- [Radial Menu – description](./description.md)
+- [Attributes](./attributes.md)
+- [radial-out](../../../../interactions/animations/entrance/radial-out/) and [radial-in](../../../../interactions/animations/exit/radial-in/)
 - [Floating Action Button](../../../primitives/actions/floating-action-button/)
