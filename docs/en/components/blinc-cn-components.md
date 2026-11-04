@@ -1180,3 +1180,379 @@ No direct Blinc equivalent. There is no multi-step wizard primitive. Build it fr
 
 #### Deutsch
 Kein direktes Blinc-Äquivalent. Es gibt kein Wizard-Primitiv. Zusammensetzen aus `cn::tabs` für den Schritt-Header (bis zur Erreichbarkeit deaktiviert), einer eigenen Zustandsmaschine im Signal für den aktuellen Schritt und `cn::button` für zurück/weiter.
+
+---
+
+### table
+
+#### English
+A themed data table assembled from structural parts rather than configured by one call: a table element with a header row, body rows and optional footer and caption.
+
+**Create:**
+    cn::table()
+    cn::table_header() / cn::table_body() / cn::table_footer()
+    cn::table_row()
+    cn::table_head(content) / cn::table_cell()
+    cn::table_caption(content)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `content` | `impl Into<String>` | Text for a header cell (`table_head`) or the caption (`table_caption`). |
+
+Builder methods — `TableRow`: `.selected(flag)` (`impl IntoReactive<bool>`; highlights the row), `.child(cell)` (repeatable), `.child_box(cell)` for a boxed builder. Cells are added to `table_row()` in column order; the row converts with `.into_div()`.
+
+#### Deutsch
+Eine themierte Datentabelle, die aus Strukturteilen zusammengesetzt wird statt über einen einzigen Aufruf konfiguriert zu werden: ein Tabellenelement mit Kopfbeile, Körperzeilen und optional Fußzeile und Caption.
+
+**Create:**
+    cn::table()
+    cn::table_header() / cn::table_body() / cn::table_footer()
+    cn::table_row()
+    cn::table_head(content) / cn::table_cell()
+    cn::table_caption(content)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `content` | `impl Into<String>` | Text für eine Kopfzelle (`table_head`) bzw. die Caption (`table_caption`). |
+
+Builder-Methoden — `TableRow`: `.selected(flag)` (`impl IntoReactive<bool>`; hebt die Zeile hervor), `.child(cell)` (wiederholbar), `.child_box(cell)` für einen Box-Builder. Zellen werden in Spaltenreihenfolge in `table_row()` eingefügt; die Zeile wird mit `.into_div()` überführt.
+
+---
+
+### tree-view
+
+#### English
+A hierarchical tree of expandable nodes. Nodes are declared inline with `cn::tree_view().node(key, label, children_fn)` or passed as a prepared `TreeNodeConfig`; one node is highlighted as selected and selection is reported through a callback.
+
+**Create:**
+    cn::tree_view()
+
+No create parameters.
+
+Builder methods: `.node(key, label, children_fn)` (repeatable; `children_fn` builds the nested nodes), `.add_node(TreeNodeConfig)`, `.selected(key)` (key of the highlighted node), `.on_select(callback)` (receives the key of the clicked node), `.indent(px)`, `.with_guides()` / `.guides(flag)` (connector lines), `.class(name)`, `.id(id)`.
+`TreeNodeConfig` is public: `TreeNodeConfig::new(key, label).expanded().icon(svg).child(key, label, builder)`, plus `.diff(TreeNodeDiff)` — `None`/`Added`/`Removed`/`Modified` — which colours the row to show what changed (used by the debugger).
+
+#### Deutsch
+Ein hierarchischer Baum aus aufklappbaren Knoten. Knoten werden inline mit `cn::tree_view().node(key, label, children_fn)` deklariert oder als vorbereitetes `TreeNodeConfig` übergeben; ein Knoten wird als ausgewählt hervorgehoben, die Auswahl wird per Callback gemeldet.
+
+**Create:**
+    cn::tree_view()
+
+Keine Create-Parameter.
+
+Builder-Methoden: `.node(key, label, children_fn)` (wiederholbar; `children_fn` baut die verschachtelten Knoten), `.add_node(TreeNodeConfig)`, `.selected(key)` (Schlüssel des hervorgehobenen Knotens), `.on_select(callback)` (erhält den Schlüssel des angeklickten Knotens), `.indent(px)`, `.with_guides()` / `.guides(flag)` (Verbindungslinien), `.class(name)`, `.id(id)`.
+`TreeNodeConfig` ist öffentlich: `TreeNodeConfig::new(key, label).expanded().icon(svg).child(key, label, builder)`, dazu `.diff(TreeNodeDiff)` — `None`/`Added`/`Removed`/`Modified` — was die Zeile je nach Änderung einfärbt (vom Debugger genutzt).
+
+---
+
+### chart
+
+#### English
+A chart family rather than one component: line, area and bar charts share a builder, and pie, histogram, comparison-bar, threshold-line and sparkline have their own. All take reactive data — a plain `Vec`, a `Signal` or a `Computed` — so charts follow their data.
+
+**Create:**
+    cn::line_chart()
+    cn::area_chart()
+    cn::bar_chart()
+    cn::threshold_line_chart()
+    cn::spark_line(values)
+    cn::pie_chart()
+    cn::histogram(values)
+    cn::comparison_bar_chart()
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `values` | `impl IntoReactive<Vec<f64>>` | The numbers for the single-series charts: a list, `Signal` or `Computed` (`spark_line`, `histogram`). |
+
+Builder methods — line/area/bar (`ChartBuilder`): `.series(name, &[f64])` (repeatable), `.series_colored(name, values, color)`, `.data(impl IntoReactive<Vec<ChartSeries>>)`, `.values(impl IntoReactive<Vec<f64>>)` for one series, `.labels(impl IntoReactive<Vec<String>>)`, `.width(px)`, `.height(px)`, `.curve(ChartCurve)`, `.dots()`, `.horizontal()`, `.stacked()`, `.no_grid()`, `.no_axes()`, `.legend(flag)`, `.no_tooltip()`, `.min(min)` / `.max(max)`, `.color(css)`, `.format(fmt_fn)`, `.class(name)`.
+Pie: `.slice(label, value)`, `.slice_colored(label, value, color)`, `.data(impl IntoReactive<Vec<PieSlice>>)`, `.donut(hole)`, `.total(caption)`, `.size(px)`, `.legend(flag)`, `.no_tooltip()`, `.format(fmt_fn)`.
+Histogram: `.bins(n)` (default 20), `.log_scale()`, `.marker(value)` / `.marker_colored(value, css)`, `.color(css)`, `.height(px)`, `.format(fmt_fn)`.
+Comparison: `.item(label, baseline, current)` / `.data(impl IntoReactive<Vec<ComparisonItem>>)` where `ComparisonItem::new(label, baseline, current)`, `.threshold(percent)` (default 10.0), `.height(px)`, `.format(fmt_fn)`.
+Threshold line: `.band(band)` for each band and `.baseline(value)` for a dashed target.
+Sparkline: comes without axes, grid, legend or tooltip at 100×24; `.filled()` fades it to its lowest value, `.color(..)` recolours it.
+
+#### Deutsch
+Eine Chart-Familie statt einer Komponente: Linien-, Flächen- und Balkendiagramm teilen sich einen Builder, Kreis-, Histogramm-, Vergleichs-, Schwellenwert- und Sparkline-Chart haben je einen eigenen. Alle nehmen reaktive Daten — eine Liste, ein `Signal` oder ein `Computed` — und folgen damit ihren Werten.
+
+**Create:**
+    cn::line_chart()
+    cn::area_chart()
+    cn::bar_chart()
+    cn::threshold_line_chart()
+    cn::spark_line(values)
+    cn::pie_chart()
+    cn::histogram(values)
+    cn::comparison_bar_chart()
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `values` | `impl IntoReactive<Vec<f64>>` | Die Zahlen der Ein-Serien-Charts: Liste, `Signal` oder `Computed` (`spark_line`, `histogram`). |
+
+Builder-Methoden — Linie/Fläche/Balken (`ChartBuilder`): `.series(name, &[f64])` (wiederholbar), `.series_colored(name, values, color)`, `.data(impl IntoReactive<Vec<ChartSeries>>)`, `.values(impl IntoReactive<Vec<f64>>)` für eine Serie, `.labels(impl IntoReactive<Vec<String>>)`, `.width(px)`, `.height(px)`, `.curve(ChartCurve)`, `.dots()`, `.horizontal()`, `.stacked()`, `.no_grid()`, `.no_axes()`, `.legend(flag)`, `.no_tooltip()`, `.min(min)` / `.max(max)`, `.color(css)`, `.format(fmt_fn)`, `.class(name)`.
+Kreis: `.slice(label, value)`, `.slice_colored(label, value, color)`, `.data(impl IntoReactive<Vec<PieSlice>>)`, `.donut(hole)`, `.total(caption)`, `.size(px)`, `.legend(flag)`, `.no_tooltip()`, `.format(fmt_fn)`.
+Histogramm: `.bins(n)` (Standard 20), `.log_scale()`, `.marker(wert)` / `.marker_colored(wert, css)`, `.color(css)`, `.height(px)`, `.format(fmt_fn)`.
+Vergleich: `.item(label, baseline, current)` / `.data(impl IntoReactive<Vec<ComparisonItem>>)` mit `ComparisonItem::new(label, baseline, current)`, `.threshold(prozent)` (Standard 10,0), `.height(px)`, `.format(fmt_fn)`.
+Schwellenwert-Linie: `.band(band)` je Band und `.baseline(wert)` für ein gestricheltes Ziel.
+Sparkline: ohne Achsen, Gitter, Legende und Tooltip, 100×24; `.filled()` füllt sie bis zu ihrem tiefsten Wert, `.color(..)` färbt sie um.
+
+---
+
+### avatar
+
+#### English
+A round or square identity tile showing an image, with initials or other text as fallback and an optional presence dot. `cn::avatar_group()` stacks several avatars with overlap and a "+N" overflow badge.
+
+**Create:**
+    cn::avatar()
+    cn::avatar_group()
+
+No create parameters.
+
+Builder methods — `avatar`: `.src(url)` (`impl IntoReactive<String>`), `.alt(text)`, `.fallback(text)` (shown until/instead of the image), `.size(AvatarSize)` (`ExtraSmall` 24px … `ExtraLarge` 64px, `Medium` 40px default; shorthands `.xs() .sm() .md() .lg() .xl()`), `.shape(AvatarShape)` (`Circle` default / `Square`, or `.circle()` / `.square()`), `.status(AvatarStatus)` (`Online` green / `Offline` grey / `Away` yellow / `Busy` red, or `.online()` etc.), `.fallback_bg(color)`, `.fallback_color(color)`, `.ring(color, width)`, `.class(name)`, `.id(id)`.
+`avatar_group`: `.child(avatar_builder)` (repeatable), `.size(AvatarSize)`, `.max(count)` (renders "+N" beyond it), `.overlap(px)`, `.class(name)`, `.id(id)`.
+
+#### Deutsch
+Eine runde oder eckige Identitätskachel mit Bild, Text-Fallback (z. B. Initialen) und optionalem Statuspunkt. `cn::avatar_group()` stapelt mehrere Avatare mit Überlappung und "+N"-Überlauf.
+
+**Create:**
+    cn::avatar()
+    cn::avatar_group()
+
+Keine Create-Parameter.
+
+Builder-Methoden — `avatar`: `.src(url)` (`impl IntoReactive<String>`), `.alt(text)`, `.fallback(text)` (bis/statt des Bildes), `.size(AvatarSize)` (`ExtraSmall` 24 px … `ExtraLarge` 64 px, `Medium` 40 px Standard; Kurzformen `.xs() .sm() .md() .lg() .xl()`), `.shape(AvatarShape)` (`Circle` Standard / `Square`, oder `.circle()` / `.square()`), `.status(AvatarStatus)` (`Online` grün / `Offline` grau / `Away` gelb / `Busy` rot, oder `.online()` usw.), `.fallback_bg(color)`, `.fallback_color(color)`, `.ring(color, width)`, `.class(name)`, `.id(id)`.
+`avatar_group`: `.child(avatar_builder)` (wiederholbar), `.size(AvatarSize)`, `.max(anzahl)` (darüber "+N"), `.overlap(px)`, `.class(name)`, `.id(id)`.
+
+---
+
+### breadcrumb
+
+#### English
+A trail of clickable path segments ending in the current location. Every segment but the last fires a click handler; the separator between segments is configurable.
+
+**Create:**
+    cn::breadcrumb()
+
+No create parameters.
+
+Builder methods: `.item(label, on_click)` (repeatable; `label: impl IntoReactive<String>`), `.item_with_icon(label, svg, on_click)`, `.current(label)` / `.current_with_icon(label, svg)` for the final non-clickable segment, `.separator(BreadcrumbSeparator)` (`Chevron` default, `Slash`, `Text(String)`, `Svg(String)`) with shorthands `.slash_separator()` / `.text_separator(text)`, `.size(BreadcrumbSize)` (`Small` 12px / `Medium` 14px default / `Large` 16px) with `.small()` / `.large()`, `.class(name)`, `.id(id)`.
+`BreadcrumbItem::new(label).icon(svg).on_click(f)` is public for prepared items.
+
+#### Deutsch
+Eine Kette anklickbarer Pfadabschnitte, abgeschlossen vom aktuellen Ort. Alle Abschnitte außer dem letzten lösen einen Klick-Handler aus; das Trennzeichen ist konfigurierbar.
+
+**Create:**
+    cn::breadcrumb()
+
+Keine Create-Parameter.
+
+Builder-Methoden: `.item(label, on_click)` (wiederholbar; `label: impl IntoReactive<String>`), `.item_with_icon(label, svg, on_click)`, `.current(label)` / `.current_with_icon(label, svg)` für den letzten nicht anklickbaren Abschnitt, `.separator(BreadcrumbSeparator)` (`Chevron` Standard, `Slash`, `Text(String)`, `Svg(String)`) mit Kurzformen `.slash_separator()` / `.text_separator(text)`, `.size(BreadcrumbSize)` (`Small` 12 px / `Medium` 14 px Standard / `Large` 16 px) mit `.small()` / `.large()`, `.class(name)`, `.id(id)`.
+`BreadcrumbItem::new(label).icon(svg).on_click(f)` ist öffentlich für vorbereitete Einträge.
+
+---
+
+### pagination
+
+#### English
+Page-number buttons with first/previous/next/last controls, driven by a total page count and a page signal. `PageValue` accepts several signal widths — `usize`, `i32` or any number signal — so the page counter stays in the caller's precision.
+
+**Create:**
+    cn::pagination(total_pages, current_page)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `total_pages` | `usize` | How many pages exist. |
+| `current_page` | `impl Into<PageValue>` | The page counter, 1-based: pass a `Signal<usize>`, `Signal<i32>` or a `NumberValue` (rounded at the boundary). |
+
+Builder methods: `.visible_pages(count)` (how many numbers to show around the current one), `.show_first_last(flag)`, `.size(PaginationSize)` (`Small` 28px / `Medium` 32px default / `Large` 40px buttons) with `.small()` / `.large()`, `.on_page_change(handler)`, `.class(name)`, `.id(id)`. Call `.signal_id()` on the `PageValue` when something else must depend on the page reactively.
+
+#### Deutsch
+Seitenzahlen-Buttons mit Erste/Zurück/Weiter/Letzte-Steuerung, getrieben von Gesamtseitenzahl und einem Seitenzähler-Signal. `PageValue` nimmt mehrere Signalbreiten — `usize`, `i32` oder ein Zahlen-Signal — der Zähler bleibt also in der Präzision des Aufrufers.
+
+**Create:**
+    cn::pagination(total_pages, current_page)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `total_pages` | `usize` | Anzahl der Seiten. |
+| `current_page` | `impl Into<PageValue>` | Seitenzähler, beginnend bei 1: ein `Signal<usize>`, `Signal<i32>` oder `NumberValue` (an der Grenze gerundet). |
+
+Builder-Methoden: `.visible_pages(anzahl)` (wie viele Zahlen um die aktuelle gezeigt werden), `.show_first_last(flag)`, `.size(PaginationSize)` (`Small` 28 px / `Medium` 32 px Standard / `Large` 40 px Buttons) mit `.small()` / `.large()`, `.on_page_change(handler)`, `.class(name)`, `.id(id)`. Auf dem `PageValue` `.signal_id()` aufrufen, wenn etwas anderes reaktiv von der Seite abhängen muss.
+
+---
+
+### sidebar
+
+#### English
+A navigation rail with animated collapse, grouped into titled sections, optionally paired with the content area beside it. Its collapsed state is a signal you own, so any button can fold the rail.
+
+**Create:**
+    cn::sidebar(is_collapsed)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `is_collapsed` | `Signal<bool>` | Reactive collapsed state; the built-in toggle button writes to it, and so can you. |
+
+Builder methods: `.item(label, icon_svg, on_click)`, `.item_active(label, icon_svg, on_click)` (renders as selected), `.section(title)` / `.section_untitled()` (each following item joins the current section), `.show_toggle(flag)`, `.content(\|selected\| -> Div)` (the area next to the rail; built once, so drive it from a signal the click handlers write), `.class(name)`, `.id(id)`.
+`SidebarItem::new(label, icon_svg, on_click).active(flag)` and `SidebarSection` are public for prepared rails.
+
+#### Deutsch
+Eine Navigationsleiste mit animiertem Einklappen, gegliedert in betitelte Abschnitte, optional gepaart mit dem Inhaltsbereich daneben. Der eingeklappte Zustand liegt in einem eigenen Signal, damit jeder Button die Leiste einziehen kann.
+
+**Create:**
+    cn::sidebar(is_collapsed)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `is_collapsed` | `Signal<bool>` | Reaktiver Einklapp-Zustand; der eingebaute Toggle schreibt daran, man selbst auch. |
+
+Builder-Methoden: `.item(label, icon_svg, on_click)`, `.item_active(label, icon_svg, on_click)` (dargestellt als ausgewählt), `.section(titel)` / `.section_untitled()` (jeder folgende Eintrag kommt in den aktuellen Abschnitt), `.show_toggle(flag)`, `.content(\|auswahl\| -> Div)` (der Bereich neben der Leiste; wird einmal gebaut, also aus einem Signal der Klick-Handler steuern), `.class(name)`, `.id(id)`.
+`SidebarItem::new(label, icon_svg, on_click).active(flag)` und `SidebarSection` sind öffentlich für vorbereitete Leisten.
+
+---
+
+### tabs
+
+#### English
+A tab strip plus the panel of the active tab, with the selected value held in a `Signal<String>`. Tabs can carry icons and badges, be disabled, and switch panels with a fade or slide transition.
+
+**Create:**
+    cn::tabs(state)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `state` | `Signal<String>` | Reactive value of the active tab; updated when a tab is clicked. |
+
+Builder methods: `.tab(value, label, content_fn)` (repeatable), `.tab_item(TabMenuItem, content_fn)`, `.tab_disabled(value, label, content_fn)`, `.default_value(value)`, `.size(TabsSize)` (`Small` 32px / `Medium` 40px default / `Large` 48px), `.transition(TabsTransition)` (`None`, `Fade`, `Slide` default, `SlideLeft`, `SlideRight`), `.on_change(callback)`, `.class(name)`, `.id(id)`, `.with_key(key, state)`.
+`cn::tab_item(value)` builds a prepared tab: `.label(l)`, `.icon(svg)`, `.badge(text)`, `.disabled()`, `.content(f)`.
+
+#### Deutsch
+Eine Tab-Leiste plus das Panel des aktiven Tabs, mit dem gewählten Wert in einem `Signal<String>`. Tabs können Icons und Badges tragen, deaktiviert sein, und der Panelwechsel nutzt Fade- oder Slide-Übergang.
+
+**Create:**
+    cn::tabs(state)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `state` | `Signal<String>` | Reaktiver Wert des aktiven Tabs; wird beim Klick aktualisiert. |
+
+Builder-Methoden: `.tab(value, label, content_fn)` (wiederholbar), `.tab_item(TabMenuItem, content_fn)`, `.tab_disabled(value, label, content_fn)`, `.default_value(value)`, `.size(TabsSize)` (`Small` 32 px / `Medium` 40 px Standard / `Large` 48 px), `.transition(TabsTransition)` (`None`, `Fade`, `Slide` Standard, `SlideLeft`, `SlideRight`), `.on_change(callback)`, `.class(name)`, `.id(id)`, `.with_key(key, state)`.
+`cn::tab_item(value)` baut einen vorbereiteten Tab: `.label(l)`, `.icon(svg)`, `.badge(text)`, `.disabled()`, `.content(f)`.
+
+---
+
+### calendar-view
+
+#### English
+A month grid with day cells, event markers and month navigation. The selected day is a signal, events arrive as a reactive list, and today's date is injectable so tests and non-local time zones stay deterministic.
+
+**Create:**
+    cn::calendar(value)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `value` | `Signal<Option<CalendarDay>>` | Reactive selected date (`CalendarDay::new(year, month, day)`, or `CalendarDay::today()`); `None` means no selection. |
+
+Builder methods: `.today(day)` (`CalendarDay` — what counts as today), `.week_start(weekday)` (0 = Sunday), `.min_year(year)` / `.max_year(year)`, `.events(impl IntoReactive<Vec<CalendarEvent>>)`, `.on_change(callback)`, `.class(name)`, `.id(id)`.
+`CalendarEvent::new(day, title).kind(k).icon(svg)` describes one marker; `events_on(&events, day)` returns the events for a day.
+
+#### Deutsch
+Ein Monatsraster mit Tageszellen, Event-Markierungen und Monatsnavigation. Der gewählte Tag ist ein Signal, Events kommen als reaktive Liste, und das heutige Datum lässt sich vorgeben — deterministisch für Tests und andere Zeitonen.
+
+**Create:**
+    cn::calendar(value)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `value` | `Signal<Option<CalendarDay>>` | Reaktives gewähltes Datum (`CalendarDay::new(Jahr, Monat, Tag)` oder `CalendarDay::today()`); `None` = keine Auswahl. |
+
+Builder-Methoden: `.today(day)` (`CalendarDay` — was als heute gilt), `.week_start(weekday)` (0 = Sonntag), `.min_year(jahr)` / `.max_year(jahr)`, `.events(impl IntoReactive<Vec<CalendarEvent>>)`, `.on_change(callback)`, `.class(name)`, `.id(id)`.
+`CalendarEvent::new(tag, titel).kind(k).icon(svg)` beschreibt eine Markierung; `events_on(&events, tag)` liefert die Events eines Tages.
+
+---
+
+### list-view
+
+#### English
+Two tools for lists. `blinc_layout`'s `ul()` / `ol()` render a small fixed set of items with markers and indentation; `virtual_list` renders only the rows in view, so lists of thousands stay cheap.
+
+**Create:**
+    blinc_layout::widgets::list::ul()
+    blinc_layout::widgets::list::ol()          // ol_start(n) to begin elsewhere
+    blinc_layout::widgets::list::li()          // one item; task_item(checked) for a checkbox row
+    blinc_layout::widgets::virtual_list::virtual_list(item_count, builder)
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `item_count` | `usize` | Total number of rows in the virtual list. |
+| `builder` | `Fn(usize) -> impl ElementBuilder` | Builds the row at a given index; called only for visible indices. |
+
+Builder methods — lists: `.child(ListItem)` (built with `li()`), `.child_element(element)` / `.child_box(builder)`, `.marker(ListMarker)`, `.indent(px)`, `.spacing(px)`, `.class(name)`, `.id(id)`; ordered lists also `.start(n)` (`ol_start(n)` at creation).
+`virtual_list`: `.estimated_item_height(px)` (how tall an unseen row is assumed to be), `.window_size(n)` (rows kept beyond the viewport), `.w(px)` / `.h(px)` / `.w_full()` / `.h_full()`, `.gap_px(px)`, `.p(px)`, `.bg(color)`, `.rounded(r)`, `.border(width, color)`, `.item_class(class)` / `.content_class(class)`, `.class(name)`, `.id(id)`, `.into_div()`.
+
+#### Deutsch
+Zwei Werkzeuge für Listen. `ul()` / `ol()` aus `blinc_layout` rendern eine kleine feste Menge Einträge mit Markern und Einrückung; `virtual_list` rendert nur die sichtbaren Zeilen, damit Listen mit tausenden Einträgen günstig bleiben.
+
+**Create:**
+    blinc_layout::widgets::list::ul()
+    blinc_layout::widgets::list::ol()          // mit ol_start(n) beginnt die Nummerierung anders
+    blinc_layout::widgets::list::li()          // ein Eintrag; task_item(checked) mit Checkbox
+    blinc_layout::widgets::virtual_list::virtual_list(item_count, builder)
+
+| Parameter | Typ | Beschreibung |
+|-----------|-----|--------------|
+| `item_count` | `usize` | Gesamtzahl der Zeilen der virtuellen Liste. |
+| `builder` | `Fn(usize) -> impl ElementBuilder` | Baut die Zeile am Index; wird nur für sichtbare Indizes aufgerufen. |
+
+Builder-Methoden — Listen: `.child(ListItem)` (erzeugt mit `li()`), `.child_element(element)` / `.child_box(builder)`, `.marker(ListMarker)`, `.indent(px)`, `.spacing(px)`, `.class(name)`, `.id(id)`; geordnete Listen zusätzlich `.start(n)` (beim Erzeugen `ol_start(n)`).
+`virtual_list`: `.estimated_item_height(px)` (angenommene Höhe einer ungesehenen Zeile), `.window_size(n)` (zusätzlich gehaltene Zeilen), `.w(px)` / `.h(px)` / `.w_full()` / `.h_full()`, `.gap_px(px)`, `.p(px)`, `.bg(color)`, `.rounded(r)`, `.border(width, color)`, `.item_class(class)` / `.content_class(class)`, `.class(name)`, `.id(id)`, `.into_div()`.
+
+---
+
+### description-list
+
+#### English
+No direct Blinc equivalent. There is no term/value list primitive. Compose one with `cn::table()` (two columns, no `table_header`), or a column of flex rows: `div().flex().child(cn::label(term)).child(text(value))`.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Es gibt kein Primitiv für Begriff/Wert-Listen. Mit `cn::table()` (zwei Spalten, ohne `table_header`) oder einer Spalte aus Flex-Zeilen bauen: `div().flex().child(cn::label(term)).child(text(value))`.
+
+---
+
+### grid-view
+
+#### English
+No direct Blinc equivalent. There is no grid/tile view component. A responsive tile layout is done with the layout primitives — `div()` with a wrap/flex or grid style and `cn::card()` children — inside a `cn::scroll_area()` when it needs to scroll.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Es gibt keine Raster-/Kachelansicht. Ein responsives Kachellayout entsteht mit den Layout-Primitiven — `div()` mit Wrap/Flex- oder Grid-Style und `cn::card()`-Kindern — in einem `cn::scroll_area()`, falls es scrollen muss.
+
+---
+
+### repeater
+
+#### English
+No dedicated repeater component. Repetition is done in Rust: map over the data and `.child()` one element per item, or use `blinc_layout::widgets::virtual_list::virtual_list(count, builder)` when the item count is large. A reactive list can also drive a `computed` child.
+
+#### Deutsch
+Keine eigene Repeater-Komponente. Wiederholung geschieht in Rust: über die Daten mappen und je Element ein `.child()`, oder `blinc_layout::widgets::virtual_list::virtual_list(anzahl, builder)` bei vielen Einträgen. Eine reaktive Liste kann auch ein `computed`-Kind steuern.
+
+---
+
+### table-of-contents
+
+#### English
+No direct Blinc equivalent. There is no outline/anchor component. Build the outline from `cn::breadcrumb()` or a `cn::sidebar()` (`.section()` per heading level) and scroll to anchors yourself; there is no built-in scroll-into-view target.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent. Es gibt kein Gliederungs-/Anker-Primitiv. Die Gliederung aus `cn::breadcrumb()` oder einer `cn::sidebar()` (`.section()` je Überschriftenebene) bauen und selbst zu den Ankern scrollen — ein eingebautes Scroll-into-View-Ziel gibt es nicht.
+
+---
+
+### timeline
+
+#### English
+No direct Blinc equivalent for the data-display timeline. Note the name clash: `TimelineHandle` and `TimelineRotation` in `blinc_layout::motion` / `stateful` are animation timelines, not event timelines. Render an event timeline as a `cn::scroll_area()` of rows, each a `cn::avatar()` or dot plus `cn::label`s, with a `cn::separator()` between entries.
+
+#### Deutsch
+Kein direktes Blinc-Äquivalent für die Ereignis-Timeline. Achtung Namensdopplung: `TimelineHandle` und `TimelineRotation` in `blinc_layout::motion` / `stateful` sind Animations-Timelines, keine Event-Timelines. Eine Event-Timeline als `cn::scroll_area()` aus Zeilen rendern, je mit `cn::avatar()` oder Punkt und `cn::label`s, getrennt durch `cn::separator()`.
