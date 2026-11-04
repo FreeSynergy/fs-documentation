@@ -12,3 +12,7 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0003 | Repo-Schale und Skript-Schattenbaum | akzeptiert |
 | 0004 | Komponenten-Einteilung primitives/widgets/workbenches | akzeptiert |
 | 0005 | App und Widget: derselbe Kern, unterschiedliche Ebene | akzeptiert |
+| 0006 | Haken, Abbruchkriterium, Pflichtmenge pro Kategorie | akzeptiert |
+| 0007 | `skins/` wird `masks/` | akzeptiert |
+| 0008 | Englisch zuerst, Deutsch zweite Sprache | akzeptiert |
+| 0009 | GUI: Blinc ist gesetzt | akzeptiert |

@@ -19,6 +19,7 @@ scripts/_tmp_*.py
 
 # Third-party tool downloads / research artifacts (not source)
 .research-planner/
+.research-blinc/
 *.tmp
 
 # OS / editor cruft

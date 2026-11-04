@@ -7,7 +7,7 @@ gültig für alle Repos, bis ausdrücklich geändert.
 
 Das konkrete Dateisatz- und Layout-Handwerk steht in `doku-standard.md` (hier im Verzeichnis).
 
-Stand: 2026-11-03
+Stand: 2026-11-03 (ADRs 0006–0009 eingetragen)
 
 ---
 
@@ -46,6 +46,9 @@ Querschnitt (eigene Top-Level-Zweige, **nicht** unter `components`):
 
 - `interactions/` → `gestures/`, `animations/` (Querband durch alle Ebenen)
 - `data/` → standardisierte Daten (macht Ebene 5 erst möglich)
+
+Unter jeder Programmkategorie: `masks/<programm>/` (sieben Dateien, ADR 0007) und
+`requirements.md` (Pflichtmenge + Kür aus den Masken, ADR 0006).
 
 Jede Ebene hat ihren eigenen `index.md`.
 
@@ -115,13 +118,14 @@ Festgelegte Grenzfälle:
 - `file-upload` → **widget** (endliche Kinder: Picker, Dropfläche, Vorschau; eigene
   Zustände; keine offene Bearbeitungsfläche — bei Umzug 2026-11-03 ergänzt)
 
-## 4. Sprache
+## 4. Sprache (ADR 0008 — englisch zuerst)
 
 - **Immer englisch:** Dateinamen, Pfade, Ordner, Bezeichner, Code, Kommentare, Commits.
-- **Deutsch erlaubt:** Prosa in `docs/de/`, Beschlüsse, Prompts, Fragen an Agenten.
-- **Keine manuelle Übersetzung nötig:** um Hilfe bitten geht auf Deutsch. Die englische
-  Doku (`en/`) wird vom Übersetzer-Modell aus `de/` erzeugt (siehe `todo/translator.md`),
-  nicht von Hand. Deutsch ist Quelle der Wahrheit, Englisch Ableitung.
+- **`docs/en/` ist die erste Sprache:** neuer Inhalt wird englisch geschrieben und nach außen
+  gegeben. **`docs/de/` ist die zweite Sprache** und wird parallel mitgezogen; beide möglichst
+  gleich halten. Der Übersetzer (`todo/translator.md`) füllt Lücken in beide Richtungen.
+- **Deutsch erlaubt und erwünscht:** Beschlüsse, Pläne, Prompts, Fragen an Agenten
+  (`conventions/`, `temp/`, `todo/`) und der Gesprächsverkehr.
 - Nie über Sprachbäume hinweg verlinken: in `en/` zeigt jeder Verweis auf `en/`.
 
 ## 5. Skripte (`scripts/`) – Schattenbaum

@@ -11,12 +11,12 @@ file sets and layout agents must follow when writing docs.
 ```
 fs-documentation/
 ├── docs/                    # NUR veroeffentlichte Doku (mkdocs -> site/)
-│   ├── de/                 # Deutsch (Quelle)
+│   ├── en/                 # Englisch (ERSTE Sprache, ADR 0008)
 │   │   ├── components/     # Bauebene: primitives/ widgets/ workbenches/
-│   │   ├── programs/       # Laufebene: apps/ suites/ platform/  (Skin: 7 Dateien/Programm)
+│   │   ├── programs/       # Laufebene: apps/ suites/ platform/  (Maske: 7 Dateien/Programm)
 │   │   ├── interactions/   # gestures/ + animations/  (Querschnitt)
 │   │   └── data/           # standardisierte Daten (standards, mappings, formate, modelle, felder, konventionen, api)
-│   └── en/                 # englische Doku (Auto-Uebersetzung aus de/)
+│   └── de/                 # Deutsch (zweite Sprache, wird mitgezogen)
 ├── conventions/            # Regeln + Gedaechtnis (CONVENTIONS.md, decisions/, doku-standard.md)
 ├── todo/                   # Aufgaben je Modell (qwen / translator / opus)
 ├── temp/                   # unsortiert
@@ -28,9 +28,10 @@ Nur `docs/` wird gebaut. Alles andere ist Repo-Unterstuetzung und erscheint nich
 
 ### Language Requirements
 
-- **Primary language**: German (`de/`)
-- All documentation must be created in **German** first
-- English translations (`en/`) and French translations (`fr/`) are maintained as needed
+- **Primary language**: English (`en/`) — ADR 0008
+- All documentation is created in **English first**; German (`de/`) is maintained in parallel
+  and kept as close to `en/` as possible
+- Further languages (`fr/`, …) are added as needed
 - **Never link across languages**: in `en/` every cross-reference points to the
   same language tree (`en → en`), never to `de/` – even when the target file
   does not exist there yet, because the translation will follow. Language
@@ -47,7 +48,8 @@ Nur `docs/` wird gebaut. Alles andere ist Repo-Unterstuetzung und erscheint nich
 ## 🗂️ Category Structure
 
 All program documentation lives under `docs/[language]/programs/`, grouped by **level**
-(see ADR 0001), each category holding `skins/[program]/` with 7 files per program.
+(see ADR 0001), each category holding `masks/[program]/` with 7 files per program
+(ADR 0007 — masks, not skins).
 
 ### Levels and categories
 
@@ -57,6 +59,9 @@ docs/[language]/programs/
 │               #   messenger, projectmanagement, streaming, whiteboards, wiki
 ├── suites/     # Ebene 5 – crm, democracy, erp, marketplace, workflows
 └── platform/   # Ebene 6 – desktop, crates
+
+Jede Kategorie enthält `masks/<programm>/` (7 Dateien) und `requirements.md`
+(Pflichtmenge + Kür, ADR 0006).
 ```
 
 Neue Kategorie der passenden Ebene zuordnen; Level-Grenze = „laeuft es allein?“.
@@ -69,7 +74,7 @@ Neue Kategorie der passenden Ebene zuordnen; Level-Grenze = „laeuft es allein?
 
 ### File Naming Conventions
 
-Each program requires exactly **7 documentation files** (`index.md` plus the 6 core files):
+Each program mask requires exactly **7 documentation files** (`index.md` plus the 6 core files):
 
 | File | Purpose | German Description |
 |------|---------|-------------------|
@@ -295,7 +300,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 **Description**: Desktop applications and software
 
-**Programs with skin documentation** (`apps/desktop/skins/<program>/`):
+**Programs with mask documentation** (`programs/platform/desktop/masks/<program>/`):
 - **homarr** - Homelab dashboard with widgets and Docker integration
 - **heimdall** - Personal dashboard with server statistics (Laravel)
 - **homer** - Static dashboard, YAML configuration only
@@ -808,7 +813,7 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `Zust�
 | `scripts/check_components.py` | validates the standard: band assignment, required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
 | `scripts/migrate_links.py` | rewrites relative **and** absolute markdown links after a directory move given as `OLD=NEW`; run before `git mv`; `--dry-run`/`--check` |
 | `scripts/fix_links.py` | re-resolves every internal link against a name registry built from `docs/`; run after `git mv` with `--force` — no depth arithmetic needed; `--dry-run`/`--check` |
-| `scripts/gen_skin_indexes.py` | builds skin `index.md` per category under `programs/<level>/<category>/skins/` and refreshes the Skin-Dokumentation block; skips hand-maintained skin indexes |
+| `scripts/gen_skin_indexes.py` | builds mask `index.md` per category under `programs/<level>/<category>/masks/` and refreshes the Mask-Dokumentation block; skips hand-maintained mask indexes (name still says skin — rename next time it is touched, ADR 0007) |
 | `scripts/gen_usage_pages.py` | creates missing `usage.md` from description + attribute tables |
 | `scripts/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section |
 | `scripts/standardize_sections.py` | renames/merges/reorders section headings, repairs `Default` column |
@@ -945,7 +950,7 @@ All 6 files should include cross-links to each other:
 
 2. **Create the folder structure**:
    ```bash
-   docs/[language]/apps/[category]/skins/[program-name]/
+   docs/[language]/programs/[level]/[category]/masks/[program-name]/
    ```
 
 3. **Create the 7 required files**:
@@ -957,11 +962,11 @@ All 6 files should include cross-links to each other:
    - `shortcuts.md`
    - `api.md`
 
-4. **Follow the template structure** from existing programs (reference: `docs/de/apps/wiki/skins/mediawiki/`)
+4. **Follow the template structure** from existing programs (reference: `docs/de/programs/apps/wiki/masks/mediawiki/`)
 
 5. **Add cross-links** in all files
 
-6. **Update the category `skins/index.md`** with the new program entry
+6. **Update the category `masks/index.md`** with the new program entry
 
 7. **Update the mkdocs.yml** navigation section if needed
 
@@ -973,10 +978,9 @@ All 6 files should include cross-links to each other:
 
 ### Language Support
 
-- German (`de/`) is the primary language
-- English (`en/`) translations are maintained as needed
-- French (`fr/`) translations are maintained as needed
-- Other languages can be added by creating new subdirectories
+- English (`en/`) is the primary language (ADR 0008)
+- German (`de/`) is maintained in parallel, kept as close to `en/` as possible
+- French (`fr/`) and other languages can be added by creating new subdirectories
 
 ### Documentation Maintenance
 
@@ -987,7 +991,7 @@ All 6 files should include cross-links to each other:
 
 ### Quality Standards
 
-- Use clear, concise German
+- Write in clear, concise English first; mirror in German
 - Include examples where helpful
 - Use tables for comparison and organization
 - Include cross-links for easy navigation
