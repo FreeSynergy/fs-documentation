@@ -1,21 +1,21 @@
-# Drawer (Seitenleiste) - Attribute
+# Drawer - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `title` | string | - | Titel |
-| `isOpen` | boolean | `false` | Ist geöffnet? |
-| `onClose` | function | - | Event beim Schließen |
+| `title` | string | - | title |
+| `isOpen` | boolean | `false` | is it open? |
+| `onClose` | function | - | event on closing |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
 | `position` | enum | `left` | Position: `left`, `right`, `top`, `bottom` |
-| `closable` | boolean | `true` | Schließbar? |
-| `overlay` | boolean | `true` | Overlay anzeigen? |
-| `overlayClosable` | boolean | `true` | Klick auf Overlay schließt? |
+| `closable` | boolean | `true` | closable? |
+| `overlay` | boolean | `true` | show an overlay? |
+| `overlayClosable` | boolean | `true` | does a click on the overlay close it? |
 
 ## Presentation
 

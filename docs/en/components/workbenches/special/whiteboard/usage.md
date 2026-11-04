@@ -1,34 +1,33 @@
-# Whiteboard (Whiteboard) - Usage
+# Whiteboard - Usage
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    The examples are kept syntax-neutral. Once the implementation switches to Rust and
+    Blinc, the `usage.md` examples will be replaced in a separate pass.
 
 ## Application
 
-Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
+A whiteboard is a drawing surface for collaboration.
 
 - Brainstorming
-- Planung
-- Kollaboration
+- Planning
+- Collaboration
 
 ## Examples
 
 ### Brainstorming
 
 ```jsx
-<Whiteboard toolbar={eintraege} onChange={aktion} />
+<Whiteboard toolbar={entries} onChange={action} />
 ```
 
-### Planung
+### Planning
 
 ```jsx
-<Whiteboard toolbar={eintraege} interactive={true} />
+<Whiteboard toolbar={entries} interactive={true} />
 ```
 
-### Kollaboration
+### Collaboration
 
 ```jsx
-<Whiteboard toolbar={eintraege} grid={true} />
+<Whiteboard toolbar={entries} grid={true} />
 ```

@@ -12,22 +12,22 @@
 | **State** | documented |
 
 ## Description
-Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
+A whiteboard is a drawing surface for collaboration.
 
 ## Purpose
 
 - Brainstorming
-- Planung
-- Kollaboration
+- Planning
+- Collaboration
 
 ## Variants
 
 | Variant | Description |
 | ---------- | -------------- |
-| **zeichnung** | freies Zeichnen mit Stift und Radierer |
-| **formen** | Rechtecke, Pfeile und Verbinder, einrastend |
-| **notizen** | Notizzettel als Karten auf der Fläche |
-| **vorlage** | vorbereitete Fläche (Raster, Spalten, Ablaufschienen) |
+| **zeichnung** | free drawing with pen and eraser |
+| **formen** | rectangles, arrows and connectors, snapping |
+| **notizen** | sticky notes as cards on the surface |
+| **vorlage** | prepared surface (grid, columns, swimlanes) |
 
 ## Features
 
@@ -41,24 +41,24 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
 ## Distinction
 
-- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
-  Text, hier eine Fläche.
-- **Nicht verwechseln mit** [map-view](../../../widgets/special/map-view/): die Zeichenfläche hat keinen Geo-Bezug.
-- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): ein Whiteboard erzeugt Inhalte,
-  eine Galerie zeigt vorhandene.
+- **Do not confuse with** [rich-text-editor](../../fields/rich-text-editor/): there text is
+  created, here a surface.
+- **Do not confuse with** [map-view](../../../widgets/special/map-view/): the drawing surface has no geographic reference.
+- **Do not confuse with** [gallery](../../../widgets/media/gallery/): a whiteboard produces content,
+  a gallery shows existing content.
 
 ## Best Practices
 
-- Fläche ohne harte Grenze, der Ausschnitt wird verwaltet; ein optionales Raster hilft beim
-  Ausrichten.
-- Rückgängig/Wiederholen gehört zum Whiteboard dazu — auch nach gemeinsamer Bearbeitung.
-- Bei gemeinsamer Arbeit sind die Zeiger der anderen sichtbar und farbig unterscheidbar.
-- Formen rasten ein und zeigen Ausrichtungslinien, sonst wird nichts lesbar.
-- Export als Bild **und** als bearbeitbare Daten, damit später weitergearbeitet werden kann.
+- Surface without a hard boundary, the viewport is managed; an optional grid helps with
+  alignment.
+- Undo/redo belongs to the whiteboard — also after collaborative editing.
+- When working together, the other people's pointers are visible and distinguishable by colour.
+- Shapes snap and show alignment guides, otherwise nothing stays readable.
+- Export as an image **and** as editable data, so work can continue later.
 
 ## See also
 
 - [special – overview](../index.md)
-- [Rich Text Editor](../../fields/rich-text-editor/) — Text statt Fläche
-- [Map View](../../../widgets/special/map-view/) — Fläche mit Geo-Bezug
+- [Rich Text Editor](../../fields/rich-text-editor/) — text instead of a surface
+- [Map View](../../../widgets/special/map-view/) — surface with a geographic reference
 - [Base component](../../../primitives/basics/base.md)

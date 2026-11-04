@@ -1,7 +1,7 @@
 # Drawer
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `overlays` |
 | **Inherits from** | `base` |
 | **Variants** | `Left Drawer`, `Right Drawer`, `Bottom Drawer`, `Full Drawer` |
@@ -12,26 +12,26 @@
 | **State** | documented |
 
 ## Description
-Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
+A drawer is a side overlay window (collapsible).
 
 ## Purpose
 
 - Navigation
-- Filter
-- Profile
+- Filters
+- Profiles
 
 ## Variants
 
 | Variant | Position | Description |
-| --------- | ---------- | -------------- |
-| **Left Drawer** | Links | Links |
-| **Right Drawer** | Rechts | Rechts |
-| **Bottom Drawer** | Unten | Unten |
-| **Full Drawer** | Voll | Vollständig |
+|---------|----------|-------------|
+| **Left Drawer** | left | left |
+| **Right Drawer** | right | right |
+| **Bottom Drawer** | bottom | bottom |
+| **Full Drawer** | full | full screen |
 
-!!! info "Einordnung"
-    Das in Bibliotheken separate `sheet` ist keine eigene Komponente, sondern der
-    Bottom Drawer mit reduzierter Höhe und Griffleiste.
+!!! info "Classification"
+    The `sheet`, kept separate in libraries, is not a component of its own but the bottom
+    drawer with reduced height and a grab handle.
 
 ## Features
 
@@ -43,27 +43,26 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 
 ## Distinction
 
-- **Nicht verwechseln mit** [sidebar](../../navigation/sidebar/): die Seitenleiste gehört
-  dauerhaft zum Layout; der Drawer kommt auf Zuruf und überdeckt den Inhalt.
-- **Nicht verwechseln mit** [modal](../modal/): das Modal sitzt in der Mitte und will eine
-  Entscheidung; der Drawer bringt Navigation oder Filter an den Rand.
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover ist klein, an ein Element
-  geheftet und erklärt genau dieses.
-- Der Bottom Drawer mit Griffleiste ist die `sheet`-Bauform — eine Variante, keine eigene
-  Komponente.
-- Auf breiter Fläche kann der Drawer dauerhaft offen stehen; dann verhält er sich wie eine
-  Seitenleiste, bleibt aber dieselbe Komponente.
+- **Do not confuse with** [sidebar](../../navigation/sidebar/): the sidebar permanently belongs
+  to the layout; the drawer comes on demand and covers the content.
+- **Do not confuse with** [modal](../modal/): the modal sits in the middle and wants a decision;
+  the drawer brings navigation or filters to the edge.
+- **Do not confuse with** [popover](../popover/): a popover is small, attached to an element and
+  explains exactly that element.
+- The bottom drawer with a grab handle is the `sheet` form — a variant, not a component of its own.
+- On a wide surface the drawer can stay open permanently; it then behaves like a sidebar but
+  remains the same component.
 
 ## Best Practices
 
-- Clear-Content
-- Close-Button
+- Clear content
+- Close button
 - Accessibility
 - Feedback
 
 ## See also
 
 - [overlays – overview](../index.md)
-- [Sidebar](../../navigation/sidebar/) — dauerhafte Seitenleiste
-- [Modal](../modal/) — zentriertes Overlay
+- [Sidebar](../../navigation/sidebar/) — permanent sidebar
+- [Modal](../modal/) — centred overlay
 - [Base component](../../../primitives/basics/base.md)

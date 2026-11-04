@@ -55,20 +55,20 @@
 
 ## Examples
 
-## Example 1: Header-Wechsel
+## Example 1: header switcher
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🏠 Home  📚 Wiki  📬 Nachrichten        │
+│ 🏠 Home  📚 Wiki  📬 Messages           │
 │                                🇩🇪 🇬🇧  │
 └─────────────────────────────────────────┘
 ```
 
-## Example 2: Einstellungen
+## Example 2: settings
 
 ```
 ┌─────────────────────────────────────────┐
-│ Sprache                                 │
+│ Language                                │
 ├─────────────────────────────────────────┤
 │ 🇩🇪 Deutsch                              │
 │ 🇬🇧 English                              │
@@ -78,11 +78,11 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 3: Dropdown
+## Example 3: dropdown
 
 ```
 ┌─────────────────────────────────────────┐
-│ Sprache                                 │
+│ Language                                │
 ├─────────────────────────────────────────┤
 │ 🇩🇪 Deutsch ▼                            │
 ├─────────────────────────────────────────┤
@@ -92,7 +92,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 4: Flaggen-Buttons
+## Example 4: flag buttons
 
 ```
 ┌─────────────────────────────────────────┐
@@ -100,16 +100,16 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 5: Auto-Detect
+## Example 5: auto-detect
 
 ```
 ┌─────────────────────────────────────────┐
-│ Sprache                                 │
+│ Language                                │
 ├─────────────────────────────────────────┤
-│ 🇩🇪 Deutsch (Standard)                   │
+│ 🇩🇪 Deutsch (default)                    │
 │ 🇬🇧 English                              │
 │ 🇫🇷 Français                             │
 ├─────────────────────────────────────────┤
-│ [✓] Sprache automatisch erkennen        │
+│ [✓] Detect language automatically       │
 └─────────────────────────────────────────┘
 ```

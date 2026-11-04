@@ -1,7 +1,7 @@
 # Context Menu
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `overlays` |
 | **Inherits from** | `base`, `menu` |
 | **Variants** | `Standard`, `Long Press`, `Overflow Menu` |
@@ -12,59 +12,58 @@
 | **State** | documented |
 
 ## Description
-Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion geöffnet und bietet kontextbezogene Optionen.
+A context menu is opened by right-click or a long touch action and offers context-related options.
 
 ## Purpose
 
-- Kontextbezogene Aktionen anzeigen
-- Weniger wichtige Funktionen verstecken
-- Schneller Zugriff auf Aktionen für ausgewählte Elemente
+- Showing context-related actions
+- Hiding less important functions
+- Quick access to actions for selected elements
 
 ## Variants
 
 | Variant | Description |
-| --------- | -------------- |
-| **Standard** | Rechtsklick-Menü (Desktop) |
-| **Long Press** | Lange Touch-Aktion (Mobile) |
-| **Overflow Menu** | Drei-Punkte-Menü |
+|---------|-------------|
+| **Standard** | right-click menu (desktop) |
+| **Long Press** | long touch action (mobile) |
+| **Overflow Menu** | three-dots menu |
 
 ## Features
 
-- Positionierung am Mauszeiger (Desktop)
-- Scrollen (bei vielen Optionen)
-- Keyboard-Navigation
-- Accessibility (Barrierefreiheit)
+- Positioning at the mouse pointer (desktop)
+- Scrolling (with many options)
+- Keyboard navigation
+- Accessibility
 
 ## Distinction
 
-- **Nicht verwechseln mit** [menu](../../navigation/menu/): ein Menü hängt an einer
-  Navigationsleiste und führt meist zu Ansichten; das Kontextmenü ruft Aktionen für das
-  Objekt am Zeiger auf.
-- **Nicht verwechseln mit** [toolbar](../../navigation/toolbar/): die Toolbar zeigt Aktionen
-  dauerhaft, das Kontextmenü nur auf Zuruf (`long-press`, Rechtsklick).
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover trägt Inhalt oder ein Formular,
-  das Kontextmenü ausschließlich eine Aktionsliste.
-- **Nicht verwechseln mit** [select](../../../primitives/fields/select/): hier wird ein Feldwert gesetzt,
-  dort eine Aktion ausgeführt.
-- Das Overflow-Menü (drei Punkte) ist die Variante für kleine Flächen, keine eigene Komponente.
+- **Do not confuse with** [menu](../../navigation/menu/): a menu hangs on a navigation bar and
+  usually leads to views; the context menu invokes actions for the object at the pointer.
+- **Do not confuse with** [toolbar](../../navigation/toolbar/): the toolbar shows actions
+  permanently, the context menu only on demand (`long-press`, right-click).
+- **Do not confuse with** [popover](../popover/): a popover carries content or a form, the
+  context menu exclusively an action list.
+- **Do not confuse with** [select](../../../primitives/fields/select/): here a field value is set,
+  there an action is carried out.
+- The overflow menu (three dots) is the variant for small surfaces, not a component of its own.
 
 ## Best Practices
 
-- Nur relevante Aktionen anzeigen
-- Konsistente Aktionen für gleiche Elemente
-- Aktionen mit Icons
-- Deaktivierte Aktionen ausgrauen
+- Only show relevant actions
+- Consistent actions for identical elements
+- Actions with icons
+- Grey out disabled actions
 
-## Inhalt
+## Content
 
-- **Actions** - Aktionen (Bearbeiten, Löschen, Teilen)
-- **Dividers** - Trennlinien
-- **Disabled Items** - Deaktivierte Optionen
-- **Icons** - Icons für visuelle Orientierung
+- **Actions** - actions (edit, delete, share)
+- **Dividers** - separators
+- **Disabled Items** - disabled options
+- **Icons** - icons for visual orientation
 
 ## See also
 
 - [overlays – overview](../index.md)
-- [Menu](../../navigation/menu/) — Elternklasse
-- [Popover](../popover/) — Inhalt statt Aktionsliste
+- [Menu](../../navigation/menu/) — parent class
+- [Popover](../popover/) — content instead of an action list
 - [Base component](../../../primitives/basics/base.md)

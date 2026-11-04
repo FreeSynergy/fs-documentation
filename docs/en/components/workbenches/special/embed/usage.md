@@ -1,24 +1,23 @@
-# Embed (Einbettung) - Usage
+# Embed - Usage
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    The examples are kept syntax-neutral. Once the implementation switches to Rust and
+    Blinc, the `usage.md` examples will be replaced in a separate pass.
 
-## Externe Seite einbetten
+## Embedding an external page
 
 ```jsx
-<Embed source="iframe" src="https://example.org/kalender" title="Kurskalender"
+<Embed source="iframe" src="https://example.org/calendar" title="Course calendar"
        ratio="16:9" onLoad={fit} onError={showFallback} />
 ```
 
-## Anderes Programm einbetten
+## Embedding another program
 
 ```jsx
 <Embed source="app" appId="calendar" config={{ view: "month", filter: "team-a" }} />
 ```
 
-## Widget mit Nachrichtenaustausch
+## Widget with message exchange
 
 ```jsx
 <Embed source="widget" appId="weather" postMessage={true} origin="https://widgets.example"
@@ -27,9 +26,9 @@
 
 ## Scenarios
 
-| Szenario | Empfehlung |
-| ---------- | ------------ |
-| Fremde Seite ohne Skripte | `source = "iframe"`, `sandbox` eng setzen |
-| eigenes Programm im Dashboard | `source = "app"`, Kopfzeile des einbettenden Programms ausblenden |
-| kleiner Baustein in einer Liste | `size = "small"`, `interactive = false` |
-| Inhalt ist nicht erreichbar | `onError` zeigt Hinweis mit Verweis nach außen |
+| Scenario | Recommendation |
+|----------|----------------|
+| foreign page without scripts | `source = "iframe"`, set `sandbox` tightly |
+| own program in a dashboard | `source = "app"`, hide the header of the embedding program |
+| small building block in a list | `size = "small"`, `interactive = false` |
+| content is unreachable | `onError` shows a notice with a link outwards |

@@ -12,21 +12,21 @@
 | **State** | documented |
 
 ## Description
-Ein Code Editor ist ein Editor für Quellcode.
+A code editor is an editor for source code.
 
 ## Purpose
 
 - Code
-- Programmierung
-- Skripte
+- Programming
+- Scripts
 
 ## Variants
 
 | Variant | Description |
 | ---------- | -------------- |
-| **voll** | bearbeiten mit Hervorhebung, Vervollständigung und Fehlermarkierung |
-| **nur-lesen** | hervorgehobener Code zum Ansehen und Kopieren |
-| **vergleich** | zwei Versionen nebeneinander, Unterschiede markiert |
+| **voll** | editing with highlighting, completion and error marking |
+| **nur-lesen** | highlighted code for viewing and copying |
+| **vergleich** | two versions side by side, differences marked |
 
 ## Features
 
@@ -37,23 +37,23 @@ Ein Code Editor ist ein Editor für Quellcode.
 
 ## Distinction
 
-- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
-  formatted Text, hier Quelltext. Wiki-Syntax ist eine Variante des Texteditors, nicht hiervon.
-- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): ohne Zeilennummern,
-  Hervorhebung und Klammerschluss ist es einfach ein Textfeld.
-- Ausgabe von Programmen ist keine Editor-Aufgabe — sie gehört in eine Ergebnisanzeige.
+- **Do not confuse with** [rich-text-editor](../../fields/rich-text-editor/): there formatted
+  text is created, here source code. Wiki syntax is a variant of the text editor, not of this one.
+- **Do not confuse with** [textarea](../../../primitives/fields/textarea/): without line numbers,
+  highlighting and bracket closing it is simply a text field.
+- Output of programs is not an editor task — it belongs in a result view.
 
 ## Best Practices
 
-- Sprache immer explizit angeben, sonst fehlt die Hervorhebung und die Einrückung ist falsch.
-- `Tab` rückt ein; zum Verlassen des Editors `Esc` oder `Strg+Tab` anbieten.
-- Zeilennummern und horizontales Lineal erst ab mehrzeiligem Inhalt.
-- Ungespeicherte Änderungen deutlich markieren, Schließen rückfragen.
-- Shortcuts an der üblichen Stelle dokumentieren (`Strg+/`, `Strg+F`, `Strg+D`).
+- Always state the language explicitly, otherwise the highlighting is missing and the indentation is wrong.
+- `Tab` indents; offer `Esc` or `Ctrl+Tab` to leave the editor.
+- Line numbers and a horizontal ruler only from multi-line content onwards.
+- Mark unsaved changes clearly, ask before closing.
+- Document shortcuts in the usual place (`Ctrl+/`, `Ctrl+F`, `Ctrl+D`).
 
 ## See also
 
 - [special – overview](../index.md)
-- [Rich Text Editor](../../fields/rich-text-editor/) — formatierter Text
-- [Whiteboard](../whiteboard/) — Skizzen statt Code
+- [Rich Text Editor](../../fields/rich-text-editor/) — formatted text
+- [Whiteboard](../whiteboard/) — sketches instead of code
 - [Base component](../../../primitives/basics/base.md)

@@ -1,4 +1,4 @@
-# Drawer (Seitenleiste) - Usage
+# Drawer - Usage
 
 ## Einfacher Drawer
 

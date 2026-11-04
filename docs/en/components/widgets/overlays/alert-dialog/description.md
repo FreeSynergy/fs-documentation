@@ -1,7 +1,7 @@
 # Alert Dialog
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `overlays` |
 | **Inherits from** | `base`, `modal` |
 | **Variants** | `bestaetigung`, `zerstoererisch` |
@@ -14,42 +14,42 @@
 
 ## Description
 
-Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird. Er ist die
-Kombination aus [modal](../modal/) (eigener Fokus, blockiert dahinterliegenden Inhalt)
-und [alert](../../../primitives/feedback/alert/) (Meldung mit Typ und Aktion).
+A confirmation dialog asks before an action is carried out. It is the combination of
+[modal](../modal/) (own focus, blocks the content behind it) and
+[alert](../../../primitives/feedback/alert/) (a message with a type and an action).
 
 ## Purpose
 
-- Zerstörerische Aktionen absichern (Löschen, Verlassen, Verwerfen)
-- Aktionen ohne Rückgabeweg bestätigen (Senden, Veröffentlichen)
-- Shortcuts ausführen, die nicht rückgängig gemacht werden können
+- Securing destructive actions (delete, leave, discard)
+- Confirming actions with no way back (send, publish)
+- Carrying out shortcuts that cannot be undone
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **bestaetigung** | neutrale Frage, Bestätigungs- und Abbrechen-Button |
-| **zerstoererisch** | Fehlerfarbe, Bestätigungs-Button erst nach Eingabe möglich |
+|---------|-------------|
+| **bestaetigung** | neutral question, confirm and cancel button |
+| **zerstoererisch** | error colour, the confirm button only becomes possible after typing |
 
 ## Features
 
-- Fokus liegt auf der Abbrechen-Aktion, `Esc` bricht ab
-- Bestätigungs-Button kann eine Tipp-Bestätigung verlangen (Name des Objekts)
-- Ladezustand blockiert beide Aktionen, während die Anfrage läuft
-- Kein eigenes Schließen-Symbol: entschieden wird mit einer der zwei Aktionen
+- Focus sits on the cancel action, `Esc` cancels
+- The confirm button can require a typed confirmation (the name of the object)
+- The loading state blocks both actions while the request runs
+- No close icon of its own: the decision is made with one of the two actions
 
 ## Distinction
 
-- **Nicht verwechseln mit** [modal](../modal/): ein Modal ist ein beliebiger Dialog,
-  der Bestätigungsdialog hat genau zwei Auswege und blockiert `Esc`-Verlust nicht.
-- **Nicht verwechseln mit** [toast](../../../primitives/feedback/toast/): ein Toast meldet nach der Tat
-  und bietet Rückgängig an, der Dialog fragt vorher.
+- **Do not confuse with** [modal](../modal/): a modal is an arbitrary dialog, the confirmation
+  dialog has exactly two exits and does not block losing `Esc`.
+- **Do not confuse with** [toast](../../../primitives/feedback/toast/): a toast reports after the
+  fact and offers undo, the dialog asks beforehand.
 
 ## Best Practices
 
-- Absicht im Titel nennen („Seite verwerfen?“), Auswirkung im Text.
-- Bestätigungs-Button als Verb („Verwerfen“), nie „OK“.
-- Rückgängige Aktionen nicht abfragen — stattdessen Toast mit Rückgängig.
+- Name the intention in the title ("Discard page?"), the effect in the text.
+- Confirm button as a verb ("Discard"), never "OK".
+- Do not ask for reversible actions — use a toast with undo instead.
 
 ## See also
 

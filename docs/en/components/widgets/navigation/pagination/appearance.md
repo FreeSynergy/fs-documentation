@@ -70,7 +70,7 @@ Pagination is a navigation for large lists that splits data into pages.
 | ------------ | ----------- |
 | Desktop (>768px) | full pagination visible |
 | Tablet (480-768px) | compact |
-| Mobile (<480px) | Previous/Next oder Load More |
+| Mobile (<480px) | previous/next or load more |
 
 ## Features
 

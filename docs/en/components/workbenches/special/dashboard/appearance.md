@@ -1,7 +1,7 @@
 # Dashboard - Appearance
 
 ## Base layout
-Ein Dashboard ist eine Übersichtsseite mit Widgets.
+A dashboard is an overview page with widgets.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -46,23 +46,23 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
 ## Responsive
 
-- Vierte Spalten ab 1600 px, drei ab 1200 px, zwei ab 800 px, darunter einspaltig;
-  die gespeicherte Reihenfolge bleibt erhalten.
-- Widgets behalten ihre Zeilenspannung, soweit sie in die neue Spaltenzahl passen;
-  sonst wachsen sie in die Höhe.
-- Auf Touch-Geräten beginnt das Verschieben erst nach langem Drücken (`long-press`),
-  die Nachbarrücken mit `reorder` zur Seite.
+- Four columns from 1600 px, three from 1200 px, two from 800 px, below that a single
+  column; the saved order is kept.
+- Widgets keep their row span as far as it fits the new column count; otherwise they grow
+  in height.
+- On touch devices moving only starts after a long press (`long-press`), the neighbours move
+  aside with `reorder`.
 
-## Widget-Typen
+## Widget types
 
 | Type | Description |
-| ------ | -------------- |
-| **Card** | Karte |
-| **Chart** | Diagramm |
-| **List** | Liste |
-| **Table** | Tabelle |
-| **Stat** | Statistik |
-| **Calendar** | Kalender |
+|------------|-------------|
+| **Card** | card |
+| **Chart** | chart |
+| **List** | list |
+| **Table** | table |
+| **Stat** | statistic |
+| **Calendar** | calendar |
 
 ## Drag & Drop
 

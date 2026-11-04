@@ -1,17 +1,17 @@
 # Whiteboard - Appearance
 
 ## Base layout
-Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
+A whiteboard is a drawing surface for collaboration.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [Pencil] [Eraser] [Shapes] [Text]       │  ← Toolbar
+│ [Pencil] [Eraser] [Shapes] [Text]       │  ← toolbar
 ├─────────────────────────────────────────┤
 │                                         │
 │      🖌️                                  │
-│      Whiteboard-Fläche                  │
+│      whiteboard surface                 │
 │                                         │
-│      (Zeichenfläche)                    │
+│      (drawing area)                     │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -19,59 +19,59 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **zeichnung** | Werkzeuge Stift und Radierer, freie Striche |
-| **formen** | Werkzeugkasten mit Figuren und Verbindern |
-| **notizen** | Karten auf der Fläche, farbige Zettel |
-| **vorlage** | vorgezeichnete Flächen, Spalten und Ablaufschienen |
+|---------|------------|
+| **zeichnung** | pen and eraser tools, free strokes |
+| **formen** | tool box with figures and connectors |
+| **notizen** | cards on the surface, coloured notes |
+| **vorlage** | pre-drawn surfaces, columns and swimlanes |
 
 ## Sizes
 
 | Size | Width/height | Use |
-| ------- | ------------- | ------------ |
-| Small | 400x300px | Inline |
-| Medium | 600x400px | Standard |
-| Large | 800x600px | Featured |
-| Full | 100% | Volle Breite |
+|------|--------------|-------------|
+| Small | 400x300px | inline |
+| Medium | 600x400px | standard |
+| Large | 800x600px | featured |
+| Full | 100% | full width |
 
 ## Colours and states
 
 | State | Colour | Description |
-| -------- | ------- | -------------- |
-| **Background** | Weiß/Grün | Hintergrund |
-| **Pencil** | Schwarz | Stift |
-| **Shapes** | Farbig | Formen |
-| **Text** | Schrift | Text |
+|--------------|-------------|----------------------|
+| **Background** | white/green | background |
+| **Pencil** | black | pen |
+| **Shapes** | coloured | shapes |
+| **Text** | font | text |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `scale` | Vergrößerung |
+|--------|-------------|
+| `scale` | enlargement |
 | `shadow` | stronger shadow |
 
 ## Responsive
 
-- `Full` füllt den Viewport abzüglich Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
-  und der Ausschnitt scrollt.
-- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen rutscht sie
-  nach unten und die Knöpfe bleiben mindestens 44 px groß.
-- `pinch`/`spread` ändern den Maßstab, `drag` verschiebt die Fläche; die Linienstärke bleibt
-  gleich, die Striche werden nicht dicker.
+- `Full` fills the viewport minus the toolbar; otherwise the surface grows with the content
+  and the viewport scrolls.
+- The toolbar stays reachable while scrolling; on narrow screens it moves to the bottom and
+  the buttons stay at least 44 px large.
+- `pinch`/`spread` change the scale, `drag` moves the surface; the line thickness stays the
+  same, the strokes do not get thicker.
 
-## Toolbar-Buttons
+## Toolbar buttons
 
 | Button | Function |
-| -------- | ---------- |
-| **Pencil** | Stift |
-| **Eraser** | Radiergummi |
-| **Shapes** | Formen |
-| **Text** | Text |
-| **Color** | Colour |
-| **Clear** | Alles löschen |
-| **Export** | Exportieren |
+|--------|----------|
+| **Pencil** | pen |
+| **Eraser** | eraser |
+| **Shapes** | shapes |
+| **Text** | text |
+| **Color** | colour |
+| **Clear** | delete everything |
+| **Export** | export |
 
-## Grid-Background
+## Grid background
 
 ```
 ┌─────────────────────────────────────────┐

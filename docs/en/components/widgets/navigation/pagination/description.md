@@ -34,7 +34,7 @@ Pagination splits a long list into portions and offers switching between them.
 - Total Items (Gesamtanzahl)
 - Current Page (aktuelle Seite)
 - Items per Page (Elemente pro Seite)
-- Jump to Page (direkt zu Seite springen)
+- Jump to Page (jump straight to a page)
 - Page Size Selector (Anzahl pro Seite ändern)
 
 ## Distinction

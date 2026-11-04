@@ -1,16 +1,16 @@
 # Rich Text Editor - Appearance
 
 ## Base layout
-Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
+A rich text editor is a WYSIWYG editor for formatted text.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [B] [I] [U] [ Strikes] [ Color]         │  ← Toolbar
+│ [B] [I] [U] [ Strikes] [ Color]         │  ← toolbar
 ├─────────────────────────────────────────┤
 │                                         │
-│  (Editor-Bereich)                       │
+│  (editor area)                          │
 │                                         │
-│  Hier ist der Text...                   │
+│  Here is the text...                    │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -18,59 +18,58 @@ Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **wysiwyg** | Formatierungsleiste oben, Text wie im Druckbild |
-| **wiki-syntax** | Syntaxfeld links, Vorschau rechts (oder als Reiter) |
+|---------|------------|
+| **wysiwyg** | formatting bar on top, text as in the printed layout |
+| **wiki-syntax** | syntax field on the left, preview on the right (or as a tab) |
 
 ## Sizes
 
 | Size | Height | Use |
-| ------- | ------ | ------------ |
-| Small | 200px | Inline |
-| Medium | 400px | Standard |
-| Large | 600px | Featured |
-| Full | 100% | Volle Breite |
+|------|--------|-------------|
+| Small | 200px | inline |
+| Medium | 400px | standard |
+| Large | 600px | featured |
+| Full | 100% | full width |
 
 ## Colours and states
 
 | State | Appearance |
-| --------- | ---------- |
-| `default` | heller Grund, randloser Textbereich |
-| `focus` | Rand in Primärfarbe, Cursor sichtbar |
-| `unspeichert` | kleiner Punkt am Rand, Speichern-Knopf hervorgehoben |
-| `error` | roter Rand, betroffene Stelle unterstrichen |
-| `disabled` | grauer Grund, Leiste ausgegraut |
+|-------------|-------------------------------------------------------|
+| `default` | light base, text area without border |
+| `focus` | border in the primary colour, cursor visible |
+| `unspeichert` | small dot on the edge, save button emphasised |
+| `error` | red border, the affected spot underlined |
+| `disabled` | grey base, bar greyed out |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
+|--------|-------------|
 | `border` | the border lights up |
 | `shadow` | stronger shadow |
 
 ## Responsive
 
-- Die Formatierungsleiste bleibt beim Scrollen oben stehen; passt sie nicht in eine Zeile,
-  rutschen weitere Werkzeuge hinter ein ``+``-Aufklappfeld.
-- Unter `small` Bildschirmbreite wird die Vorschau von `wiki-syntax` zum Reiter statt
-  zur Nebenspalte.
-- Der Editorbereich wächst mit dem Text (`auto-resize`), `Full` füllt die Viewport-Höhe
-  abzüglich Leiste.
+- The formatting bar stays pinned at the top while scrolling; if it does not fit on one line,
+  further tools move behind a `+` drop-down field.
+- Below `small` screen width the `wiki-syntax` preview becomes a tab instead of a side column.
+- The editor area grows with the text (`auto-resize`), `Full` fills the viewport height minus
+  the bar.
 
-## Toolbar-Buttons
+## Toolbar buttons
 
 | Button | Function |
-| -------- | ---------- |
-| **B** | Fett |
-| **I** | Kursiv |
-| **U** | Unterstrichen |
-| ** Strikes** | Durchgestrichen |
-| ** Color** | Colour |
-| ** Heading** | Überschriften |
-| ** List** | Listen |
-| ** Link** | Links |
-| ** Image** | Bilder |
-| ** Code** | Code-Block |
+|------------|--------------------|
+| **B** | bold |
+| **I** | italic |
+| **U** | underlined |
+| ** Strikes** | strikethrough |
+| ** Color** | colour |
+| ** Heading** | headings |
+| ** List** | lists |
+| ** Link** | links |
+| ** Image** | images |
+| ** Code** | code block |
 
 ## Placeholder
 
@@ -78,6 +77,6 @@ Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
 ┌─────────────────────────────────────────┐
 │ [B] [I] [U] ...                         │
 ├─────────────────────────────────────────┤
-│  Dies ist ein Platzhalter...            │
+│  This is a placeholder...               │
 └─────────────────────────────────────────┘
 ```

@@ -1,18 +1,21 @@
-# workbenches – Offene Arbeitsflaechen
+# workbenches – open work surfaces
 
-Erhält seinen Inhalt erst zur Laufzeit: offene Fläche, die selbst primitives und widgets aufnehmen darf. Testfrage: *erhält Inhalte erst zur Laufzeit*.
+It receives its content only at runtime: an open surface that may itself hold
+primitives and widgets. Test question: *receives its content only at runtime*.
 
-## Typgruppen (2) — 5 Komponenten
+## Type groups (2) — 5 components
 
-### [fields](./fields/) — Felder (1)
+### [fields](./fields/) — fields (1)
 
-Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
+Elements for entering and selecting values. The field (`field`) holds the label, help
+text and error message together.
 
 [rich-text-editor](./fields/rich-text-editor/)
 
-### [special](./special/) — Spezielle Elemente (4)
+### [special](./special/) — special elements (4)
 
-Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Karten und Ansichten, die es bei generischen Bibliotheken nicht gibt.
+Composite elements with their own data structure: editors, embeddings, cards and views
+that generic libraries do not offer.
 
 [code-editor](./special/code-editor/), [dashboard](./special/dashboard/), [embed](./special/embed/), [whiteboard](./special/whiteboard/)
 
@@ -20,6 +23,6 @@ Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Kar
 
 - [Component overview](../index.md)
 - [Base class](../primitives/basics/base.md)
-- [primitives](../primitives/) – Grundbausteine
-- [widgets](../widgets/) – Bausteine mit bekanntem Inhalt
-- [Gestures](../../interactions/gestures/) und [Animations](../../interactions/animations/)
+- [primitives](../primitives/) – basic building blocks
+- [widgets](../widgets/) – building blocks with known content
+- [Gestures](../../interactions/gestures/) and [Animations](../../interactions/animations/)

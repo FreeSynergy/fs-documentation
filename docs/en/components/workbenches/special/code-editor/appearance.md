@@ -1,7 +1,7 @@
 # Code Editor - Appearance
 
 ## Base layout
-Ein Code Editor ist ein Editor für Quellcode.
+A code editor is an editor for source code.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -14,59 +14,59 @@ Ein Code Editor ist ein Editor für Quellcode.
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **voll** | Zeilennummern links, Vorschlageliste am Cursor |
-| **nur-lesen** | keine Cursor, Kopieren-Knopf oben rechts |
-| **vergleich** | zwei Hälften, geänderte Zeilen rot und grün markiert |
+|---------|------------|
+| **voll** | line numbers on the left, suggestion list at the cursor |
+| **nur-lesen** | no cursor, copy button top right |
+| **vergleich** | two halves, changed lines marked in red and green |
 
 ## Sizes
 
 | Size | Height | Use |
-| ------- | ------ | ------------ |
-| Small | 200px | Inline |
-| Medium | 400px | Standard |
-| Large | 600px | Featured |
-| Full | 100% | Volle Breite |
+|------|--------|-------------|
+| Small | 200px | inline |
+| Medium | 400px | standard |
+| Large | 600px | featured |
+| Full | 100% | full width |
 
 ## Colours and states
 
 | State | Colour | Description |
-| -------- | ------- | -------------- |
-| **Background** | Dunkel | Dunkles Theme |
-| **Text** | Hell | Text-Farbe |
-| **Keyword** | Lila | Schlüsselwörter |
-| **String** | Orange | Strings |
-| **Comment** | Grau | Kommentare |
+|--------------|--------|----------------------|
+| **Background** | dark | dark theme |
+| **Text** | light | text colour |
+| **Keyword** | purple | keywords |
+| **String** | orange | strings |
+| **Comment** | grey | comments |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `line-number` | Zeilennummer hervorheben |
-| `cursor` | Cursor ändern |
+|-------------|-----------------------------|
+| `line-number` | highlights the line number |
+| `cursor` | changes the cursor |
 
 ## Responsive
 
-- Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt waagerecht (`swipe`).
-- Unter `small` Bildschirmbreite wird die Vorschlageliste über die Tastatur-blende gesetzt,
-  der Zeilennummernblock wird schmaler.
-- Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander,
-  die Höhe bleibt pro Hälfte begrenzt.
+- The editor fills the width; code does not wrap but scrolls horizontally (`swipe`).
+- Below `small` screen width the suggestion list is placed over the keyboard, the line
+  number block becomes narrower.
+- The comparison variant puts the two halves below each other instead of side by side; the
+  height stays limited per half.
 
 ## Features
 
 | Feature | Description |
-| --------- | -------------- |
-| **Syntax Highlighting** | Farbige Hervorhebung |
-| **Line Numbers** | Zeilennummern |
-| **Auto-completion** | Autovervollständigung |
-| **Error Detection** | Fehlererkennung |
-| **Multiple Cursors** | Mehrere Cursor |
+|---------------------|---------------------------|
+| **Syntax Highlighting** | coloured highlighting |
+| **Line Numbers** | line numbers |
+| **Auto-completion** | autocompletion |
+| **Error Detection** | error detection |
+| **Multiple Cursors** | multiple cursors |
 
 ## Themes
 
 | Theme | Description |
-| ------- | -------------- |
-| **Dark** | Dunkles Theme |
-| **Light** | Helles Theme |
-| **Custom** | Benutzerdefiniert |
+|-------|-------------|
+| **Dark** | dark theme |
+| **Light** | light theme |
+| **Custom** | custom |

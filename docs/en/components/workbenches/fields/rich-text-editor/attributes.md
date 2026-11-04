@@ -1,23 +1,23 @@
-# Rich Text Editor - Attribute
+# Rich Text Editor - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `value` | string | - | Wert (HTML) |
+| `value` | string | - | value (HTML) |
 | `onChange` | function | - | event on change |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `placeholder` | string | `null` | Placeholder-Text |
+| `placeholder` | string | `null` | placeholder text |
 
 ## Events
 
 | Attribute | Type | Description |
 | ---------- | ----- | -------------- |
-| `onSave` | function | Wird beim Speichern ausgeführt |
+| `onSave` | function | runs on save |
 
 ## Accessibility
 
@@ -25,21 +25,21 @@
 | ---------- | ----- | -------------- |
 | `role` | string | ARIA role: `textbox` |
 
-## Toolbar-Attribute
+## Toolbar attributes
 
 | Attribute | Type | Default | Description |
-| --- | --- | --- | --- |
-| `showToolbar` | boolean | `true` | Toolbar anzeigen? |
-| `toolbarButtons` | array[] | - | Array von Buttons |
+|---|---|---|---|
+| `showToolbar` | boolean | `true` | show the toolbar? |
+| `toolbarButtons` | array[] | - | array of buttons |
 
 ## Features attributes
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `enableImages` | boolean | `true` | Bilder erlauben? |
-| `enableLinks` | boolean | `true` | Links erlauben? |
-| `enableCode` | boolean | `true` | Code erlauben? |
-| `enablePreview` | boolean | `true` | Vorschau erlauben? |
+| `enableImages` | boolean | `true` | allow images? |
+| `enableLinks` | boolean | `true` | allow links? |
+| `enableCode` | boolean | `true` | allow code? |
+| `enablePreview` | boolean | `true` | allow a preview? |
 
 ## Inherited from
 

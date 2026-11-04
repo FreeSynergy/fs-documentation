@@ -4,13 +4,13 @@
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `widgets` | array[] | - | Array von Widgets |
+| `widgets` | array[] | - | array of widgets |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `dragAndDrop` | boolean | `true` | Drag & Drop aktivieren? |
+| `dragAndDrop` | boolean | `true` | enable drag & drop? |
 | `responsive` | boolean | `true` | responsive layout? |
 
 ## Presentation
@@ -18,15 +18,15 @@
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
 | `columns` | number | `3` | number of columns |
-| `gap` | number | `16` | Abstand zwischen Widgets |
+| `gap` | number | `16` | distance between widgets |
 
 ## Events
 
 | Attribute | Type | Description |
 | ---------- | ----- | -------------- |
-| `onWidgetMove` | function | Wird beim Verschieben ausgeführt |
-| `onWidgetResize` | function | Wird beim Resizen ausgeführt |
-| `onWidgetRemove` | function | Wird beim Entfernen ausgeführt |
+| `onWidgetMove` | function | runs when moving |
+| `onWidgetResize` | function | runs when resizing |
+| `onWidgetRemove` | function | runs when removing |
 
 ## Accessibility
 
@@ -34,14 +34,14 @@
 | ---------- | ----- | -------------- |
 | `role` | string | ARIA role: `region` |
 
-## Widget-Attribute
+## Widget attributes
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `id` | string | Eindeutige ID |
-| `type` | string | Widget-Typ |
-| `title` | string | Titel |
-| `content` | string/node | Inhalt |
+|-----------|------|-------------|
+| `id` | string | unique ID |
+| `type` | string | widget type |
+| `title` | string | title |
+| `content` | string/node | content |
 
 ## Inherited from
 

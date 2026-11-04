@@ -1,36 +1,36 @@
 # Context Menu - Usage
 
-## Einfaches Context Menu
+## Simple context menu
 
 ```jsx
-<ContextMenu 
+<ContextMenu
   items={[
-    { id: 'edit', label: 'Bearbeiten', icon: 'pencil' },
-    { id: 'copy', label: 'Kopieren', icon: 'copy' },
-    { id: 'delete', label: 'Löschen', icon: 'trash', danger: true }
+    { id: 'edit', label: 'Edit', icon: 'pencil' },
+    { id: 'copy', label: 'Copy', icon: 'copy' },
+    { id: 'delete', label: 'Delete', icon: 'trash', danger: true }
   ]}
   onSelect={(id) => console.log('Selected:', id)}
 />
 ```
 
-## Mit Separator
+## With separator
 
 ```jsx
-<ContextMenu 
+<ContextMenu
   items={[
-    { id: 'edit', label: 'Bearbeiten' },
-    { id: 'copy', label: 'Kopieren' },
+    { id: 'edit', label: 'Edit' },
+    { id: 'copy', label: 'Copy' },
     { separator: true },
-    { id: 'delete', label: 'Löschen', danger: true }
+    { id: 'delete', label: 'Delete', danger: true }
   ]}
 />
 ```
 
-## In List-Item
+## In a list item
 
 ```jsx
 <ListItem onContextMenu={showContextMenu}>
-  <ContextMenu 
+  <ContextMenu
     items={itemMenu}
     anchorEl={anchor}
     position={position}
@@ -41,10 +41,10 @@
 ## With icons
 
 ```jsx
-<ContextMenu 
+<ContextMenu
   items={[
-    { id: 'edit', label: 'Bearbeiten', icon: 'pencil' },
-    { id: 'delete', label: 'Löschen', icon: 'trash', danger: true }
+    { id: 'edit', label: 'Edit', icon: 'pencil' },
+    { id: 'delete', label: 'Delete', icon: 'trash', danger: true }
   ]}
   showIcons={true}
 />
@@ -53,7 +53,7 @@
 ## With event handlers
 
 ```jsx
-<ContextMenu 
+<ContextMenu
   items={items}
   onOpen={() => console.log('Open')}
   onClose={() => console.log('Close')}
@@ -63,64 +63,64 @@
 
 ## Examples
 
-## Example 1: Datei-Explorer
+## Example 1: file explorer
 
 ```
-└─ Rechtsklick auf Datei ───────────────┐
-   📋 Bearbeiten                          │
-   📄 Kopieren                            │
-   📄 Einfügen                            │
-   ─────────────────────                   │
-   🗑️ Löschen                             │
-   ℹ️ Eigenschaften                        │
-└─────────────────────────────────────────┘
+└─ right-click on file ─────────────────┐
+   📋 Edit                               │
+   📄 Copy                               │
+   📄 Paste                              │
+   ─────────────────────                 │
+   🗑️ Delete                             │
+   ℹ️ Properties                          │
+└────────────────────────────────────────┘
 ```
 
-## Example 2: Chat-Kontext
+## Example 2: chat context
 
 ```
-└─ Rechtsklick auf Nachricht ───────────┐
-   📋 Antworten                            │
-   📄 Weiterleiten                         │
-   ⭐ Markieren                            │
-   ─────────────────────                   │
-   🗑️ Löschen (nur für mich)              │
-   🚫 melden                              │
-└─────────────────────────────────────────┘
+└─ right-click on message ──────────────┐
+   📋 Reply                              │
+   📄 Forward                            │
+   ⭐ Star                                │
+   ─────────────────────                 │
+   🗑️ Delete (only for me)               │
+   🚫 Report                             │
+└────────────────────────────────────────┘
 ```
 
-## Example 3: Tab-Kontext
+## Example 3: tab context
 
 ```
-└─ Rechtsklick auf Tab ─────────────────┐
-   🔄 Aktualisieren                       │
-   📄 Kopieren                            │
-   ─────────────────────                   │
-   🗑️ Schließen                          │
-   📤 In neuem Tab öffnen                 │
-└─────────────────────────────────────────┘
+└─ right-click on tab ──────────────────┐
+   🔄 Refresh                            │
+   📄 Copy                               │
+   ─────────────────────                 │
+   🗑️ Close                              │
+   📤 Open in new tab                    │
+└────────────────────────────────────────┘
 ```
 
-## Example 4: List-Item-Kontext
+## Example 4: list item context
 
 ```
-└─ Rechtsklick auf List-Item ───────────┐
-   📋 Bearbeiten                          │
-   📄 Kopieren                            │
-   ─────────────────────                   │
-   🗑️ Löschen                             │
-   📧 E-Mail senden                       │
-└─────────────────────────────────────────┘
+└─ right-click on list item ────────────┐
+   📋 Edit                               │
+   📄 Copy                               │
+   ─────────────────────                 │
+   🗑️ Delete                             │
+   📧 Send e-mail                        │
+└────────────────────────────────────────┘
 ```
 
-## Example 5: Dashboard-Kontext
+## Example 5: dashboard context
 
 ```
-└─ Rechtsklick auf Widget ──────────────┐
-   📋 Bearbeiten                          │
-   📄 Kopieren                            │
-   ─────────────────────                   │
-   🗑️ Löschen                             │
-   ⚙️ Einstellungen                       │
-└─────────────────────────────────────────┘
+└─ right-click on widget ───────────────┐
+   📋 Edit                               │
+   📄 Copy                               │
+   ─────────────────────                 │
+   🗑️ Delete                             │
+   ⚙️ Settings                           │
+└────────────────────────────────────────┘
 ```

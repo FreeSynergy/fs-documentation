@@ -1,18 +1,18 @@
-# Code Editor - Attribute
+# Code Editor - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `value` | string | - | Wert (Code) |
+| `value` | string | - | value (code) |
 | `onChange` | function | - | event on change |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `language` | string | `javascript` | Sprache |
-| `readOnly` | boolean | `false` | Nur-Lese-Modus? |
+| `language` | string | `javascript` | language |
+| `readOnly` | boolean | `false` | read-only mode? |
 
 ## Events
 
@@ -30,17 +30,17 @@
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `showLineNumbers` | boolean | `true` | Zeilennummern anzeigen? |
-| `showGutter` | boolean | `true` | Gutter anzeigen? |
-| `autoCompletion` | boolean | `true` | Autovervollständigung aktivieren? |
+| `showLineNumbers` | boolean | `true` | show line numbers? |
+| `showGutter` | boolean | `true` | show the gutter? |
+| `autoCompletion` | boolean | `true` | enable autocompletion? |
 
-## Editor-Attribute
+## Editor attributes
 
 | Attribute | Type | Default | Description |
-| --- | --- | --- | --- |
-| `lineHeight` | number | `1.5` | Zeilenhöhe |
-| `fontSize` | number | `14` | Font size |
-| `tabSize` | number | `2` | Tab-Größe |
+|---|---|---|---|
+| `lineHeight` | number | `1.5` | line height |
+| `fontSize` | number | `14` | font size |
+| `tabSize` | number | `2` | tab size |
 
 ## Inherited from
 

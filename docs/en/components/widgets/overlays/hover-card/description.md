@@ -1,7 +1,7 @@
 # Hover Card
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `overlays` |
 | **Inherits from** | `base`, `popover` |
 | **Variants** | `profil`, `dokument`, `vorschau` |
@@ -14,42 +14,42 @@
 
 ## Description
 
-Die Vorschaukarte zeigt zu einem Verweis die wichtigsten Informationen zum Ziel —
-ohne die Adresse zu wechseln. Sie erscheint bei Zeiger über dem Verweis und verschwindet
-wieder, wenn der Zeiger abzieht.
+The preview card shows the most important information about the target of a reference —
+without changing the address. It appears when the pointer is over the reference and
+disappears again when the pointer moves away.
 
 ## Purpose
 
-- Profilvorschau, wenn ein Name in einem Chat oder einer Liste angetippt wird
-- Kurzfassung eines Wiki-Artikels oder einer Aufgabe beim Überfahren des Verweises
-- Zieladresse eines externen Verweises lesbar machen
+- Profile preview when a name is tapped in a chat or a list
+- Short version of a wiki article or a task when hovering over the reference
+- Making the target address of an external reference readable
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **profil** | Avatar, Name, Rolle, letzte Aktivität |
-| **dokument** | Titel, Auszug, Bearbeiter, Änderungsdatum |
-| **vorschau** | Bild oder erstes Element des Zieles |
+|---------|-------------|
+| **profil** | avatar, name, role, last activity |
+| **dokument** | title, excerpt, editor, modification date |
+| **vorschau** | image or first element of the target |
 
 ## Features
 
-- Inhalt wird nach einer Verzögerung geladen, nicht beim ersten Drauffahren
-- Karte bleibt offen, wenn der Zeiger in die Karte wandelt (Inhalt ist bedienbar)
-- Auf Touch-Geräten erscheint die Karte nach Langdruck, schließt mit `Esc` oder Tippen
+- Content is loaded after a delay, not on the first hover
+- The card stays open when the pointer moves into the card (the content is operable)
+- On touch devices the card appears after a long-press, closes with `Esc` or a tap
 
 ## Distinction
 
-- **Nicht verwechseln mit** [tooltip](../tooltip/): ein Tooltip erklärt ein Bedienelement
-  in einem Satz, die Karte zeigt Inhalt.
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält Aktionen,
-  die Karte zeigt eine Zusammenfassung.
+- **Do not confuse with** [tooltip](../tooltip/): a tooltip explains a control in one
+  sentence, the card shows content.
+- **Do not confuse with** [popover](../popover/): a popover contains actions, the card shows
+  a summary.
 
 ## Best Practices
 
-- Höchstens fünf Informationen pro Karte.
-- Kein Scrollen in der Karte; wer alles lesen will, folgt dem Verweis.
-- Karten nicht in Listen mit vielen Zeilen gleichzeitig laden.
+- At most five pieces of information per card.
+- No scrolling inside the card; whoever wants to read everything follows the reference.
+- Do not load cards in lists with many rows at the same time.
 
 ## See also
 

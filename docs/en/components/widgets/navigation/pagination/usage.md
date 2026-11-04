@@ -1,6 +1,6 @@
 # Pagination - Usage
 
-## Numerische Pagination
+## Numeric pagination
 
 ```jsx
 <Pagination 
@@ -43,7 +43,7 @@
 />
 ```
 
-## In Table
+## In a table
 
 ```jsx
 <Table 
@@ -72,11 +72,11 @@
 
 ## Examples
 
-## Example 1: Tabellarische Daten
+## Example 1: tabular data
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name │ Alter │                         │
+│ ID │ Name │ Age   │                         │
 ├─────────────────────────────────────────┤
 │ 1  │ John │ 25    │                         │
 │ 2  │ Jane │ 30    │                         │
@@ -87,7 +87,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 2: Produktsuche
+## Example 2: product search
 
 ```
 ┌─────────────────────────────────────────┐
@@ -96,12 +96,12 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 3: Load More
+## Example 3: load more
 
 ```
 ┌─────────────────────────────────────────┐
-│ Artikel 1                               │
-│ Artikel 2                               │
+│ Article 1                               │
+│ Article 2                               │
 │ ...                                     │
 ├─────────────────────────────────────────┤
 │ [Load more]                             │
@@ -112,10 +112,10 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ Artikel 1                               │
-│ Artikel 2                               │
+│ Article 1                               │
+│ Article 2                               │
 │ ...                                     │
-│ (Automatisch nachladen beim Scrollen)   │
+│ (loads automatically while scrolling)   │
 └─────────────────────────────────────────┘
 ```
 

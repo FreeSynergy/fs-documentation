@@ -1,41 +1,41 @@
-# Alert Dialog (Bestätigungsdialog) - Attribute
+# Alert Dialog - Attributes
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Only **own** attributes. Everything else comes from the base class, see
 [base](../../../primitives/basics/base.md).
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `title` | string | - | Frage als Titel |
-| `message` | string | - | Auswirkung in einem Satz |
-| `confirmLabel` | string | `Bestätigen` | Verb des Bestätigungs-Buttons |
-| `cancelLabel` | string | `Abbrechen` | Verb des Abbrechen-Buttons |
+|-----------|------|---------|-------------|
+| `title` | string | - | the question as the title |
+| `message` | string | - | the effect in one sentence |
+| `confirmLabel` | string | `Confirm` | verb of the confirm button |
+| `cancelLabel` | string | `Cancel` | verb of the cancel button |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `destructive` | boolean | `false` | zerstörerische Variante (Fehlerfarbe) |
-| `confirmWord` | string | `null` | Wort, das zum Bestätigen getippt werden muss |
-| `busy` | boolean | `false` | Anfrage läuft, Aktionen gesperrt |
-| `closeOnEsc` | boolean | `true` | `Esc` = Abbrechen |
-| `closeOnOutsideClick` | boolean | `false` | Klick außerhalb bricht nicht ab |
+|-----------|------|---------|-------------|
+| `destructive` | boolean | `false` | destructive variant (error colour) |
+| `confirmWord` | string | `null` | word that has to be typed to confirm |
+| `busy` | boolean | `false` | request running, actions locked |
+| `closeOnEsc` | boolean | `true` | `Esc` = cancel |
+| `closeOnOutsideClick` | boolean | `false` | a click outside does not cancel |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `onConfirm` | function | Bestätigt |
-| `onCancel` | function | Abgebrochen oder `Esc` |
+|-----------|------|-------------|
+| `onConfirm` | function | confirmed |
+| `onCancel` | function | cancelled or `Esc` |
 
 ## Accessibility
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
+|-----------|------|---------|-------------|
 | `role` | string | `alertdialog` | - |
-| `aria-describedby` | string | - | id des Meldungstextes |
-| `initialFocus` | enum | `cancel` | zuerst fokussierter Button |
+| `aria-describedby` | string | - | id of the message text |
+| `initialFocus` | enum | `cancel` | button focused first |
 
 ## Inherited from
 

@@ -1,29 +1,29 @@
-# Alert Dialog (Bestätigungsdialog) - Appearance
+# Alert Dialog - Appearance
 
 ## Base layout
 
 ```
 ┌───────────────────────────────────┐
-│  Seite verwerfen?             ✕   │
+│  Discard page?                ✕   │
 ├───────────────────────────────────┤
-│  Deine Änderungen an diesem       │
-│  Dokument gehen verloren.         │
+│  Your changes to this             │
+│  document will be lost.           │
 │                                   │
-│        [Abbrechen]  [Verwerfen]   │
+│         [Cancel]  [Discard]       │
 └───────────────────────────────────┘
 ```
 
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **bestaetigung** | Primärfarbe im Bestätigungs-Button, Titel neutral |
-| **zerstoererisch** | Titelleiste und Button in Fehlerfarbe |
+|---------|------------|
+| **bestaetigung** | primary colour in the confirm button, neutral title |
+| **zerstoererisch** | title bar and button in the error colour |
 
 ## Sizes
 
-| Size | Width | Höhenabstand |
-| ------- | -------- | -------------- |
+| Size | Width | Vertical spacing |
+|------|-------|------------------|
 | `small` | 360 px | 12 px |
 | `medium` | 480 px | 16 px |
 | `large` | 640 px | 20 px |
@@ -31,20 +31,20 @@
 ## Colours and states
 
 | State | Appearance |
-| --------- | ---------- |
-| `default` | Fläche mit Rahmen, Hintergrund dahinter abgedunkelt |
-| `open` | Fokus auf Abbrechen, 2 px Fokus-Ring |
-| `loading` | Spinner im Bestätigungs-Button, beide Buttons gesperrt |
-| `disabled` | Fläche abgeblendet, keine Aktion möglich |
+|-------|------------|
+| `default` | surface with a border, background behind it darkened |
+| `open` | focus on cancel, 2 px focus ring |
+| `loading` | spinner in the confirm button, both buttons locked |
+| `disabled` | surface dimmed, no action possible |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `tone` | Buttonfläche dunkler bei Hover |
-| `scrim` | Abgedunkelte Fläche hinter dem Dialog, nicht klickbar |
+|--------|-------------|
+| `tone` | the button surface gets darker on hover |
+| `scrim` | darkened surface behind the dialog, not clickable |
 
 ## Responsive
 
-- Auf Mobilgeräten füllt der Dialog die Breite und sitzt am unteren Rand.
-- Lange Begründungen scrollen im Inhalt, die Buttons bleiben sichtbar.
+- On mobile devices the dialog fills the width and sits at the bottom edge.
+- Long justifications scroll inside the content, the buttons stay visible.

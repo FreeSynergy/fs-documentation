@@ -1,7 +1,7 @@
 # Rich Text Editor
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `fields` |
 | **Inherits from** | `base`, `textarea` |
 | **Variants** | `wysiwyg`, `wiki-syntax` |
@@ -11,24 +11,25 @@
 | **Related** | `textarea`, `code-editor`, `whiteboard`, `emoji-picker` |
 | **State** | documented |
 
-!!! info "Standardisierung"
-    Die frühere Komponente `wiki-editor` ist als Variante in `rich-text-editor` aufgegangen: `wysiwyg` und `wiki-syntax`.
+!!! info "Standardisation"
+    The former component `wiki-editor` became a variant of `rich-text-editor`:
+    `wysiwyg` and `wiki-syntax`.
 
 ## Description
-Ein Rich Text Editor ist ein Editor für formatierten Text.
+A rich text editor is an editor for formatted text.
 
 ## Purpose
 
-- Dokumente
-- Artikel
-- Nachrichten
+- Documents
+- Articles
+- Messages
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **wysiwyg** | Formatieren wie im Druckbild (Standard) |
-| **wiki-syntax** | Editor mit Wiki-Syntax (Markdown) und Vorschau |
+|---------|-------------|
+| **wysiwyg** | formatting as in the printed layout (standard) |
+| **wiki-syntax** | editor with wiki syntax (Markdown) and preview |
 
 ## Features
 
@@ -40,24 +41,24 @@ Ein Rich Text Editor ist ein Editor für formatierten Text.
 
 ## Distinction
 
-- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): das mehrzeilige Feld speichert reinen Text,
-  dieser Editor speichert Formatierung als Struktur.
-- **Nicht verwechseln mit** [code-editor](../../special/code-editor/): dort steht Quellcode mit
-  Syntaxhervorhebung im Vordergrund, hier das Druckbild.
-- **Nicht verwechseln mit** [whiteboard](../../special/whiteboard/): freie Zeichenfläche statt
-  Textfluss.
+- **Do not confuse with** [textarea](../../../primitives/fields/textarea/): the multi-line field stores
+  plain text, this editor stores formatting as structure.
+- **Do not confuse with** [code-editor](../../special/code-editor/): there source code with syntax
+  highlighting is in the foreground, here the printed layout.
+- **Do not confuse with** [whiteboard](../../special/whiteboard/): a free drawing surface instead of
+  text flow.
 
 ## Best Practices
 
-- Nur Werkzeuge anzeigen, die der Inhalt wirklich kennt (kein `Tabelle` in einem Kommentarfeld).
-- Shortcuts parallel anbieten (`Strg+B`, `Strg+I`, `Strg+K` für Links).
-- Fremden Text bereinigt einfügen (Formatierung aus anderen Anwendungen mitnehmen, nicht alles).
-- Zwischenzustand automatisch sichern und den Speicherpunkt sichtbar machen (`unspeichert`).
-- `wiki-syntax` immer mit Vorschau-Schalter, damit die Syntax lesbar bleibt.
+- Only show tools the content really knows (no `Tabelle` in a comment field).
+- Offer shortcuts in parallel (`Ctrl+B`, `Ctrl+I`, `Ctrl+K` for links).
+- Paste foreign text cleaned up (take the formatting from other applications, not everything).
+- Save the intermediate state automatically and make the save point visible (`unspeichert`).
+- `wiki-syntax` always with a preview switch, so the syntax stays readable.
 
 ## See also
 
 - [fields – overview](../index.md)
-- [Textarea](../../../primitives/fields/textarea/) — reinen Text bearbeiten
-- [Code Editor](../../special/code-editor/) — Quellcode
+- [Textarea](../../../primitives/fields/textarea/) — editing plain text
+- [Code Editor](../../special/code-editor/) — source code
 - [Base component](../../../primitives/basics/base.md)

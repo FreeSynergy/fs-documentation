@@ -1,51 +1,51 @@
-# Embed (Einbettung) - Attribute
+# Embed - Attributes
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Only **own** attributes. Everything else comes from the base class, see
 [base](../../../primitives/basics/base.md).
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `source` | enum | `iframe` | Art der Einbettung: `app`, `widget`, `iframe` |
-| `src` | string | - | source URL (nur `source = iframe`) |
-| `appId` | string | - | Programm-id (nur `source = app`) |
-| `config` | object | - | Konfiguration des eingebetteten Inhalts |
-| `title` | string | - | Titel der Kopfzeile |
-| `showBorder` | boolean | `true` | Rand anzeigen? |
-| `borderColor` | string | `#ccc` | Rand-Farbe |
-| `widgetId` | string | - | Widget-ID |
+|-----------|------|---------|-------------|
+| `source` | enum | `iframe` | kind of embedding: `app`, `widget`, `iframe` |
+| `src` | string | - | source URL (only `source = iframe`) |
+| `appId` | string | - | program id (only `source = app`) |
+| `config` | object | - | configuration of the embedded content |
+| `title` | string | - | title of the header |
+| `showBorder` | boolean | `true` | show a border? |
+| `borderColor` | string | `#ccc` | border colour |
+| `widgetId` | string | - | widget ID |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `responsive` | boolean | `true` | Fläche passt sich der Breite an |
-| `interactive` | boolean | `true` | Eingaben im eingebetteten Inhalt erlauben |
-| `ratio` | enum | `auto` | Seitenverhältnis: `auto`, `16:9`, `4:3`, `1:1` |
-| `allowFullscreen` | boolean | `true` | Vollbild erlauben |
-| `sandbox` | string | `null` | Sandbox-Vorgaben, nur `source = iframe` |
+|-----------|------|---------|-------------|
+| `responsive` | boolean | `true` | the surface adapts to the width |
+| `interactive` | boolean | `true` | allow input in the embedded content |
+| `ratio` | enum | `auto` | aspect ratio: `auto`, `16:9`, `4:3`, `1:1` |
+| `allowFullscreen` | boolean | `true` | allow fullscreen |
+| `sandbox` | string | `null` | sandbox settings, only `source = iframe` |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `onLoad` | function | Inhalt ist bereit |
-| `onError` | function | Inhalt konnte nicht geladen werden |
+|-----------|------|-------------|
+| `onLoad` | function | the content is ready |
+| `onError` | function | the content could not be loaded |
 
 ## Accessibility
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
-| `role` | string | `region` bei `app` und `widget`, `iframe` bei `iframe` |
-| `title` | string | dient zugleich als benennender Text für Hilfstechnologien |
+|-----------|------|-------------|
+| `role` | string | `region` for `app` and `widget`, `iframe` for `iframe` |
+| `title` | string | also serves as the naming text for assistive technologies |
 
-## Kommunikation
+## Communication
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `postMessage` | boolean | `false` | Nachrichtenaustausch mit dem Inhalt |
-| `origin` | string | - | erlaubte Herkunft, Pflicht bei `postMessage` |
+|-----------|------|---------|-------------|
+| `postMessage` | boolean | `false` | message exchange with the content |
+| `origin` | string | - | allowed origin, required with `postMessage` |
 
 ## Inherited from
 

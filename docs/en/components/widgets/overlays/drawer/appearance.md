@@ -1,15 +1,15 @@
-# Drawer (Seitenleiste) - Appearance
+# Drawer - Appearance
 
 ## Base layout
-Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
+A drawer is a side overlay window (collapsible).
 
 ```
 ┌─────────────────────────────────────────┐
 │  ┌───────────────────────────────────┐  │
-│  │ [✕] Menü                        │  │
+│  │ [✕] Menu                        │  │
 │  ├───────────────────────────────────┤  │
 │  │                                   │  │
-│  │   Inhalt                          │  │
+│  │   Content                         │  │
 │  │   ...                             │  │
 │  │                                   │  │
 │  └───────────────────────────────────┘  │
@@ -19,11 +19,11 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 ## Variants
 
 | Variant | Position | Description |
-| --------- | ---------- | -------------- |
-| **Left Drawer** | Links | Links |
-| **Right Drawer** | Rechts | Rechts |
-| **Bottom Drawer** | Unten | Unten |
-| **Full Drawer** | Voll | Vollständig |
+|---------------|----------|-------------|
+| **Left Drawer** | left | left |
+| **Right Drawer** | right | right |
+| **Bottom Drawer** | bottom | bottom |
+| **Full Drawer** | full | full screen |
 
 ## Sizes
 
@@ -51,10 +51,10 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 
 ## Responsive
 
-Der Drawer gleitet von der Kante herein (`slide-in`) und überdeckt den Inhalt mit
-Schatten; auf breiter Fläche kann er dauerhaft offen stehen und teilt den Raum dann wie
-[split-view](../../containers/split-view/). Auf schmaler Fläche wird der linke Drawer zum
-Overlay mit Abblenden, der Bottom Drawer füllt höchstens 80 % der Höhe.
+The drawer slides in from the edge (`slide-in`) and covers the content with a shadow; on a
+wide surface it can stay open permanently and then divides the space like
+[split-view](../../containers/split-view/). On a narrow surface the left drawer becomes an
+overlay with dimming, the bottom drawer fills at most 80 % of the height.
 
 ```css
 .drawer { position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
@@ -63,11 +63,11 @@ Overlay mit Abblenden, der Bottom Drawer füllt höchstens 80 % der Höhe.
 .scrim        { background: rgba(0,0,0,.4); }
 
 @media (min-width: 1024px) {
-  .drawer--permanent { position: static; transform: none; }   /* fest, ohne Overlay */
+  .drawer--permanent { position: static; transform: none; }   /* fixed, without overlay */
   .scrim { display: none; }
 }
 @media (max-width: 600px) {
-  .drawer--bottom { max-height: 80vh; }                        /* Bottom Drawer */
+  .drawer--bottom { max-height: 80vh; }                        /* bottom drawer */
 }
 ```
 
@@ -76,9 +76,9 @@ Overlay mit Abblenden, der Bottom Drawer füllt höchstens 80 % der Höhe.
 ```
 ┌─────────────────────────────────────────┐
 │  ┌───────────────────────────────────┐  │
-│  │ [✕] Menü                        │  │
+│  │ [✕] Menu                        │  │
 │  │                                   │  │
-│  │   Inhalt                          │  │
+│  │   Content                         │  │
 │  └───────────────────────────────────┘  │
 └─────────────────────────────────────────┘
 ```

@@ -4,23 +4,23 @@
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `toolbar` | array[] | - | Array von Toolbar-Buttons |
+| `toolbar` | array[] | - | array of toolbar buttons |
 | `onChange` | function | - | event on change |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `interactive` | boolean | `true` | Interaktiv? |
-| `grid` | boolean | `true` | Raster anzeigen? |
+| `interactive` | boolean | `true` | interactive? |
+| `grid` | boolean | `true` | show a grid? |
 
 ## Events
 
 | Attribute | Type | Description |
 | ---------- | ----- | -------------- |
-| `onDraw` | function | Wird beim Zeichnen ausgeführt |
-| `onClear` | function | Wird beim Löschen ausgeführt |
-| `onExport` | function | Wird beim Exportieren ausgeführt |
+| `onDraw` | function | runs when drawing |
+| `onClear` | function | runs when clearing |
+| `onExport` | function | runs on export |
 
 ## Accessibility
 
@@ -32,10 +32,10 @@
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `undoRedo` | boolean | `true` | Rückgängig/Wiederherstellen? |
-| `collaborative` | boolean | `false` | Kollaborativ? |
+| `undoRedo` | boolean | `true` | undo/redo? |
+| `collaborative` | boolean | `false` | collaborative? |
 
-## Export-Attribute
+## Export attributes
 
 | Attribute | Type | Description |
 | ---------- | ----- | -------------- |

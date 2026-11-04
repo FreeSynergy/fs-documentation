@@ -1,20 +1,20 @@
-# Pagination - Attribute
+# Pagination - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
 | ---------- | ----- | --------- | -------------- |
-| `currentPage` | number | 1 | Aktuelle Seite |
-| `totalItems` | number | - | Gesamtanzahl |
-| `itemsPerPage` | number | 10 | Elemente pro Seite |
+| `currentPage` | number | 1 | current page |
+| `totalItems` | number | - | total count |
+| `itemsPerPage` | number | 10 | items per page |
 | `onChange` | function | - | event on page change |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `showTotal` | boolean | `false` | Gesamtanzahl anzeigen? |
-| `showPageSizes` | boolean | `false` | Page-Size-Selector anzeigen? |
+| `showTotal` | boolean | `false` | show the total count? |
+| `showPageSizes` | boolean | `false` | show the page-size selector? |
 
 ## Events
 
@@ -33,8 +33,8 @@
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
-| `showFirstLast` | boolean | `false` | First/Last-Buttons anzeigen? |
-| `showEllipsis` | boolean | `true` | Ellipsis anzeigen? |
+| `showFirstLast` | boolean | `false` | show first/last buttons? |
+| `showEllipsis` | boolean | `true` | show an ellipsis? |
 
 ## Inherited from
 

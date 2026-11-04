@@ -64,7 +64,7 @@
 
 ## Examples
 
-## Example 1: Bestätigungs-Modal
+## Example 1: confirmation modal
 
 ```
 ┌─────────────────────────────────────────┐
@@ -108,7 +108,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Example 4: Fehler-Modal
+## Example 4: error modal
 
 ```
 ┌─────────────────────────────────────────┐

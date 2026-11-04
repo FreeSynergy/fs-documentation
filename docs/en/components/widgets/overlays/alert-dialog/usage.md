@@ -1,35 +1,34 @@
-# Alert Dialog (Bestätigungsdialog) - Usage
+# Alert Dialog - Usage
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    The examples are kept syntax-neutral. Once the implementation switches to Rust and
+    Blinc, the `usage.md` examples will be replaced in a separate pass.
 
 ## Application
 
-Der Dialog erscheint aus einer Aktion heraus und hält sie zurück, bis entschieden ist.
-Er wird einmal pro Programmfenster verwaltet, nicht pro Button.
+The dialog appears out of an action and holds it back until a decision is made. It is
+managed once per program window, not once per button.
 
 ## Examples
 
-### Zerstörerische Aktion absichern
+### Securing a destructive action
 
 ```jsx
-<AlertDialog title="Seite verwerfen?" message="Änderungen gehen verloren."
-             destructive={true} confirmLabel="Verwerfen" onConfirm={discard} />
+<AlertDialog title="Discard page?" message="Changes will be lost."
+             destructive={true} confirmLabel="Discard" onConfirm={discard} />
 ```
 
-### Bestätigung mit Tipp-Text
+### Confirmation with a typed word
 
 ```jsx
-<AlertDialog title="Wissensbereich löschen?" confirmWord="wiki-demo"
-             confirmLabel="Endgültig löschen" onConfirm={remove} />
+<AlertDialog title="Delete knowledge area?" confirmWord="wiki-demo"
+             confirmLabel="Delete permanently" onConfirm={remove} />
 ```
 
 ## Scenarios
 
-| Szenario | Empfehlung |
-| ---------- | ------------ |
-| Aktion ist rückgängig machbar | kein Dialog, Toast mit Rückgängig |
-| Objekt mit vielen Bezügen löschen | `destructive` + `confirmWord` |
-| Formular mit Änderungen verlassen | Dialog mit drei Aktionen (Speichern, Verwerfen, Abbrechen) |
+| Scenario | Recommendation |
+|----------|----------------|
+| action can be undone | no dialog, toast with undo |
+| deleting an object with many references | `destructive` + `confirmWord` |
+| leaving a form with changes | dialog with three actions (Save, Discard, Cancel) |

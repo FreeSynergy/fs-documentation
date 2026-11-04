@@ -1,7 +1,7 @@
 # Dashboard
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `special` |
 | **Inherits from** | `base` |
 | **Variants** | `vorlage`, `anordbar`, `bericht` |
@@ -12,21 +12,21 @@
 | **State** | documented |
 
 ## Description
-Ein Dashboard ist eine Übersichtsseite mit Widgets.
+A dashboard is an overview page with widgets.
 
 ## Purpose
 
-- Übersicht
+- Overview
 - Analytics
 - Project
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **vorlage** | feste Anordnung, vom Anwender nicht veränderbar |
-| **anordbar** | Widgets verschieben, Größe ändern, eigene Auswahl |
-| **bericht** | reine Anzeige ohne Bearbeiten-Modus, für geteilte Ansichten |
+|---------|-------------|
+| **vorlage** | fixed arrangement, not changeable by the user |
+| **anordbar** | move widgets, resize them, choose your own selection |
+| **bericht** | display only without an edit mode, for shared views |
 
 ## Features
 
@@ -37,24 +37,24 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
 ## Distinction
 
-- **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): das Raster zeigt gleichartige
-  Einträge, das Dashboard unterschiedliche Widgets in unterschiedlichen Größen.
-- **Nicht verwechseln mit** [card](../../../widgets/containers/card/): die Karte ist ein Baustein,
-  das Dashboard ist die Anordnung mehrerer Bausteine samt Einstellung.
-- **Nicht verwechseln mit** [chart](../../../widgets/data/chart/): gezeichnet wird im Diagramm,
-  hier wird nur platziert.
+- **Do not confuse with** [grid-view](../../../widgets/data/grid-view/): the grid shows similar
+  entries, the dashboard different widgets in different sizes.
+- **Do not confuse with** [card](../../../widgets/containers/card/): the card is one building
+  block, the dashboard is the arrangement of several blocks including its settings.
+- **Do not confuse with** [chart](../../../widgets/data/chart/): drawing happens in the chart,
+  here things are only placed.
 
 ## Best Practices
 
-- Mit einer sinnvollen Standardansicht starten, Konfiguration ist optional.
-- Bearbeiten als eigenen Modus (`bearbeiten`) — im Lesemodus verrutscht nichts.
-- Raster mit Spalten und Zeilen, jedes Widget bringt Mindest- und Maximalgröße mit.
-- Jeder Widget-Ladezustand einzeln behandeln, die Seite nicht komplett sperren.
-- Anordnung je Person speichern und ein Zurücksetzen anbieten.
+- Start with a sensible default view, configuration is optional.
+- Editing as its own mode (`bearbeiten`) — nothing shifts in reading mode.
+- Grid with columns and rows, each widget brings a minimum and maximum size.
+- Handle each widget's loading state individually, do not lock the whole page.
+- Save the arrangement per person and offer a reset.
 
 ## See also
 
 - [special – overview](../index.md)
-- [Card](../../../widgets/containers/card/) — der Baustein
-- [Chart](../../../widgets/data/chart/) — das Diagramm
+- [Card](../../../widgets/containers/card/) — the building block
+- [Chart](../../../widgets/data/chart/) — the chart
 - [Base component](../../../primitives/basics/base.md)

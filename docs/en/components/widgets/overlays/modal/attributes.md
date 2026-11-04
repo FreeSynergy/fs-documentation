@@ -1,43 +1,43 @@
-# Modal (Modaler Dialog) - Attribute
+# Modal - Attributes
 
 ## Main attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `title` | string | - | Titel |
-| `isOpen` | boolean | `false` | Ist geöffnet? |
-| `onClose` | function | - | Event beim Schließen |
+|-----------|------|---------|-------------|
+| `title` | string | - | title |
+| `isOpen` | boolean | `false` | is it open? |
+| `onClose` | function | - | event on closing |
 
 ## Behaviour
 
 | Attribute | Type | Default | Description |
-| --- | --- | --- | --- |
-| `closable` | boolean | `true` | Schließbar? |
-| `overlayClosable` | boolean | `true` | Klick auf Overlay schließt? |
-| `keyboardClosable` | boolean | `true` | ESC schließt? |
+|---|---|---|---|
+| `closable` | boolean | `true` | closable? |
+| `overlayClosable` | boolean | `true` | does a click on the overlay close it? |
+| `keyboardClosable` | boolean | `true` | does ESC close it? |
 
 ## Events
 
 | Attribute | Type | Description |
-| ---------- | ----- | -------------- |
+|-----------|------|-------------|
 | `onOpen` | function | runs when opened |
 | `onClose` | function | runs when closed |
-| `onActionClick` | function | Wird bei Aktion-Klick ausgeführt |
+| `onActionClick` | function | runs on an action click |
 
 ## Accessibility
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
+|-----------|------|---------|-------------|
 | `role` | string | - | ARIA role: `dialog` |
-| `aria-modal` | boolean | `true` | Modal-Modus? |
+| `aria-modal` | boolean | `true` | modal mode? |
 
-## Action-Attribute
+## Action attributes
 
 | Attribute | Type | Default | Description |
-| ---------- | ----- | --------- | -------------- |
-| `confirmLabel` | string | `Speichern` | Bestätigungs-Label |
-| `cancelLabel` | string | `Abbrechen` | Abbrech-Label |
-| `onConfirm` | function | - | Wird bei Bestätigung ausgeführt |
+|-----------|------|---------|-------------|
+| `confirmLabel` | string | `Save` | confirm label |
+| `cancelLabel` | string | `Cancel` | cancel label |
+| `onConfirm` | function | - | runs on confirmation |
 
 ## Inherited from
 

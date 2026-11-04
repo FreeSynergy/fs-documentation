@@ -1,57 +1,57 @@
-# Embed (Einbettung) - Appearance
+# Embed - Appearance
 
 ## Base layout
 
 ```
 ┌──────────────────────────────────────────────┐
-│  Titel                          ⛶  ↗         │  Kopfzeile (optional)
+│  Title                          ⛶  ↗         │  header (optional)
 ├──────────────────────────────────────────────┤
 │                                              │
-│                                              │  eingebettete Fläche
+│                                              │  embedded surface
 │                                              │
 └──────────────────────────────────────────────┘
 ```
 
-Die Kopfzeile entfällt bei `showTitle = false`; das Vollbild- und das Öffnen-Symbol
-erscheinen erst bei Hover oder Fokus.
+The header is dropped with `showTitle = false`; the fullscreen and open-in-new symbols
+only appear on hover or focus.
 
 ## Variants
 
 | `source` | Appearance |
-| ---------- | ---------- |
-| **app** | wie ein eigenes Programmfenster, ohne eigene Navigationsleiste |
-| **widget** | kompakte Fläche, füllhöhenbegrenzt, seltener Rahmen |
-| **iframe** | fremde Seite randlos, Kopfzeile nur bei `showTitle = true` |
+|----------|------------|
+| **app** | like its own program window, without its own navigation bar |
+| **widget** | compact surface, limited fill height, rarer border |
+| **iframe** | foreign page without border, header only with `showTitle = true` |
 
 ## Sizes
 
-| Size | Bedeutung |
-| ------- | ----------- |
-| `small` | Zeilenhöhe 280 px, z. B. in Listen |
-| `medium` | 480 px Höhe, Standard in Seiten |
-| `large` | füllt die verfügbare Höhe, für Dashboards |
+| Size | Meaning |
+|------|---------|
+| `small` | row height 280 px, e.g. in lists |
+| `medium` | 480 px height, standard in pages |
+| `large` | fills the available height, for dashboards |
 
-Zusätzlich bestimmt `ratio` das Seitenverhältnis (`auto`, `16:9`, `4:3`, `1:1`).
+In addition, `ratio` determines the aspect ratio (`auto`, `16:9`, `4:3`, `1:1`).
 
 ## Colours and states
 
 | State | Appearance |
-| --------- | ---------- |
-| `default` | Fläche mit Grundfarbe, dezenter 1 px Rahmen |
-| `hover` | Kopfzeilen-Symbole werden sichtbar |
-| `focus` | 2 px Fokus-Ring um die Gesamtfläche |
-| `loading` | Skeleton in der Fläche, Kopfzeile bleibt bedienbar |
-| `error` | Fehlerhinweis in der Fläche, Ursache und Verweis nach außen |
-| `disabled` | Fläche abgeblendet, Bedienung gesperrt |
+|-------|------------|
+| `default` | surface with a base colour, subtle 1 px border |
+| `hover` | the header symbols become visible |
+| `focus` | 2 px focus ring around the whole surface |
+| `loading` | skeleton in the surface, the header stays operable |
+| `error` | error notice in the surface, cause and a link outwards |
+| `disabled` | surface dimmed, operation locked |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `reveal` | Kopfzeilen-Werkzeuge erscheinen erst bei Hover oder Fokus |
-| `ring` | Fokus-Ring markiert die gesamte Einbettung |
+|--------|-------------|
+| `reveal` | header tools only appear on hover or focus |
+| `ring` | the focus ring marks the entire embedding |
 
 ## Responsive
 
-- Bei schmalem Fenster wird die Fläche vollbreit, die Kopfzeile bleibt einzeilig.
-- Bei `responsive = false` behält die Fläche ihre feste Höhe und bekommt Seitenlauf.
+- In a narrow window the surface goes full width, the header stays on one line.
+- With `responsive = false` the surface keeps its fixed height and gets a scrollbar.

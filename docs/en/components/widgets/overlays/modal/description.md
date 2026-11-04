@@ -1,7 +1,7 @@
 # Modal
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `overlays` |
 | **Inherits from** | `base` |
 | **Variants** | `Small`, `Medium`, `Large`, `Fullscreen` |
@@ -12,22 +12,22 @@
 | **State** | documented |
 
 ## Description
-Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
+A modal is an overlay window with focus on content.
 
 ## Purpose
 
-- Bestätigungen
-- Formulare
-- Bearbeitungsdialoge
+- Confirmations
+- Forms
+- Editing dialogs
 
 ## Variants
 
 | Variant | Size | Description |
-| --------- | ------- | -------------- |
-| **Small** | - | Formulare, Bestätigungen |
-| **Medium** | - | Bearbeitungsdialoge |
-| **Large** | - | Komplette Ansichten |
-| **Fullscreen** | - | Komplette Ansicht |
+|---------|------|-------------|
+| **Small** | - | forms, confirmations |
+| **Medium** | - | editing dialogs |
+| **Large** | - | complete views |
+| **Fullscreen** | - | complete view |
 
 ## Features
 
@@ -39,26 +39,26 @@ Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
 
 ## Distinction
 
-- **Nicht verwechseln mit** [alert-dialog](../alert-dialog/): der Alert-Dialog fragt eine
-  Entscheidung ab, hat kaum Inhalt und ist nicht durch Klick außerhalb schließbar; das Modal
-  trägt Inhalt oder ein Formular.
-- **Nicht verwechseln mit** [drawer](../drawer/): der Drawer kommt von einer Kante und bringt
-  Navigation; das Modal sitzt zentriert und verlangt Aufmerksamkeit.
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover sperrt den Rest der Seite nicht.
-- **Nicht verwechseln mit** [wizard](../../containers/wizard/): mehrere Schritte hinterein-
-  ander sind ein Wizard — auch wenn er in einem Modal läuft.
-- Gesperrter Fokus und Hintergrund-Scroll sind Teil dieser Komponente, keine Zusatzbibliothek.
+- **Do not confuse with** [alert-dialog](../alert-dialog/): the alert dialog asks for a
+  decision, has hardly any content and cannot be closed by a click outside; the modal carries
+  content or a form.
+- **Do not confuse with** [drawer](../drawer/): the drawer comes from an edge and brings
+  navigation; the modal sits centred and demands attention.
+- **Do not confuse with** [popover](../popover/): a popover does not lock the rest of the page.
+- **Do not confuse with** [wizard](../../containers/wizard/): several steps in a row are a
+  wizard — even when it runs inside a modal.
+- Locked focus and blocked background scroll are part of this component, not an extra library.
 
 ## Best Practices
 
-- Clear-Content
-- Close-Button
+- Clear content
+- Close button
 - Accessibility
 - Feedback
 
 ## See also
 
 - [overlays – overview](../index.md)
-- [Alert Dialog](../alert-dialog/) — Bestätigung ohne Inhalt
-- [Drawer](../drawer/) — Overlay an der Kante
+- [Alert Dialog](../alert-dialog/) — confirmation without content
+- [Drawer](../drawer/) — overlay at the edge
 - [Base component](../../../primitives/basics/base.md)

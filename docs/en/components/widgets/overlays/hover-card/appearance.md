@@ -1,29 +1,29 @@
-# Hover Card (Vorschaukarte) - Appearance
+# Hover Card - Appearance
 
 ## Base layout
 
 ```
-Verweis:  [ Anna Berger ]
+reference:  [ Anna Berger ]
                  │
           ┌──────▼───────────────────┐
           │ ◯  Anna Berger           │
-          │    Projektplanung        │
-          │    zuletzt vor 12 Min.   │
+          │    project planning      │
+          │    last seen 12 min ago  │
           └──────────────────────────┘
 ```
 
 ## Variants
 
 | Variant | Appearance |
-| ---------- | ---------- |
-| **profil** | Avatar links, zwei Zeilen Text rechts |
-| **dokument** | Titelzeile, Auszug, Meta-Zeile darunter |
-| **vorschau** | Bildfläche oben, Titelzeile darunter |
+|---------|------------|
+| **profil** | avatar on the left, two lines of text on the right |
+| **dokument** | title line, excerpt, meta line below |
+| **vorschau** | image surface on top, title line below |
 
 ## Sizes
 
-| Size | Width | Zeilen |
-| ------- | -------- | -------- |
+| Size | Width | Rows |
+|------|-------|------|
 | `small` | 240 px | 2 |
 | `medium` | 320 px | 4 |
 | `large` | 400 px | 6 |
@@ -31,19 +31,19 @@ Verweis:  [ Anna Berger ]
 ## Colours and states
 
 | State | Appearance |
-| --------- | ---------- |
-| `default` | Karte mit Rahmen und Schatten, Spitze zum Auslöser |
-| `open` | Karte sichtbar, Auslöser leicht hinterlegt |
-| `loading` | Skeleton in der Kartenfläche |
+|-------|------------|
+| `default` | card with border and shadow, tip pointing at the trigger |
+| `open` | card visible, trigger slightly filled |
+| `loading` | skeleton in the card surface |
 
 ## Hover and focus effects
 
 | Effect | Description |
-| -------- | -------------- |
-| `bridge` | unsichtbare Brücke zwischen Auslöser und Karte, damit die Karte nicht zufällt |
-| `shadow` | Schatten hebt die Karte vom Inhalt ab |
+|--------|-------------|
+| `bridge` | invisible bridge between trigger and card so the card does not snap shut |
+| `shadow` | the shadow lifts the card off the content |
 
 ## Responsive
 
-- Auf Mobilgeräten ersetzt eine untere Leiste die Karte (Langdruck).
-- Die Karte klappt zur verfügbaren Seite auf; am Rand sitzt sie bündig.
+- On mobile devices a bottom bar replaces the card (long-press).
+- The card opens towards the available side; at an edge it sits flush.

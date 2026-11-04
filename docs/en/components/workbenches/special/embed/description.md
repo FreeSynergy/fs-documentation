@@ -1,71 +1,70 @@
 # Embed
 
 | Field | Value |
-| ------ | ------ |
+|-------|-------|
 | **Category** | `special` |
 | **Inherits from** | `base` |
 | **Variants** | `app`, `widget`, `iframe` |
 | **States** | `geladen`, `fehler` |
-| **Gestures** | `tap`, `drag` (nur bei `interactive`) |
+| **Gestures** | `tap`, `drag` (only with `interactive`) |
 | **Animations** | `fade-in` |
 | **Related** | `map-view`, `whiteboard`, `dashboard`, `base` |
 | **State** | documented |
 
-!!! info "Standardisierung"
-    Die früheren Komponenten `app-embed`, `widget-embed` und `iframe-embed` sind in `embed` mit dem Attribut `source` aufgegangen: `app`, `widget`, `iframe`.
+!!! info "Standardisation"
+    The former components `app-embed`, `widget-embed` and `iframe-embed` became the `source`
+    attribute of `embed`: `app`, `widget`, `iframe`.
 
 ## Description
 
-Ein **Embed** bindet fremden Inhalt in eine FreeSynergy-Oberfläche ein: ein anderes
-FreeSynergy-Programm, ein Widget oder eine externe Seite. Der Inhalt gehört nicht zur
-Anwendung; er wird in einer eigenen Fläche dargestellt und über eine klar benannte
-Schnittstelle angesprochen.
+An **embed** includes foreign content in a FreeSynergy surface: another FreeSynergy
+program, a widget or an external page. The content does not belong to the application; it
+is shown in its own surface and addressed through a clearly named interface.
 
 ## Purpose
 
-- Ein FreeSynergy-Programm in ein anderes einbetten (z. B. Kalender in einem Dashboard)
-- Ein Widget (Wetter, Uhr, Zähler) in eine Seite oder ein Dashboard setzen
-- Eine externe Seite oder einen externen Player einbetten
+- Embedding one FreeSynergy program into another (e.g. a calendar inside a dashboard)
+- Placing a widget (weather, clock, counter) on a page or a dashboard
+- Embedding an external page or an external player
 
 ## Variants
 
 | Variant | Description |
-| ---------- | -------------- |
-| **app** | ein anderes FreeSynergy-Programm im Fenster |
-| **widget** | kleines Programm mit eigener Konfiguration |
-| **iframe** | externe Seite über `src` |
+|---------|-------------|
+| **app** | another FreeSynergy program in the window |
+| **widget** | small program with its own configuration |
+| **iframe** | external page via `src` |
 
 ## Features
 
-- Einheitliche Größe über `size` und `ratio`, responsives Verhalten abschaltbar
-- Nachrichenaustausch mit dem eingebetteten Inhalt (`postMessage`) mit Origin-Prüfung
-- Lade- und Fehlerzustand sind Teil der Komponente, nicht des eingebetteten Inhalts
-- Sandbox und Berechtigungen nur bei `source = iframe` wirksam
+- Uniform size via `size` and `ratio`, responsive behaviour can be switched off
+- Message exchange with the embedded content (`postMessage`) with origin checking
+- Loading and error states are part of the component, not of the embedded content
+- Sandbox and permissions only take effect with `source = iframe`
 
 ## Distinction
 
-- **Nicht verwechseln mit** `app-embed`, `widget-embed` und `iframe-embed`: diese drei
-  früheren Eigenkomponenten sind als `source`-Werte in `embed` aufgegangen.
+- **Do not confuse with** `app-embed`, `widget-embed` and `iframe-embed`: these three
+  former standalone components became `source` values inside `embed`.
 
-- **Nicht verwechseln mit** [map-view](../../../widgets/special/map-view/) und [whiteboard](../whiteboard/):
-  das sind eigene Komponenten mit eigener Datenstruktur, keine Einbettung.
+- **Do not confuse with** [map-view](../../../widgets/special/map-view/) and [whiteboard](../whiteboard/):
+  those are components of their own with their own data structure, not an embedding.
 
-- **Nicht verwechseln mit** [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe):
-  `embed` ist die Oberfläche inklusive Zuständen und Berechtigungen.
+- **Do not confuse with** [iframe](https://developer.mozilla.org/docs/Web/HTML/Element/iframe):
+  `embed` is the surface including states and permissions.
 
 ## Best Practices
 
-- Externe Inhalte immer in den Modi `media-src` und `scripts-src` getrennt betrachten;
-  Standard ist keine Skriptausführung.
+- Always treat external content separately in the `media-src` and `scripts-src` modes;
+  the default is no script execution.
 
-- `origin` stets setzen, wenn `postMessage` aktiv ist.
-- Für eingebettete Programme gilt: kein Doppelmenü. Das einbettende Programm
-  versteckt eigene Kopfzeilen, wenn `source = app`.
+- Always set `origin` when `postMessage` is active.
+- For embedded programs: no double menu. The embedding program hides its own headers
+  when `source = app`.
 
-- Ein Embed ist nie die einzige Möglichkeit, den Inhalt zu erreichen — Verweis
-  nach außen mit anbieten.
+- An embed is never the only way to reach the content — also offer a link outwards.
 
 ## See also
 
-- [Dashboard](../dashboard/) — Embeds als Bausteine
+- [Dashboard](../dashboard/) — embeds as building blocks
 - [Base component](../../../primitives/basics/base.md)
