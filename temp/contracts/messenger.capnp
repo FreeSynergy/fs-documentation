@@ -2,7 +2,7 @@
 # Source of truth for the frontend <-> program interface (ADR 0021). JSON, CLI and MCP are generated
 # from this file. Capability ids and groups: docs/en/programs/apps/messenger/requirements.md.
 # Evolution rules (Cap'n Proto): never renumber or remove fields/methods; only append.
-# Not yet compiled (no capnp tool installed) — syntax unverified.
+# Compiled successfully 2026-11-05 with capnpc-embedded 0.2.0 (capnp 1.4.0) + capnpc 0.23 (ADR 0040).
 
 @0xd6c1b5e3a2f40917;   # file id (generate a fresh one with `capnp id` before first release)
 
@@ -15,10 +15,9 @@ struct Timestamp { unixMillis @0 :Int64; }
 struct Cursor    { opaque @0 :Data; }                       # pagination
 struct Problem   { type @0 :Text; title @1 :Text; detail @2 :Text; status @3 :UInt16; }  # RFC 9457 shape
 
-struct Page(T) {
-  items @0 :List(T);
-  next  @1 :Cursor;                                         # empty = end
-}
+# pages: one struct per item type (Cap'n Proto has no List(T) over generic parameters)
+struct MessagePage      { items @0 :List(MessageSummary);      next @1 :Cursor; }   # empty next = end
+struct ConversationPage { items @0 :List(ConversationSummary); next @1 :Cursor; }
 
 # --------------------------------------------------------- envelope (ADR 0020) ----
 
@@ -109,13 +108,13 @@ struct Account      { id @0 :Uuid; address @1 :Text; kind @2 :Text; encryptionRe
 struct AccountSetup { address @0 :Text; kind @1 :Text; secret @2 :Text; }  # kind: "mail", "matrix", "mimi"
 
 interface Conversations {
-  list    @0 (folder :Text, onlyUnread :Bool, cursor :Cursor) -> (page :Page(ConversationSummary));
+  list    @0 (folder :Text, onlyUnread :Bool, cursor :Cursor) -> (page :ConversationPage);
   open    @1 (id :Uuid) -> (conversation :Conversation);
   nextUnread @2 (after :Uuid) -> (message :MessageSummary);  # frontend no. 1 (swipe)
 }
 
 interface Conversation {
-  messages @0 (cursor :Cursor) -> (page :Page(MessageSummary));
+  messages @0 (cursor :Cursor) -> (page :MessagePage);
   message  @1 (id :Uuid) -> (message :Message);
   markRead @2 (upTo :Uuid) -> ();                            # "read up to X"
   pin      @3 (pinned :Bool) -> ();
@@ -149,7 +148,7 @@ interface Draft {
 }
 
 interface Search {
-  query @0 (text :Text, filter :SearchFilter, cursor :Cursor) -> (page :Page(MessageSummary));
+  query @0 (text :Text, filter :SearchFilter, cursor :Cursor) -> (page :MessagePage);
 }
 struct SearchFilter { from @0 :Text; unread @1 :Bool; hasAttachment @2 :Bool; since @3 :Timestamp; }
 

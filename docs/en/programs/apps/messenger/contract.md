@@ -1,6 +1,6 @@
 # Messenger — Contract (draft 0.1)
 
-The interface between `fs-messenger` and every frontend (ADR 0021). **Draft**, not compiled yet.
+The interface between `fs-messenger` and every frontend (ADR 0021). **Draft**; compiles with `capnpc-embedded` 0.2.0 (capnp 1.4.0) + `capnpc` 0.23 (2026-11-05) — no C++ toolchain (ADR 0040).
 The schema file lives for now in the docs repo under `temp/contracts/messenger.capnp`; it moves to
 the `fs-messenger` repository when that exists (ADR 0017).
 
