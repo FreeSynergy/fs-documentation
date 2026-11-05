@@ -18,3 +18,10 @@ Scope: Übersetzung und kleine Massenaufgaben. Kein Planen, keine Entscheidungen
   ganzer Baum · Status: läuft
 - Nach dem Umbau `masks/` → `frontends/` (Phase 1): `de/` neu aus `en/` übersetzen statt von
   Hand nachzuziehen · Status: wartet auf Phase 1
+
+## Hinweis für Hintergrundjobs (2026-11-05)
+- **Nur eigene Dateien committen**: `git commit -- <pfade>` statt `git commit -a`/`git add -A`.
+  Sonst landen fremde, gerade vorgemerkte Änderungen (z. B. ein laufender `scripts/move.py`-Umbau)
+  im Übersetzungs-Commit (passiert in `055ff056`).
+- Programme liegen jetzt unter `programs/<level>/<category>/frontends/<program>/latest/`
+  (ADR 0012); `masks/` gibt es nicht mehr.
