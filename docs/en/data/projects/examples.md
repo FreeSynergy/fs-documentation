@@ -6,21 +6,21 @@ Task fields are ✅ verified JSCalendar fields (RFC 8984, list in [events/standa
 
 ```json
 {
-  "id": "01HTZN0E5T2R8V4B6N9K1D7M3Q",
+  "id": "018ebf50-38ba-7611-b22c-d54cc2d3d077",
   "@type": "Project",
   "name": "FreeSynergy rollout",
-  "team": "https://<instance>/contacts/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "team": "https://<instance>/contacts/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "roles": [
-    { "contact": "https://<instance>/contacts/01HTZK5C8R4M6YQ2N9XGZ7TQ1A", "role": "owner" }
+    { "contact": "https://<instance>/contacts/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a", "role": "owner" }
   ]
 }
 ```
 
 ```json
 {
-  "id": "01HTZN3G8W6P2S5H0J4F9C1Y7T",
+  "id": "018ebf51-c11c-7585-92c4-1223d2c0f8fa",
   "@type": "Board",
-  "project": "01HTZN0E5T2R8V4B6N9K1D7M3Q",
+  "project": "018ebf50-38ba-7611-b22c-d54cc2d3d077",
   "name": "Implementation"
 }
 ```
@@ -32,7 +32,7 @@ The task itself is a JSCalendar object from [events/examples.md → example 3](.
 ```json
 {
   "task": "01HTZM7Y2L4P9Q8R0T6V3B5N7C",
-  "list": "01HTZN5A9Q3D7K2M6B8V1S4F0H",
+  "list": "018ebf52-a937-7b4f-b150-cb46c3923c11",
   "position": 1500
 }
 ```
@@ -42,7 +42,7 @@ The task itself is a JSCalendar object from [events/examples.md → example 3](.
 ```json
 {
   "from": "01HTZM7Y2L4P9Q8R0T6V3B5N7C",
-  "to": "01HTZN8X4C6T1W9E3G5J2R7Y0P",
+  "to": "018ebf54-748c-7683-84b8-702c8583f816",
   "kind": "blocks"
 }
 ```
@@ -67,11 +67,11 @@ The task itself is a JSCalendar object from [events/examples.md → example 3](.
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Update",
-  "actor": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "actor": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "object": {
     "@type": "task_link",
     "task": "01HTZM7Y2L4P9Q8R0T6V3B5N7C",
-    "list": "01HTZN5A9Q3D7K2M6B8V1S4F0H",
+    "list": "018ebf52-a937-7b4f-b150-cb46c3923c11",
     "position": 2000
   }
 }

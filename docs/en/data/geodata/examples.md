@@ -7,7 +7,7 @@ Field names exclusively from the ✅ verified standards (RFC 7946, RFC 5870, RFC
 ```json
 {
   "type": "Feature",
-  "id": "01HTZK9F2W7P3D8S5V1BQ6XH4M",
+  "id": "018ebf34-bc5c-7d86-9464-bb0aee6ec494",
   "geometry": {
     "type": "Point",
     "coordinates": [13.4050, 52.5200]
@@ -71,7 +71,7 @@ An appointment in [events/](../events/index.md) only stores the reference:
 ```json
 {
   "locations": {
-    "loc1": { "name": "Rathaus Berlin", "link": "https://<instance>/geodata/01HTZK9F2W7P3D8S5V1BQ6XH4M" }
+    "loc1": { "name": "Rathaus Berlin", "link": "https://<instance>/geodata/018ebf34-bc5c-7d86-9464-bb0aee6ec494" }
   }
 }
 ```

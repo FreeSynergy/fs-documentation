@@ -8,12 +8,12 @@ AS2 fields ✅ Core/Vocabulary-verified (list in [standards.md → activities](.
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Person",
-  "id": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "id": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "name": "Anna Weber",
   "preferredUsername": "anna",
   "publicKey": {
-    "id": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A#mainKey",
-    "owner": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A"
+    "id": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a#mainKey",
+    "owner": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a"
   }
 }
 ```
@@ -23,7 +23,7 @@ AS2 fields ✅ Core/Vocabulary-verified (list in [standards.md → activities](.
 ```json
 {
   "@type": "ProjectionRules",
-  "profile": "01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "profile": "018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "groups": {
     "public":   { "fields": ["name", "media:avatar"] },
     "work":     { "fields": ["titles", "emails:work", "organizations"] },
@@ -66,10 +66,10 @@ AS2 fields ✅ Core/Vocabulary-verified (list in [standards.md → activities](.
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Update",
-  "actor": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "actor": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "object": {
     "@type": "Profile",
-    "id": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+    "id": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
     "name": "Anna Weber"
   }
 }

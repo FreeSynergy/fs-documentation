@@ -2,14 +2,14 @@
 
 ## Storage perspective
 
-- **One table `message`**: canonical payload = AS2 object JSON (`Note`/`Article`) (decision 4). Extracted columns: `id` (ULID), `type`, `thread_id`, `in_reply_to` (ULID or IRI), `actor_id`, `created_at`, `updated_at`, `deleted` (tombstone marker).
+- **One table `message`**: canonical payload = AS2 object JSON (`Note`/`Article`) (decision 4). Extracted columns: `id` (UUIDv7), `type`, `thread_id`, `in_reply_to` (UUIDv7 or IRI), `actor_id`, `created_at`, `updated_at`, `deleted` (tombstone marker).
 - **Delivery copies:** `to`/`cc`/`bto`/`bcc` decide **where copies land** (decision 2). Internally: table `message_delivery` (`message_id`, `recipient_id`, `audience` ∈ `to|cc|bto|bcc`). The actual authorization runs separately through resource permissions — the audience fields do not replace it.
 
 ## Threading rule (our own decision — not fully defined in AS2)
 
 AS2 knows `inReplyTo` but no complete thread mechanism (open point in [index.md](index.md)). Proposal:
 
-- `thread_id` = ULID of the **root post** (one column, indexed)
+- `thread_id` = UUIDv7 of the **root post** (one column, indexed)
 - `in_reply_to` = direct parent post (tree structure)
 - Display: flat (chat) or threaded (comments) — both rendered from the same columns
 
@@ -27,7 +27,7 @@ AS2 knows `inReplyTo` but no complete thread mechanism (open point in [index.md]
 | Mail sending | RFC 5322 (✅ §3.4.1 address format) — SMTP transport is a topic of its own (not a data model) |
 | JMAP endpoint | `Note` → JMAP email structure, field mapping open |
 | Search/indexes | `content`/`contentMap` full text; `name` as the subject |
-| Encryption | MLS (RFC 9420, ⚠️ not retrieved in this round) as a candidate for group E2EE |
+| Encryption | MLS (RFC 9420, ✅) for group E2EE (ADR 0018) |
 
 ## Open technical points
 

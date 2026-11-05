@@ -8,11 +8,11 @@ The AS2 fields (`Relationship`, `subject`, `relationship`, `object`, `publicKey`
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Create",
-  "actor": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "actor": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "object": {
     "type": "Relationship",
-    "id": "https://<instance>/identity/01HTZS3B7D9M2P5V8K4R6T1W0Q",
-    "subject": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+    "id": "https://<instance>/identity/018ebf91-aced-7d05-a2ed-13260da0f017",
+    "subject": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
     "relationship": "fs:person_key",
     "object": "https://other.example/profile/01HTZS6H8L3C7N9X2B5D8F4K1M",
     "fs:attestedAt": "2026-11-01T18:30:00Z",
@@ -46,7 +46,7 @@ The AS2 fields (`Relationship`, `subject`, `relationship`, `object`, `publicKey`
 ```json
 {
   "query": {
-    "from": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+    "from": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
     "about": "https://other.example/profile/01HTZS6H8L3C7N9X2B5D8F4K1M",
     "claim": "person_key"
   },

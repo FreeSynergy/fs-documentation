@@ -80,7 +80,7 @@ The **envelope** (AS2 + ActivityPub, decisions in [standards.md](standards.md)) 
 
 ## Basic rules
 
-1. **IDs are opaque strings** — never interpret them as numbers; internally a ULID, externally the absolute IRI `https://<instance>/<domain>/<ulid>` (decision 3)
+1. **IDs are opaque strings** — never interpret them as numbers; internally a UUIDv7 (RFC 9562), externally the absolute IRI `https://<instance>/<domain>/<uuid>` (decision 3)
 2. **Times always with time zone offset** or explicitly `allDay: true`
 3. **Empty values are `null`**, not `""` (exception: required text fields)
 4. **Enums are lowercase and singular** (`active`, not `Active`)

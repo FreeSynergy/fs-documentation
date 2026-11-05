@@ -8,7 +8,7 @@ All field names come from the ✅ verified JSContact field list in [standards.md
 {
   "@type": "Card",
   "version": 1,
-  "uid": "01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "uid": "018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "name": {
     "components": [
       { "kind": "given", "value": "Anna" },
@@ -61,7 +61,7 @@ A Spanish name with two suffixes stays correctly representable:
 ```
 BEGIN:VCARD
 VERSION:4.0
-UID:01HTZK5C8R4M6YQ2N9XGZ7TQ1A
+UID:018ebf32-b118-750d-ab8a-a9ec3e7d5c2a
 FN:Anna Weber
 N:Weber;Anna;;;
 NICKNAME:awi

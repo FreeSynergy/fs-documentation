@@ -6,16 +6,16 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [Ant Media Server](ant-media-server/index.md) | — | The Ant Media Server (AMS) is a streaming platform based on Java: it accepts RTMP, RTSP, SRT and WebRTC, delivers WebRTC, HLS and DASH, can transcode (adaptive multi-bitrate) and manages streams, r… |
-| [FFmpeg](ffmpeg/index.md) | — | FFmpeg is the command-line tool collection of the FFmpeg projects: `ffmpeg` transcodes, muxes/demuxes and filters media, `ffprobe` analyses files in a machine-readable way, `ffplay` plays them as a… |
-| [GStreamer](gstreamer/index.md) | — | GStreamer is a multimedia framework in C: capture, decoding, filtering, encoding and output are built as a **pipeline of elements** (source → filter/codec → sink). |
-| [MediaMTX](mediamtx/index.md) | — | MediaMTX (formerly `rtsp-simple-server`) is a lean live media router in **Go**: one binary, one YAML file, and the server accepts streams and delivers them over RTSP, RTMP, SRT, WebRTC, HLS/LL-HLS,… |
-| [MistServer](mistserver/index.md) | — | MistServer is a lean streaming server written in C++ without transcoding: it accepts live streams (RTMP, RTSP, SRT, WebRTC/WHIP) and files and delivers them over HTTP, HLS, DASH, WebRTC, RTMP, RTSP… |
-| [nginx-rtmp-module](nginx-rtmp-module/index.md) | — | The nginx-rtmp-module (arut) extends nginx with an RTMP server: it accepts RTMP publishes, writes along HLS and DASH streams, records, and forwards via relay. |
-| [OBS Studio](obs-studio/index.md) | — | OBS Studio records screens, cameras and audio and transmits them via RTMP/SRT into streams; scenes, sources, filters and the mixer turn it into a full-fledged production tool. |
-| [Restream](restream/index.md) | — | Restream (restream.io) is a **cloud multistreaming service**: one encoder stream is accepted and passed on simultaneously to many platforms (YouTube, Twitch, Facebook, LinkedIn, TikTok and others). |
-| [Restreamer](restreamer/index.md) | — | The (Docker) Restreamer is a complete package for your own video reception and distribution: nginx + nginx-rtmp-module + Node.js web UI. |
-| [Wowza Streaming Engine](wowza/index.md) | — | Wowza Streaming Engine is a **commercial media server** for live and on-demand video: it accepts streams (RTMP, RTSP, SRT, MP4 upload), shapes them with the built-in transcoder into multi-bitrate l… |
+| [Ant Media Server](ant-media-server/index.md) | [latest](ant-media-server/latest/description.md) | The Ant Media Server (AMS) is a streaming platform based on Java: it accepts RTMP, RTSP, SRT and WebRTC, delivers WebRTC, HLS and DASH, can transcode (adaptive multi-bitrate) and manages streams, r… |
+| [FFmpeg](ffmpeg/index.md) | [latest](ffmpeg/latest/description.md) | FFmpeg is the command-line tool collection of the FFmpeg projects: `ffmpeg` transcodes, muxes/demuxes and filters media, `ffprobe` analyses files in a machine-readable way, `ffplay` plays them as a… |
+| [GStreamer](gstreamer/index.md) | [latest](gstreamer/latest/description.md) | GStreamer is a multimedia framework in C: capture, decoding, filtering, encoding and output are built as a **pipeline of elements** (source → filter/codec → sink). |
+| [MediaMTX](mediamtx/index.md) | [latest](mediamtx/latest/description.md) | MediaMTX (formerly `rtsp-simple-server`) is a lean live media router in **Go**: one binary, one YAML file, and the server accepts streams and delivers them over RTSP, RTMP, SRT, WebRTC, HLS/LL-HLS,… |
+| [MistServer](mistserver/index.md) | [latest](mistserver/latest/description.md) | MistServer is a lean streaming server written in C++ without transcoding: it accepts live streams (RTMP, RTSP, SRT, WebRTC/WHIP) and files and delivers them over HTTP, HLS, DASH, WebRTC, RTMP, RTSP… |
+| [nginx-rtmp-module](nginx-rtmp-module/index.md) | [latest](nginx-rtmp-module/latest/description.md) | The nginx-rtmp-module (arut) extends nginx with an RTMP server: it accepts RTMP publishes, writes along HLS and DASH streams, records, and forwards via relay. |
+| [OBS Studio](obs-studio/index.md) | [latest](obs-studio/latest/description.md) | OBS Studio records screens, cameras and audio and transmits them via RTMP/SRT into streams; scenes, sources, filters and the mixer turn it into a full-fledged production tool. |
+| [Restream](restream/index.md) | [latest](restream/latest/description.md) | Restream (restream.io) is a **cloud multistreaming service**: one encoder stream is accepted and passed on simultaneously to many platforms (YouTube, Twitch, Facebook, LinkedIn, TikTok and others). |
+| [Restreamer](restreamer/index.md) | [latest](restreamer/latest/description.md) | The (Docker) Restreamer is a complete package for your own video reception and distribution: nginx + nginx-rtmp-module + Node.js web UI. |
+| [Wowza Streaming Engine](wowza/index.md) | [latest](wowza/latest/description.md) | Wowza Streaming Engine is a **commercial media server** for live and on-demand video: it accepts streams (RTMP, RTSP, SRT, MP4 upload), shapes them with the built-in transcoder into multi-bitrate l… |
 
 ## File set per program (ADR 0012)
 

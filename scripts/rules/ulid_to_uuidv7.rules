@@ -1,0 +1,30 @@
+# ADR 0027: example IDs ULID -> UUIDv7 (same 48-bit ms timestamp, version/variant bits set)
+# python3 scripts/replace.py --scope docs/en --rules scripts/rules/ulid_to_uuidv7.rules [--apply]
+\b01HTZK5C8R4M6YQ2N9XGZ7TQ1A\b => 018ebf32-b118-750d-ab8a-a9ec3e7d5c2a
+\b01HTZK9F2W7P3D8S5V1BQ6XH4M\b => 018ebf34-bc5c-7d86-9464-bb0aee6ec494
+\b01HTZM2Q6T8V3N9K5R7D1XWZ2P\b => 018ebf41-5cda-76c7-94cc-b83b43de7c56
+\b01HTZM4W0C5B8J2H6F9G0S1D3E\b => 018ebf42-700c-7ad1-a144-cf4c0190b46e
+\b01HTZN0E5T2R8V4B6N9K1D7M3Q\b => 018ebf50-38ba-7611-b22c-d54cc2d3d077
+\b01HTZN3G8W6P2S5H0J4F9C1Y7T\b => 018ebf51-c11c-7585-92c4-1223d2c0f8fa
+\b01HTZN5A9Q3D7K2M6B8V1S4F0H\b => 018ebf52-a937-7b4f-b150-cb46c3923c11
+\b01HTZN8X4C6T1W9E3G5J2R7Y0P\b => 018ebf54-748c-7683-84b8-702c8583f816
+\b01HTZP1A7D4K9M2R6T8V3B5Q0W\b => 018ebf60-a8ed-74d3-8160-da46c6b2dc1c
+\b01HTZP4F8H2N6C9X4B7D1K5T3R\b => 018ebf62-3d11-754c-84f4-8b3b4332e878
+\b01HTZP7J3Q8W2S5H9F6C1D4M0V\b => 018ebf63-c877-7705-92c5-2f3302d2501b
+\b01HTZP9G5V2B8N4X6C3D7F0S1H\b => 018ebf64-c0bb-72d1-9274-cc1b4ef06431
+\b01HTZR6D2W9P4S7H5B1K8M3Q0V\b => 018ebf83-345c-7d89-93c4-ab0cd141dc1b
+\b01HTZR8F5T2C7N4X6V9B1D5K8M\b => 018ebf84-3cba-730f-9274-db4ac2d2cd14
+\b01HTZS3B7D9M2P5V8K4R6T1W0Q\b => 018ebf91-aced-7d05-a2ed-13260da0f017
+# wording
+\(ULID or IRI\) => (UUIDv7 or IRI)
+= ULID of the \*\*root post\*\* => = UUIDv7 of the **root post**
+`id` \(ULID\) => `id` (UUIDv7)
+internally ULID\b => internally UUIDv7 (RFC 9562)
+Internal ID \| ULID \(opaque, sortable\) => Internal ID | UUIDv7 (RFC 9562, time-sortable)
+internally a ULID, externally => internally a UUIDv7 (RFC 9562), externally
+<domain>/<ulid> => <domain>/<uuid>
+\(ULID\) \| => (UUIDv7) |
+an internal ULID\b => an internal UUIDv7
+the ULID the stable identity => the UUIDv7 the stable identity
+/<ulid>` => /<uuid>`
+`<type>_<ulid>` => `<type>_<uuid>` (UUIDv7)

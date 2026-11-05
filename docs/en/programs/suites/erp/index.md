@@ -79,19 +79,17 @@ When choosing an ERP system, consider the following criteria:
 
 Further information can be found in the documentation of individual ERP systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/erp/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [axelor](frontends/axelor/index.md)
+- [dolibarr](frontends/dolibarr/index.md)
+- [erpnext](frontends/erpnext/index.md)
+- [odoo](frontends/odoo/index.md)
+- [sage](frontends/sage/index.md)
+- [tryton](frontends/tryton/index.md)
 
-- [Axelor](frontends/axelor/index.md) - Axelor
-- [Dolibarr](frontends/dolibarr/index.md) - Dolibarr
-- [ERPNext](frontends/erpnext/index.md) - ERPNext
-- [Odoo](frontends/odoo/index.md) - Odoo
-- [Sage](frontends/sage/index.md) - Sage
-- [Tryton](frontends/tryton/index.md) - Tryton
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

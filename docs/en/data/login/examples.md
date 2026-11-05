@@ -7,7 +7,7 @@ Only terms evidenced by the OIDC quote in the central register (standards.md →
 ```json
 {
   "iss": "https://auth.example.org",
-  "sub": "kanidm:01HTZR6D2W9P4S7H5B1K8M3Q0V",
+  "sub": "kanidm:018ebf83-345c-7d89-93c4-ab0cd141dc1b",
   "aud": "fs-web",
   "exp": 1793642100,
   "iat": 1793638500
@@ -20,11 +20,11 @@ Only terms evidenced by the OIDC quote in the central register (standards.md →
 
 ```json
 {
-  "id": "01HTZR8F5T2C7N4X6V9B1D5K8M",
+  "id": "018ebf84-3cba-730f-9274-db4ac2d2cd14",
   "spn": "anna@example.org",
-  "sub": "kanidm:01HTZR6D2W9P4S7H5B1K8M3Q0V",
+  "sub": "kanidm:018ebf83-345c-7d89-93c4-ab0cd141dc1b",
   "status": "active",
-  "self_card_id": "01HTZK5C8R4M6YQ2N9XGZ7TQ1A"
+  "self_card_id": "018ebf32-b118-750d-ab8a-a9ec3e7d5c2a"
 }
 ```
 
@@ -32,7 +32,7 @@ Only terms evidenced by the OIDC quote in the central register (standards.md →
 
 ```json
 {
-  "account_id": "01HTZR8F5T2C7N4X6V9B1D5K8M",
+  "account_id": "018ebf84-3cba-730f-9274-db4ac2d2cd14",
   "type": "webauthn",
   "credential_id": "o2n...base64...",
   "public_key_alg": -7,

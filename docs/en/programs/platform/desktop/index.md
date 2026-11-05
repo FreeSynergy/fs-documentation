@@ -109,3 +109,24 @@ When choosing a desktop application, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual desktop applications.
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (12), by function, nothing copied (ADR 0012/0013):
+
+- [dashy](frontends/dashy/index.md)
+- [gethomepage](frontends/gethomepage/index.md)
+- [heimdall](frontends/heimdall/index.md)
+- [homarr](frontends/homarr/index.md)
+- [homepage](frontends/homepage/index.md)
+- [homer](frontends/homer/index.md)
+- [launchboard](frontends/launchboard/index.md)
+- [opnsense](frontends/opnsense/index.md)
+- [proxmox](frontends/proxmox/index.md)
+- [synology-dsm](frontends/synology-dsm/index.md)
+- [truenas](frontends/truenas/index.md)
+- [unraid](frontends/unraid/index.md)
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

@@ -16,7 +16,7 @@ Our definition is in [models.md](models.md#contact). This is the comparison:
 
 | Our field | Evidenced counterpart | Source | Note |
 |-----------|-----------------------|--------|------|
-| `id` | `uid` (mandatory in JSContact), vCard `UID` | ✅ RFC 9553 §2.1.9, RFC 6350 | Our ID is an internal ULID. That is not enough for AS2 (see below) |
+| `id` | `uid` (mandatory in JSContact), vCard `UID` | ✅ RFC 9553 §2.1.9, RFC 6350 | Our ID is an internal UUIDv7. That is not enough for AS2 (see below) |
 | `firstName` + `lastName` | `name.components[]` with `kind`: `given`, `given2`, `surname`, `surname2`, `title`, `credential`, `generation`, `separator` | ✅ RFC 9553 §2.2.1.2 | **The two-field model is too poor.** JSContact covers middle name, second family name (Spanish), honorific titles and generational suffix this way |
 | — (missing) | `name.full` | ✅ RFC 9553 §2.2.1.1 | this is exactly the single `name` you want |
 | `displayName` | `name.full` or `name` | ✅ RFC 9553, schema.org `name` | in ours it is only 🔁 derived — that fits, derive instead of store |

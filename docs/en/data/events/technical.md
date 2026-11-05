@@ -2,12 +2,12 @@
 
 ## Storage perspective
 
-- **One table `calobj`** for both JSCalendar types (`Event`, `Task`): canonical payload = JSCalendar JSON (decision 4). Extracted columns: `id` (ULID), `uid` (JSCalendar `uid`), `type` (`event`/`task`), `start_min`/`end_min` (index over the time range; `due_min` for tasks), `calendar_id` (which calendar), `sequence`, `updated_at`, `sync_token`.
+- **One table `calobj`** for both JSCalendar types (`Event`, `Task`): canonical payload = JSCalendar JSON (decision 4). Extracted columns: `id` (UUIDv7), `uid` (JSCalendar `uid`), `type` (`event`/`task`), `start_min`/`end_min` (index over the time range; `due_min` for tasks), `calendar_id` (which calendar), `sequence`, `updated_at`, `sync_token`.
 - **Series:** the master object with `recurrenceRules` is **not** stored expanded; expanding it into individual occurrences happens at query time (respect the iCalendar half-open interval rules). Changes to a single occurrence are stored as a `recurrenceOverrides` entry on the master (RFC 8984, ✅).
 
 ## Keys and links
 
-- Externally: `https://<instance>/events/<ulid>` (decision 3).
+- Externally: `https://<instance>/events/<uuid>` (decision 3).
 - `participants[].email` follows RFC 5322 §3.4.1 (✅) and is the **link to [contacts/](../contacts/index.md)**: when rendering, the card is looked up, but the participant fields stay the appointment-binding copy (otherwise the invitation would change when someone moves house).
 - `participants[].locationId` ↔ ` Participant.kind = "location"` refers to [geodata/](../geodata/index.md).
 - `relatedTo` connects task ↔ event (the task "write the minutes" hangs on an appointment).

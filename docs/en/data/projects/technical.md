@@ -10,14 +10,14 @@
 | Table | Payload | Note |
 |-------|---------|------|
 | `project` | JSON (own model) | references to the team and `contacts` |
-| `board` | JSON | `project_id` (ULID) |
+| `board` | JSON | `project_id` (UUIDv7) |
 | `list` | JSON | `board_id`, `position` (sortable in-between value, our own decision) |
 | `task_link` | `task_id` (→ `calobj`), `list_id`, `position` | **assignment** of a task to exactly one list (board view) — the task itself stays calendar-wise independent |
 | `relation` | `from_id`, `to_id`, `kind` (enum) | relations between tasks |
 
 ## Keys and flow
 
-- Externally: `https://<instance>/projects/<ulid>` (decision 3).
+- Externally: `https://<instance>/projects/<uuid>` (decision 3).
 - Moving within a board = `Update` on `task_link` (not on the task!) — which is why `task.moved` is an envelope event about the assignment, not about the task (see [index.md](index.md), open point).
 - Milestones: JSCalendar `Event` with `categories: ["milestone"]` (using ✅ verified fields; the convention itself is our own decision).
 

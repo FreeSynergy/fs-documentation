@@ -79,19 +79,17 @@ When choosing a CRM system, consider the following criteria:
 
 Further information can be found in the documentation of the individual CRM systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/crm/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [civicrm](frontends/civicrm/index.md)
+- [espocrm](frontends/espocrm/index.md)
+- [hubspot](frontends/hubspot/index.md)
+- [pipedrive](frontends/pipedrive/index.md)
+- [salesforce](frontends/salesforce/index.md)
+- [suitecrm](frontends/suitecrm/index.md)
 
-- [CiviCRM](frontends/civicrm/index.md) - CiviCRM
-- [EspoCRM](frontends/espocrm/index.md) - EspoCRM
-- [HubSpot](frontends/hubspot/index.md) - HubSpot
-- [Pipedrive](frontends/pipedrive/index.md) - Pipedrive
-- [Salesforce](frontends/salesforce/index.md) - Salesforce
-- [SuiteCRM](frontends/suitecrm/index.md) - SuiteCRM
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

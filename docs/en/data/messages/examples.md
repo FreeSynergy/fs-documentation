@@ -8,13 +8,13 @@ All AS2 fields from the ✅ read Core/Vocabulary list in [standards.md](standard
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Create",
-  "id": "https://<instance>/messages/01HTZP1A7D4K9M2R6T8V3B5Q0W",
-  "actor": "https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "id": "https://<instance>/messages/018ebf60-a8ed-74d3-8160-da46c6b2dc1c",
+  "actor": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "published": "2026-11-02T10:15:00Z",
-  "to": ["https://<instance>/profile/01HTZP4F8H2N6C9X4B7D1K5T3R"],
+  "to": ["https://<instance>/profile/018ebf62-3d11-754c-84f4-8b3b4332e878"],
   "object": {
     "type": "Note",
-    "id": "https://<instance>/messages/01HTZP1A7D4K9M2R6T8V3B5Q0W",
+    "id": "https://<instance>/messages/018ebf60-a8ed-74d3-8160-da46c6b2dc1c",
     "name": "",
     "content": "Can we move the review to Thursday?",
     "published": "2026-11-02T10:15:00Z"
@@ -28,12 +28,12 @@ All AS2 fields from the ✅ read Core/Vocabulary list in [standards.md](standard
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Create",
-  "actor": "https://<instance>/profile/01HTZP4F8H2N6C9X4B7D1K5T3R",
-  "to": ["https://<instance>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A"],
+  "actor": "https://<instance>/profile/018ebf62-3d11-754c-84f4-8b3b4332e878",
+  "to": ["https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a"],
   "object": {
     "type": "Note",
-    "id": "https://<instance>/messages/01HTZP7J3Q8W2S5H9F6C1D4M0V",
-    "inReplyTo": "https://<instance>/messages/01HTZP1A7D4K9M2R6T8V3B5Q0W",
+    "id": "https://<instance>/messages/018ebf63-c877-7705-92c5-2f3302d2501b",
+    "inReplyTo": "https://<instance>/messages/018ebf60-a8ed-74d3-8160-da46c6b2dc1c",
     "content": "Yes — 15:00 instead of 15:30.",
     "published": "2026-11-02T10:22:00Z"
   }
@@ -46,9 +46,9 @@ All AS2 fields from the ✅ read Core/Vocabulary list in [standards.md](standard
 {
   "type": "Note",
   "id": "https://<instance>/messages/01HTZPA2L6T9R3Q7D5K8M1W4B0",
-  "inReplyTo": "https://<instance>/wiki/01HTZP9G5V2B8N4X6C3D7F0S1H",
+  "inReplyTo": "https://<instance>/wiki/018ebf64-c0bb-72d1-9274-cc1b4ef06431",
   "content": "Section 3 needs an example.",
-  "cc": ["https://<instance>/wiki/01HTZP9G5V2B8N4X6C3D7F0S1H/followers"]
+  "cc": ["https://<instance>/wiki/018ebf64-c0bb-72d1-9274-cc1b4ef06431/followers"]
 }
 ```
 
@@ -72,7 +72,7 @@ All AS2 fields from the ✅ read Core/Vocabulary list in [standards.md](standard
   "type": "Annotation",
   "body": { "type": "TextualBody", "value": "Section 3 unclear", "purpose": "commenting" },
   "target": {
-    "source": "https://<instance>/wiki/01HTZP9G5V2B8N4X6C3D7F0S1H",
+    "source": "https://<instance>/wiki/018ebf64-c0bb-72d1-9274-cc1b4ef06431",
     "selector": [{
       "type": "TextQuoteSelector",
       "exact": "Process management follows ISO 21502",

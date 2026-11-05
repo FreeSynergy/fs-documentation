@@ -7,7 +7,7 @@
 | Standard | Evidence | Role |
 |----------|----------|------|
 | **Activity Streams 2.0 Vocabulary (W3C)** | ✅ | canonical payload: `Note`, `Article`; multilingualism `contentMap`/`nameMap`; audience `to`/`cc`/`bto`/`bcc` (Core, ✅) |
-| **ActivityPub** (envelope) | ✅ (core rules evidenced; signature mechanisms ❌ see correction list) | `Create`/`Update`/`Delete` on `Note`/`Article` (decision 2) |
+| **ActivityPub** (envelope) | ✅ (core rules evidenced; signatures ✅ RFC 9421 + FEP-8b32, see [identity/](../identity/standards.md)) | `Create`/`Update`/`Delete` on `Note`/`Article` (decision 2) |
 
 ## References and interoperability
 
@@ -17,7 +17,7 @@
 | **Mail address format, RFC 5322 §3.4.1** | ✅ | sender/recipient addresses in projections |
 | **W3C Web Annotation Model** | ✅ | comments/tags on text fragments (`TextQuoteSelector`, `body`/`target`) — takes load off the message domain |
 | **XMPP (RFC 6120/6121)** | ⚠️ unverified | interoperability with legacy chat systems, evidence before use |
-| **MLS, RFC 9420** | ⚠️ not retrieved in this round | candidate for end-to-end encryption of groups |
+| **MLS, RFC 9420** | ✅ July 2023, Proposed Standard | group end-to-end encryption (ADR 0018) |
 
 ## AS2 fields we evidence (✅ Core/Vocabulary read)
 
@@ -27,4 +27,4 @@
 
 - **Threading:** AS2 defines `inReplyTo` but no thread completion → our own rule (in [technical.md](technical.md))
 - **Edit history, read receipts:** no standard → our own decision
-- Signature mechanisms for ActivityPub objects: ❌ the old reference was 404 — research anew before specifying signatures
+- ~~Signature mechanisms~~ → ✅ RFC 9421 / FEP-8b32 (2026-11-05)

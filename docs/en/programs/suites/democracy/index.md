@@ -72,19 +72,17 @@ When choosing a democracy system, consider the following criteria:
 
 Further information can be found in the documentation of individual democracy systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/democracy/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [adhocracy4](frontends/adhocracy4/index.md)
+- [circo](frontends/circo/index.md)
+- [consul](frontends/consul/index.md)
+- [decidim](frontends/decidim/index.md)
+- [liquid-feedback](frontends/liquid-feedback/index.md)
+- [polis](frontends/polis/index.md)
 
-- [Adhocracy4](frontends/adhocracy4/index.md) - Adhocracy4
-- [Circo](frontends/circo/index.md) - Circo
-- [Consul](frontends/consul/index.md) - Consul
-- [Decidim](frontends/decidim/index.md) - Decidim
-- [LiquidFeedback](frontends/liquid-feedback/index.md) - LiquidFeedback
-- [Pol.is](frontends/polis/index.md) - Pol.is
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

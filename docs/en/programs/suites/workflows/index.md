@@ -79,19 +79,17 @@ When choosing a workflow automation system, consider the following criteria:
 
 Further information can be found in the documentation of individual workflow automation systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/workflows/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [apache-airflow](frontends/apache-airflow/index.md)
+- [make](frontends/make/index.md)
+- [n8n](frontends/n8n/index.md)
+- [node-red](frontends/node-red/index.md)
+- [prefect](frontends/prefect/index.md)
+- [zapier](frontends/zapier/index.md)
 
-- [Apache Airflow](frontends/apache-airflow/index.md) - Apache Airflow
-- [Make](frontends/make/index.md) - Make
-- [n8n](frontends/n8n/index.md) - n8n
-- [Node-RED](frontends/node-red/index.md) - Node-RED
-- [Prefect](frontends/prefect/index.md) - Prefect
-- [Zapier](frontends/zapier/index.md) - Zapier
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

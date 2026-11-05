@@ -32,7 +32,7 @@ Consequence: the field names in this file stay our **internal** spelling. What b
 
 Rules:
 
-- prefix + sortable ID (`<type>_<ulid>`), no running numbers outwards
+- prefix + sortable ID (`<type>_<uuid>` (UUIDv7)), no running numbers outwards
 - `slug` only for addressable resources (`Document`, `Space`, `Team`)
 
 ## Time fields

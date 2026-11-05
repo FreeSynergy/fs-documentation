@@ -8,12 +8,12 @@ Frontends of well-known programs in this category, analysed for their **function
 |---------|----------|------------|
 | [Asana](asana/index.md) | [latest](asana/latest/description.md) | Asana is task and project work at portfolio level: tasks with fields (due date, assignees, dependencies, custom fields) in projects (list/table/timeline/kanban), teams, workloads and rules automation. |
 | [Jira](jira/index.md) | [latest](jira/latest/description.md) | Jira (Atlassian) is issue and project tracking with workflows: issues move through statuses (To Do→In Progress→Done), with sprints (Jira Software), types, priorities and powerful JQL. |
-| [OpenProject](openproject/index.md) | — | OpenProject is an open-source project management system for self-hosting (Community Edition plus a commercial Enterprise Edition) with work packages, Gantt planning, agile boards, time and cost tra… |
-| [Planka](planka/index.md) | — | Planka is a self-hosted, plain kanban board (fair-code: free Community Edition plus a commercial Pro Edition) with projects, boards, lists and cards in real-time collaboration. |
-| [Redmine](redmine/index.md) | — | Redmine is a free, web-based project management and issue tracking application based on Rails: multiple projects with issue trackers, time tracking, wiki, forums, Gantt/calendar and role-based perm… |
-| [Taiga](taiga/index.md) | — | Taiga is the agile open-source project management tool (AGPL, Python/Django + a modern frontend "Taigo"): Scrum (sprints, points) and kanban in one, plus epics, issues, wiki and a CRM module. |
+| [OpenProject](openproject/index.md) | [latest](openproject/latest/description.md) | OpenProject is an open-source project management system for self-hosting (Community Edition plus a commercial Enterprise Edition) with work packages, Gantt planning, agile boards, time and cost tra… |
+| [Planka](planka/index.md) | [latest](planka/latest/description.md) | Planka is a self-hosted, plain kanban board (fair-code: free Community Edition plus a commercial Pro Edition) with projects, boards, lists and cards in real-time collaboration. |
+| [Redmine](redmine/index.md) | [latest](redmine/latest/description.md) | Redmine is a free, web-based project management and issue tracking application based on Rails: multiple projects with issue trackers, time tracking, wiki, forums, Gantt/calendar and role-based perm… |
+| [Taiga](taiga/index.md) | [latest](taiga/latest/description.md) | Taiga is the agile open-source project management tool (AGPL, Python/Django + a modern frontend "Taigo"): Scrum (sprints, points) and kanban in one, plus epics, issues, wiki and a CRM module. |
 | [Trello](trello/index.md) | [latest](trello/latest/description.md) | Trello (Atlassian) is the digital kanban board: boards with lists and cards, due dates, labels, members, checklists and automation via "Butler". |
-| [Wekan](wekan/index.md) | — | Wekan is the open Trello clone (Meteor/Node, MongoDB): boards, lists, cards, swimlanes, labels and checklists — self-hosted, with OAuth2/LDAP and outgoing webhooks. |
+| [Wekan](wekan/index.md) | [latest](wekan/latest/description.md) | Wekan is the open Trello clone (Meteor/Node, MongoDB): boards, lists, cards, swimlanes, labels and checklists — self-hosted, with OAuth2/LDAP and outgoing webhooks. |
 
 ## File set per program (ADR 0012)
 

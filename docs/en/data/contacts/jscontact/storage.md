@@ -8,8 +8,8 @@ According to decision 4 in [standards.md](../../standards.md) the **evidenced st
 |-------|------|-------------------|
 | Canonical form | one card = one JSContact object, exact JSON fields | decisions 1, 4 |
 | `uid` | stays identical across all projections and exports | RFC 9553 §2.3 |
-| Internal ID | ULID (opaque, sortable) | decision 3 |
-| External handle | absolute IRI `https://<instance>/contacts/<ulid>` | decision 3 (AS2 Core §4.1) |
+| Internal ID | UUIDv7 (RFC 9562, time-sortable) | decision 3 |
+| External handle | absolute IRI `https://<instance>/contacts/<uuid>` | decision 3 (AS2 Core §4.1) |
 | Partial change | JSON Patch (RFC 6902) or `PatchObject` from RFC 9553; paths like `emails/work/value` | [api.md](../../api.md) |
 | Own fields | only as vendor properties `<domain>:<name>` (RFC 9553 §1.8.1, ✅) — never through renamed or repurposed standard fields | decision 5 |
 
