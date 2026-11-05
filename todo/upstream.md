@@ -17,6 +17,15 @@ zuerst im RFC-Kanal (Discord) besprechen → PR.
 - Roadmap = git-bug · erledigt (gelesen: `temp/research/blinc-issues.md`)
 - **Gesten: Stift (Druck, Neigung), generischer Swipe, Zwei-Finger-Pan/Rotate** — Autor: Beiträge willkommen · **unser Beitrag** (RFC-Kanal zuerst)
 - **cn-Komponenten** aus dem Rückstand (bf7c901) und unsere neuen (Messenger) — Autor: Beiträge willkommen · **unser Beitrag**
+- **Beitrags-Kandidaten aus der Messenger-Zerlegung** (je erst git-bug-Issue + RFC-Kanal):
+  - Wisch-/Zieh-Gesten an Listenzeilen (vorher 9ab9dc6 klären) · kein Issue
+  - umgekehrte, unten verankerte `virtual_list` (Chat, oben nachladen) · kein Issue
+  - `html_view()` mit Sperre für Fernladen · a782b47
+  - Chips / `tags-input` · Teil von bf7c901 prüfen
+  - `date_picker`, `time-picker` · bf7c901
+  - Inline-Elemente (Erwähnung, Emoji) im Rich-Text-Editor · kein Issue
+  - allgemeine `toolbar`, `command`-Palette, `empty-state`, Dropfläche für `file-upload` · kein Issue
+  - Combobox-Hover · 8115bf5
 - Ansehen: Repo `blinc_abi` (IDE auf Blinc-Teilmenge) als Referenz für den Code-Editor · offen
 
 ## Turso / libSQL

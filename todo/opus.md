@@ -85,3 +85,13 @@ Pro Kategorie, Reihenfolge nach Nutzen (Vorschlag: messenger, contact, calendar,
 - primitives → widgets → workbenches (auf Blinc 0.6.x, ADR 0009) → apps
 - Repo je Programm `fs-<name>`, `MIT OR Apache-2.0`
 - Fehlendes in Blinc → `todo/upstream.md`
+
+## Phase 3 – Messenger (Brücke von beiden Seiten)
+
+- [x] requirements.md (29 + 44 Kür + 13 nicht), Zerlegung in Components, Referenz-Frontend Nr. 1 (Entwurf),
+      Outlook `m365-2026-11` + Apple Mail `ios-26` aus Bildern (2026-11-05)
+- [x] Components einsortiert: 13 neu, 12 Änderungen, Blinc-Beitragsliste (CONVENTIONS §3, `todo/upstream.md`)
+- [ ] Doku-Gerüste für die 13 neuen Components (Vorlage wie bestehende: description/appearance/attributes/usage) · Sonnet
+- [ ] Darstellungs-Register: erste Einträge `Conversation`, `Message`, `Encryption` (ADR 0023) · Opus
+- [ ] **Schnittstelle `fs-messenger`**: erstes Cap'n-Proto-Schema aus den Gruppen der requirements · Opus
+- [ ] Referenz-Frontend Nr. 1 sehen und testen (Nutzer) — Gesten gelten für Mails **und** Nachrichten

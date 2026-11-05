@@ -130,6 +130,34 @@ Zuordnung der 84 Komponenten. Bei Abweichung beim physischen Umsortieren korrigi
 - special: `code-editor`, `dashboard`, `embed`, `whiteboard`
 - fields: `rich-text-editor`
 
+**Neu geplant (Messenger-Zerlegung 2026-11-05, `temp/messenger-components.md`) — Doku fehlt noch:**
+- primitives/feedback: `message-status` (wird gesendet/gesendet/zugestellt/gelesen/Fehler),
+  `encryption-state` (Verschlüsselungsart; unverschlüsselt markiert; **anklickbar**, führt zur Anleitung — darum kein `badge`)
+- widgets/data: `message-list` (Konversation, unten verankert, nachladend, Trenner ⚠️ evtl. Variante von `timeline`),
+  `message-bubble`, `mail-view`, `reaction-bar`, `link-preview`
+- widgets/fields: `rule-editor` (Regeln „wenn … dann …“, gespeichert als Sieve)
+- widgets/overlays: `key-verification` (Schlüssel/Gerät prüfen, Vertrauen bestätigen)
+- widgets/media: `call-controls` (gehört zum eigenen Anruf-Programm, ADR 0037)
+- workbenches/special: `message-composer` (Empfänger, Betreff, einfacher Editor, Anhänge, Emoji, Erwähnung),
+  `html-view` (fremdes HTML bereinigt, ohne Fernladen)
+- workbenches/fields: `block-editor` (ADR 0039)
+
+**Drei Text-Editoren (ADR 0039):** `code-editor` = einfacher Editor (Markdown + Code),
+`rich-text-editor` = erweiterter Editor (WYSIWYG, ODF), `block-editor` = Block-Editor (neu).
+
+**Änderungsbedarf an vorhandenen Components (Messenger):**
+`list-view` (Mehrfachauswahl, Wisch-Aktionen je Richtung — Gesten kommen aus dem Frontend, ADR 0037 —,
+„nächste ungelesene“, virtuelle Zeilen) · `tags-input` (Variante `recipients`: JSContact-Vorschlag,
+Schlüsselstatus je Chip) · `mention-input` (auch als Inline-Element im Editor) · `rich-text-editor`
+(Nur-Lese-Modus, Ausgabe HTML und Markdown) · `emoji-picker` (Variante Reaktion, zuletzt benutzt) ·
+`toolbar` (schwebend; Ribbon mit `tabs`) · `separator` (Beschriftung mittig) · `avatar` (Anwesenheit
+an Datenfeld binden) · `badge` (Abgrenzung zu `encryption-state` vermerken) · `file-upload`
+(verschlüsselter Upload, Zwischenablage) · `embed` (Verweis auf `html-view`) · `timeline` (Verhältnis zu `message-list`).
+
+**Wo gebaut wird (Leitlinie):** interaktive Grundbausteine **ohne Fachwissen → Beitrag zu Blinc**
+(passt zu Blincs Plan c422b97); alles, was ein **Datenmodell bindet** (Nachricht, Konversation,
+Verschlüsselung, Sieve) → **unsere Schicht** (ADR 0023). Liste: `todo/upstream.md`.
+
 Festgelegte Grenzfälle:
 - `*-picker`, `range-calendar` → **widget** (Overlay + Liste, endliche Auswahl)
 - Overlays (`modal`, `drawer`, …) → **widget** (eigene Lebensdauer, kein offenes Editieren)
@@ -140,6 +168,9 @@ Festgelegte Grenzfälle:
 - `link` → **primitive** (zerlegbar wie `label`/`kbd`, bei Umzug 2026-11-03 ergänzt)
 - `file-upload` → **widget** (endliche Kinder: Picker, Dropfläche, Vorschau; eigene
   Zustände; keine offene Bearbeitungsfläche — bei Umzug 2026-11-03 ergänzt)
+- `message-composer` → **workbench** (enthält den Editor, selbst eine Workbench; 2026-11-05)
+- `html-view` → **workbench** (fremder Inhalt erst zur Laufzeit, wie `embed`; 2026-11-05)
+- `encryption-state` → **primitive**, nicht `badge` (bedienbar; 2026-11-05)
 
 ## 4. Sprache (ADR 0011 — nur Englisch wird gepflegt)
 
