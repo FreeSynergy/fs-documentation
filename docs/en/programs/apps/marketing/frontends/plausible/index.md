@@ -1,14 +1,32 @@
-# Plausible Documentation
+# Plausible
 
-## Overview
+> Category: [marketing](../../index.md)
+
+## What it is
 
 Plausible (MIT/AGPL dual depending on edition) is minimalist web analytics: one script, one numbers view, cookieless and GDPR-friendly, self-hosted or cloud. Goal: "understand traffic without hoarding data".
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Stats dashboard, filters, settings
-- [features.md](latest/features.md) - Events/goals, stats API, what Plausible does NOT do
-- [description.md](latest/description.md) - How it differs from Matomo, GA4, GoatCounter
-- [layout.md](latest/layout.md) - One-page dashboard with time series + sources
-- [shortcuts.md](latest/shortcuts.md) - none
-- [api.md](latest/api.md) - Events API (`/api/event`), stats API (filterable), imports
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

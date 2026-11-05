@@ -13,7 +13,7 @@ fs-documentation/
 ├── docs/                    # NUR veroeffentlichte Doku (mkdocs -> site/)
 │   ├── en/                 # Englisch (ERSTE Sprache, ADR 0008)
 │   │   ├── components/     # Bauebene: primitives/ widgets/ workbenches/
-│   │   ├── programs/       # Laufebene: apps/ suites/ platform/  (Maske: 7 Dateien/Programm)
+│   │   ├── programs/       # Laufebene: apps/ suites/ platform/  (frontends/<programm>/<version>/, ADR 0012)
 │   │   ├── interactions/   # gestures/ + animations/  (Querschnitt)
 │   │   └── data/           # standardisierte Daten (standards, mappings, formate, modelle, felder, konventionen, api)
 │   └── de/                 # Deutsch (zweite Sprache, wird mitgezogen)
@@ -48,8 +48,7 @@ Nur `docs/` wird gebaut. Alles andere ist Repo-Unterstuetzung und erscheint nich
 ## 🗂️ Category Structure
 
 All program documentation lives under `docs/[language]/programs/`, grouped by **level**
-(see ADR 0001), each category holding `masks/[program]/` with 7 files per program
-(ADR 0007 — masks, not skins).
+(see ADR 0001), each category holding `frontends/<program>/<version>/` (file set ADR 0012) and `requirements.md`.
 
 ### Levels and categories
 
@@ -60,7 +59,7 @@ docs/[language]/programs/
 ├── suites/     # Ebene 5 – crm, democracy, erp, marketplace, workflows
 └── platform/   # Ebene 6 – desktop, crates
 
-Jede Kategorie enthält `masks/<programm>/` (7 Dateien) und `requirements.md`
+Jede Kategorie enthält `frontends/<programm>/<version>/` (ADR 0012) und `requirements.md`
 (Pflichtmenge + Kür, ADR 0006).
 ```
 
@@ -74,17 +73,7 @@ Neue Kategorie der passenden Ebene zuordnen; Level-Grenze = „laeuft es allein?
 
 ### File Naming Conventions
 
-Each program mask requires exactly **7 documentation files** (`index.md` plus the 6 core files):
-
-| File | Purpose | German Description |
-|------|---------|-------------------|
-| `index.md` | Entry point | Übersicht + Links auf die 6 Dateien |
-| `menu.md` | Menu structure | Alle Menüpunkte und Navigationsstruktur |
-| `features.md` | Features | Funktionen, Editoren, Haupt-Features |
-| `description.md` | Description | Was das Programm macht, Vorteile, Abgrenzung |
-| `structure.md` | Structure | UI/UX, Fensterstruktur, Layout |
-| `shortcuts.md` | Shortcuts | Alle Tastatur-Shortcuts |
-| `api.md` | API | REST API, GraphQL, Webhooks, SDKs |
+File set per frontend: see **Frontend file set (ADR 0012)** below and `conventions/templates/frontend/`.
 
 ### Non-Program Documentation Areas
 
@@ -300,7 +289,7 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 **Description**: Desktop applications and software
 
-**Programs with mask documentation** (`programs/platform/desktop/masks/<program>/`):
+**Programs with frontend documentation** (`programs/platform/desktop/frontends/<program>/`):
 - **homarr** - Homelab dashboard with widgets and Docker integration
 - **heimdall** - Personal dashboard with server statistics (Laravel)
 - **homer** - Static dashboard, YAML configuration only
@@ -456,310 +445,21 @@ Every area has an `index.md` that lists all entries in a table and documents the
 
 ---
 
-## 📁 6-File-Per-Program Structure
-
-Each program requires exactly 6 documentation files in German:
-
-### 1. `menu.md` - Menüpunkte
-
-**Purpose**: Document all menu items, navigation structure, and context menus
-
-**Content requirements**:
-- Complete list of all menu items
-- Context menus and actions
-- Navigation structure
-- Menu organization by function
-- Menu locations (top bar, sidebar, context menus)
-
-**Example structure**:
-```markdown
-# Programmname - Menüpunkte
-
-## Übersicht
-[Beschreibung der Menüstruktur]
-
-## Hauptmenüpunkte
-
-### 1. [Menü-Name]
-- **Funktion**: [Beschreibung]
-- **Details**:
-  - [Funktion 1]
-  - [Funktion 2]
-  - [Funktion 3]
-
-## Kontext-Menüs
-[Details zu Kontext-Menüs]
-
-## Menüs nach Benutzerrolle
-[Menüs für verschiedene Benutzerrollen]
-```
-
----
-
-### 2. `features.md` - Funktionen
-
-**Purpose**: Document features, editors, and capabilities
-
-**Content requirements**:
-- Main features and capabilities
-- Editor features (if applicable)
-- Feature comparison
-- What the program CAN do
-- What the program CANNOT do
-- Editor types and differences
-- Extension/plugin features
-
-**Example structure**:
-```markdown
-# Programmname - Funktionen
-
-## Übersicht
-[Beschreibung der Hauptfunktionen]
-
-## Hauptfunktionen
-
-### 1. [Funktionsbereich]
-- **Feature 1**: [Beschreibung]
-- **Feature 2**: [Beschreibung]
-- **Feature 3**: [Beschreibung]
-
-## Editoren
-[Beschreibung der verfügbaren Editoren]
-
-## Vergleich der Editoren
-[Tabelle oder Text Vergleich]
-
-## Was Programmname NICHT kann
-- [Nicht-Feature 1]
-- [Nicht-Feature 2]
-- [Nicht-Feature 3]
-```
-
----
-
-### 3. `description.md` - Beschreibung
-
-**Purpose**: Describe what the program does and how it compares to alternatives
-
-**Content requirements**:
-- What the program does
-- Key features and benefits
-- Technical details (backend, database, authentication)
-- Target audience
-- Comparison to similar programs (3-5 comparisons)
-- For whom the program is suitable
-
-**Example structure**:
-```markdown
-# Programmname - Beschreibung
-
-## Übersicht
-[Kurzbeschreibung]
-
-## Was Programmname macht
-[Was das Programm genau macht]
-
-## Vorteile
-- **Feature 1**: [Beschreibung]
-- **Feature 2**: [Beschreibung]
-
-## Abgrenzung zu anderen Systemen
-### Programmname vs. [Alternativ-1]
-- [Unterschied 1]
-- [Unterschied 2]
-
-### Programmname vs. [Alternativ-2]
-- [Unterschied 1]
-- [Unterschied 2]
-
-## Technische Details
-- **Backend**: [Technologie]
-- **Database**: [Datenbank]
-- **Frontend**: [Frontend-Technologie]
-- **Authentication**: [Auth-Methode]
-- **Hosting**: [Hosting-Möglichkeiten]
-
-## Für wen ist Programmname geeignet?
-- [Zielgruppe 1]
-- [Zielgruppe 2]
-```
-
----
-
-### 3. `structure.md` - Struktur & UI/UX
-
-**Purpose**: Document UI structure, layout, and user experience
-
-**Content requirements**:
-- Window/viewport structure (ASCII diagram recommended)
-- Main areas (sidebar, content, header, footer)
-- UI components and their functions
-- Color scheme and typography
-- Interactions and animations
-- Accessibility features
-- Performance characteristics
-
-**Example structure**:
-```markdown
-# Programmname - Struktur & UI/UX
-
-## Übersicht
-[Kurze Übersicht]
-
-## Fenster-Struktur
-
-### Hauptbereiche
-```
-[ASCII-Diagramm der UI-Struktur]
-```
-
-### [Bereichs-Name]
-[Details zu diesem Bereich]
-
-## UI/UX
-
-### Design-Prinzipien
-- [Prinzip 1]
-- [Prinzip 2]
-
-### Farbschema
-- [Theme 1]
-- [Theme 2]
-
-### Interaktionen
-- [Interaktion 1]
-- [Interaktion 2]
-
-## Zugänglichkeit
-- [Feature 1]
-- [Feature 2]
-
-## Performance
-- [Feature 1]
-- [Feature 2]
-```
-
----
-
-### 4. `shortcuts.md` - Tastatur-Shortcuts
-
-**Purpose**: Document all keyboard shortcuts
-
-**Content requirements**:
-- All keyboard shortcuts (Ctrl/Command combinations)
-- Shortcuts by category (formatting, navigation, editing)
-- Editor-specific shortcuts
-- Mac vs Windows/Linux differences
-- Quick navigation shortcuts
-
-**Example structure**:
-```markdown
-# Programmname - Tastatur-Shortcuts
-
-## Übersicht
-[Kurze Übersicht]
-
-## Allgemeine Shortcuts
-| Shortcut | Funktion |
-|----------|----------|
-| `Ctrl+Shift+P` | [Funktion] |
-| `Ctrl+,` | [Funktion] |
-
-## Editor Shortcuts
-### Formatierung
-| Shortcut | Funktion |
-|----------|----------|
-| `Ctrl+B` | Fett |
-
-## Navigation Shortcuts
-| Shortcut | Funktion |
-|----------|----------|
-| `Ctrl+K` | [Funktion] |
-
-## Mac Shortcuts
-| Shortcut | Funktion |
-|----------|----------|
-| `Cmd+K` | [Funktion] |
-
-## Zusammenfassung
-[Zusammenfassung der Shortcuts]
-```
-
----
-
-### 5. `api.md` - API-Dokumentation
-
-**Purpose**: Document the API for program integration
-
-**Content requirements**:
-- API overview
-- Authentication methods
-- Main API endpoints
-- Request/response examples
-- Rate limits
-- Webhooks
-- SDKs and client libraries
-- Code examples (curl, Python, JavaScript)
-
-**Example structure**:
-```markdown
-# Programmname - API Dokumentation
-
-## Übersicht
-[Kurze Übersicht]
-
-## Authentifizierung
-[Beschreibung der Authentifizierungsmethoden]
-
-### Header
-```
-[Header-Beispiel]
-```
-
-### URL Format
-```
-[URL-Format]
-```
-
-## Endpunkte
-
-### [Endpoint-Gruppe]
-| Methode | Endpoint | Beschreibung |
-|---------|----------|--------------|
-| GET | `/endpoint` | [Beschreibung] |
-| POST | `/endpoint` | [Beschreibung] |
-
-## Beispiele
-
-### [Beispiel-Typ]
-```bash
-[curl-Beispiel]
-```
-
-### Python Example
-```python
-[Python-Beispiel]
-```
-
-## Rate Limits
-- [Limit 1]
-- [Limit 2]
-
-## Webhooks
-[Beschreibung der Webhooks]
-
-## SDKs und Client-Bibliotheken
-- **JavaScript**: [Library]
-- **Python**: [Library]
-
-## Siehe auch
-- [menu.md](menu.md)
-- [features.md](features.md)
-- [description.md](description.md)
-- [structure.md](structure.md)
-- [shortcuts.md](shortcuts.md)
-- [api.md](api.md) (diese Datei)
-```
+## 📁 Frontend file set (ADR 0012)
+
+Superseded the old "6-File-Per-Program" structure (2026-11-05). The binding rules:
+
+- **File set and paths:** `conventions/decisions/0012-frontends-mit-versionen.md`
+  (`programs/<level>/<category>/frontends/<program>/<version>/`, required vs. if-needed files,
+  `themes/`, suites with `shared/` and `apps.md`).
+- **Templates to copy:** `conventions/templates/frontend/` and `conventions/templates/suite/`.
+- **Selection and wording:** ADR 0013 — functions are described in our own words, nothing is
+  copied; every program index states its *Notable ideas*; research is stored with source and date.
+- **Generated parts:** `python3 scripts/gen_frontend_indexes.py` writes `frontends/index.md`,
+  the `## Documented versions` block of every program `index.md`, the frontends block in the
+  category `index.md`, and a `requirements.md` skeleton if missing. Hand-written text outside the
+  `<!-- gen:… -->` markers is kept. `--extract-themes` moves colour/typography sections from
+  `layout.md` into `themes/`.
 
 ---
 
@@ -813,7 +513,7 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `Zust�
 | `scripts/check_components.py` | validates the standard: band assignment, required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
 | `scripts/migrate_links.py` | rewrites relative **and** absolute markdown links after a directory move given as `OLD=NEW`; run before `git mv`; `--dry-run`/`--check` |
 | `scripts/fix_links.py` | re-resolves every internal link against a name registry built from `docs/`; run after `git mv` with `--force` — no depth arithmetic needed; `--dry-run`/`--check` |
-| `scripts/gen_skin_indexes.py` | builds mask `index.md` per category under `programs/<level>/<category>/masks/` and refreshes the Mask-Dokumentation block; skips hand-maintained mask indexes (name still says skin — rename next time it is touched, ADR 0007) |
+| `scripts/gen_frontend_indexes.py` | builds `frontends/index.md` per category, the versions block per program, the frontends block in the category index, `requirements.md` skeletons (ADR 0012); `--check` for CI |
 | `scripts/gen_usage_pages.py` | creates missing `usage.md` from description + attribute tables |
 | `scripts/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section |
 | `scripts/standardize_sections.py` | renames/merges/reorders section headings, repairs `Default` column |
@@ -948,25 +648,18 @@ All 6 files should include cross-links to each other:
 
 1. **Determine the correct category** for the program
 
-2. **Create the folder structure**:
-   ```bash
-   docs/[language]/programs/[level]/[category]/masks/[program-name]/
-   ```
+2. **Check first** that the program has a notable idea or is widely learned (ADR 0013).
 
-3. **Create the 7 required files**:
-   - `index.md`
-   - `menu.md`
-   - `features.md`
-   - `description.md`
-   - `structure.md`
-   - `shortcuts.md`
-   - `api.md`
+3. **Copy the template** `conventions/templates/frontend/_program/` to
+   `docs/en/programs/[level]/[category]/frontends/[program-name]/`, rename `_version/` to the
+   vendor's current version, fill in the required files (only `docs/en/`, ADR 0011).
 
-4. **Follow the template structure** from existing programs (reference: `docs/de/programs/apps/wiki/masks/mediawiki/`)
+4. **Store sources** with URL and date in the program `index.md` (ADR 0013).
 
-5. **Add cross-links** in all files
+5. **Run** `python3 scripts/gen_frontend_indexes.py` — it updates the category lists and the
+   versions block.
 
-6. **Update the category `masks/index.md`** with the new program entry
+6. **Add the capabilities** to the category `requirements.md`.
 
 7. **Update the mkdocs.yml** navigation section if needed
 

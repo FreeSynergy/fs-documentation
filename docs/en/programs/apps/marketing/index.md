@@ -80,19 +80,17 @@ When choosing a marketing tool, consider the following criteria:
 
 Further information can be found in the documentation of individual marketing tools.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/marketing/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [Google Analytics](frontends/google-analytics/index.md) — Google Analytics (GA4, commercial) is the standard workhorse of web/app analytics: event-based measurement (events + parameters), audiences, funnels, attribution — linked with Google Ads/Search Con…
+- [Hotjar](frontends/hotjar/index.md) — Hotjar (commercial) supplements web analytics with the **how**: heatmaps (clicks/scrolls/moves), session replays, surveys (onsite surveys), feedback/rage-click detection and funnel coupling.
+- [Mailchimp](frontends/mailchimp/index.md) — Mailchimp (Intuit, commercial) is the newsletter/marketing-automation platform: lists + segments, campaign editor, e-mail automations (journeys), landing pages, CRM-lite and analytics.
+- [Matomo](frontends/matomo/index.md) — Matomo (GPL, formerly Piwik) is the leading **self-hostable web-analytics platform** (PHP/MySQL): visitor analysis capable of running cookieless, cookies with consent integration, heatmaps/session …
+- [Mautic](frontends/mautic/index.md) — Mautic (GPL, PHP/Symfony) is open-source marketing automation: contacts + segments, e-mail campaigns, **campaign tree** (triggers/actions), landing pages/forms, point scoring — self-hosted with ful…
+- [Plausible](frontends/plausible/index.md) — Plausible (MIT/AGPL dual depending on edition) is minimalist web analytics: one script, one numbers view, cookieless and GDPR-friendly, self-hosted or cloud.
 
-- [Google Analytics](frontends/google-analytics/index.md) - Google Analytics
-- [Hotjar](frontends/hotjar/index.md) - Hotjar
-- [Mailchimp](frontends/mailchimp/index.md) - Mailchimp
-- [Matomo](frontends/matomo/index.md) - Matomo
-- [Mautic](frontends/mautic/index.md) - Mautic
-- [Plausible](frontends/plausible/index.md) - Plausible
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

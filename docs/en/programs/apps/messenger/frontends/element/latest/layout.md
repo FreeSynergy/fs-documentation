@@ -73,20 +73,6 @@ Optionally right: Display of details depending on the selected room
 - **Consistent**: Consistent design across all areas
 - **Customizable**: Theme support
 
-### Color Scheme
-
-- **Light Theme**: Light color scheme (default)
-- **Dark Theme**: Dark color scheme
-- **Custom**: Customizable colors via theme system
-- **Context-based colors**: Colors for message status
-
-### Typography
-
-- **Headings**: Clear hierarchy
-- **Text**: Readable font sizes (12-14pt)
-- **Lists**: Clear bullet points
-- **Monospace**: For code blocks
-
 ### Interactions
 
 - **Hover effects**: Visual feedback on hover
@@ -150,3 +136,7 @@ Optionally right: Display of details depending on the selected room
 - **Pagination**: For large lists
 - **Debounce**: For search functions
 - **Lazy loading**: For large rooms
+
+## Themes
+
+Colours, typography and theme details: see [themes](themes/index.md).

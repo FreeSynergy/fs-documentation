@@ -79,19 +79,17 @@ When choosing a calendar system, consider the following criteria:
 
 Further information can be found in the documentation of individual calendar systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/calendar/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [DAViCal](frontends/davical/index.md) — DAViCal is a CalDAV/CardDAV server written in PHP on PostgreSQL — a lean, protocol-faithful self-hosted calendar/contact store with web administration.
+- [Google Calendar](frontends/google-calendar/index.md) — Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscrip…
+- [Merkuro Calendar](frontends/merkuro/index.md) — Merkuro Calendar is the **modern calendar client of the KDE desktop environment** (Qt 6/QML/Kirigami, convergent on desktop and Plasma Mobile).
+- [Nextcloud Calendar](frontends/nextcloud-calendar/index.md) — The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar) above the CalDAV backend (sabre/dav) of the Nextcloud server.
+- [Outlook calendar](frontends/outlook-calendar/index.md) — The calendar component of the Microsoft Outlook line: web app (outlook.com / Outlook on the web), the new and the classic Outlook for Windows, Outlook for Mac and iOS/Android — data in the mailbox …
+- [GNOME Planner](frontends/planner/index.md) — Planner is the project planner on GNOME (app ID `app.drey.Planner`): tasks with start/finish, work, costs and dependencies (FS/SS/FF/SF with lag), resources with their own working calendars, critic…
 
-- [DAViCal](frontends/davical/index.md) - DAViCal
-- [Google Calendar](frontends/google-calendar/index.md) - Google Calendar
-- [Merkuro Calendar](frontends/merkuro/index.md) - Merkuro Calendar
-- [Nextcloud Calendar](frontends/nextcloud-calendar/index.md) - Nextcloud Calendar
-- [Outlook Calendar](frontends/outlook-calendar/index.md) - Outlook Calendar
-- [GNOME Planner](frontends/planner/index.md) - GNOME Planner
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

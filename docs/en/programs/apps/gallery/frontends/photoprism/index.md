@@ -1,14 +1,32 @@
-# PhotoPrism Documentation
+# PhotoPrism
 
-## Overview
+> Category: [gallery](../../index.md)
+
+## What it is
 
 PhotoPrism indexes an existing photo collection, recognises content and faces, and presents it as a searchable web gallery with albums and sharing. Stack: Go backend (Plus variant with extended AI), Vue frontend, MariaDB/SQLite, index over its own folder.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Main navigation, folder/album menus, settings, admin
-- [features.md](latest/features.md) - Indexing, labels, faces, albums, what PhotoPrism does NOT do
-- [description.md](latest/description.md) - How it differs from Immich, LibrePhotos and Piwigo
-- [layout.md](latest/layout.md) - Search bar, mosaic, detail panel, folder view
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts of search and viewer
-- [api.md](latest/api.md) - REST `/api/v1`, Basic/Bearer, batch index, webhooks
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

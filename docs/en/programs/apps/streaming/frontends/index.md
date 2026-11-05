@@ -1,64 +1,42 @@
-# Streaming Frontend documentation
+# Streaming — Frontends
 
-## Overview
+Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Streaming` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
 
-This directory contains the documentation of the programs in this category following the wiki schema: menu items, features, description, structure/UI-UX, keyboard shortcuts and API — seven files per program.
+## Programs
 
-All programs documented here are **not** FreeSynergy in-house developments, but foreign programs whose surface and interfaces are recreated or connected as a frontend.
+| Program | Versions | What it is |
+|---------|----------|------------|
+| [Ant Media Server](ant-media-server/index.md) | — | The Ant Media Server (AMS) is a streaming platform based on Java: it accepts RTMP, RTSP, SRT and WebRTC, delivers WebRTC, HLS and DASH, can transcode (adaptive multi-bitrate) and manages streams, r… |
+| [FFmpeg](ffmpeg/index.md) | — | FFmpeg is the command-line tool collection of the FFmpeg projects: `ffmpeg` transcodes, muxes/demuxes and filters media, `ffprobe` analyses files in a machine-readable way, `ffplay` plays them as a… |
+| [GStreamer](gstreamer/index.md) | — | GStreamer is a multimedia framework in C: capture, decoding, filtering, encoding and output are built as a **pipeline of elements** (source → filter/codec → sink). |
+| [MediaMTX](mediamtx/index.md) | — | MediaMTX (formerly `rtsp-simple-server`) is a lean live media router in **Go**: one binary, one YAML file, and the server accepts streams and delivers them over RTSP, RTMP, SRT, WebRTC, HLS/LL-HLS,… |
+| [MistServer](mistserver/index.md) | — | MistServer is a lean streaming server written in C++ without transcoding: it accepts live streams (RTMP, RTSP, SRT, WebRTC/WHIP) and files and delivers them over HTTP, HLS, DASH, WebRTC, RTMP, RTSP… |
+| [nginx-rtmp-module](nginx-rtmp-module/index.md) | — | The nginx-rtmp-module (arut) extends nginx with an RTMP server: it accepts RTMP publishes, writes along HLS and DASH streams, records, and forwards via relay. |
+| [OBS Studio](obs-studio/index.md) | — | OBS Studio records screens, cameras and audio and transmits them via RTMP/SRT into streams; scenes, sources, filters and the mixer turn it into a full-fledged production tool. |
+| [Restream](restream/index.md) | — | Restream (restream.io) is a **cloud multistreaming service**: one encoder stream is accepted and passed on simultaneously to many platforms (YouTube, Twitch, Facebook, LinkedIn, TikTok and others). |
+| [Restreamer](restreamer/index.md) | — | The (Docker) Restreamer is a complete package for your own video reception and distribution: nginx + nginx-rtmp-module + Node.js web UI. |
+| [Wowza Streaming Engine](wowza/index.md) | — | Wowza Streaming Engine is a **commercial media server** for live and on-demand video: it accepts streams (RTMP, RTSP, SRT, MP4 upload), shapes them with the built-in transcoder into multi-bitrate l… |
 
-## Included documentation
-
-- [Ant Media Server](ant-media-server/index.md)
-- [FFmpeg](ffmpeg/index.md)
-- [GStreamer](gstreamer/index.md)
-- [MediaMTX](mediamtx/index.md)
-- [MistServer](mistserver/index.md)
-- [nginx-rtmp-module](nginx-rtmp-module/index.md)
-- [OBS Studio](obs-studio/index.md)
-- [Restream](restream/index.md)
-- [Restreamer](restreamer/index.md)
-- [Wowza Streaming Engine](wowza/index.md)
-
-## Directory structure
+## File set per program (ADR 0012)
 
 ```
-docs/de/programs/apps/streaming/frontends/
-├── index.md              (this file)
-├── ant-media-server/   (index, menu, features, description, structure, shortcuts, api)
-├── ffmpeg/   (index, menu, features, description, structure, shortcuts, api)
-├── gstreamer/   (index, menu, features, description, structure, shortcuts, api)
-├── mediamtx/   (index, menu, features, description, structure, shortcuts, api)
-├── mistserver/   (index, menu, features, description, structure, shortcuts, api)
-├── nginx-rtmp-module/   (index, menu, features, description, structure, shortcuts, api)
-├── obs-studio/   (index, menu, features, description, structure, shortcuts, api)
-├── restream/   (index, menu, features, description, structure, shortcuts, api)
-├── restreamer/   (index, menu, features, description, structure, shortcuts, api)
-└── wowza/   (index, menu, features, description, structure, shortcuts, api)
+programs/apps/streaming/frontends/<program>/
+├── index.md        what it is, notable ideas, documented versions, sources
+├── changelog.md    changes between documented versions (≥ 2 versions)
+└── <version>/
+    ├── description.md    required · Detailed description, differentiation, who it suits
+    ├── features.md       required · What the program can do — and what not
+    ├── layout.md         required · Window structure, regions, panels
+    ├── menus.md          required · Menu structure, context menus, menus by role
+    ├── shortcuts.md      required · Keyboard shortcuts
+    ├── api.md            required · APIs and protocols, authentication, rate limits
+    ├── themes/index.md   required · Themes: colours, typography, spacing — what can be rebuilt
+    ├── interaction.md    if needed · Hover, focus, drag, gestures (finger, mouse, pen)
+    ├── states.md         if needed · UI states and transitions
+    ├── events.md         if needed · Events to the outside (webhooks, push, streams)
+    ├── limits.md         if needed · Known limitations
+    ├── i18n.md           if needed · Localisation, writing direction
+    └── dependencies.md   if needed · Which of our components a frontend in this style needs
 ```
 
-## Content of each documentation
-
-Each program directory contains **seven** files:
-
-1. **index.md** – overview of the program and links to the six detail files
-2. **menu.md** – all main menu items, context menus, role-dependent menus
-3. **features.md** – main features, what the program can and CANNOT do, extensions
-4. **description.md** – description, advantages, differentiation, technical details, target groups
-5. **structure.md** – window/page structure, UI/UX, interactions, responsive design, accessibility
-6. **shortcuts.md** – all keyboard shortcuts including Mac variants
-7. **api.md** – API type, authentication, endpoints, examples, rate limits, webhooks, SDKs
-
-## Notes
-
-- All documentation is written in German
-- The content is suitable for users and administrators
-- **Keyboard shortcuts are always in the separate file `shortcuts.md`**
-- **API documentation is always in the separate file `api.md`**
-- Missing features are explicitly marked as not present (❌)
-
-## Related areas
-
-- [Category overview](../) – overview of this program category
-- [Wiki frontends](../../wiki/frontends/) – reference schema for this documentation
-- [Desktop frontends](../../../platform/desktop/frontends/) – same file structure
-- [Standardised data](../../../../data/) – fields and models for all frontend APIs
+Protocols (Matrix, IMAP, CalDAV, …) are not frontends; they are described under [data](../../../../data/standards.md).

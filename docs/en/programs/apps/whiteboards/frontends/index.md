@@ -1,56 +1,38 @@
-# Whiteboards Frontend documentation
+# Whiteboards — Frontends
 
-## Overview
+Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Whiteboards` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
 
-This directory contains the documentation of the programs in this category following the wiki schema: menu items, features, description, structure/UI-UX, keyboard shortcuts and API — seven files per program.
+## Programs
 
-All programs documented here are **not** FreeSynergy in-house developments, but foreign programs whose surface and interfaces are recreated or connected as a frontend.
+| Program | Versions | What it is |
+|---------|----------|------------|
+| [draw.io](drawio/index.md) | — | draw.io (diagrams.net) is a free diagram tool for flowcharts, network plans, UML and BPMN. |
+| [Excalidraw](excalidraw/index.md) | — | Excalidraw is a free, open-source collaborative whiteboard in a hand-drawn style. |
+| [Miro](miro/index.md) | — | Miro is the commercial online whiteboard (SaaS) for visual collaboration: infinite canvas, shapes/sticky notes, frames, template library (retros, workshops, customer journeys), voting/timer and boa… |
+| [Mural](mural/index.md) | — | Mural is the workshop whiteboard suite (SaaS) with strong facilitation: canvas with shapes/notes, "Facilitation Sequence" (moderation flows), participation control and templates. |
+| [OpenBoard](openboard/index.md) | — | OpenBoard is a free interactive whiteboard tool (C++, Qt) for teaching and presentations: multi-page "boards", pens/text/images, integrated browser, document and note tools, offline-first with a lo… |
+| [tldraw](tldraw/index.md) | — | tldraw is an open-source infinite-canvas whiteboard library and app in TypeScript: ready to use on tldraw.com and as a React SDK (`tldraw`) for your own canvas applications. |
 
-## Included documentation
-
-- [draw.io](drawio/index.md)
-- [Excalidraw](excalidraw/index.md)
-- [Miro](miro/index.md)
-- [Mural](mural/index.md)
-- [OpenBoard](openboard/index.md)
-- [tldraw](tldraw/index.md)
-
-## Directory structure
+## File set per program (ADR 0012)
 
 ```
-docs/de/programs/apps/whiteboards/frontends/
-├── index.md              (this file)
-├── drawio/   (index, menu, features, description, structure, shortcuts, api)
-├── excalidraw/   (index, menu, features, description, structure, shortcuts, api)
-├── miro/   (index, menu, features, description, structure, shortcuts, api)
-├── mural/   (index, menu, features, description, structure, shortcuts, api)
-├── openboard/   (index, menu, features, description, structure, shortcuts, api)
-└── tldraw/   (index, menu, features, description, structure, shortcuts, api)
+programs/apps/whiteboards/frontends/<program>/
+├── index.md        what it is, notable ideas, documented versions, sources
+├── changelog.md    changes between documented versions (≥ 2 versions)
+└── <version>/
+    ├── description.md    required · Detailed description, differentiation, who it suits
+    ├── features.md       required · What the program can do — and what not
+    ├── layout.md         required · Window structure, regions, panels
+    ├── menus.md          required · Menu structure, context menus, menus by role
+    ├── shortcuts.md      required · Keyboard shortcuts
+    ├── api.md            required · APIs and protocols, authentication, rate limits
+    ├── themes/index.md   required · Themes: colours, typography, spacing — what can be rebuilt
+    ├── interaction.md    if needed · Hover, focus, drag, gestures (finger, mouse, pen)
+    ├── states.md         if needed · UI states and transitions
+    ├── events.md         if needed · Events to the outside (webhooks, push, streams)
+    ├── limits.md         if needed · Known limitations
+    ├── i18n.md           if needed · Localisation, writing direction
+    └── dependencies.md   if needed · Which of our components a frontend in this style needs
 ```
 
-## Content of each documentation
-
-Each program directory contains **seven** files:
-
-1. **index.md** – overview of the program and links to the six detail files
-2. **menu.md** – all main menu items, context menus, role-dependent menus
-3. **features.md** – main features, what the program can and CANNOT do, extensions
-4. **description.md** – description, advantages, differentiation, technical details, target groups
-5. **structure.md** – window/page structure, UI/UX, interactions, responsive design, accessibility
-6. **shortcuts.md** – all keyboard shortcuts including Mac variants
-7. **api.md** – API type, authentication, endpoints, examples, rate limits, webhooks, SDKs
-
-## Notes
-
-- All documentation is written in German
-- The content is suitable for users and administrators
-- **Keyboard shortcuts are always in the separate file `shortcuts.md`**
-- **API documentation is always in the separate file `api.md`**
-- Missing features are explicitly marked as not present (❌)
-
-## Related areas
-
-- [Category overview](../) – overview of this program category
-- [Wiki frontends](../../wiki/frontends/) – reference schema for this documentation
-- [Desktop frontends](../../../platform/desktop/frontends/) – same file structure
-- [Standardised data](../../../../data/) – fields and models for all frontend APIs
+Protocols (Matrix, IMAP, CalDAV, …) are not frontends; they are described under [data](../../../../data/standards.md).

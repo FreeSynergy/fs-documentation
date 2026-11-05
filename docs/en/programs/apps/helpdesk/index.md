@@ -75,21 +75,19 @@ When choosing a help desk system, consider the following criteria:
 
 Further information can be found in the documentation of individual help desk systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/helpdesk/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (8), by function, nothing copied (ADR 0012/0013):
 
-**documented (8 programs):**
+- [Freshdesk](frontends/freshdesk/index.md) — Freshdesk (Freshworks) is a SaaS helpdesk with tickets, knowledge base, SLAs, omnichannel e-mail/phone/chat and Freddy AI.
+- [GLPI](frontends/glpi/index.md) — GLPI is a French-flavoured open-source ITSM: helpdesk tickets plus complete IT asset management (computers, software, contracts, network), reporting that supports projects and budgets.
+- [Helodesk](frontends/helodesk/index.md) — Helodesk is a French SaaS customer-service suite (contact centre): telephony/softphone, e-mail, chat, SMS and callback in one surface, plus cases (tickets), knowledge base, IVR and reporting.
+- [Help Scout](frontends/helpscout/index.md) — Help Scout is support as a shared inbox: customers write to an e-mail address ("Conversations"), the team replies as if from a personal mail — without the ticket-number feel.
+- [osTicket](frontends/osticket/index.md) — osTicket is the classic among open-source helpdesks: PHP/MySQL, e-mail ingest, help topics, filter rules and a plain agent and customer portal.
+- [Request Tracker (RT)](frontends/request-tracker/index.md) — Request Tracker by Best Practical is the veteran of ticket systems: Perl-based, extremely regexp-/script-driven, with REST 1.0 and JSON-RPC 2.0 APIs.
+- [Zammad](frontends/zammad/index.md) — Zammad is a modern, open-source helpdesk: tickets from e-mail, web form, chat, phone and Telegram converge in one surface, with SLAs, text modules, knowledge base and a fully-fledged REST API.
+- [Zendesk](frontends/zendesk/index.md) — Zendesk is the commercial support platform (SaaS) with tickets, Help Center, chat/messaging, voice and analytics.
 
-- [Freshdesk](frontends/freshdesk/index.md) - Freshdesk
-- [GLPI](frontends/glpi/index.md) - GLPI
-- [Helodesk](frontends/helodesk/index.md) - Helodesk
-- [Help Scout](frontends/helpscout/index.md) - Help Scout
-- [osTicket](frontends/osticket/index.md) - osTicket
-- [Request Tracker (RT)](frontends/request-tracker/index.md) - Request Tracker (RT)
-- [Zammad](frontends/zammad/index.md) - Zammad
-- [Zendesk](frontends/zendesk/index.md) - Zendesk
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

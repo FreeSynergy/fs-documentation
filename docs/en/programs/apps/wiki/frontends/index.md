@@ -1,167 +1,39 @@
-# Wiki Frontend documentation
+# Wiki — Frontends
 
-## Overview
+Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Wiki` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
 
-This directory documents the menu items, features, keyboard shortcuts and APIs of various wiki software systems and developer tools.
+## Programs
 
-## Included Documentation
+| Program | Versions | What it is |
+|---------|----------|------------|
+| [Confluence](confluence/index.md) | — | Confluence is an enterprise wiki platform by Atlassian for team collaboration. |
+| [MediaWiki](mediawiki/index.md) | — | MediaWiki is the most popular wiki software, used among others by Wikipedia. |
+| [Notion](notion/index.md) | — | Notion is an all-in-one platform for notes, documentation and collaboration. |
+| [Tango.io](tango.io/index.md) | — | Tango.io is a modern knowledge-management platform that focuses on collaboration. |
+| [VSCodium](vscodium/index.md) | — | VSCodium is an open-source version of Microsoft Visual Studio Code. |
+| [Wiki.js](wikijs/index.md) | — | Wiki.js is a modern, lightweight wiki system based on Node.js. |
+| [XWiki](xwiki/index.md) | — | XWiki is a powerful enterprise wiki platform with advanced features for knowledge management. |
 
-- [Wiki.js](wikijs/index.md) - Modern, lightweight wiki software
-- [XWiki](xwiki/index.md) - Enterprise wiki platform
-- [MediaWiki](mediawiki/index.md) - The most popular wiki software (Wikipedia)
-- [Tango.io](tango.io/index.md) - Knowledge management platform
-- [Notion](notion/index.md) - All-in-one collaboration platform
-- [Confluence](confluence/index.md) - Enterprise wiki by Atlassian
-- [VSCodium](vscodium/index.md) - Open-source code editor (VS Code fork)
-
-## Directory Structure
+## File set per program (ADR 0012)
 
 ```
-docs/en/programs/apps/wiki/frontends/
-├── index.md              (this file)
-├── wikijs/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── xwiki/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── mediawiki/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── tango.io/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── notion/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── confluence/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-└── vscodium/
-    ├── index.md
-    ├── menu.md
-    ├── features.md
-    ├── description.md
-    ├── structure.md
-    ├── shortcuts.md
-    └── api.md
+programs/apps/wiki/frontends/<program>/
+├── index.md        what it is, notable ideas, documented versions, sources
+├── changelog.md    changes between documented versions (≥ 2 versions)
+└── <version>/
+    ├── description.md    required · Detailed description, differentiation, who it suits
+    ├── features.md       required · What the program can do — and what not
+    ├── layout.md         required · Window structure, regions, panels
+    ├── menus.md          required · Menu structure, context menus, menus by role
+    ├── shortcuts.md      required · Keyboard shortcuts
+    ├── api.md            required · APIs and protocols, authentication, rate limits
+    ├── themes/index.md   required · Themes: colours, typography, spacing — what can be rebuilt
+    ├── interaction.md    if needed · Hover, focus, drag, gestures (finger, mouse, pen)
+    ├── states.md         if needed · UI states and transitions
+    ├── events.md         if needed · Events to the outside (webhooks, push, streams)
+    ├── limits.md         if needed · Known limitations
+    ├── i18n.md           if needed · Localisation, writing direction
+    └── dependencies.md   if needed · Which of our components a frontend in this style needs
 ```
 
-## Content of Each Documentation
-
-Every project directory holds **six** files:
-
-### menu.md
-- All main menu items
-- Context menus
-- Menus that depend on user rights
-
-### features.md
-- Main features
-- What the program can do
-- What the program CANNOT do
-- Extensions/plugins
-
-### description.md
-- What the program does
-- Advantages
-- Differentiation from other systems
-- Technical details
-- Who the program is suitable for
-
-### structure.md
-- Window structure
-- UI/UX design
-- Editor structure (where present)
-- Responsive design
-- Accessibility
-
-### shortcuts.md
-- All keyboard shortcuts
-- General shortcuts
-- Editor/conversation shortcuts
-- Navigation shortcuts
-- Editing shortcuts
-- Mac shortcuts (where they differ)
-
-### api.md
-- API type (REST, GraphQL, WebSocket, etc.)
-- Authentication (OAuth2, API keys, etc.)
-- Endpoints with methods, paths and descriptions
-- Request/response examples
-- Rate limits
-- Webhooks (where present)
-- SDKs and client libraries
-
-## Notes
-
-- All documentation is written in English
-- The content suits both users and administrators
-- **Keyboard shortcuts are documented in the separate file `shortcuts.md`**
-- **API documentation is in the separate file `api.md`**
-- Email clients include email editor structures
-- Wiki software includes wiki editor structures
-
-## Category System
-
-**Please note:** this system applies to ALL categories in this project:
-- Wiki (7 programs)
-- Messenger (7 programs)
-- Desktop (12 programs)
-- Whiteboards (6 programs)
-- Helpdesk (8 programs)
-- Project management (8 programs)
-- Contact (4 programs)
-- Calendar (6 programs)
-- CRM (6 programs)
-- Democracy (6 programs)
-- Maps (7 programs)
-- ERP (6 programs)
-- Workflows (6 programs)
-- Marketing (6 programs)
-- Marketplaces (6 programs)
-- Photo galleries (8 programs)
-- Streaming (10 programs)
-
-**Every application in every category always gets 7 files:**
-1. index.md (overview and links)
-2. menu.md
-3. features.md
-4. description.md
-5. structure.md
-6. shortcuts.md (always separate!)
-7. api.md (REST, GraphQL, etc.)
-
-Status of this mirror: in `en/` each of the seven programs currently has only
-`index.md`; the remaining six files per program are still to be translated from
-`docs/de/programs/apps/wiki/frontends/` (see `todo/translator.md`).
+Protocols (Matrix, IMAP, CalDAV, …) are not frontends; they are described under [data](../../../../data/standards.md).

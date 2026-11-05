@@ -1,14 +1,17 @@
-# Wekan Documentation
+# Wekan
 
-## Overview
+> Category: [projectmanagement](../../index.md)
+
+## What it is
 
 Wekan is the open Trello clone (Meteor/Node, MongoDB): boards, lists, cards, swimlanes, labels and checklists — self-hosted, with OAuth2/LDAP and outgoing webhooks. For FreeSynergy the reference frontend "kanban with self-hosting and organisational swimlanes".
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Board menus, card menu, admin panel
-- [features.md](latest/features.md) - Swimlanes, invoke webhooks, what Wekan does NOT do
-- [description.md](latest/description.md) - How it differs from Planka, Trello, Focalboard
-- [layout.md](latest/layout.md) - Board with swimlanes/lists, card modal
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts (Trello-like, verify state)
-- [api.md](latest/api.md) - REST /api with a personal token, invoke hooks, webhooks
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->

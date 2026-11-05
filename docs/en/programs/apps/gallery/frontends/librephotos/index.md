@@ -1,14 +1,32 @@
-# LibrePhotos Documentation
+# LibrePhotos
 
-## Overview
+> Category: [gallery](../../index.md)
+
+## What it is
 
 LibrePhotos is the open-source alternative to Google Photos: automatic backup via an app, face and object recognition, timeline, albums and shared galleries. Stack: Django/Python backend, React frontend, PostgreSQL, machine-learning pipeline (CLIP, Face-Recognition).
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Navigation, album/people menus, administration
-- [features.md](latest/features.md) - Scan pipeline, search, sharing features, what LibrePhotos does NOT do
-- [description.md](latest/description.md) - How it differs from Immich and PhotoPrism
-- [layout.md](latest/layout.md) - Timeline, search overlay, album pages
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts of search and viewer
-- [api.md](latest/api.md) - REST `/api/...`, token auth, administrative tasks
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

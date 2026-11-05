@@ -1,14 +1,32 @@
-# Nextcloud Contacts Documentation
+# Nextcloud Contacts
 
-## Overview
+> Category: [contact](../../index.md)
+
+## What it is
 
 Nextcloud Contacts is the contact app of the Nextcloud suite: address books in the browser, synchronised over CardDAV with all devices, linked to user accounts, circles/groups and the people area of the dashboard. The data lives as vCards in the Nextcloud database.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - App navigation, contact actions, sharing menus
-- [features.md](latest/features.md) - CardDAV, circles, import/export, what Contacts does NOT do
-- [description.md](latest/description.md) - Description and how it differs from KAddressBook, Monica and GNOME Contacts
-- [layout.md](latest/layout.md) - List-detail layout, fields, responsive design
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts (few; web standards)
-- [api.md](latest/api.md) - CardDAV (RFC 6352), OCS sharing, status keys
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

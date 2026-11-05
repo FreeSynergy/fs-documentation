@@ -74,20 +74,6 @@ Optionally right: Display of details depending on the selected element
 - **Functional**: Function over form
 - **Consistent**: Consistent design across all areas
 
-### Color Scheme
-
-- **Light Theme**: Light color scheme (default)
-- **Dark Theme**: Dark color scheme
-- **Custom**: Customizable colors via theme system
-- **Context-based colors**: Colors for toot status
-
-### Typography
-
-- **Headings**: Clear hierarchy
-- **Text**: Readable font sizes (14-16pt)
-- **Lists**: Clear bullet points
-- **Monospace**: For code blocks
-
 ### Interactions
 
 - **Hover effects**: Visual feedback on hover
@@ -159,3 +145,7 @@ Optionally right: Display of details depending on the selected element
 - **Pagination**: For large lists
 - **Debounce**: For search functions
 - **Lazy loading**: For large timelines
+
+## Themes
+
+Colours, typography and theme details: see [themes](themes/index.md).

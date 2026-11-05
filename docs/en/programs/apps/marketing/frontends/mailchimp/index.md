@@ -1,14 +1,32 @@
-# Mailchimp Documentation
+# Mailchimp
 
-## Overview
+> Category: [marketing](../../index.md)
+
+## What it is
 
 Mailchimp (Intuit, commercial) is the newsletter/marketing-automation platform: lists + segments, campaign editor, e-mail automations (journeys), landing pages, CRM-lite and analytics. API v3 with OAuth2.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Audience/campaign/automation menus
-- [features.md](latest/features.md) - Journeys, segments, what Mailchimp does NOT do
-- [description.md](latest/description.md) - How it differs from Brevo, Mautic, benchmark EU tools
-- [layout.md](latest/layout.md) - Dashboard, list workspace, journey builder
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts (none)
-- [api.md](latest/api.md) - REST v3 (members, campaigns, reports), OAuth2, webhooks
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

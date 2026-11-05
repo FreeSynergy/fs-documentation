@@ -80,21 +80,19 @@ When choosing a project management tool, consider the following criteria:
 
 Further information can be found in the documentation of individual project management tools.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/projectmanagement/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (8), by function, nothing copied (ADR 0012/0013):
 
-**documented (8 programs):**
+- [Asana](frontends/asana/index.md) — Asana is task and project work at portfolio level: tasks with fields (due date, assignees, dependencies, custom fields) in projects (list/table/timeline/kanban), teams, workloads and rules automation.
+- [Jira](frontends/jira/index.md) — Jira (Atlassian) is issue and project tracking with workflows: issues move through statuses (To Do→In Progress→Done), with sprints (Jira Software), types, priorities and powerful JQL.
+- [OpenProject](frontends/openproject/index.md) — OpenProject is an open-source project management system for self-hosting (Community Edition plus a commercial Enterprise Edition) with work packages, Gantt planning, agile boards, time and cost tra…
+- [Planka](frontends/planka/index.md) — Planka is a self-hosted, plain kanban board (fair-code: free Community Edition plus a commercial Pro Edition) with projects, boards, lists and cards in real-time collaboration.
+- [Redmine](frontends/redmine/index.md) — Redmine is a free, web-based project management and issue tracking application based on Rails: multiple projects with issue trackers, time tracking, wiki, forums, Gantt/calendar and role-based perm…
+- [Taiga](frontends/taiga/index.md) — Taiga is the agile open-source project management tool (AGPL, Python/Django + a modern frontend "Taigo"): Scrum (sprints, points) and kanban in one, plus epics, issues, wiki and a CRM module.
+- [Trello](frontends/trello/index.md) — Trello (Atlassian) is the digital kanban board: boards with lists and cards, due dates, labels, members, checklists and automation via "Butler".
+- [Wekan](frontends/wekan/index.md) — Wekan is the open Trello clone (Meteor/Node, MongoDB): boards, lists, cards, swimlanes, labels and checklists — self-hosted, with OAuth2/LDAP and outgoing webhooks.
 
-- [Asana](frontends/asana/index.md) - Asana
-- [Jira](frontends/jira/index.md) - Jira
-- [OpenProject](frontends/openproject/index.md) - OpenProject
-- [Planka](frontends/planka/index.md) - Planka
-- [Redmine](frontends/redmine/index.md) - Redmine
-- [Taiga](frontends/taiga/index.md) - Taiga
-- [Trello](frontends/trello/index.md) - Trello
-- [Wekan](frontends/wekan/index.md) - Wekan
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

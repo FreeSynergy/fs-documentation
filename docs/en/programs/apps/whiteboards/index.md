@@ -75,19 +75,17 @@ When choosing a whiteboard tool, consider the following criteria:
 
 Further information can be found in the documentation of individual whiteboard tools.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/whiteboards/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-**documented (6 programs):**
+- [draw.io](frontends/drawio/index.md) — draw.io (diagrams.net) is a free diagram tool for flowcharts, network plans, UML and BPMN.
+- [Excalidraw](frontends/excalidraw/index.md) — Excalidraw is a free, open-source collaborative whiteboard in a hand-drawn style.
+- [Miro](frontends/miro/index.md) — Miro is the commercial online whiteboard (SaaS) for visual collaboration: infinite canvas, shapes/sticky notes, frames, template library (retros, workshops, customer journeys), voting/timer and boa…
+- [Mural](frontends/mural/index.md) — Mural is the workshop whiteboard suite (SaaS) with strong facilitation: canvas with shapes/notes, "Facilitation Sequence" (moderation flows), participation control and templates.
+- [OpenBoard](frontends/openboard/index.md) — OpenBoard is a free interactive whiteboard tool (C++, Qt) for teaching and presentations: multi-page "boards", pens/text/images, integrated browser, document and note tools, offline-first with a lo…
+- [tldraw](frontends/tldraw/index.md) — tldraw is an open-source infinite-canvas whiteboard library and app in TypeScript: ready to use on tldraw.com and as a React SDK (`tldraw`) for your own canvas applications.
 
-- [draw.io](frontends/drawio/index.md) - draw.io
-- [Excalidraw](frontends/excalidraw/index.md) - Excalidraw
-- [Miro](frontends/miro/index.md) - Miro
-- [Mural](frontends/mural/index.md) - Mural
-- [OpenBoard](frontends/openboard/index.md) - OpenBoard
-- [tldraw](frontends/tldraw/index.md) - tldraw
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

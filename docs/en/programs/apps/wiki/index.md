@@ -62,3 +62,19 @@ When choosing a wiki system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual wiki systems.
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (7), by function, nothing copied (ADR 0012/0013):
+
+- [Confluence](frontends/confluence/index.md) — Confluence is an enterprise wiki platform by Atlassian for team collaboration.
+- [MediaWiki](frontends/mediawiki/index.md) — MediaWiki is the most popular wiki software, used among others by Wikipedia.
+- [Notion](frontends/notion/index.md) — Notion is an all-in-one platform for notes, documentation and collaboration.
+- [Tango.io](frontends/tango.io/index.md) — Tango.io is a modern knowledge-management platform that focuses on collaboration.
+- [VSCodium](frontends/vscodium/index.md) — VSCodium is an open-source version of Microsoft Visual Studio Code.
+- [Wiki.js](frontends/wikijs/index.md) — Wiki.js is a modern, lightweight wiki system based on Node.js.
+- [XWiki](frontends/xwiki/index.md) — XWiki is a powerful enterprise wiki platform with advanced features for knowledge management.
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

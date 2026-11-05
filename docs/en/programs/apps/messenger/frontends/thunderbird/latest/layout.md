@@ -77,20 +77,6 @@ Optionally right: Display of details depending on the selected item
 - **Mozilla-style**: Follows Mozilla design guidelines
 - **Accessible**: Focus on accessibility
 
-### Color Scheme
-
-- **Light Theme**: Classic light color scheme
-- **Dark Theme**: Dark color scheme
-- **Custom**: Customizable colors via theme system
-- **Context-based colors**: Colors for calendar, categories
-
-### Typography
-
-- **Headings**: Clear hierarchy
-- **Text**: Readable font sizes (10-12pt)
-- **Lists**: Clear bullet points with checkboxes
-- **Monospace**: For email headers
-
 ### Interactions
 
 - **Hover effects**: Visual feedback on hover
@@ -162,3 +148,7 @@ Optionally right: Display of details depending on the selected item
 - **Pagination**: For large lists
 - **Debounce**: For search functions
 - **Lazy loading**: For large calendars and address books
+
+## Themes
+
+Colours, typography and theme details: see [themes](themes/index.md).

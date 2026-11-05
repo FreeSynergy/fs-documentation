@@ -1,14 +1,32 @@
-# uMap Documentation
+# uMap
 
-## Overview
+> Category: [maps](../../index.md)
+
+## What it is
 
 uMap (uMap Project, free software) is **collaborative map diagramming**: own layers with markers/polylines/polygons, popup contents (HTML), sharing via link, multi-user editing. Built on OSM tiles; self-hostable (Django/PostgreSQL) or public instances (uMap.org).
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Map toolbar, layers panel, settings, share
-- [features.md](latest/features.md) - Layers/formats, data exchange, what uMap does NOT do
-- [description.md](latest/description.md) - How it differs from Google My Maps, Fusion Tables, QGIS
-- [layout.md](latest/layout.md) - Map + layer list + popup editor
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts (minimal set)
-- [api.md](latest/api.md) - Data API (GeoJSON), import/export formats
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

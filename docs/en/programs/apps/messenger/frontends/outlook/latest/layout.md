@@ -75,18 +75,6 @@ Optionally on the right:
 - **Consistency**: a uniform design across all areas
 - **Customisable**: a wide range of layout options
 
-### Colour Scheme
-
-- **Light theme**: the classic light colour scheme
-- **Dark theme**: dark colour scheme (newer)
-- **Custom**: adjustable colours
-
-### Typography
-
-- **Headings**: a clear hierarchy
-- **Text**: readable font sizes (10–12 pt)
-- **Lists**: clear bullet points
-
 ### Interactions
 
 - **Hover effects**: visual feedback on hover
@@ -155,3 +143,7 @@ Optionally on the right:
 - **Caching**: client-side caching (OST files)
 - **Pagination**: for large lists
 - **Debounce**: for the search functions
+
+## Themes
+
+Colours, typography and theme details: see [themes](themes/index.md).

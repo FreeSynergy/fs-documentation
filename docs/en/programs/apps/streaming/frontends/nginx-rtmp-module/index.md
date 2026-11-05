@@ -1,14 +1,17 @@
-# nginx-rtmp-module Documentation
+# nginx-rtmp-module
 
-## Overview
+> Category: [streaming](../../index.md)
+
+## What it is
 
 The nginx-rtmp-module (arut) extends nginx with an RTMP server: it accepts RTMP publishes, writes along HLS and DASH streams, records, and forwards via relay. Configuration happens exclusively through `nginx.conf`; control runs through HTTP hooks and the status page. Written in C, BSD-licensed, for years without substantial further development — WebRTC and SRT are missing.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Configuration blocks (`rtmp`, `application`, `http`), status page, roles
-- [features.md](latest/features.md) - RTMP/HLS/DASH, hooks, `exec`, relay, what the module does NOT do
-- [description.md](latest/description.md) - How it differs from MediaMTX, MistServer and Restreamer
-- [layout.md](latest/layout.md) - nginx processes, directory layout of the output, configuration layers
-- [shortcuts.md](latest/shortcuts.md) - nginx command line (`-t`, `-s reload`), no UI keys
-- [api.md](latest/api.md) - HTTP hooks (`on_publish`, `on_play`, `on_record_done`), status XML, `exec`
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->

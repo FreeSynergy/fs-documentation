@@ -1,14 +1,32 @@
-# Matomo Documentation
+# Matomo
 
-## Overview
+> Category: [marketing](../../index.md)
+
+## What it is
 
 Matomo (GPL, formerly Piwik) is the leading **self-hostable web-analytics platform** (PHP/MySQL): visitor analysis capable of running cookieless, cookies with consent integration, heatmaps/session replay (paid), roles, raw data in your own database. Cloud optional.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Dashboard, visits/behaviour, administration
-- [features.md](latest/features.md) - Plugins, raw-data sovereignty, what Matomo does NOT do
-- [description.md](latest/description.md) - How it differs from GA4, Plausible, etracker
-- [layout.md](latest/layout.md) - Report tables, visitor log, heatmap view
-- [shortcuts.md](latest/shortcuts.md) - none
-- [api.md](latest/api.md) - Tracking HTTP API, Analytics REST API (token_auth), plugins
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

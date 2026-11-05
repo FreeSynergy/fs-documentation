@@ -1,17 +1,35 @@
-# GNOME Planner Documentation
+# GNOME Planner
 
-## Overview
+> Category: [calendar](../../index.md)
+
+## What it is
 
 Planner is the project planner on GNOME (app ID `app.drey.Planner`): tasks with start/finish, work, costs and dependencies (FS/SS/FF/SF with lag), resources with their own working calendars, critical path and slacks — shown in four views (Gantt, tasks, resources, resource usage). Projects stay XML files (`*.planner`, DTD `mrproject-0.6`); optionally an experimental plugin stores them in PostgreSQL. Import: MS Project XML and Evolution/LDAP contacts; export: HTML and print/PDF. State: **0.14.92 (December 2023)** — maintained again after a long standstill (translations up to 2026; packaged in Debian stable and Arch extra), but marked as beta. In this calendar series what matters for it is the working-calendar/time-axis logic, not an event calendar.
 
-## File structure
+## Notable ideas
 
-- [description.md](latest/description.md) - What Planner does, benefits, how it differs from MS Project, GanttProject, OpenProject, Nextcloud
-- [features.md](latest/features.md) - Verified features (0.14.92) and what Planner does NOT offer
-- [layout.md](latest/layout.md) - Window layout, program/module structure (src, libplanner, plugins), configuration, deployment
-- [menus.md](latest/menus.md) - Menus, bars and context menus taken from the GtkBuilder files
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts from the source code (incl. Open = F3!)
-- [api.md](latest/api.md) - No REST: the `*.planner` file format, DTD, units, SQL storage, import/export paths
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Sources
 

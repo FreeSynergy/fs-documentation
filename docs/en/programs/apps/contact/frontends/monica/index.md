@@ -1,14 +1,32 @@
-# Monica Documentation
+# Monica
 
-## Overview
+> Category: [contact](../../index.md)
+
+## What it is
 
 Monica is a self-hosted personal CRM: capture people with all their relationships, activities, gifts, tasks and notes — as a web app (Laravel/Vue) with a REST API. For FreeSynergy, Monica is the frontend reference case "contact with a history" as opposed to plain address books.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Main navigation, person menu, settings
-- [features.md](latest/features.md) - Activities, relationships, tasks, what Monica does NOT do
-- [description.md](latest/description.md) - Description and how it differs from Nextcloud Contacts, Trekk, People CRM
-- [layout.md](latest/layout.md) - Person detail masks, timeline, responsive
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts (web standard)
-- [api.md](latest/api.md) - REST API /api/ with token, endpoints, webhooks
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

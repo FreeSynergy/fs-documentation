@@ -79,17 +79,15 @@ When choosing a CRM system, consider the following criteria:
 
 Further information can be found in the documentation of individual CRM systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/contact/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (4), by function, nothing copied (ADR 0012/0013):
 
-**documented (4 programs):**
+- [GNOME Contacts](frontends/gnome-contacts/index.md) — GNOME Contacts is the lean contact app for GNOME: create contacts, link them, synchronise them with Evolution Data Server sources (local address books, CalDAV/CardDAV accounts, Google, LDAP).
+- [KAddressBook](frontends/kaddressbook/index.md) — KAddressBook is the contact management application of KDE PIM: vCard-based, managed through Akonadi resources (local folders, IMAP-Contacts, CardDAV, LDAP).
+- [Monica](frontends/monica/index.md) — Monica is a self-hosted personal CRM: capture people with all their relationships, activities, gifts, tasks and notes — as a web app (Laravel/Vue) with a REST API.
+- [Nextcloud Contacts](frontends/nextcloud-contacts/index.md) — Nextcloud Contacts is the contact app of the Nextcloud suite: address books in the browser, synchronised over CardDAV with all devices, linked to user accounts, circles/groups and the people area o…
 
-- [GNOME Contacts](frontends/gnome-contacts/index.md) - GNOME Contacts
-- [KAddressBook](frontends/kaddressbook/index.md) - KAddressBook
-- [Monica](frontends/monica/index.md) - Monica
-- [Nextcloud Contacts](frontends/nextcloud-contacts/index.md) - Nextcloud Contacts
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

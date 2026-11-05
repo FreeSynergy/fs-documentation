@@ -85,20 +85,6 @@ Optional right side: Display of details depending on the selected element
 - **Adjustable**: Versatile layout options
 - **Plasma Integration**: Seamless integration with KDE Plasma
 
-### Color Scheme
-
-- **Light Theme**: Classic light color scheme (Breeze Light)
-- **Dark Theme**: Dark color scheme (Breeze Dark)
-- **Customizable**: Customizable colors via system settings
-- **Context-sensitive colors**: Colors for calendar, categories
-
-### Typography
-
-- **Headings**: Clear hierarchy (H1, H2, H3)
-- **Text**: Readable font sizes (9-12pt)
-- **Lists**: Clear bullet points with checkboxes
-- **Monospace**: For email headers and code
-
 ### Interactions
 
 - **Hover effects**: Visual feedback on hover (Breeze theme)
@@ -193,3 +179,7 @@ Optional right side: Display of details depending on the selected element
 - **Pagination**: For large lists
 - **Debounce**: For search functions
 - **Threading**: Multithreading for fast computational operations
+
+## Themes
+
+Colours, typography and theme details: see [themes](themes/index.md).

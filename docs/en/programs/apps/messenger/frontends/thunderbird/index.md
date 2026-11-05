@@ -1,14 +1,31 @@
-# Thunderbird Documentation
+# Thunderbird
 
-## Overview
+> Category: [messenger](../../index.md)
+
+## What it is
 
 Thunderbird is Mozilla's open-source email client, cross-platform and email-focused.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - All menu items
-- [features.md](latest/features.md) - Editor features and functionality
-- [description.md](latest/description.md) - Description and differentiation
-- [layout.md](latest/layout.md) - UI/UX and structure
-- [shortcuts.md](latest/shortcuts.md) - All keyboard shortcuts
-- [api.md](latest/api.md) - API documentation (REST, GraphQL, etc.)
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 7/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+| [themes/index.md](latest/themes/index.md) | Themes: colours, typography, spacing — what can be rebuilt |
+<!-- /gen:versions -->

@@ -1,14 +1,32 @@
-# Hotjar Documentation
+# Hotjar
 
-## Overview
+> Category: [marketing](../../index.md)
+
+## What it is
 
 Hotjar (commercial) supplements web analytics with the **how**: heatmaps (clicks/scrolls/moves), session replays, surveys (onsite surveys), feedback/rage-click detection and funnel coupling. Script-based, EU data-residency option.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Heatmaps/replays/surveys, recording rules
-- [features.md](latest/features.md) - Heatmap types, surveys, what Hotjar does NOT do
-- [description.md](latest/description.md) - How it differs from Matomo plugins, FullStory, Microsoft Clarity
-- [layout.md](latest/layout.md) - Heatmap overlay, replay player, survey editors
-- [shortcuts.md](latest/shortcuts.md) - none
-- [api.md](latest/api.md) - REST (recordings/surveys), Identify API, no open heatmap export API
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

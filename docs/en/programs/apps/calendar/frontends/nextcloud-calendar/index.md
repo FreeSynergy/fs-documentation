@@ -1,5 +1,7 @@
 # Nextcloud Calendar
 
+> Category: [calendar](../../index.md)
+
 The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar) above the CalDAV backend (sabre/dav) of the Nextcloud server. Events, series, tasks (VTODO), birthdays and WebCal subscriptions live as standard ICS objects under `remote.php/dav/`; on top come appointment booking by link, public/embedded calendar views and meeting proposals (polls). Kept separate from the actual data storage: the app itself is only a frontend plus a few small JSON-OCS endpoints.
 
 - **Category:** calendar (groupware web interface)
@@ -7,16 +9,30 @@ The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar)
 - **Currently documented version:** app **6.6.4** (released 2026-10-26), requires Nextcloud Server 32–35 and PHP 8.1–8.5
 - **Development status:** active (daily commits, release series 6.6.x, maintained by the Nextcloud groupware team)
 
-## File structure of this section
+## Notable ideas
+
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
 
 | File | Contents |
 |------|----------|
-| [description.md](latest/description.md) | What the program does, benefits, differentiation (incl. from Davical and Google Calendar), technical details, who it suits |
-| [features.md](latest/features.md) | Verified feature list + "What Nextcloud Calendar does NOT offer" |
-| [api.md](latest/api.md) | CalDAV backend, app routes, JSON/OCS endpoints (booking, appointment configs, proposals), auth, rate limits, SDKs |
-| [menus.md](latest/menus.md) | navigation/menu structure from the source (AppNavigation, editor, settings) |
-| [shortcuts.md](latest/shortcuts.md) | keyboard shortcuts of the web interface (verified) + direct-URL workflows |
-| [layout.md](latest/layout.md) | request/module structure, data model (DB tables, ICS), configuration, deployment |
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Sources
 

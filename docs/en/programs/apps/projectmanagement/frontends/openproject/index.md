@@ -1,14 +1,17 @@
-# OpenProject Documentation
+# OpenProject
 
-## Overview
+> Category: [projectmanagement](../../index.md)
+
+## What it is
 
 OpenProject is an open-source project management system for self-hosting (Community Edition plus a commercial Enterprise Edition) with work packages, Gantt planning, agile boards, time and cost tracking, wiki, meetings and discussion forums. The surface is a classic web application with a main menu, project selector and module bar.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - All menu items, module bar and role menus
-- [features.md](latest/features.md) - Work packages, planning, agile boards, workflows
-- [description.md](latest/description.md) - Description and how it differs from Redmine, Jira and Planka
-- [layout.md](latest/layout.md) - UI/UX, window structure and colour scheme
-- [shortcuts.md](latest/shortcuts.md) - Keyboard control (and shortcuts marked as missing)
-- [api.md](latest/api.md) - API documentation (REST v3, OAuth2, webhooks)
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->

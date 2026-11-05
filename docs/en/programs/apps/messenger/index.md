@@ -77,3 +77,19 @@ When choosing a messenger, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual messenger systems.
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (7), by function, nothing copied (ADR 0012/0013):
+
+- [Discord](frontends/discord/index.md) — Discord is a proprietary communication platform for gaming communities, with voice/video and a server structure.
+- [Element](frontends/element/index.md) — Element is the open-source messenger for the Matrix protocol, with a decentralised architecture and end-to-end encryption.
+- [Kontact](frontends/kontact/index.md) — Kontact is the integrated PIM application for KDE, which unites email, calendar, contacts, tasks and notes in a single application.
+- [Mastodon](frontends/mastodon/index.md) — Mastodon is an open-source microblogging network based on the ActivityPub protocol, and it is decentralised.
+- [Outlook](frontends/outlook/index.md) — Outlook is Microsoft's most popular email client, part of Microsoft 365.
+- [Telegram](frontends/telegram/index.md) — Telegram is a cloud-based messenger focused on speed, large groups/channels and encryption.
+- [Thunderbird](frontends/thunderbird/index.md) — Thunderbird is Mozilla's open-source email client, cross-platform and email-focused.
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

@@ -1,17 +1,35 @@
-# Nextcloud Photos Documentation
+# Nextcloud Photos
 
-## Overview
+> Category: [gallery](../../index.md)
+
+## What it is
 
 The Photos app of Nextcloud is the gallery surface on top of the Files app: chronology, albums, Shared view, folder selection and (from NC 25+) Recognizer/facial-recognition integration. Stack: PHP backend of the Nextcloud platform, Vue frontend, WebDAV plus OCS endpoints.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Photos navigation, folder selection, albums, shared areas
-- [features.md](latest/features.md) - Chronology, albums, recognition, what Photos does NOT do
-- [description.md](latest/description.md) - How it differs from Immich, PhotoPrism and Piwigo
-- [layout.md](latest/layout.md) - Chronology grid, viewer, album pages
-- [shortcuts.md](latest/shortcuts.md) - Shortcuts of the Nextcloud web surface
-- [api.md](latest/api.md) - WebDAV, OCS albums, Photos endpoints, sharing API
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Note
 

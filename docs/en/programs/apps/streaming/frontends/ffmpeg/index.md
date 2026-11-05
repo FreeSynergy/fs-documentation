@@ -1,17 +1,20 @@
-# FFmpeg Documentation
+# FFmpeg
 
-## Overview
+> Category: [streaming](../../index.md)
+
+## What it is
 
 FFmpeg is the command-line tool collection of the FFmpeg projects: `ffmpeg` transcodes, muxes/demuxes and filters media, `ffprobe` analyses files in a machine-readable way, `ffplay` plays them as a simple SDL player. The technology stack is pure C (libavformat, libavcodec, libavfilter, libswscale, libswresample) with build options for x264/x265, AV1, Opus and hardware acceleration (NVENC, QSV, VAAPI, VideoToolbox). FFmpeg is primarily a CLI — there is no graphical surface; operation, automation and integration run through arguments, exit codes and status streams. The core is licensed under LGPL, with a GPL-buildable configuration (and de facto GPL when GPL code such as x264 is compiled in). The current release lines are the 6.x and 7.x series (ffmpeg.org).
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Tools, options, filter commands (FFmpeg without classic menus)
-- [features.md](latest/features.md) - Transcoding, filter graph, containers, hardware, what FFmpeg does NOT do
-- [description.md](latest/description.md) - How it differs from OBS, GStreamer, MediaMTX and Restreamer
-- [layout.md](latest/layout.md) - Pipeline flow & CLI structure, parameter conventions
-- [shortcuts.md](latest/shortcuts.md) - ffplay keyboard control, ffmpeg command-line keys
-- [api.md](latest/api.md) - Process API, ffprobe JSON, libav\* libraries, language bindings
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
 
 ## Position in the system
 

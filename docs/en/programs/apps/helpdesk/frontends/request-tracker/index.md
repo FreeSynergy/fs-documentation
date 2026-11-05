@@ -1,14 +1,32 @@
-# Request Tracker (RT) Documentation
+# Request Tracker (RT)
 
-## Overview
+> Category: [helpdesk](../../index.md)
+
+## What it is
 
 Request Tracker by Best Practical is the veteran of ticket systems: Perl-based, extremely regexp-/script-driven, with REST 1.0 and JSON-RPC 2.0 APIs. It scales in large organisations (universities, ISPs) and is regarded as the reference for ticket workflows.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - Menu structure Create/Browse/Query/Logs/Admin
-- [features.md](latest/features.md) - Queues, scrips, saved searches, what RT does NOT do
-- [description.md](latest/description.md) - How it differs from Zammad, GLPI, osTicket
-- [layout.md](latest/layout.md) - Query-based lists, create page, update page
-- [shortcuts.md](latest/shortcuts.md) - no UI shortcuts, instead strong aliases
-- [api.md](latest/api.md) - REST 1.0 (`/REST/1.0`), JSON-RPC 2.0, CLI `rt`
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

@@ -1,5 +1,7 @@
 # Merkuro Calendar
 
+> Category: [calendar](../../index.md)
+
 > **Rename:** the KDE calendar program launched in 2021 as **Kalendar** has been called **Merkuro since KDE Gear 23.08 (August 2023)**; repos, binaries and the AppStream ID follow the new name (`pim/merkuro`, `merkuro-calendar`, `org.kde.merkuro.calendar`). This section documents the current state of the successor.
 
 Merkuro Calendar is the **modern calendar client of the KDE desktop environment** (Qt 6/QML/Kirigami, convergent on desktop and Plasma Mobile). Events, tasks (VTodo) and journals are not stored by the app itself but managed through the KDE PIM service **Akonadi**, which synchronises local and online calendars (Nextcloud, Google, Outlook, CalDAV … via `kdepim-runtime`). Since 2025/26 Merkuro is a small suite: calendar, contacts, mail and launcher.
@@ -9,16 +11,30 @@ Merkuro Calendar is the **modern calendar client of the KDE desktop environment*
 - **Currently documented version:** **26.08.2** (KDE Release Service, tag 2026-10-08); project activity still high (last activity entry 2026-11-02)
 - **Development status:** active; maintainers Carl Schwan and Clau Cambra (KDE PIM)
 
-## File structure of this section
+## Notable ideas
+
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
 
 | File | Contents |
 |------|----------|
-| [description.md](latest/description.md) | What the program does, benefits, differentiation (incl. from Nextcloud Calendar, Davical, KOrganizer), technical details, who it suits |
-| [features.md](latest/features.md) | Verified feature list + "What Merkuro does NOT offer" |
-| [api.md](latest/api.md) | D-Bus interface `org.kde.calendar.Calendar`, CLI/ICS import, Akonadi as the data layer, configuration, version state |
-| [menus.md](latest/menus.md) | Menu structure (File/Edit/View/Settings, mobile toolbar) taken from the QML source |
-| [shortcuts.md](latest/shortcuts.md) | Verified keyboard shortcuts of the QML interface |
-| [layout.md](latest/layout.md) | Module/directory structure, request flow (Akonadi models), configuration, deployment |
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Sources
 

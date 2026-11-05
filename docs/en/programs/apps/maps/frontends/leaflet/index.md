@@ -1,14 +1,32 @@
-# Leaflet Documentation
+# Leaflet
 
-## Overview
+> Category: [maps](../../index.md)
+
+## What it is
 
 Leaflet (BSD-2-Clause) is the lightweight JavaScript map library: raster tiles, markers, polygons, layer switching, touch support — the standard on which uMap and thousands of map widgets sit.
 
-## File structure
+## Notable ideas
 
-- [menus.md](latest/menus.md) - UI controls that Leaflet brings along (zoom/attribution/layers)
-- [features.md](latest/features.md) - Layer types, plugins, what Leaflet does NOT do
-- [description.md](latest/description.md) - How it differs from MapLibre, OpenLayers, Google Static Maps
-- [layout.md](latest/layout.md) - DOM layout (tile layers + overlay layer)
-- [shortcuts.md](latest/shortcuts.md) - Keyboard navigation of the map
-- [api.md](latest/api.md) - JS API (class `L`), no server interface
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

@@ -33,11 +33,18 @@ Grundsätze: `conventions/CONVENTIONS.md` §0, ADRs 0011–0018.
       (`programm<TAB>version`), dann umbenennen mit
       `python3 scripts/move.py --scope docs/en --scope docs/de --rules scripts/rules/frontend_versions.rules --table version=temp/frontend-versions.tsv --default version=latest --sync-state temp/sync_state.json [--apply]`
       · Recherche Leo/llama, Ausführung Sonnet
-- [ ] `scripts/gen_skin_indexes.py` → `gen_frontend_indexes.py`: auf `docs/en/`, `frontends/`,
-      englische Texte (läuft heute auf `de/` mit `masks/`, ist **nicht** in der CI) · Sonnet
-- [ ] Bestehende Frontends an ADR-0012-Dateisatz anpassen: `themes/` anlegen (Farbschema aus
-      `layout.md` herausziehen), `index.md` um „Notable ideas“ + „Documented versions“ · Sonnet,
-      pro Kategorie, nur für Programme, die bleiben (ADR 0013)
+- [x] `scripts/gen_frontend_indexes.py` (ersetzt `gen_skin_indexes.py`, archiviert): `en/`,
+      Marker-Blöcke, idempotent, `--check`, `--extract-themes`, `--suggest-versions` (2026-11-05) · Opus
+- [x] Alle 77 Programmseiten in `en/`: Titel, „What it is“, „Notable ideas“ (Platzhalter),
+      „Documented versions“ mit fehlenden Pflichtdateien; 8 Themes aus `layout.md` ausgelagert;
+      11 `requirements.md`-Gerüste; `doku-standard.md` auf ADR 0012 umgestellt · Opus
+- [ ] **Notable ideas** je Programm ausfüllen — 77 Platzhalter. Nur für Programme, die bleiben;
+      die anderen werden nicht gelöscht, nur nicht weiter gepflegt (ADR 0013) · Opus entscheidet je
+      Kategorie, Leo recherchiert („Was kann X, was andere nicht können?“)
+- [ ] **themes/** für die übrigen Programme (Generator listet sie als „Missing required files“) ·
+      Leo/Sonnet; vorhandene Themes-Texte sind dünn (Element: „Clear hierarchy“) → nachrecherchieren
+- [ ] `gen_frontend_indexes.py --check` in die CI, sobald die Hintergrund-Übersetzung von
+      `frontends/` durch ist (sonst schlägt jeder neue `en`-Text die CI) · Sonnet
 - [ ] Messenger: Protokolle (Matrix …) aus `frontends/` nach `data/messages/standards.md` (ADR 0018) · Opus
 - [ ] `interactions/` aufräumen: Gesten-Achse Finger / Maus / Stift (ADR 0015), Landing-Page
       `interactions/index.md` · Opus plant, Sonnet setzt um

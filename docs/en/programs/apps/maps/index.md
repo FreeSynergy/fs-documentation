@@ -78,20 +78,18 @@ When choosing a mapping system, consider the following criteria:
 
 Further information can be found in the documentation of individual mapping systems.
 
-## Frontend documentation
+## Frontends
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/maps/frontends/<program>/`.
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (7), by function, nothing copied (ADR 0012/0013):
 
-**documented (7 programs):**
+- [Leaflet](frontends/leaflet/index.md) — Leaflet (BSD-2-Clause) is the lightweight JavaScript map library: raster tiles, markers, polygons, layer switching, touch support — the standard on which uMap and thousands of map widgets sit.
+- [MapLibre](frontends/maplibre/index.md) — MapLibre (BSD, a fork from Mapbox GL JS after the licence change) is the **vector-map engine**: tiles + style JSON (GL Style Spec), WebGL rendering with 3D tilts, custom styles (Maputnik), self-hos…
+- [OpenStreetMap](frontends/openstreetmap/index.md) — OpenStreetMap (OSM) is the worldwide collaborative mapping platform: everyone edits the geodata ("the wiki of maps").
+- [Organic Maps](frontends/organic-maps/index.md) — Organic Maps (GPL, subscription-free nonprofit app) is the lean offline map/navigation app (Android/iOS/desktop): fast, sparing with data (no tracking/advertising logic), OSM-based, with own places…
+- [OsmAnd](frontends/osmand/index.md) — OsmAnd (Apache-2.0) is the offline navigation app based on OSM (Android/iOS): downloadable map regions, routing (car/bike/foot; public-transport planner available offline), POI search, track record…
+- [QGIS](frontends/qgis/index.md) — QGIS (GPL) is the professional desktop GIS: layers (shapefile/GeoPackage/PostGIS/WMS), analysis tools (buffers, overlays, geoprocessing), print layouts, **QGIS Server** (OGC services) and Python (P…
+- [uMap](frontends/umap/index.md) — uMap (uMap Project, free software) is **collaborative map diagramming**: own layers with markers/polylines/polygons, popup contents (HTML), sharing via link, multi-user editing.
 
-- [Leaflet](frontends/leaflet/index.md) - Leaflet
-- [MapLibre](frontends/maplibre/index.md) - MapLibre
-- [OpenStreetMap](frontends/openstreetmap/index.md) - OpenStreetMap
-- [Organic Maps](frontends/organic-maps/index.md) - Organic Maps
-- [OsmAnd](frontends/osmand/index.md) - OsmAnd
-- [QGIS](frontends/qgis/index.md) - QGIS
-- [uMap](frontends/umap/index.md) - uMap
-
-Overview: [Frontend directory](frontends/index.md)
-
-Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

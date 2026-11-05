@@ -1,4 +1,6 @@
-# Outlook calendar – Documentation
+# Outlook calendar
+
+> Category: [calendar](../../index.md)
 
 The calendar component of the Microsoft Outlook line: web app (outlook.com / Outlook on the web), the new and the classic Outlook for Windows, Outlook for Mac and iOS/Android — data in the mailbox of **Exchange Online**, automation through **Microsoft Graph v1.0** (REST/OAuth/OData). Its striking API feature compared with the other entries in this series: **real webhooks** (Graph change notifications) — and a protocol boundary drawn firmly: **no CalDAV**, with the EWS shutdown in Exchange Online under way (Oct 2026–Apr 2027).
 
@@ -7,16 +9,30 @@ The calendar component of the Microsoft Outlook line: web app (outlook.com / Out
 - **Currently documented version:** Microsoft Graph **v1.0** (stable) + beta; client state "new Outlook for Windows" / Outlook on the web, verification date **2026-11-02**
 - **Development status:** very active (ring releases; EWS→Graph migration forced; calendar-sharing migration MAPI→REST in 2026)
 
-## File structure of this section
+## Notable ideas
+
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
 
 | File | Contents |
 |------|----------|
-| [description.md](latest/description.md) | What the program does, benefits, differentiation (incl. from Google Calendar, Nextcloud Calendar, Davical, Merkuro), technical details, who it suits |
-| [features.md](latest/features.md) | Verified feature list + "What the Outlook calendar does NOT offer" |
-| [api.md](latest/api.md) | Graph v1.0: calendar/event endpoints, auth/scopes, webhooks, limits, SDKs, EWS shutdown |
-| [menus.md](latest/menus.md) | navigation structure (new Outlook, classic Outlook, admin level) from official layout articles |
-| [shortcuts.md](latest/shortcuts.md) | official keyboard shortcuts (new/classic Outlook, web) + direct workflows |
-| [layout.md](latest/layout.md) | build layers, data model (changeKey/iCalUId/series), configuration, deployment |
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Sources
 

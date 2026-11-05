@@ -1,163 +1,39 @@
-# Messenger Documentation
+# Messenger — Frontends
 
-## Overview
+Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Messenger` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
 
-This directory documents the menu items, features, keyboard shortcuts and APIs of various messenger and email applications.
+## Programs
 
-## Included Documentation
+| Program | Versions | What it is |
+|---------|----------|------------|
+| [Discord](discord/index.md) | [latest](discord/latest/description.md) | Discord is a proprietary communication platform for gaming communities, with voice/video and a server structure. |
+| [Element](element/index.md) | [latest](element/latest/description.md) | Element is the open-source messenger for the Matrix protocol, with a decentralised architecture and end-to-end encryption. |
+| [Kontact](kontact/index.md) | [latest](kontact/latest/description.md) | Kontact is the integrated PIM application for KDE, which unites email, calendar, contacts, tasks and notes in a single application. |
+| [Mastodon](mastodon/index.md) | [latest](mastodon/latest/description.md) | Mastodon is an open-source microblogging network based on the ActivityPub protocol, and it is decentralised. |
+| [Outlook](outlook/index.md) | [latest](outlook/latest/description.md) | Outlook is Microsoft's most popular email client, part of Microsoft 365. |
+| [Telegram](telegram/index.md) | [latest](telegram/latest/description.md) | Telegram is a cloud-based messenger focused on speed, large groups/channels and encryption. |
+| [Thunderbird](thunderbird/index.md) | [latest](thunderbird/latest/description.md) | Thunderbird is Mozilla's open-source email client, cross-platform and email-focused. |
 
-- [Outlook](outlook/index.md) - Microsoft email client
-- [Kontact](kontact/index.md) - KDE PIM application
-- [Thunderbird](thunderbird/index.md) - Mozilla email client
-- [Element](element/index.md) - Matrix messenger
-- [Discord](discord/index.md) - Gaming/community messenger
-- [Mastodon](mastodon/index.md) - Microblogging network
-- [Telegram](telegram/index.md) - Cloud messenger
-
-## Directory Structure
+## File set per program (ADR 0012)
 
 ```
-docs/en/programs/apps/messenger/frontends/
-├── index.md              (this file)
-├── outlook/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── kontact/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── thunderbird/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── element/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── discord/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── mastodon/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-└── telegram/
-    ├── index.md
-    ├── menu.md
-    ├── features.md
-    ├── description.md
-    ├── structure.md
-    ├── shortcuts.md
-    └── api.md
+programs/apps/messenger/frontends/<program>/
+├── index.md        what it is, notable ideas, documented versions, sources
+├── changelog.md    changes between documented versions (≥ 2 versions)
+└── <version>/
+    ├── description.md    required · Detailed description, differentiation, who it suits
+    ├── features.md       required · What the program can do — and what not
+    ├── layout.md         required · Window structure, regions, panels
+    ├── menus.md          required · Menu structure, context menus, menus by role
+    ├── shortcuts.md      required · Keyboard shortcuts
+    ├── api.md            required · APIs and protocols, authentication, rate limits
+    ├── themes/index.md   required · Themes: colours, typography, spacing — what can be rebuilt
+    ├── interaction.md    if needed · Hover, focus, drag, gestures (finger, mouse, pen)
+    ├── states.md         if needed · UI states and transitions
+    ├── events.md         if needed · Events to the outside (webhooks, push, streams)
+    ├── limits.md         if needed · Known limitations
+    ├── i18n.md           if needed · Localisation, writing direction
+    └── dependencies.md   if needed · Which of our components a frontend in this style needs
 ```
 
-## Content of Each Documentation
-
-Every project directory holds **six** files:
-
-### menu.md
-- All main menu items
-- Context menus
-- Menus that depend on user rights
-
-### features.md
-- Main features
-- What the program can do
-- What the program CANNOT do
-- Add-ons/extensions (where present)
-
-### description.md
-- What the program does
-- Advantages
-- Differentiation from other systems
-- Technical details
-- Who the program is suitable for
-
-### structure.md
-- Window structure
-- UI/UX design
-- Editor structure (where present)
-- Responsive design
-- Accessibility
-
-### shortcuts.md
-- All keyboard shortcuts
-- General shortcuts
-- Chat/conversation shortcuts
-- Navigation shortcuts
-- Editing shortcuts
-- Mac shortcuts (where they differ)
-
-### api.md
-- API type (REST, GraphQL, WebSocket, etc.)
-- Authentication (OAuth2, API keys, etc.)
-- Endpoints with methods, paths and descriptions
-- Request/response examples
-- Rate limits
-- Webhooks (where present)
-- SDKs and client libraries
-
-## Notes
-
-- All documentation is written in English
-- The content suits both users and administrators
-- **Keyboard shortcuts are documented in the separate file `shortcuts.md`**
-- **API documentation is in the separate file `api.md`**
-- Email clients include email editor structures
-- Messengers include chat and community structures
-
-## Category System
-
-**Please note:** this system applies to ALL categories in this project:
-- Wiki (complete, 7 programs)
-- Messenger (complete, 7 programs)
-- Desktop (complete, 12 programs)
-- Whiteboards (complete, 6 programs)
-- Helpdesk (complete, 8 programs)
-- Project management (complete, 8 programs)
-- Contact (complete, 4 programs)
-- Calendar (complete, 6 programs)
-- CRM (complete, 6 programs)
-- Democracy (complete, 6 programs)
-- Maps (complete, 7 programs)
-- ERP (complete, 6 programs)
-- Workflows (complete, 6 programs)
-- Marketing (complete, 6 programs)
-- Marketplaces (complete, 6 programs)
-- Photo galleries (complete, 8 programs)
-- Streaming (complete, 10 programs)
-
-**Every application in every category always gets 7 files:**
-1. index.md (overview and links)
-2. menu.md
-3. features.md
-4. description.md
-5. structure.md
-6. shortcuts.md (always separate!)
-7. api.md (REST, GraphQL, etc.)
+Protocols (Matrix, IMAP, CalDAV, …) are not frontends; they are described under [data](../../../../data/standards.md).

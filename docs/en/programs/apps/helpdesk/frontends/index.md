@@ -1,60 +1,40 @@
-# Helpdesk Frontend documentation
+# Helpdesk — Frontends
 
-## Overview
+Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Helpdesk` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
 
-This directory contains the documentation of the programs in this category following the wiki schema: menu items, features, description, structure/UI-UX, keyboard shortcuts and API — seven files per program.
+## Programs
 
-All programs documented here are **not** FreeSynergy in-house developments, but foreign programs whose surface and interfaces are recreated or connected as a frontend.
+| Program | Versions | What it is |
+|---------|----------|------------|
+| [Freshdesk](freshdesk/index.md) | [latest](freshdesk/latest/description.md) | Freshdesk (Freshworks) is a SaaS helpdesk with tickets, knowledge base, SLAs, omnichannel e-mail/phone/chat and Freddy AI. |
+| [GLPI](glpi/index.md) | [latest](glpi/latest/description.md) | GLPI is a French-flavoured open-source ITSM: helpdesk tickets plus complete IT asset management (computers, software, contracts, network), reporting that supports projects and budgets. |
+| [Helodesk](helodesk/index.md) | [latest](helodesk/latest/description.md) | Helodesk is a French SaaS customer-service suite (contact centre): telephony/softphone, e-mail, chat, SMS and callback in one surface, plus cases (tickets), knowledge base, IVR and reporting. |
+| [Help Scout](helpscout/index.md) | [latest](helpscout/latest/description.md) | Help Scout is support as a shared inbox: customers write to an e-mail address ("Conversations"), the team replies as if from a personal mail — without the ticket-number feel. |
+| [osTicket](osticket/index.md) | [latest](osticket/latest/description.md) | osTicket is the classic among open-source helpdesks: PHP/MySQL, e-mail ingest, help topics, filter rules and a plain agent and customer portal. |
+| [Request Tracker (RT)](request-tracker/index.md) | [latest](request-tracker/latest/description.md) | Request Tracker by Best Practical is the veteran of ticket systems: Perl-based, extremely regexp-/script-driven, with REST 1.0 and JSON-RPC 2.0 APIs. |
+| [Zammad](zammad/index.md) | [latest](zammad/latest/description.md) | Zammad is a modern, open-source helpdesk: tickets from e-mail, web form, chat, phone and Telegram converge in one surface, with SLAs, text modules, knowledge base and a fully-fledged REST API. |
+| [Zendesk](zendesk/index.md) | [latest](zendesk/latest/description.md) | Zendesk is the commercial support platform (SaaS) with tickets, Help Center, chat/messaging, voice and analytics. |
 
-## Included documentation
-
-- [Freshdesk](freshdesk/index.md)
-- [GLPI](glpi/index.md)
-- [Helodesk](helodesk/index.md)
-- [Help Scout](helpscout/index.md)
-- [osTicket](osticket/index.md)
-- [Request Tracker (RT)](request-tracker/index.md)
-- [Zammad](zammad/index.md)
-- [Zendesk](zendesk/index.md)
-
-## Directory structure
+## File set per program (ADR 0012)
 
 ```
-docs/de/programs/apps/helpdesk/frontends/
-├── index.md              (this file)
-├── freshdesk/   (index, menu, features, description, structure, shortcuts, api)
-├── glpi/   (index, menu, features, description, structure, shortcuts, api)
-├── helodesk/   (index, menu, features, description, structure, shortcuts, api)
-├── helpscout/   (index, menu, features, description, structure, shortcuts, api)
-├── osticket/   (index, menu, features, description, structure, shortcuts, api)
-├── request-tracker/   (index, menu, features, description, structure, shortcuts, api)
-├── zammad/   (index, menu, features, description, structure, shortcuts, api)
-└── zendesk/   (index, menu, features, description, structure, shortcuts, api)
+programs/apps/helpdesk/frontends/<program>/
+├── index.md        what it is, notable ideas, documented versions, sources
+├── changelog.md    changes between documented versions (≥ 2 versions)
+└── <version>/
+    ├── description.md    required · Detailed description, differentiation, who it suits
+    ├── features.md       required · What the program can do — and what not
+    ├── layout.md         required · Window structure, regions, panels
+    ├── menus.md          required · Menu structure, context menus, menus by role
+    ├── shortcuts.md      required · Keyboard shortcuts
+    ├── api.md            required · APIs and protocols, authentication, rate limits
+    ├── themes/index.md   required · Themes: colours, typography, spacing — what can be rebuilt
+    ├── interaction.md    if needed · Hover, focus, drag, gestures (finger, mouse, pen)
+    ├── states.md         if needed · UI states and transitions
+    ├── events.md         if needed · Events to the outside (webhooks, push, streams)
+    ├── limits.md         if needed · Known limitations
+    ├── i18n.md           if needed · Localisation, writing direction
+    └── dependencies.md   if needed · Which of our components a frontend in this style needs
 ```
 
-## Content of each documentation
-
-Each program directory contains **seven** files:
-
-1. **index.md** – overview of the program and links to the six detail files
-2. **menu.md** – all main menu items, context menus, role-dependent menus
-3. **features.md** – main features, what the program can and CANNOT do, extensions
-4. **description.md** – description, advantages, differentiation, technical details, target groups
-5. **structure.md** – window/page structure, UI/UX, interactions, responsive design, accessibility
-6. **shortcuts.md** – all keyboard shortcuts including Mac variants
-7. **api.md** – API type, authentication, endpoints, examples, rate limits, webhooks, SDKs
-
-## Notes
-
-- All documentation is written in German
-- The content is suitable for users and administrators
-- **Keyboard shortcuts are always in the separate file `shortcuts.md`**
-- **API documentation is always in the separate file `api.md`**
-- Missing features are explicitly marked as not present (❌)
-
-## Related areas
-
-- [Category overview](../) – overview of this program category
-- [Wiki frontends](../../wiki/frontends/) – reference schema for this documentation
-- [Desktop frontends](../../../platform/desktop/frontends/) – same file structure
-- [Standardised data](../../../../data/) – fields and models for all frontend APIs
+Protocols (Matrix, IMAP, CalDAV, …) are not frontends; they are described under [data](../../../../data/standards.md).

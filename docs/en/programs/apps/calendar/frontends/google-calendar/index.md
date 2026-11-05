@@ -1,17 +1,35 @@
-# Google Calendar – Documentation
+# Google Calendar
 
-## Overview
+> Category: [calendar](../../index.md)
+
+## What it is
 
 Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscription) Gemini. Events, series, shares, booking pages, focus time, work location and organisational calendars all come from a closed SaaS platform; accessed programmatically through the **Calendar REST API v3** (discovery revision 2026-10-28) with OAuth scopes, sync tokens and push channels. For FreeSynergy it is the cloud frontend: connection is only possible via Google's own API, there is **no documented CalDAV**, and no self-hosting.
 
-## File structure
+## Notable ideas
 
-- [description.md](latest/description.md) – What Google Calendar does, benefits, how it differs from DAViCal/Nextcloud/Outlook/Merkuro
-- [features.md](latest/features.md) – verified features (views, events, sharing, booking, integrations) + "What Google Calendar does NOT offer"
-- [layout.md](latest/layout.md) – request/program flow, data model, configuration, deployment reality
-- [menus.md](latest/menus.md) – navigation structure of the web interface (from official help pages)
-- [shortcuts.md](latest/shortcuts.md) – official keyboard shortcuts of the web app + boundary of client-side keys
-- [api.md](latest/api.md) – Calendar API v3: base URL, all endpoints, auth/scopes, push, limits, SDKs
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Short profile
 
