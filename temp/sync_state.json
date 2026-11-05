@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T13:14:57.527462+00:00",
+  "last_run": "2026-11-05T13:26:03.403202+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -25784,118 +25784,148 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "a6fac57c6f98b536",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:26:03.403173+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki notion)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/notion/api.md"
+        },
+        {
+          "at": "2026-11-05T13:26:03.403173+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5454
+      "de_bytes": 5454,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "fb01bd265b167933",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:26:02.935228+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki notion)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/notion/description.md"
+        },
+        {
+          "at": "2026-11-05T13:26:02.935228+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 1922
+      "de_bytes": 1922,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "6dca2d737db8a2c3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:26:03.044249+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki notion)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/notion/features.md"
+        },
+        {
+          "at": "2026-11-05T13:26:03.044249+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 7346
+      "de_bytes": 7346,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "3e88d4b6c3afd222",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:26:03.225363+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki notion)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/notion/menu.md"
+        },
+        {
+          "at": "2026-11-05T13:26:03.225363+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 4294
+      "de_bytes": 4294,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "d55d064be3d1973b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:26:03.313610+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki notion)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/notion/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T13:26:03.313610+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 7257
+      "de_bytes": 7257,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "a6e818df2ec10e07",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:26:03.134760+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki notion)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/notion/structure.md"
+        },
+        {
+          "at": "2026-11-05T13:26:03.134760+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5523
+      "de_bytes": 5523,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/api.md": {
       "status": "PENDING",
