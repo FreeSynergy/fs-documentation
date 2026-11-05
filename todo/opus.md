@@ -113,10 +113,10 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 | 3 | Text-Kern: Rope + Markierungen (ADR 0033/0042), Markdown hinein/heraus (pulldown-cmark), Link-Tabelle, Vorlagen | `fs-wiki` (crate `fs-text` im Workspace) | (2) später | Sonnet | offen |
 | 4 ✅ | `common.capnp` (Uuid, Timestamp, Cursor, Problem, Blob) | `fs-documentation/temp/contracts` | — | Opus | ✅ |
 | 5 ✅ | Doku-Gerüste der 13 neuen Components (+ Skripte auf `en`) | `fs-documentation` | — | Sonnet | ✅ |
-| 6 | Datenmodelle Kontakte / Kalender / Karten | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | Karten ✅ 29 · Kontakte ✅ 15 · Kalender ✅ 31 Tests; fs-store 0.2 (Invite-Arten, atomar, Bereichs-/Textsuche, Zeitzonen 2026) läuft |
+| 6 | Datenmodelle Kontakte / Kalender / Karten | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | Karten ✅ 29 · Kontakte ✅ 15 · Kalender ✅ 31 Tests; fs-store 0.2 ✅ 37 · Kontakte 18 · Kalender 39 Tests (jiff, System-tzdb 2026e) |
 | 7 | Wiki-Workbench auf Blinc (Code-Modus, liest `fs-documentation`) | `fs-wiki` | 3, Blinc | Sonnet | später |
 | 8 | Suite `fs-groupware` (Container, Workbenches nebeneinander) | `fs-groupware` | 6, 7 | — | später |
-| 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | — | später |
+| 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | Sonnet | läuft |
 
 **Fragen für den Morgen:**
 - alte Repos `fs-store`/`fs-components` archivieren und Namen übernehmen?
