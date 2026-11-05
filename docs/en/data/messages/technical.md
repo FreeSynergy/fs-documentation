@@ -22,7 +22,7 @@ Signatures stay verifiable because the original is never rewritten.
 
 - `id` = UUIDv7 (ours). **Alias table** `message_alias(id, scheme, external_id)` for `Message-ID`, Matrix `event_id`, MIMI id — gap, see standards.
 - Extracted columns: `id`, `context`, `in_reply_to`, `attributed_to`, `published`, `updated`, `encryption`, `kind` (`mail`/`chat`/`comment`), full-text fields.
-- **Encryption state** per message, vendor property `freesynergy.net:encryption` (ADR 0028): `mls` · `openpgp` · `megolm` · `transport-only` · `none`. Outgoing `transport-only`/`none` is refused or asked about (ADR 0018); incoming is **marked**.
+- **Encryption state** per message, vendor property `freesynergy.net:encryption` (ADR 0028): `mls` · `openpgp` · `megolm` · `transport-only` · `none`. Outgoing `transport-only`/`none` is refused or asked about (ADR 0018); incoming is **marked**, with a link to the library guide on encrypting mail (ADR 0031).
 - Content stored encrypted at rest (ADR 0024); sensitive marking applies (ADR 0029).
 
 ## Log mapping (AS2 activities)
@@ -53,5 +53,4 @@ Signatures stay verifiable because the original is never rewritten.
 
 ## Open technical points
 
-- Handling of incoming unencrypted messages (mark only, or quarantine?) — ADR 0018
 - Edit history display (all versions from the log, or only the last?)

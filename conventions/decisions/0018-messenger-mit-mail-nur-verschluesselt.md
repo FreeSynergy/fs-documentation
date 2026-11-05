@@ -36,8 +36,10 @@ Ich habe eine Nachricht. Die Trennung kommt aus der Technik, nicht aus dem Bedar
 - Risiko: Stalwart-Crates wechseln zu AGPL → Versionen der MIT/Apache-Crates festschreiben,
   notfalls selbst weiterpflegen.
 
-## Offen
-- Umgang mit eingehenden unverschlüsselten Nachrichten (kennzeichnen? annehmen und nachfragen?).
+- **Inhaltsformat Chat: MIMI** (`draft-ietf-mimi-content-10`, festgeschrieben bis zum RFC; wir
+  ziehen Änderungen nach — vom Nutzer bestätigt 2026-11-05). E-Mail: Original-MIME + JMAP-Felder.
+- **Eingehende unverschlüsselte Nachrichten werden gekennzeichnet** (keine Quarantäne), mit
+  Verweis auf eine Anleitung „So verschlüsselst du deine Mails“ in der Bibliothek (ADR 0031).
 
 ## Folgen
 - Protokolle (Matrix, IMAP, SMTP, JMAP, XMPP) werden in `data/messages/standards.md` beschrieben,

@@ -18,7 +18,7 @@ Envelope for all: AS2 `Note` with `context` (conversation), `inReplyTo`, `attach
 
 - Own-spec candidates: delivered/read state, expiry, encrypted attachments, edit identity, thread
   profile, message-ID aliases, reactions/edits for e-mail ([standards.md](standards.md))
-- Incoming unencrypted messages: mark or quarantine (ADR 0018)
+- Incoming unencrypted messages are marked, with a link to the encryption guide (ADR 0018/0031)
 
 ## See also
 
