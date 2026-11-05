@@ -877,6 +877,83 @@ Ablauf + offene Punkte; keine fertige Liste).
   `programs/platform/crates/blinc.md` + Todo-Liste.
 - **Mehr Programme** werden gebraucht — der Plan ist offen, Kategorien wachsen.
 
+## 21. Fünfte Runde (2026-11-05): Daten, Identität, Messenger, Schnittstelle, Components
+
+Legende wie oben. **Nutzer** = gesetzt durch den Nutzer · **Vorschlag** = Opus, wartet auf Bestätigung.
+
+### 21.1 Datenhaltung (A1)
+- **Nutzer:** Jedes Programm läuft lokal oder übers Web; wo das Programm ist, ist seine Datenbank.
+  Jedes Programm hat **eine eigene DB**. Auf demselben Gerät läuft ein **Server (Hub)** mit eigener
+  DB, der die Daten aller Programme sammelt. Weil alles standardisiert ist, ergänzen sich die
+  Programme (Kontakt aus PM ↔ Kontakt aus Contacts angleichen). Idee: Turso Local Sync Server
+  (`tursodb serve`), Programme `push()`/`pull()`.
+- **Vorschlag:** Hub ja — das ist „der Server“ aus §3, einmal pro Gerät. Aber:
+  1. **Abstraktion `fs-store`** (Rust-Trait: Objekte lesen/schreiben/abfragen/abonnieren); Programme
+     sprechen nie direkt SQL/Turso. Turso/libSQL ist die erste Implementierung, austauschbar.
+  2. **Sync-Einheit = Objekt, nicht Zeile/Seite.** Jedes Programm führt ein Änderungsprotokoll
+     (Aktivitäten, 21.2); der Hub sammelt sie. Grund: Turso-Sync ist *last-push-wins* (Konflikt =
+     Datenverlust), der Local Sync Server ist laut Turso „development and testing“, und dieselbe
+     Mechanik soll später **zwischen Instanzen (P2P/Föderation)** laufen — Schenken, Leihen,
+     Entziehen gibt es auf Zeilenebene nicht.
+  3. ⚠️ zu prüfen: Turso-Sync repliziert **eine** Server-DB; zwei Programme mit derselben URL sind
+     Replikate derselben DB (kein Zusammenführen getrennter DBs). Teil-Sync je Programm?
+  4. **Angleichen** (Kontakt PM ↔ Contacts): Hub erkennt Kandidaten (gleiche E-Mail/Telefon/DID),
+     legt eine *Gleichheits-Verknüpfung* an, Mensch bestätigt; Originale bleiben, nichts wird
+     still verschmolzen.
+  5. Port: `tursodb serve` und llama.cpp wollen beide 8080 → Hub-Port festlegen.
+
+### 21.2 Speicherformat (A3)
+- **Nutzer:** Name usw. auf jeden Fall im Standard. AS2 bringt Adressierung (`to`) — wichtig für
+  Datenschutz, Server/Client, P2P zwischen zwei Instanzen: **schenken** (Empfänger besitzt, ich
+  kann nichts mehr) oder **leihen** (ich kann entziehen, wie ein Webserver).
+- **Vorschlag: Hülle + Inhalt + Protokoll.**
+  - *Hülle* = AS2-Kernfelder als Spalten: `id` (URI), `type`, `attributedTo`, `to/cc/bto/bcc/audience`,
+    `published`, `updated`, `context`, Herkunft.
+  - *Inhalt* = Fachstandard als JSON: JSContact (RFC 9553), JSCalendar (RFC 8984), GeoJSON (RFC 7946), …;
+    abgeleitete Suchspalten.
+  - *Protokoll* = AS2-Aktivitäten, nur anhängen: `Create/Update/Delete/Add/Remove/Offer/Accept/Reject/Undo`.
+    Das ist zugleich Sync, Verlauf und Freigabe.
+  - Leihen = `Offer` an Empfänger mit Hinweis „Leihgabe“, Entziehen = `Undo`/`Remove`; Schenken =
+    Übergabe mit neuem `attributedTo` + Herkunft (§16). Regeln zur Nutzung: ODRL (§17) als Kandidat.
+  - Grenze: `to` ist **Adressierung**, keine Durchsetzung; ein Empfänger kann kopieren — Entziehen
+    ist eine Ansage (§17), technisch sicher nur bei Live-Verweis (Daten bleiben bei mir).
+
+### 21.3 Identität (B)
+- **Nutzer:** Jedes Programm hat OAuth2, SSO, SCIM sofort, ohne Umwege. **Niemals Paywall.** Dazu
+  DID. P2P-Netz als Föderation: Listen, die wie ein Identity-Broker sagen, was Menschen/Gruppen
+  dürfen; je mehr Vertrauen, desto mehr Regeln für Datenfreigabe.
+- **Vorschlag:** Kanidm = Konten/Anmeldung (OAuth2/OIDC, SCIM) am Hub; DID = Identität zwischen
+  Instanzen; Web of Trust = Vertrauensstufen → Stufen sind Eingang für Freigaberegeln.
+  Offen: Programm allein (ohne Hub) — eingebauter Minimal-Login oder immer ein Hub?
+
+### 21.4 Messenger-Backend (C) — offen, Vorschlag
+- **Vorschlag:** Matrix als **Transport für Chat**, nicht als Datenmodell. Eigenes Nachrichtenmodell
+  (AS2 `Note`/Nachricht im `fs-store`) + **Konnektoren**: Matrix (`matrix-rust-sdk`, E2EE), E-Mail
+  (IMAP/SMTP/JMAP-Crates + OpenPGP/Autocrypt), Kalender/Kontakte nach außen CalDAV/CardDAV/JMAP;
+  eigener Homeserver tuwunel. Brücken (Telegram, …) nur als Übergang — sie entschlüsseln in der
+  Brücke, widerspricht „nur verschlüsselt“. Details in der Antwort an den Nutzer.
+
+### 21.5 Programm ↔ Frontend (D)
+- **Nutzer:** Fähigkeiten über CLI, Cap'n Proto, JSON, MCP. Frontend ↔ Programm wie Web-Frontend ↔
+  Backend, nur lokal. Frontend installieren und „schwupps“ ist es da. Programm bietet Funktionen,
+  das Frontend nutzt sie oder nicht (nur Mails anzeigen und wegwischen ↔ Outlook-Nachbau mit Matrix
+  und Telegram). **Pro Programm immer 2 Referenz-Frontends**: eins wie ein Closed-Source-Vorbild,
+  eins unser eigenes — damit die Schnittstelle nicht bricht.
+- **Vorschlag:** **Ein Vertrag, viele Zugänge:** Cap'n-Proto-Schema ist die Quelle der Wahrheit
+  (Versionierungsregeln eingebaut), JSON-API, CLI und MCP-Tools werden daraus erzeugt. Lokal über
+  Unix-Socket/Named Pipe. Frontend = Paket mit Manifest (benötigte Fähigkeiten + Vertragsversion).
+
+### 21.6 Components speichern Standarddaten (8)
+- **Nutzer:** Keine Frage von „oder“: primitives, widgets, workbenches speichern **standardisiert**.
+  Jedes Element sagt, was es speichern/darstellen kann — und umgekehrt sagt jeder Datenstandard, wie
+  er dargestellt werden kann (Kontakt → UI-Karte/Text; Koordinaten → Karte/Text in mehreren
+  Schreibweisen; Arrays → Dropdown/Checkbox-Gruppe/Kanban). Kanban ist Workbench; in der App größer
+  mit mehr Einstellungen; das App-Menü ist ein Widget, das Kanban selbst hat kein Menü (ADR 0005).
+  Ziel: App = Datenstandard + Elemente + Aufbau; Frontend klickt nur noch das Aussehen zusammen.
+- **Vorschlag:** **Darstellungs-Register**: Paare (Datentyp → Darstellung), beidseitig abfragbar.
+  Texte = strukturierte Blockliste (jeder Block ein Datentyp mit Darstellung); Markdown/HTML/ODF nur
+  Import/Export.
+
 ## Siehe auch
 
 - `conventions/CONVENTIONS.md` §2 (sechs Ebenen), §3 (Components-Zuordnung)
