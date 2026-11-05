@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 07:28 UTC · 1499 Dateien verfolgt · 659 offen · 833 bestätigt
+Stand: 2026-11-05 08:13 UTC · 1499 Dateien verfolgt · 617 offen · 875 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 659 |
+| A. `en/` fehlt – aus `de/` übersetzen | 617 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -47,7 +47,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 659 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 617 Dateien
 
 ### `data/` · 8
 
@@ -59,75 +59,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/models.md` · 9.5k
 - [ ] `data/requirements.md` · 7.1k
 - [ ] `data/standards.md` · 21.2k
-
-### `data/contacts/` · 5
-
-- [ ] `data/contacts/description.md` · 2.2k
-- [ ] `data/contacts/examples.md` · 1.9k
-- [ ] `data/contacts/index.md` · 1.3k
-- [ ] `data/contacts/standards.md` · 2.4k
-- [ ] `data/contacts/technical.md` · 2.4k
-
-### `data/contacts/jscontact/` · 2
-
-- [ ] `data/contacts/jscontact/description.md` · 4.0k
-- [ ] `data/contacts/jscontact/storage.md` · 3.0k
-
-### `data/events/` · 5
-
-- [ ] `data/events/description.md` · 1.6k
-- [ ] `data/events/examples.md` · 2.4k
-- [ ] `data/events/index.md` · 1.3k
-- [ ] `data/events/standards.md` · 2.8k
-- [ ] `data/events/technical.md` · 2.4k
-
-### `data/geodata/` · 5
-
-- [ ] `data/geodata/description.md` · 1.6k
-- [ ] `data/geodata/examples.md` · 1.8k
-- [ ] `data/geodata/index.md` · 1.1k
-- [ ] `data/geodata/standards.md` · 1.7k
-- [ ] `data/geodata/technical.md` · 1.9k
-
-### `data/identity/` · 5
-
-- [ ] `data/identity/description.md` · 1.8k
-- [ ] `data/identity/examples.md` · 2.3k
-- [ ] `data/identity/index.md` · 2.1k
-- [ ] `data/identity/standards.md` · 2.5k
-- [ ] `data/identity/technical.md` · 2.4k
-
-### `data/login/` · 5
-
-- [ ] `data/login/description.md` · 1.1k
-- [ ] `data/login/examples.md` · 2.0k
-- [ ] `data/login/index.md` · 1.9k
-- [ ] `data/login/standards.md` · 2.1k
-- [ ] `data/login/technical.md` · 2.2k
-
-### `data/messages/` · 5
-
-- [ ] `data/messages/description.md` · 1.6k
-- [ ] `data/messages/examples.md` · 2.4k
-- [ ] `data/messages/index.md` · 1.1k
-- [ ] `data/messages/standards.md` · 1.9k
-- [ ] `data/messages/technical.md` · 2.1k
-
-### `data/profile/` · 5
-
-- [ ] `data/profile/description.md` · 1.6k
-- [ ] `data/profile/examples.md` · 2.2k
-- [ ] `data/profile/index.md` · 1.5k
-- [ ] `data/profile/standards.md` · 2.2k
-- [ ] `data/profile/technical.md` · 2.5k
-
-### `data/projects/` · 5
-
-- [ ] `data/projects/description.md` · 1.5k
-- [ ] `data/projects/examples.md` · 1.8k
-- [ ] `data/projects/index.md` · 1.9k
-- [ ] `data/projects/standards.md` · 1.9k
-- [ ] `data/projects/technical.md` · 2.1k
 
 ### `interactions/animations/entrance/` · 1
 
@@ -1143,8 +1074,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-  kein Übersetzungsproblem.
-- 2026-11-05 02:25 · **Reparatur im selben Skript:** `--fix-boxes <pfad>` (Zielbreite je Box, aus
   der `de`-Datei übernommen) und `--gen-box <pfad> --cell "a|b"`. Erster Fund gefixt:
   `en/components/primitives/fields/field/appearance.md` (Zeile 26 → 25 Zeichen, Frame bleibt heil).
 - 2026-11-05 02:25 · **Festhaltungen:** `conventions/decisions/0010-ein-uebersetzungspruefer.md`,
@@ -1184,3 +1113,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 06:53 · Lauf: 1492 verfolgt, 659 offen, 833 bestätigt · needs_en=659 rename=17
 - 2026-11-05 07:28 · Lauf: 1499 verfolgt, 702 offen, 790 bestätigt · needs_en=659 review=43
 - 2026-11-05 07:28 · Lauf: 1499 verfolgt, 659 offen, 833 bestätigt · needs_en=659
+- 2026-11-05 08:13 · Lauf: 1499 verfolgt, 660 offen, 832 bestätigt · needs_en=617 review=43
+- 2026-11-05 08:13 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=617

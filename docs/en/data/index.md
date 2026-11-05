@@ -25,7 +25,7 @@ Every domain has a directory with its own `index.md`; every standard inside it a
 | Profile | [profile/](profile/index.md) | AS2 `Actor` projection onto JSContact ✅ | schema.org `Person` (⚠️) |
 | Projects | [projects/](projects/index.md) | ❌ no open data spec – our own work | ISO 21502 (process) ✅, MSPDI (de facto) ✅, JSCalendar `Task` |
 
-**Proposed but not yet decided**: `aufgaben/` (JSCalendar already covers `Task`), `dokumente/` (block structure = the biggest gap), `dateien/`, `verschlagwortung/` (Web Annotation ✅), `kommentare/`, `benachrichtigungen/`, `organisationen/`.
+**Proposed but not yet decided**: `tasks/` (JSCalendar already covers `Task`), `documents/` (block structure = the biggest gap), `files/`, `tagging/` (Web Annotation ✅), `comments/`, `notifications/`, `organisations/`.
 
 The **envelope** (AS2 + ActivityPub, decisions in [standards.md](standards.md)) is cross-cutting and not a domain of its own.
 

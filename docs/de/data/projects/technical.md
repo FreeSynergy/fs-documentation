@@ -27,7 +27,7 @@
 |------|------------|
 | Kalender-Ansicht | Meilensteine + Task-`due` aus `calobj` |
 | MSPDI-Export (✅ Existenz) | Board/List-Struktur ↔ MSPDI-Task-Baum; ⚠️ Feldmapping muss noch erstellt werden |
-| CRM/ERP-Skins | Projekt als Assoziation zu Contacts |
+| CRM/ERP-Masken | Projekt als Assoziation zu Contacts |
 
 ## Offene technische Punkte
 
