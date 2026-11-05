@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T14:28:43.375598+00:00",
+  "last_run": "2026-11-05T14:41:20.550251+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -7512,25 +7512,33 @@
     },
     "data/contacts/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "79a8d5c855a6de57",
+      "en_hash": "9f0a29100090a090",
       "de_hash": "19ff577a50c09dae",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1989,
+      "en_bytes": 2009,
       "de_bytes": 1994,
       "change_reason": null
     },
     "data/contacts/index.md": {
       "status": "PENDING",
-      "en_hash": "f3033a05afcc8454",
+      "en_hash": "3c7853e64e99e048",
       "de_hash": "4583eff84532de20",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -7548,7 +7556,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1487,
+      "en_bytes": 1520,
       "de_bytes": 1298,
       "change_reason": "hash changed since verification"
     },
@@ -7588,7 +7596,7 @@
     },
     "data/contacts/standards.md": {
       "status": "PENDING",
-      "en_hash": "45ac2a9783ba3e4d",
+      "en_hash": "5fc5681fd9bb6c06",
       "de_hash": "6d160fafde2e1f8b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -7606,13 +7614,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3105,
+      "en_bytes": 3128,
       "de_bytes": 2455,
       "change_reason": "hash changed since verification"
     },
     "data/contacts/technical.md": {
       "status": "PENDING",
-      "en_hash": "fa787eb070a1914c",
+      "en_hash": "d3658d5af0ef48ed",
       "de_hash": "8fcf255ffcab6892",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -7638,7 +7646,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3093,
+      "en_bytes": 3271,
       "de_bytes": 2458,
       "change_reason": "hash changed since verification"
     },
@@ -7662,19 +7670,27 @@
     },
     "data/events/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "9388c39429731c7a",
+      "en_hash": "81066eb6239df750",
       "de_hash": "6fa2f027ab9e47dd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2468,
+      "en_bytes": 2528,
       "de_bytes": 2456,
       "change_reason": null
     },
@@ -7716,19 +7732,27 @@
     },
     "data/events/technical.md": {
       "status": "VERIFIED",
-      "en_hash": "7134f365bc4e79d5",
+      "en_hash": "91dc6267dac7f531",
       "de_hash": "6b4f78478ae26708",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2401,
+      "en_bytes": 2403,
       "de_bytes": 2412,
       "change_reason": null
     },
@@ -7786,19 +7810,27 @@
     },
     "data/geodata/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "970b45d68aec3b7f",
+      "en_hash": "9cb4ef64874ca15c",
       "de_hash": "d51ef34e2b1373ea",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1870,
+      "en_bytes": 1890,
       "de_bytes": 1885,
       "change_reason": null
     },
@@ -7840,19 +7872,27 @@
     },
     "data/geodata/technical.md": {
       "status": "VERIFIED",
-      "en_hash": "0a601e5888789609",
+      "en_hash": "8a02ddbedc7126fe",
       "de_hash": "4a2f97da2b9c2b5e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1875,
+      "en_bytes": 1877,
       "de_bytes": 1960,
       "change_reason": null
     },
@@ -7876,19 +7916,27 @@
     },
     "data/identity/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "ec382f11f4b3863a",
+      "en_hash": "286cb3ce6205f145",
       "de_hash": "674d6a4d2974c700",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2349,
+      "en_bytes": 2389,
       "de_bytes": 2333,
       "change_reason": null
     },
@@ -7941,15 +7989,13 @@
       "change_reason": "hash changed since verification"
     },
     "data/identity/technical.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "0df104fe57bc3abe",
       "de_hash": "6ffc064a29d4c956",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -7958,20 +8004,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2431,
       "de_bytes": 2482,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "data/index.md": {
       "status": "VERIFIED",
-      "en_hash": "c6f5189bbc8ba5d8",
+      "en_hash": "58a8199a0916646e",
       "de_hash": "893e16c8a5a2232d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T12:05:30.172228+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "link retarget after masks->frontends restructure (ADR 0012)",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T06:53:39.529934+00:00",
@@ -8000,9 +8050,17 @@
         {
           "at": "2026-11-05T12:05:30.172228+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 6713,
+      "en_bytes": 6726,
       "de_bytes": 6930,
       "change_reason": null
     },
@@ -8043,19 +8101,27 @@
     },
     "data/login/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "21b4b20996175d83",
+      "en_hash": "98376769f0d32122",
       "de_hash": "b858bb69f1e543a6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1993,
+      "en_bytes": 2043,
       "de_bytes": 2016,
       "change_reason": null
     },
@@ -8078,15 +8144,13 @@
       "change_reason": null
     },
     "data/login/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "acad2c9f17e12944",
       "de_hash": "3bcb124bfe073a1a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -8095,45 +8159,65 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2091,
       "de_bytes": 2143,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "data/login/technical.md": {
       "status": "VERIFIED",
-      "en_hash": "f05d35ca230bdd3d",
+      "en_hash": "cd2fb0ff440afcb5",
       "de_hash": "04310da92d0d863c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2202,
+      "en_bytes": 2204,
       "de_bytes": 2211,
       "change_reason": null
     },
     "data/mappings.md": {
       "status": "VERIFIED",
-      "en_hash": "14d9d28d6709a1e0",
+      "en_hash": "9cd122772d413d2d",
       "de_hash": "e7827f36244aec3e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T10:04:40.521587+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T10:04:40.521587+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 14950,
+      "en_bytes": 14952,
       "de_bytes": 15290,
       "change_reason": null
     },
@@ -8157,19 +8241,27 @@
     },
     "data/messages/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "e58ab884fd0908c6",
+      "en_hash": "4e299e1e968a5d53",
       "de_hash": "bcf55bed712d9084",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2414,
+      "en_bytes": 2524,
       "de_bytes": 2425,
       "change_reason": null
     },
@@ -8192,38 +8284,52 @@
       "change_reason": null
     },
     "data/messages/standards.md": {
-      "status": "VERIFIED",
-      "en_hash": "dfb0cd8aac43e1ee",
+      "status": "PENDING",
+      "en_hash": "d7c47bbf2233201e",
       "de_hash": "2224532374502aa0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "translated de->en",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1927,
+      "en_bytes": 1894,
       "de_bytes": 1934,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "data/messages/technical.md": {
       "status": "VERIFIED",
-      "en_hash": "ec88d987980b0778",
+      "en_hash": "9943d9b416beb5d1",
       "de_hash": "26503a5e1e2ec69a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2083,
+      "en_bytes": 2054,
       "de_bytes": 2154,
       "change_reason": null
     },
@@ -8264,19 +8370,27 @@
     },
     "data/profile/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "a1f1cf974786707f",
+      "en_hash": "7c0ec79fea5686f9",
       "de_hash": "5abb797bcda931bc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2245,
+      "en_bytes": 2305,
       "de_bytes": 2238,
       "change_reason": null
     },
@@ -8354,19 +8468,27 @@
     },
     "data/projects/examples.md": {
       "status": "VERIFIED",
-      "en_hash": "a0b6aaa0e642fbed",
+      "en_hash": "1f2ca1c82661a8d5",
       "de_hash": "9c19a9edddf86ee8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1853,
+      "en_bytes": 1943,
       "de_bytes": 1844,
       "change_reason": null
     },
@@ -8408,12 +8530,12 @@
     },
     "data/projects/technical.md": {
       "status": "VERIFIED",
-      "en_hash": "7af77492c499a058",
+      "en_hash": "d73182cc1629ba54",
       "de_hash": "1126be5c54c8b3b7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T12:05:30.258082+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "link retarget after masks->frontends restructure (ADR 0012)",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -8426,15 +8548,23 @@
         {
           "at": "2026-11-05T12:05:30.258082+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2131,
+      "en_bytes": 2133,
       "de_bytes": 2201,
       "change_reason": null
     },
     "data/standards.md": {
       "status": "PENDING",
-      "en_hash": "ccf2661f3420c214",
+      "en_hash": "7d5c9c72a10e6db9",
       "de_hash": "f4ea7aedd62af49c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -8452,7 +8582,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 24209,
+      "en_bytes": 24274,
       "de_bytes": 21759,
       "change_reason": "hash changed since verification"
     },
@@ -12419,15 +12549,13 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "31f9cb04d3d73488",
       "de_hash": "2e28cff4535281c9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "link retarget after masks->frontends restructure (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
@@ -12444,11 +12572,15 @@
         {
           "at": "2026-11-05T12:09:25.017263+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3760,
       "de_bytes": 2917,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/helpdesk/index.md": {
       "status": "PENDING",
@@ -12605,15 +12737,13 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "b868791dffbfc103",
       "de_hash": "fbd3436c94114232",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "link retarget after masks->frontends restructure (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -12630,11 +12760,15 @@
         {
           "at": "2026-11-05T12:09:25.017263+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 4895,
       "de_bytes": 3461,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/whiteboards/index.md": {
       "status": "PENDING",
@@ -12905,15 +13039,13 @@
       "change_reason": null
     },
     "data/contacts/jscontact/storage.md": {
-      "status": "PENDING",
-      "en_hash": "60b3fa4f76c81f4d",
+      "status": "VERIFIED",
+      "en_hash": "46fe071c3347e45b",
       "de_hash": "68eb9b35bda6371b",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -12922,11 +13054,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2894,
+      "en_bytes": 2890,
       "de_bytes": 3048,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "data/conventions.md": {
       "status": "VERIFIED",
@@ -12956,12 +13092,12 @@
     },
     "data/fields.md": {
       "status": "VERIFIED",
-      "en_hash": "de33f02326796e36",
+      "en_hash": "725791b412e8c920",
       "de_hash": "63f5eb5c8fbfce27",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": "2026-11-05T12:05:30.068494+00:00",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
       "kind": [],
-      "note": "link retarget after masks->frontends restructure (ADR 0012)",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T10:04:41.075703+00:00",
@@ -12974,9 +13110,17 @@
         {
           "at": "2026-11-05T12:05:30.068494+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T14:38:56.692921+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 10247,
+      "en_bytes": 10256,
       "de_bytes": 10238,
       "change_reason": null
     },
@@ -18985,15 +19129,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "b3932a20f29dc249",
       "de_hash": "1f17950c38f7a4d2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -19014,11 +19156,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 7337,
       "de_bytes": 7528,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/index.md": {
       "status": "PENDING",
@@ -19167,15 +19313,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/element/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "a545fa7c1bb1b971",
       "de_hash": "448387388d005fed",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -19196,11 +19340,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6561,
       "de_bytes": 6780,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/element/index.md": {
       "status": "PENDING",
@@ -19349,15 +19497,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "1d8da92ce7073f16",
       "de_hash": "76618372c74144ff",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -19378,11 +19524,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 10494,
       "de_bytes": 10731,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/index.md": {
       "status": "PENDING",
@@ -19531,15 +19681,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "999cbcbb3f3ab872",
       "de_hash": "e1e1056f469a53cc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -19560,11 +19708,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 7906,
       "de_bytes": 8092,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/index.md": {
       "status": "PENDING",
@@ -19741,15 +19893,13 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/outlook/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "b084b24ee22f7a88",
       "de_hash": "643de742983482fc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -19770,11 +19920,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 7285,
       "de_bytes": 7438,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -19895,15 +20049,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "35afb1ca7b85ba65",
       "de_hash": "f517c8bae856f3a0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -19924,11 +20076,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 7773,
       "de_bytes": 7984,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/index.md": {
       "status": "PENDING",
@@ -20077,15 +20233,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "a94e4e1caf099087",
       "de_hash": "9797c26329dc58a5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -20106,11 +20260,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 7663,
       "de_bytes": 7855,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/index.md": {
       "status": "PENDING",
@@ -21205,15 +21363,13 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/confluence/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "9597a5719de5f234",
       "de_hash": "1983e992d5e2f505",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "read both sides, table-heavy page, translated",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:51.912323+00:00",
@@ -21226,22 +21382,24 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1078,
       "de_bytes": 1136,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "e96fd64fc17b8cf9",
       "de_hash": "9f3bd4f2908a59d1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "reviewed de+en, translated",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21254,22 +21412,24 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1075,
       "de_bytes": 1133,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "bb51a8f0d62f16cb",
       "de_hash": "139b41d3b36d4b2d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "read both sides, table-heavy page, translated",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:51.912323+00:00",
@@ -21282,22 +21442,24 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1072,
       "de_bytes": 1131,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "e63cc1a1a6dbf6d6",
       "de_hash": "842bdccaeafa73f4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "reviewed de+en, translated",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21310,22 +21472,24 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1079,
       "de_bytes": 1145,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "8e357b4801e71bf8",
       "de_hash": "199ac5a7e961da00",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "read both sides, table-heavy page, translated",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:51.912323+00:00",
@@ -21338,22 +21502,24 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1065,
       "de_bytes": 1120,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/wikijs/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "636423dc76e39cd3",
       "de_hash": "3059db5d48fc0ba7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "read both sides, table-heavy page, translated",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:51.912323+00:00",
@@ -21366,22 +21532,24 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1059,
       "de_bytes": 1126,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "0836a8f8411d25f0",
       "de_hash": "130f493c93236e2d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "reviewed de+en, translated",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21394,11 +21562,15 @@
         {
           "at": "2026-11-05T11:25:05.053277+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1088,
       "de_bytes": 1153,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/gallery/frontends/index.md": {
       "status": "PENDING",
@@ -21509,15 +21681,13 @@
       "change_reason": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "88b58dec50ac49f6",
       "de_hash": "bb34cd44a6d90e16",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:19.953722+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
@@ -21538,11 +21708,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:19.953722+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1296,
       "de_bytes": 1257,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/menus.md": {
       "status": "VERIFIED",
@@ -25644,15 +25818,13 @@
       "de_bytes": 3002
     },
     "programs/apps/wiki/frontends/confluence/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "5a42c4fc75209e73",
       "de_hash": "80c94013b639ba33",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki confluence)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25665,22 +25837,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6058,
       "de_bytes": 6152,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/confluence/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "9411fa8fdb8be7e5",
       "de_hash": "168b0abfab8e0705",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki confluence)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25693,22 +25867,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1898,
       "de_bytes": 1940,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/confluence/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "f4d59cd2aa21c029",
       "de_hash": "6236206b643d2c96",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki confluence)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25721,22 +25897,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5215,
       "de_bytes": 5541,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/confluence/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "515aeb31a0b5ffe2",
       "de_hash": "af26a3a7a0b7d93a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki confluence)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25749,22 +25927,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2103,
       "de_bytes": 2507,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/confluence/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "32da1863dc17e16b",
       "de_hash": "cae3837476c95ed2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki confluence)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25777,22 +25957,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6908,
       "de_bytes": 7199,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/confluence/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "8b8e7be2a238472d",
       "de_hash": "003bd63acd34448b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki confluence)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25805,22 +25987,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5877,
       "de_bytes": 6028,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "158b842f0d1fcae2",
       "de_hash": "cbb99c98d3f9b52c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki mediawiki)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25833,22 +26017,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5210,
       "de_bytes": 5379,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "94a92cdcc717dc63",
       "de_hash": "46d94593617b85ca",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki mediawiki)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25861,22 +26047,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1844,
       "de_bytes": 1941,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "58c204f31ba5fc4b",
       "de_hash": "51d4be00ddc36b8e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki mediawiki)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25889,22 +26077,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3842,
       "de_bytes": 4184,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "f256343f25213ffa",
       "de_hash": "67903d858b9607e3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki mediawiki)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25917,22 +26107,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2064,
       "de_bytes": 2386,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "6c8036946f31a52e",
       "de_hash": "c7b5897fa1c687bb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki mediawiki)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25945,22 +26137,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6626,
       "de_bytes": 6890,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "5afbd8f53db7e3f0",
       "de_hash": "c79f12e4bfff1c98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki mediawiki)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -25973,22 +26167,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5748,
       "de_bytes": 5885,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "812a53e5d59f237a",
       "de_hash": "a6fac57c6f98b536",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki notion)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26001,22 +26197,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5364,
       "de_bytes": 5454,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "c77fbf573451b27c",
       "de_hash": "fb01bd265b167933",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki notion)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26029,22 +26227,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1847,
       "de_bytes": 1922,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "633e3016bff3e1be",
       "de_hash": "6dca2d737db8a2c3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki notion)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26057,22 +26257,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6857,
       "de_bytes": 7346,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "086b283ac98bf48f",
       "de_hash": "3e88d4b6c3afd222",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki notion)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26085,22 +26287,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3754,
       "de_bytes": 4294,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "5f011dc3d49d75ea",
       "de_hash": "d55d064be3d1973b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki notion)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26113,22 +26317,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6948,
       "de_bytes": 7257,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "e356f445b4cce3f6",
       "de_hash": "a6e818df2ec10e07",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki notion)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26141,22 +26347,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5372,
       "de_bytes": 5523,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "3854f0f5744137a1",
       "de_hash": "cc1e275a9e6db642",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki tango.io)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26169,22 +26377,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 4937,
       "de_bytes": 5110,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "b2380bb8e71faf0e",
       "de_hash": "175815c14acfbf03",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki tango.io)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26197,22 +26407,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1722,
       "de_bytes": 1816,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "1988110e723384b4",
       "de_hash": "a5ddc597dbdac9eb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki tango.io)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26225,22 +26437,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 4547,
       "de_bytes": 4907,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "371fcb72b8c29344",
       "de_hash": "0f963e4a2ee2787a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki tango.io)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26253,22 +26467,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2274,
       "de_bytes": 2599,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "bb0eb0a0f68638dc",
       "de_hash": "ae310f9278419e0e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki tango.io)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26281,22 +26497,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6544,
       "de_bytes": 6829,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "be37666eeacc1b5b",
       "de_hash": "e2e58b40f4c54a9a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki tango.io)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26309,22 +26527,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5379,
       "de_bytes": 5532,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "a00fe01273e4cec5",
       "de_hash": "d9bed30e1dc75fb2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki vscodium)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26337,22 +26557,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5150,
       "de_bytes": 5222,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "9f8b2cf4aa9a8c89",
       "de_hash": "bbfd613b05d4b69c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki vscodium)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26365,22 +26587,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1767,
       "de_bytes": 1946,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "f87737c66eba7419",
       "de_hash": "11786c840ba30afa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki vscodium)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26393,22 +26617,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6193,
       "de_bytes": 6516,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "4579ccb06764ab48",
       "de_hash": "d1c3abb4f0913921",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki vscodium)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26421,22 +26647,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1784,
       "de_bytes": 2031,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "7ed97e9501688f3d",
       "de_hash": "b32600867a5c2641",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki vscodium)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26449,22 +26677,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6407,
       "de_bytes": 6541,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "349f12c3606c86fa",
       "de_hash": "4285d5bfd907f9f5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki vscodium)",
+      "last_verified": "2026-11-05T14:41:20.238952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26477,22 +26707,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.238952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6797,
       "de_bytes": 6967,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/wikijs/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "552875b94dd80b01",
       "de_hash": "c61376bd82222328",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki wikijs)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26505,11 +26737,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 4280,
       "de_bytes": 4501,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/wikijs/latest/description.md": {
       "status": "VERIFIED",
@@ -26578,15 +26814,13 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/wikijs/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "acc28f5c0c35dcb0",
       "de_hash": "4944ad649e06ad5c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki wikijs)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26599,11 +26833,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 5002,
       "de_bytes": 5252,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/wikijs/latest/layout.md": {
       "status": "VERIFIED",
@@ -26628,15 +26866,13 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "ab7d2b1404d07f26",
       "de_hash": "d629c2c9d276ce33",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki xwiki)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26649,22 +26885,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 4965,
       "de_bytes": 5176,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "2d19f4ce1e26a351",
       "de_hash": "d6980c4931a2c0e4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki xwiki)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26677,22 +26915,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1997,
       "de_bytes": 2098,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "2bb23683e66d711f",
       "de_hash": "28a9d0aa09a65e60",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki xwiki)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26705,22 +26945,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3341,
       "de_bytes": 3506,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "8097831aacc6d0b8",
       "de_hash": "dcce5b214852d1c5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki xwiki)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26733,22 +26975,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2167,
       "de_bytes": 2493,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "bc989772b799369f",
       "de_hash": "67bd35c6e25b3685",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki xwiki)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26761,22 +27005,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6580,
       "de_bytes": 6873,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "69d6ed86fd47d0b1",
       "de_hash": "0bf8dd7c716c5cdf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "translated de->en (wiki xwiki)",
+      "last_verified": "2026-11-05T14:41:20.327585+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "move.py",
@@ -26789,11 +27035,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.327585+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6744,
       "de_bytes": 6898,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/suites/crm/frontends/index.md": {
       "status": "PENDING",
@@ -32524,15 +32774,13 @@
       "de_bytes": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "fe4970231a572065",
       "de_hash": "d3a1445a8f3c9868",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.135940+00:00",
@@ -32541,22 +32789,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1513,
       "de_bytes": 1550,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "be36d09e23e436b8",
       "de_hash": "ed33c68c99acc17a",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.045841+00:00",
@@ -32565,11 +32815,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 216,
       "de_bytes": 230,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/gallery/requirements.md": {
       "status": "PENDING",
@@ -32628,15 +32882,13 @@
       "de_bytes": null
     },
     "programs/apps/messenger/frontends/discord/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "92cd74019b3c4322",
       "de_hash": "684ba076a4dd1cba",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.404430+00:00",
@@ -32645,22 +32897,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 485,
       "de_bytes": 521,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "4eabba9b52b2d322",
       "de_hash": "9c4ac4496ffea5e7",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.315232+00:00",
@@ -32669,22 +32923,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 213,
       "de_bytes": 227,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/element/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "4e3b55d64d7b9eb0",
       "de_hash": "703b7b9b068c102d",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.684394+00:00",
@@ -32693,22 +32949,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 481,
       "de_bytes": 518,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/element/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "cbb70142ae39e2c1",
       "de_hash": "1e37fc22e84724f1",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.594948+00:00",
@@ -32717,22 +32975,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 213,
       "de_bytes": 227,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "fcea782583ad44d5",
       "de_hash": "1fe111b440991e56",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.959538+00:00",
@@ -32741,22 +33001,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 566,
       "de_bytes": 603,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "47f1c956f220409c",
       "de_hash": "b1bfeb156986eba0",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:26.867154+00:00",
@@ -32765,22 +33027,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 213,
       "de_bytes": 227,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "2f982d22785e2def",
       "de_hash": "9aacb334b8aaa375",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.235382+00:00",
@@ -32789,22 +33053,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 479,
       "de_bytes": 513,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "9f4dafb4737ed9b9",
       "de_hash": "f7aefac17fa963f2",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.141779+00:00",
@@ -32813,22 +33079,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 214,
       "de_bytes": 228,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "57ca1ef4ce29dbfe",
       "de_hash": "88fb3a645336558d",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.516388+00:00",
@@ -32837,22 +33105,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 394,
       "de_bytes": 413,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "0ace4fbfedc9c984",
       "de_hash": "2e6e3aab778a40ed",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.422339+00:00",
@@ -32861,22 +33131,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 213,
       "de_bytes": 227,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "e1558d4a921a32dc",
       "de_hash": "659e24af60cdbf8d",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.049629+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.786605+00:00",
@@ -32885,22 +33157,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.049629+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 492,
       "de_bytes": 530,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "530e987e4968af02",
       "de_hash": "4048c9f5c310d7cb",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.697034+00:00",
@@ -32909,22 +33183,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 214,
       "de_bytes": 228,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/latest/themes/default.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "a269b49763224f15",
       "de_hash": "4d2edeaae5b476cb",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:28.054478+00:00",
@@ -32933,22 +33209,24 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 507,
       "de_bytes": 550,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/latest/themes/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "3f915543f2da9a79",
       "de_hash": "b8c8b22a56991403",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": "themes split mirrored en->de (ADR 0012)",
+      "last_verified": "2026-11-05T14:41:20.137952+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T14:28:27.964365+00:00",
@@ -32957,11 +33235,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T14:41:20.137952+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 217,
       "de_bytes": 231,
-      "change_reason": "hash changed since verification"
+      "change_reason": null
     },
     "programs/apps/messenger/requirements.md": {
       "status": "PENDING",
