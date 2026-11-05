@@ -58,11 +58,13 @@ Grundsätze: `conventions/CONVENTIONS.md` §0, ADRs 0011–0018.
 
 ## Phase 2 – Datenfundament (Standards, AS2)
 
-- [ ] `data/standards.md`: Spalte „AS2-Abbildung“ + Abschnitt „Gaps“ (ADR 0014) · Opus
 - [x] contacts + identity (2026-11-05) · Opus
 - [x] messages (2026-11-05): MIMI, Original + Hülle (ADR 0030) · Opus
-- [ ] events · [ ] **documents** (neu, ADR 0031: Seite/Buch/Bibliothek, Web Annotation, Blockformat)
-      · [ ] geodata · [ ] projects · [ ] profile · [ ] login
+- [x] events (JSCalendar 2.0) · documents (ADR 0031/0033/0034) · geodata · projects · profile · login (2026-11-05)
+- [x] `data/standards.md`: AS2-Abbildung für alle Domänen, Lückenliste (Kandidaten eigener Specs)
+- [ ] Entscheidung: OpenID Federation 1.0 für Föderation zwischen Instanzen (ADR 0024)
+- [ ] Eigene Specs (Reihenfolge festlegen): Blockformat · Markieren · Kollektionsprofil · Hilfe-Schlüssel ·
+      Kanban/Aufgabenbeziehungen · DPV-Feldtabelle · WebFinger-Linkprofil · Nachrichten-Lücken · Kalender-Lücken
 - [ ] Bibliothek: erster Eintrag „So verschlüsselst du deine Mails“ (ADR 0018/0031)
 - [ ] Gespräch: gitoxide als Versionskontrolle überall vs. Aktivitätsprotokoll
 - [ ] Gespräch mit Nutzer: Datenhaltung (zentral / pro Programm, Abgleich, Turso) — Protokoll §3/§4
