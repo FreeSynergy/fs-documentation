@@ -6,13 +6,13 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [Confluence](confluence/index.md) | — | Confluence is an enterprise wiki platform by Atlassian for team collaboration. |
-| [MediaWiki](mediawiki/index.md) | — | MediaWiki is the most popular wiki software, used among others by Wikipedia. |
-| [Notion](notion/index.md) | — | Notion is an all-in-one platform for notes, documentation and collaboration. |
-| [Tango.io](tango.io/index.md) | — | Tango.io is a modern knowledge-management platform that focuses on collaboration. |
-| [VSCodium](vscodium/index.md) | — | VSCodium is an open-source version of Microsoft Visual Studio Code. |
-| [Wiki.js](wikijs/index.md) | — | Wiki.js is a modern, lightweight wiki system based on Node.js. |
-| [XWiki](xwiki/index.md) | — | XWiki is a powerful enterprise wiki platform with advanced features for knowledge management. |
+| [Confluence](confluence/index.md) | [latest](confluence/latest/description.md) | Confluence is an enterprise wiki platform by Atlassian for team collaboration. |
+| [MediaWiki](mediawiki/index.md) | [latest](mediawiki/latest/description.md) | MediaWiki is the most popular wiki software, used among others by Wikipedia. |
+| [Notion](notion/index.md) | [latest](notion/latest/description.md) | Notion is an all-in-one platform for notes, documentation and collaboration. |
+| [Tango.io](tango.io/index.md) | [latest](tango.io/latest/description.md) | Tango.io is a modern knowledge-management platform that focuses on collaboration. |
+| [VSCodium](vscodium/index.md) | [latest](vscodium/latest/description.md) | VSCodium is an open-source version of Microsoft Visual Studio Code. |
+| [Wiki.js](wikijs/index.md) | [latest](wikijs/latest/description.md) | Wiki.js is a modern, lightweight wiki system based on Node.js. |
+| [XWiki](xwiki/index.md) | [latest](xwiki/latest/description.md) | XWiki is a powerful enterprise wiki platform with advanced features for knowledge management. |
 
 ## File set per program (ADR 0012)
 

@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T13:52:52.200730+00:00",
+  "last_run": "2026-11-05T14:12:40.454386+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -26360,118 +26360,148 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "d629c2c9d276ce33",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T14:12:40.454352+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki xwiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/xwiki/api.md"
+        },
+        {
+          "at": "2026-11-05T14:12:40.454352+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5176
+      "de_bytes": 5176,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "d6980c4931a2c0e4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T14:12:39.994800+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki xwiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/xwiki/description.md"
+        },
+        {
+          "at": "2026-11-05T14:12:39.994800+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 2098
+      "de_bytes": 2098,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "28a9d0aa09a65e60",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T14:12:40.088770+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki xwiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/xwiki/features.md"
+        },
+        {
+          "at": "2026-11-05T14:12:40.088770+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 3506
+      "de_bytes": 3506,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "dcce5b214852d1c5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T14:12:40.277577+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki xwiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/xwiki/menu.md"
+        },
+        {
+          "at": "2026-11-05T14:12:40.277577+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 2493
+      "de_bytes": 2493,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "67bd35c6e25b3685",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T14:12:40.364712+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki xwiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/xwiki/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T14:12:40.364712+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6873
+      "de_bytes": 6873,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/xwiki/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "0bf8dd7c716c5cdf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T14:12:40.179483+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki xwiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/xwiki/structure.md"
+        },
+        {
+          "at": "2026-11-05T14:12:40.179483+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6898
+      "de_bytes": 6898,
+      "change_reason": null
     },
     "programs/suites/crm/frontends/index.md": {
       "status": "PENDING",
