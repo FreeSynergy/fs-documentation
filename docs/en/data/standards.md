@@ -184,7 +184,7 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | identity — own person | DID document / Controlled Identifier (W3C) | `Person` (actor) with `Multikey` (FEP-521a) | ✅ 2026-11-05 |
 | identity — attestation | VC 2.0 + `eddsa-jcs-2022` (as RLTP) | `Relationship` | ✅ 2026-11-05 |
 | identity — same person (hub matching, ADR 0019) | — | `Relationship`, relation `owl:sameAs` | decided 2026-11-05 (ADR 0029) |
-| messages | AS2 `Note`/`Article` | itself | open (next) |
+| messages | chat: MIMI content (draft -10); e-mail: original MIME + JMAP `Email` fields; Matrix events | `Note` (`context` = conversation) | ✅ 2026-11-05, see [messages/](messages/standards.md) |
 | events | JSCalendar `Event`/`Task` (RFC 8984) | `Event` | open |
 | geodata, projects, profile, login | see domain directories | | open |
 
