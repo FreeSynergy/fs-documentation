@@ -17,6 +17,8 @@ Fremdprojekte, Lizenz, Repos, Messenger)
 - **Funktionen analysieren, nichts kopieren** — auch nicht aus OSS (ADR 0013); nur im äußersten
   Notfall aus offenen Projekten, nie Closed Source, Lizenz/Urheber bleiben (ADR 0025).
 - **Immer die neueste tragfähige Technik**, Altes nur als Brücke nach außen (ADR 0026).
+- **Rust-Hygiene:** Vorlagen `conventions/templates/rust/`, `target/` nie in Git, nach jeder
+  Rust-Sitzung `scripts/clean_rust.py --apply` (ADR 0041).
 - **Beschlossenes bleibt.** Erweist sich ein Beschluss als falsch, ersetzt ihn ein neuer ADR
   ausdrücklich — nie stilles Abweichen (ADR 0032).
 - **Standards zuerst**, ActivityStreams 2.0 als Basis; fehlt ein Standard → eigener Entwurf

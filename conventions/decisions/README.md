@@ -47,3 +47,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0038 | Referenz-Frontends: vier Arten, am besten ganze Suiten | akzeptiert |
 | 0039 | Drei Text-Editoren | akzeptiert |
 | 0040 | Cap'n-Proto-Schema-Compiler in reinem Rust; Anerkennung ohne Drama | akzeptiert |
+| 0041 | Rust-Hygiene: Build-Ausgabe klein, nie in Git, regelmäßig aufräumen | akzeptiert |
