@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T17:49:26.764848+00:00",
+  "last_run": "2026-11-05T17:56:49.193352+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -25181,118 +25181,136 @@
       "de_bytes": 3627
     },
     "programs/apps/streaming/frontends/obs-studio/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "92285f9206059f15",
       "de_hash": "060258a59c5ba877",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:56:48.569322+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming obs-studio)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/obs-studio/api.md"
+        },
+        {
+          "at": "2026-11-05T17:56:48.569322+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3233
+      "en_bytes": 3219,
+      "de_bytes": 3233,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2a8e788e0d8078de",
       "de_hash": "d84d6ab3317fe1e8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:56:48.660297+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming obs-studio)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/obs-studio/description.md"
+        },
+        {
+          "at": "2026-11-05T17:56:48.660297+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1813
+      "en_bytes": 1846,
+      "de_bytes": 1813,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "07e9c9628d54b574",
       "de_hash": "43c310581abf5988",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:56:48.751792+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming obs-studio)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/obs-studio/features.md"
+        },
+        {
+          "at": "2026-11-05T17:56:48.751792+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2346
+      "en_bytes": 2314,
+      "de_bytes": 2346,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0681870fbaf05a1b",
       "de_hash": "6a966923fdfff8f1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:56:48.934360+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming obs-studio)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/obs-studio/menu.md"
+        },
+        {
+          "at": "2026-11-05T17:56:48.934360+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2206
+      "en_bytes": 1969,
+      "de_bytes": 2206,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "4cf6845c87ed934a",
       "de_hash": "6e1080d590745f10",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:56:49.028104+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming obs-studio)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/obs-studio/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T17:56:49.028104+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1817
+      "en_bytes": 1792,
+      "de_bytes": 1817,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "b9e5e00deef94930",
       "de_hash": "6b48f2b12e587c3c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:56:48.843053+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming obs-studio)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/obs-studio/structure.md"
+        },
+        {
+          "at": "2026-11-05T17:56:48.843053+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3105
+      "en_bytes": 3034,
+      "de_bytes": 3105,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/api.md": {
       "status": "PENDING",

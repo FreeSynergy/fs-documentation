@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 17:49 UTC · 1537 Dateien verfolgt · 387 offen · 1143 bestätigt
+Stand: 2026-11-05 17:56 UTC · 1537 Dateien verfolgt · 381 offen · 1149 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 387 |
+| A. `en/` fehlt – aus `de/` übersetzen | 381 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -47,7 +47,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 387 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 381 Dateien
 
 ### `programs/` · 1
 
@@ -106,15 +106,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/layout.md` · 3.5k
 - [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/menus.md` · 2.4k
 - [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/shortcuts.md` · 1.6k
-
-### `programs/apps/streaming/frontends/obs-studio/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/obs-studio/latest/api.md` · 3.2k
-- [ ] `programs/apps/streaming/frontends/obs-studio/latest/description.md` · 1.8k
-- [ ] `programs/apps/streaming/frontends/obs-studio/latest/features.md` · 2.3k
-- [ ] `programs/apps/streaming/frontends/obs-studio/latest/layout.md` · 3.0k
-- [ ] `programs/apps/streaming/frontends/obs-studio/latest/menus.md` · 2.2k
-- [ ] `programs/apps/streaming/frontends/obs-studio/latest/shortcuts.md` · 1.8k
 
 ### `programs/apps/streaming/frontends/restream/latest/` · 6
 
@@ -754,8 +745,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 08:13 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=617
-- 2026-11-05 10:04 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=609 review=8
 - 2026-11-05 10:04 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=609
 - 2026-11-05 10:20 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=581 review=28
 - 2026-11-05 10:31 · Lauf: 1499 verfolgt, 581 offen, 911 bestätigt · needs_en=556 review=25
@@ -795,3 +784,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 17:40 · Lauf: 1537 verfolgt, 393 offen, 1137 bestätigt · needs_en=393
 - 2026-11-05 17:49 · Lauf: 1537 verfolgt, 393 offen, 1137 bestätigt · needs_en=387 review=6
 - 2026-11-05 17:49 · Lauf: 1537 verfolgt, 387 offen, 1143 bestätigt · needs_en=387
+- 2026-11-05 17:56 · Lauf: 1537 verfolgt, 387 offen, 1143 bestätigt · needs_en=381 review=6
+- 2026-11-05 17:56 · Lauf: 1537 verfolgt, 381 offen, 1149 bestätigt · needs_en=381
