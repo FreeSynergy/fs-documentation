@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T16:19:47.778702+00:00",
+  "last_run": "2026-11-05T16:23:30.675329+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -33745,74 +33745,94 @@
       "change_reason": null
     },
     "data/documents/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "26d28ffaa57d4d5d",
-      "de_hash": null,
+      "de_hash": "dfadd3f20d49ddde",
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:23:30.012130+00:00",
+      "kind": [],
+      "note": "translated en->de (documents domain, ADR 0031/0034)",
+      "history": [
+        {
+          "at": "2026-11-05T16:23:30.012130+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 1099,
-      "de_bytes": null
+      "de_bytes": 1248,
+      "change_reason": null
     },
     "data/documents/examples.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "ea778b6a7c372da9",
-      "de_hash": null,
+      "de_hash": "eac3a9f81060aec1",
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:23:30.129366+00:00",
+      "kind": [],
+      "note": "translated en->de (documents domain, ADR 0031/0034)",
+      "history": [
+        {
+          "at": "2026-11-05T16:23:30.129366+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 1158,
-      "de_bytes": null
+      "de_bytes": 1235,
+      "change_reason": null
     },
     "data/documents/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "ef5eb176990f3059",
-      "de_hash": null,
+      "de_hash": "d2941bc61ee15486",
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:23:30.247949+00:00",
+      "kind": [],
+      "note": "translated en->de (documents domain, ADR 0031/0034)",
+      "history": [
+        {
+          "at": "2026-11-05T16:23:30.247949+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 1525,
-      "de_bytes": null
+      "de_bytes": 1648,
+      "change_reason": null
     },
     "data/documents/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "747a8256fcb0c8dd",
-      "de_hash": null,
+      "de_hash": "494698d2970990d3",
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:23:30.364852+00:00",
+      "kind": [],
+      "note": "translated en->de (documents domain, ADR 0031/0034)",
+      "history": [
+        {
+          "at": "2026-11-05T16:23:30.364852+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 3770,
-      "de_bytes": null
+      "de_bytes": 4087,
+      "change_reason": null
     },
     "data/documents/technical.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "1b0e7b2f9019812b",
-      "de_hash": null,
+      "de_hash": "37b06877d67f6bcb",
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:23:30.482228+00:00",
+      "kind": [],
+      "note": "translated en->de (documents domain, ADR 0031/0034)",
+      "history": [
+        {
+          "at": "2026-11-05T16:23:30.482228+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 2502,
-      "de_bytes": null
+      "de_bytes": 2761,
+      "change_reason": null
     }
   }
 }
