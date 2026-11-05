@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T19:59:20.557446+00:00",
+  "last_run": "2026-11-05T20:10:36.501225+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -23814,9 +23814,7 @@
       "de_hash": "7fdb8805e41d242f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.971925+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "mirrored en gen:versions block into de",
       "history": [
         {
@@ -23849,12 +23847,14 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "6f738c7bf5a89520",
+      "status": "PENDING",
+      "en_hash": "64a053dbd47db32a",
       "de_hash": "827a49a2930e66ee",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23872,11 +23872,15 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T20:10:17.611298+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1006,
+      "en_bytes": 1389,
       "de_bytes": 1063,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/obs-studio/index.md": {
       "status": "VERIFIED",
@@ -23992,12 +23996,14 @@
     },
     "programs/apps/streaming/frontends/wowza/index.md": {
       "status": "VERIFIED",
-      "en_hash": "1349a921d7129b9e",
-      "de_hash": "e5ad8422e965ba16",
+      "en_hash": "069a358729e7315c",
+      "de_hash": "601370ddd7f6b6ef",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T20:10:36.501190+00:00",
+      "kind": [
+        "review"
+      ],
+      "note": "regenerated en version table, mirrored into de",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -24014,10 +24020,18 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T20:10:17.611298+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T20:10:36.501190+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1153,
-      "de_bytes": 1196,
+      "en_bytes": 1536,
+      "de_bytes": 1537,
       "change_reason": null
     },
     "programs/apps/calendar/frontends/index.md": {
@@ -25236,9 +25250,7 @@
       "de_hash": "cb6e942e9fd7a2c5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.875934+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mistserver)",
       "history": [
         {
@@ -25260,9 +25272,7 @@
       "de_hash": "f6a66749fd5dc476",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.390793+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mistserver)",
       "history": [
         {
@@ -25284,9 +25294,7 @@
       "de_hash": "c45ca5da6661e37b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.490569+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mistserver)",
       "history": [
         {
@@ -25308,9 +25316,7 @@
       "de_hash": "3e018524082cdec2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.684363+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mistserver)",
       "history": [
         {
@@ -25332,9 +25338,7 @@
       "de_hash": "54df480aa38d48aa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.781062+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mistserver)",
       "history": [
         {
@@ -25356,9 +25360,7 @@
       "de_hash": "6ed65006f4111f80",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:19.587552+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mistserver)",
       "history": [
         {
@@ -25380,9 +25382,7 @@
       "de_hash": "0b8054b0aea9900d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:20.557413+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
@@ -25404,9 +25404,7 @@
       "de_hash": "fb014713a03ad291",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:20.068316+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
@@ -25428,9 +25426,7 @@
       "de_hash": "4eb12b071464045c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:20.165051+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
@@ -25452,9 +25448,7 @@
       "de_hash": "a4ad82213019a7a7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:20.365686+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
@@ -25476,9 +25470,7 @@
       "de_hash": "c00cb078ed86905d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:20.458984+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
@@ -25500,9 +25492,7 @@
       "de_hash": "139bc56bbc687164",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:59:20.275861+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
@@ -25939,118 +25929,148 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0c243c2f52c2ca02",
       "de_hash": "e4179129c44712ce",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T20:10:36.401536+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming wowza)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/wowza/api.md"
+        },
+        {
+          "at": "2026-11-05T20:10:36.401536+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3293
+      "en_bytes": 3324,
+      "de_bytes": 3293,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "196a9e365d006284",
       "de_hash": "e1b66b5c2f6edfd0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T20:10:35.904289+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming wowza)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/wowza/description.md"
+        },
+        {
+          "at": "2026-11-05T20:10:35.904289+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2481
+      "en_bytes": 2453,
+      "de_bytes": 2481,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "3249f7890547d667",
       "de_hash": "2db9c4cc33090d36",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T20:10:36.003128+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming wowza)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/wowza/features.md"
+        },
+        {
+          "at": "2026-11-05T20:10:36.003128+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2345
+      "en_bytes": 2346,
+      "de_bytes": 2345,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6c11948398b15fcf",
       "de_hash": "a8e0102b7fa40828",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T20:10:36.200441+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming wowza)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/wowza/menu.md"
+        },
+        {
+          "at": "2026-11-05T20:10:36.200441+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2240
+      "en_bytes": 2164,
+      "de_bytes": 2240,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0afde924870c745c",
       "de_hash": "3012d1ab6825a663",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T20:10:36.302328+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming wowza)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/wowza/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T20:10:36.302328+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2071
+      "en_bytes": 2041,
+      "de_bytes": 2071,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "eaf55884097b7712",
       "de_hash": "96fcfeab61088396",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T20:10:36.100496+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming wowza)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/wowza/structure.md"
+        },
+        {
+          "at": "2026-11-05T20:10:36.100496+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3884
+      "en_bytes": 3876,
+      "de_bytes": 3884,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/latest/api.md": {
       "status": "VERIFIED",
@@ -35360,6 +35380,20 @@
       "note": null,
       "history": [],
       "en_bytes": 1112,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/contract.md": {
+      "status": "PENDING",
+      "en_hash": "c090278fc855c604",
+      "de_hash": null,
+      "first_seen": "2026-11-05T20:10:17.611298+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 2033,
       "de_bytes": null
     }
   }

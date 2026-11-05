@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 19:58 UTC · 1572 Dateien verfolgt · 366 offen · 1199 bestätigt
+Stand: 2026-11-05 20:10 UTC · 1573 Dateien verfolgt · 356 offen · 1210 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,31 +36,22 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 303 |
-| B. `de/` fehlt – englische Quelle nachziehen | 35 |
+| A. `en/` fehlt – aus `de/` übersetzen | 297 |
+| B. `de/` fehlt – englische Quelle nachziehen | 36 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 15 |
+| F. Form nicht gleich – Struktur abgleichen | 16 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 13 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 7 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 303 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 297 Dateien
 
 ### `programs/` · 1
 
 - [ ] `programs/index.md` · 3.4k · Plan[~]
-
-### `programs/apps/streaming/frontends/wowza/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/wowza/latest/api.md` · 3.2k
-- [ ] `programs/apps/streaming/frontends/wowza/latest/description.md` · 2.4k
-- [ ] `programs/apps/streaming/frontends/wowza/latest/features.md` · 2.3k
-- [ ] `programs/apps/streaming/frontends/wowza/latest/layout.md` · 3.8k
-- [ ] `programs/apps/streaming/frontends/wowza/latest/menus.md` · 2.2k
-- [ ] `programs/apps/streaming/frontends/wowza/latest/shortcuts.md` · 2.0k
 
 ### `programs/platform/crates/` · 1
 
@@ -616,7 +607,11 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
-## B. `de/` fehlt – englische Quelle nachziehen – 35 Dateien
+## B. `de/` fehlt – englische Quelle nachziehen – 36 Dateien
+
+### `programs/apps/messenger/` · 1
+
+- [ ] `programs/apps/messenger/contract.md` · 2.0k
 
 ### `programs/apps/messenger/frontends/apple-mail/` · 1
 
@@ -677,7 +672,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/light.md` · 1.7k
 - [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/picture.md` · 1.1k
 
-## F. Form nicht gleich – Struktur abgleichen – 15 Dateien
+## F. Form nicht gleich – Struktur abgleichen – 16 Dateien
 
 ### `programs/apps/messenger/` · 2
 
@@ -708,6 +703,10 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 - [ ] `programs/apps/streaming/frontends/mediamtx/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
 
+### `programs/apps/streaming/frontends/nginx-rtmp-module/` · 1
+
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/index.md` · 1.4k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
 ### `programs/apps/streaming/frontends/restream/` · 1
 
 - [ ] `programs/apps/streaming/frontends/restream/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
@@ -736,29 +735,20 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 - [ ] `programs/apps/whiteboards/frontends/tldraw/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
 
-## H. Beide Seiten da, kein Befund – lesen und bestätigen – 13 Dateien
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 7 Dateien
 
-### `programs/apps/streaming/frontends/mistserver/` · 1
+### `programs/apps/streaming/frontends/wowza/` · 1
 
-- [ ] `programs/apps/streaming/frontends/mistserver/index.md` · 1.4k · hash changed since verification
+- [ ] `programs/apps/streaming/frontends/wowza/index.md` · 1.5k · hash changed since verification
 
-### `programs/apps/streaming/frontends/mistserver/latest/` · 6
+### `programs/apps/streaming/frontends/wowza/latest/` · 6
 
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/api.md` · 4.2k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/description.md` · 2.8k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/features.md` · 2.5k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/layout.md` · 3.6k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/menus.md` · 1.8k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/shortcuts.md` · 1.9k
-
-### `programs/apps/streaming/frontends/nginx-rtmp-module/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/api.md` · 3.8k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/description.md` · 2.4k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/features.md` · 2.4k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/layout.md` · 3.5k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/menus.md` · 2.4k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/shortcuts.md` · 1.6k
+- [ ] `programs/apps/streaming/frontends/wowza/latest/api.md` · 3.2k
+- [ ] `programs/apps/streaming/frontends/wowza/latest/description.md` · 2.4k
+- [ ] `programs/apps/streaming/frontends/wowza/latest/features.md` · 2.3k
+- [ ] `programs/apps/streaming/frontends/wowza/latest/layout.md` · 3.8k
+- [ ] `programs/apps/streaming/frontends/wowza/latest/menus.md` · 2.1k
+- [ ] `programs/apps/streaming/frontends/wowza/latest/shortcuts.md` · 2.0k
 
 ## 🗑️ Gelöscht – 7
 
@@ -772,7 +762,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 11:46 · Lauf: 1499 verfolgt, 714 offen, 778 bestätigt · needs_en=472 review=242
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 695 offen, 797 bestätigt · needs_en=472 review=223
 - 2026-11-05 12:09 · Lauf: 1526 verfolgt, 605 offen, 914 bestätigt · needs_en=471 needs_de=27 parity=105 review=2
 - 2026-11-05 12:38 · Lauf: 1526 verfolgt, 605 offen, 914 bestätigt · needs_en=467 needs_de=27 parity=105 review=6
@@ -813,3 +802,4 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 19:36 · Lauf: 1537 verfolgt, 327 offen, 1203 bestätigt · needs_en=321 review=6
 - 2026-11-05 19:44 · Lauf: 1547 verfolgt, 331 offen, 1209 bestätigt · needs_en=315 needs_de=10 review=6
 - 2026-11-05 19:58 · Lauf: 1572 verfolgt, 366 offen, 1199 bestätigt · needs_en=303 needs_de=35 parity=15 review=13
+- 2026-11-05 20:10 · Lauf: 1573 verfolgt, 356 offen, 1210 bestätigt · needs_en=297 needs_de=36 parity=16 review=7
