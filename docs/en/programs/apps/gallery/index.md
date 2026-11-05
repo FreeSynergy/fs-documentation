@@ -21,18 +21,18 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (8 programs):**
 
-- [Coppermine](masks/coppermine/index.md) - Coppermine
-- [Damselfly](masks/damselfly/index.md) - Damselfly
-- [Immich](masks/immich/index.md) - Immich
-- [LibrePhotos](masks/librephotos/index.md) - LibrePhotos
-- [Lychee](masks/lychee/index.md) - Lychee
-- [Nextcloud Photos](masks/nextcloud-photos/index.md) - Nextcloud Photos
-- [PhotoPrism](masks/photoprism/index.md) - PhotoPrism
-- [Piwigo](masks/piwigo/index.md) - Piwigo
+- [Coppermine](frontends/coppermine/index.md) - Coppermine
+- [Damselfly](frontends/damselfly/index.md) - Damselfly
+- [Immich](frontends/immich/index.md) - Immich
+- [LibrePhotos](frontends/librephotos/index.md) - LibrePhotos
+- [Lychee](frontends/lychee/index.md) - Lychee
+- [Nextcloud Photos](frontends/nextcloud-photos/index.md) - Nextcloud Photos
+- [PhotoPrism](frontends/photoprism/index.md) - PhotoPrism
+- [Piwigo](frontends/piwigo/index.md) - Piwigo
 
-Overview: [Skin directory](masks/index.md)
+Overview: [Skin directory](frontends/index.md)
 
-Reference schema: [Wiki skins](../wiki/masks/index.md) · [Desktop skins](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki skins](../wiki/frontends/index.md) · [Desktop skins](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
 
 ## Mask documentation
 
@@ -40,15 +40,15 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (8 programs):**
 
-- [Coppermine](masks/coppermine/index.md) - Coppermine
-- [Damselfly](masks/damselfly/index.md) - Damselfly
-- [Immich](masks/immich/index.md) - Immich
-- [LibrePhotos](masks/librephotos/index.md) - LibrePhotos
-- [Lychee](masks/lychee/index.md) - Lychee
-- [Nextcloud Photos](masks/nextcloud-photos/index.md) - Nextcloud Photos
-- [PhotoPrism](masks/photoprism/index.md) - PhotoPrism
-- [Piwigo](masks/piwigo/index.md) - Piwigo
+- [Coppermine](frontends/coppermine/index.md) - Coppermine
+- [Damselfly](frontends/damselfly/index.md) - Damselfly
+- [Immich](frontends/immich/index.md) - Immich
+- [LibrePhotos](frontends/librephotos/index.md) - LibrePhotos
+- [Lychee](frontends/lychee/index.md) - Lychee
+- [Nextcloud Photos](frontends/nextcloud-photos/index.md) - Nextcloud Photos
+- [PhotoPrism](frontends/photoprism/index.md) - PhotoPrism
+- [Piwigo](frontends/piwigo/index.md) - Piwigo
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Mask directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

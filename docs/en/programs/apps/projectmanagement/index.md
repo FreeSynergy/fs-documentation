@@ -86,15 +86,15 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (8 programs):**
 
-- [Asana](masks/asana/index.md) - Asana
-- [Jira](masks/jira/index.md) - Jira
-- [OpenProject](masks/openproject/index.md) - OpenProject
-- [Planka](masks/planka/index.md) - Planka
-- [Redmine](masks/redmine/index.md) - Redmine
-- [Taiga](masks/taiga/index.md) - Taiga
-- [Trello](masks/trello/index.md) - Trello
-- [Wekan](masks/wekan/index.md) - Wekan
+- [Asana](frontends/asana/index.md) - Asana
+- [Jira](frontends/jira/index.md) - Jira
+- [OpenProject](frontends/openproject/index.md) - OpenProject
+- [Planka](frontends/planka/index.md) - Planka
+- [Redmine](frontends/redmine/index.md) - Redmine
+- [Taiga](frontends/taiga/index.md) - Taiga
+- [Trello](frontends/trello/index.md) - Trello
+- [Wekan](frontends/wekan/index.md) - Wekan
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Mask directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

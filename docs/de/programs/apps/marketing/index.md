@@ -86,13 +86,13 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [Google Analytics](masks/google-analytics/index.md) - Google Analytics
-- [Hotjar](masks/hotjar/index.md) - Hotjar
-- [Mailchimp](masks/mailchimp/index.md) - Mailchimp
-- [Matomo](masks/matomo/index.md) - Matomo
-- [Mautic](masks/mautic/index.md) - Mautic
-- [Plausible](masks/plausible/index.md) - Plausible
+- [Google Analytics](frontends/google-analytics/index.md) - Google Analytics
+- [Hotjar](frontends/hotjar/index.md) - Hotjar
+- [Mailchimp](frontends/mailchimp/index.md) - Mailchimp
+- [Matomo](frontends/matomo/index.md) - Matomo
+- [Mautic](frontends/mautic/index.md) - Mautic
+- [Plausible](frontends/plausible/index.md) - Plausible
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

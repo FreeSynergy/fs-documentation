@@ -38,7 +38,7 @@ Jede Skin-Dokumentation liegt in `apps/<kategorie>/masks/<programm>/` und enthä
 | `shortcuts.md` | Alle Tastatur-Shortcuts (immer separat) |
 | `api.md` | API-Art, Auth, Endpunkte, Beispiele, Rate Limits, SDKs |
 
-Referenzbeispiele: [Wiki/Skins](apps/wiki/masks/), [Messenger/Skins](apps/messenger/masks/), [Desktop/Skins](platform/desktop/masks/).
+Referenzbeispiele: [Wiki/Skins](apps/wiki/frontends/), [Messenger/Skins](apps/messenger/frontends/), [Desktop/Skins](platform/desktop/frontends/).
 
 ## Querverweise auf Systembereiche
 

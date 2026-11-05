@@ -81,13 +81,13 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (6 programs):**
 
-- [draw.io](masks/drawio/index.md) - draw.io
-- [Excalidraw](masks/excalidraw/index.md) - Excalidraw
-- [Miro](masks/miro/index.md) - Miro
-- [Mural](masks/mural/index.md) - Mural
-- [OpenBoard](masks/openboard/index.md) - OpenBoard
-- [tldraw](masks/tldraw/index.md) - tldraw
+- [draw.io](frontends/drawio/index.md) - draw.io
+- [Excalidraw](frontends/excalidraw/index.md) - Excalidraw
+- [Miro](frontends/miro/index.md) - Miro
+- [Mural](frontends/mural/index.md) - Mural
+- [OpenBoard](frontends/openboard/index.md) - OpenBoard
+- [tldraw](frontends/tldraw/index.md) - tldraw
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Mask directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

@@ -81,15 +81,15 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (8 Programme):**
 
-- [Freshdesk](masks/freshdesk/index.md) - Freshdesk
-- [GLPI](masks/glpi/index.md) - GLPI
-- [Helodesk](masks/helodesk/index.md) - Helodesk
-- [Help Scout](masks/helpscout/index.md) - Help Scout
-- [osTicket](masks/osticket/index.md) - osTicket
-- [Request Tracker (RT)](masks/request-tracker/index.md) - Request Tracker (RT)
-- [Zammad](masks/zammad/index.md) - Zammad
-- [Zendesk](masks/zendesk/index.md) - Zendesk
+- [Freshdesk](frontends/freshdesk/index.md) - Freshdesk
+- [GLPI](frontends/glpi/index.md) - GLPI
+- [Helodesk](frontends/helodesk/index.md) - Helodesk
+- [Help Scout](frontends/helpscout/index.md) - Help Scout
+- [osTicket](frontends/osticket/index.md) - osTicket
+- [Request Tracker (RT)](frontends/request-tracker/index.md) - Request Tracker (RT)
+- [Zammad](frontends/zammad/index.md) - Zammad
+- [Zendesk](frontends/zendesk/index.md) - Zendesk
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

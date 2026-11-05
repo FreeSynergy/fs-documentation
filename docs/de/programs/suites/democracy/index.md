@@ -78,13 +78,13 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [Adhocracy4](masks/adhocracy4/index.md) - Adhocracy4
-- [Circo](masks/circo/index.md) - Circo
-- [Consul](masks/consul/index.md) - Consul
-- [Decidim](masks/decidim/index.md) - Decidim
-- [LiquidFeedback](masks/liquid-feedback/index.md) - LiquidFeedback
-- [Pol.is](masks/polis/index.md) - Pol.is
+- [Adhocracy4](frontends/adhocracy4/index.md) - Adhocracy4
+- [Circo](frontends/circo/index.md) - Circo
+- [Consul](frontends/consul/index.md) - Consul
+- [Decidim](frontends/decidim/index.md) - Decidim
+- [LiquidFeedback](frontends/liquid-feedback/index.md) - LiquidFeedback
+- [Pol.is](frontends/polis/index.md) - Pol.is
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

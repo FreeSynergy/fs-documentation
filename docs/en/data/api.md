@@ -283,5 +283,5 @@ client.tasks.update(
 - [standard fields](fields.md)
 - [data formats](formats.md)
 - [conventions](conventions.md)
-- [desktop masks — API examples](../programs/platform/desktop/masks/)
+- [desktop masks — API examples](../programs/platform/desktop/frontends/)
 - [workflows](../programs/suites/workflows/)

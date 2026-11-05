@@ -85,13 +85,13 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [Apache Airflow](masks/apache-airflow/index.md) - Apache Airflow
-- [Make](masks/make/index.md) - Make
-- [n8n](masks/n8n/index.md) - n8n
-- [Node-RED](masks/node-red/index.md) - Node-RED
-- [Prefect](masks/prefect/index.md) - Prefect
-- [Zapier](masks/zapier/index.md) - Zapier
+- [Apache Airflow](frontends/apache-airflow/index.md) - Apache Airflow
+- [Make](frontends/make/index.md) - Make
+- [n8n](frontends/n8n/index.md) - n8n
+- [Node-RED](frontends/node-red/index.md) - Node-RED
+- [Prefect](frontends/prefect/index.md) - Prefect
+- [Zapier](frontends/zapier/index.md) - Zapier
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

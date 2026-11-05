@@ -85,11 +85,11 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (4 programs):**
 
-- [GNOME Contacts](masks/gnome-contacts/index.md) - GNOME Contacts
-- [KAddressBook](masks/kaddressbook/index.md) - KAddressBook
-- [Monica](masks/monica/index.md) - Monica
-- [Nextcloud Contacts](masks/nextcloud-contacts/index.md) - Nextcloud Contacts
+- [GNOME Contacts](frontends/gnome-contacts/index.md) - GNOME Contacts
+- [KAddressBook](frontends/kaddressbook/index.md) - KAddressBook
+- [Monica](frontends/monica/index.md) - Monica
+- [Nextcloud Contacts](frontends/nextcloud-contacts/index.md) - Nextcloud Contacts
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Mask directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

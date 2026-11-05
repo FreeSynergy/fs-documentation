@@ -85,13 +85,13 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [CiviCRM](masks/civicrm/index.md) - CiviCRM
-- [EspoCRM](masks/espocrm/index.md) - EspoCRM
-- [HubSpot](masks/hubspot/index.md) - HubSpot
-- [Pipedrive](masks/pipedrive/index.md) - Pipedrive
-- [Salesforce](masks/salesforce/index.md) - Salesforce
-- [SuiteCRM](masks/suitecrm/index.md) - SuiteCRM
+- [CiviCRM](frontends/civicrm/index.md) - CiviCRM
+- [EspoCRM](frontends/espocrm/index.md) - EspoCRM
+- [HubSpot](frontends/hubspot/index.md) - HubSpot
+- [Pipedrive](frontends/pipedrive/index.md) - Pipedrive
+- [Salesforce](frontends/salesforce/index.md) - Salesforce
+- [SuiteCRM](frontends/suitecrm/index.md) - SuiteCRM
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

@@ -85,13 +85,13 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [Axelor](masks/axelor/index.md) - Axelor
-- [Dolibarr](masks/dolibarr/index.md) - Dolibarr
-- [ERPNext](masks/erpnext/index.md) - ERPNext
-- [Odoo](masks/odoo/index.md) - Odoo
-- [Sage](masks/sage/index.md) - Sage
-- [Tryton](masks/tryton/index.md) - Tryton
+- [Axelor](frontends/axelor/index.md) - Axelor
+- [Dolibarr](frontends/dolibarr/index.md) - Dolibarr
+- [ERPNext](frontends/erpnext/index.md) - ERPNext
+- [Odoo](frontends/odoo/index.md) - Odoo
+- [Sage](frontends/sage/index.md) - Sage
+- [Tryton](frontends/tryton/index.md) - Tryton
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

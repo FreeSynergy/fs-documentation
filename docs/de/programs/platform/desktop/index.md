@@ -8,7 +8,7 @@ Dieser Bereich enthält die Dokumentation für verschiedene Desktop-Applikatione
 
 Programme ohne eigenes Masken-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
 
-→ [Desktop-Masken](masks/index.md)
+→ [Desktop-Masken](frontends/index.md)
 
 Dokumentiert: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
 

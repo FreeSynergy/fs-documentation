@@ -19,16 +19,16 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [Arcemall](masks/arcemall/index.md) - Arcemall
-- [CS-Cart Multi-Vendor](masks/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
-- [eBay](masks/ebay/index.md) - eBay
-- [Etsy](masks/etsy/index.md) - Etsy
-- [Kleinanzeigen](masks/kleinanzeigen/index.md) - Kleinanzeigen
-- [Sharetribe](masks/sharetribe/index.md) - Sharetribe
+- [Arcemall](frontends/arcemall/index.md) - Arcemall
+- [CS-Cart Multi-Vendor](frontends/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
+- [eBay](frontends/ebay/index.md) - eBay
+- [Etsy](frontends/etsy/index.md) - Etsy
+- [Kleinanzeigen](frontends/kleinanzeigen/index.md) - Kleinanzeigen
+- [Sharetribe](frontends/sharetribe/index.md) - Sharetribe
 
-Übersicht: [Skin-Verzeichnis](masks/index.md)
+Übersicht: [Skin-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../../apps/wiki/frontends/index.md) · [Desktop-Skins](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Masken-Dokumentation
 
@@ -36,13 +36,13 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (6 Programme):**
 
-- [Arcemall](masks/arcemall/index.md) - Arcemall
-- [CS-Cart Multi-Vendor](masks/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
-- [eBay](masks/ebay/index.md) - eBay
-- [Etsy](masks/etsy/index.md) - Etsy
-- [Kleinanzeigen](masks/kleinanzeigen/index.md) - Kleinanzeigen
-- [Sharetribe](masks/sharetribe/index.md) - Sharetribe
+- [Arcemall](frontends/arcemall/index.md) - Arcemall
+- [CS-Cart Multi-Vendor](frontends/cs-cart-multivendor/index.md) - CS-Cart Multi-Vendor
+- [eBay](frontends/ebay/index.md) - eBay
+- [Etsy](frontends/etsy/index.md) - Etsy
+- [Kleinanzeigen](frontends/kleinanzeigen/index.md) - Kleinanzeigen
+- [Sharetribe](frontends/sharetribe/index.md) - Sharetribe
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../../apps/wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

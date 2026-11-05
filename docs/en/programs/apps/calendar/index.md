@@ -85,13 +85,13 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (6 programs):**
 
-- [DAViCal](masks/davical/index.md) - DAViCal
-- [Google Calendar](masks/google-calendar/index.md) - Google Calendar
-- [Merkuro Calendar](masks/merkuro/index.md) - Merkuro Calendar
-- [Nextcloud Calendar](masks/nextcloud-calendar/index.md) - Nextcloud Calendar
-- [Outlook Calendar](masks/outlook-calendar/index.md) - Outlook Calendar
-- [GNOME Planner](masks/planner/index.md) - GNOME Planner
+- [DAViCal](frontends/davical/index.md) - DAViCal
+- [Google Calendar](frontends/google-calendar/index.md) - Google Calendar
+- [Merkuro Calendar](frontends/merkuro/index.md) - Merkuro Calendar
+- [Nextcloud Calendar](frontends/nextcloud-calendar/index.md) - Nextcloud Calendar
+- [Outlook Calendar](frontends/outlook-calendar/index.md) - Outlook Calendar
+- [GNOME Planner](frontends/planner/index.md) - GNOME Planner
 
 Overview: [Mask directory](masks/index.md)
 
-Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

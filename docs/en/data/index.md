@@ -116,4 +116,4 @@ docs/en/data/
 - [Gestures](../interactions/gestures/) — interaction data (thresholds, callbacks)
 - [Animations](../interactions/animations/) — animation attributes and durations
 - [Programs](../programs/) — programs with their own `api.md` per mask
-- [Desktop masks](../programs/platform/desktop/masks/) — example of API documentation following the pattern
+- [Desktop masks](../programs/platform/desktop/frontends/) — example of API documentation following the pattern

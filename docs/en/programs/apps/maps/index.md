@@ -84,14 +84,14 @@ The programs in this category are documented following the wiki schema (seven fi
 
 **documented (7 programs):**
 
-- [Leaflet](masks/leaflet/index.md) - Leaflet
-- [MapLibre](masks/maplibre/index.md) - MapLibre
-- [OpenStreetMap](masks/openstreetmap/index.md) - OpenStreetMap
-- [Organic Maps](masks/organic-maps/index.md) - Organic Maps
-- [OsmAnd](masks/osmand/index.md) - OsmAnd
-- [QGIS](masks/qgis/index.md) - QGIS
-- [uMap](masks/umap/index.md) - uMap
+- [Leaflet](frontends/leaflet/index.md) - Leaflet
+- [MapLibre](frontends/maplibre/index.md) - MapLibre
+- [OpenStreetMap](frontends/openstreetmap/index.md) - OpenStreetMap
+- [Organic Maps](frontends/organic-maps/index.md) - Organic Maps
+- [OsmAnd](frontends/osmand/index.md) - OsmAnd
+- [QGIS](frontends/qgis/index.md) - QGIS
+- [uMap](frontends/umap/index.md) - uMap
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Mask directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

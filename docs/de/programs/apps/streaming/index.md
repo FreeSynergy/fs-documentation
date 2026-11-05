@@ -23,20 +23,20 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (10 Programme):**
 
-- [Ant Media Server](masks/ant-media-server/index.md) - Ant Media Server
-- [FFmpeg](masks/ffmpeg/index.md) - FFmpeg
-- [GStreamer](masks/gstreamer/index.md) - GStreamer
-- [MediaMTX](masks/mediamtx/index.md) - MediaMTX
-- [MistServer](masks/mistserver/index.md) - MistServer
-- [nginx-rtmp-module](masks/nginx-rtmp-module/index.md) - nginx-rtmp-module
-- [OBS Studio](masks/obs-studio/index.md) - OBS Studio
-- [Restream](masks/restream/index.md) - Restream
-- [Restreamer](masks/restreamer/index.md) - Restreamer
-- [Wowza Streaming Engine](masks/wowza/index.md) - Wowza Streaming Engine
+- [Ant Media Server](frontends/ant-media-server/index.md) - Ant Media Server
+- [FFmpeg](frontends/ffmpeg/index.md) - FFmpeg
+- [GStreamer](frontends/gstreamer/index.md) - GStreamer
+- [MediaMTX](frontends/mediamtx/index.md) - MediaMTX
+- [MistServer](frontends/mistserver/index.md) - MistServer
+- [nginx-rtmp-module](frontends/nginx-rtmp-module/index.md) - nginx-rtmp-module
+- [OBS Studio](frontends/obs-studio/index.md) - OBS Studio
+- [Restream](frontends/restream/index.md) - Restream
+- [Restreamer](frontends/restreamer/index.md) - Restreamer
+- [Wowza Streaming Engine](frontends/wowza/index.md) - Wowza Streaming Engine
 
-Übersicht: [Skin-Verzeichnis](masks/index.md)
+Übersicht: [Skin-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Skins](../wiki/frontends/index.md) · [Desktop-Skins](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
 
 ## Masken-Dokumentation
 
@@ -44,17 +44,17 @@ Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Date
 
 **dokumentiert (10 Programme):**
 
-- [Ant Media Server](masks/ant-media-server/index.md) - Ant Media Server
-- [FFmpeg](masks/ffmpeg/index.md) - FFmpeg
-- [GStreamer](masks/gstreamer/index.md) - GStreamer
-- [MediaMTX](masks/mediamtx/index.md) - MediaMTX
-- [MistServer](masks/mistserver/index.md) - MistServer
-- [nginx-rtmp-module](masks/nginx-rtmp-module/index.md) - nginx-rtmp-module
-- [OBS Studio](masks/obs-studio/index.md) - OBS Studio
-- [Restream](masks/restream/index.md) - Restream
-- [Restreamer](masks/restreamer/index.md) - Restreamer
-- [Wowza Streaming Engine](masks/wowza/index.md) - Wowza Streaming Engine
+- [Ant Media Server](frontends/ant-media-server/index.md) - Ant Media Server
+- [FFmpeg](frontends/ffmpeg/index.md) - FFmpeg
+- [GStreamer](frontends/gstreamer/index.md) - GStreamer
+- [MediaMTX](frontends/mediamtx/index.md) - MediaMTX
+- [MistServer](frontends/mistserver/index.md) - MistServer
+- [nginx-rtmp-module](frontends/nginx-rtmp-module/index.md) - nginx-rtmp-module
+- [OBS Studio](frontends/obs-studio/index.md) - OBS Studio
+- [Restream](frontends/restream/index.md) - Restream
+- [Restreamer](frontends/restreamer/index.md) - Restreamer
+- [Wowza Streaming Engine](frontends/wowza/index.md) - Wowza Streaming Engine
 
-Übersicht: [Masken-Verzeichnis](masks/index.md)
+Übersicht: [Masken-Verzeichnis](frontends/index.md)
 
-Referenzschema: [Wiki-Masken](../wiki/masks/index.md) · [Desktop-Masken](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
+Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)

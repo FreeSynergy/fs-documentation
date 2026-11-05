@@ -116,4 +116,4 @@ docs/de/data/
 - [Gesten](../interactions/gestures/) — Interaktionsdaten (Schwellwerte, Callbacks)
 - [Animationen](../interactions/animations/) — Animationsattribute und -dauern
 - [Programs](../programs/) — Programme mit eigener `api.md` pro Maske
-- [Desktop-Masken](../programs/platform/desktop/masks/) — Beispiel für API-Dokumentation nach Muster
+- [Desktop-Masken](../programs/platform/desktop/frontends/) — Beispiel für API-Dokumentation nach Muster
