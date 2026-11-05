@@ -16,7 +16,8 @@ Calendar entries, series, participants — and **tasks**: JSCalendar (RFC 8984) 
 
 ## Open points
 
-- Naming conflict `title` (JSCalendar) vs. `name` (JSContact/schema.org/AS2): the rule is still pending (open decision 1 in [standards.md](../standards.md))
+- Stored model **JSCalendar 2.0** (draft -22, ADR 0026); original + AS2 `Event` envelope + `Invite`/`Accept` log (ADR 0020/0030)
+- `title` vs. `name`: proposed rule — content keeps `title`, envelope `name` is derived from it (see [standards.md](../standards.md), open decision 1)
 
 ## See also
 

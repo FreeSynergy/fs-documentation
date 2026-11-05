@@ -165,6 +165,9 @@ Mistakes from the earlier conversation, so they do not end up in a file:
 
 1. **The `name` rule:** one mandatory field `name` for everything
    nameable, `title`/`headline`/`displayName` only as export aliases?
+   *Proposal 2026-11-05 (ADR 0030):* content standards keep their own field (`title` in JSCalendar,
+   `name.full` in JSContact, subject in mail); the **AS2 envelope always has `name`**, derived from it.
+   Nothing is renamed; cross-program views read only the envelope.
 2. **Publication paths for our own specs:** W3C community groups (AS2
    kinship: Social Web Incubator CG) vs. IETF datatracker — to be chosen per
    spec individually.
@@ -185,7 +188,7 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | identity — attestation | VC 2.0 + `eddsa-jcs-2022` (as RLTP) | `Relationship` | ✅ 2026-11-05 |
 | identity — same person (hub matching, ADR 0019) | — | `Relationship`, relation `owl:sameAs` | decided 2026-11-05 (ADR 0029) |
 | messages | chat: MIMI content (draft -10); e-mail: original MIME + JMAP `Email` fields; Matrix events | `Note` (`context` = conversation) | ✅ 2026-11-05, see [messages/](messages/standards.md) |
-| events | JSCalendar `Event`/`Task` (RFC 8984) | `Event` | open |
+| events | **JSCalendar 2.0** (`draft-ietf-calext-jscalendarbis-22`) `Event`/`Task` | `Event`; log `Invite`/`Accept`/`TentativeAccept`/`Reject` | ✅ 2026-11-05, see [events/](events/standards.md) |
 | geodata, projects, profile, login | see domain directories | | open |
 
 ## Gaps → own specifications (ADR 0014)
