@@ -47,10 +47,10 @@ Authorization: Basic base64(agent@mail.com/token/API_TOKEN)
 Content-Type: application/json
 
 { "ticket": {
-    "subject": "Drucker offline",
-    "comment": { "body": "Seit 09:00 kein Druck.", "public": true },
+    "subject": "Printer offline",
+    "comment": { "body": "No printing since 09:00.", "public": true },
     "requester_id": 12345,
-    "tags": ["drucker", "hw"],
+    "tags": ["printer", "hw"],
     "priority": "high" } }
 ```
 

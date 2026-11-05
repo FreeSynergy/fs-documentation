@@ -32,4 +32,4 @@ buttons, rotation handle, slider). Keep browser pinch-zoom controllable via
 
 - [Gesture overview](../index.md)
 - [Zoom-in animation](../../animations/entrance/zoom-in/description.md) - answer to zoom gestures
-- [Rotate animation](rotate/description.md) - answer to rotation gestures
+- [Rotate animation](../../animations/transition/rotate/description.md) - answer to rotation gestures

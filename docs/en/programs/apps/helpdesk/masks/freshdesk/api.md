@@ -43,7 +43,7 @@ POST /api/v2/tickets/1024/reply HTTP/1.1
 Authorization: Basic base64(agent@mail.com:APIKEY)
 Content-Type: application/json
 
-{ "body": "Wir haben die Rechnung korrigiert.", "files": [] }
+{ "body": "We have corrected the invoice.", "files": [] }
 ```
 
 Response: `200 OK` with a conversation object (`id`, `incoming:false`, `source:2`).

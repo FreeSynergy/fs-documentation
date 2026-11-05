@@ -91,13 +91,4 @@ Discord is a proprietary communication platform and chat client originally devel
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Enter` | Send message |
-| `Shift+Enter` | New line |
-| `Ctrl+K` | Search channel |
-| `Ctrl+Shift+K` | Search server |
-| `Ctrl+E` | Settings |
-| `Ctrl+M` | Audio call |
-| `Ctrl+V` | Video call |
-| `Ctrl+Shift+D` | Screen sharing |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

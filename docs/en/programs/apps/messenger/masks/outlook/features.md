@@ -61,17 +61,4 @@ Outlook is Microsoft's most popular email client, part of Microsoft 365. It comb
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+Shift+M` | New Email |
-| `Ctrl+Shift+A` | Create Appointment |
-| `Ctrl+Shift+K` | Create Contacts |
-| `Ctrl+Shift+L` | Create Distribution List |
-| `Ctrl+Shift+T` | New Note |
-| `Ctrl+R` | Reply |
-| `Ctrl+Shift+R` | Forward |
-| `Ctrl+Shift+D` | Quick Search |
-| `Ctrl+1` | Email View |
-| `Ctrl+2` | Calendar View |
-| `Ctrl+3` | Contacts View |
-| `Ctrl+4` | Tasks View |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

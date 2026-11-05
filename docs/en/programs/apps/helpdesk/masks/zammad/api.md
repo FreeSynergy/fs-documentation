@@ -45,7 +45,7 @@ Authorization: Token <token>
 Content-Type: application/json
 
 {
-  "body": "<p>Hallo, der Techniker kommt Donnerstag.</p>",
+  "body": "<p>Hello, the technician is coming on Thursday.</p>",
   "type": "note",
   "form_id": null
 }

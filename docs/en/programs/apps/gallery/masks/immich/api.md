@@ -34,7 +34,7 @@ Immich is REST-based under `/api` (OpenAPI/Swagger under `/api/docs`). All clien
 | `POST` | `/api/assets` | Metadata entry before upload (`deviceAssetId`, `checksum`) |
 | `PUT` | `/api/asset-status` | Batch: favourite, archive, trash, duplicate marking |
 | `POST` | `/api/search/metadata` | Search by EXIF/place/person/date |
-| `POST` | `/api/search/smart` | Semantic CLIP search (`{ "q": "hund am see" }`) |
+| `POST` | `/api/search/smart` | Semantic CLIP search (`{ "q": "dog at the lake" }`) |
 | `GET` | `/api/people` | Recognised people, `updatePerson` for naming |
 | `POST` | `/api/share` | Public link (`expiresAt`, `password`, `allowDownload`) |
 | `POST` | `/api/jobs/{name}` | Re-trigger a job type (`THUMBNAIL`, `FACIAL_RECOGNITION`) |
@@ -49,7 +49,7 @@ POST /api/search/smart HTTP/1.1
 x-api-key: <key>
 Content-Type: application/json
 
-{ "q": "Fahrrad in der Stadt", "size": 20 }
+{ "q": "bicycle in the city", "size": 20 }
 ```
 
 Response: `200 OK` with `{ "assets": { "items": [ { "id": "…", "originalFileName": "IMG_1.jpg" } ], "count": 20 } }`.

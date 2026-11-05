@@ -1,26 +1,26 @@
-# Modal (Modaler Dialog) - Usage
+# Modal - Usage
 
-## Einfaches Modal
+## Simple modal
 
 ```jsx
 <Modal 
-  title="Bestätigung"
+  title="Confirmation"
   isOpen={isOpen}
   onClose={() => setIsOpen(false)}
 >
-  <p>Möchten Sie fortfahren?</p>
+  <p>Do you want to continue?</p>
   <Modal.Footer>
-    <Button onClick={() => setIsOpen(false)}>Abbrechen</Button>
-    <Button variant="primary" onClick={handleConfirm}>Bestätigen</Button>
+    <Button onClick={() => setIsOpen(false)}>Cancel</Button>
+    <Button variant="primary" onClick={handleConfirm}>Confirm</Button>
   </Modal.Footer>
 </Modal>
 ```
 
-## Mit Formular
+## With form
 
 ```jsx
 <Modal 
-  title="Benutzer bearbeiten"
+  title="Edit user"
   isOpen={isOpen}
   onClose={() => setIsOpen(false)}
 >
@@ -29,8 +29,8 @@
     <Input label="Email" value={email} onChange={setEmail} />
   </form>
   <Modal.Footer>
-    <Button onClick={() => setIsOpen(false)}>Abbrechen</Button>
-    <Button variant="primary" onClick={saveUser}>Speichern</Button>
+    <Button onClick={() => setIsOpen(false)}>Cancel</Button>
+    <Button variant="primary" onClick={saveUser}>Save</Button>
   </Modal.Footer>
 </Modal>
 ```
@@ -45,7 +45,7 @@
     isOpen={showInfo}
     onClose={() => setShowInfo(false)}
   >
-    <p>Hier ist die Info...</p>
+    <p>Here is the info...</p>
   </Modal>
 </App>
 ```
@@ -54,7 +54,7 @@
 
 ```jsx
 <Modal 
-  title="Bestätigung"
+  title="Confirmation"
   isOpen={isOpen}
   onOpen={() => console.log('Open')}
   onClose={() => console.log('Close')}
@@ -68,21 +68,21 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✕] Bestätigung                         │
+│ [✕] Confirmation                        │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Möchten Sie wirklich löschen?         │
+│   Delete this item for good?            │
 │                                         │
 ├─────────────────────────────────────────┤
-│  [Nein]               [Ja]              │
+│  [No]                 [Yes]             │
 └─────────────────────────────────────────┘
 ```
 
-## Example 2: Formular-Modal
+## Example 2: Form modal
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✕] Benutzer bearbeiten                 │
+│ [✕] Edit user                           │
 ├─────────────────────────────────────────┤
 │ Name                                    │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━        │
@@ -90,7 +90,7 @@
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━        │
 │                                         │
 ├─────────────────────────────────────────┤
-│  [Abbrechen]        [Speichern]         │
+│  [Cancel]           [Save]              │
 └─────────────────────────────────────────┘
 ```
 
@@ -101,9 +101,9 @@
 │ [✕] Info                                │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Diese Funktion ermöglicht...          │
+│   This feature lets you...              │
 │                                         │
-│   Weitere Informationen...              │
+│   More information...                   │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -112,12 +112,12 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✕] Fehler                              │
+│ [✕] Error                               │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Es ist ein Fehler aufgetreten.        │
+│   An error occurred.                    │
 │                                         │
-│   Bitte versuchen Sie es später erneut. │
+│   Please try again later.               │
 │                                         │
 ├─────────────────────────────────────────┤
 │         [OK]                            │

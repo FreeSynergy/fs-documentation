@@ -27,14 +27,14 @@ Leaflet is the API: a JS library, no server interface. The integration points ar
 ## Example
 
 ```js
-const map = L.map("karte").setView([48.53, 9.058], 14);
+const map = L.map("map").setView([48.53, 9.058], 14);
 L.tileLayer("https://tile.osm.example/{z}/{x}/{y}.png",
   { attribution: "© OpenStreetMap contributors" }).addTo(map);
 
 fetch("/api/standpunkte.geojson")
   .then(r => r.json())
   .then(d => L.geoJSON(d, {
-    onEachFeature: (f, l) => l.bindPopup(f.properties.beschreibung)
+    onEachFeature: (f, l) => l.bindPopup(f.properties.description)
   }).addTo(map));
 ```
 

@@ -74,16 +74,4 @@ Thunderbird is an open-source email and messaging client developed by the Mozill
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+Shift+M` | New email |
-| `Ctrl+Shift+A` | Create appointment (Lightning) |
-| `Ctrl+Shift+K` | New contact (Lightning) |
-| `Ctrl+Shift+N` | New message (News) |
-| `Ctrl+R` | Reply |
-| `Ctrl+Shift+R` | Forward |
-| `Ctrl+Shift+D` | Quick search |
-| `Ctrl+1` | Email view |
-| `Ctrl+2` | Calendar view (Lightning) |
-| `Ctrl+3` | Address book view (Lightning) |
-| `Ctrl+L` | Open address book |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

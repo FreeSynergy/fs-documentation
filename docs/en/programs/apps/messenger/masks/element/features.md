@@ -81,13 +81,4 @@ Element is an open-source messenger for the Matrix protocol community. It is a c
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Enter` | Send message |
-| `Shift+Enter` | New line |
-| `Ctrl+K` | Search room |
-| `Ctrl+Shift+F` | Global search |
-| `Ctrl+P` | Room preferences |
-| `Ctrl+E` | Settings |
-| `Ctrl+M` | Audio call |
-| `Ctrl+V` | Video call |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

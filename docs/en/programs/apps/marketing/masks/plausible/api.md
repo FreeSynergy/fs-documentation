@@ -37,8 +37,8 @@ Report a goal:
 POST /api/event HTTP/1.1
 Content-Type: application/json
 
-{ "name": "Spende", "url": "https://org/danke",
-  "domain": "org.example", "props": { "betrag": 25 } }
+{ "name": "Donation", "url": "https://org/donate",
+  "domain": "org.example", "props": { "amount": 25 } }
 ```
 
 Response: `202`.
@@ -47,7 +47,7 @@ Metrics:
 
 ```http
 GET /api/v1/stats/aggregate?site_id=org.example&period=30d
-    &metrics=visits,conversion_rate&filters=event:is:Spende
+    &metrics=visits,conversion_rate&filters=event:is:Donation
 Authorization: Bearer <api-key>
 ```
 

@@ -92,12 +92,4 @@ Telegram is a cloud-based messenger with a focus on speed and security. It is av
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Enter` | Send message |
-| `Shift+Enter` | New line |
-| `Ctrl+K` | Search chat |
-| `Ctrl+Shift+F` | Global search |
-| `Ctrl+E` | Settings |
-| `Ctrl+M` | Audio call |
-| `Ctrl+V` | Video call |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

@@ -19,7 +19,7 @@ OsmAnd has **no server API** — the interfaces are the file formats and (on And
 ### Open the app with a destination (web/other apps)
 
 ```html
-<a href="geo:48.530,9.058?q=48.530,9.058">In OsmAnd öffnen</a>
+<a href="geo:48.530,9.058?q=48.530,9.058">Open in OsmAnd</a>
 ```
 
 ### Have it plan a route (intents, planning plugin active)

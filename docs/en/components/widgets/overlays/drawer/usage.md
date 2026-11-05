@@ -1,10 +1,10 @@
 # Drawer - Usage
 
-## Einfacher Drawer
+## Simple drawer
 
 ```jsx
 <Drawer 
-  title="Menü"
+  title="Menu"
   isOpen={isOpen}
   onClose={() => setIsOpen(false)}
 >
@@ -21,11 +21,11 @@
 <AppShell>
   <Header>
     <Button onClick={() => setIsOpen(true)}>
-      ☰ Menü
+      ☰ Menu
     </Button>
   </Header>
   <Drawer 
-    title="Menü"
+    title="Menu"
     isOpen={isOpen}
     onClose={() => setIsOpen(false)}
   >
@@ -35,7 +35,7 @@
 </AppShell>
 ```
 
-## Mit Formular
+## With form
 
 ```jsx
 <Drawer 
@@ -45,8 +45,8 @@
 >
   <form>
     <Select label="Status" options={statusOptions} />
-    <DateInput label="Von" value={from} onChange={setFrom} />
-    <DateInput label="Bis" value={to} onChange={setTo} />
+    <DateInput label="From" value={from} onChange={setFrom} />
+    <DateInput label="To" value={to} onChange={setTo} />
   </form>
 </Drawer>
 ```
@@ -55,7 +55,7 @@
 
 ```jsx
 <Drawer 
-  title="Menü"
+  title="Menu"
   isOpen={isOpen}
   onOpen={() => console.log('Open')}
   onClose={() => console.log('Close')}
@@ -64,20 +64,20 @@
 
 ## Examples
 
-## Example 1: Mobile-Menu
+## Example 1: Mobile menu
 
 ```
 ┌─────────────────────────────────────────┐
-│  ☰ Menü                                 │
+│  ☰ Menu                                 │
 ├─────────────────────────────────────────┤
 │ 🏠 Home                                 │
 │ ℹ️ About                                │
 │ 🛍️ Shop                                │
 │ 📝 Blog                                 │
-│ 👥 Profil                               │
+│ 👥 Profile                              │
 ├─────────────────────────────────────────┤
-│ ⚙️ Einstellungen                        │
-│ ❓ Hilfe                                │
+│ ⚙️ Settings                             │
+│ ❓ Help                                 │
 └─────────────────────────────────────────┘
 ```
 
@@ -88,46 +88,46 @@
 │  🔍 Filter                              │
 ├─────────────────────────────────────────┤
 │ Status:                                 │
-│   [✓] Offen                             │
-│   [ ] Geschlossen                       │
+│   [✓] Open                              │
+│   [ ] Closed                            │
 │                                         │
-│ Priorität:                              │
-│   [✓] Hoch                              │
-│   [ ] Mittel                            │
-│   [ ] Niedrig                           │
+│ Priority:                               │
+│   [✓] High                              │
+│   [ ] Medium                            │
+│   [ ] Low                               │
 │                                         │
-│ [Reset] [Anwenden]                      │
+│ [Reset] [Apply]                         │
 └─────────────────────────────────────────┘
 ```
 
-## Example 3: Profil-Drawer
+## Example 3: Profile drawer
 
 ```
 ┌─────────────────────────────────────────┐
-│  👤 Profil                              │
+│  👤 Profile                             │
 ├─────────────────────────────────────────┤
 │  🖼️ John Doe                            │
 │  Developer                             │
 │  john@example.com                      │
 ├─────────────────────────────────────────┤
-│ [Einstellungen]                         │
-│ [Abmelden]                              │
+│ [Settings]                              │
+│ [Sign out]                              │
 └─────────────────────────────────────────┘
 ```
 
-## Example 4: Sidebar (Links)
+## Example 4: Sidebar (left)
 
 ```
 ┌─────────────────────────────────────────┐
-│  📱 Menü                                │
+│  📱 Menu                                │
 ├─────────────────────────────────────────┤
 │ 🏠 Dashboard                            │
-│ 📩 Nachrichten                          │
-│ 📅 Kalender                             │
-│ 👥 Kontakte                             │
+│ 📩 Messages                             │
+│ 📅 Calendar                             │
+│ 👥 Contacts                             │
 ├─────────────────────────────────────────┤
 │ 📊 Reports                              │
-│ ⚙️ Einstellungen                        │
+│ ⚙️ Settings                             │
 └─────────────────────────────────────────┘
 ```
 
@@ -135,14 +135,14 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│  🛒 Warenkorb                           │
+│  🛒 Cart                                │
 ├─────────────────────────────────────────┤
-│  [✕] Produkt 1        x2  €29,99        │
-│  [✕] Produkt 2        x1  €19,99        │
+│  [✕] Product 1        x2  €29,99        │
+│  [✕] Product 2        x1  €19,99        │
 │                                         │
 │  ─────────────────────────              │
-│  Summe: €79,97                          │
+│  Total: €79.97                          │
 │                                         │
-│  [Weiter]                                │
+│  [Continue]                              │
 └─────────────────────────────────────────┘
 ```

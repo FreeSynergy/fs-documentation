@@ -80,18 +80,4 @@ Kontact is an integrated Personal Information Manager (PIM) application for the 
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+Shift+M` | New email |
-| `Ctrl+Shift+A` | Create appointment |
-| `Ctrl+Shift+K` | Create contact |
-| `Ctrl+Shift+L` | Create mailing list |
-| `Ctrl+Shift+T` | New note |
-| `Ctrl+R` | Reply |
-| `Ctrl+Shift+R` | Forward |
-| `Ctrl+Shift+D` | Quick search |
-| `Ctrl+1` | Email view |
-| `Ctrl+2` | Calendar view |
-| `Ctrl+3` | Contacts view |
-| `Ctrl+4` | Tasks view |
-| `Ctrl+5` | Notes view |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

@@ -16,16 +16,16 @@ As with OsmAnd: **no server API**. The docking points are geo links/intents and 
 ## Core patterns
 
 ```html
-<a href="geo:48.530,9.058?q=48.530,9.058">In Organic Maps öffnen</a>
+<a href="geo:48.530,9.058?q=48.530,9.058">Open in Organic Maps</a>
 ```
 
 KML for group distribution:
 
 ```xml
 <kml><Document><Placemark>
-  <name>Treffpunkt Nordring</name>
+  <name>Meeting point Nordring</name>
   <Point><coordinates>9.058,48.530,0</coordinates></Point>
-  <description>Brunnenseite, samstags 10 Uhr</description>
+  <description>By the fountain, Saturdays 10 a.m.</description>
 </Placemark></Document></kml>
 ```
 

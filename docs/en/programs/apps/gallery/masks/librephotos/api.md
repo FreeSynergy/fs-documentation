@@ -44,7 +44,7 @@ POST /api/search HTTP/1.1
 Authorization: Token <token>
 Content-Type: application/json
 
-{ "search_text": "Hund im Garten", "user": 3, "time": "all" }
+{ "search_text": "dog in the garden", "user": 3, "time": "all" }
 ```
 
 Response: `200 OK` with `{ "results": [ { "id": 812, "image": "/media/samples/…jpg" } ] }`.

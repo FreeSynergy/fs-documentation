@@ -92,11 +92,4 @@ Mastodon is an open-source microblogging network based on the ActivityPub protoc
 
 ## Shortcuts
 
-| Shortcut | Function |
-|----------|----------|
-| `Enter` | Send toot |
-| `Shift+Enter` | New line |
-| `Ctrl+K` | Search toot |
-| `Ctrl+Shift+F` | Search profile |
-| `Ctrl+E` | Settings |
-| `Ctrl+Shift+M` | New direct message |
+ See [shortcuts.md](shortcuts.md) for the complete list of keyboard shortcuts.

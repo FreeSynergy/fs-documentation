@@ -18,7 +18,7 @@ Pagination is a navigation for large lists that splits data into pages.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [◀ Zurück] [Weiter ▶]                   │
+│ [◀ Back] [Next ▶]                       │
 └─────────────────────────────────────────┘
 ```
 
@@ -26,7 +26,7 @@ Pagination is a navigation for large lists that splits data into pages.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [Mehr laden]                            │
+│ [Load more]                             │
 └─────────────────────────────────────────┘
 ```
 
@@ -34,7 +34,7 @@ Pagination is a navigation for large lists that splits data into pages.
 
 ```
 ┌─────────────────────────────────────────┐
-│ (Automatisch nachladen beim Scrollen)   │
+│ (Auto-loads on scroll)                  │
 └─────────────────────────────────────────┘
 ```
 
@@ -78,4 +78,4 @@ Pagination is a navigation for large lists that splits data into pages.
 - **Current Page**: current page
 - **Items per Page**: items per page
 - **Jump to Page**: jump straight to a page
-- **Page Size Selector**: Anzahl pro Seite ändern
+- **Page Size Selector**: change the number of items per page

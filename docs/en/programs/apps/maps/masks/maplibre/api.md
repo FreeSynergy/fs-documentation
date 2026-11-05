@@ -29,15 +29,15 @@ Two API levels: the **JS map API** (`maplibregl`) and the **data/style formats**
 
 ```js
 const map = new maplibregl.Map({
-  container: "karte",
+  container: "map",
   style: "https://tiles.example.org/osm-bright.json"
 });
 map.addSource("standpunkte", { type: "geojson",
   data: { type: "FeatureCollection", features: [] } });
 map.addLayer({ id: "pk", type: "circle", source: "standpunkte",
   paint: { "circle-radius": 7, "circle-color": "#d33" } });
-// Polling/eigener Update-Kanal:
-quelle.setData(geojson);
+// Polling / own update channel:
+source.setData(geojson);
 ```
 
 ## Tile setups (schema)

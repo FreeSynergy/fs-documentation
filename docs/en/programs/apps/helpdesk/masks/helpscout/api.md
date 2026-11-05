@@ -40,7 +40,7 @@ POST /v2/conversations/123/reply HTTP/1.1
 Authorization: Bearer <token>
 Content-Type: application/json
 
-{ "type": "reply", "body": "<p>Hallo, anbei die Korrektur.</p>", "assignTo": 456 }
+{ "type": "reply", "body": "<p>Hello, the correction is attached.</p>", "assignTo": 456 }
 ```
 
 Response: `201 Created` with a thread object.
