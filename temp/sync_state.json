@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T13:04:25.970612+00:00",
+  "last_run": "2026-11-05T13:14:57.527462+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -25640,118 +25640,148 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "cbb99c98d3f9b52c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:14:57.527428+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki mediawiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/mediawiki/api.md"
+        },
+        {
+          "at": "2026-11-05T13:14:57.527428+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5379
+      "de_bytes": 5379,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "46d94593617b85ca",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:14:57.099728+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki mediawiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/mediawiki/description.md"
+        },
+        {
+          "at": "2026-11-05T13:14:57.099728+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 1941
+      "de_bytes": 1941,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "51d4be00ddc36b8e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:14:57.186049+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki mediawiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/mediawiki/features.md"
+        },
+        {
+          "at": "2026-11-05T13:14:57.186049+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 4184
+      "de_bytes": 4184,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "67903d858b9607e3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:14:57.357531+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki mediawiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/mediawiki/menu.md"
+        },
+        {
+          "at": "2026-11-05T13:14:57.357531+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 2386
+      "de_bytes": 2386,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "c7b5897fa1c687bb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:14:57.442761+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki mediawiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/mediawiki/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T13:14:57.442761+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6890
+      "de_bytes": 6890,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/mediawiki/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "c79f12e4bfff1c98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:14:57.271786+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki mediawiki)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/mediawiki/structure.md"
+        },
+        {
+          "at": "2026-11-05T13:14:57.271786+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5885
+      "de_bytes": 5885,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/notion/latest/api.md": {
       "status": "PENDING",
