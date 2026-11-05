@@ -6,11 +6,13 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
+| [Apple Mail](apple-mail/index.md) | [ios-26](apple-mail/ios-26/description.md) | Apple Mail is the mail program that ships with every iPhone, iPad and Mac. |
 | [Discord](discord/index.md) | [latest](discord/latest/description.md) | Discord is a proprietary communication platform for gaming communities, with voice/video and a server structure. |
 | [Element](element/index.md) | [latest](element/latest/description.md) | Element is the open-source messenger for the Matrix protocol, with a decentralised architecture and end-to-end encryption. |
+| [FreeSynergy Simple](freesynergy-simple/index.md) | [0.1](freesynergy-simple/0.1/description.md) | Our own, deliberately minimal messenger frontend. |
 | [Kontact](kontact/index.md) | [latest](kontact/latest/description.md) | Kontact is the integrated PIM application for KDE, which unites email, calendar, contacts, tasks and notes in a single application. |
 | [Mastodon](mastodon/index.md) | [latest](mastodon/latest/description.md) | Mastodon is an open-source microblogging network based on the ActivityPub protocol, and it is decentralised. |
-| [Outlook](outlook/index.md) | [latest](outlook/latest/description.md) | Outlook is Microsoft's most popular email client, part of Microsoft 365. |
+| [Outlook](outlook/index.md) | [latest](outlook/latest/description.md), [m365-2026-11](outlook/m365-2026-11/description.md) | Outlook is Microsoft's most popular email client, part of Microsoft 365. |
 | [Telegram](telegram/index.md) | [latest](telegram/latest/description.md) | Telegram is a cloud-based messenger focused on speed, large groups/channels and encryption. |
 | [Thunderbird](thunderbird/index.md) | [latest](thunderbird/latest/description.md) | Thunderbird is Mozilla's open-source email client, cross-platform and email-focused. |
 

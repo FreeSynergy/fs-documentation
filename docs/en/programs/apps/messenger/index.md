@@ -81,10 +81,12 @@ Further information can be found in the documentation of individual messenger sy
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (7), by function, nothing copied (ADR 0012/0013):
+Analysed programs (9), by function, nothing copied (ADR 0012/0013):
 
+- [Apple Mail](frontends/apple-mail/index.md) — Apple Mail is the mail program that ships with every iPhone, iPad and Mac.
 - [Discord](frontends/discord/index.md) — Discord is a proprietary communication platform for gaming communities, with voice/video and a server structure.
 - [Element](frontends/element/index.md) — Element is the open-source messenger for the Matrix protocol, with a decentralised architecture and end-to-end encryption.
+- [FreeSynergy Simple](frontends/freesynergy-simple/index.md) — Our own, deliberately minimal messenger frontend.
 - [Kontact](frontends/kontact/index.md) — Kontact is the integrated PIM application for KDE, which unites email, calendar, contacts, tasks and notes in a single application.
 - [Mastodon](frontends/mastodon/index.md) — Mastodon is an open-source microblogging network based on the ActivityPub protocol, and it is decentralised.
 - [Outlook](frontends/outlook/index.md) — Outlook is Microsoft's most popular email client, part of Microsoft 365.

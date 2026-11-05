@@ -9,7 +9,8 @@ Status: `implemented` · `planned` · `proposed`
 **Seen in** — analysed frontends: [Di](frontends/discord/index.md) Discord ·
 [El](frontends/element/index.md) Element · [Ko](frontends/kontact/index.md) Kontact ·
 [Ma](frontends/mastodon/index.md) Mastodon · [Ou](frontends/outlook/index.md) Outlook ·
-[Te](frontends/telegram/index.md) Telegram · [Th](frontends/thunderbird/index.md) Thunderbird.
+[Te](frontends/telegram/index.md) Telegram · [Th](frontends/thunderbird/index.md) Thunderbird ·
+[Ap](frontends/apple-mail/index.md) Apple Mail (iOS 26). Outlook (Ou) also from screenshots, version `m365-2026-11`.
 *arch.* = required by our architecture or principles, not by counting.
 ⚠️ = not (or not clearly) in our frontend files; known from the products, to be verified there first.
 
@@ -91,6 +92,21 @@ Data references: [messages standards](../../../data/messages/standards.md) ·
 | Calendar invitations answered in place (accept / decline) | Ko, Ou, Th (mail + calendar together) | iMIP / JSCalendar, handled by the calendar program (ADR 0017), shown via its widget | proposed |
 | Search and send GIFs, stickers, images from **Git repositories** (own, community, free offers) (`media.search`) | Di, El (GIF search as an idea) | packages via Git (ADR 0036); no tracking lookups | proposed |
 | Bridges to other networks (Telegram, Discord, WhatsApp, …), installable on demand (`bridge.install`) | El (bridges) ⚠️ | Matrix bridges, self-hosted; marked "not end-to-end" (ADR 0018) | proposed |
+| Saved views / smart mailboxes: a stored search shown like a folder (`view.save`) | Ou (search folders), Ap (smart mailboxes) | stored query over the envelope fields; JMAP `Email/query` filter as model | proposed |
+| Automatic categories / focused inbox with explanation (`message.classify`) | Ou (Focused/Other), Ap (categories) | local classification only (no cloud), result as JMAP keyword / vendor property | proposed |
+| Follow-up reminder on a message (`message.followup`) | Ou, Ap | JSCalendar `Task` linked via `relatedTo` | proposed |
+| Pin a conversation (`conversation.pin`) | Ou | JMAP keyword | proposed |
+| Recall a sent message (`message.recall`) | Ou | only where both sides are ours / MIMI delete; mail: best effort ⚠️ | proposed |
+| VIP senders (`contact.vip`) | Ap | contacts: JSContact vendor property `freesynergy.net:vip` | proposed |
+| Protect privacy when opening mail: remote content via proxy, hide IP (`privacy.proxy`) | Ap (Protect Mail Activity) | fits ADR 0018/0029; hub as proxy | proposed |
+| Warn about recipients outside a trusted set (`recipient.warn`) | Ap (Mark Addresses) | contacts + trust (Web of Trust) | proposed |
+| One-click unsubscribe from mailing lists (`list.unsubscribe`) | Ap | RFC 2369 `List-Unsubscribe`, RFC 8058 one-click ⚠️ verify | proposed |
+| Automatic replies / out of office (`autoreply.set`) | Ou | Sieve vacation (RFC 5230) ⚠️ verify | proposed |
+| Mute / ignore a conversation (`conversation.ignore`) | Ou (ignore), Ap (mute) | JMAP keyword | proposed |
+| Message priority / importance (`message.priority`) | Ou | MIME `Importance` header; chat: vendor property | proposed |
+| Sending aliases per account (`account.alias`) | Ap | JMAP `Identity` | proposed |
+| Offline: choose which folders and how many days are kept (`sync.scope`) | Ou | `fs-store` sync policy (ADR 0019) | proposed |
+| Summarise a long message (`message.summarize`) | Ou | **local model only** (no cloud, ADR 0029) ⚠️ | proposed |
 
 ## Not planned (deliberately)
 
