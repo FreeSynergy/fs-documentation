@@ -7,14 +7,16 @@ gültig für alle Repos, bis ausdrücklich geändert.
 
 Das konkrete Dateisatz- und Layout-Handwerk steht in `doku-standard.md` (hier im Verzeichnis).
 
-Stand: 2026-11-05 (ADRs 0011–0024: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
+Stand: 2026-11-05 (ADRs 0011–0026: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
 Fremdprojekte, Lizenz, Repos, Messenger)
 
 ---
 
 ## 0. Grundsätze (Kurzfassung, Details in den ADRs)
 
-- **Funktionen analysieren, nichts kopieren** — auch nicht aus OSS (ADR 0013).
+- **Funktionen analysieren, nichts kopieren** — auch nicht aus OSS (ADR 0013); nur im äußersten
+  Notfall aus offenen Projekten, nie Closed Source, Lizenz/Urheber bleiben (ADR 0025).
+- **Immer die neueste tragfähige Technik**, Altes nur als Brücke nach außen (ADR 0026).
 - **Standards zuerst**, ActivityStreams 2.0 als Basis; fehlt ein Standard → eigener Entwurf
   → IETF/W3C (ADR 0014).
 - **100 % Rust**, keine doppelten Crates; Blinc, Turso, Web of Trust, Kanidm, Zentinel werden
