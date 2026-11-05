@@ -68,4 +68,4 @@ Cloud: gestaffelt (~4.000 Requests/10-s-Fenster pro Nutzer über alle Apps; App-
 
 ## Skin-Hinweis
 
-Status-Transitionen (Kanten mit Berechtigungen) sind das Referenzmuster für Workflow-Skins; JQL-Feldnamen → [felder.md](../../../../../data/felder.md).
+Status-Transitionen (Kanten mit Berechtigungen) sind das Referenzmuster für Workflow-Skins; JQL-Feldnamen → [fields.md](../../../../../data/fields.md).

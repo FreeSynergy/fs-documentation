@@ -8,7 +8,7 @@ Alle Beispiele hier sind **wörtlich den Spezifikationen entnommen oder aus ihre
 
 ## Contact
 
-Unsere Definition steht in [modelle.md](modelle.md#contact). Das ist der Abgleich:
+Unsere Definition steht in [models.md](models.md#contact). Das ist der Abgleich:
 
 | Unser Feld | Belegtes Gegenstück | Quelle | Anmerkung |
 |-----------|---------------------|--------|-----------|
@@ -107,13 +107,13 @@ Zwei Stellen in dieser Dokumentation beschreiben Inhalt bereits **verschieden** 
 | Fundstelle | Was dort steht |
 |------------|----------------|
 | `components/workbenches/fields/rich-text-editor/attributes.md` | Attribut `value`, Typ `string`, Beschreibung „Wert (HTML)" |
-| `data/modelle.md`, Modell `Block` | `type` mit Werten `text`, `heading`, `image`, `table`, `code`, `callout`; typabhängige Attribute in `props`; `content` als `array[] \| markdown`; weiter `order`, `align` |
+| `data/models.md`, Modell `Block` | `type` mit Werten `text`, `heading`, `image`, `table`, `code`, `callout`; typabhängige Attribute in `props`; `content` als `array[] \| markdown`; weiter `order`, `align` |
 
 Drei Folgen, die wir bereinigen müssen, bevor „Überschrift → `name`" funktionieren kann:
 
 1. Es gibt **zwei Inhaltsrepräsentationen** (HTML im Editor, Block-Array im Modell) und **keine** dokumentierte Abbildung zwischen beiden. Eine Überschrift ist im einen Fall `<h1>`, im anderen ein Block — welche davon in der Datenbank steht, ist offen.
-2. Der Block hat **kein Feld für die Überschriftenstufe**. `level` (oder `depth`) existiert in `modelle.md` nicht. Ohne diese Stufe können wir nicht sagen, welche Überschrift die „Hauptüberschrift" ist.
-3. Für strukturierten Block-Inhalt habe ich **keinen** Standard gefunden. Verbreitete Formen wie ProseMirror-/TipTap-JSON oder Markdown-AST sind De-facto-Formate von fremden Implementierungen, von mir hier **nicht geprüft** ⚠️. Markdown + Frontmatter in `formate.md` ist eine eigene Konvention, kein Standard.
+2. Der Block hat **kein Feld für die Überschriftenstufe**. `level` (oder `depth`) existiert in `models.md` nicht. Ohne diese Stufe können wir nicht sagen, welche Überschrift die „Hauptüberschrift" ist.
+3. Für strukturierten Block-Inhalt habe ich **keinen** Standard gefunden. Verbreitete Formen wie ProseMirror-/TipTap-JSON oder Markdown-AST sind De-facto-Formate von fremden Implementierungen, von mir hier **nicht geprüft** ⚠️. Markdown + Frontmatter in `formats.md` ist eine eigene Konvention, kein Standard.
 
 Was wir also selbst festlegen müssten, ist **eine einzige Regel** — zum Beispiel: *„Ein Block mit `type: heading` und `level: 1`, der als erster Block eines Dokuments steht, schreibt seinen Text in `name` des Dokuments; die Zuordnung wird als Annotation mit Motiv `classifying` gespeichert."* Das wäre ein Kandidat für eine eigene Spezifikation, weil es genau diese Regel nirgends gibt.
 
@@ -126,7 +126,7 @@ Offene Punkte dazu, bevor wir das entscheiden:
 
 ## Event und Task
 
-Grundlage ist **JSCalendar, RFC 8984** (siehe [standards.md](standards.md)). Unsere Definitionen stehen in [modelle.md](modelle.md#event) und [modelle.md](modelle.md#task).
+Grundlage ist **JSCalendar, RFC 8984** (siehe [standards.md](standards.md)). Unsere Definitionen stehen in [models.md](models.md#event) und [models.md](models.md#task).
 
 | Unser Feld | JSCalendar-Gegenstück | Beleg | Anmerkung |
 |-----------|----------------------|-------|-----------|
@@ -137,7 +137,7 @@ Grundlage ist **JSCalendar, RFC 8984** (siehe [standards.md](standards.md)). Uns
 | `timezone` | `timeZone`, `timeZones` | ✅ §4.7.1, §4.7.2 | Groß-/Kleinschreibung unterscheidet sich |
 | `locationId` | `locations` (Unterobjekte), `virtualLocations`, `Participant.locationId` | ✅ §4.2.5, §4.2.6, §4.4.6 | JSCalendar kennt mehrere Orte pro Termin, wir nur einen |
 | `attendees[]` | `participants` (Karte von Teilnehmer-IDs) | ✅ §4.4.6 | |
-| `attendees[].response` | `participationStatus` | ✅ §4.4.6 | Werte: `needs-action`, `accepted`, `declined`, `tentative`, `delegated`. **Unser `needsAction` verstößt gegen unsere eigene Enum-Regel** (felder.md: lowercase, `_`) → intern `needs_action` |
+| `attendees[].response` | `participationStatus` | ✅ §4.4.6 | Werte: `needs-action`, `accepted`, `declined`, `tentative`, `delegated`. **Unser `needsAction` verstößt gegen unsere eigene Enum-Regel** (fields.md: lowercase, `_`) → intern `needs_action` |
 | — (fehlt bei uns) | `roles` — **Pflicht**, mindestens eine: `owner`, `attendee`, `optional`, `informational`, `chair`, `contact` | ✅ §4.4.6 | unser Teilnehmer-Modell kann nicht unterscheiden: eingeladen, nur informiert, Verantwortlicher, Raum |
 | — (fehlt bei uns) | `kind` des Teilnehmers: `individual`, `group`, `location`, `resource` | ✅ §4.4.6 | Räume und Beamte sind Teilnehmer — wichtig für Raumbuchung |
 | — (fehlt bei uns) | `sendTo` (`imip`, `other`), `expectReply`, `scheduleAgent` (`server`, `client`, `none`), `participationComment` | ✅ §4.4.6 | invitationsfähig ohne Extratabelle |
@@ -207,7 +207,7 @@ Diese Zeilen müssen einzeln belegt werden, **bevor** wir Feldnamen darauf mappe
 ## Siehe auch
 
 - [Datenstandards](standards.md)
-- [Datenmodelle](modelle.md)
-- [Standardfelder](felder.md)
-- [Datenformate](formate.md)
-- [Konventionen](konventionen.md)
+- [Datenmodelle](models.md)
+- [Standardfelder](fields.md)
+- [Datenformate](formats.md)
+- [Konventionen](conventions.md)

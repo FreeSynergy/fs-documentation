@@ -66,4 +66,4 @@ Keine harte API-Begrenzung eingebaut; empfohlen werden Limits im Reverse Proxy s
 
 ## Skin-Hinweis
 
-Asset/Album/Share entspricht dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); EXIF-Felder folgen [felder.md](../../../../../data/felder.md).
+Asset/Album/Share entspricht dem Standardmodell ([models.md](../../../../../data/models.md)); EXIF-Felder folgen [fields.md](../../../../../data/fields.md).

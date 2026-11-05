@@ -28,4 +28,4 @@ Asana strukturiert Arbeit als Aufgaben mit klaren Verantwortlichkeiten und Termi
 ## Für wen geeignet
 
 - Marketing/Operations/Agenturen mit Termin- und Verantwortlichkeitsdruck
-- FreeSynergy-Skins: Aufgabe+Custom Fields+Abhängigkeit als generisches [Task-Modell](../../../../../data/modelle.md)
+- FreeSynergy-Skins: Aufgabe+Custom Fields+Abhängigkeit als generisches [Task-Modell](../../../../../data/models.md)

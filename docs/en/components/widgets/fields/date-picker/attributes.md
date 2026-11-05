@@ -78,7 +78,7 @@ data set through the pattern in [data API](../../../../data/api.md).
 
 ## Entry object
 
-An entry in `entries` follows the [standard fields](../../../../data/felder.md).
+An entry in `entries` follows the [standard fields](../../../../data/fields.md).
 
 | Attribute | Type | Description |
 |-----------|------|-------------|

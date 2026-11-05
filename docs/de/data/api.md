@@ -279,9 +279,9 @@ client.tasks.update(
 
 ## Siehe auch
 
-- [Standardmodelle](modelle.md)
-- [Standardfelder](felder.md)
-- [Datenformate](formate.md)
-- [Konventionen](konventionen.md)
+- [Standardmodelle](models.md)
+- [Standardfelder](fields.md)
+- [Datenformate](formats.md)
+- [Konventionen](conventions.md)
 - [Desktop-Skins — API-Beispiele](../programs/platform/desktop/masks/)
 - [Workflows](../programs/suites/workflows/)

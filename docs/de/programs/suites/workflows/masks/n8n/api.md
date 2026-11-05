@@ -61,4 +61,4 @@ Standardmäßig keine API-Grundgrenze; Webhook-/Queue-Kapazität hängt an Insta
 
 ## Skin-Hinweis
 
-n8n-Workflow-JSON = Referenz für Integrations-Skins: Trigger + Schritte + Fehlerpfade als standardisierte Abläufe ([modelle.md](../../../../../data/modelle.md) → Workflow/Event).
+n8n-Workflow-JSON = Referenz für Integrations-Skins: Trigger + Schritte + Fehlerpfade als standardisierte Abläufe ([models.md](../../../../../data/models.md) → Workflow/Event).

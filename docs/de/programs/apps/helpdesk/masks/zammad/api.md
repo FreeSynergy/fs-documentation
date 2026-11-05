@@ -77,4 +77,4 @@ Keine eingebauten API-Limits (Schutz über Reverse Proxy/Empfehlung: Token-Scope
 
 ## Skin-Hinweis
 
-Ticket-/Article-/User-Felder spiegeln das Standardmodell ([modelle.md](../../../../../data/modelle.md)); dynamische Felder entsprechen [felder.md](../../../../../data/felder.md) (`object_manager_attributes`).
+Ticket-/Article-/User-Felder spiegeln das Standardmodell ([models.md](../../../../../data/models.md)); dynamische Felder entsprechen [fields.md](../../../../../data/fields.md) (`object_manager_attributes`).

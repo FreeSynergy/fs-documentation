@@ -64,4 +64,4 @@ zeitbasierte Limits pro App/Nutzer; bei 429 `Retry-After`-Header; Response enth�
 
 ## Skin-Hinweis
 
-`gid`- IDs + Abschnitt/Portfolio entsprechen [Task-Struktur](../../../../../data/modelle.md); Custom Fields → [felder.md](../../../../../data/felder.md).
+`gid`- IDs + Abschnitt/Portfolio entsprechen [Task-Struktur](../../../../../data/models.md); Custom Fields → [fields.md](../../../../../data/fields.md).

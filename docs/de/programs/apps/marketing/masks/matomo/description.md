@@ -28,4 +28,4 @@ Matomo ist Web-Analyse mit eigenen Regeln: Tracking-Code rein, Berichte raus —
 ## Für wen geeignet
 
 - Organisationen mit Compliance-Pflicht + Analyseanspruch
-- FreeSynergy-Skins: Matomo als Standard-Analytics-Layer ([modelle.md](../../../../../data/modelle.md): Ereignis→Besuch→Conversion)
+- FreeSynergy-Skins: Matomo als Standard-Analytics-Layer ([models.md](../../../../../data/models.md): Ereignis→Besuch→Conversion)

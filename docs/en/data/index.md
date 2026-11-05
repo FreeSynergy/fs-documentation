@@ -12,7 +12,7 @@ Standardised data describe in which **formats**, **models** and **fields** FreeS
 
 ## Data domains (decided 2026-11-01)
 
-Every domain has a directory with its own `index.md`; every standard inside it a subdirectory with `beschreibung.md` + `speicherung.md`.
+Every domain has a directory with its own `index.md`; every standard inside it a subdirectory with `description.md` + `storage.md`.
 
 | Domain | Directory | Canonical standard | Further standards |
 |--------|-----------|--------------------|-------------------|
@@ -35,10 +35,10 @@ The **envelope** (AS2 + ActivityPub, decisions in [standards.md](standards.md)) 
 |------|---------|
 | [standards.md](standards.md) | Which existing standards cover which data area (with evidence and unverified points) |
 | [mappings.md](mappings.md) | Our fields ↔ standard fields (initially Contact, Name, headline) |
-| [formate.md](formate.md) | Exchange formats (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
-| [modelle.md](modelle.md) | Standard models (User, Message, Document, Event, Task, Contact, …) |
-| [felder.md](felder.md) | Standard fields, types, enums, required fields |
-| [konventionen.md](konventionen.md) | Naming, file structures, versioning, validation, i18n |
+| [formats.md](formats.md) | Exchange formats (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
+| [models.md](models.md) | Standard models (User, Message, Document, Event, Task, Contact, …) |
+| [fields.md](fields.md) | Standard fields, types, enums, required fields |
+| [conventions.md](conventions.md) | Naming, file structures, versioning, validation, i18n |
 | [api.md](api.md) | Unified CRUD pattern, pagination, filters, error format, webhooks |
 
 ## Standard models (overview)
@@ -95,12 +95,12 @@ docs/en/data/
 ├── index.md            (this file)
 ├── standards.md        standards register + decisions of 2026-11-01
 ├── mappings.md         our fields ↔ standard fields
-├── formate.md          exchange formats
-├── modelle.md          standard models
-├── felder.md           standard fields and types
-├── konventionen.md     naming and versioning rules
+├── formats.md          exchange formats
+├── models.md          standard models
+├── fields.md           standard fields and types
+├── conventions.md     naming and versioning rules
 ├── api.md              unified API pattern
-├── contacts/           ├── index.md └── jscontact/{beschreibung,speicherung}.md
+├── contacts/           ├── index.md └── jscontact/{description,storage}.md
 ├── messages/           ┐
 ├── events/             │ every domain:
 ├── geodata/            │ index.md + description.md

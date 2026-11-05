@@ -72,4 +72,4 @@ Keine eingebauten; Session-Timeout (Standard 30 min) und `App-Token`-Rotation ad
 
 ## Skin-Hinweis
 
-Ticket↔Asset-Verknüpfung ist das GLPI-Besondere — FreeSynergy-Skins mappen es auf Relationen im [Modell-Set](../../../../../data/modelle.md) (`ticket.related = [file, device]`).
+Ticket↔Asset-Verknüpfung ist das GLPI-Besondere — FreeSynergy-Skins mappen es auf Relationen im [Modell-Set](../../../../../data/models.md) (`ticket.related = [file, device]`).

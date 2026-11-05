@@ -62,4 +62,4 @@ Cloud: generous limits (events throttled roughly per domain); self-hosted: the s
 
 ## Skin note
 
-The goal name = the standard event word in [felder.md](../../../../../data/felder.md); the stats API is ideal for wiki KPI tiles (caching! 5–10 min).
+The goal name = the standard event word in [fields.md](../../../../../data/fields.md); the stats API is ideal for wiki KPI tiles (caching! 5–10 min).

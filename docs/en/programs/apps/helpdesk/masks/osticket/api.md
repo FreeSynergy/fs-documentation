@@ -64,4 +64,4 @@ None built in; limit via the web server/anti-spam (flood thresholds in the ticke
 
 ## Skin note
 
-The status model new/open/pending/closed → the standard ticket status list ([modelle.md](../../../../../data/modelle.md)); the API field names correspond to [felder.md](../../../../../data/felder.md).
+The status model new/open/pending/closed → the standard ticket status list ([models.md](../../../../../data/models.md)); the API field names correspond to [fields.md](../../../../../data/fields.md).

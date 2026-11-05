@@ -66,4 +66,4 @@ keine internen Limits; Hosting-/Proxy-Ebene.
 
 ## Skin-Hinweis
 
-`sqlfilters`-Syntax (t.feld:op:wert) in Sync-Skins sauber kapseln; Zahlenpräfix `CLI-…` wie in [felder.md](../../../../../data/felder.md) dokumentieren.
+`sqlfilters`-Syntax (t.feld:op:wert) in Sync-Skins sauber kapseln; Zahlenpräfix `CLI-…` wie in [fields.md](../../../../../data/fields.md) dokumentieren.

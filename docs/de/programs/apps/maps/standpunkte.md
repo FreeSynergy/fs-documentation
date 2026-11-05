@@ -41,4 +41,4 @@ Rechte bleiben in FreeSynergy (DB-Rollen); Karten-Tools sind Ansichten mit Lese-
 ## Offene Punkte
 
 - Kollisions-/Dublettenprüfung bei Punkt-Import (QGIS „near“ oder PostGIS)
-- Zeitzonen-/Zeitstempel-Konventionen wie in [data/](../../../data/modelle.md)
+- Zeitzonen-/Zeitstempel-Konventionen wie in [data/](../../../data/models.md)

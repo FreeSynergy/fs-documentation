@@ -24,7 +24,7 @@ docs/<sprache>/programs/<ebene>/<kategorie>/masks/<programm>/
   `scripts/fix_links.py --force` (Link-Mitschrift, CONVENTIONS §9) und `mkdocs build` als
   Verifikation.
 - Pfadtexte in `docs/de/programs/index.md`, `conventions/doku-standard.md`,
-  `data/konventionen.md`, `data/index.md` und `temp/apps-plan.md` folgen.
+  `data/conventions.md`, `data/index.md` und `temp/apps-plan.md` folgen.
 - Neue Kategorie-Anlage (ADR 0001/0004 Ablauf) nutzt `masks/`.
 - Eine Maske ist pro Programm und steht beim Start fest (Protokoll §2) — die Doku-Struktur
   bildet genau das ab: eine Maske = ein Verzeichnis mit den sieben Dateien.

@@ -19,7 +19,7 @@
 eigene Anzeigen      → DSGVO-Auskunft/Export (Konto-Funktion/Anfrage)
 gewerbliche Angebote → Partner-Feed-Vertrag (CSV/XML-Feed nach Vorgabe)
 Referenz für Skins   → Kategorien-/Umkreis-Modell als eigenes Datenmodell
-                       (see ../../data/modelle.md)
+                       (see ../../data/models.md)
 ```
 
 Beispiel-Feedformat (nur Partner, schematisch — Vorgabe des Betreibers maßgeblich):

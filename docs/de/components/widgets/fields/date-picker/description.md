@@ -76,7 +76,7 @@ ausgewählt und geschrieben werden; welches Datum gemeint ist, bestimmt `dateFie
 - Nie den ganzen Bestand laden: nur das Fenster mit `loadWindow`, pro Tag höchstens
   `entryLimit` Einträge, der Rest als „+ n weitere“.
 - Zeiten mit Zeitzonen-Offset, Ganztagesdaten mit `allDay = true`
-  (siehe [Standardfelder](../../../../data/felder.md)).
+  (siehe [Standardfelder](../../../../data/fields.md)).
 - `creatable` und `movable` nur einschalten, wenn das Schreibrecht besteht; sonst bleibt
   der Wähler lesend und die Tagesliste ist reine Information.
 - Ohne Kontext (`sources` leer) verhält sich der Wähler wie ein reiner Kalender —
@@ -110,6 +110,6 @@ vollständig.
 - [Range Calendar](../range-calendar/)
 - [Calendar View](../../data/calendar-view/)
 - [Termine — Datendomäne](../../../../data/events/)
-- [Standardfelder](../../../../data/felder.md)
+- [Standardfelder](../../../../data/fields.md)
 - [Daten-API](../../../../data/api.md)
 - [Basiskomponente](../../../primitives/basics/base.md)

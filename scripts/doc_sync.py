@@ -696,10 +696,12 @@ def print_report(state: dict, en_scan: dict, de_scan: dict, verbose: bool = Fals
 
 
 # Dateinamen muessen englisch sein (ADR 0002) – deutsches Wort oder Umlaut im Namen ist ein Befund
+# "mappings"/"standards" gehoeren nicht hierher: das sind englische Identifikatoren, kein
+# deutscher Rest – sie haben 10 saubere data/*-Dateien als rename gemeldet.
 GERMAN_NAME_STEMS = GERMAN_WORDS | {
     "beschreibung", "speicherung", "grundlagen", "rückgabe", "ruckgabe", "einordnung",
     "zuordnung", "übersicht", "uebersicht", "hinweise", "beispiele", "felder", "formate",
-    "modelle", "mappings", "standards", "anforderungen", "konventionen", "verwendung",
+    "modelle", "anforderungen", "konventionen", "verwendung",
 }
 _NAME_WORDS = re.compile(r"[a-zäöüß]+")
 

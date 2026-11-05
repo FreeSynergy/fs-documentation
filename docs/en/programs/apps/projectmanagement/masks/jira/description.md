@@ -28,4 +28,4 @@ Jira manages work as issues with a defined life cycle: who creates it, which sta
 ## Who it suits
 
 - Engineering/support organisations with a need for rules
-- FreeSynergy skins: the issue life cycle + status transitions as a workflow model ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy skins: the issue life cycle + status transitions as a workflow model ([models.md](../../../../../data/models.md))

@@ -46,14 +46,14 @@ Jedes Programm in `apps/<kategorie>/masks/<programm>/` bekommt **sieben** Dateie
 
 ### Daten
 
-Querschnitts-Dateien direkt in `data/`: `index.md`, `standards.md`, `mappings.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`.
+Querschnitts-Dateien direkt in `data/`: `index.md`, `standards.md`, `mappings.md`, `formats.md`, `models.md`, `fields.md`, `conventions.md`, `api.md`.
 
 Darunter gilt: **Datendomäne → Standard → Dateien**:
 
 ```
 data/<domaene>/index.md                      Übersicht + Tabelle der Standards der Domäne
-data/<domaene>/<standard>/beschreibung.md    allgemeine Beschreibung (was, Umfang, Grenzen)
-data/<domaene>/<standard>/speicherung.md     wie Daten darin gespeichert werden (DB, Dateien, Patches)
+data/<domaene>/<standard>/description.md    allgemeine Beschreibung (was, Umfang, Grenzen)
+data/<domaene>/<standard>/storage.md     wie Daten darin gespeichert werden (DB, Dateien, Patches)
 data/<domaene>/<standard>/beispiele.md       optional, bei Bedarf
 data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standardfelder
 ```
@@ -190,13 +190,13 @@ Beispiel-Dokument dazu:
 - `shortcuts.md` und `api.md` sind nie in anderen Dateien enthalten
 - Fehlende Funktionen werden ausdrücklich benannt („Was X NICHT kann“)
 - Erfundene Shortcuts oder Endpoints sind ein Fehler — lieber „nicht vorhanden“
-- **Standard-Pate:** Jedes Feld in `felder.md` nennt in [standards.md](standards.md) einen Beleg (Standard samt Nummer) oder ist ausdrücklich als **eigene Festlegung** markiert. Ein Feld ohne Beleg und ohne Markierung ist ein Fehler
+- **Standard-Pate:** Jedes Feld in `fields.md` nennt in [standards.md](standards.md) einen Beleg (Standard samt Nummer) oder ist ausdrücklich als **eigene Festlegung** markiert. Ein Feld ohne Beleg und ohne Markierung ist ein Fehler
 - **Keine erfundenen Standard-Nummern:** Eine RFC- oder Spec-Nummer wird nur genannt, wenn sie nachgesehen wurde. ungeprüfte Angaben werden mit ⚠️ gekennzeichnet
 
 ## Siehe auch
 
-- [Datenformate](formate.md)
-- [Datenmodelle](modelle.md)
-- [Standardfelder](felder.md)
+- [Datenformate](formats.md)
+- [Datenmodelle](models.md)
+- [Standardfelder](fields.md)
 - [Daten-API](api.md)
 - [Komponenten](../components/)

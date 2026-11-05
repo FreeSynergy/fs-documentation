@@ -62,4 +62,4 @@ nicht hart eingebaut; Instanz-Limits/Empfehlung: Batch-Importe über API + Cron.
 
 ## Skin-Hinweis
 
-Custom-Field-Catalog (`/api/customfields`) speisen direkt in [felder.md](../../../../../data/felder.md); Webhooks als Ereignisquelle im Event-Modell.
+Custom-Field-Catalog (`/api/customfields`) speisen direkt in [fields.md](../../../../../data/fields.md); Webhooks als Ereignisquelle im Event-Modell.

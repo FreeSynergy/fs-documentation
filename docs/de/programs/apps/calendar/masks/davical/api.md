@@ -147,4 +147,4 @@ Antwort enthält eine Ticket-URL (`…?ticket=<id>`); Ablaufoptionen wie `Second
 
 ## Skin-Hinweis
 
-FreeSynergy-Skins mit DAViCal-Backend sprechen exakt diese RFC-Endpunkte; Datenmodelle: [Event-Modell](../../../../../data/modelle.md), [ICS-Format](../../../../../data/formate.md).
+FreeSynergy-Skins mit DAViCal-Backend sprechen exakt diese RFC-Endpunkte; Datenmodelle: [Event-Modell](../../../../../data/models.md), [ICS-Format](../../../../../data/formats.md).

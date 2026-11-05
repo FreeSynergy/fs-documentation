@@ -51,4 +51,4 @@ instanzseitig (Stadtserver), üblich: großzügig für Lesezugriff.
 
 ## Skin-Hinweis
 
-JSON-Feldnamen (supports_count, investments) direkt als [felder.md](../../../../../data/modelle.md)-Referenz übernehmbar; für Live-Sync Export-Jobs statt Webhooks einplanen.
+JSON-Feldnamen (supports_count, investments) direkt als [fields.md](../../../../../data/models.md)-Referenz übernehmbar; für Live-Sync Export-Jobs statt Webhooks einplanen.

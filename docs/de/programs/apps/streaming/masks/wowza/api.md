@@ -78,4 +78,4 @@ Keine dokumentierten Kontingente (Selbstbetrieb). Schutz über Reverse-Proxy und
 
 ## Skin-Hinweis
 
-Virtual Host → Anwendung → Stream entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); URL-, Schlüssel- und Feldeigenschaften folgen [felder.md](../../../../../data/felder.md).
+Virtual Host → Anwendung → Stream entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); URL-, Schlüssel- und Feldeigenschaften folgen [fields.md](../../../../../data/fields.md).

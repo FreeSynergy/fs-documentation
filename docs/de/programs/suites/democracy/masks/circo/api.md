@@ -24,7 +24,7 @@ Circo-Projekt → Export-Bericht (CSV/PDF)
 ## Feldhinweise (Export-Praxis)
 
 - Beitrags-ID, Verfasser-Kennung ( pseudonymisiert je Projekt), Phase, Bewertungsaggregate
-- Spaltenbenennung je Projekt gleich halten ([felder.md](../../../../../data/felder.md))
+- Spaltenbenennung je Projekt gleich halten ([fields.md](../../../../../data/fields.md))
 
 ## Skin-Hinweis
 

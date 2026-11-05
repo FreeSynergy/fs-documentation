@@ -80,4 +80,4 @@ Standard: **keine** harte API-Rate-Limitierung; instanzseitig über Webserver se
 
 ## Skin-Hinweis
 
-Monica-Struktur ist Referenz für das Contact-mit-Event-Modell ([modelle.md](../../../../../data/modelle.md)); Webhooks entsprechen den Standard-Event-Feldern ([felder.md](../../../../../data/felder.md)).
+Monica-Struktur ist Referenz für das Contact-mit-Event-Modell ([models.md](../../../../../data/models.md)); Webhooks entsprechen den Standard-Event-Feldern ([fields.md](../../../../../data/fields.md)).

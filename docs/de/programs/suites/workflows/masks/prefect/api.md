@@ -62,4 +62,4 @@ Cloud: dokumentierte Kontingente für Events/API (Plankaskalen); Self-hosted: Se
 
 ## Skin-Hinweis
 
-Deployment-/Run-Objekte = Planungsmodell in [modelle.md](../../../../../data/modelle.md); Automations-Events passen zu Event-Kanälen der App-Skins.
+Deployment-/Run-Objekte = Planungsmodell in [models.md](../../../../../data/models.md); Automations-Events passen zu Event-Kanälen der App-Skins.

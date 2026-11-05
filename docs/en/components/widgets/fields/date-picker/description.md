@@ -76,7 +76,7 @@ date can be shown, selected and written; which date is meant is decided by `date
 - Never load the whole data set: only the window with `loadWindow`, at most
   `entryLimit` entries per day, the rest as "+ n more".
 - Times with timezone offsets, all-day dates with `allDay = true`
-  (see [standard fields](../../../../data/felder.md)).
+  (see [standard fields](../../../../data/fields.md)).
 - Only switch on `creatable` and `movable` when the write permission exists; otherwise the
   picker stays read-only and the day list is pure information.
 - Without context (`sources` empty) the picker behaves like a plain calendar —
@@ -110,6 +110,6 @@ entirely.
 - [Range Calendar](../range-calendar/)
 - [Calendar View](../../data/calendar-view/)
 - [Appointments — date domain](../../../../data/events/)
-- [Standard fields](../../../../data/felder.md)
+- [Standard fields](../../../../data/fields.md)
 - [Data API](../../../../data/api.md)
 - [Base component](../../../primitives/basics/base.md)

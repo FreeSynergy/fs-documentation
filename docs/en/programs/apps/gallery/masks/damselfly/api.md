@@ -60,4 +60,4 @@ No hard limits; upload sizes and the number of workers configure the throughput 
 
 ## Skin note
 
-Image/album/person/label correspond to the standard model ([modelle.md](../../../../../data/modelle.md)); the ID type is an integer.
+Image/album/person/label correspond to the standard model ([models.md](../../../../../data/models.md)); the ID type is an integer.

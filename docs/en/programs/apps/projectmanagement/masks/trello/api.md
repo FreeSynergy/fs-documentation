@@ -67,4 +67,4 @@ Callback with retry; the model is "action events" (also `commentCard`, `updateCa
 
 ## Skin note
 
-board/list/card/pos/labels are the reference vocabulary for kanban masks ([modelle.md](../../../../../data/modelle.md)); the `pos` float matches the sorting logic in [felder.md](../../../../../data/felder.md).
+board/list/card/pos/labels are the reference vocabulary for kanban masks ([models.md](../../../../../data/models.md)); the `pos` float matches the sorting logic in [fields.md](../../../../../data/fields.md).

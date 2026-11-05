@@ -27,4 +27,4 @@ Decidim strukturiert Beteiligungsprozesse so, wie Verwaltungen sie brauchen: kla
 ## Für wen geeignet
 
 - Kommunen/Verbände mit formalen Beteiligungsverfahren
-- FreeSynergy-Skins: Prozess-/Komponentenmodell als Vorbild partizipativer Abläufe ([modelle.md](../../../../../data/modelle.md) → Antrag/Support/Phase)
+- FreeSynergy-Skins: Prozess-/Komponentenmodell als Vorbild partizipativer Abläufe ([models.md](../../../../../data/models.md) → Antrag/Support/Phase)

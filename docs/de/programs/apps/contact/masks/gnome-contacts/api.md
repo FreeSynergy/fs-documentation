@@ -47,4 +47,4 @@ Ausschließlich die der Quellen-Server (Google-Quotas, Nextcloud-Throttling).
 
 ## Skin-Hinweis
 
-Ein GNOME-Contacts-Skin spiegelt die Karte/Felder-Maske; Datenmodel-Brücke über EDS oder `.vcf` → [Contact-Modell](../../../../../data/modelle.md).
+Ein GNOME-Contacts-Skin spiegelt die Karte/Felder-Maske; Datenmodel-Brücke über EDS oder `.vcf` → [Contact-Modell](../../../../../data/models.md).

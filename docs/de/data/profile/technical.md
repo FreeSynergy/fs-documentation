@@ -15,7 +15,7 @@ JSContact-Card (contacts/)            AS2-Actor (Handle, publicKey)
 - **Gespeichert wird nur:** die Handle-Zeile (`id`-IRI ↔ Konto aus [login/](../login/index.md) ↔ `self_card_id`) und die **Regeln** (Feldgruppen → Publikum). Feldwerte selbst bleiben ausschließlich in der Card.
 - Eine Projektion wird **bei Bedarf berechnet**, nicht dauerhaft abgelegt (sonst gäbe es Kopien mit Zerfallsdatum — gegen Beschluss 4).
 
-## Feldgruppen und Zweckbindung (eigene Festlegung — noch nicht beschlossen, offen in [anforderungen.md §6.3](../anforderungen.md))
+## Feldgruppen und Zweckbindung (eigene Festlegung — noch nicht beschlossen, offen in [requirements.md §6.3](../requirements.md))
 
 Vorschlag: jede Card-Feld-Referenz bekommt genau eine Feldgruppe:
 

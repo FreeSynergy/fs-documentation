@@ -64,4 +64,4 @@ keine eingebauten Limits (Instanz-/Worker-Grenzen); JSON-RPC über Reverse-Proxy
 
 ## Skin-Hinweis
 
-Modell-/Feldkatalog per RPC (`ir.model.fields`) = perfekte Quelle für automatisches Mapping ([felder.md](../../../../../data/felder.md)).
+Modell-/Feldkatalog per RPC (`ir.model.fields`) = perfekte Quelle für automatisches Mapping ([fields.md](../../../../../data/fields.md)).

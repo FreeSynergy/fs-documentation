@@ -147,4 +147,4 @@ The response contains a ticket URL (`…?ticket=<id>`); expiry options such as `
 
 ## Skin note
 
-FreeSynergy skins with a DAViCal backend address exactly these RFC endpoints; data models: [Event model](../../../../../data/modelle.md), [ICS format](../../../../../data/formate.md).
+FreeSynergy skins with a DAViCal backend address exactly these RFC endpoints; data models: [Event model](../../../../../data/models.md), [ICS format](../../../../../data/formats.md).

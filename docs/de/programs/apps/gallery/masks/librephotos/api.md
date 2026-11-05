@@ -61,4 +61,4 @@ Keine API-Limits vorkonfiguriert; Django-Caching und Reverse-Proxy-Limits empfoh
 
 ## Skin-Hinweis
 
-Modell Photo/Album/Person entspricht [modelle.md](../../../../../data/modelle.md); wegen fehlender Versionierung sollten Feldänderungen bei Upgrades geprüft werden.
+Modell Photo/Album/Person entspricht [models.md](../../../../../data/models.md); wegen fehlender Versionierung sollten Feldänderungen bei Upgrades geprüft werden.

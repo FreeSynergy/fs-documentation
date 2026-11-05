@@ -63,4 +63,4 @@ Instanzseitig (`login`-Throttling; Tracking-Drosselung über Proxy).
 
 ## Skin-Hinweis
 
-`idsite` = Property-Schlüssel in [modelle.md](../../../../../data/modelle.md); Ereignisnamen als Vokabular in [felder.md](../../../../../data/felder.md) zentral pflegen.
+`idsite` = Property-Schlüssel in [models.md](../../../../../data/models.md); Ereignisnamen als Vokabular in [fields.md](../../../../../data/fields.md) zentral pflegen.

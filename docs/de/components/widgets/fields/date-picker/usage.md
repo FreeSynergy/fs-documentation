@@ -85,7 +85,7 @@ Je Quelle darf ein anderes Datumsfeld zählen; die Angabe pro Quelle überschrei
 | Löschen aus der Liste | `DELETE /api/v1/events/{id}` (Soft-Delete) |
 
 Ein geladener Ausschnitt sieht pro Eintrag so aus wie in
-[Standardfelder](../../../../data/felder.md) beschrieben:
+[Standardfelder](../../../../data/fields.md) beschrieben:
 
 ```json
 {

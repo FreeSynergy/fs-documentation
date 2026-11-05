@@ -42,7 +42,7 @@ Jedes Domänen-Verzeichnis enthält künftig:
 | `standards.md` | **Standardtexte** — die einschlägigen Standards mit Belegstatus und Feldlisten/Auszügen |
 | `examples.md` | **Beispiele** — konkrete JSON-/Textbeispiele |
 
-Ergänzungen sind ausdrücklich erwünscht (z. B. pro Standard ein Unterverzeichnis mit `beschreibung.md` + `speicherung.md`, wie für JSContact bereits vorgesehen).
+Ergänzungen sind ausdrücklich erwünscht (z. B. pro Standard ein Unterverzeichnis mit `description.md` + `storage.md`, wie für JSContact bereits vorgesehen).
 
 ## 5. Verzeichnisnamen: Englisch (umbenannt am 2026-11-02)
 

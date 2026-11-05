@@ -28,4 +28,4 @@ Jira verwaltet Arbeit als Issues mit definiertem Lebenszyklus: Wer erstellt es, 
 ## Für wen geeignet
 
 - Engineering-/Support-Organisationen mit Regelbedarf
-- FreeSynergy-Skins: Issue-Lebenszyklus + Statusübergänge als Workflow-Vorbild ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: Issue-Lebenszyklus + Statusübergänge als Workflow-Vorbild ([models.md](../../../../../data/models.md))

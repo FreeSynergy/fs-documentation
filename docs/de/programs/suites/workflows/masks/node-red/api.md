@@ -64,4 +64,4 @@ Instanzseitig (Node.js-Prozess); HTTP-Limits über Reverse Proxy.
 
 ## Skin-Hinweis
 
-Node+Draht-Modell = [Flow-Modell](../../../../../data/modelle.md): Knoten mit Ports, msg-Payload als Standard-Nachrichtenformat.
+Node+Draht-Modell = [Flow-Modell](../../../../../data/models.md): Knoten mit Ports, msg-Payload als Standard-Nachrichtenformat.

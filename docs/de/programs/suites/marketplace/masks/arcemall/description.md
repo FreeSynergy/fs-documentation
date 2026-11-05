@@ -27,4 +27,4 @@ Arcemall will Marktplatz-Baukasten sein: Statt bei null zu starten, modelliert m
 ## Für wen geeignet
 
 - FreeSynergy-umfeld-nahe Projekte mit eigenem Marktplatz-Wunsch und IT-Ressource
-- Skins: Modell-Editor-Muster für eigene Angebotsmodelle ([modelle.md](../../../../../data/modelle.md))
+- Skins: Modell-Editor-Muster für eigene Angebotsmodelle ([models.md](../../../../../data/models.md))

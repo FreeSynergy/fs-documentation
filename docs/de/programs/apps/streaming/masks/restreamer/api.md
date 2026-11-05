@@ -92,4 +92,4 @@ Keine dokumentierten Kontingente (Selbstbetrieb). Praktische Grenzen: nginx-Work
 
 ## Skin-Hinweis
 
-Eingang/Ziel/Segment entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); URL- und Schlüsselfelder folgen [felder.md](../../../../../data/felder.md).
+Eingang/Ziel/Segment entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); URL- und Schlüsselfelder folgen [fields.md](../../../../../data/fields.md).

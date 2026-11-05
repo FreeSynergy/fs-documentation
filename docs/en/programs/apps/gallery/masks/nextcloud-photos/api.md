@@ -59,4 +59,4 @@ No API quotas; throttling comes from PHP worker limits, the `throttling` app (lo
 
 ## Skin note
 
-File/share objects correspond to the standard model ([modelle.md](../../../../../data/modelle.md)); preview URLs behave as in [felder.md](../../../../../data/felder.md) (`fileId` as the reference).
+File/share objects correspond to the standard model ([models.md](../../../../../data/models.md)); preview URLs behave as in [fields.md](../../../../../data/fields.md) (`fileId` as the reference).

@@ -27,4 +27,4 @@ Consul bündelt die klassischen Beteiligungsformate einer Stadt unter einem Dach
 ## Für wen geeignet
 
 - Kommunen/Regionen mit klassischer Beteiligungs-Palette
-- FreeSynergy-Skins: Budget-/Support-Muster ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: Budget-/Support-Muster ([models.md](../../../../../data/models.md))

@@ -60,4 +60,4 @@ Not publicly standardised; design integrations to be friendly (backoff on 429).
 
 ## Skin note
 
-The contact-case-channel triad matches the model approach ([modelle.md](../../../../../data/modelle.md): Contact ↔ Event/Comment ↔ Task); recording links as file references.
+The contact-case-channel triad matches the model approach ([models.md](../../../../../data/models.md): Contact ↔ Event/Comment ↔ Task); recording links as file references.

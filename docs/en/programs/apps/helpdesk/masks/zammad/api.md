@@ -77,4 +77,4 @@ No built-in API limits (protection via reverse proxy/recommendation: keep the to
 
 ## Skin note
 
-The ticket/article/user fields mirror the standard model ([modelle.md](../../../../../data/modelle.md)); dynamic fields correspond to [felder.md](../../../../../data/felder.md) (`object_manager_attributes`).
+The ticket/article/user fields mirror the standard model ([models.md](../../../../../data/models.md)); dynamic fields correspond to [fields.md](../../../../../data/fields.md) (`object_manager_attributes`).

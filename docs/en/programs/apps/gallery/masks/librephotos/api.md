@@ -61,4 +61,4 @@ No API limits are preconfigured; Django caching and reverse-proxy limits are rec
 
 ## Skin note
 
-The photo/album/person model corresponds to [modelle.md](../../../../../data/modelle.md); because versioning is missing, field changes should be checked on upgrades.
+The photo/album/person model corresponds to [models.md](../../../../../data/models.md); because versioning is missing, field changes should be checked on upgrades.

@@ -28,4 +28,4 @@ Trello visualises work as columns with cards — the state of a thing is its pos
 ## Who it suits
 
 - Teams for whom status is more visual than field-detail-needing
-- FreeSynergy skins: the Trello board model (board/list/card/label/checklist) as the canonical [task skin](../../../../../data/modelle.md)
+- FreeSynergy skins: the Trello board model (board/list/card/label/checklist) as the canonical [task skin](../../../../../data/models.md)

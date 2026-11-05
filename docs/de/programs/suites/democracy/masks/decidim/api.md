@@ -54,4 +54,4 @@ nicht eingebaut (Instanz-/Proxy-Limits).
 
 ## Skin-Hinweis
 
-GraphQL = perfekter Feed für Beteiligungs-Dashboards (Read-Only-Skin); Webhook→n8n-Kette für Benachrichtigungs-Skins ([modelle.md](../../../../../data/modelle.md): Antrag→Support→Phase).
+GraphQL = perfekter Feed für Beteiligungs-Dashboards (Read-Only-Skin); Webhook→n8n-Kette für Benachrichtigungs-Skins ([models.md](../../../../../data/models.md): Antrag→Support→Phase).

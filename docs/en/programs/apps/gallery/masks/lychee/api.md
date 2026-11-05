@@ -62,4 +62,4 @@ No API quotas are built in; limits in the web server and upload sizes via `post_
 
 ## Skin note
 
-Album/photo/share correspond to the standard model ([modelle.md](../../../../../data/modelle.md)); IDs are strings and must be treated as such.
+Album/photo/share correspond to the standard model ([models.md](../../../../../data/models.md)); IDs are strings and must be treated as such.

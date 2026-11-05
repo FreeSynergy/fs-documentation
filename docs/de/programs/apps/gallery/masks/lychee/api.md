@@ -62,4 +62,4 @@ Keine API-Quotas eingebaut; empfohlen werden Limits im Webserver und Upload-Grö
 
 ## Skin-Hinweis
 
-Album/Photo/Share entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); IDs sind Strings und müssen als solche behandelt werden.
+Album/Photo/Share entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); IDs sind Strings und müssen als solche behandelt werden.

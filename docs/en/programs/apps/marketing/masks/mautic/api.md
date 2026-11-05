@@ -62,4 +62,4 @@ Not hard-coded; instance limits/recommendation: batch imports via the API + cron
 
 ## Skin note
 
-The custom field catalog (`/api/customfields`) feeds directly into [felder.md](../../../../../data/felder.md); webhooks as the event source in the event model.
+The custom field catalog (`/api/customfields`) feeds directly into [fields.md](../../../../../data/fields.md); webhooks as the event source in the event model.

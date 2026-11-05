@@ -145,4 +145,4 @@ make the same action reachable via button, menu or keyboard as well.
 
 - Families: [tap](tap/) · [swipe](swipe/) · [transform](transform/) · [special](special/) · [device](device/) · [combined](combined/)
 - [Animations](../animations/) — visual answer to gestures
-- [Conventions](../../data/konventionen.md) — file and naming rules
+- [Conventions](../../data/conventions.md) — file and naming rules

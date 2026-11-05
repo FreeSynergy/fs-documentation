@@ -76,4 +76,4 @@ No built-in limits; limiting in the web server (`mod_qos`, nginx `limit_req`) an
 
 ## Skin note
 
-Category/image/tag/group correspond to the standard model ([modelle.md](../../../../../data/modelle.md)); custom fields follow [felder.md](../../../../../data/felder.md).
+Category/image/tag/group correspond to the standard model ([models.md](../../../../../data/models.md)); custom fields follow [fields.md](../../../../../data/fields.md).

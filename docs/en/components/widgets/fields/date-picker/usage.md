@@ -84,7 +84,7 @@ Each source may count a different date field; the setting per source overrides
 | Delete from the list | `DELETE /api/v1/events/{id}` (soft delete) |
 
 A loaded slice looks per entry as described in
-[standard fields](../../../../data/felder.md):
+[standard fields](../../../../data/fields.md):
 
 ```json
 {

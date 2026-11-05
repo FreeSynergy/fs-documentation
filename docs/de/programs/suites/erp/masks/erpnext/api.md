@@ -60,4 +60,4 @@ keine eingebauten Standardlimits; Frappe Cloud/Proxy setzen Kontingente.
 
 ## Skin-Hinweis
 
-DocType-Metadaten → automatisches [Mapping](../../../../../data/felder.md); namentliche Dokument-IDs (`CUST-…`) bei Verbundmodellen beachten.
+DocType-Metadaten → automatisches [Mapping](../../../../../data/fields.md); namentliche Dokument-IDs (`CUST-…`) bei Verbundmodellen beachten.

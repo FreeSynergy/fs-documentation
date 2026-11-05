@@ -23,7 +23,7 @@ FROM issues i LEFT JOIN votes v ON v.issue_id = i.id
 GROUP BY i.id, i.title, i.current_state;
 ```
 
-Empfehlung: **Replikat** nutzen, niemals schreiben; Spaltennamen dokumentieren ([felder.md](../../../../../data/felder.md)).
+Empfehlung: **Replikat** nutzen, niemals schreiben; Spaltennamen dokumentieren ([fields.md](../../../../../data/fields.md)).
 
 ## Datenfluss-Skizze
 

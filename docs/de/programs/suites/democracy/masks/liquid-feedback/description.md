@@ -27,4 +27,4 @@ LiquidFeedback ist gelebte Delegative Demokratie: Mitglieder bringen Anträge ei
 ## Für wen geeignet
 
 - Verbände/Initiativen mit satzungsfesten Entscheidungsprozessen
-- FreeSynergy-Skins: Delegationsmodell als Beispiel für Stimm-Relationen ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: Delegationsmodell als Beispiel für Stimm-Relationen ([models.md](../../../../../data/models.md))

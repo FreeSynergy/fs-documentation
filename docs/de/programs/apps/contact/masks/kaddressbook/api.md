@@ -52,4 +52,4 @@ Nur relevant für die Ressourcen-Server (CardDAV-/LDAP-Limits des Servers).
 
 ## Skin-Hinweis
 
-Das vCard-Feldvokabular ist die gemeinsame Sprache ([felder.md](../../../../../data/felder.md), [Contact-Modell](../../../../../data/modelle.md)); ein „KAddressBook-Skin“ bildet Liste/Baum/Editor nach und liest `.vcf`-Stapel oder CardDAV.
+Das vCard-Feldvokabular ist die gemeinsame Sprache ([fields.md](../../../../../data/fields.md), [Contact-Modell](../../../../../data/models.md)); ein „KAddressBook-Skin“ bildet Liste/Baum/Editor nach und liest `.vcf`-Stapel oder CardDAV.

@@ -62,4 +62,4 @@ Events `subscribe`, `unsubscribe`, `cleaned`, `profile` — HMAC-Signatur mit AP
 
 ## Skin-Hinweis
 
-Member-Modell (E-Mail als Primärschlüssel + Tags) spiegelt Kontaktstandard in [data/felder.md](../../../../../data/felder.md); Sync-IDs immer Subscriber-Hash verwenden.
+Member-Modell (E-Mail als Primärschlüssel + Tags) spiegelt Kontaktstandard in [data/fields.md](../../../../../data/fields.md); Sync-IDs immer Subscriber-Hash verwenden.

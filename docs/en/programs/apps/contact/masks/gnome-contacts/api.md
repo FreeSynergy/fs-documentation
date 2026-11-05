@@ -47,4 +47,4 @@ Only those of the source servers (Google quotas, Nextcloud throttling).
 
 ## Skin note
 
-A GNOME Contacts skin mirrors the card/fields mask; data-model bridge via EDS or `.vcf` → [Contact model](../../../../../data/modelle.md).
+A GNOME Contacts skin mirrors the card/fields mask; data-model bridge via EDS or `.vcf` → [Contact model](../../../../../data/models.md).

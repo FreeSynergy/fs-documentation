@@ -52,4 +52,4 @@ deployment-seitig (Standard: keine dokumentierten harten Limits).
 
 ## Skin-Hinweis
 
-`point`-GeoJSON = Andockpunkt an Maps-Skins ([standpunkte.md](../../../../apps/maps/standpunkte.md)); Rating-Zähler in [modelle.md](../../../../../data/modelle.md) „Support“ abbilden.
+`point`-GeoJSON = Andockpunkt an Maps-Skins ([standpunkte.md](../../../../apps/maps/standpunkte.md)); Rating-Zähler in [models.md](../../../../../data/models.md) „Support“ abbilden.

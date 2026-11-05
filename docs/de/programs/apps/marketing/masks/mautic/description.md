@@ -28,4 +28,4 @@ Mautic automatisiert Kommunikations-Abläufe mit eigenen Daten: Formulare sammel
 ## Für wen geeignet
 
 - Organisationen mit eigener IT und Kommunikations-Automatisierungsdrang
-- FreeSynergy-Szenarien: Kontakt-Broker zwischen CRM-Skins (Webhook→Event, [modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Szenarien: Kontakt-Broker zwischen CRM-Skins (Webhook→Event, [models.md](../../../../../data/models.md))

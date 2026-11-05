@@ -37,7 +37,7 @@ Entsprechend Beschluss 4 in [standards.md](../../standards.md) ist das **belegte
 
 ## Siehe auch
 
-- [beschreibung.md](beschreibung.md) – was JSContact ist
+- [description.md](description.md) – was JSContact ist
 - [kontakt/index.md](../index.md) – Domäne Kontakte
 - [standards.md](../../standards.md) – Beschlüsse 1–5
 - [mappings.md](../../mappings.md) – Mapping auf Alt-Felder und Zielsysteme

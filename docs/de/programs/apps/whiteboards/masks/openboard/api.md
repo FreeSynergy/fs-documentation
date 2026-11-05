@@ -33,4 +33,4 @@ rsvg-convert -f pdf -o seite-1.pdf retro/page-1.svg
 
 ## Skin-Hinweis
 
-Ein „OpenBoard-Skin“ in FreeSynergy baut die Tafel-UI (Seite/Element) nach und tauscht `.obz`/SVG — Modell: [Whiteboard-Elemente](../../../../../data/modelle.md) seitenbasiert statt Canvas-Records.
+Ein „OpenBoard-Skin“ in FreeSynergy baut die Tafel-UI (Seite/Element) nach und tauscht `.obz`/SVG — Modell: [Whiteboard-Elemente](../../../../../data/models.md) seitenbasiert statt Canvas-Records.

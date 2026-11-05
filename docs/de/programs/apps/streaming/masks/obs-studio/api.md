@@ -82,4 +82,4 @@ Keine Kontingente; praktisch begrenzt durch Encode-Last. Empfehlung: Ereignis-Ab
 
 ## Skin-Hinweis
 
-Szene/Quelle/Ausgangsziel entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); Hotkey-Felder folgen [felder.md](../../../../../data/felder.md).
+Szene/Quelle/Ausgangsziel entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); Hotkey-Felder folgen [fields.md](../../../../../data/fields.md).

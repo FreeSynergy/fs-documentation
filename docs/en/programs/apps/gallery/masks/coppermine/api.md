@@ -69,4 +69,4 @@ Direct database access is prone to breaking on upgrades and should be encapsulat
 
 ## Skin note
 
-Because no API exists, the FreeSynergy skin recreates the gallery via its own data storage; the migration fields (`pid`, `aid`) correspond to the standard models ([modelle.md](../../../../../data/modelle.md)).
+Because no API exists, the FreeSynergy skin recreates the gallery via its own data storage; the migration fields (`pid`, `aid`) correspond to the standard models ([models.md](../../../../../data/models.md)).

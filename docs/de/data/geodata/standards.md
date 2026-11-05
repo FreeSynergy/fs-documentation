@@ -19,7 +19,7 @@
 
 ## JSContact-`Address` — geprüfte Bausteine (RFC 9553, ✅)
 
-`components[]` mit `kind` (u. a. `street`, `locality`, `region`, `postcode`, `country`), dazu `texts[]` (mehrsprachige Einzeiler-Formen) und `coordinates` als `geo:`-URI. Details: [contacts/jscontact/beschreibung.md](../contacts/jscontact/beschreibung.md).
+`components[]` mit `kind` (u. a. `street`, `locality`, `region`, `postcode`, `country`), dazu `texts[]` (mehrsprachige Einzeiler-Formen) und `coordinates` als `geo:`-URI. Details: [contacts/jscontact/description.md](../contacts/jscontact/description.md).
 
 ## Offene Standard-Punkte
 

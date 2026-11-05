@@ -69,4 +69,4 @@ Direkte Datenbankzugriffe sind upgrade-anfällig und sollten über eine eigene B
 
 ## Skin-Hinweis
 
-Weil keine API existiert, bildet der FreeSynergy-Skin die Galerie über die eigene Datenhaltung ab; Migrationsfelder (`pid`, `aid`) entsprechen den Standardmodellen ([modelle.md](../../../../../data/modelle.md)).
+Weil keine API existiert, bildet der FreeSynergy-Skin die Galerie über die eigene Datenhaltung ab; Migrationsfelder (`pid`, `aid`) entsprechen den Standardmodellen ([models.md](../../../../../data/models.md)).

@@ -28,4 +28,4 @@ Asana structures work as tasks with clear responsibilities and dates, and scales
 ## Who it suits
 
 - Marketing/operations/agencies under date and responsibility pressure
-- FreeSynergy skins: task + custom fields + dependency as a generic [task model](../../../../../data/modelle.md)
+- FreeSynergy skins: task + custom fields + dependency as a generic [task model](../../../../../data/models.md)

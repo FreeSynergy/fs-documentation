@@ -71,4 +71,4 @@ Nextcloud throttling on the login endpoints; DAV itself has no fixed limits (bru
 
 ## Skin note
 
-Skin mapping onto the contact model ([modelle.md](../../../../../data/modelle.md)), field names according to vCard 3.0 ([felder.md](../../../../../data/felder.md)).
+Skin mapping onto the contact model ([models.md](../../../../../data/models.md)), field names according to vCard 3.0 ([fields.md](../../../../../data/fields.md)).

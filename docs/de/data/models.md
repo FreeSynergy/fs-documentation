@@ -237,8 +237,8 @@ Integration ──> events: document.created | task.updated | message.created
 
 ## Siehe auch
 
-- [Datenformate](formate.md)
-- [Standardfelder](felder.md)
-- [Konventionen](konventionen.md)
+- [Datenformate](formats.md)
+- [Standardfelder](fields.md)
+- [Konventionen](conventions.md)
 - [Daten-API](api.md)
 - [Komponenten](../components/) — `type`-Werte der Blöcke

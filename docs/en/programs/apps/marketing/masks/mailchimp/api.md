@@ -62,4 +62,4 @@ Events `subscribe`, `unsubscribe`, `cleaned`, `profile` — verify the HMAC sign
 
 ## Skin note
 
-The member model (email as the primary key + tags) mirrors the contact standard in [data/felder.md](../../../../../data/felder.md); always use the subscriber hash for sync IDs.
+The member model (email as the primary key + tags) mirrors the contact standard in [data/fields.md](../../../../../data/fields.md); always use the subscriber hash for sync IDs.

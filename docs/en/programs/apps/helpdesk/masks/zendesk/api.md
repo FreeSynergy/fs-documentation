@@ -74,4 +74,4 @@ Response: `201 Created` with the ticket JSON (`id`, `status:"new"`, `via`, `audi
 
 ## Skin note
 
-`ticket.comment`, `audit`, `user` correspond directly to the [comment/user model](../../../../../data/modelle.md) — Zendesk v2 is a good patron for FreeSynergy ticket fields ([felder.md](../../../../../data/felder.md)).
+`ticket.comment`, `audit`, `user` correspond directly to the [comment/user model](../../../../../data/models.md) — Zendesk v2 is a good patron for FreeSynergy ticket fields ([fields.md](../../../../../data/fields.md)).

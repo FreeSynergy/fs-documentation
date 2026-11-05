@@ -139,4 +139,4 @@ Entfällt (keine Netzwerk-API). Das SQL-Plugin unterliegt nur den Grenzen der Po
 
 ## Skin-Hinweis
 
-Ein Planner-Skin in FreeSynergy bildet die vier Ansichten (Gantt, Aufgaben, Ressourcen, Ressourcennutzung) nach und liest/schreibt `*.planner`-XML; Zeit-/Aufwandsfelder auf das Standardmodell mappen ([Felder](../../../../../data/felder.md), [Task-/Projekt-Modell](../../../../../data/modelle.md); siehe auch [data/projects](../../../../../data/projects/)).
+Ein Planner-Skin in FreeSynergy bildet die vier Ansichten (Gantt, Aufgaben, Ressourcen, Ressourcennutzung) nach und liest/schreibt `*.planner`-XML; Zeit-/Aufwandsfelder auf das Standardmodell mappen ([Felder](../../../../../data/fields.md), [Task-/Projekt-Modell](../../../../../data/models.md); siehe auch [data/projects](../../../../../data/projects/)).

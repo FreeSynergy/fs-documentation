@@ -66,4 +66,4 @@ nicht eingebaut; Gateway-Limits empfohlen.
 
 ## Skin-Hinweis
 
-Modellname = Endpunkt: Skin-Mapping kann Modellkatalog aus Builder-Metadaten lesen (analog [felder.md](../../../../../data/felder.md)).
+Modellname = Endpunkt: Skin-Mapping kann Modellkatalog aus Builder-Metadaten lesen (analog [fields.md](../../../../../data/fields.md)).

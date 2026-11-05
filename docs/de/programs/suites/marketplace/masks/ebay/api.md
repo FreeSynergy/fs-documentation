@@ -56,4 +56,4 @@ pro API/Operation dokumentiert (z.B. mehrere hundert Requests/min + Tageskonting
 
 ## Skin-Hinweis
 
-Bestell-/Listing-Reader für Dashboard-Skins; Gebühren-/Feldnamen in [felder.md](../../../../../data/felder.md) normieren, Policies der API-Nutzung einhalten (Compliance-Skin!).
+Bestell-/Listing-Reader für Dashboard-Skins; Gebühren-/Feldnamen in [fields.md](../../../../../data/fields.md) normieren, Policies der API-Nutzung einhalten (Compliance-Skin!).

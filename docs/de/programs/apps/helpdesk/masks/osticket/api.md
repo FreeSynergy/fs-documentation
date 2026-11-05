@@ -64,4 +64,4 @@ Keine eingebauten; über Webserver/Anti-Spam (Flood-Schwellen in den Ticket-Eins
 
 ## Skin-Hinweis
 
-Statusmodell new/open/pending/closed → Standard-Ticket-Statusliste ([modelle.md](../../../../../data/modelle.md)); API-Feldnamen entsprechen [felder.md](../../../../../data/felder.md).
+Statusmodell new/open/pending/closed → Standard-Ticket-Statusliste ([models.md](../../../../../data/models.md)); API-Feldnamen entsprechen [fields.md](../../../../../data/fields.md).

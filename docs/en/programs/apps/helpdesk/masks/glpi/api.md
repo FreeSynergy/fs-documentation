@@ -72,4 +72,4 @@ None built in; session timeout (default 30 min) and `App-Token` rotation are adm
 
 ## Skin note
 
-The ticket↔asset link is what is distinctive about GLPI — FreeSynergy skins map it onto relations in the [model set](../../../../../data/modelle.md) (`ticket.related = [file, device]`).
+The ticket↔asset link is what is distinctive about GLPI — FreeSynergy skins map it onto relations in the [model set](../../../../../data/models.md) (`ticket.related = [file, device]`).

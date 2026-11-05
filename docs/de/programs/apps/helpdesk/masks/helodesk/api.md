@@ -60,4 +60,4 @@ nicht öffentlich standardisiert; Integrationen freundlich (Backoff bei 429) ges
 
 ## Skin-Hinweis
 
-Kontakt-Case-Kanal-Dreiklang entspricht dem Modellansatz ([modelle.md](../../../../../data/modelle.md): Contact ↔ Event/Comment ↔ Task); Recording-Links als File-Referenzen.
+Kontakt-Case-Kanal-Dreiklang entspricht dem Modellansatz ([models.md](../../../../../data/models.md): Contact ↔ Event/Comment ↔ Task); Recording-Links als File-Referenzen.

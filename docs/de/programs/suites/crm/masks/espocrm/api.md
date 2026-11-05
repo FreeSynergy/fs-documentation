@@ -64,4 +64,4 @@ Keine eingebauten; Webserver-Limits empfohlen.
 
 ## Skin-Hinweis
 
-`GET /api/v1/Metadata` liefert die Feldtaxonomy — perfekt zum automatischen Mapping auf [felder.md](../../../../../data/felder.md).
+`GET /api/v1/Metadata` liefert die Feldtaxonomy — perfekt zum automatischen Mapping auf [fields.md](../../../../../data/fields.md).

@@ -95,7 +95,7 @@ Areas outside `apps/` use their own, smaller file sets:
 | UI components | `docs/de/components/<band>/<category>/<component>/` | `description.md`, `appearance.md`, `attributes.md`, `usage.md` (all four required; `examples.md` was merged into `usage.md`) |
 | Gestures | `docs/de/gestures/<category>/<gesture>/` | `description.md`, `attributes.md`, `appearance.md` |
 | Animations | `docs/de/animations/<category>/<animation>/` | `description.md`, `attributes.md`, `appearance.md` |
-| Standardized data | `docs/de/data/` + `docs/de/data/<domain>/<standard>/` | Cross-cutting: `index.md`, `standards.md`, `mappings.md`, `formate.md`, `modelle.md`, `felder.md`, `konventionen.md`, `api.md`. Per standard: `index.md` (domain), `beschreibung.md`, `speicherung.md` (+ optional `beispiele.md`, `mapping.md`) |
+| Standardized data | `docs/de/data/` + `docs/de/data/<domain>/<standard>/` | Cross-cutting: `index.md`, `standards.md`, `mappings.md`, `formats.md`, `models.md`, `fields.md`, `conventions.md`, `api.md`. Per standard: `index.md` (domain), `description.md`, `storage.md` (+ optional `beispiele.md`, `mapping.md`) |
 
 Every area has an `index.md` that lists all entries in a table and documents the shared attributes/configuration.
 
@@ -883,10 +883,10 @@ Note: `gestures/shake` (input: user shakes the device) and `animations/shake` (o
 | `index.md` | Overview, models table, data types, basic rules |
 | `standards.md` | Which existing external standard covers which data area; each entry carries a verification status (✅ verified at RFC Editor / w3.org / schema.org, ⚠️ unverified, ❌ proven absent) |
 | `mappings.md` | Our fields ↔ standard fields (JSContact RFC 9553, JSCalendar RFC 8984, vCard RFC 6350, ActivityStreams 2.0, schema.org); naming conflicts and open gaps |
-| `formate.md` | JSON, NDJSON, YAML, TOML, CSV/TSV, XML, MessagePack, Parquet, Markdown frontmatter, ICS, VCF, GeoJSON, JSON Schema |
-| `modelle.md` | User, Team, Message, Document, Block, Event, Task, Contact, Location, File, Tag, Comment, Notification, Revision, Integration |
-| `felder.md` | ID, time, naming, communication, enums, permissions, metadata fields; null rules |
-| `konventionen.md` | Naming, file sets, versioning, JSON Schema pattern, validation, i18n, accessibility data |
+| `formats.md` | JSON, NDJSON, YAML, TOML, CSV/TSV, XML, MessagePack, Parquet, Markdown frontmatter, ICS, VCF, GeoJSON, JSON Schema |
+| `models.md` | User, Team, Message, Document, Block, Event, Task, Contact, Location, File, Tag, Comment, Notification, Revision, Integration |
+| `fields.md` | ID, time, naming, communication, enums, permissions, metadata fields; null rules |
+| `conventions.md` | Naming, file sets, versioning, JSON Schema pattern, validation, i18n, accessibility data |
 | `api.md` | Shared CRUD pattern, response envelope, pagination, filters, error format, sync, webhooks, SDKs |
 
 Program `api.md` files document program-specific deviations from this pattern.

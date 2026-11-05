@@ -61,4 +61,4 @@ Keine festen API-Quotas; konfigurierbare Limits über Reverse Proxy und `PHOTOPR
 
 ## Skin-Hinweis
 
-Photo/Album/Label/Person entspricht dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); EXIF-Felder folgen [felder.md](../../../../../data/felder.md).
+Photo/Album/Label/Person entspricht dem Standardmodell ([models.md](../../../../../data/models.md)); EXIF-Felder folgen [fields.md](../../../../../data/fields.md).

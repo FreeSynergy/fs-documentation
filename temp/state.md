@@ -1,9 +1,11 @@
 # STATE – Apps translation de → en
 
-- Current component number: 19 (marketing category complete)
-- Next component to do: projectmanagement / asana (then jira, openproject, planka, redmine, taiga, trello, wekan)
-- Last 3 components completed: marketing/matomo, marketing/mautic, marketing/plausible (whole marketing category)
-- Progress: 282 of 468 files translated. Done:
+- Current component number: 25 (parity section F done; messenger category done)
+- Next component to do: data/ renames + data/* translation (then animations, desktop masks,
+  streaming, suites, wiki, whiteboards, projectmanagement)
+- Last 3 components completed: messenger masks (51 files), parity section F (17 files),
+  asana/jira/trello projectmanagement masks
+- Progress: 833 of 1492 files VERIFIED (doc_sync.py). Done:
   - calendar/masks/planner/api.md (repair), ALL index.md of the 9 categories
   - contact 30/30, gallery 56/56, helpdesk 56/56, maps 49/49 (incl. standpunkte.md),
     marketing 42/42
@@ -36,6 +38,15 @@
   Former helpers (`update-progress.py`, `mark-progress.py`, `check-box-width.py`, `boxgen.py`,
   `find_german_prose.py`, `find_untranslated*.py`, `check-translation.sh`,
   `translate-index-templates.py`) are superseded and archived in `scripts/_archive/`.
-- Push status: OK (recovered; marketing pushed at c1d21988).
+- Push status: PUSH FAILED at component 25 (DNS failure resolving github.com) — commits
+  fc1bd19c and a1823700 are local; push when the network is back.
   Commit after ~5 components then push; if push fails: wait 5s, retry, retry once more, else note
   "PUSH FAILED at component <N>" here and keep working.
+- Rename section G: done. `mappings`/`standards` are English identifiers – they were wrongly
+  listed in `GERMAN_NAME_STEMS` of `doc_sync.py` and are removed there. The genuinely German
+  names were renamed on **both** sides (ADR 0002) and every link/path text rewritten:
+  felder→fields, formate→formats, modelle→models, konventionen→conventions,
+  anforderungen→requirements, beschreibung→description, speicherung→storage
+  (7 files, 411 link edits in 155 files, `mkdocs build` has zero `de/` link warnings).
+  Renaming breaks verification: 43 previously VERIFIED files went back to PENDING
+  ("hash changed") and were re-confirmed with a note. Expect that after every rename.

@@ -65,4 +65,4 @@ standardmäßig keine harten Limits; Instanz-Betreiber drosseln über Reverse Pr
 
 ## Skin-Hinweis
 
-Story/Task/Issue/Epic/Milestone = direkt abbildbar auf [Task-/Sprint-Modelle](../../../../../data/modelle.md).
+Story/Task/Issue/Epic/Milestone = direkt abbildbar auf [Task-/Sprint-Modelle](../../../../../data/models.md).

@@ -25,4 +25,4 @@
 
 - W3C DID Core und VC Data Model feldgenau belegen (⚠️) und mit Antons Nutzung abgleichen
 - Signatur-Mechanismus (❌) — Kandidaten aus Antons Stack: Ed25519-Signaturen, JWS; belegt ist das noch nicht für unser ActivityPub
-- `identity/mapping.md` schreiben: WoT-Spec-Begriffe ↔ AS2-`Relationship`/`publicKey` (Auftrag in [anforderungen.md §7](../anforderungen.md))
+- `identity/mapping.md` schreiben: WoT-Spec-Begriffe ↔ AS2-`Relationship`/`publicKey` (Auftrag in [requirements.md §7](../requirements.md))

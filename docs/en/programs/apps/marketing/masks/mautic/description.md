@@ -28,4 +28,4 @@ Mautic automates communication workflows with your own data: forms collect conta
 ## Who it suits
 
 - Organisations with their own IT and a drive to automate communication
-- FreeSynergy scenarios: a contact broker between CRM skins (webhook → event, [modelle.md](../../../../../data/modelle.md))
+- FreeSynergy scenarios: a contact broker between CRM skins (webhook → event, [models.md](../../../../../data/models.md))

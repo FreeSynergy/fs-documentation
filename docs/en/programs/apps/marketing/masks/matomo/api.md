@@ -63,4 +63,4 @@ On the instance side (`login` throttling; tracking throttling via proxy).
 
 ## Skin note
 
-`idsite` = the property key in [modelle.md](../../../../../data/modelle.md); maintain the event names as a vocabulary centrally in [felder.md](../../../../../data/felder.md).
+`idsite` = the property key in [models.md](../../../../../data/models.md); maintain the event names as a vocabulary centrally in [fields.md](../../../../../data/fields.md).

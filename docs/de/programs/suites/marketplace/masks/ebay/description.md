@@ -27,4 +27,4 @@ eBay vermietet Marktplatz-Reichweite: Einstellen, Verhandeln/Auktionieren, Bezah
 ## Für wen geeignet
 
 - Wiederverkauf-/Sonderposten-Logistik mit ERP-Anbindung
-- FreeSynergy-Skins: Order-/Listing-Reader für Auswertungen ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: Order-/Listing-Reader für Auswertungen ([models.md](../../../../../data/models.md))

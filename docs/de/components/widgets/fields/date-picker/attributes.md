@@ -78,7 +78,7 @@ Datenbestand über das Muster in [Daten-API](../../../../data/api.md).
 
 ## Eintragsobjekt
 
-Ein Eintrag in `entries` folgt den [Standardfeldern](../../../../data/felder.md).
+Ein Eintrag in `entries` folgt den [Standardfeldern](../../../../data/fields.md).
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|

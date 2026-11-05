@@ -52,4 +52,4 @@ Only relevant for the resource servers (the CardDAV/LDAP limits of the server).
 
 ## Skin note
 
-The vCard field vocabulary is the common language ([felder.md](../../../../../data/felder.md), [Contact model](../../../../../data/modelle.md)); a "KAddressBook skin" recreates list/tree/editor and reads `.vcf` batches or CardDAV.
+The vCard field vocabulary is the common language ([fields.md](../../../../../data/fields.md), [Contact model](../../../../../data/models.md)); a "KAddressBook skin" recreates list/tree/editor and reads `.vcf` batches or CardDAV.

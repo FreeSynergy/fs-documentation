@@ -157,7 +157,7 @@ Every category has its own overview (`<category>/index.md`); this file lists the
 
 ## Standard attributes (for all animations)
 
-Attribute names follow the convention from [data/konventionen.md](../../data/konventionen.md): `camelCase` and ASCII. Terms with an umlaut are named in English (`overshoot`, `dotSize`, `intensity`).
+Attribute names follow the convention from [data/conventions.md](../../data/conventions.md): `camelCase` and ASCII. Terms with an umlaut are named in English (`overshoot`, `dotSize`, `intensity`).
 
 | Attribute | Type | Default | Description |
 |-----------|------|---------|-------------|

@@ -25,7 +25,7 @@
 
 `@type`, `version`, `uid`, `name` (Objekt mit `components[]`, `kind` ∈ `title`, `given`, `given2`, `surname`, `surname2`, `credential`, `generation`, `separator`; dazu `full`, `isOrdered`, `defaultSeparator`, `sortAs`, `phonetic`), `nicknames`, `organizations`, `titles`, `emails`, `onlineServices`, `phones`, `preferredLanguages`, `calendars`, `schedulingAddresses`, `addresses`, `cryptoKeys`, `directories`, `links`, `media`, `localizations`, `anniversaries`, `keywords`, `notes`, `personalInfo`.
 
-Die vollständige Detailbeschreibung liegt in [jscontact/beschreibung.md](jscontact/beschreibung.md) und [jscontact/speicherung.md](jscontact/speicherung.md).
+Die vollständige Detailbeschreibung liegt in [jscontact/description.md](jscontact/description.md) und [jscontact/storage.md](jscontact/storage.md).
 
 ## Offene Standard-Punkte
 

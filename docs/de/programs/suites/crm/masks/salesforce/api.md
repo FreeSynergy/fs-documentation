@@ -64,4 +64,4 @@ Response:
 
 ## Skin-Hinweis
 
-Standard-Objektnamen (Account/Contact/Lead/Opportunity) als Glossar fürs [CRM-Modell](../../../../../data/modelle.md) verwenden; Describe-Aufrufe liefern Feld-Mapping automatisch.
+Standard-Objektnamen (Account/Contact/Lead/Opportunity) als Glossar fürs [CRM-Modell](../../../../../data/models.md) verwenden; Describe-Aufrufe liefern Feld-Mapping automatisch.

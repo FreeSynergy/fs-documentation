@@ -67,4 +67,4 @@ Callback mit Retry; Modell „action-Events“ (auch `commentCard`, `updateCard`
 
 ## Skin-Hinweis
 
-Board/List/Card/pos/labels sind das Referenz-Vokabular für Kanban-Skins ([modelle.md](../../../../../data/modelle.md)); `pos`-Float entspricht der Sortierlogik in [felder.md](../../../../../data/felder.md).
+Board/List/Card/pos/labels sind das Referenz-Vokabular für Kanban-Skins ([models.md](../../../../../data/models.md)); `pos`-Float entspricht der Sortierlogik in [fields.md](../../../../../data/fields.md).

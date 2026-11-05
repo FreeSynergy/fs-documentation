@@ -49,4 +49,4 @@ nicht hart eingebaut; Hosting-Limits + Drosselung empfohlen.
 
 ## Skin-Hinweis
 
-`vendor_id`-Beziehung ist das Marktplatz-Merkmal im Datenmodell → [modelle.md](../../../../../data/modelle.md) (Angebot↔Anbieter); Sync-Felder in [felder.md](../../../../../data/felder.md) normieren.
+`vendor_id`-Beziehung ist das Marktplatz-Merkmal im Datenmodell → [models.md](../../../../../data/models.md) (Angebot↔Anbieter); Sync-Felder in [fields.md](../../../../../data/fields.md) normieren.

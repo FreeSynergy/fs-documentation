@@ -59,4 +59,4 @@ Dynamisch nach Marketplace-Volumen dokumentiert (Spikes throttled; 429 mit Backo
 
 ## Skin-Hinweis
 
-Listing-`publicData.location` = GeoJSON-Anschluss an Maps-Skins; Transaktions-/Prozessmodell → [modelle.md](../../../../../data/modelle.md) (Angebot/Anfrage/Zusage/Bewertung).
+Listing-`publicData.location` = GeoJSON-Anschluss an Maps-Skins; Transaktions-/Prozessmodell → [models.md](../../../../../data/models.md) (Angebot/Anfrage/Zusage/Bewertung).

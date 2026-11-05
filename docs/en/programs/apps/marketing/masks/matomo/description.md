@@ -28,4 +28,4 @@ Matomo is web analytics with your own rules: tracking code in, reports out — a
 ## Who it suits
 
 - Organisations with a compliance duty + an analytical claim
-- FreeSynergy skins: Matomo as the standard analytics layer ([modelle.md](../../../../../data/modelle.md): event → visit → conversion)
+- FreeSynergy skins: Matomo as the standard analytics layer ([models.md](../../../../../data/models.md): event → visit → conversion)

@@ -139,4 +139,4 @@ Not applicable (no network API). The SQL plugin is only subject to the limits of
 
 ## Skin note
 
-A Planner skin in FreeSynergy reproduces the four views (Gantt, tasks, resources, resource usage) and reads/writes `*.planner` XML; map the time/effort fields onto the standard model ([Fields](../../../../../data/felder.md), [Task/project model](../../../../../data/modelle.md); see also [data/projects](../../../../../data/projects/)).
+A Planner skin in FreeSynergy reproduces the four views (Gantt, tasks, resources, resource usage) and reads/writes `*.planner` XML; map the time/effort fields onto the standard model ([Fields](../../../../../data/fields.md), [Task/project model](../../../../../data/models.md); see also [data/projects](../../../../../data/projects/)).

@@ -61,4 +61,4 @@ dokumentiert pro API (moderat, 429 mit Backoff); Platform-Aufrufe je App-Limit.
 
 ## Skin-Hinweis
 
-Zap-Struktur (Trigger + Steps + Paths) = vereinfachtes Flow-Modell für Einsteiger-Templates ([modelle.md](../../../../../data/modelle.md)).
+Zap-Struktur (Trigger + Steps + Paths) = vereinfachtes Flow-Modell für Einsteiger-Templates ([models.md](../../../../../data/models.md)).

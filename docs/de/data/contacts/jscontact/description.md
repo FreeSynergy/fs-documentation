@@ -27,7 +27,7 @@ JSContact ist ein standardisiertes, **reines JSON-Kontaktmodell**: RFC 9553 („
 | `preferredLanguages` | map | Sprachpräferenzen (Language Tags, RFC 5646) |
 | `calendars` | map | Kalender-URIs der Person |
 | `schedulingAddresses` | map | Scheduling-Adressen (`mailto:`) |
-| `addresses` | `Address[]` | Postadressen mit Komponententypen (`locality`, `region`, `postcode`, `street`, …) und `coordinates` als `geo:`-URI (RFC 5870) – Bezug zu [geodaten](../../geodaten/index.md) |
+| `addresses` | `Address[]` | Postadressen mit Komponententypen (`locality`, `region`, `postcode`, `street`, …) und `coordinates` als `geo:`-URI (RFC 5870) – Bezug zu [geodata](../../geodata/index.md) |
 | `cryptoKeys` | map | öffentliche Schlüssel (OpenPGP, Fingerprints) |
 | `directories` | map | Ordner, in denen die Card lebt |
 | `links` | map | Links zu Web-Profilen |
@@ -44,7 +44,7 @@ JSContact ist ein standardisiertes, **reines JSON-Kontaktmodell**: RFC 9553 („
 |-------------|-----------|---------|
 | Personen- und Firmenkarten | ✅ | `Organization[]`, `kind`-Unterscheidung via `personalInfo.subType` |
 | Mehrere Adressen/Telefonnummern je Karte | ✅ | maps mit Typ-Schlüsseln |
-| Historie/Revision | ⚠️ | Standard definiert kein Revisionsmodell – Umsetzung siehe [speicherung.md](speicherung.md) |
+| Historie/Revision | ⚠️ | Standard definiert kein Revisionsmodell – Umsetzung siehe [storage.md](storage.md) |
 | Kundenstatus (`lifecycle`: lead/prospect/customer/churned) | ❌ | existiert in keinem Standard → als `extensions`-Erweiterung (⚠️ Mechanismus noch belegen, offener Punkt in [kontakt/index.md](../index.md)) |
 | Feld-Mapping unserer Alt-Felder (`firstName`/`lastName`, `street`/`city`) | ✅ | siehe [mappings.md → Contact](../../mappings.md) |
 
@@ -53,5 +53,5 @@ JSContact ist ein standardisiertes, **reines JSON-Kontaktmodell**: RFC 9553 („
 - [kontakt/index.md](../index.md) – Domäne Kontakte (Standards, offene Punkte)
 - [standards.md](../../standards.md) – Belegtabrik und Beschlüsse
 - [mappings.md](../../mappings.md) – Feld-für-Feld-Mapping in alle Richtungen
-- [felder.md](../../felder.md) – Feldkatalog
+- [fields.md](../../fields.md) – Feldkatalog
 - [api.md](../../api.md) – einheitliches API-Muster (Patch, Fehlerblock)

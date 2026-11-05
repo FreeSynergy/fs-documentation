@@ -58,4 +58,4 @@ Data API: Standard-Quotas pro Property/Projekt (moderat; Backoff bei 429/429-Fam
 
 ## Skin-Hinweis
 
-Report-Skins: Data-API nur für **aggregierte** Kennzahlen; personenbezogene Auswertung bleibt Sache von Self-Hosting-Alternativen ([modelle.md](../../../../../data/modelle.md) → Datenschutz-Notiz).
+Report-Skins: Data-API nur für **aggregierte** Kennzahlen; personenbezogene Auswertung bleibt Sache von Self-Hosting-Alternativen ([models.md](../../../../../data/models.md) → Datenschutz-Notiz).

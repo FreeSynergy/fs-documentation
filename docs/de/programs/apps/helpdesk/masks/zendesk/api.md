@@ -74,4 +74,4 @@ Response: `201 Created` mit Ticket-JSON (`id`, `status:"new"`, `via`, `audit_ids
 
 ## Skin-Hinweis
 
-`ticket.comment`, `audit`, `user` entsprechen direkt dem [Kommentar-/User-Modell](../../../../../data/modelle.md) — Zendesk-v2 ist ein guter Pate für FreeSynergy-Ticketfelder ([felder.md](../../../../../data/felder.md)).
+`ticket.comment`, `audit`, `user` entsprechen direkt dem [Kommentar-/User-Modell](../../../../../data/models.md) — Zendesk-v2 ist ein guter Pate für FreeSynergy-Ticketfelder ([fields.md](../../../../../data/fields.md)).

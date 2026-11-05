@@ -27,4 +27,4 @@ Mailchimp verschickt Newsletter und begleitet Kontakte mit Automatisierungen —
 ## Für wen geeignet
 
 - Teams mit US-tolerabler Datenhaltung und Fokus auf Kampagnen-Tempo
-- FreeSynergy-Skins: Member-/Tag-Modell als Referenz für [Kontakt-/Segmentfelder](../../../../../data/felder.md)
+- FreeSynergy-Skins: Member-/Tag-Modell als Referenz für [Kontakt-/Segmentfelder](../../../../../data/fields.md)

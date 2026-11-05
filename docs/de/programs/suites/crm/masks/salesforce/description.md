@@ -29,4 +29,4 @@ Salesforce betreibt CRM als mehrschichtige Plattform: ein mandantenfähiger Obje
 ## Für wen geeignet
 
 - Unternehmen mit Admin-Ressourcen und Integrationsbedarf
-- FreeSynergy-Skins: Salesforce-Datenmodell (Account/Contact/Opportunity) ist De-facto-Vokabular fürs [CRM-Mapping](../../../../../data/modelle.md)
+- FreeSynergy-Skins: Salesforce-Datenmodell (Account/Contact/Opportunity) ist De-facto-Vokabular fürs [CRM-Mapping](../../../../../data/models.md)

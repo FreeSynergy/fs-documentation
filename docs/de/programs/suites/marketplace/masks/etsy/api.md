@@ -57,4 +57,4 @@ Response:
 
 ## Skin-Hinweis
 
-`receipts`-Poll (5–15 min) ersetzt fehlende Webhooks; Feldnamen in [felder.md](../../../../../data/felder.md) normieren (Beträge mit `scale`!).
+`receipts`-Poll (5–15 min) ersetzt fehlende Webhooks; Feldnamen in [fields.md](../../../../../data/fields.md) normieren (Beträge mit `scale`!).

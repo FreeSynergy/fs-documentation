@@ -62,4 +62,4 @@ Cloud: großzügige Limits (Events ~ pro Domain gedrosselt); Self-host: Server.
 
 ## Skin-Hinweis
 
-Goal-Name = Standardereigniswort in [felder.md](../../../../../data/felder.md); Stats-API ideal für Wiki-KPI-Kacheln (Caching! 5–10 min).
+Goal-Name = Standardereigniswort in [fields.md](../../../../../data/fields.md); Stats-API ideal für Wiki-KPI-Kacheln (Caching! 5–10 min).

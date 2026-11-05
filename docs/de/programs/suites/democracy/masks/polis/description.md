@@ -27,4 +27,4 @@ Pol.is dreht Beteiligung um: statt abzustimmen bewerten die Leute Aussagen ander
 ## Für wen geeignet
 
 - große Dialogformate (Stadtentwicklung, Vernehmlassungen) mit Auswertungsressourcen
-- FreeSynergy-Skins: Data-API-Auswertung als Ergebnis-Widget ([modelle.md](../../../../../data/modelle.md) → Cluster/Konsensmodell)
+- FreeSynergy-Skins: Data-API-Auswertung als Ergebnis-Widget ([models.md](../../../../../data/models.md) → Cluster/Konsensmodell)

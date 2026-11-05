@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T06:53:52.892546+00:00",
+  "last_run": "2026-11-05T07:28:52.154108+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -4719,12 +4719,12 @@
     },
     "components/widgets/fields/date-picker/attributes.md": {
       "status": "VERIFIED",
-      "en_hash": "dc7c0c4d1d3033fc",
-      "de_hash": "fb11fd21a310b084",
+      "en_hash": "3ad5d12065be7f72",
+      "de_hash": "9c5796adfb7dda35",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:29.808152+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:29.719406+00:00",
@@ -4732,6 +4732,14 @@
         },
         {
           "at": "2026-11-05T04:50:29.808152+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -4741,12 +4749,12 @@
     },
     "components/widgets/fields/date-picker/description.md": {
       "status": "VERIFIED",
-      "en_hash": "ee0cbfc42359eabb",
-      "de_hash": "2559816193f74b9e",
+      "en_hash": "6f8f636a1bd06df1",
+      "de_hash": "d1f1ac63bfd2b99a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:29.808152+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:29.719406+00:00",
@@ -4754,6 +4762,14 @@
         },
         {
           "at": "2026-11-05T04:50:29.808152+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -4763,12 +4779,12 @@
     },
     "components/widgets/fields/date-picker/usage.md": {
       "status": "VERIFIED",
-      "en_hash": "d3dd5f9b443e36dd",
-      "de_hash": "a5fa21b55bb819fa",
+      "en_hash": "51a66154b4291bbe",
+      "de_hash": "a677bdcb9b2fa090",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:29.808152+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:29.719406+00:00",
@@ -4776,6 +4792,14 @@
         },
         {
           "at": "2026-11-05T04:50:29.808152+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -7426,24 +7450,26 @@
       "change_reason": null
     },
     "data/anforderungen.md": {
-      "status": "PENDING",
+      "status": "DELETED",
       "en_hash": null,
       "de_hash": "4a3e5434c1b51436",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
+      "kind": [],
       "note": null,
-      "history": [],
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
       "en_bytes": null,
-      "de_bytes": 7314
+      "de_bytes": null
     },
     "data/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "075511bdb733c0f1",
+      "de_hash": "cfd787bcb4410e2e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -7452,12 +7478,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 8963
+      "de_bytes": 8961
     },
     "data/contacts/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "4b7c573e71ea8b67",
+      "de_hash": "3c8add13f583e8f7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -7466,7 +7492,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2211
+      "de_bytes": 2207
     },
     "data/contacts/examples.md": {
       "status": "PENDING",
@@ -7485,7 +7511,7 @@
     "data/contacts/index.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "818f268f4e7e4d84",
+      "de_hash": "4583eff84532de20",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -7494,52 +7520,55 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1299
+      "de_bytes": 1298
     },
     "data/contacts/jscontact/beschreibung.md": {
-      "status": "PENDING",
+      "status": "DELETED",
       "en_hash": null,
       "de_hash": "e9c0309960ae7228",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
+      "kind": [],
       "note": null,
-      "history": [],
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
       "en_bytes": null,
-      "de_bytes": 4151
+      "de_bytes": null
     },
     "data/contacts/jscontact/speicherung.md": {
-      "status": "PENDING",
+      "status": "DELETED",
       "en_hash": null,
       "de_hash": "f40f04f5b41fe467",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
+      "kind": [],
       "note": null,
-      "history": [],
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
       "en_bytes": null,
-      "de_bytes": 3050
+      "de_bytes": null
     },
     "data/contacts/standards.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "2fbfcc826c0a9e70",
+      "de_hash": "6d160fafde2e1f8b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2465
+      "de_bytes": 2455
     },
     "data/contacts/technical.md": {
       "status": "PENDING",
@@ -7604,8 +7633,7 @@
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
@@ -7627,34 +7655,38 @@
       "de_bytes": 2412
     },
     "data/felder.md": {
-      "status": "PENDING",
+      "status": "DELETED",
       "en_hash": null,
       "de_hash": "a1663753ab551573",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
+      "kind": [],
       "note": null,
-      "history": [],
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
       "en_bytes": null,
-      "de_bytes": 10242
+      "de_bytes": null
     },
     "data/formate.md": {
-      "status": "PENDING",
+      "status": "DELETED",
       "en_hash": null,
       "de_hash": "c5fd0c73bc0b53b3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
+      "kind": [],
       "note": null,
-      "history": [],
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
       "en_bytes": null,
-      "de_bytes": 5341
+      "de_bytes": null
     },
     "data/geodata/description.md": {
       "status": "PENDING",
@@ -7687,7 +7719,7 @@
     "data/geodata/index.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "7764d57ce34e737c",
+      "de_hash": "942077277fda92b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -7696,22 +7728,21 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1165
+      "de_bytes": 1164
     },
     "data/geodata/standards.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "0c227c9ba7dc4a88",
+      "de_hash": "9f69ff14fed93ead",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1783
+      "de_bytes": 1781
     },
     "data/geodata/technical.md": {
       "status": "PENDING",
@@ -7772,22 +7803,7 @@
     "data/identity/standards.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "c02a88f3f4eb06f9",
-      "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 2580
-    },
-    "data/identity/technical.md": {
-      "status": "PENDING",
-      "en_hash": null,
-      "de_hash": "b0eabe6a0bff5c88",
+      "de_hash": "f37572e4415985e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -7796,40 +7812,64 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2484
+      "de_bytes": 2578
     },
-    "data/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "335137f0e0414ccf",
-      "de_hash": "63006dabec1d4083",
-      "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T06:53:39.529934+00:00",
-      "kind": [],
-      "note": "parity: mirrored DE structure, removed stale Skin blocks",
-      "history": [
-        {
-          "at": "2026-11-05T06:53:39.529934+00:00",
-          "event": "confirmed → VERIFIED"
-        }
-      ],
-      "en_bytes": 6727,
-      "de_bytes": 6942,
-      "change_reason": null
-    },
-    "data/konventionen.md": {
+    "data/identity/technical.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "d989cef64d2d2107",
+      "de_hash": "6ffc064a29d4c956",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 8534
+      "de_bytes": 2482
+    },
+    "data/index.md": {
+      "status": "VERIFIED",
+      "en_hash": "84b36bbbf8c0fb19",
+      "de_hash": "ce7b7b4278cffb47",
+      "first_seen": "2026-11-04T20:29:00.376325+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
+      "kind": [],
+      "note": "link retarget after data/ renames (ADR 0002)",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 6711,
+      "de_bytes": 6926,
+      "change_reason": null
+    },
+    "data/konventionen.md": {
+      "status": "DELETED",
+      "en_hash": null,
+      "de_hash": "d989cef64d2d2107",
+      "first_seen": "2026-11-04T20:29:00.376325+00:00",
+      "last_verified": null,
+      "kind": [],
+      "note": null,
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
+      "en_bytes": null,
+      "de_bytes": null
     },
     "data/login/description.md": {
       "status": "PENDING",
@@ -7880,8 +7920,7 @@
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
@@ -7905,17 +7944,16 @@
     "data/mappings.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "b288f891fbb43c1f",
+      "de_hash": "e7827f36244aec3e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 15300
+      "de_bytes": 15290
     },
     "data/messages/description.md": {
       "status": "PENDING",
@@ -7966,8 +8004,7 @@
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
@@ -7989,19 +8026,21 @@
       "de_bytes": 2154
     },
     "data/modelle.md": {
-      "status": "PENDING",
+      "status": "DELETED",
       "en_hash": null,
       "de_hash": "bd553b21ecf5c74e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
-      "kind": [
-        "needs_en",
-        "rename"
-      ],
+      "kind": [],
       "note": null,
-      "history": [],
+      "history": [
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "file gone → DELETED"
+        }
+      ],
       "en_bytes": null,
-      "de_bytes": 9764
+      "de_bytes": null
     },
     "data/profile/description.md": {
       "status": "PENDING",
@@ -8052,8 +8091,7 @@
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
@@ -8063,7 +8101,7 @@
     "data/profile/technical.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "1848cf99e1725a94",
+      "de_hash": "1d1d861a9396d7b4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -8072,7 +8110,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2521
+      "de_bytes": 2519
     },
     "data/projects/description.md": {
       "status": "PENDING",
@@ -8105,7 +8143,7 @@
     "data/projects/index.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "37c69326148ddf90",
+      "de_hash": "8fb0ed65701ec880",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -8114,7 +8152,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1974
+      "de_bytes": 1973
     },
     "data/projects/standards.md": {
       "status": "PENDING",
@@ -8123,8 +8161,7 @@
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
@@ -8148,17 +8185,16 @@
     "data/standards.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "032c4e9783c89dbe",
+      "de_hash": "f4ea7aedd62af49c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en",
-        "rename"
+        "needs_en"
       ],
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 21768
+      "de_bytes": 21759
     },
     "index.md": {
       "status": "VERIFIED",
@@ -9326,20 +9362,28 @@
     },
     "interactions/animations/index.md": {
       "status": "VERIFIED",
-      "en_hash": "a61e86d1a2d23d00",
-      "de_hash": "8acf23da7dc4d058",
+      "en_hash": "0b48a90e60c0052b",
+      "de_hash": "6d2e1c22f92347d8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T06:53:39.529934+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 14847,
-      "de_bytes": 15306,
+      "en_bytes": 14845,
+      "de_bytes": 15304,
       "change_reason": null
     },
     "interactions/animations/loading/dots/appearance.md": {
@@ -10488,20 +10532,28 @@
     },
     "interactions/gestures/index.md": {
       "status": "VERIFIED",
-      "en_hash": "e3c33f248297a1b9",
-      "de_hash": "095ed9765998f812",
+      "en_hash": "f609beabf9dbfd15",
+      "de_hash": "944cb2d6b95342c7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T06:53:39.529934+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 8401,
-      "de_bytes": 8757,
+      "en_bytes": 8400,
+      "de_bytes": 8756,
       "change_reason": null
     },
     "interactions/gestures/special/fingerprint/appearance.md": {
@@ -11514,20 +11566,28 @@
     },
     "programs/apps/calendar/masks/davical/api.md": {
       "status": "VERIFIED",
-      "en_hash": "c4b418b351886e11",
-      "de_hash": "a9654627b69c2acb",
+      "en_hash": "60a179b7a890e232",
+      "de_hash": "03648dd31a11678f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 7943,
-      "de_bytes": 7997,
+      "en_bytes": 7942,
+      "de_bytes": 7996,
       "change_reason": null
     },
     "programs/apps/calendar/masks/davical/description.md": {
@@ -12158,20 +12218,28 @@
     },
     "programs/apps/calendar/masks/planner/api.md": {
       "status": "VERIFIED",
-      "en_hash": "bc086c9a5b59245c",
-      "de_hash": "c927c8dac8cb4ef7",
+      "en_hash": "bc2e36f79ae6a9c8",
+      "de_hash": "0932d60876c352db",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 8725,
-      "de_bytes": 8980,
+      "en_bytes": 8724,
+      "de_bytes": 8979,
       "change_reason": null
     },
     "programs/apps/calendar/masks/planner/description.md": {
@@ -12302,20 +12370,28 @@
     },
     "programs/apps/contact/masks/gnome-contacts/api.md": {
       "status": "VERIFIED",
-      "en_hash": "edc92cad00d08d0b",
-      "de_hash": "fec09d23470a192f",
+      "en_hash": "f0945e82b42ae913",
+      "de_hash": "e9d5d3f2e67b8886",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1761,
-      "de_bytes": 1834,
+      "en_bytes": 1760,
+      "de_bytes": 1833,
       "change_reason": null
     },
     "programs/apps/contact/masks/gnome-contacts/description.md": {
@@ -12446,20 +12522,28 @@
     },
     "programs/apps/contact/masks/kaddressbook/api.md": {
       "status": "VERIFIED",
-      "en_hash": "8586a557cafbdd20",
-      "de_hash": "2c6e386de53d3910",
+      "en_hash": "07e61fc9ff99894a",
+      "de_hash": "bf468b95f2214e4c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2119,
-      "de_bytes": 2204,
+      "en_bytes": 2118,
+      "de_bytes": 2203,
       "change_reason": null
     },
     "programs/apps/contact/masks/kaddressbook/description.md": {
@@ -12572,20 +12656,28 @@
     },
     "programs/apps/contact/masks/monica/api.md": {
       "status": "VERIFIED",
-      "en_hash": "aec30c9f315191f5",
-      "de_hash": "e518ae75b1b8e348",
+      "en_hash": "1c7653dc978369a8",
+      "de_hash": "3786d528358244ce",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2376,
-      "de_bytes": 2452,
+      "en_bytes": 2374,
+      "de_bytes": 2450,
       "change_reason": null
     },
     "programs/apps/contact/masks/monica/description.md": {
@@ -12698,20 +12790,28 @@
     },
     "programs/apps/contact/masks/nextcloud-contacts/api.md": {
       "status": "VERIFIED",
-      "en_hash": "76d2a3d2489019da",
-      "de_hash": "0602b2ba5ec07320",
+      "en_hash": "40fffe792b95e6d0",
+      "de_hash": "51d7bad2e878f81c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2684,
-      "de_bytes": 2714,
+      "en_bytes": 2682,
+      "de_bytes": 2712,
       "change_reason": null
     },
     "programs/apps/contact/masks/nextcloud-contacts/description.md": {
@@ -12842,20 +12942,28 @@
     },
     "programs/apps/gallery/masks/coppermine/api.md": {
       "status": "VERIFIED",
-      "en_hash": "f3c402c7b9b04ae1",
-      "de_hash": "ca68051484cb84fa",
+      "en_hash": "f0775a501dd6857d",
+      "de_hash": "7a606f34340d4f38",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2704,
-      "de_bytes": 2757,
+      "en_bytes": 2702,
+      "de_bytes": 2755,
       "change_reason": null
     },
     "programs/apps/gallery/masks/coppermine/description.md": {
@@ -12968,20 +13076,28 @@
     },
     "programs/apps/gallery/masks/damselfly/api.md": {
       "status": "VERIFIED",
-      "en_hash": "9103cc81435cc2fa",
-      "de_hash": "9cc082be7ad47ef6",
+      "en_hash": "a730524aa79d4110",
+      "de_hash": "839220e84f6e7785",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.264912+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2240,
-      "de_bytes": 2283,
+      "en_bytes": 2238,
+      "de_bytes": 2281,
       "change_reason": null
     },
     "programs/apps/gallery/masks/damselfly/description.md": {
@@ -13094,20 +13210,28 @@
     },
     "programs/apps/gallery/masks/immich/api.md": {
       "status": "VERIFIED",
-      "en_hash": "7848536ec33ad3f9",
-      "de_hash": "4eded188e61998a7",
+      "en_hash": "ecbc8d8ca212a67f",
+      "de_hash": "86db24ef2d8c7e55",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2944,
-      "de_bytes": 2997,
+      "en_bytes": 2942,
+      "de_bytes": 2995,
       "change_reason": null
     },
     "programs/apps/gallery/masks/immich/description.md": {
@@ -13238,20 +13362,28 @@
     },
     "programs/apps/gallery/masks/librephotos/api.md": {
       "status": "VERIFIED",
-      "en_hash": "f41bf09db610c08e",
-      "de_hash": "efdd96e59f3419b7",
+      "en_hash": "5fa3a39570e9bdb6",
+      "de_hash": "e3bcc36a0e391286",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2230,
-      "de_bytes": 2265,
+      "en_bytes": 2228,
+      "de_bytes": 2263,
       "change_reason": null
     },
     "programs/apps/gallery/masks/librephotos/description.md": {
@@ -13364,20 +13496,28 @@
     },
     "programs/apps/gallery/masks/lychee/api.md": {
       "status": "VERIFIED",
-      "en_hash": "7a8497cdb76a4fe9",
-      "de_hash": "5c323dbcd517b824",
+      "en_hash": "22e78f4c793811ab",
+      "de_hash": "19a3cfa1e0b0db61",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2432,
-      "de_bytes": 2516,
+      "en_bytes": 2430,
+      "de_bytes": 2514,
       "change_reason": null
     },
     "programs/apps/gallery/masks/lychee/description.md": {
@@ -13490,20 +13630,28 @@
     },
     "programs/apps/gallery/masks/nextcloud-photos/api.md": {
       "status": "VERIFIED",
-      "en_hash": "477975c68a8083b0",
-      "de_hash": "65ef70f5dfee255a",
+      "en_hash": "1050e8d79cbb77cd",
+      "de_hash": "eb3df235ee2c8cf1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2681,
-      "de_bytes": 2725,
+      "en_bytes": 2679,
+      "de_bytes": 2723,
       "change_reason": null
     },
     "programs/apps/gallery/masks/nextcloud-photos/description.md": {
@@ -13616,20 +13764,28 @@
     },
     "programs/apps/gallery/masks/photoprism/api.md": {
       "status": "VERIFIED",
-      "en_hash": "82f64ed3b9df8f4f",
-      "de_hash": "c4d60cf13c78a063",
+      "en_hash": "b277e829abbce866",
+      "de_hash": "fdaaaabaf557de01",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2621,
-      "de_bytes": 2709,
+      "en_bytes": 2619,
+      "de_bytes": 2707,
       "change_reason": null
     },
     "programs/apps/gallery/masks/photoprism/description.md": {
@@ -13742,20 +13898,28 @@
     },
     "programs/apps/gallery/masks/piwigo/api.md": {
       "status": "VERIFIED",
-      "en_hash": "27ee02ab5eba1006",
-      "de_hash": "cb73ee6075e828e4",
+      "en_hash": "3b0f7bb0278f6c8b",
+      "de_hash": "63e20ec8330c2ca6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2656,
-      "de_bytes": 2766,
+      "en_bytes": 2654,
+      "de_bytes": 2764,
       "change_reason": null
     },
     "programs/apps/gallery/masks/piwigo/description.md": {
@@ -13886,20 +14050,28 @@
     },
     "programs/apps/helpdesk/masks/freshdesk/api.md": {
       "status": "VERIFIED",
-      "en_hash": "e2a66caa50718f1e",
-      "de_hash": "8784edc36370bbb6",
+      "en_hash": "58ddcbe5508a6bf4",
+      "de_hash": "5b53cec73c45905f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2462,
-      "de_bytes": 2509,
+      "en_bytes": 2460,
+      "de_bytes": 2507,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/freshdesk/description.md": {
@@ -14012,20 +14184,28 @@
     },
     "programs/apps/helpdesk/masks/glpi/api.md": {
       "status": "VERIFIED",
-      "en_hash": "9657afb2818a7fef",
-      "de_hash": "d994f762398f7f55",
+      "en_hash": "dc56a59b19e1b3ad",
+      "de_hash": "ce763cb271000a6f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2511,
-      "de_bytes": 2541,
+      "en_bytes": 2510,
+      "de_bytes": 2540,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/glpi/description.md": {
@@ -14138,20 +14318,28 @@
     },
     "programs/apps/helpdesk/masks/helodesk/api.md": {
       "status": "VERIFIED",
-      "en_hash": "fcdf0299aac7393f",
-      "de_hash": "3d79b340a532c02c",
+      "en_hash": "2713f92ece51e35d",
+      "de_hash": "6c3222ee66125652",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2517,
-      "de_bytes": 2598,
+      "en_bytes": 2515,
+      "de_bytes": 2596,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/helodesk/description.md": {
@@ -14264,20 +14452,28 @@
     },
     "programs/apps/helpdesk/masks/helpscout/api.md": {
       "status": "VERIFIED",
-      "en_hash": "344bc94692d23c00",
-      "de_hash": "7aa50fb2fd54300c",
+      "en_hash": "6f75cc2f7900098c",
+      "de_hash": "24c530a84985ddbf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2137,
-      "de_bytes": 2167,
+      "en_bytes": 2135,
+      "de_bytes": 2165,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/helpscout/description.md": {
@@ -14408,20 +14604,28 @@
     },
     "programs/apps/helpdesk/masks/osticket/api.md": {
       "status": "VERIFIED",
-      "en_hash": "a6db86c53cd7e82e",
-      "de_hash": "a93ad9862ccbe3b9",
+      "en_hash": "37e5fa5d7d604660",
+      "de_hash": "45bc7e09c055ab97",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2374,
-      "de_bytes": 2420,
+      "en_bytes": 2372,
+      "de_bytes": 2418,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/osticket/description.md": {
@@ -14534,20 +14738,28 @@
     },
     "programs/apps/helpdesk/masks/request-tracker/api.md": {
       "status": "VERIFIED",
-      "en_hash": "75d700a1c42d0112",
-      "de_hash": "b8cfd65213147456",
+      "en_hash": "7810d3944eb45d8c",
+      "de_hash": "fd35f0699b444c1c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2607,
-      "de_bytes": 2632,
+      "en_bytes": 2606,
+      "de_bytes": 2631,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/request-tracker/description.md": {
@@ -14660,20 +14872,28 @@
     },
     "programs/apps/helpdesk/masks/zammad/api.md": {
       "status": "VERIFIED",
-      "en_hash": "37522ab3380fbbf9",
-      "de_hash": "a8e2109d0fee6128",
+      "en_hash": "f7f1b16a87c247c6",
+      "de_hash": "3ee89716b8ab10f5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2963,
-      "de_bytes": 2983,
+      "en_bytes": 2961,
+      "de_bytes": 2981,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/zammad/description.md": {
@@ -14786,20 +15006,28 @@
     },
     "programs/apps/helpdesk/masks/zendesk/api.md": {
       "status": "VERIFIED",
-      "en_hash": "f7b0535cc9ecb982",
-      "de_hash": "db71a68b0499a079",
+      "en_hash": "8c7dfec31e17ded4",
+      "de_hash": "a45922f2b7fa7e53",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 3113,
-      "de_bytes": 3166,
+      "en_bytes": 3112,
+      "de_bytes": 3165,
       "change_reason": null
     },
     "programs/apps/helpdesk/masks/zendesk/description.md": {
@@ -15830,20 +16058,28 @@
     },
     "programs/apps/maps/standpunkte.md": {
       "status": "VERIFIED",
-      "en_hash": "7a83bad11f58e221",
-      "de_hash": "81e06b9753538e8e",
+      "en_hash": "63e9f7f78292e110",
+      "de_hash": "190180d2860f28a2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2212,
-      "de_bytes": 2179,
+      "en_bytes": 2211,
+      "de_bytes": 2178,
       "change_reason": null
     },
     "programs/apps/marketing/index.md": {
@@ -15866,20 +16102,28 @@
     },
     "programs/apps/marketing/masks/google-analytics/api.md": {
       "status": "VERIFIED",
-      "en_hash": "e88890f6b415ab2e",
-      "de_hash": "6d238e165e1c9199",
+      "en_hash": "45647ff8c5763e99",
+      "de_hash": "127ca5bcc57d6c62",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2208,
-      "de_bytes": 2217,
+      "en_bytes": 2206,
+      "de_bytes": 2215,
       "change_reason": null
     },
     "programs/apps/marketing/masks/google-analytics/description.md": {
@@ -16136,15 +16380,23 @@
     },
     "programs/apps/marketing/masks/mailchimp/api.md": {
       "status": "VERIFIED",
-      "en_hash": "776897e1da7f67d6",
-      "de_hash": "d07ba3a4a5d68406",
+      "en_hash": "dd81c5e81b75beb9",
+      "de_hash": "62532f6d732e8267",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -16154,15 +16406,23 @@
     },
     "programs/apps/marketing/masks/mailchimp/description.md": {
       "status": "VERIFIED",
-      "en_hash": "6c316967be1c4c2a",
-      "de_hash": "67493dc3b8240bfd",
+      "en_hash": "9913f7757cd0dcc5",
+      "de_hash": "bcbbf8bc42555ff1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -16262,38 +16522,54 @@
     },
     "programs/apps/marketing/masks/matomo/api.md": {
       "status": "VERIFIED",
-      "en_hash": "867da1fb7c85f48a",
-      "de_hash": "fa1bfa2e998f1fe0",
+      "en_hash": "a3c4aa327c1d2257",
+      "de_hash": "7725710ae3784f90",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2168,
-      "de_bytes": 2217,
+      "en_bytes": 2166,
+      "de_bytes": 2215,
       "change_reason": null
     },
     "programs/apps/marketing/masks/matomo/description.md": {
       "status": "VERIFIED",
-      "en_hash": "991ef2151828fb32",
-      "de_hash": "b622d1c5678fb70e",
+      "en_hash": "d20161ab45d5a1bd",
+      "de_hash": "e04d7c0ef8a997e0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1309,
-      "de_bytes": 1286,
+      "en_bytes": 1307,
+      "de_bytes": 1284,
       "change_reason": null
     },
     "programs/apps/marketing/masks/matomo/features.md": {
@@ -16388,15 +16664,23 @@
     },
     "programs/apps/marketing/masks/mautic/api.md": {
       "status": "VERIFIED",
-      "en_hash": "0fbd1c3c93f5cc02",
-      "de_hash": "4cab61dec051e73f",
+      "en_hash": "8942c6e44f9bacf5",
+      "de_hash": "10669195a9cd54ba",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -16406,20 +16690,28 @@
     },
     "programs/apps/marketing/masks/mautic/description.md": {
       "status": "VERIFIED",
-      "en_hash": "55d45dbe7ead8301",
-      "de_hash": "dc07676434b90f2f",
+      "en_hash": "c676e5fbe9afb7d5",
+      "de_hash": "c2c8bb7254eaf87f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "reviewed de+en, translated",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1228,
-      "de_bytes": 1204,
+      "en_bytes": 1226,
+      "de_bytes": 1202,
       "change_reason": null
     },
     "programs/apps/marketing/masks/mautic/features.md": {
@@ -16514,15 +16806,23 @@
     },
     "programs/apps/marketing/masks/plausible/api.md": {
       "status": "VERIFIED",
-      "en_hash": "0d5111e14c7281d8",
-      "de_hash": "12f879d3daa19b77",
+      "en_hash": "0548811ae3b7b848",
+      "de_hash": "14e1457f11ad3d48",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en / code labels englished (ADR 0002)",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -17576,12 +17876,12 @@
     },
     "programs/apps/projectmanagement/masks/asana/api.md": {
       "status": "VERIFIED",
-      "en_hash": "ea352bb76a764ae8",
-      "de_hash": "61e2707cef5aed82",
+      "en_hash": "9d53d022d402755f",
+      "de_hash": "158787ced5e7615a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:48:27.390466+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T03:49:54.524649+00:00",
@@ -17590,28 +17890,44 @@
         {
           "at": "2026-11-05T04:48:27.390466+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2388,
-      "de_bytes": 2407,
+      "en_bytes": 2387,
+      "de_bytes": 2406,
       "change_reason": null
     },
     "programs/apps/projectmanagement/masks/asana/description.md": {
       "status": "VERIFIED",
-      "en_hash": "254def888a41220c",
-      "de_hash": "7510f62827c8e55a",
+      "en_hash": "190f07d483a8b500",
+      "de_hash": "2a65cc6842b1a001",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:48:27.390466+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:48:27.390466+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1217,
-      "de_bytes": 1233,
+      "en_bytes": 1216,
+      "de_bytes": 1232,
       "change_reason": null
     },
     "programs/apps/projectmanagement/masks/asana/features.md": {
@@ -17724,15 +18040,23 @@
     },
     "programs/apps/projectmanagement/masks/jira/api.md": {
       "status": "VERIFIED",
-      "en_hash": "6111b9f106d0f36e",
-      "de_hash": "f116359df4420b92",
+      "en_hash": "9e86bdde80a0fff1",
+      "de_hash": "1846fb361d0d8792",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:48:27.390466+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:48:27.390466+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -17742,20 +18066,28 @@
     },
     "programs/apps/projectmanagement/masks/jira/description.md": {
       "status": "VERIFIED",
-      "en_hash": "3860f55fcc31dbbd",
-      "de_hash": "e3530596679bcf9c",
+      "en_hash": "32126e1202fe301a",
+      "de_hash": "d9cc4158ce297476",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:48:27.390466+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:48:27.390466+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1320,
-      "de_bytes": 1326,
+      "en_bytes": 1318,
+      "de_bytes": 1324,
       "change_reason": null
     },
     "programs/apps/projectmanagement/masks/jira/features.md": {
@@ -17953,7 +18285,7 @@
     "programs/apps/projectmanagement/masks/planka/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "c2b7d17d5fa657e8",
+      "de_hash": "a977df2d6301dfa2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -17962,7 +18294,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2925
+      "de_bytes": 2922
     },
     "programs/apps/projectmanagement/masks/planka/description.md": {
       "status": "PENDING",
@@ -18157,7 +18489,7 @@
     "programs/apps/projectmanagement/masks/taiga/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "a3d16ab10bf1bc07",
+      "de_hash": "3d4bd52e93620bee",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -18166,12 +18498,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2275
+      "de_bytes": 2274
     },
     "programs/apps/projectmanagement/masks/taiga/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "b03130cadfd2c95c",
+      "de_hash": "1cec675a2c1f8f28",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -18180,7 +18512,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1374
+      "de_bytes": 1372
     },
     "programs/apps/projectmanagement/masks/taiga/features.md": {
       "status": "PENDING",
@@ -18258,12 +18590,12 @@
     },
     "programs/apps/projectmanagement/masks/trello/api.md": {
       "status": "VERIFIED",
-      "en_hash": "fc0f20ceb5ecb8a3",
-      "de_hash": "fffb38f081479289",
+      "en_hash": "6c755c1086ed05ca",
+      "de_hash": "d8c37a9d6c7e836e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:53:06.400629+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:48:27.390466+00:00",
@@ -18276,28 +18608,44 @@
         {
           "at": "2026-11-05T04:53:06.400629+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2524,
-      "de_bytes": 2569,
+      "en_bytes": 2522,
+      "de_bytes": 2567,
       "change_reason": null
     },
     "programs/apps/projectmanagement/masks/trello/description.md": {
       "status": "VERIFIED",
-      "en_hash": "00cd0d383a0fb552",
-      "de_hash": "37c111e836ea0601",
+      "en_hash": "9a9f0d134b49b94d",
+      "de_hash": "33385d2a025cc1d6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:48:27.390466+00:00",
+      "last_verified": "2026-11-05T07:28:51.902607+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
           "at": "2026-11-05T04:48:27.390466+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T07:28:06.907199+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T07:28:51.902607+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1294,
-      "de_bytes": 1269,
+      "en_bytes": 1293,
+      "de_bytes": 1268,
       "change_reason": null
     },
     "programs/apps/projectmanagement/masks/trello/features.md": {
@@ -18425,7 +18773,7 @@
     "programs/apps/projectmanagement/masks/wekan/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "bbeaff38d7de03f9",
+      "de_hash": "2bb44ef91dcebf16",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -18434,7 +18782,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2575
+      "de_bytes": 2574
     },
     "programs/apps/projectmanagement/masks/wekan/description.md": {
       "status": "PENDING",
@@ -19175,7 +19523,7 @@
     "programs/apps/streaming/masks/obs-studio/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "9056dbe8e02e2756",
+      "de_hash": "fac3b1957d12c2b6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -19184,7 +19532,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 3229
+      "de_bytes": 3227
     },
     "programs/apps/streaming/masks/obs-studio/description.md": {
       "status": "PENDING",
@@ -19379,7 +19727,7 @@
     "programs/apps/streaming/masks/restreamer/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "c53500e77513bfa8",
+      "de_hash": "93d454a37e2aa4f2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -19388,7 +19736,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 3840
+      "de_bytes": 3838
     },
     "programs/apps/streaming/masks/restreamer/description.md": {
       "status": "PENDING",
@@ -19481,7 +19829,7 @@
     "programs/apps/streaming/masks/wowza/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "29fcc2a26f45d4d7",
+      "de_hash": "7696485d30d20d55",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -19490,7 +19838,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 3289
+      "de_bytes": 3287
     },
     "programs/apps/streaming/masks/wowza/description.md": {
       "status": "PENDING",
@@ -19823,7 +20171,7 @@
     "programs/apps/whiteboards/masks/miro/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "2615c342b51880ce",
+      "de_hash": "8a98785ad51d9083",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -19832,7 +20180,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2381
+      "de_bytes": 2379
     },
     "programs/apps/whiteboards/masks/miro/description.md": {
       "status": "PENDING",
@@ -20027,7 +20375,7 @@
     "programs/apps/whiteboards/masks/openboard/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "a21489042bb9d2ae",
+      "de_hash": "3e7fe57f61ecaeb6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -20036,7 +20384,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1232
+      "de_bytes": 1231
     },
     "programs/apps/whiteboards/masks/openboard/description.md": {
       "status": "PENDING",
@@ -20129,7 +20477,7 @@
     "programs/apps/whiteboards/masks/tldraw/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "357075ca5f6f64cd",
+      "de_hash": "b9507d0856691db0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -20138,7 +20486,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 3068
+      "de_bytes": 3066
     },
     "programs/apps/whiteboards/masks/tldraw/description.md": {
       "status": "PENDING",
@@ -22235,7 +22583,7 @@
     "programs/suites/crm/masks/civicrm/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "79c71ecc5caaee5c",
+      "de_hash": "7230fd97e054127b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22244,7 +22592,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2604
+      "de_bytes": 2602
     },
     "programs/suites/crm/masks/civicrm/description.md": {
       "status": "PENDING",
@@ -22333,7 +22681,7 @@
     "programs/suites/crm/masks/espocrm/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "a45d0304fee44b08",
+      "de_hash": "bb192eceb43424bf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22431,7 +22779,7 @@
     "programs/suites/crm/masks/hubspot/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "1daa320506a8658b",
+      "de_hash": "f820c296071c452c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22641,7 +22989,7 @@
     "programs/suites/crm/masks/salesforce/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "a9e3f6bc09c0eaf7",
+      "de_hash": "c1ec09c64b989651",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22650,12 +22998,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2759
+      "de_bytes": 2758
     },
     "programs/suites/crm/masks/salesforce/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "18a1b49eeccc71c0",
+      "de_hash": "8fee98fc6e249991",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22664,7 +23012,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1636
+      "de_bytes": 1635
     },
     "programs/suites/crm/masks/salesforce/features.md": {
       "status": "PENDING",
@@ -22855,7 +23203,7 @@
     "programs/suites/democracy/masks/adhocracy4/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "cda9c6c6b2fee7e6",
+      "de_hash": "9f3b0c7b72392a4f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22864,12 +23212,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1847
+      "de_bytes": 1845
     },
     "programs/suites/democracy/masks/adhocracy4/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "58cd315a437a23ac",
+      "de_hash": "455c620c0a7ca9f2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -22878,7 +23226,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1288
+      "de_bytes": 1286
     },
     "programs/suites/democracy/masks/adhocracy4/features.md": {
       "status": "PENDING",
@@ -22953,7 +23301,7 @@
     "programs/suites/democracy/masks/circo/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "7c27e54dae5547a4",
+      "de_hash": "756ecbc2e2bd0d81",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23051,7 +23399,7 @@
     "programs/suites/democracy/masks/consul/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "6c396be955f6e656",
+      "de_hash": "7c2897106e62dd5b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23060,12 +23408,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1732
+      "de_bytes": 1731
     },
     "programs/suites/democracy/masks/consul/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "3e17676cd2feb267",
+      "de_hash": "7cec9d8f0f9772be",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23074,7 +23422,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1117
+      "de_bytes": 1115
     },
     "programs/suites/democracy/masks/consul/features.md": {
       "status": "PENDING",
@@ -23149,7 +23497,7 @@
     "programs/suites/democracy/masks/decidim/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "fa37eedc1ca4dcf8",
+      "de_hash": "68f2fb5a37bc2e95",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23158,12 +23506,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1840
+      "de_bytes": 1838
     },
     "programs/suites/democracy/masks/decidim/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "d8ad3563c3b5e08f",
+      "de_hash": "41bc1c207bf21238",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23172,7 +23520,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1304
+      "de_bytes": 1302
     },
     "programs/suites/democracy/masks/decidim/features.md": {
       "status": "PENDING",
@@ -23261,7 +23609,7 @@
     "programs/suites/democracy/masks/liquid-feedback/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "dfdde2120aef5dcd",
+      "de_hash": "b50b47a470900206",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23275,7 +23623,7 @@
     "programs/suites/democracy/masks/liquid-feedback/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "effa9d87f9d86f85",
+      "de_hash": "b69f76ecb75e9c25",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23284,7 +23632,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1224
+      "de_bytes": 1222
     },
     "programs/suites/democracy/masks/liquid-feedback/features.md": {
       "status": "PENDING",
@@ -23373,7 +23721,7 @@
     "programs/suites/democracy/masks/polis/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "d1f5b052d5d8aa70",
+      "de_hash": "2e353c04add6b9d1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23382,7 +23730,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1248
+      "de_bytes": 1246
     },
     "programs/suites/democracy/masks/polis/features.md": {
       "status": "PENDING",
@@ -23475,7 +23823,7 @@
     "programs/suites/erp/masks/axelor/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "6a162c863dd4292e",
+      "de_hash": "a7e8e6700e6cd478",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23573,7 +23921,7 @@
     "programs/suites/erp/masks/dolibarr/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "79b915faf8e0fab1",
+      "de_hash": "a1655c22d399a2c2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23671,7 +24019,7 @@
     "programs/suites/erp/masks/erpnext/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "0585f3d10a2323c9",
+      "de_hash": "9ebcb7801f4fe0e9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23783,7 +24131,7 @@
     "programs/suites/erp/masks/odoo/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "43bd6abd0e78c88f",
+      "de_hash": "81e780977d8a3bc3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23797,7 +24145,7 @@
     "programs/suites/erp/masks/odoo/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "601af1070c91aee8",
+      "de_hash": "abbd461ff1b76bf9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23806,7 +24154,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1408
+      "de_bytes": 1406
     },
     "programs/suites/erp/masks/odoo/features.md": {
       "status": "PENDING",
@@ -23881,7 +24229,7 @@
     "programs/suites/erp/masks/sage/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "0b1ecad3d2eef2af",
+      "de_hash": "59a822df1898649d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -23890,7 +24238,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1878
+      "de_bytes": 1876
     },
     "programs/suites/erp/masks/sage/description.md": {
       "status": "PENDING",
@@ -23979,7 +24327,7 @@
     "programs/suites/erp/masks/tryton/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "f03246164c506b26",
+      "de_hash": "23bcccf73207d5ad",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24105,7 +24453,7 @@
     "programs/suites/marketplace/masks/arcemall/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "ee97d47bf255c79a",
+      "de_hash": "819bcb64cf988b7e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24114,7 +24462,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1273
+      "de_bytes": 1271
     },
     "programs/suites/marketplace/masks/arcemall/features.md": {
       "status": "PENDING",
@@ -24189,7 +24537,7 @@
     "programs/suites/marketplace/masks/cs-cart-multivendor/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "7f9a26e41a11604b",
+      "de_hash": "b96e6800f75b67e0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24198,7 +24546,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1791
+      "de_bytes": 1789
     },
     "programs/suites/marketplace/masks/cs-cart-multivendor/description.md": {
       "status": "PENDING",
@@ -24287,7 +24635,7 @@
     "programs/suites/marketplace/masks/ebay/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "1c70f3a6c6f1eb3f",
+      "de_hash": "f4dfe819a38b8a66",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24301,7 +24649,7 @@
     "programs/suites/marketplace/masks/ebay/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "69f7e1ed7304e5b5",
+      "de_hash": "aa0e714371d4c566",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24310,7 +24658,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1170
+      "de_bytes": 1168
     },
     "programs/suites/marketplace/masks/ebay/features.md": {
       "status": "PENDING",
@@ -24385,7 +24733,7 @@
     "programs/suites/marketplace/masks/etsy/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "3623aecad13c024d",
+      "de_hash": "3a33c50c740e326c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24399,7 +24747,7 @@
     "programs/suites/marketplace/masks/etsy/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "4724f1701b2b44ba",
+      "de_hash": "700d399717f6945a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24408,7 +24756,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1104
+      "de_bytes": 1102
     },
     "programs/suites/marketplace/masks/etsy/features.md": {
       "status": "PENDING",
@@ -24497,7 +24845,7 @@
     "programs/suites/marketplace/masks/kleinanzeigen/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "2ceff63b27327aa2",
+      "de_hash": "1989f5471e84fc91",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24506,7 +24854,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1309
+      "de_bytes": 1308
     },
     "programs/suites/marketplace/masks/kleinanzeigen/description.md": {
       "status": "PENDING",
@@ -24595,7 +24943,7 @@
     "programs/suites/marketplace/masks/sharetribe/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "f7f6b9dec7f5fe5f",
+      "de_hash": "9dd6e8fd441d8b7a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24604,12 +24952,12 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2374
+      "de_bytes": 2372
     },
     "programs/suites/marketplace/masks/sharetribe/description.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "eb6330c21a129e0b",
+      "de_hash": "ed742ffccf1c307e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24618,7 +24966,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 1437
+      "de_bytes": 1435
     },
     "programs/suites/marketplace/masks/sharetribe/features.md": {
       "status": "PENDING",
@@ -24711,7 +25059,7 @@
     "programs/suites/workflows/masks/apache-airflow/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "33cd45a453cd661a",
+      "de_hash": "be446bf3009f79e7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24720,7 +25068,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2553
+      "de_bytes": 2551
     },
     "programs/suites/workflows/masks/apache-airflow/description.md": {
       "status": "PENDING",
@@ -24823,7 +25171,7 @@
     "programs/suites/workflows/masks/make/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "b35eadd23f020c23",
+      "de_hash": "508fd60eb252b638",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24832,7 +25180,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2159
+      "de_bytes": 2157
     },
     "programs/suites/workflows/masks/make/description.md": {
       "status": "PENDING",
@@ -24921,7 +25269,7 @@
     "programs/suites/workflows/masks/n8n/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "d145a4129f4cc73a",
+      "de_hash": "3c966919c506efc1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -24930,7 +25278,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2364
+      "de_bytes": 2362
     },
     "programs/suites/workflows/masks/n8n/description.md": {
       "status": "PENDING",
@@ -25019,7 +25367,7 @@
     "programs/suites/workflows/masks/node-red/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "6ca892900d51d87d",
+      "de_hash": "d0140931a6a48437",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -25028,7 +25376,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2140
+      "de_bytes": 2139
     },
     "programs/suites/workflows/masks/node-red/description.md": {
       "status": "PENDING",
@@ -25117,7 +25465,7 @@
     "programs/suites/workflows/masks/prefect/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "ae0a64b95bc95fd8",
+      "de_hash": "a6df86e706a21cb7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -25126,7 +25474,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2385
+      "de_bytes": 2383
     },
     "programs/suites/workflows/masks/prefect/description.md": {
       "status": "PENDING",
@@ -25215,7 +25563,7 @@
     "programs/suites/workflows/masks/zapier/api.md": {
       "status": "PENDING",
       "en_hash": null,
-      "de_hash": "ea97fd6951ae732d",
+      "de_hash": "52215fd73fdee6e2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
@@ -25224,7 +25572,7 @@
       "note": null,
       "history": [],
       "en_bytes": null,
-      "de_bytes": 2236
+      "de_bytes": 2234
     },
     "programs/suites/workflows/masks/zapier/description.md": {
       "status": "PENDING",
@@ -25309,6 +25657,104 @@
       "history": [],
       "en_bytes": null,
       "de_bytes": 2193
+    },
+    "data/contacts/jscontact/description.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "77359fada53e8255",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 4143
+    },
+    "data/contacts/jscontact/storage.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "68eb9b35bda6371b",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 3048
+    },
+    "data/conventions.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "26560cfd3d0e1d20",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 8526
+    },
+    "data/fields.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "286217d6de003892",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 10237
+    },
+    "data/formats.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "e6de2f4ca175d5b3",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 5337
+    },
+    "data/models.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "a070a7891a968c7f",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 9763
+    },
+    "data/requirements.md": {
+      "status": "PENDING",
+      "en_hash": null,
+      "de_hash": "215adbb2965d25b9",
+      "first_seen": "2026-11-05T07:28:06.907199+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_en"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": null,
+      "de_bytes": 7309
     }
   }
 }

@@ -28,4 +28,4 @@ Trello visualisiert Arbeit als Spalten mit Karten — der Zustand einer Sache is
 ## Für wen geeignet
 
 - Teams, die Status visueller als felddetailsbedürftig ist
-- FreeSynergy-Skins: Trello-Boardmodell (Board/List/Card/Label/Checklist) als kanonischer [Task-Skin](../../../../../data/modelle.md)
+- FreeSynergy-Skins: Trello-Boardmodell (Board/List/Card/Label/Checklist) als kanonischer [Task-Skin](../../../../../data/models.md)

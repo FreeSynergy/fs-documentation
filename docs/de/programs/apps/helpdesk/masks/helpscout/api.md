@@ -60,4 +60,4 @@ keine offiziell harte Zahl publiziert; Drosselung > ~20 req/s typischerweise mit
 
 ## Skin-Hinweis
 
-Conversation = Thread-Baum statt Ticket+Comment; Mapping-Variante in [modelle.md](../../../../../data/modelle.md) unter „Conversation-Modell“.
+Conversation = Thread-Baum statt Ticket+Comment; Mapping-Variante in [models.md](../../../../../data/models.md) unter „Conversation-Modell“.

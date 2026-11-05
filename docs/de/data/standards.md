@@ -149,7 +149,7 @@ Die frühere offene Entscheidung „Reichweite“ ist mit Beschluss 1+4 beantwor
 
 ## Domänen-Verzeichnisse
 
-Jede Datendomäne hat ein Verzeichnis mit `index.md`, `description.md`, `technical.md`, `standards.md`, `examples.md` (Festlegung 2026-11-02, siehe [anforderungen.md → §4](anforderungen.md)); jeder Standard darin zusätzlich ein Unterverzeichnis mit `beschreibung.md` + `speicherung.md` (Schema analog zu Komponenten):
+Jede Datendomäne hat ein Verzeichnis mit `index.md`, `description.md`, `technical.md`, `standards.md`, `examples.md` (Festlegung 2026-11-02, siehe [requirements.md → §4](requirements.md)); jeder Standard darin zusätzlich ein Unterverzeichnis mit `description.md` + `storage.md` (Schema analog zu Komponenten):
 
 | Domäne | Verzeichnis |
 |--------|-------------|
@@ -202,9 +202,9 @@ Faktenstand (vollständig aufgeschrieben, **nicht erneut herunterladen**):
 
 ## Siehe auch
 
-- [Datenmodelle](modelle.md)
-- [Standardfelder](felder.md)
-- [Datenformate](formate.md)
+- [Datenmodelle](models.md)
+- [Standardfelder](fields.md)
+- [Datenformate](formats.md)
 - [Feld-Mappings](mappings.md)
-- [Konventionen](konventionen.md)
+- [Konventionen](conventions.md)
 - [Daten-API](api.md)

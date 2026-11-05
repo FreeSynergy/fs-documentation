@@ -63,4 +63,4 @@ The documentation states **100 requests/minute per API key** (a guideline; on ex
 
 ## Skin note
 
-Conversations/ticket fields run parallel to Zendesk — a shared mapping in [modelle.md](../../../../../data/modelle.md) (`Comment.public`, `Ticket.status`).
+Conversations/ticket fields run parallel to Zendesk — a shared mapping in [models.md](../../../../../data/models.md) (`Comment.public`, `Ticket.status`).

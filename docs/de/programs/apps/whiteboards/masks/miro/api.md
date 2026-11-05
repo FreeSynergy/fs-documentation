@@ -63,4 +63,4 @@ Response: `201` mit Item (`id`, `type:"sticky_note"`, `data`, `geometry`, `style
 
 ## Skin-Hinweis
 
-Sticky/Frame/Connector entsprechen den Whiteboard-Bausteinen der Component-Doku; Item-JSON → [modelle.md](../../../../../data/modelle.md) (Shape-Records analog tldraw).
+Sticky/Frame/Connector entsprechen den Whiteboard-Bausteinen der Component-Doku; Item-JSON → [models.md](../../../../../data/models.md) (Shape-Records analog tldraw).

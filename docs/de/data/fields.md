@@ -1,10 +1,10 @@
 # Standardfelder
 
-Felder sind die Bausteine der [Modelle](modelle.md). Sie sind über alle Programme hinweg **gleich benannt**, damit Komponenten, Skins und Workflows ohne Übersetzungsschicht funktionieren.
+Felder sind die Bausteine der [Modelle](models.md). Sie sind über alle Programme hinweg **gleich benannt**, damit Komponenten, Skins und Workflows ohne Übersetzungsschicht funktionieren.
 
 ## Standard-Pate je Feldgruppe
 
-Nach der Regel in [konventionen.md](konventionen.md) braucht jedes Feld einen Beleg. Die ausführliche Herleitung steht in [standards.md](standards.md) und [mappings.md](mappings.md); hier die Kurzfassung pro Abschnitt. ✅ belegt, ⚠️ noch zu belegen.
+Nach der Regel in [conventions.md](conventions.md) braucht jedes Feld einen Beleg. Die ausführliche Herleitung steht in [standards.md](standards.md) und [mappings.md](mappings.md); hier die Kurzfassung pro Abschnitt. ✅ belegt, ⚠️ noch zu belegen.
 
 | Feldgruppe | Pate | Beleg |
 |------------|------|-------|
@@ -175,7 +175,7 @@ Diese Felder erscheinen in Komponenten-Attributen ([components](../components/))
 
 ## Siehe auch
 
-- [Datenmodelle](modelle.md)
-- [Datenformate](formate.md)
-- [Konventionen](konventionen.md)
+- [Datenmodelle](models.md)
+- [Datenformate](formats.md)
+- [Konventionen](conventions.md)
 - [Daten-API](api.md)

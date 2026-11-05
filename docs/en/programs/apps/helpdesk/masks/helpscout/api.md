@@ -60,4 +60,4 @@ No officially published hard figure; throttling above ~20 req/s is typically ans
 
 ## Skin note
 
-Conversation = thread tree instead of ticket + comment; the mapping variant in [modelle.md](../../../../../data/modelle.md) under "conversation model".
+Conversation = thread tree instead of ticket + comment; the mapping variant in [models.md](../../../../../data/models.md) under "conversation model".

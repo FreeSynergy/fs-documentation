@@ -5,7 +5,7 @@
 **Was sie abdeckt:**
 
 - Anlegen, Ändern, Patchen, Zusammenführen (`merge`) von Karten (`Card`)
-- Namen mit Komponenten (nicht `firstName`/`lastName` — siehe [jscontact/beschreibung.md](jscontact/beschreibung.md))
+- Namen mit Komponenten (nicht `firstName`/`lastName` — siehe [jscontact/description.md](jscontact/description.md))
 - Organisationen und Rollen einer Person (`organizations`, `titles`)
 - Erreichbarkeiten: `emails`, `phones`, `onlineServices`, `impp`, Scheduling-Adressen
 - Postadressen als Teil der Card (Geometrien und Karten liegen in [geodata/](../geodata/index.md))
@@ -21,6 +21,6 @@
 | [events/](../events/index.md) | Teilnehmer **an Terminen** | Die Person ist hier verknüpft (`sendTo`/`email`), nicht gespeichert |
 | [geodata/](../geodata/index.md) | Orte als Karten-Features | Die Postadresse **einer Person** gehört zur Card |
 
-**Person vs. Kontakt (Beschluss-Kandidat 6, offen):** Der „Mensch, der sich anmeldet“ braucht nach unserem Vorschlag **kein eigenes `person/`-Verzeichnis**: die Person ist diejenige JSContact-`Card` (Rolle `individual`), die mit dem Konto aus [login/](../login/index.md) verknüpft ist. Alle Personen-Daten bleiben also in dieser Domäne. Siehe [anforderungen.md → 6.4](../anforderungen.md).
+**Person vs. Kontakt (Beschluss-Kandidat 6, offen):** Der „Mensch, der sich anmeldet“ braucht nach unserem Vorschlag **kein eigenes `person/`-Verzeichnis**: die Person ist diejenige JSContact-`Card` (Rolle `individual`), die mit dem Konto aus [login/](../login/index.md) verknüpft ist. Alle Personen-Daten bleiben also in dieser Domäne. Siehe [requirements.md → 6.4](../requirements.md).
 
 ** Lifecycle-Lücke:** `lifecycle` (lead/prospect/customer/churned) existiert in keinem Standard (❌ belegt) → geplant als JSContact-`extensions`-Eintrag (⚠️ Mechanismus noch belegen). Siehe [standards.md](standards.md).

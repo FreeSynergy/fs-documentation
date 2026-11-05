@@ -58,4 +58,4 @@ Data API: standard quotas per property/project (moderate; backoff on 429/429 fam
 
 ## Skin note
 
-Report skins: use the Data API only for **aggregated** metrics; evaluating personal data remains the domain of self-hosting alternatives ([modelle.md](../../../../../data/modelle.md) → data-protection note).
+Report skins: use the Data API only for **aggregated** metrics; evaluating personal data remains the domain of self-hosting alternatives ([models.md](../../../../../data/models.md) → data-protection note).

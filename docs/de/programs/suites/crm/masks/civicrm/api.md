@@ -76,4 +76,4 @@ Nicht eingebaut; CMS-/Webserver-Limits und Mailing-Scheduling beachten.
 
 ## Skin-Hinweis
 
-Constituent-Modell (Contact + Contribution/Event/Membership als Beziehungen) → Mapping auf [modelle.md](../../../../../data/modelle.md).
+Constituent-Modell (Contact + Contribution/Event/Membership als Beziehungen) → Mapping auf [models.md](../../../../../data/models.md).

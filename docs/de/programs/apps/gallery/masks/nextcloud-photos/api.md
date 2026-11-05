@@ -59,4 +59,4 @@ Keine API-Quotas; Bremsen kommen von PHP-Worker-Limits, `throttling`-App (Login)
 
 ## Skin-Hinweis
 
-Datei-/Freigabeobjekte entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); Preview-URLs verhalten sich wie [felder.md](../../../../../data/felder.md) (`fileId` als Referenz).
+Datei-/Freigabeobjekte entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); Preview-URLs verhalten sich wie [fields.md](../../../../../data/fields.md) (`fileId` als Referenz).

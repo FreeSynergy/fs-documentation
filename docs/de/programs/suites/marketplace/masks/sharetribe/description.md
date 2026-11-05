@@ -28,4 +28,4 @@ Sharetribe liefert das Komplettpaket, um **eigenen Marktplätzen** beizubringen,
 ## Für wen geeignet
 
 - Initiativen mit regionalem Tausch-/Dienstleistungsmarktplatz
-- FreeSynergy-Szenarien: Angebots-/Standortmodell in [modelle.md](../../../../../data/modelle.md); Listing-Geo → [standpunkte.md](../../../../apps/maps/standpunkte.md)
+- FreeSynergy-Szenarien: Angebots-/Standortmodell in [models.md](../../../../../data/models.md); Listing-Geo → [standpunkte.md](../../../../apps/maps/standpunkte.md)

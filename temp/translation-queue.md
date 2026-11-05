@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 06:53 UTC · 1492 Dateien verfolgt · 659 offen · 833 bestätigt
+Stand: 2026-11-05 07:28 UTC · 1499 Dateien verfolgt · 659 offen · 833 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -43,42 +43,42 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
 | F. Form nicht gleich – Struktur abgleichen | 0 |
-| G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 17 |
+| G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
-| 🗑️ gelöscht (tombstone) | 0 |
+| 🗑️ gelöscht (tombstone) | 7 |
 
 ## A. `en/` fehlt – aus `de/` übersetzen – 659 Dateien
 
 ### `data/` · 8
 
-- [ ] `data/anforderungen.md` · 7.1k · auch: rename
 - [ ] `data/api.md` · 8.8k
-- [ ] `data/felder.md` · 10.0k · auch: rename
-- [ ] `data/formate.md` · 5.2k · auch: rename
-- [ ] `data/konventionen.md` · 8.3k · auch: rename
-- [ ] `data/mappings.md` · 14.9k · auch: rename
-- [ ] `data/modelle.md` · 9.5k · auch: rename
-- [ ] `data/standards.md` · 21.3k · auch: rename
+- [ ] `data/conventions.md` · 8.3k
+- [ ] `data/fields.md` · 10.0k
+- [ ] `data/formats.md` · 5.2k
+- [ ] `data/mappings.md` · 14.9k
+- [ ] `data/models.md` · 9.5k
+- [ ] `data/requirements.md` · 7.1k
+- [ ] `data/standards.md` · 21.2k
 
 ### `data/contacts/` · 5
 
 - [ ] `data/contacts/description.md` · 2.2k
 - [ ] `data/contacts/examples.md` · 1.9k
 - [ ] `data/contacts/index.md` · 1.3k
-- [ ] `data/contacts/standards.md` · 2.4k · auch: rename
+- [ ] `data/contacts/standards.md` · 2.4k
 - [ ] `data/contacts/technical.md` · 2.4k
 
 ### `data/contacts/jscontact/` · 2
 
-- [ ] `data/contacts/jscontact/beschreibung.md` · 4.1k · auch: rename
-- [ ] `data/contacts/jscontact/speicherung.md` · 3.0k · auch: rename
+- [ ] `data/contacts/jscontact/description.md` · 4.0k
+- [ ] `data/contacts/jscontact/storage.md` · 3.0k
 
 ### `data/events/` · 5
 
 - [ ] `data/events/description.md` · 1.6k
 - [ ] `data/events/examples.md` · 2.4k
 - [ ] `data/events/index.md` · 1.3k
-- [ ] `data/events/standards.md` · 2.8k · auch: rename
+- [ ] `data/events/standards.md` · 2.8k
 - [ ] `data/events/technical.md` · 2.4k
 
 ### `data/geodata/` · 5
@@ -86,7 +86,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/geodata/description.md` · 1.6k
 - [ ] `data/geodata/examples.md` · 1.8k
 - [ ] `data/geodata/index.md` · 1.1k
-- [ ] `data/geodata/standards.md` · 1.7k · auch: rename
+- [ ] `data/geodata/standards.md` · 1.7k
 - [ ] `data/geodata/technical.md` · 1.9k
 
 ### `data/identity/` · 5
@@ -94,7 +94,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/identity/description.md` · 1.8k
 - [ ] `data/identity/examples.md` · 2.3k
 - [ ] `data/identity/index.md` · 2.1k
-- [ ] `data/identity/standards.md` · 2.5k · auch: rename
+- [ ] `data/identity/standards.md` · 2.5k
 - [ ] `data/identity/technical.md` · 2.4k
 
 ### `data/login/` · 5
@@ -102,7 +102,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/login/description.md` · 1.1k
 - [ ] `data/login/examples.md` · 2.0k
 - [ ] `data/login/index.md` · 1.9k
-- [ ] `data/login/standards.md` · 2.1k · auch: rename
+- [ ] `data/login/standards.md` · 2.1k
 - [ ] `data/login/technical.md` · 2.2k
 
 ### `data/messages/` · 5
@@ -110,7 +110,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/messages/description.md` · 1.6k
 - [ ] `data/messages/examples.md` · 2.4k
 - [ ] `data/messages/index.md` · 1.1k
-- [ ] `data/messages/standards.md` · 1.9k · auch: rename
+- [ ] `data/messages/standards.md` · 1.9k
 - [ ] `data/messages/technical.md` · 2.1k
 
 ### `data/profile/` · 5
@@ -118,7 +118,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/profile/description.md` · 1.6k
 - [ ] `data/profile/examples.md` · 2.2k
 - [ ] `data/profile/index.md` · 1.5k
-- [ ] `data/profile/standards.md` · 2.2k · auch: rename
+- [ ] `data/profile/standards.md` · 2.2k
 - [ ] `data/profile/technical.md` · 2.5k
 
 ### `data/projects/` · 5
@@ -126,7 +126,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/projects/description.md` · 1.5k
 - [ ] `data/projects/examples.md` · 1.8k
 - [ ] `data/projects/index.md` · 1.9k
-- [ ] `data/projects/standards.md` · 1.9k · auch: rename
+- [ ] `data/projects/standards.md` · 1.9k
 - [ ] `data/projects/technical.md` · 2.1k
 
 ### `interactions/animations/entrance/` · 1
@@ -546,7 +546,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ### `programs/apps/streaming/masks/restreamer/` · 6
 
-- [ ] `programs/apps/streaming/masks/restreamer/api.md` · 3.8k · Plan[~]
+- [ ] `programs/apps/streaming/masks/restreamer/api.md` · 3.7k · Plan[~]
 - [ ] `programs/apps/streaming/masks/restreamer/description.md` · 1.7k · Plan[~]
 - [ ] `programs/apps/streaming/masks/restreamer/features.md` · 1.4k · Plan[~]
 - [ ] `programs/apps/streaming/masks/restreamer/menu.md` · 1.3k · Plan[~]
@@ -1131,58 +1131,18 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/masks/zapier/shortcuts.md` · 449b · Plan[~]
 - [ ] `programs/suites/workflows/masks/zapier/structure.md` · 2.1k · Plan[~]
 
-## G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) – 17 Dateien
+## 🗑️ Gelöscht – 7
 
-### `data/` · 7
-
-- [ ] `data/anforderungen.md` · 7.1k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/felder.md` · 10.0k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/formate.md` · 5.2k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/konventionen.md` · 8.3k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/mappings.md` · 14.9k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/modelle.md` · 9.5k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/standards.md` · 21.3k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/contacts/` · 1
-
-- [ ] `data/contacts/standards.md` · 2.4k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/contacts/jscontact/` · 2
-
-- [ ] `data/contacts/jscontact/beschreibung.md` · 4.1k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-- [ ] `data/contacts/jscontact/speicherung.md` · 3.0k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/events/` · 1
-
-- [ ] `data/events/standards.md` · 2.8k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/geodata/` · 1
-
-- [ ] `data/geodata/standards.md` · 1.7k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/identity/` · 1
-
-- [ ] `data/identity/standards.md` · 2.5k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/login/` · 1
-
-- [ ] `data/login/standards.md` · 2.1k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/messages/` · 1
-
-- [ ] `data/messages/standards.md` · 1.9k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/profile/` · 1
-
-- [ ] `data/profile/standards.md` · 2.2k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
-
-### `data/projects/` · 1
-
-- [ ] `data/projects/standards.md` · 1.9k · Zielpfad englisch, dann Links + `mkdocs.yml` nachziehen · auch: needs_en
+- [x] `data/anforderungen.md` · nicht mehr im Baum
+- [x] `data/contacts/jscontact/beschreibung.md` · nicht mehr im Baum
+- [x] `data/contacts/jscontact/speicherung.md` · nicht mehr im Baum
+- [x] `data/felder.md` · nicht mehr im Baum
+- [x] `data/formate.md` · nicht mehr im Baum
+- [x] `data/konventionen.md` · nicht mehr im Baum
+- [x] `data/modelle.md` · nicht mehr im Baum
 
 ## Changelog
 
-  als `de/` – die Breitenfehler existieren sonst beidseitig (en 123 / de 227 Dateien) und sind
   kein Übersetzungsproblem.
 - 2026-11-05 02:25 · **Reparatur im selben Skript:** `--fix-boxes <pfad>` (Zielbreite je Box, aus
   der `de`-Datei übernommen) und `--gen-box <pfad> --cell "a|b"`. Erster Fund gefixt:
@@ -1222,3 +1182,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 06:10 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 parity=17 rename=17
 - 2026-11-05 06:53 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 rename=17 review=17
 - 2026-11-05 06:53 · Lauf: 1492 verfolgt, 659 offen, 833 bestätigt · needs_en=659 rename=17
+- 2026-11-05 07:28 · Lauf: 1499 verfolgt, 702 offen, 790 bestätigt · needs_en=659 review=43
+- 2026-11-05 07:28 · Lauf: 1499 verfolgt, 659 offen, 833 bestätigt · needs_en=659

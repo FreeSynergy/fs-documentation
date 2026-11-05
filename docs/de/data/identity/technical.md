@@ -31,6 +31,6 @@ Das deckt sich mit Antons Modell („build reputation through attestations over 
 
 ## Offene technische Punkte
 
-- `identity/mapping.md` als eigene Datei erstellen (Auftrag aus [anforderungen.md §7](../anforderungen.md))
+- `identity/mapping.md` als eigene Datei erstellen (Auftrag aus [requirements.md §7](../requirements.md))
 - Signatur-Mechanismus-Recherche (welcher ist real belegt?) — vor jeder Implementierung
 - Vertrauensketten-Fragen (Tiefe, Verfallsfristen) als API, nicht als Schema

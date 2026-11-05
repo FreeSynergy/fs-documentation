@@ -28,4 +28,4 @@ Adhocracy4 strukturiert kommunale Beteiligung in nachvollziehbaren Phasen-Module
 ## Für wen geeignet
 
 - Kommunen, die Beteiligung mit Verwaltungs-Rückkopplung betreiben
-- FreeSynergy-Skins: Ideen/Rating/Geo als Modell (→ [modelle.md](../../../../../data/modelle.md) + [Standpunkte](../../../../apps/maps/standpunkte.md))
+- FreeSynergy-Skins: Ideen/Rating/Geo als Modell (→ [models.md](../../../../../data/models.md) + [Standpunkte](../../../../apps/maps/standpunkte.md))

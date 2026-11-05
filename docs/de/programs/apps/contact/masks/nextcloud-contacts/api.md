@@ -71,4 +71,4 @@ Nextcloud-Throttling auf Login-Endpunkten; DAV selbst ohne feste Limits (Brutefo
 
 ## Skin-Hinweis
 
-Skin-Mapping auf das Contact-Modell ([modelle.md](../../../../../data/modelle.md)), Feldnamen gemäß vCard 3.0 ([felder.md](../../../../../data/felder.md)).
+Skin-Mapping auf das Contact-Modell ([models.md](../../../../../data/models.md)), Feldnamen gemäß vCard 3.0 ([fields.md](../../../../../data/fields.md)).

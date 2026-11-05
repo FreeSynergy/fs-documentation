@@ -41,4 +41,4 @@ Permissions stay in FreeSynergy (DB roles); the map tools are views with read/wr
 ## Open points
 
 - Collision/duplicate checking on point import (QGIS "near" or PostGIS)
-- Timezone/timestamp conventions as in [data/](../../../data/modelle.md)
+- Timezone/timestamp conventions as in [data/](../../../data/models.md)

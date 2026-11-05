@@ -63,4 +63,4 @@ nicht eingebaut; Kapazität über API-Server/Reverse-Proxy.
 
 ## Skin-Hinweis
 
-DAG/Task-Instance-Modell als Referenz für geplante Abläufe in [modelle.md](../../../../../data/modelle.md); Konfiguration über Connections/Variables spiegelt Credential-Modelle.
+DAG/Task-Instance-Modell als Referenz für geplante Abläufe in [models.md](../../../../../data/models.md); Konfiguration über Connections/Variables spiegelt Credential-Modelle.

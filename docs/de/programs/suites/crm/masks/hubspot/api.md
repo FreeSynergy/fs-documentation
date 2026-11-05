@@ -66,4 +66,4 @@ Response: `201`
 
 ## Skin-Hinweis
 
-Eigenschafts-API = Feldkatalog fürs automatische Mapping ([felder.md](../../../../../data/felder.md)); Lifecycle-Stages → Standard-Pipeline-Feld.
+Eigenschafts-API = Feldkatalog fürs automatische Mapping ([fields.md](../../../../../data/fields.md)); Lifecycle-Stages → Standard-Pipeline-Feld.

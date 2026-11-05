@@ -27,4 +27,4 @@ Etsy gibt Maker:innen (Näherinnen, Drucker, Illustrator:innen) einen gemeinsame
 ## Für wen geeignet
 
 - Kreative mit Verkaufsautomatisierung (Listing-Pflege, Order-Export in ERP)
-- FreeSynergy-Skins: Listing-/Receipt-Reader ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: Listing-/Receipt-Reader ([models.md](../../../../../data/models.md))

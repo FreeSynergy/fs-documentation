@@ -26,4 +26,4 @@ Boards, Listen, Aufgaben-Beziehungen, Meilensteine, Rollen im Projekt. Das ist d
 ## Siehe auch
 
 - [standards.md → Was wir erfinden müssen](../standards.md)
-- [events/](../events/index.md) (Task-Standard), [modell-Übersicht](../modelle.md)
+- [events/](../events/index.md) (Task-Standard), [modell-Übersicht](../models.md)

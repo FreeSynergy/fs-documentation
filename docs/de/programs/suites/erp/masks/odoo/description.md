@@ -29,4 +29,4 @@ Odoo verdrahtet Unternehmen in einer Suite: ein Lead wird zum Angebot, zur Liefe
 ## Für wen geeignet
 
 - KMU/Mittelstand, die ERP+CRM+Web aus einer Hand und anpassbar wollen
-- FreeSynergy-Skins: `res.partner`/`sale.order`-Muster als Referenz für Adress-/Auftragsmodelle ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: `res.partner`/`sale.order`-Muster als Referenz für Adress-/Auftragsmodelle ([models.md](../../../../../data/models.md))

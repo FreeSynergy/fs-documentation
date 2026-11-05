@@ -60,4 +60,4 @@ Keine harten Limits; Upload-Größen und Worker-Anzahl konfigurieren den Durchsa
 
 ## Skin-Hinweis
 
-Image/Album/Person/Label entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); ID-Typ ist ganzzahlig.
+Image/Album/Person/Label entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); ID-Typ ist ganzzahlig.

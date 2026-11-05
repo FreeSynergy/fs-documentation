@@ -53,4 +53,4 @@ Dokumentierte Kontingente je Plan (Requests/Minute moderat, 429 + Retry); Präzi
 
 ## Skin-Hinweis
 
-Szenario-Objekt (Trigger, Module, Routen, Scheduling) als Flow-Modell-Vorlage ([modelle.md](../../../../../data/modelle.md)).
+Szenario-Objekt (Trigger, Module, Routen, Scheduling) als Flow-Modell-Vorlage ([models.md](../../../../../data/models.md)).

@@ -145,4 +145,4 @@ Weil Gesten nie selbsterklärend sind, gilt überall: gleiche Aktion auch
 
 - Familien: [tap](tap/) · [swipe](swipe/) · [transform](transform/) · [special](special/) · [device](device/) · [combined](combined/)
 - [Animationen](../animations/) - visuelle Antwort auf Gesten
-- [Konventionen](../../data/konventionen.md) - Datei- und Benennungsregeln
+- [Konventionen](../../data/conventions.md) - Datei- und Benennungsregeln

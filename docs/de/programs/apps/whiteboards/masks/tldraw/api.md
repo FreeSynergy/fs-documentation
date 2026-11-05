@@ -90,4 +90,4 @@ Cloud: dokumentierte Fair-Use-Grenzen ohne feste öffentliche Zahlen (Stand: nic
 
 ## Skin-Hinweis
 
-FreeSynergy-Skin = React-Einbettung von `<Tldraw/>` plus eigene Persistenz; Whiteboard-Inhalte lassen sich per Snapshot auf das Block-/File-Modell ([modelle.md](../../../../../data/modelle.md)) mappen.
+FreeSynergy-Skin = React-Einbettung von `<Tldraw/>` plus eigene Persistenz; Whiteboard-Inhalte lassen sich per Snapshot auf das Block-/File-Modell ([models.md](../../../../../data/models.md)) mappen.

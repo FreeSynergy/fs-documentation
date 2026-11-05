@@ -70,4 +70,4 @@ Keine eingebauten; Instanz-Limits über Proxy.
 
 ## Skin-Hinweis
 
-Swimlane-Ebene ergänzt das [Board-Modell](../../../../../data/modelle.md) (Board → Swimlane → List → Card).
+Swimlane-Ebene ergänzt das [Board-Modell](../../../../../data/models.md) (Board → Swimlane → List → Card).

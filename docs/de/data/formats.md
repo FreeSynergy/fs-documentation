@@ -1,6 +1,6 @@
 # Datenformate
 
-Formate legen fest, **wie** Daten gespeichert und zwischen Programmen ausgetauscht werden. Die Modelle in [modelle.md](modelle.md) sind formatunabhängig.
+Formate legen fest, **wie** Daten gespeichert und zwischen Programmen ausgetauscht werden. Die Modelle in [models.md](models.md) sind formatunabhängig.
 
 ## Überblick
 
@@ -184,7 +184,7 @@ END:VCARD
 
 ## Siehe auch
 
-- [Standardmodelle](modelle.md)
-- [Standardfelder](felder.md)
-- [Konventionen](konventionen.md)
+- [Standardmodelle](models.md)
+- [Standardfelder](fields.md)
+- [Konventionen](conventions.md)
 - [Daten-API](api.md)

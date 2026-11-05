@@ -16,7 +16,7 @@ Personen, Firmen und ihre Erreichbarkeiten. Diese Domäne ist vollständig stand
 
 | Standard | Verzeichnis |
 |----------|-------------|
-| JSContact | [jscontact/](jscontact/beschreibung.md) |
+| JSContact | [jscontact/](jscontact/description.md) |
 
 ## Offene Punkte
 
@@ -27,4 +27,4 @@ Personen, Firmen und ihre Erreichbarkeiten. Diese Domäne ist vollständig stand
 
 - [standards.md](../standards.md) (Belegtabrik, Beschlüsse)
 - [mappings.md](../mappings.md) (Feld für Feld)
-- [felder.md](../felder.md)
+- [fields.md](../fields.md)

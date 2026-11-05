@@ -29,4 +29,4 @@ Taiga ist schlanke, schöne Agile-Software zum Selbsthosten: ein Projekt wählt 
 ## Für wen geeignet
 
 - kleine/mittlere Dev-Teams, die OSS + Scrum/Kanban ohne Ballast wollen
-- FreeSynergy-Skins: Sprint/Story/Epic-Begriffe direkt als Agile-Modell ([modelle.md](../../../../../data/modelle.md))
+- FreeSynergy-Skins: Sprint/Story/Epic-Begriffe direkt als Agile-Modell ([models.md](../../../../../data/models.md))

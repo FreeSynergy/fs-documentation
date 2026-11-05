@@ -62,4 +62,4 @@ keine eingebauten; Server-/Proxy-Limits.
 
 ## Skin-Hinweis
 
-`context` ( Sprache/Firma/TZ) in Sync-Skins immer explizit setzen — häufigste Fehlerquelle; Metadaten via `ir.model.fields` → [felder.md](../../../../../data/felder.md).
+`context` ( Sprache/Firma/TZ) in Sync-Skins immer explizit setzen — häufigste Fehlerquelle; Metadaten via `ir.model.fields` → [fields.md](../../../../../data/fields.md).

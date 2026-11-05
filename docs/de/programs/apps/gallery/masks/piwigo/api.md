@@ -76,4 +76,4 @@ Keine eingebauten Limits; empfohlen werden Begrenzung im Webserver (`mod_qos`, n
 
 ## Skin-Hinweis
 
-Category/Image/Tag/Group entsprechen dem Standardmodell ([modelle.md](../../../../../data/modelle.md)); benutzerdefinierte Felder folgen [felder.md](../../../../../data/felder.md).
+Category/Image/Tag/Group entsprechen dem Standardmodell ([models.md](../../../../../data/models.md)); benutzerdefinierte Felder folgen [fields.md](../../../../../data/fields.md).

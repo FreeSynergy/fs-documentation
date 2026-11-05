@@ -78,4 +78,4 @@ Keine eingebauten; Best-Practices: eigene API-User, Proxy-Limits, Transaktionsfl
 
 ## Skin-Hinweis
 
-Transaktionsmodell (Ticket = Kopf, Transactions = Events) ist Vorbild für das [Comment-/Event-Modell](../../../../../data/modelle.md).
+Transaktionsmodell (Ticket = Kopf, Transactions = Events) ist Vorbild für das [Comment-/Event-Modell](../../../../../data/models.md).

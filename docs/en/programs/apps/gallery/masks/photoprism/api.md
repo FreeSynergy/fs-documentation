@@ -61,4 +61,4 @@ No fixed API quotas; configurable limits via reverse proxy and `PHOTOPRISM_ADMIN
 
 ## Skin note
 
-Photo/album/label/person correspond to the standard model ([modelle.md](../../../../../data/modelle.md)); EXIF fields follow [felder.md](../../../../../data/felder.md).
+Photo/album/label/person correspond to the standard model ([models.md](../../../../../data/models.md)); EXIF fields follow [fields.md](../../../../../data/fields.md).

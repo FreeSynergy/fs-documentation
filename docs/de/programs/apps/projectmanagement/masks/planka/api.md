@@ -47,7 +47,7 @@ Content-Type: application/json
 
 {
   "name": "Skin-API mappen",
-  "description": "Felder auf data/modelle.md",
+  "description": "Felder auf data/models.md",
   "dueDate": "2026-11-05T10:00:00.000Z",
   "labelIds": ["640f..."],
   "memberIds": ["641a..."]
@@ -75,4 +75,4 @@ Eingebaute Limits: ❌ (nur Node-Standard); für Production Proxy-Limits empfohl
 
 ## Skin-Hinweis
 
-Planka-Kartenmappern auf das Task-Modell ([modelle.md](../../../../../data/modelle.md)); `position`-Feld entspricht der Listen-Sortierlogik ([felder.md](../../../../../data/felder.md)).
+Planka-Kartenmappern auf das Task-Modell ([models.md](../../../../../data/models.md)); `position`-Feld entspricht der Listen-Sortierlogik ([fields.md](../../../../../data/fields.md)).

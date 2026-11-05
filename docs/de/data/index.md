@@ -12,7 +12,7 @@ Standardisierte Daten beschreiben, in welchen **Formaten**, **Modellen** und **F
 
 ## Datendomänen (Beschlossen 2026-11-01)
 
-Jede Domäne hat ein Verzeichnis mit eigener `index.md`; jeder Standard darin ein Unterverzeichnis mit `beschreibung.md` + `speicherung.md`.
+Jede Domäne hat ein Verzeichnis mit eigener `index.md`; jeder Standard darin ein Unterverzeichnis mit `description.md` + `storage.md`.
 
 | Domäne | Verzeichnis | Kanonischer Standard | Weitere Standards |
 |--------|-------------|----------------------|-------------------|
@@ -35,10 +35,10 @@ Der **Envelope** (AS2 + ActivityPub, Beschlüsse in [standards.md](standards.md)
 |-------|--------|
 | [standards.md](standards.md) | Welche existierenden Standards welchen Datenbereich abdecken (mit Belegen und ungeprüften Punkten) |
 | [mappings.md](mappings.md) | Unsere Felder ↔ Standardfelder (zunächst Contact, Name, Überschrift) |
-| [formate.md](formate.md) | Austauschformate (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
-| [modelle.md](modelle.md) | Standardmodelle (User, Message, Document, Event, Task, Contact, …) |
-| [felder.md](felder.md) | Standardfelder, Typen, Enums, Pflichtfelder |
-| [konventionen.md](konventionen.md) | Benennung, Dateistrukturen, Versionierung, Validierung, i18n |
+| [formats.md](formats.md) | Austauschformate (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
+| [models.md](models.md) | Standardmodelle (User, Message, Document, Event, Task, Contact, …) |
+| [fields.md](fields.md) | Standardfelder, Typen, Enums, Pflichtfelder |
+| [conventions.md](conventions.md) | Benennung, Dateistrukturen, Versionierung, Validierung, i18n |
 | [api.md](api.md) | Einheitliches CRUD-Muster, Pagination, Filter, Fehlerformat, Webhooks |
 
 ## Standardmodelle (Überblick)
@@ -95,12 +95,12 @@ docs/de/data/
 ├── index.md            (diese Datei)
 ├── standards.md        Standards-Register + Beschlüsse 2026-11-01
 ├── mappings.md         unsere Felder ↔ Standardfelder
-├── formate.md          Austauschformate
-├── modelle.md          Standardmodelle
-├── felder.md           Standardfelder und Typen
-├── konventionen.md     Benennungs- und Versionierungsregeln
+├── formats.md          Austauschformate
+├── models.md          Standardmodelle
+├── fields.md           Standardfelder und Typen
+├── conventions.md     Benennungs- und Versionierungsregeln
 ├── api.md              einheitliches API-Muster
-├── contacts/           ├── index.md └── jscontact/{beschreibung,speicherung}.md
+├── contacts/           ├── index.md └── jscontact/{description,storage}.md
 ├── messages/           ┐
 ├── events/             │ jede Domäne:
 ├── geodata/            │ index.md + description.md

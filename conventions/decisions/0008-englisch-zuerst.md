@@ -1,7 +1,7 @@
 # 0008 – Englisch zuerst, Deutsch zweite Sprache
 
 ## Kontext
-Bisher galt (CONVENTIONS §4, `data/anforderungen.md` §1): `docs/de/` ist Quelle der Wahrheit,
+Bisher galt (CONVENTIONS §4, `data/requirements.md` §1): `docs/de/` ist Quelle der Wahrheit,
 `docs/en/` wird vom Übersetzer-Modell nachgezogen, „zurzeit nur `de/` pflegen“. Der Bestand
 hinkt hinterher: 1491 `de`- gegen 478 `en`-Dateien, davon 355 Komponenten. Der Nutzer will die
 Doku an Dritte weitergeben und entscheidet am 2026-11-03 um. Der Gesprächsverkehr bleibt deutsch.
@@ -22,7 +22,7 @@ möglichst gleich gehalten.
 
 ## Folgen
 - Die 355 `en/components/`-Dateien sind **Bestand, nicht Ballast** (erledigt P11 aus §19).
-- `data/anforderungen.md` §1 („zurzeit nur `de/` pflegen“) ist damit ersetzt.
+- `data/requirements.md` §1 („zurzeit nur `de/` pflegen“) ist damit ersetzt.
 - Verlinkung bleibt sprachbaum-getrennt (CONVENTIONS §9): aus `en/` zeigt kein Link nach `de/`.
 - Bekannte Altschäden in `en/` (9 defekte Links, fehlende `animations/`- und `data/`-Spiegel)
   sind jetzt **Aufgabe**, nicht hinnehmbarer Zustand. Liste in `todo/qwen.md` und `todo/translator.md`.

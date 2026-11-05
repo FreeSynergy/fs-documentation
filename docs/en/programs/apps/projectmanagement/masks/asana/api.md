@@ -64,4 +64,4 @@ Time-based limits per app/user; on 429 the `Retry-After` header; the response co
 
 ## Skin note
 
-The `gid` IDs + section/portfolio correspond to the [task structure](../../../../../data/modelle.md); custom fields → [felder.md](../../../../../data/felder.md).
+The `gid` IDs + section/portfolio correspond to the [task structure](../../../../../data/models.md); custom fields → [fields.md](../../../../../data/fields.md).

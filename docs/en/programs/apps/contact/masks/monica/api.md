@@ -80,4 +80,4 @@ Default: **no** hard API rate limiting; set it instance-side via the web server.
 
 ## Skin note
 
-The Monica structure is the reference for the contact-with-event model ([modelle.md](../../../../../data/modelle.md)); the webhooks correspond to the standard event fields ([felder.md](../../../../../data/felder.md)).
+The Monica structure is the reference for the contact-with-event model ([models.md](../../../../../data/models.md)); the webhooks correspond to the standard event fields ([fields.md](../../../../../data/fields.md)).

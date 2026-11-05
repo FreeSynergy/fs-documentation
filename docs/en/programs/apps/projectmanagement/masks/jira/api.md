@@ -68,4 +68,4 @@ Cloud: tiered (~4,000 requests per 10-second window per user across all apps; ap
 
 ## Skin note
 
-The status transitions (edges with permissions) are the reference pattern for workflow skins; JQL field names → [felder.md](../../../../../data/felder.md).
+The status transitions (edges with permissions) are the reference pattern for workflow skins; JQL field names → [fields.md](../../../../../data/fields.md).

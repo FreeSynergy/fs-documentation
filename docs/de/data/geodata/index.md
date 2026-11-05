@@ -19,4 +19,4 @@ Orte, Koordinaten und Postadressen. Löst unsere Kritik an der „Westeuropäisi
 ## Siehe auch
 
 - [standards.md → Orte, Dateien](../standards.md)
-- [contacts/jscontact](../contacts/jscontact/beschreibung.md) (Adressen gehören zur Card)
+- [contacts/jscontact](../contacts/jscontact/description.md) (Adressen gehören zur Card)

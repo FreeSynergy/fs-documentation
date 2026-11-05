@@ -66,4 +66,4 @@ No hard API limit is built in; limits in the reverse proxy plus job throttling (
 
 ## Skin note
 
-Asset/album/share correspond to the standard model ([modelle.md](../../../../../data/modelle.md)); the EXIF fields follow [felder.md](../../../../../data/felder.md).
+Asset/album/share correspond to the standard model ([models.md](../../../../../data/models.md)); the EXIF fields follow [fields.md](../../../../../data/fields.md).

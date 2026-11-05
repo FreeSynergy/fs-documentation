@@ -63,4 +63,4 @@ Dokumentation nennt **100 Requests/Minute pro API-Key** (Richtwert; bei Übersch
 
 ## Skin-Hinweis
 
-Conversations/Ticket-Felder parallel zu Zendesk — gemeinsames Mapping in [modelle.md](../../../../../data/modelle.md) (`Comment.public`, `Ticket.status`).
+Conversations/Ticket-Felder parallel zu Zendesk — gemeinsames Mapping in [models.md](../../../../../data/models.md) (`Comment.public`, `Ticket.status`).

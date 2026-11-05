@@ -44,4 +44,4 @@ Cloud-Portal dokumentiert Limits pro App/Tenant (moderat; 429-Backoff).
 
 ## Skin-Hinweis
 
-Sage-Skin = **Adapter-Muster**: ein dünner Konverter pro Sage-Linie auf FreeSynergy-Standardmodelle; niemals „Sage allgemein“ modellieren ([modelle.md](../../../../../data/modelle.md) + Produktswitch).
+Sage-Skin = **Adapter-Muster**: ein dünner Konverter pro Sage-Linie auf FreeSynergy-Standardmodelle; niemals „Sage allgemein“ modellieren ([models.md](../../../../../data/models.md) + Produktswitch).
