@@ -957,6 +957,16 @@ Legende wie oben. **Nutzer** = gesetzt durch den Nutzer · **Vorschlag** = Opus,
   Texte = strukturierte Blockliste (jeder Block ein Datentyp mit Darstellung); Markdown/HTML/ODF nur
   Import/Export.
 
+## 22. Ideen, später zu besprechen (2026-11-05)
+
+- **Galerie / Dateien (Nutzer, nach OpenCloud):** Nicht „Datenbank + Bild“, sondern **alles in
+  Dateien** — die meisten Infos als Metadaten **im Bild** selbst; die Datenbank hält nur den
+  Speicherort, als Index für unsere Programme, nicht als Verwaltung. Vorteile: keine Inkonsistenz bei
+  Abbruch, sehr schnell. Passt zu ADR 0030 (Datei = Original). Standards-Kandidaten (⚠️ zu prüfen):
+  XMP (ISO 16684-1), IPTC Photo Metadata, EXIF. Datenbank = aus den Dateien neu aufbaubarer Index.
+- **gitoxide** als Versionskontrolle überall — Verhältnis zum Aktivitätsprotokoll.
+- **Blinc** — ist es eine sichere Wahl? Recherche `temp/research/blinc-health-and-parsers.md`.
+
 ## Siehe auch
 
 - `conventions/CONVENTIONS.md` §2 (sechs Ebenen), §3 (Components-Zuordnung)

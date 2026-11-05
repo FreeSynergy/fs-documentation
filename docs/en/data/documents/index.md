@@ -1,28 +1,26 @@
 # Documents
 
-**Every text is a wiki entry** (ADR 0031): pages → books → libraries; one shared library used by all
-programs (help, tool helpers, guides), shown where you are; own explanations beside the original,
-which is muted, never deleted. Stored as original + AS2 envelope + activity log (ADR 0020, 0030).
+**Every text is a wiki entry** (ADR 0031). Technically there are four building blocks (ADR 0034) —
+whether something is a book, a web page, bookkeeping or a log does not matter; EPUB, Markdown and
+HTML are **export formats only**. Stored as original + AS2 envelope + activity log (ADR 0020, 0030).
 
-## Standards in this domain (details: [standards.md](standards.md))
+| Building block | What | AS2 envelope |
+|----------------|------|--------------|
+| **passage** | extractable, named part (like a block); reusable elsewhere | named mark (ADR 0033) / block type |
+| **page** | one document | `Article` (not `Page`: AS2 `Page` = a web page) |
+| **collection** | group of pages/collections, may reference each other (graph), lockable | `Collection` / `OrderedCollection` |
+| **shelf** | independent instance (own store, own rights) | instance boundary (ADR 0019/0028) |
 
-| Part | Content / standard | AS2 envelope |
-|------|--------------------|--------------|
-| text file (`.md`, `.js`, …) | original bytes; Markdown = CommonMark 0.31.2 / GFM, `text/markdown; variant=GFM` | `Document`, or `Article` with `source` for Markdown |
-| block document | **own spec** "FS Block Document" (no open standard exists) | `Article` |
-| page | — | `Article` (not `Page`: AS2 `Page` = a web page) |
-| book, chapter | schema.org `Book`/`Chapter`, `hasPart`/`isPartOf` | `OrderedCollection` |
-| library, shelf | schema.org `Collection` | `Collection` |
-| own explanation, muting | W3C Web Annotation + 2 own motivations | `Note`/`Article` as annotation body |
-| export | EPUB 3.3 (books), GFM (blocks) | — |
+**Marking** (ADR 0033): one mechanism for all data — a point inserts (variable, mail merge), a range
+names/replaces (own explanation instead of the muted original, reusable passage). Based on W3C Web
+Annotation.
+
+Details: [standards.md](standards.md) · [technical.md](technical.md) · [examples.md](examples.md)
 
 ## Open points
 
-- Own specs: block document format, the two annotation motivations, library profile, help keys
+- Own specs: block document format (neutral name, to be submitted to IETF/W3C), marking vocabulary,
+  collection profile, help keys
 - Version history: activity log only, or gitoxide underneath (conversation pending)
-- Collaborative editing (CRDT: Automerge vs. yrs) only if needed
-
-## See also
-
-- [ADR 0031](https://github.com/FreeSynergy/fs-documentation/blob/main/conventions/decisions/0031-texte-wiki-bibliothek.md)
-- [Wiki frontends](../../programs/apps/wiki/frontends/index.md)
+- Parser/highlighter for the code editor: pure Rust, fitting Blinc (research running)
+- Goal: our own documentation runs in our wiki instead of mkdocs (ADR 0031)

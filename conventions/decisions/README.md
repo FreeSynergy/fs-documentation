@@ -38,3 +38,6 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0029 | Schutzbedürftige Daten müssen gekennzeichnet werden | akzeptiert (Form: Vorschlag) |
 | 0030 | Original + Hülle: Empfangenes unverändert aufbewahren | akzeptiert |
 | 0031 | Jeder Text ist ein Wiki-Eintrag; Bibliothek; Hilfe dort, wo man ist | akzeptiert (Standards offen) |
+| 0032 | name-Regel; Beschlossenes bleibt | akzeptiert |
+| 0033 | Markieren: ein Mechanismus (Punkt = einsetzen, Bereich = ersetzen/benennen) | akzeptiert |
+| 0034 | Textstruktur technisch: Absatz, Seite, Kollektion, Regal | akzeptiert |

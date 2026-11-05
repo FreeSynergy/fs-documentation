@@ -20,6 +20,10 @@ dort genutzt, wo man gerade arbeitet.
 6. **Interoperabilität für alle Programme:** Wer etwas braucht, bedient sich. Einmal programmiert,
    immer wieder verwendbar.
 
+## Warum (Nutzer, 2026-11-05)
+Das Wiki ersetzt auch **mkdocs**: Unsere eigene Doku soll später in unserem Wiki laufen.
+Präzisiert durch ADR 0033 (Markieren) und ADR 0034 (Absatz, Seite, Kollektion, Regal).
+
 ## Folgen / offen
 - Neue Datendomäne **`documents`** (Seite, Buch, Bibliothek, Blockinhalt) — Standards recherchieren.
   Kandidaten: AS2 `Article`/`Page`, W3C **Web Annotation** für „eigene Erklärung daneben“ und
