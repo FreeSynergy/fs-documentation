@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T17:28:55.690271+00:00",
+  "last_run": "2026-11-05T17:40:40.529272+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -24233,232 +24233,268 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "266725254340dc60",
       "de_hash": "2425a0e23ce66c3e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:34:42.743552+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement taiga)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/taiga/api.md"
+        },
+        {
+          "at": "2026-11-05T17:34:42.743552+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2277
+      "en_bytes": 2251,
+      "de_bytes": 2277,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "60d34d0a4db2b1df",
       "de_hash": "68df1de561b5c345",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:34:42.834889+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement taiga)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/taiga/description.md"
+        },
+        {
+          "at": "2026-11-05T17:34:42.834889+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1375
+      "en_bytes": 1376,
+      "de_bytes": 1375,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "87997d851deb9c91",
       "de_hash": "e3de32f3e44ebbb3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:34:42.924449+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement taiga)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/taiga/features.md"
+        },
+        {
+          "at": "2026-11-05T17:34:42.924449+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1238
+      "en_bytes": 1222,
+      "de_bytes": 1238,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6beeaa0b16e82799",
       "de_hash": "757b8fb1c18f1d08",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:34:43.121977+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement taiga)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/taiga/menu.md"
+        },
+        {
+          "at": "2026-11-05T17:34:43.121977+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1288
+      "en_bytes": 1255,
+      "de_bytes": 1288,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "3039a5bf6621d716",
       "de_hash": "d5b0bc3ff818a7f8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:34:43.212149+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement taiga)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/taiga/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T17:34:43.212149+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 546
+      "en_bytes": 511,
+      "de_bytes": 546,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6be8e6fbaa851b59",
       "de_hash": "f6137e043c53e402",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:34:43.027150+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement taiga)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/taiga/structure.md"
+        },
+        {
+          "at": "2026-11-05T17:34:43.027150+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2044
+      "en_bytes": 2038,
+      "de_bytes": 2044,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "85aa198f25c48904",
       "de_hash": "14822a27fef47d87",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:40:39.889980+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement wekan)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/wekan/api.md"
+        },
+        {
+          "at": "2026-11-05T17:40:39.889980+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2577
+      "en_bytes": 2553,
+      "de_bytes": 2577,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "47373eadb7d118f2",
       "de_hash": "ee10859c7f7ecb14",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:40:39.986529+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement wekan)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/wekan/description.md"
+        },
+        {
+          "at": "2026-11-05T17:40:39.986529+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1229
+      "en_bytes": 1260,
+      "de_bytes": 1229,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "8889e7fb141e9f60",
       "de_hash": "90006f3468f4a159",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:40:40.076444+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement wekan)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/wekan/features.md"
+        },
+        {
+          "at": "2026-11-05T17:40:40.076444+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1304
+      "en_bytes": 1216,
+      "de_bytes": 1304,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "4527745e70c00857",
       "de_hash": "58309b03cca95ca8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:40:40.264435+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement wekan)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/wekan/menu.md"
+        },
+        {
+          "at": "2026-11-05T17:40:40.264435+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1262
+      "en_bytes": 1153,
+      "de_bytes": 1262,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "52d834ff35edf9e5",
       "de_hash": "e5dd24fb533b0688",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:40:40.368434+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement wekan)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/wekan/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T17:40:40.368434+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 819
+      "en_bytes": 760,
+      "de_bytes": 819,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2db503b916aa4f11",
       "de_hash": "1102df5cd8f0f04e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:40:40.175730+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement wekan)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/wekan/structure.md"
+        },
+        {
+          "at": "2026-11-05T17:40:40.175730+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2552
+      "en_bytes": 2526,
+      "de_bytes": 2552,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/api.md": {
       "status": "PENDING",

@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 17:28 UTC · 1537 Dateien verfolgt · 405 offen · 1125 bestätigt
+Stand: 2026-11-05 17:40 UTC · 1537 Dateien verfolgt · 393 offen · 1137 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 405 |
+| A. `en/` fehlt – aus `de/` übersetzen | 393 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -47,29 +47,11 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 405 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 393 Dateien
 
 ### `programs/` · 1
 
 - [ ] `programs/index.md` · 3.4k · Plan[~]
-
-### `programs/apps/projectmanagement/frontends/taiga/latest/` · 6
-
-- [ ] `programs/apps/projectmanagement/frontends/taiga/latest/api.md` · 2.2k
-- [ ] `programs/apps/projectmanagement/frontends/taiga/latest/description.md` · 1.3k
-- [ ] `programs/apps/projectmanagement/frontends/taiga/latest/features.md` · 1.2k
-- [ ] `programs/apps/projectmanagement/frontends/taiga/latest/layout.md` · 2.0k
-- [ ] `programs/apps/projectmanagement/frontends/taiga/latest/menus.md` · 1.3k
-- [ ] `programs/apps/projectmanagement/frontends/taiga/latest/shortcuts.md` · 546b
-
-### `programs/apps/projectmanagement/frontends/wekan/latest/` · 6
-
-- [ ] `programs/apps/projectmanagement/frontends/wekan/latest/api.md` · 2.5k
-- [ ] `programs/apps/projectmanagement/frontends/wekan/latest/description.md` · 1.2k
-- [ ] `programs/apps/projectmanagement/frontends/wekan/latest/features.md` · 1.3k
-- [ ] `programs/apps/projectmanagement/frontends/wekan/latest/layout.md` · 2.5k
-- [ ] `programs/apps/projectmanagement/frontends/wekan/latest/menus.md` · 1.2k
-- [ ] `programs/apps/projectmanagement/frontends/wekan/latest/shortcuts.md` · 819b
 
 ### `programs/apps/streaming/frontends/ant-media-server/latest/` · 6
 
@@ -781,10 +763,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 06:10 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 parity=17 rename=17
-- 2026-11-05 06:53 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 rename=17 review=17
-- 2026-11-05 06:53 · Lauf: 1492 verfolgt, 659 offen, 833 bestätigt · needs_en=659 rename=17
-- 2026-11-05 07:28 · Lauf: 1499 verfolgt, 702 offen, 790 bestätigt · needs_en=659 review=43
 - 2026-11-05 07:28 · Lauf: 1499 verfolgt, 659 offen, 833 bestätigt · needs_en=659
 - 2026-11-05 08:13 · Lauf: 1499 verfolgt, 660 offen, 832 bestätigt · needs_en=617 review=43
 - 2026-11-05 08:13 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=617
@@ -822,3 +800,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 17:20 · Lauf: 1537 verfolgt, 414 offen, 1116 bestätigt · needs_en=405 parity=1 review=8
 - 2026-11-05 17:28 · Lauf: 1537 verfolgt, 414 offen, 1116 bestätigt · needs_en=405 review=9
 - 2026-11-05 17:28 · Lauf: 1537 verfolgt, 405 offen, 1125 bestätigt · needs_en=405
+- 2026-11-05 17:34 · Lauf: 1537 verfolgt, 405 offen, 1125 bestätigt · needs_en=399 review=6
+- 2026-11-05 17:34 · Lauf: 1537 verfolgt, 399 offen, 1131 bestätigt · needs_en=399
+- 2026-11-05 17:40 · Lauf: 1537 verfolgt, 399 offen, 1131 bestätigt · needs_en=393 review=6
+- 2026-11-05 17:40 · Lauf: 1537 verfolgt, 393 offen, 1137 bestätigt · needs_en=393
