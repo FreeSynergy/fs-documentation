@@ -1,6 +1,6 @@
 # Standardfelder
 
-Felder sind die Bausteine der [Modelle](models.md). Sie sind über alle Programme hinweg **gleich benannt**, damit Komponenten, Skins und Workflows ohne Übersetzungsschicht funktionieren.
+Felder sind die Bausteine der [Modelle](models.md). Sie sind über alle Programme hinweg **gleich benannt**, damit Komponenten, Masken und Workflows ohne Übersetzungsschicht funktionieren.
 
 ## Standard-Pate je Feldgruppe
 

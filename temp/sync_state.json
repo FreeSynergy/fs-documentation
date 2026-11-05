@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T08:13:11.515174+00:00",
+  "last_run": "2026-11-05T10:04:47.780763+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -7467,18 +7467,22 @@
       "de_bytes": null
     },
     "data/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
-      "de_hash": "cfd787bcb4410e2e",
+      "status": "VERIFIED",
+      "en_hash": "b061b7a0d303236c",
+      "de_hash": "66a0e6d7339341a5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:40.922066+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:40.922066+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 8961
+      "en_bytes": 8859,
+      "de_bytes": 8963,
+      "change_reason": null
     },
     "data/contacts/description.md": {
       "status": "VERIFIED",
@@ -8050,18 +8054,22 @@
       "change_reason": null
     },
     "data/mappings.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "14d9d28d6709a1e0",
       "de_hash": "e7827f36244aec3e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:40.521587+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:40.521587+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 15290
+      "en_bytes": 14950,
+      "de_bytes": 15290,
+      "change_reason": null
     },
     "data/messages/description.md": {
       "status": "VERIFIED",
@@ -8351,18 +8359,22 @@
       "change_reason": null
     },
     "data/standards.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "d63c1e6b15c535c6",
       "de_hash": "f4ea7aedd62af49c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:40.609312+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:40.609312+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 21759
+      "en_bytes": 21138,
+      "de_bytes": 21759,
+      "change_reason": null
     },
     "index.md": {
       "status": "VERIFIED",
@@ -25863,74 +25875,94 @@
       "change_reason": null
     },
     "data/conventions.md": {
-      "status": "PENDING",
-      "en_hash": null,
-      "de_hash": "26560cfd3d0e1d20",
+      "status": "VERIFIED",
+      "en_hash": "030c33d37a36a3a2",
+      "de_hash": "c9a3a3e747033ea5",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:40.847304+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:40.847304+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 8526
+      "en_bytes": 8260,
+      "de_bytes": 8524,
+      "change_reason": null
     },
     "data/fields.md": {
-      "status": "PENDING",
-      "en_hash": null,
-      "de_hash": "286217d6de003892",
+      "status": "VERIFIED",
+      "en_hash": "feca962afff3dec9",
+      "de_hash": "63f5eb5c8fbfce27",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:41.075703+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:41.075703+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 10237
+      "en_bytes": 10246,
+      "de_bytes": 10238,
+      "change_reason": null
     },
     "data/formats.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "99edc814b15835bd",
       "de_hash": "e6de2f4ca175d5b3",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:40.690251+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:40.690251+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 5337
+      "en_bytes": 5181,
+      "de_bytes": 5337,
+      "change_reason": null
     },
     "data/models.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "39d764e762f37623",
       "de_hash": "a070a7891a968c7f",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:41.001291+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:41.001291+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 9763
+      "en_bytes": 9714,
+      "de_bytes": 9763,
+      "change_reason": null
     },
     "data/requirements.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "9376122fa2df931f",
       "de_hash": "215adbb2965d25b9",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T10:04:40.769211+00:00",
+      "kind": [],
+      "note": "translated de->en",
+      "history": [
+        {
+          "at": "2026-11-05T10:04:40.769211+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 7309
+      "en_bytes": 7079,
+      "de_bytes": 7309,
+      "change_reason": null
     }
   }
 }

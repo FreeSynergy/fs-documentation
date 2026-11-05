@@ -58,7 +58,7 @@ data/<domaene>/<standard>/beispiele.md       optional, bei Bedarf
 data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standardfelder
 ```
 
-- Domänenverzeichnisse: lowercase, ASCII (`kontakt`, `identitaet`, `geodaten`)
+- Domänenverzeichnisse: lowercase, ASCII (`contacts`, `identity`, `geodata`)
 - Standardverzeichnisse: offizieller Kurzname, lowercase (`jscontact`, `jscalendar`, `vcard`)
 - Jeder Eintrag endet wie überall mit `## Siehe auch`
 

@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 08:13 UTC · 1499 Dateien verfolgt · 617 offen · 875 bestätigt
+Stand: 2026-11-05 10:04 UTC · 1499 Dateien verfolgt · 609 offen · 883 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 617 |
+| A. `en/` fehlt – aus `de/` übersetzen | 609 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -47,18 +47,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 617 Dateien
-
-### `data/` · 8
-
-- [ ] `data/api.md` · 8.8k
-- [ ] `data/conventions.md` · 8.3k
-- [ ] `data/fields.md` · 10.0k
-- [ ] `data/formats.md` · 5.2k
-- [ ] `data/mappings.md` · 14.9k
-- [ ] `data/models.md` · 9.5k
-- [ ] `data/requirements.md` · 7.1k
-- [ ] `data/standards.md` · 21.2k
+## A. `en/` fehlt – aus `de/` übersetzen – 609 Dateien
 
 ### `interactions/animations/entrance/` · 1
 
@@ -1074,8 +1063,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-  der `de`-Datei übernommen) und `--gen-box <pfad> --cell "a|b"`. Erster Fund gefixt:
-  `en/components/primitives/fields/field/appearance.md` (Zeile 26 → 25 Zeichen, Frame bleibt heil).
 - 2026-11-05 02:25 · **Festhaltungen:** `conventions/decisions/0010-ein-uebersetzungspruefer.md`,
   `temp/state.md` auf `doc_sync.py` umgestellt, `temp/translation-progress.md` stillgelegt.
   Abschnittszahlen jetzt: A 687 · B 1 · C 0 · D 3 · D2 15 · E 0 · F 29 · G 17 · H 756.
@@ -1115,3 +1102,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 07:28 · Lauf: 1499 verfolgt, 659 offen, 833 bestätigt · needs_en=659
 - 2026-11-05 08:13 · Lauf: 1499 verfolgt, 660 offen, 832 bestätigt · needs_en=617 review=43
 - 2026-11-05 08:13 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=617
+- 2026-11-05 10:04 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=609 review=8
+- 2026-11-05 10:04 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=609
