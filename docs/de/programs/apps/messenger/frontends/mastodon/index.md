@@ -10,6 +10,46 @@ Mastodon ist ein Open-Source-Mikroblogging-Netzwerk, das auf ActivityPub-Protoko
 
 _Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
 
+## Review 2026-11-05
+
+- **Gesehene Version:** keine — keine Datei unter `latest/` nennt eine Produktversion; der Text
+  beschreibt einen ungenannten neueren Stand. Geprüft am 2026-11-05 (Doku-Stand von Commit
+  `3fe3d7d1`) beim Erarbeiten der [Anforderungen](../../requirements.md). Der Ordner `latest/` wird
+  nach der Nachrecherche auf die echte Version umbenannt (`temp/frontend-versions-missing.txt`).
+- **Qualität:** dünn; teils allgemein. Aus dem Produkt bekannte Funktionen, die hier **fehlen**:
+  Reaktionen, Threads, später senden, Snooze, Senden rückgängig machen, Wischaktionen (wo das
+- Mastodon ist Microblogging (ActivityPub), kein Messenger im engeren Sinn; hier als Referenz für öffentliche Timelines und die `Note`-Behandlung behalten.
+- **Fähigkeiten, die dieses Frontend zeigt** (aus der Spalte *Gesehen in* der Anforderungen,
+  ⚠️ = nur aus dem Produkt bekannt):
+  - Pflicht:
+  - `conversation.list`
+  - `conversation.open`, `message.open`
+  - `message.send`
+  - `message.reply` ⚠️
+  - `message.quote`
+  - `message.edit`
+  - `message.delete`
+  - `message.read`
+  - `message.search`
+  - `attachment.add`, `attachment.save`
+  - `attachment.preview`
+  - `message.compose`
+  - `draft.save`, `draft.list`
+  - `conversation.notify`
+  - `group.role`
+  - `member.remove`, `actor.block`, `message.report`
+  - `contact.lookup`
+  - `profile.edit`
+  - `rule.create`, `rule.run`
+  - Kür:
+  - `message.react` ⚠️
+  - `message.mention`
+  - `message.bookmark`
+  - `channel.follow`
+  - `message.announce`
+  - `message.sensitive`
+  - `attachment.describe`
+
 ## Dokumentierte Versionen
 
 <!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->

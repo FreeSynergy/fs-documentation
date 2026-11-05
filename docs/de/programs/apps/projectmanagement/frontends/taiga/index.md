@@ -15,12 +15,18 @@ _Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier d
 <!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
 | Version | Pflichtdateien vorhanden |
 |---------|------------------------|
-| [latest](latest/description.md) | 0/7 |
+| [latest](latest/description.md) | 6/7 |
 
 ### latest
 
 | Datei | Inhalt |
 |------|----------|
+| [description.md](latest/description.md) | 0/7 |
+| [features.md](latest/features.md) | Was das Programm kann — und was nicht |
+| [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
+| [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
+| [shortcuts.md](latest/shortcuts.md) | Tastatur-Shortcuts |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
 
-⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
 <!-- /gen:versions -->

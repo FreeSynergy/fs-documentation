@@ -89,6 +89,8 @@ Daten-Verweise: [messages-Standards](../../../data/messages/standards.md) ·
 | Von der Gegenseite erzeugte Link-Vorschau, nie vom Leser abgerufen (`message.compose`) | ⚠️ El, Te (nicht in unseren Dateien) | AS2 `Link` / `Page` als Anhang ⚠️ | proposed |
 | Bots und Automatisierung über unseren eigenen Vertrag | Di, El, Te (Bots, Webhooks) | Cap'n Proto → JSON / CLI / MCP (ADR 0021) — keine separate Bot-API | proposed |
 | Kalendereinladungen vor Ort beantworten (annehmen / ablehnen) | Ko, Ou, Th (Mail + Kalender zusammen) | iMIP / JSCalendar, vom Kalenderprogramm behandelt (ADR 0017), über dessen Widget angezeigt | proposed |
+| GIFs, Sticker und Bilder aus **Git-Repositories** suchen und senden (eigene, Community-, kostenlose Angebote) (`media.search`) | Di, El (GIF-Suche als Idee) | Pakete über Git (ADR 0036); keine Tracking-Abfragen | proposed |
+| Bridges in andere Netzwerke (Telegram, Discord, WhatsApp, …), auf Nachfrage installierbar (`bridge.install`) | El (Bridges) ⚠️ | Matrix-Bridges, selbst gehostet; mit „not end-to-end" markiert (ADR 0018) | proposed |
 
 ## Nicht geplant (bewusst)
 

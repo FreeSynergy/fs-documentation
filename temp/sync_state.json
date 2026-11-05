@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T19:00:53.347576+00:00",
+  "last_run": "2026-11-05T19:15:19.545382+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -19489,15 +19489,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "1f54fdc35b0ef3c1",
-      "de_hash": "7fe3af3bd84bcd06",
+      "de_hash": "2b5105edab900247",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -19518,11 +19516,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2907,
-      "de_bytes": 1143,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 2925,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -19681,15 +19683,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/element/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "acde5e1b187dc266",
-      "de_hash": "c32b6cba2d56df7c",
+      "de_hash": "1b9fb58614c8b1fb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -19710,11 +19710,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3202,
-      "de_bytes": 1153,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3247,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/element/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -19873,15 +19877,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "3febd259e0d0609c",
-      "de_hash": "eeb775586ecbd100",
+      "de_hash": "0945220c7a624a86",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -19902,11 +19904,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2879,
-      "de_bytes": 1168,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 2911,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -20065,15 +20071,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "4378787ef188e5ab",
-      "de_hash": "a956997c2f9f51a4",
+      "de_hash": "56a703682aeeb164",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -20094,11 +20098,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2702,
-      "de_bytes": 1138,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 2720,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -20219,15 +20227,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "99e8377a1555cd8b",
-      "de_hash": "5c372e195bbf1917",
+      "de_hash": "f2dd8df5fdd233d5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -20248,11 +20254,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2772,
-      "de_bytes": 1108,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 2781,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/latest/layout.md": {
       "status": "VERIFIED",
@@ -20449,15 +20459,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "49bdb4d229b0a5a8",
-      "de_hash": "d5bb616fc7b71715",
+      "de_hash": "bcb4e40b927de4c6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -20478,11 +20486,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3283,
-      "de_bytes": 1147,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3359,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -20641,15 +20653,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "62d8298ae959a428",
-      "de_hash": "feacbd5609098ae2",
+      "de_hash": "ccd08aedee118df5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T06:10:20.524108+00:00",
@@ -20670,11 +20680,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3068,
-      "de_bytes": 1129,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3077,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -21151,15 +21165,13 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "05f8b21f73494ac0",
-      "de_hash": "32e4891c00a3a217",
+      "de_hash": "fe92fdd87eccd298",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21180,22 +21192,24 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1347,
-      "de_bytes": 1014,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1355,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "e098f7d495280177",
-      "de_hash": "561ff05a43193333",
+      "de_hash": "1a6aef70382657a2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21216,22 +21230,24 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1271,
-      "de_bytes": 956,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1297,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "8ce2a826138eba14",
-      "de_hash": "960834e015712536",
+      "de_hash": "f22dde9ef27e229e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21252,22 +21268,24 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1324,
-      "de_bytes": 988,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1329,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "ab6813828ef1d0a2",
-      "de_hash": "5cb840e9227e39b5",
+      "de_hash": "ef13e27c9bd7515e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21288,11 +21306,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1239,
-      "de_bytes": 900,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1241,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/trello/index.md": {
       "status": "VERIFIED",
@@ -21529,15 +21551,13 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "1a08465d144c820a",
-      "de_hash": "a54ef913564fbe22",
+      "de_hash": "6fc8b951f8235601",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -21558,11 +21578,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1270,
-      "de_bytes": 935,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1276,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/index.md": {
       "status": "VERIFIED",
@@ -23767,15 +23791,13 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "ee6f6f36819b1bba",
-      "de_hash": "eaac53bfe26ca11f",
+      "de_hash": "876b6d1048f061bd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -23796,11 +23818,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1265,
-      "de_bytes": 942,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1283,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/index.md": {
       "status": "VERIFIED",
@@ -23833,15 +23859,13 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "d003af55a35acf7c",
-      "de_hash": "6df145f9c07991de",
+      "de_hash": "6dea698e7892b08b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.714109+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -23862,11 +23886,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.714109+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1267,
-      "de_bytes": 915,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1256,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/index.md": {
       "status": "VERIFIED",
@@ -25421,118 +25449,136 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "7976d4771f3183bd",
       "de_hash": "a7575756683a89e3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restream/api.md"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3086
+      "en_bytes": 2959,
+      "de_bytes": 3086,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "734ffd35706b03b7",
       "de_hash": "4af0c9603652898a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "review"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restream/description.md"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2531,
-      "de_bytes": 2535
+      "de_bytes": 2535,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0208fa2ac66d3d86",
       "de_hash": "d8055d47cb5cc6ce",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restream/features.md"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2405
+      "en_bytes": 2351,
+      "de_bytes": 2405,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "3eca5fab87e138c1",
       "de_hash": "bead3c95331d59a7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restream/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2307
+      "en_bytes": 2232,
+      "de_bytes": 2307,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "938b2ddd4dfc16c4",
       "de_hash": "9bed56b6c9b638ac",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restream/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1405
+      "en_bytes": 1308,
+      "de_bytes": 1405,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2e3d60dcc2bc55db",
       "de_hash": "cb14b02dce922173",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restream/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3603
+      "en_bytes": 3543,
+      "de_bytes": 3603,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/latest/api.md": {
       "status": "VERIFIED",
@@ -25786,9 +25832,7 @@
       "de_hash": "8a564153b2340548",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -25818,9 +25862,7 @@
       "de_hash": "a6dcbfafc52b2d18",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -25850,9 +25892,7 @@
       "de_hash": "2dd0f593d3504446",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -25882,9 +25922,7 @@
       "de_hash": "59b75f3dbedc0c4c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -25914,9 +25952,7 @@
       "de_hash": "b8230632e96175a5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -25946,9 +25982,7 @@
       "de_hash": "2e5764d20ba95fc9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -25978,9 +26012,7 @@
       "de_hash": "8064fb6bce8c06b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26010,9 +26042,7 @@
       "de_hash": "a5f00883f0b36b44",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26042,9 +26072,7 @@
       "de_hash": "fa76d1fbc14fcfb8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26074,9 +26102,7 @@
       "de_hash": "71bcbfa8df86cb52",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26106,9 +26132,7 @@
       "de_hash": "b2b69b7e52c7f989",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26138,9 +26162,7 @@
       "de_hash": "ee970749c7c68baa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26170,9 +26192,7 @@
       "de_hash": "57eadb533b28450e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26202,9 +26222,7 @@
       "de_hash": "6f99133067ca8d87",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26234,9 +26252,7 @@
       "de_hash": "d09711d3fe0b744e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26266,9 +26282,7 @@
       "de_hash": "12d2ce33007dc11d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26298,9 +26312,7 @@
       "de_hash": "b577e2b6834e45e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26330,9 +26342,7 @@
       "de_hash": "e9c0ee9d128eec19",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26362,9 +26372,7 @@
       "de_hash": "b3414762cbe344a4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26394,9 +26402,7 @@
       "de_hash": "fc1cf5035305473a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26426,9 +26432,7 @@
       "de_hash": "753e386444a0bb22",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26458,9 +26462,7 @@
       "de_hash": "6a78c6875d7f4103",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26490,9 +26492,7 @@
       "de_hash": "db29402171f42599",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26522,9 +26522,7 @@
       "de_hash": "7b40196522d6bbc3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26554,9 +26552,7 @@
       "de_hash": "fea2144b00be708e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26586,9 +26582,7 @@
       "de_hash": "6cf701a9db26f936",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26618,9 +26612,7 @@
       "de_hash": "b5d9bcb8277ea4aa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26650,9 +26642,7 @@
       "de_hash": "27cb2bde9a3e3bdb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26682,9 +26672,7 @@
       "de_hash": "4f8d1f423e0f5b98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26714,9 +26702,7 @@
       "de_hash": "0628f115d17f953a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26746,9 +26732,7 @@
       "de_hash": "8eddd098f6ab76ab",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26770,9 +26754,7 @@
       "de_hash": "2c9029fd66c27b55",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26794,9 +26776,7 @@
       "de_hash": "b412f36e344ce850",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26818,9 +26798,7 @@
       "de_hash": "50faed2a0d5c406e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26842,9 +26820,7 @@
       "de_hash": "7cdb7412e94425e4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -26866,9 +26842,7 @@
       "de_hash": "fa6e8c99c09d42b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:00:53.347471+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (whiteboards group)",
       "history": [
         {
@@ -34355,15 +34329,13 @@
       "change_reason": null
     },
     "programs/apps/messenger/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "da7863c6776598fb",
-      "de_hash": "adeba4450adb04e4",
+      "de_hash": "613e9f5a96f0c1e4",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:15:11.593427+00:00",
+      "kind": [],
+      "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
           "at": "2026-11-05T16:19:46.698587+00:00",
@@ -34380,11 +34352,15 @@
         {
           "at": "2026-11-05T18:53:46.523533+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:15:11.593427+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 16611,
-      "de_bytes": 17830,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 18283,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/requirements.md": {
       "status": "VERIFIED",
