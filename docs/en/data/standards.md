@@ -189,6 +189,7 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | identity — same person (hub matching, ADR 0019) | — | `Relationship`, relation `owl:sameAs` | decided 2026-11-05 (ADR 0029) |
 | messages | chat: MIMI content (draft -10); e-mail: original MIME + JMAP `Email` fields; Matrix events | `Note` (`context` = conversation) | ✅ 2026-11-05, see [messages/](messages/standards.md) |
 | events | **JSCalendar 2.0** (`draft-ietf-calext-jscalendarbis-22`) `Event`/`Task` | `Event`; log `Invite`/`Accept`/`TentativeAccept`/`Reject` | ✅ 2026-11-05, see [events/](events/standards.md) |
+| documents | text: original + CommonMark/GFM; blocks: own spec; structure: schema.org `Book`/`Collection`; annotations: Web Annotation | `Article`, `Document`, `Collection`/`OrderedCollection`, `Annotation` | ✅ 2026-11-05, see [documents/](documents/standards.md) |
 | geodata, projects, profile, login | see domain directories | | open |
 
 ## Gaps → own specifications (ADR 0014)
@@ -218,6 +219,7 @@ components):
 | Login / accounts | [login/](login/index.md) |
 | Identity (Web of Trust) | [identity/](identity/index.md) |
 | Profile | [profile/](profile/index.md) |
+| Documents | [documents/](documents/index.md) |
 | Projects | [projects/](projects/index.md) |
 
 ## Follow-up research 2026-11-02 — the evidence is fully here, do not download it again

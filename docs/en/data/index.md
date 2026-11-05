@@ -17,15 +17,16 @@ Every domain has a directory with its own `index.md`; every standard inside it a
 | Domain | Directory | Canonical standard | Further standards |
 |--------|-----------|--------------------|-------------------|
 | Contacts | [contacts/](contacts/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
-| Messages | [messages/](messages/index.md) | AS2 `Note`/`Article` ✅ | JMAP, RFC 5322, MLS (⚠️) |
-| Appointments | [events/](events/index.md) | JSCalendar (RFC 8984) ✅ | iCalendar, CalDAV, iTIP |
+| Messages | [messages/](messages/index.md) | original + AS2 `Note`; chat MIMI, mail MIME+JMAP ✅ | MLS, OpenPGP v6, Matrix |
+| Appointments | [events/](events/index.md) | JSCalendar 2.0 (jscalendarbis) ✅ | iCalendar, CalDAV, iTIP |
 | Geodata | [geodata/](geodata/index.md) | GeoJSON (RFC 7946) ✅ | geo: URI, ISO 19160 |
 | Login / accounts | [login/](login/index.md) | OIDC ✅ (2026-11-02), OAuth 6749 ✅, WebAuthn ✅ | SCIM (⚠️), WebFinger, kanidm |
 | Identity / Web of Trust | [identity/](identity/index.md) | WoT Spec v0.1.0-draft (VC, DIDComm, did:key) ✅ reviewed | Docking points: AS2 `Relationship`, `publicKey` |
 | Profile | [profile/](profile/index.md) | AS2 `Actor` projection onto JSContact ✅ | schema.org `Person` (⚠️) |
+| Documents | [documents/](documents/index.md) | own FS Block Document; CommonMark/GFM; Web Annotation ✅ | AS2 `Article`/`Collection`, schema.org `Book`, EPUB 3.3 |
 | Projects | [projects/](projects/index.md) | ❌ no open data spec – our own work | ISO 21502 (process) ✅, MSPDI (de facto) ✅, JSCalendar `Task` |
 
-**Proposed but not yet decided**: `tasks/` (JSCalendar already covers `Task`), `documents/` (block structure = the biggest gap), `files/`, `tagging/` (Web Annotation ✅), `comments/`, `notifications/`, `organisations/`.
+**Proposed but not yet decided**: `tasks/` (JSCalendar already covers `Task`), `files/`, `tagging/` (Web Annotation ✅), `comments/`, `notifications/`, `organisations/`.
 
 The **envelope** (AS2 + ActivityPub, decisions in [standards.md](standards.md)) is cross-cutting and not a domain of its own.
 
@@ -107,6 +108,7 @@ docs/en/data/
 ├── login/              │ + technical.md + standards.md
 ├── identity/           │ + examples.md
 ├── profile/            │
+├── documents/          │
 └── projects/           ┘
 ```
 
