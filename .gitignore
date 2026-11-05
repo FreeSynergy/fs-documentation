@@ -26,3 +26,6 @@ scripts/_tmp_*.py
 .DS_Store
 Thumbs.db
 *.swp
+
+# screenshots of foreign programs: internal reference only, never published (ADR 0038)
+temp/private/
