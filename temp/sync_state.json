@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T13:35:41.734756+00:00",
+  "last_run": "2026-11-05T13:52:52.200730+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -26072,118 +26072,148 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "d9bed30e1dc75fb2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:52:52.200694+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki vscodium)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/vscodium/api.md"
+        },
+        {
+          "at": "2026-11-05T13:52:52.200694+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5222
+      "de_bytes": 5222,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "bbfd613b05d4b69c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:52:51.644900+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki vscodium)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/vscodium/description.md"
+        },
+        {
+          "at": "2026-11-05T13:52:51.644900+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 1946
+      "de_bytes": 1946,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "11786c840ba30afa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:52:51.764611+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki vscodium)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/vscodium/features.md"
+        },
+        {
+          "at": "2026-11-05T13:52:51.764611+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6516
+      "de_bytes": 6516,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "d1c3abb4f0913921",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:52:52.002257+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki vscodium)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/vscodium/menu.md"
+        },
+        {
+          "at": "2026-11-05T13:52:52.002257+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 2031
+      "de_bytes": 2031,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "b32600867a5c2641",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:52:52.112921+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki vscodium)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/vscodium/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T13:52:52.112921+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6541
+      "de_bytes": 6541,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "4285d5bfd907f9f5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:52:51.882582+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki vscodium)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/vscodium/structure.md"
+        },
+        {
+          "at": "2026-11-05T13:52:51.882582+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6967
+      "de_bytes": 6967,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/wikijs/latest/api.md": {
       "status": "VERIFIED",
