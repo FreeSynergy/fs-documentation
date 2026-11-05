@@ -31,7 +31,7 @@ According to decision 4 in [standards.md](../../standards.md) the **evidenced st
 
 ## Open points (to be settled standards-conformingly, not invented)
 
-- `lifecycle` as vendor property `<domain>:lifecycle` (mechanism ✅); our domain still to be fixed
+- `lifecycle` as vendor property `freesynergy.net:lifecycle` (mechanism ✅, ADR 0028)
 - Define revision/deletion states (`status`) in interplay with CardDAV sync
 - `media` objects: data URI inline or moved to object storage with a URL — both are RFC 9553 conforming, document the decision
 

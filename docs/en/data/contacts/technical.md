@@ -7,7 +7,8 @@
   - *Content*: the **JSContact `Card`** JSON (RFC 9553) — the standard model is the source of truth.
   - *Log*: AS2 activities `Create`/`Update`/`Delete` per card, written by `fs-store` in the same transaction.
 - Columns **extracted** for indexes: `id`, `uid` (JSContact), `kind` (✅ `individual`/`group`/`org`/`location`/`device`/`application`), `describes`, `name_sort` (from `name.components`), emails/phones (normalised, for hub matching), `created_at`, `updated_at`.
-- **IDs:** see [standards.md → decision 3](../standards.md) (ULID today, UUIDv7 proposed); externally `https://<instance>/contacts/<id>`.
+- **IDs:** UUIDv7 (RFC 9562, ADR 0027); externally `https://<instance>/contacts/<id>`.
+- **Sensitive fields** (e.g. sexual orientation) are marked; marked data is never auto-linked, leaves the device only with explicit release and is stored encrypted (ADR 0029).
 
 ## Keys and links
 
@@ -34,7 +35,7 @@
 
 - No standard defines merging (❌ checked 2026-11-05). Our rule: **link, don't merge.**
 - The hub finds candidates (same normalised e-mail/phone, same `describes`/DID) and proposes them; a person confirms.
-- A confirmed link is stored as an AS2 **`Relationship`** between the two cards (relation ⚠️ proposed: `owl:sameAs`). Both cards stay; views may show them combined. Undo = `Undo` on the relationship.
+- A confirmed link is stored as an AS2 **`Relationship`** between the two cards (relation `owl:sameAs`, ADR 0029); never proposed automatically for cards with sensitive fields. Both cards stay; views may show them combined. Undo = `Undo` on the relationship.
 - `relatedTo` is **not** used for this — its values describe relations between *different* people (✅).
 
 ## Deleting

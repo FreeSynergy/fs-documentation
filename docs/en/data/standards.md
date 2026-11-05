@@ -157,7 +157,7 @@ Mistakes from the earlier conversation, so they do not end up in a file:
 |-----|----------|
 | 1 | **Canonical payload per domain:** contacts → JSContact (RFC 9553/9554), appointments and tasks → JSCalendar (RFC 8984, covers `Event` **and** `Task`), places/addresses → GeoJSON + JSContact `Address` (+ ISO 19160, ✅ URL checked), messages → AS2 `Note`/`Article`, profile → AS2 `Actor` projection onto JSContact. |
 | 2 | **Envelope for every exchange: ActivityStreams 2 + ActivityPub.** Changes going out are `Create`/`Update`/`Delete` on typed objects; the domain payload is carried by the object as an extension. `to`/`cc`/`bto`/`bcc` are disclosure control (they decide **where copies land**) — but **not access control**; authorization is enforced per resource separately. |
-| 3 | **IDs:** internally ULID (opaque, sortable) — *proposed 2026-11-05: replace by **UUIDv7, RFC 9562** (May 2024, ✅), a standard instead of a convention (ADR 0014/0026); awaiting decision* — externally absolute IRI `https://<instance>/<domain>/<ulid>` (AS2 Core §4.1 requires absolute IRIs — ✅ evidenced). The IRI is the resolvable handle, the ULID the stable identity (host migration stays possible, decentralised operation included). |
+| 3 | **IDs:** internally **UUIDv7, RFC 9562** (time-sortable standard, ✅; replaces ULID 2026-11-05, ADR 0027) — externally absolute IRI `https://<instance>/<domain>/<ulid>` (AS2 Core §4.1 requires absolute IRIs — ✅ evidenced). The IRI is the resolvable handle, the ULID the stable identity (host migration stays possible, decentralised operation included). |
 | 4 | **The source of truth is the evidenced standard model** (JSContact, JSCalendar, …). We use Cap'n Proto internally (ADR 0021), JSON-LD/AS2 externally — both as projections generated from it. (Corrects the earlier direction "protobuf as the only source".) |
 | 5 | **Extend instead of invent:** first use the standard's extension points (e.g. `extensions` in JSContact for `lifecycle` — ⚠️ mechanism still to be evidenced); only where those do not exist, design our own specs. |
 
@@ -183,7 +183,7 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | contacts | JSContact `Card` (RFC 9553) | `Profile` (`describes` → person's actor/DID) | ✅ 2026-11-05 |
 | identity — own person | DID document / Controlled Identifier (W3C) | `Person` (actor) with `Multikey` (FEP-521a) | ✅ 2026-11-05 |
 | identity — attestation | VC 2.0 + `eddsa-jcs-2022` (as RLTP) | `Relationship` | ✅ 2026-11-05 |
-| identity — same person (hub matching, ADR 0019) | — | `Relationship`, relation *proposed* `owl:sameAs` | ⚠️ proposed |
+| identity — same person (hub matching, ADR 0019) | — | `Relationship`, relation `owl:sameAs` | decided 2026-11-05 (ADR 0029) |
 | messages | AS2 `Note`/`Article` | itself | open (next) |
 | events | JSCalendar `Event`/`Task` (RFC 8984) | `Event` | open |
 | geodata, projects, profile, login | see domain directories | | open |
@@ -193,7 +193,8 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | Gap | Evidence | Candidate |
 |-----|----------|-----------|
 | merging/aliasing two cards of the same person | ❌ none in RFC 9553/9554/9555/9610/9982/10050 (✅ checked 2026-11-05) | hub-matching spec (ADR 0019) |
-| `Contact.lifecycle` | ❌ in vCard/JSContact; extension mechanism ✅ (RFC 9553 §1.8.1) | vendor property, later CRM spec |
+| `Contact.lifecycle` | ❌ in vCard/JSContact; extension mechanism ✅ (RFC 9553 §1.8.1) | vendor property `freesynergy.net:lifecycle` (ADR 0028), later CRM spec |
+| marking of sensitive data (GDPR Art. 9 categories) | ⚠️ W3C DPV candidate, unchecked | ADR 0029 |
 | board/project structure | ❌ | spec candidate no. 3 |
 | Web of Trust | ❌ in standards bodies | co-author with RLTP |
 

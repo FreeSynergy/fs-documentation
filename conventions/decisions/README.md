@@ -33,3 +33,6 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0024 | Programm ohne Hub, Verschlüsselung, Schlüsseltresor, SCIM | akzeptiert |
 | 0025 | Abschauen nur im äußersten Notfall, nie bei Closed Source | akzeptiert |
 | 0026 | Immer die neueste Technik | akzeptiert |
+| 0027 | IDs: UUIDv7 (RFC 9562) | akzeptiert |
+| 0028 | Namen, Domains, Erreichbarkeit über den Hub (`freesynergy.net`) | akzeptiert (Technik: Vorschlag) |
+| 0029 | Schutzbedürftige Daten müssen gekennzeichnet werden | akzeptiert (Form: Vorschlag) |
