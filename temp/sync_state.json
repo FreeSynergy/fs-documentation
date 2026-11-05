@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T19:44:11.884708+00:00",
+  "last_run": "2026-11-05T19:59:20.557446+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -12913,12 +12913,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "f05eef1dba052aa8",
+      "status": "PENDING",
+      "en_hash": "4cead482651d59f9",
       "de_hash": "0707e49b5386b834",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -12932,11 +12934,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3994,
+      "en_bytes": 4235,
       "de_bytes": 4369,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/index.md": {
       "status": "VERIFIED",
@@ -19355,12 +19361,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "22291c723a0a94f1",
+      "status": "PENDING",
+      "en_hash": "962a363316588996",
       "de_hash": "38a7659686c65afa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -19378,11 +19386,15 @@
         {
           "at": "2026-11-05T15:44:13.827645+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3246,
+      "en_bytes": 3612,
       "de_bytes": 3396,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/discord/latest/description.md": {
       "status": "VERIFIED",
@@ -20227,12 +20239,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "99e8377a1555cd8b",
+      "status": "PENDING",
+      "en_hash": "14fdb3edb8a9a287",
       "de_hash": "f2dd8df5fdd233d5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T19:15:11.593427+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
@@ -20258,11 +20272,15 @@
         {
           "at": "2026-11-05T19:15:11.593427+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2772,
+      "en_bytes": 5828,
       "de_bytes": 2781,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/outlook/latest/layout.md": {
       "status": "VERIFIED",
@@ -21619,12 +21637,14 @@
       "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "3904719b85a559d0",
+      "status": "PENDING",
+      "en_hash": "043aab869fa6d677",
       "de_hash": "89294a909e58c22a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21642,19 +21662,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 840,
+      "en_bytes": 1223,
       "de_bytes": 900,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/excalidraw/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "09bbce8d156d06d3",
+      "status": "PENDING",
+      "en_hash": "a3ccfbf10de8b903",
       "de_hash": "0983274a9cf290c8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21672,19 +21698,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 801,
+      "en_bytes": 1184,
       "de_bytes": 872,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/miro/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "43040a4026a7700d",
+      "status": "PENDING",
+      "en_hash": "8bc0957f4cd1911d",
       "de_hash": "324955e662fd91cd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21702,19 +21734,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 876,
+      "en_bytes": 1259,
       "de_bytes": 927,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/mural/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "d2b771acd3613fed",
+      "status": "PENDING",
+      "en_hash": "d004fd96b8097a39",
       "de_hash": "df81f5ee96b95a92",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21732,19 +21770,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 846,
+      "en_bytes": 1229,
       "de_bytes": 884,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/openboard/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "4dcd017bd54b7730",
+      "status": "PENDING",
+      "en_hash": "f8b8d25dbee32ce7",
       "de_hash": "59ea106b9a737187",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21762,19 +21806,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 897,
+      "en_bytes": 1280,
       "de_bytes": 955,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/tldraw/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "04128437838a5f7a",
+      "status": "PENDING",
+      "en_hash": "521ca32cb861cb22",
       "de_hash": "79c69713a9140cee",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21792,11 +21842,15 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 885,
+      "en_bytes": 1268,
       "de_bytes": 942,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/index.md": {
       "status": "VERIFIED",
@@ -23611,12 +23665,14 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "ed46b3ed3abaea52",
+      "status": "PENDING",
+      "en_hash": "8481c9e6a2cec90b",
       "de_hash": "5b2a392c9c54d673",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23634,19 +23690,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 937,
+      "en_bytes": 1320,
       "de_bytes": 999,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/ffmpeg/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "94137a9d303b25b9",
+      "status": "PENDING",
+      "en_hash": "554f371cbadb4942",
       "de_hash": "95ef3b056bfbdf6a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23664,19 +23726,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2196,
+      "en_bytes": 2579,
       "de_bytes": 2273,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/gstreamer/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "056d0a663fed3d44",
+      "status": "PENDING",
+      "en_hash": "a05ec19a60fb9886",
       "de_hash": "4bcac8b47179c350",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23694,19 +23762,25 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1033,
+      "en_bytes": 1416,
       "de_bytes": 1085,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/mediamtx/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "9fb29d784ce6b76b",
+      "status": "PENDING",
+      "en_hash": "70e568a63611da8c",
       "de_hash": "e9d821ca7de6c836",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23724,20 +23798,26 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 996,
+      "en_bytes": 1379,
       "de_bytes": 1046,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/mistserver/index.md": {
       "status": "VERIFIED",
-      "en_hash": "2d458efcf979c452",
-      "de_hash": "73f16804453b4ff8",
+      "en_hash": "b04ef2ec432f2f7a",
+      "de_hash": "7fdb8805e41d242f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
-      "note": "reviewed en+de, structure mirrored",
+      "last_verified": "2026-11-05T19:59:19.971925+00:00",
+      "kind": [
+        "review"
+      ],
+      "note": "mirrored en gen:versions block into de",
       "history": [
         {
           "at": "2026-11-05T04:50:41.342386+00:00",
@@ -23754,10 +23834,18 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:59:19.971925+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1014,
-      "de_bytes": 1084,
+      "en_bytes": 1397,
+      "de_bytes": 1425,
       "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/index.md": {
@@ -23829,12 +23917,14 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/restream/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "927a381a0b6004d7",
+      "status": "PENDING",
+      "en_hash": "9cd53a9596ea7bc4",
       "de_hash": "d0c24e800229f0fe",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23852,11 +23942,15 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 963,
+      "en_bytes": 1346,
       "de_bytes": 1021,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/restreamer/index.md": {
       "status": "VERIFIED",
@@ -24614,9 +24708,7 @@
       "de_hash": "d289d6960ff5466d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:44:11.884672+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
@@ -24638,9 +24730,7 @@
       "de_hash": "a99e413cad01a648",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:44:11.413795+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
@@ -24662,9 +24752,7 @@
       "de_hash": "0417af113af0beec",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:44:11.505208+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
@@ -24686,9 +24774,7 @@
       "de_hash": "69ea05715def9f74",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:44:11.693895+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
@@ -24710,9 +24796,7 @@
       "de_hash": "17a3efc638d98442",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:44:11.789915+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
@@ -24734,9 +24818,7 @@
       "de_hash": "96cabdeea6f5ea98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:44:11.597836+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
@@ -25149,232 +25231,292 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "fca3f6bcae93def4",
       "de_hash": "cb6e942e9fd7a2c5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:19.875934+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mistserver)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mistserver/api.md"
+        },
+        {
+          "at": "2026-11-05T19:59:19.875934+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4397
+      "en_bytes": 4270,
+      "de_bytes": 4397,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0b933db7a1339112",
       "de_hash": "f6a66749fd5dc476",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:19.390793+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mistserver)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mistserver/description.md"
+        },
+        {
+          "at": "2026-11-05T19:59:19.390793+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2903
+      "en_bytes": 2870,
+      "de_bytes": 2903,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c1344ac7d75484a3",
       "de_hash": "c45ca5da6661e37b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:19.490569+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mistserver)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mistserver/features.md"
+        },
+        {
+          "at": "2026-11-05T19:59:19.490569+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2646
+      "en_bytes": 2603,
+      "de_bytes": 2646,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "215d82add291c5c9",
       "de_hash": "3e018524082cdec2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:19.684363+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mistserver)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mistserver/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:59:19.684363+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1875
+      "en_bytes": 1868,
+      "de_bytes": 1875,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "597725d06d72354e",
       "de_hash": "54df480aa38d48aa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:19.781062+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mistserver)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mistserver/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:59:19.781062+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2007
+      "en_bytes": 1944,
+      "de_bytes": 2007,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ae0fd69a455d4b23",
       "de_hash": "6ed65006f4111f80",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:19.587552+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mistserver)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mistserver/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:59:19.587552+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3647
+      "en_bytes": 3643,
+      "de_bytes": 3647,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ffa86d682ad6e993",
       "de_hash": "0b8054b0aea9900d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:20.557413+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/nginx-rtmp-module/api.md"
+        },
+        {
+          "at": "2026-11-05T19:59:20.557413+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3923
+      "en_bytes": 3941,
+      "de_bytes": 3923,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "5fdd311f6cded9ff",
       "de_hash": "fb014713a03ad291",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:20.068316+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/nginx-rtmp-module/description.md"
+        },
+        {
+          "at": "2026-11-05T19:59:20.068316+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2511
+      "en_bytes": 2484,
+      "de_bytes": 2511,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "7e7b65052dcc6e43",
       "de_hash": "4eb12b071464045c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:20.165051+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/nginx-rtmp-module/features.md"
+        },
+        {
+          "at": "2026-11-05T19:59:20.165051+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2552
+      "en_bytes": 2503,
+      "de_bytes": 2552,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a1d544bb7f437b65",
       "de_hash": "a4ad82213019a7a7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:20.365686+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/nginx-rtmp-module/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:59:20.365686+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2422
+      "en_bytes": 2410,
+      "de_bytes": 2422,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1e7d1385f7cea100",
       "de_hash": "c00cb078ed86905d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:20.458984+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/nginx-rtmp-module/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:59:20.458984+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1622
+      "en_bytes": 1621,
+      "de_bytes": 1622,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c44f71b94b354ac7",
       "de_hash": "139bc56bbc687164",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:59:20.275861+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming nginx-rtmp-module)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/nginx-rtmp-module/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:59:20.275861+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3627
+      "en_bytes": 3601,
+      "de_bytes": 3627,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/latest/api.md": {
       "status": "VERIFIED",
@@ -34413,12 +34555,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/requirements.md": {
-      "status": "VERIFIED",
-      "en_hash": "da7863c6776598fb",
+      "status": "PENDING",
+      "en_hash": "08353ca21fdbb49e",
       "de_hash": "613e9f5a96f0c1e4",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": "2026-11-05T19:15:11.593427+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "translated de->en (restream) + mirrored review blocks (messenger, projectmanagement, streaming indexes)",
       "history": [
         {
@@ -34440,11 +34584,15 @@
         {
           "at": "2026-11-05T19:15:11.593427+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T19:58:48.151017+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 16611,
+      "en_bytes": 18711,
       "de_bytes": 18283,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/requirements.md": {
       "status": "VERIFIED",
@@ -34852,7 +35000,7 @@
     },
     "programs/apps/messenger/frontends/freesynergy-simple/index.md": {
       "status": "PENDING",
-      "en_hash": "4c9829b2ae13095e",
+      "en_hash": "e384df9c343d59bf",
       "de_hash": null,
       "first_seen": "2026-11-05T19:44:11.260252+00:00",
       "last_verified": null,
@@ -34861,7 +35009,357 @@
       ],
       "note": null,
       "history": [],
-      "en_bytes": 1066,
+      "en_bytes": 2111,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/index.md": {
+      "status": "PENDING",
+      "en_hash": "96b6d414c6baa0f0",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 4103,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/api.md": {
+      "status": "PENDING",
+      "en_hash": "c525ac986422e521",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 959,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/dependencies.md": {
+      "status": "PENDING",
+      "en_hash": "294231004c409e00",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 2594,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/description.md": {
+      "status": "PENDING",
+      "en_hash": "bdd7fa070ac80a94",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 3201,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/features.md": {
+      "status": "PENDING",
+      "en_hash": "2b121dadd83354a6",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 3780,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/interaction.md": {
+      "status": "PENDING",
+      "en_hash": "7d281f496cf1476d",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1619,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/layout.md": {
+      "status": "PENDING",
+      "en_hash": "51716cb73542bc90",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 3105,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/menus.md": {
+      "status": "PENDING",
+      "en_hash": "b9ac0814f9a1ce69",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 2323,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/shortcuts.md": {
+      "status": "PENDING",
+      "en_hash": "47402575f118f616",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 664,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/states.md": {
+      "status": "PENDING",
+      "en_hash": "cf687cb1fbb689ce",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1551,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/themes/index.md": {
+      "status": "PENDING",
+      "en_hash": "fd698be59aabedc4",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 997,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/apple-mail/ios-26/themes/light.md": {
+      "status": "PENDING",
+      "en_hash": "668afb155c1cbe94",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1776,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/api.md": {
+      "status": "PENDING",
+      "en_hash": "c47ef7fd81fec0f5",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1326,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/dependencies.md": {
+      "status": "PENDING",
+      "en_hash": "67e3651539cc67b8",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 3568,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/description.md": {
+      "status": "PENDING",
+      "en_hash": "88dec90e89c51fab",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 3169,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/features.md": {
+      "status": "PENDING",
+      "en_hash": "d86ff1537dc55f86",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 5641,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/interaction.md": {
+      "status": "PENDING",
+      "en_hash": "435f7ca950c6fa3d",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1952,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/layout.md": {
+      "status": "PENDING",
+      "en_hash": "adbaa9ab97be7deb",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 6379,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/menus.md": {
+      "status": "PENDING",
+      "en_hash": "41b85379a3a28417",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 4125,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/shortcuts.md": {
+      "status": "PENDING",
+      "en_hash": "2b7be54e3e1b47b6",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 667,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/states.md": {
+      "status": "PENDING",
+      "en_hash": "97d08cb0b39ac06c",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1916,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/themes/dark.md": {
+      "status": "PENDING",
+      "en_hash": "d02c38fbfea36298",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1020,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/themes/index.md": {
+      "status": "PENDING",
+      "en_hash": "4a5d4d680b36a4f0",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1482,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/themes/light.md": {
+      "status": "PENDING",
+      "en_hash": "ac19438558f9e756",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1788,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/outlook/m365-2026-11/themes/picture.md": {
+      "status": "PENDING",
+      "en_hash": "8988c389ace89691",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:58:48.151017+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1112,
       "de_bytes": null
     }
   }

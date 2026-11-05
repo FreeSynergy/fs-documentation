@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 19:44 UTC · 1547 Dateien verfolgt · 331 offen · 1209 bestätigt
+Stand: 2026-11-05 19:58 UTC · 1572 Dateien verfolgt · 366 offen · 1199 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,40 +36,22 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 315 |
-| B. `de/` fehlt – englische Quelle nachziehen | 10 |
+| A. `en/` fehlt – aus `de/` übersetzen | 303 |
+| B. `de/` fehlt – englische Quelle nachziehen | 35 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 0 |
+| F. Form nicht gleich – Struktur abgleichen | 15 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 6 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 13 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 315 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 303 Dateien
 
 ### `programs/` · 1
 
 - [ ] `programs/index.md` · 3.4k · Plan[~]
-
-### `programs/apps/streaming/frontends/mistserver/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/api.md` · 4.3k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/description.md` · 2.8k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/features.md` · 2.6k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/layout.md` · 3.6k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/menus.md` · 1.8k
-- [ ] `programs/apps/streaming/frontends/mistserver/latest/shortcuts.md` · 2.0k
-
-### `programs/apps/streaming/frontends/nginx-rtmp-module/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/api.md` · 3.8k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/description.md` · 2.5k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/features.md` · 2.5k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/layout.md` · 3.5k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/menus.md` · 2.4k
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/shortcuts.md` · 1.6k
 
 ### `programs/apps/streaming/frontends/wowza/latest/` · 6
 
@@ -634,11 +616,32 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
-## B. `de/` fehlt – englische Quelle nachziehen – 10 Dateien
+## B. `de/` fehlt – englische Quelle nachziehen – 35 Dateien
+
+### `programs/apps/messenger/frontends/apple-mail/` · 1
+
+- [ ] `programs/apps/messenger/frontends/apple-mail/index.md` · 4.0k
+
+### `programs/apps/messenger/frontends/apple-mail/ios-26/` · 9
+
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/api.md` · 959b
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/dependencies.md` · 2.5k
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/description.md` · 3.1k
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/features.md` · 3.7k
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/interaction.md` · 1.6k
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/layout.md` · 3.0k
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/menus.md` · 2.3k
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/shortcuts.md` · 664b
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/states.md` · 1.5k
+
+### `programs/apps/messenger/frontends/apple-mail/ios-26/themes/` · 2
+
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/themes/index.md` · 997b
+- [ ] `programs/apps/messenger/frontends/apple-mail/ios-26/themes/light.md` · 1.7k
 
 ### `programs/apps/messenger/frontends/freesynergy-simple/` · 1
 
-- [ ] `programs/apps/messenger/frontends/freesynergy-simple/index.md` · 1.0k
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/index.md` · 2.1k
 
 ### `programs/apps/messenger/frontends/freesynergy-simple/0.1/` · 8
 
@@ -655,16 +658,107 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 - [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/themes/index.md` · 259b
 
-## H. Beide Seiten da, kein Befund – lesen und bestätigen – 6 Dateien
+### `programs/apps/messenger/frontends/outlook/m365-2026-11/` · 9
 
-### `programs/apps/streaming/frontends/ant-media-server/latest/` · 6
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/api.md` · 1.3k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/dependencies.md` · 3.5k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/description.md` · 3.1k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/features.md` · 5.5k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/interaction.md` · 1.9k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/layout.md` · 6.2k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/menus.md` · 4.0k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/shortcuts.md` · 667b
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/states.md` · 1.9k
 
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/api.md` · 4.0k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/description.md` · 2.7k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/features.md` · 2.6k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/layout.md` · 3.7k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/menus.md` · 2.1k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/shortcuts.md` · 1.9k
+### `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/` · 4
+
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/dark.md` · 1020b
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/index.md` · 1.4k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/light.md` · 1.7k
+- [ ] `programs/apps/messenger/frontends/outlook/m365-2026-11/themes/picture.md` · 1.1k
+
+## F. Form nicht gleich – Struktur abgleichen – 15 Dateien
+
+### `programs/apps/messenger/` · 2
+
+- [ ] `programs/apps/messenger/index.md` · 4.1k · Plan[~] · Parität: links en-only=['frontends/apple-mail/index.md', 'frontends/freesynergy-simple/index.md'] de-only=[] · hash changed since verification
+- [ ] `programs/apps/messenger/requirements.md` · 18.3k · Parität: table rows 94 vs 79; links en-only=['frontends/apple-mail/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/` · 1
+
+- [ ] `programs/apps/messenger/frontends/index.md` · 3.5k · Parität: table rows 11 vs 9; links en-only=['apple-mail/index.md', 'apple-mail/ios-26/description.md', 'freesynergy-simple/0.1/description.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/outlook/` · 1
+
+- [ ] `programs/apps/messenger/frontends/outlook/index.md` · 5.7k · Parität: headings 7 vs 6; table rows 25 vs 12 · hash changed since verification
+
+### `programs/apps/streaming/frontends/ant-media-server/` · 1
+
+- [ ] `programs/apps/streaming/frontends/ant-media-server/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/streaming/frontends/ffmpeg/` · 1
+
+- [ ] `programs/apps/streaming/frontends/ffmpeg/index.md` · 2.5k · Parität: table rows 19 vs 13; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/streaming/frontends/gstreamer/` · 1
+
+- [ ] `programs/apps/streaming/frontends/gstreamer/index.md` · 1.4k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/streaming/frontends/mediamtx/` · 1
+
+- [ ] `programs/apps/streaming/frontends/mediamtx/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/streaming/frontends/restream/` · 1
+
+- [ ] `programs/apps/streaming/frontends/restream/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/drawio/` · 1
+
+- [ ] `programs/apps/whiteboards/frontends/drawio/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/excalidraw/` · 1
+
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/miro/` · 1
+
+- [ ] `programs/apps/whiteboards/frontends/miro/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/mural/` · 1
+
+- [ ] `programs/apps/whiteboards/frontends/mural/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/openboard/` · 1
+
+- [ ] `programs/apps/whiteboards/frontends/openboard/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/tldraw/` · 1
+
+- [ ] `programs/apps/whiteboards/frontends/tldraw/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 13 Dateien
+
+### `programs/apps/streaming/frontends/mistserver/` · 1
+
+- [ ] `programs/apps/streaming/frontends/mistserver/index.md` · 1.4k · hash changed since verification
+
+### `programs/apps/streaming/frontends/mistserver/latest/` · 6
+
+- [ ] `programs/apps/streaming/frontends/mistserver/latest/api.md` · 4.2k
+- [ ] `programs/apps/streaming/frontends/mistserver/latest/description.md` · 2.8k
+- [ ] `programs/apps/streaming/frontends/mistserver/latest/features.md` · 2.5k
+- [ ] `programs/apps/streaming/frontends/mistserver/latest/layout.md` · 3.6k
+- [ ] `programs/apps/streaming/frontends/mistserver/latest/menus.md` · 1.8k
+- [ ] `programs/apps/streaming/frontends/mistserver/latest/shortcuts.md` · 1.9k
+
+### `programs/apps/streaming/frontends/nginx-rtmp-module/latest/` · 6
+
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/api.md` · 3.8k
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/description.md` · 2.4k
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/features.md` · 2.4k
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/layout.md` · 3.5k
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/menus.md` · 2.4k
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/shortcuts.md` · 1.6k
 
 ## 🗑️ Gelöscht – 7
 
@@ -678,7 +772,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 11:28 · Lauf: 1499 verfolgt, 676 offen, 816 bestätigt · needs_en=498 review=178
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 714 offen, 778 bestätigt · needs_en=472 review=242
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 695 offen, 797 bestätigt · needs_en=472 review=223
 - 2026-11-05 12:09 · Lauf: 1526 verfolgt, 605 offen, 914 bestätigt · needs_en=471 needs_de=27 parity=105 review=2
@@ -719,3 +812,4 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 19:28 · Lauf: 1537 verfolgt, 339 offen, 1191 bestätigt · needs_en=327 review=12
 - 2026-11-05 19:36 · Lauf: 1537 verfolgt, 327 offen, 1203 bestätigt · needs_en=321 review=6
 - 2026-11-05 19:44 · Lauf: 1547 verfolgt, 331 offen, 1209 bestätigt · needs_en=315 needs_de=10 review=6
+- 2026-11-05 19:58 · Lauf: 1572 verfolgt, 366 offen, 1199 bestätigt · needs_en=303 needs_de=35 parity=15 review=13
