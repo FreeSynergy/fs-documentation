@@ -10,6 +10,50 @@ Discord is a proprietary communication platform for gaming communities, with voi
 
 _To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
 
+## Review 2026-11-05
+
+- **Version seen:** none — no file under `latest/` names a product version; the text describes an
+  unspecified recent state. Reviewed on 2026-11-05 (docs state of commit `3fe3d7d1`) while deriving
+  [requirements](../../requirements.md). Folder `latest/` is to be renamed to the real version after
+  re-research (`temp/frontend-versions-missing.txt`).
+- **Quality:** thin; partly generic. Features known from the product but **missing here**: reactions,
+  threads, schedule send, snooze, undo send, swipe actions (where the product has them) ⚠️.
+- **Template suspicion:** menus and shortcuts are near-identical to Element and Telegram — likely written from one template, not from the product.
+- **Capabilities this frontend shows** (from the *Seen in* column of the requirements, ⚠️ = only
+  known from the product):
+  - Required:
+  - `conversation.list`
+  - `conversation.move`, `mailbox.create`
+  - `conversation.open`, `message.open`
+  - `message.send`
+  - `message.reply` ⚠️
+  - `message.forward`
+  - `message.quote`
+  - `message.edit`
+  - `message.delete`
+  - `message.flag` ⚠️
+  - `message.search`
+  - `attachment.add`, `attachment.save`
+  - `attachment.preview`
+  - `draft.save`, `draft.list`
+  - `conversation.notify`
+  - `group.create`, `group.invite`, `group.leave`
+  - `group.role`
+  - `member.remove`, `actor.block`, `message.report`
+  - `contact.lookup`
+  - `profile.edit`
+  - `rule.create`, `rule.run`
+  - Optional:
+  - `message.react` ⚠️
+  - `thread.open` ⚠️
+  - `message.status`
+  - `Insert emoji in text`
+  - `message.mention`
+  - `presence.set`
+  - `Clear the history of a conversation (for me)`
+  - `call.start`
+  - `Bots and automation through our own contract`
+
 ## Documented versions
 
 <!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->

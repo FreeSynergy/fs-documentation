@@ -10,6 +10,61 @@ Telegram is a cloud-based messenger focused on speed, large groups/channels and 
 
 _To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
 
+## Review 2026-11-05
+
+- **Version seen:** none — no file under `latest/` names a product version; the text describes an
+  unspecified recent state. Reviewed on 2026-11-05 (docs state of commit `3fe3d7d1`) while deriving
+  [requirements](../../requirements.md). Folder `latest/` is to be renamed to the real version after
+  re-research (`temp/frontend-versions-missing.txt`).
+- **Quality:** thin; partly generic. Features known from the product but **missing here**: reactions,
+  threads, schedule send, snooze, undo send, swipe actions (where the product has them) ⚠️.
+- **Template suspicion:** menus and shortcuts are near-identical to Discord and Element — likely written from one template, not from the product.
+- **Capabilities this frontend shows** (from the *Seen in* column of the requirements, ⚠️ = only
+  known from the product):
+  - Required:
+  - `account.add`, `account.remove`, `account.edit`
+  - `conversation.list`
+  - `conversation.move`, `mailbox.create`
+  - `conversation.open`, `message.open`
+  - `message.send`
+  - `message.send`, `key.discover`
+  - `message.encryption`
+  - `key.verify`, `device.list`
+  - `message.reply` ⚠️
+  - `message.forward`
+  - `message.quote`
+  - `message.edit`
+  - `message.delete`
+  - `message.flag` ⚠️
+  - `message.read`
+  - `message.search`
+  - `attachment.add`, `attachment.save`
+  - `attachment.preview`
+  - `draft.save`, `draft.list`
+  - `conversation.notify`
+  - `group.create`, `group.invite`, `group.leave`
+  - `group.role`
+  - `member.remove`, `actor.block`, `message.report`
+  - `contact.lookup`
+  - `profile.edit`
+  - `Work offline and stay in sync across devices (`syn`
+  - Optional:
+  - `message.react` ⚠️
+  - `message.status`
+  - `presence.set`
+  - `Sort and group the list (date, sender, subject, co`
+  - `message.schedule` ⚠️
+  - `message.bookmark`
+  - `message.expire`
+  - `poll.create`
+  - `channel.follow`
+  - `Clear the history of a conversation (for me)`
+  - `message.export`, `message.import`
+  - `call.start`
+  - `Voice messages (record, play)` ⚠️
+  - `message.compose` ⚠️
+  - `Bots and automation through our own contract`
+
 ## Documented versions
 
 <!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
