@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T13:26:03.403202+00:00",
+  "last_run": "2026-11-05T13:35:41.734756+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -25928,118 +25928,148 @@
       "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/api.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "cc1e275a9e6db642",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:35:41.734723+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki tango.io)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/tango.io/api.md"
+        },
+        {
+          "at": "2026-11-05T13:35:41.734723+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5110
+      "de_bytes": 5110,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "175815c14acfbf03",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:35:41.285288+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki tango.io)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/tango.io/description.md"
+        },
+        {
+          "at": "2026-11-05T13:35:41.285288+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 1816
+      "de_bytes": 1816,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/features.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "a5ddc597dbdac9eb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:35:41.377071+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki tango.io)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/tango.io/features.md"
+        },
+        {
+          "at": "2026-11-05T13:35:41.377071+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 4907
+      "de_bytes": 4907,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/menus.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "0f963e4a2ee2787a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:35:41.559023+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki tango.io)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/tango.io/menu.md"
+        },
+        {
+          "at": "2026-11-05T13:35:41.559023+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 2599
+      "de_bytes": 2599,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/shortcuts.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "ae310f9278419e0e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:35:41.648148+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki tango.io)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/tango.io/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T13:35:41.648148+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 6829
+      "de_bytes": 6829,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/tango.io/latest/layout.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": null,
       "de_hash": "e2e58b40f4c54a9a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T13:35:41.470651+00:00",
       "kind": [
         "needs_en"
       ],
-      "note": null,
+      "note": "translated de->en (wiki tango.io)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/tango.io/structure.md"
+        },
+        {
+          "at": "2026-11-05T13:35:41.470651+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": null,
-      "de_bytes": 5532
+      "de_bytes": 5532,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/vscodium/latest/api.md": {
       "status": "PENDING",
