@@ -1,5 +1,7 @@
 # 0022 – Jedes Programm hat zwei Referenz-Frontends
 
+Status: **superseded by 0038** (2026-11-05)
+
 Status: akzeptiert (2026-11-05)
 
 ## Entscheidung

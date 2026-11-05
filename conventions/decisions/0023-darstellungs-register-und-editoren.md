@@ -1,5 +1,7 @@
 # 0023 – Darstellungs-Register; zwei Editor-Workbenches
 
+Status: Punkt 4 **ersetzt durch 0039** (drei Editoren), Rest gilt
+
 Status: akzeptiert (2026-11-05) · Protokoll §11, §21.6 · ADR 0004, 0005
 
 ## Entscheidung

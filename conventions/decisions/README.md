@@ -28,8 +28,8 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0019 | Datenhaltung: `fs-store` je Programm, `fs-hub` je Gerät | akzeptiert |
 | 0020 | Speicherformat: AS2-Hülle + Fachstandard + Protokoll; Leihen = Live-Verweis | akzeptiert |
 | 0021 | Schnittstelle: ein Vertrag (Cap'n Proto), viele Zugänge | akzeptiert |
-| 0022 | Zwei Referenz-Frontends je Programm | akzeptiert |
-| 0023 | Darstellungs-Register; Code- und Block-Editor | akzeptiert |
+| 0022 | Zwei Referenz-Frontends je Programm | superseded by 0038 |
+| 0023 | Darstellungs-Register; Code- und Block-Editor | Punkt 4 ersetzt durch 0039 |
 | 0024 | Programm ohne Hub, Verschlüsselung, Schlüsseltresor, SCIM | akzeptiert |
 | 0025 | Abschauen nur im äußersten Notfall, nie bei Closed Source | akzeptiert |
 | 0026 | Immer die neueste Technik | akzeptiert |
@@ -42,3 +42,7 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0033 | Markieren: ein Mechanismus (Punkt = einsetzen, Bereich = ersetzen/benennen) | akzeptiert |
 | 0034 | Textstruktur technisch: Absatz, Seite, Kollektion, Regal | akzeptiert |
 | 0035 | Föderation zwischen Instanzen: OpenID Federation 1.0 | akzeptiert |
+| 0036 | Git als dezentrale Verteilung (gix): Pakete, Themes, Programme, Medien | akzeptiert |
+| 0037 | Jedes Programm ist mindestens eine Workbench; Programme zeigen sich gegenseitig an | akzeptiert |
+| 0038 | Referenz-Frontends: vier Arten, am besten ganze Suiten | akzeptiert |
+| 0039 | Drei Text-Editoren | akzeptiert |

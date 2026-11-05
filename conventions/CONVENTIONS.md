@@ -7,7 +7,7 @@ gültig für alle Repos, bis ausdrücklich geändert.
 
 Das konkrete Dateisatz- und Layout-Handwerk steht in `doku-standard.md` (hier im Verzeichnis).
 
-Stand: 2026-11-05 (ADRs 0011–0034: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
+Stand: 2026-11-05 (ADRs 0011–0039: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
 Fremdprojekte, Lizenz, Repos, Messenger)
 
 ---
@@ -31,7 +31,7 @@ Fremdprojekte, Lizenz, Repos, Messenger)
   Objekt = AS2-Hülle + Fachstandard + Aktivitätsprotokoll, Leihen = Live-Verweis, Regeln werden
   angesagt (ADR 0020). Programm ohne Hub speichert lokal, wahlweise verschlüsselt (ADR 0024).
 - **Schnittstelle:** Cap'n Proto ist der Vertrag, JSON/CLI/MCP daraus erzeugt (ADR 0021);
-  zwei Referenz-Frontends je Programm (ADR 0022); Darstellungs-Register Datentyp ↔ Element (ADR 0023).
+  bis zu vier Referenz-Frontends je Programm, am besten Suiten (ADR 0038); jedes Programm ist mindestens eine Workbench (ADR 0037); drei Text-Editoren (ADR 0039); Verteilung über Git/gix (ADR 0036); Darstellungs-Register Datentyp ↔ Element (ADR 0023).
 
 ## 1. Was veröffentlicht wird und was nicht
 
