@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T10:31:29.311889+00:00",
+  "last_run": "2026-11-05T11:06:45.043735+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -8377,12 +8377,14 @@
       "change_reason": null
     },
     "index.md": {
-      "status": "VERIFIED",
-      "en_hash": "a98d16c823b872c0",
+      "status": "PENDING",
+      "en_hash": "df8c468afc8f6bd1",
       "de_hash": "5766da39d5f2e945",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T06:53:39.529934+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
         {
@@ -8400,11 +8402,15 @@
         {
           "at": "2026-11-05T06:53:39.529934+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T11:06:42.589800+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1961,
+      "en_bytes": 2048,
       "de_bytes": 2069,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "interactions/animations/entrance/bounce-in/appearance.md": {
       "status": "VERIFIED",
@@ -8916,9 +8922,7 @@
       "de_hash": "349dd514409253ea",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.350163+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -8936,9 +8940,7 @@
       "de_hash": "fd60f88b20b27a01",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.429079+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -8956,9 +8958,7 @@
       "de_hash": "85ccf112dbf51342",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.509891+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -8976,9 +8976,7 @@
       "de_hash": "5bc1283c5a500778",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.590051+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -8996,9 +8994,7 @@
       "de_hash": "5ac72f08d07b62f8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.669726+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9016,9 +9012,7 @@
       "de_hash": "963bef60c13a80a9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.747269+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9036,9 +9030,7 @@
       "de_hash": "b0ba136d70b0b45a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.832351+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9056,9 +9048,7 @@
       "de_hash": "5584db6f60f1a695",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.915924+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9076,9 +9066,7 @@
       "de_hash": "67184e2197b7d393",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:27.997761+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9096,9 +9084,7 @@
       "de_hash": "6479c63f833a302b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.074651+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9116,9 +9102,7 @@
       "de_hash": "15615cdc06df0282",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.157581+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9136,9 +9120,7 @@
       "de_hash": "e31fe9f95459f717",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.243766+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9156,9 +9138,7 @@
       "de_hash": "781821de36a152c7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.320925+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9176,9 +9156,7 @@
       "de_hash": "4333760fdfeee88b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.410021+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9196,9 +9174,7 @@
       "de_hash": "14635f10f1faae3f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.490929+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9216,9 +9192,7 @@
       "de_hash": "e0d014203b122561",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.567264+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9236,9 +9210,7 @@
       "de_hash": "ea6cfcf66bd8a09f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.647705+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9256,9 +9228,7 @@
       "de_hash": "655db27a5b254cb1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.732663+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9276,9 +9246,7 @@
       "de_hash": "0a47a27922f9e883",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.814351+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9296,9 +9264,7 @@
       "de_hash": "65fdc539a6fa05e3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.898507+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9316,9 +9282,7 @@
       "de_hash": "ffd28a54d216dc11",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:28.978386+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9336,9 +9300,7 @@
       "de_hash": "94c9773fecdb0d4e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:29.061176+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9356,9 +9318,7 @@
       "de_hash": "8703dd471343449a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:29.144058+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9376,9 +9336,7 @@
       "de_hash": "9958740013a999fc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:29.230466+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9396,9 +9354,7 @@
       "de_hash": "133635cde0851b6a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T10:31:29.311860+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations exit)",
       "history": [
         {
@@ -9411,396 +9367,564 @@
       "change_reason": null
     },
     "interactions/animations/feedback/elastic/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e43657d5d4195bae",
       "de_hash": "b98fd0652db9b394",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:42.804629+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1424
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:42.804629+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1388,
+      "de_bytes": 1424,
+      "change_reason": null
     },
     "interactions/animations/feedback/elastic/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "04f0c1a21c4773a9",
       "de_hash": "d351fa6d20002ce1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:42.882420+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1301
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:42.882420+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1310,
+      "de_bytes": 1301,
+      "change_reason": null
     },
     "interactions/animations/feedback/elastic/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c695ab8574ea0e8e",
       "de_hash": "3a1f1faf710c49dc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:42.963038+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1012
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:42.963038+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 968,
+      "de_bytes": 1012,
+      "change_reason": null
     },
     "interactions/animations/feedback/highlight/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "f1ea629851cfd268",
       "de_hash": "8b960df9e8b9a3bf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.047457+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1454
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.047457+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1443,
+      "de_bytes": 1454,
+      "change_reason": null
     },
     "interactions/animations/feedback/highlight/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "39382a27fe3b6d00",
       "de_hash": "af2314af95cab5ec",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.129619+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1682
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.129619+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1678,
+      "de_bytes": 1682,
+      "change_reason": null
     },
     "interactions/animations/feedback/highlight/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6cd22a0a8d3f9df5",
       "de_hash": "f8e027bc325b12e9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.215814+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 892
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.215814+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 878,
+      "de_bytes": 892,
+      "change_reason": null
     },
     "interactions/animations/feedback/index.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ec35868bc86854d9",
       "de_hash": "779b9f80d640ca92",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.299409+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1230
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.299409+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1164,
+      "de_bytes": 1230,
+      "change_reason": null
     },
     "interactions/animations/feedback/lift/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "9257d2cf674d76ca",
       "de_hash": "40a0d37c1169ada9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.386754+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1776
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.386754+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1736,
+      "de_bytes": 1776,
+      "change_reason": null
     },
     "interactions/animations/feedback/lift/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "757a33de7d655346",
       "de_hash": "6fb830103fede6c3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.468417+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1755
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.468417+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1708,
+      "de_bytes": 1755,
+      "change_reason": null
     },
     "interactions/animations/feedback/lift/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1b926d09087d57ec",
       "de_hash": "f30821800f1733b3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.555080+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1307
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.555080+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1280,
+      "de_bytes": 1307,
+      "change_reason": null
     },
     "interactions/animations/feedback/press/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "77dd638c16736243",
       "de_hash": "e665b6871c358be6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.636337+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1523
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.636337+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1502,
+      "de_bytes": 1523,
+      "change_reason": null
     },
     "interactions/animations/feedback/press/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ce97c99f735e148d",
       "de_hash": "9e2ab0f5b11e8361",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.716431+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1726
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.716431+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1688,
+      "de_bytes": 1726,
+      "change_reason": null
     },
     "interactions/animations/feedback/press/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "d6af141620afcae2",
       "de_hash": "be7021fad810ef17",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.800337+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1296
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.800337+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1214,
+      "de_bytes": 1296,
+      "change_reason": null
     },
     "interactions/animations/feedback/ripple/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "615a6b62cc620997",
       "de_hash": "ecd656fbe80f0c22",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.881471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1422
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.881471+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1403,
+      "de_bytes": 1422,
+      "change_reason": null
     },
     "interactions/animations/feedback/ripple/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "4cc13fcaf78eb925",
       "de_hash": "7d314e4ef8cdf7d8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:43.961720+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1726
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:43.961720+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1725,
+      "de_bytes": 1726,
+      "change_reason": null
     },
     "interactions/animations/feedback/ripple/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "bf7809067eebe6e0",
       "de_hash": "c0107b7fd77af872",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.048114+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 973
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.048114+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 915,
+      "de_bytes": 973,
+      "change_reason": null
     },
     "interactions/animations/feedback/rubber-band/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "41fedc1014f637fa",
       "de_hash": "2d015c3017d50ba3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.130759+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1576
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.130759+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1562,
+      "de_bytes": 1576,
+      "change_reason": null
     },
     "interactions/animations/feedback/rubber-band/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a65566c8565af668",
       "de_hash": "8a262be4fbf22a1a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.213830+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1305
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.213830+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1298,
+      "de_bytes": 1305,
+      "change_reason": null
     },
     "interactions/animations/feedback/rubber-band/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "57526cc8f612ebff",
       "de_hash": "bb120556d6dc2e40",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.294425+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1040
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.294425+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1064,
+      "de_bytes": 1040,
+      "change_reason": null
     },
     "interactions/animations/feedback/shake/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2196048481adba3f",
       "de_hash": "d121334d78b0b4db",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.381217+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1480
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.381217+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1523,
+      "de_bytes": 1480,
+      "change_reason": null
     },
     "interactions/animations/feedback/shake/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "91ed5c935fe31d08",
       "de_hash": "38dbdda70d2e1213",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.464469+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1697
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.464469+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1697,
+      "de_bytes": 1697,
+      "change_reason": null
     },
     "interactions/animations/feedback/shake/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "9609ca2f90f2d13f",
       "de_hash": "ad384c9b163b2965",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.547981+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1147
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.547981+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1126,
+      "de_bytes": 1147,
+      "change_reason": null
     },
     "interactions/animations/feedback/tick-draw/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ba9bf1793a8faaca",
       "de_hash": "d472a1f632e8eef0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.627623+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1834
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.627623+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1806,
+      "de_bytes": 1834,
+      "change_reason": null
     },
     "interactions/animations/feedback/tick-draw/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0c74ff1a9d130ce2",
       "de_hash": "4d585edeb60ffe13",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.704263+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1868
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.704263+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1848,
+      "de_bytes": 1868,
+      "change_reason": null
     },
     "interactions/animations/feedback/tick-draw/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "299c856ac32e3fbd",
       "de_hash": "3f2118bc10ac2dbb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.785077+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1257
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.785077+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1156,
+      "de_bytes": 1257,
+      "change_reason": null
     },
     "interactions/animations/feedback/wiggle/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "f357f2e1e7d0ae84",
       "de_hash": "9a1a4c2afb08898a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.874876+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1566
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.874876+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1578,
+      "de_bytes": 1566,
+      "change_reason": null
     },
     "interactions/animations/feedback/wiggle/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "bbd3eaac4bc2908a",
       "de_hash": "afabdc4e032f61f1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:44.955721+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1734
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:44.955721+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1731,
+      "de_bytes": 1734,
+      "change_reason": null
     },
     "interactions/animations/feedback/wiggle/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "459b5bbab5064703",
       "de_hash": "a04e16b6112d5586",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:06:45.043708+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 966
+      "note": "translated de->en (animations feedback)",
+      "history": [
+        {
+          "at": "2026-11-05T11:06:45.043708+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 888,
+      "de_bytes": 966,
+      "change_reason": null
     },
     "interactions/animations/index.md": {
       "status": "VERIFIED",
