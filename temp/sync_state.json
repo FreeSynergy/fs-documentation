@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T17:40:40.529272+00:00",
+  "last_run": "2026-11-05T17:49:26.764848+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -25409,118 +25409,136 @@
       "de_bytes": 3603
     },
     "programs/apps/streaming/frontends/restreamer/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c4b5ffaada799083",
       "de_hash": "c1a820f6077de99f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:49:26.149795+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming restreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restreamer/api.md"
+        },
+        {
+          "at": "2026-11-05T17:49:26.149795+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3844
+      "en_bytes": 3662,
+      "de_bytes": 3844,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "f2f5a0b0f3a4fbbe",
       "de_hash": "47c136e6b47b883c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:49:26.240270+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming restreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restreamer/description.md"
+        },
+        {
+          "at": "2026-11-05T17:49:26.240270+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1742
+      "en_bytes": 1732,
+      "de_bytes": 1742,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e8e37b15da5bf888",
       "de_hash": "985440021a402b9b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:49:26.335930+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming restreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restreamer/features.md"
+        },
+        {
+          "at": "2026-11-05T17:49:26.335930+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1450
+      "en_bytes": 1396,
+      "de_bytes": 1450,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0673af4d3d85e8f3",
       "de_hash": "9d1514c58ec1cfc5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:49:26.518023+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming restreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restreamer/menu.md"
+        },
+        {
+          "at": "2026-11-05T17:49:26.518023+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1376
+      "en_bytes": 1331,
+      "de_bytes": 1376,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ad48f01c8a67bda1",
       "de_hash": "b9f28a03f634e9a2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:49:26.606514+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming restreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restreamer/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T17:49:26.606514+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1929
+      "en_bytes": 1877,
+      "de_bytes": 1929,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "abb0f626a3c1d01d",
       "de_hash": "a518e3db35fd6cb2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:49:26.424539+00:00",
+      "kind": [],
+      "note": "translated de->en (streaming restreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/restreamer/structure.md"
+        },
+        {
+          "at": "2026-11-05T17:49:26.424539+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3828
+      "en_bytes": 3812,
+      "de_bytes": 3828,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/wowza/latest/api.md": {
       "status": "PENDING",
