@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 15:43 UTC · 1537 Dateien verfolgt · 476 offen · 1054 bestätigt
+Stand: 2026-11-05 16:19 UTC · 1537 Dateien verfolgt · 441 offen · 1089 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -37,14 +37,14 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | Abschnitt | Dateien |
 |-----------|---------|
 | A. `en/` fehlt – aus `de/` übersetzen | 423 |
-| B. `de/` fehlt – englische Quelle nachziehen | 22 |
+| B. `de/` fehlt – englische Quelle nachziehen | 5 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
 | F. Form nicht gleich – Struktur abgleichen | 13 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 18 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
 ## A. `en/` fehlt – aus `de/` übersetzen – 423 Dateien
@@ -796,83 +796,15 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
-## B. `de/` fehlt – englische Quelle nachziehen – 22 Dateien
+## B. `de/` fehlt – englische Quelle nachziehen – 5 Dateien
 
 ### `data/documents/` · 5
 
 - [ ] `data/documents/description.md` · 1.1k
-- [ ] `data/documents/examples.md` · 759b
+- [ ] `data/documents/examples.md` · 1.1k
 - [ ] `data/documents/index.md` · 1.5k
-- [ ] `data/documents/standards.md` · 3.5k
-- [ ] `data/documents/technical.md` · 2.2k
-
-### `programs/apps/calendar/` · 1
-
-- [ ] `programs/apps/calendar/requirements.md` · 575b
-
-### `programs/apps/contact/` · 1
-
-- [ ] `programs/apps/contact/requirements.md` · 573b
-
-### `programs/apps/gallery/` · 1
-
-- [ ] `programs/apps/gallery/requirements.md` · 573b
-
-### `programs/apps/helpdesk/` · 1
-
-- [ ] `programs/apps/helpdesk/requirements.md` · 575b
-
-### `programs/apps/maps/` · 1
-
-- [ ] `programs/apps/maps/requirements.md` · 567b
-
-### `programs/apps/marketing/` · 1
-
-- [ ] `programs/apps/marketing/requirements.md` · 577b
-
-### `programs/apps/messenger/` · 1
-
-- [ ] `programs/apps/messenger/requirements.md` · 577b
-
-### `programs/apps/projectmanagement/` · 1
-
-- [ ] `programs/apps/projectmanagement/requirements.md` · 593b
-
-### `programs/apps/streaming/` · 1
-
-- [ ] `programs/apps/streaming/requirements.md` · 577b
-
-### `programs/apps/whiteboards/` · 1
-
-- [ ] `programs/apps/whiteboards/requirements.md` · 581b
-
-### `programs/apps/wiki/` · 1
-
-- [ ] `programs/apps/wiki/requirements.md` · 567b
-
-### `programs/platform/desktop/` · 1
-
-- [ ] `programs/platform/desktop/requirements.md` · 573b
-
-### `programs/suites/crm/` · 1
-
-- [ ] `programs/suites/crm/requirements.md` · 565b
-
-### `programs/suites/democracy/` · 1
-
-- [ ] `programs/suites/democracy/requirements.md` · 577b
-
-### `programs/suites/erp/` · 1
-
-- [ ] `programs/suites/erp/requirements.md` · 565b
-
-### `programs/suites/marketplace/` · 1
-
-- [ ] `programs/suites/marketplace/requirements.md` · 581b
-
-### `programs/suites/workflows/` · 1
-
-- [ ] `programs/suites/workflows/requirements.md` · 577b
+- [ ] `data/documents/standards.md` · 3.7k
+- [ ] `data/documents/technical.md` · 2.4k
 
 ## F. Form nicht gleich – Struktur abgleichen – 13 Dateien
 
@@ -904,80 +836,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `data/messages/standards.md` · 4.0k · Parität: headings 6 vs 5; table rows 28 vs 11 · hash changed since verification
 - [ ] `data/messages/technical.md` · 2.9k · Parität: headings 7 vs 6; table rows 23 vs 6 · hash changed since verification
 
-## H. Beide Seiten da, kein Befund – lesen und bestätigen – 18 Dateien
-
-### `data/events/` · 1
-
-- [ ] `data/events/index.md` · 1.4k · hash changed since verification
-
-### `programs/apps/calendar/frontends/` · 1
-
-- [ ] `programs/apps/calendar/frontends/index.md` · 3.5k
-
-### `programs/apps/contact/frontends/` · 1
-
-- [ ] `programs/apps/contact/frontends/index.md` · 3.0k · hash changed since verification
-
-### `programs/apps/gallery/frontends/` · 1
-
-- [ ] `programs/apps/gallery/frontends/index.md` · 3.7k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/index.md` · 3.8k · hash changed since verification
-
-### `programs/apps/maps/frontends/` · 1
-
-- [ ] `programs/apps/maps/frontends/index.md` · 3.7k · hash changed since verification
-
-### `programs/apps/marketing/frontends/` · 1
-
-- [ ] `programs/apps/marketing/frontends/index.md` · 3.5k · hash changed since verification
-
-### `programs/apps/messenger/frontends/` · 1
-
-- [ ] `programs/apps/messenger/frontends/index.md` · 3.2k · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/index.md` · 4.0k · hash changed since verification
-
-### `programs/apps/streaming/frontends/` · 1
-
-- [ ] `programs/apps/streaming/frontends/index.md` · 4.6k · hash changed since verification
-
-### `programs/apps/whiteboards/frontends/` · 1
-
-- [ ] `programs/apps/whiteboards/frontends/index.md` · 3.3k · hash changed since verification
-
-### `programs/apps/wiki/frontends/` · 1
-
-- [ ] `programs/apps/wiki/frontends/index.md` · 3.0k · hash changed since verification
-
-### `programs/platform/desktop/frontends/` · 1
-
-- [ ] `programs/platform/desktop/frontends/index.md` · 2.9k
-
-### `programs/suites/crm/frontends/` · 1
-
-- [ ] `programs/suites/crm/frontends/index.md` · 2.4k
-
-### `programs/suites/democracy/frontends/` · 1
-
-- [ ] `programs/suites/democracy/frontends/index.md` · 2.4k
-
-### `programs/suites/erp/frontends/` · 1
-
-- [ ] `programs/suites/erp/frontends/index.md` · 2.3k
-
-### `programs/suites/marketplace/frontends/` · 1
-
-- [ ] `programs/suites/marketplace/frontends/index.md` · 2.4k
-
-### `programs/suites/workflows/frontends/` · 1
-
-- [ ] `programs/suites/workflows/frontends/index.md` · 2.4k
-
 ## 🗑️ Gelöscht – 7
 
 - [x] `data/anforderungen.md` · nicht mehr im Baum
@@ -990,9 +848,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-04 20:44 · Lauf: 1492 verfolgt, 1492 offen, 0 bestätigt · needs_en=687 needs_de=1 en_german=4 parity=28 rename=17 review=773
-- 2026-11-04 20:47 · Lauf: 1492 verfolgt, 1492 offen, 0 bestätigt · needs_en=687 needs_de=1 en_german=2 parity=28 rename=17 review=775
-- 2026-11-04 20:49 · Lauf: 1492 verfolgt, 1492 offen, 0 bestätigt · needs_en=687 needs_de=1 en_german=1 parity=28 rename=17 review=776
 - 2026-11-04 20:50 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=1 parity=28 rename=17 review=773
 - 2026-11-05 00:45 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=3 parity=28 rename=17 review=771
 - 2026-11-05 01:45 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=3 code_german=15 parity=28 rename=17 review=757
@@ -1031,3 +886,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 15:27 · Lauf: 1532 verfolgt, 554 offen, 971 bestätigt · needs_en=423 needs_de=17 parity=27 review=87
 - 2026-11-05 15:28 · Lauf: 1532 verfolgt, 467 offen, 1058 bestätigt · needs_en=423 needs_de=17 parity=27
 - 2026-11-05 15:43 · Lauf: 1537 verfolgt, 476 offen, 1054 bestätigt · needs_en=423 needs_de=22 parity=13 review=18
+- 2026-11-05 16:18 · Lauf: 1537 verfolgt, 458 offen, 1072 bestätigt · needs_en=423 needs_de=22 parity=13
+- 2026-11-05 16:19 · Lauf: 1537 verfolgt, 458 offen, 1072 bestätigt · needs_en=423 needs_de=5 parity=13 review=17
+- 2026-11-05 16:19 · Lauf: 1537 verfolgt, 441 offen, 1089 bestätigt · needs_en=423 needs_de=5 parity=13

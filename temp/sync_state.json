@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T15:44:13.827709+00:00",
+  "last_run": "2026-11-05T16:19:47.778702+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -7700,9 +7700,7 @@
       "de_hash": "27af8134beab7911",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -14430,9 +14428,7 @@
       "de_hash": "83d481efdd25af56",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -15198,9 +15194,7 @@
       "de_hash": "912f891a88db63b3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -16726,9 +16720,7 @@
       "de_hash": "583396fdf16c0b01",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -18036,9 +18028,7 @@
       "de_hash": "14bbe8e9e467d379",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -19216,9 +19206,7 @@
       "de_hash": "38a7659686c65afa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -20550,9 +20538,7 @@
       "de_hash": "9c7e1486df57aee3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21358,9 +21344,7 @@
       "de_hash": "6df8f785aea4be9a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21570,9 +21554,7 @@
       "de_hash": "14073ecd8bc24c1b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21812,9 +21794,7 @@
       "de_hash": "ae55167fee3cb9ef",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23356,9 +23336,7 @@
       "de_hash": "8ea68befc393fb5c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23688,9 +23666,7 @@
       "de_hash": "839afc67e10dabe7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -27334,9 +27310,7 @@
       "de_hash": "1747c046e9f6a56c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -28156,9 +28130,7 @@
       "de_hash": "2017575cfc3eaec1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -28978,9 +28950,7 @@
       "de_hash": "16f94f238b89ad35",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -29800,9 +29770,7 @@
       "de_hash": "13381de5982eb272",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -30622,9 +30590,7 @@
       "de_hash": "c6c9df8b065c3fe3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -31444,9 +31410,7 @@
       "de_hash": "d8408668c67540be",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T15:44:13.827645+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -33059,32 +33023,40 @@
       "de_bytes": 8279
     },
     "programs/apps/calendar/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "5f28b37595c10927",
-      "de_hash": null,
+      "de_hash": "7da169177adad2c3",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.140207+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.140207+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 575,
-      "de_bytes": null
+      "de_bytes": 601,
+      "change_reason": null
     },
     "programs/apps/contact/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "2588f3adba40db45",
-      "de_hash": null,
+      "de_hash": "09614d43dbfea70f",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.242213+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.242213+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 573,
-      "de_bytes": null
+      "de_bytes": 600,
+      "change_reason": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/themes/default.md": {
       "status": "VERIFIED",
@@ -33139,60 +33111,76 @@
       "change_reason": null
     },
     "programs/apps/gallery/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "7522a25b0a8d55b7",
-      "de_hash": null,
+      "de_hash": "51f6d066576e9969",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.334687+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.334687+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 573,
-      "de_bytes": null
+      "de_bytes": 605,
+      "change_reason": null
     },
     "programs/apps/helpdesk/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "48ee40bf817f0296",
-      "de_hash": null,
+      "de_hash": "84296e9348ac7f42",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.424049+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.424049+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 575,
-      "de_bytes": null
+      "de_bytes": 601,
+      "change_reason": null
     },
     "programs/apps/maps/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "90cb130a17e19d57",
-      "de_hash": null,
+      "de_hash": "cb7f0cf473a9820b",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.512736+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.512736+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 567,
-      "de_bytes": null
+      "de_bytes": 595,
+      "change_reason": null
     },
     "programs/apps/marketing/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "93aceae26db168a6",
-      "de_hash": null,
+      "de_hash": "1f1bf54de2d4e9aa",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.604176+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.604176+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 577,
-      "de_bytes": null
+      "de_bytes": 603,
+      "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/latest/themes/default.md": {
       "status": "VERIFIED",
@@ -33559,158 +33547,202 @@
       "change_reason": null
     },
     "programs/apps/messenger/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "eb4a4012acdffae5",
-      "de_hash": null,
+      "de_hash": "fc1ac5cbffd4a960",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.698587+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.698587+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 577,
-      "de_bytes": null
+      "de_bytes": 603,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "d4252e19e673224e",
-      "de_hash": null,
+      "de_hash": "a012efb4e46c6c17",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.788040+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.788040+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 593,
-      "de_bytes": null
+      "de_bytes": 619,
+      "change_reason": null
     },
     "programs/apps/streaming/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "32470aedfc7bdd1f",
-      "de_hash": null,
+      "de_hash": "2bb578c7f6f386f6",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.880036+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.880036+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 577,
-      "de_bytes": null
+      "de_bytes": 603,
+      "change_reason": null
     },
     "programs/apps/whiteboards/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "10a9cb0935616ec2",
-      "de_hash": null,
+      "de_hash": "d7fe8f5582946ca9",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:46.968471+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:46.968471+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 581,
-      "de_bytes": null
+      "de_bytes": 607,
+      "change_reason": null
     },
     "programs/apps/wiki/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "110fb0a0df86f833",
-      "de_hash": null,
+      "de_hash": "92e95fe376bc146e",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.065578+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.065578+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 567,
-      "de_bytes": null
+      "de_bytes": 593,
+      "change_reason": null
     },
     "programs/platform/desktop/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "fed5e01efe90d556",
-      "de_hash": null,
+      "de_hash": "85503ea05f9fd569",
       "first_seen": "2026-11-05T14:28:43.200783+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.602809+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.602809+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 573,
-      "de_bytes": null
+      "de_bytes": 599,
+      "change_reason": null
     },
     "programs/suites/crm/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "f47b912944df03f6",
-      "de_hash": null,
+      "de_hash": "ab9021c18ec15f91",
       "first_seen": "2026-11-05T14:28:43.200783+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.152539+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.152539+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 565,
-      "de_bytes": null
+      "de_bytes": 591,
+      "change_reason": null
     },
     "programs/suites/democracy/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "888366253204f175",
-      "de_hash": null,
+      "de_hash": "4060bac91c2d4942",
       "first_seen": "2026-11-05T14:28:43.200783+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.242072+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.242072+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 577,
-      "de_bytes": null
+      "de_bytes": 604,
+      "change_reason": null
     },
     "programs/suites/erp/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "4187f50ae82d50dc",
-      "de_hash": null,
+      "de_hash": "15cde6a42d1054ca",
       "first_seen": "2026-11-05T14:28:43.200783+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.332284+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.332284+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 565,
-      "de_bytes": null
+      "de_bytes": 591,
+      "change_reason": null
     },
     "programs/suites/marketplace/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "a8923f78302953de",
-      "de_hash": null,
+      "de_hash": "0cd9a11fc8f7ffaa",
       "first_seen": "2026-11-05T14:28:43.200783+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.419912+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.419912+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 581,
-      "de_bytes": null
+      "de_bytes": 608,
+      "change_reason": null
     },
     "programs/suites/workflows/requirements.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "77c88ab044481b44",
-      "de_hash": null,
+      "de_hash": "d2e4312bc483b7d0",
       "first_seen": "2026-11-05T14:28:43.200783+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_de"
+      "last_verified": "2026-11-05T16:19:47.511420+00:00",
+      "kind": [],
+      "note": "skeleton mirrored from en (ADR 0006)",
+      "history": [
+        {
+          "at": "2026-11-05T16:19:47.511420+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 577,
-      "de_bytes": null
+      "de_bytes": 603,
+      "change_reason": null
     },
     "data/documents/description.md": {
       "status": "PENDING",
@@ -33728,7 +33760,7 @@
     },
     "data/documents/examples.md": {
       "status": "PENDING",
-      "en_hash": "49e3bb509276b4d2",
+      "en_hash": "ea778b6a7c372da9",
       "de_hash": null,
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
       "last_verified": null,
@@ -33737,12 +33769,12 @@
       ],
       "note": null,
       "history": [],
-      "en_bytes": 759,
+      "en_bytes": 1158,
       "de_bytes": null
     },
     "data/documents/index.md": {
       "status": "PENDING",
-      "en_hash": "d388d4ae23a1e365",
+      "en_hash": "ef5eb176990f3059",
       "de_hash": null,
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
       "last_verified": null,
@@ -33751,12 +33783,12 @@
       ],
       "note": null,
       "history": [],
-      "en_bytes": 1574,
+      "en_bytes": 1525,
       "de_bytes": null
     },
     "data/documents/standards.md": {
       "status": "PENDING",
-      "en_hash": "1ae557c2d52cffb7",
+      "en_hash": "747a8256fcb0c8dd",
       "de_hash": null,
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
       "last_verified": null,
@@ -33765,12 +33797,12 @@
       ],
       "note": null,
       "history": [],
-      "en_bytes": 3567,
+      "en_bytes": 3770,
       "de_bytes": null
     },
     "data/documents/technical.md": {
       "status": "PENDING",
-      "en_hash": "09b3e7fe228a6711",
+      "en_hash": "1b0e7b2f9019812b",
       "de_hash": null,
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
       "last_verified": null,
@@ -33779,7 +33811,7 @@
       ],
       "note": null,
       "history": [],
-      "en_bytes": 2271,
+      "en_bytes": 2502,
       "de_bytes": null
     }
   }
