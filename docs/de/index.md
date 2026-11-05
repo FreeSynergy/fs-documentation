@@ -40,4 +40,4 @@ Alle Beiträge sind willkommen — von kleinen Korrekturen bis zu kompletten Tut
 
 ---
 
-*Built with [MkDocs](https://www.mkdocs.org/) + [Material Theme](https://squidfunk.github.io/mkdocs-material/). Licensed under [Apache 2.0](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE).*
+*Built with [MkDocs](https://www.mkdocs.org/) + [Material Theme](https://squidfunk.github.io/mkdocs-material/). Licensed under [MIT](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE-MIT) OR [Apache 2.0](https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE-APACHE).*

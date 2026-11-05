@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 11:06 UTC · 1499 Dateien verfolgt · 557 offen · 935 bestätigt
+Stand: 2026-11-05 11:17 UTC · 1499 Dateien verfolgt · 529 offen · 963 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,46 +36,18 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 528 |
+| A. `en/` fehlt – aus `de/` übersetzen | 515 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 1 |
+| F. Form nicht gleich – Struktur abgleichen | 0 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 28 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 14 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 528 Dateien
-
-### `interactions/animations/loading/` · 1
-
-- [ ] `interactions/animations/loading/index.md` · 963b
-
-### `interactions/animations/loading/dots/` · 3
-
-- [ ] `interactions/animations/loading/dots/appearance.md` · 1.6k
-- [ ] `interactions/animations/loading/dots/attributes.md` · 1.8k
-- [ ] `interactions/animations/loading/dots/description.md` · 1.2k
-
-### `interactions/animations/loading/progress/` · 3
-
-- [ ] `interactions/animations/loading/progress/appearance.md` · 1.4k
-- [ ] `interactions/animations/loading/progress/attributes.md` · 1.3k
-- [ ] `interactions/animations/loading/progress/description.md` · 929b
-
-### `interactions/animations/loading/skeleton/` · 3
-
-- [ ] `interactions/animations/loading/skeleton/appearance.md` · 1.6k
-- [ ] `interactions/animations/loading/skeleton/attributes.md` · 1.4k
-- [ ] `interactions/animations/loading/skeleton/description.md` · 1.2k
-
-### `interactions/animations/loading/typing/` · 3
-
-- [ ] `interactions/animations/loading/typing/appearance.md` · 1.4k
-- [ ] `interactions/animations/loading/typing/attributes.md` · 1.4k
-- [ ] `interactions/animations/loading/typing/description.md` · 938b
+## A. `en/` fehlt – aus `de/` übersetzen – 515 Dateien
 
 ### `interactions/animations/loop/` · 1
 
@@ -883,71 +855,39 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/masks/zapier/shortcuts.md` · 449b · Plan[~]
 - [ ] `programs/suites/workflows/masks/zapier/structure.md` · 2.1k · Plan[~]
 
-## F. Form nicht gleich – Struktur abgleichen – 1 Dateien
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 14 Dateien
 
 ### `(wurzel)/` · 1
 
-- [ ] `index.md` · 2.0k · Parität: links en-only=['https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE-APACHE', 'https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE-MIT'] de-only=['https://github.com/FreeSynergy/fs-documentation/blob/main/LICENSE'] · hash changed since verification
+- [ ] `index.md` · 2.0k · hash changed since verification
 
-## H. Beide Seiten da, kein Befund – lesen und bestätigen – 28 Dateien
+### `interactions/animations/loading/` · 1
 
-### `interactions/animations/feedback/` · 1
+- [ ] `interactions/animations/loading/index.md` · 945b
 
-- [ ] `interactions/animations/feedback/index.md` · 1.1k
+### `interactions/animations/loading/dots/` · 3
 
-### `interactions/animations/feedback/elastic/` · 3
+- [ ] `interactions/animations/loading/dots/appearance.md` · 1.6k
+- [ ] `interactions/animations/loading/dots/attributes.md` · 1.7k
+- [ ] `interactions/animations/loading/dots/description.md` · 1.1k
 
-- [ ] `interactions/animations/feedback/elastic/appearance.md` · 1.4k
-- [ ] `interactions/animations/feedback/elastic/attributes.md` · 1.3k
-- [ ] `interactions/animations/feedback/elastic/description.md` · 968b
+### `interactions/animations/loading/progress/` · 3
 
-### `interactions/animations/feedback/highlight/` · 3
+- [ ] `interactions/animations/loading/progress/appearance.md` · 1.4k
+- [ ] `interactions/animations/loading/progress/attributes.md` · 1.3k
+- [ ] `interactions/animations/loading/progress/description.md` · 911b
 
-- [ ] `interactions/animations/feedback/highlight/appearance.md` · 1.4k
-- [ ] `interactions/animations/feedback/highlight/attributes.md` · 1.6k
-- [ ] `interactions/animations/feedback/highlight/description.md` · 878b
+### `interactions/animations/loading/skeleton/` · 3
 
-### `interactions/animations/feedback/lift/` · 3
+- [ ] `interactions/animations/loading/skeleton/appearance.md` · 1.5k
+- [ ] `interactions/animations/loading/skeleton/attributes.md` · 1.4k
+- [ ] `interactions/animations/loading/skeleton/description.md` · 1.1k
 
-- [ ] `interactions/animations/feedback/lift/appearance.md` · 1.7k
-- [ ] `interactions/animations/feedback/lift/attributes.md` · 1.7k
-- [ ] `interactions/animations/feedback/lift/description.md` · 1.2k
+### `interactions/animations/loading/typing/` · 3
 
-### `interactions/animations/feedback/press/` · 3
-
-- [ ] `interactions/animations/feedback/press/appearance.md` · 1.5k
-- [ ] `interactions/animations/feedback/press/attributes.md` · 1.6k
-- [ ] `interactions/animations/feedback/press/description.md` · 1.2k
-
-### `interactions/animations/feedback/ripple/` · 3
-
-- [ ] `interactions/animations/feedback/ripple/appearance.md` · 1.4k
-- [ ] `interactions/animations/feedback/ripple/attributes.md` · 1.7k
-- [ ] `interactions/animations/feedback/ripple/description.md` · 915b
-
-### `interactions/animations/feedback/rubber-band/` · 3
-
-- [ ] `interactions/animations/feedback/rubber-band/appearance.md` · 1.5k
-- [ ] `interactions/animations/feedback/rubber-band/attributes.md` · 1.3k
-- [ ] `interactions/animations/feedback/rubber-band/description.md` · 1.0k
-
-### `interactions/animations/feedback/shake/` · 3
-
-- [ ] `interactions/animations/feedback/shake/appearance.md` · 1.5k
-- [ ] `interactions/animations/feedback/shake/attributes.md` · 1.7k
-- [ ] `interactions/animations/feedback/shake/description.md` · 1.1k
-
-### `interactions/animations/feedback/tick-draw/` · 3
-
-- [ ] `interactions/animations/feedback/tick-draw/appearance.md` · 1.8k
-- [ ] `interactions/animations/feedback/tick-draw/attributes.md` · 1.8k
-- [ ] `interactions/animations/feedback/tick-draw/description.md` · 1.1k
-
-### `interactions/animations/feedback/wiggle/` · 3
-
-- [ ] `interactions/animations/feedback/wiggle/appearance.md` · 1.5k
-- [ ] `interactions/animations/feedback/wiggle/attributes.md` · 1.7k
-- [ ] `interactions/animations/feedback/wiggle/description.md` · 888b
+- [ ] `interactions/animations/loading/typing/appearance.md` · 1.3k
+- [ ] `interactions/animations/loading/typing/attributes.md` · 1.3k
+- [ ] `interactions/animations/loading/typing/description.md` · 900b
 
 ## 🗑️ Gelöscht – 7
 
@@ -961,8 +901,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-04 20:45 · **Abschnitt D abgearbeitet (3 von 4):** `en/components/widgets/overlays/drawer/appearance.md`,
-  `en/components/workbenches/special/dashboard/appearance.md` (deutsche Tabellenzellen in Groessen/Farben
   uebersetzt), `en/programs/apps/calendar/masks/google-calendar/menu.md` (deutsche Menue-Labels an den
   Stil der Datei angepasst und gequotet). Bestaetigt mit `--confirm`. Variante-Namen wie `vorlage`,
   `anordbar`, `bericht` bleiben deutsch – Bezeichner, ADR 0002.
@@ -1002,3 +940,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 10:20 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=581 review=28
 - 2026-11-05 10:31 · Lauf: 1499 verfolgt, 581 offen, 911 bestätigt · needs_en=556 review=25
 - 2026-11-05 11:06 · Lauf: 1499 verfolgt, 557 offen, 935 bestätigt · needs_en=528 parity=1 review=28
+- 2026-11-05 11:07 · Lauf: 1499 verfolgt, 529 offen, 963 bestätigt · needs_en=528 parity=1
+- 2026-11-05 11:17 · Lauf: 1499 verfolgt, 529 offen, 963 bestätigt · needs_en=515 review=14
