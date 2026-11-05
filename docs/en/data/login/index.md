@@ -7,7 +7,7 @@
 | Standard | Evidence | Role in FreeSynergy |
 |----------|----------|---------------------|
 | **OIDC Core 1.0 (errata set 2)** | ✅ retrieved 2026-11-02 | sign-in: `sub` claim ↔ our user ID; quote/details in [standards.md → follow-up research](../standards.md) |
-| **SCIM, RFC 7643/7644** | ⚠️ unverified (retrieval on 2026-11-02 aborted) | provisioning: create/patch/deactivate accounts via a standard API |
+| **SCIM, RFC 7643 (core schema) / RFC 7644 (protocol)** | ✅ Sept 2015, Proposed Standard (checked 2026-11-05); newer: RFC 9865 (cursor pagination), RFC 9944 (device schema), RFC 9967 (SCIM events) | provisioning: create/patch/deactivate accounts via a standard API; every program speaks SCIM (ADR 0024) |
 | **OAuth 2.0, RFC 6749** | ✅ retrieved 2026-11-02 | authorization for APIs and integrations; updates RFC 8252/8996/9700 |
 | **WebAuthn Level 2 (W3C, Rec. 08.04.2021)** | ✅ retrieved 2026-11-02 | passwordless public-key sign-in; docking point for `identity/` keys |
 | **WebFinger, RFC 7033** | ✅ | discover actors via `acct:`/email |

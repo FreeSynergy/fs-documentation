@@ -7,7 +7,7 @@
 | Standard | Evidence | Role in FreeSynergy |
 |----------|----------|---------------------|
 | **AS2 `Actor`** (Core/Vocabulary) | ✅ read | wrapper of the public view: `id` (absolute IRI, Core §4.1), `name`/`nameMap`, `preferredUsername`, `publicKey` |
-| **AS2 `Profile` type** (Vocabulary) | ✅ present in the vocabulary; field details ⚠️ section still to evidence | "A profile object contains minimal information about its owner." — candidate for the minimal view |
+| **AS2 `Profile` type** (Vocabulary) | ✅ checked 2026-11-05: "describes another object, usually an actor"; property `describes` | **envelope of the public view**: a `Profile` whose `describes` points to **myself** (my actor/DID). Same type as a contact card, which describes *someone else* (ADR 0020) |
 | **AS2 audience `to`/`cc`/`bto`/`bcc`** | ✅ Core read | disclosure control per field/field group; **no** access control (decision 2) |
 | **JSContact `Card`** (RFC 9553) | ✅ | source of the displayed fields |
 | **schema.org `Person`** | ⚠️ not verified; `name` ✅ | web/SEO export projection |
@@ -25,6 +25,6 @@ Profile = **AS2 `Actor` projection onto JSContact**. The handle (actor) is the s
 
 ## Open standard points
 
-- Evidence the `Profile` type field by field and decide whether we use it as the response form or represent the actor directly
+- ~~Evidence the `Profile` type~~ → ✅ 2026-11-05: profile = AS2 `Profile` describing myself; the actor (`Person` with `Multikey`, FEP-521a) stays the identity
 - Verify schema.org `Person` before the SEO export is built
-- Take Anton's `wot-profiles` (JWS-signed profile discoverability, ✅ reviewed) as a reference for signed profile delivery — the signature mechanism remains ⚠️/❌ open
+- Take Anton's `wot-profiles` (JWS-signed profile discoverability, ✅ reviewed) as a reference for signed profile delivery — signatures: FEP-8b32 object proofs + RFC 9421 transport (✅ 2026-11-05)

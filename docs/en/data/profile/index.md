@@ -14,7 +14,7 @@ A profile is **not a second copy of the person data** but a **projection**:
 
 | Standard | Evidence | Role in FreeSynergy |
 |----------|----------|---------------------|
-| **AS2 `Actor` / `Profile`** | ✅ Actor read; `Profile` type ⚠️ section still to evidence | wrapper of the public view |
+| **AS2 `Actor` / `Profile`** | ✅ (2026-11-05) | public view = `Profile` with `describes` → myself; contacts use the same type for others (ADR 0020) |
 | **JSContact `Card`** | ✅ | source of the displayed fields |
 | **schema.org `Person` / `name`** | `name` ✅, `Person` ⚠️ | export projection for web/SEO |
 | **AS2 audience (`to`/`cc`/`bto`/`bcc`)** | ✅ Core read | audience rules per field/field group |

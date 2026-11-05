@@ -3,7 +3,7 @@
 **What this domain is:** the **access** to FreeSynergy. It answers two separate questions:
 
 1. **Authentication** — who may log in? (OIDC, OAuth 2.0, WebAuthn)
-2. **Provisioning** — how do accounts come into being and change? (SCIM ⚠️, kanidm as the reference implementation)
+2. **Provisioning** — how do accounts come into being and change? (SCIM ✅ RFC 7643/7644, kanidm as the reference implementation)
 
 **What it covers:**
 
