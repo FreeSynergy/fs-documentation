@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T11:28:13.826639+00:00",
+  "last_run": "2026-11-05T11:46:55.459448+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -7468,7 +7468,7 @@
     },
     "data/api.md": {
       "status": "PENDING",
-      "en_hash": "0ce898156fc8d2bb",
+      "en_hash": "c7e2c2955c177df0",
       "de_hash": "2eaa2588dd740a6d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -7486,7 +7486,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 8863,
+      "en_bytes": 8875,
       "de_bytes": 8967,
       "change_reason": "hash changed since verification"
     },
@@ -7597,22 +7597,28 @@
       "change_reason": null
     },
     "data/contacts/technical.md": {
-      "status": "VERIFIED",
-      "en_hash": "d26248b566baef37",
+      "status": "PENDING",
+      "en_hash": "21f2582311d48d7b",
       "de_hash": "8fcf255ffcab6892",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "translated de->en",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2394,
+      "en_bytes": 2398,
       "de_bytes": 2458,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "data/events/description.md": {
       "status": "VERIFIED",
@@ -7920,7 +7926,7 @@
     },
     "data/index.md": {
       "status": "PENDING",
-      "en_hash": "985bbb068e29711d",
+      "en_hash": "c6f5189bbc8ba5d8",
       "de_hash": "893e16c8a5a2232d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -7954,7 +7960,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 6693,
+      "en_bytes": 6713,
       "de_bytes": 6930,
       "change_reason": "hash changed since verification"
     },
@@ -8353,22 +8359,28 @@
       "change_reason": null
     },
     "data/projects/technical.md": {
-      "status": "VERIFIED",
-      "en_hash": "b502d60b2d5a533c",
+      "status": "PENDING",
+      "en_hash": "7af77492c499a058",
       "de_hash": "1126be5c54c8b3b7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "translated de->en",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2127,
+      "en_bytes": 2131,
       "de_bytes": 2201,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "data/standards.md": {
       "status": "VERIFIED",
@@ -8390,7 +8402,7 @@
     },
     "index.md": {
       "status": "PENDING",
-      "en_hash": "df8c468afc8f6bd1",
+      "en_hash": "f6927d0cb02ed178",
       "de_hash": "7e844857c14023d3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -8428,7 +8440,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2048,
+      "en_bytes": 2052,
       "de_bytes": 2156,
       "change_reason": "hash changed since verification"
     },
@@ -10390,9 +10402,7 @@
       "de_hash": "b008494062504d2b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:28:13.567910+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations movement)",
       "history": [
         {
@@ -10410,9 +10420,7 @@
       "de_hash": "0e8334ad97b561f1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:28:13.656692+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations movement)",
       "history": [
         {
@@ -10430,9 +10438,7 @@
       "de_hash": "69ba1b950b4f0531",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:28:13.741871+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations movement)",
       "history": [
         {
@@ -10450,9 +10456,7 @@
       "de_hash": "5c9cc77a2199325a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:28:13.826605+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations movement)",
       "history": [
         {
@@ -10466,367 +10470,443 @@
     },
     "interactions/animations/organization/cascade/appearance.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "6510c1546291ae31",
       "de_hash": "a6b187430abbd0ea",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1917,
       "de_bytes": 1918
     },
     "interactions/animations/organization/cascade/attributes.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "2351ba3cbd59cf99",
       "de_hash": "1816a7b858a70deb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1764,
       "de_bytes": 1776
     },
     "interactions/animations/organization/cascade/description.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "2b92723ef7cbdd1c",
       "de_hash": "c8b6194ec27614cc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1212,
       "de_bytes": 1324
     },
     "interactions/animations/organization/index.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "604011d5deeee272",
       "de_hash": "520094b549264f80",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1063,
       "de_bytes": 1134
     },
     "interactions/animations/organization/stagger/appearance.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "a49e93e391fe2dcb",
       "de_hash": "8c077b7d1c8047f3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1549,
       "de_bytes": 1555
     },
     "interactions/animations/organization/stagger/attributes.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "a504e9f39acd6557",
       "de_hash": "650db238ab44b457",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1343,
       "de_bytes": 1342
     },
     "interactions/animations/organization/stagger/description.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "16912655d6ba1daa",
       "de_hash": "cd73a9c62385c6a1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [],
-      "en_bytes": null,
+      "en_bytes": 1087,
       "de_bytes": 1203
     },
     "interactions/animations/transition/cross-fade/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e5f107ee412c5583",
       "de_hash": "fae5a9ff3449b1b7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:53.599345+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:53.599345+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1428
+      "en_bytes": 1429,
+      "de_bytes": 1428,
+      "change_reason": null
     },
     "interactions/animations/transition/cross-fade/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "fcf29d495c8a8904",
       "de_hash": "bc5bc503c56e2ff6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:53.682872+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:53.682872+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1365
+      "en_bytes": 1353,
+      "de_bytes": 1365,
+      "change_reason": null
     },
     "interactions/animations/transition/cross-fade/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c1b1042012c0a59d",
       "de_hash": "b656450d629a511c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:53.767639+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:53.767639+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1001
+      "en_bytes": 928,
+      "de_bytes": 1001,
+      "change_reason": null
     },
     "interactions/animations/transition/cross-slide/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "03750dd1073a5b90",
       "de_hash": "60906023cbb43a2f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:53.851350+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:53.851350+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1845
+      "en_bytes": 1808,
+      "de_bytes": 1845,
+      "change_reason": null
     },
     "interactions/animations/transition/cross-slide/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "af0239b2b7ac39b9",
       "de_hash": "d8e22367e502d7c4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:53.940111+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:53.940111+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1866
+      "en_bytes": 1842,
+      "de_bytes": 1866,
+      "change_reason": null
     },
     "interactions/animations/transition/cross-slide/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ad77531edbaae7af",
       "de_hash": "e37ce2d1bd13c720",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.028872+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.028872+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1227
+      "en_bytes": 1234,
+      "de_bytes": 1227,
+      "change_reason": null
     },
     "interactions/animations/transition/flip/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "b1cfb05ff906e553",
       "de_hash": "0737ca62597570df",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.113321+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.113321+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1369
+      "en_bytes": 1341,
+      "de_bytes": 1369,
+      "change_reason": null
     },
     "interactions/animations/transition/flip/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "39e9afe7ffea1f14",
       "de_hash": "b9189e80e26983b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.200809+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.200809+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1716
+      "en_bytes": 1690,
+      "de_bytes": 1716,
+      "change_reason": null
     },
     "interactions/animations/transition/flip/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c9b3d56e6a2d36e1",
       "de_hash": "8a651a24afef2e2c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.288029+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.288029+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 972
+      "en_bytes": 930,
+      "de_bytes": 972,
+      "change_reason": null
     },
     "interactions/animations/transition/index.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "7089bc896f1130d4",
       "de_hash": "9d10667c7cea9e15",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.391734+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.391734+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1229
+      "en_bytes": 1121,
+      "de_bytes": 1229,
+      "change_reason": null
     },
     "interactions/animations/transition/morph/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "93ed58362553d4fc",
       "de_hash": "f6aec0580480fe0b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.478138+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.478138+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1398
+      "en_bytes": 1402,
+      "de_bytes": 1398,
+      "change_reason": null
     },
     "interactions/animations/transition/morph/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "5de3d689e4b9b4fc",
       "de_hash": "1dd411bfd0da3bf1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.566396+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.566396+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1409
+      "en_bytes": 1423,
+      "de_bytes": 1409,
+      "change_reason": null
     },
     "interactions/animations/transition/morph/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ceaef0c9f7b0057a",
       "de_hash": "7a235894c8dffa1f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.654975+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.654975+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1029
+      "en_bytes": 979,
+      "de_bytes": 1029,
+      "change_reason": null
     },
     "interactions/animations/transition/reorder/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ebe3f840451277d1",
       "de_hash": "0d5442c11d2e2098",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.739322+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.739322+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1836
+      "en_bytes": 1803,
+      "de_bytes": 1836,
+      "change_reason": null
     },
     "interactions/animations/transition/reorder/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "cf852160eb5d3ea1",
       "de_hash": "3cd8b1aec36fa32a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.827285+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.827285+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1948
+      "en_bytes": 1953,
+      "de_bytes": 1948,
+      "change_reason": null
     },
     "interactions/animations/transition/reorder/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0d856fa1526e0db0",
       "de_hash": "607dfe540773517e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:54.918253+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:54.918253+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1288
+      "en_bytes": 1205,
+      "de_bytes": 1288,
+      "change_reason": null
     },
     "interactions/animations/transition/rotate/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "cafb28b76e7d8d38",
       "de_hash": "6f431b63da7842e6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:55.000599+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:55.000599+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1190
+      "en_bytes": 1158,
+      "de_bytes": 1190,
+      "change_reason": null
     },
     "interactions/animations/transition/rotate/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "93085380cf5c1a2d",
       "de_hash": "f4fb03d9fe5a338f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:55.087882+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:55.087882+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1633
+      "en_bytes": 1593,
+      "de_bytes": 1633,
+      "change_reason": null
     },
     "interactions/animations/transition/rotate/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1d37d729ead8f833",
       "de_hash": "6eddf32d8bbebe12",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
+      "last_verified": "2026-11-05T11:46:55.179235+00:00",
+      "kind": [],
+      "note": "translated de->en (animations organization/transition)",
+      "history": [
+        {
+          "at": "2026-11-05T11:46:55.179235+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 927
+      "en_bytes": 920,
+      "de_bytes": 927,
+      "change_reason": null
     },
     "interactions/gestures/combined/drag-and-drop/appearance.md": {
       "status": "VERIFIED",
@@ -12206,7 +12286,7 @@
     },
     "programs/apps/calendar/index.md": {
       "status": "PENDING",
-      "en_hash": "b5cc4d72937af13e",
+      "en_hash": "39501e45ab2408ed",
       "de_hash": "220b76f074556af6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12224,13 +12304,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3708,
+      "en_bytes": 3728,
       "de_bytes": 3835,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/index.md": {
       "status": "PENDING",
-      "en_hash": "e87b31878aee8a95",
+      "en_hash": "0a91db375703f9ee",
       "de_hash": "3778259ffd1b4181",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12248,13 +12328,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3441,
+      "en_bytes": 3461,
       "de_bytes": 3611,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/index.md": {
       "status": "PENDING",
-      "en_hash": "18666895e996366e",
+      "en_hash": "219b25c71305c50c",
       "de_hash": "2e28cff4535281c9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12272,13 +12352,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2847,
+      "en_bytes": 2887,
       "de_bytes": 2917,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/index.md": {
       "status": "PENDING",
-      "en_hash": "22dd93ea726f221f",
+      "en_hash": "29ab4772deafd3a2",
       "de_hash": "dd43b873572f6a25",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12296,13 +12376,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3461,
+      "en_bytes": 3481,
       "de_bytes": 3616,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/index.md": {
       "status": "PENDING",
-      "en_hash": "27fefe72e7d5b3da",
+      "en_hash": "31c260d0a7b508f5",
       "de_hash": "ff7cb4f75fbfe9d0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12320,17 +12400,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3271,
+      "en_bytes": 3291,
       "de_bytes": 3430,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/standpunkte.md": {
-      "status": "VERIFIED",
-      "en_hash": "63e9f7f78292e110",
+      "status": "PENDING",
+      "en_hash": "650bed5add0003d4",
       "de_hash": "190180d2860f28a2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T07:28:51.902607+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "link retarget after data/ renames (ADR 0002)",
       "history": [
         {
@@ -12344,15 +12426,19 @@
         {
           "at": "2026-11-05T07:28:51.902607+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2211,
+      "en_bytes": 2223,
       "de_bytes": 2178,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/index.md": {
       "status": "PENDING",
-      "en_hash": "6d7da000b72577ae",
+      "en_hash": "0f628af51951ae9f",
       "de_hash": "2a84eb0c517c1bb3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12370,7 +12456,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3751,
+      "en_bytes": 3771,
       "de_bytes": 3952,
       "change_reason": "hash changed since verification"
     },
@@ -12394,7 +12480,7 @@
     },
     "programs/apps/projectmanagement/index.md": {
       "status": "PENDING",
-      "en_hash": "be4d14a11370fed7",
+      "en_hash": "7b411eea555bc6ad",
       "de_hash": "69aec859a01ea416",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12412,13 +12498,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3688,
+      "en_bytes": 3708,
       "de_bytes": 3891,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/index.md": {
       "status": "PENDING",
-      "en_hash": "d337881923c45e0a",
+      "en_hash": "90c842f2a0669944",
       "de_hash": "fbd3436c94114232",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12436,13 +12522,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3391,
+      "en_bytes": 3431,
       "de_bytes": 3461,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/index.md": {
       "status": "PENDING",
-      "en_hash": "10353355a82bf890",
+      "en_hash": "cd9ffc87a84076c7",
       "de_hash": "9f70c21657f69e3d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12460,7 +12546,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3340,
+      "en_bytes": 3360,
       "de_bytes": 3562,
       "change_reason": "hash changed since verification"
     },
@@ -12512,7 +12598,7 @@
     },
     "programs/platform/desktop/index.md": {
       "status": "PENDING",
-      "en_hash": "d71a4cce561c03bc",
+      "en_hash": "0db1d24fc3889014",
       "de_hash": "91087d1078a3b61e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12530,13 +12616,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 4047,
+      "en_bytes": 4059,
       "de_bytes": 4235,
       "change_reason": "hash changed since verification"
     },
     "programs/suites/crm/index.md": {
       "status": "PENDING",
-      "en_hash": "b2d5b403e25a26d0",
+      "en_hash": "1c6a88e5ea6a1feb",
       "de_hash": "10598f39a8cc12e0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12554,13 +12640,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3531,
+      "en_bytes": 3551,
       "de_bytes": 3691,
       "change_reason": "hash changed since verification"
     },
     "programs/suites/democracy/index.md": {
       "status": "PENDING",
-      "en_hash": "179404f33339841a",
+      "en_hash": "9a542cecb0dcd0a9",
       "de_hash": "d46b95472d7865a1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12578,13 +12664,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3359,
+      "en_bytes": 3379,
       "de_bytes": 3560,
       "change_reason": "hash changed since verification"
     },
     "programs/suites/erp/index.md": {
       "status": "PENDING",
-      "en_hash": "2c161f26ba46eaa5",
+      "en_hash": "89f7be8cb5605a45",
       "de_hash": "656750b93143fff6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12602,7 +12688,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3321,
+      "en_bytes": 3341,
       "de_bytes": 3469,
       "change_reason": "hash changed since verification"
     },
@@ -12622,7 +12708,7 @@
     },
     "programs/suites/workflows/index.md": {
       "status": "PENDING",
-      "en_hash": "e654db49b02cdf3d",
+      "en_hash": "dcce4e03467542b0",
       "de_hash": "652dc5ebb4f6fc96",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12640,7 +12726,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3324,
+      "en_bytes": 3344,
       "de_bytes": 3651,
       "change_reason": "hash changed since verification"
     },
@@ -12681,40 +12767,52 @@
       "change_reason": null
     },
     "data/conventions.md": {
-      "status": "VERIFIED",
-      "en_hash": "030c33d37a36a3a2",
+      "status": "PENDING",
+      "en_hash": "7ab7650788f34fd9",
       "de_hash": "c9a3a3e747033ea5",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": "2026-11-05T10:04:40.847304+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "translated de->en",
       "history": [
         {
           "at": "2026-11-05T10:04:40.847304+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 8260,
+      "en_bytes": 8266,
       "de_bytes": 8524,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "data/fields.md": {
-      "status": "VERIFIED",
-      "en_hash": "feca962afff3dec9",
+      "status": "PENDING",
+      "en_hash": "de33f02326796e36",
       "de_hash": "63f5eb5c8fbfce27",
       "first_seen": "2026-11-05T07:28:06.907199+00:00",
-      "last_verified": "2026-11-05T10:04:41.075703+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "translated de->en",
       "history": [
         {
           "at": "2026-11-05T10:04:41.075703+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 10246,
+      "en_bytes": 10247,
       "de_bytes": 10238,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "data/formats.md": {
       "status": "VERIFIED",
@@ -12794,7 +12892,7 @@
     },
     "programs/apps/calendar/frontends/davical/index.md": {
       "status": "PENDING",
-      "en_hash": "b0bccf4e6cbcbe75",
+      "en_hash": "74cb513184522aef",
       "de_hash": "2a4f10f46e1780fe",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12816,7 +12914,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2812,
+      "en_bytes": 2805,
       "de_bytes": 2818,
       "change_reason": "hash changed since verification"
     },
@@ -12910,7 +13008,7 @@
     },
     "programs/apps/calendar/frontends/davical/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "9f36b82c2e7df38c",
+      "en_hash": "6eb32fda2c8bad06",
       "de_hash": "ac3d42030f5c2cc5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12940,13 +13038,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 7948,
+      "en_bytes": 7956,
       "de_bytes": 8002,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/calendar/frontends/google-calendar/index.md": {
       "status": "PENDING",
-      "en_hash": "7ffe8017c21fd43c",
+      "en_hash": "4ec578293e5d2ddf",
       "de_hash": "f3de1b18fc2bea3b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -12968,17 +13066,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 8499,
+      "en_bytes": 8501,
       "de_bytes": 8757,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/calendar/frontends/google-calendar/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "617602da8200c838",
+      "status": "PENDING",
+      "en_hash": "a1f5b3a9659d04e5",
       "de_hash": "fff8135031336005",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -12988,11 +13088,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/calendar/masks/google-calendar/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 5341,
+      "en_bytes": 5345,
       "de_bytes": 5536,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/calendar/frontends/google-calendar/latest/features.md": {
       "status": "VERIFIED",
@@ -13118,7 +13222,7 @@
     },
     "programs/apps/calendar/frontends/merkuro/index.md": {
       "status": "PENDING",
-      "en_hash": "7f1a353d0d0915c5",
+      "en_hash": "b3b73ea34a7adf44",
       "de_hash": "bea9fe437241bb0c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13140,7 +13244,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3822,
+      "en_bytes": 3820,
       "de_bytes": 3886,
       "change_reason": "hash changed since verification"
     },
@@ -13252,7 +13356,7 @@
     },
     "programs/apps/calendar/frontends/merkuro/latest/shortcuts.md": {
       "status": "PENDING",
-      "en_hash": "14fb2bd83ca38f06",
+      "en_hash": "2280f03a1500e0c0",
       "de_hash": "df7cc90b7dbe8339",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13274,7 +13378,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2822,
+      "en_bytes": 2819,
       "de_bytes": 2886,
       "change_reason": "hash changed since verification"
     },
@@ -13308,7 +13412,7 @@
     },
     "programs/apps/calendar/frontends/nextcloud-calendar/index.md": {
       "status": "PENDING",
-      "en_hash": "298ff8352e1f8f97",
+      "en_hash": "12359ec0bb3d43c2",
       "de_hash": "78532c877bfbd61b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13330,7 +13434,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3799,
+      "en_bytes": 3797,
       "de_bytes": 3854,
       "change_reason": "hash changed since verification"
     },
@@ -13498,7 +13602,7 @@
     },
     "programs/apps/calendar/frontends/outlook-calendar/index.md": {
       "status": "PENDING",
-      "en_hash": "5e5a3bbe6570adbd",
+      "en_hash": "8d00aa82b9138b66",
       "de_hash": "9343adf8b528194a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13520,7 +13624,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 6070,
+      "en_bytes": 6072,
       "de_bytes": 6087,
       "change_reason": "hash changed since verification"
     },
@@ -13688,7 +13792,7 @@
     },
     "programs/apps/calendar/frontends/planner/index.md": {
       "status": "PENDING",
-      "en_hash": "07e68c9664eba0a8",
+      "en_hash": "a4fc2ee851f80218",
       "de_hash": "96d1f511a21f6d0c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13710,7 +13814,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 5145,
+      "en_bytes": 5143,
       "de_bytes": 5273,
       "change_reason": "hash changed since verification"
     },
@@ -13826,7 +13930,7 @@
     },
     "programs/apps/calendar/frontends/planner/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "a323feba61b40341",
+      "en_hash": "9327c9a9ee6868d9",
       "de_hash": "8c039d8f46395ede",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13856,13 +13960,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 8733,
+      "en_bytes": 8745,
       "de_bytes": 8988,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "864339fe2aed9e4b",
+      "en_hash": "f851cd64ee93d4be",
       "de_hash": "8e6d1e324291556a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13884,13 +13988,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2407,
+      "en_bytes": 2431,
       "de_bytes": 2532,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/gnome-contacts/index.md": {
       "status": "PENDING",
-      "en_hash": "a0fddc346b9bad36",
+      "en_hash": "1001f2fa85e8c71c",
       "de_hash": "69c7d188197e5e6b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13912,13 +14016,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 861,
+      "en_bytes": 859,
       "de_bytes": 868,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/gnome-contacts/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "9cc84ee2654cff90",
+      "en_hash": "cb7ba26078819ed0",
       "de_hash": "cf03ad136506813f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -13948,17 +14052,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1763,
+      "en_bytes": 1771,
       "de_bytes": 1836,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/gnome-contacts/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "a76ca61bfc8ffa32",
+      "status": "PENDING",
+      "en_hash": "ae0ac8a75a70b581",
       "de_hash": "e9d57d24720a383a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -13968,11 +14074,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/contact/masks/gnome-contacts/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1720,
+      "en_bytes": 1724,
       "de_bytes": 1710,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/gnome-contacts/latest/features.md": {
       "status": "VERIFIED",
@@ -14064,7 +14174,7 @@
     },
     "programs/apps/contact/frontends/kaddressbook/index.md": {
       "status": "PENDING",
-      "en_hash": "c4f295dd11978b30",
+      "en_hash": "644bd261eb863753",
       "de_hash": "b7ff39bf76d42e57",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14086,13 +14196,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 854,
+      "en_bytes": 852,
       "de_bytes": 859,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/kaddressbook/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "e907ea3a0068d035",
+      "en_hash": "0744be6d1e590d9b",
       "de_hash": "6bd34fe37c685626",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14122,17 +14232,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2124,
+      "en_bytes": 2136,
       "de_bytes": 2209,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/kaddressbook/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "ae376d7a4b8a8dd1",
+      "status": "PENDING",
+      "en_hash": "52caf11c8b5c7dea",
       "de_hash": "3c3e708672f06411",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -14142,11 +14254,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/contact/masks/kaddressbook/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1723,
+      "en_bytes": 1727,
       "de_bytes": 1743,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/kaddressbook/latest/features.md": {
       "status": "VERIFIED",
@@ -14238,7 +14354,7 @@
     },
     "programs/apps/contact/frontends/monica/index.md": {
       "status": "PENDING",
-      "en_hash": "e5b8b0e4b545b6af",
+      "en_hash": "b41bd6c1d1ec1d91",
       "de_hash": "68c8d7991e10f526",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14260,13 +14376,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 837,
+      "en_bytes": 839,
       "de_bytes": 860,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/monica/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "065eeb42dc8acd53",
+      "en_hash": "4fe79419bbb713a1",
       "de_hash": "5eb476c9e10c9e65",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14296,7 +14412,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2380,
+      "en_bytes": 2384,
       "de_bytes": 2456,
       "change_reason": "hash changed since verification"
     },
@@ -14412,7 +14528,7 @@
     },
     "programs/apps/contact/frontends/nextcloud-contacts/index.md": {
       "status": "PENDING",
-      "en_hash": "57779c2a63aaa475",
+      "en_hash": "3301f9d9cbc29596",
       "de_hash": "50f035da690bd8ae",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14434,7 +14550,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 857,
+      "en_bytes": 855,
       "de_bytes": 858,
       "change_reason": "hash changed since verification"
     },
@@ -14462,7 +14578,7 @@
     },
     "programs/apps/contact/frontends/nextcloud-contacts/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "4279ed5addcc9de3",
+      "en_hash": "224c4c9300911dae",
       "de_hash": "b3722ebe42be3def",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14492,7 +14608,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2688,
+      "en_bytes": 2696,
       "de_bytes": 2718,
       "change_reason": "hash changed since verification"
     },
@@ -14519,12 +14635,14 @@
       "change_reason": null
     },
     "programs/apps/contact/frontends/nextcloud-contacts/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "45f59aff615759b3",
+      "status": "PENDING",
+      "en_hash": "5ba673cb28a8b897",
       "de_hash": "0ab6b42830fc3d75",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -14534,11 +14652,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/contact/masks/nextcloud-contacts/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1705,
+      "en_bytes": 1709,
       "de_bytes": 1754,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/frontends/nextcloud-contacts/latest/menus.md": {
       "status": "VERIFIED",
@@ -14586,7 +14708,7 @@
     },
     "programs/apps/helpdesk/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "aac33c63ecfbdcca",
+      "en_hash": "14767edc451b84d3",
       "de_hash": "50218d527fc9f894",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14608,13 +14730,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2839,
+      "en_bytes": 2863,
       "de_bytes": 2964,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/freshdesk/index.md": {
       "status": "PENDING",
-      "en_hash": "e4917b2053a69fe2",
+      "en_hash": "6e9c1345c9c6d564",
       "de_hash": "14b02980bc651291",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14636,17 +14758,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 719,
+      "en_bytes": 717,
       "de_bytes": 721,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/freshdesk/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "174c616a31a1261a",
+      "status": "PENDING",
+      "en_hash": "51b00d173756d4ad",
       "de_hash": "c9b8964f3e8b6443",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -14656,11 +14780,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/freshdesk/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1327,
+      "en_bytes": 1331,
       "de_bytes": 1339,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/freshdesk/latest/features.md": {
       "status": "VERIFIED",
@@ -14752,7 +14880,7 @@
     },
     "programs/apps/helpdesk/frontends/freshdesk/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "1d79a66e3e93c29d",
+      "en_hash": "fad0dcf11e6c36fe",
       "de_hash": "4c87eb0cd3c2ab0c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14782,13 +14910,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2463,
+      "en_bytes": 2467,
       "de_bytes": 2510,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/glpi/index.md": {
       "status": "PENDING",
-      "en_hash": "51ecf5744a715012",
+      "en_hash": "011fe3dd89fa3f68",
       "de_hash": "e164bc43faebf483",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14810,17 +14938,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 890,
+      "en_bytes": 888,
       "de_bytes": 902,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/glpi/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "86bac86989aa8dd6",
+      "status": "PENDING",
+      "en_hash": "a53b22bf2d63d367",
       "de_hash": "c1edd4aeb817198a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -14830,11 +14960,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/glpi/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1516,
+      "en_bytes": 1520,
       "de_bytes": 1539,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/glpi/latest/features.md": {
       "status": "VERIFIED",
@@ -14926,7 +15060,7 @@
     },
     "programs/apps/helpdesk/frontends/glpi/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "0a5cae4d4e707f03",
+      "en_hash": "f3e2229b6cd5b062",
       "de_hash": "d0c3bf671f67c989",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14956,13 +15090,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2513,
+      "en_bytes": 2521,
       "de_bytes": 2543,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helodesk/index.md": {
       "status": "PENDING",
-      "en_hash": "7578bb5b4dc6c28e",
+      "en_hash": "2978760a2b473016",
       "de_hash": "977996f505df7abd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -14984,17 +15118,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 886,
+      "en_bytes": 888,
       "de_bytes": 906,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helodesk/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "9f6b4ce7c895e069",
+      "status": "PENDING",
+      "en_hash": "bc4e91b687738d07",
       "de_hash": "6b58428d203796e8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15004,11 +15140,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/helodesk/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1509,
+      "en_bytes": 1513,
       "de_bytes": 1535,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helodesk/latest/features.md": {
       "status": "VERIFIED",
@@ -15077,12 +15217,14 @@
       "change_reason": null
     },
     "programs/apps/helpdesk/frontends/helodesk/latest/layout.md": {
-      "status": "VERIFIED",
-      "en_hash": "70dc01a558598705",
+      "status": "PENDING",
+      "en_hash": "abbbb62252ad4adf",
       "de_hash": "c2da4550f8645eeb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15092,15 +15234,19 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/helodesk/structure.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2391,
+      "en_bytes": 2395,
       "de_bytes": 2348,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helodesk/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "48e43abb553f7674",
+      "en_hash": "f3109a81e5d46bef",
       "de_hash": "0c32cfe68bd0e1c8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15130,13 +15276,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2518,
+      "en_bytes": 2526,
       "de_bytes": 2599,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helpscout/index.md": {
       "status": "PENDING",
-      "en_hash": "04769ed31582cddd",
+      "en_hash": "195d309988e0bdea",
       "de_hash": "027a24fa7dad1015",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15158,17 +15304,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 745,
+      "en_bytes": 743,
       "de_bytes": 757,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helpscout/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "df7386b245633a25",
+      "status": "PENDING",
+      "en_hash": "24c971347af25742",
       "de_hash": "649ebdf6f3036e93",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15178,11 +15326,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/helpscout/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1249,
+      "en_bytes": 1253,
       "de_bytes": 1282,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/helpscout/latest/features.md": {
       "status": "VERIFIED",
@@ -15274,7 +15426,7 @@
     },
     "programs/apps/helpdesk/frontends/helpscout/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "ba4686e179bcf449",
+      "en_hash": "7466532855b0d515",
       "de_hash": "51c31def19ed6481",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15304,13 +15456,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2138,
+      "en_bytes": 2142,
       "de_bytes": 2168,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/osticket/index.md": {
       "status": "PENDING",
-      "en_hash": "d1ad5e5a7c3e0d69",
+      "en_hash": "ac082d6ed47911cb",
       "de_hash": "276af20ec2cb0401",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15332,17 +15484,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 779,
+      "en_bytes": 777,
       "de_bytes": 808,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/osticket/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "70b940c56d98f80d",
+      "status": "PENDING",
+      "en_hash": "9aae5a8628944f9c",
       "de_hash": "65dccc54c6ff4ce1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15352,11 +15506,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/osticket/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1399,
+      "en_bytes": 1403,
       "de_bytes": 1410,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/osticket/latest/features.md": {
       "status": "VERIFIED",
@@ -15448,7 +15606,7 @@
     },
     "programs/apps/helpdesk/frontends/osticket/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "ec3f1e066b3c8a71",
+      "en_hash": "472a6fa309f2d4f3",
       "de_hash": "bb15500288cef4de",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15478,13 +15636,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2378,
+      "en_bytes": 2382,
       "de_bytes": 2424,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/request-tracker/index.md": {
       "status": "PENDING",
-      "en_hash": "214c6324b6aa1def",
+      "en_hash": "aa01373b019980a1",
       "de_hash": "d33c0dafce5158d1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15506,17 +15664,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 820,
+      "en_bytes": 818,
       "de_bytes": 812,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/request-tracker/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "e12f30109878d7f9",
+      "status": "PENDING",
+      "en_hash": "67b87f5aae0e7955",
       "de_hash": "ddb3c5bf4e74d944",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15526,11 +15686,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/request-tracker/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1505,
+      "en_bytes": 1509,
       "de_bytes": 1531,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/request-tracker/latest/features.md": {
       "status": "VERIFIED",
@@ -15622,7 +15786,7 @@
     },
     "programs/apps/helpdesk/frontends/request-tracker/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "1115c694d79f513f",
+      "en_hash": "b908993ec73918b6",
       "de_hash": "f17b70687c2ec99a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15652,13 +15816,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2609,
+      "en_bytes": 2613,
       "de_bytes": 2634,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/zammad/index.md": {
       "status": "PENDING",
-      "en_hash": "97b78be6f3feef6a",
+      "en_hash": "19dddb96e9bbe515",
       "de_hash": "46fa8e3d239d8ff1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15680,17 +15844,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 869,
+      "en_bytes": 867,
       "de_bytes": 899,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/zammad/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "fa9492f0532f13f2",
+      "status": "PENDING",
+      "en_hash": "e3d8f6e85f426bbb",
       "de_hash": "7542be24a20a10ee",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15700,11 +15866,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/zammad/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1758,
+      "en_bytes": 1762,
       "de_bytes": 1787,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/zammad/latest/features.md": {
       "status": "VERIFIED",
@@ -15796,7 +15966,7 @@
     },
     "programs/apps/helpdesk/frontends/zammad/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "3da9d5d2246565c5",
+      "en_hash": "aaa96c109a17c485",
       "de_hash": "01b4dbbe5ab1f3b3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15826,13 +15996,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2967,
+      "en_bytes": 2971,
       "de_bytes": 2987,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/zendesk/index.md": {
       "status": "PENDING",
-      "en_hash": "d4befaccd30cc1b9",
+      "en_hash": "8ce5f5dc506f92d8",
       "de_hash": "342318d6cddb5beb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -15854,17 +16024,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 772,
+      "en_bytes": 774,
       "de_bytes": 778,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/zendesk/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "85b6f34d03a6164d",
+      "status": "PENDING",
+      "en_hash": "ed624ea143b75292",
       "de_hash": "0eb18976167dcc98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -15874,11 +16046,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/helpdesk/masks/zendesk/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1436,
+      "en_bytes": 1440,
       "de_bytes": 1449,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/frontends/zendesk/latest/features.md": {
       "status": "VERIFIED",
@@ -15970,7 +16146,7 @@
     },
     "programs/apps/helpdesk/frontends/zendesk/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "4c8a01d01d01df65",
+      "en_hash": "2a1dcd4709ee9d5e",
       "de_hash": "040ca2023c9d667a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16000,13 +16176,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3118,
+      "en_bytes": 3122,
       "de_bytes": 3171,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "91d63919db727195",
+      "en_hash": "2a24b67ebffbe3e7",
       "de_hash": "4e0f60266b276268",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16028,13 +16204,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2695,
+      "en_bytes": 2719,
       "de_bytes": 2820,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/leaflet/index.md": {
       "status": "PENDING",
-      "en_hash": "5de64f9fbb412565",
+      "en_hash": "a555011414cdfeca",
       "de_hash": "115934ebc80befad",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16056,7 +16232,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 755,
+      "en_bytes": 753,
       "de_bytes": 775,
       "change_reason": "hash changed since verification"
     },
@@ -16089,12 +16265,14 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/leaflet/latest/features.md": {
-      "status": "VERIFIED",
-      "en_hash": "1b32a3ad7dda1852",
+      "status": "PENDING",
+      "en_hash": "1efae0915eaae881",
       "de_hash": "961eefd55e0dc203",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -16104,11 +16282,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/maps/masks/leaflet/features.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1088,
+      "en_bytes": 1092,
       "de_bytes": 1065,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/leaflet/latest/menus.md": {
       "status": "VERIFIED",
@@ -16178,7 +16360,7 @@
     },
     "programs/apps/maps/frontends/leaflet/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "dfe6615077067bf0",
+      "en_hash": "34fbe8fad1d2c47d",
       "de_hash": "ef0c65ec783594e7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16200,13 +16382,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1851,
+      "en_bytes": 1859,
       "de_bytes": 1871,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/maplibre/index.md": {
       "status": "PENDING",
-      "en_hash": "4e22e19bfa10478e",
+      "en_hash": "503a707b9d56bd38",
       "de_hash": "eb96620864d7c8ef",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16228,17 +16410,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 910,
+      "en_bytes": 908,
       "de_bytes": 920,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/maplibre/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "36d9b6a819d90d28",
+      "status": "PENDING",
+      "en_hash": "97022e3597d5000a",
       "de_hash": "bb19af01091d7609",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -16248,11 +16432,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/maps/masks/maplibre/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1115,
+      "en_bytes": 1119,
       "de_bytes": 1109,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/maplibre/latest/features.md": {
       "status": "VERIFIED",
@@ -16343,12 +16531,14 @@
       "change_reason": null
     },
     "programs/apps/maps/frontends/maplibre/latest/api.md": {
-      "status": "VERIFIED",
-      "en_hash": "5d17dcca133b0fb9",
+      "status": "PENDING",
+      "en_hash": "a4e586de1ef78a5f",
       "de_hash": "f483d1ec3f4d9b31",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T03:49:54.524649+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "translated de->en / code labels englished (ADR 0002)",
       "history": [
         {
@@ -16358,15 +16548,19 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/maps/masks/maplibre/api.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2004,
+      "en_bytes": 2008,
       "de_bytes": 2030,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/openstreetmap/index.md": {
       "status": "PENDING",
-      "en_hash": "0551e419ee5caae4",
+      "en_hash": "619950d5dcb0bd86",
       "de_hash": "6e627f147b6627cd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16388,13 +16582,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 878,
+      "en_bytes": 876,
       "de_bytes": 889,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/openstreetmap/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "5b79aac86bbdc064",
+      "en_hash": "3e10ddddfee5bc26",
       "de_hash": "3251cb704e0253d0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16416,7 +16610,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1189,
+      "en_bytes": 1193,
       "de_bytes": 1207,
       "change_reason": "hash changed since verification"
     },
@@ -16487,12 +16681,14 @@
       "change_reason": null
     },
     "programs/apps/maps/frontends/openstreetmap/latest/layout.md": {
-      "status": "VERIFIED",
-      "en_hash": "331eb0c8d7be6bef",
+      "status": "PENDING",
+      "en_hash": "ce17f85f5f84dfb5",
       "de_hash": "85f5432ee722453f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -16502,15 +16698,19 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/maps/masks/openstreetmap/structure.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2178,
+      "en_bytes": 2182,
       "de_bytes": 2218,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/openstreetmap/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "b7d43126516d0f9a",
+      "en_hash": "3c59ac270ebb8124",
       "de_hash": "52f91ad4dc232ca0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16532,13 +16732,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2407,
+      "en_bytes": 2427,
       "de_bytes": 2446,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/organic-maps/index.md": {
       "status": "PENDING",
-      "en_hash": "836bcfe06318786b",
+      "en_hash": "96940cc4d09918f6",
       "de_hash": "e73297c523459abf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16560,7 +16760,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 776,
+      "en_bytes": 774,
       "de_bytes": 779,
       "change_reason": "hash changed since verification"
     },
@@ -16682,7 +16882,7 @@
     },
     "programs/apps/maps/frontends/organic-maps/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "c1e835b6ea80ed5d",
+      "en_hash": "0a410ca7232fa999",
       "de_hash": "ea536f87083aaa09",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16704,13 +16904,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1114,
+      "en_bytes": 1118,
       "de_bytes": 1122,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/osmand/index.md": {
       "status": "PENDING",
-      "en_hash": "8b8c2360ab298ad6",
+      "en_hash": "c42b84d3b98df930",
       "de_hash": "edd1604211c8bef9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16732,7 +16932,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 879,
+      "en_bytes": 877,
       "de_bytes": 896,
       "change_reason": "hash changed since verification"
     },
@@ -16765,12 +16965,14 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/osmand/latest/features.md": {
-      "status": "VERIFIED",
-      "en_hash": "e1ab4fdbd6e2d112",
+      "status": "PENDING",
+      "en_hash": "fb4ce60e5f3a45bc",
       "de_hash": "8780e269fed8fd0f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -16780,11 +16982,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/maps/masks/osmand/features.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1283,
+      "en_bytes": 1287,
       "de_bytes": 1298,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/osmand/latest/menus.md": {
       "status": "VERIFIED",
@@ -16854,7 +17060,7 @@
     },
     "programs/apps/maps/frontends/osmand/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "4aefe5eba2d09777",
+      "en_hash": "e6f2ee9d7402ff39",
       "de_hash": "38057cad25af3804",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16876,13 +17082,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1785,
+      "en_bytes": 1797,
       "de_bytes": 1775,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/qgis/index.md": {
       "status": "PENDING",
-      "en_hash": "3f5b526739e6bd0f",
+      "en_hash": "8506dee90664aa97",
       "de_hash": "70f1cd634c77cf57",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -16904,7 +17110,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 796,
+      "en_bytes": 794,
       "de_bytes": 810,
       "change_reason": "hash changed since verification"
     },
@@ -17026,7 +17232,7 @@
     },
     "programs/apps/maps/frontends/qgis/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "5949ef74a7240e8a",
+      "en_hash": "5eaf4e0167d9292a",
       "de_hash": "d10ff7752af4abd3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17048,13 +17254,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1920,
+      "en_bytes": 1928,
       "de_bytes": 1913,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/umap/index.md": {
       "status": "PENDING",
-      "en_hash": "ff8ef573799a8c20",
+      "en_hash": "f8069262e6251d89",
       "de_hash": "52bb2e14a9cc61ee",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17076,7 +17282,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 787,
+      "en_bytes": 785,
       "de_bytes": 817,
       "change_reason": "hash changed since verification"
     },
@@ -17109,12 +17315,14 @@
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/umap/latest/features.md": {
-      "status": "VERIFIED",
-      "en_hash": "39f9d0b4430ad6ee",
+      "status": "PENDING",
+      "en_hash": "c2883121bf641c3b",
       "de_hash": "e00a9c10d8629848",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -17124,11 +17332,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/maps/masks/umap/features.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1075,
+      "en_bytes": 1079,
       "de_bytes": 1121,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/frontends/umap/latest/menus.md": {
       "status": "VERIFIED",
@@ -17198,7 +17410,7 @@
     },
     "programs/apps/maps/frontends/umap/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "6f9b2c57bbfbcab5",
+      "en_hash": "f30a3018efc8672a",
       "de_hash": "8ab5d2751e2b40d8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17220,13 +17432,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1819,
+      "en_bytes": 1835,
       "de_bytes": 1847,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "6dd6c2a1f430af24",
+      "en_hash": "32582be5aba53571",
       "de_hash": "1d98d99050817a58",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17248,13 +17460,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2605,
+      "en_bytes": 2629,
       "de_bytes": 2730,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/google-analytics/index.md": {
       "status": "PENDING",
-      "en_hash": "18a911179806814d",
+      "en_hash": "b6ee5911372937f3",
       "de_hash": "149dbbf842117237",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17276,17 +17488,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 800,
+      "en_bytes": 798,
       "de_bytes": 792,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/google-analytics/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "05542fb6d22a69dc",
+      "status": "PENDING",
+      "en_hash": "71a46476fc21862e",
       "de_hash": "7ea75f4debd5f877",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -17296,11 +17510,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/marketing/masks/google-analytics/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1108,
+      "en_bytes": 1120,
       "de_bytes": 1106,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/google-analytics/latest/features.md": {
       "status": "VERIFIED",
@@ -17392,7 +17610,7 @@
     },
     "programs/apps/marketing/frontends/google-analytics/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "746dd0086f10763e",
+      "en_hash": "d11ff1c7a0330b41",
       "de_hash": "e3be39eed18afc5a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17422,13 +17640,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2209,
+      "en_bytes": 2217,
       "de_bytes": 2218,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/hotjar/index.md": {
       "status": "PENDING",
-      "en_hash": "c0d3397824fc6bc7",
+      "en_hash": "f448a0209da2cf95",
       "de_hash": "7c3e5ffe027bf4b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17450,17 +17668,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 781,
+      "en_bytes": 779,
       "de_bytes": 780,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/hotjar/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "a5dbecefa94c1575",
+      "status": "PENDING",
+      "en_hash": "622642eb2e224f16",
       "de_hash": "5f2b12f9087e0141",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -17470,11 +17690,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/marketing/masks/hotjar/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1087,
+      "en_bytes": 1091,
       "de_bytes": 1085,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/hotjar/latest/features.md": {
       "status": "VERIFIED",
@@ -17565,12 +17789,14 @@
       "change_reason": null
     },
     "programs/apps/marketing/frontends/hotjar/latest/api.md": {
-      "status": "VERIFIED",
-      "en_hash": "f6e2eb4ff9a676db",
+      "status": "PENDING",
+      "en_hash": "09bc254e23ada978",
       "de_hash": "57a95689cf3cb8e4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -17580,15 +17806,19 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/marketing/masks/hotjar/api.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1766,
+      "en_bytes": 1778,
       "de_bytes": 1766,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mailchimp/index.md": {
       "status": "PENDING",
-      "en_hash": "67e0b24c3ef33198",
+      "en_hash": "58b08e578681837f",
       "de_hash": "553b69bd518297e7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17610,13 +17840,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 735,
+      "en_bytes": 733,
       "de_bytes": 746,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mailchimp/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "cb2cba5b27a1e781",
+      "en_hash": "b32ef7ec0b9ca6c0",
       "de_hash": "8278ff490657ab6b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17646,7 +17876,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1200,
+      "en_bytes": 1204,
       "de_bytes": 1182,
       "change_reason": "hash changed since verification"
     },
@@ -17740,7 +17970,7 @@
     },
     "programs/apps/marketing/frontends/mailchimp/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "c7ae05fff56cd607",
+      "en_hash": "61ec31f40d68bd88",
       "de_hash": "ebbd17d1976c6140",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17770,13 +18000,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2302,
+      "en_bytes": 2306,
       "de_bytes": 2296,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/matomo/index.md": {
       "status": "PENDING",
-      "en_hash": "32d5909205d77813",
+      "en_hash": "55e308e711936148",
       "de_hash": "8c48baa8e124c1e6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17798,13 +18028,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 791,
+      "en_bytes": 789,
       "de_bytes": 779,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/matomo/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "f75550fb31443320",
+      "en_hash": "42c61468a7393532",
       "de_hash": "0dd556b82529a4a4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17834,7 +18064,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1310,
+      "en_bytes": 1318,
       "de_bytes": 1287,
       "change_reason": "hash changed since verification"
     },
@@ -17928,7 +18158,7 @@
     },
     "programs/apps/marketing/frontends/matomo/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "1791a91bd40e56c2",
+      "en_hash": "43489a7e7f00f95a",
       "de_hash": "b5fc1173eb85cad3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17958,13 +18188,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2172,
+      "en_bytes": 2176,
       "de_bytes": 2221,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mautic/index.md": {
       "status": "PENDING",
-      "en_hash": "c19864410f72f875",
+      "en_hash": "5fc18b150dbcb1ef",
       "de_hash": "45befe3b5496ab62",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -17986,13 +18216,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 794,
+      "en_bytes": 792,
       "de_bytes": 789,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mautic/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "0506c4e75a1b4bac",
+      "en_hash": "64c16932cf9d592b",
       "de_hash": "78a08d9d98434e04",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18022,17 +18252,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1229,
+      "en_bytes": 1237,
       "de_bytes": 1205,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mautic/latest/features.md": {
-      "status": "VERIFIED",
-      "en_hash": "4346cb2d97b93167",
+      "status": "PENDING",
+      "en_hash": "266d63ef39e80ed8",
       "de_hash": "727dd16a4b7953eb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -18042,19 +18274,25 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/marketing/masks/mautic/features.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1110,
+      "en_bytes": 1114,
       "de_bytes": 1124,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mautic/latest/menus.md": {
-      "status": "VERIFIED",
-      "en_hash": "560a91229834ecfc",
+      "status": "PENDING",
+      "en_hash": "74f7a980656b71c8",
       "de_hash": "b75c34d54ddd558c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:51.912323+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "read both sides, table-heavy page, translated",
       "history": [
         {
@@ -18064,11 +18302,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/marketing/masks/mautic/menu.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1042,
+      "en_bytes": 1046,
       "de_bytes": 1069,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/mautic/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -18116,7 +18358,7 @@
     },
     "programs/apps/marketing/frontends/mautic/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "ff7f1dcefb263719",
+      "en_hash": "8a2ea6c050c4ab73",
       "de_hash": "1325925313087fcf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18146,13 +18388,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2481,
+      "en_bytes": 2485,
       "de_bytes": 2515,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/plausible/index.md": {
       "status": "PENDING",
-      "en_hash": "61de78c301368fb8",
+      "en_hash": "987315427f82f31b",
       "de_hash": "67008ffacd91f196",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18174,17 +18416,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 728,
+      "en_bytes": 726,
       "de_bytes": 722,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/plausible/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "bc3bca945d831190",
+      "status": "PENDING",
+      "en_hash": "22884ae6919ef154",
       "de_hash": "b5fd1f0c5d164f97",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -18194,11 +18438,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/marketing/masks/plausible/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1096,
+      "en_bytes": 1104,
       "de_bytes": 1075,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/marketing/frontends/plausible/latest/features.md": {
       "status": "VERIFIED",
@@ -18290,7 +18538,7 @@
     },
     "programs/apps/marketing/frontends/plausible/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "9f420ef2a4ef492f",
+      "en_hash": "aa1fd71da2123930",
       "de_hash": "52c06a90237f810b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18320,17 +18568,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2099,
+      "en_bytes": 2103,
       "de_bytes": 2097,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "4570e148aa1a3844",
+      "status": "PENDING",
+      "en_hash": "c274cbbb1c8c0487",
       "de_hash": "6f82837932595cc6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T06:10:20.524108+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "translated de->en",
       "history": [
         {
@@ -18340,11 +18590,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/messenger/masks/index.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 4355,
+      "en_bytes": 4359,
       "de_bytes": 4559,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/discord/latest/description.md": {
       "status": "VERIFIED",
@@ -18436,7 +18690,7 @@
     },
     "programs/apps/messenger/frontends/discord/index.md": {
       "status": "PENDING",
-      "en_hash": "08eb97f6158ab610",
+      "en_hash": "8d1d6edd963c2843",
       "de_hash": "fa2636b2fc7ea4ae",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18458,7 +18712,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 553,
+      "en_bytes": 551,
       "de_bytes": 554,
       "change_reason": "hash changed since verification"
     },
@@ -18486,7 +18740,7 @@
     },
     "programs/apps/messenger/frontends/discord/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "18e62fb7aeb16baa",
+      "en_hash": "236ff1ec2a6c17d6",
       "de_hash": "ec4c964aafc4dfcd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18508,7 +18762,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 7208,
+      "en_bytes": 7206,
       "de_bytes": 7345,
       "change_reason": "hash changed since verification"
     },
@@ -18602,7 +18856,7 @@
     },
     "programs/apps/messenger/frontends/element/index.md": {
       "status": "PENDING",
-      "en_hash": "40883b4e25858fdf",
+      "en_hash": "05d5d0614cae1264",
       "de_hash": "d9c9a5b6bffc1e5c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18624,7 +18878,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 563,
+      "en_bytes": 561,
       "de_bytes": 564,
       "change_reason": "hash changed since verification"
     },
@@ -18652,7 +18906,7 @@
     },
     "programs/apps/messenger/frontends/element/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "2e080fb2ae24511e",
+      "en_hash": "788429b8d8bad7cb",
       "de_hash": "982f8764374e47b0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18674,7 +18928,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 7218,
+      "en_bytes": 7216,
       "de_bytes": 7342,
       "change_reason": "hash changed since verification"
     },
@@ -18768,7 +19022,7 @@
     },
     "programs/apps/messenger/frontends/kontact/index.md": {
       "status": "PENDING",
-      "en_hash": "3208b4cda3525340",
+      "en_hash": "a7dfe91c566550e6",
       "de_hash": "e31d84c69c7b4e0f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18790,7 +19044,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 572,
+      "en_bytes": 570,
       "de_bytes": 579,
       "change_reason": "hash changed since verification"
     },
@@ -18818,7 +19072,7 @@
     },
     "programs/apps/messenger/frontends/kontact/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "9b27d313d410fc39",
+      "en_hash": "d63e11a317323014",
       "de_hash": "91c5cdcfe49acdae",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18840,7 +19094,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 5719,
+      "en_bytes": 5717,
       "de_bytes": 5832,
       "change_reason": "hash changed since verification"
     },
@@ -18934,7 +19188,7 @@
     },
     "programs/apps/messenger/frontends/mastodon/index.md": {
       "status": "PENDING",
-      "en_hash": "c92f3cc3070bce77",
+      "en_hash": "b0f709dd7d209518",
       "de_hash": "abba132647f0ecd3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -18956,7 +19210,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 550,
+      "en_bytes": 548,
       "de_bytes": 549,
       "change_reason": "hash changed since verification"
     },
@@ -18984,7 +19238,7 @@
     },
     "programs/apps/messenger/frontends/mastodon/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "16575af73896999e",
+      "en_hash": "e9b60a73b588615e",
       "de_hash": "7cfe7c81474005f4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19006,7 +19260,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 7176,
+      "en_bytes": 7174,
       "de_bytes": 7267,
       "change_reason": "hash changed since verification"
     },
@@ -19078,7 +19332,7 @@
     },
     "programs/apps/messenger/frontends/outlook/index.md": {
       "status": "PENDING",
-      "en_hash": "e691e9a0b7bec272",
+      "en_hash": "ace36349bd1be83a",
       "de_hash": "c5286ed498cb6fe8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19100,7 +19354,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 513,
+      "en_bytes": 511,
       "de_bytes": 519,
       "change_reason": "hash changed since verification"
     },
@@ -19150,7 +19404,7 @@
     },
     "programs/apps/messenger/frontends/outlook/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "758eafd9a050cfbb",
+      "en_hash": "3e65151d4219f0d8",
       "de_hash": "78f69e2178cd067c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19172,7 +19426,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 6525,
+      "en_bytes": 6523,
       "de_bytes": 6575,
       "change_reason": "hash changed since verification"
     },
@@ -19266,7 +19520,7 @@
     },
     "programs/apps/messenger/frontends/telegram/index.md": {
       "status": "PENDING",
-      "en_hash": "a7c83ccf6f9f58e7",
+      "en_hash": "c2c76fd53e80adc3",
       "de_hash": "67f2bc4664bbed63",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19288,7 +19542,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 533,
+      "en_bytes": 531,
       "de_bytes": 558,
       "change_reason": "hash changed since verification"
     },
@@ -19316,7 +19570,7 @@
     },
     "programs/apps/messenger/frontends/telegram/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "5af54e9bcf74e00e",
+      "en_hash": "b0d2a52d2bf4be97",
       "de_hash": "f4857fa0fbd41d42",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19338,7 +19592,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 6954,
+      "en_bytes": 6952,
       "de_bytes": 7097,
       "change_reason": "hash changed since verification"
     },
@@ -19432,7 +19686,7 @@
     },
     "programs/apps/messenger/frontends/thunderbird/index.md": {
       "status": "PENDING",
-      "en_hash": "37be2fb3ff578319",
+      "en_hash": "4e244b554050502d",
       "de_hash": "fccad45c6c7f312c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19454,7 +19708,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 529,
+      "en_bytes": 527,
       "de_bytes": 540,
       "change_reason": "hash changed since verification"
     },
@@ -19482,7 +19736,7 @@
     },
     "programs/apps/messenger/frontends/thunderbird/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "5370c6910a660064",
+      "en_hash": "c549e21a9f342c09",
       "de_hash": "f3cb6a0acffaf20e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19504,13 +19758,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 6329,
+      "en_bytes": 6327,
       "de_bytes": 6593,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "0d21631f12be9b28",
+      "en_hash": "33c40a6f165be141",
       "de_hash": "e413b6b490dd2119",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19532,13 +19786,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2800,
+      "en_bytes": 2824,
       "de_bytes": 2925,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/asana/index.md": {
       "status": "PENDING",
-      "en_hash": "53769766808c8456",
+      "en_hash": "be6061d13b5fec55",
       "de_hash": "0db9f4c290d5ceb4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19560,13 +19814,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 783,
+      "en_bytes": 781,
       "de_bytes": 828,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/asana/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "3433418b7bc0de57",
+      "en_hash": "b35953428ecfed06",
       "de_hash": "c59a47cf2c8e4656",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19596,7 +19850,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1219,
+      "en_bytes": 1223,
       "de_bytes": 1235,
       "change_reason": "hash changed since verification"
     },
@@ -19690,7 +19944,7 @@
     },
     "programs/apps/projectmanagement/frontends/asana/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "f2255ec37a35f1c0",
+      "en_hash": "e77724defce780b2",
       "de_hash": "feaca253513d08c9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19724,13 +19978,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2393,
+      "en_bytes": 2397,
       "de_bytes": 2412,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/jira/index.md": {
       "status": "PENDING",
-      "en_hash": "43cbc8981f85e9dc",
+      "en_hash": "9ea459e486fdc1b9",
       "de_hash": "4f62ebddca1eed0d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19752,13 +20006,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 768,
+      "en_bytes": 766,
       "de_bytes": 773,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/jira/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "6948a446f800391e",
+      "en_hash": "a94b07dd7cd190fe",
       "de_hash": "48225947fb506dcc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19788,7 +20042,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1321,
+      "en_bytes": 1325,
       "de_bytes": 1327,
       "change_reason": "hash changed since verification"
     },
@@ -19882,7 +20136,7 @@
     },
     "programs/apps/projectmanagement/frontends/jira/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "46d7fff59705011e",
+      "en_hash": "8b569b07f07b3838",
       "de_hash": "b41f470deac2975f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19912,13 +20166,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2576,
+      "en_bytes": 2584,
       "de_bytes": 2576,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/openproject/index.md": {
       "status": "PENDING",
-      "en_hash": "f6f38d00c76b460d",
+      "en_hash": "9d212cd9eff16bc5",
       "de_hash": "7cb483b3a41749ca",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19940,13 +20194,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 905,
+      "en_bytes": 903,
       "de_bytes": 920,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/planka/index.md": {
       "status": "PENDING",
-      "en_hash": "05fbafe972c7dc89",
+      "en_hash": "10c4a8cda6b196c0",
       "de_hash": "e16fa40a0486ad1e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19968,13 +20222,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 852,
+      "en_bytes": 850,
       "de_bytes": 882,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/redmine/index.md": {
       "status": "PENDING",
-      "en_hash": "b91bc4281f60b657",
+      "en_hash": "ad7687b5571ecd3a",
       "de_hash": "f9d468fc8e83487d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -19996,13 +20250,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 884,
+      "en_bytes": 882,
       "de_bytes": 888,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/taiga/index.md": {
       "status": "PENDING",
-      "en_hash": "f81dbc4722223675",
+      "en_hash": "db05e33e48f28549",
       "de_hash": "adf472b3ec41d0fb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20024,13 +20278,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 764,
+      "en_bytes": 762,
       "de_bytes": 765,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/trello/index.md": {
       "status": "PENDING",
-      "en_hash": "e894a211cc45efd3",
+      "en_hash": "4b8f6523dc2ee227",
       "de_hash": "026118c18ff861ac",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20052,13 +20306,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 739,
+      "en_bytes": 741,
       "de_bytes": 752,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/trello/latest/description.md": {
       "status": "PENDING",
-      "en_hash": "e00db9b91f77d844",
+      "en_hash": "a42ef4567f4e2a0a",
       "de_hash": "30af4673f72dde2f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20088,7 +20342,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1296,
+      "en_bytes": 1304,
       "de_bytes": 1271,
       "change_reason": "hash changed since verification"
     },
@@ -20214,7 +20468,7 @@
     },
     "programs/apps/projectmanagement/frontends/trello/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "f2972ca6e5573670",
+      "en_hash": "c3000f126b43e2ca",
       "de_hash": "760de1b1a642e39c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20252,13 +20506,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2528,
+      "en_bytes": 2532,
       "de_bytes": 2573,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/wekan/index.md": {
       "status": "PENDING",
-      "en_hash": "b399f3c5ee7d50d4",
+      "en_hash": "5e78c0492eb58a29",
       "de_hash": "2038e9595e1d3587",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20280,13 +20534,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 800,
+      "en_bytes": 802,
       "de_bytes": 820,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "c8fb32c88ab736ef",
+      "en_hash": "44fa03acf60a2aad",
       "de_hash": "a3b7494840c8f7e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20308,13 +20562,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2574,
+      "en_bytes": 2598,
       "de_bytes": 2699,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/drawio/index.md": {
       "status": "PENDING",
-      "en_hash": "8556131dc10a472d",
+      "en_hash": "bb24d642a2f69fa8",
       "de_hash": "6d209478756d68b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20336,13 +20590,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 851,
+      "en_bytes": 849,
       "de_bytes": 894,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/excalidraw/index.md": {
       "status": "PENDING",
-      "en_hash": "c4cbd4694caa5e55",
+      "en_hash": "ce755fc8e2830e26",
       "de_hash": "602d0c1406fe9cc6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20364,13 +20618,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 784,
+      "en_bytes": 782,
       "de_bytes": 826,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/miro/index.md": {
       "status": "PENDING",
-      "en_hash": "c8ad614be78184e2",
+      "en_hash": "7fddadafef56b42a",
       "de_hash": "4690bee965b058fc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20392,13 +20646,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 750,
+      "en_bytes": 748,
       "de_bytes": 764,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/mural/index.md": {
       "status": "PENDING",
-      "en_hash": "1f9cee7843260501",
+      "en_hash": "50175b22b967c3cd",
       "de_hash": "db7e1409b3047752",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20420,13 +20674,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 724,
+      "en_bytes": 722,
       "de_bytes": 722,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/openboard/index.md": {
       "status": "PENDING",
-      "en_hash": "78832cf9f553b06f",
+      "en_hash": "6db45c439982fa6e",
       "de_hash": "df901808f03fa114",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20448,13 +20702,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 784,
+      "en_bytes": 782,
       "de_bytes": 814,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/tldraw/index.md": {
       "status": "PENDING",
-      "en_hash": "e51a7c9789ce04f3",
+      "en_hash": "637e7cdf6f2a1c3f",
       "de_hash": "a0b1d0b6f6c1de46",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20476,17 +20730,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 866,
+      "en_bytes": 864,
       "de_bytes": 894,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "3c51c30524b24cda",
+      "status": "PENDING",
+      "en_hash": "f47b53db30bb34db",
       "de_hash": "dcef19081a57b7a0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T05:06:38.072953+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "link/structure parity fixed (en link pointed at the gesture page, not the animation)",
       "history": [
         {
@@ -20496,15 +20752,19 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/wiki/masks/index.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 4475,
+      "en_bytes": 4487,
       "de_bytes": 4651,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/confluence/index.md": {
       "status": "PENDING",
-      "en_hash": "ce75fa990c37d339",
+      "en_hash": "98a365315fce296f",
       "de_hash": "b4bac7dbc73a4c4f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20526,13 +20786,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 522,
+      "en_bytes": 520,
       "de_bytes": 525,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/mediawiki/index.md": {
       "status": "PENDING",
-      "en_hash": "0d834acc7e415641",
+      "en_hash": "a1d2023d46ee0e7e",
       "de_hash": "36ff36be1010c081",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20554,13 +20814,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 519,
+      "en_bytes": 517,
       "de_bytes": 522,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/notion/index.md": {
       "status": "PENDING",
-      "en_hash": "004e0a66f3a3f5c7",
+      "en_hash": "5d571ea173f5728b",
       "de_hash": "725a94be44faa8e7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20582,13 +20842,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 516,
+      "en_bytes": 514,
       "de_bytes": 520,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/tango.io/index.md": {
       "status": "PENDING",
-      "en_hash": "3a109d2abbf92597",
+      "en_hash": "61794ed88a900f3b",
       "de_hash": "e248ffa61bc3a4df",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20610,13 +20870,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 523,
+      "en_bytes": 521,
       "de_bytes": 534,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/vscodium/index.md": {
       "status": "PENDING",
-      "en_hash": "dbddd1094bd1bccf",
+      "en_hash": "d15b756e18bff3f6",
       "de_hash": "a5ddf267d055f103",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20638,13 +20898,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 509,
+      "en_bytes": 507,
       "de_bytes": 509,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/wikijs/index.md": {
       "status": "PENDING",
-      "en_hash": "f083c6af94ec9cfd",
+      "en_hash": "619af77e42bce114",
       "de_hash": "38e47dbfa7608cb9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20666,13 +20926,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 503,
+      "en_bytes": 501,
       "de_bytes": 515,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/xwiki/index.md": {
       "status": "PENDING",
-      "en_hash": "49ef566a547a29ca",
+      "en_hash": "77a17fee55ff2579",
       "de_hash": "95af717021369e2d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20694,13 +20954,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 532,
+      "en_bytes": 530,
       "de_bytes": 542,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "30d8c259cbdfdf48",
+      "en_hash": "308fae1829760a35",
       "de_hash": "eaa1ce4e8af3bee1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20722,13 +20982,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2855,
+      "en_bytes": 2879,
       "de_bytes": 2980,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/coppermine/index.md": {
       "status": "PENDING",
-      "en_hash": "632546a887814586",
+      "en_hash": "c7aef36f6c756da0",
       "de_hash": "f523c86f995e86f1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20750,17 +21010,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 858,
+      "en_bytes": 856,
       "de_bytes": 875,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/coppermine/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "d44880330dbf9fd9",
+      "status": "PENDING",
+      "en_hash": "4da5f3db3105c458",
       "de_hash": "8754ccc697903aab",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -20770,11 +21032,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/coppermine/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1414,
+      "en_bytes": 1418,
       "de_bytes": 1471,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/coppermine/latest/features.md": {
       "status": "VERIFIED",
@@ -20799,12 +21065,14 @@
       "change_reason": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/layout.md": {
-      "status": "VERIFIED",
-      "en_hash": "f381d976627faf5f",
+      "status": "PENDING",
+      "en_hash": "fa43ff3897ceefec",
       "de_hash": "608cd6fa20301e97",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -20814,11 +21082,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/coppermine/structure.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2602,
+      "en_bytes": 2606,
       "de_bytes": 2589,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/coppermine/latest/menus.md": {
       "status": "VERIFIED",
@@ -20843,12 +21115,14 @@
       "change_reason": null
     },
     "programs/apps/gallery/frontends/coppermine/latest/shortcuts.md": {
-      "status": "VERIFIED",
-      "en_hash": "84a4234ee3703559",
+      "status": "PENDING",
+      "en_hash": "ad2749636d86b2e9",
       "de_hash": "b45180ecc6cf6113",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -20858,15 +21132,19 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/coppermine/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1028,
+      "en_bytes": 1036,
       "de_bytes": 1061,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/coppermine/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "78cd00f32ec3f007",
+      "en_hash": "4062cff37863ff0e",
       "de_hash": "0c8f93e0f86fa633",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20896,13 +21174,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2705,
+      "en_bytes": 2713,
       "de_bytes": 2758,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/damselfly/index.md": {
       "status": "PENDING",
-      "en_hash": "f7149900aabbb21a",
+      "en_hash": "bb3a85b7e6912220",
       "de_hash": "6201a3bd177ce0ce",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -20924,17 +21202,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 771,
+      "en_bytes": 769,
       "de_bytes": 776,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/damselfly/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "e25ebfa2c08df9bf",
+      "status": "PENDING",
+      "en_hash": "3e29cdf6076e3e11",
       "de_hash": "3670a3138362db92",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -20944,11 +21224,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/damselfly/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1335,
+      "en_bytes": 1339,
       "de_bytes": 1357,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/damselfly/latest/features.md": {
       "status": "VERIFIED",
@@ -21040,7 +21324,7 @@
     },
     "programs/apps/gallery/frontends/damselfly/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "c182cabe0fd20f4d",
+      "en_hash": "a732d03083f11713",
       "de_hash": "087fbf3570dc0f43",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21070,13 +21354,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2241,
+      "en_bytes": 2245,
       "de_bytes": 2284,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/immich/index.md": {
       "status": "PENDING",
-      "en_hash": "a2d174167b7a36d3",
+      "en_hash": "50b38b105c7cdb5f",
       "de_hash": "566d997c5f0f852e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21098,17 +21382,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 875,
+      "en_bytes": 873,
       "de_bytes": 868,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/immich/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "4af873158afcca8c",
+      "status": "PENDING",
+      "en_hash": "40621cf66035f6a8",
       "de_hash": "2ad474a0cf220162",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -21118,11 +21404,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/immich/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1846,
+      "en_bytes": 1854,
       "de_bytes": 1884,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/immich/latest/features.md": {
       "status": "VERIFIED",
@@ -21214,7 +21504,7 @@
     },
     "programs/apps/gallery/frontends/immich/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "c9cb6ca4ab4f9f83",
+      "en_hash": "2c020e8e7a41fab0",
       "de_hash": "8d3742025f59c05d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21244,13 +21534,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2948,
+      "en_bytes": 2952,
       "de_bytes": 3001,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/librephotos/index.md": {
       "status": "PENDING",
-      "en_hash": "3be2ede5d5cb00b8",
+      "en_hash": "b8152ca3e2d58987",
       "de_hash": "79becf870741eb8b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21272,17 +21562,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 826,
+      "en_bytes": 824,
       "de_bytes": 817,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/librephotos/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "e85c64b4860c747f",
+      "status": "PENDING",
+      "en_hash": "b2a33925f18ca681",
       "de_hash": "b9606dd4a4e8c9f3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.264912+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -21292,11 +21584,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/librephotos/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1390,
+      "en_bytes": 1394,
       "de_bytes": 1413,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/librephotos/latest/features.md": {
       "status": "VERIFIED",
@@ -21322,7 +21618,7 @@
     },
     "programs/apps/gallery/frontends/librephotos/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "4077ccb8fa64cff4",
+      "en_hash": "9e4163262afc00c8",
       "de_hash": "4fd0b747a57023bd",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21352,7 +21648,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2231,
+      "en_bytes": 2235,
       "de_bytes": 2266,
       "change_reason": "hash changed since verification"
     },
@@ -21424,7 +21720,7 @@
     },
     "programs/apps/gallery/frontends/lychee/index.md": {
       "status": "PENDING",
-      "en_hash": "fe7cb14a38a912e7",
+      "en_hash": "0c7d51aa58683942",
       "de_hash": "124441db9326c159",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21446,17 +21742,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 749,
+      "en_bytes": 747,
       "de_bytes": 762,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/lychee/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "b218b11468dcb359",
+      "status": "PENDING",
+      "en_hash": "27af99a1eae52887",
       "de_hash": "167778c3796b24c4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -21466,11 +21764,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/lychee/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1400,
+      "en_bytes": 1408,
       "de_bytes": 1436,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/lychee/latest/features.md": {
       "status": "VERIFIED",
@@ -21496,7 +21798,7 @@
     },
     "programs/apps/gallery/frontends/lychee/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "db8753b71d4c7954",
+      "en_hash": "5a5c57720ad2f001",
       "de_hash": "ff4d11bc69ff8419",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21526,7 +21828,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2433,
+      "en_bytes": 2437,
       "de_bytes": 2517,
       "change_reason": "hash changed since verification"
     },
@@ -21598,7 +21900,7 @@
     },
     "programs/apps/gallery/frontends/nextcloud-photos/index.md": {
       "status": "PENDING",
-      "en_hash": "3c8a8332a7cc4c5e",
+      "en_hash": "6c134706bd48808b",
       "de_hash": "56ef83aa658c07f0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21620,17 +21922,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 978,
+      "en_bytes": 976,
       "de_bytes": 975,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/nextcloud-photos/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "6fd66d92d6246b89",
+      "status": "PENDING",
+      "en_hash": "9f86f308f139970f",
       "de_hash": "5b1c75632b155b67",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -21640,11 +21944,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/nextcloud-photos/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1673,
+      "en_bytes": 1677,
       "de_bytes": 1645,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/nextcloud-photos/latest/features.md": {
       "status": "VERIFIED",
@@ -21670,7 +21978,7 @@
     },
     "programs/apps/gallery/frontends/nextcloud-photos/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "73f77f76c79f52f8",
+      "en_hash": "3b99905547fe85e6",
       "de_hash": "dcc1a2cf81852c52",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21700,7 +22008,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2685,
+      "en_bytes": 2689,
       "de_bytes": 2729,
       "change_reason": "hash changed since verification"
     },
@@ -21772,7 +22080,7 @@
     },
     "programs/apps/gallery/frontends/photoprism/index.md": {
       "status": "PENDING",
-      "en_hash": "e91a4464d5f06d46",
+      "en_hash": "eb942337e3dd5ddf",
       "de_hash": "753923dfb03004dc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21794,17 +22102,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 829,
+      "en_bytes": 827,
       "de_bytes": 848,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/photoprism/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "739b42f68afdad8a",
+      "status": "PENDING",
+      "en_hash": "f328e5df95c80ada",
       "de_hash": "3badf0a496a09529",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -21814,11 +22124,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/photoprism/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1595,
+      "en_bytes": 1599,
       "de_bytes": 1678,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/photoprism/latest/features.md": {
       "status": "VERIFIED",
@@ -21866,7 +22180,7 @@
     },
     "programs/apps/gallery/frontends/photoprism/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "5bb864019bd87bc9",
+      "en_hash": "209b74aee76a7e05",
       "de_hash": "b95f19afbf94f8b7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21896,7 +22210,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2625,
+      "en_bytes": 2629,
       "de_bytes": 2713,
       "change_reason": "hash changed since verification"
     },
@@ -21946,7 +22260,7 @@
     },
     "programs/apps/gallery/frontends/piwigo/index.md": {
       "status": "PENDING",
-      "en_hash": "efa83dd83ba5695b",
+      "en_hash": "fd24c4366fc6701d",
       "de_hash": "6d653cca7c9da0ad",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -21968,17 +22282,19 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 804,
+      "en_bytes": 802,
       "de_bytes": 812,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/piwigo/latest/description.md": {
-      "status": "VERIFIED",
-      "en_hash": "5a867ac01ccade43",
+      "status": "PENDING",
+      "en_hash": "1c155f38c6aa150d",
       "de_hash": "6bb0c530ec9c1912",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T04:50:41.342386+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "review"
+      ],
       "note": "reviewed de+en, translated",
       "history": [
         {
@@ -21988,11 +22304,15 @@
         {
           "at": "move.py",
           "event": "renamed from programs/apps/gallery/masks/piwigo/description.md"
+        },
+        {
+          "at": "2026-11-05T11:46:53.306640+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1583,
+      "en_bytes": 1587,
       "de_bytes": 1598,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/frontends/piwigo/latest/features.md": {
       "status": "VERIFIED",
@@ -22040,7 +22360,7 @@
     },
     "programs/apps/gallery/frontends/piwigo/latest/api.md": {
       "status": "PENDING",
-      "en_hash": "236717d4cde1e0a5",
+      "en_hash": "4ea265aa870877f1",
       "de_hash": "6b8d9eab1ff4e1e7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22070,7 +22390,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2660,
+      "en_bytes": 2664,
       "de_bytes": 2770,
       "change_reason": "hash changed since verification"
     },
@@ -22120,7 +22440,7 @@
     },
     "programs/apps/streaming/frontends/index.md": {
       "status": "PENDING",
-      "en_hash": "5e2c456c779352d0",
+      "en_hash": "192f0c905ba48aaf",
       "de_hash": "909f48af63468634",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22142,13 +22462,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3139,
+      "en_bytes": 3163,
       "de_bytes": 3264,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/ant-media-server/index.md": {
       "status": "PENDING",
-      "en_hash": "294e31b22af9fa1a",
+      "en_hash": "d4a3279f3f651935",
       "de_hash": "15447cf225c8e103",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22170,13 +22490,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 944,
+      "en_bytes": 942,
       "de_bytes": 961,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/ffmpeg/index.md": {
       "status": "PENDING",
-      "en_hash": "1c354efe6db5749e",
+      "en_hash": "8b2d61c7f821d257",
       "de_hash": "0d0fc6f5f1797b33",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22198,13 +22518,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2217,
+      "en_bytes": 2215,
       "de_bytes": 2255,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/gstreamer/index.md": {
       "status": "PENDING",
-      "en_hash": "1d12c2912b29fb12",
+      "en_hash": "6660920569d1528a",
       "de_hash": "7a70824ff5ada547",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22226,13 +22546,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1048,
+      "en_bytes": 1046,
       "de_bytes": 1061,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/mediamtx/index.md": {
       "status": "PENDING",
-      "en_hash": "7f4f9d058da0547b",
+      "en_hash": "49114a64a02da24a",
       "de_hash": "0637d08063a88ff0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22254,13 +22574,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1010,
+      "en_bytes": 1008,
       "de_bytes": 1017,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/mistserver/index.md": {
       "status": "PENDING",
-      "en_hash": "06b3683c3551585c",
+      "en_hash": "37be22864024f82d",
       "de_hash": "75175be1b5d09c54",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22282,13 +22602,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 994,
+      "en_bytes": 992,
       "de_bytes": 1026,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/index.md": {
       "status": "PENDING",
-      "en_hash": "4184d67b60187373",
+      "en_hash": "c59bfd045bc42439",
       "de_hash": "c8d1642021e41cbf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22310,13 +22630,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1054,
+      "en_bytes": 1052,
       "de_bytes": 1065,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/obs-studio/index.md": {
       "status": "PENDING",
-      "en_hash": "2777c43547900a6a",
+      "en_hash": "6abb38f7c9b747b3",
       "de_hash": "52dfcab683967c3e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22338,13 +22658,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 849,
+      "en_bytes": 847,
       "de_bytes": 877,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/restream/index.md": {
       "status": "PENDING",
-      "en_hash": "1ffb8a2490f5a370",
+      "en_hash": "8258bb7a9097c4e9",
       "de_hash": "5982de7ed18da72a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22366,13 +22686,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1021,
+      "en_bytes": 1019,
       "de_bytes": 1038,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/restreamer/index.md": {
       "status": "PENDING",
-      "en_hash": "5a923b839b332827",
+      "en_hash": "822c4bce04a38668",
       "de_hash": "859a897f0f3a144a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22394,13 +22714,13 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 842,
+      "en_bytes": 840,
       "de_bytes": 823,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/wowza/index.md": {
       "status": "PENDING",
-      "en_hash": "013c8db94a5acd46",
+      "en_hash": "2b8c808c7ded0233",
       "de_hash": "05bf37b01e1f9447",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
@@ -22422,7 +22742,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1337,
+      "en_bytes": 1335,
       "de_bytes": 1329,
       "change_reason": "hash changed since verification"
     },
