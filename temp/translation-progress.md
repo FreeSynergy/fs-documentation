@@ -1,5 +1,9 @@
 # Übersetzungs-Fortschritt – Apps de → en
 
+> **Ersetzt durch `temp/translation-queue.md`** (Abschnitt A) seit 2026-11-04. Diese Datei ist
+> ein Stand von vor dem Umstieg auf `scripts/doc_sync.py` und wird nicht mehr gepflegt.
+> Erzeuger `temp/update-progress.py` liegt in `scripts/_archive/`.
+
 Arbeitsbereich: `docs/de/programs/apps/<app>/` → `docs/en/programs/apps/<app>/`.
 
 Statuswerte: `[x] übersetzt` · `[ ] offen` · `[!] unvollständig/reparatur` · `[!] nicht gefunden`
@@ -19,13 +23,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | ant-media-server | programs/apps/streaming/masks/ant-media-server/menu.md | [ ] offen |
 | ant-media-server | programs/apps/streaming/masks/ant-media-server/shortcuts.md | [ ] offen |
 | ant-media-server | programs/apps/streaming/masks/ant-media-server/structure.md | [ ] offen |
-| asana | programs/apps/projectmanagement/masks/asana/api.md | [ ] offen |
-| asana | programs/apps/projectmanagement/masks/asana/description.md | [ ] offen |
-| asana | programs/apps/projectmanagement/masks/asana/features.md | [ ] offen |
+| asana | programs/apps/projectmanagement/masks/asana/api.md | [x] übersetzt |
+| asana | programs/apps/projectmanagement/masks/asana/description.md | [x] übersetzt |
+| asana | programs/apps/projectmanagement/masks/asana/features.md | [x] übersetzt |
 | asana | programs/apps/projectmanagement/masks/asana/index.md | [x] übersetzt |
-| asana | programs/apps/projectmanagement/masks/asana/menu.md | [ ] offen |
-| asana | programs/apps/projectmanagement/masks/asana/shortcuts.md | [ ] offen |
-| asana | programs/apps/projectmanagement/masks/asana/structure.md | [ ] offen |
+| asana | programs/apps/projectmanagement/masks/asana/menu.md | [x] übersetzt |
+| asana | programs/apps/projectmanagement/masks/asana/shortcuts.md | [x] übersetzt |
+| asana | programs/apps/projectmanagement/masks/asana/structure.md | [x] übersetzt |
 | confluence | programs/apps/wiki/masks/confluence/api.md | [ ] offen |
 | confluence | programs/apps/wiki/masks/confluence/description.md | [ ] offen |
 | confluence | programs/apps/wiki/masks/confluence/features.md | [ ] offen |
@@ -137,13 +141,13 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | immich | programs/apps/gallery/masks/immich/menu.md | [x] übersetzt |
 | immich | programs/apps/gallery/masks/immich/shortcuts.md | [x] übersetzt |
 | immich | programs/apps/gallery/masks/immich/structure.md | [x] übersetzt |
-| jira | programs/apps/projectmanagement/masks/jira/api.md | [ ] offen |
-| jira | programs/apps/projectmanagement/masks/jira/description.md | [ ] offen |
-| jira | programs/apps/projectmanagement/masks/jira/features.md | [ ] offen |
+| jira | programs/apps/projectmanagement/masks/jira/api.md | [x] übersetzt |
+| jira | programs/apps/projectmanagement/masks/jira/description.md | [x] übersetzt |
+| jira | programs/apps/projectmanagement/masks/jira/features.md | [x] übersetzt |
 | jira | programs/apps/projectmanagement/masks/jira/index.md | [x] übersetzt |
-| jira | programs/apps/projectmanagement/masks/jira/menu.md | [ ] offen |
-| jira | programs/apps/projectmanagement/masks/jira/shortcuts.md | [ ] offen |
-| jira | programs/apps/projectmanagement/masks/jira/structure.md | [ ] offen |
+| jira | programs/apps/projectmanagement/masks/jira/menu.md | [x] übersetzt |
+| jira | programs/apps/projectmanagement/masks/jira/shortcuts.md | [x] übersetzt |
+| jira | programs/apps/projectmanagement/masks/jira/structure.md | [x] übersetzt |
 | kaddressbook | programs/apps/contact/masks/kaddressbook/api.md | [x] übersetzt |
 | kaddressbook | programs/apps/contact/masks/kaddressbook/description.md | [x] übersetzt |
 | kaddressbook | programs/apps/contact/masks/kaddressbook/features.md | [x] übersetzt |
@@ -481,18 +485,16 @@ Neu erzeugt: `python3 temp/update-progress.py` (Status aus Dateisystem abgeleite
 | zendesk | programs/apps/helpdesk/masks/zendesk/shortcuts.md | [x] übersetzt |
 | zendesk | programs/apps/helpdesk/masks/zendesk/structure.md | [x] übersetzt |
 
-Dateien gesamt: 468 · übersetzt: 282 · offen: 186
+Dateien gesamt: 468 · übersetzt: 294 · offen: 174
 
 ## Offen
 
 - [ ] **ant-media-server** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **asana** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **confluence** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **drawio** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **excalidraw** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **ffmpeg** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **gstreamer** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
-- [ ] **jira** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mediamtx** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **mediawiki** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md
 - [ ] **miro** (6): api.md, description.md, features.md, menu.md, shortcuts.md, structure.md

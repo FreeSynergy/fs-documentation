@@ -18,7 +18,7 @@ Error state:
 ```
 Email *
 ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
-│ ✕  broken@doma.in      │
+│ ✕  broken@doma.in     │
 └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘
 ⚠ This email is not valid.
 ```

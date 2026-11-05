@@ -17,25 +17,25 @@ A dashboard is an overview page with widgets.
 
 | Variant | Appearance |
 | ---------- | ---------- |
-| **vorlage** | Widgets ohne Greifpunkte, Raster unveränderlich |
-| **anordbar** | Greifpunkt oben links, Rahmen zum Ziehen, Rasterlinien im Bearbeiten-Modus |
-| **bericht** | wie `vorlage`, ohne Bearbeiten-Knopf, dafür Drucken/Aktualisieren |
+| **vorlage** | widgets without grab points, grid unchangeable |
+| **anordbar** | grab point top left, frame for dragging, grid lines in edit mode |
+| **bericht** | like `vorlage`, without an edit button, instead print/refresh |
 
 ## Sizes
 
 | Size | Width | Use |
 | ------- | -------- | ------------ |
-| Small | 800px | Kleines Dashboard |
+| Small | 800px | Small dashboard |
 | Medium | 1200px | Standard |
-| Large | 1600px | Großes Dashboard |
+| Large | 1600px | Large dashboard |
 
 ## Colours and states
 
 | State | Colour | Description |
 | -------- | ------- | -------------- |
-| **Background** | Hell | Hintergrund |
-| **Widget** | Weiß | Widget-Hintergrund |
-| **Border** | Grau | Rand |
+| **Background** | Light | Background |
+| **Widget** | White | Widget background |
+| **Border** | Grey | Border |
 
 ## Hover and focus effects
 

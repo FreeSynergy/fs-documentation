@@ -16,3 +16,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0007 | `skins/` wird `masks/` | akzeptiert |
 | 0008 | Englisch zuerst, Deutsch zweite Sprache | akzeptiert |
 | 0009 | GUI: Blinc ist gesetzt | akzeptiert |
+| 0010 | Ein Prüfer für die Übersetzung: `scripts/doc_sync.py` | akzeptiert |

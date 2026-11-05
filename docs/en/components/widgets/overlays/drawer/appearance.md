@@ -29,18 +29,18 @@ A drawer is a side overlay window (collapsible).
 
 | Size | Width/height | Use |
 | ------- | ------------- | ------------ |
-| Small | 200px | Wenige Elemente |
+| Small | 200px | Few items |
 | Medium | 300px | Standard |
-| Large | 400px | Viele Elemente |
-| Full | 100% | Volle Breite/Höhe |
+| Large | 400px | Many items |
+| Full | 100% | Full width/height |
 
 ## Colours and states
 
 | State | Colour | Description |
 | -------- | ------- | -------------- |
-| **Background** | Hell | Hintergrund |
-| **Header** | Hell | Titelzeile |
-| **Overlay** | Dunkel | Hintergrund abdunkeln |
+| **Background** | Light | Background |
+| **Header** | Light | Title bar |
+| **Overlay** | Dark | Dim the background |
 
 ## Hover and focus effects
 

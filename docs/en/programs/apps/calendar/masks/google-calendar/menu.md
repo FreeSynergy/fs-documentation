@@ -10,7 +10,7 @@ Google Calendar has no menu that can be reviewed in source code (closed source).
 | Mini calendar (top left) | date selection by click (same help) |
 | „Eintragen" (Create; left) | creation menu; among other things it contains **„Terminplan"** (Appointment schedule) for booking pages (help "Create an appointment schedule") |
 | Search (top) | free-text search across calendars/events (mirror of the API `q` search) |
-| Views (top right) | **Day, Week, 4 days, Month, Year, Schedule** (Tag, Woche, 4 Tage, Monat, Jahr, Terminübersicht) — the last one chosen becomes the default view (help "View your day, week, or month") |
+| Views (top right) | **Day, Week, 4 days, Month, Year, Schedule** („Tag“, „Woche“, „4 Tage“, „Monat“, „Jahr“, „Terminübersicht“) — the last one chosen becomes the default view (help "View your day, week, or month") |
 | „Einstellungen" (Settings; gear, top right) | opens the settings page (see below) (same help) |
 | Account/avatar (far right) | Google account switcher (multiple accounts) |
 
