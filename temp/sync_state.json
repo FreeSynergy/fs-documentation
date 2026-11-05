@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T19:28:33.267774+00:00",
+  "last_run": "2026-11-05T19:36:33.410048+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -24728,9 +24728,7 @@
       "de_hash": "b31b57c377256e28",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.728555+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
@@ -24752,9 +24750,7 @@
       "de_hash": "2737164ae4b2157e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.257052+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
@@ -24776,9 +24772,7 @@
       "de_hash": "4f04f2e1c0c4a474",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.365775+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
@@ -24800,9 +24794,7 @@
       "de_hash": "1a00b1765a80c08e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.546422+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
@@ -24824,9 +24816,7 @@
       "de_hash": "906551264b74d1c9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.639082+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
@@ -24848,9 +24838,7 @@
       "de_hash": "0a03225c496d128d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.454895+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
@@ -24872,9 +24860,7 @@
       "de_hash": "a4e6df7093eb7fd3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:33.267754+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
@@ -24896,9 +24882,7 @@
       "de_hash": "77f7ae48b28d1e19",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.820470+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
@@ -24920,9 +24904,7 @@
       "de_hash": "14bf8e84033a1cab",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.911892+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
@@ -24944,9 +24926,7 @@
       "de_hash": "7a6f44f9eebcb952",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:33.091721+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
@@ -24968,9 +24948,7 @@
       "de_hash": "a3c5fa377e3754a2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:33.179733+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
@@ -24992,9 +24970,7 @@
       "de_hash": "378b6c1fea53eeb8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:28:32.999973+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
@@ -25011,118 +24987,148 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "eff86feae109b274",
       "de_hash": "f5d2dc551cf2d176",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:36:33.410017+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mediamtx/api.md"
+        },
+        {
+          "at": "2026-11-05T19:36:33.410017+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4247
+      "en_bytes": 4221,
+      "de_bytes": 4247,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1ffe85def4c477e0",
       "de_hash": "98e96089ef8cc840",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:36:32.948251+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mediamtx/description.md"
+        },
+        {
+          "at": "2026-11-05T19:36:32.948251+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2941
+      "en_bytes": 2819,
+      "de_bytes": 2941,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "365e54b7157360ba",
       "de_hash": "2858af67751407e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:36:33.037168+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mediamtx/features.md"
+        },
+        {
+          "at": "2026-11-05T19:36:33.037168+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3120
+      "en_bytes": 3082,
+      "de_bytes": 3120,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "bf98af6b18a6d845",
       "de_hash": "2cedf6237f595cad",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:36:33.224423+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mediamtx/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:36:33.224423+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2468
+      "en_bytes": 2457,
+      "de_bytes": 2468,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "b83e44861a19a14f",
       "de_hash": "78a00e4eb843ff91",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:36:33.315684+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mediamtx/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:36:33.315684+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1772
+      "en_bytes": 1789,
+      "de_bytes": 1772,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e175d072bd5aae50",
       "de_hash": "79cc289563b03638",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:36:33.130375+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/mediamtx/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:36:33.130375+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3872
+      "en_bytes": 3819,
+      "de_bytes": 3872,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mistserver/latest/api.md": {
       "status": "PENDING",
