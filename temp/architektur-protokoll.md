@@ -5,6 +5,11 @@ Zweck: Was in den Gesprächen ab dem 2026-11-03 feststeht, ist hier festgehalten
 wieder gefragt und wieder beantwortet werden muss. Wenn ein Punkt aus diesem Blatt in `docs/`
 oder in einen ADR wandert, bleibt er hier stehen und bekommt einen Verweis.
 
+> **Hinweis 2026-11-05:** Mehrere Punkte sind durch ADRs 0011–0018 ersetzt. Lies **„Maske“ als
+> „Frontend“** (ADR 0012). §20 P4 „vorhandene Programme kopieren“ gilt **nicht** mehr — es wird
+> nichts kopiert, nur Funktionen analysiert (ADR 0013). Lizenzkonflikt §20 P5 gelöst:
+> `MIT OR Apache-2.0` (ADR 0016).
+
 Stand: 2026-11-03 · Quelle: Gespräch Nutzer ↔ Agent (Kalender-Fall → Masken-Modell → Datenhaltung)
 
 Zweite Runde am selben Tag: Abgleich und Kollision, Schenken gegenüber Freigeben, „als frei

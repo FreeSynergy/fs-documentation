@@ -1,5 +1,7 @@
 # 0007 – `skins/` wird `masks/`
 
+Status: **superseded by 0012** (2026-11-05)
+
 ## Kontext
 ADR 0001 und die Doku-Struktur benutzen für die Nachbau-Oberflächen eines Programms den Ordner
 `skins/`. Das Architektur-Protokoll §2 hat den Begriff längst korrigiert: **Maske** = Struktur

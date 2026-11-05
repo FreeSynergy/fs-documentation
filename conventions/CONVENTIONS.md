@@ -1,15 +1,28 @@
 # CONVENTIONS
 
-Dieses Verzeichnis ist das **Gedächtnis des Repos**. Ein Agent (qwen, Übersetzer, Opus)
+Dieses Verzeichnis ist das **Gedächtnis des Repos**. Ein Agent (Opus, Sonnet, llama, Leo)
 liest **zuerst** diese Datei. Es gibt kein Session-Gedächtnis über Sitzungen hinweg –
 deshalb gilt: **jede neue Festlegung wird sofort hier eingetragen.** Was hier steht,
 gültig für alle Repos, bis ausdrücklich geändert.
 
 Das konkrete Dateisatz- und Layout-Handwerk steht in `doku-standard.md` (hier im Verzeichnis).
 
-Stand: 2026-11-03 (ADRs 0006–0009 eingetragen)
+Stand: 2026-11-05 (ADRs 0011–0018: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
+Fremdprojekte, Lizenz, Repos, Messenger)
 
 ---
+
+## 0. Grundsätze (Kurzfassung, Details in den ADRs)
+
+- **Funktionen analysieren, nichts kopieren** — auch nicht aus OSS (ADR 0013).
+- **Standards zuerst**, ActivityStreams 2.0 als Basis; fehlt ein Standard → eigener Entwurf
+  → IETF/W3C (ADR 0014).
+- **100 % Rust**, keine doppelten Crates; Blinc, Turso, Web of Trust, Kanidm, Zentinel werden
+  genutzt und unterstützt (ADR 0015).
+- **`MIT OR Apache-2.0`, für immer kostenlos**, keine Armutsdiskriminierung (ADR 0016).
+- **Programm = Kategorie**: `FreeSynergy.Messenger`, Repo `fs-messenger`; jedes Programm läuft
+  allein, zusammen teilen sie die Arbeit über Standarddaten (ADR 0017).
+- **Nur `docs/en/` wird gepflegt**, `de/` übersetzt llama (ADR 0011).
 
 ## 1. Was veröffentlicht wird und was nicht
 
@@ -47,8 +60,9 @@ Querschnitt (eigene Top-Level-Zweige, **nicht** unter `components`):
 - `interactions/` → `gestures/`, `animations/` (Querband durch alle Ebenen)
 - `data/` → standardisierte Daten (macht Ebene 5 erst möglich)
 
-Unter jeder Programmkategorie: `masks/<programm>/` (sieben Dateien, ADR 0007) und
-`requirements.md` (Pflichtmenge + Kür aus den Masken, ADR 0006).
+Unter jeder Programmkategorie: `frontends/<programm>/<version>/` (Dateisatz ADR 0012,
+Vorlage `conventions/templates/frontend/`) und `requirements.md` (Pflichtmenge + Kür aus den
+Frontends, mit unserem Umsetzungsstatus, ADR 0006/0013).
 
 Jede Ebene hat ihren eigenen `index.md`.
 
@@ -118,12 +132,13 @@ Festgelegte Grenzfälle:
 - `file-upload` → **widget** (endliche Kinder: Picker, Dropfläche, Vorschau; eigene
   Zustände; keine offene Bearbeitungsfläche — bei Umzug 2026-11-03 ergänzt)
 
-## 4. Sprache (ADR 0008 — englisch zuerst)
+## 4. Sprache (ADR 0011 — nur Englisch wird gepflegt)
 
 - **Immer englisch:** Dateinamen, Pfade, Ordner, Bezeichner, Code, Kommentare, Commits.
-- **`docs/en/` ist die erste Sprache:** neuer Inhalt wird englisch geschrieben und nach außen
-  gegeben. **`docs/de/` ist die zweite Sprache** und wird parallel mitgezogen; beide möglichst
-  gleich halten. Der Übersetzer (`todo/translator.md`) füllt Lücken in beide Richtungen.
+- **Gearbeitet wird nur in `docs/en/`.** `docs/de/` (und weitere Sprachen) erzeugt llama als
+  Übersetzung. `de/` darf als Informationsquelle gelesen werden; fehlt es dort auch → in `en/`
+  neu schreiben.
+- **Nicht übersetzt:** `temp/`, `todo/`, `conventions/`, `scripts/`.
 - **Deutsch erlaubt und erwünscht:** Beschlüsse, Pläne, Prompts, Fragen an Agenten
   (`conventions/`, `temp/`, `todo/`) und der Gesprächsverkehr.
 - Nie über Sprachbäume hinweg verlinken: in `en/` zeigt jeder Verweis auf `en/`.
@@ -161,17 +176,21 @@ werden sie später einsortiert. Nicht in `docs/` belassen, bis der Platz festste
 
 ## 7. todo/ – Aufgaben nach Modell
 
-Drei Listen, je eine pro LLM:
+Drei KIs, um Tokens zu sparen — jede bekommt nur, was sie gut kann:
 
-- `todo/qwen.md` – aktuell: Struktur, Vorgaben, Umzüge
-- `todo/translator.md` – NPU-Modell: nur Übersetzung
-- `todo/opus.md` – später: Plan + Programmierung (schweres Zeug)
+| Liste | Wer | Wofür |
+|-------|-----|-------|
+| `todo/opus.md` | Claude Opus (Plan) + Sonnet (Umsetzung) | Architektur, Beschlüsse, Spezifikation, Review (Opus); Skripte, Umbauten, Code nach fertiger Spezifikation (Sonnet) |
+| `todo/llama.md` | llama.cpp lokal (`http://localhost:8080`, Qwen3.8-Flash-Next) | Übersetzung `en → de`, kleine Massenaufgaben (Umformatieren, Zusammenfassen). **Höchstens 2 parallele Anfragen** — läuft eine Übersetzung, ist nur noch ein Platz frei |
+| `todo/leo.md` | Brave Leo (vom Nutzer per Hand bedient) | Recherche: Rohmaterial zu Programmen, Standards, Crates. Ergebnisse sind ungeprüft (⚠️), Opus prüft |
+| `todo/upstream.md` | Nutzer | Issues/Feature-Requests an Fremdprojekte (ADR 0015) |
 
 Eintrag im gleichen Muster: `Aufgabe · Ebene · Dateien · Status`.
 
 ## 8. Ablauf
 
-- Nach jeder Änderung: **commit und push** (immer).
+- Nach jeder Änderung: **commit und push**. Push durch Agenten ist nur in der laufenden
+  Umbauphase erlaubt (Stand 2026-11-05); danach fragt der Agent vor jedem Push.
 - **Keine eigenen Agenten anlegen.** Bei Bedarf legt der Nutzer etwas Neues an.
 - Beschlüsse als nummerierte ADRs in `conventions/decisions/` (Format: Kontext →
   Entscheidung → Folgen, mit Verweis auf betroffene Doku).

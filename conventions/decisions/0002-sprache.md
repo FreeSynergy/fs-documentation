@@ -1,5 +1,7 @@
 # 0002 – Sprache: Identifikatoren englisch, Prosa deutsch
 
+Status: Teil „Prosa deutsch / Deutsch = Quelle“ **ersetzt durch 0011** (2026-11-05), Rest gilt
+
 ## Kontext
 Der Nutzer musste beim Bitten um Hilfe immer erst übersetzen. Das nervt und ist unnötig.
 

@@ -1,5 +1,7 @@
 # 0008 – Englisch zuerst, Deutsch zweite Sprache
 
+Status: **superseded by 0011** (2026-11-05)
+
 ## Kontext
 Bisher galt (CONVENTIONS §4, `data/requirements.md` §1): `docs/de/` ist Quelle der Wahrheit,
 `docs/en/` wird vom Übersetzer-Modell nachgezogen, „zurzeit nur `de/` pflegen“. Der Bestand

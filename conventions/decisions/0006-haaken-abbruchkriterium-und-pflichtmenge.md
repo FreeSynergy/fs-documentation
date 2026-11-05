@@ -1,5 +1,7 @@
 # 0006 – Haken, Abbruchkriterium und Pflichtmenge pro Kategorie
 
+Status: Punkt 2 und 3.4 **ersetzt durch 0013** (2026-11-05), Rest gilt
+
 ## Kontext
 Der Abarbeitungsplan (`temp/apps-plan.md`) hat 869 Datei-Zeilen, davon 42 mit `[x]`, aber
 520 Dateien liegen geschrieben ohne Haken. Ohne klare Bedeutung des Hakens ist nicht
