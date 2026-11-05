@@ -116,12 +116,14 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 | 6 | Datenmodelle Kontakte / Kalender / Karten | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | Karten ✅ 29 · Kontakte ✅ 15 · Kalender ✅ 31 Tests; fs-store 0.2 ✅ 37 · Kontakte 18 · Kalender 39 Tests (jiff, System-tzdb 2026e) |
 | 7 | Wiki-Workbench auf Blinc (Code-Modus, liest `fs-documentation`) | `fs-wiki` | 3, Blinc | Sonnet | später |
 | 8 | Suite `fs-groupware` (Container, Workbenches nebeneinander) | `fs-groupware` | 6, 7 | — | später |
-| 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | Sonnet | läuft |
+| 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | Sonnet | ✅ 7 E2E-Tests (Kontakte ↔ Kalender über den Hub) |
 
 **Fragen für den Morgen:**
 - alte Repos `fs-store`/`fs-components` archivieren und Namen übernehmen?
 - GitHub-Anbindung darf in der Org keine Repos anlegen (404) → Repos anlegen oder Berechtigung geben; lokal: fs-capnpc, fs-store, fs-wiki, fs-contacts, fs-calendar, fs-maps
 - fs-maps (29 Tests ✅): OSMF-Kachelserver verbieten Offline/Bulk → eigener PMTiles-Auszug; **welcher Auszug wird standardmäßig gehostet** (Region, Server)? rustls nutzt Krypto mit C/asm (ring/aws-lc) — reine Rust-Variante `rustls-rustcrypto` (experimentell) prüfen?
 - fs-calendar: von JSCalendar 2.0 nur „reserviert“ markierte Felder (`sendTo`, `replyTo` …) bleiben vorerst im Objekt (Demo-Daten nutzen `sendTo`) — richtig so? Antworten auf Einladungen gelten heute für die ganze Serie, nicht für einzelne Termine.
+- fs-hub: Akteur im Hub-Protokoll = Programmname (heute) oder auch die Person? Doppelte innerhalb eines Programms vorschlagen? Wo liegen abgelehnte Vorschläge?
+- Nachziehen (Opus/Sonnet): `common.capnp` Envelope um describes/startTime/endTime ergänzt (2026-11-05) → Kopie in fs-hub aktualisieren; capnp/capnp-rpc 0.23 → neueste (0.27?) prüfen (ADR 0026)
 - fs-store: `max_steps` global oder je Person? Schutzbedürftige Objekte in unverschlüsseltem Speicher standardmäßig ablehnen (heute so)? Grabsteine nach Abgleich + Aufräumen behalten? Aktivitäten als volle Vorher/Nachher-Bilder (heute) oder RFC-6902-Patches?
 
