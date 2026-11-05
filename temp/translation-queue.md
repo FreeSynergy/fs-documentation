@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 11:46 UTC · 1499 Dateien verfolgt · 695 offen · 797 bestätigt
+Stand: 2026-11-05 12:38 UTC · 1526 Dateien verfolgt · 605 offen · 914 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,26 +36,22 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 472 |
-| B. `de/` fehlt – englische Quelle nachziehen | 0 |
+| A. `en/` fehlt – aus `de/` übersetzen | 467 |
+| B. `de/` fehlt – englische Quelle nachziehen | 27 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 0 |
+| F. Form nicht gleich – Struktur abgleichen | 105 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 223 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 6 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 472 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 467 Dateien
 
 ### `programs/` · 1
 
 - [ ] `programs/index.md` · 3.4k · Plan[~]
-
-### `programs/apps/calendar/frontends/` · 1
-
-- [ ] `programs/apps/calendar/frontends/index.md` · 2.7k
 
 ### `programs/apps/projectmanagement/frontends/openproject/latest/` · 6
 
@@ -291,13 +287,9 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/apps/wiki/frontends/vscodium/latest/menus.md` · 2.0k
 - [ ] `programs/apps/wiki/frontends/vscodium/latest/shortcuts.md` · 6.4k
 
-### `programs/apps/wiki/frontends/wikijs/latest/` · 6
+### `programs/apps/wiki/frontends/wikijs/latest/` · 2
 
 - [ ] `programs/apps/wiki/frontends/wikijs/latest/api.md` · 4.4k
-- [ ] `programs/apps/wiki/frontends/wikijs/latest/description.md` · 2.1k
-- [ ] `programs/apps/wiki/frontends/wikijs/latest/features.md` · 3.6k
-- [ ] `programs/apps/wiki/frontends/wikijs/latest/layout.md` · 6.2k
-- [ ] `programs/apps/wiki/frontends/wikijs/latest/menus.md` · 2.6k
 - [ ] `programs/apps/wiki/frontends/wikijs/latest/shortcuts.md` · 5.1k
 
 ### `programs/apps/wiki/frontends/xwiki/latest/` · 6
@@ -887,701 +879,530 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
-## H. Beide Seiten da, kein Befund – lesen und bestätigen – 223 Dateien
-
-### `(wurzel)/` · 1
-
-- [ ] `index.md` · 2.0k · hash changed since verification
-
-### `data/` · 4
-
-- [ ] `data/api.md` · 8.7k · hash changed since verification
-- [ ] `data/conventions.md` · 8.1k · hash changed since verification
-- [ ] `data/fields.md` · 10.0k · hash changed since verification
-- [ ] `data/index.md` · 6.6k · hash changed since verification
-
-### `data/contacts/` · 1
-
-- [ ] `data/contacts/technical.md` · 2.3k · hash changed since verification
-
-### `data/projects/` · 1
-
-- [ ] `data/projects/technical.md` · 2.1k · hash changed since verification
-
-### `interactions/animations/organization/` · 1
-
-- [ ] `interactions/animations/organization/index.md` · 1.0k
-
-### `interactions/animations/organization/cascade/` · 3
-
-- [ ] `interactions/animations/organization/cascade/appearance.md` · 1.9k
-- [ ] `interactions/animations/organization/cascade/attributes.md` · 1.7k
-- [ ] `interactions/animations/organization/cascade/description.md` · 1.2k
-
-### `interactions/animations/organization/stagger/` · 3
-
-- [ ] `interactions/animations/organization/stagger/appearance.md` · 1.5k
-- [ ] `interactions/animations/organization/stagger/attributes.md` · 1.3k
-- [ ] `interactions/animations/organization/stagger/description.md` · 1.1k
+## B. `de/` fehlt – englische Quelle nachziehen – 27 Dateien
 
 ### `programs/apps/calendar/` · 1
 
-- [ ] `programs/apps/calendar/index.md` · 3.6k · Plan[~] · hash changed since verification
-
-### `programs/apps/calendar/frontends/davical/` · 1
-
-- [ ] `programs/apps/calendar/frontends/davical/index.md` · 2.7k · hash changed since verification
-
-### `programs/apps/calendar/frontends/davical/latest/` · 1
-
-- [ ] `programs/apps/calendar/frontends/davical/latest/api.md` · 7.8k · hash changed since verification
-
-### `programs/apps/calendar/frontends/google-calendar/` · 1
-
-- [ ] `programs/apps/calendar/frontends/google-calendar/index.md` · 8.3k · hash changed since verification
-
-### `programs/apps/calendar/frontends/google-calendar/latest/` · 3
-
-- [ ] `programs/apps/calendar/frontends/google-calendar/latest/description.md` · 5.2k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/google-calendar/latest/layout.md` · 7.6k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/google-calendar/latest/menus.md` · 6.0k · hash changed since verification
-
-### `programs/apps/calendar/frontends/merkuro/` · 1
-
-- [ ] `programs/apps/calendar/frontends/merkuro/index.md` · 3.7k · hash changed since verification
-
-### `programs/apps/calendar/frontends/merkuro/latest/` · 5
-
-- [ ] `programs/apps/calendar/frontends/merkuro/latest/description.md` · 4.5k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/merkuro/latest/features.md` · 4.3k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/merkuro/latest/layout.md` · 6.1k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/merkuro/latest/menus.md` · 3.4k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/merkuro/latest/shortcuts.md` · 2.8k · hash changed since verification
-
-### `programs/apps/calendar/frontends/nextcloud-calendar/` · 1
-
-- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/index.md` · 3.7k · hash changed since verification
-
-### `programs/apps/calendar/frontends/nextcloud-calendar/latest/` · 5
-
-- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/latest/description.md` · 4.9k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/latest/features.md` · 6.2k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/latest/layout.md` · 7.4k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/latest/menus.md` · 5.7k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/latest/shortcuts.md` · 4.1k · hash changed since verification
-
-### `programs/apps/calendar/frontends/outlook-calendar/` · 1
-
-- [ ] `programs/apps/calendar/frontends/outlook-calendar/index.md` · 5.9k · hash changed since verification
-
-### `programs/apps/calendar/frontends/outlook-calendar/latest/` · 5
-
-- [ ] `programs/apps/calendar/frontends/outlook-calendar/latest/description.md` · 5.3k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/outlook-calendar/latest/features.md` · 6.9k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/outlook-calendar/latest/layout.md` · 5.9k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/outlook-calendar/latest/menus.md` · 4.1k · hash changed since verification
-- [ ] `programs/apps/calendar/frontends/outlook-calendar/latest/shortcuts.md` · 4.0k · hash changed since verification
-
-### `programs/apps/calendar/frontends/planner/` · 1
-
-- [ ] `programs/apps/calendar/frontends/planner/index.md` · 5.0k · hash changed since verification
-
-### `programs/apps/calendar/frontends/planner/latest/` · 1
-
-- [ ] `programs/apps/calendar/frontends/planner/latest/api.md` · 8.5k · hash changed since verification
+- [ ] `programs/apps/calendar/requirements.md` · 575b
 
 ### `programs/apps/contact/` · 1
 
-- [ ] `programs/apps/contact/index.md` · 3.4k · Plan[~] · hash changed since verification
-
-### `programs/apps/contact/frontends/` · 1
-
-- [ ] `programs/apps/contact/frontends/index.md` · 2.4k · hash changed since verification
-
-### `programs/apps/contact/frontends/gnome-contacts/` · 1
-
-- [ ] `programs/apps/contact/frontends/gnome-contacts/index.md` · 859b · hash changed since verification
-
-### `programs/apps/contact/frontends/gnome-contacts/latest/` · 2
-
-- [ ] `programs/apps/contact/frontends/gnome-contacts/latest/api.md` · 1.7k · hash changed since verification
-- [ ] `programs/apps/contact/frontends/gnome-contacts/latest/description.md` · 1.7k · hash changed since verification
-
-### `programs/apps/contact/frontends/kaddressbook/` · 1
-
-- [ ] `programs/apps/contact/frontends/kaddressbook/index.md` · 852b · hash changed since verification
-
-### `programs/apps/contact/frontends/kaddressbook/latest/` · 2
-
-- [ ] `programs/apps/contact/frontends/kaddressbook/latest/api.md` · 2.1k · hash changed since verification
-- [ ] `programs/apps/contact/frontends/kaddressbook/latest/description.md` · 1.7k · hash changed since verification
-
-### `programs/apps/contact/frontends/monica/` · 1
-
-- [ ] `programs/apps/contact/frontends/monica/index.md` · 839b · hash changed since verification
-
-### `programs/apps/contact/frontends/monica/latest/` · 1
-
-- [ ] `programs/apps/contact/frontends/monica/latest/api.md` · 2.3k · hash changed since verification
-
-### `programs/apps/contact/frontends/nextcloud-contacts/` · 1
-
-- [ ] `programs/apps/contact/frontends/nextcloud-contacts/index.md` · 855b · hash changed since verification
-
-### `programs/apps/contact/frontends/nextcloud-contacts/latest/` · 2
-
-- [ ] `programs/apps/contact/frontends/nextcloud-contacts/latest/api.md` · 2.6k · hash changed since verification
-- [ ] `programs/apps/contact/frontends/nextcloud-contacts/latest/description.md` · 1.7k · hash changed since verification
+- [ ] `programs/apps/contact/requirements.md` · 573b
 
 ### `programs/apps/gallery/` · 1
 
-- [ ] `programs/apps/gallery/index.md` · 2.8k · Plan[~] · hash changed since verification
+- [ ] `programs/apps/gallery/requirements.md` · 573b
 
-### `programs/apps/gallery/frontends/` · 1
+### `programs/apps/gallery/frontends/coppermine/latest/themes/` · 2
 
-- [ ] `programs/apps/gallery/frontends/index.md` · 2.8k · hash changed since verification
-
-### `programs/apps/gallery/frontends/coppermine/` · 1
-
-- [ ] `programs/apps/gallery/frontends/coppermine/index.md` · 856b · hash changed since verification
-
-### `programs/apps/gallery/frontends/coppermine/latest/` · 4
-
-- [ ] `programs/apps/gallery/frontends/coppermine/latest/api.md` · 2.6k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/coppermine/latest/description.md` · 1.4k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/coppermine/latest/layout.md` · 2.5k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/coppermine/latest/shortcuts.md` · 1.0k · hash changed since verification
-
-### `programs/apps/gallery/frontends/damselfly/` · 1
-
-- [ ] `programs/apps/gallery/frontends/damselfly/index.md` · 769b · hash changed since verification
-
-### `programs/apps/gallery/frontends/damselfly/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/damselfly/latest/api.md` · 2.2k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/damselfly/latest/description.md` · 1.3k · hash changed since verification
-
-### `programs/apps/gallery/frontends/immich/` · 1
-
-- [ ] `programs/apps/gallery/frontends/immich/index.md` · 873b · hash changed since verification
-
-### `programs/apps/gallery/frontends/immich/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/immich/latest/api.md` · 2.9k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/immich/latest/description.md` · 1.8k · hash changed since verification
-
-### `programs/apps/gallery/frontends/librephotos/` · 1
-
-- [ ] `programs/apps/gallery/frontends/librephotos/index.md` · 824b · hash changed since verification
-
-### `programs/apps/gallery/frontends/librephotos/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/librephotos/latest/api.md` · 2.2k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/librephotos/latest/description.md` · 1.4k · hash changed since verification
-
-### `programs/apps/gallery/frontends/lychee/` · 1
-
-- [ ] `programs/apps/gallery/frontends/lychee/index.md` · 747b · hash changed since verification
-
-### `programs/apps/gallery/frontends/lychee/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/lychee/latest/api.md` · 2.4k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/lychee/latest/description.md` · 1.4k · hash changed since verification
-
-### `programs/apps/gallery/frontends/nextcloud-photos/` · 1
-
-- [ ] `programs/apps/gallery/frontends/nextcloud-photos/index.md` · 976b · hash changed since verification
-
-### `programs/apps/gallery/frontends/nextcloud-photos/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/nextcloud-photos/latest/api.md` · 2.6k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/nextcloud-photos/latest/description.md` · 1.6k · hash changed since verification
-
-### `programs/apps/gallery/frontends/photoprism/` · 1
-
-- [ ] `programs/apps/gallery/frontends/photoprism/index.md` · 827b · hash changed since verification
-
-### `programs/apps/gallery/frontends/photoprism/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/photoprism/latest/api.md` · 2.6k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/photoprism/latest/description.md` · 1.6k · hash changed since verification
-
-### `programs/apps/gallery/frontends/piwigo/` · 1
-
-- [ ] `programs/apps/gallery/frontends/piwigo/index.md` · 802b · hash changed since verification
-
-### `programs/apps/gallery/frontends/piwigo/latest/` · 2
-
-- [ ] `programs/apps/gallery/frontends/piwigo/latest/api.md` · 2.6k · hash changed since verification
-- [ ] `programs/apps/gallery/frontends/piwigo/latest/description.md` · 1.5k · hash changed since verification
+- [ ] `programs/apps/gallery/frontends/coppermine/latest/themes/default.md` · 1.5k
+- [ ] `programs/apps/gallery/frontends/coppermine/latest/themes/index.md` · 216b
 
 ### `programs/apps/helpdesk/` · 1
 
-- [ ] `programs/apps/helpdesk/index.md` · 3.4k · Plan[~] · hash changed since verification
+- [ ] `programs/apps/helpdesk/requirements.md` · 575b
 
-### `programs/apps/helpdesk/frontends/` · 1
+### `programs/apps/maps/` · 1
 
-- [ ] `programs/apps/helpdesk/frontends/index.md` · 2.8k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/freshdesk/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/freshdesk/index.md` · 717b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/freshdesk/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/freshdesk/latest/api.md` · 2.4k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/freshdesk/latest/description.md` · 1.3k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/glpi/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/glpi/index.md` · 888b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/glpi/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/glpi/latest/api.md` · 2.5k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/glpi/latest/description.md` · 1.5k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/helodesk/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/helodesk/index.md` · 888b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/helodesk/latest/` · 3
-
-- [ ] `programs/apps/helpdesk/frontends/helodesk/latest/api.md` · 2.5k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/helodesk/latest/description.md` · 1.5k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/helodesk/latest/layout.md` · 2.3k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/helpscout/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/helpscout/index.md` · 743b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/helpscout/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/helpscout/latest/api.md` · 2.1k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/helpscout/latest/description.md` · 1.2k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/osticket/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/osticket/index.md` · 777b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/osticket/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/osticket/latest/api.md` · 2.3k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/osticket/latest/description.md` · 1.4k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/request-tracker/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/request-tracker/index.md` · 818b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/request-tracker/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/request-tracker/latest/api.md` · 2.6k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/request-tracker/latest/description.md` · 1.5k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/zammad/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/zammad/index.md` · 867b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/zammad/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/zammad/latest/api.md` · 2.9k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/zammad/latest/description.md` · 1.7k · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/zendesk/` · 1
-
-- [ ] `programs/apps/helpdesk/frontends/zendesk/index.md` · 774b · hash changed since verification
-
-### `programs/apps/helpdesk/frontends/zendesk/latest/` · 2
-
-- [ ] `programs/apps/helpdesk/frontends/zendesk/latest/api.md` · 3.0k · hash changed since verification
-- [ ] `programs/apps/helpdesk/frontends/zendesk/latest/description.md` · 1.4k · hash changed since verification
-
-### `programs/apps/maps/` · 2
-
-- [ ] `programs/apps/maps/index.md` · 3.2k · Plan[~] · hash changed since verification
-- [ ] `programs/apps/maps/standpunkte.md` · 2.2k · Plan[~] · hash changed since verification
-
-### `programs/apps/maps/frontends/` · 1
-
-- [ ] `programs/apps/maps/frontends/index.md` · 2.7k · hash changed since verification
-
-### `programs/apps/maps/frontends/leaflet/` · 1
-
-- [ ] `programs/apps/maps/frontends/leaflet/index.md` · 753b · hash changed since verification
-
-### `programs/apps/maps/frontends/leaflet/latest/` · 3
-
-- [ ] `programs/apps/maps/frontends/leaflet/latest/api.md` · 1.8k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/leaflet/latest/description.md` · 1.1k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/leaflet/latest/features.md` · 1.1k · hash changed since verification
-
-### `programs/apps/maps/frontends/maplibre/` · 1
-
-- [ ] `programs/apps/maps/frontends/maplibre/index.md` · 908b · hash changed since verification
-
-### `programs/apps/maps/frontends/maplibre/latest/` · 2
-
-- [ ] `programs/apps/maps/frontends/maplibre/latest/api.md` · 2.0k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/maplibre/latest/description.md` · 1.1k · hash changed since verification
-
-### `programs/apps/maps/frontends/openstreetmap/` · 1
-
-- [ ] `programs/apps/maps/frontends/openstreetmap/index.md` · 876b · hash changed since verification
-
-### `programs/apps/maps/frontends/openstreetmap/latest/` · 3
-
-- [ ] `programs/apps/maps/frontends/openstreetmap/latest/api.md` · 2.4k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/openstreetmap/latest/description.md` · 1.2k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/openstreetmap/latest/layout.md` · 2.1k · hash changed since verification
-
-### `programs/apps/maps/frontends/organic-maps/` · 1
-
-- [ ] `programs/apps/maps/frontends/organic-maps/index.md` · 774b · hash changed since verification
-
-### `programs/apps/maps/frontends/organic-maps/latest/` · 2
-
-- [ ] `programs/apps/maps/frontends/organic-maps/latest/api.md` · 1.1k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/organic-maps/latest/description.md` · 1.0k · hash changed since verification
-
-### `programs/apps/maps/frontends/osmand/` · 1
-
-- [ ] `programs/apps/maps/frontends/osmand/index.md` · 877b · hash changed since verification
-
-### `programs/apps/maps/frontends/osmand/latest/` · 3
-
-- [ ] `programs/apps/maps/frontends/osmand/latest/api.md` · 1.8k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/osmand/latest/description.md` · 1.1k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/osmand/latest/features.md` · 1.3k · hash changed since verification
-
-### `programs/apps/maps/frontends/qgis/` · 1
-
-- [ ] `programs/apps/maps/frontends/qgis/index.md` · 794b · hash changed since verification
-
-### `programs/apps/maps/frontends/qgis/latest/` · 2
-
-- [ ] `programs/apps/maps/frontends/qgis/latest/api.md` · 1.9k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/qgis/latest/description.md` · 1.1k · hash changed since verification
-
-### `programs/apps/maps/frontends/umap/` · 1
-
-- [ ] `programs/apps/maps/frontends/umap/index.md` · 785b · hash changed since verification
-
-### `programs/apps/maps/frontends/umap/latest/` · 3
-
-- [ ] `programs/apps/maps/frontends/umap/latest/api.md` · 1.8k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/umap/latest/description.md` · 1.1k · hash changed since verification
-- [ ] `programs/apps/maps/frontends/umap/latest/features.md` · 1.1k · hash changed since verification
+- [ ] `programs/apps/maps/requirements.md` · 567b
 
 ### `programs/apps/marketing/` · 1
 
-- [ ] `programs/apps/marketing/index.md` · 3.7k · Plan[~] · hash changed since verification
+- [ ] `programs/apps/marketing/requirements.md` · 577b
 
-### `programs/apps/marketing/frontends/` · 1
+### `programs/apps/messenger/` · 1
 
-- [ ] `programs/apps/marketing/frontends/index.md` · 2.6k · hash changed since verification
+- [ ] `programs/apps/messenger/requirements.md` · 577b
 
-### `programs/apps/marketing/frontends/google-analytics/` · 1
+### `programs/apps/messenger/frontends/discord/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/google-analytics/index.md` · 798b · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/discord/latest/themes/default.md` · 485b
+- [ ] `programs/apps/messenger/frontends/discord/latest/themes/index.md` · 213b
 
-### `programs/apps/marketing/frontends/google-analytics/latest/` · 2
+### `programs/apps/messenger/frontends/element/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/google-analytics/latest/api.md` · 2.2k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/google-analytics/latest/description.md` · 1.1k · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/element/latest/themes/default.md` · 481b
+- [ ] `programs/apps/messenger/frontends/element/latest/themes/index.md` · 213b
 
-### `programs/apps/marketing/frontends/hotjar/` · 1
+### `programs/apps/messenger/frontends/kontact/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/hotjar/index.md` · 779b · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/kontact/latest/themes/default.md` · 566b
+- [ ] `programs/apps/messenger/frontends/kontact/latest/themes/index.md` · 213b
 
-### `programs/apps/marketing/frontends/hotjar/latest/` · 2
+### `programs/apps/messenger/frontends/mastodon/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/hotjar/latest/api.md` · 1.7k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/hotjar/latest/description.md` · 1.1k · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/mastodon/latest/themes/default.md` · 479b
+- [ ] `programs/apps/messenger/frontends/mastodon/latest/themes/index.md` · 214b
 
-### `programs/apps/marketing/frontends/mailchimp/` · 1
+### `programs/apps/messenger/frontends/outlook/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/mailchimp/index.md` · 733b · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/outlook/latest/themes/default.md` · 394b
+- [ ] `programs/apps/messenger/frontends/outlook/latest/themes/index.md` · 213b
 
-### `programs/apps/marketing/frontends/mailchimp/latest/` · 2
+### `programs/apps/messenger/frontends/telegram/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/mailchimp/latest/api.md` · 2.3k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/mailchimp/latest/description.md` · 1.2k · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/telegram/latest/themes/default.md` · 492b
+- [ ] `programs/apps/messenger/frontends/telegram/latest/themes/index.md` · 214b
 
-### `programs/apps/marketing/frontends/matomo/` · 1
+### `programs/apps/messenger/frontends/thunderbird/latest/themes/` · 2
 
-- [ ] `programs/apps/marketing/frontends/matomo/index.md` · 789b · hash changed since verification
-
-### `programs/apps/marketing/frontends/matomo/latest/` · 2
-
-- [ ] `programs/apps/marketing/frontends/matomo/latest/api.md` · 2.1k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/matomo/latest/description.md` · 1.3k · hash changed since verification
-
-### `programs/apps/marketing/frontends/mautic/` · 1
-
-- [ ] `programs/apps/marketing/frontends/mautic/index.md` · 792b · hash changed since verification
-
-### `programs/apps/marketing/frontends/mautic/latest/` · 4
-
-- [ ] `programs/apps/marketing/frontends/mautic/latest/api.md` · 2.4k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/mautic/latest/description.md` · 1.2k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/mautic/latest/features.md` · 1.1k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/mautic/latest/menus.md` · 1.0k · hash changed since verification
-
-### `programs/apps/marketing/frontends/plausible/` · 1
-
-- [ ] `programs/apps/marketing/frontends/plausible/index.md` · 726b · hash changed since verification
-
-### `programs/apps/marketing/frontends/plausible/latest/` · 2
-
-- [ ] `programs/apps/marketing/frontends/plausible/latest/api.md` · 2.1k · hash changed since verification
-- [ ] `programs/apps/marketing/frontends/plausible/latest/description.md` · 1.1k · hash changed since verification
-
-### `programs/apps/messenger/frontends/` · 1
-
-- [ ] `programs/apps/messenger/frontends/index.md` · 4.3k · hash changed since verification
-
-### `programs/apps/messenger/frontends/discord/` · 1
-
-- [ ] `programs/apps/messenger/frontends/discord/index.md` · 551b · hash changed since verification
-
-### `programs/apps/messenger/frontends/discord/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/discord/latest/api.md` · 7.0k · hash changed since verification
-
-### `programs/apps/messenger/frontends/element/` · 1
-
-- [ ] `programs/apps/messenger/frontends/element/index.md` · 561b · hash changed since verification
-
-### `programs/apps/messenger/frontends/element/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/element/latest/api.md` · 7.0k · hash changed since verification
-
-### `programs/apps/messenger/frontends/kontact/` · 1
-
-- [ ] `programs/apps/messenger/frontends/kontact/index.md` · 570b · hash changed since verification
-
-### `programs/apps/messenger/frontends/kontact/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/kontact/latest/api.md` · 5.6k · hash changed since verification
-
-### `programs/apps/messenger/frontends/mastodon/` · 1
-
-- [ ] `programs/apps/messenger/frontends/mastodon/index.md` · 548b · hash changed since verification
-
-### `programs/apps/messenger/frontends/mastodon/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/mastodon/latest/api.md` · 7.0k · hash changed since verification
-
-### `programs/apps/messenger/frontends/outlook/` · 1
-
-- [ ] `programs/apps/messenger/frontends/outlook/index.md` · 511b · hash changed since verification
-
-### `programs/apps/messenger/frontends/outlook/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/outlook/latest/api.md` · 6.4k · hash changed since verification
-
-### `programs/apps/messenger/frontends/telegram/` · 1
-
-- [ ] `programs/apps/messenger/frontends/telegram/index.md` · 531b · hash changed since verification
-
-### `programs/apps/messenger/frontends/telegram/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/telegram/latest/api.md` · 6.8k · hash changed since verification
-
-### `programs/apps/messenger/frontends/thunderbird/` · 1
-
-- [ ] `programs/apps/messenger/frontends/thunderbird/index.md` · 527b · hash changed since verification
-
-### `programs/apps/messenger/frontends/thunderbird/latest/` · 1
-
-- [ ] `programs/apps/messenger/frontends/thunderbird/latest/api.md` · 6.2k · hash changed since verification
+- [ ] `programs/apps/messenger/frontends/thunderbird/latest/themes/default.md` · 507b
+- [ ] `programs/apps/messenger/frontends/thunderbird/latest/themes/index.md` · 217b
 
 ### `programs/apps/projectmanagement/` · 1
 
-- [ ] `programs/apps/projectmanagement/index.md` · 3.6k · Plan[~] · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/index.md` · 2.8k · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/asana/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/asana/index.md` · 781b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/asana/latest/` · 2
-
-- [ ] `programs/apps/projectmanagement/frontends/asana/latest/api.md` · 2.3k · hash changed since verification
-- [ ] `programs/apps/projectmanagement/frontends/asana/latest/description.md` · 1.2k · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/jira/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/jira/index.md` · 766b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/jira/latest/` · 2
-
-- [ ] `programs/apps/projectmanagement/frontends/jira/latest/api.md` · 2.5k · hash changed since verification
-- [ ] `programs/apps/projectmanagement/frontends/jira/latest/description.md` · 1.3k · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/openproject/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/openproject/index.md` · 903b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/planka/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/planka/index.md` · 850b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/redmine/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/redmine/index.md` · 882b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/taiga/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/taiga/index.md` · 762b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/trello/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/trello/index.md` · 741b · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/trello/latest/` · 2
-
-- [ ] `programs/apps/projectmanagement/frontends/trello/latest/api.md` · 2.5k · hash changed since verification
-- [ ] `programs/apps/projectmanagement/frontends/trello/latest/description.md` · 1.3k · hash changed since verification
-
-### `programs/apps/projectmanagement/frontends/wekan/` · 1
-
-- [ ] `programs/apps/projectmanagement/frontends/wekan/index.md` · 802b · hash changed since verification
+- [ ] `programs/apps/projectmanagement/requirements.md` · 593b
 
 ### `programs/apps/streaming/` · 1
 
-- [ ] `programs/apps/streaming/index.md` · 3.4k · Plan[~] · hash changed since verification
-
-### `programs/apps/streaming/frontends/` · 1
-
-- [ ] `programs/apps/streaming/frontends/index.md` · 3.1k · hash changed since verification
-
-### `programs/apps/streaming/frontends/ant-media-server/` · 1
-
-- [ ] `programs/apps/streaming/frontends/ant-media-server/index.md` · 942b · hash changed since verification
-
-### `programs/apps/streaming/frontends/ffmpeg/` · 1
-
-- [ ] `programs/apps/streaming/frontends/ffmpeg/index.md` · 2.2k · hash changed since verification
-
-### `programs/apps/streaming/frontends/gstreamer/` · 1
-
-- [ ] `programs/apps/streaming/frontends/gstreamer/index.md` · 1.0k · hash changed since verification
-
-### `programs/apps/streaming/frontends/mediamtx/` · 1
-
-- [ ] `programs/apps/streaming/frontends/mediamtx/index.md` · 1008b · hash changed since verification
-
-### `programs/apps/streaming/frontends/mistserver/` · 1
-
-- [ ] `programs/apps/streaming/frontends/mistserver/index.md` · 992b · hash changed since verification
-
-### `programs/apps/streaming/frontends/nginx-rtmp-module/` · 1
-
-- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/index.md` · 1.0k · hash changed since verification
-
-### `programs/apps/streaming/frontends/obs-studio/` · 1
-
-- [ ] `programs/apps/streaming/frontends/obs-studio/index.md` · 847b · hash changed since verification
-
-### `programs/apps/streaming/frontends/restream/` · 1
-
-- [ ] `programs/apps/streaming/frontends/restream/index.md` · 1019b · hash changed since verification
-
-### `programs/apps/streaming/frontends/restreamer/` · 1
-
-- [ ] `programs/apps/streaming/frontends/restreamer/index.md` · 840b · hash changed since verification
-
-### `programs/apps/streaming/frontends/wowza/` · 1
-
-- [ ] `programs/apps/streaming/frontends/wowza/index.md` · 1.3k · hash changed since verification
+- [ ] `programs/apps/streaming/requirements.md` · 577b
 
 ### `programs/apps/whiteboards/` · 1
 
-- [ ] `programs/apps/whiteboards/index.md` · 3.3k · Plan[~] · hash changed since verification
+- [ ] `programs/apps/whiteboards/requirements.md` · 581b
+
+### `programs/apps/wiki/` · 1
+
+- [ ] `programs/apps/wiki/requirements.md` · 567b
+
+## F. Form nicht gleich – Struktur abgleichen – 105 Dateien
+
+### `programs/apps/calendar/` · 1
+
+- [ ] `programs/apps/calendar/index.md` · 4.3k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
+
+### `programs/apps/calendar/frontends/` · 1
+
+- [ ] `programs/apps/calendar/frontends/index.md` · 3.5k · Parität: headings 3 vs 7; table rows 8 vs 0
+
+### `programs/apps/calendar/frontends/davical/` · 1
+
+- [ ] `programs/apps/calendar/frontends/davical/index.md` · 3.1k · Parität: headings 6 vs 4; table rows 27 vs 16 · hash changed since verification
+
+### `programs/apps/calendar/frontends/google-calendar/` · 1
+
+- [ ] `programs/apps/calendar/frontends/google-calendar/index.md` · 8.5k · Parität: headings 7 vs 5; table rows 50 vs 39 · hash changed since verification
+
+### `programs/apps/calendar/frontends/merkuro/` · 1
+
+- [ ] `programs/apps/calendar/frontends/merkuro/index.md` · 3.9k · Parität: headings 5 vs 3; table rows 11 vs 8 · hash changed since verification
+
+### `programs/apps/calendar/frontends/nextcloud-calendar/` · 1
+
+- [ ] `programs/apps/calendar/frontends/nextcloud-calendar/index.md` · 3.8k · Parität: headings 5 vs 3; table rows 11 vs 8 · hash changed since verification
+
+### `programs/apps/calendar/frontends/outlook-calendar/` · 1
+
+- [ ] `programs/apps/calendar/frontends/outlook-calendar/index.md` · 6.0k · Parität: headings 5 vs 3; table rows 11 vs 8 · hash changed since verification
+
+### `programs/apps/calendar/frontends/planner/` · 1
+
+- [ ] `programs/apps/calendar/frontends/planner/index.md` · 5.3k · Parität: headings 6 vs 4; table rows 30 vs 19 · hash changed since verification
+
+### `programs/apps/contact/` · 1
+
+- [ ] `programs/apps/contact/index.md` · 3.8k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
+
+### `programs/apps/contact/frontends/` · 1
+
+- [ ] `programs/apps/contact/frontends/index.md` · 3.0k · Parität: headings 3 vs 7; table rows 6 vs 0 · hash changed since verification
+
+### `programs/apps/contact/frontends/gnome-contacts/` · 1
+
+- [ ] `programs/apps/contact/frontends/gnome-contacts/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/contact/frontends/kaddressbook/` · 1
+
+- [ ] `programs/apps/contact/frontends/kaddressbook/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/contact/frontends/monica/` · 1
+
+- [ ] `programs/apps/contact/frontends/monica/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/contact/frontends/nextcloud-contacts/` · 1
+
+- [ ] `programs/apps/contact/frontends/nextcloud-contacts/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/` · 1
+
+- [ ] `programs/apps/gallery/frontends/index.md` · 3.7k · Parität: headings 3 vs 7; table rows 10 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/coppermine/` · 1
+
+- [ ] `programs/apps/gallery/frontends/coppermine/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/coppermine/latest/` · 1
+
+- [ ] `programs/apps/gallery/frontends/coppermine/latest/layout.md` · 1.3k · Parität: links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/gallery/frontends/damselfly/` · 1
+
+- [ ] `programs/apps/gallery/frontends/damselfly/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/immich/` · 1
+
+- [ ] `programs/apps/gallery/frontends/immich/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/librephotos/` · 1
+
+- [ ] `programs/apps/gallery/frontends/librephotos/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/lychee/` · 1
+
+- [ ] `programs/apps/gallery/frontends/lychee/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/nextcloud-photos/` · 1
+
+- [ ] `programs/apps/gallery/frontends/nextcloud-photos/index.md` · 1.4k · Parität: headings 6 vs 4; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/photoprism/` · 1
+
+- [ ] `programs/apps/gallery/frontends/photoprism/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/gallery/frontends/piwigo/` · 1
+
+- [ ] `programs/apps/gallery/frontends/piwigo/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/` · 1
+
+- [ ] `programs/apps/helpdesk/index.md` · 4.3k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/index.md` · 3.8k · Parität: headings 3 vs 7; table rows 10 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/freshdesk/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/freshdesk/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/glpi/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/glpi/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/helodesk/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/helodesk/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/helpscout/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/helpscout/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/osticket/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/osticket/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/request-tracker/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/request-tracker/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/zammad/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/zammad/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/helpdesk/frontends/zendesk/` · 1
+
+- [ ] `programs/apps/helpdesk/frontends/zendesk/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/` · 1
+
+- [ ] `programs/apps/maps/index.md` · 4.2k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
+
+### `programs/apps/maps/frontends/` · 1
+
+- [ ] `programs/apps/maps/frontends/index.md` · 3.7k · Parität: headings 3 vs 7; table rows 9 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/leaflet/` · 1
+
+- [ ] `programs/apps/maps/frontends/leaflet/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/maplibre/` · 1
+
+- [ ] `programs/apps/maps/frontends/maplibre/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/openstreetmap/` · 1
+
+- [ ] `programs/apps/maps/frontends/openstreetmap/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/organic-maps/` · 1
+
+- [ ] `programs/apps/maps/frontends/organic-maps/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/osmand/` · 1
+
+- [ ] `programs/apps/maps/frontends/osmand/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/qgis/` · 1
+
+- [ ] `programs/apps/maps/frontends/qgis/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/maps/frontends/umap/` · 1
+
+- [ ] `programs/apps/maps/frontends/umap/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/` · 1
+
+- [ ] `programs/apps/marketing/index.md` · 4.5k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
+
+### `programs/apps/marketing/frontends/` · 1
+
+- [ ] `programs/apps/marketing/frontends/index.md` · 3.5k · Parität: headings 3 vs 7; table rows 8 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/frontends/google-analytics/` · 1
+
+- [ ] `programs/apps/marketing/frontends/google-analytics/index.md` · 1.3k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/frontends/hotjar/` · 1
+
+- [ ] `programs/apps/marketing/frontends/hotjar/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/frontends/mailchimp/` · 1
+
+- [ ] `programs/apps/marketing/frontends/mailchimp/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/frontends/matomo/` · 1
+
+- [ ] `programs/apps/marketing/frontends/matomo/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/frontends/mautic/` · 1
+
+- [ ] `programs/apps/marketing/frontends/mautic/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/marketing/frontends/plausible/` · 1
+
+- [ ] `programs/apps/marketing/frontends/plausible/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/` · 1
+
+- [ ] `programs/apps/messenger/index.md` · 3.9k · Plan[~] · Parität: headings 11 vs 10; links en-only=['frontends/discord/index.md', 'frontends/element/index.md', 'frontends/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/` · 1
+
+- [ ] `programs/apps/messenger/frontends/index.md` · 3.2k · Parität: headings 3 vs 13; table rows 9 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/discord/` · 1
+
+- [ ] `programs/apps/messenger/frontends/discord/index.md` · 1.1k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/discord/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/discord/latest/layout.md` · 7.2k · Parität: headings 18 vs 19; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/element/` · 1
+
+- [ ] `programs/apps/messenger/frontends/element/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/element/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/element/latest/layout.md` · 6.4k · Parität: headings 18 vs 19; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/kontact/` · 1
+
+- [ ] `programs/apps/messenger/frontends/kontact/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/kontact/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/kontact/latest/layout.md` · 10.2k · Parität: headings 19 vs 20; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/mastodon/` · 1
+
+- [ ] `programs/apps/messenger/frontends/mastodon/index.md` · 1.1k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/mastodon/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/mastodon/latest/layout.md` · 7.7k · Parität: headings 18 vs 19; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/outlook/` · 1
+
+- [ ] `programs/apps/messenger/frontends/outlook/index.md` · 1.1k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/outlook/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/outlook/latest/layout.md` · 7.1k · Parität: headings 18 vs 19; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/telegram/` · 1
+
+- [ ] `programs/apps/messenger/frontends/telegram/index.md` · 1.1k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/telegram/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/telegram/latest/layout.md` · 7.6k · Parität: headings 18 vs 19; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/thunderbird/` · 1
+
+- [ ] `programs/apps/messenger/frontends/thunderbird/index.md` · 1.1k · Parität: headings 5 vs 3; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/messenger/frontends/thunderbird/latest/` · 1
+
+- [ ] `programs/apps/messenger/frontends/thunderbird/latest/layout.md` · 7.5k · Parität: headings 18 vs 19; links en-only=['themes/index.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/projectmanagement/` · 1
+
+- [ ] `programs/apps/projectmanagement/index.md` · 4.7k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/index.md` · 3.8k · Parität: headings 3 vs 7; table rows 10 vs 0 · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/asana/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/asana/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/jira/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/jira/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/openproject/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/openproject/index.md` · 699b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/planka/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/planka/index.md` · 623b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/redmine/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/redmine/index.md` · 676b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/taiga/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/taiga/index.md` · 591b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/trello/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/trello/index.md` · 1.2k · Parität: headings 5 vs 3; table rows 11 vs 0 · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/wekan/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/wekan/index.md` · 622b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/` · 1
+
+- [ ] `programs/apps/streaming/frontends/index.md` · 4.2k · Parität: headings 3 vs 7; table rows 12 vs 0 · hash changed since verification
+
+### `programs/apps/streaming/frontends/ant-media-server/` · 1
+
+- [ ] `programs/apps/streaming/frontends/ant-media-server/index.md` · 672b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/ffmpeg/` · 1
+
+- [ ] `programs/apps/streaming/frontends/ffmpeg/index.md` · 1.9k · Parität: headings 5 vs 4; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/gstreamer/` · 1
+
+- [ ] `programs/apps/streaming/frontends/gstreamer/index.md` · 768b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/mediamtx/` · 1
+
+- [ ] `programs/apps/streaming/frontends/mediamtx/index.md` · 731b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/mistserver/` · 1
+
+- [ ] `programs/apps/streaming/frontends/mistserver/index.md` · 749b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/nginx-rtmp-module/` · 1
+
+- [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/index.md` · 741b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/obs-studio/` · 1
+
+- [ ] `programs/apps/streaming/frontends/obs-studio/index.md` · 617b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/restream/` · 1
+
+- [ ] `programs/apps/streaming/frontends/restream/index.md` · 698b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/restreamer/` · 1
+
+- [ ] `programs/apps/streaming/frontends/restreamer/index.md` · 619b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/streaming/frontends/wowza/` · 1
+
+- [ ] `programs/apps/streaming/frontends/wowza/index.md` · 888b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/whiteboards/` · 1
+
+- [ ] `programs/apps/whiteboards/index.md` · 3.9k · Plan[~] · Parität: links en-only=[] de-only=['../../data/api.md', '../platform/desktop/frontends/index.md', 'wiki/frontends/index.md'] · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/index.md` · 2.5k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/index.md` · 3.1k · Parität: headings 3 vs 7; table rows 8 vs 0 · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/drawio/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/drawio/index.md` · 849b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/drawio/index.md` · 575b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/excalidraw/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/index.md` · 782b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/index.md` · 536b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/miro/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/miro/index.md` · 748b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/miro/index.md` · 611b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/mural/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/mural/index.md` · 722b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/mural/index.md` · 581b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/openboard/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/openboard/index.md` · 782b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/openboard/index.md` · 632b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/whiteboards/frontends/tldraw/` · 1
 
-- [ ] `programs/apps/whiteboards/frontends/tldraw/index.md` · 864b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/tldraw/index.md` · 620b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
+
+### `programs/apps/wiki/` · 1
+
+- [ ] `programs/apps/wiki/index.md` · 3.3k · Plan[~] · Parität: headings 10 vs 9; links en-only=['frontends/confluence/index.md', 'frontends/index.md', 'frontends/mediawiki/index.md'] de-only=[] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/` · 1
 
-- [ ] `programs/apps/wiki/frontends/index.md` · 4.4k · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/index.md` · 2.7k · Parität: headings 3 vs 13; table rows 9 vs 0 · hash changed since verification
 
 ### `programs/apps/wiki/frontends/confluence/` · 1
 
-- [ ] `programs/apps/wiki/frontends/confluence/index.md` · 520b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/confluence/index.md` · 430b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/mediawiki/` · 1
 
-- [ ] `programs/apps/wiki/frontends/mediawiki/index.md` · 517b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/mediawiki/index.md` · 427b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/notion/` · 1
 
-- [ ] `programs/apps/wiki/frontends/notion/index.md` · 514b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/notion/index.md` · 424b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/tango.io/` · 1
 
-- [ ] `programs/apps/wiki/frontends/tango.io/index.md` · 521b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/tango.io/index.md` · 431b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/vscodium/` · 1
 
-- [ ] `programs/apps/wiki/frontends/vscodium/index.md` · 507b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/vscodium/index.md` · 417b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/wikijs/` · 1
 
-- [ ] `programs/apps/wiki/frontends/wikijs/index.md` · 501b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/wikijs/index.md` · 411b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
 ### `programs/apps/wiki/frontends/xwiki/` · 1
 
-- [ ] `programs/apps/wiki/frontends/xwiki/index.md` · 530b · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/xwiki/index.md` · 440b · Parität: headings 4 vs 3; links en-only=['../index.md'] de-only=['latest/api.md', 'latest/description.md', 'latest/features.md'] · hash changed since verification
 
-### `programs/platform/desktop/` · 1
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 6 Dateien
 
-- [ ] `programs/platform/desktop/index.md` · 4.0k · Plan[~] · hash changed since verification
+### `programs/apps/gallery/` · 1
 
-### `programs/suites/crm/` · 1
+- [ ] `programs/apps/gallery/index.md` · 3.7k · Plan[~] · hash changed since verification
 
-- [ ] `programs/suites/crm/index.md` · 3.5k · Plan[~] · hash changed since verification
+### `programs/apps/streaming/` · 1
 
-### `programs/suites/democracy/` · 1
+- [ ] `programs/apps/streaming/index.md` · 4.8k · Plan[~] · hash changed since verification
 
-- [ ] `programs/suites/democracy/index.md` · 3.3k · Plan[~] · hash changed since verification
+### `programs/apps/wiki/frontends/wikijs/latest/` · 4
 
-### `programs/suites/erp/` · 1
-
-- [ ] `programs/suites/erp/index.md` · 3.3k · Plan[~] · hash changed since verification
-
-### `programs/suites/workflows/` · 1
-
-- [ ] `programs/suites/workflows/index.md` · 3.3k · Plan[~] · hash changed since verification
+- [ ] `programs/apps/wiki/frontends/wikijs/latest/description.md` · 2.0k
+- [ ] `programs/apps/wiki/frontends/wikijs/latest/features.md` · 3.3k
+- [ ] `programs/apps/wiki/frontends/wikijs/latest/layout.md` · 6.0k
+- [ ] `programs/apps/wiki/frontends/wikijs/latest/menus.md` · 2.2k
 
 ## 🗑️ Gelöscht – 7
 
@@ -1595,8 +1416,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-  Prosa. Deutsche Produkt-Labels in `en/` und englische Spezifikat-Zitate in `de/` sind Belege,
-  keine Uebersetzungsreste. Das allein hat 34 False-Positives in D/E beseitigt.
 - 2026-11-04 20:29 · Lauf: 1492 verfolgt, 1492 offen, 0 bestätigt · needs_en=687 needs_de=1 en_german=5 de_english=3 parity=28 rename=15 review=771
 - 2026-11-04 20:29 · Lauf: 1492 verfolgt, 1492 offen, 0 bestätigt · needs_en=687 needs_de=1 en_german=5 de_english=3 parity=28 rename=17 review=771
 - 2026-11-04 20:32 · Lauf: 1492 verfolgt, 1492 offen, 0 bestätigt · needs_en=687 needs_de=1 en_german=5 de_english=3 parity=28 rename=17 review=771
@@ -1636,3 +1455,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 11:28 · Lauf: 1499 verfolgt, 676 offen, 816 bestätigt · needs_en=498 review=178
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 714 offen, 778 bestätigt · needs_en=472 review=242
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 695 offen, 797 bestätigt · needs_en=472 review=223
+- 2026-11-05 12:09 · Lauf: 1526 verfolgt, 605 offen, 914 bestätigt · needs_en=471 needs_de=27 parity=105 review=2
+- 2026-11-05 12:38 · Lauf: 1526 verfolgt, 605 offen, 914 bestätigt · needs_en=467 needs_de=27 parity=105 review=6
