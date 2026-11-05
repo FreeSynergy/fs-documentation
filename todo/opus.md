@@ -113,7 +113,7 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 | 3 | Text-Kern: Rope + Markierungen (ADR 0033/0042), Markdown hinein/heraus (pulldown-cmark), Link-Tabelle, Vorlagen | `fs-wiki` (crate `fs-text` im Workspace) | (2) später | Sonnet | offen |
 | 4 ✅ | `common.capnp` (Uuid, Timestamp, Cursor, Problem, Blob) | `fs-documentation/temp/contracts` | — | Opus | ✅ |
 | 5 ✅ | Doku-Gerüste der 13 neuen Components (+ Skripte auf `en`) | `fs-documentation` | — | Sonnet | ✅ |
-| 6 | Datenmodelle Kontakte / Kalender / Karten | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | Karten ✅ 29 Tests; Kontakte/Kalender laufen |
+| 6 | Datenmodelle Kontakte / Kalender / Karten | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | Karten ✅ 29 · Kontakte ✅ 15 · Kalender ✅ 31 Tests; fs-store 0.2 (Invite-Arten, atomar, Bereichs-/Textsuche, Zeitzonen 2026) läuft |
 | 7 | Wiki-Workbench auf Blinc (Code-Modus, liest `fs-documentation`) | `fs-wiki` | 3, Blinc | Sonnet | später |
 | 8 | Suite `fs-groupware` (Container, Workbenches nebeneinander) | `fs-groupware` | 6, 7 | — | später |
 | 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | — | später |
@@ -122,5 +122,6 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 - alte Repos `fs-store`/`fs-components` archivieren und Namen übernehmen?
 - GitHub-Anbindung darf in der Org keine Repos anlegen (404) → Repos anlegen oder Berechtigung geben; lokal: fs-capnpc, fs-store, fs-wiki, fs-contacts, fs-calendar, fs-maps
 - fs-maps (29 Tests ✅): OSMF-Kachelserver verbieten Offline/Bulk → eigener PMTiles-Auszug; **welcher Auszug wird standardmäßig gehostet** (Region, Server)? rustls nutzt Krypto mit C/asm (ring/aws-lc) — reine Rust-Variante `rustls-rustcrypto` (experimentell) prüfen?
+- fs-calendar: von JSCalendar 2.0 nur „reserviert“ markierte Felder (`sendTo`, `replyTo` …) bleiben vorerst im Objekt (Demo-Daten nutzen `sendTo`) — richtig so? Antworten auf Einladungen gelten heute für die ganze Serie, nicht für einzelne Termine.
 - fs-store: `max_steps` global oder je Person? Schutzbedürftige Objekte in unverschlüsseltem Speicher standardmäßig ablehnen (heute so)? Grabsteine nach Abgleich + Aufräumen behalten? Aktivitäten als volle Vorher/Nachher-Bilder (heute) oder RFC-6902-Patches?
 
