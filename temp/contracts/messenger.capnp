@@ -6,7 +6,7 @@
 
 @0xd6c1b5e3a2f40917;   # file id (generate a fresh one with `capnp id` before first release)
 
-using Ids = import "common.capnp";   # planned shared file: Uuid, Iri, Timestamp, Cursor, Problem, Blob
+# later: move Uuid, Timestamp, Cursor, Problem, Blob into a shared common.capnp for all programs
 
 # ---------------------------------------------------------------- basics ----
 
