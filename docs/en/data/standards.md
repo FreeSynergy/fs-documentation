@@ -190,7 +190,10 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | messages | chat: MIMI content (draft -10); e-mail: original MIME + JMAP `Email` fields; Matrix events | `Note` (`context` = conversation) | ✅ 2026-11-05, see [messages/](messages/standards.md) |
 | events | **JSCalendar 2.0** (`draft-ietf-calext-jscalendarbis-22`) `Event`/`Task` | `Event`; log `Invite`/`Accept`/`TentativeAccept`/`Reject` | ✅ 2026-11-05, see [events/](events/standards.md) |
 | documents | text: original + CommonMark/GFM; blocks: own spec; structure: schema.org `Book`/`Collection`; annotations: Web Annotation | `Article`, `Document`, `Collection`/`OrderedCollection`, `Annotation` | ✅ 2026-11-05, see [documents/](documents/standards.md) |
-| geodata, projects, profile, login | see domain directories | | open |
+| geodata | GeoJSON (JSON-FG 1.0 where needed); in images Exif 3.1 + XMP + IPTC 2025.1 | `Place` | ✅ 2026-11-05 |
+| projects | JSCalendar 2.0 `Task` + RFC 9253/10051 semantics; board: own spec | `Collection` (board), task envelope; ForgeFed `TicketDependency` | ✅ 2026-11-05 |
+| profile | JSContact (self card) | `Profile` (`describes` → myself) | ✅ 2026-11-05 |
+| login | OIDC / WebAuthn L3 / SCIM; federation: OpenID Federation 1.0 (proposed) | `Person` actor, WebFinger | ✅ 2026-11-05 |
 
 ## Gaps → own specifications (ADR 0014)
 
@@ -200,7 +203,11 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | `Contact.lifecycle` | ❌ in vCard/JSContact; extension mechanism ✅ (RFC 9553 §1.8.1) | vendor property `freesynergy.net:lifecycle` (ADR 0028), later CRM spec |
 | marking of sensitive data (GDPR Art. 9 categories) | ⚠️ W3C DPV candidate, unchecked | ADR 0029 |
 | board/project structure | ❌ | spec candidate no. 3 |
-| Web of Trust | ❌ in standards bodies | co-author with RLTP |
+| Web of Trust | ❌ in standards bodies | co-author with RLTP; trust-mark profile for OpenID Federation |
+| task relations "blocks"/"duplicates" in JSCalendar | ❌ | relation vocabulary (OpenProject set as reference) |
+| profile field → DPV category table, consent record | ❌ | ADR 0029 |
+| SCIM provisioning server (Kanidm is sync-source only) | ❌ in Kanidm | own SCIM server in the hub |
+| WebFinger link profile (actor, OIDC issuer, DID) | ❌ | discovery spec |
 
 ## Domain directories
 

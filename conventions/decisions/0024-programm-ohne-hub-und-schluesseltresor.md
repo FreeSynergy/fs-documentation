@@ -18,3 +18,7 @@ Status: akzeptiert (2026-11-05) · Protokoll §3, §21.3 · ADR 0015, 0019
 
 ## Folgen
 - Neue Kategorie für den Schlüsseltresor (Programm und/oder Workbench) planen.
+- Befund 2026-11-05 (`temp/research/geodata-projects-profile-login.md`): **Kanidm 1.12** kann SCIM nur
+  als *Eingang* (Sync-Quelle), nicht als Provisionierungs-Server, und kein OpenID Federation →
+  eigener SCIM-Server im Hub; Föderation zwischen Instanzen: **OpenID Federation 1.0** (final
+  2026-02-17, Trust Anchors/Chains/Marks) als Kandidat — Vorschlag, wartet auf Entscheidung.

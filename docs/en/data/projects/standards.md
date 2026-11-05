@@ -2,6 +2,26 @@
 
 > The evidence lives centrally in [standards.md](../standards.md) — **do not reload anything from the web.** Research completed 2026-11-02.
 
+
+## State 2026-11-05
+
+Evidence: `temp/research/geodata-projects-profile-login.md` (2026-11-05).
+
+| Standard | Evidence | Role |
+|----------|----------|------|
+| JSCalendar 2.0 `Task` | ✅ | the task object |
+| **RFC 9253** relations: `DEPENDS-ON`, `FIRST`, `NEXT`, `FINISHTOSTART`/`FINISHTOFINISH`/`STARTTOSTART`/`STARTTOFINISH` with lead/lag gap | ✅ | dependencies |
+| **RFC 10051** task extensions: status `PENDING`/`FAILED`, `VSTATUS` (reason, substate), estimated duration, `TASK-MODE` | ✅ | richer task status (vendor property until JSCalendar has it) |
+| JSCalendar `relatedTo` | ✅ only `first`, `next`, `child`, `parent` | no "blocks"/"duplicates" → gap |
+| **ForgeFed** `TicketDependency` (ActivityPub for forges) | ✅ draft | federation-native dependency in the envelope |
+| ISO 21511:2018 (WBS) | ✅ guidance only, no data format | vocabulary reference |
+| schema.org `Project` | ✅ core, subtype of `Organization`; no task/status/dependency properties | export projection only |
+| W6C XML Schema | not found again | dropped |
+| kanban board standard | ❌ none | **own spec** (candidate no. 3) |
+
+Reference vocabulary for relations (OpenProject): relates, duplicates, blocks, precedes/follows,
+includes/partof, requires. Exports seen: Taiga JSON dump, Vikunja ZIP with `data.json`.
+
 ## Result of the standards search (2026-11-02)
 
 | Candidate | Evidence | Assessment |

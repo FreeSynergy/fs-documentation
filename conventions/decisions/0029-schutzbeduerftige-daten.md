@@ -16,7 +16,8 @@ Todesstrafe bedeuten. Verknüpfung + solche Daten = Gefahr.
 ## Vorschlag zur Umsetzung
 - Kennzeichnung je **Feld oder Objekt** mit Kategorien der besonders geschützten Daten
   (DSGVO Art. 9: sexuelle Orientierung, Gesundheit, Religion, politische Meinung, Herkunft, …);
-  Vokabular-Kandidat: W3C **Data Privacy Vocabulary (DPV)** ⚠️ ungeprüft.
+  Vokabular: W3C **Data Privacy Vocabulary DPV 2.3** (2026-02-25, Final CG Report ✅) —
+  `dpv:SpecialCategoryPersonalData`, `pd:SexualPreference`, GDPR-Erweiterung mit Art. 9(2)(a)–(j).
 - Gekennzeichnete Daten:
   1. werden **nie automatisch** verknüpft — der Hub schlägt keine `owl:sameAs`-Verbindung vor, die
      sie mit anderen Kontexten zusammenführt;
