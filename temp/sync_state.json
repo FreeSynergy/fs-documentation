@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T06:10:39.048170+00:00",
+  "last_run": "2026-11-05T06:53:52.892546+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -1458,18 +1458,22 @@
       "change_reason": null
     },
     "components/primitives/fields/color-input/appearance.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "cc0cc969c2750dbb",
-      "de_hash": "6560cae2a3c169cf",
+      "de_hash": "58f7bd3a55d8048f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
       "en_bytes": 2818,
-      "de_bytes": 3436
+      "de_bytes": 2828,
+      "change_reason": null
     },
     "components/primitives/fields/color-input/attributes.md": {
       "status": "VERIFIED",
@@ -7795,18 +7799,22 @@
       "de_bytes": 2484
     },
     "data/index.md": {
-      "status": "PENDING",
-      "en_hash": "a01ae964bdc97b4c",
-      "de_hash": "02f415a2e7857329",
+      "status": "VERIFIED",
+      "en_hash": "335137f0e0414ccf",
+      "de_hash": "63006dabec1d4083",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 3909,
-      "de_bytes": 6938
+      "en_bytes": 6727,
+      "de_bytes": 6942,
+      "change_reason": null
     },
     "data/konventionen.md": {
       "status": "PENDING",
@@ -8153,15 +8161,13 @@
       "de_bytes": 21768
     },
     "index.md": {
-      "status": "PENDING",
-      "en_hash": "1de8c7534c058db8",
-      "de_hash": "04f8e1ada11d6dfd",
+      "status": "VERIFIED",
+      "en_hash": "a98d16c823b872c0",
+      "de_hash": "5766da39d5f2e945",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "test",
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
         {
           "at": "2026-11-05T02:26:25.934446+00:00",
@@ -8174,10 +8180,14 @@
         {
           "at": "2026-11-05T02:26:55.026422+00:00",
           "event": "unconfirmed → PENDING"
+        },
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1200,
-      "de_bytes": 2067,
+      "en_bytes": 1961,
+      "de_bytes": 2069,
       "change_reason": null
     },
     "interactions/animations/entrance/bounce-in/appearance.md": {
@@ -9315,18 +9325,22 @@
       "de_bytes": 966
     },
     "interactions/animations/index.md": {
-      "status": "PENDING",
-      "en_hash": "887767cff1c2655d",
+      "status": "VERIFIED",
+      "en_hash": "a61e86d1a2d23d00",
       "de_hash": "8acf23da7dc4d058",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 5304,
-      "de_bytes": 15306
+      "en_bytes": 14847,
+      "de_bytes": 15306,
+      "change_reason": null
     },
     "interactions/animations/loading/dots/appearance.md": {
       "status": "PENDING",
@@ -10473,18 +10487,22 @@
       "change_reason": null
     },
     "interactions/gestures/index.md": {
-      "status": "PENDING",
-      "en_hash": "0fc99e83ae2f1734",
+      "status": "VERIFIED",
+      "en_hash": "e3c33f248297a1b9",
       "de_hash": "095ed9765998f812",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 8298,
-      "de_bytes": 8757
+      "en_bytes": 8401,
+      "de_bytes": 8757,
+      "change_reason": null
     },
     "interactions/gestures/special/fingerprint/appearance.md": {
       "status": "VERIFIED",
@@ -11477,18 +11495,22 @@
       "change_reason": null
     },
     "programs/apps/calendar/index.md": {
-      "status": "PENDING",
-      "en_hash": "b0aeeaffe0739928",
-      "de_hash": "71fe6c3df51650da",
+      "status": "VERIFIED",
+      "en_hash": "4ee5d2d00df11961",
+      "de_hash": "13da85cc740e9d0d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2801,
-      "de_bytes": 4681
+      "en_bytes": 3672,
+      "de_bytes": 3799,
+      "change_reason": null
     },
     "programs/apps/calendar/masks/davical/api.md": {
       "status": "VERIFIED",
@@ -12261,18 +12283,22 @@
       "change_reason": null
     },
     "programs/apps/contact/index.md": {
-      "status": "PENDING",
-      "en_hash": "2cb1f5c0a3b490a8",
-      "de_hash": "9510e35e00b1c5e1",
+      "status": "VERIFIED",
+      "en_hash": "9e3ba5cb7a68507a",
+      "de_hash": "fe1a1cc70b71f0d7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2683,
-      "de_bytes": 4324
+      "en_bytes": 3413,
+      "de_bytes": 3583,
+      "change_reason": null
     },
     "programs/apps/contact/masks/gnome-contacts/api.md": {
       "status": "VERIFIED",
@@ -13841,18 +13867,22 @@
       "change_reason": null
     },
     "programs/apps/helpdesk/index.md": {
-      "status": "PENDING",
-      "en_hash": "a0dee74f3f8a8765",
-      "de_hash": "fb25830acb687e6d",
+      "status": "VERIFIED",
+      "en_hash": "adeb04a6399c3bfd",
+      "de_hash": "a101303c10ccab6b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2526,
-      "de_bytes": 4474
+      "en_bytes": 3417,
+      "de_bytes": 3572,
+      "change_reason": null
     },
     "programs/apps/helpdesk/masks/freshdesk/api.md": {
       "status": "VERIFIED",
@@ -14881,18 +14911,22 @@
       "change_reason": null
     },
     "programs/apps/maps/index.md": {
-      "status": "PENDING",
-      "en_hash": "4dad53e519b43706",
-      "de_hash": "13d798e5c44a6b60",
+      "status": "VERIFIED",
+      "en_hash": "3761c4d16960a46d",
+      "de_hash": "a4ab26ebc5050094",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2417,
-      "de_bytes": 4215
+      "en_bytes": 3231,
+      "de_bytes": 3390,
+      "change_reason": null
     },
     "programs/apps/maps/masks/index.md": {
       "status": "VERIFIED",
@@ -15813,18 +15847,22 @@
       "change_reason": null
     },
     "programs/apps/marketing/index.md": {
-      "status": "PENDING",
-      "en_hash": "f5e2975b2906e826",
-      "de_hash": "78efd7ba650bb29c",
+      "status": "VERIFIED",
+      "en_hash": "2e04a9ae0eb7338a",
+      "de_hash": "9034379d96f9c207",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2927,
-      "de_bytes": 4715
+      "en_bytes": 3715,
+      "de_bytes": 3916,
+      "change_reason": null
     },
     "programs/apps/marketing/masks/google-analytics/api.md": {
       "status": "VERIFIED",
@@ -17519,18 +17557,22 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/index.md": {
-      "status": "PENDING",
-      "en_hash": "b836742a510c1e76",
-      "de_hash": "5618bc1336ea8ecf",
+      "status": "VERIFIED",
+      "en_hash": "7b2f1b4ee54c3702",
+      "de_hash": "980c2939956947e8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2807,
-      "de_bytes": 4695
+      "en_bytes": 3644,
+      "de_bytes": 3847,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/masks/asana/api.md": {
       "status": "VERIFIED",
@@ -19539,18 +19581,22 @@
       "de_bytes": 3884
     },
     "programs/apps/whiteboards/index.md": {
-      "status": "PENDING",
-      "en_hash": "dd486a8d9f343879",
-      "de_hash": "1d014a0a4b5b29ca",
+      "status": "VERIFIED",
+      "en_hash": "7d928585d6bae21b",
+      "de_hash": "8df8395c04ccb10f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2548,
-      "de_bytes": 4293
+      "en_bytes": 3304,
+      "de_bytes": 3526,
+      "change_reason": null
     },
     "programs/apps/whiteboards/masks/drawio/api.md": {
       "status": "PENDING",
@@ -20961,18 +21007,22 @@
       "de_bytes": 11937
     },
     "programs/platform/desktop/index.md": {
-      "status": "PENDING",
-      "en_hash": "1077bb5741ce1da9",
-      "de_hash": "82f67cfb7e0c0605",
+      "status": "VERIFIED",
+      "en_hash": "5aabdf61f089a549",
+      "de_hash": "135e0887bf0a7333",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2720,
-      "de_bytes": 4225
+      "en_bytes": 4043,
+      "de_bytes": 4231,
+      "change_reason": null
     },
     "programs/platform/desktop/masks/dashy/api.md": {
       "status": "PENDING",
@@ -22165,18 +22215,22 @@
       "de_bytes": 8278
     },
     "programs/suites/crm/index.md": {
-      "status": "PENDING",
-      "en_hash": "d7ca9c4954db6df4",
-      "de_hash": "e8a496199ae27a89",
+      "status": "VERIFIED",
+      "en_hash": "2f766c3a81d1a183",
+      "de_hash": "ea2881d504e19bad",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 959,
-      "de_bytes": 4446
+      "en_bytes": 3495,
+      "de_bytes": 3655,
+      "change_reason": null
     },
     "programs/suites/crm/masks/civicrm/api.md": {
       "status": "PENDING",
@@ -22781,18 +22835,22 @@
       "de_bytes": 6664
     },
     "programs/suites/democracy/index.md": {
-      "status": "PENDING",
-      "en_hash": "89184032d9ffcf19",
-      "de_hash": "72393cf922bf9c36",
+      "status": "VERIFIED",
+      "en_hash": "1a01153b4a5d0aa0",
+      "de_hash": "e35658c44fcd085d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2537,
-      "de_bytes": 4321
+      "en_bytes": 3323,
+      "de_bytes": 3524,
+      "change_reason": null
     },
     "programs/suites/democracy/masks/adhocracy4/api.md": {
       "status": "PENDING",
@@ -23397,18 +23455,22 @@
       "de_bytes": 1636
     },
     "programs/suites/erp/index.md": {
-      "status": "PENDING",
-      "en_hash": "f19885e70faf440c",
-      "de_hash": "4c5eed4e1a36acf8",
+      "status": "VERIFIED",
+      "en_hash": "1385249dc04ec79b",
+      "de_hash": "fba2730d059c885c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2544,
-      "de_bytes": 4185
+      "en_bytes": 3285,
+      "de_bytes": 3433,
+      "change_reason": null
     },
     "programs/suites/erp/masks/axelor/api.md": {
       "status": "PENDING",
@@ -24629,18 +24691,22 @@
       "de_bytes": 1742
     },
     "programs/suites/workflows/index.md": {
-      "status": "PENDING",
-      "en_hash": "6055347b61d1b5fe",
-      "de_hash": "3be40ad93f6962e1",
+      "status": "VERIFIED",
+      "en_hash": "0db3fdb51fee058d",
+      "de_hash": "22c8e5de4714ffa5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
+      "last_verified": "2026-11-05T06:53:39.529934+00:00",
+      "kind": [],
+      "note": "parity: mirrored DE structure, removed stale Skin blocks",
+      "history": [
+        {
+          "at": "2026-11-05T06:53:39.529934+00:00",
+          "event": "confirmed → VERIFIED"
+        }
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": 2520,
-      "de_bytes": 4394
+      "en_bytes": 3288,
+      "de_bytes": 3615,
+      "change_reason": null
     },
     "programs/suites/workflows/masks/apache-airflow/api.md": {
       "status": "PENDING",

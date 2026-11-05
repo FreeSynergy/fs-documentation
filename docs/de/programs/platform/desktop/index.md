@@ -4,11 +4,11 @@
 
 Dieser Bereich enthält die Dokumentation für verschiedene Desktop-Applikationen und Software.
 
-## Skin-Dokumentation
+## Masken-Dokumentation
 
-Programme ohne eigenes Skin-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
+Programme ohne eigenes Masken-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
 
-→ [Desktop-Skins](masks/index.md)
+→ [Desktop-Masken](masks/index.md)
 
 Dokumentiert: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
 
@@ -25,7 +25,7 @@ Dokumentiert: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **ge
 
 ## System-Oberflächen (NAS, Virtualisierung, Netzwerk)
 
-Auch diese Programme haben eine desktopartige Oberfläche und sind als Skin dokumentiert:
+Auch diese Programme haben eine desktopartige Oberfläche und sind als Maske dokumentiert:
 
 - **unraid** - NAS-OS mit Array, Docker, VMs und GraphQL-API
 - **proxmox** - Virtualisierungsplattform mit REST-API `/api2/json`

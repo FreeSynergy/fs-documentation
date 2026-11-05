@@ -17,6 +17,16 @@ This documentation is available in several languages:
 - 💡 Best practices & tips from the community
 - 🧩 Extensions, plugins & integrations
 
+## 🗂️ Areas
+
+| Area | Contents |
+|------|----------|
+| [Programs](programs/) | Programs by category (apps/suites/platform), with mask documentation (menu, features, structure, shortcuts, API) |
+| [Components](components/) | UI elements in three bands (primitives, widgets, workbenches): description, appearance, attributes (84 elements) |
+| [Gestures](interactions/gestures/) | Touch interactions in 4 families: single (Tap, Swipe, Drag …), multi (Pinch, Rotate …), device (Shake, Tilt …), combined (Drag and Drop …) |
+| [Animations](interactions/animations/) | Transitions and effects: Fade, Slide, Zoom, Bounce, Flip, Pulse, Skeleton and others |
+| [Standardised data](data/) | Formats, models, fields, conventions and the uniform API pattern |
+
 ## 💬 Contribute
 
 Want to help? It's easy:

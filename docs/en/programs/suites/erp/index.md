@@ -78,3 +78,20 @@ When choosing an ERP system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual ERP systems.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/erp/masks/<program>/`.
+
+**documented (6 programs):**
+
+- [Axelor](masks/axelor/index.md) - Axelor
+- [Dolibarr](masks/dolibarr/index.md) - Dolibarr
+- [ERPNext](masks/erpnext/index.md) - ERPNext
+- [Odoo](masks/odoo/index.md) - Odoo
+- [Sage](masks/sage/index.md) - Sage
+- [Tryton](masks/tryton/index.md) - Tryton
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../../apps/wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

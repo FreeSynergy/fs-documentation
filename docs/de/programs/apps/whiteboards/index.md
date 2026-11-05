@@ -17,23 +17,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Whiteboard- und Kollabor
 - **gitmind** - Mind-Mapping-Tool
 - **mindmeister** - Online Mind-Mapping
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/whiteboards/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [draw.io](masks/drawio/index.md) - draw.io
-- [Excalidraw](masks/excalidraw/index.md) - Excalidraw
-- [Miro](masks/miro/index.md) - Miro
-- [Mural](masks/mural/index.md) - Mural
-- [OpenBoard](masks/openboard/index.md) - OpenBoard
-- [tldraw](masks/tldraw/index.md) - tldraw
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist ein Whiteboard?
 
 Ein Whiteboard ist ein digitales Tool zur visuellen Zusammenarbeit und Brainstorming. Whiteboards ermöglichen:

@@ -22,23 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Marketing-Tools, CRM-Sys
 - **sendgrid** - E-Mail Delivery Service
 - **pipedrive** - Sales Pipeline Management
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/marketing/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [Google Analytics](masks/google-analytics/index.md) - Google Analytics
-- [Hotjar](masks/hotjar/index.md) - Hotjar
-- [Mailchimp](masks/mailchimp/index.md) - Mailchimp
-- [Matomo](masks/matomo/index.md) - Matomo
-- [Mautic](masks/mautic/index.md) - Mautic
-- [Plausible](masks/plausible/index.md) - Plausible
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist Marketing-Automation?
 
 Marketing-Automation bezeichnet Software-Lösungen zur Automatisierung von Marketing-Prozessen. Sie umfassen:

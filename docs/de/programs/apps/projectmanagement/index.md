@@ -22,25 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Projektmanagement-Tools.
 - **smartsheet** - Work Management und Kollaboration
 - **wrike** - Project Management Software
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/projectmanagement/masks/<programm>/`.
-
-**dokumentiert (8 Programme):**
-
-- [Asana](masks/asana/index.md) - Asana
-- [Jira](masks/jira/index.md) - Jira
-- [OpenProject](masks/openproject/index.md) - OpenProject
-- [Planka](masks/planka/index.md) - Planka
-- [Redmine](masks/redmine/index.md) - Redmine
-- [Taiga](masks/taiga/index.md) - Taiga
-- [Trello](masks/trello/index.md) - Trello
-- [Wekan](masks/wekan/index.md) - Wekan
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist Projektmanagement?
 
 Projektmanagement ist der Prozess der Planung, Organisation, Steuerung und Überwachung von Projekten. Projektmanagement-Tools unterstützen:

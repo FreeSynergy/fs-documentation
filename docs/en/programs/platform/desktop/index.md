@@ -4,6 +4,34 @@
 
 This section contains documentation for various desktop applications and software.
 
+## Mask documentation
+
+Programs without their own mask directory are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
+
+→ [Desktop masks](masks/index.md)
+
+Documented: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
+
+## Dashboard and start-page systems
+
+- **homarr** - homelab dashboard with widgets and Docker integration
+- **heimdall** - personal dashboard with server statistics
+- **homer** - static dashboard built from YAML configuration
+- **dashy** - extensible dashboard with authentication and widgets
+- **homepage** - service dashboard with live widgets
+- **gethomepage** - service client library for the widgets of homepage
+- **launchboard** - commercial no-code dashboard
+- **synology-dsm** - NAS portal with its own REST API
+
+## System surfaces (NAS, virtualisation, network)
+
+These programs also have a desktop-like surface and are documented as a mask:
+
+- **unraid** - NAS OS with array, Docker, VMs and GraphQL API
+- **proxmox** - virtualisation platform with REST API `/api2/json`
+- **truenas** - ZFS NAS with apps, VMs and JSON-RPC API v2.0
+- **opnsense** - firewall and router with MVC REST API
+
 ## Available Systems
 
 - **libreoffice** - Office suite

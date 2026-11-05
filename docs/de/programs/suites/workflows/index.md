@@ -22,23 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Workflow-Automatisierung
 - **traefik** - Reverse Proxy
 - **nifi** - Dataflow Automation
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/workflows/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [Apache Airflow](masks/apache-airflow/index.md) - Apache Airflow
-- [Make](masks/make/index.md) - Make
-- [n8n](masks/n8n/index.md) - n8n
-- [Node-RED](masks/node-red/index.md) - Node-RED
-- [Prefect](masks/prefect/index.md) - Prefect
-- [Zapier](masks/zapier/index.md) - Zapier
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist Workflow-Automatisierung?
 
 Workflow-Automatisierung ist der Einsatz von Software zur Automatisierung von wiederkehrenden Aufgaben und Prozessen. Workflow-Automatisierungssysteme umfassen:

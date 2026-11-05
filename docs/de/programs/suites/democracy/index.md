@@ -17,23 +17,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Demokratie- und Beteilig
 - **consul** - Open Source Partizipatives Platform
 - **democracy-enabler** - Demokratie Tools
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/democracy/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [Adhocracy4](masks/adhocracy4/index.md) - Adhocracy4
-- [Circo](masks/circo/index.md) - Circo
-- [Consul](masks/consul/index.md) - Consul
-- [Decidim](masks/decidim/index.md) - Decidim
-- [LiquidFeedback](masks/liquid-feedback/index.md) - LiquidFeedback
-- [Pol.is](masks/polis/index.md) - Pol.is
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist Demokratie-System?
 
 Ein Demokratie-System ist eine Plattform zur Unterstützung von demokratischen Entscheidungsprozessen und Bürgerbeteiligung. Demokratie-Systeme umfassen:

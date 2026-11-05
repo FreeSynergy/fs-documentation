@@ -79,3 +79,20 @@ When choosing a marketing tool, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual marketing tools.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/marketing/masks/<program>/`.
+
+**documented (6 programs):**
+
+- [Google Analytics](masks/google-analytics/index.md) - Google Analytics
+- [Hotjar](masks/hotjar/index.md) - Hotjar
+- [Mailchimp](masks/mailchimp/index.md) - Mailchimp
+- [Matomo](masks/matomo/index.md) - Matomo
+- [Mautic](masks/mautic/index.md) - Mautic
+- [Plausible](masks/plausible/index.md) - Plausible
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

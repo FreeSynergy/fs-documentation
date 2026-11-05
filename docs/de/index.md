@@ -21,7 +21,7 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 
 | Bereich | Inhalt |
 |---------|--------|
-| [Programs](programs/) | Programme je Kategorie (apps/suites/platform), mit Skin-Dokumentation (Menü, Funktionen, Struktur, Shortcuts, API) |
+| [Programs](programs/) | Programme je Kategorie (apps/suites/platform), mit Masken-Dokumentation (Menü, Funktionen, Struktur, Shortcuts, API) |
 | [Components](components/) | UI-Elemente in drei Bändern (primitives, widgets, workbenches): Beschreibung, Aussehen, Attribute (84 Elemente) |
 | [Gesten](interactions/gestures/) | Touch-Interaktionen in 4 Familien: single (Tap, Swipe, Drag …), multi (Pinch, Rotate …), device (Shake, Tilt …), combined (Drag and Drop …) |
 | [Animationen](interactions/animations/) | Übergänge und Effekte: Fade, Slide, Zoom, Bounce, Flip, Pulse, Skeleton u. a. |

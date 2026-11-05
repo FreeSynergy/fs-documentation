@@ -78,3 +78,18 @@ When choosing a CRM system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual CRM systems.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/contact/masks/<program>/`.
+
+**documented (4 programs):**
+
+- [GNOME Contacts](masks/gnome-contacts/index.md) - GNOME Contacts
+- [KAddressBook](masks/kaddressbook/index.md) - KAddressBook
+- [Monica](masks/monica/index.md) - Monica
+- [Nextcloud Contacts](masks/nextcloud-contacts/index.md) - Nextcloud Contacts
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

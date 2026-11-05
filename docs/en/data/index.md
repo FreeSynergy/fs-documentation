@@ -1,46 +1,67 @@
-# Standardized Data
+# Standardised data
 
-Standardized data describe in which **formats**, **models**, and **fields** FreeSynergy programs, components, and masks exchange information.
+Standardised data describe in which **formats**, **models** and **fields** FreeSynergy programs, components and masks exchange information.
 
-## Why Standardization?
+## Why standardisation?
 
-- **Interoperability**: Messenger, wiki, calendar, and desktop dashboards use the same field names
-- **Reusability**: Components (`table`, `list-view`, `calendar-view`) work with any model
-- **Migration capability**: Data can be moved between programs (export/import)
-- **Predictability**: Masks (`programs/<level>/<category>/masks/<program>/api.md`) describe the same API style
-- **Automation**: Workflows and webhooks access stable paths
+- **Interoperability**: messenger, wiki, calendar and desktop dashboards use the same field names
+- **Reusability**: components (`table`, `list-view`, `calendar-view`) work with any model
+- **Migration capability**: data can be moved between programs (export/import)
+- **Predictability**: masks (`apps/<category>/masks/<program>/api.md`) describe the same API style
+- **Automation**: workflows and webhooks access stable paths
 
-## Data Areas
+## Data domains (decided 2026-11-01)
+
+Every domain has a directory with its own `index.md`; every standard inside it a subdirectory with `beschreibung.md` + `speicherung.md`.
+
+| Domain | Directory | Canonical standard | Further standards |
+|--------|-----------|--------------------|-------------------|
+| Contacts | [contacts/](contacts/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
+| Messages | [messages/](messages/index.md) | AS2 `Note`/`Article` ✅ | JMAP, RFC 5322, MLS (⚠️) |
+| Appointments | [events/](events/index.md) | JSCalendar (RFC 8984) ✅ | iCalendar, CalDAV, iTIP |
+| Geodata | [geodata/](geodata/index.md) | GeoJSON (RFC 7946) ✅ | geo: URI, ISO 19160 |
+| Login / accounts | [login/](login/index.md) | OIDC ✅ (2026-11-02), OAuth 6749 ✅, WebAuthn ✅ | SCIM (⚠️), WebFinger, kanidm |
+| Identity / Web of Trust | [identity/](identity/index.md) | WoT Spec v0.1.0-draft (VC, DIDComm, did:key) ✅ reviewed | Docking points: AS2 `Relationship`, `publicKey` |
+| Profile | [profile/](profile/index.md) | AS2 `Actor` projection onto JSContact ✅ | schema.org `Person` (⚠️) |
+| Projects | [projects/](projects/index.md) | ❌ no open data spec – our own work | ISO 21502 (process) ✅, MSPDI (de facto) ✅, JSCalendar `Task` |
+
+**Proposed but not yet decided**: `aufgaben/` (JSCalendar already covers `Task`), `dokumente/` (block structure = the biggest gap), `dateien/`, `verschlagwortung/` (Web Annotation ✅), `kommentare/`, `benachrichtigungen/`, `organisationen/`.
+
+The **envelope** (AS2 + ActivityPub, decisions in [standards.md](standards.md)) is cross-cutting and not a domain of its own.
+
+## Data areas (cross-section)
 
 | File | Content |
 |------|---------|
-| `formate.md` | Exchange formats (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
-| `modelle.md` | Standard models (User, Message, Document, Event, Task, Contact, …) |
-| `felder.md` | Standard fields, types, enums, required fields |
-| `konventionen.md` | Naming, file structures, versioning, validation, i18n |
-| `api.md` | Unified CRUD pattern, pagination, filters, error format, webhooks |
+| [standards.md](standards.md) | Which existing standards cover which data area (with evidence and unverified points) |
+| [mappings.md](mappings.md) | Our fields ↔ standard fields (initially Contact, Name, headline) |
+| [formate.md](formate.md) | Exchange formats (JSON, YAML, TOML, CSV, NDJSON, ICS, VCF, GeoJSON, …) |
+| [modelle.md](modelle.md) | Standard models (User, Message, Document, Event, Task, Contact, …) |
+| [felder.md](felder.md) | Standard fields, types, enums, required fields |
+| [konventionen.md](konventionen.md) | Naming, file structures, versioning, validation, i18n |
+| [api.md](api.md) | Unified CRUD pattern, pagination, filters, error format, webhooks |
 
-## Standard Models (overview)
+## Standard models (overview)
 
 | Model | Short description | Category reference |
 |-------|-------------------|--------------------|
 | **User** | Account with profile, roles, status | all |
-| **Team** | Organization, group, workspace | all |
-| **Message** | Chat, comment, or mail message | messenger |
+| **Team** | Organisation, group, workspace | all |
+| **Message** | Chat, comment or mail message | messenger |
 | **Document** | Page, post, article with blocks | wiki |
 | **Block** | Content element in a Document | components |
-| **Event** | Appointment with start, end, participants | kalender |
-| **Task** | Task with due date and status | projektmanagement |
-| **Contact** | Person with contact data and organization | kontakt, crm |
+| **Event** | Appointment with start, end, participants | calendar |
+| **Task** | Task with due date and status | project management |
+| **Contact** | Person with contact data and organisation | contact, crm |
 | **Location** | Place with address and GeoJSON coordinate | maps |
 | **File** | File with storage location, type, size | all |
-| **Tag** | Keyword for categorization | all |
+| **Tag** | Keyword for categorisation | all |
 | **Comment** | Comment attached to a resource | all |
 | **Notification** | Notification to a user | all |
 | **Revision** | Version of a resource | wiki, components |
 | **Integration** | Webhook, API key, connector | workflows |
 
-## Data Types
+## Data types
 
 | Type | Notation | Example |
 |------|----------|---------|
@@ -57,30 +78,42 @@ Standardized data describe in which **formats**, **models**, and **fields** Free
 | `markdown` | Markdown text | `"**Important**"` |
 | `null` | explicitly empty | `null` |
 
-## Basic Rules
+## Basic rules
 
-1. **IDs are opaque strings** — never interpret them as numbers
+1. **IDs are opaque strings** — never interpret them as numbers; internally a ULID, externally the absolute IRI `https://<instance>/<domain>/<ulid>` (decision 3)
 2. **Times always with time zone offset** or explicitly `allDay: true`
 3. **Empty values are `null`**, not `""` (exception: required text fields)
 4. **Enums are lowercase and singular** (`active`, not `Active`)
 5. **New fields are additive** — existing fields are never renamed
 6. **Every resource carries `id`, `createdAt`, `updatedAt`**
+7. **Audience rule:** `to`/`cc`/`bto`/`bcc` control where copies land — they do not replace authorisation of the resource (decision 2)
 
-## Directory Structure
+## Directory structure
 
 ```
 docs/en/data/
 ├── index.md            (this file)
-├── formate.md          Exchange formats
-├── modelle.md          Standard models
-├── felder.md           Standard fields and types
-├── konventionen.md     Naming and versioning rules
-└── api.md              unified API pattern
+├── standards.md        standards register + decisions of 2026-11-01
+├── mappings.md         our fields ↔ standard fields
+├── formate.md          exchange formats
+├── modelle.md          standard models
+├── felder.md           standard fields and types
+├── konventionen.md     naming and versioning rules
+├── api.md              unified API pattern
+├── contacts/           ├── index.md └── jscontact/{beschreibung,speicherung}.md
+├── messages/           ┐
+├── events/             │ every domain:
+├── geodata/            │ index.md + description.md
+├── login/              │ + technical.md + standards.md
+├── identity/           │ + examples.md
+├── profile/            │
+└── projects/           ┘
 ```
 
 ## See also
 
-- [Gestures](../interactions/gestures/index.md) — interaction data (thresholds, callbacks)
-- [Animations](../interactions/animations/index.md) — animation attributes and durations
-- [Wiki](../programs/apps/wiki/index.md) — program with its own masks
-- [Messenger](../programs/apps/messenger/index.md) — program with its own masks
+- [Components](../components/) — attributes and data types of the UI elements
+- [Gestures](../interactions/gestures/) — interaction data (thresholds, callbacks)
+- [Animations](../interactions/animations/) — animation attributes and durations
+- [Programs](../programs/) — programs with their own `api.md` per mask
+- [Desktop masks](../programs/platform/desktop/masks/) — example of API documentation following the pattern

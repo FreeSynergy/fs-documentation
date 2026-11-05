@@ -22,23 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Kalender- und Zeitmanage
 - **toodledo** - Task und Zeit-Management
 - **clockwork** - Calendar Synchronization
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/calendar/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [DAViCal](masks/davical/index.md) - DAViCal
-- [Google Kalender](masks/google-calendar/index.md) - Google Kalender
-- [Merkuro Calendar](masks/merkuro/index.md) - Merkuro Calendar
-- [Nextcloud Calendar](masks/nextcloud-calendar/index.md) - Nextcloud Calendar
-- [Outlook-Kalender](masks/outlook-calendar/index.md) - Outlook-Kalender
-- [GNOME Planner](masks/planner/index.md) - GNOME Planner
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist ein Kalender-System?
 
 Ein Kalender-System ist eine Software zur Organisation von Terminen, Meetings und Aufgaben. Kalender-Systeme umfassen:

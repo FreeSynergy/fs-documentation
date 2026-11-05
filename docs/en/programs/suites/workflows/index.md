@@ -78,3 +78,20 @@ When choosing a workflow automation system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual workflow automation systems.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/workflows/masks/<program>/`.
+
+**documented (6 programs):**
+
+- [Apache Airflow](masks/apache-airflow/index.md) - Apache Airflow
+- [Make](masks/make/index.md) - Make
+- [n8n](masks/n8n/index.md) - n8n
+- [Node-RED](masks/node-red/index.md) - Node-RED
+- [Prefect](masks/prefect/index.md) - Prefect
+- [Zapier](masks/zapier/index.md) - Zapier
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../../apps/wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

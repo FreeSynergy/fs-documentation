@@ -22,23 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene CRM-Systeme (Customer Re
 - **sugarcrm** - CRM Platform
 - **roistat** - Marketing Analytics und CRM
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/crm/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [CiviCRM](masks/civicrm/index.md) - CiviCRM
-- [EspoCRM](masks/espocrm/index.md) - EspoCRM
-- [HubSpot](masks/hubspot/index.md) - HubSpot
-- [Pipedrive](masks/pipedrive/index.md) - Pipedrive
-- [Salesforce](masks/salesforce/index.md) - Salesforce
-- [SuiteCRM](masks/suitecrm/index.md) - SuiteCRM
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist CRM?
 
 CRM (Customer Relationship Management) ist ein Konzept zur systematischen Verwaltung von Kundenbeziehungen. CRM-Systeme umfassen:

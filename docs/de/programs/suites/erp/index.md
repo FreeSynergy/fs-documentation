@@ -22,23 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene ERP-Systeme (Enterprise 
 - **ofbiz** - Apache OFBiz
 - **dolibarr** - ERP/CRM für kleine Unternehmen
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/erp/masks/<programm>/`.
-
-**dokumentiert (6 Programme):**
-
-- [Axelor](masks/axelor/index.md) - Axelor
-- [Dolibarr](masks/dolibarr/index.md) - Dolibarr
-- [ERPNext](masks/erpnext/index.md) - ERPNext
-- [Odoo](masks/odoo/index.md) - Odoo
-- [Sage](masks/sage/index.md) - Sage
-- [Tryton](masks/tryton/index.md) - Tryton
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../../apps/wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist ERP?
 
 ERP (Enterprise Resource Planning) ist eine integrierte Software-Lösung zur Verwaltung aller Geschäftsprozesse eines Unternehmens. ERP-Systeme umfassen:

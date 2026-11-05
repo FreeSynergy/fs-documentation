@@ -22,21 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Kontakt- und CRM-Systeme
 - **sugarcrm** - CRM Platform
 - **roistat** - Marketing Analytics und CRM
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/contact/masks/<programm>/`.
-
-**dokumentiert (4 Programme):**
-
-- [GNOME Contacts](masks/gnome-contacts/index.md) - GNOME Contacts
-- [KAddressBook](masks/kaddressbook/index.md) - KAddressBook
-- [Monica](masks/monica/index.md) - Monica
-- [Nextcloud Contacts](masks/nextcloud-contacts/index.md) - Nextcloud Contacts
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist CRM?
 
 CRM (Customer Relationship Management) ist ein Konzept zur systematischen Verwaltung von Kundenbeziehungen. CRM-Systeme umfassen:

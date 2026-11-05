@@ -71,3 +71,20 @@ When choosing a democracy system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual democracy systems.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/democracy/masks/<program>/`.
+
+**documented (6 programs):**
+
+- [Adhocracy4](masks/adhocracy4/index.md) - Adhocracy4
+- [Circo](masks/circo/index.md) - Circo
+- [Consul](masks/consul/index.md) - Consul
+- [Decidim](masks/decidim/index.md) - Decidim
+- [LiquidFeedback](masks/liquid-feedback/index.md) - LiquidFeedback
+- [Pol.is](masks/polis/index.md) - Pol.is
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../../apps/wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

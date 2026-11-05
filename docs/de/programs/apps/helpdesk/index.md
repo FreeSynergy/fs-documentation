@@ -18,25 +18,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Help Desk und Ticketsyst
 - **servertime** - Help Desk Software
 - **kayako** - Customer Support Platform
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/helpdesk/masks/<programm>/`.
-
-**dokumentiert (8 Programme):**
-
-- [Freshdesk](masks/freshdesk/index.md) - Freshdesk
-- [GLPI](masks/glpi/index.md) - GLPI
-- [Helodesk](masks/helodesk/index.md) - Helodesk
-- [Help Scout](masks/helpscout/index.md) - Help Scout
-- [osTicket](masks/osticket/index.md) - osTicket
-- [Request Tracker (RT)](masks/request-tracker/index.md) - Request Tracker (RT)
-- [Zammad](masks/zammad/index.md) - Zammad
-- [Zendesk](masks/zendesk/index.md) - Zendesk
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist ein Help Desk?
 
 Ein Help Desk ist ein System zur Verwaltung von Kundenanfragen und Support-Tickets. Help Desk-Systeme umfassen:

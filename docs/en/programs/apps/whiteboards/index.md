@@ -74,3 +74,20 @@ When choosing a whiteboard tool, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual whiteboard tools.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/whiteboards/masks/<program>/`.
+
+**documented (6 programs):**
+
+- [draw.io](masks/drawio/index.md) - draw.io
+- [Excalidraw](masks/excalidraw/index.md) - Excalidraw
+- [Miro](masks/miro/index.md) - Miro
+- [Mural](masks/mural/index.md) - Mural
+- [OpenBoard](masks/openboard/index.md) - OpenBoard
+- [tldraw](masks/tldraw/index.md) - tldraw
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

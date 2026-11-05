@@ -22,24 +22,6 @@ Dieser Bereich enthält Dokumentation für verschiedene Kartensysteme und GIS-Sy
 - **postgis** - Spatial Database
 - **mapbox-gl-js** - Interaktive Maps
 
-## Skin-Dokumentation
-
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/maps/masks/<programm>/`.
-
-**dokumentiert (7 Programme):**
-
-- [Leaflet](masks/leaflet/index.md) - Leaflet
-- [MapLibre](masks/maplibre/index.md) - MapLibre
-- [OpenStreetMap](masks/openstreetmap/index.md) - OpenStreetMap
-- [Organic Maps](masks/organic-maps/index.md) - Organic Maps
-- [OsmAnd](masks/osmand/index.md) - OsmAnd
-- [QGIS](masks/qgis/index.md) - QGIS
-- [uMap](masks/umap/index.md) - uMap
-
-Übersicht: [Skin-Verzeichnis](masks/index.md)
-
-Referenzschema: [Wiki-Skins](../wiki/masks/index.md) · [Desktop-Skins](../../platform/desktop/masks/index.md) · [Standardisierte Daten](../../../data/api.md)
-
 ## Was ist ein Kartensystem?
 
 Ein Kartensystem ist eine Software zur Erstellung, Anzeige und Analyse von Karten und geografischen Daten. Kartensysteme umfassen:

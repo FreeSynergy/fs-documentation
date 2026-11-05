@@ -77,3 +77,21 @@ When choosing a mapping system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual mapping systems.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/maps/masks/<program>/`.
+
+**documented (7 programs):**
+
+- [Leaflet](masks/leaflet/index.md) - Leaflet
+- [MapLibre](masks/maplibre/index.md) - MapLibre
+- [OpenStreetMap](masks/openstreetmap/index.md) - OpenStreetMap
+- [Organic Maps](masks/organic-maps/index.md) - Organic Maps
+- [OsmAnd](masks/osmand/index.md) - OsmAnd
+- [QGIS](masks/qgis/index.md) - QGIS
+- [uMap](masks/umap/index.md) - uMap
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

@@ -74,3 +74,22 @@ When choosing a help desk system, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual help desk systems.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/helpdesk/masks/<program>/`.
+
+**documented (8 programs):**
+
+- [Freshdesk](masks/freshdesk/index.md) - Freshdesk
+- [GLPI](masks/glpi/index.md) - GLPI
+- [Helodesk](masks/helodesk/index.md) - Helodesk
+- [Help Scout](masks/helpscout/index.md) - Help Scout
+- [osTicket](masks/osticket/index.md) - osTicket
+- [Request Tracker (RT)](masks/request-tracker/index.md) - Request Tracker (RT)
+- [Zammad](masks/zammad/index.md) - Zammad
+- [Zendesk](masks/zendesk/index.md) - Zendesk
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

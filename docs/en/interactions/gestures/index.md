@@ -2,7 +2,7 @@
 
 Touch gestures are interaction methods for touchscreen devices (and related
 pointers: mouse, pen, motion sensors). Gestures are **inputs** – the visual
-answer to them is an [animation](../animations/index.md).
+answer to them is an [animation](../animations/).
 
 Gestures are grouped into six families (mirroring the animation categories).
 
@@ -96,7 +96,8 @@ gestures:
 | `onEdgeSwipe` | function | Executed on Edge Swipe |
 | `onForcePress` | function | Executed on Force Press |
 | `onHoverStart` / `onHoverEnd` | function | Hover starts/ends |
-| `onFingerprint` / `onFingerprintFail` | function | Fingerprint scan succeeds / no match |
+| `onFingerprint` | function | Executed after a successful fingerprint scan |
+| `onFingerprintFail` | function | Executed when the scan finds no match |
 | `onDrawGesture` | function | Executed after a recognized shape |
 | `onPinch` | function | Executed on Pinch |
 | `onSpread` | function | Executed on Spread |
@@ -143,4 +144,5 @@ make the same action reachable via button, menu or keyboard as well.
 ## See also
 
 - Families: [tap](tap/) · [swipe](swipe/) · [transform](transform/) · [special](special/) · [device](device/) · [combined](combined/)
-- [Animations](../animations/index.md) — Shake, Wiggle as feedback to gestures
+- [Animations](../animations/) — visual answer to gestures
+- [Conventions](../../data/konventionen.md) — file and naming rules

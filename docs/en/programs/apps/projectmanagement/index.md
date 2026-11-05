@@ -79,3 +79,22 @@ When choosing a project management tool, consider the following criteria:
 ## More Information
 
 Further information can be found in the documentation of individual project management tools.
+
+## Mask documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/projectmanagement/masks/<program>/`.
+
+**documented (8 programs):**
+
+- [Asana](masks/asana/index.md) - Asana
+- [Jira](masks/jira/index.md) - Jira
+- [OpenProject](masks/openproject/index.md) - OpenProject
+- [Planka](masks/planka/index.md) - Planka
+- [Redmine](masks/redmine/index.md) - Redmine
+- [Taiga](masks/taiga/index.md) - Taiga
+- [Trello](masks/trello/index.md) - Trello
+- [Wekan](masks/wekan/index.md) - Wekan
+
+Overview: [Mask directory](masks/index.md)
+
+Reference schema: [Wiki masks](../wiki/masks/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)

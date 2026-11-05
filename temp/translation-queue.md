@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 06:10 UTC · 1492 Dateien verfolgt · 676 offen · 816 bestätigt
+Stand: 2026-11-05 06:53 UTC · 1492 Dateien verfolgt · 659 offen · 833 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -42,7 +42,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 17 |
+| F. Form nicht gleich – Struktur abgleichen | 0 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 17 |
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 0 |
@@ -1131,76 +1131,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/masks/zapier/shortcuts.md` · 449b · Plan[~]
 - [ ] `programs/suites/workflows/masks/zapier/structure.md` · 2.1k · Plan[~]
 
-## F. Form nicht gleich – Struktur abgleichen – 17 Dateien
-
-### `(wurzel)/` · 1
-
-- [ ] `index.md` · 1.2k · Parität: headings 4 vs 5; table rows 0 vs 7
-
-### `components/primitives/fields/color-input/` · 1
-
-- [ ] `components/primitives/fields/color-input/appearance.md` · 2.8k · Parität: table rows 20 vs 25
-
-### `data/` · 1
-
-- [ ] `data/index.md` · 3.8k · Parität: headings 8 vs 9; table rows 38 vs 50
-
-### `interactions/animations/` · 1
-
-- [ ] `interactions/animations/index.md` · 5.2k · Parität: headings 15 vs 18; table rows 63 vs 137
-
-### `interactions/gestures/` · 1
-
-- [ ] `interactions/gestures/index.md` · 8.1k · Parität: table rows 91 vs 92; links en-only=['animations/index.md'] de-only=['../data/konventionen.md', 'animations']
-
-### `programs/apps/calendar/` · 1
-
-- [ ] `programs/apps/calendar/index.md` · 2.7k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/davical/index.md']
-
-### `programs/apps/contact/` · 1
-
-- [ ] `programs/apps/contact/index.md` · 2.6k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/gnome-contacts/index.md']
-
-### `programs/apps/helpdesk/` · 1
-
-- [ ] `programs/apps/helpdesk/index.md` · 2.5k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/freshdesk/index.md']
-
-### `programs/apps/maps/` · 1
-
-- [ ] `programs/apps/maps/index.md` · 2.4k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/index.md']
-
-### `programs/apps/marketing/` · 1
-
-- [ ] `programs/apps/marketing/index.md` · 2.9k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/google-analytics/index.md']
-
-### `programs/apps/projectmanagement/` · 1
-
-- [ ] `programs/apps/projectmanagement/index.md` · 2.7k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/asana/index.md']
-
-### `programs/apps/whiteboards/` · 1
-
-- [ ] `programs/apps/whiteboards/index.md` · 2.5k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../platform/desktop/masks/index.md', 'masks/drawio/index.md']
-
-### `programs/platform/desktop/` · 1
-
-- [ ] `programs/platform/desktop/index.md` · 2.7k · Plan[~] · Parität: headings 10 vs 13; links en-only=[] de-only=['masks/index.md']
-
-### `programs/suites/crm/` · 1
-
-- [ ] `programs/suites/crm/index.md` · 959b · Plan[~] · Parität: headings 5 vs 12; links en-only=['programs/suites/crm/masks'] de-only=['../../data/api.md', '../apps/helpdesk', '../apps/marketing']
-
-### `programs/suites/democracy/` · 1
-
-- [ ] `programs/suites/democracy/index.md` · 2.5k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../apps/wiki/masks/index.md', '../platform/desktop/masks/index.md']
-
-### `programs/suites/erp/` · 1
-
-- [ ] `programs/suites/erp/index.md` · 2.5k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../apps/wiki/masks/index.md', '../platform/desktop/masks/index.md']
-
-### `programs/suites/workflows/` · 1
-
-- [ ] `programs/suites/workflows/index.md` · 2.5k · Plan[~] · Parität: headings 10 vs 12; links en-only=[] de-only=['../../data/api.md', '../apps/wiki/masks/index.md', '../platform/desktop/masks/index.md']
-
 ## G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) – 17 Dateien
 
 ### `data/` · 7
@@ -1252,9 +1182,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-  Kein alter Detektor hat Codezeilen gesehen. Zwei Parser-Fehler behoben: ``` ```jsx ``` wurde als
-  Inline-Code geparst und machte ganze Codeblöcke Ausnahme-frei; Umlaute am Wortanfang (`ändern`)
-  galten nicht als Indiz. Box-Prüfung (`box frames broken`) meldet nur, wenn `en/` schlechter ist
   als `de/` – die Breitenfehler existieren sonst beidseitig (en 123 / de 227 Dateien) und sind
   kein Übersetzungsproblem.
 - 2026-11-05 02:25 · **Reparatur im selben Skript:** `--fix-boxes <pfad>` (Zielbreite je Box, aus
@@ -1293,3 +1220,5 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 05:06 · Lauf: 1492 verfolgt, 710 offen, 782 bestätigt · needs_en=682 parity=24 rename=17 review=4
 - 2026-11-05 06:09 · Lauf: 1492 verfolgt, 706 offen, 786 bestätigt · needs_en=659 parity=17 rename=17 review=30
 - 2026-11-05 06:10 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 parity=17 rename=17
+- 2026-11-05 06:53 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 rename=17 review=17
+- 2026-11-05 06:53 · Lauf: 1492 verfolgt, 659 offen, 833 bestätigt · needs_en=659 rename=17
