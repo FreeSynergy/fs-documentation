@@ -80,21 +80,19 @@ Bei der Wahl eines Projektmanagement-Tools sollten folgende Kriterien berücksic
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Projektmanagement-Tools.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/projectmanagement/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (8), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (8 Programme):**
+- [Asana](frontends/asana/index.md) — Asana ist Aufgaben- und Projektarbeit auf Portfolio-Ebene: Aufgaben mit Feldern (Fälligkeit, Assignees, Abhängigkeiten, Custom Fields) in Projekten (Liste/Tabelle/Timeline/Kanban), Teams, Workloads…
+- [Jira](frontends/jira/index.md) — Jira (Atlassian) ist Issue- und Projekt-Tracking mit Workflows: Issues durchlaufen Status (To Do→In Progress→Done), mit Sprints (Jira Software), Typen, Prioritäten und mächtigem JQL.
+- [OpenProject](frontends/openproject/index.md) — OpenProject ist ein quelloffenes Projektmanagement-System zum Selbsthosten (Community-Edition plus kommerzielle Enterprise-Edition) mit Arbeitspaketen, Gantt-Planung, agilen Boards, Zeit- und Koste…
+- [Planka](frontends/planka/index.md) — Planka ist ein selbst gehostetes, schlichtes Kanban-Board (fair-code: kostenlose Community-Edition plus kommerzielle Pro-Edition) mit Projekten, Boards, Listen und Karten in Echtzeit-Kollaboration.
+- [Redmine](frontends/redmine/index.md) — Redmine ist eine freie, webbasierte Projektverwaltungs- und Issue-Tracking-Anwendung auf Rails-Basis: mehrere Projekte mit Issue-Trackern, Zeiterfassung, Wiki, Foren, Gantt/Kalender und rollenbasie…
+- [Taiga](frontends/taiga/index.md) — Taiga ist das agile Open-Source-Projektmanagement (AGPL, Python/Django + modernes Frontend „Taigo“): Scrum (Sprints, Points) und Kanban in einem, dazu Epics, Issues, Wiki und CRM-Modul.
+- [Trello](frontends/trello/index.md) — Trello (Atlassian) ist das digitale Kanban-Brett: Boards mit Listen und Karten, Fälligkeiten, Labels, Mitglieder, Checklisten und Automatisierung per „Butler“.
+- [Wekan](frontends/wekan/index.md) — Wekan ist der offene Trello-Klon (Meteor/Node, MongoDB): Boards, Listen, Karten, Swimlanen, Labels und Checklisten — selbst gehostet, mit OAuth2/LDAP und ausgehenden Webhooks.
 
-- [Asana](frontends/asana/index.md) - Asana
-- [Jira](frontends/jira/index.md) - Jira
-- [OpenProject](frontends/openproject/index.md) - OpenProject
-- [Planka](frontends/planka/index.md) - Planka
-- [Redmine](frontends/redmine/index.md) - Redmine
-- [Taiga](frontends/taiga/index.md) - Taiga
-- [Trello](frontends/trello/index.md) - Trello
-- [Wekan](frontends/wekan/index.md) - Wekan
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

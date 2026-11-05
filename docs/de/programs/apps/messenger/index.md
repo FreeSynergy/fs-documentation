@@ -77,3 +77,19 @@ Bei der Wahl eines Messengers sollten folgende Kriterien berücksichtigt werden:
 ## Mehr Informationen
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Messenger-Systeme.
+
+## Frontends
+
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (7), nach Funktionen, nichts kopiert (ADR 0012/0013):
+
+- [Discord](frontends/discord/index.md) — Discord ist eine proprietäre Communication-Plattform für Gaming-Communities, mit Voice/Video und Server-Struktur.
+- [Element](frontends/element/index.md) — Element ist der Open-Source-Messenger für das Matrix-Protokoll, mit dezentraler Architektur und End-to-End-Verschlüsselung.
+- [Kontact](frontends/kontact/index.md) — Kontact ist die integrierte PIM-Anwendung für KDE, die E-Mail, Kalender, Kontakte, Aufgaben und Notzen in einer einzigen Anwendung vereint.
+- [Mastodon](frontends/mastodon/index.md) — Mastodon ist ein Open-Source-Mikroblogging-Netzwerk, das auf ActivityPub-Protokoll basiert und dezentral ist.
+- [Outlook](frontends/outlook/index.md) — Outlook ist der beliebteste E-Mail-Client von Microsoft, Teil von Microsoft 365.
+- [Telegram](frontends/telegram/index.md) — Telegram ist ein cloud-basierter Messenger mit Fokus auf Geschwindigkeit, große Gruppen/Kanäle und Verschlüsselung.
+- [Thunderbird](frontends/thunderbird/index.md) — Thunderbird ist der quelloffene E-Mail-Client von Mozilla, plattformunabhängig und E-Mail-Fokus.
+
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

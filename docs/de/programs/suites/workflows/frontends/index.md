@@ -1,56 +1,38 @@
-# Workflows Masken-Dokumentation
+# Workflows — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Workflows` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält die Dokumentation der Programme dieser Kategorie nach dem Wiki-Schema: Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API — sieben Dateien pro Programm.
+## Programme
 
-Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [Apache Airflow](apache-airflow/index.md) | [latest](apache-airflow/latest/description.md) | Apache Airflow (Apache-2.0) orchestriert datenintensive Pipelines als DAGs in Python: Planner (Scheduler) rechnet Zeitpläne, Executors verteilen Tasks an Worker. |
+| [Make](make/index.md) | [latest](make/latest/description.md) | Make (früher Integromat) ist die visuelle SaaS-Automatisierungsplattform: Szenarien aus Modulen (Trigger → Router/Iterator/Aggregator → Aktionen), 1.500+ Apps, visuelle Datenpfade mit Bubbles. |
+| [n8n](n8n/index.md) | [latest](n8n/latest/description.md) | n8n ist das quelloffene Workflow-Automatisierungswerkzeug (Node.js, „fair-code“): Nodes grafisch zu Workflows verdrahten, Hunderte Integrationen, eigene JS/Python-Code-Nodes, Webhooks als Trigger, … |
+| [Node-RED](node-red/index.md) | [latest](node-red/latest/description.md) | Node-RED ist die Flow-basierte Programmier-Umgebung (Node.js, Apache-2.0) aus IBMs IoT-Schmiede: Knoten verdrahtet man per Drähten (Nachrichten fließen darüber), mit Dashboard, MQTT/OPC-UA-Support … |
+| [Prefect](prefect/index.md) | [latest](prefect/latest/description.md) | Prefect (Apache-2.0) ist modernes Workflow-Orchestering in Python: `@flow`/`@task`-Dekoratoren, Deployments (Work Pools/Workers), Scheduling, Events/Automations, Observability-UI. |
+| [Zapier](zapier/index.md) | [latest](zapier/latest/description.md) | Zapier ist die größte SaaS-Automatisierungsbibliothek (8.000+ Apps): „Zaps“ verknüpfen Trigger→Aktionen, mehrstufige Zaps und Paths für Verzweigungen, Interfaces/Tables/Forms als Mini-Apps. |
 
-## Enthaltene Dokumentationen
-
-- [Apache Airflow](apache-airflow/index.md)
-- [Make](make/index.md)
-- [n8n](n8n/index.md)
-- [Node-RED](node-red/index.md)
-- [Prefect](prefect/index.md)
-- [Zapier](zapier/index.md)
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/programs/suites/workflows/masks/
-├── index.md              (diese Datei)
-├── apache-airflow/   (index, menu, features, description, structure, shortcuts, api)
-├── make/   (index, menu, features, description, structure, shortcuts, api)
-├── n8n/   (index, menu, features, description, structure, shortcuts, api)
-├── node-red/   (index, menu, features, description, structure, shortcuts, api)
-├── prefect/   (index, menu, features, description, structure, shortcuts, api)
-└── zapier/   (index, menu, features, description, structure, shortcuts, api)
+programs/suites/workflows/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Programmverzeichnis enthält **sieben** Dateien:
-
-1. **index.md** – Übersicht des Programms und Links auf die sechs Detail-Dateien
-2. **menu.md** – alle Hauptmenüpunkte, Kontext-Menüs, rollenabhängige Menüs
-3. **features.md** – Hauptfunktionen, was das Programm kann und NICHT kann, Erweiterungen
-4. **description.md** – Beschreibung, Vorteile, Abgrenzung, technische Details, Zielgruppen
-5. **structure.md** – Fenster-/Seitenstruktur, UI/UX, Interaktionen, Responsive Design, Accessibility
-6. **shortcuts.md** – alle Tastatur-Shortcuts inklusive Mac-Varianten
-7. **api.md** – API-Art, Authentifizierung, Endpunkte, Beispiele, Rate Limits, Webhooks, SDKs
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind immer in der separaten Datei `shortcuts.md`**
-- **API-Dokumentation ist immer in der separaten Datei `api.md`**
-- Fehlende Funktionen sind ausdrücklich als nicht vorhanden markiert (❌)
-
-## Verwandte Bereiche
-
-- [Kategorie-Übersicht](../) – Überblick über diese Programmkategorie
-- [Wiki-Masken](../../../apps/wiki/frontends/) – Referenzschema dieser Dokumentation
-- [Desktop-Masken](../../../platform/desktop/frontends/) – gleiche Dateistruktur
-- [Standardisierte Daten](../../../../data/) – Felder und Modelle für alle Masken-APIs
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

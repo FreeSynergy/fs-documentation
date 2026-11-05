@@ -1,14 +1,26 @@
 # Excalidraw - Dokumentation
 
+> Kategorie: [whiteboards](../../index.md)
+
 ## Übersicht
 
 Excalidraw ist ein freies, quelloffenes kollaboratives Whiteboard im handgezeichneten Stil. Es läuft im Browser, benötigt keine Anmeldung und teilt Zeichenflächen über Ende-zu-Ende-verschlüsselte Links.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [description.md](latest/description.md) - Beschreibung, Vorteile und Abgrenzung zu draw.io, Miro und tldraw
-- [menu.md](latest/menus.md) - Alle Menüpunkte, Plus-Menü und Kontext-Menüs
-- [features.md](latest/features.md) - Zeichenwerkzeuge, Objektmodell, Kollaboration, Bibliotheken
-- [structure.md](latest/layout.md) - UI/UX, Canvas-Aufbau, Farbschema und Themes
-- [shortcuts.md](latest/shortcuts.md) - Alle Tastatur-Shortcuts und Gesten
-- [api.md](latest/api.md) - Dateiformat, Kollaborations-Protokoll und Einbettung (keine öffentliche REST-API)
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 0/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+
+⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+<!-- /gen:versions -->

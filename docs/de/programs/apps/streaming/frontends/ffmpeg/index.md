@@ -1,17 +1,29 @@
 # FFmpeg Dokumentation
 
+> Kategorie: [streaming](../../index.md)
+
 ## Übersicht
 
 FFmpeg ist die Kommandozeilen-Werkzeugsammlung der FFmpeg-Projekte: `ffmpeg` transcodiert, muxed/demuxed und filtert Medien, `ffprobe` analysiert Dateien maschinenlesbar, `ffplay` spielt sie als einfacher SDL-Player ab. Der Technik-Stack ist reines C (libavformat, libavcodec, libavfilter, libswscale, libswresample) mit Build-Optionen für x264/x265, AV1, Opus und Hardware-Beschleunigung (NVENC, QSV, VAAPI, VideoToolbox). FFmpeg ist primär eine CLI — es gibt keine grafische Oberfläche; Bedienung, Automatisierung und Integration laufen über Argumente, Exit-Codes und Statusströme. Lizenziert ist der Kern unter LGPL, mit GPL-Baubarkeit (und de-facto GPL, wenn GPL-Code wie x264 einkompiliert wird). Aktuelle Standlinien sind die 6.x- und 7.x-Reihen (ffmpeg.org).
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [menu.md](latest/menus.md) - Werkzeuge, Optionen, Filter-Kommandos (FFmpeg ohne klassische Menüs)
-- [features.md](latest/features.md) - Transcoding, Filtergraph, Container, Hardware, Was FFmpeg NICHT kann
-- [description.md](latest/description.md) - Abgrenzung zu OBS, GStreamer, MediaMTX und Restreamer
-- [structure.md](latest/layout.md) - Ablauf Pipeline & CLI-Struktur, Parameter-Konventionen
-- [shortcuts.md](latest/shortcuts.md) - ffplay-Tastatursteuerung, ffmpeg-Runzeilentasten
-- [api.md](latest/api.md) - Prozess-API, ffprobe-JSON, libav\*-Bibliotheken, Sprachbindungen
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 0/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+
+⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+<!-- /gen:versions -->
 
 ## Einordnung im System
 

@@ -1,14 +1,26 @@
 # OBS Studio Dokumentation
 
+> Kategorie: [streaming](../../index.md)
+
 ## Übersicht
 
 OBS Studio nimmt Bildschirme, Kameras und Audio auf und überträgt sie per RTMP/SRT in Streams; Szenen, Quellen, Filter und Mischer machen daraus ein vollwertiges Produktionswerkzeug. Stack: C/C++ (libobs), Qt-Oberfläche, plattformübergreifend, obs-websocket für Fernsteuerung.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [menu.md](latest/menus.md) - Menüleisten, Rechtsklickmenüs, Docker, Szenen-/Quellen-Menüs
-- [features.md](latest/features.md) - Szenen, Quellen, Filter, Aufnahmen, Streaming, Was OBS NICHT kann
-- [description.md](latest/description.md) - Abgrenzung zu StreamYard, vMix, Restreamer und ffmpeg
-- [structure.md](latest/layout.md) - Vorschau, Szenen-/Quellenlisten, Mischer, Reiter
-- [shortcuts.md](latest/shortcuts.md) - Hotkeys und globale Tastenkürzel
-- [api.md](latest/api.md) - obs-websocket 5.x, OBS-Command, libobs, Plugins
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 0/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+
+⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+<!-- /gen:versions -->

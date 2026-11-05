@@ -1,56 +1,38 @@
-# Marketing Masken-Dokumentation
+# Marketing — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Marketing` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält die Dokumentation der Programme dieser Kategorie nach dem Wiki-Schema: Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API — sieben Dateien pro Programm.
+## Programme
 
-Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [Google Analytics](google-analytics/index.md) | [latest](google-analytics/latest/description.md) | Google Analytics (GA4, kommerziell) ist das Web-/App-Analyse-Standardwerk: ereignisbasierte Messung (Events + Parameter), Zielgruppen, Trichter, Attribution — verknüpft mit Google Ads/Search Console. |
+| [Hotjar](hotjar/index.md) | [latest](hotjar/latest/description.md) | Hotjar (kommerziell) ergänzt Web-Analytik um das Wie: Heatmaps (Klicks/Scrolls/Moves), Session-Replays, Umfragen (Onsite-Surveys), Feedback-/Rage-Click-Erkennung und Funnel-Kopplung. |
+| [Mailchimp](mailchimp/index.md) | [latest](mailchimp/latest/description.md) | Mailchimp (Intuit, kommerziell) ist die Newsletter-/Marketing-Automation-Plattform: Listen + Segmente, Kampagnen-Editor, E-Mail-Automatisierungen (Journeys), Landingpages, CRM-lite und Analytics. |
+| [Matomo](matomo/index.md) | [latest](matomo/latest/description.md) | Matomo (GPL, ehem. |
+| [Mautic](mautic/index.md) | [latest](mautic/latest/description.md) | Mautic (GPL, PHP/Symfony) ist quelloffene Marketing-Automation: Kontakte + Segmente, E-Mail-Kampagnen, Kampagnen-Baum (Trigger/Actions), Landingpages/Formulare, point scoring — self-hosted mit voll… |
+| [Plausible](plausible/index.md) | [latest](plausible/latest/description.md) | Plausible (MIT/AGPL-Dual je Edition) ist minimalistische Web-Analyse: ein Skript, eine Zahlenansicht, cookieless & DSGVO-freundlich, self-hosted oder Cloud. |
 
-## Enthaltene Dokumentationen
-
-- [Google Analytics](google-analytics/index.md)
-- [Hotjar](hotjar/index.md)
-- [Mailchimp](mailchimp/index.md)
-- [Matomo](matomo/index.md)
-- [Mautic](mautic/index.md)
-- [Plausible](plausible/index.md)
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/programs/apps/marketing/masks/
-├── index.md              (diese Datei)
-├── google-analytics/   (index, menu, features, description, structure, shortcuts, api)
-├── hotjar/   (index, menu, features, description, structure, shortcuts, api)
-├── mailchimp/   (index, menu, features, description, structure, shortcuts, api)
-├── matomo/   (index, menu, features, description, structure, shortcuts, api)
-├── mautic/   (index, menu, features, description, structure, shortcuts, api)
-└── plausible/   (index, menu, features, description, structure, shortcuts, api)
+programs/apps/marketing/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Programmverzeichnis enthält **sieben** Dateien:
-
-1. **index.md** – Übersicht des Programms und Links auf die sechs Detail-Dateien
-2. **menu.md** – alle Hauptmenüpunkte, Kontext-Menüs, rollenabhängige Menüs
-3. **features.md** – Hauptfunktionen, was das Programm kann und NICHT kann, Erweiterungen
-4. **description.md** – Beschreibung, Vorteile, Abgrenzung, technische Details, Zielgruppen
-5. **structure.md** – Fenster-/Seitenstruktur, UI/UX, Interaktionen, Responsive Design, Accessibility
-6. **shortcuts.md** – alle Tastatur-Shortcuts inklusive Mac-Varianten
-7. **api.md** – API-Art, Authentifizierung, Endpunkte, Beispiele, Rate Limits, Webhooks, SDKs
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind immer in der separaten Datei `shortcuts.md`**
-- **API-Dokumentation ist immer in der separaten Datei `api.md`**
-- Fehlende Funktionen sind ausdrücklich als nicht vorhanden markiert (❌)
-
-## Verwandte Bereiche
-
-- [Kategorie-Übersicht](../) – Überblick über diese Programmkategorie
-- [Wiki-Masken](../../wiki/frontends/) – Referenzschema dieser Dokumentation
-- [Desktop-Masken](../../../platform/desktop/frontends/) – gleiche Dateistruktur
-- [Standardisierte Daten](../../../../data/) – Felder und Modelle für alle Masken-APIs
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

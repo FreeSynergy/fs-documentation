@@ -75,19 +75,17 @@ Bei der Wahl eines Whiteboard-Tools sollten folgende Kriterien berücksichtigt w
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Whiteboard-Tools.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/whiteboards/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [draw.io](frontends/drawio/index.md) — draw.io (diagrams.net) ist ein freies Diagramm-Werkzeug für Flussdiagramme, Netzwerkpläne, UML und BPMN.
+- [Excalidraw](frontends/excalidraw/index.md) — Excalidraw ist ein freies, quelloffenes kollaboratives Whiteboard im handgezeichneten Stil.
+- [Miro](frontends/miro/index.md) — Miro ist das kommerzielle Online-Whiteboard (SaaS) für Visual Collaboration: Infinite Canvas, Shapes/Sticky Notes, Frames, Vorlagen-Bibliothek (Retros, Workshops, Customer Journeys), Voting/Timer u…
+- [Mural](frontends/mural/index.md) — Mural ist die Workshop-Whiteboard-Suite (SaaS) mit starker Facilitation: Canvas mit Formen/Notizen, „Facilitation Sequence“ (Moderationsabläufe), Teilnahmesteuerung und Vorlagen.
+- [OpenBoard](frontends/openboard/index.md) — OpenBoard ist ein freies Interactive-Whiteboard-Tool (C++, Qt) für Unterricht und Präsentationen: mehrseitige „Tableaus“, Stifte/Text/Bilder, integrierte Browser-, Dokument- und Notiz-Werkzeuge, Of…
+- [tldraw](frontends/tldraw/index.md) — tldraw ist eine quelloffene Infinite-Canvas-Whiteboard-Bibliothek und App in TypeScript: einsatzbereit auf tldraw.com und als React-SDK (`tldraw`) für eigene Canvas-Anwendungen.
 
-- [draw.io](frontends/drawio/index.md) - draw.io
-- [Excalidraw](frontends/excalidraw/index.md) - Excalidraw
-- [Miro](frontends/miro/index.md) - Miro
-- [Mural](frontends/mural/index.md) - Mural
-- [OpenBoard](frontends/openboard/index.md) - OpenBoard
-- [tldraw](frontends/tldraw/index.md) - tldraw
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

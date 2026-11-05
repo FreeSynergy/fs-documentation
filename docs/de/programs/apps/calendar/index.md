@@ -79,19 +79,17 @@ Bei der Wahl eines Kalender-Systems sollten folgende Kriterien berücksichtigt w
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Kalender-Systeme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/calendar/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [DAViCal](frontends/davical/index.md) — DAViCal ist ein CalDAV-/CardDAV-Server in PHP auf PostgreSQL – ein schlanker, protokolltreuer Self-Hosted-Kalender-/Kontaktspeicher mit Web-Administration.
+- [Google Calendar](frontends/google-calendar/index.md) — Google Kalender (calendar.google.com) ist Googles Kalender-Dienst: Web-Oberfläche und Apps für Android, iOS, Wear OS und Apple Watch, gekoppelt mit Gmail, Meet, Tasks und (mit Premium-Abo) Gemini.
+- [Merkuro Calendar](frontends/merkuro/index.md) — Merkuro Calendar ist der moderne Kalender-Client der KDE-Desktop-Umgebung (Qt 6/QML/Kirigami, konvergent auf Desktop und Plasma Mobile).
+- [Nextcloud Calendar](frontends/nextcloud-calendar/index.md) — Die Kalender-App des Nextcloud-Servers: eine Weboberfläche (Vue 3 + FullCalendar) über dem CalDAV-Backend (sabre/dav) des Nextcloud-Servers.
+- [Outlook calendar](frontends/outlook-calendar/index.md) — Kalenderkomponente der Microsoft-Outlook-Linie: Web-App (outlook.com / Outlook on the web), neues und klassisches Outlook für Windows, Outlook für Mac und iOS/Android – Daten im Postfach von Exchan…
+- [GNOME Planner](frontends/planner/index.md) — Planner ist der Projektplaner unter GNOME (App-ID `app.drey.Planner`): Vorgänge mit Anfang/Ende, Aufwand, Kosten und Abhängigkeiten (FS/SS/FF/SF mit Lag), Ressourcen mit eigenen Arbeitskalendern, k…
 
-- [DAViCal](frontends/davical/index.md) - DAViCal
-- [Google Kalender](frontends/google-calendar/index.md) - Google Kalender
-- [Merkuro Calendar](frontends/merkuro/index.md) - Merkuro Calendar
-- [Nextcloud Calendar](frontends/nextcloud-calendar/index.md) - Nextcloud Calendar
-- [Outlook-Kalender](frontends/outlook-calendar/index.md) - Outlook-Kalender
-- [GNOME Planner](frontends/planner/index.md) - GNOME Planner
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

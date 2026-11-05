@@ -1,163 +1,39 @@
-# Messenger Dokumentation
+# Messenger — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Messenger` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält Dokumentationen zu den Menüpunkten, Funktionen, Tastatur-Shortcuts und APIs verschiedener Messenger- und E-Mail-Anwendungen.
+## Programme
 
-## Enthaltene Dokumentationen
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [Discord](discord/index.md) | [latest](discord/latest/description.md) | Discord ist eine proprietäre Communication-Plattform für Gaming-Communities, mit Voice/Video und Server-Struktur. |
+| [Element](element/index.md) | [latest](element/latest/description.md) | Element ist der Open-Source-Messenger für das Matrix-Protokoll, mit dezentraler Architektur und End-to-End-Verschlüsselung. |
+| [Kontact](kontact/index.md) | [latest](kontact/latest/description.md) | Kontact ist die integrierte PIM-Anwendung für KDE, die E-Mail, Kalender, Kontakte, Aufgaben und Notzen in einer einzigen Anwendung vereint. |
+| [Mastodon](mastodon/index.md) | [latest](mastodon/latest/description.md) | Mastodon ist ein Open-Source-Mikroblogging-Netzwerk, das auf ActivityPub-Protokoll basiert und dezentral ist. |
+| [Outlook](outlook/index.md) | [latest](outlook/latest/description.md) | Outlook ist der beliebteste E-Mail-Client von Microsoft, Teil von Microsoft 365. |
+| [Telegram](telegram/index.md) | [latest](telegram/latest/description.md) | Telegram ist ein cloud-basierter Messenger mit Fokus auf Geschwindigkeit, große Gruppen/Kanäle und Verschlüsselung. |
+| [Thunderbird](thunderbird/index.md) | [latest](thunderbird/latest/description.md) | Thunderbird ist der quelloffene E-Mail-Client von Mozilla, plattformunabhängig und E-Mail-Fokus. |
 
-- [Outlook](outlook/index.md) - Microsoft E-Mail-Client
-- [Kontact](kontact/index.md) - KDE PIM-Anwendung
-- [Thunderbird](thunderbird/index.md) - Mozilla E-Mail-Client
-- [Element](element/index.md) - Matrix-Messenger
-- [Discord](discord/index.md) - Gaming/Community-Messenger
-- [Mastodon](mastodon/index.md) - Mikroblogging-Netzwerk
-- [Telegram](telegram/index.md) - Cloud-Messenger
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/messenger/masks/
-├── index.md              (diese Datei)
-├── outlook/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── kontact/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── thunderbird/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── element/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── discord/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── mastodon/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-└── telegram/
-    ├── index.md
-    ├── menu.md
-    ├── features.md
-    ├── description.md
-    ├── structure.md
-    ├── shortcuts.md
-    └── api.md
+programs/apps/messenger/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Projektverzeichnis enthält **sechs** Dateien:
-
-### menu.md
-- Alle Hauptmenüpunkte
-- Kontext-Menüs
-- Benutzerrechte-abhängige Menüs
-
-### features.md
-- Hauptfunktionen
-- Was das Programm kann
-- Was das Programm NICHT kann
-- Add-ons/Erweiterungen (wenn vorhanden)
-
-### description.md
-- Was das Programm macht
-- Vorteile
-- Abgrenzung zu anderen Systemen
-- Technische Details
-- Für wen das Programm geeignet ist
-
-### structure.md
-- Fenster-Struktur
-- UI/UX Design
-- Editor-Struktur (wenn vorhanden)
-- Responsive Design
-- Accessibility
-
-### shortcuts.md
-- Alle Tastatur-Shortcuts
-- Allgemeine Shortcuts
-- Chat/Conversation-Shortcuts
-- Navigation-Shortcuts
-- Bearbeiten-Shortcuts
-- Mac Shortcuts (wenn verschieden)
-
-### api.md
-- API-Art (REST, GraphQL, WebSocket, etc.)
-- Authentifizierung (OAuth2, API keys, etc.)
-- Endpunkte mit Methoden, Pfaden und Beschreibungen
-- Request/Response-Beispiele
-- Rate Limits
-- Webhooks (wenn vorhanden)
-- SDKs und Client-Bibliotheken
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind in separater Datei `shortcuts.md` dokumentiert**
-- **API-Dokumentation ist in separater Datei `api.md` dokumentiert**
-- E-Mail-Clients enthalten E-Mail-Editor-Strukturen
-- Messenger enthalten Chat- und Community-Strukturen
-
-## Kategorien-System
-
-**Bitte beachte:** Dieses System gilt für ALLE Kategorien in diesem Projekt:
-- Wiki (abgeschlossen, 7 Programme)
-- Messenger (abgeschlossen, 7 Programme)
-- Desktop (abgeschlossen, 12 Programme)
-- Whiteboards (abgeschlossen, 6 Programme)
-- Helpdesk (abgeschlossen, 8 Programme)
-- Projektmanagement (abgeschlossen, 8 Programme)
-- Kontakt (abgeschlossen, 4 Programme)
-- Kalender (abgeschlossen, 6 Programme)
-- CRM (abgeschlossen, 6 Programme)
-- Demokratie (abgeschlossen, 6 Programme)
-- Maps (abgeschlossen, 7 Programme)
-- ERP (abgeschlossen, 6 Programme)
-- Workflows (abgeschlossen, 6 Programme)
-- Marketing (abgeschlossen, 6 Programme)
-- Marktplätze (abgeschlossen, 6 Programme)
-- Foto-Galerien (abgeschlossen, 8 Programme)
-- Streaming (abgeschlossen, 10 Programme)
-
-**Jede Anwendung in jeder Kategorie erhält immer 7 Dateien:**
-1. index.md (Übersicht und Links)
-2. menu.md
-3. features.md
-4. description.md
-5. structure.md
-6. shortcuts.md (immer separat!)
-7. api.md (REST, GraphQL, etc.)
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

@@ -1,22 +1,37 @@
 # Nextcloud Calendar
 
-Die Kalender-App des Nextcloud-Servers: eine Weboberfläche (Vue 3 + FullCalendar) über dem CalDAV-Backend (sabre/dav) des Nextcloud-Servers. Termine, Serien, Aufgaben (VTODO), Geburtstage und WebCal-Abos liegen als Standard-ICS-Objekte unter `remote.php/dav/`; dazu kommen Terminbuchung per Link, öffentliche/gebettete Kalenderansichten und Meeting-Vorschläge (Terminumfragen). Getrennt von der eigentlichen Datenhaltung: die App selbst ist nur Frontend plus kleine JSON-OCS-Endpunkte.
+> Kategorie: [calendar](../../index.md)
 
+Die Kalender-App des Nextcloud-Servers: eine Weboberfläche (Vue 3 + FullCalendar) über dem CalDAV-Backend (sabre/dav) des Nextcloud-Servers. Termine, Serien, Aufgaben (VTODO), Geburtstage und WebCal-Abos liegen als Standard-ICS-Objekte unter `remote.php/dav/`; dazu kommen Terminbuchung per Link, öffentliche/gebettete Kalenderansichten und Meeting-Vorschläge (Terminumfragen). Getrennt von der eigentlichen Datenhaltung: die App selbst ist nur Frontend plus kleine JSON-OCS-Endpunkte.
 - **Kategorie:** calendar (Groupware-Weboberfläche)
 - **Lizenz:** AGPL-3.0-or-later
 - **Aktuell dokumentierte Version:** App **6.6.4** (Release 2026‑10‑26), benötigt Nextcloud Server 32–35 und PHP 8.1–8.5
 - **Entwicklungsstatus:** aktiv (tägliche Commits, Release-Serie 6.6.x, Pflege durch das Nextcloud-Groupware-Team)
 
-## Dateistruktur dieser Sektion
+## Bemerkenswerte Ideen
+
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
 
 | Datei | Inhalt |
-|-------|--------|
+|------|----------|
 | [description.md](latest/description.md) | Was das Programm macht, Vorteile, Abgrenzung (u. a. zu Davical und Google Kalender), technische Details, Für-wen-geeignet |
 | [features.md](latest/features.md) | Verifizierte Funktionsliste + „Was Nextcloud Calendar NICHT bietet“ |
-| [api.md](latest/api.md) | CalDAV-Backend, App-Routen, JSON/OCS-Endpunkte (Booking, Appointment-Configs, Proposals), Auth, Rate-Limits, SDKs |
-| [menu.md](latest/menus.md) | Navigations-/Menüstruktur aus Quelltext (AppNavigation, Editor, Einstellungen) |
+| [layout.md](latest/layout.md) | Request-/Modulstruktur, Datenmodell (DB-Tabellen, ICS), Konfiguration, Deployment |
+| [menus.md](latest/menus.md) | Navigations-/Menüstruktur aus Quelltext (AppNavigation, Editor, Einstellungen) |
 | [shortcuts.md](latest/shortcuts.md) | Tastenkürzel der Weboberfläche (verifiziert) + Direct-URL-Workflows |
-| [structure.md](latest/layout.md) | Request-/Modulstruktur, Datenmodell (DB-Tabellen, ICS), Konfiguration, Deployment |
+| [api.md](latest/api.md) | CalDAV-Backend, App-Routen, JSON/OCS-Endpunkte (Booking, Appointment-Configs, Proposals), Auth, Rate-Limits, SDKs |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Quellen
 

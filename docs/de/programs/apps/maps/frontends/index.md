@@ -1,58 +1,39 @@
-# Maps Masken-Dokumentation
+# Maps — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Maps` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält die Dokumentation der Programme dieser Kategorie nach dem Wiki-Schema: Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API — sieben Dateien pro Programm.
+## Programme
 
-Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [Leaflet](leaflet/index.md) | [latest](leaflet/latest/description.md) | Leaflet (BSD-2-Clause) ist die leichtgewichtige JavaScript-Kartenbibliothek: Raster-Kacheln, Marker, Polygone, Layer-Wechsel, Touch-Unterstützung — der Standard, auf dem uMap und tausende Karten-Wi… |
+| [MapLibre](maplibre/index.md) | [latest](maplibre/latest/description.md) | MapLibre (BSD, Abspaltung von Mapbox GL JS nach Lizenzwechsel) ist die Vektorkarten-Engine: Kacheln + Stil-JSON (GL Style Spec), WebGL-Rendering mit 3D-Kippen, eigene Stile (Maputnik), Self-hosting… |
+| [OpenStreetMap](openstreetmap/index.md) | [latest](openstreetmap/latest/description.md) | OpenStreetMap (OSM) ist die weltweite kollaborative Kartenplattform: Jeder editiert die Geodaten („Wiki der Karten“). |
+| [Organic Maps](organic-maps/index.md) | [latest](organic-maps/latest/description.md) | Organic Maps (GPL, Abo-freie Nonprofit-App) ist die schlanke Offline-Karten-/Navigations-App (Android/iOS/Desktop): schnell, datensparsam (keine Tracking-Werbelogik), OSM-basiert, mit eigenen Orten… |
+| [OsmAnd](osmand/index.md) | [latest](osmand/latest/description.md) | OsmAnd (Apache-2.0) ist die Offline-Navigations-App auf OSM-Basis (Android/iOS): herunterladbare Kartenregionen, Routing (Auto/Rad/Fuß/ÖPNV-Routenplan offline möglich), POI-Suche, Track-Aufzeichnun… |
+| [QGIS](qgis/index.md) | [latest](qgis/latest/description.md) | QGIS (GPL) ist das professionelle Desktop-GIS: Layer (Shapefile/GeoPackage/PostGIS/WMS), Analyse-Werkzeuge (Puffer, Überlagerungen, Geoprocessing), Druck-Layouts, QGIS Server (OGC-Dienste) und Pyth… |
+| [uMap](umap/index.md) | [latest](umap/latest/description.md) | uMap (uMap Project, free software) ist kollaborative Karten-Diagrammung: eigene Ebenen mit Markern/Polylinien/Flächen, Popup-Inhalte (HTML), Sharing per Link, Mehrbenutzer-Edit. |
 
-## Enthaltene Dokumentationen
-
-- [Leaflet](leaflet/index.md)
-- [MapLibre](maplibre/index.md)
-- [OpenStreetMap](openstreetmap/index.md)
-- [Organic Maps](organic-maps/index.md)
-- [OsmAnd](osmand/index.md)
-- [QGIS](qgis/index.md)
-- [uMap](umap/index.md)
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/programs/apps/maps/masks/
-├── index.md              (diese Datei)
-├── leaflet/   (index, menu, features, description, structure, shortcuts, api)
-├── maplibre/   (index, menu, features, description, structure, shortcuts, api)
-├── openstreetmap/   (index, menu, features, description, structure, shortcuts, api)
-├── organic-maps/   (index, menu, features, description, structure, shortcuts, api)
-├── osmand/   (index, menu, features, description, structure, shortcuts, api)
-├── qgis/   (index, menu, features, description, structure, shortcuts, api)
-└── umap/   (index, menu, features, description, structure, shortcuts, api)
+programs/apps/maps/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Programmverzeichnis enthält **sieben** Dateien:
-
-1. **index.md** – Übersicht des Programms und Links auf die sechs Detail-Dateien
-2. **menu.md** – alle Hauptmenüpunkte, Kontext-Menüs, rollenabhängige Menüs
-3. **features.md** – Hauptfunktionen, was das Programm kann und NICHT kann, Erweiterungen
-4. **description.md** – Beschreibung, Vorteile, Abgrenzung, technische Details, Zielgruppen
-5. **structure.md** – Fenster-/Seitenstruktur, UI/UX, Interaktionen, Responsive Design, Accessibility
-6. **shortcuts.md** – alle Tastatur-Shortcuts inklusive Mac-Varianten
-7. **api.md** – API-Art, Authentifizierung, Endpunkte, Beispiele, Rate Limits, Webhooks, SDKs
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind immer in der separaten Datei `shortcuts.md`**
-- **API-Dokumentation ist immer in der separaten Datei `api.md`**
-- Fehlende Funktionen sind ausdrücklich als nicht vorhanden markiert (❌)
-
-## Verwandte Bereiche
-
-- [Kategorie-Übersicht](../) – Überblick über diese Programmkategorie
-- [Wiki-Masken](../../wiki/frontends/) – Referenzschema dieser Dokumentation
-- [Desktop-Masken](../../../platform/desktop/frontends/) – gleiche Dateistruktur
-- [Standardisierte Daten](../../../../data/) – Felder und Modelle für alle Masken-APIs
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

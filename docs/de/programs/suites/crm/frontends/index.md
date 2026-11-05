@@ -1,56 +1,38 @@
-# Crm Masken-Dokumentation
+# Crm — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Crm` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält die Dokumentation der Programme dieser Kategorie nach dem Wiki-Schema: Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API — sieben Dateien pro Programm.
+## Programme
 
-Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [CiviCRM](civicrm/index.md) | [latest](civicrm/latest/description.md) | CiviCRM ist das offene CRM für Verbände, NGOs und Vereine („Constituent Relationship Management“): Kontakte, Spenden, Mitgliedschaften, Veranstaltungen, Kampagnen und Fälle — eingebettet in ein CMS… |
+| [EspoCRM](espocrm/index.md) | [latest](espocrm/latest/description.md) | EspoCRM ist ein schlankes, schnelles Open-Source-CRM (PHP + Backbone/JS, SPA): Leads, Opportunities, Accounts, Kontakte und Aktivitäten — mit grafischem Entity-Manager, Workflows und sauberer REST-… |
+| [HubSpot](hubspot/index.md) | [latest](hubspot/latest/description.md) | HubSpot ist die Marketing-first-CRM-Suite (SaaS): freies CRM (Kontakte, Firmen, Deals, Tickets) plus kostenpflichtige Hubs für Marketing (E-Mail, Kampagnen, Landing Pages), Sales (Sequenzen, Pipeli… |
+| [Pipedrive](pipedrive/index.md) | [latest](pipedrive/latest/description.md) | Pipedrive ist ein cloud-basiertes Sales-CRM, das um die Vertriebspipeline strukturiert ist: Deals wandern in Spalten (Stages) von der Qualifizierung bis zum Abschluss, ergänzt um Leads, Kontakte, F… |
+| [Salesforce](salesforce/index.md) | [latest](salesforce/latest/description.md) | Salesforce ist die führende kommerzielle CRM-Plattform (SaaS): Leads, Accounts, Contacts, Opportunities und Dutzende Clouds (Service, Marketing, Commerce, Analytics) auf einem modellierbaren Datenk… |
+| [SuiteCRM](suitecrm/index.md) | [latest](suitecrm/latest/description.md) | SuiteCRM ist ein quelloffenes CRM (AGPL-3.0), das 2013 als Fork der offenen SugarCRM-Suite entstand und heute von der Community um SalesAgility weiterentwickelt wird. |
 
-## Enthaltene Dokumentationen
-
-- [CiviCRM](civicrm/index.md)
-- [EspoCRM](espocrm/index.md)
-- [HubSpot](hubspot/index.md)
-- [Pipedrive](pipedrive/index.md)
-- [Salesforce](salesforce/index.md)
-- [SuiteCRM](suitecrm/index.md)
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/programs/suites/crm/masks/
-├── index.md              (diese Datei)
-├── civicrm/   (index, menu, features, description, structure, shortcuts, api)
-├── espocrm/   (index, menu, features, description, structure, shortcuts, api)
-├── hubspot/   (index, menu, features, description, structure, shortcuts, api)
-├── pipedrive/   (index, menu, features, description, structure, shortcuts, api)
-├── salesforce/   (index, menu, features, description, structure, shortcuts, api)
-└── suitecrm/   (index, menu, features, description, structure, shortcuts, api)
+programs/suites/crm/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Programmverzeichnis enthält **sieben** Dateien:
-
-1. **index.md** – Übersicht des Programms und Links auf die sechs Detail-Dateien
-2. **menu.md** – alle Hauptmenüpunkte, Kontext-Menüs, rollenabhängige Menüs
-3. **features.md** – Hauptfunktionen, was das Programm kann und NICHT kann, Erweiterungen
-4. **description.md** – Beschreibung, Vorteile, Abgrenzung, technische Details, Zielgruppen
-5. **structure.md** – Fenster-/Seitenstruktur, UI/UX, Interaktionen, Responsive Design, Accessibility
-6. **shortcuts.md** – alle Tastatur-Shortcuts inklusive Mac-Varianten
-7. **api.md** – API-Art, Authentifizierung, Endpunkte, Beispiele, Rate Limits, Webhooks, SDKs
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind immer in der separaten Datei `shortcuts.md`**
-- **API-Dokumentation ist immer in der separaten Datei `api.md`**
-- Fehlende Funktionen sind ausdrücklich als nicht vorhanden markiert (❌)
-
-## Verwandte Bereiche
-
-- [Kategorie-Übersicht](../) – Überblick über diese Programmkategorie
-- [Wiki-Masken](../../../apps/wiki/frontends/) – Referenzschema dieser Dokumentation
-- [Desktop-Masken](../../../platform/desktop/frontends/) – gleiche Dateistruktur
-- [Standardisierte Daten](../../../../data/) – Felder und Modelle für alle Masken-APIs
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

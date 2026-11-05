@@ -79,19 +79,17 @@ Bei der Wahl eines CRM-Systems sollten folgende Kriterien berücksichtigt werden
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen CRM-Systeme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/crm/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [civicrm](frontends/civicrm/index.md) — CiviCRM ist das offene CRM für Verbände, NGOs und Vereine („Constituent Relationship Management“): Kontakte, Spenden, Mitgliedschaften, Veranstaltungen, Kampagnen und Fälle — eingebettet in ein CMS…
+- [espocrm](frontends/espocrm/index.md) — EspoCRM ist ein schlankes, schnelles Open-Source-CRM (PHP + Backbone/JS, SPA): Leads, Opportunities, Accounts, Kontakte und Aktivitäten — mit grafischem Entity-Manager, Workflows und sauberer REST-…
+- [hubspot](frontends/hubspot/index.md) — HubSpot ist die Marketing-first-CRM-Suite (SaaS): freies CRM (Kontakte, Firmen, Deals, Tickets) plus kostenpflichtige Hubs für Marketing (E-Mail, Kampagnen, Landing Pages), Sales (Sequenzen, Pipeli…
+- [pipedrive](frontends/pipedrive/index.md) — Pipedrive ist ein cloud-basiertes Sales-CRM, das um die Vertriebspipeline strukturiert ist: Deals wandern in Spalten (Stages) von der Qualifizierung bis zum Abschluss, ergänzt um Leads, Kontakte, F…
+- [salesforce](frontends/salesforce/index.md) — Salesforce ist die führende kommerzielle CRM-Plattform (SaaS): Leads, Accounts, Contacts, Opportunities und Dutzende Clouds (Service, Marketing, Commerce, Analytics) auf einem modellierbaren Datenk…
+- [suitecrm](frontends/suitecrm/index.md) — SuiteCRM ist ein quelloffenes CRM (AGPL-3.0), das 2013 als Fork der offenen SugarCRM-Suite entstand und heute von der Community um SalesAgility weiterentwickelt wird.
 
-- [CiviCRM](frontends/civicrm/index.md) - CiviCRM
-- [EspoCRM](frontends/espocrm/index.md) - EspoCRM
-- [HubSpot](frontends/hubspot/index.md) - HubSpot
-- [Pipedrive](frontends/pipedrive/index.md) - Pipedrive
-- [Salesforce](frontends/salesforce/index.md) - Salesforce
-- [SuiteCRM](frontends/suitecrm/index.md) - SuiteCRM
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

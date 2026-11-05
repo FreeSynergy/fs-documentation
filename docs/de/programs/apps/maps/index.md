@@ -78,20 +78,18 @@ Bei der Wahl eines Kartensystems sollten folgende Kriterien berücksichtigt werd
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Kartensysteme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/maps/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (7), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (7 Programme):**
+- [Leaflet](frontends/leaflet/index.md) — Leaflet (BSD-2-Clause) ist die leichtgewichtige JavaScript-Kartenbibliothek: Raster-Kacheln, Marker, Polygone, Layer-Wechsel, Touch-Unterstützung — der Standard, auf dem uMap und tausende Karten-Wi…
+- [MapLibre](frontends/maplibre/index.md) — MapLibre (BSD, Abspaltung von Mapbox GL JS nach Lizenzwechsel) ist die Vektorkarten-Engine: Kacheln + Stil-JSON (GL Style Spec), WebGL-Rendering mit 3D-Kippen, eigene Stile (Maputnik), Self-hosting…
+- [OpenStreetMap](frontends/openstreetmap/index.md) — OpenStreetMap (OSM) ist die weltweite kollaborative Kartenplattform: Jeder editiert die Geodaten („Wiki der Karten“).
+- [Organic Maps](frontends/organic-maps/index.md) — Organic Maps (GPL, Abo-freie Nonprofit-App) ist die schlanke Offline-Karten-/Navigations-App (Android/iOS/Desktop): schnell, datensparsam (keine Tracking-Werbelogik), OSM-basiert, mit eigenen Orten…
+- [OsmAnd](frontends/osmand/index.md) — OsmAnd (Apache-2.0) ist die Offline-Navigations-App auf OSM-Basis (Android/iOS): herunterladbare Kartenregionen, Routing (Auto/Rad/Fuß/ÖPNV-Routenplan offline möglich), POI-Suche, Track-Aufzeichnun…
+- [QGIS](frontends/qgis/index.md) — QGIS (GPL) ist das professionelle Desktop-GIS: Layer (Shapefile/GeoPackage/PostGIS/WMS), Analyse-Werkzeuge (Puffer, Überlagerungen, Geoprocessing), Druck-Layouts, QGIS Server (OGC-Dienste) und Pyth…
+- [uMap](frontends/umap/index.md) — uMap (uMap Project, free software) ist kollaborative Karten-Diagrammung: eigene Ebenen mit Markern/Polylinien/Flächen, Popup-Inhalte (HTML), Sharing per Link, Mehrbenutzer-Edit.
 
-- [Leaflet](frontends/leaflet/index.md) - Leaflet
-- [MapLibre](frontends/maplibre/index.md) - MapLibre
-- [OpenStreetMap](frontends/openstreetmap/index.md) - OpenStreetMap
-- [Organic Maps](frontends/organic-maps/index.md) - Organic Maps
-- [OsmAnd](frontends/osmand/index.md) - OsmAnd
-- [QGIS](frontends/qgis/index.md) - QGIS
-- [uMap](frontends/umap/index.md) - uMap
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

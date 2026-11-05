@@ -80,19 +80,17 @@ Bei der Wahl eines Marketing-Tools sollten folgende Kriterien berücksichtigt we
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Marketing-Tools.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/marketing/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [Google Analytics](frontends/google-analytics/index.md) — Google Analytics (GA4, kommerziell) ist das Web-/App-Analyse-Standardwerk: ereignisbasierte Messung (Events + Parameter), Zielgruppen, Trichter, Attribution — verknüpft mit Google Ads/Search Console.
+- [Hotjar](frontends/hotjar/index.md) — Hotjar (kommerziell) ergänzt Web-Analytik um das Wie: Heatmaps (Klicks/Scrolls/Moves), Session-Replays, Umfragen (Onsite-Surveys), Feedback-/Rage-Click-Erkennung und Funnel-Kopplung.
+- [Mailchimp](frontends/mailchimp/index.md) — Mailchimp (Intuit, kommerziell) ist die Newsletter-/Marketing-Automation-Plattform: Listen + Segmente, Kampagnen-Editor, E-Mail-Automatisierungen (Journeys), Landingpages, CRM-lite und Analytics.
+- [Matomo](frontends/matomo/index.md) — Matomo (GPL, ehem.
+- [Mautic](frontends/mautic/index.md) — Mautic (GPL, PHP/Symfony) ist quelloffene Marketing-Automation: Kontakte + Segmente, E-Mail-Kampagnen, Kampagnen-Baum (Trigger/Actions), Landingpages/Formulare, point scoring — self-hosted mit voll…
+- [Plausible](frontends/plausible/index.md) — Plausible (MIT/AGPL-Dual je Edition) ist minimalistische Web-Analyse: ein Skript, eine Zahlenansicht, cookieless & DSGVO-freundlich, self-hosted oder Cloud.
 
-- [Google Analytics](frontends/google-analytics/index.md) - Google Analytics
-- [Hotjar](frontends/hotjar/index.md) - Hotjar
-- [Mailchimp](frontends/mailchimp/index.md) - Mailchimp
-- [Matomo](frontends/matomo/index.md) - Matomo
-- [Mautic](frontends/mautic/index.md) - Mautic
-- [Plausible](frontends/plausible/index.md) - Plausible
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

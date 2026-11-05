@@ -1,14 +1,26 @@
 # nginx-rtmp-module Dokumentation
 
+> Kategorie: [streaming](../../index.md)
+
 ## Übersicht
 
 Das nginx-rtmp-module (arut) erweitert nginx um einen RTMP-Server: Es nimmt RTMP-Publishes an, schreibt HLS- und DASH-Streams mit, zeichnet auf und leitet per Relay weiter. Konfiguration geschieht ausschließlich über `nginx.conf`; Steuerung läuft über HTTP-Hooks und die Statusseite. Geschrieben in C, BSD-lizenziert, seit Jahren ohne wesentliche Weiterentwicklung — WebRTC und SRT fehlen.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [menu.md](latest/menus.md) - Konfigurationsblöcke (`rtmp`, `application`, `http`), Statusseite, Rollen
-- [features.md](latest/features.md) - RTMP/HLS/DASH, Hooks, `exec`, Relay, Was das Modul NICHT kann
-- [description.md](latest/description.md) - Abgrenzung zu MediaMTX, MistServer und Restreamer
-- [structure.md](latest/layout.md) - nginx-Prozesse, Verzeichnislayout der Ausgabe, Konfigschichten
-- [shortcuts.md](latest/shortcuts.md) - nginx-Kommandozeile (`-t`, `-s reload`), keine UI-Tasten
-- [api.md](latest/api.md) - HTTP-Hooks (`on_publish`, `on_play`, `on_record_done`), Status-XML, `exec`
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 0/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+
+⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+<!-- /gen:versions -->

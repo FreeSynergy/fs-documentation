@@ -79,19 +79,17 @@ Bei der Wahl eines Workflow-Automatisierungssystems sollten folgende Kriterien b
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Workflow-Automatisierungssysteme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/workflows/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [apache-airflow](frontends/apache-airflow/index.md) — Apache Airflow (Apache-2.0) orchestriert datenintensive Pipelines als DAGs in Python: Planner (Scheduler) rechnet Zeitpläne, Executors verteilen Tasks an Worker.
+- [make](frontends/make/index.md) — Make (früher Integromat) ist die visuelle SaaS-Automatisierungsplattform: Szenarien aus Modulen (Trigger → Router/Iterator/Aggregator → Aktionen), 1.500+ Apps, visuelle Datenpfade mit Bubbles.
+- [n8n](frontends/n8n/index.md) — n8n ist das quelloffene Workflow-Automatisierungswerkzeug (Node.js, „fair-code“): Nodes grafisch zu Workflows verdrahten, Hunderte Integrationen, eigene JS/Python-Code-Nodes, Webhooks als Trigger, …
+- [node-red](frontends/node-red/index.md) — Node-RED ist die Flow-basierte Programmier-Umgebung (Node.js, Apache-2.0) aus IBMs IoT-Schmiede: Knoten verdrahtet man per Drähten (Nachrichten fließen darüber), mit Dashboard, MQTT/OPC-UA-Support …
+- [prefect](frontends/prefect/index.md) — Prefect (Apache-2.0) ist modernes Workflow-Orchestering in Python: `@flow`/`@task`-Dekoratoren, Deployments (Work Pools/Workers), Scheduling, Events/Automations, Observability-UI.
+- [zapier](frontends/zapier/index.md) — Zapier ist die größte SaaS-Automatisierungsbibliothek (8.000+ Apps): „Zaps“ verknüpfen Trigger→Aktionen, mehrstufige Zaps und Paths für Verzweigungen, Interfaces/Tables/Forms als Mini-Apps.
 
-- [Apache Airflow](frontends/apache-airflow/index.md) - Apache Airflow
-- [Make](frontends/make/index.md) - Make
-- [n8n](frontends/n8n/index.md) - n8n
-- [Node-RED](frontends/node-red/index.md) - Node-RED
-- [Prefect](frontends/prefect/index.md) - Prefect
-- [Zapier](frontends/zapier/index.md) - Zapier
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

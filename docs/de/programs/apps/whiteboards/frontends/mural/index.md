@@ -1,14 +1,26 @@
 # Mural Dokumentation
 
+> Kategorie: [whiteboards](../../index.md)
+
 ## Übersicht
 
 Mural ist die Workshop-Whiteboard-Suite (SaaS) mit starker Facilitation: Canvas mit Formen/Notizen, „Facilitation Sequence“ (Moderationsabläufe), Teilnahmesteuerung und Vorlagen. API-Fläche deutlich kleiner als bei Miro.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [menu.md](latest/menus.md) - Toolbar, Mural-Menü, Moderationspunkte
-- [features.md](latest/features.md) - Sequenzen, Sessions, Was Mural NICHT kann
-- [description.md](latest/description.md) - Abgrenzung zu Miro, Jamboard, FigJam
-- [structure.md](latest/layout.md) - Mural-Canvas, Area-Layout
-- [shortcuts.md](latest/shortcuts.md) - Kurzbefehle
-- [api.md](latest/api.md) - REST (eigene Mural-API), keine breite öffentliche API (Stand)
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 0/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+
+⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+<!-- /gen:versions -->

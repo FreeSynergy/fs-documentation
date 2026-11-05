@@ -1,14 +1,26 @@
 # Taiga Dokumentation
 
+> Kategorie: [projectmanagement](../../index.md)
+
 ## Übersicht
 
 Taiga ist das agile Open-Source-Projektmanagement (AGPL, Python/Django + modernes Frontend „Taigo“): Scrum (Sprints, Points) und Kanban in einem, dazu Epics, Issues, Wiki und CRM-Modul. Selbst gehostet (Docker) oder als Taiga Cloud.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [menu.md](latest/menus.md) - Projekt-Module, Epic-Tracker, Admin-Center
-- [features.md](latest/features.md) - Scrum/Kanban, Epics, Import, Was Taiga NICHT kann
-- [description.md](latest/description.md) - Abgrenzung zu OpenProject, Redmine, Jira
-- [structure.md](latest/layout.md) - Modul-Navigation, Sprint-Tafel, Backlogs
-- [shortcuts.md](latest/shortcuts.md) - Kurzbefehle (kaum welche; Web-Standards)
-- [api.md](latest/api.md) - REST /api/v1, Token/OAuth2, Webhooks
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 0/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+
+⚠️ Fehlende Pflichtdateien: `description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`, `themes/index.md`
+<!-- /gen:versions -->

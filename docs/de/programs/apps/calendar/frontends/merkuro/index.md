@@ -1,24 +1,38 @@
 # Merkuro Calendar
 
+> Kategorie: [calendar](../../index.md)
+
 > **Umbenennung:** Das 2021 als **Kalendar** gestartete KDE-Kalenderprogramm heißt seit **KDE Gear 23.08 (August 2023) Merkuro**; Repos, Binaries und AppStream-ID folgen dem neuen Namen (`pim/merkuro`, `merkuro-calendar`, `org.kde.merkuro.calendar`). Diese Sektion dokumentiert den aktuellen Stand des Nachfolgers.
-
 Merkuro Calendar ist der **moderne Kalender-Client der KDE-Desktop-Umgebung** (Qt 6/QML/Kirigami, konvergent auf Desktop und Plasma Mobile). Termine, Aufgaben (VTodo) und Journale werden nicht von der App selbst gespeichert, sondern über den KDE-PIM-Dienst **Akonadi** verwaltet, der lokale und Online-Kalender (Nextcloud, Google, Outlook, CalDAV … via `kdepim-runtime`) synchronisiert. Seit 2025/26 ist Merkuro eine kleine Suite: Kalender, Kontakte, Mail und Launcher.
-
 - **Kategorie:** calendar (nativer Groupware-Client)
 - **Lizenz:** GPL-3.0-or-later
 - **Aktuell dokumentierte Version:** **26.08.2** (KDE Release Service, Tag 2026‑10‑08); Projektaktivität unverändert hoch (letzter Aktivitäts-Eintrag 2026‑11‑02)
 - **Entwicklungsstatus:** aktiv; Maintainer Carl Schwan und Clau Cambra (KDE PIM)
 
-## Dateistruktur dieser Sektion
+## Bemerkenswerte Ideen
+
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
 
 | Datei | Inhalt |
-|-------|--------|
+|------|----------|
 | [description.md](latest/description.md) | Was das Programm macht, Vorteile, Abgrenzung (u. a. zu Nextcloud Calendar, Davical, KOrganizer), technische Details, Für-wen-geeignet |
 | [features.md](latest/features.md) | Verifizierte Funktionsliste + „Was Merkuro NICHT bietet“ |
-| [api.md](latest/api.md) | D-Bus-Interface `org.kde.calendar.Calendar`, CLI/ICS-Import, Akonadi als Datenschicht, Konfiguration, Versionsstand |
-| [menu.md](latest/menus.md) | Menüstruktur (Datei/Bearifen/Ansicht/Einstellungen, Mobile-Toolbar) aus dem QML-Quelltext |
+| [layout.md](latest/layout.md) | Modul-/Verzeichnisstruktur, Request-Ablauf (Akonadi-Modelle), Konfiguration, Deployment |
+| [menus.md](latest/menus.md) | Menüstruktur (Datei/Bearifen/Ansicht/Einstellungen, Mobile-Toolbar) aus dem QML-Quelltext |
 | [shortcuts.md](latest/shortcuts.md) | Verifizierte Tastenkürzel der QML-Oberfläche |
-| [structure.md](latest/layout.md) | Modul-/Verzeichnisstruktur, Request-Ablauf (Akonadi-Modelle), Konfiguration, Deployment |
+| [api.md](latest/api.md) | D-Bus-Interface `org.kde.calendar.Calendar`, CLI/ICS-Import, Akonadi als Datenschicht, Konfiguration, Versionsstand |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Quellen
 

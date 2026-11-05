@@ -1,155 +1,44 @@
-# Desktop-Masken-Dokumentation
+# Desktop — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Desktop` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält die Dokumentation zu Desktop- und Dashboard-Programmen nach demselben Schema wie die Wiki-Masken: Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API.
+## Programme
 
-Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [Dashy](dashy/index.md) | [latest](dashy/latest/description.md) | Dashy ist ein anpassbares Self-Hosted-Dashboard für das eigene Netzwerk: App-Kacheln, Statusanzeigen, Widgets, Themes und Suche werden über `conf.yml` (oder JSON) beschrieben und lassen sich option… |
+| [gethomepage (Bibliothek)](gethomepage/index.md) | [latest](gethomepage/latest/description.md) |  |
+| [Heimdall](heimdall/index.md) | [latest](heimdall/latest/description.md) | Heimdall ist ein Application-Dashboard auf Laravel-Basis: App-Kacheln, optionale Statistik-Kacheln und Panels bilden eine persönliche Startseite für selbst gehostete Dienste. |
+| [Homarr](homarr/index.md) | [latest](homarr/latest/description.md) | Homarr ist ein Self-Hosted Dashboard für Homelabs: Dienste, Container und Verknüpfungen werden in frei konfigurierbaren Boards (Widget-Rastern) gesammelt, live überwacht und per Klick geöffnet. |
+| [Homepage](homepage/index.md) | [latest](homepage/latest/description.md) | Homepage (Projekt `gethomepage/homepage`) ist ein statisches Dashboard für Homelabs: Dienste, Links und Live-Widgets werden aus YAML-Dateien unter `config/` gerendert. |
+| [Homer](homer/index.md) | [latest](homer/latest/description.md) | Homer ist ein statisches Dashboard für selbst gehostete Dienste: Eine YAML-Datei beschreibt Gruppen und Kacheln, eine kleine Single-Page-Anwendung rendert daraus die Startseite. |
+| [LaunchBoard](launchboard/index.md) | [latest](launchboard/latest/description.md) | LaunchBoard ist ein kommerzielles, proprietäres Homelab-Dashboard: Boards werden per Drag & Drop ohne Konfigurationsdateien gebaut, Widgets liefern Live-Daten zu Containern, Medien- und Netzwerkdie… |
+| [OPNsense](opnsense/index.md) | [latest](opnsense/latest/description.md) | OPNsense ist eine Firewall- und Router-Distribution (FreeBSD-basiert, Deciso) mit vollständiger Web-UI: Interfaces, Firewall-Regeln (pf), NAT, VPN, Dienste und Plugins werden über Menüs konfigurier… |
+| [Proxmox VE](proxmox/index.md) | [latest](proxmox/latest/description.md) | Proxmox VE ist eine quelloffene Virtualisierungsplattform auf Debian-Basis: KVM-/QEMU-Virtualmaschinen und LXC-Container werden über eine gemeinsame Web-UI (Port 8006, HTTPS) betrieben — optional a… |
+| [Synology DSM](synology-dsm/index.md) | [latest](synology-dsm/latest/description.md) | Synology DiskStation Manager (DSM) ist das proprietäre Betriebssystem der Synology-NAS mit einem vollständigen Desktop-Portal im Browser: Hauptmenü, Fenster-Verwaltung, App-Leiste, Desktop-Widgets,… |
+| [TrueNAS](truenas/index.md) | [latest](truenas/latest/description.md) | TrueNAS (iXsystems, ehemals FreeNAS) ist die Open-Source-Speicherplattform mit durchgängiger ZFS-Verwaltung: Pools, Datasets, Snapshots, Replikation und Freigaben (SMB, NFS, iSCSI, S3) werden über … |
+| [Unraid](unraid/index.md) | [latest](unraid/latest/description.md) | Unraid ist ein proprietäres Server-Betriebssystem für NAS-, Medien- und Spielserver: Ein Array mischt unterschiedlich große Festplatten, ein dediziertes Paritätslaufwerk schützt die Daten, und Dock… |
 
-## Enthaltene Dokumentationen
-
-- [Homarr](homarr/index.md) - Modernes Homelab-Dashboard (Next.js, Widgets, Docker-Integration)
-- [Heimdall](heimdall/index.md) - schlankes persönliches Dashboard mit Server-Statistiken
-- [Homer](homer/index.md) - statisches Dashboard, rein YAML-konfiguriert
-- [Dashy](dashy/index.md) - sehr mächtiges Dashboard mit Widgets und Authentifizierung
-- [Homepage](homepage/index.md) - statisches Dashboard mit Service-Widgets (gethomepage)
-- [gethomepage (Library)](gethomepage/index.md) - Service-Client-Bibliothek hinter Homepage
-- [LaunchBoard](launchboard/index.md) - kommerzielles Homelab-Dashboard ohne Code
-- [Synology DSM](synology-dsm/index.md) - NAS-Desktop-Portal mit `SYNO.*`-REST-API
-- [Unraid](unraid/index.md) - proprietäres NAS-OS mit Array, Docker, VMs und GraphQL-API
-- [Proxmox VE](proxmox/index.md) - Virtualisierungsplattform mit REST-API `/api2/json`
-- [TrueNAS](truenas/index.md) - ZFS-NAS mit Apps/VMs und JSON-RPC-API v2.0
-- [OPNsense](opnsense/index.md) - Firewall/Router mit MVC-REST-API und API-Key-Auth
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/apps/desktop/masks/
-├── index.md              (diese Datei)
-├── homarr/
-│   ├── index.md
-│   ├── menu.md
-│   ├── features.md
-│   ├── description.md
-│   ├── structure.md
-│   ├── shortcuts.md
-│   └── api.md
-├── heimdall/   (gleiche sieben Dateien)
-├── homer/      (gleiche sieben Dateien)
-├── dashy/      (gleiche sieben Dateien)
-├── homepage/   (gleiche sieben Dateien)
-├── gethomepage/(gleiche sieben Dateien)
-├── launchboard/(gleiche sieben Dateien)
-├── synology-dsm/(gleiche sieben Dateien)
-├── unraid/     (gleiche sieben Dateien)
-├── proxmox/    (gleiche sieben Dateien)
-├── truenas/    (gleiche sieben Dateien)
-└── opnsense/   (gleiche sieben Dateien)
+programs/platform/desktop/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Programmverzeichnis enthält **sieben** Dateien:
-
-### index.md
-- Übersicht des Programms
-- Links auf die sechs Detail-Dateien
-
-### menu.md
-- Alle Hauptmenüpunkte
-- Kontext-Menüs (Rechtsklick, Widget-Bearbeitung)
-- Menüs abhängig von Benutzerrolle
-
-### features.md
-- Hauptfunktionen und Widgets
-- Was das Programm kann
-- Was das Programm NICHT kann
-- Erweiterungen, Plugins, Integrationen
-
-### description.md
-- Was das Programm macht
-- Vorteile
-- Abgrenzung zu anderen Systemen
-- Technische Details (Backend, Datenbank, Frontend, Authentifizierung, Hosting)
-- Für wen das Programm geeignet ist
-
-### structure.md
-- Fenster-Struktur (ASCII-Diagramm)
-- UI/UX-Design, Themes, Farbschema
-- Interaktionen (Drag & Drop, Animationen)
-- Responsive Design, Accessibility, Performance
-
-### shortcuts.md
-- Alle Tastatur-Shortcuts
-- Allgemeine Shortcuts, Navigation, Bearbeitung, Suche
-- Mac-Varianten (Cmd)
-- Nicht vorhandene Shortcuts sind als solche gekennzeichnet
-
-### api.md
-- API-Art (REST, TRPC, JSON/YAML-Config, `SYNO.*`)
-- Authentifizierung (API-Key, OAuth2/OIDC, Session)
-- Endpunkte mit Methoden, Pfaden und Beschreibungen
-- Request/Response-Beispiele
-- Rate Limits, Webhooks
-- SDKs und Client-Bibliotheken
-
-## Kategorien-System
-
-Dieses Schema gilt für **alle** Kategorien:
-
-| Kategorie | Masken-Status |
-|-----------|-------------|
-| Wiki | abgeschlossen (7 Programme) |
-| Messenger | abgeschlossen (7 Programme) |
-| Desktop | abgeschlossen (12 Programme) |
-| Whiteboards | abgeschlossen (6 Programme) |
-| Helpdesk | abgeschlossen (8 Programme) |
-| Projektmanagement | abgeschlossen (8 Programme) |
-| Kontakt | abgeschlossen (4 Programme) |
-| CRM | abgeschlossen (6 Programme) |
-| Kalender | abgeschlossen (6 Programme) |
-| Maps | abgeschlossen (7 Programme) |
-| ERP | abgeschlossen (6 Programme) |
-| Workflows | abgeschlossen (6 Programme) |
-| Demokratie | abgeschlossen (6 Programme) |
-| Marketing | abgeschlossen (6 Programme) |
-| Marktplätze | abgeschlossen (6 Programme) |
-| Foto-Galerien | abgeschlossen (8 Programme) |
-| Streaming | abgeschlossen (10 Programme) |
-| Components | eigenes Schema (`description`/`appearance`/`attributes`) |
-
-## Nachziehen (Kandidaten je Kategorie)
-
-Die dokumentierten Programme sind abgeschlossen; die noch **vorgesehenen** Kandidaten werden nach demselben Schema ergänzt:
-
-| Kategorie | Kandidaten |
-|-----------|------------|
-| Desktop | **dokumentiert:** homarr, heimdall, homer, dashy, homepage, gethomepage, launchboard, synology-dsm, unraid, proxmox, truenas, opnsense — **vorgesehen:** pfsense, chrome, windows-11, macos-finder, gnome-shell, kde-plasma, windows-start, raycast, alfred, launchy, fluent-search, ulauncher, powerlauncher, wox, flow-launcher, keeweb, obsidian, logseq |
-| Whiteboards | **dokumentiert:** excalidraw, miro, mural, tldraw, drawio, openboard — **vorgesehen:** jamboard, figjam |
-| Helpdesk | **dokumentiert:** zammad, osticket, glpi, request-tracker, zendesk, freshdesk, helpscout, helodesk |
-| Projektmanagement | **dokumentiert:** trello, jira, asana, redmine, taiga, openproject, planka, wekan — **vorgesehen:** clickup, mon |
-| Kontakt / CRM | **dokumentiert:** nextcloud-contacts, gnome-contacts, kaddressbook, monica, civicrm, suitecrm, espocrm, salesforce, pipedrive, hubspot |
-| Kalender | **dokumentiert:** nextcloud-calendar, davical, google-calendar, outlook-calendar, merkuro, planner — **vorgesehen:** rndc, Thunderbird-events |
-| Maps | **dokumentiert:** openstreetmap, leaflet, maplibre, qgis, organic-maps, osmand, umap — **vorgesehen:** maputnik, geojson-io |
-| ERP | **dokumentiert:** erpnext, odoo, dolibarr, axelor, tryton, sage — **vorgesehen:** ofbiz |
-| Workflows | **dokumentiert:** n8n, node-red, apache-airflow, make, zapier, prefect — **vorgesehen:** kestra, activepieces |
-| Demokratie | **dokumentiert:** decidim, consul, adhocracy4, circo, liquid-feedback, polis — **vorgesehen:** liquider, society |
-| Marketing | **dokumentiert:** matomo, plausible, google-analytics, hotjar, mailchimp, mautic |
-| Marktplätze | **dokumentiert:** ebay, etsy, kleinanzeigen, sharetribe, cs-cart-multivendor, arcemall |
-| Foto-Galerien | **dokumentiert:** photoprism, immich, lychee, piwigo, nextcloud-photos, librephotos, coppermine, damselfly |
-| Streaming | **dokumentiert:** obs-studio, ffmpeg, gstreamer, mediamtx, nginx-rtmp-module, restreamer, restream, mistserver, ant-media-server, wowza |
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind immer in der separaten Datei `shortcuts.md`**
-- **API-Dokumentation ist immer in der separaten Datei `api.md`**
-- Statische Programme ohne Backend (Homer, Homepage) haben keine API im klassischen Sinn — dort wird die Konfigurationsdatei dokumentiert
-
-## Verwandte Bereiche
-
-- [Desktop-Kategorie](../) - Überblick über Desktop-Applikationen
-- [Wiki-Masken](../../../apps/wiki/frontends/) - Referenzschema dieser Dokumentation
-- [Messenger-Masken](../../../apps/messenger/frontends/) - gleiche Dateistruktur
-- [Standardisierte Daten](../../../../data/) - Felder und Modelle für alle Masken-APIs
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

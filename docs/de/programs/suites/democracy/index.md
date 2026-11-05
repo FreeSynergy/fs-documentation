@@ -72,19 +72,17 @@ Bei der Wahl eines Demokratie-Systems sollten folgende Kriterien berücksichtigt
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Demokratie-Systeme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/democracy/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [adhocracy4](frontends/adhocracy4/index.md) — Adhocracy4 (AGPL, Python/Django) ist das Beteiligungs-Framework hinter vielen kommunalen Portalen (u.a.
+- [circo](frontends/circo/index.md) — Circo (Bürgerbeteiligungs-/Konsultations-Plattform, in DE/AT für Verbände und Parlamentsbeteiligung genutzt) verbindet Umfragen, Workshops und Online-Konsultationen mit Moderation und Ergebnisberic…
+- [consul](frontends/consul/index.md) — Consul („Decide Madrid“-Software, Apache-2.0, Ruby on Rails) ist die Beteiligungsplattform für Kommunen: Vorschläge, Beteiligungsprozesse, Bürgerhaushalte, Abstimmungen/Polls, Debatten, Gesetzgebun…
+- [decidim](frontends/decidim/index.md) — Decidim (AGPL, Ruby on Rails) ist die Plattform für partizipative Demokratie: Prozesse (Bürgerhaushalt, Beteiligung, Planung), Vorschläge mit Kommentaren/Supports, Debatten, Treffen/Events, Abstimm…
+- [liquid-feedback](frontends/liquid-feedback/index.md) — LiquidFeedback („LiQu“, PHP, frei) implementiert delegatives Votum (Liquid Democracy): Initiativen in Themenräumen, Delegationsketten für Stimmen, Argumente mit Pro/Contra, Abstimmungen mit Quoren.
+- [polis](frontends/polis/index.md) — Pol.is (kommerziell, gemeinnützige Wurzeln) ist die Deliberations-Skalierungsplattform: Alle Teilnehmenden schreiben Kommentare und bewerten andere („agree/disagree/pass“) — ein Algorithmus cluster…
 
-- [Adhocracy4](frontends/adhocracy4/index.md) - Adhocracy4
-- [Circo](frontends/circo/index.md) - Circo
-- [Consul](frontends/consul/index.md) - Consul
-- [Decidim](frontends/decidim/index.md) - Decidim
-- [LiquidFeedback](frontends/liquid-feedback/index.md) - LiquidFeedback
-- [Pol.is](frontends/polis/index.md) - Pol.is
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

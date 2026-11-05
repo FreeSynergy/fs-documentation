@@ -1,17 +1,35 @@
 # Google Kalender – Dokumentation
 
+> Kategorie: [calendar](../../index.md)
+
 ## Übersicht
 
 Google Kalender (calendar.google.com) ist Googles Kalender-Dienst: Web-Oberfläche und Apps für Android, iOS, Wear OS und Apple Watch, gekoppelt mit Gmail, Meet, Tasks und (mit Premium-Abo) Gemini. Termine, Serien, Freigaben, Reservierungsseiten, Fokuszeit, Arbeitsort und Organisationskalender stammen aus einer geschlossenen SaaS-Plattform; programmatisch erschlossen über die **Calendar REST API v3** (Discovery-Revision 2026‑10‑28) mit OAuth-Scopes, Sync-Token und Push-Kanälen. Für FreeSynergy ist er der Cloud-Skin: Anbindung nur über Google-eigene API möglich, **kein dokumentiertes CalDAV**, kein Self-Hosting.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [description.md](latest/description.md) – Was Google Kalender macht, Vorteile, Abgrenzung zu DAViCal/Nextcloud/Outlook/Merkuro
-- [features.md](latest/features.md) – verifizierte Funktionen (Ansichten, Termine, Freigaben, Buchung, Integrationen) + „Was Google Kalender NICHT bietet“
-- [structure.md](latest/layout.md) – Request-/Programmablauf, Datenmodell, Konfiguration, Deployment-Realität
-- [menu.md](latest/menus.md) – Navigationsstruktur der Web-Oberfläche (aus offiziellen Hilfeseiten)
-- [shortcuts.md](latest/shortcuts.md) – offizielle Tastaturkürzel der Web-App + Abgrenzung client-seitiger Tasten
-- [api.md](latest/api.md) – Calendar API v3: Basis-URL, alle Endpunkte, Auth/Scopes, Push, Limits, SDKs
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Was Google Kalender macht, Vorteile, Abgrenzung zu DAViCal/Nextcloud/Outlook/Merkuro |
+| [features.md](latest/features.md) | verifizierte Funktionen (Ansichten, Termine, Freigaben, Buchung, Integrationen) + „Was Google Kalender NICHT bietet“ |
+| [layout.md](latest/layout.md) | Request-/Programmablauf, Datenmodell, Konfiguration, Deployment-Realität |
+| [menus.md](latest/menus.md) | Navigationsstruktur der Web-Oberfläche (aus offiziellen Hilfeseiten) |
+| [shortcuts.md](latest/shortcuts.md) | offizielle Tastaturkürzel der Web-App + Abgrenzung client-seitiger Tasten |
+| [api.md](latest/api.md) | Calendar API v3: Basis-URL, alle Endpunkte, Auth/Scopes, Push, Limits, SDKs |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Kurzprofil
 

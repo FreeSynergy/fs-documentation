@@ -1,22 +1,37 @@
 # Outlook-Kalender – Dokumentation
 
-Kalenderkomponente der Microsoft-Outlook-Linie: Web-App (outlook.com / Outlook on the web), neues und klassisches Outlook für Windows, Outlook für Mac und iOS/Android – Daten im Postfach von **Exchange Online**, Automatisierung über **Microsoft Graph v1.0** (REST/OAuth/OData). Markantes API-Merkmal im Serienvergleich: **echte Webhooks** (Graph change notifications) – und eine hart gezogene Protokollgrenze: **kein CalDAV**, EWS-Abschaltung in Exchange Online laufend (Okt 2026–Apr 2027).
+> Kategorie: [calendar](../../index.md)
 
+Kalenderkomponente der Microsoft-Outlook-Linie: Web-App (outlook.com / Outlook on the web), neues und klassisches Outlook für Windows, Outlook für Mac und iOS/Android – Daten im Postfach von **Exchange Online**, Automatisierung über **Microsoft Graph v1.0** (REST/OAuth/OData). Markantes API-Merkmal im Serienvergleich: **echte Webhooks** (Graph change notifications) – und eine hart gezogene Protokollgrenze: **kein CalDAV**, EWS-Abschaltung in Exchange Online laufend (Okt 2026–Apr 2027).
 - **Kategorie:** calendar (SaaS-Groupware-Oberfläche + proprietäre API)
 - **Lizenz:** proprietär (Microsoft-Dienst; Clients teils mit Microsoft-365-Abo, Web-Apps für Privatkonten kostenfrei)
 - **Aktuell dokumentierte Version:** Microsoft Graph **v1.0** (stabil) + beta; Client-Stand „neues Outlook für Windows“ / Outlook on the web, Prüfdatum **2026-11-02**
 - **Entwicklungsstatus:** hochaktiv (Schrittveröffentlichungen; EWS→Graph-Migration erzwungen; Kalender-Sharing-Migration MAPI→REST 2026)
 
-## Dateistruktur dieser Sektion
+## Bemerkenswerte Ideen
+
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
 
 | Datei | Inhalt |
-|-------|--------|
+|------|----------|
 | [description.md](latest/description.md) | Was das Programm macht, Vorteile, Abgrenzung (u. a. zu Google Kalender, Nextcloud Calendar, Davical, Merkuro), technische Details, Für-wen-geeignet |
 | [features.md](latest/features.md) | Verifizierte Funktionsliste + „Was Outlook-Kalender NICHT bietet“ |
-| [api.md](latest/api.md) | Graph v1.0: Kalender-/Event-Endpunkte, Auth/Scopes, Webhooks, Limits, SDKs, EWS-Abschaltung |
-| [menu.md](latest/menus.md) | Navigationsstruktur (neues Outlook, klassisches Outlook, Admin-Ebene) aus offiziellen Layout-Artikeln |
+| [layout.md](latest/layout.md) | Bauschichten, Datenmodell (changeKey/iCalUId/Serien), Konfiguration, Deployment |
+| [menus.md](latest/menus.md) | Navigationsstruktur (neues Outlook, klassisches Outlook, Admin-Ebene) aus offiziellen Layout-Artikeln |
 | [shortcuts.md](latest/shortcuts.md) | Offizielle Tastenkürzel (neues/klassisches Outlook, Web) + Direkt-Workflows |
-| [structure.md](latest/layout.md) | Bauschichten, Datenmodell (changeKey/iCalUId/Serien), Konfiguration, Deployment |
+| [api.md](latest/api.md) | Graph v1.0: Kalender-/Event-Endpunkte, Auth/Scopes, Webhooks, Limits, SDKs, EWS-Abschaltung |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Quellen
 

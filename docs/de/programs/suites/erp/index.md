@@ -79,19 +79,17 @@ Bei der Wahl eines ERP-Systems sollten folgende Kriterien berücksichtigt werden
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen ERP-Systeme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/suites/erp/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (6 Programme):**
+- [axelor](frontends/axelor/index.md) — Axelor Open Suite (AGPL, Java) verbindet ERP (CRM, Sales, Purchasing, Stock, Manufacturing, Account, HR, Project) mit Low-Code/BPM: Masken, Modelle und Workflows werden im „App Builder“ modelliert;…
+- [dolibarr](frontends/dolibarr/index.md) — Dolibarr (GPL, PHP) ist das schlanke KMU-ERP/CRM: Dritte, Angebote/Bestellungen, Rechnungen, Lager, Projekte, Basis-Buchhaltung — einfach zu hosten (LAMP), stabiler Funktionskern, Extension-Markt.
+- [erpnext](frontends/erpnext/index.md) — ERPNext (GPLv3) ist das vollständige Open-Source-ERP auf dem Frappe-Framework (Python/MariaDB): Accounting, Inventory, Buying/Selling, HR, Manufacturing, Projects — komplett ohne Lizenzkosten, mit …
+- [odoo](frontends/odoo/index.md) — Odoo ist die offene Business-Suite (LGPL-Core + kommerzielle Enterprise-Apps): CRM, Vertrieb, Einkauf, Lager, Fertigung, Buchhaltung, Projekte, HR — als integrierte Module mit gemeinsamer ORM-Schicht.
+- [sage](frontends/sage/index.md) — „Sage“ ist ein kommerzieller Suite-Verbund (Sage Group) für Rechnungswesen/ERP: Sage Business Cloud (SaaS-Buchhaltung, z.B.
+- [tryton](frontends/tryton/index.md) — Tryton (GPL, Python) ist das ruhige, modulare ERP für technische Anwender: Module für Buchhaltung, Vertrieb, Einkauf, Lager, Projekte, Zeiterfassung — mit starker Datenintegrität, Desktop-Client (G…
 
-- [Axelor](frontends/axelor/index.md) - Axelor
-- [Dolibarr](frontends/dolibarr/index.md) - Dolibarr
-- [ERPNext](frontends/erpnext/index.md) - ERPNext
-- [Odoo](frontends/odoo/index.md) - Odoo
-- [Sage](frontends/sage/index.md) - Sage
-- [Tryton](frontends/tryton/index.md) - Tryton
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../../apps/wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

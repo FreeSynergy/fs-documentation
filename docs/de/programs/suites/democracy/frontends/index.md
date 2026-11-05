@@ -1,56 +1,38 @@
-# Democracy Masken-Dokumentation
+# Democracy — Frontend-Dokumentation
 
-## Übersicht
+Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktionen** — nichts wird kopiert (ADR 0013). Ein Programm ist hier dokumentiert, weil es weit verbreitet ist oder eine bemerkenswerte Idee hat. Unser eigenes Programm dieser Kategorie ist `FreeSynergy.Democracy` (ADR 0017); seine Fähigkeiten und sein Stand stehen in [requirements](../requirements.md).
 
-Dieses Verzeichnis enthält die Dokumentation der Programme dieser Kategorie nach dem Wiki-Schema: Menüpunkte, Funktionen, Beschreibung, Struktur/UI-UX, Tastatur-Shortcuts und API — sieben Dateien pro Programm.
+## Programme
 
-Alle hier dokumentierten Programme sind **keine** FreeSynergy-Eigenentwicklungen, sondern fremde Programme, deren Oberfläche und Schnittstellen als Maske nachgebildet bzw. angebunden werden.
+| Programm | Versionen | Was es ist |
+|----------|-----------|------------|
+| [Adhocracy4](adhocracy4/index.md) | [latest](adhocracy4/latest/description.md) | Adhocracy4 (AGPL, Python/Django) ist das Beteiligungs-Framework hinter vielen kommunalen Portalen (u.a. |
+| [Circo](circo/index.md) | [latest](circo/latest/description.md) | Circo (Bürgerbeteiligungs-/Konsultations-Plattform, in DE/AT für Verbände und Parlamentsbeteiligung genutzt) verbindet Umfragen, Workshops und Online-Konsultationen mit Moderation und Ergebnisberic… |
+| [Consul](consul/index.md) | [latest](consul/latest/description.md) | Consul („Decide Madrid“-Software, Apache-2.0, Ruby on Rails) ist die Beteiligungsplattform für Kommunen: Vorschläge, Beteiligungsprozesse, Bürgerhaushalte, Abstimmungen/Polls, Debatten, Gesetzgebun… |
+| [Decidim](decidim/index.md) | [latest](decidim/latest/description.md) | Decidim (AGPL, Ruby on Rails) ist die Plattform für partizipative Demokratie: Prozesse (Bürgerhaushalt, Beteiligung, Planung), Vorschläge mit Kommentaren/Supports, Debatten, Treffen/Events, Abstimm… |
+| [LiquidFeedback](liquid-feedback/index.md) | [latest](liquid-feedback/latest/description.md) | LiquidFeedback („LiQu“, PHP, frei) implementiert delegatives Votum (Liquid Democracy): Initiativen in Themenräumen, Delegationsketten für Stimmen, Argumente mit Pro/Contra, Abstimmungen mit Quoren. |
+| [Pol.is](polis/index.md) | [latest](polis/latest/description.md) | Pol.is (kommerziell, gemeinnützige Wurzeln) ist die Deliberations-Skalierungsplattform: Alle Teilnehmenden schreiben Kommentare und bewerten andere („agree/disagree/pass“) — ein Algorithmus cluster… |
 
-## Enthaltene Dokumentationen
-
-- [Adhocracy4](adhocracy4/index.md)
-- [Circo](circo/index.md)
-- [Consul](consul/index.md)
-- [Decidim](decidim/index.md)
-- [LiquidFeedback](liquid-feedback/index.md)
-- [Pol.is](polis/index.md)
-
-## Verzeichnisstruktur
+## Dateisatz pro Programm (ADR 0012)
 
 ```
-docs/de/programs/suites/democracy/masks/
-├── index.md              (diese Datei)
-├── adhocracy4/   (index, menu, features, description, structure, shortcuts, api)
-├── circo/   (index, menu, features, description, structure, shortcuts, api)
-├── consul/   (index, menu, features, description, structure, shortcuts, api)
-├── decidim/   (index, menu, features, description, structure, shortcuts, api)
-├── liquid-feedback/   (index, menu, features, description, structure, shortcuts, api)
-└── polis/   (index, menu, features, description, structure, shortcuts, api)
+programs/suites/democracy/frontends/<program>/
+├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
+├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
+└── <version>/
+    ├── description.md    Pflicht · Ausführliche Beschreibung, Abgrenzung, für wen es passt
+    ├── features.md       Pflicht · Was das Programm kann — und was nicht
+    ├── layout.md         Pflicht · Fensterstruktur, Bereiche, Panels
+    ├── menus.md          Pflicht · Menüstruktur, Kontextmenüs, Menüs nach Rolle
+    ├── shortcuts.md      Pflicht · Tastatur-Shortcuts
+    ├── api.md            Pflicht · APIs und Protokolle, Authentifizierung, Rate Limits
+    ├── themes/index.md   Pflicht · Themes: Farben, Typografie, Abstände — was sich nachbauen lässt
+    ├── interaction.md    bei Bedarf · Hover, Fokus, Ziehen, Gesten (Finger, Maus, Stift)
+    ├── states.md         bei Bedarf · UI-Zustände und Übergänge
+    ├── events.md         bei Bedarf · Ereignisse nach außen (Webhooks, Push, Streams)
+    ├── limits.md         bei Bedarf · Bekannte Grenzen
+    ├── i18n.md           bei Bedarf · Lokalisierung, Schreibrichtung
+    └── dependencies.md   bei Bedarf · Welche unserer Bausteine ein Frontend dieser Art braucht
 ```
 
-## Inhalt jeder Dokumentation
-
-Jedes Programmverzeichnis enthält **sieben** Dateien:
-
-1. **index.md** – Übersicht des Programms und Links auf die sechs Detail-Dateien
-2. **menu.md** – alle Hauptmenüpunkte, Kontext-Menüs, rollenabhängige Menüs
-3. **features.md** – Hauptfunktionen, was das Programm kann und NICHT kann, Erweiterungen
-4. **description.md** – Beschreibung, Vorteile, Abgrenzung, technische Details, Zielgruppen
-5. **structure.md** – Fenster-/Seitenstruktur, UI/UX, Interaktionen, Responsive Design, Accessibility
-6. **shortcuts.md** – alle Tastatur-Shortcuts inklusive Mac-Varianten
-7. **api.md** – API-Art, Authentifizierung, Endpunkte, Beispiele, Rate Limits, Webhooks, SDKs
-
-## Hinweise
-
-- Alle Dokumentationen sind auf Deutsch verfasst
-- Die Inhalte sind für Anwender und Administratoren geeignet
-- **Tastatur-Shortcuts sind immer in der separaten Datei `shortcuts.md`**
-- **API-Dokumentation ist immer in der separaten Datei `api.md`**
-- Fehlende Funktionen sind ausdrücklich als nicht vorhanden markiert (❌)
-
-## Verwandte Bereiche
-
-- [Kategorie-Übersicht](../) – Überblick über diese Programmkategorie
-- [Wiki-Masken](../../../apps/wiki/frontends/) – Referenzschema dieser Dokumentation
-- [Desktop-Masken](../../../platform/desktop/frontends/) – gleiche Dateistruktur
-- [Standardisierte Daten](../../../../data/) – Felder und Modelle für alle Masken-APIs
+Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).

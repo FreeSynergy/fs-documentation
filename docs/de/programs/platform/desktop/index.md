@@ -4,13 +4,34 @@
 
 Dieser Bereich enthält die Dokumentation für verschiedene Desktop-Applikationen und Software.
 
-## Masken-Dokumentation
+## Frontend-Dokumentation
 
-Programme ohne eigenes Masken-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
+Programme ohne eigenes Frontend-Verzeichnis werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
 
-→ [Desktop-Masken](frontends/index.md)
+→ [Desktop-Frontends](frontends/index.md)
 
 Dokumentiert: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
+
+## Frontends
+
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (12), nach Funktionen, nichts kopiert (ADR 0012/0013):
+
+- [dashy](frontends/dashy/index.md) — Dashy ist ein anpassbares Self-Hosted-Dashboard für das eigene Netzwerk: App-Kacheln, Statusanzeigen, Widgets, Themes und Suche werden über `conf.yml` (oder JSON) beschrieben und lassen sich option…
+- [gethomepage](frontends/gethomepage/index.md) — `gethomepage` bezeichnet die API-Bibliotheksschicht des Projekts `gethomepage/homepage`: die Service-Clients, Proxy-Handler, Konfigurationsleser und Hilfsfunktionen, die aus den YAML-Angaben der `s…
+- [heimdall](frontends/heimdall/index.md) — Heimdall ist ein Application-Dashboard auf Laravel-Basis: App-Kacheln, optionale Statistik-Kacheln und Panels bilden eine persönliche Startseite für selbst gehostete Dienste.
+- [homarr](frontends/homarr/index.md) — Homarr ist ein Self-Hosted Dashboard für Homelabs: Dienste, Container und Verknüpfungen werden in frei konfigurierbaren Boards (Widget-Rastern) gesammelt, live überwacht und per Klick geöffnet.
+- [homepage](frontends/homepage/index.md) — Homepage (Projekt `gethomepage/homepage`) ist ein statisches Dashboard für Homelabs: Dienste, Links und Live-Widgets werden aus YAML-Dateien unter `config/` gerendert.
+- [homer](frontends/homer/index.md) — Homer ist ein statisches Dashboard für selbst gehostete Dienste: Eine YAML-Datei beschreibt Gruppen und Kacheln, eine kleine Single-Page-Anwendung rendert daraus die Startseite.
+- [launchboard](frontends/launchboard/index.md) — LaunchBoard ist ein kommerzielles, proprietäres Homelab-Dashboard: Boards werden per Drag & Drop ohne Konfigurationsdateien gebaut, Widgets liefern Live-Daten zu Containern, Medien- und Netzwerkdie…
+- [opnsense](frontends/opnsense/index.md) — OPNsense ist eine Firewall- und Router-Distribution (FreeBSD-basiert, Deciso) mit vollständiger Web-UI: Interfaces, Firewall-Regeln (pf), NAT, VPN, Dienste und Plugins werden über Menüs konfigurier…
+- [proxmox](frontends/proxmox/index.md) — Proxmox VE ist eine quelloffene Virtualisierungsplattform auf Debian-Basis: KVM-/QEMU-Virtualmaschinen und LXC-Container werden über eine gemeinsame Web-UI (Port 8006, HTTPS) betrieben — optional a…
+- [synology-dsm](frontends/synology-dsm/index.md) — Synology DiskStation Manager (DSM) ist das proprietäre Betriebssystem der Synology-NAS mit einem vollständigen Desktop-Portal im Browser: Hauptmenü, Fenster-Verwaltung, App-Leiste, Desktop-Widgets,…
+- [truenas](frontends/truenas/index.md) — TrueNAS (iXsystems, ehemals FreeNAS) ist die Open-Source-Speicherplattform mit durchgängiger ZFS-Verwaltung: Pools, Datasets, Snapshots, Replikation und Freigaben (SMB, NFS, iSCSI, S3) werden über …
+- [unraid](frontends/unraid/index.md) — Unraid ist ein proprietäres Server-Betriebssystem für NAS-, Medien- und Spielserver: Ein Array mischt unterschiedlich große Festplatten, ein dediziertes Paritätslaufwerk schützt die Daten, und Dock…
+
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->
 
 ## Dashboard- und Startseiten-Systeme
 

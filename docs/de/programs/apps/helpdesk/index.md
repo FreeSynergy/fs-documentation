@@ -75,21 +75,19 @@ Bei der Wahl eines Help Desk-Systems sollten folgende Kriterien berücksichtigt 
 
 Weitere Informationen finden Sie in der Dokumentation der einzelnen Help Desk-Systeme.
 
-## Masken-Dokumentation
+## Frontends
 
-Programme dieser Kategorie werden nach dem Wiki-Schema dokumentiert (sieben Dateien pro Programm: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) unter `programs/apps/helpdesk/masks/<programm>/`.
+<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+Analysierte Programme (8), nach Funktionen, nichts kopiert (ADR 0012/0013):
 
-**dokumentiert (8 Programme):**
+- [Freshdesk](frontends/freshdesk/index.md) — Freshdesk (Freshworks) ist ein SaaS-Helpdesk mit Tickets, Knowledge Base, SLAs, Omnichannel-E-Mail/Telefon/Chat und Freddy-KI.
+- [GLPI](frontends/glpi/index.md) — GLPI ist ein französisch geprägtes Open-Source-ITSM: Helpdesk-Tickets plus vollständige IT-Asset-Verwaltung (Rechner, Software, Verträge, Netzwerk), projekt- und budgetfähige Reportings.
+- [Helodesk](frontends/helodesk/index.md) — Helodesk ist eine französische SaaS-Kundenservice-Suite (Kontaktcenter): Telefonie/Softphone, E-Mail, Chat, SMS und Callback in einer Oberfläche, dazu Cases (Tickets), Wissensdatenbank, IVR und Rep…
+- [Help Scout](frontends/helpscout/index.md) — Help Scout ist Support als gemeinsames Postfach: Kunden schreiben an eine E-Mail-Adresse („Conversations“), das Team antwortet wie aus einer persönlichen Mail — ohne Ticketnummern-Gefühl.
+- [osTicket](frontends/osticket/index.md) — osTicket ist der Klassiker unter den Open-Source-Helpdesks: PHP/MySQL, E-Mail-Ingest, Help Topics, Filterregeln und ein schlichtes Agenten- bzw.
+- [Request Tracker (RT)](frontends/request-tracker/index.md) — Request Tracker von Best Practical ist der Veteran der Ticketsysteme: Perl-basiert, extrem regexp-/skriptgetrieben, mit REST 1.0 und JSON-RPC 2.0 API.
+- [Zammad](frontends/zammad/index.md) — Zammad ist ein moderner, quelloffener Helpdesk: Tickets aus E-Mail, Web-Formular, Chat, Telefon und Telegram laufen in einer Oberfläche zusammen, mit SLAs, Textbausteinen, Wissensdatenbank und eine…
+- [Zendesk](frontends/zendesk/index.md) — Zendesk ist die kommerzielle Support-Plattform (SaaS) mit Tickets, Help Center, Chat/Messaging, Voice und Analytics.
 
-- [Freshdesk](frontends/freshdesk/index.md) - Freshdesk
-- [GLPI](frontends/glpi/index.md) - GLPI
-- [Helodesk](frontends/helodesk/index.md) - Helodesk
-- [Help Scout](frontends/helpscout/index.md) - Help Scout
-- [osTicket](frontends/osticket/index.md) - osTicket
-- [Request Tracker (RT)](frontends/request-tracker/index.md) - Request Tracker (RT)
-- [Zammad](frontends/zammad/index.md) - Zammad
-- [Zendesk](frontends/zendesk/index.md) - Zendesk
-
-Übersicht: [Masken-Verzeichnis](frontends/index.md)
-
-Referenzschema: [Wiki-Masken](../wiki/frontends/index.md) · [Desktop-Masken](../../platform/desktop/frontends/index.md) · [Standardisierte Daten](../../../data/api.md)
+Übersicht: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

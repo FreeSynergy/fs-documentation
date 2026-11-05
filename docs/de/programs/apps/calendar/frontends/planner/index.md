@@ -1,17 +1,35 @@
 # GNOME Planner Dokumentation
 
+> Kategorie: [calendar](../../index.md)
+
 ## Übersicht
 
 Planner ist der Projektplaner unter GNOME (App-ID `app.drey.Planner`): Vorgänge mit Anfang/Ende, Aufwand, Kosten und Abhängigkeiten (FS/SS/FF/SF mit Lag), Ressourcen mit eigenen Arbeitskalendern, kritischer Pfad und Slacks — dargestellt in vier Ansichten (Gantt, Aufgaben, Ressourcen, Ressourcennutzung). Projekte bleiben XML-Dateien (`*.planner`, DTD `mrproject-0.6`); optional speichert ein experimentelles Plugin in PostgreSQL. Import: MS Project XML und Evolution-/LDAP-Kontakte; Export: HTML und Druck/PDF. Stand: **0.14.92 (Dezember 2023)** — nach langem Stillstand wieder gepflegt (Übersetzungen bis 2026; in Debian stable und Arch extra), aber als Beta gekennzeichnet. In dieser Kalender-Serie führt ihn die Arbeitskalender-/Zeitachsenlogik, nicht ein Termin-Kalender.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [description.md](latest/description.md) - Was Planner macht, Vorteile, Abgrenzung zu MS Project, GanttProject, OpenProject, Nextcloud
-- [features.md](latest/features.md) - Verifizierte Funktionen (0.14.92) und was Planner NICHT bietet
-- [structure.md](latest/layout.md) - Fensteraufbau, Programm-/Modulstruktur (src, libplanner, Plugins), Konfiguration, Deployment
-- [menu.md](latest/menus.md) - Menü-, Leisten- und Kontextmenüs aus den GtkBuilder-Dateien
-- [shortcuts.md](latest/shortcuts.md) - Kurzbefehle aus dem Quelltext (u. a. Öffnen = F3!)
-- [api.md](latest/api.md) - Kein REST: Dateiformat `*.planner`, DTD, Einheiten, SQL-Ablage, Import/Export-Wege
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+| Version | Pflichtdateien vorhanden |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Was Planner macht, Vorteile, Abgrenzung zu MS Project, GanttProject, OpenProject, Nextcloud |
+| [features.md](latest/features.md) | Verifizierte Funktionen (0.14.92) und was Planner NICHT bietet |
+| [layout.md](latest/layout.md) | Fensteraufbau, Programm-/Modulstruktur (src, libplanner, Plugins), Konfiguration, Deployment |
+| [menus.md](latest/menus.md) | Menü-, Leisten- und Kontextmenüs aus den GtkBuilder-Dateien |
+| [shortcuts.md](latest/shortcuts.md) | Kurzbefehle aus dem Quelltext (u. a. Öffnen = F3!) |
+| [api.md](latest/api.md) | Kein REST: Dateiformat `*.planner`, DTD, Einheiten, SQL-Ablage, Import/Export-Wege |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->
 
 ## Quellen
 
