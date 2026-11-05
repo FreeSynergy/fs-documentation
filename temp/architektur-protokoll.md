@@ -121,6 +121,9 @@ Beides hat Vor- und Nachteile; Entscheidung steht noch aus. Klar ist in beiden F
 
 ## 4. Datenbank-Kandidat Turso / libSQL — Belegstand 2026-11-03
 
+> **Korrektur 2026-11-05:** Der Nutzer hatte recht — Supabase übernimmt Turso (angekündigt
+> 2026-10-02). Aktueller Stand: `temp/research/turso-sync.md`, Folgen in ADR 0019.
+
 Der Nutzer tendiert zu Turso und erinnerte „von Supabase". Nachstand: Turso kam **nicht** von
 Supabase (der libSQL-Fork stammt von ChiselStrike); die Verbindung zu Supabase ist offenbar
 die Übernahme von 2026-10-02. Nachstand:

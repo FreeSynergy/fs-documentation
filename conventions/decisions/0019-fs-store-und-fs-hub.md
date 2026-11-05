@@ -38,4 +38,10 @@ PM wird mit einem Kontakt aus Contacts angeglichen, weil beide standardisiert si
 ## Folgen
 - Neue Repos `fs-store` und `fs-hub` (ADR 0017).
 - Hub-Port/Socket festlegen; Kollision mit llama.cpp (8080) vermeiden.
-- Turso-Sync wird höchstens als Transport genutzt; Konfliktregel und Freigaben liegen bei uns.
+- **Turso ohne Sync** (Recherche `temp/research/turso-sync.md`, 2026-11-05): Turso-Sync spiegelt
+  genau eine Server-DB, führt getrennte DBs nicht zusammen, kennt kein P2P, löst Konflikte mit
+  last-push-wins und kann die lokale Datei **nicht verschlüsseln** (widerspricht ADR 0024). Turso
+  wird nur als eingebettete DB hinter `fs-store` genutzt (Crate `turso`, MIT, < 1.0).
+- `fs-store` schreibt jeden Protokolleintrag **selbst, in derselben Transaktion** wie die
+  Objektänderung. Turso-CDC (Early Preview, Zeilen-IDs) höchstens als Prüfhilfe.
+- Programme übergeben Objekte über IPC an den Hub; der Hub öffnet nie Programm-Dateien.
