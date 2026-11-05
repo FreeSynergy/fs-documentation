@@ -2,40 +2,22 @@
 # Source of truth for the frontend <-> program interface (ADR 0021). JSON, CLI and MCP are generated
 # from this file. Capability ids and groups: docs/en/programs/apps/messenger/requirements.md.
 # Evolution rules (Cap'n Proto): never renumber or remove fields/methods; only append.
-# Compiled successfully 2026-11-05 with capnpc-embedded 0.2.0 (capnp 1.4.0) + capnpc 0.23 (ADR 0040).
+# Compiled successfully 2026-11-05 together with common.capnp (capnpc-embedded 0.2.0 / capnp 1.4.0 + capnpc 0.23).
 
 @0xd6c1b5e3a2f40917;   # file id (generate a fresh one with `capnp id` before first release)
 
-# later: move Uuid, Timestamp, Cursor, Problem, Blob into a shared common.capnp for all programs
 
-# ---------------------------------------------------------------- basics ----
-
-struct Uuid      { hi @0 :UInt64; lo @1 :UInt64; }          # UUIDv7 (ADR 0027)
-struct Timestamp { unixMillis @0 :Int64; }
-struct Cursor    { opaque @0 :Data; }                       # pagination
-struct Problem   { type @0 :Text; title @1 :Text; detail @2 :Text; status @3 :UInt16; }  # RFC 9457 shape
+using C = import "common.capnp";
+using Uuid = C.Uuid;
+using Timestamp = C.Timestamp;
+using Cursor = C.Cursor;
+using Problem = C.Problem;
+using Envelope = C.Envelope;
+using Blob = C.Blob;
 
 # pages: one struct per item type (Cap'n Proto has no List(T) over generic parameters)
-struct MessagePage      { items @0 :List(MessageSummary);      next @1 :Cursor; }   # empty next = end
+struct MessagePage      { items @0 :List(MessageSummary);      next @1 :Cursor; }
 struct ConversationPage { items @0 :List(ConversationSummary); next @1 :Cursor; }
-
-# --------------------------------------------------------- envelope (ADR 0020) ----
-
-struct Envelope {
-  id           @0 :Uuid;
-  iri          @1 :Text;                                    # https://<instance>/messages/<uuid>
-  type         @2 :Text;                                    # AS2 type, e.g. "Note"
-  name         @3 :Text;                                    # derived display name (ADR 0032)
-  attributedTo @4 :Text;                                    # actor IRI / DID
-  to           @5 :List(Text);
-  cc           @6 :List(Text);
-  bcc          @7 :List(Text);
-  context      @8 :Text;                                    # conversation (AS2 context)
-  inReplyTo    @9 :Text;
-  published    @10 :Timestamp;
-  updated      @11 :Timestamp;
-  sensitive    @12 :List(Text);                             # DPV categories (ADR 0029)
-}
 
 enum Encryption { mls @0; openpgp @1; megolm @2; transportOnly @3; none @4; }   # ADR 0018
 
@@ -49,8 +31,6 @@ struct Attachment {
   size      @2 :UInt64;
   blob      @3 :Blob;                                       # capability to fetch the bytes
 }
-
-interface Blob { read @0 (offset :UInt64, length :UInt32) -> (data :Data); }
 
 struct Reaction { key @0 :Text; count @1 :UInt32; mine @2 :Bool; }
 
