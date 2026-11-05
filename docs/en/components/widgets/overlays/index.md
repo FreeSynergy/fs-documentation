@@ -11,6 +11,7 @@ lifecycle and close with `Esc` or a click outside.
 - [**context-menu**](./context-menu/) – A context menu is opened by right-click or a long touch action and offers context-related options.
 - [**drawer**](./drawer/) – A drawer is a side overlay window (collapsible).
 - [**hover-card**](./hover-card/) – The preview card shows the most important information about the target of a reference — without changing the address.
+- [**key-verification**](./key-verification/) – A key verification lets a person check the key or device of a counterpart and confirm trust.
 - [**modal**](./modal/) – A modal is an overlay window with focus on content.
 - [**popover**](./popover/) – A popover is a small overlay with interactive content: actions, a preview or a short form.
 - [**tooltip**](./tooltip/) – A tooltip shows a short explanation of an element – as text, without interactive content.
@@ -23,6 +24,7 @@ lifecycle and close with `Esc` or a click outside.
 | [context-menu](./context-menu/) | `base`, `menu` | `Standard`, `Long Press`, `Overflow Menu` | - | documented |
 | [drawer](./drawer/) | `base` | `Left Drawer`, `Right Drawer`, `Bottom Drawer`, `Full Drawer` | - | documented |
 | [hover-card](./hover-card/) | `base`, `popover` | `profil`, `dokument`, `vorschau` | `tooltip` | documented |
+| [key-verification](./key-verification/) | `base` | `fingerprint`, `qr`, `device-list` | - | skeleton |
 | [modal](./modal/) | `base` | `Small`, `Medium`, `Large`, `Fullscreen` | - | documented |
 | [popover](./popover/) | `base` | `inhalt`, `aktionen`, `formular` | - | documented |
 | [tooltip](./tooltip/) | `base` | `top`, `bottom`, `left`, `right`, `auto` | - | documented |

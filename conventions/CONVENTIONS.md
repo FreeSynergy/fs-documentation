@@ -132,7 +132,7 @@ Zuordnung der 84 Komponenten. Bei Abweichung beim physischen Umsortieren korrigi
 - special: `code-editor`, `dashboard`, `embed`, `whiteboard`
 - fields: `rich-text-editor`
 
-**Neu geplant (Messenger-Zerlegung 2026-11-05, `temp/messenger-components.md`) — Doku fehlt noch:**
+**Neu geplant (Messenger-Zerlegung 2026-11-05, `temp/messenger-components.md`) — Doku angelegt 2026-11-05 (Gerüst):**
 - primitives/feedback: `message-status` (wird gesendet/gesendet/zugestellt/gelesen/Fehler),
   `encryption-state` (Verschlüsselungsart; unverschlüsselt markiert; **anklickbar**, führt zur Anleitung — darum kein `badge`)
 - widgets/data: `message-list` (Konversation, unten verankert, nachladend, Trenner ⚠️ evtl. Variante von `timeline`),

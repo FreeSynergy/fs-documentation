@@ -8,20 +8,22 @@ and `video`.
 ## Elements
 
 - [**audio**](./audio/) – An audio element plays audio files in various formats.
-- [**video**](./video/) – A video element plays videos in various formats.
-- [**media-player**](./media-player/) – A media player plays videos and audio.
+- [**call-controls**](./call-controls/) – Call controls are the control bar of a call: microphone, camera, screen sharing, hang up.
 - [**carousel**](./carousel/) – A carousel shows contents one after another in a single place: one slide visible, the others ready, switched by button, swipe or automatically.
 - [**gallery**](./gallery/) – A gallery is a container element that shows several images in a grid or in a slideshow.
+- [**media-player**](./media-player/) – A media player plays videos and audio.
+- [**video**](./video/) – A video element plays videos in various formats.
 
 ## Profiles
 
 | Component | Inherits from | Variants | Role | Status |
 |-----------|---------------|----------|------|--------|
 | [audio](./audio/) | `base`, `media-player` | `einzeln`, `playlist`, `kompakt` | - | documented |
-| [video](./video/) | `base`, `media-player` | `einzeln`, `hintergrund`, `live` | - | documented |
-| [media-player](./media-player/) | `base` | `einzeln`, `playlist`, `steuerung` | - | documented |
+| [call-controls](./call-controls/) | `base` | `bar`, `compact` | - | skeleton |
 | [carousel](./carousel/) | `base`, `gallery` | `Auto-play`, `Manual`, `Thumbnails`, `Fade Effect` | - | documented |
 | [gallery](./gallery/) | `base` | `raster`, `mosaik`, `zeile` | - | documented |
+| [media-player](./media-player/) | `base` | `einzeln`, `playlist`, `steuerung` | - | documented |
+| [video](./video/) | `base`, `media-player` | `einzeln`, `hintergrund`, `live` | - | documented |
 
 ## See also
 

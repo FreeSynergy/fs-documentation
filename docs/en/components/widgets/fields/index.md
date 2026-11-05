@@ -11,6 +11,7 @@ text and error message together.
 - [**emoji-picker**](./emoji-picker/) – an emoji picker is an emoji selection for chat/comments.
 - [**file-upload**](./file-upload/) – a file upload is an element for choosing and uploading files.
 - [**range-calendar**](./range-calendar/) – the range calendar selects one continuous period of time.
+- [**rule-editor**](./rule-editor/) – A rule editor edits rules of the form "if .
 - [**time-picker**](./time-picker/) – the time picker selects a time of day from a list of possible times.
 
 ## Profiles
@@ -21,6 +22,7 @@ text and error message together.
 | [emoji-picker](./emoji-picker/) | `base` | `inline`, `overlay`, `reaktion` | - | documented |
 | [file-upload](./file-upload/) | `base` | `File Picker`, `Drag & Drop`, `Image Preview` | - | documented |
 | [range-calendar](./range-calendar/) | `base`, `date-picker` | `zwei-monate`, `ein-monat` | `dialog` | documented |
+| [rule-editor](./rule-editor/) | `base` | `list`, `simple` | - | skeleton |
 | [time-picker](./time-picker/) | `base`, `date-input` | `liste`, `ziffernblatt` | `listbox` | documented |
 
 ## See also
