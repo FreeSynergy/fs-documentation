@@ -11,12 +11,12 @@ Evidence: `temp/research/geodata-projects-profile-login.md` (2026-11-05).
 |----------|----------|------|
 | **WebAuthn Level 3** (W3C Rec 2026-08-25), passkeys | ✅ | sign-in |
 | OAuth 2.1 (draft -17, 2026-10-31); RFC 9700 = BCP 240 | ✅ | follow 2.1, apply BCP |
-| **OpenID Federation 1.0** (final 2026-02-17): trust anchors, trust chains, **trust marks**, metadata policy, automatic registration | ✅ | **candidate for federation between instances** — our trust lists as trust anchors, Web-of-Trust levels as trust marks |
+| **OpenID Federation 1.0** (final 2026-02-17): trust anchors, trust chains, **trust marks**, metadata policy, automatic registration | ✅ | **federation between instances (ADR 0035)** — our trust lists as trust anchors, Web-of-Trust levels as trust marks |
 | FedCM | ✅ First Public WD (2024-08) only | watch |
 | WebFinger RFC 7033 JRD: `subject`, `aliases`, `properties`, `links` (`rel`, `type`, `href`, `titles`, `properties`) | ✅ | discovery: link to AS2 actor, OIDC issuer, DID |
 | SCIM RFC 7643 `User`/`Group`/enterprise attributes | ✅ listed in the research file | mapping to `account` + JSContact |
 | **Kanidm 1.12.0** (2026-11-01, MPL-2.0): passkeys, OAuth2/OIDC provider (token exchange), read-only LDAPS, RADIUS | ✅ | identity provider in the server (ADR 0024) |
-| Kanidm SCIM: **inbound sync source only**, no provisioning server; no OpenID Federation | ✅ | gaps → our own SCIM server; OpenID Federation as sidecar |
+| Kanidm SCIM: **full SCIM API since 1.7.0** (GET/PUT/POST, pagination, sorting, batch); its docs still say "sync only" — kanidm#4638, maintainer 2026-10-28: API shape still changing, not yet declared stable | ✅ | use behind our abstraction; no own SCIM server. No OpenID Federation → added beside Kanidm (ADR 0035) |
 
 ## Standards in this domain
 

@@ -18,7 +18,9 @@ Status: akzeptiert (2026-11-05) · Protokoll §3, §21.3 · ADR 0015, 0019
 
 ## Folgen
 - Neue Kategorie für den Schlüsseltresor (Programm und/oder Workbench) planen.
-- Befund 2026-11-05 (`temp/research/geodata-projects-profile-login.md`): **Kanidm 1.12** kann SCIM nur
-  als *Eingang* (Sync-Quelle), nicht als Provisionierungs-Server, und kein OpenID Federation →
-  eigener SCIM-Server im Hub; Föderation zwischen Instanzen: **OpenID Federation 1.0** (final
-  2026-02-17, Trust Anchors/Chains/Marks) als Kandidat — Vorschlag, wartet auf Entscheidung.
+- **Korrektur 2026-11-05 (Nutzer):** Kanidm hat seit **1.7.0 eine volle SCIM-API** (GET, PUT, POST,
+  Pagination, Sorting, Batch; PRs #3151, #3359, #3535, #3700, #3725, #3741, #3748, #4271). Die Kanidm-Doku
+  („nur Synchronisation“) ist veraltet — Issue kanidm#4638 (vom Nutzer); Maintainer 2026-10-28: noch
+  nicht dokumentiert, **weil sich die Form der API noch ändert**. → Kein eigener SCIM-Server; Kanidm-SCIM
+  hinter unserer Abstraktion nutzen, bis die API stabil ist. Kanidm kann kein OpenID Federation →
+  Ergänzung neben Kanidm (ADR 0035).

@@ -193,7 +193,7 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | geodata | GeoJSON (JSON-FG 1.0 where needed); in images Exif 3.1 + XMP + IPTC 2025.1 | `Place` | ✅ 2026-11-05 |
 | projects | JSCalendar 2.0 `Task` + RFC 9253/10051 semantics; board: own spec | `Collection` (board), task envelope; ForgeFed `TicketDependency` | ✅ 2026-11-05 |
 | profile | JSContact (self card) | `Profile` (`describes` → myself) | ✅ 2026-11-05 |
-| login | OIDC / WebAuthn L3 / SCIM; federation: OpenID Federation 1.0 (proposed) | `Person` actor, WebFinger | ✅ 2026-11-05 |
+| login | OIDC / WebAuthn L3 / SCIM; federation: OpenID Federation 1.0 (ADR 0035) | `Person` actor, WebFinger | ✅ 2026-11-05 |
 
 ## Gaps → own specifications (ADR 0014)
 
@@ -206,7 +206,6 @@ Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/
 | Web of Trust | ❌ in standards bodies | co-author with RLTP; trust-mark profile for OpenID Federation |
 | task relations "blocks"/"duplicates" in JSCalendar | ❌ | relation vocabulary (OpenProject set as reference) |
 | profile field → DPV category table, consent record | ❌ | ADR 0029 |
-| SCIM provisioning server (Kanidm is sync-source only) | ❌ in Kanidm | own SCIM server in the hub |
 | WebFinger link profile (actor, OIDC issuer, DID) | ❌ | discovery spec |
 
 ## Domain directories

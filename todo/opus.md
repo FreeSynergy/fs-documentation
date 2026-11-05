@@ -62,7 +62,7 @@ Grundsätze: `conventions/CONVENTIONS.md` §0, ADRs 0011–0018.
 - [x] messages (2026-11-05): MIMI, Original + Hülle (ADR 0030) · Opus
 - [x] events (JSCalendar 2.0) · documents (ADR 0031/0033/0034) · geodata · projects · profile · login (2026-11-05)
 - [x] `data/standards.md`: AS2-Abbildung für alle Domänen, Lückenliste (Kandidaten eigener Specs)
-- [ ] Entscheidung: OpenID Federation 1.0 für Föderation zwischen Instanzen (ADR 0024)
+- [x] OpenID Federation 1.0 für Föderation zwischen Instanzen (ADR 0035); Kanidm-SCIM korrigiert (ADR 0024)
 - [ ] Eigene Specs (Reihenfolge festlegen): Blockformat · Markieren · Kollektionsprofil · Hilfe-Schlüssel ·
       Kanban/Aufgabenbeziehungen · DPV-Feldtabelle · WebFinger-Linkprofil · Nachrichten-Lücken · Kalender-Lücken
 - [ ] Bibliothek: erster Eintrag „So verschlüsselst du deine Mails“ (ADR 0018/0031)

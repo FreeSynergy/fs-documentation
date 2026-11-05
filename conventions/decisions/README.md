@@ -41,3 +41,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0032 | name-Regel; Beschlossenes bleibt | akzeptiert |
 | 0033 | Markieren: ein Mechanismus (Punkt = einsetzen, Bereich = ersetzen/benennen) | akzeptiert |
 | 0034 | Textstruktur technisch: Absatz, Seite, Kollektion, Regal | akzeptiert |
+| 0035 | Föderation zwischen Instanzen: OpenID Federation 1.0 | akzeptiert |
