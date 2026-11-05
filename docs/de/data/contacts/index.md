@@ -20,11 +20,13 @@ Personen, Firmen und ihre Erreichbarkeiten. Diese Domäne ist vollständig stand
 
 ## Offene Punkte
 
-- `lifecycle` (lead/prospect/customer/churned) existiert in keinem der Standards (❌ belegt) → als JSContact-Erweiterung über `extensions` (⚠️ Mechanismus noch belegen)
+- Envelope: AS2 `Profile` mit `describes` (ADR 0020) — siehe [technical.md](technical.md)
+- `lifecycle` existiert in keinem der Standards (❌) → Anbieter-Eigenschaft `freesynergy.net:lifecycle` (✅ RFC 9553 §1.8.1, ADR 0028)
+- Dieselbe Person in mehreren Programmen: Verknüpfung über `Relationship`, kein Merge (ADR 0019) — Relation `owl:sameAs`; sensible Daten sind markiert und werden nie automatisch verknüpft (ADR 0029)
 - Mapping unserer Alt-Felder (`firstName`/`lastName`, `street`/`city`): siehe [mappings.md → Contact](../mappings.md)
 
 ## Siehe auch
 
-- [standards.md](../standards.md) (Belegtabrik, Beschlüsse)
+- [standards.md](../standards.md) (Belegtabelle, Beschlüsse)
 - [mappings.md](../mappings.md) (Feld für Feld)
 - [fields.md](../fields.md)

@@ -29,5 +29,10 @@ Die vollständige Detailbeschreibung liegt in [jscontact/description.md](jsconta
 
 ## Offene Standard-Punkte
 
-- **`lifecycle` (lead/prospect/customer/churned):** ❌ in vCard 4.0 nicht enthalten (belegt). Ersatz: `extensions`-Mechanismus von JSContact — ⚠️ Mechanismus noch Feld für Feld belegen.
-- **Rollen-Enum der Card** (`individual`/`organization`/…): ⚠️ Begriffe aus vCard `KIND` bekannt, die exakte JSContact-Schreibweise noch belegen.
+- **`lifecycle` (lead/prospect/customer/churned):** ❌ in vCard 4.0 nicht enthalten (belegt). **Mechanismus ✅ (RFC 9553 §1.8.1, geprüft 2026-11-05):** anbieterspezifische Eigenschaften heißen `<domain>:<name>` und Implementierungen müssen sie behalten → `"freesynergy.net:lifecycle"` (Vokabel-Präfix ist immer `freesynergy.net`, unabhängig von der Instanzdomäne — ADR 0028).
+- **`Card.kind` ✅ (2026-11-05):** `individual` (Standard), `group`, `org`, `location`, `device`, `application`, dazu Anbieterwerte `<domain>:<value>`.
+- **`relatedTo` ✅:** bildet die `uid` der anderen Karte auf Relationstypen ab (die 20 vCard-`RELATED`-Werte: `friend`, `colleague`, `me`, `spouse`, …). **Keiner bedeutet "dieselbe Person".**
+- **Zusammenführen/Aliasierung ❌ (geprüft 2026-11-05):** kein RFC definiert es (9553, 9554, 9555, 9610, 9982, 10050) → eigene Regel, siehe [technical.md](technical.md).
+- **RFC 9982** macht `uid` optional (✅ laut Recherche) — wir behalten es pflicht für die Austausch-Stabilität.
+
+Beleg: `temp/research/contacts-identity-standards.md` (2026-11-05).

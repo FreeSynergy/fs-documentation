@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 16:23 UTC · 1537 Dateien verfolgt · 436 offen · 1094 bestätigt
+Stand: 2026-11-05 16:44 UTC · 1537 Dateien verfolgt · 423 offen · 1107 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -42,7 +42,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 13 |
+| F. Form nicht gleich – Struktur abgleichen | 0 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
@@ -796,36 +796,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
-## F. Form nicht gleich – Struktur abgleichen – 13 Dateien
-
-### `data/` · 2
-
-- [ ] `data/index.md` · 6.7k · Parität: table rows 51 vs 50; links en-only=['documents/index.md'] de-only=[] · hash changed since verification
-- [ ] `data/standards.md` · 24.5k · Parität: headings 20 vs 18; table rows 127 vs 107 · hash changed since verification
-
-### `data/contacts/` · 3
-
-- [ ] `data/contacts/index.md` · 1.5k · Parität: links en-only=['technical.md'] de-only=[] · hash changed since verification
-- [ ] `data/contacts/standards.md` · 3.1k · Parität: links en-only=['technical.md'] de-only=[] · hash changed since verification
-- [ ] `data/contacts/technical.md` · 3.2k · Parität: headings 7 vs 6 · hash changed since verification
-
-### `data/events/` · 2
-
-- [ ] `data/events/standards.md` · 3.7k · Parität: table rows 25 vs 15 · hash changed since verification
-- [ ] `data/events/technical.md` · 3.0k · Parität: headings 7 vs 6; table rows 13 vs 6 · hash changed since verification
-
-### `data/identity/` · 2
-
-- [ ] `data/identity/index.md` · 3.1k · Parität: table rows 13 vs 7 · hash changed since verification
-- [ ] `data/identity/standards.md` · 2.5k · Parität: table rows 8 vs 9 · hash changed since verification
-
-### `data/messages/` · 4
-
-- [ ] `data/messages/description.md` · 1.6k · Parität: links en-only=['standards.md'] de-only=[] · hash changed since verification
-- [ ] `data/messages/examples.md` · 2.6k · Parität: links en-only=['technical.md'] de-only=[] · hash changed since verification
-- [ ] `data/messages/standards.md` · 4.0k · Parität: headings 6 vs 5; table rows 28 vs 11 · hash changed since verification
-- [ ] `data/messages/technical.md` · 2.9k · Parität: headings 7 vs 6; table rows 23 vs 6 · hash changed since verification
-
 ## 🗑️ Gelöscht – 7
 
 - [x] `data/anforderungen.md` · nicht mehr im Baum
@@ -838,9 +808,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 01:47 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=3 code_german=15 parity=151 rename=17 review=635
-- 2026-11-05 01:54 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=3 code_german=15 parity=29 rename=17 review=756
-- 2026-11-05 02:24 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=3 code_german=15 parity=28 rename=17 review=757
 - 2026-11-05 03:47 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=1 parity=28 rename=17 review=773
 - 2026-11-05 04:01 · Lauf: 1492 verfolgt, 1474 offen, 18 bestätigt · needs_en=687 parity=28 rename=17 review=759
 - 2026-11-05 04:51 · Lauf: 1492 verfolgt, 715 offen, 777 bestätigt · needs_en=682 parity=28 rename=17 review=5
@@ -879,3 +846,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 16:21 · Lauf: 1537 verfolgt, 441 offen, 1089 bestätigt · needs_en=423 needs_de=2 parity=13 review=3
 - 2026-11-05 16:23 · Lauf: 1537 verfolgt, 441 offen, 1089 bestätigt · needs_en=423 parity=13 review=5
 - 2026-11-05 16:23 · Lauf: 1537 verfolgt, 436 offen, 1094 bestätigt · needs_en=423 parity=13
+- 2026-11-05 16:43 · Lauf: 1537 verfolgt, 437 offen, 1093 bestätigt · needs_en=423 parity=1 review=13
+- 2026-11-05 16:44 · Lauf: 1537 verfolgt, 437 offen, 1093 bestätigt · needs_en=423 review=14
+- 2026-11-05 16:44 · Lauf: 1537 verfolgt, 423 offen, 1107 bestätigt · needs_en=423

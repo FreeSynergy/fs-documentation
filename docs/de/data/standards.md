@@ -17,7 +17,7 @@ Konflikte entstehen nicht zwischen Formaten, sondern zwischen **Feldnamen**. Des
 | Schicht | Frage | Unsere Regel |
 |---------|-------|--------------|
 | **Speicher** | Wie sieht ein Datensatz in der Datenbank aus? | existierende JSON-/Textmodelle, feldgenau (JSContact, JSCalendar, GeoJSON, …) |
-| **Übertragung** | Wie reden Programme miteinander? | Envelope: AS2/ActivityPub; protobuf/gRPC intern, JSON-LD außen — **beides abgeleitete Projektionen** des kanonischen Standardmodells (Beschluss 4) |
+| **Übertragung** | Wie reden Programme miteinander? | Envelope: AS2/ActivityPub; Cap'n Proto intern (ADR 0021), JSON-LD außen — **beides abgeleitete Projektionen** des kanonischen Standardmodells (Beschluss 4) |
 | **Vokabular** | Wie heißen die Felder nach außen? | ein Kanon intern, Mapping-Tabelle pro Zielsystem |
 
 Regel Nr. 1: **Ein Feld, ein Owner.** `name` gehört zur Ressource, nicht zum Modul. Kein Modul bekommt ein `crmContactName`.
@@ -62,12 +62,14 @@ Achtung Namenskonflikt, den **die Standards selbst** haben: JSCalendar benutzt `
 
 | Standard | Beleg | Abdeckung |
 |----------|-------|-----------|
-| **Activity Streams 2.0 Core + Vocabulary (W3C Community Group)** | ✅ | `@context: "https://www.w3.org/ns/activitystreams"`; `id` ist ein **absoluter IRI** (Core §4.1); relative IRIs sollen nicht verwendet werden (§2.2); Medientyp `application/activity+json` ist in Core §8.1 bei der IANA registriert; Sprach-Varianten über `nameMap`, `contentMap`, `summaryMap`; `Link`-Objekte mit `href`, `mediaType`, `width`, `height` |
+| **Activity Streams 2.0 Core + Vocabulary (W3C Recommendation 2017)** | ✅ (Status korrigiert 2026-11-05) | `@context: "https://www.w3.org/ns/activitystreams"`; `id` ist ein **absoluter IRI** (Core §4.1); relative IRIs sollen nicht verwendet werden (§2.2); Medientyp `application/activity+json` ist in Core §8.1 bei der IANA registriert; Sprach-Varianten über `nameMap`, `contentMap`, `summaryMap`; `Link`-Objekte mit `href`, `mediaType`, `width`, `height` |
 | **AS2 enthält den Typ `Hashtag` nicht** | ❌ belegt | in Core und Vocabulary kommt der Begriff nirgends vor. Mastodon definiert `Hashtag` als Unterart von `Link` und verweist dabei auf `activitystreams#Hashtag` — eine Erweiterung, nicht der Kern |
 | **schema.org hat keinen Typ `Hashtag`** | ❌ belegt | `schema.org/Hashtag` liefert HTTP 404 |
 | **AS2 ist kein RFC** | ❌ belegt | RFC 9332 ist „Dual-Queue Coupled Active Queue Management (AQM) …" — hat nichts mit ActivityStreams zu tun. Wer AS2 zitiert, zitiert den W3C-Report |
 | **WebFinger, RFC 7033** | ✅ | Auffinden von Akteuren über `acct:` / E-Mail |
 | **W3C Web Annotation Model** | ✅ | Motive u. a. `classifying`, `tagging`, `commenting`, `describing`, `editing`, `bookmarking`; Selektoren `TextQuoteSelector`, `TextPositionSelector`, `RangeSelector`; Struktur `body` / `target`. **Das ist der richtige Standard für „einem Textteil ein Tag geben“, ohne den Text umzuschreiben** |
+| **AS2 `Profile` + `describes`** | ✅ 2026-11-05 | „describes another object, usually an actor“ — **Envelope-Typ für Kontakt-Cards** (ADR 0020): eine Karte ist *meine Beschreibung* jemandes, `describes` zeigt auf den Schauspieler/DID dieser Person |
+| **AS2 `Relationship` (`subject`, `object`, `relationship`)** | ✅ 2026-11-05 | Envelope für Beglaubigungen und für bestätigte „dieselbe Person“-Verknüpfungen. AS2 selbst hat **keine** „same as“-Eigenschaft (✅ geprüft) |
 | **JMAP, RFC 8620 (Grundlage) und RFC 8621 (Mail)** | ✅ | Referenz dafür, wie man JSON-Ressourcen sauber adressiert, patcht und synchronisiert |
 
 ### Orte, Dateien, API-Querschnitt
@@ -128,7 +130,7 @@ Fehler aus dem bisherigen Gespräch, damit sie nicht in eine Datei wandern:
 | schema.org-Version „16.0" | frei erfundene Zahl. Geprüft: schema.org nennt auf den abgerufenen Seiten „V30.1 \| 2026-09-16" |
 | „W3C bringt gerade ein Ink Annotation Module" | unbelegt, zurückgezogen |
 | „E-Rechnung: Empfang seit 2025, Ausstellung 2027/2028" | in dieser Runde **nicht nachgesehen** — als Frist nicht verwenden |
-| „ActivityPub signiert mit `Authorization: Signature`, Referenz `w3id.org/security/httpsig`" | diese Referenz liefert **HTTP 404**. Die Signatur-Mechanismen von ActivityPub sind damit **nicht belegt** und müssen erst recherchiert werden |
+| „ActivityPub signiert mit `Authorization: Signature`, Referenz `w3id.org/security/httpsig`" | diese Referenz liefert **HTTP 404**. **Gelöst 2026-11-05:** HTTP Message Signatures **RFC 9421** (Feb 2024, ✅); Objekt-Proofs **FEP-8b32** (Entwurf, Data Integrity `eddsa-jcs-2022`, ✅); Schlüssel als `Multikey` nach **FEP-521a** (final 2025-06-14, ✅). Mastodon prüft RFC 9421 seit 4.5.0 (✅). Details: `temp/research/contacts-identity-standards.md` |
 
 ## Beschlüsse (2026-11-01)
 
@@ -136,16 +138,45 @@ Fehler aus dem bisherigen Gespräch, damit sie nicht in eine Datei wandern:
 |-----|-----------|
 | 1 | **Kanonisches Payload pro Domäne:** Kontakte → JSContact (RFC 9553/9554), Termine und Aufgaben → JSCalendar (RFC 8984, deckt `Event` **und** `Task`), Orte/Adressen → GeoJSON + JSContact `Address` (+ ISO 19160, ✅ URL geprüft), Nachrichten → AS2 `Note`/`Article`, Profil → AS2-`Actor`-Projektion auf JSContact. |
 | 2 | **Envelope für jeden Austausch: ActivityStreams 2 + ActivityPub.** Änderungen nach außen sind `Create`/`Update`/`Delete` auf typisierten Objekten; das Domänen-Payload trägt das Objekt als Erweiterung. `to`/`cc`/`bto`/`bcc` sind Offenlegungssteuerung (sie entscheiden, **wo Kopien landen**) — aber **keine Zugriffskontrolle**; Autorisierung wird pro Ressource getrennt durchgesetzt. |
-| 3 | **IDs:** intern ULID (opaque, sortierbar), extern absoluter IRI `https://<instanz>/<domaene>/<ulid>` (AS2 Core §4.1 verlangt absolute IRIs — ✅ belegt). Der IRI ist der auflösbare Handle, die ULID die stabile Identität (Host-Migration bleibt möglich, dezentraler Betrieb inklusive). |
-| 4 | **Quelle der Wahrheit ist das belegte Standardmodell** (JSContact, JSCalendar, …). protobuf/gRPC nutzen wir intern, JSON-LD/AS2 außen — beide als daraus generierte Projektionen. (Korrigiert die frühere Richtung „protobuf als einzige Quelle“.) |
+| 3 | **IDs:** intern **UUIDv7, RFC 9562** (zeitlich sortierbarer Standard, ✅; ersetzt ULID am 2026-11-05, ADR 0027) — extern absoluter IRI `https://<instanz>/<domaene>/<uuid>` (AS2 Core §4.1 verlangt absolute IRIs — ✅ belegt). Der IRI ist der auflösbare Handle, das UUIDv7 die stabile Identität (Host-Migration bleibt möglich, dezentraler Betrieb inklusive). |
+| 4 | **Quelle der Wahrheit ist das belegte Standardmodell** (JSContact, JSCalendar, …). Cap'n Proto nutzen wir intern (ADR 0021), JSON-LD/AS2 außen — beide als daraus generierte Projektionen. (Korrigiert die frühere Richtung „protobuf als einzige Quelle“.) |
 | 5 | **Erweitern statt erfinden:** erst die Extension-Punkte des Standards nutzen (z. B. `extensions` bei JSContact für `lifecycle` — ⚠️ Mechanismus noch belegen), erst wenn es die nicht gibt, eigene Specs entwerfen. |
 
 **Noch offen (bewusst nicht entschieden):**
 
 1. **`name`-Regel:** Ein Pflichtfeld `name` für alles Benennbare, `title`/`headline`/`displayName` nur als Export-Alias?
+   *Vorschlag 2026-11-05 (ADR 0030):* die Inhaltsstandards behalten ihr eigenes Feld (`title` in JSCalendar,
+   `name.full` in JSContact, Betreff bei Mail); der **AS2-Envelope hat immer `name`**, daraus abgeleitet.
+   Nichts wird umbenannt; Programm-übergreifende Ansichten lesen nur den Envelope.
 2. **Publikationspfade für eigene Specs:** W3C-Community-Groups (AS2-Verwandtschaft: Social Web Incubator CG) vs. IETF-Datatracker — pro Spec einzeln zu wählen.
 
 Die frühere offene Entscheidung „Reichweite“ ist mit Beschluss 1+4 beantwortet: die Standards gelten **bis in die Datenbank** (Arbeitsrepräsentation), Dateiformate sind Export.
+
+## AS2-Abbildung pro Domäne (ADR 0014, 0020)
+
+Jedes gespeicherte Objekt = **AS2-Envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/`bto`/`bcc`/`audience`,
+`published`, `updated`, `context`) + **Domänen-Inhalt** + **Aktivitätsprotokoll** (`Create`, `Update`, …).
+
+| Domäne | Inhaltsstandard | AS2-Envelope-Typ | Stand |
+|--------|-----------------|-------------------|-------|
+| contacts | JSContact `Card` (RFC 9553) | `Profile` (`describes` → Schauspieler/DID der Person) | ✅ 2026-11-05 |
+| identity — eigene Person | DID-Dokument / Controlled Identifier (W3C) | `Person` (Akteur) mit `Multikey` (FEP-521a) | ✅ 2026-11-05 |
+| identity — Beglaubigung | VC 2.0 + `eddsa-jcs-2022` (wie RLTP) | `Relationship` | ✅ 2026-11-05 |
+| identity — dieselbe Person (Hub-Zuordnung, ADR 0019) | — | `Relationship`, Relation `owl:sameAs` | beschlossen 2026-11-05 (ADR 0029) |
+| messages | Chat: MIMI-Inhalt (Entwurf -10); E-Mail: Original-MIME + JMAP-`Email`-Felder; Matrix-Events | `Note` (`context` = Unterhaltung) | ✅ 2026-11-05, siehe [messages/](messages/standards.md) |
+| events | **JSCalendar 2.0** (`draft-ietf-calext-jscalendarbis-22`) `Event`/`Task` | `Event`; Protokoll `Invite`/`Accept`/`TentativeAccept`/`Reject` | ✅ 2026-11-05, siehe [events/](events/standards.md) |
+| documents | Text: Original + CommonMark/GFM; Blöcke: eigene Spec; Struktur: schema.org `Book`/`Collection`; Annotationen: Web Annotation | `Article`, `Document`, `Collection`/`OrderedCollection`, `Annotation` | ✅ 2026-11-05, siehe [documents/](documents/standards.md) |
+| geodata, projects, profile, login | siehe Domänen-Verzeichnisse | | offen |
+
+## Lücken → eigene Spezifikationen (ADR 0014)
+
+| Lücke | Beleg | Kandidat |
+|-------|-------|----------|
+| Zusammenführen/Aliasierung zweier Karten derselben Person | ❌ keiner in RFC 9553/9554/9555/9610/9982/10050 (✅ geprüft 2026-11-05) | Hub-Matching-Spec (ADR 0019) |
+| `Contact.lifecycle` | ❌ in vCard/JSContact; Mechanismus ✅ (RFC 9553 §1.8.1) | Anbieter-Eigenschaft `freesynergy.net:lifecycle` (ADR 0028), später CRM-Spec |
+| Markierung sensibler Daten (DSGVO Art. 9) | ⚠️ W3C DPV-Kandidat, ungeprüft | ADR 0029 |
+| Board-/Projektstruktur | ❌ | Spec-Kandidat Nr. 3 |
+| Web of Trust | ❌ in Standardisierungsgremien | mit RLTP mitgestalten |
 
 ## Domänen-Verzeichnisse
 
@@ -160,6 +191,7 @@ Jede Datendomäne hat ein Verzeichnis mit `index.md`, `description.md`, `technic
 | Login / Konten | [login/](login/index.md) |
 | Identität (Web of Trust) | [identity/](identity/index.md) |
 | Profil | [profile/](profile/index.md) |
+| Dokumente | [documents/](documents/index.md) |
 | Projekte | [projects/](projects/index.md) |
 
 ## Nachrecherche 2026-11-02 — Belege stehen vollständig hier, nicht erneut herunterladen
@@ -187,7 +219,8 @@ Faktenstand (vollständig aufgeschrieben, **nicht erneut herunterladen**):
 - Architektur: CRDT-basiert (Yjs default, Automerge-Alternative); Dienste `wot-relay` (WebSocket, ACK+Outbox), `wot-vault` (verschlüsseltes Backup), `wot-profiles` (öffentliche Profil-Auffindbarkeit, JWS-signiert); Autorisierung **UCAN-inspiriert**, offline-verifizierbar.
 - Generation 2 (dieses Repo, ~2044 Commits am 2026-11-02) hat einen Nachfolger: **Real Life Trust Protocol (RLTP), Gen 3**, in `real-life-org/trust-protocol`. Fixes laufen Richtung Gen 3.
 - **Unsere Andockpunkte:** Attestation ↔ AS2-`Relationship`-Objekt; `did:key`/Ed25519 ↔ `publicKey` am Actor; `wot-profiles` ↔ unsere `profile/`-Projektion; RLTP beobachten.
-- **Folge für das Register:** W3C **DID Core** und **VC Data Model** sind durch Antons Spec belegt *zitiert*; die W3C-Dokumente selbst sind noch ⚠️ (nicht abgerufen).
+- **Folge für das Register:** W3C **DID Core** und **VC Data Model** sind durch Antons Spec belegt *zitiert*.
+- **Nachtrag 2026-11-05 (✅):** DID Core 1.0 = W3C Recommendation 2022-07-19 (DID 1.1 ist Candidate Recommendation, 2026-03-05); **VC Data Model 2.0, Data Integrity 1.0, EdDSA-Cryptosuites, Controlled Identifiers 1.0** = Recommendations 2025-05-15. **RLTP Gen 3** (`real-life-org/trust-protocol`, letzter Commit 2026-11-05, Bibliothek 0.12.0, Editor's Drafts): Ed25519 `did:key` mit **eigenen Kennungen je Beziehung**, Credentials **VC 2.0 + `eddsa-jcs-2022`**, Transport nicht festgelegt (erster Adapter: ToIP TSP über Mediator). Gen 2 (`web-of-trust`) ist weiter in Produktion, nicht archiviert.
 
 ### Projekte: Standardsuche 2026-11-02 (Suchergebnisse, Titelbeleg — nicht im Volltext gelesen)
 

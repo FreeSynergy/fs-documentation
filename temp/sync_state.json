@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T16:23:30.675329+00:00",
+  "last_run": "2026-11-05T16:44:38.261050+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -7537,15 +7537,13 @@
       "change_reason": null
     },
     "data/contacts/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "3c7853e64e99e048",
-      "de_hash": "4583eff84532de20",
+      "de_hash": "14696f23995d5e11",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -7554,11 +7552,23 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:26:42.591626+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1520,
-      "de_bytes": 1298,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1558,
+      "change_reason": null
     },
     "data/contacts/jscontact/beschreibung.md": {
       "status": "DELETED",
@@ -7595,15 +7605,13 @@
       "de_bytes": null
     },
     "data/contacts/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "5fc5681fd9bb6c06",
-      "de_hash": "6d160fafde2e1f8b",
+      "de_hash": "0c5f1ad5e588e906",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -7612,22 +7620,32 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:26:42.686112+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3128,
-      "de_bytes": 2455,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3207,
+      "change_reason": null
     },
     "data/contacts/technical.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "d3658d5af0ef48ed",
-      "de_hash": "8fcf255ffcab6892",
+      "de_hash": "4cdf44ea9c9d9386",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "link retarget after masks->frontends restructure (ADR 0012)",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -7644,11 +7662,23 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:26:42.776129+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3271,
-      "de_bytes": 2458,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3594,
+      "change_reason": null
     },
     "data/events/description.md": {
       "status": "VERIFIED",
@@ -7721,15 +7751,13 @@
       "change_reason": null
     },
     "data/events/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "91d563e071dc412c",
-      "de_hash": "c0cccc1f0d967f65",
+      "de_hash": "f1d640430081027f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -7738,21 +7766,31 @@
         {
           "at": "2026-11-05T15:43:48.475224+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:29:08.652019+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3755,
-      "de_bytes": 2819,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 5063,
+      "change_reason": null
     },
     "data/events/technical.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "2f1c632332c400a2",
-      "de_hash": "6b4f78478ae26708",
+      "de_hash": "f3c753a3eb42f196",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -7770,11 +7808,23 @@
         {
           "at": "2026-11-05T15:43:48.475224+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:29:08.743113+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3065,
-      "de_bytes": 2412,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3140,
+      "change_reason": null
     },
     "data/felder.md": {
       "status": "DELETED",
@@ -7961,15 +8011,13 @@
       "change_reason": null
     },
     "data/identity/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "90b9966804a61fc7",
-      "de_hash": "074d65f5dc548c4e",
+      "de_hash": "397fe30cae6287e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -7978,22 +8026,32 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:31:03.784070+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 3142,
-      "de_bytes": 2126,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3290,
+      "change_reason": null
     },
     "data/identity/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "26f2973bcde6834b",
-      "de_hash": "f37572e4415985e5",
+      "de_hash": "89f81a11e550ad7c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -8002,11 +8060,23 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:31:03.894690+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2515,
-      "de_bytes": 2578,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 2652,
+      "change_reason": null
     },
     "data/identity/technical.md": {
       "status": "VERIFIED",
@@ -8035,14 +8105,12 @@
       "change_reason": null
     },
     "data/index.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "f6973aa3cfa585f7",
-      "de_hash": "893e16c8a5a2232d",
+      "de_hash": "f9f037c82fdd0110",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -8084,11 +8152,23 @@
         {
           "at": "2026-11-05T15:43:48.475224+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:32:40.440031+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 6909,
-      "de_bytes": 6930,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 7125,
+      "change_reason": null
     },
     "data/konventionen.md": {
       "status": "DELETED",
@@ -8248,15 +8328,13 @@
       "change_reason": null
     },
     "data/messages/description.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "d739bcba68792d69",
-      "de_hash": "ec2eaa961c223532",
+      "de_hash": "2c247afb26c2aac0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -8265,21 +8343,23 @@
         {
           "at": "2026-11-05T15:27:35.738002+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 1611,
-      "de_bytes": 1636,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 1733,
+      "change_reason": null
     },
     "data/messages/examples.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "a3c275cd1f5d5483",
-      "de_hash": "bcf55bed712d9084",
+      "de_hash": "a4dfe6370ccaa8c3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -8297,11 +8377,15 @@
         {
           "at": "2026-11-05T15:27:35.738002+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2696,
-      "de_bytes": 2425,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 2591,
+      "change_reason": null
     },
     "data/messages/index.md": {
       "status": "VERIFIED",
@@ -8330,15 +8414,13 @@
       "change_reason": null
     },
     "data/messages/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "ae2b0651d9c70df3",
-      "de_hash": "2224532374502aa0",
+      "de_hash": "fa1afeef4b11636d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
@@ -8347,21 +8429,23 @@
         {
           "at": "2026-11-05T14:38:56.692921+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 4055,
-      "de_bytes": 1934,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 4369,
+      "change_reason": null
     },
     "data/messages/technical.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "4945111a9ff1b562",
-      "de_hash": "26503a5e1e2ec69a",
+      "de_hash": "0f2ea07fd3d5bb98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -8379,11 +8463,15 @@
         {
           "at": "2026-11-05T15:27:35.738002+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 2996,
-      "de_bytes": 2154,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 3557,
+      "change_reason": null
     },
     "data/modelle.md": {
       "status": "DELETED",
@@ -8615,15 +8703,13 @@
       "change_reason": null
     },
     "data/standards.md": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "en_hash": "bb7ce88f79239430",
-      "de_hash": "f4ea7aedd62af49c",
+      "de_hash": "1b6aeac94169f435",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "parity"
-      ],
-      "note": "translated de->en",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "kind": [],
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T10:04:40.609312+00:00",
@@ -8632,11 +8718,15 @@
         {
           "at": "2026-11-05T14:28:43.200783+00:00",
           "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
       "en_bytes": 25135,
-      "de_bytes": 21759,
-      "change_reason": "hash changed since verification"
+      "de_bytes": 25807,
+      "change_reason": null
     },
     "index.md": {
       "status": "VERIFIED",
@@ -33818,20 +33908,28 @@
     },
     "data/documents/technical.md": {
       "status": "VERIFIED",
-      "en_hash": "1b0e7b2f9019812b",
-      "de_hash": "37b06877d67f6bcb",
+      "en_hash": "07d9278bd3cf85dc",
+      "de_hash": "b02167e82ca5b058",
       "first_seen": "2026-11-05T15:43:48.475224+00:00",
-      "last_verified": "2026-11-05T16:23:30.482228+00:00",
+      "last_verified": "2026-11-05T16:44:30.533945+00:00",
       "kind": [],
-      "note": "translated en->de (documents domain, ADR 0031/0034)",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T16:23:30.482228+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:43:03.022908+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T16:44:30.533945+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2502,
-      "de_bytes": 2761,
+      "en_bytes": 2763,
+      "de_bytes": 3038,
       "change_reason": null
     }
   }

@@ -7,7 +7,7 @@ Standardisierte Daten beschreiben, in welchen **Formaten**, **Modellen** und **F
 - **Interoperabilität**: Messenger, Wiki, Kalender und Desktop-Dashboards nutzen dieselben Feldnamen
 - **Wiederverwendbarkeit**: Komponenten (`table`, `list-view`, `calendar-view`) funktionieren mit jedem Modell
 - **Migrationsfähigkeit**: Daten lassen sich zwischen Programmen migrieren (Export/Import)
-- **Vorhersagbarkeit**: Masken (`apps/<kategorie>/masks/<programm>/api.md`) beschreiben denselben API-Stil
+- **Vorhersagbarkeit**: Frontends (`apps/<kategorie>/frontends/<programm>/api.md`) beschreiben denselben API-Stil
 - **Automatisierung**: Workflows und Webhooks greifen auf stabile Pfade zu
 
 ## Datendomänen (Beschlossen 2026-11-01)
@@ -17,15 +17,16 @@ Jede Domäne hat ein Verzeichnis mit eigener `index.md`; jeder Standard darin ei
 | Domäne | Verzeichnis | Kanonischer Standard | Weitere Standards |
 |--------|-------------|----------------------|-------------------|
 | Kontaktdaten | [contacts/](contacts/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
-| Nachrichten | [messages/](messages/index.md) | AS2 `Note`/`Article` ✅ | JMAP, RFC 5322, MLS (⚠️) |
-| Termine | [events/](events/index.md) | JSCalendar (RFC 8984) ✅ | iCalendar, CalDAV, iTIP |
+| Nachrichten | [messages/](messages/index.md) | Original + AS2 `Note`; Chat MIMI, Mail MIME+JMAP ✅ | MLS, OpenPGP v6, Matrix |
+| Termine | [events/](events/index.md) | JSCalendar 2.0 (jscalendarbis) ✅ | iCalendar, CalDAV, iTIP |
 | Geodaten | [geodata/](geodata/index.md) | GeoJSON (RFC 7946) ✅ | geo:-URI, ISO 19160 |
 | Login / Konten | [login/](login/index.md) | OIDC ✅ (2026-11-02), OAuth 6749 ✅, WebAuthn ✅ | SCIM (⚠️), WebFinger, kanidm |
 | Identität / Web of Trust | [identity/](identity/index.md) | WoT Spec v0.1.0-draft (VC, DIDComm, did:key) ✅ gesichtet | Andockpunkte: AS2 `Relationship`, `publicKey` |
 | Profil | [profile/](profile/index.md) | AS2-`Actor`-Projektion auf JSContact ✅ | schema.org `Person` (⚠️) |
+| Dokumente | [documents/](documents/index.md) | eigenes FS-Block-Dokument; CommonMark/GFM; Web Annotation ✅ | AS2 `Article`/`Collection`, schema.org `Book`, EPUB 3.3 |
 | Projekte | [projects/](projects/index.md) | ❌ keine offene Daten-Spec – eigene Arbeit | ISO 21502 (Prozess) ✅, MSPDI (De-facto) ✅, JSCalendar-`Task` |
 
-Als **vorgeschlagen, noch nicht beschlossen**: `aufgaben/` (JSCalendar deckt `Task` bereits ab), `dokumente/` (Block-Struktur = größte Lücke), `dateien/`, `verschlagwortung/` (Web Annotation ✅), `kommentare/`, `benachrichtigungen/`, `organisationen/`.
+Als **vorgeschlagen, noch nicht beschlossen**: `aufgaben/` (JSCalendar deckt `Task` bereits ab), `dateien/`, `verschlagwortung/` (Web Annotation ✅), `kommentare/`, `benachrichtigungen/`, `organisationen/`.
 
 Der **Envelope** (AS2 + ActivityPub, Beschlüsse in [standards.md](standards.md)) ist querschnittlich und keine eigene Domäne.
 
@@ -107,6 +108,7 @@ docs/de/data/
 ├── login/              │ + technical.md + standards.md
 ├── identity/           │ + examples.md
 ├── profile/            │
+├── documents/          │
 └── projects/           ┘
 ```
 

@@ -2,6 +2,9 @@
 
 Alle AS2-Felder aus der ✅ gelesenen Core/Vocabulary-Liste in [standards.md](standards.md).
 
+> Stand 2026-11-05: Threads nutzen AS2 `context` (siehe [technical.md](technical.md)); Beispiele mit
+> Chat-Payloads im MIMI-Format und Mail-Originalen fehlen noch.
+
 ## 1. Chat-Nachricht: `Create` auf `Note` (Envelope + Payload, Beschluss 2)
 
 ```json
