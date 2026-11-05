@@ -32,3 +32,23 @@ Nutzer entscheidet am 2026-11-03: **Blinc**. Erste Anlaufstelle für die UI-Här
 - `components/*/usage.md` bekommen später einen Blinc-Abschnitt („so sieht die echte Umsetzung
   aus“), sobald die ersten Bausteine in Blinc stehen.
 - Lizenz: Blinc ist Apache-2.0 ✅ — passend zur Projektlizenz.
+
+## Bestätigt und abgesichert (2026-11-05)
+
+Nach der Recherche `temp/research/blinc-health-and-parsers.md` (Bus-Faktor 1: 99 % der Commits vom
+Autor; kaum fremde Nutzung; keine Barrierefreiheit; IME unvollständig) entscheidet der Nutzer:
+**bei Blinc bleiben und den Autor unterstützen — besser unterstützen als neu anfangen.** Blinc kann
+mehr als Komponenten: Effekte und Spielereien (Schnee, Regen, Animationen) — kleine menschliche
+Dinge, die Menschen überzeugen. Kontakt besteht (Discord); der Autor ist offen für fehlende Gesten.
+
+Absicherungen:
+1. Blinc **nur hinter unserer Component-Schicht** — keine `blinc_*`-Typen im Programmcode.
+2. **Nur Zeichnen** in Blinc; Textpuffer (`ropey`), Parsen, Hervorheben (`syntect` pure Rust) bei uns.
+3. Version festschreiben, Fork bereithalten (Apache-2.0 erlaubt es).
+4. Unsere Lücken **upstream** beheben (`todo/upstream.md`): Barrierefreiheit, IME, Hervorhebung
+   über den ganzen Puffer, Gesten (Finger/Maus/Stift).
+5. Neu bewerten, wenn: 3 Monate kein Commit · eines unserer Issues > 30 Tage unbeantwortet ·
+   vor unserer ersten öffentlichen Version kein Plan für Barrierefreiheit.
+
+Issues des Autors laufen über **git-bug** (`refs/bugs/*`); Stand: `temp/research/blinc-issues.md`.
+Blincs Plan „cn → layout promotion“ (c422b97) deckt sich mit unserer Component-Schicht.
