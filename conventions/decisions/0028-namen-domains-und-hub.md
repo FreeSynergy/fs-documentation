@@ -17,10 +17,11 @@ Programme und Hub sind ohnehin Server. Sie sollen nicht nur lokal laufen, sonder
 | | Zweck | Wert |
 |---|---|---|
 | **Instanz-Domain** | wo eine Instanz erreichbar ist, IRIs `https://<instanz>/…` | frei wählbar, Standard unter `freesynergy.net` |
-| **Vokabular-Präfix** | wer ein eigenes Feld *definiert* hat (JSContact `<domain>:<name>`, RFC 9553 §1.8.1) | **immer `freesynergy.net`** — sonst hieße `lifecycle` auf jeder Instanz anders und niemand verstünde den anderen |
+| **Vokabular-Präfix** | wer ein eigenes Feld *definiert* hat (JSContact `<domain>:<name>`, RFC 9553 §1.8.1) | **immer `freesynergy.net`** — sonst hieße `lifecycle` auf jeder Instanz anders und niemand verstünde den anderen. **Kein Präfix je Programm** (`messenger.…`): ein Feld gehört dem Projekt, nicht einem Programm, alle Programme lesen es (bestätigt 2026-11-05) |
 
 ## Vorschlag zur Technik
 - Lokal/LAN: mDNS + DNS-SD (RFC 6762/6763) — Hub und Programme finden sich ohne DNS-Server.
 - Im Netz: eigener Name per DNS; Zertifikate per ACME (RFC 8555); Akteure auffindbar per WebFinger (RFC 7033).
 - `freesynergy.net` als Standard-Netz: Unterdomain je Instanz (`<name>.freesynergy.net`), Eintrag
-  über den Hub. ⚠️ Setzt voraus, dass `freesynergy.net` dem Projekt gehört — zu bestätigen.
+  über den Hub. `freesynergy.net` gehört dem Nutzer und ist dem Projekt gegeben (bestätigt
+  2026-11-05); Übergabe an eine Trägerschaft, sobald das Projekt läuft — damit es sicher ist.
