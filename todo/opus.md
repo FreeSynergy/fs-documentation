@@ -95,3 +95,28 @@ Pro Kategorie, Reihenfolge nach Nutzen (Vorschlag: messenger, contact, calendar,
 - [ ] Darstellungs-Register: erste Einträge `Conversation`, `Message`, `Encryption` (ADR 0023) · Opus
 - [ ] **Schnittstelle `fs-messenger`**: erstes Cap'n-Proto-Schema aus den Gruppen der requirements · Opus
 - [ ] Referenz-Frontend Nr. 1 sehen und testen (Nutzer) — Gesten gelten für Mails **und** Nachrichten
+
+## Phase 4 – Groupware (Plan 2026-11-05, Nacht)
+
+Ziel: Wiki, Kontakte, Kalender, Karten, Messenger auf **denselben Daten**; Suite `fs-groupware` als
+Container der Einzelprogramme (ADR 0017/0037). Linux zuerst, dann Windows/macOS, dann Smartphones.
+
+**Regeln für die Nacht:** Rust-Hygiene ADR 0041 (`cargo build -j 4`, nach jeder Sitzung
+`scripts/clean_rust.py --apply`); **RAM ist knapp** (≈ 6 GB frei neben llama) → höchstens zwei Builds
+gleichzeitig; GitHub: `fs-store` und `fs-components` **existieren aus der alten Version** → nur lokal
+bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen öffentlich anlegen.
+
+| # | Paket | Repo | Hängt ab von | Wer | Status |
+|---|-------|------|--------------|-----|--------|
+| 1 | Cap'n-Proto-Compiler in Rust, Orakel-Tests gegen capnpc-embedded (ADR 0040) | `fs-capnpc` (crate `capnp-compiler`) | — | Sonnet | offen |
+| 2 | Objektspeicher: UUIDv7, AS2-Hülle, Turso eingebettet hinter Trait, Aktivitätsprotokoll in derselben Transaktion, begrenztes Rückgängig (ADR 0019/0020/0027/0042) | `fs-store` (lokal) | — | Sonnet | offen |
+| 3 | Text-Kern: Rope + Markierungen (ADR 0033/0042), Markdown hinein/heraus (pulldown-cmark), Link-Tabelle, Vorlagen | `fs-wiki` (crate `fs-text` im Workspace) | (2) später | Sonnet | offen |
+| 4 | `common.capnp` (Uuid, Timestamp, Cursor, Problem, Blob) | `fs-documentation/temp/contracts` | — | Opus | offen |
+| 5 | Doku-Gerüste der 13 neuen Components | `fs-documentation` | — | Sonnet | offen |
+| 6 | Datenmodelle Kontakte (JSContact) / Kalender (JSCalendar 2.0) / Karten (GeoJSON, PMTiles on demand) | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | später |
+| 7 | Wiki-Workbench auf Blinc (Code-Modus, liest `fs-documentation`) | `fs-wiki` | 3, Blinc | Sonnet | später |
+| 8 | Suite `fs-groupware` (Container, Workbenches nebeneinander) | `fs-groupware` | 6, 7 | — | später |
+| 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | — | später |
+
+**Fragen für den Morgen:** alte Repos `fs-store`/`fs-components` archivieren und Namen übernehmen?
+
