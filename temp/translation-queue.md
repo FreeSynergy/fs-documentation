@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 17:56 UTC · 1537 Dateien verfolgt · 381 offen · 1149 bestätigt
+Stand: 2026-11-05 18:53 UTC · 1537 Dateien verfolgt · 396 offen · 1134 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,18 +36,18 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 381 |
+| A. `en/` fehlt – aus `de/` übersetzen | 344 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
-| F. Form nicht gleich – Struktur abgleichen | 0 |
+| F. Form nicht gleich – Struktur abgleichen | 15 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 37 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 381 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 344 Dateien
 
 ### `programs/` · 1
 
@@ -107,10 +107,9 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/menus.md` · 2.4k
 - [ ] `programs/apps/streaming/frontends/nginx-rtmp-module/latest/shortcuts.md` · 1.6k
 
-### `programs/apps/streaming/frontends/restream/latest/` · 6
+### `programs/apps/streaming/frontends/restream/latest/` · 5
 
 - [ ] `programs/apps/streaming/frontends/restream/latest/api.md` · 3.0k
-- [ ] `programs/apps/streaming/frontends/restream/latest/description.md` · 2.5k
 - [ ] `programs/apps/streaming/frontends/restream/latest/features.md` · 2.3k
 - [ ] `programs/apps/streaming/frontends/restream/latest/layout.md` · 3.5k
 - [ ] `programs/apps/streaming/frontends/restream/latest/menus.md` · 2.3k
@@ -124,60 +123,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/apps/streaming/frontends/wowza/latest/layout.md` · 3.8k
 - [ ] `programs/apps/streaming/frontends/wowza/latest/menus.md` · 2.2k
 - [ ] `programs/apps/streaming/frontends/wowza/latest/shortcuts.md` · 2.0k
-
-### `programs/apps/whiteboards/frontends/drawio/latest/` · 6
-
-- [ ] `programs/apps/whiteboards/frontends/drawio/latest/api.md` · 6.3k
-- [ ] `programs/apps/whiteboards/frontends/drawio/latest/description.md` · 3.2k
-- [ ] `programs/apps/whiteboards/frontends/drawio/latest/features.md` · 5.9k
-- [ ] `programs/apps/whiteboards/frontends/drawio/latest/layout.md` · 6.3k
-- [ ] `programs/apps/whiteboards/frontends/drawio/latest/menus.md` · 4.6k
-- [ ] `programs/apps/whiteboards/frontends/drawio/latest/shortcuts.md` · 5.2k
-
-### `programs/apps/whiteboards/frontends/excalidraw/latest/` · 6
-
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/api.md` · 5.9k
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/description.md` · 3.4k
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/features.md` · 5.6k
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/layout.md` · 6.7k
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/menus.md` · 3.7k
-- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/shortcuts.md` · 5.2k
-
-### `programs/apps/whiteboards/frontends/miro/latest/` · 6
-
-- [ ] `programs/apps/whiteboards/frontends/miro/latest/api.md` · 2.3k
-- [ ] `programs/apps/whiteboards/frontends/miro/latest/description.md` · 1.2k
-- [ ] `programs/apps/whiteboards/frontends/miro/latest/features.md` · 1.3k
-- [ ] `programs/apps/whiteboards/frontends/miro/latest/layout.md` · 2.1k
-- [ ] `programs/apps/whiteboards/frontends/miro/latest/menus.md` · 1.1k
-- [ ] `programs/apps/whiteboards/frontends/miro/latest/shortcuts.md` · 1.0k
-
-### `programs/apps/whiteboards/frontends/mural/latest/` · 6
-
-- [ ] `programs/apps/whiteboards/frontends/mural/latest/api.md` · 1.3k
-- [ ] `programs/apps/whiteboards/frontends/mural/latest/description.md` · 1.1k
-- [ ] `programs/apps/whiteboards/frontends/mural/latest/features.md` · 1.1k
-- [ ] `programs/apps/whiteboards/frontends/mural/latest/layout.md` · 1.8k
-- [ ] `programs/apps/whiteboards/frontends/mural/latest/menus.md` · 1.1k
-- [ ] `programs/apps/whiteboards/frontends/mural/latest/shortcuts.md` · 703b
-
-### `programs/apps/whiteboards/frontends/openboard/latest/` · 6
-
-- [ ] `programs/apps/whiteboards/frontends/openboard/latest/api.md` · 1.2k
-- [ ] `programs/apps/whiteboards/frontends/openboard/latest/description.md` · 1.1k
-- [ ] `programs/apps/whiteboards/frontends/openboard/latest/features.md` · 1.2k
-- [ ] `programs/apps/whiteboards/frontends/openboard/latest/layout.md` · 1.7k
-- [ ] `programs/apps/whiteboards/frontends/openboard/latest/menus.md` · 975b
-- [ ] `programs/apps/whiteboards/frontends/openboard/latest/shortcuts.md` · 740b
-
-### `programs/apps/whiteboards/frontends/tldraw/latest/` · 6
-
-- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/api.md` · 3.0k
-- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/description.md` · 3.2k
-- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/features.md` · 4.8k
-- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/layout.md` · 2.9k
-- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/menus.md` · 1.8k
-- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/shortcuts.md` · 1.7k
 
 ### `programs/platform/crates/` · 1
 
@@ -733,6 +678,128 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
+## F. Form nicht gleich – Struktur abgleichen – 15 Dateien
+
+### `programs/apps/messenger/` · 1
+
+- [ ] `programs/apps/messenger/requirements.md` · 16.2k · Parität: table rows 79 vs 77 · hash changed since verification
+
+### `programs/apps/messenger/frontends/discord/` · 1
+
+- [ ] `programs/apps/messenger/frontends/discord/index.md` · 2.8k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/element/` · 1
+
+- [ ] `programs/apps/messenger/frontends/element/index.md` · 3.1k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/kontact/` · 1
+
+- [ ] `programs/apps/messenger/frontends/kontact/index.md` · 2.8k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/mastodon/` · 1
+
+- [ ] `programs/apps/messenger/frontends/mastodon/index.md` · 2.6k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/outlook/` · 1
+
+- [ ] `programs/apps/messenger/frontends/outlook/index.md` · 2.7k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/telegram/` · 1
+
+- [ ] `programs/apps/messenger/frontends/telegram/index.md` · 3.2k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/messenger/frontends/thunderbird/` · 1
+
+- [ ] `programs/apps/messenger/frontends/thunderbird/index.md` · 3.0k · Parität: headings 6 vs 5; links en-only=['../requirements.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/openproject/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/openproject/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/planka/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/planka/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/redmine/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/redmine/index.md` · 1.3k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/taiga/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/taiga/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/projectmanagement/frontends/wekan/` · 1
+
+- [ ] `programs/apps/projectmanagement/frontends/wekan/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/streaming/frontends/obs-studio/` · 1
+
+- [ ] `programs/apps/streaming/frontends/obs-studio/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+### `programs/apps/streaming/frontends/restreamer/` · 1
+
+- [ ] `programs/apps/streaming/frontends/restreamer/index.md` · 1.2k · Parität: table rows 11 vs 5; links en-only=['latest/api.md', 'latest/features.md', 'latest/layout.md'] de-only=[] · hash changed since verification
+
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 37 Dateien
+
+### `programs/apps/streaming/frontends/restream/latest/` · 1
+
+- [ ] `programs/apps/streaming/frontends/restream/latest/description.md` · 2.5k
+
+### `programs/apps/whiteboards/frontends/drawio/latest/` · 6
+
+- [ ] `programs/apps/whiteboards/frontends/drawio/latest/api.md` · 6.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/drawio/latest/description.md` · 3.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/drawio/latest/features.md` · 5.6k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/drawio/latest/layout.md` · 6.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/drawio/latest/menus.md` · 4.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/drawio/latest/shortcuts.md` · 4.8k · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/excalidraw/latest/` · 6
+
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/api.md` · 5.6k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/description.md` · 3.2k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/features.md` · 5.2k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/layout.md` · 6.3k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/menus.md` · 3.3k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/excalidraw/latest/shortcuts.md` · 4.7k · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/miro/latest/` · 6
+
+- [ ] `programs/apps/whiteboards/frontends/miro/latest/api.md` · 2.4k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/miro/latest/description.md` · 1.2k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/miro/latest/features.md` · 1.3k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/miro/latest/layout.md` · 2.0k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/miro/latest/menus.md` · 1.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/miro/latest/shortcuts.md` · 997b · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/mural/latest/` · 6
+
+- [ ] `programs/apps/whiteboards/frontends/mural/latest/api.md` · 1.3k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/mural/latest/description.md` · 1.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/mural/latest/features.md` · 1.0k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/mural/latest/layout.md` · 1.8k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/mural/latest/menus.md` · 993b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/mural/latest/shortcuts.md` · 670b · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/openboard/latest/` · 6
+
+- [ ] `programs/apps/whiteboards/frontends/openboard/latest/api.md` · 1.2k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/openboard/latest/description.md` · 1.1k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/openboard/latest/features.md` · 1.2k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/openboard/latest/layout.md` · 1.7k · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/openboard/latest/menus.md` · 869b · hash changed since verification
+- [ ] `programs/apps/whiteboards/frontends/openboard/latest/shortcuts.md` · 694b · hash changed since verification
+
+### `programs/apps/whiteboards/frontends/tldraw/latest/` · 6
+
+- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/api.md` · 3.0k
+- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/description.md` · 3.2k
+- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/features.md` · 4.5k
+- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/layout.md` · 2.9k
+- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/menus.md` · 1.8k
+- [ ] `programs/apps/whiteboards/frontends/tldraw/latest/shortcuts.md` · 1.6k
+
 ## 🗑️ Gelöscht – 7
 
 - [x] `data/anforderungen.md` · nicht mehr im Baum
@@ -745,7 +812,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 10:04 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=609
 - 2026-11-05 10:20 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=581 review=28
 - 2026-11-05 10:31 · Lauf: 1499 verfolgt, 581 offen, 911 bestätigt · needs_en=556 review=25
 - 2026-11-05 11:06 · Lauf: 1499 verfolgt, 557 offen, 935 bestätigt · needs_en=528 parity=1 review=28
@@ -786,3 +852,4 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 17:49 · Lauf: 1537 verfolgt, 387 offen, 1143 bestätigt · needs_en=387
 - 2026-11-05 17:56 · Lauf: 1537 verfolgt, 387 offen, 1143 bestätigt · needs_en=381 review=6
 - 2026-11-05 17:56 · Lauf: 1537 verfolgt, 381 offen, 1149 bestätigt · needs_en=381
+- 2026-11-05 18:53 · Lauf: 1537 verfolgt, 396 offen, 1134 bestätigt · needs_en=344 parity=15 review=37

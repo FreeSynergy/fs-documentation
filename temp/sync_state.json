@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T17:56:49.193352+00:00",
+  "last_run": "2026-11-05T19:00:53.347576+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -19489,12 +19489,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/discord/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "ce76caf70e532243",
+      "status": "PENDING",
+      "en_hash": "1f54fdc35b0ef3c1",
       "de_hash": "7fe3af3bd84bcd06",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -19512,11 +19514,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1173,
+      "en_bytes": 2907,
       "de_bytes": 1143,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/discord/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -19675,12 +19681,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/element/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "4a4c022963e7b3ac",
+      "status": "PENDING",
+      "en_hash": "acde5e1b187dc266",
       "de_hash": "c32b6cba2d56df7c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -19698,11 +19706,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1183,
+      "en_bytes": 3202,
       "de_bytes": 1153,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/element/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -19861,12 +19873,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/kontact/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "9a3239f39090ab44",
+      "status": "PENDING",
+      "en_hash": "3febd259e0d0609c",
       "de_hash": "eeb775586ecbd100",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -19884,11 +19898,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1192,
+      "en_bytes": 2879,
       "de_bytes": 1168,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/kontact/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -20047,12 +20065,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/mastodon/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "89e8a9468856cbe2",
+      "status": "PENDING",
+      "en_hash": "4378787ef188e5ab",
       "de_hash": "a956997c2f9f51a4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -20070,11 +20090,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1170,
+      "en_bytes": 2702,
       "de_bytes": 1138,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/mastodon/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -20195,12 +20219,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/outlook/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "4fba59b2000a8883",
+      "status": "PENDING",
+      "en_hash": "99e8377a1555cd8b",
       "de_hash": "5c372e195bbf1917",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -20218,11 +20244,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1133,
+      "en_bytes": 2772,
       "de_bytes": 1108,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/outlook/latest/layout.md": {
       "status": "VERIFIED",
@@ -20419,12 +20449,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/telegram/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "01b1be097cff042a",
+      "status": "PENDING",
+      "en_hash": "49bdb4d229b0a5a8",
       "de_hash": "d5bb616fc7b71715",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -20442,11 +20474,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1153,
+      "en_bytes": 3283,
       "de_bytes": 1147,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/telegram/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -20605,12 +20641,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/frontends/thunderbird/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "a2b4c792966d3f5d",
+      "status": "PENDING",
+      "en_hash": "62d8298ae959a428",
       "de_hash": "feacbd5609098ae2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -20628,11 +20666,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1149,
+      "en_bytes": 3068,
       "de_bytes": 1129,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/messenger/frontends/thunderbird/latest/shortcuts.md": {
       "status": "VERIFIED",
@@ -21109,12 +21151,14 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "661d4f0f83e9bb86",
+      "status": "PENDING",
+      "en_hash": "05f8b21f73494ac0",
       "de_hash": "32e4891c00a3a217",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21132,19 +21176,25 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 964,
+      "en_bytes": 1347,
       "de_bytes": 1014,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/planka/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "c5b6e10700e946f0",
+      "status": "PENDING",
+      "en_hash": "e098f7d495280177",
       "de_hash": "561ff05a43193333",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21162,19 +21212,25 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 888,
+      "en_bytes": 1271,
       "de_bytes": 956,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/redmine/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "88f63c177a761931",
+      "status": "PENDING",
+      "en_hash": "8ce2a826138eba14",
       "de_hash": "960834e015712536",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21192,19 +21248,25 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 941,
+      "en_bytes": 1324,
       "de_bytes": 988,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/taiga/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "ebc0cf726ed8ee74",
+      "status": "PENDING",
+      "en_hash": "ab6813828ef1d0a2",
       "de_hash": "5cb840e9227e39b5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:06.976902+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21222,11 +21284,15 @@
         {
           "at": "2026-11-05T15:28:06.976902+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 856,
+      "en_bytes": 1239,
       "de_bytes": 900,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/trello/index.md": {
       "status": "VERIFIED",
@@ -21463,12 +21529,14 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/wekan/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "e22a1e36de15210b",
+      "status": "PENDING",
+      "en_hash": "1a08465d144c820a",
       "de_hash": "a54ef913564fbe22",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -21486,11 +21554,15 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 887,
+      "en_bytes": 1270,
       "de_bytes": 935,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/index.md": {
       "status": "VERIFIED",
@@ -23695,12 +23767,14 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/obs-studio/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "93c627e9bb45bb51",
+      "status": "PENDING",
+      "en_hash": "ee6f6f36819b1bba",
       "de_hash": "eaac53bfe26ca11f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23718,11 +23792,15 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 882,
+      "en_bytes": 1265,
       "de_bytes": 942,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/restream/index.md": {
       "status": "VERIFIED",
@@ -23755,12 +23833,14 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/restreamer/index.md": {
-      "status": "VERIFIED",
-      "en_hash": "e20d26b9ba25041b",
+      "status": "PENDING",
+      "en_hash": "d003af55a35acf7c",
       "de_hash": "6df145f9c07991de",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T15:28:07.070431+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -23778,11 +23858,15 @@
         {
           "at": "2026-11-05T15:28:07.070431+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 884,
+      "en_bytes": 1267,
       "de_bytes": 915,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/wowza/index.md": {
       "status": "VERIFIED",
@@ -25185,7 +25269,7 @@
       "en_hash": "92285f9206059f15",
       "de_hash": "060258a59c5ba877",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T17:56:48.569322+00:00",
+      "last_verified": "2026-11-05T18:48:21.444122+00:00",
       "kind": [],
       "note": "translated de->en (streaming obs-studio)",
       "history": [
@@ -25195,6 +25279,10 @@
         },
         {
           "at": "2026-11-05T17:56:48.569322+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:48:21.444122+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -25207,7 +25295,7 @@
       "en_hash": "2a8e788e0d8078de",
       "de_hash": "d84d6ab3317fe1e8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T17:56:48.660297+00:00",
+      "last_verified": "2026-11-05T18:48:20.918178+00:00",
       "kind": [],
       "note": "translated de->en (streaming obs-studio)",
       "history": [
@@ -25217,6 +25305,10 @@
         },
         {
           "at": "2026-11-05T17:56:48.660297+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:48:20.918178+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -25229,7 +25321,7 @@
       "en_hash": "07e9c9628d54b574",
       "de_hash": "43c310581abf5988",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T17:56:48.751792+00:00",
+      "last_verified": "2026-11-05T18:48:21.041499+00:00",
       "kind": [],
       "note": "translated de->en (streaming obs-studio)",
       "history": [
@@ -25239,6 +25331,10 @@
         },
         {
           "at": "2026-11-05T17:56:48.751792+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:48:21.041499+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -25251,7 +25347,7 @@
       "en_hash": "0681870fbaf05a1b",
       "de_hash": "6a966923fdfff8f1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T17:56:48.934360+00:00",
+      "last_verified": "2026-11-05T18:48:21.265689+00:00",
       "kind": [],
       "note": "translated de->en (streaming obs-studio)",
       "history": [
@@ -25261,6 +25357,10 @@
         },
         {
           "at": "2026-11-05T17:56:48.934360+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:48:21.265689+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -25273,7 +25373,7 @@
       "en_hash": "4cf6845c87ed934a",
       "de_hash": "6e1080d590745f10",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T17:56:49.028104+00:00",
+      "last_verified": "2026-11-05T18:48:21.353709+00:00",
       "kind": [],
       "note": "translated de->en (streaming obs-studio)",
       "history": [
@@ -25283,6 +25383,10 @@
         },
         {
           "at": "2026-11-05T17:56:49.028104+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:48:21.353709+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -25295,7 +25399,7 @@
       "en_hash": "b9e5e00deef94930",
       "de_hash": "6b48f2b12e587c3c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T17:56:48.843053+00:00",
+      "last_verified": "2026-11-05T18:48:21.160195+00:00",
       "kind": [],
       "note": "translated de->en (streaming obs-studio)",
       "history": [
@@ -25305,6 +25409,10 @@
         },
         {
           "at": "2026-11-05T17:56:48.843053+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:48:21.160195+00:00",
           "event": "confirmed → VERIFIED"
         }
       ],
@@ -25333,12 +25441,12 @@
     },
     "programs/apps/streaming/frontends/restream/latest/description.md": {
       "status": "PENDING",
-      "en_hash": null,
+      "en_hash": "734ffd35706b03b7",
       "de_hash": "4af0c9603652898a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "needs_en"
+        "review"
       ],
       "note": null,
       "history": [
@@ -25347,7 +25455,7 @@
           "event": "renamed from programs/apps/streaming/masks/restream/description.md"
         }
       ],
-      "en_bytes": null,
+      "en_bytes": 2531,
       "de_bytes": 2535
     },
     "programs/apps/streaming/frontends/restream/latest/features.md": {
@@ -25673,688 +25781,1108 @@
       "de_bytes": 3884
     },
     "programs/apps/whiteboards/frontends/drawio/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "d22e87bd635a8ec0",
       "de_hash": "8a564153b2340548",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/drawio/api.md"
+        },
+        {
+          "at": "2026-11-05T18:34:09.991034+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 6453
+      "en_bytes": 6217,
+      "de_bytes": 6453,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ff02acc85742051d",
       "de_hash": "a6dcbfafc52b2d18",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/drawio/description.md"
+        },
+        {
+          "at": "2026-11-05T18:34:09.484391+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3308
+      "en_bytes": 3186,
+      "de_bytes": 3308,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "829b27185bde152c",
       "de_hash": "2dd0f593d3504446",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/drawio/features.md"
+        },
+        {
+          "at": "2026-11-05T18:34:09.600169+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 6088
+      "en_bytes": 5700,
+      "de_bytes": 6088,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1593aedb2c604b7d",
       "de_hash": "59b75f3dbedc0c4c",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/drawio/menu.md"
+        },
+        {
+          "at": "2026-11-05T18:34:09.812641+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4732
+      "en_bytes": 4181,
+      "de_bytes": 4732,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "35474f7ba7b4f038",
       "de_hash": "b8230632e96175a5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/drawio/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T18:34:09.898229+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5374
+      "en_bytes": 4901,
+      "de_bytes": 5374,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/drawio/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "94237a01cefc1aa0",
       "de_hash": "2e5764d20ba95fc9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/drawio/structure.md"
+        },
+        {
+          "at": "2026-11-05T18:34:09.717823+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 6432
+      "en_bytes": 6202,
+      "de_bytes": 6432,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/excalidraw/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "444bf01bf27b165a",
       "de_hash": "8064fb6bce8c06b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/excalidraw/api.md"
+        },
+        {
+          "at": "2026-11-05T18:34:10.559919+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 6020
+      "en_bytes": 5701,
+      "de_bytes": 6020,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/excalidraw/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a1be39ca01e70ec9",
       "de_hash": "a5f00883f0b36b44",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/excalidraw/description.md"
+        },
+        {
+          "at": "2026-11-05T18:34:10.080427+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3466
+      "en_bytes": 3325,
+      "de_bytes": 3466,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/excalidraw/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "46e2711a50e124f8",
       "de_hash": "fa76d1fbc14fcfb8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/excalidraw/features.md"
+        },
+        {
+          "at": "2026-11-05T18:34:10.183570+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5750
+      "en_bytes": 5326,
+      "de_bytes": 5750,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/excalidraw/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "428c1688d8d03b65",
       "de_hash": "71bcbfa8df86cb52",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/excalidraw/menu.md"
+        },
+        {
+          "at": "2026-11-05T18:34:10.371122+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3827
+      "en_bytes": 3397,
+      "de_bytes": 3827,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/excalidraw/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "bb99e6066dabef67",
       "de_hash": "b2b69b7e52c7f989",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/excalidraw/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T18:34:10.473783+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5311
+      "en_bytes": 4844,
+      "de_bytes": 5311,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/excalidraw/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e948f1e6b0c25ab8",
       "de_hash": "ee970749c7c68baa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/excalidraw/structure.md"
+        },
+        {
+          "at": "2026-11-05T18:34:10.279803+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 6818
+      "en_bytes": 6488,
+      "de_bytes": 6818,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/miro/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "50608438c24030f4",
       "de_hash": "57eadb533b28450e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/miro/api.md"
+        },
+        {
+          "at": "2026-11-05T18:40:11.836808+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2382
+      "en_bytes": 2423,
+      "de_bytes": 2382,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/miro/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c34261d5ad5d4106",
       "de_hash": "6f99133067ca8d87",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/miro/description.md"
+        },
+        {
+          "at": "2026-11-05T18:40:11.334717+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1276
+      "en_bytes": 1275,
+      "de_bytes": 1276,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/miro/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "9ca7464aa474f473",
       "de_hash": "d09711d3fe0b744e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/miro/features.md"
+        },
+        {
+          "at": "2026-11-05T18:40:11.451429+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1382
+      "en_bytes": 1365,
+      "de_bytes": 1382,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/miro/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ab73171be3b33f48",
       "de_hash": "12d2ce33007dc11d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/miro/menu.md"
+        },
+        {
+          "at": "2026-11-05T18:40:11.657255+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1168
+      "en_bytes": 1080,
+      "de_bytes": 1168,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/miro/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "df0b849afd7c24f4",
       "de_hash": "b577e2b6834e45e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/miro/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T18:40:11.746492+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1060
+      "en_bytes": 997,
+      "de_bytes": 1060,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/miro/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6e7fccd28ad3a2df",
       "de_hash": "e9c0ee9d128eec19",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/miro/structure.md"
+        },
+        {
+          "at": "2026-11-05T18:40:11.565298+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2152
+      "en_bytes": 2063,
+      "de_bytes": 2152,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/mural/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a271cf7f09a083ba",
       "de_hash": "b3414762cbe344a4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/mural/api.md"
+        },
+        {
+          "at": "2026-11-05T18:42:39.497955+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1366
+      "en_bytes": 1352,
+      "de_bytes": 1366,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/mural/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a3367f34c0f35d3d",
       "de_hash": "fc1cf5035305473a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/mural/description.md"
+        },
+        {
+          "at": "2026-11-05T18:42:39.013638+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1145
+      "en_bytes": 1119,
+      "de_bytes": 1145,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/mural/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "236d660991ee59d7",
       "de_hash": "753e386444a0bb22",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/mural/features.md"
+        },
+        {
+          "at": "2026-11-05T18:42:39.128359+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1080
+      "en_bytes": 1067,
+      "de_bytes": 1080,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/mural/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "af7ac726f44a5a34",
       "de_hash": "6a78c6875d7f4103",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/mural/menu.md"
+        },
+        {
+          "at": "2026-11-05T18:42:39.311384+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1081
+      "en_bytes": 993,
+      "de_bytes": 1081,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/mural/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "490bdc96ad435c05",
       "de_hash": "db29402171f42599",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/mural/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T18:42:39.405238+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 703
+      "en_bytes": 670,
+      "de_bytes": 703,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/mural/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "9725e09aee27dce7",
       "de_hash": "7b40196522d6bbc3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/mural/structure.md"
+        },
+        {
+          "at": "2026-11-05T18:42:39.217737+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1823
+      "en_bytes": 1805,
+      "de_bytes": 1823,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/openboard/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "68d1a3dafd60faca",
       "de_hash": "fea2144b00be708e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/openboard/api.md"
+        },
+        {
+          "at": "2026-11-05T18:45:56.693886+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1234
+      "en_bytes": 1200,
+      "de_bytes": 1234,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/openboard/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "3783da38fd9d4c6f",
       "de_hash": "6cf701a9db26f936",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/openboard/description.md"
+        },
+        {
+          "at": "2026-11-05T18:45:56.212773+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1139
+      "en_bytes": 1138,
+      "de_bytes": 1139,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/openboard/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "0d57b6c1085c5475",
       "de_hash": "b5d9bcb8277ea4aa",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/openboard/features.md"
+        },
+        {
+          "at": "2026-11-05T18:45:56.315196+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1277
+      "en_bytes": 1230,
+      "de_bytes": 1277,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/openboard/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "b9c7873b46a39201",
       "de_hash": "27cb2bde9a3e3bdb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/openboard/menu.md"
+        },
+        {
+          "at": "2026-11-05T18:45:56.501005+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 975
+      "en_bytes": 869,
+      "de_bytes": 975,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/openboard/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1468e8a2ebd2c1cd",
       "de_hash": "4f8d1f423e0f5b98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/openboard/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T18:45:56.599072+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 740
+      "en_bytes": 694,
+      "de_bytes": 740,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/openboard/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "64845ef23bbd490f",
       "de_hash": "0628f115d17f953a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/openboard/structure.md"
+        },
+        {
+          "at": "2026-11-05T18:45:56.407707+00:00",
+          "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1786
+      "en_bytes": 1790,
+      "de_bytes": 1786,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/tldraw/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "32501af23a710da5",
       "de_hash": "8eddd098f6ab76ab",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/tldraw/api.md"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3069
+      "en_bytes": 3063,
+      "de_bytes": 3069,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/tldraw/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "f622de9823c2e59b",
       "de_hash": "2c9029fd66c27b55",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/tldraw/description.md"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3267
+      "en_bytes": 3240,
+      "de_bytes": 3267,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/tldraw/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1a230bc40f088cb9",
       "de_hash": "b412f36e344ce850",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/tldraw/features.md"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4926
+      "en_bytes": 4635,
+      "de_bytes": 4926,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/tldraw/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "11f687d4832d2b40",
       "de_hash": "50faed2a0d5c406e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/tldraw/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1866
+      "en_bytes": 1824,
+      "de_bytes": 1866,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/tldraw/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2298997fcbd500a2",
       "de_hash": "7cdb7412e94425e4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/tldraw/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1771
+      "en_bytes": 1655,
+      "de_bytes": 1771,
+      "change_reason": null
     },
     "programs/apps/whiteboards/frontends/tldraw/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6f080ee6de1eae9d",
       "de_hash": "fa6e8c99c09d42b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:00:53.347471+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (whiteboards group)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/whiteboards/masks/tldraw/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:00:53.347471+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3002
+      "en_bytes": 3016,
+      "de_bytes": 3002,
+      "change_reason": null
     },
     "programs/apps/wiki/frontends/confluence/latest/api.md": {
       "status": "VERIFIED",
@@ -33827,12 +34355,14 @@
       "change_reason": null
     },
     "programs/apps/messenger/requirements.md": {
-      "status": "VERIFIED",
-      "en_hash": "32c41a1edd5cea32",
+      "status": "PENDING",
+      "en_hash": "da7863c6776598fb",
       "de_hash": "adeba4450adb04e4",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": "2026-11-05T17:28:39.553115+00:00",
-      "kind": [],
+      "last_verified": null,
+      "kind": [
+        "parity"
+      ],
       "note": "reviewed en+de, structure mirrored",
       "history": [
         {
@@ -33846,11 +34376,15 @@
         {
           "at": "2026-11-05T17:28:39.553115+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T18:53:46.523533+00:00",
+          "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 16165,
+      "en_bytes": 16611,
       "de_bytes": 17830,
-      "change_reason": null
+      "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/requirements.md": {
       "status": "VERIFIED",
