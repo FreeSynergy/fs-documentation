@@ -1,6 +1,6 @@
 # 0019 – Datenhaltung: `fs-store` in jedem Programm, `fs-hub` pro Gerät
 
-Status: akzeptiert (2026-11-05) · Abschnitt „Erkennung“ = Vorschlag, wartet auf Bestätigung ·
+Status: akzeptiert (2026-11-05) ·
 Turso-Details nach Recherche `temp/research/turso-sync.md` · Protokoll §3, §21.1
 
 ## Kontext
@@ -23,10 +23,11 @@ PM wird mit einem Kontakt aus Contacts angeglichen, weil beide standardisiert si
 5. **Angleichen statt Verschmelzen:** Der Hub schlägt Gleichheit vor (gleiche E-Mail, Telefon,
    DID …), der Mensch bestätigt, dann entsteht eine Verknüpfung. Originale bleiben.
 
-## Erkennung (Vorschlag)
+## Erkennung (vom Nutzer bestätigt 2026-11-05)
 - Programme **suchen einander nicht** — nur der Hub kennt alle (sonst wächst die Logik mit der
   Zahl der Programme quadratisch).
-- Der Hub wird mit **jedem** Programm ausgeliefert, aber nur einmal installiert; er lauscht an
+- Der Hub wird **nicht** mit jedem Programm mitgeliefert. Findet ein Programm keinen Hub, **fragt
+  es, ob er nachinstalliert werden soll** (und läuft bei „nein“ allein weiter). Der Hub lauscht an
   einer festen Adresse (z. B. `$XDG_RUNTIME_DIR/freesynergy/hub.sock`) und wird bei Bedarf
   gestartet (Socket-Aktivierung).
 - Ein Programm schaut beim Start nach dem Hub: **da** → anmelden mit Manifest (welche Datentypen
