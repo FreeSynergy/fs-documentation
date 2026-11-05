@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 19:36 UTC · 1537 Dateien verfolgt · 327 offen · 1203 bestätigt
+Stand: 2026-11-05 19:44 UTC · 1547 Dateien verfolgt · 331 offen · 1209 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,8 +36,8 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 321 |
-| B. `de/` fehlt – englische Quelle nachziehen | 0 |
+| A. `en/` fehlt – aus `de/` übersetzen | 315 |
+| B. `de/` fehlt – englische Quelle nachziehen | 10 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
 | D2. Deutscher Text in Codebeispielen/Boxen (ADR 0002: Code ist englisch) | 0 |
@@ -47,20 +47,11 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 6 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 321 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 315 Dateien
 
 ### `programs/` · 1
 
 - [ ] `programs/index.md` · 3.4k · Plan[~]
-
-### `programs/apps/streaming/frontends/ant-media-server/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/api.md` · 4.1k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/description.md` · 2.8k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/features.md` · 2.6k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/layout.md` · 3.7k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/menus.md` · 2.2k
-- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/shortcuts.md` · 1.9k
 
 ### `programs/apps/streaming/frontends/mistserver/latest/` · 6
 
@@ -643,16 +634,37 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
+## B. `de/` fehlt – englische Quelle nachziehen – 10 Dateien
+
+### `programs/apps/messenger/frontends/freesynergy-simple/` · 1
+
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/index.md` · 1.0k
+
+### `programs/apps/messenger/frontends/freesynergy-simple/0.1/` · 8
+
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/api.md` · 275b
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/dependencies.md` · 767b
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/description.md` · 1.1k
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/features.md` · 1.2k
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/interaction.md` · 1.4k
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/layout.md` · 2.0k
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/menus.md` · 186b
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/shortcuts.md` · 263b
+
+### `programs/apps/messenger/frontends/freesynergy-simple/0.1/themes/` · 1
+
+- [ ] `programs/apps/messenger/frontends/freesynergy-simple/0.1/themes/index.md` · 259b
+
 ## H. Beide Seiten da, kein Befund – lesen und bestätigen – 6 Dateien
 
-### `programs/apps/streaming/frontends/mediamtx/latest/` · 6
+### `programs/apps/streaming/frontends/ant-media-server/latest/` · 6
 
-- [ ] `programs/apps/streaming/frontends/mediamtx/latest/api.md` · 4.1k
-- [ ] `programs/apps/streaming/frontends/mediamtx/latest/description.md` · 2.8k
-- [ ] `programs/apps/streaming/frontends/mediamtx/latest/features.md` · 3.0k
-- [ ] `programs/apps/streaming/frontends/mediamtx/latest/layout.md` · 3.7k
-- [ ] `programs/apps/streaming/frontends/mediamtx/latest/menus.md` · 2.4k
-- [ ] `programs/apps/streaming/frontends/mediamtx/latest/shortcuts.md` · 1.7k
+- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/api.md` · 4.0k
+- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/description.md` · 2.7k
+- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/features.md` · 2.6k
+- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/layout.md` · 3.7k
+- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/menus.md` · 2.1k
+- [ ] `programs/apps/streaming/frontends/ant-media-server/latest/shortcuts.md` · 1.9k
 
 ## 🗑️ Gelöscht – 7
 
@@ -666,7 +678,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 11:25 · Lauf: 1499 verfolgt, 689 offen, 803 bestätigt · needs_en=502 parity=42 review=145
 - 2026-11-05 11:28 · Lauf: 1499 verfolgt, 676 offen, 816 bestätigt · needs_en=498 review=178
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 714 offen, 778 bestätigt · needs_en=472 review=242
 - 2026-11-05 11:46 · Lauf: 1499 verfolgt, 695 offen, 797 bestätigt · needs_en=472 review=223
@@ -707,3 +718,4 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 19:15 · Lauf: 1537 verfolgt, 339 offen, 1191 bestätigt · needs_en=339
 - 2026-11-05 19:28 · Lauf: 1537 verfolgt, 339 offen, 1191 bestätigt · needs_en=327 review=12
 - 2026-11-05 19:36 · Lauf: 1537 verfolgt, 327 offen, 1203 bestätigt · needs_en=321 review=6
+- 2026-11-05 19:44 · Lauf: 1547 verfolgt, 331 offen, 1209 bestätigt · needs_en=315 needs_de=10 review=6

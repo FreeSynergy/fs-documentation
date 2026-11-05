@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T19:36:33.410048+00:00",
+  "last_run": "2026-11-05T19:44:11.884708+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -24609,118 +24609,148 @@
       "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "4926758548458055",
       "de_hash": "d289d6960ff5466d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:44:11.884672+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ant-media-server/api.md"
+        },
+        {
+          "at": "2026-11-05T19:44:11.884672+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4166
+      "en_bytes": 4105,
+      "de_bytes": 4166,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ea7d8ec8b2a5533a",
       "de_hash": "a99e413cad01a648",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:44:11.413795+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ant-media-server/description.md"
+        },
+        {
+          "at": "2026-11-05T19:44:11.413795+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2834
+      "en_bytes": 2773,
+      "de_bytes": 2834,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "594906e6f4b0fd5d",
       "de_hash": "0417af113af0beec",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:44:11.505208+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ant-media-server/features.md"
+        },
+        {
+          "at": "2026-11-05T19:44:11.505208+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2688
+      "en_bytes": 2647,
+      "de_bytes": 2688,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "1d05939037e1782f",
       "de_hash": "69ea05715def9f74",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:44:11.693895+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ant-media-server/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:44:11.693895+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2218
+      "en_bytes": 2101,
+      "de_bytes": 2218,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "f9ec7e5803c850b4",
       "de_hash": "17a3efc638d98442",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:44:11.789915+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ant-media-server/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:44:11.789915+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1981
+      "en_bytes": 1934,
+      "de_bytes": 1981,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ant-media-server/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "649ab9639cdab4d8",
       "de_hash": "96cabdeea6f5ea98",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:44:11.597836+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ant-media-server)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ant-media-server/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:44:11.597836+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3779
+      "en_bytes": 3751,
+      "de_bytes": 3779,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/api.md": {
       "status": "VERIFIED",
@@ -24992,9 +25022,7 @@
       "de_hash": "f5d2dc551cf2d176",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:36:33.410017+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
@@ -25016,9 +25044,7 @@
       "de_hash": "98e96089ef8cc840",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:36:32.948251+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
@@ -25040,9 +25066,7 @@
       "de_hash": "2858af67751407e5",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:36:33.037168+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
@@ -25064,9 +25088,7 @@
       "de_hash": "2cedf6237f595cad",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:36:33.224423+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
@@ -25088,9 +25110,7 @@
       "de_hash": "78a00e4eb843ff91",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:36:33.315684+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
@@ -25112,9 +25132,7 @@
       "de_hash": "79cc289563b03638",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T19:36:33.130375+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (streaming mediamtx)",
       "history": [
         {
@@ -34705,6 +34723,146 @@
       "en_bytes": 2763,
       "de_bytes": 3038,
       "change_reason": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/api.md": {
+      "status": "PENDING",
+      "en_hash": "6a46081e1c1fd03e",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 275,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/dependencies.md": {
+      "status": "PENDING",
+      "en_hash": "834272e94a00fdfc",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 767,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/description.md": {
+      "status": "PENDING",
+      "en_hash": "81325dbf0d06c017",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1117,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/features.md": {
+      "status": "PENDING",
+      "en_hash": "4eddf4de713886c4",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1276,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/interaction.md": {
+      "status": "PENDING",
+      "en_hash": "d45512672c7e8ec7",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1455,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/layout.md": {
+      "status": "PENDING",
+      "en_hash": "5415909f476b2cee",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 2048,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/menus.md": {
+      "status": "PENDING",
+      "en_hash": "ecd5be1ae23878b1",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 186,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/shortcuts.md": {
+      "status": "PENDING",
+      "en_hash": "f5dd8d444ef8ba06",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 263,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/0.1/themes/index.md": {
+      "status": "PENDING",
+      "en_hash": "684e35a5e0a8fd1c",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 259,
+      "de_bytes": null
+    },
+    "programs/apps/messenger/frontends/freesynergy-simple/index.md": {
+      "status": "PENDING",
+      "en_hash": "4c9829b2ae13095e",
+      "de_hash": null,
+      "first_seen": "2026-11-05T19:44:11.260252+00:00",
+      "last_verified": null,
+      "kind": [
+        "needs_de"
+      ],
+      "note": null,
+      "history": [],
+      "en_bytes": 1066,
+      "de_bytes": null
     }
   }
 }
