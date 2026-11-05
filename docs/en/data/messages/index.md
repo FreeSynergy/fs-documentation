@@ -1,20 +1,24 @@
 # Messages
 
-Chat, comment and mail-like communications. Canonical payload: **AS2 objects** (`Note`, `Article`) in the ActivityPub envelope (decisions 1+2).
+E-mail, chat, messenger and comments — **one** domain, because for people a message is a message
+(ADR 0018). Encrypted only. Stored as **original + AS2 envelope + activity log** (ADR 0020).
 
-## Standards in this domain
+## Standards in this domain (details: [standards.md](standards.md))
 
-| Standard | Evidence | Role in FreeSynergy |
-|----------|----------|---------------------|
-| **ActivityStreams 2 Vocabulary, W3C** | ✅ | `Note`, `Article`, `contentMap`/`nameMap` (multilingualism) |
-| **JMAP, RFC 8620/8621** | ✅ | reference for cleanly addressing/patching/synchronising JSON resources |
-| **Mail address format, RFC 5322 §3.4.1** | ✅ | format of sender/recipient addresses |
-| **XMPP (RFC 6120/6121)** | ⚠️ unverified | interoperability with legacy chat systems, evidence before use |
+| Kind | Content | Encryption |
+|------|---------|------------|
+| chat / messenger | MIMI content (draft -10, pinned) | MLS (RFC 9420) |
+| e-mail | original MIME + JMAP `Email` fields (RFC 8621) | OpenPGP v6 (RFC 9580), header protection (RFC 9788), Autocrypt |
+| Matrix | Matrix spec v1.19 events (connector) | Megolm, MLS planned upstream |
+| comments | AS2 `Note` / Web Annotation | as the resource |
+
+Envelope for all: AS2 `Note` with `context` (conversation), `inReplyTo`, `attachment`, audience fields.
 
 ## Open points
 
-- threading/history (parent-child relations) is not fully defined in AS2 → a rule is needed
-- Mail interoperability (SMTP sending) is a transport topic of its own, not a data-model topic
+- Own-spec candidates: delivered/read state, expiry, encrypted attachments, edit identity, thread
+  profile, message-ID aliases, reactions/edits for e-mail ([standards.md](standards.md))
+- Incoming unencrypted messages: mark or quarantine (ADR 0018)
 
 ## See also
 

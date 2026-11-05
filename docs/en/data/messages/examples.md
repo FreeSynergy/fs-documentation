@@ -2,6 +2,9 @@
 
 All AS2 fields from the ✅ read Core/Vocabulary list in [standards.md](standards.md).
 
+> State 2026-11-05: threads use AS2 `context` (see [technical.md](technical.md)); examples with chat
+> payloads in MIMI format and e-mail originals are still to be added.
+
 ## 1. Chat message: `Create` on `Note` (envelope + payload, decision 2)
 
 ```json

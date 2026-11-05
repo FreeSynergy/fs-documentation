@@ -1,12 +1,12 @@
 # Messages – description
 
-**What this domain is:** chat, comment and mail-like communications. Canonical payload: **AS2 objects** (`Note`, `Article`) in the ActivityPub envelope (decisions 1+2).
+**What this domain is:** e-mail, chat, messenger and comments as one domain (ADR 0018), encrypted only. Stored as original + AS2 envelope + activity log (ADR 0020); content standards per kind in [standards.md](standards.md).
 
 **What it covers:**
 
 - 1:1 and group messages (messenger app)
 - Comments attached to resources (wiki page, task, image) — as a `Note` with a reference to the commented object
-- Mail-like communications (subject, addressees, threads) as a projection target
+- E-mail as a first-class message kind (original MIME kept, JMAP `Email` fields indexed)
 - Multilingualism via `contentMap`/`nameMap` (AS2, ✅)
 - Disclosure control via `to`/`cc`/`bto`/`bcc` (disclosure, **not** access control — decision 2)
 

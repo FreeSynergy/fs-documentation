@@ -1,35 +1,57 @@
 # Messages – technical explanation
 
-## Storage perspective
+Decisions: ADR 0018 (one messenger, encrypted only, connectors), ADR 0019/0020 (`fs-store`, envelope +
+content + log), ADR 0027 (UUIDv7). Evidence: [standards.md](standards.md).
 
-- **One table `message`**: canonical payload = AS2 object JSON (`Note`/`Article`) (decision 4). Extracted columns: `id` (UUIDv7), `type`, `thread_id`, `in_reply_to` (UUIDv7 or IRI), `actor_id`, `created_at`, `updated_at`, `deleted` (tombstone marker).
-- **Delivery copies:** `to`/`cc`/`bto`/`bcc` decide **where copies land** (decision 2). Internally: table `message_delivery` (`message_id`, `recipient_id`, `audience` ∈ `to|cc|bto|bcc`). The actual authorization runs separately through resource permissions — the audience fields do not replace it.
+## Principle: original + envelope
 
-## Threading rule (our own decision — not fully defined in AS2)
+Every message is stored **as received** (the original, possibly signed) **plus** a normalised envelope:
 
-AS2 knows `inReplyTo` but no complete thread mechanism (open point in [index.md](index.md)). Proposal:
+| Part | Chat (MIMI) | E-mail | Matrix |
+|------|-------------|--------|--------|
+| original | MIMI content (CBOR) | raw MIME (RFC 5322) | event JSON |
+| envelope `type` | `Note` | `Note` (`name` = subject) | `Note` |
+| `mediaType` of the payload | MIMI content type per draft -10 | `message/rfc822` | Matrix event |
+| `context` (conversation) | MIMI room / topic | JMAP `threadId` | room / `m.thread` root |
+| `inReplyTo` | MIMI reply id | `In-Reply-To` header | `m.in_reply_to` |
+| extracted index fields | sender, body text | JMAP `Email` fields (from, to, subject, sentAt, textBody, attachments) | sender, body |
 
-- `thread_id` = UUIDv7 of the **root post** (one column, indexed)
-- `in_reply_to` = direct parent post (tree structure)
-- Display: flat (chat) or threaded (comments) — both rendered from the same columns
+Signatures stay verifiable because the original is never rewritten.
 
-## Flow
+## Storage (ADR 0020)
 
-1. Sending: `Create` (envelope) with a `Note`; the server checks permissions and creates the delivery copies.
-2. Changing: `Update` — the edit window and the marking (`updated` ≠ `created`) are a product rule, not a standard.
-3. Deleting: `Delete` + tombstone (content gone, metadata stays — the extent is still to be decided).
-4. Recipient sync: the JMAP pattern (RFC 8620/8621, ✅) as a reference for efficiently fetching/patching JSON resources.
+- `id` = UUIDv7 (ours). **Alias table** `message_alias(id, scheme, external_id)` for `Message-ID`, Matrix `event_id`, MIMI id — gap, see standards.
+- Extracted columns: `id`, `context`, `in_reply_to`, `attributed_to`, `published`, `updated`, `encryption`, `kind` (`mail`/`chat`/`comment`), full-text fields.
+- **Encryption state** per message, vendor property `freesynergy.net:encryption` (ADR 0028): `mls` · `openpgp` · `megolm` · `transport-only` · `none`. Outgoing `transport-only`/`none` is refused or asked about (ADR 0018); incoming is **marked**.
+- Content stored encrypted at rest (ADR 0024); sensitive marking applies (ADR 0029).
+
+## Log mapping (AS2 activities)
+
+| Action | Activity | MIMI | Matrix | E-mail |
+|--------|----------|------|--------|--------|
+| send | `Create` | message | `m.room.message` | SMTP/JMAP submission |
+| edit | `Update` (id of the **first** version stays) | edit (replaces) | `m.replace` | — (gap) |
+| delete | `Delete` + tombstone | empty body, first-version id | redaction | move to trash / expunge |
+| react | `Like` / `EmojiReact`, undo via `Undo` | reaction | `m.annotation` | — (gap) |
+| read | `Read` | message-status | `m.receipt` | RFC 9007 MDN |
+| delivered | gap | message-status | — | DSN |
+
+## Threading
+
+- `context` = conversation (room, mail thread, comment thread); `inReplyTo` = direct parent.
+- Display flat (chat) or as a tree (comments, mail) from the same fields.
 
 ## Projections
 
 | Target | Projection |
 |--------|------------|
-| Mail sending | RFC 5322 (✅ §3.4.1 address format) — SMTP transport is a topic of its own (not a data model) |
-| JMAP endpoint | `Note` → JMAP email structure, field mapping open |
-| Search/indexes | `content`/`contentMap` full text; `name` as the subject |
-| Encryption | MLS (RFC 9420, ✅) for group E2EE (ADR 0018) |
+| Frontends | Cap'n Proto (ADR 0021) — frontends never see protocols |
+| Outgoing mail | MIME + OpenPGP v6 + RFC 9788 header protection + Autocrypt |
+| Matrix | `matrix-sdk` connector |
+| MIMI | `mimi-content` + OpenMLS |
+| Search | full text over extracted fields |
 
 ## Open technical points
 
-- Edit history: no AS2 rule — needs our own decision (revisions like in the wiki or not?).
-- Delivery receipt (read/sent): no data standard; MLS delivery receipts ⚠️.
+- Handling of incoming unencrypted messages (mark only, or quarantine?) — ADR 0018
+- Edit history display (all versions from the log, or only the last?)
