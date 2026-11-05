@@ -1,0 +1,8 @@
+# ADR 0021: internal interface is Cap'n Proto (was protobuf/gRPC in data/ decisions of 2026-11-01)
+# python3 scripts/replace.py --scope docs/en --rules scripts/rules/protobuf_to_capnp.rules [--apply]
+protobuf/gRPC internally, JSON-LD externally => Cap'n Proto internally (ADR 0021), JSON-LD externally
+We use protobuf/gRPC internally, JSON-LD/AS2 externally => We use Cap'n Proto internally (ADR 0021), JSON-LD/AS2 externally
+\| gRPC/protobuf internally \| => | Cap'n Proto internally (ADR 0021) |
+\| internally \| protobuf/gRPC \| => | internally | Cap'n Proto (ADR 0021) |
+\(gRPC metadata\) => (Cap'n Proto connection metadata)
+\bprotobuf, JSON-LD/AS2\b => Cap'n Proto, JSON-LD/AS2

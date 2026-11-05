@@ -1,10 +1,13 @@
 # Contacts – technical explanation
 
-## Storage perspective
+## Storage perspective (ADR 0019, 0020)
 
-- **One table `contact`**, one row per `Card`. The canonical payload is the **JSContact JSON itself** (decision 4: the standard model is the source of truth, not an invented table shape).
-- Columns **extracted** from the card (for indexes/filters): `id` (ULID), `uid` (JSContact `uid`, for exchange stability), `kind` (role: `individual`/`organization`/`group`/`device` — ⚠️ exact enum values from RFC 9553 still to be evidenced field by field), `name_sort` (derived from `name.components`), `created_at`, `updated_at`, `sync_token`.
-- **IDs:** internally ULID, externally `https://<instance>/contacts/<ulid>` (decision 3).
+- **Object = envelope + content + log.**
+  - *Envelope* (AS2 **`Profile`**, ✅): `id`, `type: Profile`, `describes` (the person's actor IRI or DID, if known), `attributedTo` (who wrote this card), `to`/`cc`/`bto`/`audience` (who may see it), `published`, `updated`.
+  - *Content*: the **JSContact `Card`** JSON (RFC 9553) — the standard model is the source of truth.
+  - *Log*: AS2 activities `Create`/`Update`/`Delete` per card, written by `fs-store` in the same transaction.
+- Columns **extracted** for indexes: `id`, `uid` (JSContact), `kind` (✅ `individual`/`group`/`org`/`location`/`device`/`application`), `describes`, `name_sort` (from `name.components`), emails/phones (normalised, for hub matching), `created_at`, `updated_at`.
+- **IDs:** see [standards.md → decision 3](../standards.md) (ULID today, UUIDv7 proposed); externally `https://<instance>/contacts/<id>`.
 
 ## Keys and links
 
@@ -24,10 +27,16 @@
 |--------|------------|
 | [profile/](../profile/index.md) | subset of the fields, audience-controlled (losslessness is deliberately lifted there) |
 | [events/](../events/index.md) | `Participant` object from card parts (`name`, `email`, `language`) |
-| CRM frontends | `lifecycle` and others as an `extensions` entry (⚠️) |
-| gRPC/protobuf internally | generated from the canonical JSON (decision 4) |
+| CRM frontends | `lifecycle` as vendor property `<domain>:lifecycle` (✅ mechanism, RFC 9553 §1.8.1) |
+| Cap'n Proto internally (ADR 0021) | generated from the canonical JSON (decision 4) |
 
-## Merging and deleting
+## Same person in several programs (ADR 0019)
 
-- Two cards for the same person: `merge` produces one card, the old `uid` is kept as an alias (our own decision, open for discussion — no standard evidenced).
-- Deleting is a `Delete` in the envelope; attestations from [identity/](../identity/index.md) on the deleted card stay visible as broken references (deliberately: trust does not silently disappear).
+- No standard defines merging (❌ checked 2026-11-05). Our rule: **link, don't merge.**
+- The hub finds candidates (same normalised e-mail/phone, same `describes`/DID) and proposes them; a person confirms.
+- A confirmed link is stored as an AS2 **`Relationship`** between the two cards (relation ⚠️ proposed: `owl:sameAs`). Both cards stay; views may show them combined. Undo = `Undo` on the relationship.
+- `relatedTo` is **not** used for this — its values describe relations between *different* people (✅).
+
+## Deleting
+
+- Deleting is a `Delete` in the log; attestations from [identity/](../identity/index.md) on the deleted card stay visible as broken references (deliberately: trust does not silently disappear).

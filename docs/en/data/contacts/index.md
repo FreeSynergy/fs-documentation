@@ -20,7 +20,9 @@ This domain covers contact records for **people, organisations, groups and devic
 
 ## Open points
 
-- `lifecycle` (lead/prospect/customer/churned) exists in none of the standards (❌ evidenced) → as a JSContact extension via `extensions` (⚠️ mechanism still to be evidenced)
+- Envelope: AS2 `Profile` with `describes` (ADR 0020) — see [technical.md](technical.md)
+- `lifecycle` exists in none of the standards (❌) → vendor property `<domain>:lifecycle` (✅ RFC 9553 §1.8.1); domain still to be fixed
+- Same person in several programs: link via `Relationship`, not merge (ADR 0019) — relation term proposed `owl:sameAs`
 - Mapping of our legacy fields (`firstName`/`lastName`, `street`/`city`): see [mappings.md → Contact](../mappings.md)
 
 ## See also

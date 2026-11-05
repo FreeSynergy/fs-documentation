@@ -23,4 +23,4 @@
 
 - Evidence the SCIM field lists (RFC 7643) and endpoint details (RFC 7644) ⚠️
 - Watch OAuth 2.1 (draft); not yet citable
-- Signature/token binding inwards (gRPC metadata) is implementation, not a standards need
+- Signature/token binding inwards (Cap'n Proto connection metadata) is implementation, not a standards need

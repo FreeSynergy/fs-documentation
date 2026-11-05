@@ -1,6 +1,6 @@
 # JSContact – storage
 
-According to decision 4 in [standards.md](../../standards.md) the **evidenced standard model is the source of truth**: contacts are stored field by field as a JSContact object (RFC 9553) — not in an intermediate table of our own from which the model is merely projected. All other formats (vCard, jCard, protobuf, JSON-LD/AS2) are derived projections.
+According to decision 4 in [standards.md](../../standards.md) the **evidenced standard model is the source of truth**: contacts are stored field by field as a JSContact object (RFC 9553) — not in an intermediate table of our own from which the model is merely projected. All other formats (vCard, jCard, Cap'n Proto, JSON-LD/AS2) are derived projections.
 
 ## Basic rules
 
@@ -11,13 +11,13 @@ According to decision 4 in [standards.md](../../standards.md) the **evidenced st
 | Internal ID | ULID (opaque, sortable) | decision 3 |
 | External handle | absolute IRI `https://<instance>/contacts/<ulid>` | decision 3 (AS2 Core §4.1) |
 | Partial change | JSON Patch (RFC 6902) or `PatchObject` from RFC 9553; paths like `emails/work/value` | [api.md](../../api.md) |
-| Own fields | only via `extensions` (e.g. `lifecycle`) — never through renamed or repurposed standard fields | decision 5 |
+| Own fields | only as vendor properties `<domain>:<name>` (RFC 9553 §1.8.1, ✅) — never through renamed or repurposed standard fields | decision 5 |
 
 ## Storage form
 
 - The card is persisted as a whole (JSON column or document) so that the standard structure survives without field shredding
 - Indexable extractions (`uid`, name components, organisation name, `directories`) may exist as derived columns/indexes — they are projections, not the source
-- Revisions: the standard defines no revision model; FreeSynergy records changes as a versioning layer outside the card (change log per `uid`), the export remains a single valid card
+- Revisions: the standard defines no revision model; FreeSynergy records changes in the **activity log** (ADR 0020), the export remains a single valid card
 
 ## Exchange paths (derived projections)
 
@@ -27,11 +27,11 @@ According to decision 4 in [standards.md](../../standards.md) the **evidenced st
 | Export/import JSON-vCard | jCard (RFC 7095) | conversion vCard ↔ JSON |
 | Sync with clients | CardDAV (RFC 6352) | card ↔ vCard resource per contact folder (`directories`) |
 | Envelope outwards | AS2/ActivityPub (`Create`/`Update`/`Delete`) | card as the domain payload in the object; `to`/`cc` control disclosure, not access (decision 2) |
-| internally | protobuf/gRPC | generated from the standard model (decision 4) |
+| internally | Cap'n Proto (ADR 0021) | generated from the standard model (decision 4) |
 
 ## Open points (to be settled standards-conformingly, not invented)
 
-- `lifecycle` as an `extensions` entry: still evidence the JSON schema/mechanism of the extension (⚠️, see [contacts/index.md](../index.md))
+- `lifecycle` as vendor property `<domain>:lifecycle` (mechanism ✅); our domain still to be fixed
 - Define revision/deletion states (`status`) in interplay with CardDAV sync
 - `media` objects: data URI inline or moved to object storage with a URL — both are RFC 9553 conforming, document the decision
 

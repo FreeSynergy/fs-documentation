@@ -20,7 +20,7 @@ separate:
 | Layer | Question | Our rule |
 |-------|----------|----------|
 | **Storage** | what does a record look like in the database? | existing JSON/text models, field-accurate (JSContact, JSCalendar, GeoJSON, …) |
-| **Transport** | how do programs talk to each other? | envelope: AS2/ActivityPub; protobuf/gRPC internally, JSON-LD externally — **both derived projections** of the canonical standard model (decision 4) |
+| **Transport** | how do programs talk to each other? | envelope: AS2/ActivityPub; Cap'n Proto internally (ADR 0021), JSON-LD externally — **both derived projections** of the canonical standard model (decision 4) |
 | **Vocabulary** | what are the fields called on the outside? | one canon internally, one mapping table per target system |
 
 Rule no. 1: **one field, one owner.** `name` belongs to the resource, not to
@@ -79,12 +79,14 @@ schema.org uses `name`, AS2 uses `name`. That cannot be resolved by choosing
 
 | Standard | Evidence | Coverage |
 |----------|----------|----------|
-| **Activity Streams 2.0 Core + Vocabulary (W3C Community Group)** | ✅ | `@context: "https://www.w3.org/ns/activitystreams"`; `id` is an **absolute IRI** (Core §4.1); relative IRIs should not be used (§2.2); media type `application/activity+json` is registered with IANA in Core §8.1; language variants via `nameMap`, `contentMap`, `summaryMap`; `Link` objects with `href`, `mediaType`, `width`, `height` |
+| **Activity Streams 2.0 Core + Vocabulary (W3C Recommendation 2017)** | ✅ (status corrected 2026-11-05) | `@context: "https://www.w3.org/ns/activitystreams"`; `id` is an **absolute IRI** (Core §4.1); relative IRIs should not be used (§2.2); media type `application/activity+json` is registered with IANA in Core §8.1; language variants via `nameMap`, `contentMap`, `summaryMap`; `Link` objects with `href`, `mediaType`, `width`, `height` |
 | **AS2 does not contain the type `Hashtag`** | ❌ evidenced | the term occurs nowhere in Core or Vocabulary. Mastodon defines `Hashtag` as a subtype of `Link` and refers to `activitystreams#Hashtag` — an extension, not the core |
 | **schema.org has no type `Hashtag`** | ❌ evidenced | `schema.org/Hashtag` returns HTTP 404 |
 | **AS2 is not an RFC** | ❌ evidenced | RFC 9332 is "Dual-Queue Coupled Active Queue Management (AQM) …" — nothing to do with ActivityStreams. Anyone citing AS2 cites the W3C report |
 | **WebFinger, RFC 7033** | ✅ | discovering actors via `acct:` / e-mail |
 | **W3C Web Annotation Model** | ✅ | motifs incl. `classifying`, `tagging`, `commenting`, `describing`, `editing`, `bookmarking`; selectors `TextQuoteSelector`, `TextPositionSelector`, `RangeSelector`; structure `body` / `target`. **This is the right standard for "giving a part of a text a tag" without rewriting the text** |
+| **AS2 `Profile` + `describes`** | ✅ 2026-11-05 | "describes another object, usually an actor" — **envelope type for contact cards** (ADR 0020): a card is *my description* of someone, `describes` points to that person's actor/DID |
+| **AS2 `Relationship` (`subject`, `object`, `relationship`)** | ✅ 2026-11-05 | envelope for attestations and for confirmed "same person" links. AS2 itself has **no** "same as" property (✅ checked) |
 | **JMAP, RFC 8620 (basis) and RFC 8621 (mail)** | ✅ | reference for how to address, patch and synchronise JSON resources cleanly |
 
 ### Places, files, API cross-section
@@ -147,7 +149,7 @@ Mistakes from the earlier conversation, so they do not end up in a file:
 | schema.org version "16.0" | a made-up number. Checked: schema.org says "V30.1 \| 2026-09-16" on the pages retrieved |
 | "W3C is currently producing an Ink Annotation Module" | unevidenced, withdrawn |
 | "E-invoicing: receiving from 2025, issuing 2027/2028" | **not looked up in this round** — do not use as a deadline |
-| "ActivityPub signs with `Authorization: Signature`, reference `w3id.org/security/httpsig`" | that reference returns **HTTP 404**. The signing mechanisms of ActivityPub are therefore **not evidenced** and still have to be researched |
+| "ActivityPub signs with `Authorization: Signature`, reference `w3id.org/security/httpsig`" | that reference returns **HTTP 404**. **Resolved 2026-11-05:** HTTP Message Signatures **RFC 9421** (Feb 2024, ✅); object proofs **FEP-8b32** (draft, Data Integrity `eddsa-jcs-2022`, ✅); keys as `Multikey` per **FEP-521a** (final 2025-06-14, ✅). Mastodon verifies RFC 9421 since 4.5.0 (✅). Details: `temp/research/contacts-identity-standards.md` |
 
 ## Decisions (2026-11-01)
 
@@ -155,8 +157,8 @@ Mistakes from the earlier conversation, so they do not end up in a file:
 |-----|----------|
 | 1 | **Canonical payload per domain:** contacts → JSContact (RFC 9553/9554), appointments and tasks → JSCalendar (RFC 8984, covers `Event` **and** `Task`), places/addresses → GeoJSON + JSContact `Address` (+ ISO 19160, ✅ URL checked), messages → AS2 `Note`/`Article`, profile → AS2 `Actor` projection onto JSContact. |
 | 2 | **Envelope for every exchange: ActivityStreams 2 + ActivityPub.** Changes going out are `Create`/`Update`/`Delete` on typed objects; the domain payload is carried by the object as an extension. `to`/`cc`/`bto`/`bcc` are disclosure control (they decide **where copies land**) — but **not access control**; authorization is enforced per resource separately. |
-| 3 | **IDs:** internally ULID (opaque, sortable), externally absolute IRI `https://<instance>/<domain>/<ulid>` (AS2 Core §4.1 requires absolute IRIs — ✅ evidenced). The IRI is the resolvable handle, the ULID the stable identity (host migration stays possible, decentralised operation included). |
-| 4 | **The source of truth is the evidenced standard model** (JSContact, JSCalendar, …). We use protobuf/gRPC internally, JSON-LD/AS2 externally — both as projections generated from it. (Corrects the earlier direction "protobuf as the only source".) |
+| 3 | **IDs:** internally ULID (opaque, sortable) — *proposed 2026-11-05: replace by **UUIDv7, RFC 9562** (May 2024, ✅), a standard instead of a convention (ADR 0014/0026); awaiting decision* — externally absolute IRI `https://<instance>/<domain>/<ulid>` (AS2 Core §4.1 requires absolute IRIs — ✅ evidenced). The IRI is the resolvable handle, the ULID the stable identity (host migration stays possible, decentralised operation included). |
+| 4 | **The source of truth is the evidenced standard model** (JSContact, JSCalendar, …). We use Cap'n Proto internally (ADR 0021), JSON-LD/AS2 externally — both as projections generated from it. (Corrects the earlier direction "protobuf as the only source".) |
 | 5 | **Extend instead of invent:** first use the standard's extension points (e.g. `extensions` in JSContact for `lifecycle` — ⚠️ mechanism still to be evidenced); only where those do not exist, design our own specs. |
 
 **Still open (deliberately not decided):**
@@ -170,6 +172,30 @@ Mistakes from the earlier conversation, so they do not end up in a file:
 The earlier open decision "reach" is answered by decisions 1+4: the standards
 apply **all the way into the database** (working representation); file formats
 are export.
+
+## AS2 mapping per domain (ADR 0014, 0020)
+
+Every stored object = **AS2 envelope** (`id`, `type`, `attributedTo`, `to`/`cc`/`bto`/`bcc`/`audience`,
+`published`, `updated`, `context`) + **domain content** + **activity log** (`Create`, `Update`, …).
+
+| Domain | Content standard | AS2 envelope type | State |
+|--------|------------------|-------------------|-------|
+| contacts | JSContact `Card` (RFC 9553) | `Profile` (`describes` → person's actor/DID) | ✅ 2026-11-05 |
+| identity — own person | DID document / Controlled Identifier (W3C) | `Person` (actor) with `Multikey` (FEP-521a) | ✅ 2026-11-05 |
+| identity — attestation | VC 2.0 + `eddsa-jcs-2022` (as RLTP) | `Relationship` | ✅ 2026-11-05 |
+| identity — same person (hub matching, ADR 0019) | — | `Relationship`, relation *proposed* `owl:sameAs` | ⚠️ proposed |
+| messages | AS2 `Note`/`Article` | itself | open (next) |
+| events | JSCalendar `Event`/`Task` (RFC 8984) | `Event` | open |
+| geodata, projects, profile, login | see domain directories | | open |
+
+## Gaps → own specifications (ADR 0014)
+
+| Gap | Evidence | Candidate |
+|-----|----------|-----------|
+| merging/aliasing two cards of the same person | ❌ none in RFC 9553/9554/9555/9610/9982/10050 (✅ checked 2026-11-05) | hub-matching spec (ADR 0019) |
+| `Contact.lifecycle` | ❌ in vCard/JSContact; extension mechanism ✅ (RFC 9553 §1.8.1) | vendor property, later CRM spec |
+| board/project structure | ❌ | spec candidate no. 3 |
+| Web of Trust | ❌ in standards bodies | co-author with RLTP |
 
 ## Domain directories
 
@@ -204,7 +230,7 @@ components):
 | **OpenID Connect Core 1.0, incorporating errata set 2** | ✅ retrieved 2026-11-02 at `openid.net/specs/openid-connect-core-1_0.html` | "OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It enables Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User." Authors: Sakimura, Bradley, Jones, de Medeiros, Mortimore; final with errata set 2, **2023-12-15**. Core parts: ID token, authorization code flow, token endpoint, ID-token validation, claims about the end user. → **moved from ⚠️ to ✅** |
 | **The OAuth 2.0 Authorization Framework, RFC 6749** | ✅ retrieved 2026-11-02 at `rfc-editor.org/rfc/rfc6749` | October 2012, Proposed Standard, obsoletes RFC 5849 (OAuth 1.0). The RFC editor notes updates by **RFC 8252** (native apps), **RFC 8996** (deprecating TLS 1.0/1.1) and **RFC 9700** (best current practices for OAuth security). → **moved from ⚠️ to ✅** |
 | **Web Authentication: An API for accessing Public Key Credentials – Level 2 (WebAuthn)** | ✅ retrieved 2026-11-02 at `w3.org/TR/webauthn-2/` | W3C Recommendation **2021-04-08**. Quote from the abstract: "This specification defines an API enabling the creation and use of strong, attested, scoped, public key-based credentials by web applications, for the purpose of strongly authenticating users." Credentials are scoped per relying party. **Newly added to our login register.** |
-| **SCIM, RFC 7643/7644** | ⚠️ **still unchecked** (retrieval on 2026-11-02 cut off for time) | Not loaded again, on instruction. Evidence it before use. |
+| **SCIM, RFC 7643 (core schema) / RFC 7644 (protocol)** | ✅ 2026-11-05 | September 2015, Proposed Standard. Newer: **RFC 9865** (cursor pagination, Oct 2025), **RFC 9944** (device schema, May 2026), **RFC 9967** (SCIM events as Security Event Tokens, May 2026). Every program speaks SCIM (ADR 0024) |
 
 ### Identity / Web of Trust: Anton's repo reviewed (retrieved 2026-11-02, `github.com/real-life-org/web-of-trust`)
 
@@ -218,7 +244,8 @@ State of facts (written down in full, **do not download again**):
 - Architecture: CRDT-based (Yjs default, Automerge alternative); services `wot-relay` (WebSocket, ACK+outbox), `wot-vault` (encrypted backup), `wot-profiles` (public profile discoverability, JWS-signed); authorization **UCAN-inspired**, verifiable offline.
 - Generation 2 (this repo, ~2044 commits on 2026-11-02) has a successor: **Real Life Trust Protocol (RLTP), Gen 3**, in `real-life-org/trust-protocol`. Fixes move towards Gen 3.
 - **Our docking points:** attestation ↔ AS2 `Relationship` object; `did:key`/Ed25519 ↔ `publicKey` on the actor; `wot-profiles` ↔ our `profile/` projection; keep an eye on RLTP.
-- **Consequence for the register:** W3C **DID Core** and **VC Data Model** are evidenced *as cited* through Anton's spec; the W3C documents themselves are still ⚠️ (not retrieved).
+- **Consequence for the register:** W3C **DID Core** and **VC Data Model** are evidenced *as cited* through Anton's spec.
+- **Update 2026-11-05 (✅):** DID Core 1.0 = W3C Recommendation 2022-07-19 (DID 1.1 is Candidate Recommendation, 2026-03-05); **VC Data Model 2.0, Data Integrity 1.0, EdDSA cryptosuites, Controlled Identifiers 1.0** = Recommendations 2025-05-15. **RLTP gen 3** (`real-life-org/trust-protocol`, last commit 2026-11-05, library 0.12.0, Editor's Drafts): Ed25519 `did:key` with **separate identifiers per relationship**, credentials **VC 2.0 + `eddsa-jcs-2022`**, transport not fixed (first adapter: ToIP TSP via mediator). Gen 2 (`web-of-trust`) is still in production, not archived.
 
 ### Projects: standards search 2026-11-02 (search results, title evidence — not read in full text)
 
