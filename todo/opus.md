@@ -109,14 +109,17 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 | # | Paket | Repo | Hängt ab von | Wer | Status |
 |---|-------|------|--------------|-----|--------|
 | 1 | Cap'n-Proto-Compiler in Rust, Orakel-Tests gegen capnpc-embedded (ADR 0040) | `fs-capnpc` (crate `capnp-compiler`) | — | Sonnet | offen |
-| 2 | Objektspeicher: UUIDv7, AS2-Hülle, Turso eingebettet hinter Trait, Aktivitätsprotokoll in derselben Transaktion, begrenztes Rückgängig (ADR 0019/0020/0027/0042) | `fs-store` (lokal) | — | Sonnet | offen |
+| 2 ✅ | Objektspeicher: UUIDv7, AS2-Hülle, Turso eingebettet hinter Trait, Aktivitätsprotokoll in derselben Transaktion, begrenztes Rückgängig (ADR 0019/0020/0027/0042) | `fs-store` (lokal) | — | Sonnet | ✅ 22 Tests (2026-11-05) |
 | 3 | Text-Kern: Rope + Markierungen (ADR 0033/0042), Markdown hinein/heraus (pulldown-cmark), Link-Tabelle, Vorlagen | `fs-wiki` (crate `fs-text` im Workspace) | (2) später | Sonnet | offen |
-| 4 | `common.capnp` (Uuid, Timestamp, Cursor, Problem, Blob) | `fs-documentation/temp/contracts` | — | Opus | offen |
-| 5 | Doku-Gerüste der 13 neuen Components | `fs-documentation` | — | Sonnet | offen |
+| 4 ✅ | `common.capnp` (Uuid, Timestamp, Cursor, Problem, Blob) | `fs-documentation/temp/contracts` | — | Opus | ✅ |
+| 5 ✅ | Doku-Gerüste der 13 neuen Components (+ Skripte auf `en`) | `fs-documentation` | — | Sonnet | ✅ |
 | 6 | Datenmodelle Kontakte (JSContact) / Kalender (JSCalendar 2.0) / Karten (GeoJSON, PMTiles on demand) | `fs-contacts`, `fs-calendar`, `fs-maps` | 2 | Sonnet | später |
 | 7 | Wiki-Workbench auf Blinc (Code-Modus, liest `fs-documentation`) | `fs-wiki` | 3, Blinc | Sonnet | später |
 | 8 | Suite `fs-groupware` (Container, Workbenches nebeneinander) | `fs-groupware` | 6, 7 | — | später |
 | 9 | Hub (`fs-hub`): Anmeldung der Programme, Objekt-Abgleich | `fs-hub` | 2 | — | später |
 
-**Fragen für den Morgen:** alte Repos `fs-store`/`fs-components` archivieren und Namen übernehmen?
+**Fragen für den Morgen:**
+- alte Repos `fs-store`/`fs-components` archivieren und Namen übernehmen?
+- GitHub-Anbindung darf in der Org keine Repos anlegen (404) → Repos anlegen oder Berechtigung geben; lokal: fs-capnpc, fs-store, fs-wiki, fs-contacts, fs-calendar, fs-maps
+- fs-store: `max_steps` global oder je Person? Schutzbedürftige Objekte in unverschlüsseltem Speicher standardmäßig ablehnen (heute so)? Grabsteine nach Abgleich + Aufräumen behalten? Aktivitäten als volle Vorher/Nachher-Bilder (heute) oder RFC-6902-Patches?
 
