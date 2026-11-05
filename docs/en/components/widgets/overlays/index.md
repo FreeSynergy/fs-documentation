@@ -2,8 +2,7 @@
 
 Band [widgets](../) – knows its contents when it is built.
 
-Elements that appear above other content and get their own focus. They have their own
-lifecycle and close with `Esc` or a click outside.
+Elements that appear above other content and get their own focus. They have a lifetime of their own and close with `Esc` or a click outside.
 
 ## Elements
 
@@ -14,12 +13,12 @@ lifecycle and close with `Esc` or a click outside.
 - [**key-verification**](./key-verification/) – A key verification lets a person check the key or device of a counterpart and confirm trust.
 - [**modal**](./modal/) – A modal is an overlay window with focus on content.
 - [**popover**](./popover/) – A popover is a small overlay with interactive content: actions, a preview or a short form.
-- [**tooltip**](./tooltip/) – A tooltip shows a short explanation of an element – as text, without interactive content.
+- [**tooltip**](./tooltip/) – A tooltip shows a short explanation of an element — as text, without interactive content.
 
 ## Profiles
 
-| Component | Inherits from | Variants | Role | State |
-|-----------|---------------|----------|------|-------|
+| Component | Inherits from | Variants | Role | Status |
+|------------|----------|-----------|-------|--------|
 | [alert-dialog](./alert-dialog/) | `base`, `modal` | `bestaetigung`, `zerstoererisch` | `alertdialog` | documented |
 | [context-menu](./context-menu/) | `base`, `menu` | `Standard`, `Long Press`, `Overflow Menu` | - | documented |
 | [drawer](./drawer/) | `base` | `Left Drawer`, `Right Drawer`, `Bottom Drawer`, `Full Drawer` | - | documented |

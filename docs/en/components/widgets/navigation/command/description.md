@@ -10,7 +10,7 @@
 | **Animations** | `fade-in`, `expand` |
 | **Related** | `search-field`, `menu`, `modal` |
 | **Role** | `dialog` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 

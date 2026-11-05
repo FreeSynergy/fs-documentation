@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `double-tap`, `long-press`, `drag` |
 | **Animations** | `fade-in`, `highlight` |
 | **Related** | `textarea`, `code-editor`, `whiteboard`, `emoji-picker` |
-| **State** | documented |
+| **Status** | documented |
 
 !!! info "Standardisation"
     The former component `wiki-editor` became a variant of `rich-text-editor`:

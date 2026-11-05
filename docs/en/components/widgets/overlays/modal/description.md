@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `swipe` |
 | **Animations** | `fade-in`, `pop-in`, `slide-out` |
 | **Related** | `alert-dialog`, `drawer`, `popover`, `wizard` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A modal is an overlay window with focus on content.

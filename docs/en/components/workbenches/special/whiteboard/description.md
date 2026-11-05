@@ -9,7 +9,7 @@
 | **Gestures** | `drag`, `tap`, `double-tap`, `pinch`, `spread` |
 | **Animations** | `highlight`, `fade-in` |
 | **Related** | `rich-text-editor`, `image`, `map-view`, `dashboard` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A whiteboard is a drawing surface for collaboration.

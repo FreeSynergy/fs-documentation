@@ -9,7 +9,7 @@
 | **Gestures** | `tap` |
 | **Animations** | `expand`, `fade-in` |
 | **Related** | `select`, `menu`, `toolbar`, `bottom-navigation` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A language switcher is a UI element for changing the application language.

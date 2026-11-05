@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `double-tap`, `long-press`, `drag` |
 | **Animations** | `highlight`, `fade-in` |
 | **Related** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A code editor is an editor for source code.

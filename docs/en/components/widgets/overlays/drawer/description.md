@@ -9,7 +9,7 @@
 | **Gestures** | `swipe`, `tap`, `drag` |
 | **Animations** | `slide-in`, `slide-out` |
 | **Related** | `sidebar`, `modal`, `split-view`, `menu` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A drawer is a side overlay window (collapsible).

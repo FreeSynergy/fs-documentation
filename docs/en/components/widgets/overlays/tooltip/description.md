@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `long-press` |
 | **Animations** | `fade-in`, `fade-out` |
 | **Related** | `popover`, `label`, `base`, `field` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 

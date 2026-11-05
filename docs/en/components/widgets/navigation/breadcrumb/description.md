@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `long-press` |
 | **Animations** | `expand`, `fade-in` |
 | **Related** | `menu`, `sidebar`, `tree-view`, `pagination`, `tabs` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A breadcrumb is a path navigation (Home > Wiki > Page).

@@ -1,9 +1,8 @@
-# fields (Fields)
+# fields
 
 Band [workbenches](../) – receives its content only at runtime.
 
-Elements for entering and selecting values. The field (`field`) holds the label, help
-text and error message together.
+Elements for entering and selecting values. The field (`field`) holds the label, help text and error message together.
 
 ## Elements
 
@@ -12,8 +11,8 @@ text and error message together.
 
 ## Profiles
 
-| Component | Inherits from | Variants | Role | State |
-|-----------|---------------|----------|------|-------|
+| Component | Inherits from | Variants | Role | Status |
+|------------|----------|-----------|-------|--------|
 | [block-editor](./block-editor/) | `base` | `edit`, `read`, `template` | - | skeleton |
 | [rich-text-editor](./rich-text-editor/) | `base`, `textarea` | `wysiwyg`, `wiki-syntax` | - | documented |
 

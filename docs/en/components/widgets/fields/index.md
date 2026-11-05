@@ -2,22 +2,21 @@
 
 Band [widgets](../) – knows its contents when it is built.
 
-Elements for entering and selecting values. The field (`field`) holds the label, help
-text and error message together.
+Elements for entering and selecting values. The field (`field`) holds the label, help text and error message together.
 
 ## Elements
 
-- [**date-picker**](./date-picker/) – the date picker opens a calendar overlay in which a date or a range is selected.
-- [**emoji-picker**](./emoji-picker/) – an emoji picker is an emoji selection for chat/comments.
-- [**file-upload**](./file-upload/) – a file upload is an element for choosing and uploading files.
-- [**range-calendar**](./range-calendar/) – the range calendar selects one continuous period of time.
-- [**rule-editor**](./rule-editor/) – A rule editor edits rules of the form "if .
-- [**time-picker**](./time-picker/) – the time picker selects a time of day from a list of possible times.
+- [**date-picker**](./date-picker/) – The date picker opens a calendar overlay in which a date or a range is selected.
+- [**emoji-picker**](./emoji-picker/) – An emoji picker is an emoji selection for chat/comments.
+- [**file-upload**](./file-upload/) – A file upload is an element for choosing and uploading files.
+- [**range-calendar**](./range-calendar/) – The range calendar selects one continuous period of time.
+- [**rule-editor**](./rule-editor/) – A rule editor edits rules of the form "if ...
+- [**time-picker**](./time-picker/) – The time picker selects a time of day from a list of possible times.
 
 ## Profiles
 
 | Component | Inherits from | Variants | Role | Status |
-|-----------|---------------|----------|------|--------|
+|------------|----------|-----------|-------|--------|
 | [date-picker](./date-picker/) | `base`, `date-input` | `einzeln`, `bereich`, `wiederkehrend` | `dialog` | documented |
 | [emoji-picker](./emoji-picker/) | `base` | `inline`, `overlay`, `reaktion` | - | documented |
 | [file-upload](./file-upload/) | `base` | `File Picker`, `Drag & Drop`, `Image Preview` | - | documented |

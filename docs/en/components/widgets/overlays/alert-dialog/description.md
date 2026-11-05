@@ -10,7 +10,7 @@
 | **Animations** | `fade-in`, `scale-in` |
 | **Related** | `modal`, `alert`, `toast` |
 | **Role** | `alertdialog` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 

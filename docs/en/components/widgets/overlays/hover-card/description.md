@@ -10,7 +10,7 @@
 | **Animations** | `fade-in`, `expand` |
 | **Related** | `tooltip`, `popover`, `avatar` |
 | **Role** | `tooltip` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 

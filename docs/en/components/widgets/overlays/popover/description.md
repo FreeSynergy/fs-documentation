@@ -9,7 +9,7 @@
 | **Gestures** | `tap` |
 | **Animations** | `expand`, `fade-in` |
 | **Related** | `tooltip`, `modal`, `select`, `context-menu`, `base` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 

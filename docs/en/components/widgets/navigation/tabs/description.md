@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `swipe`, `long-press` |
 | **Animations** | `slide-in`, `highlight` |
 | **Related** | `bottom-navigation`, `accordion`, `breadcrumb`, `radio-group`, `carousel` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 Tabs are tabs for switching between views.

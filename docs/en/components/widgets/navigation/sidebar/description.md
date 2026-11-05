@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `drag`, `long-press`, `swipe` |
 | **Animations** | `expand`, `collapse`, `slide-in` |
 | **Related** | `menu`, `bottom-navigation`, `drawer`, `toolbar`, `tree-view` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 The sidebar is a vertical navigation column, normally positioned on the left or right edge

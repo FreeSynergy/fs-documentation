@@ -34,8 +34,10 @@ jobs:
 
       - name: Check component documentation standard
         run: |
-          python scripts/check_components.py
-          python scripts/gen_component_indexes.py --check
+          python scripts/check_components.py --lang en
+          python scripts/gen_component_indexes.py --lang en --check
+          python scripts/check_components.py --lang de
+          python scripts/gen_component_indexes.py --lang de --check
 
       - name: Build MkDocs site
         run: |

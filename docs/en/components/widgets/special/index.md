@@ -2,8 +2,7 @@
 
 Band [widgets](../) – knows its contents when it is built.
 
-Composite elements with a data structure of their own: editors, embeds, maps and
-views that generic libraries do not offer.
+Composite elements with a data structure of their own: editors, embeds, maps and views that generic libraries do not offer.
 
 ## Elements
 
@@ -12,7 +11,7 @@ views that generic libraries do not offer.
 ## Profiles
 
 | Component | Inherits from | Variants | Role | Status |
-|-----------|---------------|----------|------|--------|
+|------------|----------|-----------|-------|--------|
 | [map-view](./map-view/) | `base` | `standort`, `sammlung`, `route` | - | documented |
 
 ## See also

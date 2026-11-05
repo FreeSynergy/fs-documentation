@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `drag` (only with `interactive`) |
 | **Animations** | `fade-in` |
 | **Related** | `map-view`, `whiteboard`, `dashboard`, `base` |
-| **State** | documented |
+| **Status** | documented |
 
 !!! info "Standardisation"
     The former components `app-embed`, `widget-embed` and `iframe-embed` became the `source`

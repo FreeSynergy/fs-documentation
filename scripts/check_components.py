@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Prueft den Komponentenbestand gegen den Standard aus
-docs/de/components/primitives/basics/base.md und conventions/CONVENTIONS.md.
+docs/<lang>/components/primitives/basics/base.md und conventions/CONVENTIONS.md.
 
 Layout: components/<band>/<typgruppe>/<komponente>/ (Bänder nach ADR 0004).
 
@@ -20,7 +20,8 @@ Pflichtabschnitte, kaputte Links, Tabellen-Schreibfehler. Absichtslos Benanntes 
 Doppelstuecke sind Hinweise. Mit --strict werden auch Hinweise zu Fehlern.
 
 Aufruf:
-    python3 scripts/check_components.py
+    python3 scripts/check_components.py            # --lang en (Standard)
+    python3 scripts/check_components.py --lang de
     python3 scripts/check_components.py --strict
 """
 import argparse
@@ -32,30 +33,54 @@ import gen_component_indexes as gen
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-COMPONENTS = DOCS / "de" / "components"
+COMPONENTS = DOCS / "en" / "components"  # per --lang umgesetzt
+LANG = "en"
 
 REQUIRED_FILES = ["description.md", "appearance.md", "attributes.md", "usage.md"]
-STECKBRIEF = ["Kategorie", "Erbt von", "Varianten", "Zustände", "Gesten", "Animationen", "Verwandt", "Status"]
-OPTIONAL_STECKBRIEF = ["Rolle"]
-# Steckbrief-Felder, die einen Wert brauchen (`-` gilt als leer).
-FILLED_STECKBRIEF = ["Varianten", "Zustände", "Gesten", "Animationen", "Verwandt"]
+# Steckbrief-Felder und Abschnittsnamen pro Sprache (en = Hauptsprache, ADR 0011).
+LANG_RULES = {
+    "de": {
+        "steckbrief": ["Kategorie", "Erbt von", "Varianten", "Zustände", "Gesten",
+                       "Animationen", "Verwandt", "Status"],
+        "category": "Kategorie", "status": "Status", "documented": "dokumentiert",
+        # Steckbrief-Felder, die einen Wert brauchen (`-` gilt als leer).
+        "filled": ["Varianten", "Zustände", "Gesten", "Animationen", "Verwandt"],
+        "sections": {
+            "description.md": ["Beschreibung", "Verwendungszweck", "Varianten", "Features",
+                               "Abgrenzung", "Best Practices", "Siehe auch"],
+            "appearance.md": ["Grundlayout", "Varianten", "Größen", "Farben und Zustände",
+                              "Hover- und Fokus-Effekte", "Reaktiv"],
+            "attributes.md": ["Geerbt von"],
+        },
+        "hard": {
+            "description.md": ["Beschreibung", "Verwendungszweck", "Siehe auch"],
+            "appearance.md": ["Grundlayout"],
+            "attributes.md": ["Geerbt von"],
+        },
+    },
+    "en": {
+        "steckbrief": ["Category", "Inherits from", "Variants", "States", "Gestures",
+                       "Animations", "Related", "Status"],
+        "category": "Category", "status": "Status", "documented": "documented",
+        "filled": ["Variants", "States", "Gestures", "Animations", "Related"],
+        "sections": {
+            "description.md": ["Description", "Purpose", "Variants", "Features",
+                               "Distinction", "Best Practices", "See also"],
+            "appearance.md": ["Base layout", "Variants", "Sizes", "Colours and states",
+                              "Hover and focus effects", "Responsive"],
+            "attributes.md": ["Inherited from"],
+        },
+        "hard": {
+            "description.md": ["Description", "Purpose", "See also"],
+            "appearance.md": ["Base layout"],
+            "attributes.md": ["Inherited from"],
+        },
+    },
+}
+RULES = LANG_RULES[LANG]
 # Paare, deren Aehnlichkeit geprueft und bewusst akzeptiert wurde
-# (docs/de/components/konzept-und-plan.md, Abschnitt 10: combobox = zusaetzlich
-# Freitext und Vorschlaege, select = nur vorhandene Optionen).
+# (combobox = zusaetzlich Freitext und Vorschlaege, select = nur vorhandene Optionen).
 ACCEPTED_PAIRS = {("combobox", "select")}
-SECTIONS = {
-    "description.md": ["Beschreibung", "Verwendungszweck", "Varianten", "Features",
-                       "Abgrenzung", "Best Practices", "Siehe auch"],
-    "appearance.md": ["Grundlayout", "Varianten", "Größen", "Farben und Zustände",
-                      "Hover- und Fokus-Effekte", "Reaktiv"],
-    "attributes.md": ["Geerbt von"],
-}
-# Abschnitte, deren Fehlen ein Fehler ist (Rest: Hinweis)
-HARD_SECTIONS = {
-    "description.md": ["Beschreibung", "Verwendungszweck", "Siehe auch"],
-    "appearance.md": ["Grundlayout"],
-    "attributes.md": ["Geerbt von"],
-}
 SEP_RE = re.compile(r"^\|[\s:|-]+\|$")
 CELL_SPLIT = re.compile(r"(?<!\\)\|")
 
@@ -152,9 +177,16 @@ def check_links(comp, text, errors):
 
 
 def main():
+    global COMPONENTS, LANG, RULES
     ap = argparse.ArgumentParser()
     ap.add_argument("--strict", action="store_true", help="Hinweise ebenfalls als Fehler werten")
+    ap.add_argument("--lang", choices=["en", "de"], default="en",
+                    help="Sprachbaum (Standard: en)")
     args = ap.parse_args()
+    LANG = args.lang
+    COMPONENTS = DOCS / LANG / "components"
+    RULES = LANG_RULES[LANG]
+    gen.set_lang(LANG)
 
     errors, notes = [], []
     comps = sorted(d for d in COMPONENTS.glob("*/*/*") if d.is_dir())
@@ -194,24 +226,24 @@ def main():
             if not fields:
                 errors.append(f"{comp.relative_to(ROOT)}/description.md: Steckbrief-Tabelle fehlt")
             else:
-                missing = [k for k in STECKBRIEF if k not in fields]
+                missing = [k for k in RULES["steckbrief"] if k not in fields]
                 if missing:
                     errors.append(f"{comp.relative_to(ROOT)}/description.md: Steckbrief-Felder fehlen: "
                                   + ", ".join(missing))
-                if fields.get("Kategorie", "").strip("`* ") != cat:
+                if fields.get(RULES["category"], "").strip("`* ") != cat:
                     errors.append(f"{comp.relative_to(ROOT)}: Steckbrief-Kategorie "
-                                  f"'{fields.get('Kategorie','')}' != Ordner '{cat}'")
-                if "Status" in fields and "dokumentiert" not in fields["Status"]:
+                                  f"'{fields.get(RULES['category'], '')}' != Ordner '{cat}'")
+                if "Status" in fields and RULES["documented"] not in fields["Status"]:
                     notes.append(f"{comp.relative_to(ROOT)}: Status = {fields['Status']}")
-                for key in FILLED_STECKBRIEF:
+                for key in RULES["filled"]:
                     if fields.get(key, "").strip(" `-") in ("", "\u2013"):
                         notes.append(f"{comp.relative_to(ROOT)}/description.md: "
                                      f"Steckbrief-Feld '{key}' ist leer")
             secs = [h for h, _ in sections_of(text)]
-            for s in HARD_SECTIONS["description.md"]:
+            for s in RULES["hard"]["description.md"]:
                 if s not in secs:
                     errors.append(f"{comp.relative_to(ROOT)}/description.md: Abschnitt '{s}' fehlt")
-            for s in SECTIONS["description.md"]:
+            for s in RULES["sections"]["description.md"]:
                 if s not in secs:
                     notes.append(f"{comp.relative_to(ROOT)}/description.md: Abschnitt '{s}' fehlt")
 
@@ -221,10 +253,10 @@ def main():
                 continue
             text = path.read_text(encoding="utf-8")
             secs = [h for h, _ in sections_of(text)]
-            for s in HARD_SECTIONS[f]:
+            for s in RULES["hard"][f]:
                 if s not in secs:
                     errors.append(f"{comp.relative_to(ROOT)}/{f}: Abschnitt '{s}' fehlt")
-            for s in SECTIONS[f]:
+            for s in RULES["sections"][f]:
                 if s not in secs:
                     notes.append(f"{comp.relative_to(ROOT)}/{f}: Abschnitt '{s}' fehlt")
 
@@ -241,8 +273,8 @@ def main():
         if attrs.is_file():
             all_attrs[name] = attr_names(attrs.read_text(encoding="utf-8"))
 
-        if f"de/components/{band}/{cat}/{name}/" not in nav_text \
-                and f"de/components/{band}/{cat}/{name}" not in nav_text:
+        if f"{LANG}/components/{band}/{cat}/{name}/" not in nav_text \
+                and f"{LANG}/components/{band}/{cat}/{name}" not in nav_text:
             notes.append(f"{comp.relative_to(ROOT)}: nicht in mkdocs.yml (nav)")
 
     # Basisklasse: Attribute, die fast alle listen, aber nicht in base.md stehen

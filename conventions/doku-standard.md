@@ -509,8 +509,8 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `ZustÃ
 
 | Tool | Purpose |
 |------|---------|
-| `scripts/gen_component_indexes.py` | writes `components/index.md`, the band and category `index.md` files and the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) from the profile tables; checks the component â†’ band assignment; `--check` fails on drift |
-| `scripts/check_components.py` | validates the standard: band assignment, required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
+| `scripts/gen_component_indexes.py` | `--lang en` (default) / `de`: writes `docs/<lang>/components/index.md` and the band and category `index.md` files from the directory tree and profile tables (English texts for `en`, German for `de`); writes the `mkdocs.yml` nav block (between `# BEGIN/END components nav`) for both `en/` and `de/` trees; checks the component â†’ band assignment; `--check` fails on drift |
+| `scripts/check_components.py` | `--lang en` (default) / `de`: validates the standard of that tree: band assignment, required files, profile fields, required sections, table cell counts, dead links, base-class attributes, near-duplicates, pages missing from the nav |
 | `scripts/migrate_links.py` | rewrites relative **and** absolute markdown links after a directory move given as `OLD=NEW`; run before `git mv`; `--dry-run`/`--check` |
 | `scripts/fix_links.py` | re-resolves every internal link against a name registry built from `docs/`; run after `git mv` with `--force` â€” no depth arithmetic needed; `--dry-run`/`--check` |
 | `scripts/gen_frontend_indexes.py` | builds `frontends/index.md` per category, the versions block per program, the frontends block in the category index, `requirements.md` skeletons (ADR 0012); `--check` for CI |
@@ -518,7 +518,7 @@ frontmatter, deliberately) carrying `Kategorie`, `Erbt von`, `Varianten`, `ZustÃ
 | `scripts/add_steckbrief.py` | inserts/refreshes the profile table and the `Siehe auch` section |
 | `scripts/standardize_sections.py` | renames/merges/reorders section headings, repairs `Default` column |
 
-CI runs `check_components.py` and `gen_component_indexes.py --check` before the site build,
+CI runs `check_components.py` and `gen_component_indexes.py --check` (each with `--lang en` and `--lang de`) before the site build,
 so numbers and navigation cannot drift again.
 
 Relative links inside a component directory use **four** levels for areas outside

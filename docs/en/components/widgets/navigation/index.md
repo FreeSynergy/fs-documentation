@@ -1,13 +1,12 @@
-# navigation (Navigation)
+# navigation
 
 Band [widgets](../) – knows its contents when it is built.
 
-Elements that show or switch the way through the program: menus, bars, tabs,
-sidebars and path indications.
+Elements that show or switch the way through the program: menus, bars, tabs, sidebars and path indications.
 
 ## Elements
 
-- [**bottom-navigation**](./bottom-navigation/) – Bottom navigation is navigation at the bottom of the screen, typical for mobile-first design.
+- [**bottom-navigation**](./bottom-navigation/) – Bottom navigation is a navigation at the bottom of the screen, typical for mobile-first design.
 - [**breadcrumb**](./breadcrumb/) – A breadcrumb is a path navigation (Home > Wiki > Page).
 - [**command**](./command/) – The command palette is an overlay with an input field and a list of matches.
 - [**language-switcher**](./language-switcher/) – A language switcher is a UI element for changing the application language.
@@ -21,7 +20,7 @@ sidebars and path indications.
 ## Profiles
 
 | Component | Inherits from | Variants | Role | Status |
-|-----------|---------------|----------|------|--------|
+|------------|----------|-----------|-------|--------|
 | [bottom-navigation](./bottom-navigation/) | `base` | `Active Icon`, `Text Labels`, `Icon Only` | - | documented |
 | [breadcrumb](./breadcrumb/) | `base` | `pfad`, `gestutzt`, `zurueck` | - | documented |
 | [command](./command/) | `base` | `palette`, `inline` | `dialog` | documented |

@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `swipe` |
 | **Animations** | `fade-in`, `progress` |
 | **Related** | `repeater`, `list-view`, `table`, `scroll-area`, `tabs` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 Pagination splits a long list into portions and offers switching between them.

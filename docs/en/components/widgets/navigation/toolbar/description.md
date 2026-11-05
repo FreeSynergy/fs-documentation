@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `long-press`, `drag` |
 | **Animations** | `expand`, `collapse`, `fade-in` |
 | **Related** | `button`, `button-group`, `menu`, `context-menu`, `rich-text-editor` |
-| **State** | documented |
+| **Status** | documented |
 
 !!! info "Standardisation"
     The former components `context-toolbar` and `ribbon` became variants of `toolbar`:

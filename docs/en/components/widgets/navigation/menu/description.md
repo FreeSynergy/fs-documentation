@@ -10,7 +10,7 @@
 | **Animations** | `expand`, `collapse`, `fade-in` |
 | **Related** | `context-menu`, `breadcrumb`, `tabs`, `bottom-navigation`, `sidebar` |
 | **Role** | `menubar` |
-| **State** | documented |
+| **Status** | documented |
 
 !!! info "Standardisation"
     The former component `hamburger-menu` became a variant of `menu`:

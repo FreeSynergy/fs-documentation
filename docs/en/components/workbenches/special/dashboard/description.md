@@ -9,7 +9,7 @@
 | **Gestures** | `drag`, `tap`, `long-press` |
 | **Animations** | `reorder`, `cascade`, `stagger` |
 | **Related** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A dashboard is an overview page with widgets.

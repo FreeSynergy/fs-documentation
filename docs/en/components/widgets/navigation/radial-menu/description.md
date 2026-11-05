@@ -10,7 +10,7 @@
 | **Animations** | `radial-out`, `radial-in`, `stagger`, `lift`, `morph` |
 | **Related** | `menu`, `context-menu`, `floating-action-button`, `toolbar`, `command` |
 | **Role** | `menu` |
-| **State** | documented |
+| **Status** | documented |
 
 !!! info "Standardisation"
     The action fan of the [floating-action-button](../../../primitives/actions/floating-action-button/)

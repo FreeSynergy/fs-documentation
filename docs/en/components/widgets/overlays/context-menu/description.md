@@ -9,7 +9,7 @@
 | **Gestures** | `tap`, `long-press` |
 | **Animations** | `pop-in`, `fade-out` |
 | **Related** | `menu`, `toolbar`, `popover`, `select` |
-| **State** | documented |
+| **Status** | documented |
 
 ## Description
 A context menu is opened by right-click or a long touch action and offers context-related options.

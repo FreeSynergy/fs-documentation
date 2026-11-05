@@ -1,9 +1,8 @@
-# special (Special elements)
+# special
 
 Band [workbenches](../) – receives its content only at runtime.
 
-Composite elements with their own data structure: editors, embeddings, cards and views
-that generic libraries do not offer.
+Composite elements with a data structure of their own: editors, embeds, maps and views that generic libraries do not offer.
 
 ## Elements
 
@@ -16,8 +15,8 @@ that generic libraries do not offer.
 
 ## Profiles
 
-| Component | Inherits from | Variants | Role | State |
-|-----------|---------------|----------|------|-------|
+| Component | Inherits from | Variants | Role | Status |
+|------------|----------|-----------|-------|--------|
 | [code-editor](./code-editor/) | `base` | `voll`, `nur-lesen`, `vergleich` | - | documented |
 | [dashboard](./dashboard/) | `base` | `vorlage`, `anordbar`, `bericht` | - | documented |
 | [embed](./embed/) | `base` | `app`, `widget`, `iframe` | - | documented |
