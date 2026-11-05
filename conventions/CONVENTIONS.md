@@ -7,7 +7,7 @@ gültig für alle Repos, bis ausdrücklich geändert.
 
 Das konkrete Dateisatz- und Layout-Handwerk steht in `doku-standard.md` (hier im Verzeichnis).
 
-Stand: 2026-11-05 (ADRs 0011–0018: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
+Stand: 2026-11-05 (ADRs 0011–0024: nur `en`, `frontends/`, nichts kopieren, Standards/AS2,
 Fremdprojekte, Lizenz, Repos, Messenger)
 
 ---
@@ -23,6 +23,11 @@ Fremdprojekte, Lizenz, Repos, Messenger)
 - **Programm = Kategorie**: `FreeSynergy.Messenger`, Repo `fs-messenger`; jedes Programm läuft
   allein, zusammen teilen sie die Arbeit über Standarddaten (ADR 0017).
 - **Nur `docs/en/` wird gepflegt**, `de/` übersetzt llama (ADR 0011).
+- **Daten:** `fs-store` je Programm, `fs-hub` je Gerät, Abgleich auf Objektebene (ADR 0019);
+  Objekt = AS2-Hülle + Fachstandard + Aktivitätsprotokoll, Leihen = Live-Verweis, Regeln werden
+  angesagt (ADR 0020). Programm ohne Hub speichert lokal, wahlweise verschlüsselt (ADR 0024).
+- **Schnittstelle:** Cap'n Proto ist der Vertrag, JSON/CLI/MCP daraus erzeugt (ADR 0021);
+  zwei Referenz-Frontends je Programm (ADR 0022); Darstellungs-Register Datentyp ↔ Element (ADR 0023).
 
 ## 1. Was veröffentlicht wird und was nicht
 

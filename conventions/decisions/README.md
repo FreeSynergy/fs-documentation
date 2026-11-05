@@ -25,3 +25,9 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0016 | Lizenz: MIT OR Apache-2.0, für immer kostenlos | akzeptiert |
 | 0017 | Programme heißen nach Kategorie, ein Repo pro Programm | akzeptiert |
 | 0018 | Messenger umfasst E-Mail und Chats; nur verschlüsselt | akzeptiert (Backend offen) |
+| 0019 | Datenhaltung: `fs-store` je Programm, `fs-hub` je Gerät | akzeptiert (Erkennung: Vorschlag) |
+| 0020 | Speicherformat: AS2-Hülle + Fachstandard + Protokoll; Leihen = Live-Verweis | akzeptiert |
+| 0021 | Schnittstelle: ein Vertrag (Cap'n Proto), viele Zugänge | akzeptiert |
+| 0022 | Zwei Referenz-Frontends je Programm | akzeptiert |
+| 0023 | Darstellungs-Register; Code- und Block-Editor | akzeptiert |
+| 0024 | Programm ohne Hub, Verschlüsselung, Schlüsseltresor, SCIM | akzeptiert |
