@@ -72,6 +72,6 @@ Response: `201 Created` with the ticket JSON (`id`, `status:"new"`, `via`, `audi
 - Official client libs: Ruby `zendesk zendesk_api_client_rb`, Python `zendesk`, Node `node-zendesk`, Java
 - The Zendesk app framework for UI extensions (iframe apps, `client.request`)
 
-## Skin note
+## Frontend note
 
 `ticket.comment`, `audit`, `user` correspond directly to the [comment/user model](../../../../../../data/models.md) — Zendesk v2 is a good patron for FreeSynergy ticket fields ([fields.md](../../../../../../data/fields.md)).

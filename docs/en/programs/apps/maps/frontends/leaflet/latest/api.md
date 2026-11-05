@@ -50,6 +50,6 @@ m.on("dragend", () =>
 
 Nonexistent — the tile/data servers decide (observe the OSM usage policies!).
 
-## Skin note
+## Frontend note
 
-A complete location point (Standpunkte) skin in ~50 lines: FreeSynergy provides the GeoJSON + PUT endpoints; Leaflet = the view layer ([standpunkte.md](../../../standpunkte.md)).
+A complete location point (Standpunkte) frontend in ~50 lines: FreeSynergy provides the GeoJSON + PUT endpoints; Leaflet = the view layer ([standpunkte.md](../../../standpunkte.md)).

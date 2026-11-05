@@ -6,9 +6,9 @@ Organic Maps (GPL, subscription-free nonprofit app) is the lean offline map/navi
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Search bar, categories, layers menu, "Saved"
+- [menus.md](latest/menus.md) - Search bar, categories, layers menu, "Saved"
 - [features.md](latest/features.md) - Offline routing, bookmarks, what Organic Maps does NOT do
 - [description.md](latest/description.md) - How it differs from OsmAnd, Google Maps, MagicEarth
-- [structure.md](latest/layout.md) - Full-screen map, search/detail sheets
+- [layout.md](latest/layout.md) - Full-screen map, search/detail sheets
 - [shortcuts.md](latest/shortcuts.md) - Gesture control
 - [api.md](latest/api.md) - Geo intents, bookmark file formats (.bm2/.kml), no API

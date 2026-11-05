@@ -30,5 +30,5 @@ PhotoPrism places a database over an existing photo folder: everything is indexe
 ## Who it suits
 
 - Collections that already exist as a folder tree and only need to be made "gallery-capable"
-- FreeSynergy gallery skins with an album / photo / label / person model
+- FreeSynergy gallery frontends with an album / photo / label / person model
 - Households and teams with no expectation of phone auto-backup

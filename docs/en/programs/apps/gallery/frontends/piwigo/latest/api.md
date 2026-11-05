@@ -74,6 +74,6 @@ No built-in limits; limiting in the web server (`mod_qos`, nginx `limit_req`) an
 - **community**: Python `piwigo-api`, PHP wrappers in plugin examples
 - **imports**: Piwigo export/import, Piwigo Companion for uploads
 
-## Skin note
+## Frontend note
 
 Category/image/tag/group correspond to the standard model ([models.md](../../../../../../data/models.md)); custom fields follow [fields.md](../../../../../../data/fields.md).

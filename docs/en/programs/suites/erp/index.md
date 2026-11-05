@@ -79,19 +79,19 @@ When choosing an ERP system, consider the following criteria:
 
 Further information can be found in the documentation of individual ERP systems.
 
-## Mask documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/erp/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/erp/frontends/<program>/`.
 
 **documented (6 programs):**
 
-- [Axelor](masks/axelor/index.md) - Axelor
-- [Dolibarr](masks/dolibarr/index.md) - Dolibarr
-- [ERPNext](masks/erpnext/index.md) - ERPNext
-- [Odoo](masks/odoo/index.md) - Odoo
-- [Sage](masks/sage/index.md) - Sage
-- [Tryton](masks/tryton/index.md) - Tryton
+- [Axelor](frontends/axelor/index.md) - Axelor
+- [Dolibarr](frontends/dolibarr/index.md) - Dolibarr
+- [ERPNext](frontends/erpnext/index.md) - ERPNext
+- [Odoo](frontends/odoo/index.md) - Odoo
+- [Sage](frontends/sage/index.md) - Sage
+- [Tryton](frontends/tryton/index.md) - Tryton
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../../apps/wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

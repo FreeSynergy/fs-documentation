@@ -21,5 +21,5 @@
 | Integration | Method |
 |-------------|--------|
 | REST API + webhooks | official |
-| Plugin system (Composer) | Your own integration skins |
+| Plugin system (Composer) | Your own integration frontends |
 | WP/Joomla plugins, Zapier | Available |

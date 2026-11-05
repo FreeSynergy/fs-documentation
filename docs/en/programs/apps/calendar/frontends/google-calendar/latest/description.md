@@ -40,5 +40,5 @@ The core of the distinction: Google Calendar is **SaaS from a single source** â€
 
 - **Private users** who already use Google Mail/accounts and want an immediately synchronised calendar without administration
 - **Organisations/teams on Google Workspace**: calendar sharing, room/resource calendars, admin policies, migration from Exchange/Notes
-- **FreeSynergy scenario**: useful as a "skin" when external users' events are to be integrated via the Calendar API (push + sync token) or mirrored out to Google
+- **FreeSynergy scenario**: useful as a "frontend" when external users' events are to be integrated via the Calendar API (push + sync token) or mirrored out to Google
 - **Unsuitable** where data sovereignty/self-hosting is required, where CalDAV client access is needed (only unofficially), or where dependence on a single vendor must be avoided â€” use DAViCal (server) or a CalDAV client there

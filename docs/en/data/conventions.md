@@ -17,17 +17,17 @@ Conventions keep documentation and data consistent across all categories.
 
 ## File conventions
 
-### Programs (masks)
+### Programs (frontends)
 
-Every program in `apps/<category>/masks/<program>/` gets **seven** files:
+Every program in `apps/<category>/frontends/<program>/` gets **seven** files:
 
 | File | Content |
 |------|---------|
 | `index.md` | overview + links to the other six files |
 | `description.md` | what the program does, advantages, differentiation, technical details |
 | `features.md` | features, widgets/plugins, what it does NOT do |
-| `menu.md` | menu items, context menus, role menus |
-| `structure.md` | window structure (ASCII), UI/UX, accessibility, performance |
+| `menus.md` | menu items, context menus, role menus |
+| `layout.md` | window structure (ASCII), UI/UX, accessibility, performance |
 | `shortcuts.md` | all keyboard shortcuts (always separate!) |
 | `api.md` | API type, auth, endpoints, examples, rate limits, SDKs |
 

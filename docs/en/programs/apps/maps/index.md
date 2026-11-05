@@ -78,9 +78,9 @@ When choosing a mapping system, consider the following criteria:
 
 Further information can be found in the documentation of individual mapping systems.
 
-## Mask documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/maps/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/maps/frontends/<program>/`.
 
 **documented (7 programs):**
 
@@ -92,6 +92,6 @@ The programs in this category are documented following the wiki schema (seven fi
 - [QGIS](frontends/qgis/index.md) - QGIS
 - [uMap](frontends/umap/index.md) - uMap
 
-Overview: [Mask directory](frontends/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

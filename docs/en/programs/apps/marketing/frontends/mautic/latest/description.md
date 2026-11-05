@@ -2,7 +2,7 @@
 
 ## What the program does
 
-Mautic automates communication workflows with your own data: forms collect contacts, segments sort them, campaigns supply them — all on your own server, API-first for synchronisation with CRM/ERP skins.
+Mautic automates communication workflows with your own data: forms collect contacts, segments sort them, campaigns supply them — all on your own server, API-first for synchronisation with CRM/ERP frontends.
 
 ## Advantages
 
@@ -28,4 +28,4 @@ Mautic automates communication workflows with your own data: forms collect conta
 ## Who it suits
 
 - Organisations with their own IT and a drive to automate communication
-- FreeSynergy scenarios: a contact broker between CRM skins (webhook → event, [models.md](../../../../../../data/models.md))
+- FreeSynergy scenarios: a contact broker between CRM frontends (webhook → event, [models.md](../../../../../../data/models.md))

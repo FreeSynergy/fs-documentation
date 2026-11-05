@@ -1,6 +1,6 @@
 # Data API (standardised)
 
-All programs expose their data using the same pattern so that workflows, imports and masks work without special treatment. Concretely documented deviations live in the `api.md` of the respective program (`apps/<category>/masks/<program>/api.md`).
+All programs expose their data using the same pattern so that workflows, imports and frontends work without special treatment. Concretely documented deviations live in the `api.md` of the respective program (`apps/<category>/frontends/<program>/api.md`).
 
 ## Overview
 
@@ -283,5 +283,5 @@ client.tasks.update(
 - [standard fields](fields.md)
 - [data formats](formats.md)
 - [conventions](conventions.md)
-- [desktop masks — API examples](../programs/platform/desktop/frontends/)
+- [desktop frontends — API examples](../programs/platform/desktop/frontends/)
 - [workflows](../programs/suites/workflows/)

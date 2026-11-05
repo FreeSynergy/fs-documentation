@@ -16,11 +16,11 @@ A cross-page function of the maps category: **location points (Standpunkte)** ar
 |----------------|--------------|
 | **uMap** | Collaborative map editor (group layers, popup notes, edit-token links) — capture + see |
 | **OpenStreetMap/Overpass** | Public location points (POIs) as starting data; reporting your own places |
-| **Leaflet/MapLibre** | Skin view: FreeSynergy GeoJSON as a live layer (web) |
+| **Leaflet/MapLibre** | Frontend view: FreeSynergy GeoJSON as a live layer (web) |
 | **QGIS** | Analysis: buffers ("who lives <500 m?"), clustering, quality checks; QGIS Server → WMS/WFS |
 | **OsmAnd / Organic Maps** | Mobile navigation to location points via GPX/OVF/KML import |
 
-## Reference chain (FreeSynergy skin)
+## Reference chain (FreeSynergy frontend)
 
 ```
 FreeSynergy DB (table: standpunkte)
@@ -35,7 +35,7 @@ Permissions stay in FreeSynergy (DB roles); the map tools are views with read/wr
 
 - **Club**: maintain hut/hiking destinations, send the tour by GPX to the phone
 - **Initiatives**: assembly locations + route waypoints (uMap public, editable only via token)
-- **Marketplace**: provider locations on a map (skins: small ads/area search)
+- **Marketplace**: provider locations on a map (frontends: small ads/area search)
 - **Disaster response**: reporting points compared via Overpass with OSM infrastructure
 
 ## Open points

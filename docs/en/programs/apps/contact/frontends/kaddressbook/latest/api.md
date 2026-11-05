@@ -2,7 +2,7 @@
 
 ## Overview
 
-KAddressBook is a client — it provides **no API**. Programming targets the KDE libraries (`KABC` for vCards, the Akonadi server via D-Bus/IPC) and the resource protocols (CardDAV, LDAP, IMAP). A FreeSynergy skin therefore attaches to **Akonadi exports or the underlying server APIs**, not to the program itself.
+KAddressBook is a client — it provides **no API**. Programming targets the KDE libraries (`KABC` for vCards, the Akonadi server via D-Bus/IPC) and the resource protocols (CardDAV, LDAP, IMAP). A FreeSynergy frontend therefore attaches to **Akonadi exports or the underlying server APIs**, not to the program itself.
 
 **API types at a glance**
 
@@ -50,6 +50,6 @@ book->save();   // writes into the Akonadi database
 
 Only relevant for the resource servers (the CardDAV/LDAP limits of the server).
 
-## Skin note
+## Frontend note
 
-The vCard field vocabulary is the common language ([fields.md](../../../../../../data/fields.md), [Contact model](../../../../../../data/models.md)); a "KAddressBook skin" recreates list/tree/editor and reads `.vcf` batches or CardDAV.
+The vCard field vocabulary is the common language ([fields.md](../../../../../../data/fields.md), [Contact model](../../../../../../data/models.md)); a "KAddressBook frontend" recreates list/tree/editor and reads `.vcf` batches or CardDAV.

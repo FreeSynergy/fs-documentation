@@ -8,8 +8,8 @@ Planner is the project planner on GNOME (app ID `app.drey.Planner`): tasks with 
 
 - [description.md](latest/description.md) - What Planner does, benefits, how it differs from MS Project, GanttProject, OpenProject, Nextcloud
 - [features.md](latest/features.md) - Verified features (0.14.92) and what Planner does NOT offer
-- [structure.md](latest/layout.md) - Window layout, program/module structure (src, libplanner, plugins), configuration, deployment
-- [menu.md](latest/menus.md) - Menus, bars and context menus taken from the GtkBuilder files
+- [layout.md](latest/layout.md) - Window layout, program/module structure (src, libplanner, plugins), configuration, deployment
+- [menus.md](latest/menus.md) - Menus, bars and context menus taken from the GtkBuilder files
 - [shortcuts.md](latest/shortcuts.md) - Shortcuts from the source code (incl. Open = F3!)
 - [api.md](latest/api.md) - No REST: the `*.planner` file format, DTD, units, SQL storage, import/export paths
 

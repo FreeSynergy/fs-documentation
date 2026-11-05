@@ -2,7 +2,7 @@
 
 ## Overview
 
-uMap is open with its data: the map data exists as **GeoJSON** (export link, remote sources). The Django instance has JSON endpoints for maps/datalayers (short-lived across versions — for skin integration primarily use export/import + remote GeoJSON).
+uMap is open with its data: the map data exists as **GeoJSON** (export link, remote sources). The Django instance has JSON endpoints for maps/datalayers (short-lived across versions — for frontend integration primarily use export/import + remote GeoJSON).
 
 **API types at a glance**
 
@@ -19,7 +19,7 @@ uMap is open with its data: the map data exists as **GeoJSON** (export link, rem
 - Public maps: none
 - Editing via the **edit-token link** (secret in the link) or instance login (self-hosted)
 
-## Pattern: the data cycle for skins
+## Pattern: the data cycle for frontends
 
 ```
 FreeSynergy database → GeoJSON endpoint (your own service)
@@ -47,6 +47,6 @@ iframe from "share": `https://uMap.example.org/map/{id}#/{zoom}/{lat}/{lng}` —
 
 On the instance operator's side (using OSM tiles via a proxy is recommended).
 
-## Skin note
+## Frontend note
 
-Location point skins write GeoJSON and use uMap as the **view layer**; the permission logic stays in FreeSynergy ([standpunkte.md](../../../standpunkte.md)).
+Location point frontends write GeoJSON and use uMap as the **view layer**; the permission logic stays in FreeSynergy ([standpunkte.md](../../../standpunkte.md)).

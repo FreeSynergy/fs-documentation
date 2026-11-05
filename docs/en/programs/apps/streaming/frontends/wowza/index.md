@@ -6,9 +6,9 @@ Wowza Streaming Engine is a **commercial media server** for live and on-demand v
 
 ## File structure
 
-- [menu.md](../../masks/wowza/menu.md) - Manager menus: Applications, Streaming Publishers, Connections, Add Application, Restart, Log Viewer; tabs per application
-- [features.md](../../masks/wowza/features.md) - Protocols, transcoding, nDVR/time shift, stream targets, security/DRM, what Wowza does NOT do
-- [description.md](../../masks/wowza/description.md) - How it differs from Restreamer, nginx-rtmp, MediaMTX, MistServer and Ant Media
-- [structure.md](../../masks/wowza/structure.md) - Manager layout, configuration hierarchy (VHost → application → stream), ports
-- [shortcuts.md](../../masks/wowza/shortcuts.md) - the Manager has no shortcuts; service commands and REST shortcuts
-- [api.md](../../masks/wowza/api.md) - REST Server API v2 (Basic auth), endpoints, examples, modules instead of webhooks
+- [menus.md](latest/menus.md) - Manager menus: Applications, Streaming Publishers, Connections, Add Application, Restart, Log Viewer; tabs per application
+- [features.md](latest/features.md) - Protocols, transcoding, nDVR/time shift, stream targets, security/DRM, what Wowza does NOT do
+- [description.md](latest/description.md) - How it differs from Restreamer, nginx-rtmp, MediaMTX, MistServer and Ant Media
+- [layout.md](latest/layout.md) - Manager layout, configuration hierarchy (VHost → application → stream), ports
+- [shortcuts.md](latest/shortcuts.md) - the Manager has no shortcuts; service commands and REST shortcuts
+- [api.md](latest/api.md) - REST Server API v2 (Basic auth), endpoints, examples, modules instead of webhooks

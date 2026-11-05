@@ -28,4 +28,4 @@ Helodesk bundles telephony and written support in a single interface: agents car
 ## Who it suits
 
 - Small/medium service teams with a high share of calls (real estate, trades, authority hotlines)
-- FreeSynergy skins that want to model a **call-centre case model** (contact + channel + case)
+- FreeSynergy frontends that want to model a **call-centre case model** (contact + channel + case)

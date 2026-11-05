@@ -24,7 +24,7 @@
 |--------|------------|
 | [profile/](../profile/index.md) | subset of the fields, audience-controlled (losslessness is deliberately lifted there) |
 | [events/](../events/index.md) | `Participant` object from card parts (`name`, `email`, `language`) |
-| CRM masks | `lifecycle` and others as an `extensions` entry (⚠️) |
+| CRM frontends | `lifecycle` and others as an `extensions` entry (⚠️) |
 | gRPC/protobuf internally | generated from the canonical JSON (decision 4) |
 
 ## Merging and deleting

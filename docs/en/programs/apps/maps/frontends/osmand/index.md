@@ -6,9 +6,9 @@ OsmAnd (Apache-2.0) is the offline navigation app based on OSM (Android/iOS): do
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Main navigation (bottom), sidebars, "My Places"
+- [menus.md](latest/menus.md) - Main navigation (bottom), sidebars, "My Places"
 - [features.md](latest/features.md) - Offline maps, routing, track log, what OsmAnd does NOT do
 - [description.md](latest/description.md) - How it differs from Organic Maps, Google Maps, Locus Map
-- [structure.md](latest/layout.md) - Full-screen map + panels + navigation mode
+- [layout.md](latest/layout.md) - Full-screen map + panels + navigation mode
 - [shortcuts.md](latest/shortcuts.md) - Gestures instead of keys
 - [api.md](latest/api.md) - "My Places"/GPX data exchange, OsmAnd intents (Android), no server API

@@ -16,7 +16,7 @@
 
 ## What uMap does NOT do
 
-- **no routing/navigation** (pure presentation; for navigation skins → OsmAnd/Organic)
+- **no routing/navigation** (pure presentation; for navigation frontends → OsmAnd/Organic)
 - **no fine geometry tools** (buffer/intersection → QGIS)
 - **no depth of roles** (only owner/token editors/public)
 - Attribute data without relations (flat)

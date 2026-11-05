@@ -14,9 +14,9 @@ The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar)
 | [description.md](latest/description.md) | What the program does, benefits, differentiation (incl. from Davical and Google Calendar), technical details, who it suits |
 | [features.md](latest/features.md) | Verified feature list + "What Nextcloud Calendar does NOT offer" |
 | [api.md](latest/api.md) | CalDAV backend, app routes, JSON/OCS endpoints (booking, appointment configs, proposals), auth, rate limits, SDKs |
-| [menu.md](latest/menus.md) | navigation/menu structure from the source (AppNavigation, editor, settings) |
+| [menus.md](latest/menus.md) | navigation/menu structure from the source (AppNavigation, editor, settings) |
 | [shortcuts.md](latest/shortcuts.md) | keyboard shortcuts of the web interface (verified) + direct-URL workflows |
-| [structure.md](latest/layout.md) | request/module structure, data model (DB tables, ICS), configuration, deployment |
+| [layout.md](latest/layout.md) | request/module structure, data model (DB tables, ICS), configuration, deployment |
 
 ## Sources
 

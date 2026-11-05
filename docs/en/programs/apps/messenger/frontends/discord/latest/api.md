@@ -254,9 +254,9 @@ pip install discord.py
 ```
 
 ## See also
-- [menu.md](menus.md)
+- [menus.md](menus.md)
 - [features.md](features.md)
 - [description.md](description.md)
-- [structure.md](layout.md)
+- [layout.md](layout.md)
 - [shortcuts.md](shortcuts.md)
 - [api.md](api.md) (this file)

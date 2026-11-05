@@ -14,13 +14,13 @@ The calendar component of the Microsoft Outlook line: web app (outlook.com / Out
 | [description.md](latest/description.md) | What the program does, benefits, differentiation (incl. from Google Calendar, Nextcloud Calendar, Davical, Merkuro), technical details, who it suits |
 | [features.md](latest/features.md) | Verified feature list + "What the Outlook calendar does NOT offer" |
 | [api.md](latest/api.md) | Graph v1.0: calendar/event endpoints, auth/scopes, webhooks, limits, SDKs, EWS shutdown |
-| [menu.md](latest/menus.md) | navigation structure (new Outlook, classic Outlook, admin level) from official layout articles |
+| [menus.md](latest/menus.md) | navigation structure (new Outlook, classic Outlook, admin level) from official layout articles |
 | [shortcuts.md](latest/shortcuts.md) | official keyboard shortcuts (new/classic Outlook, web) + direct workflows |
-| [structure.md](latest/layout.md) | build layers, data model (changeKey/iCalUId/series), configuration, deployment |
+| [layout.md](latest/layout.md) | build layers, data model (changeKey/iCalUId/series), configuration, deployment |
 
 ## Sources
 
-All statements come from the official content of the documentation pages; verification date 2026-11-02. **Outlook is closed source — so the primary sources are Microsoft's official API/help pages (not source files as for the open-source skins in this series).**
+All statements come from the official content of the documentation pages; verification date 2026-11-02. **Outlook is closed source — so the primary sources are Microsoft's official API/help pages (not source files as for the open-source frontends in this series).**
 
 1. **EWS deprecation (official):** `https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online` – timeline (2018/2023/Oct 2026/Apr 2027), Midnight Blizzard, parity gaps, tools.
 2. **Graph calendar resource:** `https://learn.microsoft.com/en-us/graph/api/resources/calendar?view=graph-rest-1.0` (page last updated **2026-10-15**, read in full) – methods incl. calendarView/delta/getSchedule/findMeetingTimes, properties incl. the `calendarPermissions` association, group limits.

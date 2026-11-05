@@ -20,16 +20,25 @@ Grundsätze: `conventions/CONVENTIONS.md` §0, ADRs 0011–0018.
 
 ## Phase 1 – Umbau der Struktur (nur `docs/en/`, de folgt per Skript)
 
-- [ ] Skript `scripts/_archive/migrate_masks_to_frontends.py` (Einmal-Migration): ·Sonnet
-      `programs/*/*/masks/<p>/` → `frontends/<p>/<version>/`; Version aus `index.md`/`description.md`
-      lesen, sonst `unknown` + Liste für Nachrecherche; `menu.md`→`menus.md`,
-      `structure.md`→`layout.md`; `index.md` bleibt auf Programmebene
-- [ ] `masks/index.md` → `frontends/index.md` je Kategorie · Sonnet
-- [ ] `scripts/gen_skin_indexes.py` → `gen_frontend_indexes.py`, CI/`mkdocs.yml` nachziehen · Sonnet
-- [ ] `scripts/fix_links.py --force`, `mkdocs build` ohne Link-Warnungen · Sonnet
-- [ ] Messenger: Unterordner prüfen, Protokolle (Matrix …) aus `frontends/` nach
-      `data/messages/standards.md` (ADR 0018) · Sonnet
-- [ ] Gleiches Skript auf `docs/de/` laufen lassen · Sonnet
+- [x] Allgemeine Werkzeuge `scripts/move.py` + `scripts/replace.py` + `scripts/rules/` (2026-11-05) · Opus
+- [x] `masks/<p>/` → `frontends/<p>/latest/` in `en/` **und** `de/` (1231 Dateien, 1897+213 Links,
+      850 sync-state-Schlüssel), `menu`→`menus`, `structure`→`layout`; Regeln
+      `scripts/rules/masks_to_frontends.rules` · Opus
+- [x] Wortlaut in `en/`: mask/skin → frontend (`scripts/rules/masks_to_frontends_text.rules`,
+      Formular-„masks“, CSS-Masken, Emoji-Hautfarben ausgenommen) · Opus
+- [x] Build-Prüfung: Warnungen vorher 223, nachher gleich; die 213 in `programs/` sind Links auf
+      noch nicht übersetzte `en`-Dateien (Ziel existiert in `de/`) — Übersetzung, kein Umbaufehler
+- [ ] **Versionsnummern**: Ordner heißen vorerst `latest/` (dokumentiert ist die aktuellste Version).
+      Liste: `temp/frontend-versions-missing.txt` (119). Nummern → `temp/frontend-versions.tsv`
+      (`programm<TAB>version`), dann umbenennen mit
+      `python3 scripts/move.py --scope docs/en --scope docs/de --rules scripts/rules/frontend_versions.rules --table version=temp/frontend-versions.tsv --default version=latest --sync-state temp/sync_state.json [--apply]`
+      · Recherche Leo/llama, Ausführung Sonnet
+- [ ] `scripts/gen_skin_indexes.py` → `gen_frontend_indexes.py`: auf `docs/en/`, `frontends/`,
+      englische Texte (läuft heute auf `de/` mit `masks/`, ist **nicht** in der CI) · Sonnet
+- [ ] Bestehende Frontends an ADR-0012-Dateisatz anpassen: `themes/` anlegen (Farbschema aus
+      `layout.md` herausziehen), `index.md` um „Notable ideas“ + „Documented versions“ · Sonnet,
+      pro Kategorie, nur für Programme, die bleiben (ADR 0013)
+- [ ] Messenger: Protokolle (Matrix …) aus `frontends/` nach `data/messages/standards.md` (ADR 0018) · Opus
 - [ ] `interactions/` aufräumen: Gesten-Achse Finger / Maus / Stift (ADR 0015), Landing-Page
       `interactions/index.md` · Opus plant, Sonnet setzt um
 - [ ] Altlasten aus der früheren qwen-Liste:

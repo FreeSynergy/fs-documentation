@@ -6,9 +6,9 @@ Leaflet (BSD-2-Clause) is the lightweight JavaScript map library: raster tiles, 
 
 ## File structure
 
-- [menu.md](latest/menus.md) - UI controls that Leaflet brings along (zoom/attribution/layers)
+- [menus.md](latest/menus.md) - UI controls that Leaflet brings along (zoom/attribution/layers)
 - [features.md](latest/features.md) - Layer types, plugins, what Leaflet does NOT do
 - [description.md](latest/description.md) - How it differs from MapLibre, OpenLayers, Google Static Maps
-- [structure.md](latest/layout.md) - DOM layout (tile layers + overlay layer)
+- [layout.md](latest/layout.md) - DOM layout (tile layers + overlay layer)
 - [shortcuts.md](latest/shortcuts.md) - Keyboard navigation of the map
 - [api.md](latest/api.md) - JS API (class `L`), no server interface

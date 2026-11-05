@@ -15,28 +15,9 @@ Photo galleries manage image and video collections: they index holdings, generat
 - **damselfly** - Lightweight image management directly on Lightroom catalogs
 - **nextcloud-photos** - Photo view and sharing within Nextcloud
 
-## Skin documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/gallery/masks/<program>/`.
-
-**documented (8 programs):**
-
-- [Coppermine](frontends/coppermine/index.md) - Coppermine
-- [Damselfly](frontends/damselfly/index.md) - Damselfly
-- [Immich](frontends/immich/index.md) - Immich
-- [LibrePhotos](frontends/librephotos/index.md) - LibrePhotos
-- [Lychee](frontends/lychee/index.md) - Lychee
-- [Nextcloud Photos](frontends/nextcloud-photos/index.md) - Nextcloud Photos
-- [PhotoPrism](frontends/photoprism/index.md) - PhotoPrism
-- [Piwigo](frontends/piwigo/index.md) - Piwigo
-
-Overview: [Skin directory](frontends/index.md)
-
-Reference schema: [Wiki skins](../wiki/frontends/index.md) · [Desktop skins](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
-
-## Mask documentation
-
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/gallery/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/gallery/frontends/<program>/`.
 
 **documented (8 programs):**
 
@@ -49,6 +30,25 @@ The programs in this category are documented following the wiki schema (seven fi
 - [PhotoPrism](frontends/photoprism/index.md) - PhotoPrism
 - [Piwigo](frontends/piwigo/index.md) - Piwigo
 
-Overview: [Mask directory](frontends/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)
+
+## Frontend documentation
+
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/gallery/frontends/<program>/`.
+
+**documented (8 programs):**
+
+- [Coppermine](frontends/coppermine/index.md) - Coppermine
+- [Damselfly](frontends/damselfly/index.md) - Damselfly
+- [Immich](frontends/immich/index.md) - Immich
+- [LibrePhotos](frontends/librephotos/index.md) - LibrePhotos
+- [Lychee](frontends/lychee/index.md) - Lychee
+- [Nextcloud Photos](frontends/nextcloud-photos/index.md) - Nextcloud Photos
+- [PhotoPrism](frontends/photoprism/index.md) - PhotoPrism
+- [Piwigo](frontends/piwigo/index.md) - Piwigo
+
+Overview: [Frontend directory](frontends/index.md)
+
+Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

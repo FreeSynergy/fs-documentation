@@ -6,9 +6,9 @@ OpenStreetMap (OSM) is the worldwide collaborative mapping platform: everyone ed
 
 ## File structure
 
-- [menu.md](latest/menus.md) - openstreetmap.org map view, editing tools, community menus
+- [menus.md](latest/menus.md) - openstreetmap.org map view, editing tools, community menus
 - [features.md](latest/features.md) - Tagging, changesets, Overpass, what OSM does NOT do
 - [description.md](latest/description.md) - How it differs from Google Maps, MapLibre tiles, commercial POI databases
-- [structure.md](latest/layout.md) - Map UI, editing modes, layers
+- [layout.md](latest/layout.md) - Map UI, editing modes, layers
 - [shortcuts.md](latest/shortcuts.md) - iD/JOSM shortcuts (JOSM has many)
 - [api.md](latest/api.md) - OSM API 0.6, Overpass QL, Nominatim, changesets

@@ -79,19 +79,19 @@ When choosing a workflow automation system, consider the following criteria:
 
 Further information can be found in the documentation of individual workflow automation systems.
 
-## Mask documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/workflows/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/workflows/frontends/<program>/`.
 
 **documented (6 programs):**
 
-- [Apache Airflow](masks/apache-airflow/index.md) - Apache Airflow
-- [Make](masks/make/index.md) - Make
-- [n8n](masks/n8n/index.md) - n8n
-- [Node-RED](masks/node-red/index.md) - Node-RED
-- [Prefect](masks/prefect/index.md) - Prefect
-- [Zapier](masks/zapier/index.md) - Zapier
+- [Apache Airflow](frontends/apache-airflow/index.md) - Apache Airflow
+- [Make](frontends/make/index.md) - Make
+- [n8n](frontends/n8n/index.md) - n8n
+- [Node-RED](frontends/node-red/index.md) - Node-RED
+- [Prefect](frontends/prefect/index.md) - Prefect
+- [Zapier](frontends/zapier/index.md) - Zapier
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../../apps/wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

@@ -32,4 +32,4 @@ KAddressBook manages contacts on the KDE desktop. It stores them in Akonadi fold
 
 - KDE/Kontact users who want to unify several contact sources
 - Migrations (GMX/LDAP/CSV → vCard/CardDAV)
-- FreeSynergy skins that recreate desktop contact masks and vCard fields
+- FreeSynergy frontends that recreate desktop contact masks and vCard fields

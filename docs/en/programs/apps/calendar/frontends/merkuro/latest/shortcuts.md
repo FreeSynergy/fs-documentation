@@ -31,7 +31,7 @@ Since the app offers no UI shortcut for everything, the alternative entry points
 | Open an event by UID | `qdbus org.kde.merkuro.calendar /Calendar org.kde.calendar.Calendar.showIncidenceByUid "<uid>" "" ""` (argument marshalling see [api.md](api.md)) |
 | Manage accounts/resources | `SystemSettings`/Akonadi settings or `kcm_akonadi` — not in the app itself |
 | Restart the Akonadi service | `akonadictl restart` (after installing `kdepim-runtime`) |
-| Edit the configuration | KConfig file `kalendarrc` (groups in [structure.md](layout.md)) |
+| Edit the configuration | KConfig file `kalendarrc` (groups in [layout.md](layout.md)) |
 
 ## Note on third-party shortcuts
 

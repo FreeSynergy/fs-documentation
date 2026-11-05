@@ -30,7 +30,7 @@ iD editor: preset search on the left, field panel (tags) on the right, "finish" 
 
 ## Responsive design
 
-- The website is map-heavy; mobile editing via site skins (StreetComplete etc.)
+- The website is map-heavy; mobile editing via site frontends (StreetComplete etc.)
 
 ## Accessibility
 

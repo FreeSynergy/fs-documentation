@@ -47,7 +47,7 @@ Nominatim:
 
 ```http
 GET /search?q=Bahnhof+Tübingen&format=jsonv2&limit=3 HTTP/1.1
-User-Agent: fs-skin-demo/1.0
+User-Agent: fs-frontend-demo/1.0
 ```
 
 Response: `[{ "place_id":…, "lat":48.530, "lon":9.058,
@@ -55,13 +55,13 @@ Response: `[{ "place_id":…, "lat":48.530, "lon":9.058,
 
 ## Rate limits
 
-OSM API: moderate limits (write bursts limited); **Overpass/Nominatim run publicly with fair limits** → for skin production: your own instance or a provider.
+OSM API: moderate limits (write bursts limited); **Overpass/Nominatim run publicly with fair limits** → for frontend production: your own instance or a provider.
 
 ## SDKs and client libraries
 
 - Python `osmapi`, `overpy`/`requests-overpass`; JS `osm` tools
 - Osmosis/osmium for data processing, `pyosmium`
 
-## Skin note
+## Frontend note
 
-Overpass queries = the data source for the [location point (Standpunkte)](../../../standpunkte.md) skins; attribution ("© OpenStreetMap contributors") is mandatory in every skin output (ODbL).
+Overpass queries = the data source for the [location point (Standpunkte)](../../../standpunkte.md) frontends; attribution ("© OpenStreetMap contributors") is mandatory in every frontend output (ODbL).

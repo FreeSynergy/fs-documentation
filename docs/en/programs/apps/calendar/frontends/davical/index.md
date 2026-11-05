@@ -2,14 +2,14 @@
 
 ## Overview
 
-DAViCal is a CalDAV/CardDAV server written in PHP on PostgreSQL — a lean, protocol-faithful self-hosted calendar/contact store with web administration. For FreeSynergy it is the backend skin sitting behind Merkuro, Thunderbird, DAVx⁵ and Apple devices; maintained and actively developed (1.1.13, May 2026).
+DAViCal is a CalDAV/CardDAV server written in PHP on PostgreSQL — a lean, protocol-faithful self-hosted calendar/contact store with web administration. For FreeSynergy it is the backend sitting behind Merkuro, Thunderbird, DAVx⁵ and Apple devices; maintained and actively developed (1.1.13, May 2026).
 
 ## File structure
 
 - [description.md](latest/description.md) - What DAViCal does, benefits, how it differs from Radicale/Nextcloud/Xandio
 - [features.md](latest/features.md) - CalDAV/CardDAV, ACLs, proxy, tickets, BIND subscriptions, scheduling, what it does NOT do
-- [structure.md](latest/layout.md) - Server layout: PHP/PostgreSQL, htdocs/schema, deployment
-- [menu.md](latest/menus.md) - Menu items of the web administration
+- [layout.md](latest/layout.md) - Server layout: PHP/PostgreSQL, htdocs/schema, deployment
+- [menus.md](latest/menus.md) - Menu items of the web administration
 - [shortcuts.md](latest/shortcuts.md) - Keyboard shortcuts
 - [api.md](latest/api.md) - Exact API 1.1.13: DAV methods, REPORTs, endpoints, tickets, metrics
 

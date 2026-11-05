@@ -75,6 +75,6 @@ No built-in API limits (protection via reverse proxy/recommendation: keep the to
 - **community**: Python `pyzammad`, Node `zammad-client`
 - **imports**: Zendesk/Freshdesk/RT/OTRS import via UI and CLI (`zammad rake`)
 
-## Skin note
+## Frontend note
 
 The ticket/article/user fields mirror the standard model ([models.md](../../../../../../data/models.md)); dynamic fields correspond to [fields.md](../../../../../../data/fields.md) (`object_manager_attributes`).

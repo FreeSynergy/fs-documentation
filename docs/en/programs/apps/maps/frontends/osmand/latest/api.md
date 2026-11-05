@@ -2,7 +2,7 @@
 
 ## Overview
 
-OsmAnd has **no server API** — the interfaces are the file formats and (on Android) **intents** for driving the app from other apps. For FreeSynergy skins: OsmAnd is an endpoint, not a backend.
+OsmAnd has **no server API** — the interfaces are the file formats and (on Android) **intents** for driving the app from other apps. For FreeSynergy frontends: OsmAnd is an endpoint, not a backend.
 
 **API types at a glance**
 
@@ -45,6 +45,6 @@ Not applicable (offline).
 - No official SDKs; intents + files are the interface
 - The OsmAnd source code (C++/Java/Swift) as the reference for parsing the formats
 
-## Skin note
+## Frontend note
 
-The location point skin provides **GPX/OVF from FreeSynergy data** → OsmAnd import; the other direction: recorded tracks back into the document store via the share dialog ([standpunkte.md](../../../standpunkte.md)).
+The location point frontend provides **GPX/OVF from FreeSynergy data** → OsmAnd import; the other direction: recorded tracks back into the document store via the share dialog ([standpunkte.md](../../../standpunkte.md)).

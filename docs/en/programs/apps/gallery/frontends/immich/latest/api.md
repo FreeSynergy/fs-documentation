@@ -64,6 +64,6 @@ No hard API limit is built in; limits in the reverse proxy plus job throttling (
 - **Community**: Python `immich-api-client`, Go and Rust clients
 - **Imports**: Google Photos import, ExifTool-based metadata takeover
 
-## Skin note
+## Frontend note
 
 Asset/album/share correspond to the standard model ([models.md](../../../../../../data/models.md)); the EXIF fields follow [fields.md](../../../../../../data/fields.md).

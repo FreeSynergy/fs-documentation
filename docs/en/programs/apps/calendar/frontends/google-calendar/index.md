@@ -2,14 +2,14 @@
 
 ## Overview
 
-Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscription) Gemini. Events, series, shares, booking pages, focus time, work location and organisational calendars all come from a closed SaaS platform; accessed programmatically through the **Calendar REST API v3** (discovery revision 2026-10-28) with OAuth scopes, sync tokens and push channels. For FreeSynergy it is the cloud skin: connection is only possible via Google's own API, there is **no documented CalDAV**, and no self-hosting.
+Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscription) Gemini. Events, series, shares, booking pages, focus time, work location and organisational calendars all come from a closed SaaS platform; accessed programmatically through the **Calendar REST API v3** (discovery revision 2026-10-28) with OAuth scopes, sync tokens and push channels. For FreeSynergy it is the cloud frontend: connection is only possible via Google's own API, there is **no documented CalDAV**, and no self-hosting.
 
 ## File structure
 
 - [description.md](latest/description.md) – What Google Calendar does, benefits, how it differs from DAViCal/Nextcloud/Outlook/Merkuro
 - [features.md](latest/features.md) – verified features (views, events, sharing, booking, integrations) + "What Google Calendar does NOT offer"
-- [structure.md](latest/layout.md) – request/program flow, data model, configuration, deployment reality
-- [menu.md](latest/menus.md) – navigation structure of the web interface (from official help pages)
+- [layout.md](latest/layout.md) – request/program flow, data model, configuration, deployment reality
+- [menus.md](latest/menus.md) – navigation structure of the web interface (from official help pages)
 - [shortcuts.md](latest/shortcuts.md) – official keyboard shortcuts of the web app + boundary of client-side keys
 - [api.md](latest/api.md) – Calendar API v3: base URL, all endpoints, auth/scopes, push, limits, SDKs
 

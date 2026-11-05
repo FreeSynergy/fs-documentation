@@ -26,4 +26,4 @@ MapLibre renders maps as vector stacks: the browser draws streets/buildings/labe
 
 ## Who it suits
 
-- Map apps with their own style/performance; FreeSynergy skins for interactive location point maps with 3D/clusters
+- Map apps with their own style/performance; FreeSynergy frontends for interactive location point maps with 3D/clusters

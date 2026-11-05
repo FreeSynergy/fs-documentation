@@ -2,7 +2,7 @@
 
 ## Overview
 
-Helodesk provides a **REST API** (JSON) for contacts, cases and messages, plus **webhooks** for call/case events. The API is functional but smaller than those of Zendesk/Freshdesk; telephony configuration (IVR) is only partly automatable. For skin work: read/write contact + case, receive events.
+Helodesk provides a **REST API** (JSON) for contacts, cases and messages, plus **webhooks** for call/case events. The API is functional but smaller than those of Zendesk/Freshdesk; telephony configuration (IVR) is only partly automatable. For frontend work: read/write contact + case, receive events.
 
 **API types at a glance**
 
@@ -58,6 +58,6 @@ Not publicly standardised; design integrations to be friendly (backoff on 429).
 - Official SDKs: ❌; connectors for HubSpot/Salesforce/Pipedrive + Zapier/Make cover the standard cases
 - REST is sufficient for your own integration
 
-## Skin note
+## Frontend note
 
 The contact-case-channel triad matches the model approach ([models.md](../../../../../../data/models.md): Contact ↔ Event/Comment ↔ Task); recording links as file references.

@@ -31,4 +31,4 @@ GLPI connects support tickets with the complete IT inventory: every ticket can b
 
 - IT departments that must interlink inventory and tickets
 - Public administration/education with SSO requirements
-- FreeSynergy skins with an asset + ticket link as a data-model template
+- FreeSynergy frontends with an asset + ticket link as a data-model template

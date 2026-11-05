@@ -9,7 +9,7 @@ Immich replaces a provider's photo-cloud service with your own instance: phones 
 - **Google-Photos-like UX** with modern search and a people view
 - **Self-hosted and data sovereignty**: the originals stay in your own storage (S3 as well)
 - **Mobile first**: genuine auto-backup, also in the background
-- **API-first**: every UI step is a documented REST call, ideal for skin integration
+- **API-first**: every UI step is a documented REST call, ideal for frontend integration
 
 ## Differentiation
 
@@ -32,5 +32,5 @@ Immich replaces a provider's photo-cloud service with your own instance: phones 
 ## Who it suits
 
 - A private and team-oriented photo/video archive with auto-backup
-- FreeSynergy gallery skins with the standard model album / asset / person / share
+- FreeSynergy gallery frontends with the standard model album / asset / person / share
 - Migrations from Google Photos (an import tool is available)

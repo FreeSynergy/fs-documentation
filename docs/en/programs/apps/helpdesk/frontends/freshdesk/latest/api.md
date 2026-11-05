@@ -61,6 +61,6 @@ The documentation states **100 requests/minute per API key** (a guideline; on ex
 - official: Python `freshdesk` (Freshworks), Node `freshdesk-sdk` (old, note this), PHP
 - developer platform: `fd` CLI for custom functions
 
-## Skin note
+## Frontend note
 
 Conversations/ticket fields run parallel to Zendesk — a shared mapping in [models.md](../../../../../../data/models.md) (`Comment.public`, `Ticket.status`).

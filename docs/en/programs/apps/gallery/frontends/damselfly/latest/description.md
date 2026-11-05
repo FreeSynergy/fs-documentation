@@ -29,5 +29,5 @@ Damselfly watches a photo folder, indexes everything and delivers a very fast se
 ## Who it suits
 
 - Self-supplied users with an existing photo folder who want AI search
-- FreeSynergy gallery skins with an album / photo / person / label model
+- FreeSynergy gallery frontends with an album / photo / person / label model
 - Environments with scarce hardware

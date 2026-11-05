@@ -62,6 +62,6 @@ None built in; limit via the web server/anti-spam (flood thresholds in the ticke
 - Official SDKs: ❌ (curl/`requests` recipes in the API docs)
 - CLI: your own scripts against the API; import wizard for legacy tickets (CSV)
 
-## Skin note
+## Frontend note
 
 The status model new/open/pending/closed → the standard ticket status list ([models.md](../../../../../../data/models.md)); the API field names correspond to [fields.md](../../../../../../data/fields.md).

@@ -8,7 +8,7 @@ Google Analytics counts visits and events on the web and derives user journeys f
 
 - Free scope + Google bundle (Search Console/Ads)
 - Explorers for your own analyses without SQL
-- BigQuery raw data for data-warehouse skins
+- BigQuery raw data for data-warehouse frontends
 
 ## Differentiation
 
@@ -27,4 +27,4 @@ Google Analytics counts visits and events on the web and derives user journeys f
 ## Who it suits
 
 - Teams with legally compliant consent infrastructure and a Google stack
-- FreeSynergy skins: a Data API reader for report skins (with a duty to give privacy notices)
+- FreeSynergy frontends: a Data API reader for report frontends (with a duty to give privacy notices)

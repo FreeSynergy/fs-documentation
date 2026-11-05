@@ -31,5 +31,5 @@ Nextcloud Photos shows the photos that are stored in the Nextcloud: a chronology
 ## Who it suits
 
 - Organisations with an existing Nextcloud that want to show photos without a second system
-- FreeSynergy gallery skins that also use WebDAV and sharing objects
+- FreeSynergy gallery frontends that also use WebDAV and sharing objects
 - Private users with an auto-upload need and file access

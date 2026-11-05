@@ -67,6 +67,6 @@ Direct database access is prone to breaking on upgrades and should be encapsulat
 - **official**: none
 - **Community**: scripts for FTP import, bridge modules for Joomla/WordPress
 
-## Skin note
+## Frontend note
 
-Because no API exists, the FreeSynergy skin recreates the gallery via its own data storage; the migration fields (`pid`, `aid`) correspond to the standard models ([models.md](../../../../../../data/models.md)).
+Because no API exists, the FreeSynergy frontend recreates the gallery via its own data storage; the migration fields (`pid`, `aid`) correspond to the standard models ([models.md](../../../../../../data/models.md)).

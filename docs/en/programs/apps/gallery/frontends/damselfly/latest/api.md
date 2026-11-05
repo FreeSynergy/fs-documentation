@@ -58,6 +58,6 @@ No hard limits; upload sizes and the number of workers configure the throughput 
 - **Community**: Bash/PowerShell scripts for bulk upload
 - **Export**: folder export via the filesystem, metadata as an XMP sidecar
 
-## Skin note
+## Frontend note
 
 Image/album/person/label correspond to the standard model ([models.md](../../../../../../data/models.md)); the ID type is an integer.

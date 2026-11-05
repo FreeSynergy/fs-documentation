@@ -6,9 +6,9 @@ GLPI is a French-flavoured open-source ITSM: helpdesk tickets plus complete IT a
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Main navigation, help/ITIL menus, admin bar
+- [menus.md](latest/menus.md) - Main navigation, help/ITIL menus, admin bar
 - [features.md](latest/features.md) - Tickets + assets, SLA, what GLPI does NOT do
 - [description.md](latest/description.md) - Description and how it differs from Zammad, Request Tracker, Snipe-IT
-- [structure.md](latest/layout.md) - Tab masks, tree structures, dashboard
+- [layout.md](latest/layout.md) - Tab masks, tree structures, dashboard
 - [shortcuts.md](latest/shortcuts.md) - Shortcuts (configuration menu, web standards)
 - [api.md](latest/api.md) - REST /apirest.php with session token, endpoints, plugins

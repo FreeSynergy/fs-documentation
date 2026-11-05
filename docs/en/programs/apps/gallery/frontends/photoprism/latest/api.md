@@ -59,6 +59,6 @@ No fixed API quotas; configurable limits via reverse proxy and `PHOTOPRISM_ADMIN
 - **community**: Python and Node clients, examples in the API docs
 - **import/export**: folder import, `photoprism export`, ExifTool sidecars
 
-## Skin note
+## Frontend note
 
 Photo/album/label/person correspond to the standard model ([models.md](../../../../../../data/models.md)); EXIF fields follow [fields.md](../../../../../../data/fields.md).

@@ -79,19 +79,19 @@ When choosing a CRM system, consider the following criteria:
 
 Further information can be found in the documentation of the individual CRM systems.
 
-## Mask documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/crm/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/crm/frontends/<program>/`.
 
 **documented (6 programs):**
 
-- [CiviCRM](masks/civicrm/index.md) - CiviCRM
-- [EspoCRM](masks/espocrm/index.md) - EspoCRM
-- [HubSpot](masks/hubspot/index.md) - HubSpot
-- [Pipedrive](masks/pipedrive/index.md) - Pipedrive
-- [Salesforce](masks/salesforce/index.md) - Salesforce
-- [SuiteCRM](masks/suitecrm/index.md) - SuiteCRM
+- [CiviCRM](frontends/civicrm/index.md) - CiviCRM
+- [EspoCRM](frontends/espocrm/index.md) - EspoCRM
+- [HubSpot](frontends/hubspot/index.md) - HubSpot
+- [Pipedrive](frontends/pipedrive/index.md) - Pipedrive
+- [Salesforce](frontends/salesforce/index.md) - Salesforce
+- [SuiteCRM](frontends/suitecrm/index.md) - SuiteCRM
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../../apps/wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

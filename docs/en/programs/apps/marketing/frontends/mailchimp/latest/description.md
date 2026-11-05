@@ -27,4 +27,4 @@ Mailchimp sends newsletters and accompanies contacts with automations — from t
 ## Who it suits
 
 - Teams with tolerable US data storage and a focus on campaign pace
-- FreeSynergy skins: the member/tag model as a reference for the [contact/segment fields](../../../../../../data/fields.md)
+- FreeSynergy frontends: the member/tag model as a reference for the [contact/segment fields](../../../../../../data/fields.md)

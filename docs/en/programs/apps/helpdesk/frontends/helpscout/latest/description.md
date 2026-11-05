@@ -28,4 +28,4 @@ Help Scout handles support like a team inbox: everyone writes to the same addres
 ## Who it suits
 
 - Small teams that understand support as "people answering people"
-- FreeSynergy skins that show a mailbox/thread presentation instead of a ticket mask
+- FreeSynergy frontends that show a mailbox/thread presentation instead of a ticket mask

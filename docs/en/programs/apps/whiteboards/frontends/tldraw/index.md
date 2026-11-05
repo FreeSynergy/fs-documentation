@@ -6,9 +6,9 @@ tldraw is an open-source infinite-canvas whiteboard library and app in TypeScrip
 
 ## File structure
 
-- [description.md](../../masks/tldraw/description.md) - Description, advantages and how it differs from Excalidraw, draw.io and Miro
-- [menu.md](../../masks/tldraw/menu.md) - Main menu, toolbar, style panel and context menus
-- [features.md](../../masks/tldraw/features.md) - Tools, Record data model, multiplayer, SDK
-- [structure.md](../../masks/tldraw/structure.md) - UI/UX, panels and canvas layout
-- [shortcuts.md](../../masks/tldraw/shortcuts.md) - Keyboard shortcuts of the app and build commands of the SDK
-- [api.md](../../masks/tldraw/api.md) - SDK API, sync protocol, snapshot format (no public REST API)
+- [description.md](latest/description.md) - Description, advantages and how it differs from Excalidraw, draw.io and Miro
+- [menus.md](latest/menus.md) - Main menu, toolbar, style panel and context menus
+- [features.md](latest/features.md) - Tools, Record data model, multiplayer, SDK
+- [layout.md](latest/layout.md) - UI/UX, panels and canvas layout
+- [shortcuts.md](latest/shortcuts.md) - Keyboard shortcuts of the app and build commands of the SDK
+- [api.md](latest/api.md) - SDK API, sync protocol, snapshot format (no public REST API)

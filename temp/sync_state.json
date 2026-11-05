@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T11:25:06.378329+00:00",
+  "last_run": "2026-11-05T11:28:13.826639+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -10156,9 +10156,7 @@
       "de_hash": "f814e8faf403d550",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.335696+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10176,9 +10174,7 @@
       "de_hash": "d3199f6888ecb45e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.424514+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10196,9 +10192,7 @@
       "de_hash": "4aefe0193c76d235",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.511618+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10216,9 +10210,7 @@
       "de_hash": "b4beb249c5844654",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.597573+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10236,9 +10228,7 @@
       "de_hash": "c72ea5e47aa08f65",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.683454+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10256,9 +10246,7 @@
       "de_hash": "9a08cbe15c0b3c9f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.768472+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10276,9 +10264,7 @@
       "de_hash": "82281e58c0527c78",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.856051+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10296,9 +10282,7 @@
       "de_hash": "5caf9148837f15bf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:05.942640+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10316,9 +10300,7 @@
       "de_hash": "4df2734fd1dba0c4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:06.027951+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10336,9 +10318,7 @@
       "de_hash": "84fbd3fd65b22534",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:06.118698+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10356,9 +10336,7 @@
       "de_hash": "5d4fdaf266ffb2b4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:06.204610+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10376,9 +10354,7 @@
       "de_hash": "f01504dd424e1795",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:06.293495+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10396,9 +10372,7 @@
       "de_hash": "795fa2747c2e5653",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": "2026-11-05T11:25:06.378301+00:00",
-      "kind": [
-        "review"
-      ],
+      "kind": [],
       "note": "translated de->en (animations loop)",
       "history": [
         {
@@ -10411,60 +10385,84 @@
       "change_reason": null
     },
     "interactions/animations/movement/index.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "650b8443f8065622",
       "de_hash": "b008494062504d2b",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:28:13.567910+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 955
+      "note": "translated de->en (animations movement)",
+      "history": [
+        {
+          "at": "2026-11-05T11:28:13.567910+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 904,
+      "de_bytes": 955,
+      "change_reason": null
     },
     "interactions/animations/movement/parallax/appearance.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "b42db8f2624ca1f3",
       "de_hash": "0e8334ad97b561f1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:28:13.656692+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1562
+      "note": "translated de->en (animations movement)",
+      "history": [
+        {
+          "at": "2026-11-05T11:28:13.656692+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1576,
+      "de_bytes": 1562,
+      "change_reason": null
     },
     "interactions/animations/movement/parallax/attributes.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "85f89af98a5e4fe2",
       "de_hash": "69ba1b950b4f0531",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:28:13.741871+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1301
+      "note": "translated de->en (animations movement)",
+      "history": [
+        {
+          "at": "2026-11-05T11:28:13.741871+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1267,
+      "de_bytes": 1301,
+      "change_reason": null
     },
     "interactions/animations/movement/parallax/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "57f4e6ce2336190a",
       "de_hash": "5c9cc77a2199325a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T11:28:13.826605+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
-      "history": [],
-      "en_bytes": null,
-      "de_bytes": 1081
+      "note": "translated de->en (animations movement)",
+      "history": [
+        {
+          "at": "2026-11-05T11:28:13.826605+00:00",
+          "event": "confirmed → VERIFIED"
+        }
+      ],
+      "en_bytes": 1041,
+      "de_bytes": 1081,
+      "change_reason": null
     },
     "interactions/animations/organization/cascade/appearance.md": {
       "status": "PENDING",
@@ -12208,12 +12206,12 @@
     },
     "programs/apps/calendar/index.md": {
       "status": "PENDING",
-      "en_hash": "968b7b83dfa2793d",
+      "en_hash": "b5cc4d72937af13e",
       "de_hash": "220b76f074556af6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12226,18 +12224,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3700,
+      "en_bytes": 3708,
       "de_bytes": 3835,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/contact/index.md": {
       "status": "PENDING",
-      "en_hash": "78231784f755aa81",
+      "en_hash": "e87b31878aee8a95",
       "de_hash": "3778259ffd1b4181",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12250,18 +12248,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3437,
+      "en_bytes": 3441,
       "de_bytes": 3611,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/gallery/index.md": {
       "status": "PENDING",
-      "en_hash": "f2c0cc0a159eda35",
+      "en_hash": "18666895e996366e",
       "de_hash": "2e28cff4535281c9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -12274,18 +12272,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2839,
+      "en_bytes": 2847,
       "de_bytes": 2917,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/helpdesk/index.md": {
       "status": "PENDING",
-      "en_hash": "352a4cc8a9c0f70e",
+      "en_hash": "22dd93ea726f221f",
       "de_hash": "dd43b873572f6a25",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12298,18 +12296,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3457,
+      "en_bytes": 3461,
       "de_bytes": 3616,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/maps/index.md": {
       "status": "PENDING",
-      "en_hash": "58c7557dea59e94e",
+      "en_hash": "27fefe72e7d5b3da",
       "de_hash": "ff7cb4f75fbfe9d0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12322,7 +12320,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3267,
+      "en_bytes": 3271,
       "de_bytes": 3430,
       "change_reason": "hash changed since verification"
     },
@@ -12354,12 +12352,12 @@
     },
     "programs/apps/marketing/index.md": {
       "status": "PENDING",
-      "en_hash": "0a6d7c487f51a640",
+      "en_hash": "6d7da000b72577ae",
       "de_hash": "2a84eb0c517c1bb3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12372,7 +12370,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3747,
+      "en_bytes": 3751,
       "de_bytes": 3952,
       "change_reason": "hash changed since verification"
     },
@@ -12396,12 +12394,12 @@
     },
     "programs/apps/projectmanagement/index.md": {
       "status": "PENDING",
-      "en_hash": "9c477b6bc06a6f39",
+      "en_hash": "be4d14a11370fed7",
       "de_hash": "69aec859a01ea416",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12414,18 +12412,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3684,
+      "en_bytes": 3688,
       "de_bytes": 3891,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/index.md": {
       "status": "PENDING",
-      "en_hash": "7c45e95f3d91fa78",
+      "en_hash": "d337881923c45e0a",
       "de_hash": "fbd3436c94114232",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -12438,18 +12436,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3383,
+      "en_bytes": 3391,
       "de_bytes": 3461,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/index.md": {
       "status": "PENDING",
-      "en_hash": "2fc4e0cafefea0c5",
+      "en_hash": "10353355a82bf890",
       "de_hash": "9f70c21657f69e3d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12462,7 +12460,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3336,
+      "en_bytes": 3340,
       "de_bytes": 3562,
       "change_reason": "hash changed since verification"
     },
@@ -12514,12 +12512,12 @@
     },
     "programs/platform/desktop/index.md": {
       "status": "PENDING",
-      "en_hash": "5aabdf61f089a549",
+      "en_hash": "d71a4cce561c03bc",
       "de_hash": "91087d1078a3b61e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12532,18 +12530,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 4043,
+      "en_bytes": 4047,
       "de_bytes": 4235,
       "change_reason": "hash changed since verification"
     },
     "programs/suites/crm/index.md": {
       "status": "PENDING",
-      "en_hash": "040690472632cc71",
+      "en_hash": "b2d5b403e25a26d0",
       "de_hash": "10598f39a8cc12e0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12556,18 +12554,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3499,
+      "en_bytes": 3531,
       "de_bytes": 3691,
       "change_reason": "hash changed since verification"
     },
     "programs/suites/democracy/index.md": {
       "status": "PENDING",
-      "en_hash": "4c23520713eee218",
+      "en_hash": "179404f33339841a",
       "de_hash": "d46b95472d7865a1",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12580,18 +12578,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3327,
+      "en_bytes": 3359,
       "de_bytes": 3560,
       "change_reason": "hash changed since verification"
     },
     "programs/suites/erp/index.md": {
       "status": "PENDING",
-      "en_hash": "29533288f149e184",
+      "en_hash": "2c161f26ba46eaa5",
       "de_hash": "656750b93143fff6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12604,7 +12602,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3289,
+      "en_bytes": 3321,
       "de_bytes": 3469,
       "change_reason": "hash changed since verification"
     },
@@ -12624,12 +12622,12 @@
     },
     "programs/suites/workflows/index.md": {
       "status": "PENDING",
-      "en_hash": "58008537db3b9daa",
+      "en_hash": "e654db49b02cdf3d",
       "de_hash": "652dc5ebb4f6fc96",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "parity: mirrored DE structure, removed stale Skin blocks",
       "history": [
@@ -12642,7 +12640,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 3292,
+      "en_bytes": 3324,
       "de_bytes": 3651,
       "change_reason": "hash changed since verification"
     },
@@ -19920,12 +19918,12 @@
     },
     "programs/apps/projectmanagement/frontends/openproject/index.md": {
       "status": "PENDING",
-      "en_hash": "4a2db1eb9ede2b31",
+      "en_hash": "f6f38d00c76b460d",
       "de_hash": "7cb483b3a41749ca",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -19942,18 +19940,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1009,
+      "en_bytes": 905,
       "de_bytes": 920,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/planka/index.md": {
       "status": "PENDING",
-      "en_hash": "484680fe0322b00e",
+      "en_hash": "05fbafe972c7dc89",
       "de_hash": "e16fa40a0486ad1e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -19970,18 +19968,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 926,
+      "en_bytes": 852,
       "de_bytes": 882,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/redmine/index.md": {
       "status": "PENDING",
-      "en_hash": "728ac1a21d684d34",
+      "en_hash": "b91bc4281f60b657",
       "de_hash": "f9d468fc8e83487d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -19998,18 +19996,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 964,
+      "en_bytes": 884,
       "de_bytes": 888,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/projectmanagement/frontends/taiga/index.md": {
       "status": "PENDING",
-      "en_hash": "d511e3f1b03fd9f9",
+      "en_hash": "f81dbc4722223675",
       "de_hash": "adf472b3ec41d0fb",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20026,7 +20024,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 832,
+      "en_bytes": 764,
       "de_bytes": 765,
       "change_reason": "hash changed since verification"
     },
@@ -20260,12 +20258,12 @@
     },
     "programs/apps/projectmanagement/frontends/wekan/index.md": {
       "status": "PENDING",
-      "en_hash": "9373bb8ffaf47498",
+      "en_hash": "b399f3c5ee7d50d4",
       "de_hash": "2038e9595e1d3587",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20282,7 +20280,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 868,
+      "en_bytes": 800,
       "de_bytes": 820,
       "change_reason": "hash changed since verification"
     },
@@ -20316,12 +20314,12 @@
     },
     "programs/apps/whiteboards/frontends/drawio/index.md": {
       "status": "PENDING",
-      "en_hash": "847e5df834796f7b",
+      "en_hash": "8556131dc10a472d",
       "de_hash": "6d209478756d68b2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20338,18 +20336,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 925,
+      "en_bytes": 851,
       "de_bytes": 894,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/excalidraw/index.md": {
       "status": "PENDING",
-      "en_hash": "43b9b9bc91312018",
+      "en_hash": "c4cbd4694caa5e55",
       "de_hash": "602d0c1406fe9cc6",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20366,18 +20364,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 882,
+      "en_bytes": 784,
       "de_bytes": 826,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/miro/index.md": {
       "status": "PENDING",
-      "en_hash": "504a2812b5e6cb1f",
+      "en_hash": "c8ad614be78184e2",
       "de_hash": "4690bee965b058fc",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20394,18 +20392,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 812,
+      "en_bytes": 750,
       "de_bytes": 764,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/mural/index.md": {
       "status": "PENDING",
-      "en_hash": "95accece34a7634b",
+      "en_hash": "1f9cee7843260501",
       "de_hash": "db7e1409b3047752",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20422,18 +20420,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 792,
+      "en_bytes": 724,
       "de_bytes": 722,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/openboard/index.md": {
       "status": "PENDING",
-      "en_hash": "f639f3894b73559e",
+      "en_hash": "78832cf9f553b06f",
       "de_hash": "df901808f03fa114",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20450,18 +20448,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 876,
+      "en_bytes": 784,
       "de_bytes": 814,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/whiteboards/frontends/tldraw/index.md": {
       "status": "PENDING",
-      "en_hash": "8a3c6087e4137aa4",
+      "en_hash": "e51a7c9789ce04f3",
       "de_hash": "a0b1d0b6f6c1de46",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20478,7 +20476,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 940,
+      "en_bytes": 866,
       "de_bytes": 894,
       "change_reason": "hash changed since verification"
     },
@@ -20506,12 +20504,12 @@
     },
     "programs/apps/wiki/frontends/confluence/index.md": {
       "status": "PENDING",
-      "en_hash": "de6d5f6b2771125d",
+      "en_hash": "ce75fa990c37d339",
       "de_hash": "b4bac7dbc73a4c4f",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "read both sides, table-heavy page, translated",
       "history": [
@@ -20528,18 +20526,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 620,
+      "en_bytes": 522,
       "de_bytes": 525,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/mediawiki/index.md": {
       "status": "PENDING",
-      "en_hash": "eab50504a311bf61",
+      "en_hash": "0d834acc7e415641",
       "de_hash": "36ff36be1010c081",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20556,18 +20554,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 611,
+      "en_bytes": 519,
       "de_bytes": 522,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/notion/index.md": {
       "status": "PENDING",
-      "en_hash": "abb205a6baa4242c",
+      "en_hash": "004e0a66f3a3f5c7",
       "de_hash": "725a94be44faa8e7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "read both sides, table-heavy page, translated",
       "history": [
@@ -20584,18 +20582,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 590,
+      "en_bytes": 516,
       "de_bytes": 520,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/tango.io/index.md": {
       "status": "PENDING",
-      "en_hash": "c747cd26195edcf0",
+      "en_hash": "3a109d2abbf92597",
       "de_hash": "e248ffa61bc3a4df",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20612,18 +20610,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 609,
+      "en_bytes": 523,
       "de_bytes": 534,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/vscodium/index.md": {
       "status": "PENDING",
-      "en_hash": "50b92594c1915a8a",
+      "en_hash": "dbddd1094bd1bccf",
       "de_hash": "a5ddf267d055f103",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "read both sides, table-heavy page, translated",
       "history": [
@@ -20640,18 +20638,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 595,
+      "en_bytes": 509,
       "de_bytes": 509,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/wikijs/index.md": {
       "status": "PENDING",
-      "en_hash": "adc3d247f8fed9d6",
+      "en_hash": "f083c6af94ec9cfd",
       "de_hash": "38e47dbfa7608cb9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "read both sides, table-heavy page, translated",
       "history": [
@@ -20668,18 +20666,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 577,
+      "en_bytes": 503,
       "de_bytes": 515,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/wiki/frontends/xwiki/index.md": {
       "status": "PENDING",
-      "en_hash": "4f70edbda527b80d",
+      "en_hash": "49ef566a547a29ca",
       "de_hash": "95af717021369e2d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -20696,7 +20694,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 600,
+      "en_bytes": 532,
       "de_bytes": 542,
       "change_reason": "hash changed since verification"
     },
@@ -22150,12 +22148,12 @@
     },
     "programs/apps/streaming/frontends/ant-media-server/index.md": {
       "status": "PENDING",
-      "en_hash": "7e37d515d8e89f41",
+      "en_hash": "294e31b22af9fa1a",
       "de_hash": "15447cf225c8e103",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22172,18 +22170,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1078,
+      "en_bytes": 944,
       "de_bytes": 961,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/ffmpeg/index.md": {
       "status": "PENDING",
-      "en_hash": "02c64ac44861f015",
+      "en_hash": "1c354efe6db5749e",
       "de_hash": "0d0fc6f5f1797b33",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22200,18 +22198,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 2291,
+      "en_bytes": 2217,
       "de_bytes": 2255,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/gstreamer/index.md": {
       "status": "PENDING",
-      "en_hash": "b543263b3a902d52",
+      "en_hash": "1d12c2912b29fb12",
       "de_hash": "7a70824ff5ada547",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22228,18 +22226,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1140,
+      "en_bytes": 1048,
       "de_bytes": 1061,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/mediamtx/index.md": {
       "status": "PENDING",
-      "en_hash": "f6aea2736ba92b3e",
+      "en_hash": "7f4f9d058da0547b",
       "de_hash": "0637d08063a88ff0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22256,18 +22254,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1096,
+      "en_bytes": 1010,
       "de_bytes": 1017,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/mistserver/index.md": {
       "status": "PENDING",
-      "en_hash": "398489c67f949512",
+      "en_hash": "06b3683c3551585c",
       "de_hash": "75175be1b5d09c54",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22284,18 +22282,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1092,
+      "en_bytes": 994,
       "de_bytes": 1026,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/nginx-rtmp-module/index.md": {
       "status": "PENDING",
-      "en_hash": "0553fc4d9e366bd3",
+      "en_hash": "4184d67b60187373",
       "de_hash": "c8d1642021e41cbf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22312,18 +22310,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1194,
+      "en_bytes": 1054,
       "de_bytes": 1065,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/obs-studio/index.md": {
       "status": "PENDING",
-      "en_hash": "f9ad9e213e0acd6b",
+      "en_hash": "2777c43547900a6a",
       "de_hash": "52dfcab683967c3e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22340,18 +22338,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 947,
+      "en_bytes": 849,
       "de_bytes": 877,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/restream/index.md": {
       "status": "PENDING",
-      "en_hash": "30374cad8cc27214",
+      "en_hash": "1ffb8a2490f5a370",
       "de_hash": "5982de7ed18da72a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22368,18 +22366,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1107,
+      "en_bytes": 1021,
       "de_bytes": 1038,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/restreamer/index.md": {
       "status": "PENDING",
-      "en_hash": "0dd0b4f21acce43a",
+      "en_hash": "5a923b839b332827",
       "de_hash": "859a897f0f3a144a",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22396,18 +22394,18 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 940,
+      "en_bytes": 842,
       "de_bytes": 823,
       "change_reason": "hash changed since verification"
     },
     "programs/apps/streaming/frontends/wowza/index.md": {
       "status": "PENDING",
-      "en_hash": "e8730fdc69a5f6a5",
+      "en_hash": "013c8db94a5acd46",
       "de_hash": "05bf37b01e1f9447",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
       "last_verified": null,
       "kind": [
-        "parity"
+        "review"
       ],
       "note": "reviewed de+en, translated",
       "history": [
@@ -22424,7 +22422,7 @@
           "event": "hash changed → PENDING"
         }
       ],
-      "en_bytes": 1405,
+      "en_bytes": 1337,
       "de_bytes": 1329,
       "change_reason": "hash changed since verification"
     },

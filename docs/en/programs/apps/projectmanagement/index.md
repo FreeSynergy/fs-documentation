@@ -80,9 +80,9 @@ When choosing a project management tool, consider the following criteria:
 
 Further information can be found in the documentation of individual project management tools.
 
-## Mask documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/projectmanagement/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/apps/projectmanagement/frontends/<program>/`.
 
 **documented (8 programs):**
 
@@ -95,6 +95,6 @@ The programs in this category are documented following the wiki schema (seven fi
 - [Trello](frontends/trello/index.md) - Trello
 - [Wekan](frontends/wekan/index.md) - Wekan
 
-Overview: [Mask directory](frontends/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

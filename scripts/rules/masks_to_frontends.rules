@@ -1,0 +1,11 @@
+# ADR 0012: masks/<program>/ -> frontends/<program>/<version>/
+# Usage: python3 scripts/move.py --scope docs/en --scope docs/de --rules scripts/rules/masks_to_frontends.rules \
+#          --table version=temp/frontend-versions.tsv --default version=latest --nav mkdocs.yml --sync-state temp/sync_state.json
+# category listing and program overview stay on their level
+(?P<base>docs/\w+/programs/\w+/[\w-]+)/masks/index\.md => \g<base>/frontends/index.md
+(?P<base>docs/\w+/programs/\w+/[\w-]+)/masks/(?P<p>[^/]+)/index\.md => \g<base>/frontends/\g<p>/index.md
+# renamed files (menu -> menus, structure -> layout)
+(?P<base>docs/\w+/programs/\w+/[\w-]+)/masks/(?P<p>[^/]+)/menu\.md => \g<base>/frontends/\g<p>/{version:p}/menus.md
+(?P<base>docs/\w+/programs/\w+/[\w-]+)/masks/(?P<p>[^/]+)/structure\.md => \g<base>/frontends/\g<p>/{version:p}/layout.md
+# everything else goes into the version folder
+(?P<base>docs/\w+/programs/\w+/[\w-]+)/masks/(?P<p>[^/]+)/(?P<f>.+) => \g<base>/frontends/\g<p>/{version:p}/\g<f>

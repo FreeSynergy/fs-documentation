@@ -165,8 +165,24 @@ Bestehende Generatoren/Prüfer liegen noch oben in `scripts/` (Pfad-Mathematik u
 neue Bereichs-Prüfer kommen in den Schattenbaum. Wegwerf-Skripte: `_tmp_*.py` (gelöscht),
 Einmal-Migrationen in `scripts/_archive/`.
 
-Skripte dürfen ein LLM anstoßen: lokales Modell = lokaler HTTP-Endpunkt (z. B.
-`http://localhost:11434/api/generate`), Prompt per POST. Kein Netz, keine Kosten.
+**Skripte statt Handarbeit (2026-11-05).** Wiederkehrendes wird als Skript gebaut — spart
+Tokens und ist wieder verwendbar. Erst prüfen, ob es schon ein Werkzeug gibt; dann
+erweitern statt neu schreiben. **Keine neuen Einmal-Skripte für Umzüge/Umbenennungen**, sondern
+eine Regeldatei für die allgemeinen Werkzeuge:
+
+| Werkzeug | Zweck |
+|----------|-------|
+| `scripts/move.py` | Dateien per Regex-Regeln verschieben/umbenennen, Links exakt mitziehen, `mkdocs.yml`-Nav und `temp/sync_state.json` umschlüsseln, `git mv`. Dry-Run ohne `--apply`; `--links-only`, `--moves-only` (Fortsetzen) |
+| `scripts/replace.py` | Text per Regex-Regeln ersetzen (Begriffe, Pfadtexte, Linkbeschriftungen), Bericht je Regel, `--skip-code` |
+| `scripts/rules/*.rules` | Regeldateien (`REGEX => ERSATZ`), je Umbau eine Datei — dokumentiert zugleich, was geändert wurde |
+| `scripts/fix_links.py` | heuristische Reparatur kaputter Links über Namensregister (Notnagel, wenn Regeln nicht reichen) |
+
+Nach jedem Umbau: `mkdocs build` und die Zahl der Link-Warnungen vorher/nachher vergleichen.
+Hintergrundjobs benutzen Git parallel; `move.py` wiederholt `git mv`, solange `index.lock`
+belegt ist.
+
+Skripte dürfen ein LLM anstoßen: lokales Modell = llama.cpp unter `http://localhost:8080`
+(höchstens 2 parallele Anfragen, §7), Prompt per POST. Kein Netz, keine Kosten.
 Schlüssel/Adresse in nicht veröffentlichte Config, nie in den Code.
 
 ## 6. temp/ – unsortiert

@@ -32,5 +32,5 @@ Zammad bundles support requests from all channels into a shared timeline per tic
 ## Who it suits
 
 - Support teams that need email-heavy work with a modern mask and SLAs
-- FreeSynergy helpdesk skins with a standard ticket/comment/user model
+- FreeSynergy helpdesk frontends with a standard ticket/comment/user model
 - Migrations from Zendesk/RT/OTRS thanks to import assistants

@@ -32,4 +32,4 @@ Nextcloud Contacts manages personal and shared address books within a Nextcloud 
 
 - Nextcloud users as a central contact store
 - Families/teams with CalDAV/CardDAV clients on all devices
-- FreeSynergy contact scenarios that want to recreate vCard/CardDAV skins with sharing
+- FreeSynergy contact scenarios that want to recreate vCard/CardDAV frontends with sharing

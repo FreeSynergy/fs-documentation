@@ -35,6 +35,6 @@ Import: app → saved → "import KML"; export the same way (`.kml`).
 
 Not applicable (offline).
 
-## Skin note
+## Frontend note
 
 The FreeSynergy group exports location points as **KML for Organic Maps** and GPX/OVF for OsmAnd — one dataset, two formats ([standpunkte.md](../../../standpunkte.md)).

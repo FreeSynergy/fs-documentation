@@ -66,6 +66,6 @@ Cloud: tiered (~4,000 requests per 10-second window per user across all apps; ap
 - Official clients (the Atlassian Python API community `atlassian-python-api`), connect/forge apps as the app model
 - CLI: `atlas` (Atlassian Labs, beta status), JQL in scripts
 
-## Skin note
+## Frontend note
 
-The status transitions (edges with permissions) are the reference pattern for workflow skins; JQL field names → [fields.md](../../../../../../data/fields.md).
+The status transitions (edges with permissions) are the reference pattern for workflow frontends; JQL field names → [fields.md](../../../../../../data/fields.md).

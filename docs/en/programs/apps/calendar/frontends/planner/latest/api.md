@@ -5,7 +5,7 @@
 ## Status check (Is this worth documenting?)
 
 - **Still developed/used?** Yes: releases 0.14.91 (2022) and 0.14.92 (2023) after a long pause; the repo `gitlab.gnome.org/World/planner` is active (last commits April 2026, mostly translations); distribution packages are current. → Document rather than delete.
-- **Unique features** (even if development stalls): project-internal working calendars per resource, custom properties at project/task/resource level, optional PostgreSQL storage of projects via a plugin — no other calendar skin in this series offers that.
+- **Unique features** (even if development stalls): project-internal working calendars per resource, custom properties at project/task/resource level, optional PostgreSQL storage of projects via a plugin — no other calendar frontend in this series offers that.
 
 ## Overview
 
@@ -137,6 +137,6 @@ Not applicable (no network API). The SQL plugin is only subject to the limits of
 - **Python bindings:** not present; `tests/python/task-test.py` is a legacy test against the historical `mrproject` PyGTK module and does not run with current versions.
 - **Converters:** `.planner` is plain XML → own scripts with XSLT/DOM; the SQL schema (`data/sql/`) is a second structured access route.
 
-## Skin note
+## Frontend note
 
-A Planner skin in FreeSynergy reproduces the four views (Gantt, tasks, resources, resource usage) and reads/writes `*.planner` XML; map the time/effort fields onto the standard model ([Fields](../../../../../../data/fields.md), [Task/project model](../../../../../../data/models.md); see also [data/projects](../../../../../../data/projects/)).
+A Planner frontend in FreeSynergy reproduces the four views (Gantt, tasks, resources, resource usage) and reads/writes `*.planner` XML; map the time/effort fields onto the standard model ([Fields](../../../../../../data/fields.md), [Task/project model](../../../../../../data/models.md); see also [data/projects](../../../../../../data/projects/)).

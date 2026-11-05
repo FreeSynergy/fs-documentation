@@ -28,4 +28,4 @@ Freshdesk provides support as a subscription: mailboxes become ticket sources, a
 ## Who it suits
 
 - SMEs and growing teams that start without an admin team
-- FreeSynergy scenarios that need SaaS ticket APIs (REST v2) as a skin model
+- FreeSynergy scenarios that need SaaS ticket APIs (REST v2) as a frontend model

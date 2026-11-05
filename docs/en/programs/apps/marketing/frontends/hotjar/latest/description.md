@@ -27,4 +27,4 @@ Hotjar shows how people use pages: where they click, where they drop off, why th
 ## Who it suits
 
 - Product/web teams with an optimisation roadmap
-- FreeSynergy scenarios: usability feedback loops to skin interfaces (observe compliance)
+- FreeSynergy scenarios: usability feedback loops to frontend interfaces (observe compliance)

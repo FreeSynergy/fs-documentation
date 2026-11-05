@@ -58,6 +58,6 @@ No officially published hard figure; throttling above ~20 req/s is typically ans
 - Official JS library (`@helpscout/api` wrapper), Python community (`helpscout` packages)
 - Zapier/Make connectors for no-code
 
-## Skin note
+## Frontend note
 
 Conversation = thread tree instead of ticket + comment; the mapping variant in [models.md](../../../../../../data/models.md) under "conversation model".

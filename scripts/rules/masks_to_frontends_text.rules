@@ -1,0 +1,31 @@
+# ADR 0012 wording: "mask" (meaning a program's UI documentation) -> "frontend".
+# NOT touched: ticket/table/form masks, CSS clip-path masks, the otp-input `mask` attribute.
+# Usage: python3 scripts/replace.py --scope docs/en --rules scripts/rules/masks_to_frontends_text.rules [--apply]
+
+# path texts in prose and code spans
+\bmasks/ => frontends/
+\bskins/ => frontends/
+# old file names in link labels / file lists
+\[structure\.md\] => [layout.md]
+\[menu\.md\] => [menus.md]
+`structure\.md` => `layout.md`
+`menu\.md` => `menus.md`
+# headings and fixed phrases
+\bMask [Dd]ocumentation\b => Frontend documentation
+\bmask documentation\b => frontend documentation
+\bMask directory\b => Frontend directory
+\b(Wiki|Desktop|CRM|CRM/ERP) masks\b => \1 frontends
+\bPrograms \(masks\) => Programs (frontends)
+\bcomponents, masks and\b => components, frontends and
+\bprograms, components and masks\b => programs, components and frontends
+\bimports and masks\b => imports and frontends
+`api.md` per mask\b => `api.md` per frontend
+\bmask APIs\b => frontend APIs
+\bas a mask\b => as a frontend
+\*\*Predictability\*\*: masks => **Predictability**: frontends
+\bdesktop masks — API => desktop frontends — API
+# "skin" is the pre-ADR-0007 word for the same thing (skin tone etc. excluded)
+\bSkins\b(?![ -]?(tone|and gender)) => Frontends
+\bSkin\b(?![ -]?(tone|and gender)) => Frontend
+\bskins\b(?![ -]?(tone|and gender)) => frontends
+\bskin\b(?![ -]?(tone|and gender)) => frontend

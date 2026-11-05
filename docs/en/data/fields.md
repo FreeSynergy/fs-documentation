@@ -1,6 +1,6 @@
 # Standard fields
 
-Fields are the building blocks of the [models](models.md). Across all programs they are **named the same way**, so that components, masks and workflows work without a translation layer.
+Fields are the building blocks of the [models](models.md). Across all programs they are **named the same way**, so that components, frontends and workflows work without a translation layer.
 
 ## Standard steward per field group
 
@@ -152,7 +152,7 @@ Rules:
 
 ## UI and interaction fields
 
-These fields appear in component attributes ([components](../components/)) and in `structure.md`:
+These fields appear in component attributes ([components](../components/)) and in `layout.md`:
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|

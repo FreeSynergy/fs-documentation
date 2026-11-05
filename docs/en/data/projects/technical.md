@@ -27,7 +27,7 @@
 |--------|------------|
 | Calendar view | milestones + task `due` from `calobj` |
 | MSPDI export (✅ existence) | board/list structure ↔ MSPDI task tree; ⚠️ field mapping still to be created |
-| CRM/ERP masks | project as an association to contacts |
+| CRM/ERP frontends | project as an association to contacts |
 
 ## Open technical points
 

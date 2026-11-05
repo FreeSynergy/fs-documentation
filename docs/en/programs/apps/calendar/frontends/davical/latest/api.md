@@ -145,6 +145,6 @@ The response contains a ticket URL (`…?ticket=<id>`); expiry options such as `
 - **PHP**: the project's AWL libraries (`XMLDocument`, `DAVResource`); CalDAV client classes in `inc/caldav-client.php`
 - **JS/raw access**: `fetch` with DAV methods (`PROPFIND`/`REPORT`), since no SDKs are maintained
 
-## Skin note
+## Frontend note
 
-FreeSynergy skins with a DAViCal backend address exactly these RFC endpoints; data models: [Event model](../../../../../../data/models.md), [ICS format](../../../../../../data/formats.md).
+FreeSynergy frontends with a DAViCal backend address exactly these RFC endpoints; data models: [Event model](../../../../../../data/models.md), [ICS format](../../../../../../data/formats.md).

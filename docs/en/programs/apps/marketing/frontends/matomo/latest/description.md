@@ -8,7 +8,7 @@ Matomo is web analytics with your own rules: tracking code in, reports out — a
 
 - **GDPR-fit by design** (self-hosting, no third-party transfer)
 - GA import (data can be imported from GA) for migration
-- The tracking HTTP API = server-side event skins without a browser
+- The tracking HTTP API = server-side event frontends without a browser
 
 ## Differentiation
 
@@ -28,4 +28,4 @@ Matomo is web analytics with your own rules: tracking code in, reports out — a
 ## Who it suits
 
 - Organisations with a compliance duty + an analytical claim
-- FreeSynergy skins: Matomo as the standard analytics layer ([models.md](../../../../../../data/models.md): event → visit → conversion)
+- FreeSynergy frontends: Matomo as the standard analytics layer ([models.md](../../../../../../data/models.md): event → visit → conversion)

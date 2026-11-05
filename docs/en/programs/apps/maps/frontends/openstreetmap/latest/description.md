@@ -26,4 +26,4 @@ OpenStreetMap is **the data**, not an application: volunteers capture roads, POI
 
 ## Who it suits
 
-- All map skins — OSM is the shared data basis (see the [location point (Standpunkte) docs](../../../standpunkte.md))
+- All map frontends — OSM is the shared data basis (see the [location point (Standpunkte) docs](../../../standpunkte.md))

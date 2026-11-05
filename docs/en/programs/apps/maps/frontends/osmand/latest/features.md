@@ -9,7 +9,7 @@
 - Routing profiles (car/truck/bike/foot), lane/turn instructions, TMC (online), lane assistant, "drive along GPX" (follow a track)
 - Public-transit stops/routes partly online (OpenTripPlanner integration)
 
-### Your own places (skin-relevant!)
+### Your own places (frontend-relevant!)
 - **My Places**: folders as layers, points with notes, GPX import from uMap/Komoot, layer visibility
 - Track recording (times, elevation), "share recording"
 

@@ -6,9 +6,9 @@ MediaMTX (formerly `rtsp-simple-server`) is a lean live media router in **Go**: 
 
 ## File structure
 
-- [menu.md](../../masks/mediamtx/menu.md) - Configuration sections, paths, protocol listeners, roles
-- [features.md](../../masks/mediamtx/features.md) - Protocols, auth, recording, hooks, what MediaMTX does NOT do
-- [description.md](../../masks/mediamtx/description.md) - How it differs from nginx-rtmp, MistServer, Ant Media and Restreamer
-- [structure.md](../../masks/mediamtx/structure.md) - Listeners → paths → readers, ports, log and config structure
-- [shortcuts.md](../../masks/mediamtx/shortcuts.md) - Command line and service management (no UI keys)
-- [api.md](../../masks/mediamtx/api.md) - Control API v3 (9997), hooks, metrics, playback server
+- [menus.md](latest/menus.md) - Configuration sections, paths, protocol listeners, roles
+- [features.md](latest/features.md) - Protocols, auth, recording, hooks, what MediaMTX does NOT do
+- [description.md](latest/description.md) - How it differs from nginx-rtmp, MistServer, Ant Media and Restreamer
+- [layout.md](latest/layout.md) - Listeners → paths → readers, ports, log and config structure
+- [shortcuts.md](latest/shortcuts.md) - Command line and service management (no UI keys)
+- [api.md](latest/api.md) - Control API v3 (9997), hooks, metrics, playback server

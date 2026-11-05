@@ -4,11 +4,11 @@
 
 This section contains documentation for various desktop applications and software.
 
-## Mask documentation
+## Frontend documentation
 
 Programs without their own mask directory are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`):
 
-→ [Desktop masks](masks/index.md)
+→ [Desktop frontends](frontends/index.md)
 
 Documented: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **gethomepage**, **launchboard**, **synology-dsm**, **unraid**, **proxmox**, **truenas**, **opnsense**
 
@@ -25,7 +25,7 @@ Documented: **homarr**, **heimdall**, **homer**, **dashy**, **homepage**, **geth
 
 ## System surfaces (NAS, virtualisation, network)
 
-These programs also have a desktop-like surface and are documented as a mask:
+These programs also have a desktop-like surface and are documented as a frontend:
 
 - **unraid** - NAS OS with array, Docker, VMs and GraphQL API
 - **proxmox** - virtualisation platform with REST API `/api2/json`

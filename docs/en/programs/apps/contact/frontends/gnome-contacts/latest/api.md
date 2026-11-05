@@ -45,6 +45,6 @@ from gi.repository import EBookClient
 
 Only those of the source servers (Google quotas, Nextcloud throttling).
 
-## Skin note
+## Frontend note
 
-A GNOME Contacts skin mirrors the card/fields mask; data-model bridge via EDS or `.vcf` → [Contact model](../../../../../../data/models.md).
+A GNOME Contacts frontend mirrors the card/fields mask; data-model bridge via EDS or `.vcf` → [Contact model](../../../../../../data/models.md).

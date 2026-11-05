@@ -1,0 +1,5 @@
+# ADR 0012: frontends/<program>/latest/ -> frontends/<program>/<version>/
+# Version per program from temp/frontend-versions.tsv (program<TAB>version); unknown stays "latest".
+# python3 scripts/move.py --scope docs/en --scope docs/de --rules scripts/rules/frontend_versions.rules \
+#   --table version=temp/frontend-versions.tsv --default version=latest --sync-state temp/sync_state.json [--apply]
+(?P<base>docs/\w+/programs/\w+/[\w-]+/frontends/(?P<p>[^/]+))/latest/(?P<f>.+) => \g<base>/{version:p}/\g<f>

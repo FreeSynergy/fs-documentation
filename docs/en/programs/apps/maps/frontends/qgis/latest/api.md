@@ -43,7 +43,7 @@ GET …service=WFS…&request=GetFeature&typeName=punkte&outputFormat=applicatio
 - Deployment: FCGI/Apache, Docker (`qgis/qgis-server`), or **PGF/plugin stacks**
 - Access protection: restrict the service capabilities, OGC access controls in the project
 
-## GeoPackage as the skin foundation
+## GeoPackage as the frontend foundation
 
 - One file = many layers + triggers/metadata; ideal for group distribution outside git (QGIS ↔ server ↔ QField)
 
@@ -51,6 +51,6 @@ GET …service=WFS…&request=GetFeature&typeName=punkte&outputFormat=applicatio
 
 Server-side (FCGI processes); the OGC parameter `maxfeatures`.
 
-## Skin note
+## Frontend note
 
 Location points often originate in QGIS (checking/buffering) → publish via WFS-JSON → Leaflet/MapLibre view; the chain is in [standpunkte.md](../../../standpunkte.md).

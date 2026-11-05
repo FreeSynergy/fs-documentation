@@ -6,9 +6,9 @@ XWiki is a powerful enterprise wiki platform with advanced features for knowledg
 
 ## File structure
 
-- [menu.md](../../masks/xwiki/menu.md) - All menu items
-- [features.md](../../masks/xwiki/features.md) - Editor features and functionality
-- [description.md](../../masks/xwiki/description.md) - Description and differentiation
-- [structure.md](../../masks/xwiki/structure.md) - UI/UX and structure
-- [shortcuts.md](../../masks/xwiki/shortcuts.md) - All keyboard shortcuts
-- [api.md](../../masks/xwiki/api.md) - API documentation (REST, GraphQL, etc.)
+- [menus.md](latest/menus.md) - All menu items
+- [features.md](latest/features.md) - Editor features and functionality
+- [description.md](latest/description.md) - Description and differentiation
+- [layout.md](latest/layout.md) - UI/UX and structure
+- [shortcuts.md](latest/shortcuts.md) - All keyboard shortcuts
+- [api.md](latest/api.md) - API documentation (REST, GraphQL, etc.)

@@ -6,9 +6,9 @@ Miro is the commercial online whiteboard (SaaS) for visual collaboration: infini
 
 ## File structure
 
-- [menu.md](../../masks/miro/menu.md) - Toolbar, board menu, moderation tools
-- [features.md](../../masks/miro/features.md) - Templates, MiroIQ, apps, what Miro does NOT do
-- [description.md](../../masks/miro/description.md) - How it differs from Mural, Excalidraw, tldraw
-- [structure.md](../../masks/miro/structure.md) - Canvas + toolbar + page tabs
-- [shortcuts.md](../../masks/miro/shortcuts.md) - Miro shortcuts
-- [api.md](../../masks/miro/api.md) - REST board/items/members, OAuth2, webhooks
+- [menus.md](latest/menus.md) - Toolbar, board menu, moderation tools
+- [features.md](latest/features.md) - Templates, MiroIQ, apps, what Miro does NOT do
+- [description.md](latest/description.md) - How it differs from Mural, Excalidraw, tldraw
+- [layout.md](latest/layout.md) - Canvas + toolbar + page tabs
+- [shortcuts.md](latest/shortcuts.md) - Miro shortcuts
+- [api.md](latest/api.md) - REST board/items/members, OAuth2, webhooks

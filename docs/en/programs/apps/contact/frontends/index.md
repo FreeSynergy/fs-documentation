@@ -1,10 +1,10 @@
-# Contact Mask Documentation
+# Contact Frontend documentation
 
 ## Overview
 
 This directory contains the documentation of the programs in this category following the wiki schema: menu items, features, description, structure/UI-UX, keyboard shortcuts and API — seven files per program.
 
-All programs documented here are **not** FreeSynergy in-house developments, but foreign programs whose surface and interfaces are recreated or connected as a mask.
+All programs documented here are **not** FreeSynergy in-house developments, but foreign programs whose surface and interfaces are recreated or connected as a frontend.
 
 ## Included documentation
 
@@ -16,7 +16,7 @@ All programs documented here are **not** FreeSynergy in-house developments, but 
 ## Directory structure
 
 ```
-docs/de/programs/apps/contact/masks/
+docs/de/programs/apps/contact/frontends/
 ├── index.md              (this file)
 ├── gnome-contacts/   (index, menu, features, description, structure, shortcuts, api)
 ├── kaddressbook/   (index, menu, features, description, structure, shortcuts, api)
@@ -47,6 +47,6 @@ Each program directory contains **seven** files:
 ## Related areas
 
 - [Category overview](../) – overview of this program category
-- [Wiki masks](../../wiki/frontends/) – reference schema for this documentation
-- [Desktop masks](../../../platform/desktop/frontends/) – same file structure
-- [Standardised data](../../../../data/) – fields and models for all mask APIs
+- [Wiki frontends](../../wiki/frontends/) – reference schema for this documentation
+- [Desktop frontends](../../../platform/desktop/frontends/) – same file structure
+- [Standardised data](../../../../data/) – fields and models for all frontend APIs

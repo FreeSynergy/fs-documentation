@@ -62,6 +62,6 @@ Time-based limits per app/user; on 429 the `Retry-After` header; the response co
 - Official clients: Python (`asana`), Node (`asana`), Java/PHP; batch examples in the docs
 - Zapier/Make/connectors available
 
-## Skin note
+## Frontend note
 
 The `gid` IDs + section/portfolio correspond to the [task structure](../../../../../../data/models.md); custom fields → [fields.md](../../../../../../data/fields.md).

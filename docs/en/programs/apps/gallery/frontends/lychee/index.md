@@ -6,9 +6,9 @@ Lychee is a lean, self-hosted photo gallery with albums, sharing via links and a
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Gallery navigation, album menus, settings
+- [menus.md](latest/menus.md) - Gallery navigation, album menus, settings
 - [features.md](latest/features.md) - Albums, sharing, slideshow, what Lychee does NOT do
 - [description.md](latest/description.md) - How it differs from Piwigo, PhotoPrism and Immich
-- [structure.md](latest/layout.md) - Album tiles, lightbox, admin panel
+- [layout.md](latest/layout.md) - Album tiles, lightbox, admin panel
 - [shortcuts.md](latest/shortcuts.md) - Lightbox and album keyboard shortcuts
 - [api.md](latest/api.md) - REST `/api`, token auth, album/photo endpoints

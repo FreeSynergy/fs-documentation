@@ -6,9 +6,9 @@ Taiga is the agile open-source project management tool (AGPL, Python/Django + a 
 
 ## File structure
 
-- [menu.md](../../masks/taiga/menu.md) - Project modules, epic tracker, admin centre
-- [features.md](../../masks/taiga/features.md) - Scrum/kanban, epics, import, what Taiga does NOT do
-- [description.md](../../masks/taiga/description.md) - How it differs from OpenProject, Redmine, Jira
-- [structure.md](../../masks/taiga/structure.md) - Module navigation, sprint board, backlogs
-- [shortcuts.md](../../masks/taiga/shortcuts.md) - Shortcuts (very few; web standards)
-- [api.md](../../masks/taiga/api.md) - REST /api/v1, token/OAuth2, webhooks
+- [menus.md](latest/menus.md) - Project modules, epic tracker, admin centre
+- [features.md](latest/features.md) - Scrum/kanban, epics, import, what Taiga does NOT do
+- [description.md](latest/description.md) - How it differs from OpenProject, Redmine, Jira
+- [layout.md](latest/layout.md) - Module navigation, sprint board, backlogs
+- [shortcuts.md](latest/shortcuts.md) - Shortcuts (very few; web standards)
+- [api.md](latest/api.md) - REST /api/v1, token/OAuth2, webhooks

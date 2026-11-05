@@ -6,9 +6,9 @@ Immich is a self-hosted photo and video management solution (server + mobile app
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Navigation in the web app and the app, administration menus
+- [menus.md](latest/menus.md) - Navigation in the web app and the app, administration menus
 - [features.md](latest/features.md) - Upload, search index, sharing, what Immich does NOT do
 - [description.md](latest/description.md) - How it differs from PhotoPrism, LibrePhotos and Nextcloud Photos
-- [structure.md](latest/layout.md) - Timeline grid, viewer, album and shared pages
+- [layout.md](latest/layout.md) - Timeline grid, viewer, album and shared pages
 - [shortcuts.md](latest/shortcuts.md) - Shortcuts of the web app
 - [api.md](latest/api.md) - REST `/api`, API keys/OAuth2, BullMQ jobs, SDKs

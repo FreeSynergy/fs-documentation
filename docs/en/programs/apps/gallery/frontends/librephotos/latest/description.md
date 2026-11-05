@@ -29,5 +29,5 @@ LibrePhotos builds a private photo cloud: captures are scanned, tagged, assigned
 ## Who it suits
 
 - Users who want to recreate Google Photos functionality self-hosted and close to Python
-- FreeSynergy gallery skins with an album / photo / person / share model
+- FreeSynergy gallery frontends with an album / photo / person / share model
 - Projects that want to adapt the recognition pipelines themselves

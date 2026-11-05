@@ -6,9 +6,9 @@ Redmine is a free, web-based project management and issue tracking application b
 
 ## File structure
 
-- [menu.md](../../masks/redmine/menu.md) - Header, project tabs and administration menus
-- [features.md](../../masks/redmine/features.md) - Issues, time tracking, wiki, workflows, plugins
-- [description.md](../../masks/redmine/description.md) - Description and how it differs from OpenProject, Jira and Trac
-- [structure.md](../../masks/redmine/structure.md) - UI/UX, table layout and themes
-- [shortcuts.md](../../masks/redmine/shortcuts.md) - Keyboard control (incl. `/` for search) and what is missing
-- [api.md](../../masks/redmine/api.md) - API documentation (REST XML/JSON, Atom, ICS)
+- [menus.md](latest/menus.md) - Header, project tabs and administration menus
+- [features.md](latest/features.md) - Issues, time tracking, wiki, workflows, plugins
+- [description.md](latest/description.md) - Description and how it differs from OpenProject, Jira and Trac
+- [layout.md](latest/layout.md) - UI/UX, table layout and themes
+- [shortcuts.md](latest/shortcuts.md) - Keyboard control (incl. `/` for search) and what is missing
+- [api.md](latest/api.md) - API documentation (REST XML/JSON, Atom, ICS)

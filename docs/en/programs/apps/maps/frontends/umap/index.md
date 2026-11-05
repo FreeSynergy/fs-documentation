@@ -6,9 +6,9 @@ uMap (uMap Project, free software) is **collaborative map diagramming**: own lay
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Map toolbar, layers panel, settings, share
+- [menus.md](latest/menus.md) - Map toolbar, layers panel, settings, share
 - [features.md](latest/features.md) - Layers/formats, data exchange, what uMap does NOT do
 - [description.md](latest/description.md) - How it differs from Google My Maps, Fusion Tables, QGIS
-- [structure.md](latest/layout.md) - Map + layer list + popup editor
+- [layout.md](latest/layout.md) - Map + layer list + popup editor
 - [shortcuts.md](latest/shortcuts.md) - Shortcuts (minimal set)
 - [api.md](latest/api.md) - Data API (GeoJSON), import/export formats

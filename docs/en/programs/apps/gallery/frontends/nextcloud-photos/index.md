@@ -6,10 +6,10 @@ The Photos app of Nextcloud is the gallery surface on top of the Files app: chro
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Photos navigation, folder selection, albums, shared areas
+- [menus.md](latest/menus.md) - Photos navigation, folder selection, albums, shared areas
 - [features.md](latest/features.md) - Chronology, albums, recognition, what Photos does NOT do
 - [description.md](latest/description.md) - How it differs from Immich, PhotoPrism and Piwigo
-- [structure.md](latest/layout.md) - Chronology grid, viewer, album pages
+- [layout.md](latest/layout.md) - Chronology grid, viewer, album pages
 - [shortcuts.md](latest/shortcuts.md) - Shortcuts of the Nextcloud web surface
 - [api.md](latest/api.md) - WebDAV, OCS albums, Photos endpoints, sharing API
 

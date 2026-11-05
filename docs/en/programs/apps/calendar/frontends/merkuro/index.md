@@ -16,9 +16,9 @@ Merkuro Calendar is the **modern calendar client of the KDE desktop environment*
 | [description.md](latest/description.md) | What the program does, benefits, differentiation (incl. from Nextcloud Calendar, Davical, KOrganizer), technical details, who it suits |
 | [features.md](latest/features.md) | Verified feature list + "What Merkuro does NOT offer" |
 | [api.md](latest/api.md) | D-Bus interface `org.kde.calendar.Calendar`, CLI/ICS import, Akonadi as the data layer, configuration, version state |
-| [menu.md](latest/menus.md) | Menu structure (File/Edit/View/Settings, mobile toolbar) taken from the QML source |
+| [menus.md](latest/menus.md) | Menu structure (File/Edit/View/Settings, mobile toolbar) taken from the QML source |
 | [shortcuts.md](latest/shortcuts.md) | Verified keyboard shortcuts of the QML interface |
-| [structure.md](latest/layout.md) | Module/directory structure, request flow (Akonadi models), configuration, deployment |
+| [layout.md](latest/layout.md) | Module/directory structure, request flow (Akonadi models), configuration, deployment |
 
 ## Sources
 

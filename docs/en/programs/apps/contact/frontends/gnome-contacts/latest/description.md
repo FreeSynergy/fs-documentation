@@ -31,4 +31,4 @@ GNOME Contacts is GNOME's own contact manager: a lean GTK surface on top of the 
 
 - GNOME users with online accounts or Nextcloud/Fastmail CardDAV
 - Environments that need a unified EDS contact base for several apps
-- FreeSynergy skins that recreate reduced contact masks (card + fields + source selection)
+- FreeSynergy frontends that recreate reduced contact masks (card + fields + source selection)

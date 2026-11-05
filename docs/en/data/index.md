@@ -1,13 +1,13 @@
 # Standardised data
 
-Standardised data describe in which **formats**, **models** and **fields** FreeSynergy programs, components and masks exchange information.
+Standardised data describe in which **formats**, **models** and **fields** FreeSynergy programs, components and frontends exchange information.
 
 ## Why standardisation?
 
 - **Interoperability**: messenger, wiki, calendar and desktop dashboards use the same field names
 - **Reusability**: components (`table`, `list-view`, `calendar-view`) work with any model
 - **Migration capability**: data can be moved between programs (export/import)
-- **Predictability**: masks (`apps/<category>/masks/<program>/api.md`) describe the same API style
+- **Predictability**: frontends (`apps/<category>/frontends/<program>/api.md`) describe the same API style
 - **Automation**: workflows and webhooks access stable paths
 
 ## Data domains (decided 2026-11-01)
@@ -115,5 +115,5 @@ docs/en/data/
 - [Components](../components/) — attributes and data types of the UI elements
 - [Gestures](../interactions/gestures/) — interaction data (thresholds, callbacks)
 - [Animations](../interactions/animations/) — animation attributes and durations
-- [Programs](../programs/) — programs with their own `api.md` per mask
-- [Desktop masks](../programs/platform/desktop/frontends/) — example of API documentation following the pattern
+- [Programs](../programs/) — programs with their own `api.md` per frontend
+- [Desktop frontends](../programs/platform/desktop/frontends/) — example of API documentation following the pattern

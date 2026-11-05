@@ -6,9 +6,9 @@ OpenBoard is a free interactive whiteboard tool (C++, Qt) for teaching and prese
 
 ## File structure
 
-- [menu.md](../../masks/openboard/menu.md) - Toolbars, library and document menus
-- [features.md](../../masks/openboard/features.md) - Boards, web browser, what OpenBoard does NOT do
-- [description.md](../../masks/openboard/description.md) - How it differs from Xournal++, MyPaint, Miro
-- [structure.md](../../masks/openboard/structure.md) - Full-screen board, tool sheets, library
-- [shortcuts.md](../../masks/openboard/shortcuts.md) - Shortcuts
-- [api.md](../../masks/openboard/api.md) - No API; the file format .obz as the exchange route
+- [menus.md](latest/menus.md) - Toolbars, library and document menus
+- [features.md](latest/features.md) - Boards, web browser, what OpenBoard does NOT do
+- [description.md](latest/description.md) - How it differs from Xournal++, MyPaint, Miro
+- [layout.md](latest/layout.md) - Full-screen board, tool sheets, library
+- [shortcuts.md](latest/shortcuts.md) - Shortcuts
+- [api.md](latest/api.md) - No API; the file format .obz as the exchange route

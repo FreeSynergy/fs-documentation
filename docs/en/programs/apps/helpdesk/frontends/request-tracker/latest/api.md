@@ -76,6 +76,6 @@ None built in; best practices: your own API user, proxy limits, avoid transactio
 - The Perl API (`RT->API`) as the reference in the core
 - Community: Python `rtrest`, Node `rt-client`; REST 2.0 is trivial in any language
 
-## Skin note
+## Frontend note
 
 The transaction model (ticket = header, transactions = events) is the model for the [comment/event model](../../../../../../data/models.md).

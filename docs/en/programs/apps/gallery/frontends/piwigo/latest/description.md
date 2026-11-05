@@ -31,5 +31,5 @@ Piwigo manages photos as a web-toolkit gallery: categories form the structure, r
 ## Who it suits
 
 - Clubs, schools and municipalities that need a curated public gallery
-- FreeSynergy gallery skins with a category / image / tag / group model
+- FreeSynergy gallery frontends with a category / image / tag / group model
 - Operators who want to steer design and permissions more strongly than the AI

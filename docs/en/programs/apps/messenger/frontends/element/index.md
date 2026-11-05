@@ -6,9 +6,9 @@ Element is the open-source messenger for the Matrix protocol, with a decentralis
 
 ## File structure
 
-- [menu.md](latest/menus.md) - All menu items
+- [menus.md](latest/menus.md) - All menu items
 - [features.md](latest/features.md) - Editor features and functionality
 - [description.md](latest/description.md) - Description and differentiation
-- [structure.md](latest/layout.md) - UI/UX and structure
+- [layout.md](latest/layout.md) - UI/UX and structure
 - [shortcuts.md](latest/shortcuts.md) - All keyboard shortcuts
 - [api.md](latest/api.md) - API documentation (REST, GraphQL, etc.)

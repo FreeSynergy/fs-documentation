@@ -60,6 +60,6 @@ Cloud: generous limits (events throttled roughly per domain); self-hosted: the s
 - Official JS/HTTP documentation, community wrappers (Python), plug-ins for CMSs
 - Events signature header (observe the self-hosted `reverse_proxy` notes)
 
-## Skin note
+## Frontend note
 
 The goal name = the standard event word in [fields.md](../../../../../../data/fields.md); the stats API is ideal for wiki KPI tiles (caching! 5–10 min).

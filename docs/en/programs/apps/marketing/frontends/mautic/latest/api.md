@@ -60,6 +60,6 @@ Not hard-coded; instance limits/recommendation: batch imports via the API + cron
 - The official PHP SDK (`mautic/api-library`), community (Python/Node)
 - Import/export recipes in the documentation
 
-## Skin note
+## Frontend note
 
 The custom field catalog (`/api/customfields`) feeds directly into [fields.md](../../../../../../data/fields.md); webhooks as the event source in the event model.

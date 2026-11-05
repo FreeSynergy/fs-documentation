@@ -6,9 +6,9 @@ PhotoPrism indexes an existing photo collection, recognises content and faces, a
 
 ## File structure
 
-- [menu.md](latest/menus.md) - Main navigation, folder/album menus, settings, admin
+- [menus.md](latest/menus.md) - Main navigation, folder/album menus, settings, admin
 - [features.md](latest/features.md) - Indexing, labels, faces, albums, what PhotoPrism does NOT do
 - [description.md](latest/description.md) - How it differs from Immich, LibrePhotos and Piwigo
-- [structure.md](latest/layout.md) - Search bar, mosaic, detail panel, folder view
+- [layout.md](latest/layout.md) - Search bar, mosaic, detail panel, folder view
 - [shortcuts.md](latest/shortcuts.md) - Shortcuts of search and viewer
 - [api.md](latest/api.md) - REST `/api/v1`, Basic/Bearer, batch index, webhooks

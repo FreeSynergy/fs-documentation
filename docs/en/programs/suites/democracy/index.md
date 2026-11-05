@@ -72,19 +72,19 @@ When choosing a democracy system, consider the following criteria:
 
 Further information can be found in the documentation of individual democracy systems.
 
-## Mask documentation
+## Frontend documentation
 
-The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/democracy/masks/<program>/`.
+The programs in this category are documented following the wiki schema (seven files per program: `index`, `menu`, `features`, `description`, `structure`, `shortcuts`, `api`) under `programs/suites/democracy/frontends/<program>/`.
 
 **documented (6 programs):**
 
-- [Adhocracy4](masks/adhocracy4/index.md) - Adhocracy4
-- [Circo](masks/circo/index.md) - Circo
-- [Consul](masks/consul/index.md) - Consul
-- [Decidim](masks/decidim/index.md) - Decidim
-- [LiquidFeedback](masks/liquid-feedback/index.md) - LiquidFeedback
-- [Pol.is](masks/polis/index.md) - Pol.is
+- [Adhocracy4](frontends/adhocracy4/index.md) - Adhocracy4
+- [Circo](frontends/circo/index.md) - Circo
+- [Consul](frontends/consul/index.md) - Consul
+- [Decidim](frontends/decidim/index.md) - Decidim
+- [LiquidFeedback](frontends/liquid-feedback/index.md) - LiquidFeedback
+- [Pol.is](frontends/polis/index.md) - Pol.is
 
-Overview: [Mask directory](masks/index.md)
+Overview: [Frontend directory](frontends/index.md)
 
-Reference schema: [Wiki masks](../../apps/wiki/frontends/index.md) · [Desktop masks](../../platform/desktop/masks/index.md) · [Standardised data](../../../data/api.md)
+Reference schema: [Wiki frontends](../../apps/wiki/frontends/index.md) · [Desktop frontends](../../platform/desktop/frontends/index.md) · [Standardised data](../../../data/api.md)

@@ -51,6 +51,6 @@ Operation: tilemaker/pmtiles + Martin/TileServer GL or Cloudflare (PMTiles)
 
 Not on the library side; tile server limits.
 
-## Skin note
+## Frontend note
 
 Location points as a GeoJSON source + `setData` channels = live group maps; style control allows the FreeSynergy colour world (keep the Maputnik asset in the repository).

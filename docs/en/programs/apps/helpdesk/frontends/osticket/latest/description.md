@@ -31,4 +31,4 @@ osTicket converts incoming emails into tickets, assigns them to teams and accomp
 
 - Small teams/clubs with a mail inbox as the support channel
 - Environments with no room for Elasticsearch & Co.
-- FreeSynergy skins that show the plain ticket-status workflow (new/open/pending/closed)
+- FreeSynergy frontends that show the plain ticket-status workflow (new/open/pending/closed)

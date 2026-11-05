@@ -29,7 +29,7 @@
 
 - **Click-to-dial** from any number (contact/case/phone book)
 - **Transfer** by dragging the active call onto the agent list
-- Chat/callback widgets embedded on customer websites (your own skins there)
+- Chat/callback widgets embedded on customer websites (your own frontends there)
 
 ## Responsive design
 

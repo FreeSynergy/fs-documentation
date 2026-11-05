@@ -30,4 +30,4 @@ RT turns every email into a ticket and organises work through queues, rights and
 
 - Technology-heavy organisations with their own ops team
 - Migration cases in which every email address is meant to be a workflow
-- FreeSynergy skins that want to model "ticket as transaction log"
+- FreeSynergy frontends that want to model "ticket as transaction log"

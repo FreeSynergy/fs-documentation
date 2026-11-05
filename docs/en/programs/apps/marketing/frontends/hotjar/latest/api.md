@@ -49,6 +49,6 @@ _hj('identify', 'teilnehmer-4711');
 
 Documented per team (moderate); interview/recording volumes limited per subscription.
 
-## Skin note
+## Frontend note
 
-Data-protection reservation: replays only with consent + masks; the FreeSynergy skin links heatmap findings onto issue skins (rage click → bug ticket via a Zapier chain).
+Data-protection reservation: replays only with consent + masks; the FreeSynergy frontend links heatmap findings onto issue frontends (rage click → bug ticket via a Zapier chain).

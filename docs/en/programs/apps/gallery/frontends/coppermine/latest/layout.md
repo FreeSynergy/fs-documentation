@@ -41,7 +41,7 @@
 
 - Limited: image alternatives come from the file titles, skip links are missing in the standard theme
 - Forms are labelled, but keyboard guidance in the batch masks is weak
-- Can be retrofitted via custom themes (the recommended route in skin projects)
+- Can be retrofitted via custom themes (the recommended route in frontend projects)
 
 ## Performance
 

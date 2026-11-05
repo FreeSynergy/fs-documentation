@@ -78,6 +78,6 @@ Default: **no** hard API rate limiting; set it instance-side via the web server.
 - Official SDKs: ❌
 - Community: PHP/JS examples in the Monica wiki; REST + `curl` suffices
 
-## Skin note
+## Frontend note
 
 The Monica structure is the reference for the contact-with-event model ([models.md](../../../../../../data/models.md)); the webhooks correspond to the standard event fields ([fields.md](../../../../../../data/fields.md)).

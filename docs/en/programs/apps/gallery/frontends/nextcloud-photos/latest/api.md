@@ -57,6 +57,6 @@ No API quotas; throttling comes from PHP worker limits, the `throttling` app (lo
 - **community**: Python `nextcloud-api-wrapper`, Node `nextcloud-node-client`
 - **export**: WebDAV rsync, Occ commands for metadata scan
 
-## Skin note
+## Frontend note
 
 File/share objects correspond to the standard model ([models.md](../../../../../../data/models.md)); preview URLs behave as in [fields.md](../../../../../../data/fields.md) (`fileId` as the reference).

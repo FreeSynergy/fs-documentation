@@ -7,7 +7,7 @@ Plausible answers the four big questions: who came from where, what was read, ho
 ## Advantages
 
 - **Compliance-light** (cookieless, EU cloud), minimal maintenance effort
-- The stats API = chart skins without an analytics project
+- The stats API = chart frontends without an analytics project
 - Imports make switching easy
 
 ## Differentiation
@@ -27,4 +27,4 @@ Plausible answers the four big questions: who came from where, what was read, ho
 ## Who it suits
 
 - Association/project websites that only want to understand traffic
-- FreeSynergy skins: light stats widgets via the stats API
+- FreeSynergy frontends: light stats widgets via the stats API

@@ -5,7 +5,7 @@
 - **Layers**: `L.tileLayer` (raster), `L.imageOverlay`, `L.geoJSON` (vector data directly), marker/popup/tooltip, polyline/polygon/circle
 - **Interaction**: panning/zoom (touch), click handlers, the `L.control.*` system, custom controls
 - **Rendering**: retina tiles, CSS filter overlays, SVG/canvas renderers (`preferCanvas`)
-- **Data handling**: `L.geoJSON` loads GeoJSON directly — the language of all the other map skins
+- **Data handling**: `L.geoJSON` loads GeoJSON directly — the language of all the other map frontends
 
 ## What Leaflet does NOT do
 

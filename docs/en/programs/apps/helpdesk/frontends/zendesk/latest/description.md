@@ -28,5 +28,5 @@ Zendesk runs support as a service: customers write via any channel, everything b
 ## Who it suits
 
 - Companies that want to outsource support without operating it and accept US/EU cloud centres
-- FreeSynergy skins for ticket-first workflows with a clean REST model
+- FreeSynergy frontends for ticket-first workflows with a clean REST model
 - As a reference API (v2) when modelling your own ticket interfaces

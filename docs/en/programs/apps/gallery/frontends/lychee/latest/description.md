@@ -7,7 +7,7 @@ Lychee puts photos in albums on the web: upload, create albums, share links with
 ## Advantages
 
 - **lightweight**: runs on small shared hosting/VPS, fast interface
-- **clean REST API** with documented endpoints, good for skin integration
+- **clean REST API** with documented endpoints, good for frontend integration
 - **shares with expiry and password** implemented in an everyday-usable way
 
 ## Differentiation
@@ -30,5 +30,5 @@ Lychee puts photos in albums on the web: upload, create albums, share links with
 ## Who it suits
 
 - Small to medium galleries with a focus on sharing and speed
-- FreeSynergy gallery skins with an album / photo / share model
+- FreeSynergy gallery frontends with an album / photo / share model
 - Operators with no need for AI detection

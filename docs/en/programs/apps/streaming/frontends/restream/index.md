@@ -6,9 +6,9 @@ Restream (restream.io) is a **cloud multistreaming service**: one encoder stream
 
 ## File structure
 
-- [menu.md](../../masks/restream/menu.md) - Dashboard areas: streaming, studio, channels, events, chat, analytics, settings
-- [features.md](../../masks/restream/features.md) - Multistreaming, studio, chat, events, what Restream does NOT do
-- [description.md](../../masks/restream/description.md) - How it differs from the Docker Restreamer, from Wowza/Ant Media
-- [structure.md](../../masks/restream/structure.md) - Dashboard layout, plan tiers, embedding of the player
-- [shortcuts.md](../../masks/restream/shortcuts.md) - Web UI keys (Restream names no official shortcuts)
-- [api.md](../../masks/restream/api.md) - REST (channels, events, platforms, stream keys, user) and WebSockets (chat, streaming)
+- [menus.md](latest/menus.md) - Dashboard areas: streaming, studio, channels, events, chat, analytics, settings
+- [features.md](latest/features.md) - Multistreaming, studio, chat, events, what Restream does NOT do
+- [description.md](latest/description.md) - How it differs from the Docker Restreamer, from Wowza/Ant Media
+- [layout.md](latest/layout.md) - Dashboard layout, plan tiers, embedding of the player
+- [shortcuts.md](latest/shortcuts.md) - Web UI keys (Restream names no official shortcuts)
+- [api.md](latest/api.md) - REST (channels, events, platforms, stream keys, user) and WebSockets (chat, streaming)

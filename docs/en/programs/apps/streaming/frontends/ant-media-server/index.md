@@ -6,9 +6,9 @@ The Ant Media Server (AMS) is a streaming platform based on Java: it accepts RTM
 
 ## File structure
 
-- [menu.md](../../masks/ant-media-server/menu.md) - Web panel: apps, live streaming, VoD, settings, cluster
-- [features.md](../../masks/ant-media-server/features.md) - Protocols, adaptive streaming, tokens, restreaming, what AMS does NOT do
-- [description.md](../../masks/ant-media-server/description.md) - How it differs from Wowza, MediaMTX and MistServer
-- [structure.md](../../masks/ant-media-server/structure.md) - Tomcat layout, application model, ports and panel layout
-- [shortcuts.md](../../masks/ant-media-server/shortcuts.md) - Server command line and service management
-- [api.md](../../masks/ant-media-server/api.md) - REST v2 (broadcasts, VoD, management), JWT/IP filter, webhooks, SDKs
+- [menus.md](latest/menus.md) - Web panel: apps, live streaming, VoD, settings, cluster
+- [features.md](latest/features.md) - Protocols, adaptive streaming, tokens, restreaming, what AMS does NOT do
+- [description.md](latest/description.md) - How it differs from Wowza, MediaMTX and MistServer
+- [layout.md](latest/layout.md) - Tomcat layout, application model, ports and panel layout
+- [shortcuts.md](latest/shortcuts.md) - Server command line and service management
+- [api.md](latest/api.md) - REST v2 (broadcasts, VoD, management), JWT/IP filter, webhooks, SDKs

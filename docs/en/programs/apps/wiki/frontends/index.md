@@ -1,4 +1,4 @@
-# Wiki Mask Documentation
+# Wiki Frontend documentation
 
 ## Overview
 
@@ -17,7 +17,7 @@ This directory documents the menu items, features, keyboard shortcuts and APIs o
 ## Directory Structure
 
 ```
-docs/en/programs/apps/wiki/masks/
+docs/en/programs/apps/wiki/frontends/
 ├── index.md              (this file)
 ├── wikijs/
 │   ├── index.md
@@ -164,4 +164,4 @@ Every project directory holds **six** files:
 
 Status of this mirror: in `en/` each of the seven programs currently has only
 `index.md`; the remaining six files per program are still to be translated from
-`docs/de/programs/apps/wiki/masks/` (see `todo/translator.md`).
+`docs/de/programs/apps/wiki/frontends/` (see `todo/translator.md`).

@@ -59,6 +59,6 @@ No API limits are preconfigured; Django caching and reverse-proxy limits are rec
 - **community**: Python scripts for import/export in repository dependencies
 - **export**: folder export via the admin command `manage.py export`
 
-## Skin note
+## Frontend note
 
 The photo/album/person model corresponds to [models.md](../../../../../../data/models.md); because versioning is missing, field changes should be checked on upgrades.

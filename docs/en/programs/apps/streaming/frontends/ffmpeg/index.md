@@ -6,12 +6,12 @@ FFmpeg is the command-line tool collection of the FFmpeg projects: `ffmpeg` tran
 
 ## File structure
 
-- [menu.md](../../masks/ffmpeg/menu.md) - Tools, options, filter commands (FFmpeg without classic menus)
-- [features.md](../../masks/ffmpeg/features.md) - Transcoding, filter graph, containers, hardware, what FFmpeg does NOT do
-- [description.md](../../masks/ffmpeg/description.md) - How it differs from OBS, GStreamer, MediaMTX and Restreamer
-- [structure.md](../../masks/ffmpeg/structure.md) - Pipeline flow & CLI structure, parameter conventions
-- [shortcuts.md](../../masks/ffmpeg/shortcuts.md) - ffplay keyboard control, ffmpeg command-line keys
-- [api.md](../../masks/ffmpeg/api.md) - Process API, ffprobe JSON, libav\* libraries, language bindings
+- [menus.md](latest/menus.md) - Tools, options, filter commands (FFmpeg without classic menus)
+- [features.md](latest/features.md) - Transcoding, filter graph, containers, hardware, what FFmpeg does NOT do
+- [description.md](latest/description.md) - How it differs from OBS, GStreamer, MediaMTX and Restreamer
+- [layout.md](latest/layout.md) - Pipeline flow & CLI structure, parameter conventions
+- [shortcuts.md](latest/shortcuts.md) - ffplay keyboard control, ffmpeg command-line keys
+- [api.md](latest/api.md) - Process API, ffprobe JSON, libav\* libraries, language bindings
 
 ## Position in the system
 

@@ -56,6 +56,6 @@ Data API: standard quotas per property/project (moderate; backoff on 429/429 fam
 - Official clients (Python `google-analytics-data`, Node, Java)
 - GTM server integration for more data-sparing measurement
 
-## Skin note
+## Frontend note
 
-Report skins: use the Data API only for **aggregated** metrics; evaluating personal data remains the domain of self-hosting alternatives ([models.md](../../../../../../data/models.md) → data-protection note).
+Report frontends: use the Data API only for **aggregated** metrics; evaluating personal data remains the domain of self-hosting alternatives ([models.md](../../../../../../data/models.md) → data-protection note).

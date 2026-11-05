@@ -28,6 +28,6 @@ Coppermine ships with **no keyboard shortcuts of its own**. Only what the browse
 
 Browser standard (`Cmd` instead of `Ctrl`), beyond that no program shortcuts.
 
-## Skin note
+## Frontend note
 
-When recreating this in FreeSynergy, the shortcuts usual in the other gallery skins (`←`/`→`, `Esc`, `f` for favourite) should be added and marked as a **FreeSynergy extension**.
+When recreating this in FreeSynergy, the shortcuts usual in the other gallery frontends (`←`/`→`, `Esc`, `f` for favourite) should be added and marked as a **FreeSynergy extension**.

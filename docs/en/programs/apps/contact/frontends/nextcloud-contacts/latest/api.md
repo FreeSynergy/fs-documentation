@@ -69,6 +69,6 @@ Nextcloud throttling on the login endpoints; DAV itself has no fixed limits (bru
 - **CLI**: `curl` with DAV methods; `vdirsyncer`
 - **PHP**: `sabre/dav` (server-side reference)
 
-## Skin note
+## Frontend note
 
-Skin mapping onto the contact model ([models.md](../../../../../../data/models.md)), field names according to vCard 3.0 ([fields.md](../../../../../../data/fields.md)).
+Frontend mapping onto the contact model ([models.md](../../../../../../data/models.md)), field names according to vCard 3.0 ([fields.md](../../../../../../data/fields.md)).

@@ -31,4 +31,4 @@ Coppermine presents photos in a web-toolkit gallery: categories and albums struc
 
 - Existing Coppermine installations that are to be recreated in FreeSynergy
 - Operators running a community gallery without cloud conveniences
-- As a comparison case in skin projects, because **no API** exists (to demonstrate the migration effort)
+- As a comparison case in frontend projects, because **no API** exists (to demonstrate the migration effort)

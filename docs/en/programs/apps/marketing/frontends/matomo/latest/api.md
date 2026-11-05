@@ -61,6 +61,6 @@ On the instance side (`login` throttling; tracking throttling via proxy).
 - Official client libs (Python `matomo`, PHP, JS), `matomo-tag-manager`
 - GA data import via an import plugin
 
-## Skin note
+## Frontend note
 
 `idsite` = the property key in [models.md](../../../../../../data/models.md); maintain the event names as a vocabulary centrally in [fields.md](../../../../../../data/fields.md).

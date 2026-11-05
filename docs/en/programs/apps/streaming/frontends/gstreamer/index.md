@@ -6,9 +6,9 @@ GStreamer is a multimedia framework in C: capture, decoding, filtering, encoding
 
 ## File structure
 
-- [menu.md](../../masks/gstreamer/menu.md) - Tools, command syntax, element inspection, roles
-- [features.md](../../masks/gstreamer/features.md) - Elements, containers, hardware, WebRTC, what GStreamer does NOT do
-- [description.md](../../masks/gstreamer/description.md) - How it differs from ffmpeg, OBS Studio, MediaMTX and MistServer
-- [structure.md](../../masks/gstreamer/structure.md) - Pipeline model, pads/caps, bus, states, debugging tools
-- [shortcuts.md](../../masks/gstreamer/shortcuts.md) - Keys in `gst-play-1.0`, options of the CLI tools
-- [api.md](../../masks/gstreamer/api.md) - C API, appsrc/appsink, gst-rtsp-server, bindings, debugging environment
+- [menus.md](latest/menus.md) - Tools, command syntax, element inspection, roles
+- [features.md](latest/features.md) - Elements, containers, hardware, WebRTC, what GStreamer does NOT do
+- [description.md](latest/description.md) - How it differs from ffmpeg, OBS Studio, MediaMTX and MistServer
+- [layout.md](latest/layout.md) - Pipeline model, pads/caps, bus, states, debugging tools
+- [shortcuts.md](latest/shortcuts.md) - Keys in `gst-play-1.0`, options of the CLI tools
+- [api.md](latest/api.md) - C API, appsrc/appsink, gst-rtsp-server, bindings, debugging environment

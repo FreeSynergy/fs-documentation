@@ -17,7 +17,7 @@ This directory documents the menu items, features, keyboard shortcuts and APIs o
 ## Directory Structure
 
 ```
-docs/en/programs/apps/messenger/masks/
+docs/en/programs/apps/messenger/frontends/
 ├── index.md              (this file)
 ├── outlook/
 │   ├── index.md
