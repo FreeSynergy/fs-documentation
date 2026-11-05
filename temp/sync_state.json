@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T19:15:19.545382+00:00",
+  "last_run": "2026-11-05T19:28:33.267774+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -24723,232 +24723,292 @@
       "de_bytes": 3779
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2ce6a3a8f24d5e79",
       "de_hash": "b31b57c377256e28",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.728555+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ffmpeg/api.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.728555+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3964
+      "en_bytes": 3849,
+      "de_bytes": 3964,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "8c1d0583b1572698",
       "de_hash": "2737164ae4b2157e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.257052+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ffmpeg/description.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.257052+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4238
+      "en_bytes": 4152,
+      "de_bytes": 4238,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "088e3cfec002cda4",
       "de_hash": "4f04f2e1c0c4a474",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.365775+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ffmpeg/features.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.365775+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3366
+      "en_bytes": 3243,
+      "de_bytes": 3366,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "2e8b6aeb040a8d29",
       "de_hash": "1a00b1765a80c08e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.546422+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ffmpeg/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.546422+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2639
+      "en_bytes": 2548,
+      "de_bytes": 2639,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "be69c2422a90fe35",
       "de_hash": "906551264b74d1c9",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.639082+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ffmpeg/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.639082+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2807
+      "en_bytes": 2714,
+      "de_bytes": 2807,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/ffmpeg/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "dd2186459e00ee58",
       "de_hash": "0a03225c496d128d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.454895+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming ffmpeg)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/ffmpeg/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.454895+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2748
+      "en_bytes": 2701,
+      "de_bytes": 2748,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/gstreamer/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "bedb9f9bd3888e8b",
       "de_hash": "a4e6df7093eb7fd3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:33.267754+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/gstreamer/api.md"
+        },
+        {
+          "at": "2026-11-05T19:28:33.267754+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4834
+      "en_bytes": 4800,
+      "de_bytes": 4834,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/gstreamer/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "d885b552c437f99e",
       "de_hash": "77f7ae48b28d1e19",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.820470+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/gstreamer/description.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.820470+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2990
+      "en_bytes": 2927,
+      "de_bytes": 2990,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/gstreamer/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "8935b8519f0e34e2",
       "de_hash": "14bf8e84033a1cab",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.911892+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/gstreamer/features.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.911892+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3489
+      "en_bytes": 3417,
+      "de_bytes": 3489,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/gstreamer/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ea3cffabe51fc022",
       "de_hash": "7a6f44f9eebcb952",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:33.091721+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/gstreamer/menu.md"
+        },
+        {
+          "at": "2026-11-05T19:28:33.091721+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2170
+      "en_bytes": 2141,
+      "de_bytes": 2170,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/gstreamer/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "5b25968f5c511495",
       "de_hash": "a3c5fa377e3754a2",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:33.179733+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/gstreamer/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T19:28:33.179733+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1890
+      "en_bytes": 1783,
+      "de_bytes": 1890,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/gstreamer/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "46d9f726949a2805",
       "de_hash": "378b6c1fea53eeb8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
+      "last_verified": "2026-11-05T19:28:32.999973+00:00",
       "kind": [
-        "needs_en"
+        "review"
       ],
-      "note": null,
+      "note": "translated de->en (streaming gstreamer)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/streaming/masks/gstreamer/structure.md"
+        },
+        {
+          "at": "2026-11-05T19:28:32.999973+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3652
+      "en_bytes": 3598,
+      "de_bytes": 3652,
+      "change_reason": null
     },
     "programs/apps/streaming/frontends/mediamtx/latest/api.md": {
       "status": "PENDING",

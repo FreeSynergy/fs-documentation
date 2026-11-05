@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 19:15 UTC · 1537 Dateien verfolgt · 339 offen · 1191 bestätigt
+Stand: 2026-11-05 19:28 UTC · 1537 Dateien verfolgt · 339 offen · 1191 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 339 |
+| A. `en/` fehlt – aus `de/` übersetzen | 327 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -44,10 +44,10 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
 | F. Form nicht gleich – Struktur abgleichen | 0 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 12 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 339 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 327 Dateien
 
 ### `programs/` · 1
 
@@ -61,24 +61,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/apps/streaming/frontends/ant-media-server/latest/layout.md` · 3.7k
 - [ ] `programs/apps/streaming/frontends/ant-media-server/latest/menus.md` · 2.2k
 - [ ] `programs/apps/streaming/frontends/ant-media-server/latest/shortcuts.md` · 1.9k
-
-### `programs/apps/streaming/frontends/ffmpeg/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/api.md` · 3.9k
-- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/description.md` · 4.1k
-- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/features.md` · 3.3k
-- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/layout.md` · 2.7k
-- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/menus.md` · 2.6k
-- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/shortcuts.md` · 2.7k
-
-### `programs/apps/streaming/frontends/gstreamer/latest/` · 6
-
-- [ ] `programs/apps/streaming/frontends/gstreamer/latest/api.md` · 4.7k
-- [ ] `programs/apps/streaming/frontends/gstreamer/latest/description.md` · 2.9k
-- [ ] `programs/apps/streaming/frontends/gstreamer/latest/features.md` · 3.4k
-- [ ] `programs/apps/streaming/frontends/gstreamer/latest/layout.md` · 3.6k
-- [ ] `programs/apps/streaming/frontends/gstreamer/latest/menus.md` · 2.1k
-- [ ] `programs/apps/streaming/frontends/gstreamer/latest/shortcuts.md` · 1.8k
 
 ### `programs/apps/streaming/frontends/mediamtx/latest/` · 6
 
@@ -670,6 +652,26 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/frontends/zapier/latest/menus.md` · 1.1k
 - [ ] `programs/suites/workflows/frontends/zapier/latest/shortcuts.md` · 449b
 
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 12 Dateien
+
+### `programs/apps/streaming/frontends/ffmpeg/latest/` · 6
+
+- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/api.md` · 3.8k
+- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/description.md` · 4.1k
+- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/features.md` · 3.2k
+- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/layout.md` · 2.6k
+- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/menus.md` · 2.5k
+- [ ] `programs/apps/streaming/frontends/ffmpeg/latest/shortcuts.md` · 2.7k
+
+### `programs/apps/streaming/frontends/gstreamer/latest/` · 6
+
+- [ ] `programs/apps/streaming/frontends/gstreamer/latest/api.md` · 4.7k
+- [ ] `programs/apps/streaming/frontends/gstreamer/latest/description.md` · 2.9k
+- [ ] `programs/apps/streaming/frontends/gstreamer/latest/features.md` · 3.3k
+- [ ] `programs/apps/streaming/frontends/gstreamer/latest/layout.md` · 3.5k
+- [ ] `programs/apps/streaming/frontends/gstreamer/latest/menus.md` · 2.1k
+- [ ] `programs/apps/streaming/frontends/gstreamer/latest/shortcuts.md` · 1.7k
+
 ## 🗑️ Gelöscht – 7
 
 - [x] `data/anforderungen.md` · nicht mehr im Baum
@@ -682,7 +684,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 11:07 · Lauf: 1499 verfolgt, 529 offen, 963 bestätigt · needs_en=528 parity=1
 - 2026-11-05 11:17 · Lauf: 1499 verfolgt, 529 offen, 963 bestätigt · needs_en=515 review=14
 - 2026-11-05 11:25 · Lauf: 1499 verfolgt, 689 offen, 803 bestätigt · needs_en=502 parity=42 review=145
 - 2026-11-05 11:28 · Lauf: 1499 verfolgt, 676 offen, 816 bestätigt · needs_en=498 review=178
@@ -723,3 +724,4 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 19:01 · Lauf: 1537 verfolgt, 360 offen, 1170 bestätigt · needs_en=344 parity=13 review=3
 - 2026-11-05 19:14 · Lauf: 1537 verfolgt, 360 offen, 1170 bestätigt · needs_en=339 review=21
 - 2026-11-05 19:15 · Lauf: 1537 verfolgt, 339 offen, 1191 bestätigt · needs_en=339
+- 2026-11-05 19:28 · Lauf: 1537 verfolgt, 339 offen, 1191 bestätigt · needs_en=327 review=12
