@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 10:20 UTC · 1499 Dateien verfolgt · 609 offen · 883 bestätigt
+Stand: 2026-11-05 10:31 UTC · 1499 Dateien verfolgt · 581 offen · 911 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 581 |
+| A. `en/` fehlt – aus `de/` übersetzen | 556 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -44,62 +44,10 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | E. `de/` enthält noch englischen Text – Rest rückübersetzen | 0 |
 | F. Form nicht gleich – Struktur abgleichen | 0 |
 | G. Deutscher Dateiname – Pfad englisch machen (ADR 0002) | 0 |
-| H. Beide Seiten da, kein Befund – lesen und bestätigen | 28 |
+| H. Beide Seiten da, kein Befund – lesen und bestätigen | 25 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 581 Dateien
-
-### `interactions/animations/exit/` · 1
-
-- [ ] `interactions/animations/exit/index.md` · 1.5k
-
-### `interactions/animations/exit/bounce-out/` · 3
-
-- [ ] `interactions/animations/exit/bounce-out/appearance.md` · 1.3k
-- [ ] `interactions/animations/exit/bounce-out/attributes.md` · 1.7k
-- [ ] `interactions/animations/exit/bounce-out/description.md` · 970b
-
-### `interactions/animations/exit/collapse/` · 3
-
-- [ ] `interactions/animations/exit/collapse/appearance.md` · 1.6k
-- [ ] `interactions/animations/exit/collapse/attributes.md` · 1.7k
-- [ ] `interactions/animations/exit/collapse/description.md` · 852b
-
-### `interactions/animations/exit/fade-out/` · 3
-
-- [ ] `interactions/animations/exit/fade-out/appearance.md` · 1.2k
-- [ ] `interactions/animations/exit/fade-out/attributes.md` · 1.5k
-- [ ] `interactions/animations/exit/fade-out/description.md` · 897b
-
-### `interactions/animations/exit/pop-out/` · 3
-
-- [ ] `interactions/animations/exit/pop-out/appearance.md` · 1.5k
-- [ ] `interactions/animations/exit/pop-out/attributes.md` · 1.6k
-- [ ] `interactions/animations/exit/pop-out/description.md` · 1.1k
-
-### `interactions/animations/exit/radial-in/` · 3
-
-- [ ] `interactions/animations/exit/radial-in/appearance.md` · 2.0k
-- [ ] `interactions/animations/exit/radial-in/attributes.md` · 1.9k
-- [ ] `interactions/animations/exit/radial-in/description.md` · 1.6k
-
-### `interactions/animations/exit/scale-out/` · 3
-
-- [ ] `interactions/animations/exit/scale-out/appearance.md` · 1.4k
-- [ ] `interactions/animations/exit/scale-out/attributes.md` · 1.6k
-- [ ] `interactions/animations/exit/scale-out/description.md` · 962b
-
-### `interactions/animations/exit/slide-out/` · 3
-
-- [ ] `interactions/animations/exit/slide-out/appearance.md` · 1.3k
-- [ ] `interactions/animations/exit/slide-out/attributes.md` · 1.6k
-- [ ] `interactions/animations/exit/slide-out/description.md` · 958b
-
-### `interactions/animations/exit/zoom-out/` · 3
-
-- [ ] `interactions/animations/exit/zoom-out/appearance.md` · 1.2k
-- [ ] `interactions/animations/exit/zoom-out/attributes.md` · 1.6k
-- [ ] `interactions/animations/exit/zoom-out/description.md` · 941b
+## A. `en/` fehlt – aus `de/` übersetzen – 556 Dateien
 
 ### `interactions/animations/feedback/` · 1
 
@@ -993,65 +941,59 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - [ ] `programs/suites/workflows/masks/zapier/shortcuts.md` · 449b · Plan[~]
 - [ ] `programs/suites/workflows/masks/zapier/structure.md` · 2.1k · Plan[~]
 
-## H. Beide Seiten da, kein Befund – lesen und bestätigen – 28 Dateien
+## H. Beide Seiten da, kein Befund – lesen und bestätigen – 25 Dateien
 
-### `interactions/animations/entrance/` · 1
+### `interactions/animations/exit/` · 1
 
-- [ ] `interactions/animations/entrance/index.md` · 1.3k
+- [ ] `interactions/animations/exit/index.md` · 1.4k
 
-### `interactions/animations/entrance/bounce-in/` · 3
+### `interactions/animations/exit/bounce-out/` · 3
 
-- [ ] `interactions/animations/entrance/bounce-in/appearance.md` · 1.3k
-- [ ] `interactions/animations/entrance/bounce-in/attributes.md` · 1.5k
-- [ ] `interactions/animations/entrance/bounce-in/description.md` · 1003b
+- [ ] `interactions/animations/exit/bounce-out/appearance.md` · 1.2k
+- [ ] `interactions/animations/exit/bounce-out/attributes.md` · 1.6k
+- [ ] `interactions/animations/exit/bounce-out/description.md` · 978b
 
-### `interactions/animations/entrance/expand/` · 3
+### `interactions/animations/exit/collapse/` · 3
 
-- [ ] `interactions/animations/entrance/expand/appearance.md` · 1.6k
-- [ ] `interactions/animations/entrance/expand/attributes.md` · 1.7k
-- [ ] `interactions/animations/entrance/expand/description.md` · 796b
+- [ ] `interactions/animations/exit/collapse/appearance.md` · 1.6k
+- [ ] `interactions/animations/exit/collapse/attributes.md` · 1.7k
+- [ ] `interactions/animations/exit/collapse/description.md` · 810b
 
-### `interactions/animations/entrance/fade-in/` · 3
+### `interactions/animations/exit/fade-out/` · 3
 
-- [ ] `interactions/animations/entrance/fade-in/appearance.md` · 1.2k
-- [ ] `interactions/animations/entrance/fade-in/attributes.md` · 1.4k
-- [ ] `interactions/animations/entrance/fade-in/description.md` · 860b
+- [ ] `interactions/animations/exit/fade-out/appearance.md` · 1.2k
+- [ ] `interactions/animations/exit/fade-out/attributes.md` · 1.4k
+- [ ] `interactions/animations/exit/fade-out/description.md` · 838b
 
-### `interactions/animations/entrance/pop-in/` · 3
+### `interactions/animations/exit/pop-out/` · 3
 
-- [ ] `interactions/animations/entrance/pop-in/appearance.md` · 1.4k
-- [ ] `interactions/animations/entrance/pop-in/attributes.md` · 1.5k
-- [ ] `interactions/animations/entrance/pop-in/description.md` · 1.0k
+- [ ] `interactions/animations/exit/pop-out/appearance.md` · 1.5k
+- [ ] `interactions/animations/exit/pop-out/attributes.md` · 1.6k
+- [ ] `interactions/animations/exit/pop-out/description.md` · 1.1k
 
-### `interactions/animations/entrance/radial-out/` · 3
+### `interactions/animations/exit/radial-in/` · 3
 
-- [ ] `interactions/animations/entrance/radial-out/appearance.md` · 2.0k
-- [ ] `interactions/animations/entrance/radial-out/attributes.md` · 1.8k
-- [ ] `interactions/animations/entrance/radial-out/description.md` · 1.4k
+- [ ] `interactions/animations/exit/radial-in/appearance.md` · 1.9k
+- [ ] `interactions/animations/exit/radial-in/attributes.md` · 1.9k
+- [ ] `interactions/animations/exit/radial-in/description.md` · 1.5k
 
-### `interactions/animations/entrance/scale-in/` · 3
+### `interactions/animations/exit/scale-out/` · 3
 
-- [ ] `interactions/animations/entrance/scale-in/appearance.md` · 1.4k
-- [ ] `interactions/animations/entrance/scale-in/attributes.md` · 1.6k
-- [ ] `interactions/animations/entrance/scale-in/description.md` · 961b
+- [ ] `interactions/animations/exit/scale-out/appearance.md` · 1.4k
+- [ ] `interactions/animations/exit/scale-out/attributes.md` · 1.6k
+- [ ] `interactions/animations/exit/scale-out/description.md` · 925b
 
-### `interactions/animations/entrance/slide-in/` · 3
+### `interactions/animations/exit/slide-out/` · 3
 
-- [ ] `interactions/animations/entrance/slide-in/appearance.md` · 1.3k
-- [ ] `interactions/animations/entrance/slide-in/attributes.md` · 1.6k
-- [ ] `interactions/animations/entrance/slide-in/description.md` · 879b
+- [ ] `interactions/animations/exit/slide-out/appearance.md` · 1.3k
+- [ ] `interactions/animations/exit/slide-out/attributes.md` · 1.6k
+- [ ] `interactions/animations/exit/slide-out/description.md` · 914b
 
-### `interactions/animations/entrance/unfold/` · 3
+### `interactions/animations/exit/zoom-out/` · 3
 
-- [ ] `interactions/animations/entrance/unfold/appearance.md` · 1.5k
-- [ ] `interactions/animations/entrance/unfold/attributes.md` · 1.7k
-- [ ] `interactions/animations/entrance/unfold/description.md` · 950b
-
-### `interactions/animations/entrance/zoom-in/` · 3
-
-- [ ] `interactions/animations/entrance/zoom-in/appearance.md` · 1.2k
-- [ ] `interactions/animations/entrance/zoom-in/attributes.md` · 1.5k
-- [ ] `interactions/animations/entrance/zoom-in/description.md` · 864b
+- [ ] `interactions/animations/exit/zoom-out/appearance.md` · 1.2k
+- [ ] `interactions/animations/exit/zoom-out/attributes.md` · 1.5k
+- [ ] `interactions/animations/exit/zoom-out/description.md` · 854b
 
 ## 🗑️ Gelöscht – 7
 
@@ -1065,7 +1007,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-  `temp/state.md` auf `doc_sync.py` umgestellt, `temp/translation-progress.md` stillgelegt.
   Abschnittszahlen jetzt: A 687 · B 1 · C 0 · D 3 · D2 15 · E 0 · F 29 · G 17 · H 756.
 - 2026-11-04 20:45 · **Abschnitt D abgearbeitet (3 von 4):** `en/components/widgets/overlays/drawer/appearance.md`,
   `en/components/workbenches/special/dashboard/appearance.md` (deutsche Tabellenzellen in Groessen/Farben
@@ -1106,3 +1047,4 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 10:04 · Lauf: 1499 verfolgt, 617 offen, 875 bestätigt · needs_en=609 review=8
 - 2026-11-05 10:04 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=609
 - 2026-11-05 10:20 · Lauf: 1499 verfolgt, 609 offen, 883 bestätigt · needs_en=581 review=28
+- 2026-11-05 10:31 · Lauf: 1499 verfolgt, 581 offen, 911 bestätigt · needs_en=556 review=25
