@@ -74,18 +74,6 @@ Optional rechts:
 - **Konsistenz**: Einheitliches Design über alle Bereiche
 - **Anpassbar**: Vielgestaltige Layout-Optionen
 
-### Farbschema
-
-- **Light Theme**: Klassisches helles Farbschema
-- **Dark Theme**: Dunkles Farbschema (neuer)
-- **Benutzerdefiniert**: Anpassbare Farben
-
-### Typography
-
-- **Headings**: Klare Hierarchie
-- **Text**: Lesbare Schriftgrößen (10-12pt)
-- **Lists**: Klare Aufzählungen
-
 ### Interaktionen
 
 - **Hover-Effekte**: Visuelles Feedback beim Hover
@@ -154,3 +142,7 @@ Optional rechts:
 - **Caching**: Client-seitiges Caching (OST-Dateien)
 - **Pagination**: Für große Listen
 - **Debounce**: Für Suchfunktionen
+
+## Themes
+
+Farben, Typografie und Theme-Details: siehe [themes](themes/index.md).

@@ -73,20 +73,6 @@ Optional rechts: Anzeige von Details abhängig vom ausgewählten Raum
 - **Konsistent**: Einheitliches Design über alle Bereiche
 - **Anpassbar**: Theme-Unterstützung
 
-### Farbschema
-
-- **Light Theme**: Helles Farbschema (Standard)
-- **Dark Theme**: Dunkles Farbschema
-- **Benutzerdefiniert**: Anpassbare Farben über Theme-System
-- **Kontextbezogene Farben**: Farben für Nachrichtenstatus
-
-### Typography
-
-- **Headings**: Klare Hierarchie
-- **Text**: Lesbare Schriftgrößen (12-14pt)
-- **Lists**: Klare Aufzählungen
-- **Monospace**: Für Code-Blöcke
-
 ### Interaktionen
 
 - **Hover-Effekte**: Visuelles Feedback beim Hover
@@ -150,3 +136,7 @@ Optional rechts: Anzeige von Details abhängig vom ausgewählten Raum
 - **Pagination**: Für große Listen
 - **Debounce**: Für Suchfunktionen
 - **Lazy Loading**: Für große Räume
+
+## Themes
+
+Farben, Typografie und Theme-Details: siehe [themes](themes/index.md).

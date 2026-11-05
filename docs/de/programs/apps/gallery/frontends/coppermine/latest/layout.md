@@ -1,22 +1,5 @@
 # Coppermine - Struktur und UI/UX
 
-## Publikumsbereich (Standard-Theme)
-
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│ Galerie-Titel  Menü: Startseiten | Alben | Suche | Login             │
-├───────────────┬──────────────────────────────────────────────────────┤
-│ Seitenblock   │ Kategorie-/Albenübersicht mit Miniaturen             │
-│ (Blöcke)      │ ┌────┐┌────┐┌────┐┌────┐                             │
-│ letzte Uploads│ └────┘└────┘└────┘└────┘                             │
-│ Bestseller    │ Albenkopf: Titel, Beschreibung, Bildzähler, Sort.    │
-└───────────────┴──────────────────────────────────────────────────────┘
-   Bildseite: Bild mittig | Dateinfo | Bewertung | Kommentare | Navigation
-```
-
-- Admin-Oberfläche „cuPCP“ ist ein separates Maskensystem mit Tab-Reitern
-- Seitenränder bestehen aus Blöcken, die pro Theme placiert werden
-
 ## UI/UX
 
 - Standard-Theme zweispaltig, ältere Themes mit fester Breite
@@ -47,3 +30,7 @@
 
 - Vorschaugrößen werden beim Upload erzeugt; Neubauen per Wartungsfunktion
 - Kein eingebauter Seiten-Cache; Caching über Webserver/Proxy erforderlich
+
+## Themes
+
+Farben, Typografie und Theme-Details: siehe [themes](themes/index.md).

@@ -77,20 +77,6 @@ Optional rechts: Anzeige von Details abhängig vom ausgewählten Element
 - **Mozilla-Style**: Befolgt Mozilla-Design-Richtlinien
 - **Barrierefrei**: Fokus auf Zugänglichkeit
 
-### Farbschema
-
-- **Light Theme**: Klassisches helles Farbschema
-- **Dark Theme**: Dunkles Farbschema
-- **Benutzerdefiniert**: Anpassbare Farben über Theme-System
-- **Kontextbezogene Farben**: Farben für Kalender, Kategorien
-
-### Typography
-
-- **Headings**: Klare Hierarchie
-- **Text**: Lesbare Schriftgrößen (10-12pt)
-- **Lists**: Klare Aufzählungen mit Kontrollkästchen
-- **Monospace**: Für E-Mail-Headers
-
 ### Interaktionen
 
 - **Hover-Effekte**: Visuelles Feedback beim Hover
@@ -162,3 +148,7 @@ Optional rechts: Anzeige von Details abhängig vom ausgewählten Element
 - **Pagination**: Für große Listen
 - **Debounce**: Für Suchfunktionen
 - **Lazy Loading**: Für große Kalender und Adressbücher
+
+## Themes
+
+Farben, Typografie und Theme-Details: siehe [themes](themes/index.md).

@@ -74,20 +74,6 @@ Optional rechts: Anzeige von Details abhängig vom ausgewählten Kanal
 - **Funktional**: Funktion über Form
 - **Konsistent**: Einheitliches Design über alle Bereiche
 
-### Farbschema
-
-- **Light Theme**: Helles Farbschema (Standard)
-- **Dark Theme**: Dunkles Farbschema (Standard)
-- **Benutzerdefiniert**: Anpassbare Farben pro Server
-- **Kontextbezogene Farben**: Farben für Nachrichtenstatus
-
-### Typography
-
-- **Headings**: Klare Hierarchie
-- **Text**: Lesbare Schriftgrößen (14-16pt)
-- **Lists**: Klare Aufzählungen
-- **Monospace**: Für Code-Blöcke
-
 ### Interaktionen
 
 - **Hover-Effekte**: Visuelles Feedback beim Hover
@@ -156,3 +142,7 @@ Optional rechts: Anzeige von Details abhängig vom ausgewählten Kanal
 - **Pagination**: Für große Listen
 - **Debounce**: Für Suchfunktionen
 - **Lazy Loading**: Für große Server
+
+## Themes
+
+Farben, Typografie und Theme-Details: siehe [themes](themes/index.md).
