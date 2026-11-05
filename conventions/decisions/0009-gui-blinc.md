@@ -52,3 +52,21 @@ Absicherungen:
 
 Issues des Autors laufen über **git-bug** (`refs/bugs/*`); Stand: `temp/research/blinc-issues.md`.
 Blincs Plan „cn → layout promotion“ (c422b97) deckt sich mit unserer Component-Schicht.
+
+## Antwort des Autors (2026-11-05, über den Nutzer)
+
+- **Barrierefreiheit:** laufende Arbeit; Tastatur-Navigation (Tab/Pfeile) für interaktive Elemente
+  und Formulare ist in **0.6.0**; mobil noch in Arbeit, geplant für **0.6.1**.
+- **IME mobil:** zurückgestellt zugunsten von Linux/Windows-Fehlern; geplant, evtl. 0.6.1.
+- **Code-Editor:** Hervorhebung ist anpassbar — eigenen Trait implementieren und an die Komponente
+  übergeben. Puffer statt Zeile evtl. schneller, nicht gemessen. Referenz: eine IDE auf einem Teil von
+  Blinc (Repo `blinc_abi`, Sprache Haxe) kommt mit großen Texten gut zurecht.
+- **cn-Komponenten:** keine Vorgaben, **Beiträge willkommen**.
+- **Gesten/Eingabe:** Stift noch nicht unterstützt — **Beiträge willkommen**.
+- **harfrust:** wird angesehen; Umstieg oder Benötigtes aus rustybuzz übernehmen.
+- **Roadmap:** in **git-bug** (CLI installieren, um alle Issues zu holen).
+- **Beitragen:** erst **git-bug-Issue**, im **GitHub-Issue** erwähnen (damit andere Maintainer es
+  sehen); bei Änderungswünschen/neuen Funktionen zuerst im **RFC-Kanal** besprechen, dann PR.
+
+Folge: Die Absicherung „Plan für Barrierefreiheit“ (Punkt 5) ist erfüllt — es gibt einen Plan.
+
