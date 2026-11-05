@@ -2,6 +2,25 @@
 
 > Belege stehen zentral in [standards.md](../standards.md) — **nichts aus dem Web nachladen.** Recherche abgeschlossen 2026-11-02.
 
+## Stand 2026-11-05
+
+Beleg: `temp/research/geodata-projects-profile-login.md` (2026-11-05).
+
+| Standard | Beleg | Rolle |
+|----------|-------|-------|
+| JSCalendar 2.0 `Task` | ✅ | das Task-Objekt |
+| **RFC 9253** Relationen: `DEPENDS-ON`, `FIRST`, `NEXT`, `FINISHTOSTART`/`FINISHTOFINISH`/`STARTTOSTART`/`STARTTOFINISH` mit Vor-/Nachlauf | ✅ | Abhängigkeiten |
+| **RFC 10051** Task-Erweiterungen: Status `PENDING`/`FAILED`, `VSTATUS` (Grund, Unterzustand), geschätzte Dauer, `TASK-MODE` | ✅ | umfangreicherer Task-Status (Anbieter-Eigenschaft, bis JSCalendar sie hat) |
+| JSCalendar `relatedTo` | ✅ nur `first`, `next`, `child`, `parent` | kein „blocks"/„duplicates" → Lücke |
+| **ForgeFed** `TicketDependency` (ActivityPub für Forges) | ✅ Entwurf | föderations-native Abhängigkeit im Envelope |
+| ISO 21511:2018 (WBS) | ✅ nur Leitfaden, kein Datenformat | Vokabular-Referenz |
+| schema.org `Project` | ✅ Kern, Unterart von `Organization`; keine Task-/Status-/Abhängigkeits-Eigenschaften | nur Exportprojektion |
+| W6C XML Schema | nicht wieder gefunden | verworfen |
+| Kanban-Board-Standard | ❌ keiner | **eigene Spec** (Kandidat Nr. 3) |
+
+Referenzvokabular für Relationen (OpenProject): relates, duplicates, blocks, precedes/follows,
+includes/partof, requires. Gesehene Exporte: Taiga-JSON-Dump, Vikunja-ZIP mit `data.json`.
+
 ## Ergebnis der Standardsuche (2026-11-02)
 
 | Kandidat | Beleg | Einordnung |

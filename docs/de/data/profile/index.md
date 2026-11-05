@@ -14,7 +14,7 @@ Ein Profil ist **keine zweite Kopie der Personendaten**, sondern eine **Projekti
 
 | Standard | Beleg | Rolle bei FreeSynergy |
 |----------|-------|-----------------------|
-| **AS2-`Actor` / `Profile`** | ✅ Actor gelesen; `Profile`-Typ ⚠️ Abschnitt noch belegen | Hülle der öffentlichen Ansicht |
+| **AS2-`Actor` / `Profile`** | ✅ (2026-11-05) | öffentliche Ansicht = `Profile` mit `describes` → ich selbst; Kontakte nutzen denselben Typ für andere (ADR 0020) |
 | **JSContact `Card`** | ✅ | Quelle der angezeigten Felder |
 | **schema.org `Person` / `name`** | `name` ✅, `Person` ⚠️ | Export-Projektion für Web/SEO |
 | **AS2-Audience (`to`/`cc`/`bto`/`bcc`)** | ✅ Core gelesen | Publikumsregeln pro Feld/Feldgruppe |

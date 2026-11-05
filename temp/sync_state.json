@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-05T16:44:38.261050+00:00",
+  "last_run": "2026-11-05T17:28:55.690271+00:00",
   "entries": {
     "components/blinc-cn-components.md": {
       "status": "VERIFIED",
@@ -7924,20 +7924,28 @@
     },
     "data/geodata/standards.md": {
       "status": "VERIFIED",
-      "en_hash": "b39d55acc6603cc9",
-      "de_hash": "9f69ff14fed93ead",
+      "en_hash": "167836d59e2a84f2",
+      "de_hash": "0a2fbc60a3b9c8d3",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1795,
-      "de_bytes": 1781,
+      "en_bytes": 2961,
+      "de_bytes": 2990,
       "change_reason": null
     },
     "data/geodata/technical.md": {
@@ -8189,20 +8197,28 @@
     },
     "data/login/description.md": {
       "status": "VERIFIED",
-      "en_hash": "ae30be4ed72acca8",
-      "de_hash": "9dccf63d605eae2f",
+      "en_hash": "dbab7d2bff366490",
+      "de_hash": "b748fc5b55697e4d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1108,
-      "de_bytes": 1144,
+      "en_bytes": 1119,
+      "de_bytes": 1155,
       "change_reason": null
     },
     "data/login/examples.md": {
@@ -8233,28 +8249,36 @@
     },
     "data/login/index.md": {
       "status": "VERIFIED",
-      "en_hash": "1f1558a64eb25e6c",
-      "de_hash": "3adef151739cffbb",
+      "en_hash": "1e7dc10879a1e5a1",
+      "de_hash": "7290876f2a4f5fa7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1911,
-      "de_bytes": 1957,
+      "en_bytes": 2069,
+      "de_bytes": 2130,
       "change_reason": null
     },
     "data/login/standards.md": {
       "status": "VERIFIED",
-      "en_hash": "acad2c9f17e12944",
-      "de_hash": "3bcb124bfe073a1a",
+      "en_hash": "e671b1d1843197da",
+      "de_hash": "913747cd228c4a9d",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T14:41:19.953722+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
@@ -8269,10 +8293,18 @@
         {
           "at": "2026-11-05T14:41:19.953722+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2091,
-      "de_bytes": 2143,
+      "en_bytes": 3634,
+      "de_bytes": 3791,
       "change_reason": null
     },
     "data/login/technical.md": {
@@ -8536,38 +8568,54 @@
     },
     "data/profile/index.md": {
       "status": "VERIFIED",
-      "en_hash": "b3d0d34b3b11fa40",
-      "de_hash": "5186c16ac454ad97",
+      "en_hash": "0c3023790db428dc",
+      "de_hash": "0368147d6d4f43f7",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 1405,
-      "de_bytes": 1488,
+      "en_bytes": 1433,
+      "de_bytes": 1527,
       "change_reason": null
     },
     "data/profile/standards.md": {
       "status": "VERIFIED",
-      "en_hash": "fba62cc9381f93fa",
-      "de_hash": "abb46bd401680821",
+      "en_hash": "f7a64c4a89907d2d",
+      "de_hash": "78a348361a354ff0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2209,
-      "de_bytes": 2220,
+      "en_bytes": 3068,
+      "de_bytes": 3200,
       "change_reason": null
     },
     "data/profile/technical.md": {
@@ -8652,20 +8700,28 @@
     },
     "data/projects/standards.md": {
       "status": "VERIFIED",
-      "en_hash": "7d16752ac49afabf",
-      "de_hash": "64a9ac7a8483096b",
+      "en_hash": "13525e48d34042b5",
+      "de_hash": "21c022e7d9998a36",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T08:13:11.333125+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "translated de->en",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T08:13:11.333125+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 2005,
-      "de_bytes": 1996,
+      "en_bytes": 3311,
+      "de_bytes": 3355,
       "change_reason": null
     },
     "data/projects/technical.md": {
@@ -8704,10 +8760,10 @@
     },
     "data/standards.md": {
       "status": "VERIFIED",
-      "en_hash": "bb7ce88f79239430",
-      "de_hash": "1b6aeac94169f435",
+      "en_hash": "6945f0327a1c7d72",
+      "de_hash": "842953f0bc391176",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": "2026-11-05T16:44:30.533945+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
       "note": "reviewed en+de, structure mirrored",
       "history": [
@@ -8722,10 +8778,18 @@
         {
           "at": "2026-11-05T16:44:30.533945+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T16:55:30.119748+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 25135,
-      "de_bytes": 25807,
+      "en_bytes": 25869,
+      "de_bytes": 26554,
       "change_reason": null
     },
     "index.md": {
@@ -23773,346 +23837,400 @@
       "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "5982d5df2d876981",
       "de_hash": "a5e6aafb565b9469",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T16:55:38.051120+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement openproject)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/openproject/api.md"
+        },
+        {
+          "at": "2026-11-05T16:55:38.051120+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 7061
+      "en_bytes": 6808,
+      "de_bytes": 7061,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6b0e58f5bda85952",
       "de_hash": "ec55435ca1729edf",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T16:55:38.168043+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement openproject)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/openproject/description.md"
+        },
+        {
+          "at": "2026-11-05T16:55:38.168043+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3677
+      "en_bytes": 3503,
+      "de_bytes": 3677,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "9b4e3fd14412eb5e",
       "de_hash": "bcf10fab7457cca0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T16:55:38.285882+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement openproject)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/openproject/features.md"
+        },
+        {
+          "at": "2026-11-05T16:55:38.285882+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4997
+      "en_bytes": 4698,
+      "de_bytes": 4997,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "c81e0b0e44b6a5b1",
       "de_hash": "e7f3280990e77314",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T16:55:38.486162+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement openproject)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/openproject/menu.md"
+        },
+        {
+          "at": "2026-11-05T16:55:38.486162+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4403
+      "en_bytes": 4060,
+      "de_bytes": 4403,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ab156fd2bb5b4cee",
       "de_hash": "4d520aeadfd2a5f4",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T16:55:38.574821+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement openproject)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/openproject/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T16:55:38.574821+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5478
+      "en_bytes": 5026,
+      "de_bytes": 5478,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/openproject/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "8eda6485ed4c45fa",
       "de_hash": "0b3cc9f89745a930",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T16:55:38.398419+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement openproject)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/openproject/structure.md"
+        },
+        {
+          "at": "2026-11-05T16:55:38.398419+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5146
+      "en_bytes": 4887,
+      "de_bytes": 5146,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "907f4609db6ef273",
       "de_hash": "992b79ed41828c10",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:01:08.264785+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement planka)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/planka/api.md"
+        },
+        {
+          "at": "2026-11-05T17:01:08.264785+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 2928
+      "en_bytes": 2865,
+      "de_bytes": 2928,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a8dadd789afd6ede",
       "de_hash": "4e9b0be09c1649c8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:01:08.383319+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement planka)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/planka/description.md"
+        },
+        {
+          "at": "2026-11-05T17:01:08.383319+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3569
+      "en_bytes": 3364,
+      "de_bytes": 3569,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e70843b56f11e984",
       "de_hash": "343cc4d29ff1f851",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:01:08.500516+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement planka)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/planka/features.md"
+        },
+        {
+          "at": "2026-11-05T17:01:08.500516+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4615
+      "en_bytes": 4276,
+      "de_bytes": 4615,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "a28340a4094fb7d9",
       "de_hash": "88e349cb4c897924",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:01:08.725317+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement planka)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/planka/menu.md"
+        },
+        {
+          "at": "2026-11-05T17:01:08.725317+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 4060
+      "en_bytes": 3699,
+      "de_bytes": 4060,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e3ed5ab6f6417db9",
       "de_hash": "102eaa7ede6c5925",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:01:08.816834+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement planka)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/planka/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T17:01:08.816834+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 1166
+      "en_bytes": 1131,
+      "de_bytes": 1166,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/planka/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "94c67bc3158d4abe",
       "de_hash": "39b49f7f466ea77e",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:01:08.621253+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement planka)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/planka/structure.md"
+        },
+        {
+          "at": "2026-11-05T17:01:08.621253+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3119
+      "en_bytes": 3033,
+      "de_bytes": 3119,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/latest/api.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ace0fb42646a04ee",
       "de_hash": "2422697537e170ea",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:10:45.520552+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement redmine)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/redmine/api.md"
+        },
+        {
+          "at": "2026-11-05T17:10:45.520552+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 7137
+      "en_bytes": 7027,
+      "de_bytes": 7137,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/latest/description.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "e4358b92a954d876",
       "de_hash": "902cd6d6a1d08bef",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:10:45.615118+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement redmine)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/redmine/description.md"
+        },
+        {
+          "at": "2026-11-05T17:10:45.615118+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3506
+      "en_bytes": 3378,
+      "de_bytes": 3506,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/latest/features.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "ca7f4966cff7679e",
       "de_hash": "0193472fd01484b8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:10:45.704684+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement redmine)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/redmine/features.md"
+        },
+        {
+          "at": "2026-11-05T17:10:45.704684+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5244
+      "en_bytes": 4965,
+      "de_bytes": 5244,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/latest/menus.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "059699beda689c13",
       "de_hash": "7caa401220b08ec0",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:10:45.884262+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement redmine)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/redmine/menu.md"
+        },
+        {
+          "at": "2026-11-05T17:10:45.884262+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 3719
+      "en_bytes": 3401,
+      "de_bytes": 3719,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/latest/shortcuts.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "b164d556d2ea055b",
       "de_hash": "cc4244dd442ef581",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:10:45.974630+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement redmine)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/redmine/shortcuts.md"
+        },
+        {
+          "at": "2026-11-05T17:10:45.974630+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5722
+      "en_bytes": 5390,
+      "de_bytes": 5722,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/redmine/latest/layout.md": {
-      "status": "PENDING",
-      "en_hash": null,
+      "status": "VERIFIED",
+      "en_hash": "6721cf49bacd5ce2",
       "de_hash": "f15b8a9e8bcb1df8",
       "first_seen": "2026-11-04T20:29:00.376325+00:00",
-      "last_verified": null,
-      "kind": [
-        "needs_en"
-      ],
-      "note": null,
+      "last_verified": "2026-11-05T17:10:45.793546+00:00",
+      "kind": [],
+      "note": "translated de->en (projectmanagement redmine)",
       "history": [
         {
           "at": "move.py",
           "event": "renamed from programs/apps/projectmanagement/masks/redmine/structure.md"
+        },
+        {
+          "at": "2026-11-05T17:10:45.793546+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": null,
-      "de_bytes": 5013
+      "en_bytes": 4812,
+      "de_bytes": 5013,
+      "change_reason": null
     },
     "programs/apps/projectmanagement/frontends/taiga/latest/api.md": {
       "status": "PENDING",
@@ -33638,20 +33756,28 @@
     },
     "programs/apps/messenger/requirements.md": {
       "status": "VERIFIED",
-      "en_hash": "eb4a4012acdffae5",
-      "de_hash": "fc1ac5cbffd4a960",
+      "en_hash": "32c41a1edd5cea32",
+      "de_hash": "adeba4450adb04e4",
       "first_seen": "2026-11-05T12:09:25.017263+00:00",
-      "last_verified": "2026-11-05T16:19:46.698587+00:00",
+      "last_verified": "2026-11-05T17:28:39.553115+00:00",
       "kind": [],
-      "note": "skeleton mirrored from en (ADR 0006)",
+      "note": "reviewed en+de, structure mirrored",
       "history": [
         {
           "at": "2026-11-05T16:19:46.698587+00:00",
           "event": "confirmed → VERIFIED"
+        },
+        {
+          "at": "2026-11-05T17:20:49.436483+00:00",
+          "event": "hash changed → PENDING"
+        },
+        {
+          "at": "2026-11-05T17:28:39.553115+00:00",
+          "event": "confirmed → VERIFIED"
         }
       ],
-      "en_bytes": 577,
-      "de_bytes": 603,
+      "en_bytes": 16165,
+      "de_bytes": 17830,
       "change_reason": null
     },
     "programs/apps/projectmanagement/requirements.md": {

@@ -1,6 +1,6 @@
 # Übersetzungsliste – der Übersetzungs-Checker für den ganzen Baum
 
-Stand: 2026-11-05 16:44 UTC · 1537 Dateien verfolgt · 423 offen · 1107 bestätigt
+Stand: 2026-11-05 17:28 UTC · 1537 Dateien verfolgt · 405 offen · 1125 bestätigt
 
 Erzeugt von `python3 scripts/doc_sync.py --en docs/en --de docs/de \`
     `--state temp/sync_state.json --list temp/translation-queue.md`
@@ -36,7 +36,7 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 | Abschnitt | Dateien |
 |-----------|---------|
-| A. `en/` fehlt – aus `de/` übersetzen | 423 |
+| A. `en/` fehlt – aus `de/` übersetzen | 405 |
 | B. `de/` fehlt – englische Quelle nachziehen | 0 |
 | C. `en/` ist eine Kopie von `de/` – unübersetzt | 0 |
 | D. `en/` enthält noch deutschen Text – Rest übersetzen | 0 |
@@ -47,38 +47,11 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 | H. Beide Seiten da, kein Befund – lesen und bestätigen | 0 |
 | 🗑️ gelöscht (tombstone) | 7 |
 
-## A. `en/` fehlt – aus `de/` übersetzen – 423 Dateien
+## A. `en/` fehlt – aus `de/` übersetzen – 405 Dateien
 
 ### `programs/` · 1
 
 - [ ] `programs/index.md` · 3.4k · Plan[~]
-
-### `programs/apps/projectmanagement/frontends/openproject/latest/` · 6
-
-- [ ] `programs/apps/projectmanagement/frontends/openproject/latest/api.md` · 6.9k
-- [ ] `programs/apps/projectmanagement/frontends/openproject/latest/description.md` · 3.6k
-- [ ] `programs/apps/projectmanagement/frontends/openproject/latest/features.md` · 4.9k
-- [ ] `programs/apps/projectmanagement/frontends/openproject/latest/layout.md` · 5.0k
-- [ ] `programs/apps/projectmanagement/frontends/openproject/latest/menus.md` · 4.3k
-- [ ] `programs/apps/projectmanagement/frontends/openproject/latest/shortcuts.md` · 5.3k
-
-### `programs/apps/projectmanagement/frontends/planka/latest/` · 6
-
-- [ ] `programs/apps/projectmanagement/frontends/planka/latest/api.md` · 2.9k
-- [ ] `programs/apps/projectmanagement/frontends/planka/latest/description.md` · 3.5k
-- [ ] `programs/apps/projectmanagement/frontends/planka/latest/features.md` · 4.5k
-- [ ] `programs/apps/projectmanagement/frontends/planka/latest/layout.md` · 3.0k
-- [ ] `programs/apps/projectmanagement/frontends/planka/latest/menus.md` · 4.0k
-- [ ] `programs/apps/projectmanagement/frontends/planka/latest/shortcuts.md` · 1.1k
-
-### `programs/apps/projectmanagement/frontends/redmine/latest/` · 6
-
-- [ ] `programs/apps/projectmanagement/frontends/redmine/latest/api.md` · 7.0k
-- [ ] `programs/apps/projectmanagement/frontends/redmine/latest/description.md` · 3.4k
-- [ ] `programs/apps/projectmanagement/frontends/redmine/latest/features.md` · 5.1k
-- [ ] `programs/apps/projectmanagement/frontends/redmine/latest/layout.md` · 4.9k
-- [ ] `programs/apps/projectmanagement/frontends/redmine/latest/menus.md` · 3.6k
-- [ ] `programs/apps/projectmanagement/frontends/redmine/latest/shortcuts.md` · 5.6k
 
 ### `programs/apps/projectmanagement/frontends/taiga/latest/` · 6
 
@@ -808,12 +781,6 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 
 ## Changelog
 
-- 2026-11-05 03:47 · Lauf: 1492 verfolgt, 1489 offen, 3 bestätigt · needs_en=687 needs_de=1 en_german=1 parity=28 rename=17 review=773
-- 2026-11-05 04:01 · Lauf: 1492 verfolgt, 1474 offen, 18 bestätigt · needs_en=687 parity=28 rename=17 review=759
-- 2026-11-05 04:51 · Lauf: 1492 verfolgt, 715 offen, 777 bestätigt · needs_en=682 parity=28 rename=17 review=5
-- 2026-11-05 04:53 · Lauf: 1492 verfolgt, 710 offen, 782 bestätigt · needs_en=682 parity=28 rename=17
-- 2026-11-05 05:06 · Lauf: 1492 verfolgt, 710 offen, 782 bestätigt · needs_en=682 parity=24 rename=17 review=4
-- 2026-11-05 06:09 · Lauf: 1492 verfolgt, 706 offen, 786 bestätigt · needs_en=659 parity=17 rename=17 review=30
 - 2026-11-05 06:10 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 parity=17 rename=17
 - 2026-11-05 06:53 · Lauf: 1492 verfolgt, 676 offen, 816 bestätigt · needs_en=659 rename=17 review=17
 - 2026-11-05 06:53 · Lauf: 1492 verfolgt, 659 offen, 833 bestätigt · needs_en=659 rename=17
@@ -849,3 +816,9 @@ Abschnitten stehen (z. B. `needs_en` + `rename`); die Abschnittszahlen zählen d
 - 2026-11-05 16:43 · Lauf: 1537 verfolgt, 437 offen, 1093 bestätigt · needs_en=423 parity=1 review=13
 - 2026-11-05 16:44 · Lauf: 1537 verfolgt, 437 offen, 1093 bestätigt · needs_en=423 review=14
 - 2026-11-05 16:44 · Lauf: 1537 verfolgt, 423 offen, 1107 bestätigt · needs_en=423
+- 2026-11-05 16:55 · Lauf: 1537 verfolgt, 431 offen, 1099 bestätigt · needs_en=417 parity=5 review=9
+- 2026-11-05 17:01 · Lauf: 1537 verfolgt, 425 offen, 1105 bestätigt · needs_en=411 parity=5 review=9
+- 2026-11-05 17:10 · Lauf: 1537 verfolgt, 419 offen, 1111 bestätigt · needs_en=405 parity=5 review=9
+- 2026-11-05 17:20 · Lauf: 1537 verfolgt, 414 offen, 1116 bestätigt · needs_en=405 parity=1 review=8
+- 2026-11-05 17:28 · Lauf: 1537 verfolgt, 414 offen, 1116 bestätigt · needs_en=405 review=9
+- 2026-11-05 17:28 · Lauf: 1537 verfolgt, 405 offen, 1125 bestätigt · needs_en=405

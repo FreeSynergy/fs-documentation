@@ -166,7 +166,10 @@ Jedes gespeicherte Objekt = **AS2-Envelope** (`id`, `type`, `attributedTo`, `to`
 | messages | Chat: MIMI-Inhalt (Entwurf -10); E-Mail: Original-MIME + JMAP-`Email`-Felder; Matrix-Events | `Note` (`context` = Unterhaltung) | ✅ 2026-11-05, siehe [messages/](messages/standards.md) |
 | events | **JSCalendar 2.0** (`draft-ietf-calext-jscalendarbis-22`) `Event`/`Task` | `Event`; Protokoll `Invite`/`Accept`/`TentativeAccept`/`Reject` | ✅ 2026-11-05, siehe [events/](events/standards.md) |
 | documents | Text: Original + CommonMark/GFM; Blöcke: eigene Spec; Struktur: schema.org `Book`/`Collection`; Annotationen: Web Annotation | `Article`, `Document`, `Collection`/`OrderedCollection`, `Annotation` | ✅ 2026-11-05, siehe [documents/](documents/standards.md) |
-| geodata, projects, profile, login | siehe Domänen-Verzeichnisse | | offen |
+| geodata | GeoJSON (JSON-FG 1.0 wo nötig); in Bildern Exif 3.1 + XMP + IPTC 2025.1 | `Place` | ✅ 2026-11-05 |
+| projects | JSCalendar 2.0 `Task` + RFC 9253/10051-Semantik; Board: eigene Spec | `Collection` (Board), Task-Envelope; ForgeFed `TicketDependency` | ✅ 2026-11-05 |
+| profile | JSContact (Selbst-Card) | `Profile` (`describes` → ich selbst) | ✅ 2026-11-05 |
+| login | OIDC / WebAuthn L3 / SCIM; Föderation: OpenID Federation 1.0 (ADR 0035) | `Person`-Akteur, WebFinger | ✅ 2026-11-05 |
 
 ## Lücken → eigene Spezifikationen (ADR 0014)
 
@@ -176,7 +179,10 @@ Jedes gespeicherte Objekt = **AS2-Envelope** (`id`, `type`, `attributedTo`, `to`
 | `Contact.lifecycle` | ❌ in vCard/JSContact; Mechanismus ✅ (RFC 9553 §1.8.1) | Anbieter-Eigenschaft `freesynergy.net:lifecycle` (ADR 0028), später CRM-Spec |
 | Markierung sensibler Daten (DSGVO Art. 9) | ⚠️ W3C DPV-Kandidat, ungeprüft | ADR 0029 |
 | Board-/Projektstruktur | ❌ | Spec-Kandidat Nr. 3 |
-| Web of Trust | ❌ in Standardisierungsgremien | mit RLTP mitgestalten |
+| Web of Trust | ❌ in Standardisierungsgremien | mit RLTP mitgestalten; Trust-Mark-Profil für OpenID Federation |
+| Task-Relationen „blocks"/„duplicates" in JSCalendar | ❌ | Relations-Vokabular (OpenProject-Set als Referenz) |
+| Profilfeld → DPV-Kategorietabelle, Einwilligungs-Nachweis | ❌ | ADR 0029 |
+| WebFinger-Link-Profil (Akteur, OIDC-Issuer, DID) | ❌ | Discovery-Spec |
 
 ## Domänen-Verzeichnisse
 

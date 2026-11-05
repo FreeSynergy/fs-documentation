@@ -3,7 +3,7 @@
 **Was diese Domäne ist:** der **Zugang** zu FreeSynergy. Sie beantwortet zwei getrennte Fragen:
 
 1. **Authentifizierung** — wer darf sich einloggen? (OIDC, OAuth 2.0, WebAuthn)
-2. **Provisioning** — wie entstehen, ändern sich Konten? (SCIM ⚠️, kanidm als Referenz-Implementierung)
+2. **Provisioning** — wie entstehen, ändern sich Konten? (SCIM ✅ RFC 7643/7644, kanidm als Referenz-Implementierung)
 
 **Was sie abdeckt:**
 
