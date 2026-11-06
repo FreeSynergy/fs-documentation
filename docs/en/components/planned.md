@@ -5,6 +5,12 @@ is built or documented in detail yet. Layers follow the existing structure: prim
 
 As with all components, gestures are not part of them; they come from the frontend (ADR 0037). Names are proposals.
 
+## What exists (`fs-components` v0.2.0, 2026-11-06)
+
+Released: the reader, `text-view`, `avatar-group`, `transfer-list`, `sortable-list`, `lightbox`, `share-dialog`. They have been reviewed, but tested
+without a real window; nobody has used them by hand yet. **Not released, although included in this tag:** `charts`, which has open blockers, the five chat components,
+which are still being reviewed, and the calendar work.
+
 ## Build first: shared by several programs
 
 | Component | Layer | What it does | Used by |
