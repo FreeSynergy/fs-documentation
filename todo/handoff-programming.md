@@ -14,9 +14,10 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 | Repo | Inhalt | Tests | Tag |
 |------|--------|-------|-----|
 | fs-store | Objektspeicher (AS2-Hülle, Protokoll, Undo, Turso) | 37 | v0.2.0 |
-| fs-people (früher fs-contacts) | JSContact, vCard, Gleiche-Person-Vorschläge | 21 | v0.1.0 |
-| fs-calendar | JSCalendar 2.0 Event, ICS, Einladungen; Aufgaben nur über `TaskItems` | 47 | v0.2.0 |
-| fs-tasks | Besitzer von JSCalendar `Task` (ADR 0050); Trait `TaskItems`, Vertrag `schema/tasks.capnp` (Entwurf) | 18 | v0.1.0 |
+| fs-jscalendar | Gemeinsame JSCalendar-Typen, kein Programm | 6 | v0.1.0 |
+| fs-people (früher fs-contacts) | JSContact, vCard, Gleiche-Person-Vorschläge, Rollen, Beziehungen, KI-Markierung | 38 | v0.2.0 |
+| fs-calendar | JSCalendar 2.0 Event, ICS, Einladungen; Aufgaben nur über `TaskItems` | 50 | v0.3.0 |
+| fs-tasks | Besitzer von JSCalendar `Task` (ADR 0050); Trait `TaskItems`, Vertrag `tasks.capnp` in fs-interfaces (Entwurf) | 18 | v0.3.0 |
 | fs-maps | PMTiles bei Bedarf, Cache, Regionen, Orte | 30 | — |
 | fs-hub | Programme verbinden, Objekt-Abgleich (Cap'n Proto RPC) | 9 | — |
 | fs-wiki (crate fs-text) | Text + Ebenen, Markdown, Links, Vorlagen | 46 | — |
@@ -73,6 +74,13 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
   `scripts/check_rust_rules.py <repo>` = 0 Fehler. Nach Rust-Arbeit `scripts/clean_rust.py --root <repo> --apply`
   (`--all` nur, wenn kein Build mehr läuft). RAM: mit llama aktiv nur ~6 GB frei → `-j 4`.
 - Agenten früh und oft committen lassen (Abbrüche verlieren sonst alles).
+
+## Stand der Reihenfolge (Programmier-Sitzung, 2026-11-06)
+1. ✅ `fs-jscalendar` v0.1.0: Kopien aus fs-tasks (v0.3.0) und fs-calendar (v0.3.0) entfernt. Aufgaben gehen aus jedem Importformat an fs-tasks; ohne Aufgabenprogramm steht es im Bericht.
+2. ✅ `people.capnp` in fs-interfaces v0.2.0, fs-people v0.2.0 ist Anbieter: Rollen als Objekte, Beziehungen, KI-Markierung (`kind` `application` + Rolle `ai`), Anbieter-Regel. Offene Punkte in `fs-people/DESIGN.md`.
+3. In Arbeit: `groups.capnp` (fs-interfaces v0.3.0), Kern `fs-groups`, danach `fs-identity` (Name vorläufig).
+4. In Arbeit: `files.capnp` (fs-interfaces v0.3.0, vorläufig), Kern `fs-files`: lokaler Ordner, dann S3.
+5. und 6. noch offen.
 
 ## Nächste Reihenfolge (Empfehlung der Strategie-Sitzung, 2026-11-06, Nutzer kann ändern)
 1. `fs-jscalendar`: Kopien in fs-tasks und fs-calendar beseitigen, falls noch nicht erledigt.
