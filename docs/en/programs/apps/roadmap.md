@@ -31,7 +31,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Know who someone is, with roles | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core with roles and draft interface, no GUI |
 | Be somewhere at some time | [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Core exists, no GUI |
 | Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
-| Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |
+| Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists; first workbench in [`fs-components`](https://github.com/FreeSynergy/fs-components) v0.1.0, app not finished |
 | Say something to someone | [`fs-messenger`](messenger/contract.md) | Draft contract |
 | Know what to do next | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) ([design](tasks/design.md)) | Core exists, no GUI; draft interface |
 | Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new**; possibly a view |
