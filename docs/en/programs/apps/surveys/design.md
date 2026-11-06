@@ -45,8 +45,12 @@ Other risks to handle:
   no id per answer, written without a log entry (`UnloggedObjects` in `fs-store` v0.3.0), because a logged write would leave the exact time
   on disk after a crash. Known limits: a copy of the file taken between two writes shows the difference, and old pages can stay on disk.
 - Reading results again and again would show the newest answer. **Provisional rule:** anonymous results are released in batches of at least
-  `minGroup` answers (default 5, at least 3), when the survey closes or widens. Up to `minGroup - 1` answers can stay held back, and
-  they could decide a vote, so a winner is withheld when they could tip the result. The project owner still has to decide this trade-off.
+  `minGroup` answers (default 5, at least 3), when the survey closes or widens. Up to `minGroup - 1` answers per survey can stay held back,
+  plus whatever the rule per question suppresses in each batch, so more in total (a review found 8 with two batches). They
+  could decide a vote, so a winner is withheld when they could tip the result. The project owner still has to decide this trade-off.
+- **Known limits, shown as such:** on an anonymous, open survey the organiser can add own answers and so isolate someone else's. Two
+  conditional questions asked of nearly the same people can expose someone. Closing and reopening after each answer shows the held-back
+  number rising, though each reopening is on record. Only one process may use a survey store at a time.
 - Small groups: results with few answers can identify people, so a minimum group size hides them.
 - Free text can identify its author, and the interface says so.
 - Answers can be sensitive data (ADR 0029): health, politics, faith.
