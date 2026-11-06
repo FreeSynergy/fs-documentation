@@ -36,6 +36,14 @@ zuerst im RFC-Kanal (Discord) besprechen → PR.
   - Inline-Elemente (Erwähnung, Emoji) im Rich-Text-Editor · kein Issue
   - allgemeine `toolbar`, `command`-Palette, `empty-state`, Dropfläche für `file-upload` · kein Issue
   - Combobox-Hover · 8115bf5
+- **Befunde Thread 4, 0.6.0** (Reproduktion und Fundstellen: `fs-components/DESIGN.md`, „Blinc notes“; alle aus dem Lesen des Codes, nicht vor dem Autor nachgestellt) · kein Issue:
+  - Elemente, die außerhalb eines Build-Durchlaufs entstehen (`stateful`-Callback baut `stateful` oder `cn`), bekommen jedes Mal neue Keys, und `STATEFUL_DEPS` schrumpft nie; alte Callbacks laufen weiter. Umgangen: Bildschirmwechsel in der Hülle ist ein voller Rebuild.
+  - `State::update` erreicht `stateful` nur über einen Callback, den `BlincContextState::init` nicht setzt; das Fenster überspringt seine Init, wenn zuvor ein Bild lief. `Signal::update` geht. Umgangen.
+  - Auf dem Visual-Pfad behält der eigene Knoten eines Live-Bereichs die Klassen des ersten Zeichnens, und ein Kind ohne Handler den Handler des ersetzten Knotens. Klassen umgangen (inneres Element), Handler nicht.
+  - `blinc_noto_emoji::register()` fügt die Schrift bei jedem Aufruf erneut hinzu, entgegen der Doku. Umgangen (`Once`).
+  - `ThemeState::init` reiht alle CSS-Quellen bei jedem Aufruf neu ein; nur ein Fenster leert die Warteschlange. Nicht umgangen, harmlos.
+  - `BlincContextState::init` panikt, wenn zwei Threads gleichzeitig zum ersten Mal initialisieren. Umgangen durch eine gemeinsame Sperre in `fs-components-render`, sobald der Reader darauf umgestellt ist.
+  - Kein Weg, von einem Arbeits-Thread aus auf den Oberflächen-Thread zu posten und die Ereignisschleife zu wecken. Für uns offen: `fs-components-app` kann Hintergrundarbeit nicht melden.
 - Ansehen: Repo `blinc_abi` (IDE auf Blinc-Teilmenge) als Referenz für den Code-Editor · offen
 
 ## Turso / libSQL
