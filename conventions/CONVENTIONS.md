@@ -17,6 +17,9 @@ Fremdprojekte, Lizenz, Repos, Messenger)
 - **Funktionen analysieren, nichts kopieren** — auch nicht aus OSS (ADR 0013); nur im äußersten
   Notfall aus offenen Projekten, nie Closed Source, Lizenz/Urheber bleiben (ADR 0025).
 - **Immer die neueste tragfähige Technik**, Altes nur als Brücke nach außen (ADR 0026).
+- **Code (ADR 0043):** immer Entwurfsmuster (benannt), gegen Schnittstellen programmieren, kleine
+  Dateien (≤ 200, max. 300 Zeilen), Refactoring und Doku sind Pflicht — `conventions/coding.md`,
+  Prüfer `scripts/check_rust_rules.py`.
 - **Rust-Hygiene:** Vorlagen `conventions/templates/rust/`, `target/` nie in Git, nach jeder
   Rust-Sitzung `scripts/clean_rust.py --apply` (ADR 0041).
 - **Beschlossenes bleibt.** Erweist sich ein Beschluss als falsch, ersetzt ihn ein neuer ADR
