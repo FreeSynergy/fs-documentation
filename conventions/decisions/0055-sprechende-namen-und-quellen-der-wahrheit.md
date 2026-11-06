@@ -11,6 +11,9 @@ Status: akzeptiert (2026-11-06) · ergänzt ADR 0047, 0050, 0052 · öffentlich:
 4. **Beim Verschieben eines Wiki-Ordners wandert alles darunter mit,** so wie man es erwartet.
 5. **Bei Orten reicht vorerst der umschließende Rahmen.**
 
+6. **Rechte in verschachtelten Gruppen sind einstellbar, und das macht die Gruppe selbst.** Sie gibt an, ob Rechte weitergegeben werden
+   oder nicht. Es gibt Gruppen, die Rechte nach unten weitergeben, und Gruppen, die sie nach oben weitergeben. (Nutzer: Kanidm gibt sie nach oben weiter.)
+
 ## Zu klären
 - `docs/en/interfaces/roles.md` nennt bisher den Identitäts-Wrapper als Besitzer der Rolle User. Punkt 3 sagt: `fs-people` konfiguriert die User. Wie sich das zum Wrapper verhält, ist offen.
 - S3 und andere Speicher: Gilt Punkt 1 auch dort? Bis zur Klärung: lokal sprechend, S3 unverändert.
