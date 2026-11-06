@@ -38,7 +38,14 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
   erst einen Weg suchen, nur wenn wirklich unmöglich: ausdrücklich `Unsupported` (Trait-Standardmethode). Jeder
   Anbieter meldet, was er kann.
 - **Alles Bestehende gegen den Schnittstellen-Katalog umbauen**, Reihenfolge: **people** → groups, files → Rest;
-  immer erst den Schnittstellen-Entwurf, dann Code. `fs-people`: **noch keine Rollen** (wartet auf den Nutzer).
+  immer erst den Schnittstellen-Entwurf, dann Code. **`fs-people` mit Rollen bestätigt (ADR 0052,
+  `docs/en/interfaces/roles.md`):** ein Datensatz pro Person, mehrere Rollen, keine Vererbung, keine Duplikate;
+  „Beziehung zu mir“ (`relatedTo`) ≠ „Rolle in einer Gruppe“ (`org:Role`/`org:Membership`); fs-people hält die Person,
+  der Besitzer jeder Rolle hält deren Felder (Nutzer → Identitäts-Wrapper, Mitgliedschaft → fs-groups, Kunde → CRM);
+  Rollen-Definitionen sind Objekte (id, Namen, Standard, Felder, Besitzer, Geltung), als Konfiguration ladbar —
+  **keine feste Rollenliste** im Code.
+- Video: Codecs ausgelagert wie bei GStreamer (eine Codec-Schnittstelle, jeder Codec ein Anbieter), offene zuerst;
+  kein H.264 von uns, Dritte dürfen. Neuer Katalogeintrag `Trust` (Web of Trust) — später.
 - **`fs-jscalendar`:** nur gemeinsame Typen (kein Programm, keine Daten); fs-calendar/fs-tasks entdoppeln; Aufgaben aus
   **jedem** Import-Format an fs-tasks weitergeben. Zweiter Nutzer für `TaskItems`: erstes Aufgaben-Frontend oder CLI
   (Kanban ist eine Ansicht von fs-tasks, ADR 0049).
@@ -54,6 +61,7 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
   iOS nur bauen. Releases nur als **Entwurf**, öffentlich erst, wenn es etwas bringt.
 - Signatur: **GPG/OpenPGP** (offener Standard, native Paketsignatur); SBOM **SPDX**; Herkunft **SLSA**; SemVer.
 - Erstes Blinc-Programm auf Android/iOS testet Blincs Mobil-Teil — Fehler per PR zurück an den Autor.
+- **Stand:** fs-release erster Lauf grün an fs-capnpc (`v0.1.1-rc.5`, Entwurf): tar.gz, deb, rpm, Arch, msi, zip, SPDX, Prüfsummen. Offen: GPG-Schlüssel (Adresse vom Nutzer), fs-hub anbinden, AppImage/exe/dmg/Flatpak mit der ersten App.
 - **SignPath (Windows-Signatur, kostenlos für OSS): Nutzer am 2026-11-13 erneut fragen.**
 
 ## Regeln, die man leicht vergisst
