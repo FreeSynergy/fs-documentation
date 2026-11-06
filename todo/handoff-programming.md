@@ -90,6 +90,13 @@ Alle Repos stehen auf `fs-interfaces` v0.5.0. Frische Klone geprüft (Stand vor 
 Nicht gebaut, überall: Cap'n-Proto-Server, `subscribe`. Nichts ist 1.0; keine Schnittstelle hat zwei unabhängige Nutzer.
 Bekannte Fehler: Markdown-Rundreise in fs-text (Dreierketten, nebeneinanderliegende Listen; kein Textverlust), siehe `fs-wiki/DESIGN.md`.
 
+## Sprint Thread 1 (2026-11-06)
+- `fs-components` `v0.1.0` (`c058947`) getaggt, zweimal geprüft. `e76cd34` (Entwurfssicherung) in Prüfung für 0.1.1.
+- Wiki-App auf `fs-wiki` `main` (`9ddb5e0`), ohne Tag; Entwürfe auf Branch `drafts`. Läuft in echtem Fenster (`kwin_wayland --virtual`), Tippen und Klicken prüft der Nutzer von Hand.
+- Markdown-Rundreise behoben (`6781432`): 0 von 1389 Dateien verlieren Wörter, vorher 16.
+- `fs-files` echte Namen, in Prüfung. `fs-groups`: sichere Auslegung, **kein Tag bis zur Antwort des Nutzers**.
+- Läuft: „Build first“ (fertig: `avatar-group`, `transfer-list`), `charts`. Offen: Chat-Components.
+
 ## Nächste Reihenfolge (Empfehlung der Strategie-Sitzung, 2026-11-06, Nutzer kann ändern)
 1. `fs-jscalendar`: Kopien in fs-tasks und fs-calendar beseitigen, falls noch nicht erledigt.
 2. Schnittstelle `people` in `fs-interfaces` mit Rollen (ADR 0052), dann fs-people als Anbieter umbauen. **ADR 0054 gleich mitdenken:** KIs sind markierte Teilnehmer. Ein Personen-Datensatz muss sagen können „das ist eine KI“ (Rolle plus JSContact `kind` `application`, RFC 9553 §2.1.4, geprüft), ohne sie einzuschränken, und künftig ihren Betreiber nennen (Form offen, Feld nicht verbauen). Aussperren: Der Entwurf ist vorerst bestätigt, gebaut wird er laut `todo/sprint.md` (Thread 2).

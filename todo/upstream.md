@@ -4,6 +4,16 @@ Wünsche an Fremdprojekte aus ADR 0015. Agenten tragen hier ein, der Nutzer schr
 Muster: `Projekt · Wunsch · Begründung · Status (offen / Issue #… / erledigt)`.
 
 ## Blinc
+### Fehler aus fs-components (Blinc 0.6.0, Thread 1, 2026-11-06; noch nicht gemeldet, Nachstellung im Bericht und in `fs-components/DESIGN.md`)
+- Rich Text: Umbruch wird in einer Schnittstärke gemessen, Fett und Kursiv werden in anderer gezeichnet; Zeilen laufen über oder überlappen (`rich_text_styled` mit fettem Abschnitt über einen Umbruch, Box 400 px).
+- `text("x").italic()` zeichnet aufrecht; kursiv geht nur im Rich Text.
+- `RichText`-Links rufen immer `open_url`; kein Klick-Handler für interne Links.
+- Emoji ohne Schrift: leer gezeichnet, aber mit Breite; mit `blinc_noto_emoji::register()` viele als Kästchen.
+- 3000 Absätze ohne `min_h(0)`: Abbruch mit wgpu-`write_buffer`-Validierungsfehler statt Fehlermeldung.
+- Ein Absatz mit 30 KB: Sekunden beim Textmessen (vorher 8,7 s im Release).
+- `BlincContextState::init` löst beim zweiten Aufruf einen Panic aus, auch über Threads hinweg.
+- **Kein Haken beim Schließen des Fensters:** Entwürfe gehen ohne eigene Sicherung verloren (wir sichern deshalb selbst).
+- Kleinere: `Scroll` hat kein `flex_1`; `min_w` neben `w(0.0)` wird ignoriert; Textfeld bricht enger um als seine Box; `cn_styles`-Doku nennt das nicht vorhandene `register_cn_styles`.
 (Befunde `temp/research/blinc-health-and-parsers.md`; Antwort des Autors 2026-11-05 in ADR 0009)
 
 **Ablauf beim Autor:** git-bug-Issue anlegen → im GitHub-Issue erwähnen → bei neuen Funktionen
