@@ -48,6 +48,10 @@ expects a single writer for now.
 Whoever installs the system is the top admin. Within groups, the admin can make others admins too. **An AI agent can never become an admin,** let alone
 the top admin (ADR 0056). Giving admin status to people by how much they take part is an idea we are keeping, not a decision.
 
+## Who gets rights
+
+Someone gets rights only if an admin allows it. Kanidm only lists people who really have the rights. Everyone in Kanidm is also in `fs-people`, but not everyone in `fs-people` is in Kanidm (ADR 0056).
+
 ## What we keep, what Kanidm keeps
 
 From the [Kanidm research](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/kanidm-control.md),

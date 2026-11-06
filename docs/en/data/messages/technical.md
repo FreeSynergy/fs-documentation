@@ -46,7 +46,7 @@ Signatures stay verifiable because the original is never rewritten.
 | Target | Projection |
 |--------|------------|
 | Frontends | Cap'n Proto (ADR 0021) — frontends never see protocols |
-| Outgoing mail | MIME + OpenPGP v6 + RFC 9788 header protection + Autocrypt |
+| Outgoing mail | MIME + OpenPGP v6, and also v4 keys with the older SEIPDv1 for recipients who cannot read v6 (ADR 0056) + RFC 9788 header protection + Autocrypt |
 | Matrix | `matrix-sdk` connector |
 | MIMI | `mimi-content` + OpenMLS |
 | Search | full text over extracted fields |

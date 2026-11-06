@@ -74,6 +74,7 @@ Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Fronten
 - Grundsätze bleiben: nichts kopieren, 100 % Rust, Muster und Schnittstellen (ADR 0043), ein Standard, ein Programm (ADR 0050).
 
 **Agenten**
+- **Modelle (Nutzer, 2026-11-06): Sonnet schreibt, Opus plant und prüft.** Agenten mit `model: sonnet` starten; die unabhängige Prüfung bleibt ein eigener Agent.
 - Du planst und prüfst; Agenten setzen nach fertiger Vorgabe um. Nur Unabhängiges parallel, je Agent ein eigener `worktree` oder eigenes Repo.
 - Früh und oft committen und pushen. Abbrüche verlieren sonst alles.
 
