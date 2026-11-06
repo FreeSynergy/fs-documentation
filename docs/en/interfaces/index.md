@@ -33,13 +33,13 @@ Keeping these apart prevents much confusion:
 | Topic | What it is for | Standard base | Owner | Status |
 |-------|----------------|---------------|---------|--------|
 | Messages | Saying something to someone, [AIs included](../programs/apps/assistant/index.md) | AS2, MIMI, JMAP Mail, MCP and ACP for agents | `fs-messenger` | Draft contract |
-| People | Knowing who someone is and how to reach them, with [roles](roles.md) | JSContact | `fs-people` | Core exists |
-| Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | `fs-groups` | Planned |
+| People | Knowing who someone is and how to reach them, with [roles](roles.md) | JSContact | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Draft interface, provider exists |
+| Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | [`fs-groups`](../programs/platform/groups.md) | Draft interface, code in progress |
 | Events | Being somewhere at some time | JSCalendar `Event` | `fs-calendar` | Core exists |
 | Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) | Core exists, draft interface |
 | History | Remembering what I or we did | AS2 activities | `fs-history` | Planned |
 | Resources | Knowing what we have and need | Gap | `fs-resources` | Planned |
-| Files | Keeping and finding anything | AS2 `Document` | `fs-files` | Planned |
+| Files | Keeping and finding anything | AS2 `Document` | [`fs-files`](../programs/apps/files/design.md) | Provisional draft interface, code in progress |
 | Texts | Writing and knowing together | Own specification (ADR 0031, 0033) | `fs-wiki` | Core exists |
 | Places | Knowing where | GeoJSON | `fs-maps` | Core exists |
 | Decisions | Asking, and deciding together | AS2 `Question`; gap beyond it | `fs-surveys` | Planned |
@@ -65,7 +65,7 @@ Keeping these apart prevents much confusion:
 | Interface | What it is for | Standard base |
 |-----------|----------------|---------------|
 | Trust | Showing when a person is safe, also against scammers and bots; each person sets their [own level](../programs/apps/assistant/index.md#locking-ais-out) | Web of Trust; its successor, the [Real Life Trust Protocol](https://github.com/real-life-org/trust-protocol), is the proposed target (ADR 0052, 0054) |
-| Sharing and permissions | Who may see what; shares go to groups | Gap, one specification for all |
+| Sharing and permissions | Who may see what; shares go to groups | Gap, one specification for all. Open: [role privacy](roles.md#open) |
 | Envelope and activity log | Every object's outer form and history | AS2, proposed owner `fs-store` (ADR 0050) |
 | Sync | Bringing devices and programs together | Activity log (ADR 0019) |
 | Presence | Seeing what others do, as it happens | Gap; never stored |
@@ -93,5 +93,5 @@ We follow what [Zentinel](https://github.com/zentinelproxy/zentinel) already doe
 ## Who owns the specifications
 
 All interfaces live in one public repository, [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces), so that others can
-implement them without our programs. Version 0.1.0 holds the common, tasks, messenger and hub contracts as drafts, generated
+implement them without our programs. Version 0.3.0 holds the common, tasks, messenger, hub, people, groups and files contracts as drafts, generated
 with our own Cap'n Proto compiler.

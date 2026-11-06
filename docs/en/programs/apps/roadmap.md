@@ -26,9 +26,9 @@ appear as stand-alone apps by being frontends, without having their own data.
 |---------|---------|--------|
 | Keep objects, share them between programs | [`fs-store`](https://github.com/FreeSynergy/fs-store), [`fs-hub`](https://github.com/FreeSynergy/fs-hub) | Exist |
 | Sign in, system access | [identity wrapper](../platform/identity.md) over Kanidm | Planned |
-| Belong together, decide who may do what | [`fs-groups`](../platform/groups.md) | Planned, **new** |
-| Keep and find anything | [`fs-files`](files/design.md) | Planned |
-| Know who someone is, with roles | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core exists, no GUI |
+| Belong together, decide who may do what | [`fs-groups`](../platform/groups.md) | Draft interface, code in progress, **new** |
+| Keep and find anything | [`fs-files`](files/design.md) | Provisional draft interface, code in progress |
+| Know who someone is, with roles | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core with roles and draft interface, no GUI |
 | Be somewhere at some time | [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Core exists, no GUI |
 | Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
 | Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |

@@ -1,6 +1,6 @@
 # Roles of a person
 
-**Status: draft (2026-11-06).** Back to the [interfaces](index.md). ADR 0052.
+**Status: draft (2026-11-06), first provider in [`fs-people`](https://github.com/FreeSynergy/fs-people) v0.2.0.** Back to the [interfaces](index.md). ADR 0052.
 
 ## Idea
 
@@ -16,6 +16,14 @@ Roles follow standards wherever one exists, and they are defined in public, befo
 |------|----------|----------|
 | **Relation** | What is this person to me? | vCard `RELATED` (RFC 6350 §6.6.6), JSContact `relatedTo` |
 | **Role** | What is this person within a group or organisation? | W3C Organization Ontology: `org:Role`, `org:Membership` (Recommendation, 2014) |
+
+## Where a role is kept
+
+A role assignment is an **object of its own** (AS2 `Relationship`), never part of the person's card. So no export of a card can
+reveal a role.
+
+`fs-people` ships four role definitions so far: `ai`, `user`, `member` and `customer`. Supplier, employee and volunteer follow
+once they are researched.
 
 ## Known roles and relations
 
@@ -49,4 +57,6 @@ Definitions are configuration, so they can be added while programs run, and can 
 1. **Is the role definition format itself a standard?** Candidates: SKOS (which `org:Role` builds on). Not read yet.
 2. **Who owns customer data:** the program that has the role, or `fs-people`? We propose that `fs-people` holds the person,
    and each role's owner holds that role's fields.
-3. **Safety:** a role must never leak. That I am someone's customer is not everyone's business (ADR 0029).
+3. **Safety:** a role must never leak. That I am someone's customer is not everyone's business (ADR 0029). **Known gap:** the
+   hub decides by object type, so a program allowed to read the type `Relationship` could see role assignments through it. This
+   belongs to the sharing interface and is not solved yet.

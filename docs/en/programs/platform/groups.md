@@ -2,7 +2,7 @@
 
 `fs-groups`: belonging together, and deciding who may do what.
 
-**Status: planned, no code yet (2026-11-06).** Back to the [overall plan](../apps/roadmap.md).
+**Status: draft interface in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces) v0.3.0, code in progress (2026-11-06).** Back to the [overall plan](../apps/roadmap.md).
 
 ## Why it comes early
 
@@ -42,6 +42,6 @@ If Kanidm gains one of these, we hand it back, as stated in ADR 0047.
 
 ## Open questions
 
-1. Must a hierarchy be a tree, or can a group have several parents? A working group can belong to two departments.
+1. Must a hierarchy be a tree, or can a group have several parents? **Provisional answer, still to be confirmed by the project owner:** several parents are allowed, as a working group can belong to two departments, and cycles are refused.
 2. Who may widen a survey to a parent group: its initiators, or the parent group?
 3. How do decisions about group membership work: by appointment, or by a vote using `fs-surveys`?

@@ -1,6 +1,6 @@
 # Files — design
 
-**Status: proposal (2026-11-06).** Back to the [roadmap](../roadmap.md) · [requirements](requirements.md).
+**Status: proposal (2026-11-06). The [interface](https://github.com/FreeSynergy/fs-interfaces/blob/main/schema/files.capnp) is provisional: it was written before the analysis of file frontends.** Back to the [roadmap](../roadmap.md) · [requirements](requirements.md).
 
 ## Idea
 

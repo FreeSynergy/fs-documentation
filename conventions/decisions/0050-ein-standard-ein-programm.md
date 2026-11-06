@@ -31,5 +31,6 @@ Kunde und User sein kann, was Vererbung nicht abbildet. Jede Rolle hat ihren Sta
 
 ## Folgen
 - Der Schnittstellen-Katalog nennt je Thema den Besitzer.
-- `fs-calendar` hat sein Task-Modell an `fs-tasks` abgegeben (erledigt: fs-tasks 0.1.0, fs-calendar 0.2.0). Offen: Wo liegen die Verträge (`fs-interfaces`, ADR 0045)?
+- `fs-calendar` hat sein Task-Modell an `fs-tasks` abgegeben (erledigt: fs-tasks 0.1.0, fs-calendar 0.2.0). Die Verträge liegen in `fs-interfaces` (ADR 0045).
+- Die gemeinsame Basis `fs-jscalendar` v0.1.0 ist umgesetzt, fs-tasks und fs-calendar nutzen sie (beide v0.3.0). Importe geben Aufgaben in jedem Format weiter, auch aus JSCalendar-JSON; ohne Aufgabenprogramm steht ein Hinweis im Bericht, nichts geht still verloren.
 - Doku-Verzeichnisse `programs/apps/contact/` und `data/contacts/` heißen noch wie vorher; Umbenennung folgt.
