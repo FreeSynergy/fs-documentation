@@ -94,4 +94,4 @@ We follow what [Zentinel](https://github.com/zentinelproxy/zentinel) already doe
 
 All interfaces live in one public repository, [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces), so that others can
 implement them without our programs. Version 0.3.0 holds the common, tasks, messenger, hub, people, groups and files contracts as drafts, generated
-with our own Cap'n Proto compiler.
+with our own Cap'n Proto compiler. Besides the contracts it holds shared transport code for servers and clients, behind a feature and without any business logic. Errors travel as RFC 9457 problems.
