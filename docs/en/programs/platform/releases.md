@@ -1,6 +1,6 @@
 # Releases
 
-How FreeSynergy programs reach people. **Status: being set up (2026-11-06), nothing published yet.** ADR 0051.
+How FreeSynergy programs reach people. **Status (2026-11-06): the shared workflows exist, and the first draft release ran on `fs-capnpc`. Nothing is public yet.** ADR 0051.
 
 ## Only free ways
 
@@ -27,5 +27,8 @@ for the right to hand out free software, so we don't.
 
 ## How
 
-Shared workflows live in `fs-release`, so every repository releases the same way. Releases start as drafts, and become
-public when they bring people something.
+Shared workflows live in [`fs-release`](https://github.com/FreeSynergy/fs-release), so every repository releases the same way.
+Releases start as drafts, and become public when they bring people something.
+
+**Tried so far:** tar.gz for Linux and macOS universal, deb, rpm, Arch, Windows msi and zip, SPDX SBOM, checksums.
+**Not tried yet:** OpenPGP signatures, AppImage, exe, dmg, Flatpak, containers, mobile.

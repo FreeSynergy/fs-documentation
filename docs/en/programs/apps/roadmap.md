@@ -40,7 +40,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Think visually | [`fs-whiteboard`](whiteboards/design.md) | Planned |
 | Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Planned |
 
-`fs-capnpc`, our Cap'n Proto compiler in pure Rust, supports them all. Details of what exists are in each repository's `DESIGN.md`.
+[`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces) holds the contracts, [`fs-release`](https://github.com/FreeSynergy/fs-release) the [release](../platform/releases.md) workflows, and `fs-capnpc`, our Cap'n Proto compiler in pure Rust, supports them all. Details of what exists are in each repository's `DESIGN.md`.
 
 ## Views (workbenches, not programs)
 
@@ -101,7 +101,7 @@ The closed-source products were checked only partly; each note lists what was ve
 | 2 | Prompt for export on leaving? | Postponed, not forgotten ([details](files/design.md#saving-and-exporting)) |
 
 **Decided on 2026-11-06:** one `fs-people`, each person with several [roles](../../interfaces/roles.md); codecs are outsourced, open ones first; every existing core is reworked against the interface catalogue, and all interfaces live in
-`fs-interfaces`. Live collaboration merges properties with a logical clock and uses a CRDT only for shared text (`loro` and
+[`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces). Live collaboration merges properties with a logical clock and uses a CRDT only for shared text (`loro` and
 `yrs` to be compared when needed).
 
 ## What is decided

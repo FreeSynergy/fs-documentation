@@ -92,5 +92,6 @@ We follow what [Zentinel](https://github.com/zentinelproxy/zentinel) already doe
 
 ## Who owns the specifications
 
-All interfaces go into one public repository, `fs-interfaces` (decided 2026-11-06, being set up), so that others can
-implement them without our programs.
+All interfaces live in one public repository, [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces), so that others can
+implement them without our programs. Version 0.1.0 holds the common, tasks, messenger and hub contracts as drafts, generated
+with our own Cap'n Proto compiler.
