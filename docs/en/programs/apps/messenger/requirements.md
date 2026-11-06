@@ -108,6 +108,20 @@ Data references: [messages standards](../../../data/messages/standards.md) ·
 | Offline: choose which folders and how many days are kept (`sync.scope`) | Ou | `fs-store` sync policy (ADR 0019) | proposed |
 | Summarise a long message (`message.summarize`) | Ou | **local model only** (no cloud, ADR 0029) ⚠️ | proposed |
 
+## AIs as participants (provisional, ADR 0054)
+
+From contract draft 0.2, which is still in review. See the [assistant](../assistant/index.md).
+
+| Capability | What it does |
+|------------|--------------|
+| `toolcall.show` | Show what an AI wants to do or has done |
+| `toolcall.decide` | A person allows or refuses a tool call, on their own device only |
+| `turn.stop` | Stop what an AI is doing right now |
+| `conversation.usage` | Show what a conversation used and cost |
+| `text.stream` | Show an answer as it is being written |
+
+**`toolcall.decide` is never offered to an AI.** It is never generated as an MCP tool, because an AI could otherwise approve its own actions.
+
 ## Not planned (deliberately)
 
 | Feature | Seen in | Why not |

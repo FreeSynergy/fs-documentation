@@ -47,6 +47,9 @@ Status: akzeptiert (2026-11-06) · Aussperren: vom Nutzer vorerst bestätigt, Id
 - **Grenze:** Der Notaus erreicht nur, was durch unsere Programme läuft. Eine KI mit eigener Shell braucht dazu einen eigenen
   Systembenutzer und eine Sandbox.
 
+## Sperre (Strategie, 2026-11-06, folgt aus „ohne Freigabe keine Handlung“)
+`MessageAction.decide` (`toolcall.decide`) wird nie als MCP-Werkzeug erzeugt, sonst könnte eine KI die eigene Freigabe aufrufen. Das gilt unabhängig von der offenen Erweiterung von ADR 0021.
+
 ## Vorschlag (offen)
 - Ansichten: Der Chat, die Agenten-Übersicht und die Anzeige von Werkzeug-Aufrufen sind Frontend und Components über
   `fs-messenger`. Der Modell-Anbieter ist ein Anbieter wie Mail oder Matrix (ADR 0045).
