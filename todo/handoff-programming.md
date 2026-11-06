@@ -15,7 +15,8 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 |------|--------|-------|-----|
 | fs-store | Objektspeicher (AS2-Hülle, Protokoll, Undo, Turso) | 37 | v0.2.0 |
 | fs-people (früher fs-contacts) | JSContact, vCard, Gleiche-Person-Vorschläge | 21 | v0.1.0 |
-| fs-calendar | JSCalendar 2.0 Event (+ noch Task → zieht nach fs-tasks), ICS, Einladungen | 45 | v0.1.0 |
+| fs-calendar | JSCalendar 2.0 Event, ICS, Einladungen; Aufgaben nur über `TaskItems` | 47 | v0.2.0 |
+| fs-tasks | Besitzer von JSCalendar `Task` (ADR 0050); Trait `TaskItems`, Vertrag `schema/tasks.capnp` (Entwurf) | 18 | v0.1.0 |
 | fs-maps | PMTiles bei Bedarf, Cache, Regionen, Orte | 30 | — |
 | fs-hub | Programme verbinden, Objekt-Abgleich (Cap'n Proto RPC) | 9 | — |
 | fs-wiki (crate fs-text) | Text + Ebenen, Markdown, Links, Vorlagen | 46 | — |
@@ -23,9 +24,9 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 
 ## Offene Aufgaben (Reihenfolge)
 1. `capnp-compiler` auf crates.io veröffentlichen — wartet auf bestätigte E-Mail des Nutzers; dann `cargo publish` in fs-capnpc.
-2. **Ein Standard → ein Programm → eine Schnittstelle** (Nutzer): `Task` aus fs-calendar in **fs-tasks** (eigenes Repo,
-   eigene Schnittstelle); fs-calendar bindet Aufgaben nur über diese Schnittstelle ein. Form/Ort der Schnittstellen
-   (Repo `fs-interfaces`, ADR 0045) mit der Entscheidungs-Sitzung klären.
+2. ✅ `Task` in fs-tasks umgezogen (2026-11-06), Kalender nutzt nur `TaskItems`, Hub auf Kalender v0.2.0.
+   **Offen:** fs-tasks enthält Kopien von Zeit/Zonen, `Participant`, `RecurrenceRule`, ICS-Zerleger aus fs-calendar
+   (Doppelung, ADR 0043 §4) → gemeinsame JSCalendar-Basis-Crate? Entscheidung liegt bei der Entscheidungs-Sitzung.
 3. Themen-Schnittstellen für das Gebaute (people, events, tasks, places, texts, messages) als versionierte Ziele;
    bestehende Kerne werden Anbieter davon (ADR 0045).
 4. Sichtbarer Teil: Wiki-Workbench auf Blinc (zeigt fs-documentation), dann Groupware-Suite.
