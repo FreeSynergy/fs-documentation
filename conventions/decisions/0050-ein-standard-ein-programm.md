@@ -18,7 +18,13 @@ Die Regel braucht eine Antwort auf zwei Fälle:
   einem Fachprogramm gehören. Vorschlag: Die Hülle gehört `fs-store`; `Group` gehört `fs-groups`, `Question` `fs-surveys`.
   JSContact kennt auch Gruppen-Karten: Sie gehören zu `fs-people` als Karte, die Mitgliedschaft und Rechte zu `fs-groups`.
 
+## Entscheidung (Opus, 2026-11-06, auf Rückfrage von freesynergy-32; Nutzer kann ändern)
+Gemeinsame **Typen** eines Standards dürfen in einer reinen Bibliothek liegen, zum Beispiel `fs-jscalendar` (Zeit, Zone,
+Teilnehmer, Wiederholung, ICS). Sie hat keine Daten, keine Speicherung, keine Schnittstelle und ist kein Programm: Der Point
+of Truth bleibt beim Besitzer. Sonst stünde Kopieren gegen ADR 0043. Importierte `Task`-Daten leitet `fs-calendar` immer an
+`fs-tasks` weiter, in jedem Format.
+
 ## Folgen
 - Der Schnittstellen-Katalog nennt je Thema den Besitzer.
-- `fs-calendar-core` gibt sein Task-Modell an `fs-tasks` ab. Offen: Wo liegen die Verträge (`fs-interfaces`, ADR 0045)?
+- `fs-calendar` hat sein Task-Modell an `fs-tasks` abgegeben (erledigt: fs-tasks 0.1.0, fs-calendar 0.2.0). Offen: Wo liegen die Verträge (`fs-interfaces`, ADR 0045)?
 - Doku-Verzeichnisse `programs/apps/contact/` und `data/contacts/` heißen noch wie vorher; Umbenennung folgt.

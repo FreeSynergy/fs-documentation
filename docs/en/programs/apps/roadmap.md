@@ -33,7 +33,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
 | Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |
 | Say something to someone | [`fs-messenger`](messenger/contract.md) | Draft contract |
-| Know what to do next | [`fs-tasks`](tasks/design.md) | Planned, **new** |
+| Know what to do next | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) ([design](tasks/design.md)) | Core exists, no GUI; draft interface |
 | Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new** |
 | Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
 | Ask, and decide together | [`fs-surveys`](surveys/design.md) | Planned |
@@ -71,7 +71,7 @@ A program can belong to several suites.
                   fs-groups + identity wrapper, then fs-files
 2. Components     shared ones first, plus charts; each built when the next program needs it
                   GUIs for the existing cores: people, calendar, maps, wiki
-3. Work           fs-tasks + fs-history, then fs-surveys, fs-resources, fs-messenger
+3. Work           GUI for fs-tasks, fs-history, then fs-surveys, fs-resources, fs-messenger
 4. Together       live presence, fs-whiteboard
 5. Suites         project management, democracy
 6. Media          gallery frontends, fs-streaming

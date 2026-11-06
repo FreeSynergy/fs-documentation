@@ -16,7 +16,7 @@ Status: akzeptiert (2026-11-06) · Form der Plugins: Vorschlag · ergänzt ADR 0
 ## Vorschlag zur Umsetzung
 - Katalog: `docs/en/interfaces/index.md`. Zwei Ebenen: Thema (Nachrichten) und Anbieter (Mail, Matrix, Telegram).
 - Kern plus vorab erklärte optionale Fähigkeiten, damit nicht alle auf den schwächsten Anbieter schrumpfen.
-- Ablauf: Entwurf → mindestens zwei unabhängige Umsetzungen → 1.0 fest → danach nur Sprünge.
+- Ablauf: Entwurf → mindestens zwei unabhängige Nutzer der Schnittstelle (bei Anbieter-Schnittstellen: zwei Anbieter) → 1.0 fest → danach nur Sprünge. Korrigiert 2026-11-06: Ein Thema hat nach ADR 0050 nur einen Besitzer, also kann nicht „zwei Umsetzungen“ die Bedingung sein.
 - Hot-Plugin = eigener Prozess mit Cap'n Proto; zeichnet er, liefert er eine Szenenbeschreibung. WASM als Alternative.
   Nicht gemessen, Textmessung ungelöst.
 - Öffentliches Repo `fs-interfaces`.

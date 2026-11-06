@@ -1,6 +1,6 @@
 # Tasks — design
 
-**Status: proposal (2026-11-06).** Back to the [overall plan](../roadmap.md) · [requirements](requirements.md).
+**Status (2026-11-06): items and `subscribe` are built; boards and views are proposals.** Back to the [overall plan](../roadmap.md) · [requirements](requirements.md).
 
 ## Idea
 
@@ -10,7 +10,7 @@ program, not programs themselves. This replaces the earlier plan for `fs-kanban`
 - **One program, personal or for a group.** A task's owner is a person or a group, and can change. Nothing is decided up front.
 - **One task, several contexts.** The same task can appear on a project board, on my personal list and in the calendar.
 - **A task stands on its own (decided, ADR 0050).** `fs-tasks` owns JSCalendar `Task`. `fs-calendar` owns `Event` and shows
-  tasks only through the interface of `fs-tasks`. `fs-calendar-core` still has a `Task` model today, which moves here.
+  tasks only through the interface of `fs-tasks`. `fs-calendar` no longer has a `Task` model of its own.
 
 `fs-projectmanagement` is a suite on top: tasks, history, resources, surveys, whiteboard, wiki.
 
@@ -47,7 +47,7 @@ Capacity and baselines belong to [`fs-resources`](../resources/index.md).
 |-----------|--------------|
 | `Tasks` (root) | `capabilities()`, hands out the others |
 | `Items` | `task.create`, `task.edit`, `task.assign`, `relation.create`, `label.assign` |
-| `Boards` | `board.open`, `board.create`, `column.create`, `column.limit`, `card.move` |
+| `Boards` (placeholder) | `board.open`, `board.create`, `column.create`, `column.limit`, `card.move` |
 | `subscribe` | Live changes |
 
 Attachments go through `fs-files`, people through `fs-people`, groups through `fs-groups`.

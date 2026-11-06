@@ -12,8 +12,8 @@ answers: what is there to standardise?
    **Each standard has exactly one owning program,** the point of truth, and every other program goes through its
    interface. No second model of the same thing (ADR 0050). A standard with several kinds of object, such as JSCalendar,
    is owned per kind: `Event` by `fs-calendar`, `Task` by `fs-tasks`.
-2. **An interface is a target.** Published as a draft, it is tested by at least two independent implementations, then
-   fixed as version 1.0. After that it changes only by a jump to a new version, never by gradual growth.
+2. **An interface is a target.** Published as a draft, it is tested by at least two independent users of it (for a
+   provider interface: two providers), then fixed as version 1.0. After that it changes only by a jump to a new version, never by gradual growth.
 3. **Optional parts are declared up front.** Not every provider can do everything: Telegram cannot do what mail does.
    The interface names the core every provider must offer and the optional capabilities it may offer, and a provider
    declares which it has. This avoids reducing everyone to the weakest provider.
@@ -36,7 +36,7 @@ Keeping these apart prevents much confusion:
 | People | Knowing who someone is and how to reach them | JSContact | `fs-people` | Core exists |
 | Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | `fs-groups` | Planned |
 | Events | Being somewhere at some time | JSCalendar `Event` | `fs-calendar` | Core exists |
-| Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | `fs-tasks` | Model still in `fs-calendar-core`, moves |
+| Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) | Core exists, draft interface |
 | History | Remembering what I or we did | AS2 activities | `fs-history` | Planned |
 | Resources | Knowing what we have and need | Gap | `fs-resources` | Planned |
 | Files | Keeping and finding anything | AS2 `Document` | `fs-files` | Planned |
