@@ -46,6 +46,9 @@ zuerst im RFC-Kanal (Discord) besprechen → PR.
   - Kein Weg, von einem Arbeits-Thread aus auf den Oberflächen-Thread zu posten und die Ereignisschleife zu wecken. Für uns offen: `fs-components-app` kann Hintergrundarbeit nicht melden.
 - Ansehen: Repo `blinc_abi` (IDE auf Blinc-Teilmenge) als Referenz für den Code-Editor · offen
 
+## rPGP
+- Panik bei unbekanntem AEAD-Byte (`pgp-0.21.0/src/crypto/aead.rs:276`), ausgelöst durch eine fremde Mail; in `fs-messenger-mail` abgefangen · Nutzer schreibt · offen
+
 ## Turso / libSQL
 ## Web of Trust
 ## Kanidm
