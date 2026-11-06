@@ -70,6 +70,7 @@ nav:
   - en/programs/apps/resources/: en/programs/apps/resources/index.md
   - en/programs/platform/groups: en/programs/platform/groups.md
   - en/programs/platform/identity: en/programs/platform/identity.md
+  - en/programs/platform/releases: en/programs/platform/releases.md
   - en/manifesto: en/manifesto.md
   - en/interfaces/: en/interfaces/index.md
   - en/components/charts: en/components/charts.md

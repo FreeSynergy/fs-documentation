@@ -57,3 +57,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0048 | Video-Encoder hinter Schnittstelle, Vulkan Video zuerst | Vorschlag |
 | 0049 | Gesamtplan: Programme nach Zweck, Workbench und Suite | akzeptiert |
 | 0050 | Ein Standard, ein Programm, eine Schnittstelle; `fs-contacts` heißt `fs-people` | akzeptiert (Abgrenzung: Vorschlag) |
+| 0051 | Releases: `fs-release`, nur kostenlose Wege, offene Signatur | akzeptiert |

@@ -165,3 +165,4 @@ Compiler fertig (Umbau ADR 0043 + Orakel 14/14), pedantic überall, fmt korrigie
 - [x] `fs-calendar-core`: `Task` nach `fs-tasks`, Einbindung nur über die Schnittstelle (ADR 0050) · freesynergy-32
 - [ ] `fs-jscalendar`: gemeinsame Typen statt Kopien, JSON-`Task` beim Import weiterleiten (ADR 0050) · freesynergy-32
 - [ ] Doku `programs/apps/contact/`, `data/contacts/` an `fs-people` anpassen · Sonnet
+- [ ] SignPath: Nutzer am 2026-11-13 erneut fragen (ADR 0051) · Opus
