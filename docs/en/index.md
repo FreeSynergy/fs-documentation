@@ -10,6 +10,11 @@ This documentation is available in several languages:
 - 🇩🇪 **Deutsch**: [Zur deutschen Version](/de/)
 - 🌍 more languages coming soon — contributions welcome!
 
+## ❤️ Why this exists
+
+Data and communication must not depend on money, and software should serve people. Read the [manifesto](manifesto.md),
+the [overall plan](programs/apps/roadmap.md) and the [interfaces](interfaces/index.md).
+
 ## 🚀 What you'll find here
 
 - 🔧 Guides for setup & usage of our tools
@@ -32,7 +37,7 @@ This documentation is available in several languages:
 Want to help? It's easy:
 
 1. **Fork** this repository  
-2. Edit or add documentation (in `docs/de/` or `docs/en/`)  
+2. Edit or add documentation (in `docs/en/`; `docs/de/` is translated from it)  
 3. **Commit & push**  
 4. Create a **Pull Request**  
 

@@ -1,6 +1,6 @@
 # Planned components
 
-**Status: proposal (2026-11-06).** Components needed by the programs on the [roadmap](../programs/apps/roadmap.md). None
+**Status: proposal (2026-11-06), program names partly older than the [overall plan](../programs/apps/roadmap.md): kanban is now part of Tasks, the gallery part of Files.** See also [charts](charts.md). None
 is built or documented in detail yet. Layers follow the existing structure: primitives, widgets, workbenches.
 
 As with all components, gestures are not part of them; they come from the frontend (ADR 0037). Names are proposals.
@@ -20,9 +20,9 @@ As with all components, gestures are not part of them; they come from the fronte
 | Program | New | Reused or changed |
 |---------|-----|-------------------|
 | **Files** | workbench `file-manager` (compact: `file-picker`); widgets `file-tile`, `file-preview` | `tree-view`, `list-view`, `grid-view`, `breadcrumb`, `context-menu`, `search-field`; **change** `file-upload`: resumable with progress |
-| **Kanban** | workbench `kanban-board`; widgets `board-column`, `task-card`, `checklist` | `sortable-list`, `card`, `drawer`, `tags-input`, `date-picker`, `badge` (limit reached), `timeline` (activity), `message-list` (comments) |
+| **Tasks (kanban)** | workbench `kanban-board`; widgets `board-column`, `task-card`, `checklist` | `sortable-list`, `card`, `drawer`, `tags-input`, `date-picker`, `badge` (limit reached), `timeline` (activity), `message-list` (comments) |
 | **Surveys** | workbenches `survey-builder`, `survey-form`; widgets `question`, `matrix-question`, `ranking-list` | `field`, `radio-group`, `checkbox`, `rating`, `slider`, `date-input`, `wizard`, `progress`, `chart`, `table` |
-| **Gallery** | workbench `gallery-browser` | `lightbox`, `carousel`, `image`, `video`, `map-view`, `timeline`, `description-list`; **change** `gallery`: large collections, virtual scrolling, grouping by date |
+| **Files (gallery)** | workbench `gallery-browser` | `lightbox`, `carousel`, `image`, `video`, `map-view`, `timeline`, `description-list`; **change** `gallery`: large collections, virtual scrolling, grouping by date |
 | **Whiteboard** | widgets `infinite-canvas`, `selection-handles`, `minimap`, `presence-cursors` | `toolbar`, `color-input`, `slider`, `tree-view` (layers), `popover`, `image`; **rework** workbench `whiteboard`: English variant names, compact variant |
 | **Streaming** | workbench `stream-studio`; widgets `stream-tile`, `level-meter` | `audio`, `video`, `call-controls`, `grid-view`, `message-list`, `badge` (live); **change** `media-player`: live mode |
 

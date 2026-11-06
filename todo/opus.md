@@ -127,7 +127,7 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 - Nachziehen (Opus/Sonnet): `common.capnp` Envelope um describes/startTime/endTime ergänzt (2026-11-05) → Kopie in fs-hub aktualisieren; capnp/capnp-rpc 0.23 → neueste (0.27?) prüfen (ADR 0026)
 - fs-store: `max_steps` global oder je Person? Schutzbedürftige Objekte in unverschlüsseltem Speicher standardmäßig ablehnen (heute so)? Grabsteine nach Abgleich + Aufräumen behalten? Aktivitäten als volle Vorher/Nachher-Bilder (heute) oder RFC-6902-Patches?
 
-## Phase 5 – Weitere Programme (Plan 2026-11-06, ADR 0044: Vorschlag)
+## Phase 5 – Weitere Programme (Plan 2026-11-06, ADR 0049; Reihenfolge in der Roadmap)
 
 Öffentlicher Plan: `docs/en/programs/apps/roadmap.md`, Components: `docs/en/components/planned.md`.
 
@@ -155,4 +155,10 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 | fs-hub | 9 | 0 | Facade, Adapter (RPC), Strategy (`ProposalEngine`), State (`HubStatus`) |
 
 Compiler fertig (Umbau ADR 0043 + Orakel 14/14), pedantic überall, fmt korrigiert (fs-store, fs-wiki).
-
+- [ ] Bestehende Kerne (fs-store, fs-contacts, fs-calendar, fs-maps, fs-hub, fs-wiki, Messenger-Vertrag) gegen den
+      Schnittstellen-Katalog prüfen und umbauen, ADR 0045 · Opus plant, Sonnet setzt um
+- [ ] `fs-interfaces`: öffentliches Repo für alle Verträge, `temp/contracts/` zieht um (nach Freigabe) · Opus
+- [ ] ADR 0021 mit ADR 0045 abgleichen: keine schleichenden Erweiterungen nach 1.0 · Opus
+- [ ] Frontends analysieren: Files; Umfragen sind recherchiert (`temp/research/surveys-landscape.md`), `requirements.md` nachziehen · Sonnet
+- [ ] `requirements.md` von surveys, streaming, tasks an den neuen Zuschnitt angleichen · Sonnet
+- [ ] Rechtsrat H.264 (Patente, Lizenz) · Nutzer

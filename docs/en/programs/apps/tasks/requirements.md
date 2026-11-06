@@ -1,4 +1,6 @@
-# Kanban — Requirements
+# Tasks — Requirements (board view)
+
+Written for the earlier plan `fs-kanban`; now the board view of [`fs-tasks`](design.md). Program names below follow that plan.
 
 What `FreeSynergy.Kanban` (repo `fs-kanban`) must and can do, derived from the analysed
 [project-management frontends](../projectmanagement/frontends/index.md) (ADR 0006, 0013).

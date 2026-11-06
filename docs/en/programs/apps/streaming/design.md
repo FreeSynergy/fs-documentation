@@ -1,80 +1,94 @@
 # Streaming — design
 
-**Status: proposal (2026-11-06).** Back to the [roadmap](../roadmap.md) · [requirements](requirements.md).
+**Status: proposal (2026-11-06).** Back to the [overall plan](../roadmap.md) · [requirements](requirements.md) ·
+[research](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/streaming-landscape.md).
 
-## Idea and assessment
+## What it is for
 
-Receive live media, forward it, record it. Calls are a separate program built on the same parts (ADR 0037).
+**Record once, and bring it everywhere:** YouTube, Odysee and other platforms at once, live and not live, with no SaaS
+provider in between. And recording must be far simpler than OBS.
 
-**How hard is it? It splits into two very different parts:**
+No open tool we found is simple, multi-platform and self-hosted at once. Restreamer and MediaMTX are for server rooms, and
+OBS with a multi-output plugin is the usual workaround, with the plugin breaking across OBS versions.
 
-| Stage | What | Assessment |
-|-------|------|------------|
-| **1: forward** | Receive, forward, repackage and record without decoding the picture | **Manageable.** Rust building blocks exist |
-| **2: process** | Convert quality levels, overlays, mixing; anything that decodes and encodes video | **Hard.** Encoding is CPU-intensive and pure-Rust options are limited |
+Calls are a separate program using the same parts (ADR 0037).
 
-We recommend documenting and planning everything now, but building only stage 1, and only after the other five programs.
+## Three parts
 
-## Stage 1
+| Part | Effort | Notes |
+|------|--------|-------|
+| **Distribute live** | Manageable | One encoded stream forwarded to many targets, no re-encoding |
+| **Publish not live** | Manageable | Upload through each platform's interface; shares a "publish" layer with live |
+| **Simple recording** | Hard | Means encoding, see below |
 
-| Purpose | Candidate (2026-11-06) | Notes |
-|---------|------------------------|-------|
-| WebRTC | `str0m` 0.25 | Sans-IO, so it fits our own networking; actively released |
-| WHIP and WHEP gateway | `moq-rtc` 0.3 | Built on `str0m`. Fast-changing API, so to be pinned |
-| Low-latency delivery | MoQ (`moq-lite` 0.17) | Still young; a bet in the sense of ADR 0026 |
-| Receiving | WHIP (RFC 9725) first | RTMP and SRT for existing tools such as OBS, later and checked separately |
-| Packaging for many viewers | HLS | No crate chosen yet |
+Video management, versions and sync belong to [`fs-files`](../files/design.md), and recordings land there. A live stream
+is not a file, so that part stays here.
 
-A viewer can use the browser's own decoder. Therefore stage 1 needs no encoder at all, provided the sender already
-delivers a suitable format.
+## Simple means automatic
 
-## Stage 2 is the hard part
+The person picks their targets. The program works out the settings, and checks before going live whether everything will
+work: connection, keys, and whether the chosen targets accept the format. Scenes, bitrates and keyframes stay hidden
+unless someone wants them. A rich frontend for experts can show them all on the same engine.
 
-| Purpose | Candidate | Limit |
-|---------|-----------|-------|
-| AV1 encoding | `rav1e` 0.8 | Rust, but last released 2025-06; live use is demanding |
-| AV1 decoding | `rav1d` 1.1 | Rust port |
-| H.264 | `openh264` 0.9 | Wraps Cisco's C++ library, so **not pure Rust** |
+## One stream for all
 
-We found no mature pure-Rust H.264 encoder (not an exhaustive search). Blinc's own `blinc_media` also uses OpenH264 for
-video on the desktop, so the question already arises in our GUI stack. Hardware encoders would be the fast route, and
-they too go through C interfaces.
+From the research: H.264, AAC-LC, constant bitrate, 2-second keyframes, 1080p at 30 fps and about 5 Mbps fits all the
+platforms examined, with LinkedIn and Vimeo setting the limits. AV1 and HEVC only help on YouTube. Vertical video needs a
+second encode.
 
-That conflicts with "100 % Rust" (ADR 0015), so it needs a decision: allow a limited exception, stay AV1-only and accept
-the limits, or do without stage 2. Our recommendation is to decide when stage 2 starts, since the options will change.
+## Platforms
 
-## Data
+| Platform | Live | Not live |
+|----------|------|----------|
+| YouTube | Enhanced RTMP: H.264, HEVC, AV1 | API, documented at 100 uploads per day |
+| Twitch | RTMP; codec beyond H.264 unclear ⚠️ | Not applicable |
+| Odysee | Custom RTMP | No official API found |
+| Rumble | ⚠️ not verified | No API found |
 
-| Piece | Standard | Notes |
-|-------|----------|-------|
-| Stream as an announced event | AS2 `Video`, JSCalendar `Event` for scheduling | |
-| Recording | `fs-files` object, AS2 `Video` | |
-| Chat beside a stream | Messenger workbench | Not duplicated (ADR 0037) |
+Twitch allows simulcasting without an exclusivity deal, but restricts merging other platforms' activity into the stream,
+according to secondary sources ⚠️. The publishing targets need review before use, since terms change.
+
+## Encoding
+
+Standards leave encoder design free; they define the stream and how to decode it. So writing an encoder is not copying.
+
+| Option | Notes |
+|--------|-------|
+| **Vulkan Video** (open Khronos standard) | Rust talks to the graphics card's encoder: H.264, H.265, AV1. Open Mesa drivers implement it. Proposed first backend |
+| `rav1e` | AV1 in Rust, for software encoding. Not sufficient alone, since most platforms need H.264 |
+| OpenH264 | C++, and Blinc uses it. Exception to 100 % Rust |
+| Own H.264 encoder | Standard is readable, but patents last until about 2030 depending on country; needs legal advice |
+| Own encoder for AV1 or AV2 | Long-term gift to everyone; good encoding takes years of tuning. No Rust encoder found for AV2 |
+
+Limits: macOS has no native Vulkan; proprietary driver status is unverified; older cards lack encoders.
+
+**Open: what happens on a machine with no suitable hardware, given that platforms need H.264?**
+
+All backends sit behind one `VideoEncoder` [interface](../../../interfaces/index.md). Sound uses Opus or AAC; note that the
+common target above needs AAC.
 
 ## Patterns
 
 | Pattern | Use |
 |---------|-----|
-| Strategy | Ingest and output protocols behind one interface |
-| Pipeline | Ingest → route → outputs, with steps added per stream |
-| Observer | Viewers subscribe to tracks |
-| State | Stream status: `idle`, `live`, `ended`, `error` |
+| Strategy | Encoders, ingest and output protocols, publishing targets |
+| Pipeline | Capture → encode → route → targets |
+| Observer | Status for the interface |
+| State | `idle`, `checking`, `live`, `ended`, `error` |
 | Adapter | Each foreign crate behind our own trait |
 
-## Components
+## Candidates
 
-Existing: `media-player` (needs a live mode), `video`, `audio`, `call-controls`, `message-list`. New: `stream-tile`,
-`level-meter`, workbench `stream-studio`. See [planned components](../../../components/planned.md).
+`str0m` 0.25 (WebRTC), `moq-rtc` 0.3 (WHIP and WHEP gateway), `xcap` (screen capture), `nokhwa` (camera), `ash` and
+`gpu-video` (Vulkan, not checked), `rav1e` 0.8, `mousiki` (Opus in Rust). None checked for C dependencies yet.
 
 ## Stages
 
-1. Forward: WHIP in, WHEP out, access control, recording to `fs-files`.
-2. Multiple outputs, HLS, RTMP and SRT, restreaming to other platforms.
-3. Processing, after the decision above.
+1. Forward: receive one stream, send to many, recording into `fs-files`.
+2. Publish not live, with per-platform titles and scheduling.
+3. Simple recording with screen and camera, automatic settings and a pre-flight check.
+4. Second encode for vertical video, overlays.
 
 ## Open questions
 
-1. **What is the main use?** Team meetings, public events or gaming differ a great deal. It affects whether MoQ, HLS or
-   WebRTC comes first.
-2. **Calls:** do they share the first code with streaming? ADR 0037 makes them a separate program on shared parts.
-3. **Encoder:** see above.
+1. Encoder fallback, see above. 2. H.264 patents and licences, including hardware encoders. 3. Which platforms first?

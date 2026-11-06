@@ -1,5 +1,7 @@
 # Gallery — design
 
+**Superseded in part (2026-11-06):** the gallery is no longer a program of its own. It is a workbench and frontend of [`fs-files`](../files/design.md). Albums, modes and metadata below move there; see the [overall plan](../roadmap.md).
+
 **Status: proposal (2026-11-06).** Back to the [roadmap](../roadmap.md) · [requirements](requirements.md).
 
 ## Idea

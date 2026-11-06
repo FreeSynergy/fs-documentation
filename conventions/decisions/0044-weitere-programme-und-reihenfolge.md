@@ -1,6 +1,6 @@
 # 0044 – Weitere Programme: Files, Kanban, Surveys, Gallery, Whiteboard, Streaming
 
-Status: **Vorschlag** (2026-11-06), Entscheidungen des Nutzers stehen aus · ergänzt ADR 0017, 0018, 0037
+Status: **überholt durch ADR 0049** (2026-11-06) · bleibt als Verlauf stehen
 
 ## Kontext (Nutzer)
 Nach den Groupware-Programmen sollen folgen: `fs-gallery`, allgemeine Dateien (evtl. mit RustFS),

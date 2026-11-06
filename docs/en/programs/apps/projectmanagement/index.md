@@ -1,6 +1,6 @@
 # Project Management
 
-Boards with columns and cards become a program of their own: see [Kanban](../kanban/index.md) and the [roadmap](../roadmap.md).
+Boards with columns and cards become a program of their own: see [Tasks](../tasks/index.md) and the [overall plan](../roadmap.md). Project management itself becomes a suite.
 
 ## Overview
 

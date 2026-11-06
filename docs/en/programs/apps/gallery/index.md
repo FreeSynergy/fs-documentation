@@ -1,6 +1,6 @@
 # Photo galleries
 
-**`FreeSynergy.Gallery` (`fs-gallery`) is planned, no code yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+**The gallery is planned as a view and frontend of [`fs-files`](../files/design.md), no code yet.** See the [earlier design](design.md), the [requirements](requirements.md) and the [overall plan](../roadmap.md).
 
 ## Overview
 

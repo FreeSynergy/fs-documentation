@@ -51,13 +51,8 @@ This sketch shows the shape only. The final form comes from the contract.
 [RustFS](https://github.com/rustfs/rustfs) is an S3-compatible object store written in Rust, under Apache-2.0 (version
 1.0.4 on 2026-10-25). It suits our licence and language rules and fits as a **recommended server backend**.
 
-We propose not to make it the engine of `fs-files`:
-
-- It is a **separate server**, so requiring it would break "every program runs alone" (ADR 0017) on a laptop or phone.
-- Its README describes running it as a server. An embedded library form was not found, and this has not been fully checked.
-- Reaching it through the S3 protocol keeps us independent of one project. It only reached 1.0 recently.
-
-This is the same role ADR 0018 gives Stalwart: recommended to operators and run separately, with no dependency on it.
+**Decided (2026-11-06): optional, yet used heavily, and we hope to work with the project,** including delivering data
+online. It is a separate server, so a laptop or phone must also work without it (ADR 0017). Git is another option.
 
 ### Candidates
 
@@ -83,6 +78,37 @@ Resumable uploads are needed for large files. The `tus` crate has had no release
 | `Backends` | `backend.list`, `backend.add`, `backend.remove` |
 | `subscribe` | Live changes for other programs |
 
+## Saving and exporting
+
+**Saving and exporting are different things** (ADR 0046, building on ADR 0042).
+
+- While you work, you work on a **copy in the database**, always kept. There is no "save" to forget.
+- Files are storage and backups.
+- Only an **export** produces a file to hand on.
+
+Texts and small objects live in the database. Large files such as videos cannot be copied whole on each edit: they keep
+their bytes in the file store, and versions share unchanged blocks.
+
+**Asking on leaving:** we propose not to ask every time, since people click such questions away. A "pass on" action
+offers the export when it is wanted. The program asks only when a file was opened from outside, because people then
+expect that file to change: "Update the original too?"
+
+## Views
+
+The same files, seen in different ways. Files can suggest a view from the content and remember it per folder; whether a
+frontend uses this is up to the frontend.
+
+List, tree, grid, timeline, map, people, music library, video library, reader, shelf of documents, recent activity,
+duplicates. **A gallery is a frontend with a built-in filter**: an app that looks like its own program, on the same engine.
+
+Ideas to develop:
+
+- **Collections, not copies:** a file can be in many albums, and an album can also be a saved search.
+- **Metadata extractors per file type** behind one [interface](../../../interfaces/index.md): photo, audio, video, PDF.
+  Each can be linked to the programs that open that type, much as an operating system does. Standards for each type come first.
+- **Embedded:** "all files of this project" inside a project or wiki page.
+- Face recognition as an optional, local-only extractor (ADR 0029).
+
 ## Components
 
 Workbench `file-manager` with a compact `file-picker` variant, used wherever a program needs to choose or attach a
@@ -96,8 +122,8 @@ file. See [planned components](../../../components/planned.md).
 
 ## Open questions
 
-1. **Real folder or managed store?** For the local backend we propose real, visible files in a normal folder, with
-   changes picked up by watching it. This avoids lock-in but makes conflicts harder.
+1. **Real folder or managed store?** Both must be possible. With the working copy in the database, real files are the
+   stored form. How changes from outside are picked up remains open.
 2. **Is a folder here the same as ADR 0037's "folder = group = mailing list"?** If so, sharing a folder would equal
    sharing with a group. This needs a decision.
 3. **Sharing model:** files, gallery, kanban and surveys all need it. We propose one shared specification rather than

@@ -1,123 +1,109 @@
-# Next programs — roadmap
+# The overall plan
 
-**Status: under review (2026-11-06).** We are rethinking the overall structure before continuing, so the list, the
-order and the split into programs below may change. No code exists yet for any program on this page. This page says what
-we plan and why, so that anyone can see where we are heading and help.
+**Status: draft (2026-11-06), agreed in outline by the project owner.** It says what we plan and why, so anyone can see
+where we are heading and help. Why we do this at all: see the [manifesto](../../manifesto.md).
 
-## Decided so far by the project owner
+## How everything is ordered
 
-- **RustFS** is an optional backend for `fs-files`. We hope to work together with the project, including online delivery.
-- **`fs-projectmanagement` is a suite**, combining kanban, surveys, timeline, whiteboard, wiki and further modules.
-  A cost module may join after looking at what such programs do and need.
-- **Workbenches and programs must not be confused.** Whether the gallery is a program, or a view of `fs-files`, is open.
-- **New requirements:** `fs-groups` (group management, nested groups, working with Kanidm through SCIM) and `fs-timeline`.
-- **Surveys** support several decision types, such as consensus and majority, and can start in a small group and widen
-  to parent groups. The democracy suite is as important as project management, and surveys are part of both.
-- **Charts** are many and varied, and are needed by surveys, project management and others.
-- **Streaming** is about distribution: record once, publish to YouTube, Odysee and other platforms at once, live and not
-  live, without a SaaS provider, plus a recording tool far simpler than OBS and management of videos.
+Everything is sorted by purpose, not by what a tool looks like. Four questions decide where something belongs:
 
-The sections below predate these decisions and will be reworked once the overall plan is agreed.
+| Question | Then it is a |
+|----------|--------------|
+| Does it have its own data, with its own rules? | **Program** |
+| Does it put programs together for a purpose? | **Suite** |
+| Does it show something without knowing what the data means? | **Component** (a **workbench** is a large component) |
+| Is it one way of using a program? | **Frontend**, possibly with built-in filters |
 
-## What already exists
+Every topic has one [interface](../../interfaces/index.md), the same for every provider.
 
-These repositories are public since 2026-11-06. All are data cores without a GUI so far, refactored to ADR 0043.
+Whether views like the gallery or kanban should *also* be offered as stand-alone programs is still open. They can
+appear as stand-alone apps by being frontends, without having their own data.
 
-| Repo | What it is | Tests |
-|------|------------|-------|
-| [`fs-store`](https://github.com/FreeSynergy/fs-store) | Object store, version 0.2 | 37 |
-| [`fs-hub`](https://github.com/FreeSynergy/fs-hub) | Shares objects between programs; contacts and calendar already share data through it | 9 |
-| [`fs-contacts`](https://github.com/FreeSynergy/fs-contacts) | Contacts core | 21 |
-| [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Events and tasks (JSCalendar), including the `Task` that `fs-tasks` would build on | 45 |
-| [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Maps core | 30 |
-| [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) | Text core `fs-text`; round-trips all 1321 files of `docs/en` with none unstable | 46 |
-| [`fs-capnpc`](https://github.com/FreeSynergy/fs-capnpc) | Cap'n Proto compiler in pure Rust (`capnp-compiler` 0.1.0), not yet on crates.io | 14 of 14 reference schemas identical |
+## Programs
 
-Known limit: these repositories still refer to `fs-store` by a local path, so they do not build elsewhere until that is
-switched to git dependencies. Details are in each repository's `DESIGN.md`.
+| Purpose | Program | Status |
+|---------|---------|--------|
+| Keep objects, share them between programs | [`fs-store`](https://github.com/FreeSynergy/fs-store), [`fs-hub`](https://github.com/FreeSynergy/fs-hub) | Exist |
+| Sign in, system access | [identity wrapper](../platform/identity.md) over Kanidm | Planned |
+| Belong together, decide who may do what | [`fs-groups`](../platform/groups.md) | Planned, **new** |
+| Keep and find anything | [`fs-files`](files/design.md) | Planned |
+| Know who someone is | [`fs-contacts`](https://github.com/FreeSynergy/fs-contacts) | Core exists, no GUI |
+| Be somewhere at some time | [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Core exists, no GUI |
+| Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
+| Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |
+| Say something to someone | [`fs-messenger`](messenger/contract.md) | Draft contract |
+| Know what to do next | [`fs-tasks`](tasks/design.md) | Planned, **new** |
+| Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new** |
+| Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
+| Ask, and decide together | [`fs-surveys`](surveys/design.md) | Planned |
+| Think visually | [`fs-whiteboard`](whiteboards/design.md) | Planned |
+| Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Planned |
 
-## The programs
+`fs-capnpc`, our Cap'n Proto compiler in pure Rust, supports them all. Details of what exists are in each repository's `DESIGN.md`.
 
-| Program | Repo | What it does | Design | Requirements | Effort |
-|---------|------|--------------|--------|--------------|--------|
-| Files | `fs-files` | Store, organise and share any file. The other programs keep their bytes here | [design](files/design.md) | [provisional](files/requirements.md) | M |
-| Kanban | `fs-kanban` | Boards, columns, cards. A card is the same task the calendar shows | [design](kanban/design.md) | [analysed](kanban/requirements.md) | M |
-| Surveys | `fs-surveys` | Build surveys, collect answers, read results, optionally anonymous | [design](surveys/design.md) | [provisional](surveys/requirements.md) | M |
-| Gallery | `fs-gallery` | Photos and videos: albums, timeline, places, sharing | [design](gallery/design.md) | [analysed](gallery/requirements.md) | M |
-| Whiteboard | `fs-whiteboard` | Infinite canvas for drawing, shapes and notes, together | [design](whiteboards/design.md) | [analysed](whiteboards/requirements.md) | L |
-| Streaming | `fs-streaming` | Receive, forward and record live media | [design](streaming/design.md) | [analysed](streaming/requirements.md) | L (stage 1: M) |
+## Views (workbenches, not programs)
 
-*Analysed* means derived from the documented frontends. *Provisional* means we have not analysed any frontends for
-this category yet, so the list comes from our architecture and must be checked against real programs (ADR 0013).
-Effort compares these programs with each other; it is not a time estimate.
+| View | Shows data from |
+|------|-----------------|
+| Gallery, video library, music | `fs-files` |
+| Kanban board, task list | `fs-tasks` |
+| Timeline (Gantt) | `fs-tasks`, `fs-calendar` |
+| Timeline of what happened | `fs-history` |
+| Result dashboards | `fs-surveys`, others, using [charts](../../components/charts.md) |
 
-The [new components](../../components/planned.md) these programs need are listed on their own page.
+## Suites
 
-## Proposed order
+A program can belong to several suites.
+
+| Suite | Contains |
+|-------|----------|
+| Groupware | Contacts, calendar, wiki, maps, messenger |
+| **Project management** | Tasks, history, resources, surveys, whiteboard, wiki, groups; possibly costs |
+| **Democracy** | Surveys, groups, wiki, messenger, tasks, resources |
+| Media | Files (with gallery), streaming |
+| ERP, CRM, others | Later, sharing resources, tasks and people |
+
+## Order
 
 ```text
-fs-store, fs-hub, fs-calendar (exist)
-   ├── fs-files ──┬── fs-gallery
-   │              ├── fs-streaming (recordings land in fs-files)
-   │              └── fs-whiteboard (embedded images)
-   ├── fs-kanban (cards are fs-calendar tasks)
-   └── fs-surveys
+1. Foundation     manifesto, interface catalogue, sharing model
+                  fs-groups + identity wrapper, then fs-files
+2. Components     shared ones first, plus charts; each built when the next program needs it
+                  GUIs for the existing cores: contacts, calendar, maps, wiki
+3. Work           fs-tasks + fs-history, then fs-surveys, fs-resources, fs-messenger
+4. Together       live presence, fs-whiteboard
+5. Suites         project management, democracy
+6. Media          gallery frontends, fs-streaming
 ```
 
-1. **`fs-files`**: the gallery, the whiteboard and streaming all store their bytes here, so it comes first.
-2. **`fs-kanban`**: tasks already exist in `fs-calendar`, so this shows quickly that two programs share one object.
-   It also produces `sortable-list`, a component most other programs want.
-3. **`fs-surveys`**: mostly reuses existing field components. Its hard part is anonymity, not the interface.
-4. **`fs-gallery`**: needs `fs-files`.
-5. **`fs-whiteboard`**: the largest interface task, with an infinite canvas and live collaboration. It needs its own
-   data specification, since no standard exists.
-6. **`fs-streaming`**: stage 1 forwards media without decoding it, which is manageable. Stage 2 needs video encoding,
-   which is the hard part. See the [streaming design](streaming/design.md).
+**Components come first, then the program.** We document components early, so we know what we have. We build each only
+when the next program needs it, since components without a real user tend to get their interface wrong.
 
-Whiteboard, surveys and kanban are the priorities. Kanban and surveys can start in parallel with `fs-files`, as they
-do not depend on it. The whiteboard is late only because of its size; its specification can start at any time.
+## What makes this worth doing
 
-## What every program has in common
+Findings from the [research notes](https://github.com/FreeSynergy/fs-documentation/tree/main/temp/research) of 2026-11-06:
 
-These rules are already decided and apply to all six.
+- **Decisions as first-class objects.** No project tool we looked at treats a decision or vote as an object linked to tasks.
+- **A survey that widens.** No tool found lets a poll start in a small group and move to its parent group, results carried over.
+- **One task, several contexts.** Personal and group use are separate products elsewhere.
+- **Capacity planning and baselines.** Open-source tools keep these behind paid plans or lack them.
+- **Systemic consensing.** Described as a method, but no open-source tool found.
+- **Simple, multi-platform, self-hosted streaming.** No open tool offers all three together.
 
-| Rule | Decision |
-|------|----------|
-| Runs alone, shares data with others | ADR 0017, 0019 |
-| Data in standards, AS2 envelope; gaps get our own specification | ADR 0014, 0020 |
-| Own `fs-store`, object-level sync through `fs-hub` | ADR 0019 |
-| Cap'n Proto contract first; JSON, CLI and MCP are generated from it | ADR 0021 |
-| At least one workbench plus a compact variant, usable inside other programs | ADR 0037 |
-| Gestures only in the frontend, not in components | ADR 0037 |
-| Up to four reference frontends | ADR 0038 |
-| Design patterns, interfaces first, small files, documentation | ADR 0043, [coding rules](https://github.com/FreeSynergy/fs-documentation/blob/main/conventions/coding.md) |
-| Licence `MIT OR Apache-2.0` | ADR 0016 |
-
-## Work steps per program
-
-1. Check requirements against the frontends (for provisional ones, analyse frontends first).
-2. Write the data specification where a standard is missing.
-3. Write the Cap'n Proto contract.
-4. Build the core without a GUI, with tests, on `fs-store`.
-5. Document the components and build them on Blinc.
-6. Build the workbench, the compact variant and the first reference frontend ("very simple").
-
-The docs change in the same step as the work, including the status on this page.
+The closed-source products were checked only partly; each note lists what was verified.
 
 ## Open decisions
 
-These are decisions for the project owner. Each design page holds the details and any further questions.
-
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Is RustFS the storage engine, or one optional backend for `fs-files`? | Optional backend, because it is a separate server ([details](files/design.md#storage-backends)) |
-| 2 | Is the order above right? | Yes, as proposed |
-| 3 | Does kanban stay a separate program from project management? | Yes; `fs-projectmanagement` builds on its workbench later |
-| 4 | Whiteboard collaboration: per-object sync or a CRDT? | Per-object first, behind an interface ([details](whiteboards/design.md#live-collaboration)) |
-| 5 | How strong must survey anonymity be? | Two levels now; binding votes belong to the democracy suite ([details](surveys/design.md#anonymity)) |
-| 6 | Streaming: is a C-based encoder acceptable for stage 2? | Decide when stage 2 starts ([details](streaming/design.md#stage-2-is-the-hard-part)) |
+| 1 | Video encoder: Vulkan Video first? How do we handle machines without suitable hardware, given platforms need H.264? | Vulkan Video first; fallback still open ([details](streaming/design.md#encoding)) |
+| 2 | H.264 patents | Needs legal advice |
+| 3 | Live collaboration in text: which CRDT? | Compare `loro` and `yrs` when the wiki or whiteboard needs it |
+| 4 | Should views also be stand-alone programs? | Discuss later |
+| 5 | Prompt for export on leaving? | Only when a file came from outside ([details](files/design.md#saving-and-exporting)) |
+| 6 | Repository `fs-interfaces`? | Yes |
+| 7 | How do fixed interfaces fit with existing cores? | Rework them in order, starting with what programs share |
 
-## Sources for the technology named here
+## What is decided
 
-Versions were read from crates.io and GitHub on 2026-11-06. A listed crate is a **candidate**, not a decision. None
-has yet been checked for C dependencies, and each must pass ADR 0015 and ADR 0026 before use.
+ADR 0044 to 0049 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).

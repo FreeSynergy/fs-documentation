@@ -39,6 +39,12 @@ decided on (ADR 0019). Conflicts are rare because two people seldom change the s
 Notes edited together are the exception: if this proves insufficient, a CRDT (`yrs` 0.28, `automerge` 0.12) can be added
 for note text only. The passing channel does not exist yet, and streaming and the messenger could use it too.
 
+**Like in a game (decided 2026-11-06):** you see what others are doing as they do it: cursors, selections, a shape moving
+while it is being dragged. That is the live channel, a shared [`Presence` interface](../../../interfaces/index.md). A CRDT is
+a separate matter: it merges changes correctly, and we use it only where properties are not enough, for text. Updates to
+properties need a logical clock, not wall time, and each property is merged by itself, so that one person's colour change
+does not undo another's move.
+
 ## Patterns
 
 | Pattern | Use |
