@@ -124,7 +124,7 @@ person's card, because the agent's self-description is self-reported.
 | Sending a prompt | `Draft.send` | Fits |
 | Streamed message text, Markdown by default | `bodyText`, and `updated` events carry only a summary | An event with a text chunk, and the media type of the body |
 | Reasoning text | Nothing | Its own field |
-| Tool call with ten kinds | `ToolCall` with four kinds. The default value of `kind` is `reads`, the harmless one | A separate `risk` field whose default is `unknown`, set by the engine and never by the agent. `unknown` always asks |
+| Tool call with ten kinds | `ToolCall` with four kinds. Until draft 0.1 the default of `kind` was `reads`, the harmless one; since draft 0.2 it is `unknown` | A separate `risk` field whose default is `unknown`, set by the engine and never by the agent. `unknown` always asks |
 | Status: pending, in progress, done, failed | `settled` does not say how it ended | An outcome field |
 | Title, plus full command, paths and content | `summary` only | A detail field. Commands and paths are shown in full, and the title is marked as written by the agent |
 | Permission request with options | State `question`, with no options and no way to answer | Options on the call, and a new `MessageAction` to decide. Only a person's device may send it |

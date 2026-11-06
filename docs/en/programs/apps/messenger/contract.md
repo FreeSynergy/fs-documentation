@@ -1,4 +1,4 @@
-# Messenger — Contract (draft 0.1)
+# Messenger — Contract (draft 0.2)
 
 The interface between `fs-messenger` and every frontend (ADR 0021). **Draft**; compiles with `capnpc-embedded` 0.2.0 (capnp 1.4.0) + `capnpc` 0.23 (2026-11-05) — no C++ toolchain (ADR 0040).
 The schema file lives in the interfaces repository: [`schema/messenger.capnp`](https://github.com/FreeSynergy/fs-interfaces/blob/main/schema/messenger.capnp) in `fs-interfaces` (ADR 0045); the owner program is `fs-messenger`.
@@ -25,6 +25,13 @@ The very simple frontend only ever asks for `conversations` and `compose`; the f
 
 Data structures follow the storage model: `Envelope` (AS2 fields, ADR 0020), `Encryption` (ADR 0018),
 `DeliveryState`, `original` as a blob (ADR 0030), sensitive categories (ADR 0029), UUIDv7 (ADR 0027).
+
+## AIs in the contract (draft 0.2, `fs-interfaces` v0.16.0)
+
+A `ToolCall` is what an AI wants to do or has done. It has a `revision`, raised by the engine on every change, so a late event can
+never overwrite a newer state. `askedOf` names the person whose decision counts. A `ToolCallDecision` carries the `signer`, who must be
+that person, and refers to a digest of the arguments, so the decision covers exactly what the person saw. Unset values never mean
+something good: an unset `Encryption` is `unknown`, an unset `kind` is `unknown`. Approving is never offered to an AI (ADR 0054).
 
 ## Open
 
