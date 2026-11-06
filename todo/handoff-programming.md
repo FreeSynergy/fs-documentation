@@ -15,12 +15,15 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 |------|--------|-------|-----|
 | fs-store | Objektspeicher (AS2-Hülle, Protokoll, Undo, Turso) | 37 | v0.2.0 |
 | fs-jscalendar | Gemeinsame JSCalendar-Typen, kein Programm | 6 | v0.1.0 |
-| fs-people (früher fs-contacts) | JSContact, vCard, Gleiche-Person-Vorschläge, Rollen, Beziehungen, KI-Markierung | 38 | v0.2.0 |
-| fs-calendar | JSCalendar 2.0 Event, ICS, Einladungen; Aufgaben nur über `TaskItems` | 50 | v0.3.0 |
-| fs-tasks | Besitzer von JSCalendar `Task` (ADR 0050); Trait `TaskItems`, Vertrag `tasks.capnp` in fs-interfaces (Entwurf) | 18 | v0.3.0 |
-| fs-maps | PMTiles bei Bedarf, Cache, Regionen, Orte | 30 | — |
+| fs-people (früher fs-contacts) | JSContact, vCard, Gleiche-Person-Vorschläge, Rollen, Beziehungen, KI-Markierung | 38 | v0.2.1 |
+| fs-groups | Gruppen, Verschachtelung ohne Zyklen, Mitgliedschaft, Einladungen, Delegation | 50 | v0.1.1 |
+| fs-identity (Name vorläufig) | Kanidm als `GroupDirectory`, REST v1 | 26 | v0.1.1 |
+| fs-files | Dateien; lokaler Ordner, S3 | 55 | v0.2.1 |
+| fs-calendar | JSCalendar 2.0 Event, ICS, Einladungen; Aufgaben nur über `TaskItems` | 55 | v0.4.1 |
+| fs-tasks | Besitzer von JSCalendar `Task` (ADR 0050); Trait `TaskItems`, Vertrag `tasks.capnp` in fs-interfaces (Entwurf) | 20 | v0.4.1 |
+| fs-maps | PMTiles bei Bedarf, Cache, Regionen, Orte, `Places` | 46 | v0.1.1 |
 | fs-hub | Programme verbinden, Objekt-Abgleich (Cap'n Proto RPC) | 9 | — |
-| fs-wiki (crate fs-text) | Text + Ebenen, Markdown, Links, Vorlagen | 46 | — |
+| fs-wiki (crates fs-text, fs-wiki-core) | Text + Ebenen, Markdown, Links, Vorlagen, `Texts` über fs-store | 73 | v0.1.1 |
 | fs-capnpc (crate capnp-compiler) | Cap'n-Proto-Compiler in reinem Rust, 14/14 Orakel | 30 | v0.1.0 |
 
 ## Offene Aufgaben (Reihenfolge)
@@ -76,11 +79,16 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 - Agenten früh und oft committen lassen (Abbrüche verlieren sonst alles).
 
 ## Stand der Reihenfolge (Programmier-Sitzung, 2026-11-06)
-1. ✅ `fs-jscalendar` v0.1.0: Kopien aus fs-tasks (v0.3.0) und fs-calendar (v0.3.0) entfernt. Aufgaben gehen aus jedem Importformat an fs-tasks; ohne Aufgabenprogramm steht es im Bericht.
-2. ✅ `people.capnp` in fs-interfaces v0.2.0, fs-people v0.2.0 ist Anbieter: Rollen als Objekte, Beziehungen, KI-Markierung (`kind` `application` + Rolle `ai`), Anbieter-Regel. Offene Punkte in `fs-people/DESIGN.md`.
-3. In Arbeit: `groups.capnp` (fs-interfaces v0.3.0), Kern `fs-groups`, danach `fs-identity` (Name vorläufig).
-4. In Arbeit: `files.capnp` (fs-interfaces v0.3.0, vorläufig), Kern `fs-files`: lokaler Ordner, dann S3.
-5. und 6. noch offen.
+Alle Repos stehen auf `fs-interfaces` v0.5.0. Frische Klone geprüft (Stand vor der Angleichung auf v0.5.0).
+1. ✅ `fs-jscalendar` v0.1.0: Kopien entfernt; Aufgaben gehen aus jedem Importformat an fs-tasks.
+2. ✅ `people`: fs-people v0.2.1 (Rollen, Beziehungen, KI-Markierung). Offen: `fs-people/DESIGN.md`.
+3. ✅ `groups`: fs-groups v0.1.1; `fs-identity` v0.1.1 (Name vorläufig), einmal gegen echtes Kanidm 1.12.0 gelaufen.
+4. ✅ `files`: fs-files v0.2.1, lokal und S3, einmal gegen echtes RustFS 1.0.4 gelaufen. Vertrag vorläufig.
+5. ✅ soweit Code da ist: fs-tasks v0.4.1, fs-calendar v0.4.1, fs-maps v0.1.1, fs-wiki v0.1.1 (neu: `fs-wiki-core`). **`messages` nur Vertrag: fs-messenger hat keinen Kern.**
+6. In Arbeit: `fs-components`, Wiki-Workbench.
+
+Nicht gebaut, überall: Cap'n-Proto-Server, `subscribe`. Nichts ist 1.0; keine Schnittstelle hat zwei unabhängige Nutzer.
+Bekannte Fehler: Markdown-Rundreise in fs-text (Dreierketten, nebeneinanderliegende Listen; kein Textverlust), siehe `fs-wiki/DESIGN.md`.
 
 ## Nächste Reihenfolge (Empfehlung der Strategie-Sitzung, 2026-11-06, Nutzer kann ändern)
 1. `fs-jscalendar`: Kopien in fs-tasks und fs-calendar beseitigen, falls noch nicht erledigt.
