@@ -43,8 +43,8 @@ Keeping these apart prevents much confusion:
 | Texts | Writing and knowing together | Own specification (ADR 0031, 0033) | `fs-wiki` | Core exists |
 | Places | Knowing where | GeoJSON | `fs-maps` | Core exists |
 | Decisions | Asking, and deciding together | AS2 `Question`; gap beyond it | [`fs-surveys`](https://github.com/FreeSynergy/fs-surveys) | Provisional draft interface, core exists |
-| Boards | Thinking visually | Gap, own specification | `fs-whiteboard` | Planned |
-| Live media | Showing something as it happens | WHIP, WHEP, enhanced RTMP | `fs-streaming` | Planned |
+| Boards | Thinking visually | Gap, own specification | [`fs-whiteboard`](https://github.com/FreeSynergy/fs-whiteboard) | Draft interface, core exists |
+| Live media | Showing something as it happens | WHIP, WHEP, enhanced RTMP | [`fs-streaming`](https://github.com/FreeSynergy/fs-streaming) | Draft interface, code in progress |
 
 ## Providers: who delivers it
 
