@@ -10,8 +10,8 @@ not a program of its own (ADR 0054). See the [overall plan](../roadmap.md).
 - **Talking to an AI**, local or remote, in one place.
 - **Seeing everything the AI does**, including the helpers it starts, and being able to step in.
 - **Reading comfortably.** Long answers are the main thing, so reading comes first.
-- **Working with every program:** the chat reads each program's MCP interface and uses it. Because MCP tools are generated
-  from each program's contract (ADR 0021), every program can be used this way without extra work.
+- **Working with every program:** the chat reads each program's MCP interface and uses it. MCP tools are generated from each
+  program's contract (ADR 0021). This works, but the contracts need a few marks first ([below](#mcp-the-contract-as-tools)).
 
 Each of these is built as a separate piece, and any program can use the chat as a [component](../../../components/planned.md).
 
@@ -23,10 +23,10 @@ Function analysis only, as with all programs (ADR 0013). Nothing is copied. Name
 |---------|------|--------|
 | [Strata](https://github.com/Niko1221/Strata) | Very pleasant appearance | Analysed (2026-11-06), below. MIT, C++ engine, React and Tauri app |
 | [CodeAF](https://github.com/Agent-Field/CodeAF) | Shows all AIs, including subagents | Analysed (2026-11-06), below. Apache-2.0, Go, terminal app |
-| Zed | Output that is easy to read at length | To be analysed |
+| [Zed](https://github.com/zed-industries/zed) | Output that is easy to read at length | Analysed (2026-11-06), below. GPL-3.0-or-later for the agent panel, Rust, code editor |
 
-Both analyses come from reading documentation, screenshots and selected code. We ran neither program, and we did not check
-their benchmark claims.
+All three analyses come from reading documentation, screenshots or selected code. We ran none of these programs, and we did not
+check their benchmark claims. For Zed we read its documentation, default settings and agent panel code, and saw no screenshots.
 
 ### Strata: why it is pleasant
 
@@ -64,13 +64,132 @@ Not for us: usage counts and the model pool are **on by default**, and the produ
 ([its telemetry page](https://github.com/Agent-Field/CodeAF/blob/main/docs/TELEMETRY.md)). This contradicts our promise of
 transparency, even though both can be switched off and are described as containing no content.
 
+### Zed: how it keeps long output readable
+
+A code editor with an agent panel. Its own agent and outside agents (over ACP) share one thread view.
+
+| What it does | What we take from it |
+|--------------|----------------------|
+| Content is limited to a maximum width and centred in a wide panel, 850 pixels by default, and this can be switched off | Every long-text view has a line-length limit |
+| The AI's text and the person's text each have their own font and size setting | Reading comfort belongs to the reader, and it is clear at once who is speaking |
+| Reasoning is separate from the answer. By default it is open while it streams and folds when it ends. Three other settings exist: preview, always open, always closed | The answer comes first, and the reasoning stays one step away. A message needs its own place for reasoning |
+| Edits and terminal output are cards. A setting per card type says if they start open | The reader decides how much work to see. Strata starts closed and Zed starts open, so this is a choice, not a fixed rule |
+| A long thread is a thing to move through: buttons to the start and the last prompt, keys from prompt to prompt, scrolling from the input box, and search inside the thread | The person's own messages are the table of contents |
+| A bar above the input gathers changed files, the plan, queued messages and open permission questions | Same result as Strata: a question can never scroll away |
+| All changes collect in one review view, and each change is accepted or rejected on its own | A result is an object that can be reviewed outside the talk |
+| A shortened context appears as an entry that opens to show the summary | Nothing is hidden, even when the AI forgets |
+| One answer can be copied, and the whole thread opened as a Markdown file | Text can always leave the view |
+| A subagent gets a card with a small window on its latest entries (8 at most) | One more form for `agent-tree` |
+| Surprising Unicode in a sandbox permission prompt blocks "allow" until it is acknowledged | A question must show what it really asks |
+
+Not for us: what only makes sense in an editor, such as following the agent from file to file. Its limits are also a warning.
+Fixed rules cover only recursive deletion of a few central folders in its terminal tool, and a global "allow" removes most other
+questions. Its sandbox covers only its own agent, not outside agents. Our [brake](#locking-ais-out) must reach further.
+
 ## Standards
 
 | Purpose | Standard | Notes |
 |---------|----------|-------|
-| Using programs from a chat | MCP | Already planned in ADR 0021 |
-| Talking to a coding agent | Agent Client Protocol (ACP), Apache-2.0 | JSON-RPC over stdio, published by Zed; read only in summaries so far |
+| Using programs from a chat | Model Context Protocol (MCP), revision 2026-07-28 (current) | Planned in ADR 0021. Works with limits, [see below](#mcp-the-contract-as-tools) |
+| Talking to a coding agent | Agent Client Protocol (ACP), protocol version 1 (stable), Apache-2.0 | JSON-RPC 2.0, stdio only so far. Version 2 is a draft. Governance is interim, by Zed and JetBrains. [See below](#acp-coding-agents-in-the-messenger) |
 | Reaching a model | ⚠️ none chosen | Provider interface, with llama.cpp and others behind it |
+
+## What ACP and MCP mean for us
+
+Read from the specifications and documentation (2026-11-06), **not run**. Nothing here was tested against a real agent or client.
+
+**The main finding:** neither protocol can enforce our rule. In both, asking the person is a matter for the program that holds
+the AI, and that program may be the AI's own. So release and the brake must live **in our engine, at the point where the action
+happens**, and an AI must have no other way to act.
+
+### ACP: coding agents in the messenger
+
+ACP connects a client (a user interface) to a coding agent that usually runs as its subprocess. It defines:
+
+- **Setup:** version and capability exchange, login, sessions with a working folder and a list of MCP servers.
+- **A prompt turn:** the client sends a prompt, and the agent streams updates: message text, reasoning, tool calls, plan, usage.
+- **Questions:** permission requests with options, and forms for structured input.
+- **Optional services by the client:** reading and writing files, and terminals. Version 2 removes these.
+
+Only stdio is defined. A remote transport is still a proposal. Subagents are also still a proposal, and they appear only in the
+unstable schemas.
+
+Showing and driving an agent fits ADR 0054 well. The agent becomes a **provider**, like mail or Matrix (ADR 0045). The provider
+starts a subprocess, so it belongs in the engine, not in a frontend. The operator must come from our own launch settings and the
+person's card, because the agent's self-description is self-reported.
+
+| ACP | `fs-messenger` today | What is needed |
+|-----|----------------------|----------------|
+| Session, with an absolute working folder | `Conversation` | Keep the session id and folder in the provider |
+| Sending a prompt | `Draft.send` | Fits |
+| Streamed message text, Markdown by default | `bodyText`, and `updated` events carry only a summary | An event with a text chunk, and the media type of the body |
+| Reasoning text | Nothing | Its own field |
+| Tool call with ten kinds | `ToolCall` with four kinds. The default value of `kind` is `reads`, the harmless one | A separate `risk` field whose default is `unknown`, set by the engine and never by the agent. `unknown` always asks |
+| Status: pending, in progress, done, failed | `settled` does not say how it ended | An outcome field |
+| Title, plus full command, paths and content | `summary` only | A detail field. Commands and paths are shown in full, and the title is marked as written by the agent |
+| Permission request with options | State `question`, with no options and no way to answer | Options on the call, and a new `MessageAction` to decide. Only a person's device may send it |
+| Tool call updates | `ToolCall` is not in any event | An event for one changed tool call |
+| Cancelling a turn | Nothing | A stop method on `Conversation` |
+| Context use and cost | Nothing | Usage on the conversation |
+| Subagents (proposal only) | Nothing | A `jobRef` on each message, as CodeAF showed. This form holds whichever way the proposal ends |
+
+All of this can be appended under the Cap'n Proto rules. Message ids are optional in ACP, so the provider must create its own.
+Replaying a session sends the old messages again, so the provider must not store them twice.
+
+**Why ACP alone cannot carry the brake:**
+
+- The agent **may** ask, but need not. The specification calls permission requests advisory, and it says an agent can act without
+  asking.
+- A remembered "allow always" is **owned by the agent**. After that we never hear about the action again, so we must never choose
+  it, for any tool call.
+- `kind` and `title` are written by the agent, so we cannot base a decision on them.
+- File and terminal services by the client are a real control point, but only for what the agent chooses to send there, and
+  version 2 removes them.
+- ACP does not sandbox anything, and Zed's sandbox does not cover outside agents either.
+
+So the page's existing limit becomes a condition: a coding agent needs **its own system user and a sandbox**, and its only way to
+reach our programs is our MCP interface. We build against version 1 and keep version 2 in mind. Its updates work in place, which
+suits our `ToolCall`.
+
+### MCP: the contract as tools
+
+ADR 0021 **holds**. A tool is a name, a description, a JSON Schema for input and optionally for output. Our capability ids such
+as `message.send` are valid tool names, and `Problem` fits a result marked as an error. The generator has to solve these problems:
+
+| # | Problem | Answer we propose |
+|---|---------|-------------------|
+| 1 | **No approval in the protocol.** The specification says a person should be able to refuse, in the client's interface, and says MCP cannot enforce this. The server never learns if anyone was asked | The server decides, see below |
+| 2 | **Risk is not in our contracts.** Hints exist (read-only, destructive, idempotent, open world), but the schema has no data for them. Without data, a tool counts as destructive. They are also only hints, untrusted by default | Cap'n Proto annotations on methods and union members. Our compiler supports annotations |
+| 3 | **"Acts in my name" has no hint.** `Draft.send` adds something and destroys nothing | Our own risk class, carried in the tool's `_meta` and enforced by the engine |
+| 4 | **One method, mixed risk.** `Conversation.act` covers flagging as well as deleting and forwarding | One tool per union member |
+| 5 | **Capabilities become handles.** `open` returns a live object and `Draft` holds state. MCP has only plain arguments | Flat tools with handle arguments. Authorisation is checked on every call, and handles expire |
+| 6 | **No callbacks.** Servers send no requests, and subscriptions cover only list and resource changes. `Listener` has no direct form | Events and `Blob` become resources, not tools. ADR 0021 mentions only tools |
+| 7 | **Secrets in arguments.** `AccountSetup.secret` would pass through the model. MCP forbids asking for secrets by form | A mark that excludes a field or method from generation |
+| 8 | **Who is calling?** Self-description proves nothing, stdio takes credentials from the environment, and the tool list may vary only by credentials | Locally, a Unix socket with the system user as identity, which fits ADR 0054. The MCP specification suggests stdio framing there. Remotely, Streamable HTTP with its OAuth flow |
+| 9 | **Outside clients expect stdio or HTTP** | A small stdio bridge to our socket |
+| 10 | **The protocol moves fast.** 2026-07-28 removed sessions and the handshake, older clients still use them, and sampling, roots and logging are deprecated | Target this revision. Support for older clients is a separate choice |
+| 11 | **Tool results carry hostile text.** Message bodies reach the model, and nothing in the protocol marks them as data | Keep them clearly separate in the result, and never let them widen a right |
+| 12 | **Size.** The messenger contract alone has 31 methods, and we have not measured what that costs a model | Tools grouped by capability, offered as the person releases them |
+
+**How a tool call gets approved.** The tempting way is MCP's form request (elicitation): the server returns `input_required`, the
+client asks, then retries with the answer. This **cannot be our brake**. The answer comes from the client, the specification allows
+"other sources", and the client may be the AI's own program. An `accept` proves nothing about a person.
+
+So we propose (a design, not tested):
+
+1. A tool call reaches the engine, and the engine looks up the risk from the contract, never from the caller.
+2. If it needs release, the engine puts a `question` tool call into `fs-messenger`, for the person.
+3. The person answers on their own device, with their own key. The answer does not pass through the AI's client.
+4. The MCP call returns `input_required` with only a `requestState`, or an error result that says "waiting" for clients that
+   cannot do this. The state is protected against tampering. It is bound to the caller, a short expiry and a digest of the exact
+   arguments. It can be used once, and the engine enforces that.
+5. A retry runs only if the person agreed to exactly these arguments. Any change asks again.
+
+Destructive actions and actions in the person's name have no "always" option at all. A release from the person can cover the other
+classes. The emergency stop simply makes the engine refuse every call.
+
+What we cannot check from reading: whether real clients retry on a bare `input_required`. The official Tasks extension names
+approval as a use, but it is optional, so we do not depend on it.
 
 ## Interfaces
 
@@ -164,3 +283,7 @@ own data.
 2. Is anything left that needs its own data here? If not, this page becomes the description of a frontend.
 3. How exactly does an AI name its operator? JSContact `kind` `application` is confirmed (RFC 9553 §2.1.4). How the operator
    signs for it, given that the trust protocol has no global identifier per person, is still open.
+4. **For the project owner:** must a coding agent over ACP run under its own system user in a sandbox, without exception? The
+   proposal is yes, since otherwise the brake does not hold for it. The cost is more setup, and some agents may not run that way.
+5. **For the project owner:** ADR 0021 needs an addition: risk marks in every contract, events and blobs as MCP resources, and an
+   exclusion mark for secrets. Is that agreed?
