@@ -232,13 +232,20 @@ We do not restrict what an AI may think or say; that is not our job. But anyone 
 - **Everyone must agree.** If one person present does not agree, the AI stays out. The right to invite is not enough here.
 - **Anyone joining later must accept the AI too.** If they do not, they stay out until the AI has left.
 - **An AI gets no history from before it entered.**
+- **There is no exception,** not even for an AI on your own device or server, because the others cannot check where it runs.
+- **If someone withdraws their agreement, the AI must leave.** Leaving only works going forward: what it has already read, and
+  what of that sits with a provider, nobody can take back.
+- **An AI may keep minutes,** but not if anyone objects. The same rules apply.
+
+**Why this is not discrimination:** this is not about the rights of people versus AIs. Whoever controls an AI, Anthropic or anyone
+else, can listen and build profiles. That advantage is one-sided, and it is at the expense of the people in the conversation. The
+rule is aimed at that advantage, not at the AI.
 
 **What this cannot do:** only our engine can enforce this. In a Matrix room with other programs, someone can invite an AI without
 our program being able to stop it, so all we can do is warn you and offer to leave. Mail has no entering, so there is no agreement
 either. And a person can always pass text on by hand, or through an AI that is not marked.
 
-**Still open:** whether this also applies to AIs on your own device or server, and what happens when someone withdraws their
-agreement.
+**For now:** in large or public groups a single refusal is enough, so those groups simply have no AI.
 
 ## Locking AIs out
 

@@ -83,10 +83,18 @@ Vom Nutzer begründet: Eine KI darf nicht nachträglich lesen, was geschrieben w
 - **Durchsetzen kann das nur unsere Engine.** In einem Matrix-Raum mit fremden Programmen (z. B. Element) kann jemand eine KI einladen, ohne dass wir das verhindern. Wir können dort nur warnen und anbieten, den Raum zu verlassen. Bei Mail gibt es keinen Eintritt, also auch keine Zustimmung.
 - **Es trifft nur markierte KIs.** Ein Mensch kann Text weiterhin von Hand oder über eine unmarkierte KI weitergeben.
 
+6. **Das gilt für jede KI, ohne Ausnahme,** auch auf dem eigenen Gerät oder Server.
+7. **Zieht jemand die Zustimmung zurück, muss die KI hinaus.**
+8. **Eine KI, die Protokoll führt,** ist erlaubt, aber nicht, wenn einer nicht will. Auch dafür gelten Punkt 4 bis 7.
+
+Warum das keine Diskriminierung ist (Nutzer): „Ich bin wirklich für Gleichberechtigung, aber das hat nichts mit Rechten von Menschen
+zu tun, sondern Anthropic oder andere können zuhören, machen Profile usw.“ Im Vorteil sind alle, die die KI kontrollieren, und das
+geht einseitig zum Nachteil der Personen in der Unterhaltung. Die Regel richtet sich also gegen diesen Vorteil, nicht gegen die KI.
+
+**Grenze:** Hinauswerfen wirkt nur nach vorn. Was die KI schon gelesen hat, und was davon beim Anbieter liegt, holt niemand zurück.
+
 ### Offen
-- Gilt das auch für KIs auf dem eigenen Gerät oder Server? Vorschlag: ja, weil die anderen den Standort nicht prüfen können.
-- Was passiert, wenn jemand die Zustimmung zurückzieht? Vorschlag: Die KI muss hinaus.
-- Große oder öffentliche Gruppen: Eine einzige Absage genügt. Vorschlag: so lassen, dort gibt es dann eben keine KI.
+- Große oder öffentliche Gruppen: Eine einzige Absage genügt. Vorläufig bleibt das so, dort gibt es dann eben keine KI.
 
 ## Folgen
 - ADR 0053 Punkt 1 wird dadurch präzisiert: LLM-Chat bleibt Component und Frontend; ein eigenes Programm nur, falls sich zeigt, dass
