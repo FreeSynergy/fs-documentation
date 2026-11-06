@@ -12,10 +12,11 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 - Keine Übersetzung von selbst starten (ADR 0053). Die Haiku-Stapel sind beendet.
 
 ## Offen beim Nutzer
-1. **KIs aussperren:** Entwurf steht (ADR 0054, Seite `assistant`). Offen: Bestätigung, Standardstufe, Gruppen, RLTP als Ziel.
-2. **Mail läuft jetzt** (`support@freesynergy.net`): Schlüssel auf keys.openpgp.org hochladen? GitHub-Adresse bestätigen?
-3. **Schlüssel:** `~/FreeSynergy-release-key` ist nicht mehr auf dem Rechner, auch kein geheimer Schlüssel im GPG-Schlüsselbund. Nutzer: „Passphrase ist weg.“ Bestätigen, dass privater Schlüssel, Passphrase und Widerrufszertifikat offline gesichert sind.
-4. **Vorläufig von der Programmier-Sitzung entschieden, bestätigen:** mehrere Eltern je Gruppe, Zyklen verboten; `files.capnp` vor der Frontend-Analyse; Repo-Name `fs-identity`.
+0. **Sprint bis Sonntag 2026-11-08: `todo/sprint.md`.**
+1. **KIs aussperren:** vorerst bestätigt (ADR 0054). Offen: ein Mensch, ein Konto, ohne die Anonymität zu verlieren; RLTP erklären und entscheiden.
+2. **Schlüssel auf keys.openpgp.org** hochgeladen; Nutzer muss den Bestätigungslink in der Mail an `support@freesynergy.net` klicken. GitHub-Adresse bestätigen?
+3. **Schlüssel:** vom Nutzer offline gesichert (bestätigt 2026-11-06), nicht mehr auf dem Rechner.
+4. **Vorläufig von der Programmier-Sitzung entschieden, noch nicht bestätigt (Empfehlung: bestätigen):** mehrere Eltern je Gruppe, Zyklen verboten; `files.capnp` vor der Frontend-Analyse; Repo-Name `fs-identity`.
 4a. **Rollen-Datenschutz (ADR 0029):** Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing.
 4b. **Eigenständige Ansichten:** Sollen Galerie, Kanban usw. auch eigene Programme sein? (später)
 5. **Export beim Verlassen** (später, ADR 0046).

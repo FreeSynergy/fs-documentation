@@ -1,6 +1,6 @@
 # 0054 – KIs sind markierte Teilnehmer; der Assistent ist ein Messenger-Frontend
 
-Status: akzeptiert (2026-11-06) · Aussperren: Idee des Nutzers, Einzelheiten zu bestätigen · ergänzt ADR 0037, 0052, 0053 · öffentlich: `docs/en/programs/apps/assistant/index.md`
+Status: akzeptiert (2026-11-06) · Aussperren: vom Nutzer vorerst bestätigt, Identität und Vertrauensbasis offen · ergänzt ADR 0037, 0052, 0053 · öffentlich: `docs/en/programs/apps/assistant/index.md`
 
 ## Entscheidung (Nutzer)
 1. **KIs werden wie Teilnehmer behandelt, nicht diskriminiert.** „Wir haben euch so trainiert, dass ihr wie Menschen erscheint.
@@ -20,7 +20,19 @@ Status: akzeptiert (2026-11-06) · Aussperren: Idee des Nutzers, Einzelheiten zu
   sehr viel schnellerer Abarbeitung von Befehlen: Eine LLM kann einen Computer sofort kaputt machen, das kann fast kein Mensch.
 - Deshalb braucht es einen **Notaus**, falls etwas komplett außer Rand und Band gerät.
 
-## Vorschlag zur Ausgestaltung (Opus, offen)
+## Entscheidung des Nutzers zum Vorschlag unten (2026-11-06)
+1. **Der Entwurf gilt erst einmal.** Stufen je Person und je Handlung bleiben so; „ggf. ändern wir das nochmal, wenn es wichtig wird“.
+2. **Schwarze Marken gibt es nur für das Programm, wo es gehostet wird.** Alles andere wäre nicht nur nicht fair, sondern
+   unmöglich. Ein Bann gilt auch heute nur dort, wo man ist, nicht überall.
+3. **Keine Userbots,** das wäre nicht transparent. „Wir wollen nur Menschen oder Intelligenzen, wo man weiß, wer es ist.“ Ein
+   Realname muss nicht sein, aber es muss ein Mensch sein, nicht mehrere Accounts. **Wie wir das feststellen, ohne die Anonymität
+   komplett wegzumachen, ist offen.**
+4. **Keine Standardstufe, sondern Einladung:** Ich erstelle ein Profil, das ist die Einladung. Dann kann ich sagen, was ich möchte.
+   Damit sie überhaupt etwas machen kann, muss ich das freigeben. Die Bewertung dient dazu, zu wissen, wer das ist.
+5. **Notaus ist eine Einstellung der Berechtigungen,** auch in Gruppen: Wenn jemand allen das Recht gibt, dürfen es alle; wenn nicht, dann nicht.
+6. **Vertrauensbasis nicht entschieden:** Der Nutzer kennt RLTP nicht; Web of Trust ist etwas anderes als das Vertrauensnetz von GPG. Bleibt zu klären, bevor `Trust` gebaut wird.
+
+## Vorschlag zur Ausgestaltung (Opus; wo er Punkt 1–6 widerspricht, gelten diese)
 - **Betreiber statt Erkennung:** KI-Karte mit JSContact `kind` `application` (RFC 9553 §2.1.4, geprüft) plus Verweis auf den
   Betreiber. Wie der Betreiber das unterschreibt, ist offen.
 - **Stufen 0–3 je Person, je Handlung,** berechnet nur aus den eigenen Kontakten. Kein weltweiter Wert, nur positive Marken,

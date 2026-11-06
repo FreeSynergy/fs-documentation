@@ -92,7 +92,7 @@ Bekannte Fehler: Markdown-Rundreise in fs-text (Dreierketten, nebeneinanderliege
 
 ## Nächste Reihenfolge (Empfehlung der Strategie-Sitzung, 2026-11-06, Nutzer kann ändern)
 1. `fs-jscalendar`: Kopien in fs-tasks und fs-calendar beseitigen, falls noch nicht erledigt.
-2. Schnittstelle `people` in `fs-interfaces` mit Rollen (ADR 0052), dann fs-people als Anbieter umbauen. **ADR 0054 gleich mitdenken:** KIs sind markierte Teilnehmer. Ein Personen-Datensatz muss sagen können „das ist eine KI“ (Rolle plus JSContact `kind` `application`, RFC 9553 §2.1.4, geprüft), ohne sie einzuschränken, und künftig ihren Betreiber nennen (Form offen, Feld nicht verbauen). Aussperren noch nicht bauen, der Entwurf ist noch nicht bestätigt.
+2. Schnittstelle `people` in `fs-interfaces` mit Rollen (ADR 0052), dann fs-people als Anbieter umbauen. **ADR 0054 gleich mitdenken:** KIs sind markierte Teilnehmer. Ein Personen-Datensatz muss sagen können „das ist eine KI“ (Rolle plus JSContact `kind` `application`, RFC 9553 §2.1.4, geprüft), ohne sie einzuschränken, und künftig ihren Betreiber nennen (Form offen, Feld nicht verbauen). Aussperren: Der Entwurf ist vorerst bestätigt, gebaut wird er laut `todo/sprint.md` (Thread 2).
 3. Schnittstelle `groups` und Kern `fs-groups`: verschachtelt, keine Zyklen, läuft ohne Kanidm. Danach Identitäts-Wrapper über Kanidm REST v1 (`temp/research/kanidm-control.md`, noch kein SCIM).
 4. Schnittstelle `files` und Kern `fs-files`: zuerst lokaler Ordner, danach S3 für RustFS.
 5. Den Rest gegen den Katalog umbauen: events, tasks, places, texts, messages.
@@ -100,4 +100,4 @@ Bekannte Fehler: Markdown-Rundreise in fs-text (Dreierketten, nebeneinanderliege
 
 `fs-assistant` ist kein eigenes Programm mehr, sondern ein Frontend über `messages` (ADR 0054): dort Agenten als Absender, sichtbare Werkzeug-Aufrufe und den Verweis einer Nachricht auf eine Aufgabe mitdenken (Analyse CodeAF, Seite `assistant`). Noch kein Code dafür.
 
-Der öffentliche Schlüssel liegt in `fs-release`. **Nicht auf Schlüsselserver hochladen, bevor der Nutzer es sagt.** `support@freesynergy.net` empfängt jetzt.
+Der öffentliche Schlüssel liegt in `fs-release`. Vom Nutzer freigegeben und auf keys.openpgp.org hochgeladen (2026-11-06); die Adresse erscheint dort, sobald der Bestätigungslink aus der Mail an `support@freesynergy.net` geklickt ist. **Aktueller Arbeitsauftrag: `todo/sprint.md`.**

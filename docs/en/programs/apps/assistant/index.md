@@ -103,7 +103,7 @@ We do not restrict what an AI may think or say; that is not our job. But anyone 
 
 ## Locking AIs out
 
-**Status: draft (2026-11-06). The idea comes from the project owner; the details are proposals still to be confirmed (ADR 0054).**
+**Status: agreed for now by the project owner (2026-11-06), may change when it becomes important (ADR 0054).**
 
 Some people want no AI. This is not discrimination. It is about espionage, about something that knows everything all the time,
 and about speed: a model can wreck a computer at once, which almost no person can.
@@ -112,6 +112,13 @@ and about speed: a model can wreck a computer at once, which almost no person ca
 
 **1. The mark says who is responsible.** We cannot tell an AI from a person by looking. So the people who **host** an AI are
 what counts: an AI is a participant that names its operator, and people vouch for that operator.
+
+**Nothing hidden.** We do not do user bots, as that would not be transparent. We want only people, or intelligences where you
+know who it is. A real name is not needed. But it must be one person, not several accounts. How to establish that without
+removing anonymity is an **open question**.
+
+**An AI comes by invitation.** I create a profile for it, and that profile is the invitation. Then I can tell it what I want.
+For it to do anything at all, I must release that. The rating is how I know who it is.
 
 **2. Everyone sets their own level.** Each person tells their own program from which level of trust it opens up for them.
 
@@ -123,8 +130,9 @@ what counts: an AI is a participant that names its operator, and people vouch fo
 | 3 | Only those I named |
 
 - **There is no global score.** The level is computed from my own contacts only, and nothing is passed along further.
-- **Positive marks only.** Having no mark means nothing is known. A block is private: it stays with me, and the blocked party
-  does not see it. A public black mark on a named person would be a pillory and a legal risk.
+- **Marks count only where they were given.** Having no mark means nothing is known. A black mark exists only for the program
+  where someone is hosted, like a ban today: it applies where you are, not everywhere. A ban across everything would be neither
+  fair nor possible, and we do not do it.
 - **Per action, not one number:** chatting with an AI and letting an AI act on my data are different decisions.
 
 **3. The emergency stop needs nobody's trust.**
@@ -135,7 +143,7 @@ what counts: an AI is a participant that names its operator, and people vouch fo
   person can open it again, with their own key on their own device.
 - **It always works:** without network, without a model, and when in doubt it stays shut.
 - **Afterwards:** the log shows what happened, and the [store](https://github.com/FreeSynergy/fs-store) undoes what it can.
-- **Groups:** a group can pull it for itself. Who may do so and who reopens is a rule the group states as data.
+- **Who may pull it** is a normal permission setting. If someone gives everyone that right, everyone may. If not, not.
 
 Before the full stop comes a **brake**, since speed is the real danger: actions that destroy something or act in my name always
 ask, whatever else was allowed. We do not restrict what an AI thinks or says. But the owner decides what happens to their
@@ -152,7 +160,7 @@ own data.
 
 ## Open questions
 
-1. Which default level applies, and what may a group decide for its members?
+1. How do we make sure it is one person and not several accounts, without removing anonymity?
 2. Is anything left that needs its own data here? If not, this page becomes the description of a frontend.
 3. How exactly does an AI name its operator? JSContact `kind` `application` is confirmed (RFC 9553 §2.1.4). How the operator
    signs for it, given that the trust protocol has no global identifier per person, is still open.

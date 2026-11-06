@@ -1,0 +1,92 @@
+# Sprint bis Sonntag, 2026-11-08 (Stand 2026-11-06)
+
+**Ziel:** So viel wie möglich bauen, aber nichts, was wir wegwerfen müssten. Nur Besprochenes: `docs/en/programs/apps/roadmap.md`,
+`docs/en/interfaces/index.md`, ADR 0045–0054. Keine neuen Ideen, keine neuen Standards ohne Rückfrage.
+
+**Annahme zum Ende:** Alles Wichtige ist bis Samstagabend gepusht. Danach läuft es weiter, aber es wird nach jedem Schritt gepusht.
+
+## Start für jeden Thread
+Einzeilig einfügen, N ersetzen:
+
+```text
+/loop Du bist Thread N im Sprint. Lies /srv/FreeSynergy/fs-documentation/todo/sprint.md, dann arbeite deine Liste der Reihe nach ab, auch mit vielen Agenten, und nimm nach jedem fertigen Punkt den nächsten.
+```
+
+## Die Threads
+
+| Thread | Aufgabe | Schreibt in | Wartet auf |
+|--------|---------|-------------|------------|
+| 1 (läuft: `freesynergy-65`) | Components, Wiki-Workbench | `fs-components`, `fs-wiki` | nichts |
+| 2 | `fs-messenger` mit KI-Teilnehmern und Notaus | `fs-messenger` (neu), `messenger.capnp` | nichts |
+| 3 | Schnittstellen in Betrieb: RPC, `subscribe`, MCP, CLI | Server- und CLI-Crates aller Programme, `fs-capnpc`, `fs-hub` | nichts |
+| 4 | GUIs der fertigen Kerne auf Blinc | Frontend-Crates der Programme | ersten Tag von `fs-components` |
+| 5 | Neue Kerne: Umfragen, Verlauf, Ressourcen | `fs-surveys`, `fs-history`, `fs-resources` (neu) | nichts |
+| Strategie (`freesynergy-8b`) | Entscheidungen, ADRs, öffentliche Doku, Recherche, Meldungen prüfen | `fs-documentation` | Meldungen |
+
+### Thread 1: Components und Wiki
+1. `fs-components` fertig committen und taggen; die Wiki-Workbench auf Blinc so weit, dass sie `fs-documentation` zeigt und bearbeitet.
+2. Fehler der Markdown-Rundreise in `fs-text` beheben (`fs-wiki/DESIGN.md`).
+3. Gemeinsame Components aus `docs/en/components/planned.md`, Abschnitt „Build first“. Früh taggen, Thread 4 wartet darauf.
+4. `charts` (Vega-Lite-Teilmenge, `docs/en/components/charts.md`).
+5. Chat-Components `message-list`, `message-composer`, `llm-chat`, `agent-tree`, `tool-call`; Muster aus der Analyse auf der Seite `assistant`.
+
+### Thread 2: Messenger
+1. Vertrag `messages` schärfen: Agenten als Absender, sichtbare Werkzeug-Aufrufe, Verweis einer Nachricht auf eine Aufgabe (ADR 0054).
+2. Kern `fs-messenger` nach ADR 0018: eigenes Modell auf `fs-store`, nur verschlüsselt.
+3. Anbieter in dieser Reihenfolge, jeder gegen einen echten Server geprüft: Mail (JMAP, IMAP, SMTP, rPGP), Matrix (`matrix-sdk`, `tuwunel`), KI-Modell (llama.cpp-API, Anthropic-API).
+4. ADR 0054 umsetzen: KI nur per Einladung (Profil anlegen), ohne Freigabe keine Handlung; Bremse (Zerstörendes und Handeln im Namen der Person fragt immer); Notaus in der Engine, außerhalb der Reichweite der KI, ohne Netz, im Zweifel zu; wer ihn ziehen darf, ist eine Berechtigung.
+5. **Nicht bauen:** Bewertung und Stufen über Dritte (Vertrauensbasis offen), Telegram, eigener Mailserver.
+
+### Thread 3: Schnittstellen in Betrieb
+1. Cap'n-Proto-Server für alle Kerne (tasks zuerst, dann people, calendar, groups, files, maps, wiki); alles, was der Vertrag nennt, statt stiller Lücken.
+2. `subscribe` überall.
+3. MCP-Werkzeuge aus den Verträgen erzeugen (ADR 0021), nicht von Hand.
+4. CLI je Programm als zweiter Nutzer der Schnittstelle. Fehler am Vertrag beheben, solange er Entwurf ist; nichts wird 1.0.
+5. Hub: alle Programme tatsächlich verbinden, mit einem Test über mehrere Programme hinweg. Kein Programm bekommt Leserecht auf den Typ `Relationship` (Rollen-Datenschutz, offen).
+
+### Thread 4: GUIs
+Bis der erste Tag von `fs-components` da ist: Blinc-Grundgerüst, gemeinsame Anwendungshülle, Frontend-Struktur nach ADR 0011ff. und 0037. Dann der Reihe nach:
+1. `fs-people`
+2. `fs-calendar`
+3. `fs-tasks`, mit Kanban als Ansicht (ADR 0049)
+4. `fs-files`, Workbench `file-manager`; Vertrag ist vorläufig
+5. `fs-maps`
+
+Programmspezifische Workbenches darf Thread 4 in `fs-components` ergänzen, Gemeinsames gehört Thread 1. Blinc-Fehler per PR oder Eintrag in `todo/upstream.md`; nicht umgehen, ohne es zu notieren. Erst läuft ein Programm wirklich, dann kommt das nächste.
+
+### Thread 5: Neue Kerne
+Jeweils erst Vertrag in `fs-interfaces`, dann Kern ohne GUI, mit eigener `DESIGN.md`:
+1. `fs-surveys` (`docs/en/programs/apps/surveys/`, `temp/research/surveys-landscape.md`); erweiterbare Umfrage über Gruppen; Entscheidungen als Objekte, die mit Aufgaben verknüpft sind.
+2. `fs-history` als Beobachter des Aktivitätsprotokolls (`history/index.md`); falls es keine eigenen Daten braucht, melden und als Ansicht bauen.
+3. `fs-resources` (`resources/index.md`)
+4. Erst wenn das steht: `fs-whiteboard`, dann `fs-streaming`, jeweils nur der Kern nach `design.md`.
+
+### Strategie
+Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Frontends analysieren; `requirements.md` von surveys, streaming, tasks angleichen; Umbenennungen der Doku; Meldungen der Threads gegen GitHub prüfen und Doku nachziehen.
+
+## Regeln für alle
+**Qualität**
+- Vor jedem Tag: `cargo fmt --check`, clippy `-D warnings` (pedantic), Tests, `scripts/check_rust_rules.py <repo>` = 0 Fehler, frischer Klon nach `/tmp` baut.
+- **Vor jedem Tag prüft ein zweiter Agent, der den Code nicht geschrieben hat** (`/code-review high`). Bestätigte Fehler zuerst beheben.
+- Fertig heißt: läuft und ist getestet. Was fehlt, sagt ausdrücklich `Unsupported` und steht in der `DESIGN.md`. Keine Attrappen, keine Tests, die nur Attrappen prüfen.
+- Grundsätze bleiben: nichts kopieren, 100 % Rust, Muster und Schnittstellen (ADR 0043), ein Standard, ein Programm (ADR 0050).
+
+**Agenten**
+- Du planst und prüfst; Agenten setzen nach fertiger Vorgabe um. Nur Unabhängiges parallel, je Agent ein eigener `worktree` oder eigenes Repo.
+- Früh und oft committen und pushen. Abbrüche verlieren sonst alles.
+
+**Zusammenarbeit**
+- Jeder schreibt nur in seine Repos und Crates. Andere per Nachricht (`ListAgents`, `SendMessage`) um Änderungen bitten.
+- `fs-interfaces`: nur die eigene Schema-Datei ändern, `git pull --rebase`, dann die nächste freie Version taggen. Kleine, häufige Tags.
+- Abhängigkeiten nur über Git-Tags (coding.md §8).
+- **Nicht warten.** Offene Frage: die wahrscheinlich richtige Antwort nehmen, als vorläufig markieren, an die Strategie melden, weitermachen. Keine ADR-Nummern selbst vergeben.
+
+**Rechner**
+- 32 Kerne, 124 GB: Builds mit `-j 8`, höchstens 4 gleichzeitig je Thread. llama.cpp bleibt aus und wird nicht gestartet.
+- `scripts/clean_rust.py` nur für das eigene Repo, **niemals `--all`**, sonst löscht es die Builds der anderen.
+
+**Nicht tun**
+- Keine Releases und kein Signieren: Der Schlüssel ist offline. Keine Übersetzung (ADR 0053). Keine Veröffentlichung auf crates.io ohne Rückfrage. Nur zu GitHub pushen, nichts sonst nach außen.
+
+**Stand melden**
+- Nach jedem fertigen Punkt eine Zeile in `todo/handoff-programming.md` (nur diese Datei und `DESIGN.md` im Repo; öffentliche Doku macht die Strategie), und kurz an `freesynergy-8b`.
