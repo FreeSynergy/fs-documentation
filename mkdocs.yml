@@ -73,6 +73,7 @@ nav:
   - en/programs/platform/releases: en/programs/platform/releases.md
   - en/manifesto: en/manifesto.md
   - en/interfaces/: en/interfaces/index.md
+  - en/interfaces/roles: en/interfaces/roles.md
   - en/components/charts: en/components/charts.md
   - en/programs/apps/surveys/: en/programs/apps/surveys/index.md
   - en/programs/apps/roadmap: en/programs/apps/roadmap.md

@@ -1,6 +1,6 @@
-# 0048 – Video-Encoder hinter Schnittstelle, Vulkan Video zuerst
+# 0048 – Codecs ausgelagert, offene Codecs zuerst
 
-Status: **Vorschlag** (2026-11-06), wartet auf Entscheidung des Nutzers · berührt ADR 0015
+Status: akzeptiert (2026-11-06), die Abschnitte „Kontext“ und „Vorschlag“ sind Verlauf · berührt ADR 0015
 
 ## Vorgabe des Nutzers (2026-11-06)
 **Wir brauchen offene Formate, soweit es geht.** H.264 wird höchstens gelesen, sonst nichts.
@@ -8,6 +8,15 @@ Status: **Vorschlag** (2026-11-06), wartet auf Entscheidung des Nutzers · berü
 Das ändert den Vorschlag unten: Eigene Ausgabe ist **AV1 und Opus**. Weiterleiten ohne Dekodieren braucht keinen Codec, auch
 bei H.264. Offen: Auch Dekodieren kann unter Patente fallen (ungeprüft), und Sisvel bestreitet, dass AV1 vollständig
 lizenzfrei ist; gerichtlich ist das nach unseren Quellen nicht entschieden. Folge: Laut Recherche nimmt nur YouTube sicher AV1.
+
+## Entscheidung des Nutzers (2026-11-06)
+- **Codecs werden ausgelagert, ähnlich wie bei GStreamer.** Jeder Codec ist ein Anbieter hinter einer Schnittstelle (ADR 0045).
+- **Zuerst die offenen Codecs.** Wenn das fertig ist, sehen wir nach, ob andere dazukommen.
+- **Wir geben nur Freies heraus.** Macht jemand anderes H.264, ist das seine Sache. Lesen wollen wir es selbst können.
+- Unsere eigene Aufnahme erreicht zunächst vor allem YouTube; andere Plattformen über weitergeleitete Streams.
+- Ziel: Wenn wir groß werden, schaffen wir Standards. Wenn nicht, auch gut.
+
+RTMP ist kein Codec, sondern Transport (Enhanced RTMP: offene Spezifikation, Apache-2.0). Es trägt AV1 und andere, ersetzt sie aber nicht.
 
 ## Kontext
 Einfaches Aufnehmen (Streaming) heißt Kodieren. Reines Rust gibt es dafür nur teilweise. Der Nutzer möchte offene Standards

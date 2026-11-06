@@ -50,23 +50,25 @@ according to secondary sources ⚠️. The publishing targets need review before
 
 ## Encoding
 
-**Decided by the owner (2026-11-06): open formats, as far as possible.** H.264 at most gets read. Our own output is **AV1 and
-Opus**. Standards leave encoder design free, so writing an encoder is not copying.
+**Decided (2026-11-06): codecs are outsourced, much as in GStreamer. Each is a provider behind one
+[interface](../../../interfaces/index.md). We start with the open ones.** Once that is done, we look at others. We only
+release what is free; anyone else may provide H.264 themselves. We want to be able to read it.
 
-| Option | Notes |
-|--------|-------|
+| Codec provider | Notes |
+|----------------|-------|
 | **AV1** with `rav1e` (Rust) | Open, royalty-free by its alliance's terms. Sisvel disputes this; no court has ruled, per our sources |
-| **Vulkan Video** (open Khronos standard) | Rust drives the graphics card's encoder, AV1 too, for live speed. Open Mesa drivers implement it |
-| **Forwarding** a stream from another tool | Needs no codec of ours at all, so H.264 passes through |
+| **AV1 by hardware**, through Vulkan Video (open Khronos standard) | Live speed. Open Mesa drivers implement it |
+| **Opus** with `mousiki` (Rust) | For sound. Young, to be tested |
 | AV2 | Spec 1.0 since May 2026; no Rust encoder found. A chance to be first, too early for platforms |
 | VP8, VP9 | Published. VP9 also has a Sisvel pool. Only bindings to `libvpx` found |
 
-**The consequence:** per the research, only YouTube reliably takes AV1. So recording directly from our tool would reach
-YouTube, while other platforms need H.264 from another tool or a platform-side change. "One stream for all" above describes
-today's platforms, not our output. Open: which formats PeerTube and Odysee take, whether reading H.264 is itself covered
-by patents, and whether encoders on the machine's own hardware or OS could be an optional provider.
+**Transport is a separate matter.** RTMP is no codec: it carries one. [Enhanced RTMP](https://github.com/veovera/enhanced-rtmp) is
+an open specification (Apache-2.0) that adds AV1 among others, so it brings open codecs to platforms, but only those that
+accept them. Forwarding a stream from another tool needs no codec of ours, so H.264 from elsewhere passes through.
 
-All backends sit behind one `VideoEncoder` [interface](../../../interfaces/index.md).
+**The consequence, accepted:** per the research, only YouTube reliably takes AV1. So our own recordings reach YouTube first,
+and other platforms through forwarded streams. Open: which formats PeerTube and Odysee take, and whether reading H.264 is
+itself covered by patents.
 
 ## Patterns
 

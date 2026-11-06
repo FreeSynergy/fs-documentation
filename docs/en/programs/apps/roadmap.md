@@ -28,7 +28,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Sign in, system access | [identity wrapper](../platform/identity.md) over Kanidm | Planned |
 | Belong together, decide who may do what | [`fs-groups`](../platform/groups.md) | Planned, **new** |
 | Keep and find anything | [`fs-files`](files/design.md) | Planned |
-| Know who someone is | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core exists, no GUI |
+| Know who someone is, with roles | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core exists, no GUI |
 | Be somewhere at some time | [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Core exists, no GUI |
 | Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
 | Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |
@@ -97,15 +97,13 @@ The closed-source products were checked only partly; each note lists what was ve
 
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Streaming with open formats only: most platforms need H.264 | See [encoding](streaming/design.md#encoding) |
-| 2 | One `fs-people` with roles? | Proposal in ADR 0050 |
-| 3 | Should views also be stand-alone programs? | Discuss later |
-| 4 | Prompt for export on leaving? | Postponed, not forgotten ([details](files/design.md#saving-and-exporting)) |
+| 1 | Should views also be stand-alone programs? | Discuss later |
+| 2 | Prompt for export on leaving? | Postponed, not forgotten ([details](files/design.md#saving-and-exporting)) |
 
-**Decided on 2026-11-06:** every existing core is reworked against the interface catalogue, and all interfaces live in
+**Decided on 2026-11-06:** one `fs-people`, each person with several [roles](../../interfaces/roles.md); codecs are outsourced, open ones first; every existing core is reworked against the interface catalogue, and all interfaces live in
 `fs-interfaces`. Live collaboration merges properties with a logical clock and uses a CRDT only for shared text (`loro` and
 `yrs` to be compared when needed).
 
 ## What is decided
 
-ADR 0044 to 0050 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).
+ADR 0044 to 0052 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).

@@ -54,7 +54,8 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0045 | Jedes Thema eine Schnittstelle; Schnittstellen sind Ziele; Hot-Plugins | akzeptiert (Form der Plugins: Vorschlag) |
 | 0046 | Speichern ist nicht Exportieren | akzeptiert (Details: Vorschlag) |
 | 0047 | Kanidm hinter eigenem Wrapper | akzeptiert (ergänzt 0024) |
-| 0048 | Video-Encoder hinter Schnittstelle, Vulkan Video zuerst | Vorschlag |
+| 0048 | Codecs ausgelagert, offene Codecs zuerst | akzeptiert |
 | 0049 | Gesamtplan: Programme nach Zweck, Workbench und Suite | akzeptiert |
 | 0050 | Ein Standard, ein Programm, eine Schnittstelle; `fs-contacts` heißt `fs-people` | akzeptiert (Abgrenzung: Vorschlag) |
 | 0051 | Releases: `fs-release`, nur kostenlose Wege, offene Signatur | akzeptiert |
+| 0052 | Eine Person mit Rollen; Rollen standardisiert oder selbst definiert; Vertrauen sichtbar machen | akzeptiert |

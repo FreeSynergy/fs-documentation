@@ -33,7 +33,7 @@ Keeping these apart prevents much confusion:
 | Topic | What it is for | Standard base | Owner | Status |
 |-------|----------------|---------------|---------|--------|
 | Messages | Saying something to someone | AS2, MIMI, JMAP Mail | `fs-messenger` | Draft contract |
-| People | Knowing who someone is and how to reach them | JSContact | `fs-people` | Core exists |
+| People | Knowing who someone is and how to reach them, with [roles](roles.md) | JSContact | `fs-people` | Core exists |
 | Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | `fs-groups` | Planned |
 | Events | Being somewhere at some time | JSCalendar `Event` | `fs-calendar` | Core exists |
 | Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) | Core exists, draft interface |
@@ -55,7 +55,7 @@ Keeping these apart prevents much confusion:
 | Mail | Sending and receiving mail, as client or server | JMAP, IMAP and SMTP clients; own server later |
 | Chat networks | Reaching people elsewhere | Matrix (tuwunel), Telegram, Discord, others |
 | Identity | Signing in, system access | Kanidm through a [wrapper](../programs/platform/identity.md), and our own fallback |
-| Video encoder | Turning a picture into a stream | Open formats first: AV1 and Opus (ADR 0048, open) |
+| Codecs | Turning a picture or sound into a stream and back; outsourced, like GStreamer | Open codecs first: AV1, Opus (ADR 0048) |
 | Publishing target | Bringing a video to a platform | YouTube, Twitch, Odysee, PeerTube, others |
 | Translation, AI | Local help with language and text | llama.cpp, others |
 | Map data | Drawing maps | PMTiles (exists in `fs-maps`) |
@@ -64,6 +64,7 @@ Keeping these apart prevents much confusion:
 
 | Interface | What it is for | Standard base |
 |-----------|----------------|---------------|
+| Trust | Showing when a person is safe, also against scammers and bots | Web of Trust (ADR 0052) |
 | Sharing and permissions | Who may see what; shares go to groups | Gap, one specification for all |
 | Envelope and activity log | Every object's outer form and history | AS2, proposed owner `fs-store` (ADR 0050) |
 | Sync | Bringing devices and programs together | Activity log (ADR 0019) |

@@ -24,9 +24,9 @@ Teilnehmer, Wiederholung, ICS). Sie hat keine Daten, keine Speicherung, keine Sc
 of Truth bleibt beim Besitzer. Sonst stünde Kopieren gegen ADR 0043. Importierte `Task`-Daten leitet `fs-calendar` immer an
 `fs-tasks` weiter, in jedem Format.
 
-## Vorschlag: Personen und Rollen (Frage des Nutzers, wartet auf Antwort)
-Ein Programm `fs-people`, statt Contacts und People. Der Nutzer denkt an Vererbung: Person als Elternklasse, Kontakt, Kunde, User
-als Ableitungen. Vorschlag: gleicher Gedanke, aber als **Person mit mehreren Rollen**, weil dieselbe Person zugleich Kontakt,
+## Personen und Rollen (vom Nutzer bestätigt, siehe ADR 0052)
+Ein Programm `fs-people`, statt Contacts und People. Der Nutzer dachte an Vererbung: Person als Elternklasse, Kontakt, Kunde, User
+als Ableitungen. Beschlossen: gleicher Gedanke, aber als **Person mit mehreren Rollen**, weil dieselbe Person zugleich Kontakt,
 Kunde und User sein kann, was Vererbung nicht abbildet. Jede Rolle hat ihren Standard (JSContact, SCIM `User`, Kunde: Lücke).
 
 ## Folgen
