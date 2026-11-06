@@ -1,6 +1,6 @@
 # Releases
 
-How FreeSynergy programs reach people. **Status (2026-11-06): the shared workflows exist, and the first draft release ran on `fs-capnpc`. Nothing is public yet.** ADR 0051.
+How FreeSynergy programs reach people. **Status (2026-11-06): the shared workflows exist. `capnp-compiler` 0.1.1 is on crates.io; its signed release on GitHub is still a draft.** ADR 0051.
 
 ## Only free ways
 
@@ -31,4 +31,6 @@ Shared workflows live in [`fs-release`](https://github.com/FreeSynergy/fs-releas
 Releases start as drafts, and become public when they bring people something.
 
 **Tried so far:** tar.gz for Linux and macOS universal, deb, rpm, Arch, Windows msi and zip, SPDX SBOM, checksums.
-**Not tried yet:** OpenPGP signatures, AppImage, exe, dmg, Flatpak, containers, mobile.
+OpenPGP signatures too, with the [release key](https://github.com/FreeSynergy/fs-release/blob/main/release-signing-key.asc), fingerprint
+`C40F 0FBA 5C4C F71D 7BEB  B5C6 5478 A473 8FFE EB69`, until 2029-11-05.
+**Not tried yet:** AppImage, exe, dmg, Flatpak, containers, mobile.
