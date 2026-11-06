@@ -34,12 +34,19 @@ does not is removed at the next sync.
 Each group decides for itself whether its rights are passed on, and in which direction: not at all, down to the groups below it,
 or up to the groups above it (ADR 0055).
 
+**In Kanidm, rights always pass from child to parent.** So nesting is mirrored only where a group really passes its rights on; elsewhere Kanidm gets a flat list. This limit exists only in Kanidm (ADR 0056). If you need the other direction, build the tree the other way round.
+
 **Provisional, safe reading, until the project owner has decided the exact meaning.** Hanging a group under another takes the parent's
 consent, a group set to "not at all" never gives anything away, and when in doubt the answer is no.
 
 **Not enforced yet.** This is what the rights check answers, not a boundary anyone enforces. Whoever consents is only a text field so far, nobody
 is authenticated, and granting rights is unprotected. Enforcing it needs a real identity, through the identity wrapper. `fs-groups` also
 expects a single writer for now.
+
+## Admins
+
+Whoever installs the system is the top admin. Within groups, the admin can make others admins too. **An AI agent can never become an admin,** let alone
+the top admin (ADR 0056). Giving admin status to people by how much they take part is an idea we are keeping, not a decision.
 
 ## What we keep, what Kanidm keeps
 

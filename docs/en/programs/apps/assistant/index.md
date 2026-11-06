@@ -273,8 +273,7 @@ own data.
 - **Nothing proves that someone is human.** The [Real Life Trust Protocol](https://github.com/real-life-org/trust-protocol)
   says this about itself: no check says "this is a human". It only shows that people I know stand behind this key. A verified
   person can still run an unmarked AI behind it. What helps then is consequences: withdraw the vouching, block, stop.
-- **The stop only reaches what runs through our programs.** An AI with its own shell on the computer is outside of it. For that
-  to work too, AIs must run under their own system user, in a sandbox, so the system can end them from outside.
+- **The stop only reaches what runs through our programs.** That is why agents always run under their own system user, in a sandbox, so the system can end them from outside (ADR 0056). An agent can never become an admin.
 - **A high level also keeps out new people** who have no contacts yet. So it is always a personal choice, never our default.
 
 ## Open questions
