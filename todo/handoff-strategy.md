@@ -23,9 +23,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
 ## Offen bei uns
-- Zed-Ausgabe ansehen, ACP und MCP lesen. (Strata und CodeAF sind analysiert, Seite `assistant`.)
-- Rollen: SKOS lesen, Kunde/Lieferant/Mitarbeiter recherchieren, Format für eigene Rollen.
+- Strata, CodeAF, Zed, ACP, MCP sind gelesen (Seite `assistant`); zwei Entscheidungen beim Nutzer.
+- Rollen: Forschung fertig (`temp/research/roles-standards.md`), fünf Entscheidungen beim Nutzer.
 - Schnittstelle `Trust`: RLTP weiterlesen (`personhood-predicates`, `trust-layer`), Betreiber-Verweis klären.
-- Dateien-Frontends analysieren; `requirements.md` von surveys, streaming, tasks an den Zuschnitt angleichen.
 - Manifest ausführlicher und schöner schreiben (Nutzer hat „Anfälle“: immer ergänzen).
-- `programs/apps/contact/`, `data/contacts/` umbenennen; `whiteboards/` → `whiteboard/`; `projectmanagement` unter `suites/`.

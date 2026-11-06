@@ -63,9 +63,9 @@ Bei der Wahl eines ERP-Systems sollten folgende Kriterien berücksichtigt werden
 
 ## Verwandte Kategorien
 
-- [Kontakt/CRM](../../apps/contact/) - Contact Management
+- [Kontakt/CRM](../../apps/people/) - Contact Management
 - [Helpdesk](../../apps/helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../../apps/projectmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 
 ## Schnellstart
 

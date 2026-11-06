@@ -20,7 +20,7 @@ Objekt, nie ein Menüpunkt oder eine Geste.
 
 Daten-Verweise: [messages-Standards](../../../data/messages/standards.md) ·
 [messages technisch](../../../data/messages/technical.md) (Protokoll-Abbildung, Verschlüsselungszustand) ·
-[contacts](../../../data/contacts/index.md) · [identity](../../../data/identity/index.md).
+[contacts](../../../data/people/index.md) · [identity](../../../data/identity/index.md).
 
 ## Pflicht (gemeinsam in den analysierten Programmen)
 
@@ -50,7 +50,7 @@ Daten-Verweise: [messages-Standards](../../../data/messages/standards.md) ·
 | Unterhaltungen gruppieren: anlegen, benennen, beschreiben, einladen, verlassen (`group.create`, `group.invite`, `group.leave`) | Di, El, Te; Ko, Ou, Th (Kontaktgruppen / Verteilerlisten) | MLS-Gruppenmitgliedschaft (Add/Remove); MIMI-Raumrichtlinie `-04`; AS2 `Invite`, `Join`, `Leave`; JSContact `kind: group` | proposed |
 | Rollen und Rechte innerhalb einer Gruppe (`group.role`) | Di, El, Te; Ma (Moderatoren) | MIMI-Raumrichtlinie `-04`; Matrix Power Levels | proposed |
 | Moderieren: entfernen, verbannen, blockieren, melden (`member.remove`, `actor.block`, `message.report`) | Di, El, Ma, Te | AS2 `Remove`, `Block`, `Flag` | proposed |
-| Kontakte nutzen: Empfänger aus dem Adressbuch wählen, die Karte eines Absenders öffnen (`contact.lookup` — geliehen, ADR 0020) | Ko, Ou, Th (Adressbuch); Di, El, Ma, Te (Profil öffnen) | JSContact RFC 9553 ([contacts](../../../data/contacts/index.md)), lebende Referenz in das Kontaktprogramm | proposed |
+| Kontakte nutzen: Empfänger aus dem Adressbuch wählen, die Karte eines Absenders öffnen (`contact.lookup` — geliehen, ADR 0020) | Ko, Ou, Th (Adressbuch); Di, El, Ma, Te (Profil öffnen) | JSContact RFC 9553 ([contacts](../../../data/people/index.md)), lebende Referenz in das Kontaktprogramm | proposed |
 | Das eigene Profil bearbeiten: Name, Bild, Kurztext (`profile.edit`) | Di, El, Ma, Te | AS2-Schauspieler; JSContact für die eigene Card; [profile](../../../data/profile/index.md) | proposed |
 | Regeln und Filter: automatisch sortieren, beschriften, verschieben, stummschalten (`rule.create`, `rule.run`) | Ko, Ou, Th (Filterregeln); Ma (Wort-/Benutzerfilter); Di (AutoMod) | Sieve über JMAP RFC 9661 für Mail; dasselbe Regelmodell auf Chat angewandt ⚠️ (Lücke) | proposed |
 | Offline arbeiten und über Geräte hinweg synchron bleiben (`sync`) | Ko, Th (Offline-Modus); El (Synchronisation); Te (Cloud) | `fs-store` + `fs-hub`, Objekt-Sync (ADR 0019); lokal, im Ruhezustand verschlüsselt (ADR 0024) | proposed |

@@ -16,7 +16,7 @@ Every domain has a directory with its own `index.md`; every standard inside it a
 
 | Domain | Directory | Canonical standard | Further standards |
 |--------|-----------|--------------------|-------------------|
-| Contacts | [contacts/](contacts/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
+| Contacts | [people/](people/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
 | Messages | [messages/](messages/index.md) | original + AS2 `Note`; chat MIMI, mail MIME+JMAP ✅ | MLS, OpenPGP v6, Matrix |
 | Appointments | [events/](events/index.md) | JSCalendar 2.0 (jscalendarbis) ✅ | iCalendar, CalDAV, iTIP |
 | Geodata | [geodata/](geodata/index.md) | GeoJSON (RFC 7946) ✅ | geo: URI, ISO 19160 |

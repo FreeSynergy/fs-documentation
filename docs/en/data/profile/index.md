@@ -6,7 +6,7 @@ What one **wants to show about oneself** — the publicly visible, audience-cont
 
 A profile is **not a second copy of the person data** but a **projection**:
 
-- Data at rest: JSContact `Card` in [contacts/](../contacts/)
+- Data at rest: JSContact `Card` in [people/](../people/)
 - Social identity: AS2 `Actor` (`id` = URI per decision 3, `name`, `preferredUsername`, `publicKey`)
 - Visibility: the **audience fields** `to`/`cc`/`bto`/`bcc` decide which fields are released to whom — disclosure control, not access control (decision 2)
 
@@ -26,5 +26,5 @@ A profile is **not a second copy of the person data** but a **projection**:
 
 ## See also
 
-- [contacts/](../contacts/index.md), [identity/](../identity/index.md)
+- [people/](../people/index.md), [identity/](../identity/index.md)
 - [standards.md → activities](../standards.md)

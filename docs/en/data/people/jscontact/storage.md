@@ -38,7 +38,7 @@ According to decision 4 in [standards.md](../../standards.md) the **evidenced st
 ## See also
 
 - [description.md](description.md) – what JSContact is
-- [contacts/index.md](../index.md) – contacts domain
+- [people/index.md](../index.md) – contacts domain
 - [standards.md](../../standards.md) – decisions 1–5
 - [mappings.md](../../mappings.md) – mapping onto legacy fields and target systems
 - [api.md](../../api.md) – patch and error format

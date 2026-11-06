@@ -2,7 +2,7 @@
 
 ## Storage perspective
 
-- **Table `account`** (the account, not the person): columns `id` (UUIDv7), `spn` (`name@domain`, unique), `sub` (OIDC subject of the external authority, if delegated), `status` (`active`/`deactivated`), `self_card_id` (→ [contacts/](../contacts/index.md); decision candidate 6), `created_at`, `updated_at`, `deactivated_at`.
+- **Table `account`** (the account, not the person): columns `id` (UUIDv7), `spn` (`name@domain`, unique), `sub` (OIDC subject of the external authority, if delegated), `status` (`active`/`deactivated`), `self_card_id` (→ [people/](../people/index.md); decision candidate 6), `created_at`, `updated_at`, `deactivated_at`.
 - **Credential table `credential`**: `account_id`, `type` (`webauthn`/`oidc-link`/…), public key, `sign_count`/attestation references (WebAuthn layer). Passwords: if at all, only hashed — the detail is an operational, not a data-model topic.
 - **Login history** (`login_event`): not yet decided (open point in [index.md](index.md)).
 
@@ -28,5 +28,5 @@ Public-key credentials are **scoped per relying party** (W3C abstract). The cred
 | Target | Projection |
 |--------|------------|
 | [profile/](../profile/index.md) | `sub` → actor IRI (decision 3) |
-| [contacts/](../contacts/index.md) | `self_card_id` → JSContact card of the person |
+| [people/](../people/index.md) | `self_card_id` → JSContact card of the person |
 | API gateway | OAuth scope → resource permissions (mapping open) |

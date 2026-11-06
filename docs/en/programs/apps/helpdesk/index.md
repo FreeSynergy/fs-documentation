@@ -59,9 +59,9 @@ When choosing a help desk system, consider the following criteria:
 
 ## Related Categories
 
-- [CRM](../contact/) - Contact management
+- [CRM](../people/) - Contact management
 - [Messenger](../messenger/) - Communication and chat
-- [Project Management](../projectmanagement/) - Project management
+- [Project Management](../../suites/projectmanagement/) - Project management
 
 ## Quick Start
 

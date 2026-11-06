@@ -49,7 +49,7 @@ Grundsätze: `conventions/CONVENTIONS.md` §0, ADRs 0011–0018.
 - [ ] `interactions/` aufräumen: Gesten-Achse Finger / Maus / Stift (ADR 0015), Landing-Page
       `interactions/index.md` · Opus plant, Sonnet setzt um
 - [ ] Altlasten aus der früheren qwen-Liste:
-      - `de/data/contacts/jscontact/`: Link `../../geodaten/` → `geodata/`
+      - `de/data/people/jscontact/`: Link `../../geodaten/` → `geodata/`
       - kaputtes Verzeichnis `docs/de/components/fields/otp-input/input-group/` (12 Fehler in
         `check_components.py`) — in `en/` prüfen, ob es dort auch existiert
       - `calendar-view` an das Muster von `date-picker` anziehen
@@ -140,7 +140,7 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 - [ ] Gemeinsames Freigabe-Modell (files, gallery, kanban, surveys, whiteboard) spezifizieren · Opus
 - [ ] Specs: Kanban-Board (Kandidat Nr. 3), Whiteboard-Modell, Survey-Profil · Opus
 - [ ] Doku-Gerüste und CONVENTIONS §3 für die neuen Components, nach den Entscheidungen · Sonnet
-- [ ] `docs/en/programs/apps/whiteboards/` → `whiteboard/` umbenennen (ADR 0017), wenn dort nichts mehr läuft · Sonnet
+- [ ] `docs/en/programs/apps/whiteboard/` → `whiteboard/` umbenennen (ADR 0017), wenn dort nichts mehr läuft · Sonnet
 - [ ] Crates prüfen (C-Abhängigkeiten, ADR 0015, 0026), bevor sie genutzt werden · Sonnet
 
 ### Stand 2026-11-06 vormittags — Umbau nach ADR 0043 (alle 0 Fehler beim Prüfer)
@@ -164,7 +164,7 @@ Compiler fertig (Umbau ADR 0043 + Orakel 14/14), pedantic überall, fmt korrigie
 - [ ] Rechtsrat H.264 (Patente, Lizenz) · Nutzer
 - [x] `fs-calendar-core`: `Task` nach `fs-tasks`, Einbindung nur über die Schnittstelle (ADR 0050) · freesynergy-32
 - [ ] `fs-jscalendar`: gemeinsame Typen statt Kopien, JSON-`Task` beim Import weiterleiten (ADR 0050) · freesynergy-32
-- [ ] Doku `programs/apps/contact/`, `data/contacts/` an `fs-people` anpassen · Sonnet
+- [ ] Doku `programs/apps/people/`, `data/people/` an `fs-people` anpassen · Sonnet
 - [ ] SignPath: Nutzer am 2026-11-13 erneut fragen (ADR 0051) · Opus
 - [ ] Rollen: SKOS lesen, Kunde/Lieferant/Mitarbeiter recherchieren, Format für eigene Rollen (ADR 0052) · Opus
 - [ ] Schnittstelle Vertrauen über Web of Trust (ADR 0052) · Opus

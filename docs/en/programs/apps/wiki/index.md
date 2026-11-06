@@ -48,7 +48,7 @@ When choosing a wiki system, consider the following criteria:
 
 - [Messenger](../messenger/) - Communication and chat
 - [Helpdesk](../helpdesk/) - Support and ticket systems
-- [Project Management](../projectmanagement/) - Task and project management
+- [Project Management](../../suites/projectmanagement/) - Task and project management
 - [Desktop](../../platform/desktop/) - Desktop applications for wiki work
 
 ## Quick Start

@@ -63,9 +63,9 @@ Bei der Wahl eines Workflow-Automatisierungssystems sollten folgende Kriterien b
 
 ## Verwandte Kategorien
 
-- [Projektmanagement](../../apps/projectmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 - [Helpdesk](../../apps/helpdesk/) - Support und Ticketsysteme
-- [CRM](../../apps/contact/) - Contact Management
+- [CRM](../../apps/people/) - Contact Management
 
 ## Schnellstart
 

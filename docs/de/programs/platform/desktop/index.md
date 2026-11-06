@@ -117,7 +117,7 @@ Bei der Wahl einer Desktop-Applikation sollten folgende Kriterien berücksichtig
 
 - [Messenger](../../apps/messenger/) - Kommunikation und Chat
 - [Wiki](../../apps/wiki/) - Wissensmanagement und Dokumentation
-- [Projektmanagement](../../apps/projectmanagement/) - Project Management
+- [Projektmanagement](../../suites/projectmanagement/) - Project Management
 
 ## Schnellstart
 

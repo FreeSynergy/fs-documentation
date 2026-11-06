@@ -65,7 +65,7 @@ Bei der Wahl eines CRM-Systems sollten folgende Kriterien berücksichtigt werden
 
 - [Marketing](../marketing/) - Marketing-Tools und Analytics
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projectmanagement/) - Project Management
+- [Projektmanagement](../../suites/projectmanagement/) - Project Management
 
 ## Schnellstart
 

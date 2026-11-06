@@ -21,7 +21,7 @@ the object, never a menu item or a gesture.
 
 Data references: [messages standards](../../../data/messages/standards.md) ·
 [messages technical](../../../data/messages/technical.md) (log mapping, encryption state) ·
-[contacts](../../../data/contacts/index.md) · [identity](../../../data/identity/index.md).
+[contacts](../../../data/people/index.md) · [identity](../../../data/identity/index.md).
 
 ## Required (common to the analysed programs)
 
@@ -51,7 +51,7 @@ Data references: [messages standards](../../../data/messages/standards.md) ·
 | Group conversations: create, name, describe, invite, leave (`group.create`, `group.invite`, `group.leave`) | Di, El, Te; Ko, Ou, Th (contact groups / distribution lists) | MLS group membership (Add/Remove); MIMI room policy `-04`; AS2 `Invite`, `Join`, `Leave`; JSContact `kind: group` | proposed |
 | Roles and permissions inside a group (`group.role`) | Di, El, Te; Ma (moderators) | MIMI room policy `-04`; Matrix power levels | proposed |
 | Moderate: remove, ban, block, report (`member.remove`, `actor.block`, `message.report`) | Di, El, Ma, Te | AS2 `Remove`, `Block`, `Flag` | proposed |
-| Use contacts: pick recipients from the address book, open a sender's card (`contact.lookup` — borrowed, ADR 0020) | Ko, Ou, Th (address book); Di, El, Ma, Te (open profile) | JSContact RFC 9553 ([contacts](../../../data/contacts/index.md)), live reference into the contacts program | proposed |
+| Use contacts: pick recipients from the address book, open a sender's card (`contact.lookup` — borrowed, ADR 0020) | Ko, Ou, Th (address book); Di, El, Ma, Te (open profile) | JSContact RFC 9553 ([contacts](../../../data/people/index.md)), live reference into the contacts program | proposed |
 | Edit the own profile: name, picture, short text (`profile.edit`) | Di, El, Ma, Te | AS2 actor; JSContact for the own card; [profile](../../../data/profile/index.md) | proposed |
 | Rules and filters: sort, label, move, mute automatically (`rule.create`, `rule.run`) | Ko, Ou, Th (filter rules); Ma (word/user filters); Di (AutoMod) | Sieve via JMAP RFC 9661 for mail; the same rule model applied to chat ⚠️ (gap) | proposed |
 | Work offline and stay in sync across devices (`sync`) | Ko, Th (offline mode); El (synchronisation); Te (cloud) | `fs-store` + `fs-hub`, object-level sync (ADR 0019); local, encrypted at rest (ADR 0024) | proposed |

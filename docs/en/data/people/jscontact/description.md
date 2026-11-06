@@ -45,12 +45,12 @@ JSContact is a standardised, **pure JSON contact model**: RFC 9553 ("JSContact: 
 | Personal and company cards | ✅ | `Organization[]`, `kind` distinction via `personalInfo.subType` |
 | Several addresses/phone numbers per card | ✅ | maps with type keys |
 | History/revision | ⚠️ | the standard defines no revision model – implementation see [storage.md](storage.md) |
-| Customer status (`lifecycle`: lead/prospect/customer/churned) | ❌ | exists in no standard → as an `extensions` extension (⚠️ mechanism still to be evidenced, open point in [contacts/index.md](../index.md)) |
+| Customer status (`lifecycle`: lead/prospect/customer/churned) | ❌ | exists in no standard → as an `extensions` extension (⚠️ mechanism still to be evidenced, open point in [people/index.md](../index.md)) |
 | Field mapping of our legacy fields (`firstName`/`lastName`, `street`/`city`) | ✅ | see [mappings.md → Contact](../../mappings.md) |
 
 ## See also
 
-- [contacts/index.md](../index.md) – contacts domain (standards, open points)
+- [people/index.md](../index.md) – contacts domain (standards, open points)
 - [standards.md](../../standards.md) – evidence table and decisions
 - [mappings.md](../../mappings.md) – field-by-field mapping in all directions
 - [fields.md](../../fields.md) – field catalogue

@@ -1,6 +1,6 @@
 # Project Management
 
-Boards with columns and cards become a program of their own: see [Tasks](../tasks/index.md) and the [overall plan](../roadmap.md). Project management itself becomes a suite.
+Boards with columns and cards become a program of their own: see [Tasks](../../apps/tasks/index.md) and the [overall plan](../../apps/roadmap.md). Project management itself becomes a suite.
 
 ## Overview
 
@@ -66,9 +66,9 @@ When choosing a project management tool, consider the following criteria:
 
 ## Related Categories
 
-- [Helpdesk](../helpdesk/) - Support and ticket systems
-- [Messenger](../messenger/) - Communication and chat
-- [Whiteboards](../whiteboards/) - Collaborative whiteboards
+- [Helpdesk](../../apps/helpdesk/) - Support and ticket systems
+- [Messenger](../../apps/messenger/) - Communication and chat
+- [Whiteboards](../../apps/whiteboard/) - Collaborative whiteboards
 
 ## Quick Start
 

@@ -1,7 +1,7 @@
 # Tasks — Requirements
 
 What `FreeSynergy.Tasks` ([`fs-tasks`](https://github.com/FreeSynergy/fs-tasks), [design](design.md)) must and can do,
-derived from the analysed [project-management frontends](../projectmanagement/frontends/index.md) (ADR 0006, 0013).
+derived from the analysed [project-management frontends](../../suites/projectmanagement/frontends/index.md) (ADR 0006, 0013).
 Each capability names its data standard (ADR 0014) and our status. The analysis was made when this was planned as
 `fs-kanban`. That plan is replaced (ADR 0049): the kanban board is a **view of `fs-tasks`**, not a program. The tables
 below are the board view. Function analysis only, own wording, nothing copied.
@@ -19,14 +19,14 @@ names of the same actions. Both kept for now; the owner is to settle them.
 Status: `implemented` · `planned` · `proposed`. **"core"** = built in `fs-tasks-core` (version 0.4.1, no GUI, interface
 still a draft). Boards, columns and `task_link` are not started: the `Boards` interface is a placeholder without methods.
 
-**Seen in** — analysed frontends: [Tr](../projectmanagement/frontends/trello/index.md) Trello ·
-[We](../projectmanagement/frontends/wekan/index.md) Wekan ·
-[Pl](../projectmanagement/frontends/planka/index.md) Planka ·
-[Ta](../projectmanagement/frontends/taiga/index.md) Taiga ·
-[Ji](../projectmanagement/frontends/jira/index.md) Jira ·
-[As](../projectmanagement/frontends/asana/index.md) Asana ·
-[Op](../projectmanagement/frontends/openproject/index.md) OpenProject ·
-[Re](../projectmanagement/frontends/redmine/index.md) Redmine.
+**Seen in** — analysed frontends: [Tr](../../suites/projectmanagement/frontends/trello/index.md) Trello ·
+[We](../../suites/projectmanagement/frontends/wekan/index.md) Wekan ·
+[Pl](../../suites/projectmanagement/frontends/planka/index.md) Planka ·
+[Ta](../../suites/projectmanagement/frontends/taiga/index.md) Taiga ·
+[Ji](../../suites/projectmanagement/frontends/jira/index.md) Jira ·
+[As](../../suites/projectmanagement/frontends/asana/index.md) Asana ·
+[Op](../../suites/projectmanagement/frontends/openproject/index.md) OpenProject ·
+[Re](../../suites/projectmanagement/frontends/redmine/index.md) Redmine.
 *arch.* = required by our architecture or principles, not by counting.
 ⚠️ = unreliable or unclear in the feature file, to be verified.
 Only board-related capabilities are counted. Issues and work packages of the tracker-style

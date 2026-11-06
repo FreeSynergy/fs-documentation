@@ -2,7 +2,7 @@
 
 ## Speicherperspektive
 
-- **Tabelle `account`** (das Konto, nicht die Person): Spalten `id` (ULID), `spn` (`name@domain`, eindeutig), `sub` (OIDC-Subjekt der externen Autorität, falls delegiert), `status` (`active`/`deactivated`), `self_card_id` (→ [contacts/](../contacts/index.md); Beschluss-Kandidat 6), `created_at`, `updated_at`, `deactivated_at`.
+- **Tabelle `account`** (das Konto, nicht die Person): Spalten `id` (ULID), `spn` (`name@domain`, eindeutig), `sub` (OIDC-Subjekt der externen Autorität, falls delegiert), `status` (`active`/`deactivated`), `self_card_id` (→ [people/](../people/index.md); Beschluss-Kandidat 6), `created_at`, `updated_at`, `deactivated_at`.
 - **Credential-Tabelle `credential`**: `account_id`, `type` (`webauthn`/`oidc-link`/…), public Key, `sign_count`/Attestation-Referenzen (WebAuthn-Ebene). Passwörter: wenn überhaupt, nur Hash — Detail ist Betriebs-, nicht Datenmodell-Thema.
 - **Login-Historie** (`login_event`): noch nicht beschlossen (offener Punkt in [index.md](index.md)).
 
@@ -28,5 +28,5 @@ Public-Key-Credentials sind **pro Relying Party gescoped** (W3C-Abstract). Die C
 | Ziel | Projektion |
 |------|------------|
 | [profile/](../profile/index.md) | `sub` → Actor-IRI (Beschluss 3) |
-| [contacts/](../contacts/index.md) | `self_card_id` → JSContact-Card des Menschen |
+| [people/](../people/index.md) | `self_card_id` → JSContact-Card des Menschen |
 | API-Gateway | OAuth-Scope → Ressourcen-Rechte (Mapping offen) |

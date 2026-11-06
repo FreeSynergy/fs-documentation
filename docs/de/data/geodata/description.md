@@ -13,7 +13,7 @@
 
 | Thema | Wo es liegt | Warum |
 |-------|-------------|-------|
-| Postadresse **einer Person/Organisation** | [contacts/](../contacts/index.md) (JSContact `Address`) | Die Adresse ist Teil der Card; diese Domäne liefert nur das Adress-**Modell** |
+| Postadresse **einer Person/Organisation** | [people/](../people/index.md) (JSContact `Address`) | Die Adresse ist Teil der Card; diese Domäne liefert nur das Adress-**Modell** |
 | Ort **an einem Termin** | [events/](../events/index.md) (JSCalendar `locations`) | Der Termin referenziert einen Ort, besitzt ihn aber nicht |
 | Kachel-/Tile-Formate (PBF/MVT) | außerhalb (Karten-Technik) | Darstellungsformat, kein Datenstandard |
 

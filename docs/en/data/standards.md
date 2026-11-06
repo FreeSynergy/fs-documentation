@@ -218,7 +218,7 @@ components):
 
 | Domain | Directory |
 |--------|-----------|
-| Contact data | [contacts/](contacts/index.md) |
+| Contact data | [people/](people/index.md) |
 | Messages | [messages/](messages/index.md) |
 | Appointments | [events/](events/index.md) |
 | Geodata | [geodata/](geodata/index.md) |

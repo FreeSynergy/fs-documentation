@@ -16,7 +16,7 @@
 
 | Topic | Where it lives |
 |-------|----------------|
-| Person **data** | [contacts/](../contacts/index.md) (JSContact card, linked to the account) |
+| Person **data** | [people/](../people/index.md) (JSContact card, linked to the account) |
 | Social identity, profile | [profile/](../profile/index.md) |
 | Belief/key attestation | [identity/](../identity/index.md) — **a login proves no identity** |
 

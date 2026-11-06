@@ -8,4 +8,4 @@ are different ways of looking at the same tasks.
 - [Design](design.md)
 - [Requirements](requirements.md), analysed from eight project tools, written when this was still planned as `fs-kanban`
 
-Frontends analysed so far are under [project management](../projectmanagement/index.md).
+Frontends analysed so far are under [project management](../../suites/projectmanagement/index.md).

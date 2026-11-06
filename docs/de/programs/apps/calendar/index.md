@@ -63,9 +63,9 @@ Bei der Wahl eines Kalender-Systems sollten folgende Kriterien berücksichtigt w
 
 ## Verwandte Kategorien
 
-- [Projektmanagement](../projectmanagement/) - Project Management
+- [Projektmanagement](../../suites/projectmanagement/) - Project Management
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Kontakt/CRM](../contact/) - Contact Management
+- [Kontakt/CRM](../people/) - Contact Management
 
 ## Schnellstart
 

@@ -15,7 +15,7 @@
 
 ## Basic rule (from decision 3)
 
-The login layer only knows **account identities** (`sub`, SPN). Person **data** stays in [contacts/](../contacts/) (JSContact), social identity in [identity/](../identity/) and [profile/](../profile/). A login is not a data model but the access to one.
+The login layer only knows **account identities** (`sub`, SPN). Person **data** stays in [people/](../people/) (JSContact), social identity in [identity/](../identity/) and [profile/](../profile/). A login is not a data model but the access to one.
 
 ## Open points
 

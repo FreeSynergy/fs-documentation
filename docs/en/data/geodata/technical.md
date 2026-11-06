@@ -3,7 +3,7 @@
 ## Storage perspective
 
 - **Table `location`** for standalone places (map features): one row per GeoJSON `Feature`; canonical payload = feature JSON (decision 4). Extracted columns: `id` (UUIDv7), `geometry_type`, `bbox` (index), `created_at`, `updated_at`.
-- **Addresses are not a table of their own** as long as they belong to a card: they stay in the card's JSON in [contacts/](../contacts/index.md) (`addresses` map with components). This domain only defines the **component names and validation**.
+- **Addresses are not a table of their own** as long as they belong to a card: they stay in the card's JSON in [people/](../people/index.md) (`addresses` map with components). This domain only defines the **component names and validation**.
 
 ## Keys and links
 
@@ -21,7 +21,7 @@
 | Target | Projection |
 |--------|------------|
 | [events/](../events/index.md) | JSCalendar `locations` (text + reference) |
-| [contacts/](../contacts/index.md) | `Address` components + `geo:` URI |
+| [people/](../people/index.md) | `Address` components + `geo:` URI |
 | Map renderers | tiles (MVT) — generated from the geometries, not stored |
 | ISO-OA exports | components in ISO 19160 names, if we carry them (open) |
 

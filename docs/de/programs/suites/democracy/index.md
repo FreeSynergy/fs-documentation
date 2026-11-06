@@ -57,7 +57,7 @@ Bei der Wahl eines Demokratie-Systems sollten folgende Kriterien berücksichtigt
 
 ## Verwandte Kategorien
 
-- [Projektmanagement](../../apps/projectmanagement/) - Project Management
+- [Projektmanagement](../projectmanagement/) - Project Management
 - [Helpdesk](../../apps/helpdesk/) - Support und Ticketsysteme
 
 ## Schnellstart

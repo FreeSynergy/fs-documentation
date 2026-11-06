@@ -16,7 +16,7 @@
 | Topic | Where it lives | Why |
 |-------|----------------|-----|
 | Board/list/relationship structure | [projects/](../projects/index.md) | projects only adds structure around the task objects of **this** domain |
-| People/organisations of the participants | [contacts/](../contacts/index.md) | a JSCalendar `Participant` is an **appointment copy** with `sendTo`/`email` as the bridge |
+| People/organisations of the participants | [people/](../people/index.md) | a JSCalendar `Participant` is an **appointment copy** with `sendTo`/`email` as the bridge |
 | Places | [geodata/](../geodata/index.md) | the appointment only references places (`locations`) |
 | Chat arrangements about the invitation | [messages/](../messages/index.md) | iTIP replies are protocol messages, not chat posts |
 

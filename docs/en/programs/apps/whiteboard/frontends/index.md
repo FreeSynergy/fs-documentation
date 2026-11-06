@@ -16,7 +16,7 @@ Frontends of well-known programs in this category, analysed for their **function
 ## File set per program (ADR 0012)
 
 ```
-programs/apps/whiteboards/frontends/<program>/
+programs/apps/whiteboard/frontends/<program>/
 ├── index.md        what it is, notable ideas, documented versions, sources
 ├── changelog.md    changes between documented versions (≥ 2 versions)
 └── <version>/

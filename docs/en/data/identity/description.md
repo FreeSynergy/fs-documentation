@@ -15,7 +15,7 @@
 | Layer | Domain | Mnemonic |
 |-------|--------|----------|
 | Access | [login/](../login/index.md) | a login proves **no** identity |
-| Person data | [contacts/](../contacts/index.md) | what is known about the person |
+| Person data | [people/](../people/index.md) | what is known about the person |
 | Self-image | [profile/](../profile/index.md) | what they show about themselves |
 | **Trust in the image others have** | **identity/** | **whom one trusts** |
 

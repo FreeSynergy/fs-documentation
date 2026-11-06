@@ -19,4 +19,4 @@ Places, coordinates and postal addresses. Resolves our criticism of the "Western
 ## See also
 
 - [standards.md → Places, files](../standards.md)
-- [contacts/jscontact](../contacts/jscontact/description.md) (addresses belong to the card)
+- [people/jscontact](../people/jscontact/description.md) (addresses belong to the card)

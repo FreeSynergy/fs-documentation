@@ -34,7 +34,7 @@ Evidence: `temp/research/geodata-projects-profile-login.md` (2026-11-05).
 
 ## JSContact `Address` — verified building blocks (RFC 9553, ✅)
 
-`components[]` with `kind` (among others `street`, `locality`, `region`, `postcode`, `country`), plus `texts[]` (multilingual one-line forms) and `coordinates` as a `geo:` URI. Details: [contacts/jscontact/description.md](../contacts/jscontact/description.md).
+`components[]` with `kind` (among others `street`, `locality`, `region`, `postcode`, `country`), plus `texts[]` (multilingual one-line forms) and `coordinates` as a `geo:` URI. Details: [people/jscontact/description.md](../people/jscontact/description.md).
 
 ## Open standard points
 

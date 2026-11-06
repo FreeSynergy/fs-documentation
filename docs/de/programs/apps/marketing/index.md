@@ -64,9 +64,9 @@ Bei der Wahl eines Marketing-Tools sollten folgende Kriterien berücksichtigt we
 
 ## Verwandte Kategorien
 
-- [Kontakt/CRM](../contact/) - Kontaktverwaltung
+- [Kontakt/CRM](../people/) - Kontaktverwaltung
 - [Helpdesk](../helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projectmanagement/) - Project Management
+- [Projektmanagement](../../suites/projectmanagement/) - Project Management
 
 ## Schnellstart
 

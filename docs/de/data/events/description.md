@@ -16,7 +16,7 @@
 | Thema | Wo es liegt | Warum |
 |-------|-------------|-------|
 | Board-/Listen-/Beziehungsstruktur | [projects/](../projects/index.md) | projects ergänzt nur Struktur um die Task-Objekte **dieser** Domäne |
-| Personen/Organisationen der Teilnehmer | [contacts/](../contacts/index.md) | JSCalendar-`Participant` ist eine **Termin-Kopie** mit `sendTo`/`email` als Brücke |
+| Personen/Organisationen der Teilnehmer | [people/](../people/index.md) | JSCalendar-`Participant` ist eine **Termin-Kopie** mit `sendTo`/`email` als Brücke |
 | Orte | [geodata/](../geodata/index.md) | Termin referenziert Orte nur (`locations`) |
 | Chat-Absprachen zur Einladung | [messages/](../messages/index.md) | iTIP-Antworten sind Protokollnachrichten, keine Chat-Beiträge |
 

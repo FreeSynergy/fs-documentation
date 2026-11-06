@@ -96,7 +96,7 @@ When choosing a desktop application, consider the following criteria:
 
 - [Messenger](../../apps/messenger/) - Communication and chat
 - [Wiki](../../apps/wiki/) - Knowledge management and documentation
-- [Project Management](../../apps/projectmanagement/) - Project management
+- [Project Management](../../suites/projectmanagement/) - Project management
 
 ## Quick Start
 

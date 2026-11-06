@@ -15,7 +15,7 @@
 
 ## Grundregel (aus Beschluss 3)
 
-Die Login-Ebene kennt nur **Konto-Identitäten** (`sub`, SPN). Personen**daten** bleiben in [contacts/](../contacts/) (JSContact), soziale Identität in [identity/](../identity/) und [profile/](../profile/). Ein Login ist kein Datenmodell, sondern der Zugang zu einem.
+Die Login-Ebene kennt nur **Konto-Identitäten** (`sub`, SPN). Personen**daten** bleiben in [people/](../people/) (JSContact), soziale Identität in [identity/](../identity/) und [profile/](../profile/). Ein Login ist kein Datenmodell, sondern der Zugang zu einem.
 
 ## Offene Punkte
 

@@ -18,7 +18,7 @@ Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktion
 ## Dateisatz pro Programm (ADR 0012)
 
 ```
-programs/apps/projectmanagement/frontends/<program>/
+programs/suites/projectmanagement/frontends/<program>/
 ├── index.md        was es ist, bemerkenswerte Ideen, dokumentierte Versionen, Quellen
 ├── changelog.md    Änderungen zwischen dokumentierten Versionen (≥ 2 Versionen)
 └── <version>/

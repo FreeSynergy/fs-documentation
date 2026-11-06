@@ -16,7 +16,7 @@ Jede Domäne hat ein Verzeichnis mit eigener `index.md`; jeder Standard darin ei
 
 | Domäne | Verzeichnis | Kanonischer Standard | Weitere Standards |
 |--------|-------------|----------------------|-------------------|
-| Kontaktdaten | [contacts/](contacts/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
+| Kontaktdaten | [people/](people/index.md) | JSContact (RFC 9553/9554) ✅ | vCard, jCard, CardDAV |
 | Nachrichten | [messages/](messages/index.md) | Original + AS2 `Note`; Chat MIMI, Mail MIME+JMAP ✅ | MLS, OpenPGP v6, Matrix |
 | Termine | [events/](events/index.md) | JSCalendar 2.0 (jscalendarbis) ✅ | iCalendar, CalDAV, iTIP |
 | Geodaten | [geodata/](geodata/index.md) | GeoJSON (RFC 7946) ✅ | geo:-URI, ISO 19160 |

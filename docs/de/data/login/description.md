@@ -16,7 +16,7 @@
 
 | Thema | Wo es liegt |
 |-------|-------------|
-| Personen**daten** | [contacts/](../contacts/index.md) (JSContact-Card, verknüpft mit dem Konto) |
+| Personen**daten** | [people/](../people/index.md) (JSContact-Card, verknüpft mit dem Konto) |
 | Soziale Identität, Profil | [profile/](../profile/index.md) |
 | Glaube/Schlüsselbeglaubigung | [identity/](../identity/index.md) — **ein Login beweist keine Identität** |
 

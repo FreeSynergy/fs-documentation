@@ -34,7 +34,7 @@ Ob Ansichten wie Galerie oder Kanban *zusätzlich* als eigenständige Programme 
 | Erinnern, was ich oder wir getan haben | [`fs-history`](history/index.md) | Geplant, **neu**; eventuell eine Ansicht |
 | Wissen, was wir haben und brauchen | [`fs-resources`](resources/index.md) | Geplant, **neu** |
 | Fragen und gemeinsam entscheiden | [`fs-surveys`](surveys/design.md) | Geplant |
-| Visuell denken | [`fs-whiteboard`](whiteboards/design.md) | Geplant |
+| Visuell denken | [`fs-whiteboard`](whiteboard/design.md) | Geplant |
 | Etwas zeigen und überall hinbringen | [`fs-streaming`](streaming/design.md) | Geplant |
 
 `fs-capnpc`, unser Cap'n-Proto-Compiler in reinem Rust, unterstützt sie alle. Details zu dem, was existiert, stehen in der `DESIGN.md` jedes Repositorys.

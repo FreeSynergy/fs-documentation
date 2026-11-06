@@ -64,7 +64,7 @@ Bei der Wahl eines Kartensystems sollten folgende Kriterien berücksichtigt werd
 ## Verwandte Kategorien
 
 - [ERP](../../suites/erp/) - Enterprise Resource Planning
-- [Projektmanagement](../projectmanagement/) - Project Management
+- [Projektmanagement](../../suites/projectmanagement/) - Project Management
 
 ## Schnellstart
 

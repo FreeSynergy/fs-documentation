@@ -17,7 +17,7 @@
 | Thema | Wo es liegt |
 |-------|-------------|
 | Task-Inhalt (Titel, Fälligkeit, Fortschritt) | [events/](../events/index.md) (JSCalendar, ✅) |
-| Personen und Organisationen | [contacts/](../contacts/index.md) |
+| Personen und Organisationen | [people/](../people/index.md) |
 | Termine/Meilensteine im Kalender | [events/](../events/index.md) |
 | Prozessführung (Phasen, Verantwortung) | ISO 21502 ist **Prozess-Leitfaden, kein Datenformat** (✅ belegt 2026-11-02) |
 

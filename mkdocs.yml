@@ -50,14 +50,14 @@ nav:
   - en/programs/apps/messenger/: en/programs/apps/messenger/index.md
   - de/programs/apps/marketing/: de/programs/apps/marketing/index.md
   - en/programs/apps/marketing/: en/programs/apps/marketing/index.md
-  - de/programs/apps/whiteboards/: de/programs/apps/whiteboards/index.md
-  - en/programs/apps/whiteboards/: en/programs/apps/whiteboards/index.md
+  - de/programs/apps/whiteboard/: de/programs/apps/whiteboard/index.md
+  - en/programs/apps/whiteboard/: en/programs/apps/whiteboard/index.md
   - de/programs/apps/helpdesk/: de/programs/apps/helpdesk/index.md
   - en/programs/apps/helpdesk/: en/programs/apps/helpdesk/index.md
-  - de/programs/apps/projectmanagement/: de/programs/apps/projectmanagement/index.md
-  - en/programs/apps/projectmanagement/: en/programs/apps/projectmanagement/index.md
-  - de/programs/apps/contact/: de/programs/apps/contact/index.md
-  - en/programs/apps/contact/: en/programs/apps/contact/index.md
+  - de/programs/suites/projectmanagement/: de/programs/suites/projectmanagement/index.md
+  - en/programs/suites/projectmanagement/: en/programs/suites/projectmanagement/index.md
+  - de/programs/apps/people/: de/programs/apps/people/index.md
+  - en/programs/apps/people/: en/programs/apps/people/index.md
   - de/programs/apps/calendar/: de/programs/apps/calendar/index.md
   - en/programs/apps/calendar/: en/programs/apps/calendar/index.md
   - de/programs/apps/gallery/: de/programs/apps/gallery/index.md

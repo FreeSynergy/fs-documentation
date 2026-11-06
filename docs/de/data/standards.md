@@ -190,7 +190,7 @@ Jede Datendomäne hat ein Verzeichnis mit `index.md`, `description.md`, `technic
 
 | Domäne | Verzeichnis |
 |--------|-------------|
-| Kontaktdaten | [contacts/](contacts/index.md) |
+| Kontaktdaten | [people/](people/index.md) |
 | Nachrichten | [messages/](messages/index.md) |
 | Termine | [events/](events/index.md) |
 | Geodaten | [geodata/](geodata/index.md) |

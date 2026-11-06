@@ -9,7 +9,7 @@
 ## Schlüssel und Verknüpfungen
 
 - Extern: `https://<instanz>/events/<uuid>` (Beschluss 3).
-- `participants[].email` folgt RFC 5322 §3.4.1 (✅) und ist die **Verknüpfung zu [contacts/](../contacts/index.md)**: beim Rendern wird die Card gesucht, aber die Participant-Felder bleiben die terminverbindliche Kopie (sonst ändert sich die Einladung, wenn jemand umzieht).
+- `participants[].email` folgt RFC 5322 §3.4.1 (✅) und ist die **Verknüpfung zu [people/](../people/index.md)**: beim Rendern wird die Card gesucht, aber die Participant-Felder bleiben die terminverbindliche Kopie (sonst ändert sich die Einladung, wenn jemand umzieht).
 - `participants[].locationId` ↔ ` Participant.kind = "location"` verweist auf [geodata/](../geodata/index.md).
 - `relatedTo` verbindet Task ↔ Event (Aufgabe „Protokoll schreiben“ hängt an Termin).
 

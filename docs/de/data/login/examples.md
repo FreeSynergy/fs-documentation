@@ -14,7 +14,7 @@ Nur Begriffe, die durch das OIDC-Zitat im zentralen Register (standards.md → N
 }
 ```
 
-**Unser Mapping:** `sub` → `account.sub`; erst damit ist eine Sitzung an ein Konto gebunden. Personenfelder stehen danach in [contacts/](../contacts/index.md), nicht hier.
+**Unser Mapping:** `sub` → `account.sub`; erst damit ist eine Sitzung an ein Konto gebunden. Personenfelder stehen danach in [people/](../people/index.md), nicht hier.
 
 ## 2. Konto-Identifikatoren nebeneinander
 

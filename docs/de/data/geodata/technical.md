@@ -3,7 +3,7 @@
 ## Speicherperspektive
 
 - **Tabelle `location`** für eigenständige Orte (Karten-Features): eine Zeile pro GeoJSON-`Feature`; kanonischer Payload = Feature-JSON (Beschluss 4). Spalten herausgezogen: `id` (ULID), `geometry_type`, `bbox` (Index), `created_at`, `updated_at`.
-- **Adressen sind keine eigene Tabelle**, solange sie zu einer Card gehören: sie bleiben im JSON der Card in [contacts/](../contacts/index.md) (`addresses`-Map mit Komponenten). Diese Domäne definiert nur die **Komponentennamen und Validierung**.
+- **Adressen sind keine eigene Tabelle**, solange sie zu einer Card gehören: sie bleiben im JSON der Card in [people/](../people/index.md) (`addresses`-Map mit Komponenten). Diese Domäne definiert nur die **Komponentennamen und Validierung**.
 
 ## Schlüssel und Verknüpfungen
 
@@ -21,7 +21,7 @@
 | Ziel | Projektion |
 |------|------------|
 | [events/](../events/index.md) | JSCalendar `locations` (Text + Referenz) |
-| [contacts/](../contacts/index.md) | `Address`-Komponenten + `geo:`-URI |
+| [people/](../people/index.md) | `Address`-Komponenten + `geo:`-URI |
 | Karten-Renderer | Kacheln (MVT) — aus Geometrien erzeugt, nicht gespeichert |
 | ISO-OA-Exporte | Komponenten nach ISO-19160-Namen, falls wir sie mitführen (offen) |
 

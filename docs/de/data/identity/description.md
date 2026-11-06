@@ -15,7 +15,7 @@
 | Schicht | Domäne | Merksatz |
 |---------|--------|----------|
 | Zugang | [login/](../login/index.md) | Ein Login beweist **keine** Identität |
-| Mensch-Daten | [contacts/](../contacts/index.md) | Was über die Person bekannt ist |
+| Mensch-Daten | [people/](../people/index.md) | Was über die Person bekannt ist |
 | Selbstbild | [profile/](../profile/index.md) | Was sie von sich zeigt |
 | **Fremdbild-Vertrauen** | **identity/** | **Wem man glaubt** |
 

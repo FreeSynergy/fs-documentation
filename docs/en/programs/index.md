@@ -9,10 +9,10 @@ Programs are organised into **categories**. Programs whose user interface is rep
 | [Wiki](apps/wiki/) | Wiki and knowledge systems | complete (7 programs) |
 | [Messenger](apps/messenger/) | Chat, e-mail, social networks | complete (7 programs) |
 | [Desktop](platform/desktop/) | Desktop programs, dashboards, start pages | complete (12 programs) |
-| [Whiteboards](apps/whiteboards/) | Collaborative whiteboards | complete (6 programs) |
+| [Whiteboards](apps/whiteboard/) | Collaborative whiteboards | complete (6 programs) |
 | [Helpdesk](apps/helpdesk/) | Tickets and support | complete (8 programs) |
-| [Project management](apps/projectmanagement/) | Tasks, boards, projects | complete (8 programs) |
-| [Contacts](apps/contact/) | Contact management | complete (4 programs) |
+| [Project management](suites/projectmanagement/) | Tasks, boards, projects | complete (8 programs) |
+| [Contacts](apps/people/) | Contact management | complete (4 programs) |
 | [CRM](suites/crm/) | Customer relationships | complete (6 programs) |
 | [Calendar](apps/calendar/) | Appointments and planning | complete (6 programs) |
 | [Maps](apps/maps/) | Maps and geodata | complete (7 programs) |

@@ -14,7 +14,7 @@ Only terms evidenced by the OIDC quote in the central register (standards.md →
 }
 ```
 
-**Our mapping:** `sub` → `account.sub`; only then is a session bound to an account. Person fields then live in [contacts/](../contacts/index.md), not here.
+**Our mapping:** `sub` → `account.sub`; only then is a session bound to an account. Person fields then live in [people/](../people/index.md), not here.
 
 ## 2. Account identifiers side by side
 

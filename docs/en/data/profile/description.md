@@ -1,6 +1,6 @@
 # Profile – description
 
-**What this domain is:** what one **wants to show about oneself** — the publicly visible, **audience-controlled** view. Per decisions 1+2 a profile is **not a second copy of the person data** but a **projection** of the JSContact card ([contacts/](../contacts/index.md)) into an AS2 `Actor`/`Profile` frame.
+**What this domain is:** what one **wants to show about oneself** — the publicly visible, **audience-controlled** view. Per decisions 1+2 a profile is **not a second copy of the person data** but a **projection** of the JSContact card ([people/](../people/index.md)) into an AS2 `Actor`/`Profile` frame.
 
 **What it covers:**
 
@@ -13,7 +13,7 @@
 
 | Topic | Where it lives |
 |-------|----------------|
-| The data at rest from which the profile is projected | [contacts/](../contacts/index.md) |
+| The data at rest from which the profile is projected | [people/](../people/index.md) |
 | The login that belongs to the account | [login/](../login/index.md) |
 | Attestations about whether one may trust the handle | [identity/](../identity/index.md) |
 | Follower relations, ActivityPub delivery mechanics | envelope (cross-cutting, not a domain) |

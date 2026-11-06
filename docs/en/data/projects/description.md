@@ -17,7 +17,7 @@
 | Topic | Where it lives |
 |-------|----------------|
 | Task content (title, due date, progress) | [events/](../events/index.md) (JSCalendar, ✅) |
-| People and organisations | [contacts/](../contacts/index.md) |
+| People and organisations | [people/](../people/index.md) |
 | Appointments/milestones in the calendar | [events/](../events/index.md) |
 | Process management (phases, responsibility) | ISO 21502 is a **process guide, not a data format** (✅ evidenced 2026-11-02) |
 

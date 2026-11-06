@@ -37,7 +37,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new**; possibly a view |
 | Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
 | Ask, and decide together | [`fs-surveys`](surveys/design.md) | Planned |
-| Think visually | [`fs-whiteboard`](whiteboards/design.md) | Planned |
+| Think visually | [`fs-whiteboard`](whiteboard/design.md) | Planned |
 | Talk to AI, and work with every program through it | [A messenger frontend](assistant/index.md), not a program of its own | Idea |
 | Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Planned |
 

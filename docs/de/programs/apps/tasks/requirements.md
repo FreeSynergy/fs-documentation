@@ -2,18 +2,18 @@
 
 Geschrieben für den früheren Plan `fs-kanban`; jetzt die Board-Ansicht von [`fs-tasks`](design.md). Programmnamen unten folgen diesem Plan.
 
-Was `FreeSynergy.Kanban` (Repository `fs-kanban`) muss und kann, abgeleitet aus den analysierten [Projektmanagement-Frontends](../projectmanagement/frontends/index.md) (ADR 0006, 0013). Jede Fähigkeit nennt ihren Datenstandard (ADR 0014) und unseren Status. Das Programm ist **nur ein Board-Programm**: Boards, Spalten, Karten. Planung (Gantt, Zeiterfassung, Budgets) wird einem späteren `fs-projectmanagement` überlassen. Nur Funktionsanalyse, eigene Formulierung, nichts kopiert.
+Was `FreeSynergy.Kanban` (Repository `fs-kanban`) muss und kann, abgeleitet aus den analysierten [Projektmanagement-Frontends](../../suites/projectmanagement/frontends/index.md) (ADR 0006, 0013). Jede Fähigkeit nennt ihren Datenstandard (ADR 0014) und unseren Status. Das Programm ist **nur ein Board-Programm**: Boards, Spalten, Karten. Planung (Gantt, Zeiterfassung, Budgets) wird einem späteren `fs-projectmanagement` überlassen. Nur Funktionsanalyse, eigene Formulierung, nichts kopiert.
 
 Status: `implemented` · `planned` · `proposed`
 
-**Gesehen in** — analysierte Frontends: [Tr](../projectmanagement/frontends/trello/index.md) Trello ·
-[We](../projectmanagement/frontends/wekan/index.md) Wekan ·
-[Pl](../projectmanagement/frontends/planka/index.md) Planka ·
-[Ta](../projectmanagement/frontends/taiga/index.md) Taiga ·
-[Ji](../projectmanagement/frontends/jira/index.md) Jira ·
-[As](../projectmanagement/frontends/asana/index.md) Asana ·
-[Op](../projectmanagement/frontends/openproject/index.md) OpenProject ·
-[Re](../projectmanagement/frontends/redmine/index.md) Redmine.
+**Gesehen in** — analysierte Frontends: [Tr](../../suites/projectmanagement/frontends/trello/index.md) Trello ·
+[We](../../suites/projectmanagement/frontends/wekan/index.md) Wekan ·
+[Pl](../../suites/projectmanagement/frontends/planka/index.md) Planka ·
+[Ta](../../suites/projectmanagement/frontends/taiga/index.md) Taiga ·
+[Ji](../../suites/projectmanagement/frontends/jira/index.md) Jira ·
+[As](../../suites/projectmanagement/frontends/asana/index.md) Asana ·
+[Op](../../suites/projectmanagement/frontends/openproject/index.md) OpenProject ·
+[Re](../../suites/projectmanagement/frontends/redmine/index.md) Redmine.
 *Arch.* = durch unsere Architektur oder Prinzipien gefordert, nicht durch Zählen.
 ⚠️ = in der Funktionsdatei unzuverlässig oder unklar, muss geprüft werden.
 Gezählt werden nur board-bezogene Fähigkeiten. Issues und Arbeitspakete der tracker-artigen Frontends (Ji, Op, Re) zählen als „Karte“, wo die Fähigkeit die Aufgabe selbst betrifft; Board-Fähigkeiten (Spalten, Verschieben) zählen nur dort, wo es ein Board gibt. Redmine hat **kein Board in seinem Kern** (Kanban nur per Plugin), daher erscheint es nur in den Zeilen auf Kartenebene.

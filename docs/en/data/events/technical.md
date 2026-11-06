@@ -9,7 +9,7 @@
 ## Keys and links
 
 - Externally: `https://<instance>/events/<uuid>` (decision 3).
-- `participants[].email` follows RFC 5322 §3.4.1 (✅) and is the **link to [contacts/](../contacts/index.md)**: when rendering, the card is looked up, but the participant fields stay the appointment-binding copy (otherwise the invitation would change when someone moves house).
+- `participants[].email` follows RFC 5322 §3.4.1 (✅) and is the **link to [people/](../people/index.md)**: when rendering, the card is looked up, but the participant fields stay the appointment-binding copy (otherwise the invitation would change when someone moves house).
 - `participants[].locationId` ↔ ` Participant.kind = "location"` refers to [geodata/](../geodata/index.md).
 - `relatedTo` connects task ↔ event (the task "write the minutes" hangs on an appointment).
 

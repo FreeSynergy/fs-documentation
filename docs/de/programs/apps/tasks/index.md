@@ -7,4 +7,4 @@
 - [Design](design.md)
 - [Anforderungen](requirements.md), analysiert aus acht Projektwerkzeugen, geschrieben, als dies noch als `fs-kanban` geplant war
 
-Bisher analysierte Frontends liegen unter [Projektmanagement](../projectmanagement/index.md).
+Bisher analysierte Frontends liegen unter [Projektmanagement](../../suites/projectmanagement/index.md).

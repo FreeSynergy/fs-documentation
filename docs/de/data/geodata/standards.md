@@ -33,7 +33,7 @@ Beleg: `temp/research/geodata-projects-profile-login.md` (2026-11-05).
 
 ## JSContact-`Address` — geprüfte Bausteine (RFC 9553, ✅)
 
-`components[]` mit `kind` (u. a. `street`, `locality`, `region`, `postcode`, `country`), dazu `texts[]` (mehrsprachige Einzeiler-Formen) und `coordinates` als `geo:`-URI. Details: [contacts/jscontact/description.md](../contacts/jscontact/description.md).
+`components[]` mit `kind` (u. a. `street`, `locality`, `region`, `postcode`, `country`), dazu `texts[]` (mehrsprachige Einzeiler-Formen) und `coordinates` als `geo:`-URI. Details: [people/jscontact/description.md](../people/jscontact/description.md).
 
 ## Offene Standard-Punkte
 

@@ -65,7 +65,7 @@ When choosing a CRM system, consider the following criteria:
 
 - [Marketing](../../apps/marketing/) - marketing tools and analytics
 - [Helpdesk](../../apps/helpdesk/) - support and ticket systems
-- [Project management](../../apps/projectmanagement/) - project management
+- [Project management](../projectmanagement/) - project management
 
 ## Quick start
 

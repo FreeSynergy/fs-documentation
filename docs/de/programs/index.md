@@ -9,10 +9,10 @@ Programme sind in **Kategorien** gegliedert. Programme, deren Oberfläche in Fre
 | [Wiki](apps/wiki/) | Wiki- und Wissenssysteme | abgeschlossen (7 Programme) |
 | [Messenger](apps/messenger/) | Chat, E-Mail, soziale Netzwerke | abgeschlossen (7 Programme) |
 | [Desktop](platform/desktop/) | Desktop-Programme, Dashboards, Startseiten | abgeschlossen (12 Programme) |
-| [Whiteboards](apps/whiteboards/) | Kollaborative Whiteboards | abgeschlossen (6 Programme) |
+| [Whiteboards](apps/whiteboard/) | Kollaborative Whiteboards | abgeschlossen (6 Programme) |
 | [Helpdesk](apps/helpdesk/) | Tickets und Support | abgeschlossen (8 Programme) |
-| [Projektmanagement](apps/projectmanagement/) | Aufgaben, Boards, Projekte | abgeschlossen (8 Programme) |
-| [Kontakt](apps/contact/) | Kontaktpflege | abgeschlossen (4 Programme) |
+| [Projektmanagement](suites/projectmanagement/) | Aufgaben, Boards, Projekte | abgeschlossen (8 Programme) |
+| [Kontakt](apps/people/) | Kontaktpflege | abgeschlossen (4 Programme) |
 | [CRM](suites/crm/) | Kundenbeziehungen | abgeschlossen (6 Programme) |
 | [Kalender](apps/calendar/) | Termine und Planung | abgeschlossen (6 Programme) |
 | [Maps](apps/maps/) | Karten und Geodaten | abgeschlossen (7 Programme) |

@@ -1,6 +1,6 @@
 # Profil – Beschreibung
 
-**Was diese Domäne ist:** was man **von sich zeigen möchte** — die öffentlich sichtbare, **publikumsgesteuerte** Ansicht. Ein Profil ist nach Beschluss 1+2 **keine zweite Kopie der Personendaten**, sondern eine **Projektion** der JSContact-Card ([contacts/](../contacts/index.md)) in einen AS2-`Actor`/`Profile`-Rahmen.
+**Was diese Domäne ist:** was man **von sich zeigen möchte** — die öffentlich sichtbare, **publikumsgesteuerte** Ansicht. Ein Profil ist nach Beschluss 1+2 **keine zweite Kopie der Personendaten**, sondern eine **Projektion** der JSContact-Card ([people/](../people/index.md)) in einen AS2-`Actor`/`Profile`-Rahmen.
 
 **Was sie abdeckt:**
 
@@ -13,7 +13,7 @@
 
 | Thema | Wo es liegt |
 |-------|-------------|
-| Die speicherechten Daten, aus denen das Profil projiziert wird | [contacts/](../contacts/index.md) |
+| Die speicherechten Daten, aus denen das Profil projiziert wird | [people/](../people/index.md) |
 | Der Login, der zum Konto gehört | [login/](../login/index.md) |
 | Beglaubigungen, ob man dem Handle glauben darf | [identity/](../identity/index.md) |
 | Follower-Beziehungen, ActivityPub-Zustellungsmechanik | Envelope (querschnittlich, keine Domäne) |
