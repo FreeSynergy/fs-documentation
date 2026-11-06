@@ -19,6 +19,23 @@ we plan and why, so that anyone can see where we are heading and help.
 
 The sections below predate these decisions and will be reworked once the overall plan is agreed.
 
+## What already exists
+
+These repositories are public since 2026-11-06. All are data cores without a GUI so far, refactored to ADR 0043.
+
+| Repo | What it is | Tests |
+|------|------------|-------|
+| [`fs-store`](https://github.com/FreeSynergy/fs-store) | Object store, version 0.2 | 37 |
+| [`fs-hub`](https://github.com/FreeSynergy/fs-hub) | Shares objects between programs; contacts and calendar already share data through it | 9 |
+| [`fs-contacts`](https://github.com/FreeSynergy/fs-contacts) | Contacts core | 21 |
+| [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Events and tasks (JSCalendar), including the `Task` that `fs-tasks` would build on | 45 |
+| [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Maps core | 30 |
+| [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) | Text core `fs-text`; round-trips all 1321 files of `docs/en` with none unstable | 46 |
+| [`fs-capnpc`](https://github.com/FreeSynergy/fs-capnpc) | Cap'n Proto compiler in pure Rust (`capnp-compiler` 0.1.0), not yet on crates.io | 14 of 14 reference schemas identical |
+
+Known limit: these repositories still refer to `fs-store` by a local path, so they do not build elsewhere until that is
+switched to git dependencies. Details are in each repository's `DESIGN.md`.
+
 ## The programs
 
 | Program | Repo | What it does | Design | Requirements | Effort |
@@ -39,7 +56,7 @@ The [new components](../../components/planned.md) these programs need are listed
 ## Proposed order
 
 ```text
-fs-store, fs-hub (exist)
+fs-store, fs-hub, fs-calendar (exist)
    ├── fs-files ──┬── fs-gallery
    │              ├── fs-streaming (recordings land in fs-files)
    │              └── fs-whiteboard (embedded images)
