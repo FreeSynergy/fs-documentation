@@ -73,3 +73,15 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
   `scripts/check_rust_rules.py <repo>` = 0 Fehler. Nach Rust-Arbeit `scripts/clean_rust.py --root <repo> --apply`
   (`--all` nur, wenn kein Build mehr läuft). RAM: mit llama aktiv nur ~6 GB frei → `-j 4`.
 - Agenten früh und oft committen lassen (Abbrüche verlieren sonst alles).
+
+## Nächste Reihenfolge (Empfehlung der Strategie-Sitzung, 2026-11-06, Nutzer kann ändern)
+1. `fs-jscalendar`: Kopien in fs-tasks und fs-calendar beseitigen, falls noch nicht erledigt.
+2. Schnittstelle `people` in `fs-interfaces` mit Rollen (ADR 0052), dann fs-people als Anbieter umbauen. **ADR 0054 gleich mitdenken:** KIs sind markierte Teilnehmer. Ein Personen-Datensatz muss sagen können „das ist eine KI“ (Rolle plus Art; JSContact `kind` `application` in RFC 9553 prüfen), ohne sie einzuschränken. Aussperren noch nicht bauen, die Strategie ist offen.
+3. Schnittstelle `groups` und Kern `fs-groups`: verschachtelt, keine Zyklen, läuft ohne Kanidm. Danach Identitäts-Wrapper über Kanidm REST v1 (`temp/research/kanidm-control.md`, noch kein SCIM).
+4. Schnittstelle `files` und Kern `fs-files`: zuerst lokaler Ordner, danach S3 für RustFS.
+5. Den Rest gegen den Katalog umbauen: events, tasks, places, texts, messages.
+6. `fs-components` beginnen: die gemeinsamen, dazu als erstes Sichtbares die Wiki-Workbench auf Blinc. Erst Components, dann Programm, jeweils wenn das nächste Programm sie braucht (ADR 0049).
+
+`fs-assistant` ist kein eigenes Programm mehr, sondern ein Frontend über `messages` (ADR 0054): dort Agenten als Absender und sichtbare Werkzeug-Aufrufe mitdenken. Noch kein Code dafür.
+
+Der öffentliche Schlüssel liegt in `fs-release`. **Nicht auf Schlüsselserver hochladen, bevor der Nutzer es sagt.** `support@freesynergy.net` empfängt jetzt.
