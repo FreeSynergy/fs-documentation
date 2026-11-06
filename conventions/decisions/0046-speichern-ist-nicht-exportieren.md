@@ -9,7 +9,9 @@ Status: akzeptiert (2026-11-06) · Details: Vorschlag · ergänzt ADR 0042, 0030
 - **Erst ein Export bringt sie heraus.** Damit gibt es einen echten Unterschied zwischen Speichern und Export.
 - Sammlungen statt Kopien; git und RustFS sind dafür Optionen.
 
-## Vorschlag (offen)
+## Vorschlag (vom Nutzer auf später verschoben, nicht vergessen)
+Frontends, die fremde Programme nachbilden, verhalten sich ohnehin wie diese.
+
 - Große Dateien wie Videos passen nicht als ganze Kopie in die Datenbank: Bytes bleiben im Dateispeicher, Versionen
   teilen unveränderte Blöcke.
 - Nicht bei jedem Verlassen nach dem Export fragen: Das Programm bietet ihn beim Weitergeben an und fragt nur nach,

@@ -24,6 +24,11 @@ Teilnehmer, Wiederholung, ICS). Sie hat keine Daten, keine Speicherung, keine Sc
 of Truth bleibt beim Besitzer. Sonst stünde Kopieren gegen ADR 0043. Importierte `Task`-Daten leitet `fs-calendar` immer an
 `fs-tasks` weiter, in jedem Format.
 
+## Vorschlag: Personen und Rollen (Frage des Nutzers, wartet auf Antwort)
+Ein Programm `fs-people`, statt Contacts und People. Der Nutzer denkt an Vererbung: Person als Elternklasse, Kontakt, Kunde, User
+als Ableitungen. Vorschlag: gleicher Gedanke, aber als **Person mit mehreren Rollen**, weil dieselbe Person zugleich Kontakt,
+Kunde und User sein kann, was Vererbung nicht abbildet. Jede Rolle hat ihren Standard (JSContact, SCIM `User`, Kunde: Lücke).
+
 ## Folgen
 - Der Schnittstellen-Katalog nennt je Thema den Besitzer.
 - `fs-calendar` hat sein Task-Modell an `fs-tasks` abgegeben (erledigt: fs-tasks 0.1.0, fs-calendar 0.2.0). Offen: Wo liegen die Verträge (`fs-interfaces`, ADR 0045)?

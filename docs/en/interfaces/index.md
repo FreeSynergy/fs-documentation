@@ -1,6 +1,6 @@
 # Interfaces
 
-**Status: catalogue draft (2026-11-06).** This applies to everything, including what is already built (ADR 0045). Most
+**Status: catalogue draft (2026-11-06).** This applies to everything, including what is already built, which will be reworked (ADR 0045). Most
 interfaces are not specified yet; the table says which are.
 
 Every topic has **one interface, the same for every provider**, so that a provider can be swapped or added. This list
@@ -12,11 +12,11 @@ answers: what is there to standardise?
    **Each standard has exactly one owning program,** the point of truth, and every other program goes through its
    interface. No second model of the same thing (ADR 0050). A standard with several kinds of object, such as JSCalendar,
    is owned per kind: `Event` by `fs-calendar`, `Task` by `fs-tasks`.
-2. **An interface is a target.** Published as a draft, it is tested by at least two independent users of it (for a
+2. **An interface is a target.** We define the target, and it may get sharper while we do not know it fully yet. Published as a draft, it is tested by at least two independent users of it (for a
    provider interface: two providers), then fixed as version 1.0. After that it changes only by a jump to a new version, never by gradual growth.
-3. **Optional parts are declared up front.** Not every provider can do everything: Telegram cannot do what mail does.
-   The interface names the core every provider must offer and the optional capabilities it may offer, and a provider
-   declares which it has. This avoids reducing everyone to the weakest provider.
+3. **Like a parent class.** Every provider offers all methods and attributes of its interface. If a provider lacks
+   something, we look for a way to make it work anyway. If there truly is none, it answers explicitly "not possible".
+   We think about how something can be done before saying that it cannot.
 4. **A frontend uses what it wants.** The engine may offer more than a frontend needs.
 5. **Plugins can be added and removed while running** (hot plugins); see [plugin form](#plugin-form).
 
@@ -55,7 +55,7 @@ Keeping these apart prevents much confusion:
 | Mail | Sending and receiving mail, as client or server | JMAP, IMAP and SMTP clients; own server later |
 | Chat networks | Reaching people elsewhere | Matrix (tuwunel), Telegram, Discord, others |
 | Identity | Signing in, system access | Kanidm through a [wrapper](../programs/platform/identity.md), and our own fallback |
-| Video encoder | Turning a picture into a stream | Vulkan Video and `rav1e` proposed (ADR 0048) |
+| Video encoder | Turning a picture into a stream | Open formats first: AV1 and Opus (ADR 0048, open) |
 | Publishing target | Bringing a video to a platform | YouTube, Twitch, Odysee, PeerTube, others |
 | Translation, AI | Local help with language and text | llama.cpp, others |
 | Map data | Drawing maps | PMTiles (exists in `fs-maps`) |
@@ -81,14 +81,15 @@ A component is not the only kind of interface; it is one row here. A workbench i
 
 ## Plugin form
 
-Rust has no stable way to load compiled code at run time, so a plugin cannot simply be loaded as a library.
+We follow what [Zentinel](https://github.com/zentinelproxy/zentinel) already does:
 
-**Proposal:** a plugin is a separate small process that speaks Cap'n Proto (ADR 0021), started and stopped while
-everything else keeps running. A frontend with built-in filters is the same idea: a mini server on top of an engine. If a
-plugin must draw, it returns a scene description, and the host draws it. WASM components are the alternative for small
-plugins that must be sandboxed. How plugins measure text is unsolved, and nothing has been measured yet.
+- **Many interfaces are only configuration,** which is validated and swapped atomically while everything keeps running.
+- **Larger plugins are agents:** separate, crash-isolated processes over a local connection, which report their
+  capabilities. Ours speak Cap'n Proto (ADR 0021). A frontend with built-in filters is the same idea: a mini server on an engine.
+- **If an agent must draw,** it returns a scene description, and the host draws it. How it measures text is unsolved, and
+  nothing has been measured yet.
 
 ## Who owns the specifications
 
-Today, contracts lie in `temp/contracts/` in the docs repository. We propose a public repository for all interfaces,
-`fs-interfaces`, so that others can implement them without our programs.
+All interfaces go into one public repository, `fs-interfaces` (decided 2026-11-06, being set up), so that others can
+implement them without our programs.

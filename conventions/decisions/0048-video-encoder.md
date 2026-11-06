@@ -2,6 +2,13 @@
 
 Status: **Vorschlag** (2026-11-06), wartet auf Entscheidung des Nutzers · berührt ADR 0015
 
+## Vorgabe des Nutzers (2026-11-06)
+**Wir brauchen offene Formate, soweit es geht.** H.264 wird höchstens gelesen, sonst nichts.
+
+Das ändert den Vorschlag unten: Eigene Ausgabe ist **AV1 und Opus**. Weiterleiten ohne Dekodieren braucht keinen Codec, auch
+bei H.264. Offen: Auch Dekodieren kann unter Patente fallen (ungeprüft), und Sisvel bestreitet, dass AV1 vollständig
+lizenzfrei ist; gerichtlich ist das nach unseren Quellen nicht entschieden. Folge: Laut Recherche nimmt nur YouTube sicher AV1.
+
 ## Kontext
 Einfaches Aufnehmen (Streaming) heißt Kodieren. Reines Rust gibt es dafür nur teilweise. Der Nutzer möchte offene Standards
 nutzen, auch weil ein Rust-Encoder allen hilft. Die Plattformen brauchen für einen gemeinsamen Stream H.264.

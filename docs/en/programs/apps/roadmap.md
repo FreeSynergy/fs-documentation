@@ -34,7 +34,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |
 | Say something to someone | [`fs-messenger`](messenger/contract.md) | Draft contract |
 | Know what to do next | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) ([design](tasks/design.md)) | Core exists, no GUI; draft interface |
-| Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new** |
+| Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new**; possibly a view |
 | Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
 | Ask, and decide together | [`fs-surveys`](surveys/design.md) | Planned |
 | Think visually | [`fs-whiteboard`](whiteboards/design.md) | Planned |
@@ -97,13 +97,14 @@ The closed-source products were checked only partly; each note lists what was ve
 
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Video encoder: Vulkan Video first? How do we handle machines without suitable hardware, given platforms need H.264? | Vulkan Video first; fallback still open ([details](streaming/design.md#encoding)) |
-| 2 | H.264 patents | Needs legal advice |
-| 3 | Live collaboration in text: which CRDT? | Compare `loro` and `yrs` when the wiki or whiteboard needs it |
-| 4 | Should views also be stand-alone programs? | Discuss later |
-| 5 | Prompt for export on leaving? | Only when a file came from outside ([details](files/design.md#saving-and-exporting)) |
-| 6 | Repository `fs-interfaces`? | Yes |
-| 7 | How do fixed interfaces fit with existing cores? | Rework them in order, starting with what programs share |
+| 1 | Streaming with open formats only: most platforms need H.264 | See [encoding](streaming/design.md#encoding) |
+| 2 | One `fs-people` with roles? | Proposal in ADR 0050 |
+| 3 | Should views also be stand-alone programs? | Discuss later |
+| 4 | Prompt for export on leaving? | Postponed, not forgotten ([details](files/design.md#saving-and-exporting)) |
+
+**Decided on 2026-11-06:** every existing core is reworked against the interface catalogue, and all interfaces live in
+`fs-interfaces`. Live collaboration merges properties with a logical clock and uses a CRDT only for shared text (`loro` and
+`yrs` to be compared when needed).
 
 ## What is decided
 

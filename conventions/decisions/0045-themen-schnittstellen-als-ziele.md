@@ -15,11 +15,12 @@ Status: akzeptiert (2026-11-06) · Form der Plugins: Vorschlag · ergänzt ADR 0
 
 ## Vorschlag zur Umsetzung
 - Katalog: `docs/en/interfaces/index.md`. Zwei Ebenen: Thema (Nachrichten) und Anbieter (Mail, Matrix, Telegram).
-- Kern plus vorab erklärte optionale Fähigkeiten, damit nicht alle auf den schwächsten Anbieter schrumpfen.
+- **Korrektur des Nutzers (2026-11-06), ersetzt „Kern plus optionale Fähigkeiten“:** Wie eine Elternklasse: Jeder Anbieter bietet **alle** Methoden und Attribute. Fehlt einem Anbieter etwas, suchen wir einen Weg, es trotzdem umzusetzen. Geht das wirklich nicht, antwortet er ausdrücklich „nicht möglich“. Erst nachdenken, wie es geht, statt zu sagen, dass es nicht geht. Rust: Trait mit Standardmethode, die `Unsupported` liefert.
 - Ablauf: Entwurf → mindestens zwei unabhängige Nutzer der Schnittstelle (bei Anbieter-Schnittstellen: zwei Anbieter) → 1.0 fest → danach nur Sprünge. Korrigiert 2026-11-06: Ein Thema hat nach ADR 0050 nur einen Besitzer, also kann nicht „zwei Umsetzungen“ die Bedingung sein.
-- Hot-Plugin = eigener Prozess mit Cap'n Proto; zeichnet er, liefert er eine Szenenbeschreibung. WASM als Alternative.
-  Nicht gemessen, Textmessung ungelöst.
-- Öffentliches Repo `fs-interfaces`.
+- **Hot-Plugins nach dem Vorbild Zentinel** (Hinweis des Nutzers): Viele Schnittstellen sind nur Konfiguration, die geprüft und atomar getauscht wird. Größere sind Agenten: eigene, absturzsichere Prozesse über eine lokale Verbindung, die ihre Fähigkeiten melden. Bei uns mit Cap'n Proto. Zeichnet ein Agent, liefert er eine Szenenbeschreibung. Nicht gemessen, Textmessung ungelöst.
+- **Öffentliches Repo `fs-interfaces`: vom Nutzer bestätigt.**
+- Das Ziel darf schrittweise genauer werden, solange wir es nicht ganz kennen (Nutzer): erst Ziel festlegen, dann weitersehen.
+- **Der Umbau gilt für alles, auch für Fertiges (Nutzer).**
 
 ## Folgen
 - **ADR 0021** erlaubt Erweiterung ohne Bruch. Das bleibt technisch möglich, aber nach 1.0 ist es nicht mehr der Weg:

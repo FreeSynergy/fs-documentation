@@ -50,22 +50,23 @@ according to secondary sources ⚠️. The publishing targets need review before
 
 ## Encoding
 
-Standards leave encoder design free; they define the stream and how to decode it. So writing an encoder is not copying.
+**Decided by the owner (2026-11-06): open formats, as far as possible.** H.264 at most gets read. Our own output is **AV1 and
+Opus**. Standards leave encoder design free, so writing an encoder is not copying.
 
 | Option | Notes |
 |--------|-------|
-| **Vulkan Video** (open Khronos standard) | Rust talks to the graphics card's encoder: H.264, H.265, AV1. Open Mesa drivers implement it. Proposed first backend |
-| `rav1e` | AV1 in Rust, for software encoding. Not sufficient alone, since most platforms need H.264 |
-| OpenH264 | C++, and Blinc uses it. Exception to 100 % Rust |
-| Own H.264 encoder | Standard is readable, but patents last until about 2030 depending on country; needs legal advice |
-| Own encoder for AV1 or AV2 | Long-term gift to everyone; good encoding takes years of tuning. No Rust encoder found for AV2 |
+| **AV1** with `rav1e` (Rust) | Open, royalty-free by its alliance's terms. Sisvel disputes this; no court has ruled, per our sources |
+| **Vulkan Video** (open Khronos standard) | Rust drives the graphics card's encoder, AV1 too, for live speed. Open Mesa drivers implement it |
+| **Forwarding** a stream from another tool | Needs no codec of ours at all, so H.264 passes through |
+| AV2 | Spec 1.0 since May 2026; no Rust encoder found. A chance to be first, too early for platforms |
+| VP8, VP9 | Published. VP9 also has a Sisvel pool. Only bindings to `libvpx` found |
 
-Limits: macOS has no native Vulkan; proprietary driver status is unverified; older cards lack encoders.
+**The consequence:** per the research, only YouTube reliably takes AV1. So recording directly from our tool would reach
+YouTube, while other platforms need H.264 from another tool or a platform-side change. "One stream for all" above describes
+today's platforms, not our output. Open: which formats PeerTube and Odysee take, whether reading H.264 is itself covered
+by patents, and whether encoders on the machine's own hardware or OS could be an optional provider.
 
-**Open: what happens on a machine with no suitable hardware, given that platforms need H.264?**
-
-All backends sit behind one `VideoEncoder` [interface](../../../interfaces/index.md). Sound uses Opus or AAC; note that the
-common target above needs AAC.
+All backends sit behind one `VideoEncoder` [interface](../../../interfaces/index.md).
 
 ## Patterns
 
@@ -91,4 +92,4 @@ common target above needs AAC.
 
 ## Open questions
 
-1. Encoder fallback, see above. 2. H.264 patents and licences, including hardware encoders. 3. Which platforms first?
+1. How do we reach platforms that need H.264? See above. 2. Which platforms first?

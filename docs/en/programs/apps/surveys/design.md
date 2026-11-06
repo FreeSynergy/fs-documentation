@@ -68,7 +68,8 @@ tool found), delegation, and deliberative clustering. Each comes with a fitting 
 ## Widening to parent groups
 
 A survey can start small and, if it matters, widen to parent groups in [`fs-groups`](../../platform/groups.md). It stays one
-survey, earlier results are carried over, and anonymity can never get weaker on the way. **We found no tool that does this.**
+survey, earlier results are carried over, and anonymity can never get weaker on the way. **We found no tool that does this.** Consul comes close in one way: a proposal that gathers enough support moves on to a vote.
+Whether it can also move between levels of a hierarchy was not confirmed.
 
 ## Patterns
 
