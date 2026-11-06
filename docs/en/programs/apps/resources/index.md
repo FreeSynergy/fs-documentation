@@ -2,7 +2,7 @@
 
 `FreeSynergy.Resources` (`fs-resources`) answers: **what do we have, what do we need, and who has time?**
 
-**Status: planned, no code yet (2026-11-06).** See the [overall plan](../roadmap.md).
+**Status: [core](https://github.com/FreeSynergy/fs-resources) v0.1.0, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
 
 ## Why
 
@@ -30,5 +30,17 @@ far. To be researched.
 
 ## Open questions
 
-1. Are things and people's time one program? They share planning, but feel very different.
-2. What from ERP belongs here? ERP needs stock, and this program needs availability.
+Answers so far are provisional. Details: [`DESIGN.md`](https://github.com/FreeSynergy/fs-resources/blob/main/DESIGN.md).
+
+1. Things and people's time are **one program**.
+2. Availability uses a plain stock number. Nothing else from ERP belongs here.
+3. Costs stay out until they are analysed.
+
+## Sharing hours with a group means trusting its members
+
+Sharing is off by default and is set per group. A group only sees totals, but **totals do not protect anyone from a member who tries.** A member
+can learn the exact hours of someone who is absent in one of two weeks, by changing their own capacity in small steps. A review
+did this successfully. Rounding does not help. So share only with people you trust.
+
+**Known open point:** a fault while accepting an offer, followed by an action on the reservation and a repeated decision, can leave offer and
+reservation disagreeing.
