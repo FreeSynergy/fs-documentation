@@ -80,6 +80,13 @@ Keeping these apart prevents much confusion:
 
 A component is not the only kind of interface; it is one row here. A workbench is a component too.
 
+## Known limits before 1.0
+
+- **No proven caller.** The transport only knows the system user. Every name in a request is plain text, so `fs-groups` cannot enforce
+  rights yet. This is the largest gap for real use by several people; it needs the identity wrapper.
+- **Lists without a cursor** in `people` and `groups` fail with `too-large` when an answer no longer fits into one message.
+- **Reporting what a provider can do** is not uniform yet: some contracts have `capabilities`, some only `supportReport`.
+
 ## Plugin form
 
 We follow what [Zentinel](https://github.com/zentinelproxy/zentinel) already does:
