@@ -11,6 +11,17 @@ wohin wir gehen (Transparenz).
 ## Vom Nutzer entschieden
 - Die Programme kommen, auch `fs-kanban` und `fs-surveys` als eigene Programme.
 
+### Nachtrag 2026-11-06 (Nutzer); Gesamtplan wird neu geordnet, bevor es weitergeht
+- RustFS ist optional; Zusammenarbeit mit dem Projekt ist erwünscht, auch für Zustellung online.
+- Workbenches und Programme nicht verwechseln. Offen: Ist Gallery ein Programm oder eine Ansicht von Files?
+- `fs-projectmanagement` ist die **Suite** zu Kanban, Surveys, `fs-timeline`, Whiteboard, Wiki u. a.; Kostenmodul prüfen.
+- Neu: **`fs-groups`** (verschachtelt, mit Kanidm über SCIM), **`fs-timeline`**.
+- Surveys: verschiedene Typen (Konsens, Mehrheit …); können unten starten und auf übergeordnete Gruppen ausgeweitet
+  werden. Demokratie-Suite ist ebenso wichtig. Viele Charts, auch für andere Programme.
+- Streaming: Verteilung ohne SaaS auf mehrere Plattformen, live und nicht live; Aufnahme einfacher als OBS; Videos verwalten.
+- Haiku darf statt llama übersetzen, falls die Qualität stimmt (Probelauf); ändert sonst nichts an ADR 0011.
+- Die Punkte unter „Vorschlag“ sind damit teilweise überholt und werden mit dem Gesamtplan neu gefasst.
+
 ## Vorschlag (offen)
 1. **`fs-files`** kommt als Grundlage: Metadaten in `fs-store`, Bytes hinter der Schnittstelle `BlobStore`.
 2. **RustFS** ist ein empfohlenes Server-Backend über S3, nicht die Maschine von `fs-files`: Es ist ein eigener

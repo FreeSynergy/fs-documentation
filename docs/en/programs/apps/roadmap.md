@@ -1,7 +1,23 @@
 # Next programs — roadmap
 
-**Status: proposal (2026-11-06), awaiting decisions; see [open decisions](#open-decisions).** No code exists yet
-for any program on this page. This page says what we plan and why, so that anyone can see where we are heading and help.
+**Status: under review (2026-11-06).** We are rethinking the overall structure before continuing, so the list, the
+order and the split into programs below may change. No code exists yet for any program on this page. This page says what
+we plan and why, so that anyone can see where we are heading and help.
+
+## Decided so far by the project owner
+
+- **RustFS** is an optional backend for `fs-files`. We hope to work together with the project, including online delivery.
+- **`fs-projectmanagement` is a suite**, combining kanban, surveys, timeline, whiteboard, wiki and further modules.
+  A cost module may join after looking at what such programs do and need.
+- **Workbenches and programs must not be confused.** Whether the gallery is a program, or a view of `fs-files`, is open.
+- **New requirements:** `fs-groups` (group management, nested groups, working with Kanidm through SCIM) and `fs-timeline`.
+- **Surveys** support several decision types, such as consensus and majority, and can start in a small group and widen
+  to parent groups. The democracy suite is as important as project management, and surveys are part of both.
+- **Charts** are many and varied, and are needed by surveys, project management and others.
+- **Streaming** is about distribution: record once, publish to YouTube, Odysee and other platforms at once, live and not
+  live, without a SaaS provider, plus a recording tool far simpler than OBS and management of videos.
+
+The sections below predate these decisions and will be reworked once the overall plan is agreed.
 
 ## The programs
 

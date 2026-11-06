@@ -32,3 +32,9 @@ zuerst im RFC-Kanal (Discord) besprechen → PR.
 ## Web of Trust
 ## Kanidm
 ## Zentinel
+
+## RustFS
+- Zusammenarbeit anfragen: `fs-files` nutzt RustFS als optionales S3-Backend, auch für Zustellung online (ADR 0044) · Nutzer schreibt · offen. Hinweis: Das Repo hat eine `CLA.md`, vor Beiträgen lesen.
+
+## Kanidm
+- SCIM für Gruppen, auch verschachtelt: Form der API ändert sich noch (ADR 0024, kanidm#4638); für `fs-groups` nachfragen · offen
