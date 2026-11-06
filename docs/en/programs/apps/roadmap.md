@@ -37,9 +37,9 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Remember what I or we did | [`fs-history`](history/index.md) | Core v0.1.0, no GUI; provisional draft interface |
 | Know what we have and need | [`fs-resources`](resources/index.md) | Core v0.1.0, no GUI; provisional draft interface |
 | Ask, and decide together | [`fs-surveys`](surveys/design.md) ([repo](https://github.com/FreeSynergy/fs-surveys)) | Core v0.1.0, no GUI; draft interface |
-| Think visually | [`fs-whiteboard`](whiteboard/design.md) | Planned |
+| Think visually | [`fs-whiteboard`](whiteboard/design.md) | Core v0.1.0 (stage 1), no GUI |
 | Talk to AI, and work with every program through it | [A messenger frontend](assistant/index.md), not a program of its own | Idea |
-| Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Planned |
+| Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Draft interface, stage 1 in progress |
 
 [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces) holds the contracts, [`fs-release`](https://github.com/FreeSynergy/fs-release) the [release](../platform/releases.md) workflows, and `fs-capnpc`, our Cap'n Proto compiler in pure Rust, supports them all. Details of what exists are in each repository's `DESIGN.md`.
 

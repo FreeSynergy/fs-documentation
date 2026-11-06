@@ -1,6 +1,6 @@
 # Streaming — design
 
-**Status: proposal (2026-11-06).** Back to the [overall plan](../roadmap.md) · [requirements](requirements.md) ·
+**Status: draft interface; [stage 1](https://github.com/FreeSynergy/fs-streaming) in progress (2026-11-06): RTMP in, many RTMP or RTMPS targets out, FLV recording, no decoding.** Back to the [roadmap](../roadmap.md).
 [research](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/streaming-landscape.md).
 
 ## What it is for

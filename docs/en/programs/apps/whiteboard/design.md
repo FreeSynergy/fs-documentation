@@ -1,6 +1,8 @@
 # Whiteboard — design
 
-**Status: proposal (2026-11-06).** Back to the [roadmap](../roadmap.md) · [requirements](requirements.md).
+**Status: [core](https://github.com/FreeSynergy/fs-whiteboard) v0.1.0, stage 1 only, no GUI (2026-11-06).** Back to the [roadmap](../roadmap.md).
+
+Built: own JSON format and SVG export. Merging with logical clocks exists and is tested, but nothing calls it yet, because the hub only delivers other programs' activities, so there is no sync between devices. Not built: presence, sharing, libraries, templates, comments, PNG, PDF.
 
 The program is `FreeSynergy.Whiteboard` (`fs-whiteboard`). The docs folder is still called `whiteboards`; renaming it
 to match ADR 0017 is pending, since other work is in progress in this folder.
