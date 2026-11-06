@@ -61,7 +61,7 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
   iOS nur bauen. Releases nur als **Entwurf**, öffentlich erst, wenn es etwas bringt.
 - Signatur: **GPG/OpenPGP** (offener Standard, native Paketsignatur); SBOM **SPDX**; Herkunft **SLSA**; SemVer.
 - Erstes Blinc-Programm auf Android/iOS testet Blincs Mobil-Teil — Fehler per PR zurück an den Autor.
-- **Signaturschlüssel:** `FreeSynergy Release <support@freesynergy.net>`, Ed25519, Fingerabdruck `C40F0FBA5C4CF71D7BEBB5C65478A4738FFEEB69`, bis 2029-11-05. Privater Teil + Passphrase + Widerrufszertifikat **nur** in `~/FreeSynergy-release-key/` (Nutzer sichert offline). Secrets `GPG_PRIVATE_KEY`/`GPG_PASSPHRASE` je Repo (Org-Secret braucht admin:org). Öffentlicher Teil: `fs-release/release-signing-key.asc`. Nicht auf Keyservern.
+- **Signaturschlüssel:** `FreeSynergy Release <support@freesynergy.net>`, Ed25519, Fingerabdruck `C40F0FBA5C4CF71D7BEBB5C65478A4738FFEEB69`, bis 2029-11-05. Privater Teil + Passphrase + Widerrufszertifikat sind **nicht mehr auf diesem Rechner** (Nutzer sichert offline, Bestätigung offen). Secrets `GPG_PRIVATE_KEY`/`GPG_PASSPHRASE` nur in fs-capnpc und fs-hub (geprüft 2026-11-06); neue Repos brauchen den Schlüssel vom Nutzer oder ein Org-Secret (braucht admin:org). Öffentlicher Teil: `fs-release/release-signing-key.asc`. Nicht auf Keyservern.
 - **Projekt-Adresse überall:** `support@freesynergy.net` (Cargo `authors`, SECURITY.md, Paket-Metadaten).
 - **GitHub-Fehler beseitigt (2026-11-06):** Doku-Deploy (veraltete Nav + gleichzeitige Deploys → `concurrency`), fs-release lint (SC2015), kanidm: Sync nur manuell (GITHUB_TOKEN darf keine Workflow-Dateien pushen; optional `SYNC_TOKEN`), Upstream-CI im Fork deaktiviert, `dependabot.yml` entfernt; keine aktiven zeitgesteuerten Workflows mehr.
 - **Stand:** fs-release erster Lauf grün an fs-capnpc (`v0.1.1-rc.5`, Entwurf): tar.gz, deb, rpm, Arch, msi, zip, SPDX, Prüfsummen. Offen: GPG-Schlüssel (Adresse vom Nutzer), fs-hub anbinden, AppImage/exe/dmg/Flatpak mit der ersten App.
@@ -76,12 +76,12 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 
 ## Nächste Reihenfolge (Empfehlung der Strategie-Sitzung, 2026-11-06, Nutzer kann ändern)
 1. `fs-jscalendar`: Kopien in fs-tasks und fs-calendar beseitigen, falls noch nicht erledigt.
-2. Schnittstelle `people` in `fs-interfaces` mit Rollen (ADR 0052), dann fs-people als Anbieter umbauen. **ADR 0054 gleich mitdenken:** KIs sind markierte Teilnehmer. Ein Personen-Datensatz muss sagen können „das ist eine KI“ (Rolle plus Art; JSContact `kind` `application` in RFC 9553 prüfen), ohne sie einzuschränken. Aussperren noch nicht bauen, die Strategie ist offen.
+2. Schnittstelle `people` in `fs-interfaces` mit Rollen (ADR 0052), dann fs-people als Anbieter umbauen. **ADR 0054 gleich mitdenken:** KIs sind markierte Teilnehmer. Ein Personen-Datensatz muss sagen können „das ist eine KI“ (Rolle plus JSContact `kind` `application`, RFC 9553 §2.1.4, geprüft), ohne sie einzuschränken, und künftig ihren Betreiber nennen (Form offen, Feld nicht verbauen). Aussperren noch nicht bauen, der Entwurf ist noch nicht bestätigt.
 3. Schnittstelle `groups` und Kern `fs-groups`: verschachtelt, keine Zyklen, läuft ohne Kanidm. Danach Identitäts-Wrapper über Kanidm REST v1 (`temp/research/kanidm-control.md`, noch kein SCIM).
 4. Schnittstelle `files` und Kern `fs-files`: zuerst lokaler Ordner, danach S3 für RustFS.
 5. Den Rest gegen den Katalog umbauen: events, tasks, places, texts, messages.
 6. `fs-components` beginnen: die gemeinsamen, dazu als erstes Sichtbares die Wiki-Workbench auf Blinc. Erst Components, dann Programm, jeweils wenn das nächste Programm sie braucht (ADR 0049).
 
-`fs-assistant` ist kein eigenes Programm mehr, sondern ein Frontend über `messages` (ADR 0054): dort Agenten als Absender und sichtbare Werkzeug-Aufrufe mitdenken. Noch kein Code dafür.
+`fs-assistant` ist kein eigenes Programm mehr, sondern ein Frontend über `messages` (ADR 0054): dort Agenten als Absender, sichtbare Werkzeug-Aufrufe und den Verweis einer Nachricht auf eine Aufgabe mitdenken (Analyse CodeAF, Seite `assistant`). Noch kein Code dafür.
 
 Der öffentliche Schlüssel liegt in `fs-release`. **Nicht auf Schlüsselserver hochladen, bevor der Nutzer es sagt.** `support@freesynergy.net` empfängt jetzt.

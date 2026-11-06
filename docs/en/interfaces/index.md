@@ -64,7 +64,7 @@ Keeping these apart prevents much confusion:
 
 | Interface | What it is for | Standard base |
 |-----------|----------------|---------------|
-| Trust | Showing when a person is safe, also against scammers and bots | Web of Trust (ADR 0052) |
+| Trust | Showing when a person is safe, also against scammers and bots; each person sets their [own level](../programs/apps/assistant/index.md#locking-ais-out) | Web of Trust; its successor, the [Real Life Trust Protocol](https://github.com/real-life-org/trust-protocol), is the proposed target (ADR 0052, 0054) |
 | Sharing and permissions | Who may see what; shares go to groups | Gap, one specification for all |
 | Envelope and activity log | Every object's outer form and history | AS2, proposed owner `fs-store` (ADR 0050) |
 | Sync | Bringing devices and programs together | Activity log (ADR 0019) |

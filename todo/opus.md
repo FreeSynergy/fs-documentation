@@ -169,4 +169,5 @@ Compiler fertig (Umbau ADR 0043 + Orakel 14/14), pedantic überall, fmt korrigie
 - [ ] Rollen: SKOS lesen, Kunde/Lieferant/Mitarbeiter recherchieren, Format für eigene Rollen (ADR 0052) · Opus
 - [ ] Schnittstelle Vertrauen über Web of Trust (ADR 0052) · Opus
 - [ ] Manifest ausführlicher und schöner schreiben, immer wieder ergänzen · später
-- [ ] `fs-assistant`: Strata, CodeAF, Zed analysieren; ACP und MCP lesen; Component `llm-chat` (ADR 0053) · Opus, Recherche
+- [x] Strata und CodeAF analysiert (2026-11-06, Seite `assistant`)
+- [ ] `fs-assistant`: Zed analysieren; ACP und MCP lesen; Component `llm-chat` (ADR 0053) · Opus, Recherche
