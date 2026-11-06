@@ -123,8 +123,12 @@ file. See [planned components](../../../components/planned.md).
 ## Open questions
 
 1. **Real folder or managed store?** Decided for the local folder (ADR 0055): files lie under their **real names**, because speaking
-   names are better than ids, and which names may coexist in a folder is whatever the operating system allows. Still open: how
-   changes from outside are picked up, and whether this also applies to S3. The code still uses ids until this is rebuilt.
+   names are better than ids, and which names may coexist in a folder is whatever the operating system allows. Whether this also applies to S3 is open.
+   **Changes from outside, provisional:** an explicit `rescan` picks them up. New files are taken over, changed ones updated,
+   and missing ones reported, not deleted. Reading a file whose size no longer fits answers "changed outside". Nothing watches
+   in the background, so after a crash the program must call `rescan` itself. The folder `.fs-files` in the root is reserved.
+   Moves are atomic only on Linux; elsewhere a small risk of an empty folder remains. No "replace": on a taken name a call can
+   only refuse or keep both, so nothing is overwritten by accident.
 2. **Is a folder here the same as ADR 0037's "folder = group = mailing list"?** If so, sharing a folder would equal
    sharing with a group. This needs a decision.
 3. **Sharing model:** files, gallery, kanban and surveys all need it. We propose one shared specification rather than
