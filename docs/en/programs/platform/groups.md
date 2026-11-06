@@ -34,6 +34,13 @@ does not is removed at the next sync.
 Each group decides for itself whether its rights are passed on, and in which direction: not at all, down to the groups below it,
 or up to the groups above it (ADR 0055).
 
+**Provisional, safe reading, until the project owner has decided the exact meaning.** Hanging a group under another takes the parent's
+consent, a group set to "not at all" never gives anything away, and when in doubt the answer is no.
+
+**Not enforced yet.** This is what the rights check answers, not a boundary anyone enforces. Whoever consents is only a text field so far, nobody
+is authenticated, and granting rights is unprotected. Enforcing it needs a real identity, through the identity wrapper. `fs-groups` also
+expects a single writer for now.
+
 ## What we keep, what Kanidm keeps
 
 From the [Kanidm research](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/kanidm-control.md),
