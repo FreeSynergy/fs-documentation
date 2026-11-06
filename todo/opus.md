@@ -108,7 +108,7 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 
 | # | Paket | Repo | Hängt ab von | Wer | Status |
 |---|-------|------|--------------|-----|--------|
-| 1 | Cap'n-Proto-Compiler in Rust, Orakel-Tests gegen capnpc-embedded (ADR 0040) | `fs-capnpc` (crate `capnp-compiler`) | — | Sonnet | offen |
+| 1 ✅ | Cap'n-Proto-Compiler in Rust, Orakel-Tests gegen capnpc-embedded (ADR 0040) | `fs-capnpc` (crate `capnp-compiler`) | — | Sonnet | ✅ 14/14 Schemas identisch, 30 Tests; **Veröffentlichung wartet: crates.io verlangt bestätigte E-Mail des Nutzers** |
 | 2 ✅ | Objektspeicher: UUIDv7, AS2-Hülle, Turso eingebettet hinter Trait, Aktivitätsprotokoll in derselben Transaktion, begrenztes Rückgängig (ADR 0019/0020/0027/0042) | `fs-store` (lokal) | — | Sonnet | ✅ 22 Tests (2026-11-05) |
 | 3 | Text-Kern: Rope + Markierungen (ADR 0033/0042), Markdown hinein/heraus (pulldown-cmark), Link-Tabelle, Vorlagen | `fs-wiki` (crate `fs-text` im Workspace) | (2) später | Sonnet | offen |
 | 4 ✅ | `common.capnp` (Uuid, Timestamp, Cursor, Problem, Blob) | `fs-documentation/temp/contracts` | — | Opus | ✅ |
@@ -154,5 +154,5 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 | fs-maps | 30 | 0 | Strategy (`TileSource`), Decorator (Cache), Chain of Responsibility, Command + Observer (Region) |
 | fs-hub | 9 | 0 | Facade, Adapter (RPC), Strategy (`ProposalEngine`), State (`HubStatus`) |
 
-Läuft: Compiler (`fs-capnpc`, erst Umbau, dann Orakel-Tests), `clippy::pedantic` für fs-store/fs-text.
+Compiler fertig (Umbau ADR 0043 + Orakel 14/14), pedantic überall, fmt korrigiert (fs-store, fs-wiki).
 
