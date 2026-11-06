@@ -1,5 +1,7 @@
 # Photo galleries
 
+**`FreeSynergy.Gallery` (`fs-gallery`) is planned, no code yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+
 ## Overview
 
 Photo galleries manage image and video collections: they index holdings, generate previews, make content searchable (albums, labels, faces, places) and share results via web galleries or apps. The category includes self-hosted servers (Immich, PhotoPrism, Piwigo …) just as much as photo solutions embedded in groupware (Nextcloud Photos).

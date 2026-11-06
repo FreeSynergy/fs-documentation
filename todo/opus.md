@@ -127,3 +127,18 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 - Nachziehen (Opus/Sonnet): `common.capnp` Envelope um describes/startTime/endTime ergänzt (2026-11-05) → Kopie in fs-hub aktualisieren; capnp/capnp-rpc 0.23 → neueste (0.27?) prüfen (ADR 0026)
 - fs-store: `max_steps` global oder je Person? Schutzbedürftige Objekte in unverschlüsseltem Speicher standardmäßig ablehnen (heute so)? Grabsteine nach Abgleich + Aufräumen behalten? Aktivitäten als volle Vorher/Nachher-Bilder (heute) oder RFC-6902-Patches?
 
+## Phase 5 – Weitere Programme (Plan 2026-11-06, ADR 0044: Vorschlag)
+
+Öffentlicher Plan: `docs/en/programs/apps/roadmap.md`, Components: `docs/en/components/planned.md`.
+
+- [x] Roadmap, je Programm `design.md`, Requirements (gallery, whiteboards, kanban, streaming aus Frontends;
+      files, surveys vorläufig), Components-Liste · Opus/Sonnet
+- [ ] **Entscheidungen des Nutzers** (Tabelle in der Roadmap), danach ADR 0044 annehmen · Nutzer
+- [ ] Frontends analysieren: files (Nautilus, Dolphin, Explorer, Finder, Nextcloud Files, Seafile, Dropbox, Drive),
+      surveys (LimeSurvey, Nextcloud Forms, Formbricks, Framadate, Google Forms, Microsoft Forms) · Recherche Leo, llama
+- [ ] Standards lesen: DDI, FHIR `Questionnaire`, QTI; InkML, SVG; WHEP, HLS, RTMP, SRT, MoQ · Leo, Prüfung Opus
+- [ ] Gemeinsames Freigabe-Modell (files, gallery, kanban, surveys, whiteboard) spezifizieren · Opus
+- [ ] Specs: Kanban-Board (Kandidat Nr. 3), Whiteboard-Modell, Survey-Profil · Opus
+- [ ] Doku-Gerüste und CONVENTIONS §3 für die neuen Components, nach den Entscheidungen · Sonnet
+- [ ] `docs/en/programs/apps/whiteboards/` → `whiteboard/` umbenennen (ADR 0017), wenn dort nichts mehr läuft · Sonnet
+- [ ] Crates prüfen (C-Abhängigkeiten, ADR 0015, 0026), bevor sie genutzt werden · Sonnet

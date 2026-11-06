@@ -62,6 +62,13 @@ nav:
   - en/programs/apps/calendar/: en/programs/apps/calendar/index.md
   - de/programs/apps/gallery/: de/programs/apps/gallery/index.md
   - de/programs/apps/streaming/: de/programs/apps/streaming/index.md
+  - en/programs/apps/gallery/: en/programs/apps/gallery/index.md
+  - en/programs/apps/streaming/: en/programs/apps/streaming/index.md
+  - en/programs/apps/files/: en/programs/apps/files/index.md
+  - en/programs/apps/kanban/: en/programs/apps/kanban/index.md
+  - en/programs/apps/surveys/: en/programs/apps/surveys/index.md
+  - en/programs/apps/roadmap: en/programs/apps/roadmap.md
+  - en/components/planned: en/components/planned.md
   - de/programs/apps/maps/: de/programs/apps/maps/index.md
   - de/programs/apps/maps/standpunkte: de/programs/apps/maps/standpunkte.md
   - en/programs/apps/maps/: en/programs/apps/maps/index.md

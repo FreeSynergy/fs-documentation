@@ -1,5 +1,7 @@
 # Whiteboards
 
+**`FreeSynergy.Whiteboard` (`fs-whiteboard`) is planned, no code yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+
 ## Overview
 
 This section contains documentation for various whiteboard and collaboration tools.

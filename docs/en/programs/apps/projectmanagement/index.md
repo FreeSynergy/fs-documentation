@@ -1,5 +1,7 @@
 # Project Management
 
+Boards with columns and cards become a program of their own: see [Kanban](../kanban/index.md) and the [roadmap](../roadmap.md).
+
 ## Overview
 
 This section contains documentation for various project management tools.

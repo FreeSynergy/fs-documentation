@@ -1,5 +1,7 @@
 # Streaming systems
 
+**`FreeSynergy.Streaming` (`fs-streaming`) is planned, no code yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+
 ## Overview
 
 Streaming systems accept live or pre-produced video material, process it (transcoding, recording, packaging) and distribute it to viewers or to foreign platforms. The category covers the whole chain: encoders (OBS), protocol routers (MediaMTX, FFmpeg, GStreamer), media servers (nginx-rtmp, Restreamer, MistServer, Ant Media, Wowza) and cloud multistreaming (Restream).
