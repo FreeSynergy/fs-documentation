@@ -80,7 +80,7 @@ Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Fronten
 - Jeder schreibt nur in seine Repos und Crates. Andere per Nachricht (`ListAgents`, `SendMessage`) um Änderungen bitten.
 - `fs-interfaces`: nur die eigene Schema-Datei ändern, `git pull --rebase`, dann die nächste freie Version taggen. Kleine, häufige Tags.
 - Abhängigkeiten nur über Git-Tags (coding.md §8).
-- `fs-documentation` ist ein geteilter Arbeitsbaum: nur `git commit -- <pfade>`, **kein `--autostash`, kein `git stash`, kein `checkout` fremder Dateien.** Geht `git pull --rebase` wegen fremder Änderungen nicht: eigener `git worktree`. Tests gegen die Docs nur auf einer Kopie.
+- `fs-documentation` ist ein geteilter Arbeitsbaum: nur `git commit -- <pfade>`, **kein `--autostash`, kein `git stash`, kein `git reset`, kein `checkout` fremder Dateien.** Wer schreibt, nimmt einen eigenen `git worktree` und pusht von dort; ungepushte Commits im gemeinsamen Baum sind nicht sicher. Tests gegen die Docs nur auf einer Kopie.
 - **Nicht warten.** Offene Frage: die wahrscheinlich richtige Antwort nehmen, als vorläufig markieren, an die Strategie melden, weitermachen. Keine ADR-Nummern selbst vergeben.
 
 **Rechner**
