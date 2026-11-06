@@ -25,6 +25,7 @@ Roles follow standards wherever one exists, and they are defined in public, befo
 | User | Role | SCIM `User` (RFC 7643); Kanidm | Identity wrapper | Standard |
 | Member of a group | Role | `org:Membership`, AS2 `Group`, SCIM `Group` | `fs-groups` | Standard |
 | Customer, lead, prospect | Role | ❌ none found in vCard or JSContact; so far a vendor property (`lifecycle`) | Later CRM | **Gap, own specification** |
+| AI | Marked participant, so everyone knows it is not human (ADR 0054) | JSContact `kind` `application`, to be checked | `fs-people` | Open |
 | Supplier, employee, volunteer | Role | To be researched | Later ERP, others | Open |
 
 ## Defining a role yourself

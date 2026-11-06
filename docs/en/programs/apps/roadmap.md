@@ -38,7 +38,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
 | Ask, and decide together | [`fs-surveys`](surveys/design.md) | Planned |
 | Think visually | [`fs-whiteboard`](whiteboards/design.md) | Planned |
-| Talk to AI, and work with every program through it | [`fs-assistant`](assistant/index.md) | Idea, **new**; name open |
+| Talk to AI, and work with every program through it | [A messenger frontend](assistant/index.md), not a program of its own | Idea |
 | Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Planned |
 
 [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces) holds the contracts, [`fs-release`](https://github.com/FreeSynergy/fs-release) the [release](../platform/releases.md) workflows, and `fs-capnpc`, our Cap'n Proto compiler in pure Rust, supports them all. Details of what exists are in each repository's `DESIGN.md`.
@@ -72,7 +72,7 @@ A program can belong to several suites.
                   fs-groups + identity wrapper, then fs-files
 2. Components     shared ones first, plus charts; each built when the next program needs it
                   GUIs for the existing cores: people, calendar, maps, wiki
-3. Work           fs-assistant (we want to use it ourselves soon), GUI for fs-tasks, fs-history, then fs-surveys, fs-resources, fs-messenger
+3. Work           fs-messenger with the AI frontend (we want to use it soon), GUI for fs-tasks, fs-history, then fs-surveys, fs-resources, fs-messenger
 4. Together       live presence, fs-whiteboard
 5. Suites         project management, democracy
 6. Media          gallery frontends, fs-streaming
@@ -107,4 +107,4 @@ The closed-source products were checked only partly; each note lists what was ve
 
 ## What is decided
 
-ADR 0044 to 0053 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).
+ADR 0044 to 0054 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).

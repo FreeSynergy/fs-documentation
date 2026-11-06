@@ -32,7 +32,7 @@ Keeping these apart prevents much confusion:
 
 | Topic | What it is for | Standard base | Owner | Status |
 |-------|----------------|---------------|---------|--------|
-| Messages | Saying something to someone | AS2, MIMI, JMAP Mail | `fs-messenger` | Draft contract |
+| Messages | Saying something to someone, [AIs included](../programs/apps/assistant/index.md) | AS2, MIMI, JMAP Mail, MCP and ACP for agents | `fs-messenger` | Draft contract |
 | People | Knowing who someone is and how to reach them, with [roles](roles.md) | JSContact | `fs-people` | Core exists |
 | Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | `fs-groups` | Planned |
 | Events | Being somewhere at some time | JSCalendar `Event` | `fs-calendar` | Core exists |
@@ -44,7 +44,6 @@ Keeping these apart prevents much confusion:
 | Places | Knowing where | GeoJSON | `fs-maps` | Core exists |
 | Decisions | Asking, and deciding together | AS2 `Question`; gap beyond it | `fs-surveys` | Planned |
 | Boards | Thinking visually | Gap, own specification | `fs-whiteboard` | Planned |
-| Conversations with AI | Asking, and working together with AI | MCP, ACP | [`fs-assistant`](../programs/apps/assistant/index.md) | Idea |
 | Live media | Showing something as it happens | WHIP, WHEP, enhanced RTMP | `fs-streaming` | Planned |
 
 ## Providers: who delivers it

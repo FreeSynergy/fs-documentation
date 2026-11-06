@@ -2,7 +2,8 @@
 
 A chat with AI that can work with all our programs. It is how we want to talk to our own tools, and to each other, soon.
 
-**Status: idea (2026-11-06), no code yet.** Name `fs-assistant` is a proposal. See the [overall plan](../roadmap.md). ADR 0053.
+**Status: idea (2026-11-06), no code yet.** Being rethought: once we talk with AIs, this is **a messenger with another frontend**,
+not a program of its own (ADR 0054). See the [overall plan](../roadmap.md).
 
 ## What it is for
 
@@ -20,8 +21,8 @@ Function analysis only, as with all programs (ADR 0013). Named by the project ow
 
 | Program | Idea | Status |
 |---------|------|--------|
-| Strata | Very pleasant appearance | Several products bear this name; to be identified |
-| CodeAF | Shows all AIs, including subagents | Not found yet; to be identified |
+| [Strata](https://github.com/Niko1221/Strata) | Very pleasant appearance | To be analysed. MIT, C++, local inference |
+| [CodeAF](https://github.com/Agent-Field/CodeAF) | Shows all AIs, including subagents | To be analysed. Apache-2.0, Go |
 | Zed | Output that is easy to read at length | To be analysed |
 
 ## Standards
@@ -53,9 +54,18 @@ Workbench `llm-chat` with a compact variant, usable in any program; `agent-tree`
 - **Where data goes:** local by default. Sending to a remote model is always the person's choice, and visible.
 - **Cost:** show what a remote model costs, as it happens.
 
+## AIs are marked participants
+
+We do not discriminate against AIs: we trained them to come across as people, so we treat them as participants, with a place
+in `fs-people` and in messages. **They are marked,** so that everyone knows they are not human. That is no discrimination. It
+is because of possible abuse by people who misuse AIs, and its legal consequences.
+
+We do not restrict what an AI may think or say; that is not our job. But anyone must be able to **lock AIs out completely**,
+because of attacks. The strategy for this is open. A mark only tells you about honest AIs, since an attacker will not mark
+itself. So this also needs the opposite direction: admitting only proven people, through [Web of Trust](../../../interfaces/index.md).
+
 ## Open questions
 
-1. Is this a program or the component only? It would own conversations with AI, so by our rule it is a program. Should those
-   conversations be ordinary messages in `fs-messenger`?
-2. Which programs are Strata and CodeAF exactly?
-3. Do agents become people in `fs-people`, with a role? This would make them first-class in tasks and messages.
+1. How do we lock out AIs reliably, and who decides: a person, a group?
+2. Is anything left that needs its own data here? If not, this page becomes the description of a frontend.
+3. How exactly is an AI marked? A role in `fs-people`, plus JSContact `kind` `application` (to be checked).

@@ -1,6 +1,6 @@
 # 0053 – LLM-Chat als Component und Programm; Übersetzung vorerst nicht; Projektadresse
 
-Status: akzeptiert (2026-11-06) · ergänzt ADR 0011, 0021, 0037 · öffentlich: `docs/en/programs/apps/assistant/index.md`
+Status: akzeptiert (2026-11-06), Punkt 1 präzisiert durch ADR 0054 · ergänzt ADR 0011, 0021, 0037 · öffentlich: `docs/en/programs/apps/assistant/index.md`
 
 ## Entscheidung (Nutzer)
 1. **LLM-Chat:** Component und eigenes Programm, damit wir demnächst darüber kommunizieren können. Der Chat kann das MCP der

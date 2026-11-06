@@ -61,6 +61,12 @@ a game.
 
 Every program runs on its own. Together, they share the work.
 
+## People, and AIs
+
+We trained AIs to come across as people. So we treat them as participants and do not discriminate against them. We do mark
+them, so everyone knows who they are talking to: because people can misuse them, not because they are worth less. We do not
+restrict them. And anyone can lock them out, if they want to.
+
 ## Where this leads
 
 - [The overall plan](programs/apps/roadmap.md)
