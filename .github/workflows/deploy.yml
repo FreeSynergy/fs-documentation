@@ -8,6 +8,11 @@ on:
     branches:
       - main
 
+# Two sessions push often: a newer deploy replaces a running one instead of failing on it.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
