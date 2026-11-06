@@ -47,7 +47,7 @@ under ADR 0029. This is off by default and explained before it is switched on.
 | Read metadata | `kamadak-exif` 0.6 or `nom-exif` 3.8 (also reads video metadata, to be checked) |
 | Modern formats | `ravif` 0.13, `jxl-oxide` 0.12 |
 
-Video posters need a decoder, which raises the same question as [streaming](../streaming/design.md#stage-2-is-the-hard-part).
+Video posters need a decoder, which raises the same question as [streaming](../streaming/design.md#encoding).
 For that reason, video posters are not in stage 1.
 
 ## Interface sketch

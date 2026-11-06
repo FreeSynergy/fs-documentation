@@ -72,6 +72,20 @@ nav:
   - en/programs/platform/identity: en/programs/platform/identity.md
   - en/programs/platform/releases: en/programs/platform/releases.md
   - en/manifesto: en/manifesto.md
+  - de/manifesto: de/manifesto.md
+  - de/interfaces/: de/interfaces/index.md
+  - de/interfaces/roles: de/interfaces/roles.md
+  - de/programs/apps/roadmap: de/programs/apps/roadmap.md
+  - de/programs/apps/tasks/: de/programs/apps/tasks/index.md
+  - de/programs/apps/history/: de/programs/apps/history/index.md
+  - de/programs/apps/resources/: de/programs/apps/resources/index.md
+  - de/programs/apps/files/: de/programs/apps/files/index.md
+  - de/programs/apps/surveys/: de/programs/apps/surveys/index.md
+  - de/programs/platform/groups: de/programs/platform/groups.md
+  - de/programs/platform/identity: de/programs/platform/identity.md
+  - de/programs/platform/releases: de/programs/platform/releases.md
+  - de/components/charts: de/components/charts.md
+  - de/components/planned: de/components/planned.md
   - en/interfaces/: en/interfaces/index.md
   - en/interfaces/roles: en/interfaces/roles.md
   - en/components/charts: en/components/charts.md
