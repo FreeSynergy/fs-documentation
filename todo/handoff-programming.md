@@ -47,6 +47,15 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 - **Video:** nur offene Formate (AV1, Opus); keinen eigenen H.264-Encoder, kein eigenes OpenH264.
 - Zurückgestellt: Zusammenführen, Details Speichern/Export, eigenständige Ansichten.
 
+## Release-Werkzeuge (Nutzer, 2026-11-06)
+- Repo **`fs-release`**: gemeinsame Workflows (CI + Release), getestet an capnp-compiler und fs-hub.
+- **Nur Kostenloses:** Linux (deb, rpm, tar.gz, AppImage, Flatpak, Arch), Windows (msi, exe, zip, unsigniert),
+  macOS universal `.dmg` **unsigniert** (Apple bekommt kein Geld; gespendetes Konto wäre ok), Android über **F-Droid**,
+  iOS nur bauen. Releases nur als **Entwurf**, öffentlich erst, wenn es etwas bringt.
+- Signatur: **GPG/OpenPGP** (offener Standard, native Paketsignatur); SBOM **SPDX**; Herkunft **SLSA**; SemVer.
+- Erstes Blinc-Programm auf Android/iOS testet Blincs Mobil-Teil — Fehler per PR zurück an den Autor.
+- **SignPath (Windows-Signatur, kostenlos für OSS): Nutzer am 2026-11-13 erneut fragen.**
+
 ## Regeln, die man leicht vergisst
 - Abhängigkeiten zwischen Repos nur über Git-Tags (coding.md §8); Probe: frischer Klon nach /tmp baut.
 - Vor jedem Commit: `cargo fmt --check` (ohne --all), clippy -D warnings (pedantic), Tests,
