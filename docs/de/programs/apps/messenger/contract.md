@@ -1,8 +1,7 @@
 # Messenger — Vertrag (Entwurf 0.1)
 
 Die Schnittstelle zwischen `fs-messenger` und jedem Frontend (ADR 0021). **Entwurf**; kompiliert mit `capnpc-embedded` 0.2.0 (capnp 1.4.0) + `capnpc` 0.23 (2026-11-05) — ohne C++-Toolchain (ADR 0040).
-Die Schema-Datei liegt vorerst im Docs-Repository unter `temp/contracts/messenger.capnp`; sie zieht in
-das Repository `fs-messenger` um, sobald dieses existiert (ADR 0017).
+Die Schema-Datei liegt im Schnittstellen-Repository: [`schema/messenger.capnp`](https://github.com/FreeSynergy/fs-interfaces/blob/main/schema/messenger.capnp) in `fs-interfaces` (ADR 0045); Besitzer ist `fs-messenger`.
 
 ## Warum Cap'n Proto zu unserer Idee von Fähigkeiten passt
 
