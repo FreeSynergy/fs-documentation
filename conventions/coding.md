@@ -55,6 +55,6 @@ No pattern for its own sake: pick the one that makes the code reusable and testa
 - Examples in `examples/` for every public entry point.
 
 ## 7. Quality gates (before every commit)
-`cargo fmt` · `cargo clippy --all-targets -- -D warnings` (with `clippy::pedantic` as warn) ·
+`cargo fmt --check` (**ohne** `--all` — `--all` prüft auch Pfad-Abhängigkeiten anderer Repos) · `cargo clippy --all-targets -- -D warnings` (with `clippy::pedantic` as warn) ·
 `cargo test` · `scripts/check_rust_rules.py` (file length, module docs, pattern line) ·
 Rust hygiene (ADR 0041).

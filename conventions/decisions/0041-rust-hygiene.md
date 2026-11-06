@@ -17,3 +17,4 @@ aufgeräumt werden — das wird später noch wichtig (viele Repos, ADR 0017).
 4. **Immer aufräumen:** `scripts/clean_rust.py` entfernt inkrementelle Caches und alte Debug-Builds
    in allen Repos unter `/srv/FreeSynergy` (Trockenlauf ohne `--apply`). **Nach jeder Arbeitssitzung
    mit Rust ausführen**; bei Bedarf Größengrenze `--max-gb`.
+5. `--all` (alle `target/`-Ordner) **nur, wenn kein Build mehr läuft** — sonst reißt man laufenden Agenten den Build weg (passiert 2026-11-06). Im laufenden Betrieb `--root <repo>` verwenden.
