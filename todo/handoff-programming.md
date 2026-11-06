@@ -31,6 +31,22 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
    bestehende Kerne werden Anbieter davon (ADR 0045).
 4. Sichtbarer Teil: Wiki-Workbench auf Blinc (zeigt fs-documentation), dann Groupware-Suite.
 
+## Neue Vorgaben (Nutzer über die Entscheidungs-Sitzung, 2026-11-06)
+- **Repo `fs-interfaces`** enthält alle Verträge + erzeugten Code (mit unserem `capnp-compiler`); Programme beziehen
+  Verträge nur von dort (Git-Tag).
+- **Anbieter-Regel (ADR 0045, geändert):** wie eine Elternklasse — jeder Anbieter bietet **alle** Methoden und Attribute;
+  erst einen Weg suchen, nur wenn wirklich unmöglich: ausdrücklich `Unsupported` (Trait-Standardmethode). Jeder
+  Anbieter meldet, was er kann.
+- **Alles Bestehende gegen den Schnittstellen-Katalog umbauen**, Reihenfolge: **people** → groups, files → Rest;
+  immer erst den Schnittstellen-Entwurf, dann Code. `fs-people`: **noch keine Rollen** (wartet auf den Nutzer).
+- **`fs-jscalendar`:** nur gemeinsame Typen (kein Programm, keine Daten); fs-calendar/fs-tasks entdoppeln; Aufgaben aus
+  **jedem** Import-Format an fs-tasks weitergeben. Zweiter Nutzer für `TaskItems`: erstes Aufgaben-Frontend oder CLI
+  (Kanban ist eine Ansicht von fs-tasks, ADR 0049).
+- **Plugins** nach Vorbild Zentinel (`crates/agent-protocol`, Hot-Reload in FreeSynergy/zentinel): reine Konfiguration
+  geprüft und atomar getauscht; sonst abgeschottete Agenten-Prozesse, bei uns mit Cap'n Proto.
+- **Video:** nur offene Formate (AV1, Opus); keinen eigenen H.264-Encoder, kein eigenes OpenH264.
+- Zurückgestellt: Zusammenführen, Details Speichern/Export, eigenständige Ansichten.
+
 ## Regeln, die man leicht vergisst
 - Abhängigkeiten zwischen Repos nur über Git-Tags (coding.md §8); Probe: frischer Klon nach /tmp baut.
 - Vor jedem Commit: `cargo fmt --check` (ohne --all), clippy -D warnings (pedantic), Tests,
