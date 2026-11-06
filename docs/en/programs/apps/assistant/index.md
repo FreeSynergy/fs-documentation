@@ -220,6 +220,26 @@ is because of possible abuse by people who misuse AIs, and its legal consequence
 
 We do not restrict what an AI may think or say; that is not our job. But anyone must be able to **lock AIs out completely**.
 
+## AIs in conversations
+
+**Status: decided by the project owner (2026-11-06), not built yet (ADR 0054).**
+
+- **An AI is a participant like a person:** its own key, its own rights, which can be limited or not. This includes AIs at a
+  provider, such as Claude. "Encrypted only" stays without exception, and there is no second mode.
+- **A small program holds the key,** run by the AI's operator, because a model at a provider cannot keep anything. From there the
+  text goes to the provider. So the lock alone is not enough, and the conversation says so: "Claude reads along, the text goes to Anthropic."
+- **The notice comes before the AI enters.** An AI must not read afterwards what was written before everyone knew.
+- **Everyone must agree.** If one person present does not agree, the AI stays out. The right to invite is not enough here.
+- **Anyone joining later must accept the AI too.** If they do not, they stay out until the AI has left.
+- **An AI gets no history from before it entered.**
+
+**What this cannot do:** only our engine can enforce this. In a Matrix room with other programs, someone can invite an AI without
+our program being able to stop it, so all we can do is warn you and offer to leave. Mail has no entering, so there is no agreement
+either. And a person can always pass text on by hand, or through an AI that is not marked.
+
+**Still open:** whether this also applies to AIs on your own device or server, and what happens when someone withdraws their
+agreement.
+
 ## Locking AIs out
 
 **Status: agreed for now by the project owner (2026-11-06), may change when it becomes important (ADR 0054).**

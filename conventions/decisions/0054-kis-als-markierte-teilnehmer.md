@@ -62,6 +62,32 @@ Die Antwort trägt Nachricht, Aufruf, Revision und Digest des gezeichneten Stand
 - **Grenze:** Eine Markierung schützt nur vor ehrlichen KIs. Wer angreift, markiert sich nicht. Deshalb gilt die umgekehrte
   Richtung: Durch kommt nur, für wen die eigene Stufe reicht.
 
+## KIs in Unterhaltungen (Entscheidung des Nutzers, 2026-11-06)
+1. **Eine KI ist Teilnehmer wie eine Person:** eigener Schlüssel, eigene Rechte, die man einschränken kann oder nicht. Auch KIs bei
+   einem Anbieter wie Claude. Ende-zu-Ende reicht bis zu ihrem Programm; die Sperre „nur verschlüsselt“ (ADR 0018) bleibt ohne Ausnahme.
+2. **Den Schlüssel hält ein Programm** dazwischen, das der Betreiber betreibt, weil ein Modell bei einem Anbieter nichts verwahren
+   kann. Ab dort geht der Text an den Anbieter. Das wird genannt („Claude liest mit, der Text geht an Anthropic“); das Schloss allein reicht nicht.
+3. **Der Hinweis kommt, bevor die KI die Unterhaltung betritt,** nicht erst vor der ersten Nachricht danach.
+4. **Alle müssen zustimmen.** Sagt einer der Anwesenden nicht zu, kommt die KI nicht hinein. Ein Einladungsrecht allein genügt
+   hier nicht; das ist der eine Unterschied zu einer Person.
+5. **Wer später kommt, muss die KI ebenfalls annehmen.** Sonst kommt die Person nicht hinein, bis die KI draußen ist.
+
+Vom Nutzer begründet: Eine KI darf nicht nachträglich lesen, was geschrieben wurde, bevor alle Bescheid wussten. Daraus folgt für uns:
+**Eine KI bekommt keinen Verlauf von vor ihrem Eintritt.**
+
+### Technik (gelesen, nicht ausprobiert)
+- **MLS (RFC 9420):** Ein neues Mitglied startet mit den Schlüsseln der neuen Epoche und liest nur neue Nachrichten. Das gilt ohne unser Zutun, solange niemand alte Nachrichten nachreicht.
+- **Matrix (v1.19):** Bei `history_visibility` `shared` kann ein Neuer alte Nachrichten bekommen; Clients können ihm dafür die Schlüssel geben (`shared_history`). Unser Konnektor gibt einer KI diese Schlüssel nicht.
+
+### Grenzen
+- **Durchsetzen kann das nur unsere Engine.** In einem Matrix-Raum mit fremden Programmen (z. B. Element) kann jemand eine KI einladen, ohne dass wir das verhindern. Wir können dort nur warnen und anbieten, den Raum zu verlassen. Bei Mail gibt es keinen Eintritt, also auch keine Zustimmung.
+- **Es trifft nur markierte KIs.** Ein Mensch kann Text weiterhin von Hand oder über eine unmarkierte KI weitergeben.
+
+### Offen
+- Gilt das auch für KIs auf dem eigenen Gerät oder Server? Vorschlag: ja, weil die anderen den Standort nicht prüfen können.
+- Was passiert, wenn jemand die Zustimmung zurückzieht? Vorschlag: Die KI muss hinaus.
+- Große oder öffentliche Gruppen: Eine einzige Absage genügt. Vorschlag: so lassen, dort gibt es dann eben keine KI.
+
 ## Folgen
 - ADR 0053 Punkt 1 wird dadurch präzisiert: LLM-Chat bleibt Component und Frontend; ein eigenes Programm nur, falls sich zeigt, dass
   es eigene Daten hat.
