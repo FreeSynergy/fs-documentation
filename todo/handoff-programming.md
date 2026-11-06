@@ -23,7 +23,7 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
 | fs-capnpc (crate capnp-compiler) | Cap'n-Proto-Compiler in reinem Rust, 14/14 Orakel | 30 | v0.1.0 |
 
 ## Offene Aufgaben (Reihenfolge)
-1. `capnp-compiler` auf crates.io veröffentlichen — wartet auf bestätigte E-Mail des Nutzers; dann `cargo publish` in fs-capnpc.
+1. ✅ `capnp-compiler` **0.1.1 auf crates.io** (2026-11-06); signierter Release-Entwurf v0.1.1 (26 Dateien, GPG geprüft).
 2. ✅ `Task` in fs-tasks umgezogen (2026-11-06), Kalender nutzt nur `TaskItems`, Hub auf Kalender v0.2.0.
    **Offen:** fs-tasks enthält Kopien von Zeit/Zonen, `Participant`, `RecurrenceRule`, ICS-Zerleger aus fs-calendar
    (Doppelung, ADR 0043 §4) → gemeinsame JSCalendar-Basis-Crate? Entscheidung liegt bei der Entscheidungs-Sitzung.
@@ -61,6 +61,9 @@ Für eine neue Sitzung, die programmiert. Zuerst lesen: `conventions/CONVENTIONS
   iOS nur bauen. Releases nur als **Entwurf**, öffentlich erst, wenn es etwas bringt.
 - Signatur: **GPG/OpenPGP** (offener Standard, native Paketsignatur); SBOM **SPDX**; Herkunft **SLSA**; SemVer.
 - Erstes Blinc-Programm auf Android/iOS testet Blincs Mobil-Teil — Fehler per PR zurück an den Autor.
+- **Signaturschlüssel:** `FreeSynergy Release <support@freesynergy.net>`, Ed25519, Fingerabdruck `C40F0FBA5C4CF71D7BEBB5C65478A4738FFEEB69`, bis 2029-11-05. Privater Teil + Passphrase + Widerrufszertifikat **nur** in `~/FreeSynergy-release-key/` (Nutzer sichert offline). Secrets `GPG_PRIVATE_KEY`/`GPG_PASSPHRASE` je Repo (Org-Secret braucht admin:org). Öffentlicher Teil: `fs-release/release-signing-key.asc`. Nicht auf Keyservern.
+- **Projekt-Adresse überall:** `support@freesynergy.net` (Cargo `authors`, SECURITY.md, Paket-Metadaten).
+- **GitHub-Fehler beseitigt (2026-11-06):** Doku-Deploy (veraltete Nav + gleichzeitige Deploys → `concurrency`), fs-release lint (SC2015), kanidm: Sync nur manuell (GITHUB_TOKEN darf keine Workflow-Dateien pushen; optional `SYNC_TOKEN`), Upstream-CI im Fork deaktiviert, `dependabot.yml` entfernt; keine aktiven zeitgesteuerten Workflows mehr.
 - **Stand:** fs-release erster Lauf grün an fs-capnpc (`v0.1.1-rc.5`, Entwurf): tar.gz, deb, rpm, Arch, msi, zip, SPDX, Prüfsummen. Offen: GPG-Schlüssel (Adresse vom Nutzer), fs-hub anbinden, AppImage/exe/dmg/Flatpak mit der ersten App.
 - **SignPath (Windows-Signatur, kostenlos für OSS): Nutzer am 2026-11-13 erneut fragen.**
 
