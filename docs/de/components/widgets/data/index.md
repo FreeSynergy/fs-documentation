@@ -11,7 +11,12 @@ Elemente, die Daten darstellen: Listen, Tabellen, Raster, Bäume, Zeitachsen und
 - [**chart**](./chart/) – Ein Chart ist eine Datenvisualisierung (Diagramme).
 - [**description-list**](./description-list/) – Eine Beschreibungsliste zeigt Wertpaare aus Bezeichnung und Wert — die Detailansicht eines Datensatzes.
 - [**grid-view**](./grid-view/) – Grid View ist eine Karten/Raster-Darstellung von Elementen.
+- [**link-preview**](./link-preview/) – Eine Linkvorschau ist eine Vorschaukarte für einen Link, die vom **Absender** erzeugt und an die Nachricht angehängt wird.
 - [**list-view**](./list-view/) – Eine List View ist eine einfache Listenansicht von Elementen.
+- [**mail-view**](./mail-view/) – Eine Mailansicht zeigt eine E-Mail: Kopf (Von, An, Cc, Betreff, Datum), Text als Klartext oder HTML, Anhänge sowie den Signatur- und Verschlüsselungsstatus.
+- [**message-bubble**](./message-bubble/) – Eine Nachrichtenblase zeigt eine Chatnachricht mit Absender, Inhalt, Antwortbezug, Reaktionen, Zustellstatus und Verschlüsselung.
+- [**message-list**](./message-list/) – Eine Nachrichtenliste zeigt die Nachrichten einer Unterhaltung in zeitlicher Reihenfolge, unten verankert.
+- [**reaction-bar**](./reaction-bar/) – Eine Reaktionsleiste zeigt Reaktionen auf eine Nachricht als Emoji mit Anzahl und erlaubt, die eigene Reaktion umzuschalten.
 - [**repeater**](./repeater/) – Ein Repeater ist ein Wiederholtes Layout für Listen.
 - [**table**](./table/) – Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
 - [**table-of-contents**](./table-of-contents/) – Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
@@ -27,7 +32,12 @@ Elemente, die Daten darstellen: Listen, Tabellen, Raster, Bäume, Zeitachsen und
 | [chart](./chart/) | `base` | `line`, `bar`, `pie`, `doughnut`, `scatter`, `heatmap`, `radar` | - | dokumentiert |
 | [description-list](./description-list/) | `base` | `zweispaltig`, `gestapelt`, `inline` | `list` | dokumentiert |
 | [grid-view](./grid-view/) | `base` | `Fixed Grid`, `Responsive Grid`, `Masonry Grid` | - | dokumentiert |
+| [link-preview](./link-preview/) | `base` | `card`, `compact` | - | Skizze |
 | [list-view](./list-view/) | `base` | `Simple`, `With Icons`, `With Avatars`, `With Badges`, `With Actions` | - | dokumentiert |
+| [mail-view](./mail-view/) | `base` | `full`, `compact`, `source` | - | Skizze |
+| [message-bubble](./message-bubble/) | `base` | `incoming`, `own`, `compact` | - | Skizze |
+| [message-list](./message-list/) | `base` | `chat`, `thread`, `mail` | - | Skizze |
+| [reaction-bar](./reaction-bar/) | `base` | `inline`, `compact` | - | Skizze |
 | [repeater](./repeater/) | `base` | `liste`, `raster`, `eingabe` | - | dokumentiert |
 | [table](./table/) | `base` | `Simple`, `Data`, `Tree`, `Inline Edit` | - | dokumentiert |
 | [table-of-contents](./table-of-contents/) | `base` | `randspalte`, `block`, `aufklappbar` | - | dokumentiert |

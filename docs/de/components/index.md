@@ -11,9 +11,9 @@ Alle Komponenten erben von der **Basisklasse** [base](primitives/basics/base.md)
 Barrierefreiheit, Dateisatz und Namenskonvention. Eine Komponentendatei
 listet nur ihre **eigenen** Attribute.
 
-## Bänder (3) — 84 Komponenten, 10 Typgruppen
+## Bänder (3) — 97 Komponenten, 10 Typgruppen
 
-### [primitives](./primitives/) — Grundbausteine (34)
+### [primitives](./primitives/) — Grundbausteine (36)
 
 Nicht weiter zerlegbar: ein Wert, eine Geste, ein Zustand. Kein Band enthält Inhalte, die es erst zur Laufzeit bekommt.
 
@@ -25,9 +25,9 @@ Nicht weiter zerlegbar: ein Wert, eine Geste, ein Zustand. Kein Band enthält In
 
 [button](./primitives/actions/button/), [button-group](./primitives/actions/button-group/), [floating-action-button](./primitives/actions/floating-action-button/)
 
-#### [feedback](./primitives/feedback/) — Rückmeldung (7)
+#### [feedback](./primitives/feedback/) — Rückmeldung (9)
 
-[alert](./primitives/feedback/alert/), [badge](./primitives/feedback/badge/), [empty-state](./primitives/feedback/empty-state/), [progress](./primitives/feedback/progress/), [skeleton](./primitives/feedback/skeleton/), [spinner](./primitives/feedback/spinner/), [toast](./primitives/feedback/toast/)
+[alert](./primitives/feedback/alert/), [badge](./primitives/feedback/badge/), [empty-state](./primitives/feedback/empty-state/), [encryption-state](./primitives/feedback/encryption-state/), [message-status](./primitives/feedback/message-status/), [progress](./primitives/feedback/progress/), [skeleton](./primitives/feedback/skeleton/), [spinner](./primitives/feedback/spinner/), [toast](./primitives/feedback/toast/)
 
 #### [fields](./primitives/fields/) — Felder (18)
 
@@ -37,7 +37,7 @@ Nicht weiter zerlegbar: ein Wert, eine Geste, ein Zustand. Kein Band enthält In
 
 [icon](./primitives/media/icon/), [image](./primitives/media/image/)
 
-### [widgets](./widgets/) — Bausteine mit bekanntem Inhalt (45)
+### [widgets](./widgets/) — Bausteine mit bekanntem Inhalt (53)
 
 Kennt seine Inhalte beim Bauen: bindet ein bekanntes Datenmodell, hat endliche Kinder und eigenen Zustand.
 
@@ -49,37 +49,37 @@ Kennt seine Inhalte beim Bauen: bindet ein bekanntes Datenmodell, hat endliche K
 
 [accordion](./widgets/containers/accordion/), [card](./widgets/containers/card/), [panel](./widgets/containers/panel/), [scroll-area](./widgets/containers/scroll-area/), [split-view](./widgets/containers/split-view/), [wizard](./widgets/containers/wizard/)
 
-#### [overlays](./widgets/overlays/) — Overlays (7)
+#### [overlays](./widgets/overlays/) — Overlays (8)
 
-[alert-dialog](./widgets/overlays/alert-dialog/), [context-menu](./widgets/overlays/context-menu/), [drawer](./widgets/overlays/drawer/), [hover-card](./widgets/overlays/hover-card/), [modal](./widgets/overlays/modal/), [popover](./widgets/overlays/popover/), [tooltip](./widgets/overlays/tooltip/)
+[alert-dialog](./widgets/overlays/alert-dialog/), [context-menu](./widgets/overlays/context-menu/), [drawer](./widgets/overlays/drawer/), [hover-card](./widgets/overlays/hover-card/), [key-verification](./widgets/overlays/key-verification/), [modal](./widgets/overlays/modal/), [popover](./widgets/overlays/popover/), [tooltip](./widgets/overlays/tooltip/)
 
-#### [fields](./widgets/fields/) — Felder (5)
+#### [fields](./widgets/fields/) — Felder (6)
 
-[date-picker](./widgets/fields/date-picker/), [emoji-picker](./widgets/fields/emoji-picker/), [file-upload](./widgets/fields/file-upload/), [range-calendar](./widgets/fields/range-calendar/), [time-picker](./widgets/fields/time-picker/)
+[date-picker](./widgets/fields/date-picker/), [emoji-picker](./widgets/fields/emoji-picker/), [file-upload](./widgets/fields/file-upload/), [range-calendar](./widgets/fields/range-calendar/), [rule-editor](./widgets/fields/rule-editor/), [time-picker](./widgets/fields/time-picker/)
 
-#### [data](./widgets/data/) — Daten (11)
+#### [data](./widgets/data/) — Daten (16)
 
-[avatar](./widgets/data/avatar/), [calendar-view](./widgets/data/calendar-view/), [chart](./widgets/data/chart/), [description-list](./widgets/data/description-list/), [grid-view](./widgets/data/grid-view/), [list-view](./widgets/data/list-view/), [repeater](./widgets/data/repeater/), [table](./widgets/data/table/), [table-of-contents](./widgets/data/table-of-contents/), [timeline](./widgets/data/timeline/), [tree-view](./widgets/data/tree-view/)
+[avatar](./widgets/data/avatar/), [calendar-view](./widgets/data/calendar-view/), [chart](./widgets/data/chart/), [description-list](./widgets/data/description-list/), [grid-view](./widgets/data/grid-view/), [link-preview](./widgets/data/link-preview/), [list-view](./widgets/data/list-view/), [mail-view](./widgets/data/mail-view/), [message-bubble](./widgets/data/message-bubble/), [message-list](./widgets/data/message-list/), [reaction-bar](./widgets/data/reaction-bar/), [repeater](./widgets/data/repeater/), [table](./widgets/data/table/), [table-of-contents](./widgets/data/table-of-contents/), [timeline](./widgets/data/timeline/), [tree-view](./widgets/data/tree-view/)
 
-#### [media](./widgets/media/) — Medien (5)
+#### [media](./widgets/media/) — Medien (6)
 
-[audio](./widgets/media/audio/), [video](./widgets/media/video/), [media-player](./widgets/media/media-player/), [carousel](./widgets/media/carousel/), [gallery](./widgets/media/gallery/)
+[audio](./widgets/media/audio/), [video](./widgets/media/video/), [media-player](./widgets/media/media-player/), [call-controls](./widgets/media/call-controls/), [carousel](./widgets/media/carousel/), [gallery](./widgets/media/gallery/)
 
 #### [special](./widgets/special/) — Spezielle Elemente (1)
 
 [map-view](./widgets/special/map-view/)
 
-### [workbenches](./workbenches/) — Offene Arbeitsflaechen (5)
+### [workbenches](./workbenches/) — Offene Arbeitsflaechen (8)
 
 Erhält seinen Inhalt erst zur Laufzeit: offene Fläche, die selbst primitives und widgets aufnehmen darf.
 
-#### [fields](./workbenches/fields/) — Felder (1)
+#### [fields](./workbenches/fields/) — Felder (2)
 
-[rich-text-editor](./workbenches/fields/rich-text-editor/)
+[block-editor](./workbenches/fields/block-editor/), [rich-text-editor](./workbenches/fields/rich-text-editor/)
 
-#### [special](./workbenches/special/) — Spezielle Elemente (4)
+#### [special](./workbenches/special/) — Spezielle Elemente (6)
 
-[code-editor](./workbenches/special/code-editor/), [dashboard](./workbenches/special/dashboard/), [embed](./workbenches/special/embed/), [whiteboard](./workbenches/special/whiteboard/)
+[code-editor](./workbenches/special/code-editor/), [dashboard](./workbenches/special/dashboard/), [embed](./workbenches/special/embed/), [html-view](./workbenches/special/html-view/), [message-composer](./workbenches/special/message-composer/), [whiteboard](./workbenches/special/whiteboard/)
 
 ## Was ist hier dokumentiert?
 

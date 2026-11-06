@@ -24,6 +24,7 @@ As with all components, gestures are not part of them; they come from the fronte
 | **Surveys** | workbenches `survey-builder`, `survey-form`; widgets `question`, `matrix-question`, `ranking-list` | `field`, `radio-group`, `checkbox`, `rating`, `slider`, `date-input`, `wizard`, `progress`, `chart`, `table` |
 | **Files (gallery)** | workbench `gallery-browser` | `lightbox`, `carousel`, `image`, `video`, `map-view`, `timeline`, `description-list`; **change** `gallery`: large collections, virtual scrolling, grouping by date |
 | **Whiteboard** | widgets `infinite-canvas`, `selection-handles`, `minimap`, `presence-cursors` | `toolbar`, `color-input`, `slider`, `tree-view` (layers), `popover`, `image`; **rework** workbench `whiteboard`: English variant names, compact variant |
+| **Assistant** | workbench `llm-chat`; widgets `agent-tree`, `tool-call` | `message-list`, `message-composer`, long-text view on our text core |
 | **Streaming** | workbench `stream-studio`; widgets `stream-tile`, `level-meter` | `audio`, `video`, `call-controls`, `grid-view`, `message-list`, `badge` (live); **change** `media-player`: live mode |
 
 ## Blinc as the base

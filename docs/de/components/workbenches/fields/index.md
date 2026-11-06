@@ -6,12 +6,14 @@ Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei 
 
 ## Elemente
 
+- [**block-editor**](./block-editor/) – Der Blockeditor bearbeitet strukturierte Dokumente als Baum aus Blöcken (wie Notion).
 - [**rich-text-editor**](./rich-text-editor/) – Ein Rich Text Editor ist ein Editor für formatierten Text.
 
 ## Steckbriefe
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
+| [block-editor](./block-editor/) | `base` | `edit`, `read`, `template` | - | Skizze |
 | [rich-text-editor](./rich-text-editor/) | `base`, `textarea` | `wysiwyg`, `wiki-syntax` | - | dokumentiert |
 
 ## Siehe auch

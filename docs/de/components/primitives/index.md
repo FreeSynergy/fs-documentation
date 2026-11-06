@@ -2,7 +2,7 @@
 
 Nicht weiter zerlegbar: ein Wert, eine Geste, ein Zustand. Kein Band enthält Inhalte, die es erst zur Laufzeit bekommt. Testfrage: *nicht weiter zerlegbar*.
 
-## Typgruppen (5) — 34 Komponenten
+## Typgruppen (5) — 36 Komponenten
 
 ### [basics](./basics/) — Grundlagen (4)
 
@@ -16,11 +16,11 @@ Action-Elemente lösen eine einzelne Handlung aus oder bündeln zusammengehörig
 
 [button](./actions/button/), [button-group](./actions/button-group/), [floating-action-button](./actions/floating-action-button/)
 
-### [feedback](./feedback/) — Rückmeldung (7)
+### [feedback](./feedback/) — Rückmeldung (9)
 
 Elemente, die den Zustand einer Anwendung sichtbar machen: Meldungen, Fortschritt, Ladezustände und Kennzeichnungen.
 
-[alert](./feedback/alert/), [badge](./feedback/badge/), [empty-state](./feedback/empty-state/), [progress](./feedback/progress/), [skeleton](./feedback/skeleton/), [spinner](./feedback/spinner/), [toast](./feedback/toast/)
+[alert](./feedback/alert/), [badge](./feedback/badge/), [empty-state](./feedback/empty-state/), [encryption-state](./feedback/encryption-state/), [message-status](./feedback/message-status/), [progress](./feedback/progress/), [skeleton](./feedback/skeleton/), [spinner](./feedback/spinner/), [toast](./feedback/toast/)
 
 ### [fields](./fields/) — Felder (18)
 

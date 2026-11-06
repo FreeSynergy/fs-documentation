@@ -2,7 +2,7 @@
 
 Kennt seine Inhalte beim Bauen: bindet ein bekanntes Datenmodell, hat endliche Kinder und eigenen Zustand. Testfrage: *kennt seine Inhalte beim Bauen*.
 
-## Typgruppen (7) — 45 Komponenten
+## Typgruppen (7) — 53 Komponenten
 
 ### [navigation](./navigation/) — Navigation (10)
 
@@ -16,29 +16,29 @@ Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, aufklappbare G
 
 [accordion](./containers/accordion/), [card](./containers/card/), [panel](./containers/panel/), [scroll-area](./containers/scroll-area/), [split-view](./containers/split-view/), [wizard](./containers/wizard/)
 
-### [overlays](./overlays/) — Overlays (7)
+### [overlays](./overlays/) — Overlays (8)
 
 Elemente, die über anderem Inhalt erscheinen und eigenen Fokus bekommen. Sie haben eine eigene Lebensdauer und schließen mit `Esc` oder Klick außerhalb.
 
-[alert-dialog](./overlays/alert-dialog/), [context-menu](./overlays/context-menu/), [drawer](./overlays/drawer/), [hover-card](./overlays/hover-card/), [modal](./overlays/modal/), [popover](./overlays/popover/), [tooltip](./overlays/tooltip/)
+[alert-dialog](./overlays/alert-dialog/), [context-menu](./overlays/context-menu/), [drawer](./overlays/drawer/), [hover-card](./overlays/hover-card/), [key-verification](./overlays/key-verification/), [modal](./overlays/modal/), [popover](./overlays/popover/), [tooltip](./overlays/tooltip/)
 
-### [fields](./fields/) — Felder (5)
+### [fields](./fields/) — Felder (6)
 
 Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
 
-[date-picker](./fields/date-picker/), [emoji-picker](./fields/emoji-picker/), [file-upload](./fields/file-upload/), [range-calendar](./fields/range-calendar/), [time-picker](./fields/time-picker/)
+[date-picker](./fields/date-picker/), [emoji-picker](./fields/emoji-picker/), [file-upload](./fields/file-upload/), [range-calendar](./fields/range-calendar/), [rule-editor](./fields/rule-editor/), [time-picker](./fields/time-picker/)
 
-### [data](./data/) — Daten (11)
+### [data](./data/) — Daten (16)
 
 Elemente, die Daten darstellen: Listen, Tabellen, Raster, Bäume, Zeitachsen und Diagramme. Sie bearbeiten Werte, sondern zeigen sie — zum Ändern kommen die Felder zum Einsatz.
 
-[avatar](./data/avatar/), [calendar-view](./data/calendar-view/), [chart](./data/chart/), [description-list](./data/description-list/), [grid-view](./data/grid-view/), [list-view](./data/list-view/), [repeater](./data/repeater/), [table](./data/table/), [table-of-contents](./data/table-of-contents/), [timeline](./data/timeline/), [tree-view](./data/tree-view/)
+[avatar](./data/avatar/), [calendar-view](./data/calendar-view/), [chart](./data/chart/), [description-list](./data/description-list/), [grid-view](./data/grid-view/), [link-preview](./data/link-preview/), [list-view](./data/list-view/), [mail-view](./data/mail-view/), [message-bubble](./data/message-bubble/), [message-list](./data/message-list/), [reaction-bar](./data/reaction-bar/), [repeater](./data/repeater/), [table](./data/table/), [table-of-contents](./data/table-of-contents/), [timeline](./data/timeline/), [tree-view](./data/tree-view/)
 
-### [media](./media/) — Medien (5)
+### [media](./media/) — Medien (6)
 
 Elemente, die Medien wiedergeben oder darstellen. `media-player` ist die Elternklasse von `audio` und `video`.
 
-[audio](./media/audio/), [video](./media/video/), [media-player](./media/media-player/), [carousel](./media/carousel/), [gallery](./media/gallery/)
+[audio](./media/audio/), [video](./media/video/), [media-player](./media/media-player/), [call-controls](./media/call-controls/), [carousel](./media/carousel/), [gallery](./media/gallery/)
 
 ### [special](./special/) — Spezielle Elemente (1)
 
