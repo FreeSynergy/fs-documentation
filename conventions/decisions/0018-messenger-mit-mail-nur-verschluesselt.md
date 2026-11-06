@@ -15,6 +15,9 @@ Ich habe eine Nachricht. Die Trennung kommt aus der Technik, nicht aus dem Bedar
   fragt aktiv nach einem verschlüsselten Weg bzw. sucht ihn (Schlüssel, Gegenstelle) — die
   Menschen sollen Verschlüsselung dabei lernen. Wie mit eingehender unverschlüsselter Post
   umgegangen wird, ist offen.
+- **KIs sind davon nicht ausgenommen und nicht ausgeschlossen (2026-11-06):** Eine KI bekommt einen eigenen Schlüssel wie
+  jeder Teilnehmer, die Verschlüsselung reicht bis zu ihrem Programm. Keine Ausnahme von dieser Regel, keine zwei Modi;
+  in eine Unterhaltung kommt sie nur, wenn alle zustimmen (ADR 0054).
 
 ## Backend (entschieden 2026-11-05)
 - **Eigenes Datenmodell** (AS2-Nachricht in `fs-store`) + **Konnektoren**. Matrix ist Transport,
