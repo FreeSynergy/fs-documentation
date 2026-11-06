@@ -58,3 +58,12 @@ No pattern for its own sake: pick the one that makes the code reusable and testa
 `cargo fmt --check` (**ohne** `--all` — `--all` prüft auch Pfad-Abhängigkeiten anderer Repos) · `cargo clippy --all-targets -- -D warnings` (with `clippy::pedantic` as warn) ·
 `cargo test` · `scripts/check_rust_rules.py` (file length, module docs, pattern line) ·
 Rust hygiene (ADR 0041).
+
+## 8. Dependencies between our repos
+- Always **git dependencies with a tag**, never local paths:
+  `fs-store = { git = "https://github.com/FreeSynergy/fs-store", tag = "v0.2.0" }`.
+- A change in a shared repo → new tag → dependents bump the tag in the same step.
+- Working across repos on one machine: override temporarily with
+  `cargo test --config 'patch."https://github.com/FreeSynergy/fs-store".fs-store.path="../fs-store/crates/fs-store"'`
+  — never commit such paths (a fresh clone must build; check with a clone into `/tmp`).
+

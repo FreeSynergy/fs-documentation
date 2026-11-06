@@ -18,5 +18,5 @@ kennt keine Objektorientierung, aber Entsprechungen. Nachtbefund 2026-11-06: Dat
 6. Prüfung vor jedem Commit: fmt, clippy, Tests, `check_rust_rules.py`, Rust-Hygiene (ADR 0041).
 
 ## Folgen
-- Bestehende Repos (fs-store, fs-contacts, fs-calendar, fs-maps, fs-hub, fs-wiki, fs-capnpc) werden
+- Bestehende Repos (fs-store, fs-people, fs-calendar, fs-maps, fs-hub, fs-wiki, fs-capnpc) werden
   nach diesen Regeln umgebaut.
