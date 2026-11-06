@@ -8,5 +8,4 @@ keep their bytes here instead of building their own storage.
 - [Design](design.md): how it is built, storage backends, open questions
 - [Requirements](requirements.md): what it must do (provisional)
 
-No frontends have been analysed for this category yet. Candidates for the analysis are file managers (Nautilus,
-Dolphin, Windows Explorer, Finder) and sync services (Nextcloud Files, Seafile, Dropbox, Google Drive).
+- [Frontends](frontends/index.md): eight programs analysed for their functions (first pass)
