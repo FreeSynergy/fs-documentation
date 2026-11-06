@@ -3,7 +3,7 @@
 `FreeSynergy.History` (`fs-history`) answers: **what have I, or we, done?** It shows your own data as a timeline, whether
 for one person or for a project. This is what was first called `fs-timeline`.
 
-**Status: planned, no code yet (2026-11-06).** See the [overall plan](../roadmap.md).
+**Status: provisional draft interface, [core](https://github.com/FreeSynergy/fs-history) in progress (2026-11-06).** See the [overall plan](../roadmap.md).
 
 ## Idea
 
@@ -17,8 +17,15 @@ An **observer** of what happens. Every program already keeps an activity log (AD
 
 ## Open questions
 
-1. **Does it have its own data?** As an observer it mainly reads other programs' logs. If so, it might be a workbench and not a program.
-2. **Privacy:** personal history shows everything I did. It must stay mine unless I share it, and a group's view must
-   not show more than I agreed to. This needs care.
-3. **Time tracking:** can it be derived from history, so nobody has to fill in a form?
-4. **Which entries matter?** A log contains too much. How do we show what is meaningful?
+All answers are provisional. Details: [`DESIGN.md`](https://github.com/FreeSynergy/fs-history/blob/main/DESIGN.md).
+
+1. **Does it have its own data?** No content of its own, but a derived local index, because the hub cannot search by time, person or
+   project. So it stays a small program, not only a view.
+2. **Privacy:** it stays local. There is no sharing and no group view until the sharing interface exists. Role assignments and survey
+   answers are never read. `forget` removes an entry from this index only; the hub's log keeps it. Every delete blanks the name and context of
+   that object's entries, because an object that became sensitive arrives as a plain delete and the two cases look the same.
+3. **Time tracking:** not built.
+4. **Which entries matter?** `digest` groups changes to one object by one program within a time window.
+
+**Known limit:** the hub delivers the program as the actor and the receive time as the time. Until it passes on the originals, "person" means
+the object's `attributedTo`, so "what I edited in someone else's object" cannot be answered.
