@@ -101,3 +101,4 @@ Bekannte Fehler: Markdown-Rundreise in fs-text (Dreierketten, nebeneinanderliege
 `fs-assistant` ist kein eigenes Programm mehr, sondern ein Frontend über `messages` (ADR 0054): dort Agenten als Absender, sichtbare Werkzeug-Aufrufe und den Verweis einer Nachricht auf eine Aufgabe mitdenken (Analyse CodeAF, Seite `assistant`). Noch kein Code dafür.
 
 Der öffentliche Schlüssel liegt in `fs-release`. Vom Nutzer freigegeben und auf keys.openpgp.org hochgeladen (2026-11-06); die Adresse erscheint dort, sobald der Bestätigungslink aus der Mail an `support@freesynergy.net` geklickt ist. **Aktueller Arbeitsauftrag: `todo/sprint.md`.**
+- Thread 5 (2026-11-06): `surveys.capnp` in fs-interfaces v0.15.0 (Entwurf, vorläufig); Repo `fs-surveys` angelegt, Kern und Methoden im Bau.
