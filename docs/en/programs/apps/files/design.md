@@ -122,8 +122,9 @@ file. See [planned components](../../../components/planned.md).
 
 ## Open questions
 
-1. **Real folder or managed store?** Both must be possible. With the working copy in the database, real files are the
-   stored form. How changes from outside are picked up remains open.
+1. **Real folder or managed store?** Decided for the local folder (ADR 0055): files lie under their **real names**, because speaking
+   names are better than ids, and which names may coexist in a folder is whatever the operating system allows. Still open: how
+   changes from outside are picked up, and whether this also applies to S3. The code still uses ids until this is rebuilt.
 2. **Is a folder here the same as ADR 0037's "folder = group = mailing list"?** If so, sharing a folder would equal
    sharing with a group. This needs a decision.
 3. **Sharing model:** files, gallery, kanban and surveys all need it. We propose one shared specification rather than

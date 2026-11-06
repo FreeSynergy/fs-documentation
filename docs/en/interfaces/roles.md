@@ -30,7 +30,7 @@ once they are researched.
 | Name | Kind | Standard | Owner | State |
 |------|------|----------|-------|-------|
 | Contact, friend, acquaintance, colleague, co-worker, neighbour, family, emergency contact | Relation | vCard `RELATED` types `contact`, `friend`, `acquaintance`, `colleague`, `co-worker`, `neighbor`, `kin`, `child`, `parent`, `sibling`, `spouse`, `emergency` | `fs-people` | Standard |
-| User | Role | SCIM `User` (RFC 7643); Kanidm | Identity wrapper | Standard |
+| User | Role | SCIM `User` (RFC 7643); Kanidm | `fs-people` configures users (ADR 0055); how this relates to the identity wrapper is open | Standard |
 | Member of a group | Role | `org:Membership`, AS2 `Group`, SCIM `Group` | `fs-groups` | Standard |
 | Customer, lead, prospect | Role | ❌ none found in vCard or JSContact; so far a vendor property (`lifecycle`) | Later CRM | **Gap, own specification** |
 | AI | Marked participant, so everyone knows it is not human; names the person who hosts it (ADR 0054) | JSContact `kind` `application` (RFC 9553 §2.1.4); the link to the operator is still a gap | `fs-people` | Kind confirmed, operator open |

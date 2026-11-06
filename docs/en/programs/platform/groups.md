@@ -24,6 +24,11 @@ concept, and this program is where that concept lives. Sharing then means sharin
 | Exchange | SCIM `Group` (RFC 7643) | Only for mirroring; nesting does not carry reliably over SCIM between systems |
 | Roles, hierarchy, invitations | Gap | Own specification |
 
+## Point of truth
+
+`fs-groups` decides which groups exist and who is in them (ADR 0055). A member Kanidm has in a mirrored group but `fs-groups`
+does not is removed at the next sync.
+
 ## What we keep, what Kanidm keeps
 
 From the [Kanidm research](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/kanidm-control.md),
