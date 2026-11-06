@@ -25,3 +25,6 @@ Scope: Übersetzung und kleine Massenaufgaben. Kein Planen, keine Entscheidungen
   im Übersetzungs-Commit (passiert in `055ff056`).
 - Programme liegen jetzt unter `programs/<level>/<category>/frontends/<program>/latest/`
   (ADR 0012); `masks/` gibt es nicht mehr.
+
+## Stand 2026-11-06 (ADR 0053)
+Die 297 `needs_en`-Dateien werden **nicht** mehr übersetzt (253 offen, 44 durch Haiku erledigt). Übersetzung kommt später, von llama oder über die API. Nicht von selbst starten.

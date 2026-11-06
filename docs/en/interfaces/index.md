@@ -44,6 +44,7 @@ Keeping these apart prevents much confusion:
 | Places | Knowing where | GeoJSON | `fs-maps` | Core exists |
 | Decisions | Asking, and deciding together | AS2 `Question`; gap beyond it | `fs-surveys` | Planned |
 | Boards | Thinking visually | Gap, own specification | `fs-whiteboard` | Planned |
+| Conversations with AI | Asking, and working together with AI | MCP, ACP | [`fs-assistant`](../programs/apps/assistant/index.md) | Idea |
 | Live media | Showing something as it happens | WHIP, WHEP, enhanced RTMP | `fs-streaming` | Planned |
 
 ## Providers: who delivers it
@@ -57,7 +58,7 @@ Keeping these apart prevents much confusion:
 | Identity | Signing in, system access | Kanidm through a [wrapper](../programs/platform/identity.md), and our own fallback |
 | Codecs | Turning a picture or sound into a stream and back; outsourced, like GStreamer | Open codecs first: AV1, Opus (ADR 0048) |
 | Publishing target | Bringing a video to a platform | YouTube, Twitch, Odysee, PeerTube, others |
-| Translation, AI | Local help with language and text | llama.cpp, others |
+| AI models | Answers, translation, help with text | llama.cpp, Anthropic API, others |
 | Map data | Drawing maps | PMTiles (exists in `fs-maps`) |
 
 ## Cross-cutting: used by all
