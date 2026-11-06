@@ -14,7 +14,8 @@ Everything is sorted by purpose, not by what a tool looks like. Four questions d
 | Does it show something without knowing what the data means? | **Component** (a **workbench** is a large component) |
 | Is it one way of using a program? | **Frontend**, possibly with built-in filters |
 
-Every topic has one [interface](../../interfaces/index.md), the same for every provider.
+Every topic has one [interface](../../interfaces/index.md), the same for every provider. **Each standard has exactly one
+owning program, so there is one point of truth,** and other programs reach it through that interface.
 
 Whether views like the gallery or kanban should *also* be offered as stand-alone programs is still open. They can
 appear as stand-alone apps by being frontends, without having their own data.
@@ -27,7 +28,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Sign in, system access | [identity wrapper](../platform/identity.md) over Kanidm | Planned |
 | Belong together, decide who may do what | [`fs-groups`](../platform/groups.md) | Planned, **new** |
 | Keep and find anything | [`fs-files`](files/design.md) | Planned |
-| Know who someone is | [`fs-contacts`](https://github.com/FreeSynergy/fs-contacts) | Core exists, no GUI |
+| Know who someone is | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core exists, no GUI |
 | Be somewhere at some time | [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Core exists, no GUI |
 | Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
 | Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists, no GUI |
@@ -57,7 +58,7 @@ A program can belong to several suites.
 
 | Suite | Contains |
 |-------|----------|
-| Groupware | Contacts, calendar, wiki, maps, messenger |
+| Groupware | People, calendar, wiki, maps, messenger |
 | **Project management** | Tasks, history, resources, surveys, whiteboard, wiki, groups; possibly costs |
 | **Democracy** | Surveys, groups, wiki, messenger, tasks, resources |
 | Media | Files (with gallery), streaming |
@@ -69,7 +70,7 @@ A program can belong to several suites.
 1. Foundation     manifesto, interface catalogue, sharing model
                   fs-groups + identity wrapper, then fs-files
 2. Components     shared ones first, plus charts; each built when the next program needs it
-                  GUIs for the existing cores: contacts, calendar, maps, wiki
+                  GUIs for the existing cores: people, calendar, maps, wiki
 3. Work           fs-tasks + fs-history, then fs-surveys, fs-resources, fs-messenger
 4. Together       live presence, fs-whiteboard
 5. Suites         project management, democracy
@@ -106,4 +107,4 @@ The closed-source products were checked only partly; each note lists what was ve
 
 ## What is decided
 
-ADR 0044 to 0049 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).
+ADR 0044 to 0050 in [`conventions/decisions`](https://github.com/FreeSynergy/fs-documentation/tree/main/conventions/decisions).

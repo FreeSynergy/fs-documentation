@@ -98,7 +98,7 @@ Observation: almost all tools are built for purpose 3 (split work) and call it "
 | Integrations (forge, chat) | Link to code/talk | Taiga, Redmine, Plane ⚠️, Huly (GitHub) [S11] | Jira, Linear | platform (AS2/ForgeFed) |
 | AI assist | Summaries, triage | Asana/Jira cloud [repo]; Height (gone) ⚠️ | Notion, ClickUp, Linear ⚠️ | local model only (ADR 0029) |
 | Personal inbox / daily planning | Order my day | Vikunja ⚠️, Leantime ("my work") ⚠️ | Asana "My tasks" [repo], Todoist ⚠️ | `fs-tasks` personal scope |
-| Customer / CRM link | Link tasks to clients | Huly (CRM), Taiga CRM module [repo][S11] | Monday, Notion ⚠️ | `fs-contacts` reference |
+| Customer / CRM link | Link tasks to clients | Huly (CRM), Taiga CRM module [repo][S11] | Monday, Notion ⚠️ | `fs-people` reference |
 | Helpdesk / tickets | Support work | Redmine, Huly ⚠️ | Jira Service Mgmt ⚠️ | separate `helpdesk` category (already in index) |
 
 ---
@@ -190,7 +190,7 @@ Few columns, plain language, no gamification; "what is next" first. Supports non
 
 | Entity | Fields (suggested) | Linked to |
 |--------|--------------------|-----------|
-| Person / role | identity ref (`fs-contacts`), roles, skills, job title | groups |
+| Person / role | identity ref (`fs-people`), roles, skills, job title | groups |
 | Working schedule | weekly pattern, exceptions, absences, time zone | calendar (JSCalendar events for absence) |
 | Capacity | hours or "focus hours" per period, set by the person | person |
 | Allocation | person or role, task or project, period, amount, status (tentative/confirmed) | task |

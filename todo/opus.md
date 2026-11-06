@@ -162,3 +162,5 @@ Compiler fertig (Umbau ADR 0043 + Orakel 14/14), pedantic überall, fmt korrigie
 - [ ] Frontends analysieren: Files; Umfragen sind recherchiert (`temp/research/surveys-landscape.md`), `requirements.md` nachziehen · Sonnet
 - [ ] `requirements.md` von surveys, streaming, tasks an den neuen Zuschnitt angleichen · Sonnet
 - [ ] Rechtsrat H.264 (Patente, Lizenz) · Nutzer
+- [ ] `fs-calendar-core`: `Task` nach `fs-tasks`, Einbindung nur über die Schnittstelle (ADR 0050) · freesynergy-32
+- [ ] Doku `programs/apps/contact/`, `data/contacts/` an `fs-people` anpassen · Sonnet

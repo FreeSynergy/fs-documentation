@@ -9,8 +9,8 @@ program, not programs themselves. This replaces the earlier plan for `fs-kanban`
 
 - **One program, personal or for a group.** A task's owner is a person or a group, and can change. Nothing is decided up front.
 - **One task, several contexts.** The same task can appear on a project board, on my personal list and in the calendar.
-- **The calendar and tasks share one object.** `fs-calendar` already implements JSCalendar `Task`. We propose moving it
-  into a shared crate, and `fs-tasks` becomes its owner.
+- **A task stands on its own (decided, ADR 0050).** `fs-tasks` owns JSCalendar `Task`. `fs-calendar` owns `Event` and shows
+  tasks only through the interface of `fs-tasks`. `fs-calendar-core` still has a `Task` model today, which moves here.
 
 `fs-projectmanagement` is a suite on top: tasks, history, resources, surveys, whiteboard, wiki.
 
@@ -50,7 +50,7 @@ Capacity and baselines belong to [`fs-resources`](../resources/index.md).
 | `Boards` | `board.open`, `board.create`, `column.create`, `column.limit`, `card.move` |
 | `subscribe` | Live changes |
 
-Attachments go through `fs-files`, people through `fs-contacts`, groups through `fs-groups`.
+Attachments go through `fs-files`, people through `fs-people`, groups through `fs-groups`.
 
 ## Views
 
@@ -59,6 +59,5 @@ programs. See [planned components](../../../components/planned.md).
 
 ## Open questions
 
-1. Does the `fs-calendar` crate give up ownership of `Task`, or do both share a crate?
-2. Are columns statuses? The analysed tools differ: in some, they are; in others, free lists. We propose optional mapping.
-3. Time tracking: part of `fs-tasks`, or of `fs-history`? We propose recording it as history.
+1. Are columns statuses? The analysed tools differ: in some, they are; in others, free lists. We propose optional mapping.
+2. Time tracking: part of `fs-tasks`, or of `fs-history`? We propose recording it as history.

@@ -9,6 +9,9 @@ answers: what is there to standardise?
 ## Rules
 
 1. **A standard comes first.** If one exists, the interface follows it. If not, we write one and offer it to others.
+   **Each standard has exactly one owning program,** the point of truth, and every other program goes through its
+   interface. No second model of the same thing (ADR 0050). A standard with several kinds of object, such as JSCalendar,
+   is owned per kind: `Event` by `fs-calendar`, `Task` by `fs-tasks`.
 2. **An interface is a target.** Published as a draft, it is tested by at least two independent implementations, then
    fixed as version 1.0. After that it changes only by a jump to a new version, never by gradual growth.
 3. **Optional parts are declared up front.** Not every provider can do everything: Telegram cannot do what mail does.
@@ -27,13 +30,13 @@ Keeping these apart prevents much confusion:
 
 ## Topics: what people work with
 
-| Topic | What it is for | Standard base | Program | Status |
+| Topic | What it is for | Standard base | Owner | Status |
 |-------|----------------|---------------|---------|--------|
 | Messages | Saying something to someone | AS2, MIMI, JMAP Mail | `fs-messenger` | Draft contract |
-| People | Knowing who someone is and how to reach them | JSContact | `fs-contacts` | Core exists |
+| People | Knowing who someone is and how to reach them | JSContact | `fs-people` | Core exists |
 | Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | `fs-groups` | Planned |
-| Events | Being somewhere at some time | JSCalendar | `fs-calendar` | Core exists |
-| Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | `fs-tasks` | `Task` exists |
+| Events | Being somewhere at some time | JSCalendar `Event` | `fs-calendar` | Core exists |
+| Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | `fs-tasks` | Model still in `fs-calendar-core`, moves |
 | History | Remembering what I or we did | AS2 activities | `fs-history` | Planned |
 | Resources | Knowing what we have and need | Gap | `fs-resources` | Planned |
 | Files | Keeping and finding anything | AS2 `Document` | `fs-files` | Planned |
@@ -62,6 +65,7 @@ Keeping these apart prevents much confusion:
 | Interface | What it is for | Standard base |
 |-----------|----------------|---------------|
 | Sharing and permissions | Who may see what; shares go to groups | Gap, one specification for all |
+| Envelope and activity log | Every object's outer form and history | AS2, proposed owner `fs-store` (ADR 0050) |
 | Sync | Bringing devices and programs together | Activity log (ADR 0019) |
 | Presence | Seeing what others do, as it happens | Gap; never stored |
 | Search | Finding across programs | Gap |
