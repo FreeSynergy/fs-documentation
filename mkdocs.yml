@@ -1194,6 +1194,7 @@ copyright: |
 # Markdown extensions
 markdown_extensions:
   - abbr
+  - admonition
   - attr_list
   - def_list
   - fenced_code
