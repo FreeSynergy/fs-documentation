@@ -31,6 +31,11 @@ Status: `implemented` · `planned` · `proposed`
 | Choose the decision method per question: majority, approval, score, ranked, consent and others (`survey.method`) | *arch.* (ADR 0049, point 8; [design](design.md#decision-types)) | gap; one strategy per method | proposed |
 | Widen a survey from a small group to its parent groups, results carried over (`survey.widen`) | *arch.* (ADR 0049, point 8; [design](design.md#widening-to-parent-groups)) | groups from the `fs-groups` interface; the survey stays one object | proposed |
 
+## Decisions as objects (provisional, from contract draft)
+
+`decision.record`, `decision.read` and `decision.link` keep a decision as an object linked to tasks. `survey.subscribe` follows
+what is happening, as in the other contracts.
+
 ## Optional
 
 | Capability | Basis | Data / standard | Status |

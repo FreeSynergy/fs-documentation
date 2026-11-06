@@ -42,7 +42,7 @@ Keeping these apart prevents much confusion:
 | Files | Keeping and finding anything | AS2 `Document` | [`fs-files`](../programs/apps/files/design.md) | Provisional draft interface, code in progress |
 | Texts | Writing and knowing together | Own specification (ADR 0031, 0033) | `fs-wiki` | Core exists |
 | Places | Knowing where | GeoJSON | `fs-maps` | Core exists |
-| Decisions | Asking, and deciding together | AS2 `Question`; gap beyond it | `fs-surveys` | Planned |
+| Decisions | Asking, and deciding together | AS2 `Question`; gap beyond it | [`fs-surveys`](https://github.com/FreeSynergy/fs-surveys) | Provisional draft interface, core in progress |
 | Boards | Thinking visually | Gap, own specification | `fs-whiteboard` | Planned |
 | Live media | Showing something as it happens | WHIP, WHEP, enhanced RTMP | `fs-streaming` | Planned |
 

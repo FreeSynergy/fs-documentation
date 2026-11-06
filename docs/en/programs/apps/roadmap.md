@@ -36,7 +36,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Know what to do next | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) ([design](tasks/design.md)) | Core exists, no GUI; draft interface |
 | Remember what I or we did | [`fs-history`](history/index.md) | Planned, **new**; possibly a view |
 | Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
-| Ask, and decide together | [`fs-surveys`](surveys/design.md) | Planned |
+| Ask, and decide together | [`fs-surveys`](surveys/design.md) ([repo](https://github.com/FreeSynergy/fs-surveys)) | Draft interface, core in progress |
 | Think visually | [`fs-whiteboard`](whiteboard/design.md) | Planned |
 | Talk to AI, and work with every program through it | [A messenger frontend](assistant/index.md), not a program of its own | Idea |
 | Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Planned |

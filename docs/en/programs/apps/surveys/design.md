@@ -41,7 +41,11 @@ state its limit plainly in the interface,** without calling it fully anonymous.
 
 Other risks to handle:
 
-- Timing: storing the time of an answer can identify a person, so times are coarsened or left out.
+- Timing: storing the time of an answer can identify a person. So anonymous answers go into a separate ballot store with no time and
+  no id per answer, and its log is emptied after each write.
+- Reading results again and again would show the newest answer. **Provisional rule:** anonymous results are released in batches of at least
+  `minGroup` answers (default 5, at least 3), when the survey closes or widens. Up to `minGroup - 1` answers can stay held back, and
+  they could decide a vote. The project owner still has to decide this trade-off.
 - Small groups: results with few answers can identify people, so a minimum group size hides them.
 - Free text can identify its author, and the interface says so.
 - Answers can be sensitive data (ADR 0029): health, politics, faith.
