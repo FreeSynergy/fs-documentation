@@ -37,7 +37,7 @@ Keeping these apart prevents much confusion:
 | Groups | Belonging together, and deciding who may do what | AS2 `Group`, SCIM | [`fs-groups`](../programs/platform/groups.md) | Draft interface, code in progress |
 | Events | Being somewhere at some time | JSCalendar `Event` | `fs-calendar` | Core exists |
 | Tasks | Knowing what to do next | JSCalendar `Task`, RFC 9253 | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) | Core exists, draft interface |
-| History | Remembering what I or we did | AS2 activities | [`fs-history`](https://github.com/FreeSynergy/fs-history) | Provisional draft interface, core in progress |
+| History | Remembering what I or we did | AS2 activities | [`fs-history`](https://github.com/FreeSynergy/fs-history) | Provisional draft interface, core exists |
 | Resources | Knowing what we have and need | Gap | `fs-resources` | Planned |
 | Files | Keeping and finding anything | AS2 `Document` | [`fs-files`](../programs/apps/files/design.md) | Provisional draft interface, code in progress |
 | Texts | Writing and knowing together | Own specification (ADR 0031, 0033) | `fs-wiki` | Core exists |

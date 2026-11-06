@@ -3,7 +3,7 @@
 `FreeSynergy.History` (`fs-history`) answers: **what have I, or we, done?** It shows your own data as a timeline, whether
 for one person or for a project. This is what was first called `fs-timeline`.
 
-**Status: provisional draft interface, [core](https://github.com/FreeSynergy/fs-history) in progress (2026-11-06).** See the [overall plan](../roadmap.md).
+**Status: [core](https://github.com/FreeSynergy/fs-history) v0.1.0, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
 
 ## Idea
 
@@ -27,5 +27,5 @@ All answers are provisional. Details: [`DESIGN.md`](https://github.com/FreeSyner
 3. **Time tracking:** not built.
 4. **Which entries matter?** `digest` groups changes to one object by one program within a time window.
 
-**Known limit:** the hub delivers the program as the actor and the receive time as the time. Until it passes on the originals, "person" means
+**Known limits:** a lost connection to the hub is not reconnected. The hub delivers the program as the actor and the receive time as the time. Until it passes on the originals, "person" means
 the object's `attributedTo`, so "what I edited in someone else's object" cannot be answered.

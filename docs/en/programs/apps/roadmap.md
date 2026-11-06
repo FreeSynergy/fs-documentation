@@ -34,7 +34,7 @@ appear as stand-alone apps by being frontends, without having their own data.
 | Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists; first workbench in [`fs-components`](https://github.com/FreeSynergy/fs-components) v0.1.0, app not finished |
 | Say something to someone | [`fs-messenger`](messenger/contract.md) | Draft contract |
 | Know what to do next | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) ([design](tasks/design.md)) | Core exists, no GUI; draft interface |
-| Remember what I or we did | [`fs-history`](history/index.md) | Provisional draft interface, core in progress, **new** |
+| Remember what I or we did | [`fs-history`](history/index.md) | Core v0.1.0, no GUI; provisional draft interface |
 | Know what we have and need | [`fs-resources`](resources/index.md) | Planned, **new** |
 | Ask, and decide together | [`fs-surveys`](surveys/design.md) ([repo](https://github.com/FreeSynergy/fs-surveys)) | Core v0.1.0, no GUI; draft interface |
 | Think visually | [`fs-whiteboard`](whiteboard/design.md) | Planned |
