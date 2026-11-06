@@ -18,7 +18,7 @@ Einzeilig einfügen, N ersetzen:
 |--------|---------|-------------|------------|
 | 1 (`freesynergy-65`) | Components, Wiki-Workbench | `fs-components`, `fs-wiki` | nichts |
 | 2 (`freesynergy-7c`) | `fs-messenger` mit KI-Teilnehmern und Notaus | `fs-messenger` (neu), `messenger.capnp` | nichts |
-| 3 (`freesynergy-24`) | Schnittstellen in Betrieb: RPC, `subscribe`, MCP, CLI | Server- und CLI-Crates aller Programme, `fs-capnpc`, `fs-hub` | nichts |
+| 3 (`freesynergy-24`) | Schnittstellen in Betrieb: RPC, `subscribe`, MCP, CLI | Server- und CLI-Crates aller Programme, `fs-capnpc`, `fs-hub`, `fs-store` | nichts |
 | 4 (`freesynergy-f9`) | GUIs der fertigen Kerne auf Blinc | Frontend-Crates der Programme | ersten Tag von `fs-components` |
 | 5 (`freesynergy-64`) | Neue Kerne: Umfragen, Verlauf, Ressourcen | `fs-surveys`, `fs-history`, `fs-resources` (neu) | nichts |
 | Strategie (`freesynergy-8b`) | Entscheidungen, ADRs, öffentliche Doku, Recherche, Meldungen prüfen | `fs-documentation` | Meldungen |
@@ -43,6 +43,7 @@ Einzeilig einfügen, N ersetzen:
 2. `subscribe` überall.
 3. MCP-Werkzeuge aus den Verträgen erzeugen (ADR 0021), nicht von Hand.
 4. CLI je Programm als zweiter Nutzer der Schnittstelle. Fehler am Vertrag beheben, solange er Entwurf ist; nichts wird 1.0.
+4a. `fs-store` (Besitzer seit 2026-11-06, nur anhängen): Log eines Objekts löschen können (ADR 0029); große Originale einmal ablegen und im Log nur referenzieren; `Store` sagt, ob er verschlüsselt ist, und hat eine Identität.
 5. Hub: alle Programme tatsächlich verbinden, mit einem Test über mehrere Programme hinweg. Kein Programm bekommt Leserecht auf den Typ `Relationship` (Rollen-Datenschutz, offen).
 
 ### Thread 4: GUIs
