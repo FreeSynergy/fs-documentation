@@ -50,6 +50,10 @@ Status: akzeptiert (2026-11-06) · Aussperren: vom Nutzer vorerst bestätigt, Id
 ## Sperre (Strategie, 2026-11-06, folgt aus „ohne Freigabe keine Handlung“)
 `MessageAction.decide` (`toolcall.decide`) wird nie als MCP-Werkzeug erzeugt, sonst könnte eine KI die eigene Freigabe aufrufen. Das gilt unabhängig von der offenen Erweiterung von ADR 0021.
 
+## Freigabe gilt nur für das Gesehene (Strategie, 2026-11-06, aus einer nachgestellten Prüfung)
+Allow auf einen Aufruf, dann ersetzt ein zweiter (`rm -rf ~`) ihn am selben Pixel, und der nächste Klick genehmigt ihn. Deshalb:
+Die Antwort trägt Nachricht, Aufruf, Revision und Digest des gezeichneten Stands; das Programm lehnt eine Antwort ab, deren Digest nicht mehr passt; Antwortknöpfe sind nach jeder Änderung kurz gesperrt; der Notaus hat einen festen Platz und kann nicht aus dem Fenster geschoben werden.
+
 ## Vorschlag (offen)
 - Ansichten: Der Chat, die Agenten-Übersicht und die Anzeige von Werkzeug-Aufrufen sind Frontend und Components über
   `fs-messenger`. Der Modell-Anbieter ist ein Anbieter wie Mail oder Matrix (ADR 0045).
