@@ -142,3 +142,17 @@ bauen, nicht pushen, Nutzer entscheidet (archivieren/übernehmen); freie Namen �
 - [ ] Doku-Gerüste und CONVENTIONS §3 für die neuen Components, nach den Entscheidungen · Sonnet
 - [ ] `docs/en/programs/apps/whiteboards/` → `whiteboard/` umbenennen (ADR 0017), wenn dort nichts mehr läuft · Sonnet
 - [ ] Crates prüfen (C-Abhängigkeiten, ADR 0015, 0026), bevor sie genutzt werden · Sonnet
+
+### Stand 2026-11-06 vormittags — Umbau nach ADR 0043 (alle 0 Fehler beim Prüfer)
+
+| Repo | Tests | Prüfer | Muster (Auswahl) |
+|------|-------|--------|------------------|
+| fs-store 0.2 | 37 | 0 | Facade `Store` über 6 Traits, Adapter (Turso), Command (Undo), Builder, Observer, Template method |
+| fs-wiki / fs-text | 46 | 0 | Strategy (Textspeicher), Registry (Markierungsarten), Adapter (Markdown), Command; Graphem-Grenzen |
+| fs-contacts | 21 | 0 | `ContactBook`, Repository, Adapter (vCard), Strategy (`MatchStrategy`) |
+| fs-calendar | 45 | 0 | `Calendar`, Strategy (Wiederholung, Zeitzonen), State (Einladung), Adapter (ICS) |
+| fs-maps | 30 | 0 | Strategy (`TileSource`), Decorator (Cache), Chain of Responsibility, Command + Observer (Region) |
+| fs-hub | 9 | 0 | Facade, Adapter (RPC), Strategy (`ProposalEngine`), State (`HubStatus`) |
+
+Läuft: Compiler (`fs-capnpc`, erst Umbau, dann Orakel-Tests), `clippy::pedantic` für fs-store/fs-text.
+
