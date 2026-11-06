@@ -102,3 +102,4 @@ Bekannte Fehler: Markdown-Rundreise in fs-text (Dreierketten, nebeneinanderliege
 
 Der öffentliche Schlüssel liegt in `fs-release`. Vom Nutzer freigegeben und auf keys.openpgp.org hochgeladen (2026-11-06); die Adresse erscheint dort, sobald der Bestätigungslink aus der Mail an `support@freesynergy.net` geklickt ist. **Aktueller Arbeitsauftrag: `todo/sprint.md`.**
 - Thread 5 (2026-11-06): `surveys.capnp` in fs-interfaces v0.15.0 (Entwurf, vorläufig); Repo `fs-surveys` angelegt, Kern und Methoden im Bau.
+- Thread 2, Punkt 1 und 4a: Vertrag `messages` draft 0.2 in `fs-interfaces` v0.16.0 (Werkzeug-Aufrufe mit Risiko und gebundener Entscheidung, `jobRef`, `stop`, `usage`; Ordinal 0 einmalig auf harmlos umnummeriert). Noch kein Nutzer; maschinenlesbare MCP-Sperre für `decide` fehlt noch. Geprüft vom zweiten Agenten.
