@@ -13,6 +13,9 @@ Todesstrafe bedeuten. Verknüpfung + solche Daten = Gefahr.
 - Absicherung ist mehrfach: OAuth/SSO (Login) + DID (Identität) + Web of Trust (Vertrauen) —
   die Kombination macht es; paarweise DIDs (RLTP) sind gewollt.
 
+## Auch Geschäftsgeheimnisse (Nutzer, 2026-11-07)
+Schützen muss man nicht nur Daten nach DSGVO Art. 9: „Stell dir vor, da werden Geschäftsgeheimnisse erzählt. Das kann das Unternehmen kaputt machen.“ Die Kennzeichnung braucht dafür eine eigene Kategorie; welche Bezeichnung, ist noch zu klären. Für KIs: ADR 0054.
+
 ## Vorschlag zur Umsetzung
 - Kennzeichnung je **Feld oder Objekt** mit Kategorien der besonders geschützten Daten
   (DSGVO Art. 9: sexuelle Orientierung, Gesundheit, Religion, politische Meinung, Herkunft, …);

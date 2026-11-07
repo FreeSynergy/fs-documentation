@@ -172,6 +172,12 @@ as `message.send` are valid tool names, and `Problem` fits a result marked as an
 | 11 | **Tool results carry hostile text.** Message bodies reach the model, and nothing in the protocol marks them as data | Keep them clearly separate in the result, and never let them widen a right |
 | 12 | **Size.** The messenger contract alone has 31 methods, and we have not measured what that costs a model | Tools grouped by capability, offered as the person releases them |
 
+**Reading is not harmless (project owner, 2026-11-07).** An AI that reads passwords can do worse than one that deletes something, and
+business secrets it overhears can destroy a company. So no risk class means "harmless". MCP's `readOnlyHint` says nothing about whether
+something is safe. Our proposal: reading needs a release as well, and the release names where the text goes. Secrets never reach an AI.
+Reading anything marked sensitive (ADR 0029) asks every time. Reporting something to the outside acts in the person's name and always
+asks. What a provider does with text it has read is out of our reach, which is why a local AI stays the default.
+
 **How a tool call gets approved.** The tempting way is MCP's form request (elicitation): the server returns `input_required`, the
 client asks, then retries with the answer. This **cannot be our brake**. The answer comes from the client, the specification allows
 "other sources", and the client may be the AI's own program. An `accept` proves nothing about a person.
@@ -186,7 +192,7 @@ So we propose (a design, not tested):
    arguments. It can be used once, and the engine enforces that.
 5. A retry runs only if the person agreed to exactly these arguments. Any change asks again.
 
-Destructive actions and actions in the person's name have no "always" option at all. A release from the person can cover the other
+Destructive actions, actions in the person's name and reading anything marked sensitive have no "always" option at all. A release from the person can cover the other
 classes. The emergency stop simply makes the engine refuse every call.
 
 What we cannot check from reading: whether real clients retry on a bare `input_required`. The official Tasks extension names

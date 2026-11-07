@@ -85,7 +85,8 @@ Vom Nutzer begründet: Eine KI darf nicht nachträglich lesen, was geschrieben w
 
 6. **Das gilt für jede KI, ohne Ausnahme,** auch auf dem eigenen Gerät oder Server.
 7. **Zieht jemand die Zustimmung zurück, muss die KI hinaus.**
-9. **Weg zur KI (Nutzer, 2026-11-07): zuerst Matrix, MLS später.** Das Programm der KI hat ein normales Matrix-Konto mit eigenem Schlüssel. Auch eine lokale KI braucht dann einen Matrix-Server, etwa `tuwunel` auf dem eigenen Rechner.
+9. **Tests gegen echte Modelle (Nutzer, 2026-11-07):** erst in der ruhigen Phase, Sonntagabend oder Montag; dann schaltet der Nutzer llama ein.
+10. **Weg zur KI (Nutzer, 2026-11-07): zuerst Matrix, MLS später.** Das Programm der KI hat ein normales Matrix-Konto mit eigenem Schlüssel. Auch eine lokale KI braucht dann einen Matrix-Server, etwa `tuwunel` auf dem eigenen Rechner.
 8. **Eine KI, die Protokoll führt,** ist erlaubt, aber nicht, wenn einer nicht will. Auch dafür gelten Punkt 4 bis 7.
 
 Warum das keine Diskriminierung ist (Nutzer): „Ich bin wirklich für Gleichberechtigung, aber das hat nichts mit Rechten von Menschen
@@ -96,6 +97,17 @@ geht einseitig zum Nachteil der Personen in der Unterhaltung. Die Regel richtet 
 
 ### Offen
 - Große oder öffentliche Gruppen: Eine einzige Absage genügt. Vorläufig bleibt das so, dort gibt es dann eben keine KI.
+
+## Lesen ist nicht harmlos (Nutzer, 2026-11-07)
+„Stell dir vor, die KI liest Passwörter aus. Dann ist das schlimmer als Löschen, kommt darauf an was, oder Geheimnisse.“ „Nur scheinbar harmlose Sachen sind nicht harmlos.“
+Der Nutzer nennt auch: eine KI, die ein Gespräch mitbekommt und es meldet, und Geschäftsgeheimnisse, die ein Unternehmen zerstören können.
+
+Vorschlag zur Umsetzung (Strategie):
+- **Keine Klasse heißt „harmlos“.** Auch Lesen braucht eine Freigabe. Eine Freigabe nennt, wohin der Text geht, also auch „an Anthropic“.
+- **Geheimnisse** (Passwörter, Schlüssel) erreichen eine KI nie: kein Werkzeug, keine Ressource (ADR 0021).
+- **Gekennzeichnetes** (ADR 0029) fragt beim Lesen jedes Mal, ohne „immer erlauben“. Die Engine entscheidet das am gelesenen Objekt, weil der Vertrag allein nicht weiß, was darin steht.
+- **Etwas nach außen melden** ist Handeln im Namen der Person und fragt immer.
+- **Grenze:** Nicht Gekennzeichnetes kann trotzdem heikel sein, und was ein Anbieter mit gelesenem Text tut, erreichen wir nicht. Eine KI auf dem eigenen Gerät bleibt deshalb der Standard.
 
 ## Folgen
 - ADR 0053 Punkt 1 wird dadurch präzisiert: LLM-Chat bleibt Component und Frontend; ein eigenes Programm nur, falls sich zeigt, dass
