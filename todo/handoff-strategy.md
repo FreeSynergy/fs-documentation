@@ -15,7 +15,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 0. **Sprint bis Sonntag 2026-11-08: `todo/sprint.md`.**
 1. **KIs aussperren:** vorerst bestätigt (ADR 0054). Offen: ein Mensch, ein Konto, ohne die Anonymität zu verlieren; RLTP erklären und entscheiden.
 2. **Schlüssel auf keys.openpgp.org:** Nutzer hat bestätigt (2026-11-07). GitHub-Adresse bestätigen?
-3. **Schlüssel ersetzt (2026-11-07):** neu `16A4A3EE563AEF51FCF0C55DED7B57C4A1904342`, vom Nutzer erzeugt, auf keys.openpgp.org bestätigt, in `fs-release` und `releases.md`. Alte Secrets gelöscht, alter Entwurf gelöscht. **Offen:** Widerruf des alten (`.rev` ließ sich nicht importieren). Neue Secrets erst, wenn ein Release ansteht.
+3. **Schlüssel ersetzt (2026-11-07):** neu `16A4A3EE563AEF51FCF0C55DED7B57C4A1904342`, vom Nutzer erzeugt, auf keys.openpgp.org bestätigt, in `fs-release` und `releases.md`. Alte Secrets gelöscht, alter Entwurf gelöscht. Alter Schlüssel widerrufen (2026-11-07), Widerruf auf keys.openpgp.org (Signatur 0x20 geprüft) und in `fs-release`. Neue Secrets erst, wenn ein Release ansteht.
 4. **Bestätigt (2026-11-07):** mehrere Eltern je Gruppe, Zyklen verboten; `files.capnp` vor der Frontend-Analyse; Repo-Name `fs-identity`. Einseitiges Folgen: ADR 0056.
 4a. **Rollen-Datenschutz (ADR 0029):** Muss geschlossen werden (Nutzer „ja“, 2026-11-07). Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing; bis dahin bekommt kein Programm dieses Leserecht.
 4c. **Kontakte sind Profile (ADR 0058):** Idee des Nutzers; Ausgestaltung zu bestätigen. `fs-people` bleibt. Keine Umbauten im Sprint.
