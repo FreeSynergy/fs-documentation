@@ -29,8 +29,19 @@ module doc (`//! Pattern: Repository over Store (strategy for the backend)`).
 | RAII / Guard | `Drop` | transactions, subscriptions, locks |
 | Registry | map of kind → behaviour | mark kinds, representation register (ADR 0023) |
 | Factory | fn/trait creating trait objects from config | choose backend/source at runtime |
+| Value object | small immutable type, compared by value, valid on construction | dates, addresses, rules, plans |
+| Specification | pure predicate over a value, combinable | the "encrypted only" gate, validation rules |
+| Null object | a type that implements the trait and does nothing, on purpose | no-op listener, empty source |
+| Composite | a tree of the same trait | nested layouts, nested filters |
+| Memento | an opaque snapshot to restore or read from | undo, consistent reads |
+| Visitor | one function per variant, kept outside the data | walking a document or schema |
+| Interpreter | evaluate a small language over its tree | recurrence rules, queries |
 
 No pattern for its own sake: pick the one that makes the code reusable and testable, and write why.
+
+**Name only what is really there (2026-11-07).** A module head names a pattern from this table, plus how it is used here. A name that is not
+in the table is reported to the strategy session, not invented. A file of constants is not a Registry, because nothing is looked up by
+kind: it says `Constants`. A test file names what it tests; it has no pattern of its own. The check before a tag compares the name with the code.
 
 ## 3. Small files, many of them
 - **One concept per file.** Guideline: **≤ 200 lines**, hard limit **300** (tests included —
