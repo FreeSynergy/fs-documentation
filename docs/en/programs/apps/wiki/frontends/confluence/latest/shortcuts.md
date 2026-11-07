@@ -1,231 +1,101 @@
-# Confluence - Keyboard Shortcuts
+# Confluence (Cloud, latest) · Keyboard shortcuts
 
-## Overview
+Sources: [S12] (official table, read 2026-11-07) and [S13]. The table is a selection. The full official list is at S12. Mac uses Cmd or Opt where the official table says so. The official table shows Mac Bold/Italic/Underline as Opt+B / Opt+I / Opt+U; this is kept as published.
 
-Confluence offers extensive keyboard shortcuts for working quickly with the
-visual editor and the source-code editor (Wiki Markup).
+## Opening the list [S12][S13]
 
----
+| Action | Shortcut |
+|--------|----------|
+| Shortcut dialog (on a page or live doc) | Shift+? |
+| Shortcut dialog (while editing) | Ctrl+/ (Win), Cmd+/ (Mac) |
 
-## General shortcuts
+## Global [S12]
 
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+Shift+P` / `Cmd+Shift+P` | Open the command palette |
-| `Ctrl+,` / `Cmd+,` | Open the settings |
-| `F1` | Help |
-| `Ctrl+K` / `Cmd+K` | Add a link |
-| `Ctrl+Shift+F` / `Cmd+Shift+F` | Global search |
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Open notifications | Ctrl+Alt+O | Cmd+Opt+O |
+| Quick search | Alt+Shift+Z | Ctrl+Opt+Z |
+| Go Home | Ctrl+Alt+H | Cmd+Opt+H |
+| Open recent | Ctrl+Alt+G | Cmd+Opt+G |
+| Open starred | Ctrl+Alt+8 | Cmd+Opt+8 |
+| Go to space overview | Ctrl+Alt+V | Cmd+Opt+V |
+| Toggle sidebar | Ctrl+[ | Ctrl+[ |
+| Open Rovo chat | Ctrl+Win+. | Cmd+. |
+| Undo | Ctrl+Z | Cmd+Z |
+| Redo | Ctrl+Y or Ctrl+Shift+Z | Cmd+Y or Cmd+Shift+Z |
 
----
+## Content [S12]
 
-## Editor shortcuts (visual editor)
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Create page | Win+Alt+C | Ctrl+Opt+C |
+| Create live doc | Ctrl+Shift+D | Ctrl+Shift+D |
+| Create blog post | Ctrl+Alt+Shift+B | Cmd+Opt+Shift+B |
+| Edit | E | E |
+| Quick insert | / | / |
+| Comment | Ctrl+Alt+C | Cmd+Opt+C |
+| Next comment | Ctrl+. | Ctrl+. |
+| Previous comment | Ctrl+, | Ctrl+, |
+| Next unread comment | Ctrl+Shift+U | Cmd+Shift+U |
+| Toggle inline comments | Ctrl+] | Ctrl+] |
+| Watch | Ctrl+Alt+W | Cmd+Opt+W |
+| Share | Ctrl+Alt+S | Cmd+Opt+S |
+| Edit labels | Ctrl+Alt+A | Ctrl+Opt+A |
+| View attachments | Win+Alt+T | Ctrl+Opt+T |
+| Favorite content | Ctrl+Alt+F | Ctrl+Opt+F |
+| Presenter mode | Ctrl+Alt+P | Cmd+Opt+R |
+| Publish | Ctrl+Enter | Cmd+Enter |
+| Publish with note | Ctrl+Shift+Enter | Cmd+Shift+Enter |
+| Find and replace | Ctrl+F | Cmd+F |
+| Open details panel | Ctrl+Shift+I | Ctrl+Shift+I |
+| Open comments panel | Ctrl+] | Ctrl+] |
+| Select comment | Ctrl+Alt+E | Cmd+Opt+E |
 
-### Formatting
+## Block formatting [S12]
 
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+B` / `Cmd+B` | Bold |
-| `Ctrl+I` / `Cmd+I` | Italic |
-| `Ctrl+U` / `Cmd+U` | Underline |
-| `Ctrl+Shift+X` / `Cmd+Shift+X` | Strikethrough |
-| `Ctrl+Shift+L` / `Cmd+Shift+L` | Bullet list |
-| `Ctrl+Shift+1` / `Cmd+Shift+1` | Heading 1 (H1) |
-| `Ctrl+Shift+2` / `Cmd+Shift+2` | Heading 2 (H2) |
-| `Ctrl+Shift+3` / `Cmd+Shift+3` | Heading 3 (H3) |
-| `Ctrl+Shift+4` / `Cmd+Shift+4` | Heading 4 (H4) |
-| `Ctrl+Shift+5` / `Cmd+Shift+5` | Heading 5 (H5) |
-| `Ctrl+Shift+6` / `Cmd+Shift+6` | Heading 6 (H6) |
-| `Ctrl+E` / `Cmd+E` | Align centre |
-| `Ctrl+L` / `Cmd+L` | Align left |
-| `Ctrl+R` / `Cmd+R` | Align right |
-| `Ctrl+Shift+E` / `Cmd+Shift+E` | Justify |
-| `Ctrl+K` / `Cmd+K` | Insert a link |
-| `Ctrl+Shift+M` / `Cmd+Shift+M` | Quote (blockquote) |
-| `Ctrl+Shift+C` / `Cmd+Shift+C` | Code block |
-| `Ctrl+Shift+A` / `Cmd+Shift+A` | Task (to-do) |
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Paragraph | Ctrl+Alt+0 | Cmd+Opt+0 |
+| Heading 1 … 6 | Ctrl+Alt+1 … 6 | Cmd+Opt+1 … 6 |
+| Numbered list | Ctrl+Shift+7 | Cmd+Shift+7 |
+| Bullet list | Ctrl+Shift+8 | Cmd+Shift+8 |
+| Quote | Ctrl+Shift+9 | Cmd+Shift+9 |
+| Code block | Ctrl+Shift+M | Cmd+Shift+M |
+| Align left | Ctrl+Shift+L | Cmd+Shift+L |
+| Align centre | Ctrl+Alt+E | Cmd+Opt+E |
+| Align right | Ctrl+Alt+T | Cmd+Opt+T |
 
-### Navigation in the editor
+## Text formatting [S12]
 
-| Shortcut | Function |
-|----------|----------|
-| `Enter` | New line / block |
-| `Shift+Enter` | Line break (hard return) |
-| `Tab` | Indent / table cell |
-| `Shift+Tab` | Remove indentation |
-| `Escape` | Leave the editor / lose focus |
-| `Ctrl+Z` / `Cmd+Z` | Undo |
-| `Ctrl+Y` / `Cmd+Y` | Redo |
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Bold | Ctrl+B | Opt+B |
+| Italic | Ctrl+I | Opt+I |
+| Underline | Ctrl+U | Opt+U |
+| Strikethrough | Ctrl+Shift+S | Opt+Shift+S |
+| Inline code | Ctrl+Shift+M | Opt+Shift+M |
+| Subscript | Ctrl+Shift+, | Opt+Shift+, |
+| Superscript | Ctrl+Shift+. | Opt+Shift+. |
+| Highlight in yellow | Ctrl+Alt+Y | Cmd+Opt+Y |
 
-### Editing tables
+## Insert [S12]
 
-| Shortcut | Function |
-|----------|----------|
-| `Tab` | Next table cell |
-| `Shift+Tab` | Previous table cell |
-| `Enter` | New line inside the table cell |
-| `Ctrl+↑` / `Cmd+↑` | Table column upwards |
-| `Ctrl+↓` / `Cmd+↓` | Table column downwards |
-| `Ctrl+Shift+T` / `Cmd+Shift+T` | Insert a table |
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Files and images | Ctrl+M | Cmd+M |
+| Link | Ctrl+K | Cmd+K |
+| Insert markup | Ctrl+Shift+D | Cmd+Shift+D |
+| Macro | Ctrl+Shift+A | Cmd+Shift+A |
+| Table | Ctrl+Shift+I | Cmd+Shift+I |
+| Table: add row above / below | Ctrl+Alt+Up / Down | Cmd+Opt+Up / Down |
+| Table: add column before / after | Ctrl+Alt+Left / Right | Cmd+Opt+Left / Right |
 
-### Macros / extensions
+## Markdown autoformat triggers [S12]
 
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+Shift+M` / `Cmd+Shift+M` | Insert a macro |
-| `Ctrl+Shift+D` / `Cmd+Shift+D` | Insert a diagram |
-| `Ctrl+Shift+T` / `Cmd+Shift+T` | Table of contents |
-| `Ctrl+Shift+B` / `Cmd+Shift+B` | Insert a box/macro |
-| `Ctrl+Shift+V` / `Cmd+Shift+V` | Insert a video |
-| `Ctrl+Shift+E` / `Cmd+Shift+E` | Insert an embed |
+`**text**` bold · `*text*` italic · `~~text~~` strikethrough · `` `code` `` · `#` to `######` plus Space · `1.` plus Space · `*` plus Space · `>` plus Space · three backticks plus Space · `---` plus Space · `[]` plus Space · `<>` plus Space · `:` emoji · `@` mention · `!` image · `{` macro · `[text](url)` link
 
----
+## Not verified
 
-## Source-code editor (Wiki Markup) shortcuts
-
-### Formatting (Wiki syntax)
-
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+B` / `Cmd+B` | Bold (`*text*`) |
-| `Ctrl+I` / `Cmd+I` | Italic (`_text_`) |
-| `Ctrl+Shift+L` / `Cmd+Shift+L` | Bullet list (`*`) |
-| `Ctrl+Shift+1` / `Cmd+Shift+1` | H1 (`h1.`) |
-| `Ctrl+Shift+2` / `Cmd+Shift+2` | H2 (`h2.`) |
-| `Ctrl+Shift+3` / `Cmd+Shift+3` | H3 (`h3.`) |
-| `Ctrl+K` / `Cmd+K` | Link (`[link|url]`) |
-| `Ctrl+Shift+M` / `Cmd+Shift+M` | Quote (`bq.`) |
-
-### Navigation in the code
-
-| Shortcut | Function |
-|----------|----------|
-| `Enter` | New line |
-| `Tab` / `Shift+Tab` | Indent |
-| `Ctrl+Z` / `Cmd+Z` | Undo |
-| `Ctrl+Y` / `Cmd+Y` | Redo |
-| `Ctrl+Shift+F` / `Cmd+Shift+F` | Toggle syntax highlighting |
-
-### Quick access to the Wiki syntax
-
-| Shortcut | Function | Example |
-|----------|----------|---------|
-| `Ctrl+Shift+M` / `Cmd+Shift+M` | Macro | `{macro}` |
-| `Ctrl+Shift+C` / `Cmd+Shift+C` | Code block | `{code}` |
-| `Ctrl+Shift+T` / `Cmd+Shift+T` | Table | `{table}` |
-| `Ctrl+Shift+B` / `Cmd+Shift+B` | Box | `{box}` |
-| `Ctrl+Shift+V` / `Cmd+Shift+V` | Video | `{video}` |
-| `Ctrl+Shift+E` / `Cmd+Shift+E` | Embed | `{embed}` |
-
----
-
-## File/menu shortcuts
-
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+S` / `Cmd+S` | Save |
-| `Ctrl+P` / `Cmd+P` | Print |
-| `Ctrl+N` / `Cmd+N` | New page |
-| `Ctrl+O` / `Cmd+O` | Open a page |
-| `Ctrl+Shift+N` / `Cmd+Shift+N` | New folder |
-| `Ctrl+Shift+S` / `Cmd+Shift+S` | Save the page as |
-| `Ctrl+W` / `Cmd+W` | Close the page |
-| `Ctrl+Shift+E` / `Cmd+Shift+E` | Export the page |
-| `Ctrl+Shift+X` / `Cmd+Shift+X` | Delete the page |
-
----
-
-## Search/navigation shortcuts
-
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+F` / `Cmd+F` | Search |
-| `Ctrl+Shift+F` / `Cmd+Shift+F` | Global search |
-| `Ctrl+G` / `Cmd+G` | Next match |
-| `Ctrl+Shift+G` / `Cmd+Shift+G` | Previous match |
-| `Ctrl+H` / `Cmd+H` | Replace |
-| `Ctrl+Shift+H` / `Cmd+Shift+H` | Replace (with context) |
-| `Ctrl+K` / `Cmd+K` | Search bar (when focused) |
-| `Ctrl+P` / `Cmd+P` | File search (panel) |
-| `Ctrl+Shift+O` / `Cmd+Shift+O` | Open the page structure |
-| `Ctrl+Shift+D` / `Cmd+Shift+D` | Open the page dashboard |
-
----
-
-## View shortcuts
-
-| Shortcut | Function |
-|----------|----------|
-| `F11` | Full-screen mode |
-| `Ctrl+Shift+I` / `Cmd+Shift+I` | Developer tools |
-| `Ctrl+B` / `Cmd+B` | Show/hide the sidebar |
-| `Ctrl+Shift+B` / `Cmd+Shift+B` | Show/hide the status bar |
-| `Ctrl+Enter` / `Cmd+Enter` | Preview/publish |
-| `Ctrl+Shift+V` / `Cmd+Shift+V` | Live preview |
-
----
-
-## Macros/tools shortcuts
-
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+Shift+T` / `Cmd+Shift+T` | Insert a table of contents |
-| `Ctrl+Shift+C` / `Cmd+Shift+C` | Insert a code block |
-| `Ctrl+Shift+B` / `Cmd+Shift+B` | Insert a box/macro |
-| `Ctrl+Shift+D` / `Cmd+Shift+D` | Insert a diagram |
-| `Ctrl+Shift+M` / `Cmd+Shift+M` | Open the macro manager |
-| `Ctrl+Shift+E` / `Cmd+Shift+E` | Embed a Jira issue |
-
----
-
-## Mac shortcuts
-
-| Shortcut | Function |
-|----------|----------|
-| `Cmd+Shift+P` | Command palette |
-| `Cmd+,` | Settings |
-| `Cmd+K` | Add a link |
-| `Cmd+Shift+F` | Global search |
-| `Cmd+Shift+S` | Save as |
-| `Cmd+W` | Close the page |
-
----
-
-## Keyboard navigation
-
-| Shortcut | Function |
-|----------|----------|
-| `Tab` | Next focus |
-| `Shift+Tab` | Previous focus |
-| `Enter` | Activate |
-| `Escape` | Leave the focus / close the dialog |
-| `Space` | Select the checkbox |
-| `↑` | Next block (upwards) |
-| `↓` | Next block (downwards) |
-
----
-
-## Quick navigation in the editor
-
-| Shortcut | Function |
-|----------|----------|
-| `Ctrl+↑` / `Cmd+↑` | Start of the editor |
-| `Ctrl+↓` / `Cmd+↓` | End of the editor |
-| `Ctrl+Home` / `Cmd+Home` | Start of the editor |
-| `Ctrl+End` / `Cmd+End` | End of the editor |
-| `Ctrl+Left` / `Cmd+Left` | Start of the word (left) |
-| `Ctrl+Right` / `Cmd+Right` | Start of the word (right) |
-
----
-
-## Summary
-
-Confluence offers extensive shortcuts for:
-- **Formatting**: all the common formats (bold, italic, headings, tables)
-- **Navigation**: inside the editor, in tables and between components
-- **File operations**: save, open, print, export
-- **Search**: local and global
-- **View**: full screen, sidebar, preview
-- **Macros**: quick access to common Confluence macros
-
-Mac users get the same shortcuts with `Cmd` instead of `Ctrl`.
+- Ctrl+Shift+P command palette, Ctrl+, as settings, Ctrl+S save, Ctrl+P print, Ctrl+N, Ctrl+O, Ctrl+W, Ctrl+Shift+F global search, Ctrl+Shift+O/G/H, Ctrl+Shift+V video, Ctrl+Shift+B box: none of these appears in the official table read. The earlier draft listed them. Removed.
+- Whether shortcuts can be customised: not stated in S12 or S13 (only that General shortcuts can be turned off).
+- The earlier table had Ctrl+B for sidebar. The official sidebar toggle is Ctrl+[ [S12].

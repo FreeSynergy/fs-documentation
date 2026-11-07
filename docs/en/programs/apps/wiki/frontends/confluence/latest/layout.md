@@ -1,135 +1,76 @@
-# Confluence - Structure & UI/UX
+# Confluence (Cloud, latest) · Layout
 
-## Overview
+Sources: S-numbers refer to the table in [index.md](../index.md). Layout is labelled as beta by Atlassian for the new content layout. [S15]
 
-Confluence has a classic three-column layout structure with sidebar navigation
-and a central content area.
-
-## Window structure
-
-### Main areas
+## Global frame
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│  Header (navigation, search, user menu)                         │
-├─────────────┬──────────────────────┬────────────────────────────┤
-│             │                      │                            │
-│  Sidebar    │   Main content       │  Right sidebar             │
-│  (left)     │   (main content)     │  (meta information)        │
-│             │                      │                            │
-│ - Pages     │  ┌────────────────┐  │  - Page info               │
-│ - Spaces    │  │  page/content  │  │  - Versions                │
-│ - Dashboard │  │                │  │  - Author                  │
-│ - Templates │  │  [editor or    │  │  - Permissions             │
-│ - ...       │  │   view]        │  │  - Tags                    │
-│             │  └────────────────┘  │                            │
-└─────────────┴──────────────────────┴────────────────────────────┘
++--------------------------------------------------------------------------+
+| Top bar: Search · Create · Chat (Rovo) · Notifications · Help · Profile  |
++----------------+-----------------------------------------+---------------+
+| Sidebar        | Content area                            | (Details      |
+| (collapsible)  | breadcrumbs (hidden while editing)      |  panel opens  |
+|                | header: title, "Last updated"           |  on the right |
+|                | title area: owner, status, labels, etc. |  on demand)   |
+|                | body (view or editor)                   |               |
+|                |                                         |               |
+|                                  floating action bar (bottom right)     |
++----------------+-----------------------------------------+---------------+
 ```
 
-### Sidebar (left)
+Sources: top bar items [S14]; sidebar items [S14]; header and title area [S15]; floating bar [S15].
 
-The sidebar is placed flush left and holds the main navigation:
+## Top bar [S14]
 
-| Element | Size | Function |
-|---------|------|----------|
-| Logo | ~50px | Confluence logo |
-| Pages | variable | page navigation |
-| Spaces | variable | space selection |
-| Dashboard | ~30px | dashboard access |
-| Templates | variable | template access |
+| Item | Function |
+|------|----------|
+| Search | Finds pages, live docs, spaces and other content |
+| Create | New page, live doc, database, Loom video, whiteboard or slides |
+| Chat | Opens chat with Rovo |
+| Notifications | Activity on watched items and spaces, replies, mentions, task assignments |
+| Help | Online help and "what's new" |
+| Your profile and settings | Personal space, Confluence settings, feedback |
 
-### Content area (middle)
+## Sidebar [S14]
 
-The content area takes up the largest part of the screen:
+Order by default, top to bottom: Expand/Collapse, app switcher, Confluence logo (returns to "For you"), For you, Recent, Starred, Spaces, Apps, More, Teams, Drafts, Company Hub (only if the organisation has published one), Customize sidebar.
 
-- **Header**: page title, actions menu (edit, share, etc.)
-- **Breadcrumbs**: the navigation path
-- **Main content**: page/content (editor or view)
-- **Footer**: footer information
+## Content header and title area [S15]
 
-### Right sidebar
+- Breadcrumbs are hidden at the top left while working. The down caret shows the full path.
+- The header holds the "Last updated" timestamp. Hovering or focusing it shows the last editor.
+- Title area shows, when relevant: content owner, classification, status, emoji reactions, read time, views.
+- "..." (More actions) holds: Watch settings, Version history (view changes), Find and replace, Templates and import, Archive and delete. Some header items moved here or to the Details panel.
+- Marketplace app buttons in the header are not supported in the new layout.
 
-Optional right sidebar with meta information:
+## Floating action bar [S15]
 
-| Element | Function |
-|---------|----------|
-| Page info | meta information |
-| Versions | version history |
-| Tags | tag information |
-| Web links | links |
+Fixed bottom right. Opens: comments panel, Details panel, emoji reactions, Loom video creation, and Atlassian Intelligence (Premium and Enterprise only).
 
-## UI/UX
+## Details panel [S15]
 
-### Design principles
+Opens on the right. Contents: ownership, views and analytics, read time, contributors, creator, status, classification, labels, linked files, attachments, Jira links and Smart Links.
 
-- **Classic**: traditional wiki design
-- **Clarity**: clear hierarchy and structure
-- **Function**: function over form
-- **Consistency**: a uniform design across all areas
+## Space sidebar [S14]
 
-### Colour scheme
+Contains the space overview, pages, live docs, blogs and whiteboards. Collapse with the Expand/Collapse icon at the upper left. Space items are changed in More actions (•••) next to the space name > Space settings > General > Features. Space admins can add and reorder space shortcuts.
 
-- **Light theme**: classic light colour scheme
-- **Custom**: adjustable colours (theme system)
+## Editor toolbar [S15]
 
-### Typography
+Choice in "..." of the toolbar: fixed top toolbar, or inline toolbar shown when text is selected.
 
-- **Headings**: clear hierarchy (H1-H6)
-- **Text**: readable font sizes (14-16px)
-- **Code**: monospace font
-- **Lists**: clear bullet points
+## Not in this layout (corrections)
 
-### Interactions
+The earlier draft showed a persistent right column with page info, versions, author, permissions and tags, a left sidebar with Dashboard and Templates, and a three-column Wiki Markup preview. None of these is confirmed by the current Cloud docs. See [changelog.md](../changelog.md).
 
-- **Hover effects**: visual feedback on hover
-- **Click feedback**: direct feedback on clicks
-- **Drag & drop**: for media uploads
-- **Auto-save**: automatic saving in the editor
+## Typography, colour and spacing
 
-### Responsive design
+See [themes/index.md](themes/index.md).
 
-- **Desktop**: full functions with the sidebar
-- **Tablet**: reduced sidebar, optimised views
-- **Mobile**: hamburger menu, optimised editor functions
+## Responsive and mobile
 
-## Editor structure
-
-### Visual editor
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  Formatting bar (menu)                                          │
-├─────────────────────────────────────────────────────────────────┤
-│  Content area (full screen)                                     │
-│                                                                 │
-│  [text, tables, images, etc.]                                   │
-│                                                                 │
-├─────────────────────────────────────────────────────────────────┤
-│  Status bar (words, characters, preview button)                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Wiki Markup editor
-
-```
-┌─────────────────────┬───────────────────────────────────────────────┐
-│  Editor (left)      │  Preview (right)                              │
-│                     │                                               │
-│  [Wiki Markup]      │  [parsed HTML]                                │
-│                     │                                               │
-└─────────────────────┴───────────────────────────────────────────────┘
-```
+Not verified. The mobile apps are separate products; their layout is not documented in the sources read.
 
 ## Accessibility
 
-- **Keyboard navigation**: complete control by keyboard
-- **Screen reader support**: ARIA attributes
-- **Contrast**: high contrast for better readability
-- **Zoom**: scalable UI without loss of function
-
-## Performance
-
-- **Fast loading**: server-side caching
-- **Client-side caching**: browser-side caching
-- **Pagination**: for large lists
-- **Debounce**: for search functions
+Atlassian states that its design system tokens meet WCAG AA contrast ratios. [S18] Statement about Confluence's own UI: unverified.

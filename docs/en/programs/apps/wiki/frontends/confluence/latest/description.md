@@ -1,54 +1,47 @@
-# Confluence - Description
+# Confluence (Cloud, latest) · Description
 
-## Overview
+Sources: see [index.md](../index.md) (S-numbers below refer to its table).
 
-Confluence is an enterprise wiki platform by Atlassian for team collaboration
-and knowledge management.
+## What it is
 
-## What Confluence does
+A team wiki hosted by Atlassian. Users create pages in spaces, collaborate through comments and version history, and find content through search and a sidebar. [S14][S15]
 
-Confluence is an enterprise wiki platform built specifically for collaboration
-in teams and organisations. It is part of the Atlassian ecosystem and integrates
-seamlessly with Jira.
+## Content model (verified)
 
-## Advantages
+| Type | Evidence |
+|------|----------|
+| Page | Create menu and `page` API group [S14][S3] |
+| Live doc | Create shortcut and Forge event `avi:confluence:created` family for live docs [S12][S10] |
+| Blog post | Create shortcut; blog events [S12][S10] |
+| Database | Create menu; `database` events [S14][S10] |
+| Whiteboard | Create menu; `whiteboard` events [S14][S10] |
+| Folder | `folder` events and `Folder` API group [S10][S1] |
+| Custom content | `custom_content` events [S10] |
+| Comment | Comment events and Comment API group [S10][S1] |
 
-- **Enterprise-ready**: scalable for large organisations
-- **Jira integration**: native integration with Jira
-- **Macro system**: extensive macro system for complex content
-- **Security**: enterprise security features
-- **Audit logs**: complete audit logs
-- **Templates**: extensive template system
-- **Mobile app**: strong mobile apps for iOS and Android
+Spaces contain these items. A space has an overview, pages, live docs, blogs and whiteboards in its sidebar. [S14]
 
-## Differentiation from other systems
+## Differences between Cloud and Data Center
 
-### Confluence vs. Notion
-- **Notion** is more flexible and cheaper
-- **Confluence** is enterprise software with better integrations
-- **Notion** has better databases, **Confluence** better Jira integration
+| Topic | Cloud | Data Center |
+|-------|-------|-------------|
+| Hosting | Atlassian hosts the instance [S14] | Self-managed (the product line in S20) |
+| Lifecycle | Updated continuously; no numbered version in the docs read | End of life 2029-03-28 [S20] |
+| API base | `/wiki/api/v2`, `/wiki/rest/api` [S1][S2] | Not checked (unverified) |
+| Webhooks | Forge events; Connect webhooks (legacy) [S10][S11] | Separate admin webhook feature; not read in full (unverified) |
+| Databases, Kanban | Database objects exist in Cloud [S10] | The old file claimed Data Center only; Cloud has databases too. Kanban view: unverified |
 
-### Confluence vs. XWiki
-- **XWiki** is open source and free
-- **Confluence** is commercial and comes with licence costs
-- **XWiki** offers more customisation, **Confluence** better integrations
+## Strengths (verified only)
 
-### Confluence vs. Wiki.js
-- **Wiki.js** is open source with more customisation
-- **Confluence** is commercial and comes with support
-- **Wiki.js** offers more editor options, **Confluence** better integrations
+- Cloud has two REST API generations and a GraphQL API. [S1][S2][S8]
+- Live change events exist for most content types (Forge). [S10]
+- Export to Word and PDF from the page menu, and PDF/HTML/XML/CSV from space settings. [S16]
+- Per-user light and dark theme. [S17]
 
-## Technical details
+## Claims dropped from the earlier draft
 
-- **Backend**: Java
-- **Database**: PostgreSQL, MySQL, H2, Oracle
-- **Frontend**: JavaScript, React (new), velocity (old)
-- **Authentication**: LDAP, SSO, OAuth, Atlassian Account
-- **Hosting**: cloud (Confluence Cloud) or self-hosted (Data Center)
+The following claims could not be verified against official sources and are removed: "enterprise-ready", "audit logs", "mobile app strength", Java and PostgreSQL back end, React and Velocity front end, and all comparisons with Notion, XWiki and Wiki.js. See [changelog.md](../changelog.md).
 
-## Who Confluence suits
+## Who it suits
 
-- **Large businesses**: for complex knowledge management systems
-- **Agile teams**: for projects with Jira integration
-- **IT teams**: for technical documentation
-- **Open-source projects**: as an enterprise alternative
+Not a product statement in the official sources read. Left out.

@@ -1,128 +1,62 @@
-# Confluence - Menu items
+# Confluence (Cloud, latest) · Menus
 
-## Overview
+Sources: S-numbers refer to [index.md](../index.md). Items marked "unverified" were in the earlier draft and could not be confirmed.
 
-Confluence is an enterprise wiki platform by Atlassian for team collaboration
-and knowledge management.
+## Top bar [S14]
 
-## Main menu items
+| Menu | Items / function |
+|------|------------------|
+| Search | Find pages, live docs, spaces |
+| Create | Page, live doc, database, Loom video, whiteboard, slides; blog post via shortcut [S12] |
+| Chat | Rovo chat |
+| Notifications | Notification list |
+| Help | Online help, what's new, keyboard shortcuts (help icon > Keyboard shortcuts) [S13] |
+| Your profile and settings | Personal space, Confluence settings, feedback |
 
-### 1. Home / start page
-- **Function**: personalised start page
-- **Details**:
-  - activity stream
-  - recommendations
-  - my tasks
-  - notifications
+## Sidebar [S14]
 
-### 2. Create
-- **Function**: create new content
-- **Details**:
-  - create a page
-  - create a blog post
-  - create a question (Answers)
-  - use a template
+For you · Recent (filters: Today, Worked on, Owned by me) · Starred · Spaces (recent and starred) · Apps · More · Teams · Drafts · Company Hub (conditional) · Customize sidebar
 
-### 3. Spaces
-- **Function**: choosing a space
-- **Details**:
-  - list all spaces
-  - my spaces
-  - recently visited
-  - create a space
+## Page "•••" menu [S15][S16]
 
-### 4. Created
-- **Function**: my own content
-- **Details**:
-  - my pages
-  - my blog posts
-  - my questions
-  - last edited
+| Item | Source |
+|------|--------|
+| Watch settings | [S15] |
+| Version history (view changes) | [S15] |
+| Find and replace | [S15] |
+| Export > Export to Word | [S16] |
+| Export > Export to PDF | [S16] |
+| Templates and import | [S15] |
+| Archive and delete | [S15] |
 
-### 5. Saved
-- **Function**: favourites/saved pages
-- **Details**:
-  - show saved pages
-  - manage saved pages
+Unverified from the earlier draft: Edit, Copy, Move, Delete (as separate items), Permissions, Print.
 
-### 6. Mentions
-- **Function**: manage my mentions
-- **Details**:
-  - show mentions
-  - change the status
-  - comment
+## Space "•••" menu (next to the space name) [S14][S16]
 
-### 7. Notifications
-- **Function**: notification centre
-- **Details**:
-  - new notifications
-  - all notifications
-  - notification settings
+| Item | Function |
+|------|----------|
+| Space settings | Opens space settings (available items depend on permissions) |
+| Space settings > General > Features | Choose space sidebar items |
+| Space settings > General > Export space | Formats PDF, CSV, HTML, XML (space admins) |
 
-### 8. Dashboard
-- **Function**: overview dashboard
-- **Details**:
-  - team activity
-  - popular pages
-  - my tasks
-  - statistics
+Unverified: "Change the theme" for a space (S17 describes space inheritance only), "Organise the content", "Space statistics", "Space backup".
 
-### 9. Search
-- **Function**: global search
-- **Details**:
-  - content search
-  - user search
-  - filter options
-  - quick search (Cmd/Ctrl+.)
+## Floating action bar [S15]
 
-### 10. Profile
-- **Function**: personal settings
-- **Details**:
-  - edit the profile
-  - notifications
-  - preferences
-  - sign out
+Comments panel · Details panel · Emoji reactions · Loom · Atlassian Intelligence (Premium and Enterprise).
 
-## Context menus
+## Blog post menu
 
-### Page menu (three dots top right)
-- Edit
-- Copy
-- Move
-- Delete
-- Archive
-- Page versions
-- Permissions
-- Print
-- Export (PDF, Word)
+Unverified in detail. Only the blog post create shortcut is documented [S12].
 
-### Blog post menu
-- Edit
-- Publish
-- Save as draft
-- Delete
+## Comment menu
 
-### Comment menu
-- Reply
-- Edit
-- Delete
-- Send a message
+Unverified.
 
-### Space menu (sidebar)
-- Space information
-- Space settings
-- Change the theme
-- Organise the content
+## Dashboard, Saved, Created, Mentions
 
-## Advanced features
+Not present as named menu items in the Cloud navigation docs read. "Saved" maps to Starred; "Created" maps to Recent with the "Owned by me" filter [S14]. "Dashboard" and "Mentions" as menu names: unverified.
 
-### Space menus
-- Space overview
-- Edit the space template
-- Space statistics
-- Space backup
+## Role-based menus
 
-### Dashboard menus
-- Edit the dashboard
-- Add/remove a widget
-- Share the dashboard
+Access is set by permissions. Which menus appear for which role is not documented in the sources read (unverified).
