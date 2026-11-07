@@ -36,8 +36,11 @@ or up to the groups above it (ADR 0055).
 
 **In Kanidm, rights always pass from child to parent.** So nesting is mirrored only where a group really passes its rights on; elsewhere Kanidm gets a flat list. This limit exists only in Kanidm (ADR 0056). If you need the other direction, build the tree the other way round.
 
-**Provisional, safe reading, until the project owner has decided the exact meaning.** Hanging a group under another takes the parent's
-consent, a group set to "not at all" never gives anything away, and when in doubt the answer is no.
+**Decided by the project owner (2026-11-07): following is one-sided.** If I follow you, I decide what you may do with my things, and you
+do not have to confirm that. I only give rights that are mine, and never more than I have. I get nothing from you by following you.
+**The code still does the older, safe reading:** hanging a group under another takes the parent's consent. A group set to "not at all"
+never gives anything away, and when in doubt the answer is no. Still open: whether following is an edge in the tree at all, since two
+groups following each other would otherwise be a forbidden cycle.
 
 **Not enforced yet.** This is what the rights check answers, not a boundary anyone enforces. Whoever consents is only a text field so far, nobody
 is authenticated, and granting rights is unprotected. Enforcing it needs a real identity, through the identity wrapper. `fs-groups` also
@@ -70,6 +73,6 @@ If Kanidm gains one of these, we hand it back, as stated in ADR 0047.
 
 ## Open questions
 
-1. Must a hierarchy be a tree, or can a group have several parents? **Provisional answer, still to be confirmed by the project owner:** several parents are allowed, as a working group can belong to two departments, and cycles are refused.
+1. Must a hierarchy be a tree, or can a group have several parents? **Confirmed by the project owner (2026-11-07):** several parents are allowed, as a working group can belong to two departments, and cycles are refused.
 2. Who may widen a survey to a parent group: its initiators, or the parent group?
 3. How do decisions about group membership work: by appointment, or by a vote using `fs-surveys`?

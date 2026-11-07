@@ -85,6 +85,7 @@ Vom Nutzer begründet: Eine KI darf nicht nachträglich lesen, was geschrieben w
 
 6. **Das gilt für jede KI, ohne Ausnahme,** auch auf dem eigenen Gerät oder Server.
 7. **Zieht jemand die Zustimmung zurück, muss die KI hinaus.**
+9. **Weg zur KI (Nutzer, 2026-11-07): zuerst Matrix, MLS später.** Das Programm der KI hat ein normales Matrix-Konto mit eigenem Schlüssel. Auch eine lokale KI braucht dann einen Matrix-Server, etwa `tuwunel` auf dem eigenen Rechner.
 8. **Eine KI, die Protokoll führt,** ist erlaubt, aber nicht, wenn einer nicht will. Auch dafür gelten Punkt 4 bis 7.
 
 Warum das keine Diskriminierung ist (Nutzer): „Ich bin wirklich für Gleichberechtigung, aber das hat nichts mit Rechten von Menschen

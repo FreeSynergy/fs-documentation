@@ -30,6 +30,8 @@ researched (see the table below), but not shipped yet.
 | Name | Kind | Standard | Owner | State |
 |------|------|----------|-------|-------|
 | Contact, friend, acquaintance, colleague, co-worker, neighbour, family, emergency contact | Relation | vCard `RELATED` types `contact`, `friend`, `acquaintance`, `colleague`, `co-worker`, `neighbor`, `kin`, `child`, `parent`, `sibling`, `spouse`, `emergency` | `fs-people` | Standard |
+| Friend, partner | Relation, personal and private (ADR 0029) | vCard `RELATED` types `friend`, `spouse`, `sweetheart` (RFC 6350 §6.6.6) | `fs-people` | Standard. Which terms we offer for a partner is still to be worked out |
+| Member or office holder of a club or association | Role | `org:Role` with `org:Membership` fits as a shape; ❌ no term of its own for a club found so far, not researched in depth | `fs-groups` | To be researched |
 | User | Role | SCIM `User` (RFC 7643); Kanidm | `fs-people` configures users (ADR 0055); how this relates to the identity wrapper is open | Standard |
 | Member of a group | Role | `org:Membership`, AS2 `Group`, SCIM `Group` | `fs-groups` | Standard |
 | Customer | Role | Terms for a party in a sale: UBL 2.3 `CustomerParty` (§2.4), schema.org `customer` (on `Order` and `Invoice`), FIBO `Customer`. ❌ No standard for customer as a lasting role of a person. None in vCard, JSContact, SCIM or `org` | Later CRM | **Term exists, role is a gap: own specification** |
@@ -44,7 +46,7 @@ researched (see the table below), but not shipped yet.
 `org:Role` is a subclass of `skos:Concept` (`org` §5.3.5). So a role is a described concept. The ontology allows extra
 properties through "extension vocabularies" (§5.3.5) and allows profiles that add terms (§3).
 
-**Proposal, not decided.** A role file is a SKOS concept scheme written as JSON-LD. Ours and yours have the same format. Only
+**Decided by the project owner (2026-11-07).** Inside our programs a role travels over Cap'n Proto (`people.capnp`), which anyone may also use from outside. For everyone else there is JSON-LD, because that is the standard. A role file is a SKOS concept scheme written as JSON-LD. Ours and yours have the same format. Only
 the base address differs, and each role's full id is that base plus its short id.
 
 | Field | Meaning | Maps to |
@@ -126,19 +128,17 @@ types for fields are not defined yet. SHACL (W3C) is a candidate, but it is not 
 Definitions are configuration, so they can be added while programs run, and can be shared through a git repository
 (ADR 0036, 0045).
 
-## To decide
+## Decided (project owner, 2026-11-07)
 
-Our proposals for the project owner. None of these is decided.
-
-1. **Format:** accept SKOS in JSON-LD as described above. This needs a change in `fs-people`.
-2. **Address:** `https://freesynergy.net/ns/roles/` as the base of our roles. Existing examples use `https://freesynergy.net/ns#`.
-   Who controls this domain is not checked here.
-3. **Customer and supplier:** `org:Role` means a role "in an organization" (§5.3.5), and a customer or supplier stands outside
-   it. We propose the type `skos:Concept` for these two, not `org:Role`.
-4. **Companies:** UBL's party may be "an individual, a group, or a body" (§2.2.8), and a supplier is often a company. `fs-people`
-   keeps people. Should it also keep cards of kind `org`? We propose yes for these two roles.
-5. **Lead and prospect:** three roles (lead, prospect, customer), or one role with a stage? We propose three. A lead is not a
-   kind of customer, and a person moves on by ending one assignment and starting the next.
+1. **Format:** SKOS, with Cap'n Proto inside and also available outside, and JSON-LD outside as the standard. This needs a change in `fs-people`.
+2. **Address:** `https://freesynergy.net/ns/roles/` is the base of our roles. The project owner holds this domain. Existing examples that use
+   `https://freesynergy.net/ns#` still need changing.
+3. **Customer and supplier:** `org:Role` means a role "in an organization" (§5.3.5), and a customer or supplier stands outside it. These two
+   have the type `skos:Concept`.
+4. **Companies:** `fs-people` also keeps cards of kind `org` for these two roles.
+5. **Lead and prospect:** three roles (lead, prospect, customer), not one role with a stage. A lead is not a kind of customer, and a person
+   moves on by ending one assignment and starting the next.
+6. **More than business:** we also cover clubs and associations, friendships and partners, so personal and private life as well. See the table above.
 
 ## Open
 

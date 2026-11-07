@@ -16,7 +16,12 @@ Status: akzeptiert (2026-11-06) · ergänzt ADR 0005, 0021, 0037, 0049, 0054, 00
 8. **In Kanidm stehen nur Menschen, die die Rechte haben.** Nicht jeder in `fs-people` kommt nach Kanidm, aber jeder in Kanidm ist auch in `fs-people`.
 9. **Mail bietet auch ältere Verschlüsselung an:** zusätzlich zu OpenPGP v6 auch v4-Schlüssel und das ältere Verfahren an v4-Empfänger. Unverschlüsselt geht weiterhin nichts hinaus.
 
-## Einhängen einer Gruppe (Nutzer denkt noch nach, Vorschlag Opus)
+## Einseitig folgen (Entscheidung des Nutzers, 2026-11-07)
+**Es braucht keine Zustimmung beider Seiten.** „Wenn ich dir folge, dann bestimme ich, was du bei mir darfst. Warum musst du bestätigen, dass ich dir das erlaube? […] Natürlich ist es schön, wenn beide da sind, aber das muss nicht sein.“
+Damit ist der Vorschlag unten, die Verbindung gelte erst nach Zustimmung beider, abgelehnt. Es gilt: Wer folgt, gibt nur eigene Rechte, und nie mehr, als er selbst hat. Bei dem anderen bekommt er dadurch nichts.
+Bestätigt: mehrere Eltern je Gruppe, Zyklen verboten. **Noch offen beim Nutzer:** ob ein Folgen eine Kante im Baum ist, denn gegenseitiges Folgen wäre sonst ein verbotener Zyklus, und ob der andere eine Verbindung entfernen kann.
+
+## Einhängen einer Gruppe (früherer Stand: Nutzer dachte noch nach, Vorschlag Opus)
 Nutzer: Wer sich einhängt, sagt, was der andere bei ihm darf. Sagt der andere nichts, darf man bei ihm nichts; er darf aber bei mir schauen. Meldet er sich auch, darf man bei ihm. Ob er mich trotzdem akzeptieren muss, ist offen.
 **Vorschlag:** Rechte verschenken geht einseitig, nie mehr, als man selbst hat, und jederzeit widerrufbar; der andere sieht es und kann ablehnen. Die Verbindung im Baum (wer zu wem gehört) gilt erst, wenn beide zugestimmt haben, sonst könnte sich jede Gruppe als Teil einer anderen ausgeben.
 
