@@ -69,7 +69,7 @@ KIs dürfen bei uns mitarbeiten, als Teilnehmer, nicht als heimliche Zuhörer. J
 
 ## Offen bis zum letzten Baustein.
 
-Wo es einen offenen Standard gibt, nutzen wir ihn. Wo keiner existiert, schreiben wir einen und schenken ihn allen. Kein Programm hält dich fest, weil du nicht mehr herauskommst.
+Wir speichern alles in offenen Standards. Darum kannst du jederzeit mit all deinen Daten zu einem anderen Programm wechseln, auch zu einem, das nicht von uns ist. Und wo es noch keinen Standard gibt, schreiben wir einen und stellen ihn allen frei zur Verfügung.
 
 ---
 
