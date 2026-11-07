@@ -14,12 +14,14 @@ Einzeilig einfügen, N ersetzen:
 
 ## Runde 2 (Nutzer, 2026-11-07 abends): Laden `fs-store` lauffähig und installierbar
 
-Die fünf Threads der Runde 1 sind fertig. Runde 2 hat zwei neue Threads. **Sprint.md immer von GitHub lesen** (`git -C /srv/FreeSynergy/fs-documentation fetch -q && git -C /srv/FreeSynergy/fs-documentation show origin/main:todo/sprint.md`), der lokale geteilte Baum ist veraltet. Mechanische Arbeit (Suchen und Ersetzen, Doku nachziehen, Listen) an Haiku-Agenten geben, sie verbrauchen am wenigsten; Code-Prüfung vor jedem Tag weiter durch einen zweiten Agenten, der den Code nicht schrieb.
+Die fünf Threads der Runde 1 sind fertig. Runde 2 hat vier neue Threads; M und U warten auf das Ende der Umbenennung. **Sprint.md immer von GitHub lesen** (`git -C /srv/FreeSynergy/fs-documentation fetch -q && git -C /srv/FreeSynergy/fs-documentation show origin/main:todo/sprint.md`), der lokale geteilte Baum ist veraltet. Mechanische Arbeit (Suchen und Ersetzen, Doku nachziehen, Listen) an Haiku-Agenten geben, sie verbrauchen am wenigsten; Code-Prüfung vor jedem Tag weiter durch einen zweiten Agenten, der den Code nicht schrieb.
 
 Startzeilen:
 ```text
 /loop Du bist Thread R (Umbenennung) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread R der Reihe nach ab.
 /loop Du bist Thread S (Laden fs-store) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread S der Reihe nach ab.
+/loop Du bist Thread M (Messenger) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“). Warte, bis Thread R „Umbenennung fertig“ meldet (in todo/handoff-programming.md oder per Nachricht), dann arbeite die Liste von Thread M ab.
+/loop Du bist Thread U (Umfragen) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“). Warte, bis Thread R „Umbenennung fertig“ meldet (in todo/handoff-programming.md oder per Nachricht), dann arbeite die Liste von Thread U ab.
 ```
 
 ### Thread R: Umbenennung nach ADR 0060, danach `fs-release`
@@ -31,6 +33,7 @@ Schreibt in alle Repos, solange Schritt 1–3 laufen; sonst arbeitet niemand an 
 5. `fs-release`: `~` im Versionsnamen passt nicht zu `SHA256SUMS.txt` (rpm `0.6.1~rc.2`); `features` an jedes Paket; ein Binary unter `crates/` ohne `cargo-package`; msi bei mehreren Paketen. Danach: gemeinsamer Prüf-Ablauf bei jedem Push (fmt, clippy pedantic `-D warnings`, Tests, `check_rust_rules.py`), ohne Secrets, in alle Repos (Nutzer „ja“, 2026-11-07).
 
 ### Thread S: Laden `fs-store` (heute `/srv/FreeSynergy/fs-launcher`, nur lokal)
+**Nutzer, 2026-11-07 abends:** Vorabversionen dürfen öffentlich werden. **Spätestens Sonntag** soll es installierbare Programme geben, die Freunde testen. Der Nutzer will nicht immer wieder von Hand installieren: **Der Laden ist die App, aus der man Programme installiert, aktualisiert und erweitert.** Darum: CLI nur als dünner Test, die GUI (Punkt 6) ist Ziel, nicht Zugabe. Reihenfolge der ersten Pakete: der Laden selbst, `fs-tasks`, `fs-people`, dann was `fs-release` sauber baut. Signieren: Der Nutzer legt die Secrets für den Signaturschlüssel an; bis dahin Entwürfe bauen und alles andere fertig machen, dann veröffentlichen als **Pre-release**.
 Ziel: Auf diesem Rechner (Fedora) installiert der Laden ein echtes FreeSynergy-Programm aus einer Git-Quelle, prüft die OpenPGP-Signatur (Schlüssel `16A4A3EE563AEF51FCF0C55DED7B57C4A1904342`), aktualisiert es, rollt bei Fehlern zurück, und aktualisiert sich selbst. Erst lesen: `fs-launcher/DESIGN.md`, ADR 0036, 0060, 0051, 0021, `temp/research/craft-launcher.md`. Reihenfolge wie immer: Muster, Trait, Tests, Umsetzung.
 1. **Sicherung:** Repo jetzt als `FreeSynergy/fs-launcher` auf GitHub anlegen und pushen (Nutzer, 2026-11-07: Push im Sprint erlaubt). Umbenennung in `fs-store` erst nach der Meldung „Name `fs-store` frei“ von Thread R; dann Crates `fs-store-*`, Ordner, Doku.
 2. **Katalog (vorläufig, Strategie 2026-11-07):** Eine Quelle ist ein Git-Repo mit einem Katalog im Format **AppStream** (freedesktop, Katalog-YAML/DEP-11 oder XML; einen Standard wählen und begründen) plus abgetrennter OpenPGP-Signatur über den Katalog. Der Katalog nennt je Paket Version, Art (Programm, Frontend, Component, Theme), Format, Download-Adresse der Release-Datei und deren Signatur. Geholt wird der Katalog mit `gix`, die Dateien per HTTPS. Unsere Referenzquelle: neues Repo `FreeSynergy/fs-catalog` (erst anlegen, wenn Schritt 3 lokal läuft). Kein eigenes Format erfinden.
@@ -39,6 +42,16 @@ Ziel: Auf diesem Rechner (Fedora) installiert der Laden ein echtes FreeSynergy-P
 5. **Probe gegen echt:** Ein Paket, das `fs-release` gebaut und signiert hat (z. B. `fs-tasks` als `tar.gz`), über den Katalog installieren und starten. Entwürfe sind nicht öffentlich: Solange der Nutzer keine Vorabversion freigibt, mit einem lokalen Katalog (`file://`-Git-Repo) und den Dateien des Entwurfs testen (`gh release download`), und das in der `DESIGN.md` sagen.
 6. **GUI auf Blinc** (mit `fs-components` v0.3.0): Quellen, Verfügbar, Installiert, Fortschritt eines Auftrags. Texte über `words.rs`.
 7. **Paket für den Laden selbst** über `fs-release` (rpm und tar.gz), damit der Nutzer ihn mit `dnf install` installiert. Kein öffentliches Release ohne Rückfrage, nichts signieren (Schlüssel beim Nutzer).
+
+### Thread M: Messenger (startet nach der Meldung „Umbenennung fertig“ von Thread R)
+1. **Mail-Schlüssel (Nutzer, 2026-11-07):** v6 für unsere eigenen Schlüssel, v4 zusätzlich anbieten, damit GnuPG und RNP lesen können. Branch `mail-v4` (`460c6a6`) ist nur eine ungeprüfte Sicherung: prüfen, neu aufsetzen wo nötig.
+2. `matrix` zu v0.4.0: `prev_content`-Nachweis nur für Räume des eigenen Servers; verdrängter Raum aus `away` (über 256) gilt als nie angenommen und wird neu geprüft (Strategie, vorläufig, „im Zweifel zu“).
+3. v0.3.1 (Open point 17); Vertragswert `readsSensitive` ans Ende von `ToolCallRisk`; Geheimnisregel: vor dem Vergleich normalisieren (Unicode UTS #39: NFKC, Kleinschreibung, verwechselbare Zeichen), Wörter `passwd`, `pwd`, `pin`, `seed`, `mnemonic`, `private` dazu.
+4. ADR 0054 „KIs in Unterhaltungen“ (4c oben): Hinweis vor dem Eintritt, alle stimmen zu, kein Verlauf von vorher, Zustimmung zurückziehen = KI hinaus.
+
+### Thread U: Umfragen (startet nach der Meldung „Umbenennung fertig“ von Thread R)
+1. Offene Umfragen nach `docs/en/programs/apps/surveys/design.md`, Abschnitt „Open surveys“ (Nutzer, 2026-11-07): jeder darf antworten, kein Nachweis; Frage „Bist du eine KI?“; Auswertung der Muster (Antwortzeit, gleiche Freitexte, Honeypot-Feld, gleiche Wahl in jeder Zeile, Häufung) wird gezeigt, nie still aussortiert; freiwillige Angaben danach. Ersetzt die Regel „ohne Person vom Host = KI“ auf `ai-participants`; danach `ai-participants` mergen und taggen.
+2. Brücke `AiMarking` in `fs-groups` über `is_ai_role()` (mit Test für Kurz-ID und volle IRI).
 
 ## Die Threads (Runde 1, abgeschlossen)
 

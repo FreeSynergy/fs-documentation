@@ -43,4 +43,4 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 - Strata, CodeAF, Zed, ACP, MCP sind gelesen (Seite `assistant`); zwei Entscheidungen beim Nutzer.
 - Rollen: Forschung fertig (`temp/research/roles-standards.md`), fünf Entscheidungen beim Nutzer.
 - Schnittstelle `Trust`: RLTP weiterlesen (`personhood-predicates`, `trust-layer`), Betreiber-Verweis klären.
-- Manifest ausführlicher und schöner schreiben (Nutzer hat „Anfälle“: immer ergänzen).
+- Manifest als echten Text ausschreiben, dazu ein Werbetext für das Projekt und Beschreibungen der Programme (Nutzer, 2026-11-07: „Texte, die die Menschen umhauen“).

@@ -84,6 +84,12 @@ Whether it can also move between levels of a hierarchy was not confirmed.
 
 **AIs (project owner, 2026-11-07):** an AI takes part only if the creator of the survey allows it. Its answer is always counted and shown separately, never added to the people's. This is an exception to "like a person", because of the risk: AIs are easy to multiply. Their answers can still interest people, as they often follow a line of reasoning.
 
+**Open surveys (project owner, 2026-11-07):** anyone may answer. There is no captcha and no proof of being human. Instead, the result of an open survey comes with an **analysis of the answers**, shown next to it:
+- The survey can ask "Are you an AI?". Who says yes is counted in the AI part; who says no is counted as a person, and the share of self-declared AIs is shown. The answer is not trusted beyond that.
+- Patterns are counted and shown, never used to silently drop answers: very short answer times, identical free texts, a filled hidden field (honeypot), the same option in every row, many answers in a burst.
+- Voluntary details (for example gender or age group) can be asked after the survey, so that the result can be compared with the population.
+This replaces the provisional rule "an open answer without a person from the host counts as AI" from branch `ai-participants`. AIs that are known as AIs (invited, marked by the host) still go into the separate AI part.
+
 ## Patterns
 
 | Pattern | Use |
