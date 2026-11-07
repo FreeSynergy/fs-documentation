@@ -14,13 +14,13 @@ module doc (`//! Pattern: Repository over Store (strategy for the backend)`).
 
 | Pattern | Rust form | Typical use here |
 |---------|-----------|------------------|
-| Strategy | trait + `dyn Trait` / generic `T: Trait` | storage backends, tile sources, highlighters, key providers |
+| Strategy | trait + `dyn Trait` / generic `T: Trait`; for a closed set an enum with one `match` | storage backends, tile sources, highlighters, key providers |
 | Repository | trait with CRUD/query over a `Store` | contacts, calendar, wiki pages |
 | Adapter | struct wrapping a foreign type, implementing our trait | vCard/ICS/Markdown import, Blinc behind our components, Turso behind `Store` |
 | Facade | one small type that hides a subsystem | `fs-hub-client`, program cores' entry points |
 | Builder | `XBuilder` with `build() -> Result<X>` | complex construction (queries, compiler commands, envelopes) |
 | Command | enum of operations + `apply`/`invert` | undo/redo, activity log |
-| Observer | `tokio::sync::broadcast`/`watch`, listener traits | subscriptions, change streams |
+| Observer | `tokio::sync::broadcast`/`watch`, listener traits, or closures the caller hands in | subscriptions, change streams |
 | State | enum states + transition fns, or typestate generics | invitations, drafts, connections, delivery state |
 | Template method | trait with provided default methods | shared flows (import → validate → store) |
 | Decorator | wrapper implementing the same trait | `CachedSource` over `TileSource`, logging, metrics |
@@ -34,8 +34,11 @@ module doc (`//! Pattern: Repository over Store (strategy for the backend)`).
 | Null object | a type that implements the trait and does nothing, on purpose | no-op listener, empty source |
 | Composite | a tree of the same trait | nested layouts, nested filters |
 | Memento | an opaque snapshot to restore or read from | undo, consistent reads |
-| Visitor | one function per variant, kept outside the data | walking a document or schema |
+| Visitor | one function per variant, kept outside the data; for a closed enum one `match` outside the data | walking a document or schema |
 | Interpreter | evaluate a small language over its tree | recurrence rules, queries |
+| Unit of Work | remembers what was there at the start and writes only what changed | form drafts |
+| View function | a pure function from state to elements (Model–View–Update) | the views of components and workbenches |
+| Data structure | name it: `Data structure: Fenwick tree` | heights of messages, a keyed forest |
 | Capability object | a type only one place can hand out; holding it is the right | the port of a guard, a local enrolment |
 
 No pattern for its own sake: pick the one that makes the code reusable and testable, and write why.
