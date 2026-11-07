@@ -96,6 +96,9 @@ The closed-source products were checked only partly; each note lists what was ve
 
 ## Open decisions
 
+- **Which translation library (ADR 0057).** Everything a person reads is written to be translatable from now on, behind an interface. Nothing is translated yet.
+  Unicode MessageFormat 2 is the standard and comes first if it can be used from Rust. We research this in the week of 2026-11-09.
+
 | # | Question | Recommendation |
 |---|----------|----------------|
 | 1 | Should views also be stand-alone programs? | Discuss later |

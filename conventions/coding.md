@@ -46,7 +46,7 @@ kind: it says `Constants`. A test file names what it tests; it has no pattern of
 **A small file without behaviour may say so (project owner, 2026-11-07):** `Pattern: none`, for error lists, plain data, constants, a single pure function and a thin binary. A
 made-up name is worse than an honest "none". Anything with behaviour still names a pattern and sits behind an interface.
 
-## 2a. Text a person reads (interim rule, 2026-11-07, decision pending)
+## 2a. Text a person reads (ADR 0057)
 Translation itself comes later (ADR 0053), but text must be translatable from now on.
 - No sentence a person reads inline in code. It goes in the program's `words.rs` or a component's `labels.rs`.
 - A whole sentence with named placeholders, never joined from pieces: word order differs between languages. New text does not use positional `{}`.

@@ -28,6 +28,7 @@ Einzeilig einfügen, N ersetzen:
 2. Fehler der Markdown-Rundreise in `fs-text` beheben (`fs-wiki/DESIGN.md`).
 3. Gemeinsame Components aus `docs/en/components/planned.md`, Abschnitt „Build first“. Früh taggen, Thread 4 wartet darauf.
 4. `charts` (Vega-Lite-Teilmenge, `docs/en/components/charts.md`).
+5a. Trait für Texte (ADR 0057), nach deinen laufenden Prüfungen: Muster Strategy, Text-Kennung plus benannte Werte ergibt einen Satz, einfache englische Umsetzung dahinter, keine Bibliothek. Mit Thread 4 abstimmen, er nutzt `words.rs` in den Apps. Vorhandene `labels.rs` nicht in einem Durchlauf umbauen.
 5. Chat-Components `message-list`, `message-composer`, `llm-chat`, `agent-tree`, `tool-call`; Muster aus der Analyse auf der Seite `assistant`.
 
 ### Thread 2: Messenger
