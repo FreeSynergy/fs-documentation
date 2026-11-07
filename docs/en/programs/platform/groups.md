@@ -41,8 +41,8 @@ do not have to confirm that. I only give rights that are mine, and never more th
 **The code still does the older, safe reading:** hanging a group under another takes the parent's consent. A group set to "not at all"
 never gives anything away, and when in doubt the answer is no. **Following is not a tree (project owner, 2026-11-07).** It is no hierarchy. It works like a repository, only the other way round: you do not
 subscribe, you deliver. If I let you reach my data, you get an invitation and your server enters me as a repository. You have to learn that
-you may, but you do not have to confirm it, and two groups may follow each other. Still open: whether what I deliver may be passed on along
-a chain, and whether "belongs to" with parents stays next to this.
+you may, but you do not have to confirm it, and two groups may follow each other. Whoever receives something may pass it on only if I allow it, though nothing can stop someone
+from retyping it. "Belongs to" with parents stays, for inside an organisation; following is for independent parties. Not built yet.
 
 **Not enforced yet.** This is what the rights check answers, not a boundary anyone enforces. Whoever consents is only a text field so far, nobody
 is authenticated, and granting rights is unprotected. Enforcing it needs a real identity, through the identity wrapper. `fs-groups` also

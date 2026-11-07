@@ -98,6 +98,9 @@ geht einseitig zum Nachteil der Personen in der Unterhaltung. Die Regel richtet 
 ### Offen
 - Große oder öffentliche Gruppen: Eine einzige Absage genügt. Vorläufig bleibt das so, dort gibt es dann eben keine KI.
 
+## Agenten erzeugen keine Geheimnisse, die ein Mensch behält (Nutzer, 2026-11-07)
+Ein Agent hat ein Passwort und eine Passphrase angelegt und wusste damit beides. Der Nutzer muss es deshalb ändern. Regel: Ein Agent erzeugt kein Passwort, keine Passphrase und keinen privaten Schlüssel, die ein Mensch weiter nutzt, und liest sie auch nicht. Er schreibt die Anleitung, der Mensch führt sie aus. Testwerte in Tests sind davon nicht betroffen.
+
 ## Lesen ist nicht harmlos (Nutzer, 2026-11-07)
 „Stell dir vor, die KI liest Passwörter aus. Dann ist das schlimmer als Löschen, kommt darauf an was, oder Geheimnisse.“ „Nur scheinbar harmlose Sachen sind nicht harmlos.“
 Der Nutzer nennt auch: eine KI, die ein Gespräch mitbekommt und es meldet, und Geschäftsgeheimnisse, die ein Unternehmen zerstören können.

@@ -23,7 +23,8 @@ Bestätigt: mehrere Eltern je Gruppe, Zyklen verboten.
 
 **Folgen ist kein Baum (Nutzer, 2026-11-07):** „Das ist kein Baum, es ist keine Hierarchie, es ist ein Repository, nur umgekehrt. Nicht du abonnierst etwas, sondern du lieferst.“ „Wenn ich jemandem erlaube, dass er auf meine Daten zugreifen kann, dann bekommt er eine Invitation und sein Server trägt ihn als Repository ein. Oder das Bild einer verketteten Liste.“
 Also: Der andere muss mitbekommen, dass er darf, er muss es aber nicht bestätigen. Gegenseitig ist erlaubt, weil es kein Baum ist. Vorschlag: AS2 `Invite` als Nachricht.
-**Noch offen beim Nutzer:** ob B das von A Gelieferte an C weitergeben darf (Kette), und ob es daneben „gehört zu“ mit Eltern überhaupt noch gibt.
+**Weitergeben (Nutzer, 2026-11-07):** B darf das von A Gelieferte nur an C weitergeben, wenn A es ausdrücklich erlaubt. Einschränkung des Nutzers: „Wir können nichts tun, wenn jemand das dann abtippt und trotzdem weitergibt.“
+**„Gehört zu“ bleibt (Nutzer, 2026-11-07):** innerhalb einer Organisation mit Eltern und ohne Zyklen; Folgen gilt zwischen Unabhängigen. Für „gehört zu“ bleibt die Zustimmung der Eltern vorläufig, die Absage an „beide müssen zustimmen“ galt dem Folgen.
 
 ## Einhängen einer Gruppe (früherer Stand: Nutzer dachte noch nach, Vorschlag Opus)
 Nutzer: Wer sich einhängt, sagt, was der andere bei ihm darf. Sagt der andere nichts, darf man bei ihm nichts; er darf aber bei mir schauen. Meldet er sich auch, darf man bei ihm. Ob er mich trotzdem akzeptieren muss, ist offen.

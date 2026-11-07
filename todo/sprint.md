@@ -67,6 +67,7 @@ Jeweils erst Vertrag in `fs-interfaces`, dann Kern ohne GUI, mit eigener `DESIGN
 3. `fs-resources` (`resources/index.md`)
 4. Erst wenn das steht: `fs-whiteboard`, dann `fs-streaming`, jeweils nur der Kern nach `design.md`.
 5. `fs-people`: Rollen wie in `docs/en/interfaces/roles.md`, Abschnitt „Decided“ (Nutzer, 2026-11-07): innen Cap'n Proto, außen JSON-LD, Adresse `https://freesynergy.net/ns/roles/`, Karten `org`, Rollen Lead, Interessent, Kunde. Mit Thread 3 abstimmen, er arbeitet in `fs-people-server`.
+6. `fs-groups`: Folgen nach ADR 0056, Abschnitt „Einseitig folgen“: Wer Zugriff erlaubt, liefert (Repository andersherum, kein Baum); der andere bekommt eine Einladung (AS2 `Invite`, Vorschlag) und sein Server trägt die Quelle ein, ohne Bestätigung, entfernen kann er sie. Gegenseitig erlaubt. Nur eigene Rechte, nie mehr als man hat. Weitergeben nur mit ausdrücklicher Erlaubnis der Quelle. „Gehört zu“ mit Eltern bleibt daneben. Erst Muster und Vertrag `groups.capnp`, mit Thread 3 abstimmen.
 
 ### Strategie
 Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Frontends analysieren; `requirements.md` von surveys, streaming, tasks angleichen; Umbenennungen der Doku; Meldungen der Threads gegen GitHub prüfen und Doku nachziehen.
@@ -106,6 +107,7 @@ Kleine Korrekturen in bestehendem Code brauchen keinen neuen Trait, aber das Mus
 - `scripts/clean_rust.py` nur für das eigene Repo, **niemals `--all`**, sonst löscht es die Builds der anderen.
 
 **Nicht tun**
+- **Keine Geheimnisse für Menschen erzeugen oder lesen (ADR 0054):** Passwörter, Passphrasen, private Schlüssel. Du schreibst die Anleitung, der Mensch führt sie aus. Testwerte in Tests sind erlaubt.
 - Keine Releases und kein Signieren: Der Schlüssel ist offline. Keine Übersetzung (ADR 0053). Keine Veröffentlichung auf crates.io ohne Rückfrage. Nur zu GitHub pushen, nichts sonst nach außen.
 
 **Stand melden**

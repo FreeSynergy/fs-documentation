@@ -178,6 +178,9 @@ something is safe. Our proposal: reading needs a release as well, and the releas
 Reading anything marked sensitive (ADR 0029) asks every time. Reporting something to the outside acts in the person's name and always
 asks. What a provider does with text it has read is out of our reach, which is why a local AI stays the default.
 
+**Agents create no secrets that a person keeps (project owner, 2026-11-07).** An agent once made a password and a passphrase, and so it knew both. An
+agent writes the instructions, and the person carries them out.
+
 **How a tool call gets approved.** The tempting way is MCP's form request (elicitation): the server returns `input_required`, the
 client asks, then retries with the answer. This **cannot be our brake**. The answer comes from the client, the specification allows
 "other sources", and the client may be the AI's own program. An `accept` proves nothing about a person.
