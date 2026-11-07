@@ -1,6 +1,6 @@
 # Handtest: fs-people-app und fs-tasks-app (Stand 2026-11-07)
 
-Diese Anleitung ist für Kal. Alle Befehle unten habe ich auf diesem Rechner selbst ausgeführt (siehe letzter Abschnitt).
+Diese Anleitung ist für Kal. Alle Befehle unten habe ich auf diesem Rechner selbst ausgeführt (siehe letzter Abschnitt). Zweite Fassung vom 2026-11-07: neu sind das Blättern mit „Show more“ per Cursor und das atomare Speichern mit Konfliktmeldung.
 Ein echtes Fenster habe ich nicht geöffnet, das machst du. Die Oberfläche ist bisher **englisch** (Übersetzung ist noch nicht dran, ADR 0053).
 
 ## Das Prinzip in drei Sätzen
@@ -77,11 +77,33 @@ END:VCALENDAR
 E
 ```
 
+Eine große Beispieldatei zum Blättern (je 300 Einträge). Das kleine Skript schreibt sie:
+
+```bash
+cat > ~/fs-handtest/gen.sh <<'E'
+#!/usr/bin/env bash
+# Aufruf: gen.sh people|tasks ANZAHL DATEI
+n=$2; f=$3; : > "$f"
+if [ "$1" = people ]; then
+ for i in $(seq 1 "$n"); do u=$(printf '%08d' "$i")
+  printf 'BEGIN:VCARD\nVERSION:4.0\nUID:urn:uuid:%s-0000-4000-8000-000000000000\nFN:Person %s\nN:Person;%s;;;\nEMAIL:p%s@example.org\nEND:VCARD\n' "$u" "$u" "$u" "$i" >> "$f"; done
+else
+ printf 'BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//handtest//DE\n' >> "$f"
+ for i in $(seq 1 "$n"); do
+  printf 'BEGIN:VTODO\nUID:aufgabe-%s@example.org\nDTSTAMP:20261107T100000Z\nSUMMARY:Aufgabe %s\nSTATUS:NEEDS-ACTION\nEND:VTODO\n' "$i" "$i" >> "$f"; done
+ printf 'END:VCALENDAR\n' >> "$f"
+fi
+E
+chmod +x ~/fs-handtest/gen.sh
+~/fs-handtest/gen.sh people 300 ~/fs-handtest/viele.vcf
+~/fs-handtest/gen.sh tasks  300 ~/fs-handtest/viele.ics
+```
+
 ---
 
 ## Teil 1: fs-people-app (Personen)
 
-**Zweig:** `gui` im Repo `fs-people` (Stand beim Test: Commit `67d0da6`).
+**Zweig:** `gui` im Repo `fs-people` (Stand beim Test: Commit `a310509`).
 
 ### Befehle
 **Terminal 1: Server starten** (bleibt offen, schreibt nichts, wenn alles gut ist):
@@ -126,8 +148,10 @@ Links oben ein Suchfeld und der blaue Knopf **New**, darunter die Liste mit Spal
 5. **Bearbeiten:** Person wählen, **Edit**, die Telefonnummer ändern, speichern. Die Änderung steht rechts. Alles, was die App nicht zeigt, bleibt unverändert erhalten.
 6. **Löschen:** **Delete** drücken. Es muss **ein zweites Mal** gedrückt werden, erst dann ist die Person weg.
 7. **Export/Import:** Siehe die Befehle oben. Die ausgegebene `.vcf`-Datei kannst du mit einem Texteditor öffnen. Danach `--import` mit dieser Datei: „already known“.
-8. **Fenster klein ziehen:** Bei sehr schmalem Fenster (ca. 420 Pixel) rutscht die Einzelansicht **unter** die Liste, statt daneben zu stehen. Nichts darf überlappen oder abgeschnitten werden, die E-Mail-Spalte darf mit „...“ gekürzt sein.
-9. **Menü:** Diese App hat bisher **keine Menüleiste**, nur die Knöpfe im Fenster.
+8. **Viele Einträge, „Show more“:** Am besten mit leerem Datenordner (oder erst Aufräumen, dann neu anfangen). App mit `--import ~/fs-handtest/viele.vcf` starten: unten „Imported 300, 0 already known“. Die Liste zeigt die ersten 200 („Person 00000001“ ...), darunter der Knopf **Show more**. Klick darauf: es kommen die restlichen 100 dazu, ohne dass die Liste vorn von vorn anfängt. Kein Name darf doppelt vorkommen, am Ende ist „Person 00000300“ die letzte. Danach verschwindet der Knopf. Die Suche blättert ebenso: `Person 0000` eintippen, **Show more** klicken, es geht weiter.
+9. **Zwei Fenster, „Jemand anderes hat dies geändert“:** Zwei Terminals, zweimal dieselbe App (`fs-people-app --socket ...`) auf **demselben** Server. Fenster A und B zeigen beide Anna. In **B** (bleibt offen) **Edit** klicken und die Telefonnummer **nicht** speichern, noch warten. In **A** **Edit**, Telefonnummer ändern, speichern. Jetzt in **B** die Telefonnummer anders ändern und speichern. Erwartet: Es wird **nichts geschrieben**, B zeigt die Meldung „Someone else changed this person since you started.“ (englisch). Dein eingetippter Text bleibt im Formular stehen, die Version von A ist die gespeicherte. Ein **zweiter Klick auf Save** schreibt deine Änderung bewusst darüber (es werden nur die Felder geschrieben, die du selbst geändert hast).
+10. **Fenster klein ziehen:** Bei sehr schmalem Fenster (ca. 420 Pixel) rutscht die Einzelansicht **unter** die Liste, statt daneben zu stehen. Nichts darf überlappen oder abgeschnitten werden, die E-Mail-Spalte darf mit „...“ gekürzt sein.
+11. **Menü:** Diese App hat bisher **keine Menüleiste**, nur die Knöpfe im Fenster.
 
 ### Das geht bekanntermaßen noch nicht (steht so in der DESIGN.md)
 - Gruppen und ihre Mitglieder, Beziehungen zwischen Personen, „gleiche Person“-Vorschläge, Rollen vergeben, KI-Markierung setzen.
@@ -135,7 +159,11 @@ Links oben ein Suchfeld und der blaue Knopf **New**, darunter die Liste mit Spal
 - „Sensibel“-Markierung setzen. Karten mit dieser Markierung lehnt der Speicher bisher ab, weil er **nicht verschlüsselt** ist (der Schlüsselverwalter, ADR 0024, fehlt noch). Du wirst so etwas im Test nicht erzeugen können.
 - Dateiauswahl-Fenster für Import und Export: nur Pfade auf der Kommandozeile.
 - Rückgängig, Live-Aktualisierung (Änderungen eines anderen Programms siehst du erst nach neuem Laden), Anmeldung (der Benutzer ist fest „owner“), Entwurf bleibt nach Schließen nicht erhalten.
-- Die Liste lädt 200 Personen, mehr über „Show more“. Ein langsamer Server kann das Fenster bis zu 30 Sekunden einfrieren (das ist kein Absturz).
+- Die Liste zeigt 200 Personen, mehr über „Show more“ (liest ab dem Cursor weiter). Wie viele es insgesamt gibt, steht nirgends (kein Zähler). Zwei Fenster auf einem Adapter stören sich beim Blättern.
+- **Fristen:** Ein hängender oder sehr langsamer Server friert das Fenster bis zu **30 Sekunden pro Aktion** ein (das ist kein Absturz). Das Verbinden gibt nach 5 Sekunden auf. Eine Aktion, die abbricht, kann trotzdem schon geschrieben sein.
+- **Kein Wiederverbinden:** Stoppst du den Server, kommt bei der nächsten Aktion ein Fehler. Danach die App neu starten (und vorher den Server).
+- Wer etwas anderes ändert, siehst du nicht live, erst beim nächsten Laden (nur beim Speichern kommt die Konfliktmeldung). Das atomare Speichern gilt nur innerhalb **eines** Serverprozesses.
+- **KI-Erkennung:** Eine Karte, die als KI (Software) markiert ist, trägt in Liste und Einzelansicht die Marke „AI“, Rollen sieht man nur lesend („Roles“). Du kannst keine KI markieren und keine Rolle vergeben, also nichts davon selbst erzeugen. Die Marke hat nur Anzeigewirkung, sie sperrt nichts.
 - Beim vCard-Export steht bei aus Version 3.0 eingelesenen Karten manchmal weiter `VERSION:3.0`.
 
 ### Auffälliges notieren
@@ -145,7 +173,7 @@ Eine Zeile pro Fund in `~/fs-handtest/funde-people.txt`, Form: `Was ich geklickt
 
 ## Teil 2: fs-tasks-app (Aufgaben)
 
-**Zweig:** `gui` im Repo `fs-tasks` (Stand beim Test: Commit `08c832d`).
+**Zweig:** `gui` im Repo `fs-tasks` (Stand beim Test: Commit `ef100c2`).
 
 ### Befehle
 **Terminal 1: Server:**
@@ -188,7 +216,9 @@ Oben die Leiste „FreeSynergy Tasks“ mit den Menüs **Task** und **View**. Da
 7. **Zurück zur Liste:** **List**. Der neue Status steht in der Spalte „Status“.
 8. **Import/Export:** siehe Befehle oben. Wiederholter Import: „Imported 0, 3 already known“. Die Exportdatei enthält drei `VTODO`-Blöcke.
 9. **Menü:** nur Task, New und View, List, Status (nur echte Befehle).
-10. **Fenster klein ziehen:** Bei ca. 400 Pixel Breite rutscht die Einzelansicht unter die Liste, die Spalten werden gekürzt („...“). In der Statusansicht läuft die Reihe der Spalten über den Rand (Failed, Cancelled sind dann nur halb zu sehen), das ist bekannt. Ein sehr kleines Fenster zeigt laut Entwurf eine „kompakte Ansicht“ mit offenen Aufgaben.
+10. **Viele Aufgaben, „Show more“:** Server mit leerem Datenordner, App mit `--import ~/fs-handtest/viele.ics`. Unten steht „Imported 300, 0 already known. Notes: ...“ gefolgt von sehr vielen gleichen Zeilen „version set to 2.0“ (sieht unschön aus, ist harmlos, die Zeile ist abgeschnitten). Die Liste zeigt 200 Aufgaben (sortiert nach Titel, „Aufgabe 1“, „Aufgabe 10“, „Aufgabe 100“ ...), darunter **Show more**: Klick, es kommen die restlichen 100 dazu, nichts doppelt. In der Statusansicht steht über der Spalte „To do (200)“, ebenfalls mit **Show more**. **Achtung, anders als bei people:** Die Tasks-App blättert (noch) **nicht** per Cursor. Bei jedem Laden liest sie intern die ganze Liste (je 100 pro Seite) und zeigt davon einen Ausschnitt. Das Ergebnis sieht gleich aus, nur bei sehr vielen Aufgaben wird es langsamer (siehe DESIGN.md, „Other limits“).
+11. **Zwei Fenster, „Someone else changed this task in the meantime.“:** Wie bei people: zwei Fenster auf demselben Server, in B **Edit** öffnen, in A dieselbe Aufgabe ändern und speichern, dann in B speichern. Erwartet: nichts geschrieben, Meldung „Someone else changed this task in the meantime.“ (englisch), der Text bleibt. Das gilt auch für **Move to** in der Statusansicht: Wurde die Aufgabe inzwischen woanders verändert, wird nicht verschoben, sondern die neue Fassung gezeigt. Wer die Meldung nach einem Klick bekommt, darf einfach noch einmal klicken.
+12. **Fenster klein ziehen:** Bei ca. 400 Pixel Breite rutscht die Einzelansicht unter die Liste, die Spalten werden gekürzt („...“). In der Statusansicht läuft die Reihe der Spalten über den Rand (Failed, Cancelled sind dann nur halb zu sehen), das ist bekannt. Ein sehr kleines Fenster zeigt laut Entwurf eine „kompakte Ansicht“ mit offenen Aufgaben.
 
 ### Das geht bekanntermaßen noch nicht (steht so in der DESIGN.md)
 - **Keine echten Boards/Kanban:** nur fünf feste Spalten (der Status der Aufgabe), keine eigenen Spalten, Reihenfolge innerhalb einer Spalte (richtet sich nach Fälligkeit; zieht man eine Karte woandershin, springt sie zurück und das wird gesagt), keine Bahnen, keine Spaltenlimits.
@@ -196,7 +226,11 @@ Oben die Leiste „FreeSynergy Tasks“ mit den Menüs **Task** und **View**. Da
 - Wiederkehrende Aufgaben: Status lässt sich nicht verschieben (wird mit Grund abgelehnt).
 - Ein Status, der aus den Teilnehmern berechnet wird, wird beim Verschieben fest und kann in der App nicht zurück.
 - Fälligkeit ohne Uhrzeit, Zeitzonenwahl, Dateiauswahl-Fenster für Import/Export.
-- Keine Live-Aktualisierung, keine Wiederverbindung (stoppt der Server, kommt bei der nächsten Aktion ein Fehler), keine Anmeldung („meine nächsten Aufgaben“ sind alle offenen). Ein langsamer Server kann das Fenster bis zu 30 Sekunden einfrieren.
+- Keine Live-Aktualisierung, keine Anmeldung („meine nächsten Aufgaben“ sind alle offenen).
+- **Kein Wiederverbinden:** Stoppt der Server, kommt bei der nächsten Aktion ein Fehler. Danach App (und vorher Server) neu starten.
+- **Fristen:** Ein hängender Server friert das Fenster bis zu 30 Sekunden pro Aufruf ein, und eine Aktion (Speichern, Verschieben, Löschen) macht bis zu zwei Aufrufe, also bis zu **60 Sekunden**. Verbinden: 5 Sekunden. Es gibt noch keine „Bitte warten“-Anzeige.
+- **Blättern ohne Cursor** (s. o.): jedes Laden liest alles. Ein Server-Lesen kann zwischen zwei Seiten verändert werden, dann kann eine Aufgabe einmal doppelt oder gar nicht erscheinen (das nächste Laden ist richtig). Eine einzelne kaputte gespeicherte Aufgabe lässt Liste und Export scheitern.
+- Ein geschlossenes Fenster verliert eine ungespeicherte Änderung.
 - Karten mit „sensibel“-Markierung werden nie geöffnet und beim Export weggelassen (mit `--export-sensitive <uid>` freizugeben). Du wirst so etwas im Test nicht erzeugen können.
 
 ### Auffälliges notieren
@@ -205,15 +239,16 @@ Eine Zeile pro Fund in `~/fs-handtest/funde-tasks.txt`, gleiche Form wie oben.
 ---
 
 ## Was ich getestet habe und was nicht
-**Getestet, hat geklappt (2026-11-07, frische Klone von `https://github.com/FreeSynergy/...` unter `.scratch/t4-handtest/`, Zweig `gui`):**
-- **Frischer Klon baut:** ja, beide. fs-people in 1:51 min, fs-tasks danach in 26 s (`-j 4`, gemeinsames Build-Verzeichnis). Abhängigkeiten kommen von Git (fs-store `v0.2.0` und fs-interfaces `v0.34.0` per Tag). Die GUI-Bausteine (`fs-components`) sind per **Commit-Nummer** (`rev=8c38a3b1...`) festgehalten, nicht per Tag: das gleicht dem Ziel „nur Tags“ nicht ganz, ist aber ohne lokale Pfade. Pfad-Abhängigkeiten gibt es nur zwischen den Crates innerhalb desselben Repos.
-- **Klonen über HTTPS ohne Anmeldung** ging (Repos waren erreichbar).
-- **Server starten:** ja. Der Socket erscheint (`people.sock`, `tasks.sock`, Rechte 600). Der Datenordner muss Rechte 700 haben, sonst: „must belong to this user alone (0700)“ (hatte ich beim ersten Versuch falsch, daher das `-m 700` oben). Nach `Strg+C` (SIGINT) verschwindet der Socket, die leere `.lock`-Datei bleibt (harmlos, wird durch das Aufräumen mit entfernt).
-- **App im Bildschirmfoto-Modus** (`--snapshot`): zeigte in beiden Fällen die Oberfläche wie oben beschrieben, People mit 1000x700 und 420x600, Tasks Liste mit 1100x700 und 400x600, Tasks Statusansicht mit 1100x700. Ich habe die PNG-Dateien angesehen.
-- **Import und Export per Kommandozeile:** people (2 Personen importiert, zweiter Import „0 imported, 2 already known“, Export schreibt gültige vCard 4.0, zweiter Export in dieselbe Datei wird abgelehnt) und tasks (3 importiert, Export enthält 3 `VTODO`, Daten blieben nach Neustart des Servers erhalten).
-- Eine ICS-Datei an `fs-people-app --import` gibt sauber „holds no vCard“ (Exitcode 1).
+**Getestet, hat geklappt (2026-11-07, frische Klone von `https://github.com/FreeSynergy/...` unter `.scratch/t4-handtest2/`, Zweig `gui`; Stand `fs-people` `a310509`, `fs-tasks` `ef100c2`; Aufruf der Programme über `limited.sh`):**
+- **Frischer Klon baut:** ja, beide. fs-people in 1:03 min, fs-tasks danach in 18 s (`-j 4`, gemeinsames Build-Verzeichnis, ein Bau zur Zeit).
+- **Server starten:** ja, beide, Sockets erscheinen. Nach `Strg+C` (SIGINT) sind die Sockets weg. Mit gestopptem Server sagt `fs-people-app`: „cannot reach the people server at ...“ (Exitcode 1).
+- **Viele Einträge per Kommandozeile:** Beispieldateien mit 300 Karten bzw. 300 Aufgaben (das `gen.sh` oben). people: „Imported 300, 0 already known“, zweiter Import „Imported 0, 300 already known“, Export schreibt 300 `VCARD`, keine doppelte `UID`, zweiter Export in dieselbe Datei: „the file exists“ (Exitcode 1). tasks: „Imported 300, 0 already known“ (plus 300 mal „version set to 2.0“ in der Statuszeile), Export schreibt 300 `VTODO`, keine doppelte `UID`.
+- **`--snapshot`:** people (1000x700): erste Zeilen „Person 00000001“ ..., unten der Knopf „Show more“, Statuszeile „Imported 300, 0 already known“. tasks Liste (1100x700): sortiert nach Titel, „Show more“ unten; tasks Statusansicht (`--view status`): Spalte „To do (200)“, rosa Hinweis „für alle“, andere Spalten leer, „Cancelled“ halb abgeschnitten. Ich habe die PNG-Dateien angesehen.
+- **Die automatischen Tests der Apps zu den neuen Funktionen** (laufen gegen den echten Server, echten Socket, echten Speicher, aber ohne Fenster): people `tests/cursor.rs` 5 von 5 ok (u. a. „Show more continues from the cursor“, „search continues from the cursor“, „a person added after the first page does not break Show more“), people `tests/atomic.rs` 1 von 1 ok („a write between read and save is a conflict and nothing is lost“), tasks `tests/atomic.rs` 5 von 5 ok (Konflikt beim Speichern und beim Verschieben, jeweils mit Kontrollversuch ohne zweiten Schreiber). Das ist der Beleg für Teil 1 Nr. 8 und 9 und Teil 2 Nr. 10 und 11, **nicht** eine Bedienung von zwei echten Fenstern.
 
 **Nicht getestet:**
-- **Kein echtes Fenster** (`DISPLAY`/Wayland wäre da gewesen, aber laut Auftrag nur du). Klicks, Tippen, Tastatur, Verschieben in der Statusansicht, Anlegen/Bearbeiten/Löschen im Fenster, Menü-Klicks und das echte Verhalten beim Kleinziehen sind ungetestet. Was oben bei „klick das“ steht, folgt der DESIGN.md und den Bildschirmfotos, nicht eigener Bedienung. Der Unterschied „kleines Fenster“ ist nur über Bildschirmfotos belegt, nicht über das Ziehen in einem echten Fenster.
-- Sensible Karten/Aufgaben, `--export-sensitive`, `--view status` im echten Fenster, Wiederholungsaufgaben, sehr lange Listen (Show more).
+- **Kein echtes Fenster** (laut Auftrag nur du). Klicken, Tippen, Tastatur, „Show more“ im echten Fenster, die Konfliktmeldung im echten Fenster (also Wortlaut und Aussehen auf dem Bildschirm, ob der Text im Formular stehen bleibt, ob der zweite Klick auf Save überschreibt), Menü-Klicks, Kleinziehen, Verschieben in der Statusansicht. Was bei „Klick das“ steht, folgt der DESIGN.md, den Tests und den Bildschirmfotos. Die Meldungstexte habe ich aus `words.rs` gelesen.
+- **Zwei echte Apps auf einem Server** und das Zusammenspiel von „Show more“ mit Änderungen in einem zweiten Fenster.
+- Ob die Tasks-App mit sehr vielen Aufgaben (Tausende) spürbar langsam wird: nur mit 300 ausprobiert und nicht gemessen.
+- KI-Marke/Rollen (kann man ohne Rollenvergabe nicht erzeugen), sensible Karten/Aufgaben, `--export-sensitive`, Wiederholungsaufgaben, hängender Server (30-Sekunden-Frist) und Wiederverbinden (nur das Fehlen bei gestopptem Server, nicht das Einfrieren).
 - fs-calendar, fs-files, fs-maps sind nicht Teil dieses Tests.
