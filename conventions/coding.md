@@ -45,7 +45,7 @@ in the table is reported to the strategy session, not invented. A file of consta
 kind: it says `Constants`. A test file names what it tests; it has no pattern of its own. A type split over several files says so: `Adapter, part of MatrixProvider`. The check before a tag compares the name with the code.
 
 **A small file without behaviour may say so (project owner, 2026-11-07):** `Pattern: none`, for error lists, plain data, constants, a single pure function or a small set of them for one concept, and a thin binary. A
-made-up name is worse than an honest "none". Anything with behaviour still names a pattern and sits behind an interface.
+made-up name is worse than an honest "none". Anything with behaviour still names a pattern and sits behind an interface. "Behaviour" here means state or side effects: a function that only computes its result from its arguments has none. A fixed sequence that reads, writes or calls out names its pattern (usually Facade or Template method), except the thin binary. If nothing fits, report it.
 
 ## 2a. Text a person reads (ADR 0057)
 Translation itself comes later (ADR 0053), but text must be translatable from now on.
