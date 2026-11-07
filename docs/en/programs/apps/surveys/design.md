@@ -80,7 +80,9 @@ A survey can start small and, if it matters, widen to parent groups in [`fs-grou
 survey, earlier results are carried over, and anonymity can never get weaker on the way. **We found no tool that does this.** Consul comes close in one way: a proposal that gathers enough support moves on to a vote.
 Whether it can also move between levels of a hierarchy was not confirmed.
 
-**Who widens it (project owner, 2026-11-07, details open):** admins or people with a permission for it, selectable, or a share of participation in percent set at the start, from which the survey moves on by itself.
+**Who widens it (project owner, 2026-11-07, details open):** admins or people with a permission for it, selectable, or a share of participation in percent set at the start, from which the survey moves on by itself, always with a minimum number as well. Whether the parent group sets this rule in advance is being looked at.
+
+**AIs (project owner, 2026-11-07):** an AI takes part only if the creator of the survey allows it. Its answer is always counted and shown separately, never added to the people's. This is an exception to "like a person", because of the risk: AIs are easy to multiply. Their answers can still interest people, as they often follow a line of reasoning.
 
 ## Patterns
 

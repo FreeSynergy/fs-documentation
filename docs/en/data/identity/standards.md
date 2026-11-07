@@ -24,5 +24,6 @@
 
 - ~~Evidence DID Core / VC~~ → ✅ 2026-11-05 (status above); field-level comparison with RLTP still open
 - ~~Signature mechanism~~ → ✅ RFC 9421 (transport) + FEP-8b32 (objects) + FEP-521a (`Multikey`)
+- **Trust (project owner, 2026-11-07):** the interface follows DID and VC, and RLTP is one replaceable provider. DIDComm comes from the DIF, not the W3C.
 - **Pairwise identifiers (RLTP):** one person has a different DID per relationship → hub matching (ADR 0019) cannot rely on one DID per person; open
 - Write `identity/mapping.md`: WoT spec terms ↔ AS2 `Relationship`/`publicKey` (task in [requirements.md §7](../requirements.md))

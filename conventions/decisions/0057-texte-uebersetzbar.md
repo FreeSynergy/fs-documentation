@@ -16,7 +16,8 @@ Status: akzeptiert (2026-11-07) · ergänzt ADR 0011, 0036, 0053 · Regeln: `con
 - **ICU4X:** MF2 noch nicht fertig, Parser in Arbeit (Eintrag 8568, zuletzt 2026-11-03).
 - **Fluent** (`fluent-bundle`, Apache-2.0): reif, kein Unicode-Standard; `.ftl`-Dateien lassen sich nicht unverändert in MF2 nutzen. In seinen Abhängigkeiten steht kein ICU4X (`intl_pluralrules`, `intl-memoizer`).
 
-**Vorschlag:** Die Übersetzungsdateien in MF2-Syntax schreiben, das ist der Standard und überlebt jeden Bibliothekswechsel; `mf2` hinter `Words` in einem Probelauf prüfen; ICU4X für Zahlen und Daten. Entscheidung beim Nutzer.
+**Entschieden (Nutzer, 2026-11-07): `mf2`,** dazu ICU4X, falls `mf2` es nicht schon nutzt (es hat die Option `datetime-icu`). Zu prüfen: Blinc ist nicht genannt, nur Leptos, Ratatui und Kommandozeile; Kataloge sind eingebaut, Sprachen als Pakete (Punkt 3) brauchen Nachladen; drei Hauptversionen in zwei Wochen, also fest pinnen.
+Ursprünglicher Vorschlag: Die Übersetzungsdateien in MF2-Syntax schreiben, das ist der Standard und überlebt jeden Bibliothekswechsel; `mf2` hinter `Words` in einem Probelauf prüfen; ICU4X für Zahlen und Daten. Entscheidung beim Nutzer.
 
 ## Offen
 - **Bibliothek, Recherche in der Woche ab 2026-11-09:** Unicode MessageFormat 2 ist der Standard und damit erste Wahl (ADR 0014). Eine fertige Rust-Umsetzung ist nicht bestätigt, in ICU4X nur offene Einträge. Project Fluent (`fluent-rs`, Apache-2.0) gibt es in Rust, es ist kein Unicode-Standard, seine Reife ist nicht geprüft.

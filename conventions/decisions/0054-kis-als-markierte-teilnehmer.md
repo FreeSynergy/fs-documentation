@@ -105,6 +105,15 @@ Ein Agent hat ein Passwort und eine Passphrase angelegt und wusste damit beides.
 „Das können wir nicht. Man könnte es, wenn wir E-Mails überprüfen könnten, oder den Pass, aber das dürfen wir nicht. Das würde nur sozial gehen und das kann man umgehen.“ Beispiel: Zehn Betrüger bewerten sich gegenseitig. Einzige Idee des Nutzers: eine Identität je Gerät oder Konto; dazu ist nichts entschieden.
 Gegen den Betrügerring hilft, was schon gilt: Es gibt keinen weltweiten Wert, und Stufen werden nur aus den eigenen Kontakten berechnet. Punkt 3 oben („es muss ein Mensch sein, nicht mehrere Accounts“) bleibt als Wunsch, ist aber nicht durchsetzbar.
 
+Weitere Überlegungen des Nutzers, festgehalten, damit man die Gründe wiederfindet:
+- **Mehrere Identitäten** braucht es dafür nicht, dafür gibt es Profile; eine Dating-App fragt, ob man ein neues Profil anlegen möchte, und zeigt genau das. (Strategie: Damit zwei Dienste Profile nicht verknüpfen können, trägt jedes nach außen eine eigene Kennung, ADR 0029.)
+- **Viele Geräte kosten Geld**, das schränkt etwas ein. (Strategie: Das gilt nur, wenn ein Gerät nachweislich nur eine Identität erzeugen kann. Ohne Bindung an die Hardware erzeugt ein Gerät beliebig viele; die Bindung läuft über Apple oder Google und widerspricht unseren Grundsätzen.)
+- **Eine Identität je Konto** scheitert daran, dass öffentliche Server das Programm ebenfalls nutzen sollen.
+- **Offen:** Sollte man zuerst auf dem eigenen Gerät eine Identität anlegen und das Programm laden, bevor man online geht? Reine Online-Anmeldung ginge dann nicht. (Strategie: Als Standard gut, wegen eigener Schlüssel; als Nachweis gegen Mehrfachkonten nicht. Der Server entscheidet, ob es Gäste gibt.)
+
+## Vertrauensbasis (Nutzer, 2026-11-07)
+Die Schnittstelle folgt den Standards DID und VC. RLTP ist ein austauschbarer Anbieter (Encounter-Ablauf), nicht das Fundament. Korrektur zur Recherche: DIDComm stammt von der DIF, nicht vom W3C. Gebaut wird das nach dem Sprint.
+
 ## Ohne Befugnis nichts, auch kein Lesen (Nutzer, 2026-11-07)
 „Erstmal nichts lesen dürfen. Eine Einladung geht auch ohne Befugnisse. Erst wenn explizit Befugnisse eingeräumt werden, wird weitergemacht.“
 Eine KI kann also eingeladen werden, ohne etwas zu dürfen. Bis ihr jemand ausdrücklich Befugnisse gibt, liest und tut sie nichts. Technisch heißt das **ablehnen, nicht fragen** (Lesart der Strategie, 2026-11-07): Die KI kann eine Person nicht mit Fragen überziehen, die Befugnis gibt die Person von sich aus. Erst nach einer Befugnis fragt die Engine, was jedes Mal fragen muss. Für Rechte (Delegationen, Rollen, Mitgliedschaften, Einladungen, Speicher-Anbindungen, Anmeldung am Hub) entsteht vorerst gar kein Werkzeug, auch nicht zum Lesen.

@@ -96,8 +96,7 @@ The closed-source products were checked only partly; each note lists what was ve
 
 ## Open decisions
 
-- **Which translation library (ADR 0057).** Everything a person reads is written to be translatable from now on, behind an interface. Nothing is translated yet.
-  Unicode MessageFormat 2 is the standard and comes first if it can be used from Rust. We research this in the week of 2026-11-09.
+- **Users and contacts (ADR 0058).** They are two different things: an address card that I keep, and someone who takes part. Decided in principle, not built. Open: whether `fs-people` becomes `fs-contacts`, and `fs-identity` becomes `fs-users`.
 
 | # | Question | Recommendation |
 |---|----------|----------------|

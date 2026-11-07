@@ -69,6 +69,7 @@ Jeweils erst Vertrag in `fs-interfaces`, dann Kern ohne GUI, mit eigener `DESIGN
 4. Erst wenn das steht: `fs-whiteboard`, dann `fs-streaming`, jeweils nur der Kern nach `design.md`.
 5. `fs-people`: Rollen wie in `docs/en/interfaces/roles.md`, Abschnitt „Decided“ (Nutzer, 2026-11-07): innen Cap'n Proto, außen JSON-LD, Adresse `https://freesynergy.net/ns/roles/`, Karten `org`, Rollen Lead, Interessent, Kunde. Mit Thread 3 abstimmen, er arbeitet in `fs-people-server`.
 6. `fs-groups`: Folgen nach ADR 0056, Abschnitt „Einseitig folgen“: Wer Zugriff erlaubt, liefert (Repository andersherum, kein Baum); der andere bekommt eine Einladung (AS2 `Invite`, Vorschlag) und sein Server trägt die Quelle ein, ohne Bestätigung, entfernen kann er sie. Gegenseitig erlaubt. Nur eigene Rechte, nie mehr als man hat. Weitergeben nur mit ausdrücklicher Erlaubnis der Quelle. „Gehört zu“ mit Eltern bleibt daneben. Erst Muster und Vertrag `groups.capnp`, mit Thread 3 abstimmen.
+7. `fs-surveys`: KI als Teilnehmer nur, wenn der Ersteller es je Umfrage erlaubt; ihre Antwort wird immer getrennt gezählt und getrennt angezeigt (Nutzer, 2026-11-07). Kein MCP-Werkzeug dafür, bis das steht.
 
 ### Strategie
 Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Frontends analysieren; `requirements.md` von surveys, streaming, tasks angleichen; Umbenennungen der Doku; Meldungen der Threads gegen GitHub prüfen und Doku nachziehen.
