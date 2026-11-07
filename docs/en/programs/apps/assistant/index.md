@@ -322,7 +322,5 @@ own data.
 2. Is anything left that needs its own data here? If not, this page becomes the description of a frontend.
 3. How exactly does an AI name its operator? JSContact `kind` `application` is confirmed (RFC 9553 §2.1.4). How the operator
    signs for it, given that the trust protocol has no global identifier per person, is still open.
-4. **For the project owner:** must a coding agent over ACP run under its own system user in a sandbox, without exception? The
-   proposal is yes, since otherwise the brake does not hold for it. The cost is more setup, and some agents may not run that way.
-5. **For the project owner:** ADR 0021 needs an addition: risk marks in every contract, events and blobs as MCP resources, and an
-   exclusion mark for secrets. Is that agreed?
+
+**Answered:** a coding agent always runs in its own sandbox under its own system user (ADR 0056). The addition to ADR 0021 is agreed (2026-11-07).
