@@ -101,7 +101,7 @@ The closed-source products were checked only partly; each note lists what was ve
 
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Should views also be stand-alone programs? | **Decided (2026-11-07):** yes, as their own starters without data of their own; technically they stay frontends |
+| 1 | Should views also be stand-alone programs? | **Decided (2026-11-07):** yes, as their own starters without data of their own; technically they stay frontends. Named **facets** in ADR 0061 ([what is what](../kinds.md)) |
 | 2 | Prompt for export on leaving? | **Decided (2026-11-07):** ask once, with "remember my answer"; everything is saved anyway, this is only about export to a file ([details](files/design.md#saving-and-exporting)) |
 
 **Decided on 2026-11-06:** one `fs-people`, each person with several [roles](../../interfaces/roles.md); codecs are outsourced, open ones first; every existing core is reworked against the interface catalogue, and all interfaces live in
