@@ -26,6 +26,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
 ## Offen bei uns
+- **Launcher und Pakete online (Nutzer, 2026-11-07, besprechen):** ADR 0036, Abschnitt „Ergänzung des Nutzers“. Erster Punkt für die Planung nach dem Sprint.
 - **Rollen als volle IRIs sind schon auf `main`** (`fs-people` v0.4.0/v0.5.0). Geprüft 2026-11-07: Es gibt noch keine Implementierung von `AiMarking`, und kein Produktcode vergleicht die Kurz-ID `ai`. **Regel für jeden künftigen Host** (Brücke `fs-people` → `fs-groups` `AiMarking` bzw. Wächter `SenderLookup`): nur über `is_ai_role()` entscheiden, mit Test für Kurz-ID und volle IRI. Dazu: `anonymousOpen` in `fs-surveys` braucht eine Person vom Host, sonst gilt der Teilnehmer als KI.
 - **Nach dem Sprint (Nutzer, 2026-11-07): Pause, erst gemeinsam planen.** Ab Sonntag, 2026-11-08, 18:00 ruhen die Threads, bis der Plan steht. Kandidaten: Funde aus dem Handtest, automatische Prüfung bei jedem Push, Probeläufe `mf2` und iroh, Kontakte als Profile (ADR 0058), quadratische Listen in Kalender und Aufgaben, Verbindung Kalender–Aufgaben über Vertrag.
 - **Automatische Prüfung bei jedem Push (Nutzer, 2026-11-07, ja):** gemeinsamer Ablauf in `fs-release`, ohne Secrets: fmt, clippy, Tests, `check_rust_rules.py`.
