@@ -1,4 +1,4 @@
-# Sprint bis Sonntag, 2026-11-08 (Stand 2026-11-06)
+# Sprint bis Sonntag, 2026-11-08, 18:00 (Stand 2026-11-07)
 
 **Ziel:** So viel wie möglich bauen, aber nichts, was wir wegwerfen müssten. Nur Besprochenes: `docs/en/programs/apps/roadmap.md`,
 `docs/en/interfaces/index.md`, ADR 0045–0054. Keine neuen Ideen, keine neuen Standards ohne Rückfrage.
@@ -38,6 +38,7 @@ Einzeilig einfügen, N ersetzen:
 4. ADR 0054 umsetzen: KI nur per Einladung (Profil anlegen), ohne Freigabe keine Handlung; Bremse (Zerstörendes und Handeln im Namen der Person fragt immer); Notaus in der Engine, außerhalb der Reichweite der KI, ohne Netz, im Zweifel zu; wer ihn ziehen darf, ist eine Berechtigung.
 4a. Vertrag `messages` (erledigt, v0.16.0; solange er Entwurf ist, darf er umnummeriert werden, Strategie 2026-11-06: Ordinal 0 ist bei `Encryption` jetzt `unknown`, damit ungesetzt nie „verschlüsselt“ heißt) (Ergebnis der Analyse ACP und MCP, Seite `assistant`, `temp/research/acp-mcp-zed.md`): `ToolCall` mit `risk` (Standard `unknown`, setzt die Engine), Ergebnis, Details, Optionen; `MessageAction` „entscheiden“ nur vom Gerät der Person; Ereignisse für Änderung am Werkzeug-Aufruf und Textstücke; Nachricht mit `reasoning` und Medientyp des Textes; `jobRef` in `MessageSummary`; Stopp und Verbrauch an `Conversation`. Bei MCP beweist ein `accept` keine Person: Die Bremse sitzt in der Engine.
 4b. **`origin/ai` nicht so auf `main` mergen:** Die Frage „Encrypted only meets a model“ in der `DESIGN.md` ist entschieden, aber anders als dort vorgeschlagen: kein Weg an `gate.rs` vorbei, kein neuer Vertragswert, `PastTheGate` fliegt raus. Die KI ist ein Teilnehmer mit eigenem Schlüssel; ein Programm hält ihn und spricht dahinter mit dem Modell. Transport (Nutzer, 2026-11-07): **zuerst Matrix, MLS später**; das Programm der KI hat ein normales Matrix-Konto. **Tests gegen echte Modelle nicht im Sprint (Nutzer, 2026-11-07):** erst Sonntagabend oder Montag, dann schaltet der Nutzer llama ein; llama.cpp bleibt bis dahin aus, kein Anthropic-Aufruf. Bis dahin „nicht gegen einen echten Server geprüft“ in die `DESIGN.md`.
+4d. **Offene Punkte aus `guard` (Strategie, 2026-11-07, vorläufig; Open point 12):** (1) Ja: keine Freigabe irgendeiner Klasse im Programm = `Deny`; mit Freigabe fragen Zerstörendes, Handeln im Namen, `unknown` und Gekennzeichnetes je Aufruf; `allow-class` entfällt. (2) Keine neue Taxonomie: `Gate::check` ohne Objekt zählt als gekennzeichnet, also `Ask`, nie `Allow`; wer `Allow` will, ruft `check_object`; Listen prüft die Werkzeugschicht je Objekt (gilt auch für MCP, Thread 3). (3) Regel statt Liste: Namen auf `secret`, `token`, `key`, `password`, `passphrase`, `proof`, `credential` sind `NeverForAi`, später zusätzlich die Marken aus den Verträgen. (4) `readsSensitive` ans Ende von `ToolCallRisk`, `unknown` bleibt 0; `program` und `goesTo` anhängen. **`goesTo` kommt aus dem, was die Engine über Teilnehmer und Betreiber weiß, nie von der KI;** weiß sie es nicht, steht dort „unbekannt“.
 4c. ADR 0054, Abschnitt „KIs in Unterhaltungen“ (Nutzer, 2026-11-06), noch nicht im Code: KI mit eigenem Schlüssel wie jeder Teilnehmer, `gate.rs` bleibt ohne Ausnahme. Hinweis vor dem Eintritt; alle müssen zustimmen, sonst bleibt sie draußen; wer später kommt, nimmt sie an oder bleibt draußen; Zustimmung zurückgezogen: KI muss hinaus; kein Verlauf von vor dem Eintritt; keine Ausnahme für lokale KIs. Fremde Matrix-Programme können wir nicht zwingen: warnen und Verlassen anbieten.
 5. **Nicht bauen:** Bewertung und Stufen über Dritte (Vertrauensbasis offen), Telegram, eigener Mailserver.
 
@@ -74,6 +75,9 @@ Jeweils erst Vertrag in `fs-interfaces`, dann Kern ohne GUI, mit eigener `DESIGN
 ### Strategie
 Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Frontends analysieren; `requirements.md` von surveys, streaming, tasks angleichen; Umbenennungen der Doku; Meldungen der Threads gegen GitHub prüfen und Doku nachziehen.
 
+## Nach dem Absturz vom 2026-11-07, 08:59
+Alle Sitzungen sind beendet, Arbeit liegt noch in den Worktrees. Zuerst den eigenen Stand lesen: `git status` in `.wt-*`, `.scratch/t*`, offene Branches; `backup/*` auf GitHub ist eine Sicherung ohne Merge. Nicht committet: `.wt-fs-maps-server` (9), `.wt-fs-tasks` (1), `.wt-msg-v4` (30, Branch nur lokal), `.scratch/t5-surveys` (5), ein Agent-Worktree in `fs-wiki` (15).
+
 ## Regeln für alle
 **Reihenfolge bei jedem neuen Stück Code (Nutzer, 2026-11-07, ADR 0043)**
 1. **Muster zuerst:** Eines aus `conventions/coding.md` §2 aussuchen und in einem Satz begründen. Passt keines, nicht eines erfinden, sondern der Strategie melden.
@@ -105,6 +109,8 @@ Kleine Korrekturen in bestehendem Code brauchen keinen neuen Trait, aber das Mus
 - **Nicht warten.** Offene Frage: die wahrscheinlich richtige Antwort nehmen, als vorläufig markieren, an die Strategie melden, weitermachen. Keine ADR-Nummern selbst vergeben.
 
 **Rechner**
+- **Jeder Build, jeder Test und jede Probe läuft über `scripts/limited.sh`** (eigene Speichergrenze, Standard 32 GB). Am 2026-11-07 um 08:59 nahm sich eine Prüf-Probe aus `thread3-cal-review6` 107 GB; der Kernel beendete Zed und damit alle Sitzungen. Geprüft: Mit der Grenze stirbt nur der Befehl selbst. `gates.sh` nutzt es schon. Proben mit Grenzen wie `usize::MAX` niemals ohne.
+- **Höchstens ein Build je Thread gleichzeitig,** außer die Strategie gibt mehr frei.
 - 32 Kerne, 124 GB: Builds mit `-j 4`, höchstens 3 gleichzeitig je Thread (Last lag bei 65). **Frische Klone und Prüfungen nicht in `/tmp`** (nur 50 GB, voll führt zu scheinbar zufälligen Testfehlern), sondern unter `/srv/FreeSynergy/.scratch/<thread>-<name>/`, und danach löschen. llama.cpp bleibt aus und wird nicht gestartet.
 - `scripts/clean_rust.py` nur für das eigene Repo, **niemals `--all`**, sonst löscht es die Builds der anderen.
 

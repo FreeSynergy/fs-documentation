@@ -5,7 +5,8 @@
 # `&&` list, where bash ignores it. Inside this script it works.
 set -euo pipefail
 root="$(cd "$1" && pwd)"
-rules="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/check_rust_rules.py"
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+rules="$here/check_rust_rules.py"
 cd "$root"
 export CARGO_BUILD_JOBS="${CARGO_BUILD_JOBS:-4}"
 export TMPDIR="${TMPDIR_GATES:-/srv/FreeSynergy/.scratch}"
@@ -19,7 +20,7 @@ for manifest in crates/*/Cargo.toml; do
   fmt_args+=(-p "$(sed -n 's/^name = "\(.*\)"/\1/p' "$manifest" | head -1)")
 done
 cargo fmt --check "${fmt_args[@]}"
-cargo clippy --workspace --all-targets --all-features -- -D warnings
-cargo test --workspace --all-features
+"$here/limited.sh" cargo clippy --workspace --all-targets --all-features -- -D warnings
+"$here/limited.sh" cargo test --workspace --all-features
 python3 -I "$rules" "$root"
 echo "gates ok: $root at $(git rev-parse --short HEAD)"
