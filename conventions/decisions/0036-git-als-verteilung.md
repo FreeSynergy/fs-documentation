@@ -1,6 +1,6 @@
 # 0036 – Git als dezentrale Verteilung: Pakete, Themes, Programme, Medien
 
-Status: akzeptiert (2026-11-05) · Name des „Shops“ offen (`store` ist durch `fs-store` belegt)
+Status: akzeptiert (2026-11-05) · Name des Ladens: `fs-store` (ADR 0060; die heutige Datenablage wird `fs-objects`)
 
 ## Entscheidung (Nutzer)
 - **Git wird zum Paketinstaller** — über **gitoxide (`gix`)**, reines Rust. Man macht es selbst und
