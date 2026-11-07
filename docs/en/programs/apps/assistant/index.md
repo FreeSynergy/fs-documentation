@@ -114,8 +114,9 @@ ACP connects a client (a user interface) to a coding agent that usually runs as 
 Only stdio is defined. A remote transport is still a proposal. Subagents are also still a proposal, and they appear only in the
 unstable schemas.
 
-Showing and driving an agent fits ADR 0054 well. The agent becomes a **provider**, like mail or Matrix (ADR 0045). The provider
-starts a subprocess, so it belongs in the engine, not in a frontend. The operator must come from our own launch settings and the
+Showing and driving an agent fits ADR 0054 well. The agent is a **participant** with its own key (see [AIs in conversations](#ais-in-conversations)). ACP is a provider
+behind the program that holds that key (ADR 0045), and that program starts the subprocess, not a frontend. This is a provisional
+reading of the owner's decision (2026-11-07). The table below was written for the earlier idea, a provider inside the messenger. The operator must come from our own launch settings and the
 person's card, because the agent's self-description is self-reported.
 
 | ACP | `fs-messenger` today | What is needed |

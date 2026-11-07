@@ -56,7 +56,7 @@ Die Antwort trägt Nachricht, Aufruf, Revision und Digest des gezeichneten Stand
 
 ## Vorschlag (offen)
 - Ansichten: Der Chat, die Agenten-Übersicht und die Anzeige von Werkzeug-Aufrufen sind Frontend und Components über
-  `fs-messenger`. Der Modell-Anbieter ist ein Anbieter wie Mail oder Matrix (ADR 0045).
+  `fs-messenger`. ~~Der Modell-Anbieter ist ein Anbieter wie Mail oder Matrix (ADR 0045).~~ Überholt (2026-11-07, Folge von „KIs in Unterhaltungen“, vorläufig von der Strategie): Der Messenger bekommt keinen Kontotyp für KIs. Die KI hat ein normales Konto in ihrem eigenen Programm; der Modell-Anbieter sitzt dahinter (ADR 0045 gilt dort). Die Regeln für KIs hängen an der Markierung des Teilnehmers, die die Person festlegt, nicht an einem Konto.
 - Die CodeAF-Analyse stützt das: Dort ist eine Aufgaben-Karte eine Ansicht über Nachrichten, die an einer Aufgabe hängen, ohne eigene Tabelle.
 - Markierung über `fs-people`: Rolle plus Art des Teilnehmers.
 - **Grenze:** Eine Markierung schützt nur vor ehrlichen KIs. Wer angreift, markiert sich nicht. Deshalb gilt die umgekehrte
