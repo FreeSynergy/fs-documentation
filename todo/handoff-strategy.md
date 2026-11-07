@@ -14,7 +14,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 ## Offen beim Nutzer
 0. **Sprint bis Sonntag 2026-11-08: `todo/sprint.md`.**
 1. **KIs aussperren:** vorerst bestätigt (ADR 0054). Offen: ein Mensch, ein Konto, ohne die Anonymität zu verlieren; RLTP erklären und entscheiden.
-2. **Schlüssel auf keys.openpgp.org:** Nutzer hat bestätigt (2026-11-07). GitHub-Adresse bestätigen?
+2. **Schlüssel auf keys.openpgp.org:** bestätigt (2026-11-07).
 3. **Schlüssel ersetzt (2026-11-07):** neu `16A4A3EE563AEF51FCF0C55DED7B57C4A1904342`, vom Nutzer erzeugt, auf keys.openpgp.org bestätigt, in `fs-release` und `releases.md`. Alte Secrets gelöscht, alter Entwurf gelöscht. Alter Schlüssel widerrufen (2026-11-07), Widerruf auf keys.openpgp.org (Signatur 0x20 geprüft) und in `fs-release`. Neue Secrets erst, wenn ein Release ansteht.
 4. **Bestätigt (2026-11-07):** mehrere Eltern je Gruppe, Zyklen verboten; `files.capnp` vor der Frontend-Analyse; Repo-Name `fs-identity`. Einseitiges Folgen: ADR 0056.
 4a. **Rollen-Datenschutz (ADR 0029):** Muss geschlossen werden (Nutzer „ja“, 2026-11-07). Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing; bis dahin bekommt kein Programm dieses Leserecht.
@@ -26,6 +26,9 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
 ## Offen bei uns
+- **Nach dem Sprint (Nutzer, 2026-11-07): Pause, erst gemeinsam planen.** Ab Sonntag, 2026-11-08, 18:00 ruhen die Threads, bis der Plan steht. Kandidaten: Funde aus dem Handtest, automatische Prüfung bei jedem Push, Probeläufe `mf2` und iroh, Kontakte als Profile (ADR 0058), quadratische Listen in Kalender und Aufgaben, Verbindung Kalender–Aufgaben über Vertrag.
+- **Automatische Prüfung bei jedem Push (Nutzer, 2026-11-07, ja):** gemeinsamer Ablauf in `fs-release`, ohne Secrets: fmt, clippy, Tests, `check_rust_rules.py`.
+- **API-Guthaben:** erst nach sieben Tagen im Paket verknüpfbar (Nutzer am 2026-11-07: „erst der 2. Tag“). Danach schreibt die Strategie das Skript für Agenten ohne Rücksprache.
 - **P2P (ADR 0059):** Richtung vom Nutzer: jeder Client ein Knoten, iroh als Kandidat. Probelauf und offene Punkte nach dem Sprint besprechen.
 - Übersetzungs-Bibliothek recherchieren (Woche ab 2026-11-09, ADR 0057): MessageFormat 2 in Rust oder Fluent; Schreibrichtung in Blinc.
 - Strata, CodeAF, Zed, ACP, MCP sind gelesen (Seite `assistant`); zwei Entscheidungen beim Nutzer.

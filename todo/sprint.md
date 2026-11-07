@@ -3,7 +3,7 @@
 **Ziel:** So viel wie möglich bauen, aber nichts, was wir wegwerfen müssten. Nur Besprochenes: `docs/en/programs/apps/roadmap.md`,
 `docs/en/interfaces/index.md`, ADR 0045–0054. Keine neuen Ideen, keine neuen Standards ohne Rückfrage.
 
-**Ende (Nutzer, 2026-11-07): Sonntag, 2026-11-08, 18:00 Uhr.** Es wird nach jedem Schritt gepusht.
+**Ende (Nutzer, 2026-11-07): Sonntag, 2026-11-08, 18:00 Uhr. Danach ruhen alle Threads, bis ein neuer Plan freigegeben ist.** Vorher alles pushen, offene Arbeit in die `DESIGN.md` und eine Zeile in `todo/handoff-programming.md`. Es wird nach jedem Schritt gepusht.
 
 ## Start für jeden Thread
 Einzeilig einfügen, N ersetzen:
