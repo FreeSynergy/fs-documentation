@@ -43,6 +43,17 @@ No pattern for its own sake: pick the one that makes the code reusable and testa
 in the table is reported to the strategy session, not invented. A file of constants is not a Registry, because nothing is looked up by
 kind: it says `Constants`. A test file names what it tests; it has no pattern of its own. The check before a tag compares the name with the code.
 
+**A small file without behaviour may say so (project owner, 2026-11-07):** `Pattern: none`, for error lists, plain data, constants, a single pure function and a thin binary. A
+made-up name is worse than an honest "none". Anything with behaviour still names a pattern and sits behind an interface.
+
+## 2a. Text a person reads (interim rule, 2026-11-07, decision pending)
+Translation itself comes later (ADR 0053), but text must be translatable from now on.
+- No sentence a person reads inline in code. It goes in the program's `words.rs` or a component's `labels.rs`.
+- A whole sentence with named placeholders, never joined from pieces: word order differs between languages. New text does not use positional `{}`.
+- Code never decides by comparing text. It decides by a type, an id or a problem type.
+- Numbers, dates and plurals are not formatted by hand when a reader sees them, as far as the code can avoid it.
+- Log lines and developer errors stay English and are not translated.
+
 ## 3. Small files, many of them
 - **One concept per file.** Guideline: **≤ 200 lines**, hard limit **300** (tests included —
   split tests by feature into `tests/<feature>.rs`). Generated code is exempt.

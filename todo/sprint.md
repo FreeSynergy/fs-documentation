@@ -106,6 +106,8 @@ Kleine Korrekturen in bestehendem Code brauchen keinen neuen Trait, aber das Mus
 - 32 Kerne, 124 GB: Builds mit `-j 4`, höchstens 3 gleichzeitig je Thread (Last lag bei 65). **Frische Klone und Prüfungen nicht in `/tmp`** (nur 50 GB, voll führt zu scheinbar zufälligen Testfehlern), sondern unter `/srv/FreeSynergy/.scratch/<thread>-<name>/`, und danach löschen. llama.cpp bleibt aus und wird nicht gestartet.
 - `scripts/clean_rust.py` nur für das eigene Repo, **niemals `--all`**, sonst löscht es die Builds der anderen.
 
+**Texte (Nutzer, 2026-11-07):** Was ein Mensch liest, muss übersetzbar bleiben: `coding.md` §2a. Vorhandenes nur ändern, wenn die Datei ohnehin angefasst wird. Es wird noch nichts übersetzt (ADR 0053).
+
 **Nicht tun**
 - **Keine `v*`-Tags in `fs-capnpc`, bis die Strategie es freigibt:** Sie lösen eine Signatur mit dem alten Schlüssel aus, der gerade ersetzt wird (`todo/schluessel-wechsel.md`).
 - **Keine Geheimnisse für Menschen erzeugen oder lesen (ADR 0054):** Passwörter, Passphrasen, private Schlüssel. Du schreibst die Anleitung, der Mensch führt sie aus. Testwerte in Tests sind erlaubt.
