@@ -25,6 +25,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
 ## Offen bei uns
+- **P2P finden und verbinden, ohne Server (Frage des Nutzers, 2026-11-07): nicht gelöst.** Es gibt nur mDNS im LAN (ADR 0028) und den Vermerk „später“ (ADR 0019, `fs-hub`). Recherche offen.
 - Übersetzungs-Bibliothek recherchieren (Woche ab 2026-11-09, ADR 0057): MessageFormat 2 in Rust oder Fluent; Schreibrichtung in Blinc.
 - Strata, CodeAF, Zed, ACP, MCP sind gelesen (Seite `assistant`); zwei Entscheidungen beim Nutzer.
 - Rollen: Forschung fertig (`temp/research/roles-standards.md`), fünf Entscheidungen beim Nutzer.
