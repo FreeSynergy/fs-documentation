@@ -178,6 +178,9 @@ something is safe. Our proposal: reading needs a release as well, and the releas
 Reading anything marked sensitive (ADR 0029) asks every time. Reporting something to the outside acts in the person's name and always
 asks. What a provider does with text it has read is out of our reach, which is why a local AI stays the default.
 
+**No permission, nothing, not even reading (project owner, 2026-11-07).** An AI can be invited without being allowed to do anything. It reads and does nothing until someone
+gives it permissions explicitly. For now there are no tools at all for rights, roles, memberships, invitations, storage connections or signing in to the hub, not even for reading them.
+
 **Agents create no secrets that a person keeps (project owner, 2026-11-07).** An agent once made a password and a passphrase, and so it knew both. An
 agent writes the instructions, and the person carries them out.
 
