@@ -13,7 +13,7 @@ Geprueft werden:
 6. Links                    interne Links, die ins Leere laufen
 7. Basisklasse              Attribute, die in >= 60 % der Komponenten stehen, aber nicht in base.md
 8. Doppelstuecke            Attribut-Aehnlichkeit (Jaccard) ueber 0,6
-9. mkdocs.yml               Komponenten, die in der Navigation fehlen
+9. (entfaellt)              die Navigation folgt den Ordnern (awesome-pages), nichts mehr zu pruefen
 
 Fehler (exit 1) sind: falsches Band, fehlende Dateien, fehlender Steckbrief, fehlende
 Pflichtabschnitte, kaputte Links, Tabellen-Schreibfehler. Absichtslos Benanntes und
@@ -192,7 +192,6 @@ def main():
     comps = sorted(d for d in COMPONENTS.glob("*/*/*") if d.is_dir())
     counts = {}
     all_attrs = {}
-    nav_text = (ROOT / "mkdocs.yml").read_text(encoding="utf-8")
 
     base_attrs = set()
     base_file = COMPONENTS / "primitives" / "basics" / "base.md"
@@ -272,10 +271,6 @@ def main():
         attrs = comp / "attributes.md"
         if attrs.is_file():
             all_attrs[name] = attr_names(attrs.read_text(encoding="utf-8"))
-
-        if f"{LANG}/components/{band}/{cat}/{name}/" not in nav_text \
-                and f"{LANG}/components/{band}/{cat}/{name}" not in nav_text:
-            notes.append(f"{comp.relative_to(ROOT)}: nicht in mkdocs.yml (nav)")
 
     # Basisklasse: Attribute, die fast alle listen, aber nicht in base.md stehen
     n = len(all_attrs)

@@ -9,7 +9,6 @@ in jedem Band die Typgruppen, in der Typgruppe die Komponente:
 - docs/<lang>/components/index.md                      (Baender, Typgruppen, Zahlen)
 - docs/<lang>/components/<band>/index.md               (Typgruppen des Bands)
 - docs/<lang>/components/<band>/<typgruppe>/index.md   (Elemente der Typgruppe)
-- mkdocs.yml                                       (Nav-Abschnitt zwischen Markern)
 
 Die Zuordnung Komponente -> Band steht in ASSIGNMENT und ist die Maschine-Lesung
 von conventions/CONVENTIONS.md Abschnitt 3. Sie ist verbindlich: fehlt eine
@@ -29,7 +28,6 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MKDOCS = ROOT / "mkdocs.yml"
 LANGS = ["en", "de"]  # en ist die Hauptsprache (ADR 0011); Reihenfolge = Nav-Reihenfolge
 
 
@@ -490,48 +488,6 @@ def components_page(data):
     return "\n".join(lines).rstrip() + "\n"
 
 
-def nav_block_for(lang, data):
-    """Nav-Abschnitt eines Sprachbaums: Band, Typgruppe, index.md und jede Komponente
-    mit ihrem Dateisatz, damit keine Seite ohne Navigationspfad ist."""
-    comp_dir = components_dir(lang)
-    pre = f"{lang}/components"
-    lines = [f"  - {pre}/:", f"      - {pre}/index.md"]
-    for band in BANDS:
-        lines.append(f"      - {pre}/{band}/:")
-        lines.append(f"          - {pre}/{band}/index.md")
-        for cat in ordered_cats(band, data):
-            lines.append(f"          - {pre}/{band}/{cat}/:")
-            lines.append(f"              - {pre}/{band}/{cat}/index.md")
-            if (band, cat) == BASE_ENTRY[:2]:
-                lines.append(f"              - {pre}/{band}/{cat}/base.md")
-            for it in data[band][cat]:
-                base = f"{pre}/{band}/{cat}/{it['name']}"
-                lines.append(f"              - {it['name']}:")
-                for part in ("description.md", "appearance.md", "attributes.md", "usage.md"):
-                    if (comp_dir / band / cat / it["name"] / part).is_file():
-                        lines.append(f"                  - {base}/{part}")
-    return "\n".join(lines)
-
-
-def patch_mkdocs(blocks, write):
-    """Schreibt die Nav-Bloecke aller Sprachen zwischen die Marker. True = war aktuell."""
-    text = MKDOCS.read_text(encoding="utf-8")
-    block = "\n".join(blocks)
-    begin, end = "# BEGIN components nav", "# END components nav"
-    if begin in text and end in text:
-        head, rest = text.split(begin, 1)
-        _old, tail = rest.split(end, 1)
-        new = f"{head}{begin}\n{block}\n{end}{tail}"
-    else:
-        print("mkdocs.yml: Marker für den components-Abschnitt fehlen")
-        return False
-    if new == text:
-        return True
-    if write:
-        MKDOCS.write_text(new, encoding="utf-8")
-    return False
-
-
 def build_targets(data):
     targets = {COMPONENTS / "index.md": components_page(data)}
     for band in BANDS:
@@ -549,15 +505,9 @@ def main():
                     help="Sprachbaum fuer die Indexseiten (Standard: en)")
     args = ap.parse_args()
 
-    # Nav fuer alle Sprachbaeume (en zuerst), jeder listet, was in seinem Baum steht.
-    blocks, data = [], None
-    for lang in LANGS:
-        set_lang(lang)
-        d = inventory()
-        blocks.append(nav_block_for(lang, d))
-        if lang == args.lang:
-            data = d
+    # Die Navigation folgt den Ordnern (awesome-pages), es gibt nichts mehr in mkdocs.yml zu schreiben.
     set_lang(args.lang)
+    data = inventory()
 
     stale = []
     targets = build_targets(data)
@@ -568,9 +518,6 @@ def main():
             if not args.check:
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(content, encoding="utf-8")
-    # patch_mkdocs liefert True, wenn der Nav-Block bereits aktuell ist
-    if not patch_mkdocs(blocks, not args.check):
-        stale.append("mkdocs.yml")
 
     total = sum(len(items) for groups in data.values() for items in groups.values())
     if args.check and stale:
@@ -581,7 +528,7 @@ def main():
         return 1
     n_cats = len({c for groups in data.values() for c in groups})
     print(f"[{args.lang}] {len(BANDS)} Bänder, {n_cats} Typgruppen, {total} Komponenten, "
-          f"{'geprüfte' if args.check else 'geschriebene'} Dateien: {len(targets)} + mkdocs.yml")
+          f"{'geprüfte' if args.check else 'geschriebene'} Dateien: {len(targets)}")
     return 0
 
 
