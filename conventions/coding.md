@@ -36,14 +36,15 @@ module doc (`//! Pattern: Repository over Store (strategy for the backend)`).
 | Memento | an opaque snapshot to restore or read from | undo, consistent reads |
 | Visitor | one function per variant, kept outside the data | walking a document or schema |
 | Interpreter | evaluate a small language over its tree | recurrence rules, queries |
+| Capability object | a type only one place can hand out; holding it is the right | the port of a guard, a local enrolment |
 
 No pattern for its own sake: pick the one that makes the code reusable and testable, and write why.
 
 **Name only what is really there (2026-11-07).** A module head names a pattern from this table, plus how it is used here. A name that is not
 in the table is reported to the strategy session, not invented. A file of constants is not a Registry, because nothing is looked up by
-kind: it says `Constants`. A test file names what it tests; it has no pattern of its own. The check before a tag compares the name with the code.
+kind: it says `Constants`. A test file names what it tests; it has no pattern of its own. A type split over several files says so: `Adapter, part of MatrixProvider`. The check before a tag compares the name with the code.
 
-**A small file without behaviour may say so (project owner, 2026-11-07):** `Pattern: none`, for error lists, plain data, constants, a single pure function and a thin binary. A
+**A small file without behaviour may say so (project owner, 2026-11-07):** `Pattern: none`, for error lists, plain data, constants, a single pure function or a small set of them for one concept, and a thin binary. A
 made-up name is worse than an honest "none". Anything with behaviour still names a pattern and sits behind an interface.
 
 ## 2a. Text a person reads (ADR 0057)

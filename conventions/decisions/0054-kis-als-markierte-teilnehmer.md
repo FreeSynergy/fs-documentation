@@ -107,7 +107,7 @@ Gegen den Betrügerring hilft, was schon gilt: Es gibt keinen weltweiten Wert, u
 
 ## Ohne Befugnis nichts, auch kein Lesen (Nutzer, 2026-11-07)
 „Erstmal nichts lesen dürfen. Eine Einladung geht auch ohne Befugnisse. Erst wenn explizit Befugnisse eingeräumt werden, wird weitergemacht.“
-Eine KI kann also eingeladen werden, ohne etwas zu dürfen. Bis ihr jemand ausdrücklich Befugnisse gibt, liest und tut sie nichts. Für Rechte (Delegationen, Rollen, Mitgliedschaften, Einladungen, Speicher-Anbindungen, Anmeldung am Hub) entsteht vorerst gar kein Werkzeug, auch nicht zum Lesen.
+Eine KI kann also eingeladen werden, ohne etwas zu dürfen. Bis ihr jemand ausdrücklich Befugnisse gibt, liest und tut sie nichts. Technisch heißt das **ablehnen, nicht fragen** (Lesart der Strategie, 2026-11-07): Die KI kann eine Person nicht mit Fragen überziehen, die Befugnis gibt die Person von sich aus. Erst nach einer Befugnis fragt die Engine, was jedes Mal fragen muss. Für Rechte (Delegationen, Rollen, Mitgliedschaften, Einladungen, Speicher-Anbindungen, Anmeldung am Hub) entsteht vorerst gar kein Werkzeug, auch nicht zum Lesen.
 
 ## Lesen ist nicht harmlos (Nutzer, 2026-11-07)
 „Stell dir vor, die KI liest Passwörter aus. Dann ist das schlimmer als Löschen, kommt darauf an was, oder Geheimnisse.“ „Nur scheinbar harmlose Sachen sind nicht harmlos.“
