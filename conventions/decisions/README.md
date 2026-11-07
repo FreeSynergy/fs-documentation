@@ -65,3 +65,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0056 | Oberster Admin; Agenten werden nie Admin; Workbench gibt Kontext; Kanidm flach | akzeptiert |
 | 0057 | Was ein Mensch liest, ist übersetzbar; Bibliothek `mf2` | akzeptiert |
 | 0058 | Kontakte sind Profile | Idee vom Nutzer, Ausgestaltung offen |
+| 0059 | Verbinden ohne Server: jeder Client ist ein Knoten, iroh als Kandidat | Richtung akzeptiert, nichts gebaut |

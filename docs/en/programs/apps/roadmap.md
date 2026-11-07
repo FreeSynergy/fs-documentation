@@ -96,6 +96,7 @@ The closed-source products were checked only partly; each note lists what was ve
 
 ## Open decisions
 
+- **Connecting without a server (ADR 0059).** Every client becomes a node, so that people in one room can vote or share a whiteboard, keep the data, and carry on if the moderator drops out. `iroh` is the candidate, behind an interface. Nothing is built; anonymous votes without a server and a room with no network at all are open.
 - **Contacts are profiles (ADR 0058).** A contact is a profile that I wrote, or that someone shows me. Whoever stands behind it and takes part has keys and rights, and those are never part of a profile. `fs-people` stays one program. Details open, not built.
 
 | # | Question | Recommendation |
