@@ -1,14 +1,32 @@
-# CS-Cart Multi-Vendor Documentation
+# CS-Cart Multi-Vendor
 
-## Overview
+> Category: [marketplace](../../index.md)
+
+## What it is
 
 CS-Cart Multi-Vendor (commercial software, PHP) turns a shop into a **marketplace with many vendors**: products, stock, shipping, payment gateways, vendor commissions, admin consoles. Classic e-commerce approach (vs. brokerage marketplaces such as Sharetribe).
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Admin, merchant and customer menus
-- [features.md](latest/features.md) - Multivendor logic, add-ons, what CS-Cart MV cannot do
-- [description.md](latest/description.md) - Distinction from Sharetribe/Arcemall/WooCommerce MV
-- [structure.md](latest/layout.md) - Shop frontend, vendor dashboard, admin center
-- [shortcuts.md](latest/shortcuts.md) - none
-- [api.md](latest/api.md) - REST API (products/orders etc.), API keys
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

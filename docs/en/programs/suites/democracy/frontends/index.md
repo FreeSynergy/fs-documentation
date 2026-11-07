@@ -6,12 +6,12 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [adhocracy4](adhocracy4/index.md) | [latest](adhocracy4/latest/description.md) |  |
-| [circo](circo/index.md) | [latest](circo/latest/description.md) |  |
-| [consul](consul/index.md) | [latest](consul/latest/description.md) |  |
-| [decidim](decidim/index.md) | [latest](decidim/latest/description.md) |  |
-| [liquid-feedback](liquid-feedback/index.md) | [latest](liquid-feedback/latest/description.md) |  |
-| [polis](polis/index.md) | [latest](polis/latest/description.md) |  |
+| [Adhocracy4](adhocracy4/index.md) | [latest](adhocracy4/latest/description.md) | Adhocracy4 (AGPL, Python/Django) is the participation framework behind many municipal portals (including the Berlin portal "mein.berlin.de"): projects with phases (brainstorming, idea review, evalu… |
+| [Circo](circo/index.md) | [latest](circo/latest/description.md) | Circo (citizen participation and consultation platform, used in Germany and Austria by associations and for parliamentary consultations) combines **surveys, workshops and online consultations** wit… |
+| [Consul](consul/index.md) | [latest](consul/latest/description.md) | Consul ("Decide Madrid" software, Apache-2.0, Ruby on Rails) is the participation platform for municipalities: proposals, participation processes, **citizen budgets**, polls and votes, debates, leg… |
+| [Decidim](decidim/index.md) | [latest](decidim/latest/description.md) | Decidim (AGPL, Ruby on Rails) is the platform for **participatory democracy**: processes (citizen budgets, participation, planning), proposals with comments and supports, debates, meetings and even… |
+| [LiquidFeedback](liquid-feedback/index.md) | [latest](liquid-feedback/latest/description.md) | LiquidFeedback ("LiQu", PHP, free software) implements **delegative voting (liquid democracy)**: initiatives in topic rooms, delegation chains for votes, arguments for and against, votes with quorums. |
+| [Pol.is](polis/index.md) | [latest](polis/latest/description.md) | Pol.is (commercial, with non-profit roots) is the **deliberation scaling platform**: all participants write comments and rate those of others ("agree/disagree/pass") — an algorithm clusters the opi… |
 
 ## File set per program (ADR 0012)
 

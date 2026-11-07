@@ -1,14 +1,32 @@
-# Dolibarr Documentation
+# Dolibarr
 
-## Overview
+> Category: [erp](../../index.md)
+
+## What it is
 
 Dolibarr (GPL, PHP) is the lean SME ERP/CRM: third parties, quotes/orders, invoices, stock, projects, basic accounting — easy to host (LAMP), stable core, extension market. REST API v3 with API keys.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Main menu, administration/setup menus
-- [features.md](latest/features.md) - Modules, triggers/hooks, what Dolibarr cannot do
-- [description.md](latest/description.md) - Differentiation from Odoo, ERPNext, Lexware
-- [structure.md](latest/layout.md) - Frames layout, lists/forms
-- [shortcuts.md](latest/shortcuts.md) - Keyboard shortcuts (no official ones)
-- [api.md](latest/api.md) - REST v3 (`/api/index.php`), API key/session, webhooks module
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

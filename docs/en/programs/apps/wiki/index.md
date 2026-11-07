@@ -66,12 +66,13 @@ Further information can be found in the documentation of individual wiki systems
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (7), by function, nothing copied (ADR 0012/0013):
+Analysed programs (8), by function, nothing copied (ADR 0012/0013):
 
 - [Confluence](frontends/confluence/index.md) — Confluence is a team wiki and collaboration product by Atlassian.
 - [MediaWiki](frontends/mediawiki/index.md) — MediaWiki is the wiki engine behind Wikipedia and the other Wikimedia projects.
 - [Notion](frontends/notion/index.md) — Notion is a hosted all-in-one workspace for notes, documents and databases, built from typed blocks.
 - [Tango](frontends/tango/index.md) — Tango turns recorded clicks into step-by-step guides; not a wiki, documented for its capture-to-guide idea.
+- [Tango.io](frontends/tango.io/index.md) — Tango.io is a modern knowledge management platform focused on collaboration.
 - [VSCodium](frontends/vscodium/index.md) — VSCodium is an open-source version of Microsoft Visual Studio Code.
 - [Wiki.js](frontends/wikijs/index.md) — Wiki.js is an open-source, self-hosted wiki engine.
 - [XWiki](frontends/xwiki/index.md) — XWiki is a powerful enterprise wiki platform with advanced features for knowledge management.

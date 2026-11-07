@@ -1,6 +1,6 @@
-# Whiteboards — Frontends
+# Whiteboard — Frontends
 
-Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Whiteboards` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
+Frontends of well-known programs in this category, analysed for their **functions** — nothing is copied (ADR 0013). A program is documented here because it is widely learned or because it has a notable idea. Our own program for this category is `FreeSynergy.Whiteboard` (ADR 0017); its capabilities and status live in [requirements](../requirements.md).
 
 ## Programs
 

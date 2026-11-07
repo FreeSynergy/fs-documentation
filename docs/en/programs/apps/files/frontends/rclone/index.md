@@ -38,6 +38,12 @@ On S3 any valid UTF-8 key, but `/`, NUL, `.` and `..` as names are replaced ✅.
 
 Dry-run and a delete limit as safety in sync. Conflict policy as a setting. Listing and cleaning unfinished uploads (`Upload.received` is a good start; a list of pending uploads is missing). Cache mode idea for a stream mode. Encrypted names as an option of client-side encryption.
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://rclone.org/docs/

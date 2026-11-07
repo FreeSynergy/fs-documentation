@@ -1,14 +1,32 @@
-# Prefect Documentation
+# Prefect
 
-## Overview
+> Category: [workflows](../../index.md)
+
+## What it is
 
 Prefect (Apache-2.0) is modern workflow orchestration in Python: `@flow`/`@task` decorators, deployments (work pools/workers), scheduling, events/automations, observability UI. Self-hosted server or Prefect Cloud.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - UI (flows, deployments, runs, automations), work pools
-- [features.md](latest/features.md) - Deployments, events, what Prefect CANNOT do
-- [description.md](latest/description.md) - Differentiation from Airflow, Dagster, n8n
-- [structure.md](latest/layout.md) - Flow/task/deployment objects, run logs
-- [shortcuts.md](latest/shortcuts.md) - Keyboard shortcuts (none)
-- [api.md](latest/api.md) - REST API (flows/deployments/runs), events API
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

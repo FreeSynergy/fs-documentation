@@ -47,6 +47,7 @@ Only ideas that are verified in the 3.1.1 source are listed here.
 | Version | Required files present |
 |---------|------------------------|
 | [3.1.1](3.1.1/description.md) | 7/7 |
+| [latest](latest/description.md) | 6/7 |
 
 ### 3.1.1
 
@@ -62,6 +63,19 @@ Only ideas that are verified in the 3.1.1 source are listed here.
 | [events.md](3.1.1/events.md) | Events to the outside (webhooks, push, streams) |
 | [limits.md](3.1.1/limits.md) | Known limitations |
 | [dependencies.md](3.1.1/dependencies.md) | Which of our components a frontend in this style needs |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
 <!-- /gen:versions -->
 
 ## Sources

@@ -1,14 +1,32 @@
-# Synology DSM Documentation
+# Synology DSM
 
-## Overview
+> Category: [desktop](../../index.md)
+
+## What it is
 
 Synology DiskStation Manager (DSM) is the proprietary operating system of Synology NAS devices, with a complete **desktop portal in the browser**: main menu, window management, app bar, desktop widgets, package centre and control panel. Management API access runs via `GET/POST /webapi/entry.cgi` with `SYNO.*` APIs; default ports are **5000 (HTTP)** and **5001 (HTTPS)**.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Main menu, app bar, package centre, role menus
-- [features.md](latest/features.md) - Packages, services, rights, backup, monitoring
-- [description.md](latest/description.md) - Description and differentiation from Homarr, Heimdall, Homer, Dashy
-- [structure.md](latest/layout.md) - Desktop portal, windows, widgets, themes
-- [shortcuts.md](latest/shortcuts.md) - Keys in the portal and clearly marked missing combinations
-- [api.md](latest/api.md) - `entry.cgi`, `SYNO.API.Auth` with OTP, `SYNO.Core.*`, session handling
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

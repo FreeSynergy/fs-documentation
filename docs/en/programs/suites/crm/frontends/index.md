@@ -6,12 +6,12 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [civicrm](civicrm/index.md) | [latest](civicrm/latest/description.md) |  |
-| [espocrm](espocrm/index.md) | [latest](espocrm/latest/description.md) |  |
-| [hubspot](hubspot/index.md) | [latest](hubspot/latest/description.md) |  |
-| [pipedrive](pipedrive/index.md) | [latest](pipedrive/latest/description.md) |  |
-| [salesforce](salesforce/index.md) | [latest](salesforce/latest/description.md) |  |
-| [suitecrm](suitecrm/index.md) | [latest](suitecrm/latest/description.md) |  |
+| [CiviCRM](civicrm/index.md) | [latest](civicrm/latest/description.md) | CiviCRM is the open CRM for associations, NGOs and clubs ("Constituent Relationship Management"): contacts, donations, memberships, events, campaigns and cases — embedded in a CMS (Drupal, Joomla o… |
+| [EspoCRM](espocrm/index.md) | [latest](espocrm/latest/description.md) | EspoCRM is a lean, fast open-source CRM (PHP + Backbone/JS, SPA): leads, opportunities, accounts, contacts and activities — with a graphical entity manager, workflows and a clean REST API. |
+| [HubSpot](hubspot/index.md) | [latest](hubspot/latest/description.md) | HubSpot is the marketing-first CRM suite (SaaS): a free CRM (contacts, companies, deals, tickets) plus paid hubs for marketing (email, campaigns, landing pages), sales (sequences, pipelines) and se… |
+| [Pipedrive](pipedrive/index.md) | [latest](pipedrive/latest/description.md) | Pipedrive is a cloud-based sales CRM organized around the sales pipeline: deals move through columns (stages) from qualification to closing, supplemented by leads, contacts, organizations, activiti… |
+| [Salesforce](salesforce/index.md) | [latest](salesforce/latest/description.md) | Salesforce is the leading commercial CRM platform (SaaS): leads, accounts, contacts, opportunities and dozens of clouds (Service, Marketing, Commerce, Analytics) on a modelable data core (standard … |
+| [SuiteCRM](suitecrm/index.md) | [latest](suitecrm/latest/description.md) | SuiteCRM is an open-source CRM (AGPL-3.0) that emerged in 2013 as a fork of the open SugarCRM suite and is today developed further by the community around SalesAgility. |
 
 ## File set per program (ADR 0012)
 

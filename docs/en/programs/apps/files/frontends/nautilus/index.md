@@ -44,6 +44,12 @@ This is the closest match to ADR 0055: the file system sets the rules, the progr
 
 Rename that blocks collisions with a clear message. A warning list for characters that break other systems. Purge interval for trash as a setting. File history that can be turned off (privacy).
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://help.gnome.org/users/gnome-help/stable/files.html

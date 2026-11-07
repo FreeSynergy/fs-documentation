@@ -6,12 +6,12 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [apache-airflow](apache-airflow/index.md) | [latest](apache-airflow/latest/description.md) |  |
-| [make](make/index.md) | [latest](make/latest/description.md) |  |
-| [n8n](n8n/index.md) | [latest](n8n/latest/description.md) |  |
-| [node-red](node-red/index.md) | [latest](node-red/latest/description.md) |  |
-| [prefect](prefect/index.md) | [latest](prefect/latest/description.md) |  |
-| [zapier](zapier/index.md) | [latest](zapier/latest/description.md) |  |
+| [Apache Airflow](apache-airflow/index.md) | [latest](apache-airflow/latest/description.md) | Apache Airflow (Apache-2.0) orchestrates data-intensive pipelines as **DAGs in Python**: the planner (scheduler) calculates schedules, executors distribute tasks to workers. |
+| [Make](make/index.md) | [latest](make/latest/description.md) | Make (formerly Integromat) is the visual SaaS automation platform: scenarios built from modules (trigger → router/iterator/aggregator → actions), 1,500+ apps, visual data paths with bubbles. |
+| [n8n](n8n/index.md) | [latest](n8n/latest/description.md) | n8n is the open-source workflow automation tool (Node.js, "fair-code"): wire nodes into workflows graphically, hundreds of integrations, custom JS/Python code nodes, webhooks as triggers, self-host… |
+| [Node-RED](node-red/index.md) | [latest](node-red/latest/description.md) | Node-RED is the flow-based programming environment (Node.js, Apache-2.0) from IBM's IoT labs: you wire nodes together with wires (messages flow along them), with a dashboard, MQTT/OPC-UA support an… |
+| [Prefect](prefect/index.md) | [latest](prefect/latest/description.md) | Prefect (Apache-2.0) is modern workflow orchestration in Python: `@flow`/`@task` decorators, deployments (work pools/workers), scheduling, events/automations, observability UI. |
+| [Zapier](zapier/index.md) | [latest](zapier/latest/description.md) | Zapier is the largest SaaS automation library (8,000+ apps): "Zaps" link triggers → actions, multi-step zaps and paths for branching, interfaces/tables/forms as mini apps. |
 
 ## File set per program (ADR 0012)
 

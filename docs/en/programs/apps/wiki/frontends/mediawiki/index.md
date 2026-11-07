@@ -32,6 +32,7 @@ Plan: the frontend in our style should target 1.46 now. Check again when 1.47 is
 | Version | Required files present |
 |---------|------------------------|
 | [1.46](1.46/description.md) | 7/7 |
+| [latest](latest/description.md) | 6/7 |
 
 ### 1.46
 
@@ -48,6 +49,19 @@ Plan: the frontend in our style should target 1.46 now. Check again when 1.47 is
 | [limits.md](1.46/limits.md) | Known limitations |
 | [i18n.md](1.46/i18n.md) | Localisation, writing direction |
 | [dependencies.md](1.46/dependencies.md) | Which of our components a frontend in this style needs |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
 <!-- /gen:versions -->
 
 ## Sources used

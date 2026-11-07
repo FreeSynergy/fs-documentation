@@ -1,14 +1,32 @@
-# ERPNext Documentation
+# ERPNext
 
-## Overview
+> Category: [erp](../../index.md)
+
+## What it is
 
 ERPNext (GPLv3) is the complete open-source ERP built on the **Frappe framework** (Python/MariaDB): accounting, inventory, buying/selling, HR, manufacturing, projects — entirely free of licence fees, with a clean JSON REST API and webhooks.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Desk workspace menus, module groups
-- [features.md](latest/features.md) - Frappe doctypes, webhooks, what ERPNext cannot do
-- [description.md](latest/description.md) - Differentiation from Odoo, Dolibarr, SAP
-- [structure.md](latest/layout.md) - Desk UI: workspaces, list/form, search palette
-- [shortcuts.md](latest/shortcuts.md) - Desk shortcuts (`Ctrl+G` etc.)
-- [api.md](latest/api.md) - REST `/api/resource`, token auth, webhooks, doctypes as schema
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

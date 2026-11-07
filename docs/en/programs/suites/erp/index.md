@@ -84,12 +84,12 @@ Further information can be found in the documentation of individual ERP systems.
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
 Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-- [axelor](frontends/axelor/index.md)
-- [dolibarr](frontends/dolibarr/index.md)
-- [erpnext](frontends/erpnext/index.md)
-- [odoo](frontends/odoo/index.md)
-- [sage](frontends/sage/index.md)
-- [tryton](frontends/tryton/index.md)
+- [Axelor](frontends/axelor/index.md) — Axelor Open Suite (AGPL, Java) combines ERP (CRM, Sales, Purchasing, Stock, Manufacturing, Account, HR, Project) with **low-code/BPM**: forms, models and workflows are modelled in the "App Builder"…
+- [Dolibarr](frontends/dolibarr/index.md) — Dolibarr (GPL, PHP) is the lean SME ERP/CRM: third parties, quotes/orders, invoices, stock, projects, basic accounting — easy to host (LAMP), stable core, extension market.
+- [ERPNext](frontends/erpnext/index.md) — ERPNext (GPLv3) is the complete open-source ERP built on the **Frappe framework** (Python/MariaDB): accounting, inventory, buying/selling, HR, manufacturing, projects — entirely free of licence fee…
+- [Odoo](frontends/odoo/index.md) — Odoo is the open business suite (LGPL core + commercial Enterprise apps): CRM, sales, purchasing, warehouse, manufacturing, accounting, projects, HR — as integrated modules with a shared ORM layer.
+- [Sage](frontends/sage/index.md) — "Sage" is a commercial suite group (Sage Group) for accounting/ERP: **Sage Business Cloud** (SaaS accounting, successor to Sage One, for example), **Sage 100** (mid-market ERP, on-premise), **Sage …
+- [Tryton](frontends/tryton/index.md) — Tryton (GPL, Python) is the calm, modular ERP for technical users: modules for accounting, sales, purchasing, warehouse, projects, time tracking — with strong data integrity, a desktop client (GTK)…
 
 Overview: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

@@ -41,6 +41,12 @@ WebDAV at `/remote.php/dav/files/USERNAME/`; an app password is advised for thir
 
 Versions with expiry rules and named (pinned) versions. Trash retention as settings. The sharing model as input for the shared specification (design, question 3). Quota shown to the user. WebDAV as a later backend (design: stage 3).
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://docs.nextcloud.com/server/latest/user_manual/en/files/index.html

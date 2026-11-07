@@ -1,14 +1,32 @@
-# Decidim Documentation
+# Decidim
 
-## Overview
+> Category: [democracy](../../index.md)
+
+## What it is
 
 Decidim (AGPL, Ruby on Rails) is the platform for **participatory democracy**: processes (citizen budgets, participation, planning), proposals with comments and supports, debates, meetings and events, votes, budgets (participatory budgets), moderation — modular and multilingual. Used by hundreds of cities.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Participant view, admin console, moderation
-- [features.md](latest/features.md) - Modules (proposals, budgets, meetings), what Decidim does NOT do
-- [description.md](latest/description.md) - Differentiation from Consul, Liquid Feedback, pol.is
-- [structure.md](latest/layout.md) - Process → components, map and list views
-- [shortcuts.md](latest/shortcuts.md) - none
-- [api.md](latest/api.md) - GraphQL API (public), leftover REST plans, webhooks (module)
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

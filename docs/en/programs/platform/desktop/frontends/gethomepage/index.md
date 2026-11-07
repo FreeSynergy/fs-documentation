@@ -1,16 +1,32 @@
-# gethomepage (Library) Documentation
+# gethomepage (Library)
 
-## Overview
+> Category: [desktop](../../index.md)
+
+## What it is
 
 `gethomepage` refers to the **API library layer** of the project `gethomepage/homepage`: the service clients, proxy handlers, configuration readers and helper functions that turn the YAML entries in `services.yaml` into actual HTTP calls to Sonarr, Pi-hole, Proxmox, Docker or Kubernetes. The library has **no user interface of its own** – operation and configuration take place via the dashboard.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Module and package directory of the library (no UI menu)
-- [features.md](latest/features.md) - Client functions, handler types, validation, caching
-- [description.md](latest/description.md) - Purpose and distinction from the dashboard application
-- [structure.md](latest/layout.md) - Library structure, layers and call path
-- [shortcuts.md](latest/shortcuts.md) - Build, dev and CLI commands instead of keyboard shortcuts
-- [api.md](latest/api.md) - Library API: clients per service, methods, parameters
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
 
-- [Homepage (Dashboard)](../homepage/index.md) - Application that uses this library
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

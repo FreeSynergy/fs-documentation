@@ -1,14 +1,32 @@
-# HubSpot Documentation
+# HubSpot
 
-## Overview
+> Category: [crm](../../index.md)
+
+## What it is
 
 HubSpot is the marketing-first CRM suite (SaaS): a free CRM (contacts, companies, deals, tickets) plus paid hubs for marketing (email, campaigns, landing pages), sales (sequences, pipelines) and service. Skin-relevant: CRM REST API v3, webhooks, embeddable apps.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - Main navigation of the hubs, object lists, settings
-- [features.md](latest/features.md) - Free CRM, marketing hub, What HubSpot CANNOT do
-- [description.md](latest/description.md) - Differentiation from Salesforce, Mailchimp, Matomo (analytics)
-- [structure.md](latest/layout.md) - Card/table masks, contact record page
-- [shortcuts.md](latest/shortcuts.md) - Quick search and standard keys
-- [api.md](latest/api.md) - REST v3, private app token, webhooks, limits
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

@@ -39,6 +39,12 @@ Not documented by Dolphin; the file system decides. ⚠️
 
 Capabilities `file.search` (names and contents), `file.tag`, bulk rename (missing in the contract), undo of the last change (a frontend job, needs the engine to make moves reversible), saved search as a collection (see design: "an album can be a saved search").
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://docs.kde.org/stable_kf6/en/dolphin/dolphin/ (contents)

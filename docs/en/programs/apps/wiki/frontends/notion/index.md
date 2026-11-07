@@ -52,6 +52,7 @@ Notion does not number its app versions. Notion's product is updated continuousl
 | Version | Required files present |
 |---------|------------------------|
 | [2026-11-07](2026-11-07/description.md) | 7/7 |
+| [latest](latest/description.md) | 6/7 |
 
 ### 2026-11-07
 
@@ -67,6 +68,19 @@ Notion does not number its app versions. Notion's product is updated continuousl
 | [events.md](2026-11-07/events.md) | Events to the outside (webhooks, push, streams) |
 | [limits.md](2026-11-07/limits.md) | Known limitations |
 | [dependencies.md](2026-11-07/dependencies.md) | Which of our components a frontend in this style needs |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
 <!-- /gen:versions -->
 
 ## Sources

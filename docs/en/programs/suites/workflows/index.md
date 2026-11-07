@@ -84,12 +84,12 @@ Further information can be found in the documentation of individual workflow aut
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
 Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-- [apache-airflow](frontends/apache-airflow/index.md)
-- [make](frontends/make/index.md)
-- [n8n](frontends/n8n/index.md)
-- [node-red](frontends/node-red/index.md)
-- [prefect](frontends/prefect/index.md)
-- [zapier](frontends/zapier/index.md)
+- [Apache Airflow](frontends/apache-airflow/index.md) — Apache Airflow (Apache-2.0) orchestrates data-intensive pipelines as **DAGs in Python**: the planner (scheduler) calculates schedules, executors distribute tasks to workers.
+- [Make](frontends/make/index.md) — Make (formerly Integromat) is the visual SaaS automation platform: scenarios built from modules (trigger → router/iterator/aggregator → actions), 1,500+ apps, visual data paths with bubbles.
+- [n8n](frontends/n8n/index.md) — n8n is the open-source workflow automation tool (Node.js, "fair-code"): wire nodes into workflows graphically, hundreds of integrations, custom JS/Python code nodes, webhooks as triggers, self-host…
+- [Node-RED](frontends/node-red/index.md) — Node-RED is the flow-based programming environment (Node.js, Apache-2.0) from IBM's IoT labs: you wire nodes together with wires (messages flow along them), with a dashboard, MQTT/OPC-UA support an…
+- [Prefect](frontends/prefect/index.md) — Prefect (Apache-2.0) is modern workflow orchestration in Python: `@flow`/`@task` decorators, deployments (work pools/workers), scheduling, events/automations, observability UI.
+- [Zapier](frontends/zapier/index.md) — Zapier is the largest SaaS automation library (8,000+ apps): "Zaps" link triggers → actions, multi-step zaps and paths for branching, interfaces/tables/forms as mini apps.
 
 Overview: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

@@ -1,14 +1,32 @@
-# Heimdall Documentation
+# Heimdall
 
-## Overview
+> Category: [desktop](../../index.md)
+
+## What it is
 
 Heimdall is an application dashboard based on Laravel: app tiles, optional statistics tiles and panels form a personal start page for self-hosted services. The content is managed in the user interface; the runtime environment is configured in `.env`.
 
-## File structure
+## Notable ideas
 
-- [menu.md](latest/menus.md) - All menu items, panel and app context menus
-- [features.md](latest/features.md) - Apps, enhanced apps, server statistics, configuration
-- [description.md](latest/description.md) - Description and distinction from Homarr, Homer and Dashy
-- [structure.md](latest/layout.md) - UI/UX, panel and tile structure
-- [shortcuts.md](latest/shortcuts.md) - Keyboard control (including keys clearly marked as missing)
-- [api.md](latest/api.md) - Interfaces: Laravel routes, enhanced app API keys, configuration files
+_To do: what does this program do that others don't? Why is it documented here (ADR 0013)?_
+
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->

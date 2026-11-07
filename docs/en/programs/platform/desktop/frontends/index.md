@@ -6,18 +6,18 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [dashy](dashy/index.md) | [latest](dashy/latest/description.md) |  |
-| [gethomepage](gethomepage/index.md) | [latest](gethomepage/latest/description.md) |  |
-| [heimdall](heimdall/index.md) | [latest](heimdall/latest/description.md) |  |
-| [homarr](homarr/index.md) | [latest](homarr/latest/description.md) |  |
-| [homepage](homepage/index.md) | [latest](homepage/latest/description.md) |  |
-| [homer](homer/index.md) | [latest](homer/latest/description.md) |  |
-| [launchboard](launchboard/index.md) | [latest](launchboard/latest/description.md) |  |
-| [opnsense](opnsense/index.md) | [latest](opnsense/latest/description.md) |  |
-| [proxmox](proxmox/index.md) | [latest](proxmox/latest/description.md) |  |
-| [synology-dsm](synology-dsm/index.md) | [latest](synology-dsm/latest/description.md) |  |
-| [truenas](truenas/index.md) | [latest](truenas/latest/description.md) |  |
-| [unraid](unraid/index.md) | [latest](unraid/latest/description.md) |  |
+| [Dashy](dashy/index.md) | [latest](dashy/latest/description.md) | Dashy is a customizable self-hosted dashboard for your own network: app tiles, status indicators, widgets, themes and search are described via `conf.yml` (or JSON) and can optionally be edited in a… |
+| [gethomepage (Library)](gethomepage/index.md) | [latest](gethomepage/latest/description.md) | `gethomepage` refers to the **API library layer** of the project `gethomepage/homepage`: the service clients, proxy handlers, configuration readers and helper functions that turn the YAML entries i… |
+| [Heimdall](heimdall/index.md) | [latest](heimdall/latest/description.md) | Heimdall is an application dashboard based on Laravel: app tiles, optional statistics tiles and panels form a personal start page for self-hosted services. |
+| [Homarr](homarr/index.md) | [latest](homarr/latest/description.md) | Homarr is a self-hosted dashboard for homelabs: services, containers and links are collected in freely configurable boards (widget grids), monitored live and opened with a click. |
+| [Homepage](homepage/index.md) | [latest](homepage/latest/description.md) | Homepage (project `gethomepage/homepage`) is a static dashboard for homelabs: services, links and live widgets are rendered from YAML files under `config/`. |
+| [Homer](homer/index.md) | [latest](homer/latest/description.md) | Homer is a static dashboard for self-hosted services: a YAML file describes groups and tiles, and a small single-page application renders the start page from it. |
+| [LaunchBoard](launchboard/index.md) | [latest](launchboard/latest/description.md) | LaunchBoard is a **commercial, proprietary homelab dashboard**: boards are built by drag and drop without configuration files, widgets deliver live data for containers, media and network services, … |
+| [OPNsense](opnsense/index.md) | [latest](opnsense/latest/description.md) | OPNsense is a firewall and router distribution (FreeBSD-based, Deciso) with a complete web UI: interfaces, firewall rules (pf), NAT, VPN, services and plugins are configured via menus, with changes… |
+| [Proxmox VE](proxmox/index.md) | [latest](proxmox/latest/description.md) | Proxmox VE is an open-source virtualisation platform based on Debian: KVM/QEMU virtual machines and LXC containers are operated through a shared web UI (port 8006, HTTPS) – optionally as a cluster … |
+| [Synology DSM](synology-dsm/index.md) | [latest](synology-dsm/latest/description.md) | Synology DiskStation Manager (DSM) is the proprietary operating system of Synology NAS devices, with a complete **desktop portal in the browser**: main menu, window management, app bar, desktop wid… |
+| [TrueNAS](truenas/index.md) | [latest](truenas/latest/description.md) | TrueNAS (iXsystems, formerly FreeNAS) is the open-source storage platform with end-to-end ZFS management: pools, datasets, snapshots, replication and shares (SMB, NFS, iSCSI, S3) are managed via a … |
+| [Unraid](unraid/index.md) | [latest](unraid/latest/description.md) | Unraid is a proprietary server operating system for NAS, media and game servers: an array mixes hard drives of different sizes, a dedicated parity drive protects the data, and Docker containers and… |
 
 ## File set per program (ADR 0012)
 

@@ -37,6 +37,12 @@ Cloud storage by Google: web, apps and a desktop client. Proprietary. ⚠️
 
 Roles as a base for the sharing specification. Expiry on a share. Per-role download restriction. A file in several folders without copying (matches "collections, not copies"). Remove-from-view versus delete for people who are not the owner.
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://support.google.com/drive/answer/2494822 (sharing)

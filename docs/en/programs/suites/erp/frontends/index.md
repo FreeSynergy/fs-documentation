@@ -6,12 +6,12 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [axelor](axelor/index.md) | [latest](axelor/latest/description.md) |  |
-| [dolibarr](dolibarr/index.md) | [latest](dolibarr/latest/description.md) |  |
-| [erpnext](erpnext/index.md) | [latest](erpnext/latest/description.md) |  |
-| [odoo](odoo/index.md) | [latest](odoo/latest/description.md) |  |
-| [sage](sage/index.md) | [latest](sage/latest/description.md) |  |
-| [tryton](tryton/index.md) | [latest](tryton/latest/description.md) |  |
+| [Axelor](axelor/index.md) | [latest](axelor/latest/description.md) | Axelor Open Suite (AGPL, Java) combines ERP (CRM, Sales, Purchasing, Stock, Manufacturing, Account, HR, Project) with **low-code/BPM**: forms, models and workflows are modelled in the "App Builder"… |
+| [Dolibarr](dolibarr/index.md) | [latest](dolibarr/latest/description.md) | Dolibarr (GPL, PHP) is the lean SME ERP/CRM: third parties, quotes/orders, invoices, stock, projects, basic accounting — easy to host (LAMP), stable core, extension market. |
+| [ERPNext](erpnext/index.md) | [latest](erpnext/latest/description.md) | ERPNext (GPLv3) is the complete open-source ERP built on the **Frappe framework** (Python/MariaDB): accounting, inventory, buying/selling, HR, manufacturing, projects — entirely free of licence fee… |
+| [Odoo](odoo/index.md) | [latest](odoo/latest/description.md) | Odoo is the open business suite (LGPL core + commercial Enterprise apps): CRM, sales, purchasing, warehouse, manufacturing, accounting, projects, HR — as integrated modules with a shared ORM layer. |
+| [Sage](sage/index.md) | [latest](sage/latest/description.md) | "Sage" is a commercial suite group (Sage Group) for accounting/ERP: **Sage Business Cloud** (SaaS accounting, successor to Sage One, for example), **Sage 100** (mid-market ERP, on-premise), **Sage … |
+| [Tryton](tryton/index.md) | [latest](tryton/latest/description.md) | Tryton (GPL, Python) is the calm, modular ERP for technical users: modules for accounting, sales, purchasing, warehouse, projects, time tracking — with strong data integrity, a desktop client (GTK)… |
 
 ## File set per program (ADR 0012)
 

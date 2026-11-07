@@ -6,12 +6,12 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [arcemall](arcemall/index.md) | [latest](arcemall/latest/description.md) |  |
-| [cs-cart-multivendor](cs-cart-multivendor/index.md) | [latest](cs-cart-multivendor/latest/description.md) |  |
-| [ebay](ebay/index.md) | [latest](ebay/latest/description.md) |  |
-| [etsy](etsy/index.md) | [latest](etsy/latest/description.md) |  |
-| [kleinanzeigen](kleinanzeigen/index.md) | [latest](kleinanzeigen/latest/description.md) |  |
-| [sharetribe](sharetribe/index.md) | [latest](sharetribe/latest/description.md) |  |
+| [Arcemall](arcemall/index.md) | [latest](arcemall/latest/description.md) | Arcemall is a **low-code platform for your own marketplaces** (open-source approach): marketplace models (products/services, bookings, payments, search/map) are built with own-code components and t… |
+| [CS-Cart Multi-Vendor](cs-cart-multivendor/index.md) | [latest](cs-cart-multivendor/latest/description.md) | CS-Cart Multi-Vendor (commercial software, PHP) turns a shop into a **marketplace with many vendors**: products, stock, shipping, payment gateways, vendor commissions, admin consoles. |
+| [eBay](ebay/index.md) | [latest](ebay/latest/description.md) | eBay is the global marketplace for C2C/B2C with auction and fixed-price formats. |
+| [Etsy](etsy/index.md) | [latest](etsy/latest/description.md) | Etsy (publicly listed) is the curated marketplace for **handmade goods, vintage and design**, including digital products. |
+| [Kleinanzeigen](kleinanzeigen/index.md) | [latest](kleinanzeigen/latest/description.md) | Kleinanzeigen (formerly eBay Kleinanzeigen, Nowint/AVENUE A) is the largest **regional classifieds marketplace** in Germany: private and commercial providers post ads with a local reference, commun… |
+| [Sharetribe](sharetribe/index.md) | [latest](sharetribe/latest/description.md) | Sharetribe is the leading **marketplace software**: open source (a marketplace you build yourself, Ruby on Rails; "Sharetribe Flex": API-first with web app/Marketplace Console) as well as SaaS vers… |
 
 ## File set per program (ADR 0012)
 

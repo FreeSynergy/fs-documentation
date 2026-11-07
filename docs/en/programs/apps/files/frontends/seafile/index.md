@@ -37,6 +37,12 @@ Conflict naming only (above). Others ⚠️.
 
 Conflict handling that keeps both copies and names the author and time. Read-only sync and selective sync as options of `sync.configure`. A cache limit for the stream mode. History retention as a setting.
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://manual.seafile.com/latest/

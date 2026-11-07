@@ -84,12 +84,12 @@ Further information can be found in the documentation of the individual CRM syst
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
 Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-- [civicrm](frontends/civicrm/index.md)
-- [espocrm](frontends/espocrm/index.md)
-- [hubspot](frontends/hubspot/index.md)
-- [pipedrive](frontends/pipedrive/index.md)
-- [salesforce](frontends/salesforce/index.md)
-- [suitecrm](frontends/suitecrm/index.md)
+- [CiviCRM](frontends/civicrm/index.md) — CiviCRM is the open CRM for associations, NGOs and clubs ("Constituent Relationship Management"): contacts, donations, memberships, events, campaigns and cases — embedded in a CMS (Drupal, Joomla o…
+- [EspoCRM](frontends/espocrm/index.md) — EspoCRM is a lean, fast open-source CRM (PHP + Backbone/JS, SPA): leads, opportunities, accounts, contacts and activities — with a graphical entity manager, workflows and a clean REST API.
+- [HubSpot](frontends/hubspot/index.md) — HubSpot is the marketing-first CRM suite (SaaS): a free CRM (contacts, companies, deals, tickets) plus paid hubs for marketing (email, campaigns, landing pages), sales (sequences, pipelines) and se…
+- [Pipedrive](frontends/pipedrive/index.md) — Pipedrive is a cloud-based sales CRM organized around the sales pipeline: deals move through columns (stages) from qualification to closing, supplemented by leads, contacts, organizations, activiti…
+- [Salesforce](frontends/salesforce/index.md) — Salesforce is the leading commercial CRM platform (SaaS): leads, accounts, contacts, opportunities and dozens of clouds (Service, Marketing, Commerce, Analytics) on a modelable data core (standard …
+- [SuiteCRM](frontends/suitecrm/index.md) — SuiteCRM is an open-source CRM (AGPL-3.0) that emerged in 2013 as a fork of the open SugarCRM suite and is today developed further by the community around SalesAgility.
 
 Overview: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

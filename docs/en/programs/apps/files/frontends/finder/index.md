@@ -38,6 +38,12 @@ The file manager of macOS. Part of the system; Spotlight and iCloud Drive sit be
 
 Tags and smart folders as one mechanism (`file.tag`, saved search). A quick preview on Space that does not open the app (`file.preview`). Aliases are the case for a file in several places; the contract has one folder per file.
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://support.apple.com/guide/mac-help/organize-files-in-folders-mchlp2605/mac

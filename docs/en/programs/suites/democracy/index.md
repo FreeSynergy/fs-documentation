@@ -77,12 +77,12 @@ Further information can be found in the documentation of individual democracy sy
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
 Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
-- [adhocracy4](frontends/adhocracy4/index.md)
-- [circo](frontends/circo/index.md)
-- [consul](frontends/consul/index.md)
-- [decidim](frontends/decidim/index.md)
-- [liquid-feedback](frontends/liquid-feedback/index.md)
-- [polis](frontends/polis/index.md)
+- [Adhocracy4](frontends/adhocracy4/index.md) — Adhocracy4 (AGPL, Python/Django) is the participation framework behind many municipal portals (including the Berlin portal "mein.berlin.de"): projects with phases (brainstorming, idea review, evalu…
+- [Circo](frontends/circo/index.md) — Circo (citizen participation and consultation platform, used in Germany and Austria by associations and for parliamentary consultations) combines **surveys, workshops and online consultations** wit…
+- [Consul](frontends/consul/index.md) — Consul ("Decide Madrid" software, Apache-2.0, Ruby on Rails) is the participation platform for municipalities: proposals, participation processes, **citizen budgets**, polls and votes, debates, leg…
+- [Decidim](frontends/decidim/index.md) — Decidim (AGPL, Ruby on Rails) is the platform for **participatory democracy**: processes (citizen budgets, participation, planning), proposals with comments and supports, debates, meetings and even…
+- [LiquidFeedback](frontends/liquid-feedback/index.md) — LiquidFeedback ("LiQu", PHP, free software) implements **delegative voting (liquid democracy)**: initiatives in topic rooms, delegation chains for votes, arguments for and against, votes with quorums.
+- [Pol.is](frontends/polis/index.md) — Pol.is (commercial, with non-profit roots) is the **deliberation scaling platform**: all participants write comments and rate those of others ("agree/disagree/pass") — an algorithm clusters the opi…
 
 Overview: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

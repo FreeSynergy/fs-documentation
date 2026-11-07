@@ -41,6 +41,12 @@ A folder made on Linux may hold names Windows cannot show. The engine must repor
 
 Start page of pinned and recent folders. A single search across local and remote. Selection check boxes for touch. The device-name rule list as an example of "what the OS allows" (ADR 0055).
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+No version documented in English yet.
+<!-- /gen:versions -->
+
 ## Sources (read 2026-11-06)
 
 - https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1
