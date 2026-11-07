@@ -3,7 +3,7 @@
 **Ziel:** So viel wie möglich bauen, aber nichts, was wir wegwerfen müssten. Nur Besprochenes: `docs/en/programs/apps/roadmap.md`,
 `docs/en/interfaces/index.md`, ADR 0045–0054. Keine neuen Ideen, keine neuen Standards ohne Rückfrage.
 
-**Annahme zum Ende:** Alles Wichtige ist bis Samstagabend gepusht. Danach läuft es weiter, aber es wird nach jedem Schritt gepusht.
+**Ende (Nutzer, 2026-11-07): Sonntag, 2026-11-08, 18:00 Uhr.** Es wird nach jedem Schritt gepusht.
 
 ## Start für jeden Thread
 Einzeilig einfügen, N ersetzen:
@@ -36,7 +36,8 @@ Einzeilig einfügen, N ersetzen:
 3. Anbieter in dieser Reihenfolge, jeder gegen einen echten Server geprüft: Mail (JMAP, IMAP, SMTP, rPGP), Matrix (`matrix-sdk`, `tuwunel`), KI-Modell (llama.cpp-API, Anthropic-API).
 4. ADR 0054 umsetzen: KI nur per Einladung (Profil anlegen), ohne Freigabe keine Handlung; Bremse (Zerstörendes und Handeln im Namen der Person fragt immer); Notaus in der Engine, außerhalb der Reichweite der KI, ohne Netz, im Zweifel zu; wer ihn ziehen darf, ist eine Berechtigung.
 4a. Vertrag `messages` (erledigt, v0.16.0; solange er Entwurf ist, darf er umnummeriert werden, Strategie 2026-11-06: Ordinal 0 ist bei `Encryption` jetzt `unknown`, damit ungesetzt nie „verschlüsselt“ heißt) (Ergebnis der Analyse ACP und MCP, Seite `assistant`, `temp/research/acp-mcp-zed.md`): `ToolCall` mit `risk` (Standard `unknown`, setzt die Engine), Ergebnis, Details, Optionen; `MessageAction` „entscheiden“ nur vom Gerät der Person; Ereignisse für Änderung am Werkzeug-Aufruf und Textstücke; Nachricht mit `reasoning` und Medientyp des Textes; `jobRef` in `MessageSummary`; Stopp und Verbrauch an `Conversation`. Bei MCP beweist ein `accept` keine Person: Die Bremse sitzt in der Engine.
-4b. ADR 0054, Abschnitt „KIs in Unterhaltungen“ (Nutzer, 2026-11-06), noch nicht im Code: KI mit eigenem Schlüssel wie jeder Teilnehmer, `gate.rs` bleibt ohne Ausnahme. Hinweis vor dem Eintritt; alle müssen zustimmen, sonst bleibt sie draußen; wer später kommt, nimmt sie an oder bleibt draußen; Zustimmung zurückgezogen: KI muss hinaus; kein Verlauf von vor dem Eintritt; keine Ausnahme für lokale KIs. Fremde Matrix-Programme können wir nicht zwingen: warnen und Verlassen anbieten.
+4b. **`origin/ai` nicht so auf `main` mergen:** Die Frage „Encrypted only meets a model“ in der `DESIGN.md` ist entschieden, aber anders als dort vorgeschlagen: kein Weg an `gate.rs` vorbei, kein neuer Vertragswert, `PastTheGate` fliegt raus. Die KI ist ein Teilnehmer mit eigenem Schlüssel; ein Programm hält ihn und spricht dahinter mit dem Modell. Welcher Transport zuerst, fragt die Strategie gerade den Nutzer.
+4c. ADR 0054, Abschnitt „KIs in Unterhaltungen“ (Nutzer, 2026-11-06), noch nicht im Code: KI mit eigenem Schlüssel wie jeder Teilnehmer, `gate.rs` bleibt ohne Ausnahme. Hinweis vor dem Eintritt; alle müssen zustimmen, sonst bleibt sie draußen; wer später kommt, nimmt sie an oder bleibt draußen; Zustimmung zurückgezogen: KI muss hinaus; kein Verlauf von vor dem Eintritt; keine Ausnahme für lokale KIs. Fremde Matrix-Programme können wir nicht zwingen: warnen und Verlassen anbieten.
 5. **Nicht bauen:** Bewertung und Stufen über Dritte (Vertrauensbasis offen), Telegram, eigener Mailserver.
 
 ### Thread 3: Schnittstellen in Betrieb
