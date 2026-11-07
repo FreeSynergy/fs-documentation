@@ -26,6 +26,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
 ## Offen bei uns
+- **Merge-Sperre `fs-people` `roles-skos`:** erst nach `main`, wenn `AiMarking` (`fs-groups`) und der Wächter (`fs-messenger`) volle Rollen-IRIs über `is_ai_role()` lesen; sonst wird eine KI womöglich nicht als KI erkannt (Thread 5, ungeprüft). Dazu: `anonymousOpen` in `fs-surveys` braucht eine Person vom Host, sonst gilt der Teilnehmer als KI.
 - **Nach dem Sprint (Nutzer, 2026-11-07): Pause, erst gemeinsam planen.** Ab Sonntag, 2026-11-08, 18:00 ruhen die Threads, bis der Plan steht. Kandidaten: Funde aus dem Handtest, automatische Prüfung bei jedem Push, Probeläufe `mf2` und iroh, Kontakte als Profile (ADR 0058), quadratische Listen in Kalender und Aufgaben, Verbindung Kalender–Aufgaben über Vertrag.
 - **Automatische Prüfung bei jedem Push (Nutzer, 2026-11-07, ja):** gemeinsamer Ablauf in `fs-release`, ohne Secrets: fmt, clippy, Tests, `check_rust_rules.py`.
 - **API-Guthaben:** erst nach sieben Tagen im Paket verknüpfbar (Nutzer am 2026-11-07: „erst der 2. Tag“). Danach schreibt die Strategie das Skript für Agenten ohne Rücksprache.
