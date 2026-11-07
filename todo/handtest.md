@@ -173,7 +173,7 @@ Eine Zeile pro Fund in `~/fs-handtest/funde-people.txt`, Form: `Was ich geklickt
 
 ## Teil 2: fs-tasks-app (Aufgaben)
 
-**Zweig:** `gui` im Repo `fs-tasks` (Stand beim Test: Commit `ef100c2`).
+**Zweig:** `gui` im Repo `fs-tasks` (Stand: Commit `a016adb`; getestet wurde `ef100c2`, das Blättern per Cursor kam danach).
 
 ### Befehle
 **Terminal 1: Server:**
@@ -216,7 +216,7 @@ Oben die Leiste „FreeSynergy Tasks“ mit den Menüs **Task** und **View**. Da
 7. **Zurück zur Liste:** **List**. Der neue Status steht in der Spalte „Status“.
 8. **Import/Export:** siehe Befehle oben. Wiederholter Import: „Imported 0, 3 already known“. Die Exportdatei enthält drei `VTODO`-Blöcke.
 9. **Menü:** nur Task, New und View, List, Status (nur echte Befehle).
-10. **Viele Aufgaben, „Show more“:** Server mit leerem Datenordner, App mit `--import ~/fs-handtest/viele.ics`. Unten steht „Imported 300, 0 already known. Notes: ...“ gefolgt von sehr vielen gleichen Zeilen „version set to 2.0“ (sieht unschön aus, ist harmlos, die Zeile ist abgeschnitten). Die Liste zeigt 200 Aufgaben (sortiert nach Titel, „Aufgabe 1“, „Aufgabe 10“, „Aufgabe 100“ ...), darunter **Show more**: Klick, es kommen die restlichen 100 dazu, nichts doppelt. In der Statusansicht steht über der Spalte „To do (200)“, ebenfalls mit **Show more**. **Achtung, anders als bei people:** Die Tasks-App blättert (noch) **nicht** per Cursor. Bei jedem Laden liest sie intern die ganze Liste (je 100 pro Seite) und zeigt davon einen Ausschnitt. Das Ergebnis sieht gleich aus, nur bei sehr vielen Aufgaben wird es langsamer (siehe DESIGN.md, „Other limits“).
+10. **Viele Aufgaben, „Show more“:** Server mit leerem Datenordner, App mit `--import ~/fs-handtest/viele.ics`. Unten steht „Imported 300, 0 already known. Notes: ...“ gefolgt von sehr vielen gleichen Zeilen „version set to 2.0“ (sieht unschön aus, ist harmlos, die Zeile ist abgeschnitten). Die Liste zeigt 200 Aufgaben (sortiert nach Titel, „Aufgabe 1“, „Aufgabe 10“, „Aufgabe 100“ ...), darunter **Show more**: Klick, es kommen die restlichen 100 dazu, nichts doppelt. In der Statusansicht steht über der Spalte „To do (200)“, ebenfalls mit **Show more**. Auch die Tasks-App blättert jetzt per Cursor (Stand `a016adb`): „Show more“ liest ab dem Cursor weiter, ohne vorn neu anzufangen. In der Statusansicht sortiert die Arbeitsfläche die geladenen Zeilen in die Spalten ein, eine Spalte holt keine eigenen Aufgaben. Textsuche und „nur offene“ filtert die App selbst; ein seltener Suchbegriff kann dabei viele Seiten lesen (siehe DESIGN.md, „Other limits“).
 11. **Zwei Fenster, „Someone else changed this task in the meantime.“:** Wie bei people: zwei Fenster auf demselben Server, in B **Edit** öffnen, in A dieselbe Aufgabe ändern und speichern, dann in B speichern. Erwartet: nichts geschrieben, Meldung „Someone else changed this task in the meantime.“ (englisch), der Text bleibt. Das gilt auch für **Move to** in der Statusansicht: Wurde die Aufgabe inzwischen woanders verändert, wird nicht verschoben, sondern die neue Fassung gezeigt. Wer die Meldung nach einem Klick bekommt, darf einfach noch einmal klicken.
 12. **Fenster klein ziehen:** Bei ca. 400 Pixel Breite rutscht die Einzelansicht unter die Liste, die Spalten werden gekürzt („...“). In der Statusansicht läuft die Reihe der Spalten über den Rand (Failed, Cancelled sind dann nur halb zu sehen), das ist bekannt. Ein sehr kleines Fenster zeigt laut Entwurf eine „kompakte Ansicht“ mit offenen Aufgaben.
 
@@ -229,7 +229,7 @@ Oben die Leiste „FreeSynergy Tasks“ mit den Menüs **Task** und **View**. Da
 - Keine Live-Aktualisierung, keine Anmeldung („meine nächsten Aufgaben“ sind alle offenen).
 - **Kein Wiederverbinden:** Stoppt der Server, kommt bei der nächsten Aktion ein Fehler. Danach App (und vorher Server) neu starten.
 - **Fristen:** Ein hängender Server friert das Fenster bis zu 30 Sekunden pro Aufruf ein, und eine Aktion (Speichern, Verschieben, Löschen) macht bis zu zwei Aufrufe, also bis zu **60 Sekunden**. Verbinden: 5 Sekunden. Es gibt noch keine „Bitte warten“-Anzeige.
-- **Blättern ohne Cursor** (s. o.): jedes Laden liest alles. Ein Server-Lesen kann zwischen zwei Seiten verändert werden, dann kann eine Aufgabe einmal doppelt oder gar nicht erscheinen (das nächste Laden ist richtig). Eine einzelne kaputte gespeicherte Aufgabe lässt Liste und Export scheitern.
+- **Blättern:** Ein Server-Lesen kann zwischen zwei Seiten verändert werden, dann kann eine Aufgabe einmal doppelt oder gar nicht erscheinen (das nächste Laden ab Anfang ist richtig). Der Server liest je Seite die ganze Liste neu (große Bestände werden langsam). Eine einzelne kaputte gespeicherte Aufgabe lässt Liste und Export scheitern.
 - Ein geschlossenes Fenster verliert eine ungespeicherte Änderung.
 - Karten mit „sensibel“-Markierung werden nie geöffnet und beim Export weggelassen (mit `--export-sensitive <uid>` freizugeben). Du wirst so etwas im Test nicht erzeugen können.
 
