@@ -77,4 +77,4 @@ If Kanidm gains one of these, we hand it back, as stated in ADR 0047.
 
 1. Must a hierarchy be a tree, or can a group have several parents? **Confirmed by the project owner (2026-11-07):** several parents are allowed, as a working group can belong to two departments, and cycles are refused.
 2. Who may widen a survey to a parent group: its initiators, or the parent group?
-3. How do decisions about group membership work: by appointment, or by a vote using `fs-surveys`?
+3. How do decisions about group membership work? **Decided (2026-11-07):** each group sets it: by invitation only, open to everyone, or on request with confirmation; a vote through `fs-surveys` is possible where the group wants it.

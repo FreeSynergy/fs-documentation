@@ -20,8 +20,9 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 4a. **Rollen-Datenschutz (ADR 0029):** Muss geschlossen werden (Nutzer „ja“, 2026-11-07). Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing; bis dahin bekommt kein Programm dieses Leserecht.
 4c. **Kontakte sind Profile (ADR 0058):** Idee des Nutzers; Ausgestaltung zu bestätigen. `fs-people` bleibt. Keine Umbauten im Sprint.
 4d. **Umfrage weiterreichen:** Prozent plus Mindestzahl; die Eltern-Gruppe legt die Regel fest, die Kindgruppe darf nur strenger sein (Nutzer). Recherche offen (LiquidFeedback Policies, EU-Bürgerinitiative, Consul nicht bestätigt).
-4b. **Eigenständige Ansichten:** Sollen Galerie, Kanban usw. auch eigene Programme sein? (später)
-5. **Export beim Verlassen** (später, ADR 0046).
+4b. **Eigenständige Ansichten:** ja, als eigene Starter ohne eigene Daten (Nutzer, 2026-11-07).
+5. **Export beim Verlassen:** einmal fragen, mit „merken“ (Nutzer, 2026-11-07, ADR 0046).
+5a. **Gruppenbeitritt:** die Gruppe legt es fest: Einladung, offen oder auf Anfrage; Abstimmung über `fs-surveys` möglich (Nutzer, 2026-11-07).
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
 ## Offen bei uns

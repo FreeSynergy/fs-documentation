@@ -101,8 +101,8 @@ The closed-source products were checked only partly; each note lists what was ve
 
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Should views also be stand-alone programs? | Discuss later |
-| 2 | Prompt for export on leaving? | Postponed, not forgotten ([details](files/design.md#saving-and-exporting)) |
+| 1 | Should views also be stand-alone programs? | **Decided (2026-11-07):** yes, as their own starters without data of their own; technically they stay frontends |
+| 2 | Prompt for export on leaving? | **Decided (2026-11-07):** ask once, with "remember my answer"; everything is saved anyway, this is only about export to a file ([details](files/design.md#saving-and-exporting)) |
 
 **Decided on 2026-11-06:** one `fs-people`, each person with several [roles](../../interfaces/roles.md); codecs are outsourced, open ones first; every existing core is reworked against the interface catalogue, and all interfaces live in
 [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces). Live collaboration merges properties with a logical clock and uses a CRDT only for shared text (`loro` and

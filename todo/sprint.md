@@ -118,7 +118,7 @@ Kleine Korrekturen in bestehendem Code brauchen keinen neuen Trait, aber das Mus
 
 **Nicht tun**
 - **Keine Geheimnisse für Menschen erzeugen oder lesen (ADR 0054):** Passwörter, Passphrasen, private Schlüssel. Du schreibst die Anleitung, der Mensch führt sie aus. Testwerte in Tests sind erlaubt.
-- Keine Releases und kein Signieren: Der Schlüssel ist offline. Keine Übersetzung (ADR 0053). Keine Veröffentlichung auf crates.io ohne Rückfrage. Nur zu GitHub pushen, nichts sonst nach außen.
+- **Releases nur als Entwürfe (Nutzer, 2026-11-07):** signiert mit dem neuen Schlüssel `16A4A3EE…4342`. Die Secrets setzt nur der Nutzer selbst; kein Agent liest, setzt oder gibt sie aus, und kein Workflow schreibt sie in ein Log. Keine Übersetzung (ADR 0053). Keine Veröffentlichung auf crates.io ohne Rückfrage. Nur zu GitHub pushen, nichts sonst nach außen.
 
 **Stand melden**
 - Nach jedem fertigen Punkt eine Zeile in `todo/handoff-programming.md` (nur diese Datei und `DESIGN.md` im Repo; öffentliche Doku macht die Strategie), und kurz an die Strategie-Sitzung (Name über `ListAgents`, Namen ändern sich beim Neustart; zurzeit `freesynergy-dd`).
