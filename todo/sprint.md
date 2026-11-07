@@ -55,6 +55,8 @@ Bis der erste Tag von `fs-components` da ist: Blinc-Grundgerüst, gemeinsame Anw
 4. `fs-files`, Workbench `file-manager`; Vertrag ist vorläufig
 5. `fs-maps`
 
+**Auch fällig (ADR 0018, 0043):** Sobald der Server eines Programms läuft, spricht seine App über Cap'n Proto statt direkt mit dem Kern. `fs-calendar-app` darf nicht mehr von `fs-tasks-core` abhängen.
+
 Programmspezifische Workbenches darf Thread 4 in `fs-components` ergänzen, Gemeinsames gehört Thread 1. Blinc-Fehler per PR oder Eintrag in `todo/upstream.md`; nicht umgehen, ohne es zu notieren. Erst läuft ein Programm wirklich, dann kommt das nächste.
 
 ### Thread 5: Neue Kerne
@@ -68,6 +70,17 @@ Jeweils erst Vertrag in `fs-interfaces`, dann Kern ohne GUI, mit eigener `DESIGN
 Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Frontends analysieren; `requirements.md` von surveys, streaming, tasks angleichen; Umbenennungen der Doku; Meldungen der Threads gegen GitHub prüfen und Doku nachziehen.
 
 ## Regeln für alle
+**Reihenfolge bei jedem neuen Stück Code (Nutzer, 2026-11-07, ADR 0043)**
+1. **Muster zuerst:** Eines aus `conventions/coding.md` §2 aussuchen und in einem Satz begründen. Passt keines, nicht eines erfinden, sondern der Strategie melden.
+2. **Dann der Trait:** Erst die Schnittstelle schreiben, ohne Umsetzung, passend zum Vertrag in `fs-interfaces`. Zwischen Programmen immer Cap'n Proto, nie der Kern eines anderen Programms.
+3. **Dann Tests gegen den Trait,** danach erst die Umsetzung.
+4. Muster, Trait und Grund stehen im Modul-Kopf und in der Muster-Karte der `DESIGN.md`. Das Wort `Pattern:` allein ist kein Nachweis: Die Prüfung vor dem Tag vergleicht das genannte Muster mit dem Code.
+Kleine Korrekturen in bestehendem Code brauchen keinen neuen Trait, aber das Muster der Datei bleibt.
+
+**Threads auf Sonnet (ab 2026-11-07):** Der Thread schreibt selbst oder über Sonnet-Agenten. Die Prüfung vor jedem Tag macht ein eigener Agent mit `model: opus`, der den Code nicht geschrieben hat.
+
+**Wiederaufnahme:** Zuerst `git pull` im eigenen Repo, dann die offenen Branches und `DESIGN.md` lesen und dort weitermachen. Nichts neu anfangen, was schon auf einem Branch liegt.
+
 **Qualität**
 - Vor jedem Tag, im frischen Klon unter `.scratch`: `/srv/FreeSynergy/fs-documentation/scripts/gates.sh <klon> && git push ... && git tag ...`. **`set -e` wirkt in Tool-Aufrufen nicht** (nachgestellt); nur das Skript mit `&&` gibt einen echten Exit-Code.
 - **Vor jedem Tag prüft ein zweiter Agent, der den Code nicht geschrieben hat** (`/code-review high`). Bestätigte Fehler zuerst beheben.
@@ -94,4 +107,4 @@ Rollen (SKOS, Kunde, Lieferant, Mitarbeiter); Zed, ACP, MCP lesen; Datei-Fronten
 - Keine Releases und kein Signieren: Der Schlüssel ist offline. Keine Übersetzung (ADR 0053). Keine Veröffentlichung auf crates.io ohne Rückfrage. Nur zu GitHub pushen, nichts sonst nach außen.
 
 **Stand melden**
-- Nach jedem fertigen Punkt eine Zeile in `todo/handoff-programming.md` (nur diese Datei und `DESIGN.md` im Repo; öffentliche Doku macht die Strategie), und kurz an `freesynergy-8b`.
+- Nach jedem fertigen Punkt eine Zeile in `todo/handoff-programming.md` (nur diese Datei und `DESIGN.md` im Repo; öffentliche Doku macht die Strategie), und kurz an die Strategie-Sitzung (Name über `ListAgents`, Namen ändern sich beim Neustart; zurzeit `freesynergy-dd`).
