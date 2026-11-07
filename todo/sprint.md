@@ -53,6 +53,9 @@ Ziel: Auf diesem Rechner (Fedora) installiert der Laden ein echtes FreeSynergy-P
 5. Indexe neu erzeugen (`scripts/gen_frontend_indexes.py` schreibt sonst 29 fremde Kategorie-Seiten; prüfen, warum, und alle sauber erzeugen), `gen_component_indexes.py --lang en/de`. Deploy grün.
 6. Nach „Umbenennung fertig“: die README-Entwürfe aus `temp/drafts/readmes/` (vom Nutzer im Ton freizugeben) in die Repos, dabei veraltete Versionsangaben in `DESIGN.md`/`README.md` richtigstellen (Liste in der Meldung des Entwurfs-Agenten: messenger, groups, files, components, fs-interfaces-Tabelle, Lizenzanzeige auf GitHub).
 
+**Für Thread D:** neue Seite `docs/en/programs/kinds.md` (ADR 0061, Facetten) in die Navigation aufnehmen, gut sichtbar unter „Programme“.
+**Für Thread S:** ADR 0061: Der Katalog führt Facetten als eigene Apps mit Logo; installiert wird das Programm. Format der Facetten-Liste im Manifest des Programms festlegen.
+
 ### Thread M: Messenger (startet nach der Meldung „Umbenennung fertig“ von Thread R)
 1. **Mail-Schlüssel (Nutzer, 2026-11-07):** v6 für unsere eigenen Schlüssel, v4 zusätzlich anbieten, damit GnuPG und RNP lesen können. Branch `mail-v4` (`460c6a6`) ist nur eine ungeprüfte Sicherung: prüfen, neu aufsetzen wo nötig.
 2. `matrix` zu v0.4.0: `prev_content`-Nachweis nur für Räume des eigenen Servers; verdrängter Raum aus `away` (über 256) gilt als nie angenommen und wird neu geprüft (Strategie, vorläufig, „im Zweifel zu“).

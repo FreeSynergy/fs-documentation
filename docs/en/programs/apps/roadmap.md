@@ -12,13 +12,13 @@ Everything is sorted by purpose, not by what a tool looks like. Four questions d
 | Does it have its own data, with its own rules? | **Program** |
 | Does it put programs together for a purpose? | **Suite** |
 | Does it show something without knowing what the data means? | **Component** (a **workbench** is a large component) |
-| Is it one way of using a program? | **Frontend**, possibly with built-in filters |
+| Is it a part of a program that should look like an app of its own (own name, logo, menu entry)? | **Facet** (ADR 0061) |
+| Is it one way of using a program or facet? | **Frontend**; every program and facet also has an **admin frontend** with all settings |
 
 Every topic has one [interface](../../interfaces/index.md), the same for every provider. **Each standard has exactly one
 owning program, so there is one point of truth,** and other programs reach it through that interface.
 
-Whether views like the gallery or kanban should *also* be offered as stand-alone programs is still open. They can
-appear as stand-alone apps by being frontends, without having their own data.
+Stand-alone apps without their own data are **facets** (ADR 0061): the gallery is a facet of `fs-files`, Contacts a facet of `fs-people`. See [what is what](../kinds.md).
 
 ## Programs
 
