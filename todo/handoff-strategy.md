@@ -15,7 +15,7 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 0. **Sprint bis Sonntag 2026-11-08: `todo/sprint.md`.**
 1. **KIs aussperren:** vorerst bestätigt (ADR 0054). Offen: ein Mensch, ein Konto, ohne die Anonymität zu verlieren; RLTP erklären und entscheiden.
 2. **Schlüssel auf keys.openpgp.org:** Nutzer hat bestätigt (2026-11-07). GitHub-Adresse bestätigen?
-3. **Schlüssel:** vom Nutzer offline gesichert (bestätigt 2026-11-06), nicht mehr auf dem Rechner.
+3. **Schlüssel wird ersetzt (Nutzer, 2026-11-07):** Ein Agent kannte den alten. Der Nutzer führt `todo/schluessel-wechsel.md` aus und meldet den neuen Fingerabdruck; danach `fs-release`, `releases.md`, Entwurf `capnp-compiler v0.1.1` löschen, Tag-Sperre für `fs-capnpc` aufheben.
 4. **Bestätigt (2026-11-07):** mehrere Eltern je Gruppe, Zyklen verboten; `files.capnp` vor der Frontend-Analyse; Repo-Name `fs-identity`. Einseitiges Folgen: ADR 0056.
 4a. **Rollen-Datenschutz (ADR 0029):** Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing.
 4b. **Eigenständige Ansichten:** Sollen Galerie, Kanban usw. auch eigene Programme sein? (später)

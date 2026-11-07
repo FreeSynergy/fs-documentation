@@ -32,5 +32,5 @@ Releases start as drafts, and become public when they bring people something.
 
 **Tried so far:** tar.gz for Linux and macOS universal, deb, rpm, Arch, Windows msi and zip, SPDX SBOM, checksums.
 OpenPGP signatures too, with the [release key](https://github.com/FreeSynergy/fs-release/blob/main/release-signing-key.asc), fingerprint
-`C40F 0FBA 5C4C F71D 7BEB  B5C6 5478 A473 8FFE EB69`, until 2029-11-05.
+`C40F 0FBA 5C4C F71D 7BEB  B5C6 5478 A473 8FFE EB69`, until 2029-11-05. **This key is being replaced (2026-11-07):** an AI agent created it and knew its passphrase, so do not trust a signature made with it. Nothing public has been signed with it.
 **Not tried yet:** AppImage, exe, dmg, Flatpak, containers, mobile.

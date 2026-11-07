@@ -107,6 +107,7 @@ Kleine Korrekturen in bestehendem Code brauchen keinen neuen Trait, aber das Mus
 - `scripts/clean_rust.py` nur für das eigene Repo, **niemals `--all`**, sonst löscht es die Builds der anderen.
 
 **Nicht tun**
+- **Keine `v*`-Tags in `fs-capnpc`, bis die Strategie es freigibt:** Sie lösen eine Signatur mit dem alten Schlüssel aus, der gerade ersetzt wird (`todo/schluessel-wechsel.md`).
 - **Keine Geheimnisse für Menschen erzeugen oder lesen (ADR 0054):** Passwörter, Passphrasen, private Schlüssel. Du schreibst die Anleitung, der Mensch führt sie aus. Testwerte in Tests sind erlaubt.
 - Keine Releases und kein Signieren: Der Schlüssel ist offline. Keine Übersetzung (ADR 0053). Keine Veröffentlichung auf crates.io ohne Rückfrage. Nur zu GitHub pushen, nichts sonst nach außen.
 
