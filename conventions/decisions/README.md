@@ -64,4 +64,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0055 | Sprechende Namen statt IDs; `fs-groups` ist die Quelle der Wahrheit für Gruppen | akzeptiert |
 | 0056 | Oberster Admin; Agenten werden nie Admin; Workbench gibt Kontext; Kanidm flach | akzeptiert |
 | 0057 | Was ein Mensch liest, ist übersetzbar; Bibliothek `mf2` | akzeptiert |
-| 0058 | User und Kontakte sind zwei verschiedene Dinge | Grundsatz akzeptiert, Umsetzung offen |
+| 0058 | Kontakte sind Profile | Idee vom Nutzer, Ausgestaltung offen |

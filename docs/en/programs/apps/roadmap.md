@@ -96,7 +96,7 @@ The closed-source products were checked only partly; each note lists what was ve
 
 ## Open decisions
 
-- **Users and contacts (ADR 0058).** They are two different things: an address card that I keep, and someone who takes part. Decided in principle, not built. Open: whether `fs-people` becomes `fs-contacts`, and `fs-identity` becomes `fs-users`.
+- **Contacts are profiles (ADR 0058).** A contact is a profile that I wrote, or that someone shows me. Whoever stands behind it and takes part has keys and rights, and those are never part of a profile. `fs-people` stays one program. Details open, not built.
 
 | # | Question | Recommendation |
 |---|----------|----------------|

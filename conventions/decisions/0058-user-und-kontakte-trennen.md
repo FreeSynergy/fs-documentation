@@ -1,17 +1,19 @@
-# 0058 – User und Kontakte sind zwei verschiedene Dinge
+# 0058 – Kontakte sind Profile
 
-Status: Grundsatz akzeptiert (Nutzer, 2026-11-07), Umsetzung Vorschlag · ändert ADR 0052 Punkt 1, ADR 0055 Punkt 3, ADR 0056 Punkt 8 · kein Umbau im Sprint
+Status: Idee vom Nutzer (2026-11-07), Ausgestaltung Vorschlag bis zur Bestätigung · präzisiert ADR 0052 · kein Umbau im Sprint
 
 ## Entscheidung (Nutzer)
-„Wir müssen zwischen zwei Sachen unterscheiden: der Kartei, wo wir die Leute nur sammeln, als Adresskarten, und die, die tatsächlich bei uns mitmachen. […] dass wir das trennen müssen: User und Contacts. (Namen können geändert werden.)“
-„Also brauchen wir neben `fs-people` doch `fs-contacts` und `fs-users`. Die Frage ist, ob dann `fs-people` noch Sinn macht? Als Frontend ja, aber insgesamt?“
+Erst: „Wir müssen zwischen der Kartei, wo wir die Leute nur sammeln, und denen, die tatsächlich mitmachen, unterscheiden.“ Dann, nach Abwägung von zwei Programmen und einem Status auf derselben Karte: „Ich habe die Lösung: Profile. Kontakte sind Profile. So einfach ist das.“
 
-## Vorschlag (Strategie, Entscheidung offen)
-- **Kontakt:** was ich über jemanden weiß, eine Adresskarte (JSContact). Die Person weiß es vielleicht nicht, und sie hat dadurch keine Rechte.
-- **User:** wer selbst mitmacht, mit Identität, Schlüssel und Rechten, auch eine KI. Nur hier gibt es Einladung und Beitritt (SCIM `User`, RFC 7643). Vor Kanidm, das nur Spiegel bleibt.
-- **Zwei Programme, kein drittes:** `fs-people` wird `fs-contacts`, weil es heute schon JSContact hält. `fs-identity` wird `fs-users`. „Menschen“ bleibt als Frontend, das beide zeigt (Facade über zwei Traits); eigene Daten hätte ein drittes Programm nicht (ADR 0049).
-- **Verbindung:** Eine Karte verweist auf den User (`describes`). Beide können dieselbe Person betreffen, müssen es aber nicht.
-- **Rollen:** bleiben beim Eigentümer (ADR 0052): Rollen in einer Gruppe bei `fs-groups`. Wohin Kunde und Lieferant gehören, ist offen.
+## Vorschlag (Strategie)
+`fs-people` bleibt ein Programm. Es gibt kein `fs-contacts` und kein `fs-users`.
+- **Profil:** eine Sicht auf jemanden, mit einem Autor (AS2 `Profile`, `attributedTo`, `describes`). Karten sind im Code schon genau das (`Profile`, `describes`, Daten in JSContact).
+- **Kontakt:** ein Profil, das ich selbst geschrieben habe, oder das mir jemand zeigt. Jede Person kann mehrere zeigen, die Dating-App ein anderes als die Arbeit.
+- **User:** wer hinter einem Profil steht und mitmacht. Schlüssel, Rechte und Anmeldung stehen nie in einem Profil, sie gehören zur Identität (`data/login`, `data/identity`, Kanidm über `fs-identity`). „Ist User“ wird nicht gespeichert, es ergibt sich aus dem Verweis.
+- **Meine Notizen** sind ein eigenes Profil oder eine Anmerkung von mir, sie landen nie in dem Profil, das mir jemand zeigt, und die Person sieht sie nicht.
+- **Einladung:** aus meinem Kontakt heraus per Link. Nimmt die Person an, verweist mein Kontakt auf sie, und ich sehe, was sie mir zeigt. Das belegt nur, dass der Link angekommen ist.
 
-## Reihenfolge
-1. Nutzer entscheidet die Namen. 2. Verträge: `contacts.capnp`, `users.capnp`; Muster und Trait zuerst. 3. Umzug mit Weiterlesen alter Daten. 4. Frontend. Die KI-Markierung darf dabei nie ausfallen (ADR 0054).
+## Folgen
+- ADR 0056 Punkt 8 bleibt gültig: Jeder in Kanidm hat ein Profil in `fs-people`, nicht umgekehrt.
+- `data/profile` nennt bisher nur, was man über sich zeigt; das wird erweitert.
+- Offen: Was passiert mit meinem selbst geschriebenen Kontakt, wenn die Person mir ihr eigenes Profil zeigt? Vorschlag: beide bleiben nebeneinander, angezeigt wird ihres, meine Notizen bleiben.
