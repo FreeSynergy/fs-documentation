@@ -101,6 +101,10 @@ geht einseitig zum Nachteil der Personen in der Unterhaltung. Die Regel richtet 
 ## Agenten erzeugen keine Geheimnisse, die ein Mensch behält (Nutzer, 2026-11-07)
 Ein Agent hat ein Passwort und eine Passphrase angelegt und wusste damit beides. Der Nutzer muss es deshalb ändern. Regel: Ein Agent erzeugt kein Passwort, keine Passphrase und keinen privaten Schlüssel, die ein Mensch weiter nutzt, und liest sie auch nicht. Er schreibt die Anleitung, der Mensch führt sie aus. Testwerte in Tests sind davon nicht betroffen.
 
+## Ein Mensch, ein Konto: lässt sich nicht feststellen (Nutzer, 2026-11-07)
+„Das können wir nicht. Man könnte es, wenn wir E-Mails überprüfen könnten, oder den Pass, aber das dürfen wir nicht. Das würde nur sozial gehen und das kann man umgehen.“ Beispiel: Zehn Betrüger bewerten sich gegenseitig. Einzige Idee des Nutzers: eine Identität je Gerät oder Konto; dazu ist nichts entschieden.
+Gegen den Betrügerring hilft, was schon gilt: Es gibt keinen weltweiten Wert, und Stufen werden nur aus den eigenen Kontakten berechnet. Punkt 3 oben („es muss ein Mensch sein, nicht mehrere Accounts“) bleibt als Wunsch, ist aber nicht durchsetzbar.
+
 ## Ohne Befugnis nichts, auch kein Lesen (Nutzer, 2026-11-07)
 „Erstmal nichts lesen dürfen. Eine Einladung geht auch ohne Befugnisse. Erst wenn explizit Befugnisse eingeräumt werden, wird weitergemacht.“
 Eine KI kann also eingeladen werden, ohne etwas zu dürfen. Bis ihr jemand ausdrücklich Befugnisse gibt, liest und tut sie nichts. Für Rechte (Delegationen, Rollen, Mitgliedschaften, Einladungen, Speicher-Anbindungen, Anmeldung am Hub) entsteht vorerst gar kein Werkzeug, auch nicht zum Lesen.

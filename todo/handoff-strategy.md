@@ -17,7 +17,8 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 2. **Schlüssel auf keys.openpgp.org:** Nutzer hat bestätigt (2026-11-07). GitHub-Adresse bestätigen?
 3. **Schlüssel wird ersetzt (Nutzer, 2026-11-07):** Ein Agent kannte den alten. Der Nutzer führt `todo/schluessel-wechsel.md` aus und meldet den neuen Fingerabdruck; danach `fs-release`, `releases.md`, Entwurf `capnp-compiler v0.1.1` löschen, Tag-Sperre für `fs-capnpc` aufheben.
 4. **Bestätigt (2026-11-07):** mehrere Eltern je Gruppe, Zyklen verboten; `files.capnp` vor der Frontend-Analyse; Repo-Name `fs-identity`. Einseitiges Folgen: ADR 0056.
-4a. **Rollen-Datenschutz (ADR 0029):** Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing.
+4a. **Rollen-Datenschutz (ADR 0029):** Muss geschlossen werden (Nutzer „ja“, 2026-11-07). Der Hub prüft nach Typ; wer `Relationship` lesen darf, könnte Rollen-Zuweisungen sehen. Gehört zur Schnittstelle Sharing; bis dahin bekommt kein Programm dieses Leserecht.
+4c. **User und Kontakte trennen?** Vorschlag des Nutzers (2026-11-07), berührt ADR 0052, 0055, 0056. Keine Umbauten im Sprint.
 4b. **Eigenständige Ansichten:** Sollen Galerie, Kanban usw. auch eigene Programme sein? (später)
 5. **Export beim Verlassen** (später, ADR 0046).
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).

@@ -80,6 +80,8 @@ A survey can start small and, if it matters, widen to parent groups in [`fs-grou
 survey, earlier results are carried over, and anonymity can never get weaker on the way. **We found no tool that does this.** Consul comes close in one way: a proposal that gathers enough support moves on to a vote.
 Whether it can also move between levels of a hierarchy was not confirmed.
 
+**Who widens it (project owner, 2026-11-07, details open):** admins or people with a permission for it, selectable, or a share of participation in percent set at the start, from which the survey moves on by itself.
+
 ## Patterns
 
 | Pattern | Use |
