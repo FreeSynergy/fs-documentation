@@ -25,6 +25,12 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 5a. **Gruppenbeitritt:** die Gruppe legt es fest: Einladung, offen oder auf Anfrage; Abstimmung über `fs-surveys` möglich (Nutzer, 2026-11-07).
 6. **SignPath:** ab 2026-11-13 erneut fragen (ADR 0051).
 
+## Stand 2026-11-07, Abschluss bei ~86 % Wochenlimit
+- Alle fünf Threads haben abgeschlossen und reagieren nur noch auf Nachrichten; nichts läuft.
+- Erster signierter RPM-Entwurf: `fs-tasks` 0.6.1~rc.2 (App und Server), Signatur `16A4…4342` von der Strategie geprüft. Fehler in `fs-release`: `~` im Namen passt nicht zu `SHA256SUMS.txt`.
+- `fs-launcher` nur lokal (`/srv/FreeSynergy/fs-launcher`, 10 Commits, 27 Tests, Regelprüfer 0/0): Kern, rPGP-Prüfung, Quellenliste in TOML, `words.rs`. Wird nach ADR 0060 das neue `fs-store`.
+- `fs-wiki` Branch `client`: rebasen und als v0.3.1 taggen (v0.3.0 gibt es schon von Thread 3). `fs-messenger` `matrix`: nicht taggbar, Befunde in der `DESIGN.md`.
+
 ## Offen bei uns
 - **Erster Punkt nach dem Sprint: Umbenennung (ADR 0060).** `fs-store` → `fs-objects` in allen 18 Repos, danach wird `fs-store` der Laden. Der Launcher liegt bis dahin nur lokal unter `/srv/FreeSynergy/fs-launcher` (5 Commits, 13 Tests, nicht gepusht).
 - **Launcher und Pakete online (Nutzer, 2026-11-07, besprechen):** ADR 0036, Abschnitt „Ergänzung des Nutzers“. Erster Punkt für die Planung nach dem Sprint.
