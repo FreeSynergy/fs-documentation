@@ -2,34 +2,34 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start der Drehung ausgeführt |
-| `onCycle` | function | - | Wird nach jeder vollständigen Umdrehung ausgeführt |
-| `onAnimateEnd` | function | - | Wird beim Stoppen der Drehung ausgeführt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `onAnimateStart` | function | - | Wird ausgeführt, wenn die Drehung beginnt |
+| `onCycle` | function | - | Wird nach jeder vollen Umdrehung ausgeführt |
+| `onAnimateEnd` | function | - | Wird ausgeführt, wenn die Drehung stoppt |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `duration` | number | `1000` | Dauer einer Umdrehung in ms |
-| `timingFunction` | string | `linear` | Gleichmäßige Geschwindigkeit ohne Ruckeln |
-| `iterationCount` | number \| `infinite` | `infinite` | Endlosschleife bis zum Stop |
-| `playState` | string | `running` | `running` oder `paused` (z. B. bei Tab-Wechsel) |
+| `timingFunction` | string | `linear` | gleichmäßiges Tempo ohne Ruckeln |
+| `iterationCount` | number \| `infinite` | `infinite` | endlose Schleife bis zum Stoppen |
+| `playState` | string | `running` | `running` oder `paused` (z. B. bei einem Tab-Wechsel) |
 
-## Dreh-Attribute (Dauerbetrieb)
+## Drehattribute (fortlaufendes Drehen)
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `spinDirection` | string | `cw` | `cw` = Uhrzeigersinn, `ccw` = gegen den Uhrzeigersinn |
-| `arcSweep` | number | `270` | Sichtbarer Bogen in Grad (360 = volle Scheibe) |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `spinDirection` | string | `cw` | `cw` = im Uhrzeigersinn, `ccw` = gegen den Uhrzeigersinn |
+| `arcSweep` | number | `270` | sichtbarer Bogen in Grad (360 = volle Scheibe) |
 | `pauseWhenHidden` | boolean | `true` | Drehung pausieren, wenn das Element nicht sichtbar ist? |
 | `stopOnTaskEnd` | boolean | `true` | Drehung automatisch beenden, wenn die Aufgabe endet? |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text, z. B. „Wird geladen“ |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `aria-label` | string | - | Beschreibender Text, z. B. "Laden" |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `role` | string | - | `status` – Fortschritt zusätzlich als Text ausgeben |
+| `role` | string | - | `status` – gibt den Fortschritt zusätzlich als Text aus |

@@ -2,19 +2,19 @@
 
 ## Grundlayout
 
-Ein Punkt oder Icon in fester Position ändert Größe und Deckkraft im gleichmäßigen Rhythmus.
+Ein Punkt oder Icon an fester Position ändert in gleichmäßigem Rhythmus Größe und Deckkraft.
 
 ## Visueller Verlauf
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  Ein Zyklus = 1200 ms                            │
+│  ein Zyklus = 1200 ms                            │
 │  ·      ╭───╮      ·      ╭───╮      ·           │
 │         ╰───╯             ╰───╯                  │
 │  1.00   1.06    1.00   1.06    1.00              │
-│  Tal    Peak    Tal    Peak    Tal               │
+│  Tal    Spitze  Tal    Spitze  Tal               │
 │                                                  │
-│  genau ein Peak pro Zyklus, sinusförmig          │
+│  genau eine Spitze pro Zyklus, sinusförmig       │
 └──────────────────────────────────────────────────┘
 ```
 
@@ -22,11 +22,11 @@ Ein Punkt oder Icon in fester Position ändert Größe und Deckkraft im gleichm�
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Skala** | nur `minScale`/`maxScale` - Element atmet |
-| **Deckkraft** | nur Opacity - wirkt ruhiger |
-| **Halo** | `haloRadius` - expandierender Ring um das Element |
-| **Einmalig** | `iterationCount: 1` - kurzes Aufmerksamkeitssignal |
-| **Sanft** | maxScale 1.02, Deckkraft 0.85 - dezent |
+| **Skalierung** | nur `minScale`/`maxScale` – das Element atmet |
+| **Deckkraft** | nur die Deckkraft – wirkt ruhiger |
+| **Halo** | `haloRadius` – ein sich ausbreitender Ring um das Element |
+| **Einmal** | `iterationCount: 1` – ein kurzes Aufmerksamkeitssignal |
+| **Sanft** | maxScale 1.02, Deckkraft 0.85 – dezent |
 
 ## Dauer
 

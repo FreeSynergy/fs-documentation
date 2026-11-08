@@ -2,15 +2,15 @@
 
 ## Beschreibung
 
-Pulse schwillt gleichmäßig an und wieder ab: Größe und/oder Deckkraft steigen weich bis zu einem Maximum und fallen danach symmetrisch ab. Pro Zyklus gibt es genau einen Peak.
+Pulse schwillt gleichmäßig an und wieder ab: Größe und/oder Deckkraft steigen weich bis zu einem Maximum und fallen danach symmetrisch wieder ab. Pro Zyklus gibt es genau eine Spitze.
 
 ## Verwendung
 
-- Aufnahme-, Sende- oder Live-Indikator
-- Aufmerksamkeit für eine primäre Aktion (Call-to-Action)
-- Ortsmarker auf Karten
-- Benachrichtigungspunkt an einem Icon
-- Wartezustand, in dem „etwas gleich passiert“
+- ein Aufnahme-, Sende- oder Live-Indikator
+- Aufmerksamkeit für eine Hauptaktion (Call to Action)
+- Standortmarker auf Karten
+- ein Benachrichtigungspunkt an einem Icon
+- ein Wartezustand, in dem "gleich passiert etwas"
 - Vorbereitung auf eine erwartete Änderung
 
 ## Dauer
@@ -20,6 +20,6 @@ Pulse schwillt gleichmäßig an und wieder ab: Größe und/oder Deckkraft steige
 
 ## Unterschied zu Heartbeat
 
-- Heartbeat: zwei Peaks pro Zyklus im Herzschlag-Muster („lub-dub“) mit deutlicher Ruhephase danach
-- Pulse: ein einzelner, gleichmäßiger Peak ohne Pause, sinusförmig
-- Glow: schwellendes Leuchten um die Kontur; die Größe des Elements bleibt konstant
+- Heartbeat: zwei Spitzen pro Zyklus im Herzschlag-Muster ("lub-dub") mit einer klaren Ruhephase danach
+- Pulse: eine einzelne, gleichmäßige Spitze ohne Pause, sinusförmig
+- Glow: ein anschwellender Schein um die Kontur; die Größe des Elements bleibt gleich

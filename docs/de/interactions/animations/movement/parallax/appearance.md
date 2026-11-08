@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Mindestens zwei Ebenen (z. B. Text über Bild) legen bei gleichem Scrollweg unterschiedliche Strecken zurück.
+Mindestens zwei Ebenen (z. B. Text über einem Bild) legen für die gleiche Scrollstrecke unterschiedliche Wege zurück.
 
 ## Visueller Verlauf
 
@@ -10,10 +10,10 @@ Mindestens zwei Ebenen (z. B. Text über Bild) legen bei gleichem Scrollweg unte
 ┌──────────────────────────────────────────────────────┐
 │Scroll 0        Scroll 1        Scroll 2              │
 │                                                      │
-│FG ████████    FG  ████████   FG   ████████           │
-│BG ▒▒▒▒▒▒▒▒    BG ▒▒▒▒▒▒▒▒    BG  ▒▒▒▒▒▒▒▒            │
+│VG ████████    VG  ████████   VG   ████████           │
+│HG ▒▒▒▒▒▒▒▒    HG ▒▒▒▒▒▒▒▒    HG  ▒▒▒▒▒▒▒▒            │
 │                                                      │
-│FG = Vordergrund (schnell), BG = Hintergrund (langsam)│
+│VG = Vordergrund (schnell), HG = Hintergrund (langsam)│
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -21,11 +21,11 @@ Mindestens zwei Ebenen (z. B. Text über Bild) legen bei gleichem Scrollweg unte
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Scroll** | Standard beim Scrollen langer Seiten |
-| **Zeiger** | Ebenen kippen/versetzen beim Drauffahren |
-| **Gerät** | Gyroskop neigt die Ebenen (mobil) |
+| **Scrollen** | der Standard beim Scrollen langer Seiten |
+| **Zeiger** | die Ebenen kippen oder verschieben sich, wenn der Zeiger darüberfährt |
+| **Gerät** | das Gyroskop kippt die Ebenen (mobil) |
 | **Dezent** | `maxAusschlag: 16`, kaum wahrnehmbare Tiefe |
-| **Perspektive** | `tiefe` erzeugt echten 3D-Layer-Eindruck |
+| **Perspektive** | `tiefe` erzeugt einen echten 3D-Ebeneneindruck |
 
 ## Dauer
 

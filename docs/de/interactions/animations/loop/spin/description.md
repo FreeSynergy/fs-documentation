@@ -2,24 +2,24 @@
 
 ## Beschreibung
 
-Spin dreht ein Element dauerhaft in gleichmäßigem Takt – ohne definierten Endwinkel. Die Animation läuft als Endlosschleife und signalisiert Aktivität, solange eine Aufgabe (Laden, Sync, Verarbeitung) noch nicht abgeschlossen ist.
+Spin dreht ein Element dauerhaft in gleichmäßigem Takt – ohne festgelegten Endwinkel. Die Animation läuft als endlose Schleife und zeigt Aktivität, solange eine Aufgabe (Laden, Synchronisieren, Verarbeiten) noch nicht fertig ist.
 
 ## Verwendung
 
-- Lade-Spinner beim Abrufen von Daten
-- Synchronisierungs- und Aktualisierungsstatus
+- Ladespinner, während Daten abgerufen werden
+- Synchronisations- und Aktualisierungsstatus
 - Verarbeitung oder Upload mit unbekanntem Fortschritt
-- Aufnahme- bzw. Live-Indikator in Werkzeugleisten
-- Play-Status: rotierendes Icon während des Abspielens
-- Fortschrittsrad neben Texten wie „Wird gespeichert …“
+- Aufnahme- oder Live-Indikator in Werkzeugleisten
+- Abspielstatus: ein drehendes Icon während der Wiedergabe
+- ein Fortschrittsrad neben Texten wie "Speichern …"
 
 ## Dauer
 
-- Pro Umdrehung: 800–1500ms
+- Pro Umdrehung: 800–1500 ms
 - `iterationCount: infinite` – die Gesamtdauer endet mit der Aufgabe
-- Unter 800ms pro Umdrehung wirkt unruhig, über 1500ms träge
+- Unter 800 ms pro Umdrehung wirkt unruhig, über 1500 ms träge
 
 ## Unterschied zu Rotate
 
-- Spin: Endlose Drehung ohne Endwinkel; beendet erst, wenn die Arbeit fertig ist
-- Rotate: Definierte, einmalige Drehung auf einen festen Winkel mit dauerhaftem Endzustand
+- Spin: eine endlose Drehung ohne Endwinkel; sie stoppt erst, wenn die Arbeit erledigt ist
+- Rotate: eine festgelegte, einmalige Drehung auf einen festen Winkel mit einem bleibenden Endzustand
