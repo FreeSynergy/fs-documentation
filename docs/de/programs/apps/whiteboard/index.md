@@ -4,6 +4,8 @@
 
 Whiteboard ist eine endlose Fläche für Ideen. Du legst Seiten, Formen, Texte, Verbindungen und Zeichnungen ab, und mehrere Personen können dieselbe Fläche gleichzeitig ändern. Es beantwortet die Frage: Wie denken wir gemeinsam an einem Bild, ohne uns gegenseitig im Weg zu stehen?
 
+**Befehl:** `fs-whiteboard`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Wenn zwei Personen dieselbe Fläche ändern, werden die Änderungen Eigenschaft für Eigenschaft zusammengeführt. Verschiebst du eine Form, während jemand anderes sie umfärbt, bleiben beide Änderungen erhalten.

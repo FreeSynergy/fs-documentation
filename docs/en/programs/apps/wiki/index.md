@@ -4,6 +4,8 @@
 
 FreeSynergy Wiki turns texts into connected pages. Pages link to each other, and you can see what links to a page. It answers the question: where do the things we write live, so that we can find, link and keep them?
 
+**Command:** `fs-wiki`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - A text is stored as text plus layers, not as one flat file. The database is the truth, and files are exports.

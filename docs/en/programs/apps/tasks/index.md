@@ -4,6 +4,8 @@
 
 Tasks keeps what you, or your group, have to do. Each task can have a due date, a status, labels and links to other tasks. It answers one question: what do I, or we, do next?
 
+**Command:** `fs-tasks`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - A task follows the open JSCalendar standard (RFC 8984). This program owns that standard for tasks, so the calendar and every other program reach tasks through one interface instead of keeping their own idea of a task.
@@ -19,6 +21,8 @@ Latest tag: `v0.8.0`. You can create, edit, assign, label, relate, list and dele
 Not there yet: real boards (the status view is not a board; moving a card changes the task's status for everyone), repeating tasks beyond keeping them, assigning people, relations, checklists, comments, attachments and reminders in the window, and undo. The window reads the data directly, and there is no sign-in yet. The interface is a draft with one user (the calendar).
 
 ## Planned facets
+
+Facets are parts of a program that look like apps of their own ([ADR 0061](../../../decisions/0061-facetten.md)). Each gets its own command, a link to `fs-tasks` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Proposed, not built:
 

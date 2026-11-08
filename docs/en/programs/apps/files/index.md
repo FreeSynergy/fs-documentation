@@ -4,6 +4,8 @@
 
 Files looks after your files and folders. It knows what each file is, how big it is and where it lives, so other programs can refer to a file without ever seeing a path. It answers the question: where is that file, and who else needs it?
 
+**Command:** `fs-files`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - With the default local backend, files lie in an ordinary folder under their real names, such as `Urlaub/Foto.jpg`. You can open that folder with any other tool.
@@ -19,6 +21,8 @@ Latest tag: `v0.6.0`. Folders, rename, move, copy, trash, restore and purge work
 Not there yet: a window, sharing, versions, encryption of file contents, sync, WebDAV and previews. Replacing a file is not offered. The interface is a draft marked provisional, and nothing uses it yet.
 
 ## Planned facets
+
+Facets are parts of a program that look like apps of their own ([ADR 0061](../../../decisions/0061-facetten.md)). Each gets its own command, a link to `fs-files` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Proposed, not built:
 

@@ -4,6 +4,8 @@
 
 Calendar keeps your events, including the ones that repeat, in the right time zone. It shows them by month, week, day or as an agenda, and your tasks appear beside them. It answers the question: where do I need to be, and when?
 
+**Command:** `fs-calendar`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Events follow the open JSCalendar standard (RFC 8984), and this program owns it.
@@ -19,6 +21,8 @@ Latest tag: `v0.7.0`. You can create, edit, delete and list events, find what ha
 Not there yet: editing repeat rules or single occurrences, answering invitations, alerts and several calendars in the window; CalDAV, invitations by e-mail and free/busy calculation. The calendar server is not yet connected to a task server. Importing large files is slow (about 45 seconds for 4,000 events). Some late corrections to the core have been tested but not yet reviewed by a second reader. The interface is a draft with no consumer yet.
 
 ## Planned facets
+
+Facets are parts of a program that look like apps of their own ([ADR 0061](../../../decisions/0061-facetten.md)). Each gets its own command, a link to `fs-calendar` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Proposed, not built:
 

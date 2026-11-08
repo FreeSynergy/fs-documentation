@@ -4,6 +4,8 @@
 
 FreeSynergy Maps brings map data to your device and keeps the places you care about. It answers the question: can I have my own map, and still use it when the network is gone? It loads a map piece by piece, only what you look at, and you can download a whole region to use offline.
 
+**Command:** `fs-maps`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - There is no default map server and nothing is copied. You point it at any map source you choose, in the open PMTiles format.

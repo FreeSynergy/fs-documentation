@@ -4,6 +4,8 @@
 
 Files kümmert sich um deine Dateien und Ordner. Es weiß, was jede Datei ist, wie groß sie ist und wo sie liegt, sodass andere Programme auf eine Datei verweisen können, ohne je einen Pfad zu sehen. Es beantwortet die Frage: Wo ist diese Datei, und wer braucht sie noch?
 
+**Befehl:** `fs-files`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Mit dem standardmäßigen lokalen Backend liegen Dateien in einem gewöhnlichen Ordner unter ihren echten Namen, etwa `Urlaub/Foto.jpg`. Du kannst diesen Ordner mit jedem anderen Werkzeug öffnen.
@@ -19,6 +21,8 @@ Neueste Version: `v0.6.0`. Ordner, Umbenennen, Verschieben, Kopieren, Papierkorb
 Noch nicht da: ein Fenster, Freigabe, Versionen, Verschlüsselung von Dateiinhalten, Synchronisation, WebDAV und Vorschauen. Eine Datei zu ersetzen wird nicht angeboten. Die Oberfläche ist ein als vorläufig markierter Entwurf, und noch nichts nutzt sie.
 
 ## Geplante Facetten
+
+Facetten sind Teile eines Programms, die wie eigene Apps aussehen ([ADR 0061](../../../decisions/0061-facetten.md)). Jede bekommt einen eigenen Befehl, einen Link auf `fs-files` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Vorgeschlagen, nicht gebaut:
 

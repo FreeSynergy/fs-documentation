@@ -4,6 +4,8 @@
 
 Streaming takes one live stream and sends it on to several places at the same moment, and records it. You do not need a provider in the middle. It answers the question: how do I show something once and bring it everywhere, without handing my stream key to anyone?
 
+**Command:** `fs-streaming`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - The stream is passed on untouched, so quality is not lost and the machine does little work.

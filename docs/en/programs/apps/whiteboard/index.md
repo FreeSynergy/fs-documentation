@@ -4,6 +4,8 @@
 
 Whiteboard is an endless board for ideas. You put down pages, shapes, text, connectors and drawings, and several people can change the same board at the same time. It answers the question: how do we think together on one picture without getting in each other's way?
 
+**Command:** `fs-whiteboard`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Two people changing the same board are merged property by property. If you move a shape while someone else recolours it, both changes stay.

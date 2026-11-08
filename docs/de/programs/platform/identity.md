@@ -4,6 +4,8 @@
 
 Identity soll der eine Ort werden, an dem Anmeldung und Zugriff auf Systeme geregelt werden. Wir beschreiben, wie es sich verhalten soll, und Kanidm, ein offener Identitätsserver, übernimmt die Arbeit, wo es kann. Heute ist es eine kleine Brücke, noch keine Anmeldung.
 
+**Befehl:** `fs-identity`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Kanidm entscheidet nie, wer wozu gehört. [Gruppen](groups.md) entscheidet, und Kanidm spiegelt es.

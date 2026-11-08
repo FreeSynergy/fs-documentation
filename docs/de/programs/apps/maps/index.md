@@ -4,6 +4,8 @@
 
 FreeSynergy Maps bringt Kartendaten auf dein Gerät und behält die Orte, die dir wichtig sind. Es beantwortet die Frage: Kann ich meine eigene Karte haben und sie trotzdem nutzen, wenn das Netz weg ist? Es lädt eine Karte Stück für Stück, nur das, was du ansiehst, und du kannst eine ganze Region zur Offline-Nutzung herunterladen.
 
+**Befehl:** `fs-maps`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Es gibt keinen Standard-Kartenserver, und nichts wird kopiert. Du zeigst es auf eine Kartenquelle deiner Wahl, im offenen PMTiles-Format.

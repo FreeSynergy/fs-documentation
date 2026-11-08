@@ -4,6 +4,8 @@
 
 History is a timeline of your own work, without anyone watching you. It notices what happens across your FreeSynergy programs and keeps a short line for each event, such as "edited this page" or "finished that task". It answers the question: what have I, or we, done?
 
+**Command:** `fs-history`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - It keeps a summary, never the content. A diary text stays a wiki page, and History only points to it.

@@ -4,6 +4,8 @@
 
 People holds the people in your life: friends, family, colleagues, customers, and groups of them. Each person is one card, and one card can carry several roles. It answers the question: who is this?
 
+**Command:** `fs-people`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - A card follows the open JSContact standard (RFC 9553). Anything the program does not understand is kept, not thrown away.
@@ -19,6 +21,8 @@ Latest tag: `v0.6.0`. You can create, edit, delete, list and search cards, impor
 Not there yet: managing groups, relations and roles or setting the sensitive mark in the window, undo and live updates, sign-in (the acting person is a placeholder), CardDAV and sync between devices. The interface is a draft with no second user yet, so it may still change.
 
 ## Planned facets
+
+Facets are parts of a program that look like apps of their own ([ADR 0061](../../../decisions/0061-facetten.md)). Each gets its own command, a link to `fs-people` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Proposed, not built:
 

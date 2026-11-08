@@ -65,3 +65,5 @@ Die Entscheidungen hinter FreeSynergy, in der Reihenfolge, in der sie fielen. St
 | 0059 | [Verbinden ohne Server: jeder Client ist ein Knoten, iroh als Kandidat](0059-p2p-mit-iroh.md) | Richtung akzeptiert (Nutzer, 2026-11-07), nichts gebaut |
 | 0060 | [Die Datenablage heißt `fs-objects`; `fs-store` wird der Laden](0060-fs-store-wird-fs-objects.md) | akzeptiert (Nutzer, 2026-11-07), Umbau nach dem Sprint |
 | 0061 | [Facetten: ein Programm, mehrere Apps; jedes mit Admin-Frontend](0061-facetten.md) | akzeptiert (Nutzer, 2026-11-08) |
+| 0062 | [Pakete liegen in Git: Katalog-Repo, ein Tag je Version, TUF, Spiegel überall](0062-paket-repos-in-git.md) | akzeptiert (Nutzer, 2026-11-08) |
+| 0063 | [Ein Programm, ein Befehl: `fs-<programm>` mit Unterbefehlen](0063-ein-programm-ein-befehl.md) | akzeptiert (Nutzer, 2026-11-08) |

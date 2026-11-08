@@ -4,6 +4,8 @@
 
 Gruppen hält fest, wer zusammengehört: eine Familie, ein Team, ein Verein, eine Abteilung innerhalb einer größeren. Es beantwortet auch, wer was darf. Du kannst Personen einladen, und nur die eingeladene Person kann annehmen.
 
+**Befehl:** `fs-groups`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Gruppen funktionieren allein. Es ist kein Verzeichnisserver nötig. Wenn du einen wie Kanidm betreibst, kann Gruppen dessen Stand dorthin spiegeln, aber das Verzeichnis entscheidet nie.

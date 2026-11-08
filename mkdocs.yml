@@ -31,6 +31,7 @@ theme:
         icon: material/weather-sunny
         name: Light mode
   features:
+    - content.action.edit
     - content.code.copy
     - content.code.annotate
     - navigation.indexes
@@ -69,6 +70,7 @@ plugins:
             5 Data standards: Data standards
             6 Manifesto: Manifesto
             7 Decisions: Decisions
+            0 Get started: Get started
         - locale: de
           name: Deutsch
           build: true
@@ -81,6 +83,7 @@ plugins:
             5 Data standards: Datenstandards
             6 Manifesto: Manifest
             7 Decisions: Entscheidungen
+            0 Get started: Loslegen
 
 markdown_extensions:
   - abbr

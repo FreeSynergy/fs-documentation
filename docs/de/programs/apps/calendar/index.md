@@ -4,6 +4,8 @@
 
 Calendar behält deine Termine, auch die wiederkehrenden, in der richtigen Zeitzone. Es zeigt sie nach Monat, Woche, Tag oder als Agenda, und deine Aufgaben erscheinen daneben. Es beantwortet die Frage: Wo musst du sein, und wann?
 
+**Befehl:** `fs-calendar`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Termine folgen dem offenen Standard JSCalendar (RFC 8984), und dieses Programm verantwortet ihn.
@@ -19,6 +21,8 @@ Neueste Version: `v0.7.0`. Du kannst Termine anlegen, bearbeiten, löschen und a
 Noch nicht da: Bearbeiten von Wiederholungsregeln oder einzelnen Vorkommen, Antworten auf Einladungen, Erinnerungen und mehrere Kalender im Fenster; CalDAV, Einladungen per E-Mail und Frei/Belegt-Berechnung. Der Kalender-Server ist noch nicht mit einem Aufgaben-Server verbunden. Große Dateien zu importieren ist langsam (etwa 45 Sekunden für 4.000 Termine). Einige späte Korrekturen am Kern wurden getestet, aber noch nicht von einem zweiten Prüfer begutachtet. Die Oberfläche ist ein Entwurf ohne Anbindung.
 
 ## Geplante Facetten
+
+Facetten sind Teile eines Programms, die wie eigene Apps aussehen ([ADR 0061](../../../decisions/0061-facetten.md)). Jede bekommt einen eigenen Befehl, einen Link auf `fs-calendar` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Vorgeschlagen, nicht gebaut:
 

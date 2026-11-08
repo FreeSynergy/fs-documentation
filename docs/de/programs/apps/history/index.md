@@ -4,6 +4,8 @@
 
 History ist eine Zeitleiste deiner eigenen Arbeit, ohne dass dich jemand beobachtet. Es merkt sich, was in deinen FreeSynergy-Programmen passiert, und hält für jedes Ereignis eine kurze Zeile fest, etwa „diese Seite bearbeitet“ oder „jene Aufgabe erledigt“. Es beantwortet die Frage: Was habe ich, oder was haben wir getan?
 
+**Befehl:** `fs-history`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Es hält eine Zusammenfassung fest, nie den Inhalt. Ein Tagebuchtext bleibt eine Wiki-Seite, und History verweist nur darauf.

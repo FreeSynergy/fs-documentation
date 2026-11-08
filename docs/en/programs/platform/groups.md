@@ -4,6 +4,8 @@
 
 Groups keeps track of who belongs together: a family, a team, a club, a department inside a bigger one. It also answers who may do what. You can invite people, and only the person invited can accept.
 
+**Command:** `fs-groups`, one command per program with subcommands ([ADR 0063](../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Groups work alone. No directory server is needed. If you run one such as Kanidm, Groups can mirror its state there, but the directory never decides.

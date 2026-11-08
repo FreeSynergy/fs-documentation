@@ -4,6 +4,8 @@
 
 FreeSynergy Wiki macht aus Texten miteinander verbundene Seiten. Seiten verlinken sich gegenseitig, und du siehst, was auf eine Seite verweist. Es beantwortet die Frage: Wo leben die Dinge, die wir schreiben, damit wir sie finden, verlinken und pflegen können?
 
+**Befehl:** `fs-wiki`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Ein Text wird als Text plus Schichten gespeichert, nicht als eine flache Datei. Die Datenbank ist die Wahrheit, und Dateien sind Exporte.

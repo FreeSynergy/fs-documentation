@@ -4,6 +4,8 @@
 
 Streaming nimmt einen Live-Stream entgegen, leitet ihn gleichzeitig an mehrere Ziele weiter und zeichnet ihn auf. Du brauchst keinen Anbieter dazwischen. Es beantwortet die Frage: Wie zeige ich etwas einmal und bringe es überall hin, ohne meinen Stream-Schlüssel an andere weiterzugeben?
 
+**Befehl:** `fs-streaming`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Der Stream wird unverändert weitergegeben, sodass keine Qualität verloren geht und die Maschine wenig Arbeit hat.

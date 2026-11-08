@@ -47,7 +47,7 @@ A facet is the opposite of a suite: a suite brings several programs together; a 
 
 ## In the store
 
-[FreeSynergy.Store](platform/releases.md) lists every facet as an app with its own logo. Installing an app installs the program behind it; installing a second facet of the same program adds only its menu entry and frontends.
+[FreeSynergy.Store](platform/store.md) lists every facet as an app with its own logo. Installing an app installs the program behind it; installing a second facet of the same program adds only its menu entry and frontends.
 
 ## Planned facets
 

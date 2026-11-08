@@ -4,6 +4,8 @@
 
 FreeSynergy Messenger ist ein Ort für Mail, Chat und KI-Agenten. Es behandelt eine Nachricht als Nachricht, egal welches Netz sie gebracht hat. Du liest, antwortest, suchst und ordnest alles an einem Ort ein, und Connectoren übernehmen die Kommunikation mit der Außenwelt. Eine Nachricht wird nur gesendet, wenn sie verschlüsselt gesendet werden kann.
 
+**Befehl:** `fs-messenger`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Nur verschlüsselt: Gibt es keine Möglichkeit, eine Nachricht an alle ihre Empfänger zu verschlüsseln, wird sie nicht gesendet, und es gibt keine Ausnahme.
@@ -19,6 +21,8 @@ Neueste Version: `v0.4.0`. Heute ist es der Kern, ohne Fenster. Es hat ein Nachr
 Noch nicht da (geplant): ein Fenster, ein Server, Chat-Connectoren (Matrix und andere) und Telegram. Nachrichten bleiben aus Absicht auf dem Gerät, auf dem sie ankamen, bis der Schlüsseltresor existiert, und Konto-Passwörter können noch nicht gespeichert werden. Nachrichten bearbeiten und darauf reagieren, zeitgesteuertes Senden, Mail-Regeln, HTML-Inhalte, Schlüsselsuche, STARTTLS und S/MIME antworten mit „nicht möglich“. Die Regel, dass alle Mitglieder zustimmen müssen, bevor eine KI einer Unterhaltung beitritt, ist nicht gebaut, und die Regeln des Wächters sind vorläufig. Die Schnittstelle ist ein Entwurf ohne Anbindung.
 
 ## Geplante Facetten
+
+Facetten sind Teile eines Programms, die wie eigene Apps aussehen ([ADR 0061](../../../decisions/0061-facetten.md)). Jede bekommt einen eigenen Befehl, einen Link auf `fs-messenger` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Facetten sind Teile eines Programms, die wie eigene Apps aussehen (siehe [Programme](../../index.md)). Vorgeschlagen für `fs-messenger`:
 

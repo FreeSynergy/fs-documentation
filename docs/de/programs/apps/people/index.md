@@ -4,6 +4,8 @@
 
 People hält die Menschen in deinem Leben fest: Freunde, Familie, Kolleginnen und Kollegen, Kundschaft und Gruppen davon. Jede Person ist eine Karte, und eine Karte kann mehrere Rollen tragen. Es beantwortet die Frage: Wer ist das?
 
+**Befehl:** `fs-people`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Eine Karte folgt dem offenen Standard JSContact (RFC 9553). Alles, was das Programm nicht versteht, wird behalten und nicht weggeworfen.
@@ -19,6 +21,8 @@ Neuester Tag: `v0.6.0`. Du kannst Karten anlegen, bearbeiten, löschen, aufliste
 Noch nicht vorhanden: Gruppen, Beziehungen und Rollen oder die Markierung als sensibel im Fenster verwalten, Rückgängig und Live-Aktualisierung, Anmeldung (die handelnde Person ist ein Platzhalter), CardDAV und Synchronisation zwischen Geräten. Die Oberfläche ist ein Entwurf ohne zweite Nutzerin oder zweiten Nutzer und kann sich daher noch ändern.
 
 ## Geplante Facetten
+
+Facetten sind Teile eines Programms, die wie eigene Apps aussehen ([ADR 0061](../../../decisions/0061-facetten.md)). Jede bekommt einen eigenen Befehl, einen Link auf `fs-people` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Vorgeschlagen, nicht gebaut:
 

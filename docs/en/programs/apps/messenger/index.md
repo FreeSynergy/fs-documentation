@@ -4,6 +4,8 @@
 
 FreeSynergy Messenger is one place for mail, chat and AI agents. It treats a message as a message, whichever network brought it. You read, answer, search and file in one place, and connectors do the talking to the outside world. A message is only sent if it can be sent encrypted.
 
+**Command:** `fs-messenger`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Encrypted only: if no way to encrypt a message to all its recipients exists, it is not sent, and there is no override.
@@ -19,6 +21,8 @@ Latest tag: `v0.4.0`. Today it is the core, without a window. It has a message m
 Not there yet (planned): a window, a server, chat connectors (Matrix and others) and Telegram. Messages stay on the device they arrived on, on purpose, until the key vault exists, and account passwords cannot be stored yet. Editing and reacting to a message, scheduled sending, mail rules, HTML bodies, key discovery, STARTTLS and S/MIME answer "not possible". The rule that all members must agree before an AI joins a conversation is not built, and the guard's rules are provisional. The interface is a draft with no consumer yet.
 
 ## Planned facets
+
+Facets are parts of a program that look like apps of their own ([ADR 0061](../../../decisions/0061-facetten.md)). Each gets its own command, a link to `fs-messenger` ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md)).
 
 Facets are parts of a program that look like apps of their own (see [Programs](../../index.md)). Proposed for `fs-messenger`:
 

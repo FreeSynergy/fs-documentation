@@ -4,6 +4,8 @@
 
 Resources keeps what a group has and what it needs: things, rooms, material in stock, and people's time. You can reserve something for a stretch of time, post a need, or post an offer. It answers the question: what do we have, what do we need, and who has time? Two people cannot book the same room by accident, and nobody else can take your time.
 
+**Command:** `fs-resources`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Your own capacity, meaning your time, belongs to you. Only you decide what is shown and allocated. What a group sees is a share you give.

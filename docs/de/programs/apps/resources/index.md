@@ -4,6 +4,8 @@
 
 Resources hält fest, was eine Gruppe hat und was sie braucht: Dinge, Räume, Material auf Lager und die Zeit von Menschen. Du kannst etwas für einen Zeitraum reservieren, einen Bedarf einstellen oder ein Angebot einstellen. Es beantwortet die Frage: Was haben wir, was brauchen wir, und wer hat Zeit? Zwei Personen können denselben Raum nicht versehentlich doppelt buchen, und niemand sonst kann deine Zeit vergeben.
 
+**Befehl:** `fs-resources`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Deine eigene Kapazität, also deine Zeit, gehört dir. Nur du entscheidest, was angezeigt und zugeteilt wird. Was eine Gruppe sieht, ist ein Anteil, den du freigibst.

@@ -4,6 +4,8 @@
 
 FreeSynergy Surveys lets a person or a group ask questions, collect answers and read the result. It answers the question: how can we decide together, and be sure an anonymous answer stays anonymous? Answers can carry a name or be anonymous.
 
+**Command:** `fs-surveys`, one command per program with subcommands ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Anonymous answers do not go into the ordinary store. They go into a separate box that keeps no log and no time, with answers shuffled.

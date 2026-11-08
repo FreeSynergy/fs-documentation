@@ -4,6 +4,8 @@
 
 FreeSynergy Surveys lässt eine Person oder eine Gruppe Fragen stellen, Antworten sammeln und das Ergebnis lesen. Es beantwortet die Frage: Wie können wir gemeinsam entscheiden und sicher sein, dass eine anonyme Antwort anonym bleibt? Antworten können einen Namen tragen oder anonym sein.
 
+**Befehl:** `fs-surveys`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+
 ## Was hier anders ist
 
 - Anonyme Antworten landen nicht im normalen Speicher. Sie gehen in einen separaten Behälter, der weder Protokoll noch Zeitstempel führt, und die Antworten werden durchmischt.

@@ -4,6 +4,8 @@
 
 Identity is meant to become the one place where signing in and access to systems are handled. We describe how it should behave, and Kanidm, an open identity server, does the work where it can. Today it is a small bridge, not yet a sign-in.
 
+**Command:** `fs-identity`, one command per program with subcommands ([ADR 0063](../../decisions/0063-ein-programm-ein-befehl.md); programs are switched over when they are next touched, so not every one is yet).
+
 ## What is different here
 
 - Kanidm never decides who belongs to what. [Groups](groups.md) decides, and Kanidm mirrors it.
