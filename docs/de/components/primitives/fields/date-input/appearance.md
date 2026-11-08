@@ -1,11 +1,11 @@
-# Date Input - Aussehen
+# Datumsfeld – Erscheinungsbild
 
 ## Grundlayout
-Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
+Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
 
 ```
 ┌─────────────────────────────────────────┐
-│Datum                                    │
+│ Datum                                   │
 ├─────────────────────────────────────────┤
 │  📅 2024-01-15                          │
 │                                         │
@@ -14,43 +14,43 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 
 ## Varianten
 
-| Variante (`type`) | Aussehen |
-|-------------------|----------|
-| **date** | Feld mit Kalender-Symbol, Kalender-Overlay darunter |
-| **time** | Feld mit Uhrzeit-Symbol, Raster aus Uhrzeiten statt Kalender |
-| **datetime** | zwei Segmente in einem Feld, erst Kalender dann Uhrzeit |
+| Variante (`type`) | Erscheinungsbild |
+|------------------|------------|
+| **date** | Feld mit Kalendersymbol, darunter das Kalender-Overlay |
+| **time** | Feld mit Uhrsymbol, statt Kalender ein Raster mit Uhrzeiten |
+| **datetime** | zwei Segmente in einem Feld, zuerst Kalender, dann Uhrzeit |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
-|-------|------|------------|
-| Small | 32px | Inline |
-| Medium | 48px | Standard |
-| Large | 64px | Featured |
+|------|--------|-----|
+| small | 32px | im Textfluss |
+| medium | 48px | Standard |
+| large | 64px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+|--------|--------|-------------|
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **active** | dunkel | aktiver Zustand |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+|--------|-------------|
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Das Kalender-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen wird es
-  bodenbündig als Vollflächendialog geöffnet.
-- Monatswechsel per `swipe`, der Übergang ist `slide-in`.
-- Die Tagesflächen bleiben auch bei schmalem Raster mindestens 40 px hoch; unter
-  `small` Bildschirmbreite wird das Feld auf `large` gestellt.
+- Das Kalender-Overlay ist mindestens 280 px breit; auf schmalen Bildschirmen öffnet es sich unten verankert
+  als Vollbild-Dialog.
+- Monatswechsel über `swipe`, der Übergang ist `slide-in`.
+- Die Tagesflächen bleiben auch in einem schmalen Raster mindestens 40 px hoch; unterhalb der
+  Bildschirmbreite `small` wird das Feld auf `large` gesetzt.
 
 ## Kalender-Overlay
 
@@ -65,12 +65,12 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 └─────────────────────────────────────────┘
 ```
 
-## Range-Selection
+## Bereichsauswahl
 
 ```
 ┌─────────────────────────────────────────┐
 │ Von - Bis                               │
 ├─────────────────────────────────────────┤
-│  [01.01.2024] ━━━━━━━━━━━ [15.01.2024] │
+│  [01/01/2024] ━━━━━━━━━━━ [15/01/2024] │
 └─────────────────────────────────────────┘
 ```

@@ -1,36 +1,35 @@
-# Color Input (Farbfeld) - Verwendung
+# Farbfeld – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
+Ein Farbfeld ist ein Feld zur Farbauswahl mit einem Farbwähler.
 
-- Farbe wählen
-- Farb-themes
-- Farb-Code
+- Eine Farbe auswählen
+- Farbthemen
+- Farbcode
 
 ## Beispiele
 
-### Farbe wählen
+### Eine Farbe auswählen
 
 ```jsx
-<ColorInput value="Wert" onChange={aktion} />
+<ColorInput value="value" onChange={action} />
 ```
 
-### Farb-themes
+### Farbthemen
 
 ```jsx
-<ColorInput value="Wert" placeholder="Platzhalter" />
+<ColorInput value="value" placeholder="placeholder" />
 ```
 
-### Farb-Code
+### Farbcode
 
 ```jsx
-<ColorInput value="Wert" showIcon={true} />
+<ColorInput value="value" showIcon={true} />
 ```
 
 ## Hinweise

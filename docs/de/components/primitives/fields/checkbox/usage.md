@@ -1,10 +1,10 @@
-# Checkbox (Ankreuzfeld) - Verwendung
+# Checkbox – Verwendung
 
-## Einfache Checkbox
+## Eine einfache Checkbox
 
 ```jsx
-<Checkbox 
-  label="Einverstanden"
+<Checkbox
+  label="I agree"
   checked={checked}
   onChange={setChecked}
 />
@@ -13,47 +13,47 @@
 ## Mit Icon
 
 ```jsx
-<Checkbox 
-  label="Wichtig"
+<Checkbox
+  label="Important"
   checked={important}
   onChange={setImportant}
   icon="star"
 />
 ```
 
-## In Formular
+## In einem Formular
 
 ```jsx
 <Form>
-  <Checkbox 
-    label="Newsletter abonnieren"
+  <Checkbox
+    label="Subscribe to newsletter"
     checked={newsletter}
     onChange={setNewsletter}
   />
-  <Checkbox 
-    label="Terms akzeptieren"
+  <Checkbox
+    label="Accept terms"
     checked={terms}
     onChange={setTerms}
   />
 </Form>
 ```
 
-## Indeterminate State
+## Zustand „teilweise ausgewählt“
 
 ```jsx
-<Checkbox 
-  label="Alle auswählen"
+<Checkbox
+  label="Select all"
   checked={allChecked}
   indeterminate={indeterminate}
   onChange={toggleAll}
 />
 ```
 
-## Mit Event-Handlern
+## Mit Ereignisbehandlern
 
 ```jsx
-<Checkbox 
-  label="Feature aktivieren"
+<Checkbox
+  label="Enable feature"
   checked={featureEnabled}
   onChange={(checked) => console.log('Changed:', checked)}
 />
@@ -61,19 +61,19 @@
 
 ## Beispiele
 
-## Beispiel 1: Einzelne Checkbox
+## Beispiel 1: einzelne Checkbox
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✓] Einverstanden                       │
+│ [✓] I agree                             │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Mit Icon
+## Beispiel 2: mit Icon
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✓] Wichtig   ⭐                        │
+│ [✓] Important  ⭐                       │
 └─────────────────────────────────────────┘
 ```
 
@@ -81,20 +81,20 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✓] Newsletter abonnieren               │
-│ [✓] Terms akzeptieren                   │
-│ [ ] Sonderangebote erhalten             │
+│ [✓] Subscribe to newsletter             │
+│ [✓] Accept terms                        │
+│ [ ] Receive special offers              │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Indeterminate
+## Beispiel 4: teilweise ausgewählt
 
 ```
 ┌─────────────────────────────────────────┐
-│ [■] Alle auswählen                      │
-│   [ ] Element 1                         │
-│   [✓] Element 2                         │
-│   [✓] Element 3                         │
+│ [■] Select all                          │
+│   [ ] Item 1                            │
+│   [✓] Item 2                            │
+│   [✓] Item 3                            │
 └─────────────────────────────────────────┘
 ```
 
@@ -102,8 +102,8 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✓] Wichtig   ⭐                        │
-│ [✓] Dringend  ⚠️                        │
-│ [✓] Erledigt  ✓                         │
+│ [✓] Important  ⭐                       │
+│ [✓] Urgent     ⚠️                       │
+│ [✓] Done       ✓                        │
 └─────────────────────────────────────────┘
 ```

@@ -1,41 +1,41 @@
-# Color Input - Attribute
+# Farbfeld – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `value` | string | - | Wert (Farbe) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `placeholder` | string | `null` | Placeholder-Text |
+| `placeholder` | string | `null` | Platzhaltertext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcon` | boolean | `true` | Icon anzeigen? |
 | `icon` | string | `palette` | Icon-Name |
 | `formats` | array[] | `['hex', 'rgb', 'hsl']` | Farbformate |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen des Pickers ausgeführt |
+|-----------|------|-------------|
+| `onOpen` | function | läuft, wenn sich der Farbwähler öffnet |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `color` |
 
-## Picker-Attribute
+## Attribute des Farbwählers
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showAlpha` | boolean | `false` | Alpha-Kanal anzeigen? |
 | `showPalette` | boolean | `true` | Farbpalette anzeigen? |

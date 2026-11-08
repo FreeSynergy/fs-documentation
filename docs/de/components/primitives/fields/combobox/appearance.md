@@ -1,7 +1,7 @@
-# Combobox - Aussehen
+# Combobox – Erscheinungsbild
 
 ## Grundlayout
-Ein Combobox ist ein Textfeld + Dropdown.
+Eine Combobox ist ein Textfeld plus eine Auswahlliste.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -14,45 +14,45 @@ Ein Combobox ist ein Textfeld + Dropdown.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einzeln** | Feld mit Pfeil, darunter die Vorschlagsliste |
-| **freitext** | wie `einzeln`, aber ohne Auswahlzwang; Cursor steht im Feld |
-| **mehrfach** | bereits gewählte Werte als Tags im Feld, Liste bleibt stehen |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **einzeln** | Feld mit Pfeil, die Vorschlagsliste darunter |
+| **freitext** | wie `einzeln`, aber ohne erzwungene Auswahl; der Cursor steht im Feld |
+| **mehrfach** | bereits gewählte Werte als Tags im Feld, die Liste bleibt offen |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
-|-------|------|------------|
-| Small | 32px | Inline |
-| Medium | 48px | Standard |
-| Large | 64px | Featured |
+|------|--------|-----|
+| small | 32px | im Textfluss |
+| medium | 48px | Standard |
+| large | 64px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+|--------|--------|-------------|
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **active** | dunkel | aktiver Zustand |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+|--------|-------------|
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Die Vorschlagsliste ist maximal `medium` hoch (8 Zeilen) und scrollt sonst;
-  `swipe` bewegt sie auf Touch-Geräten.
+- Die Vorschlagsliste ist höchstens `medium` hoch (8 Zeilen) und scrollt sonst;
+  `swipe` bewegt sie auf Touchgeräten.
 - Passt die Liste nicht unter das Feld, öffnet sie sich nach oben.
-- Auf schmalen Bildschirmen wird die Liste vollbreit über dem Feld gerendert, die
-  Trefferzeilen bleiben mindestens 44 px hoch.
+- Auf schmalen Bildschirmen wird die Liste über das Feld in voller Breite gerendert; die Ergebniszeilen
+  bleiben mindestens 44 px hoch.
 
-## Dropdown
+## Auswahlliste
 
 ```
 ┌─────────────────────────────────────────┐
@@ -66,16 +66,16 @@ Ein Combobox ist ein Textfeld + Dropdown.
 └─────────────────────────────────────────┘
 ```
 
-## Auto-Complete
+## Autovervollständigung
 
 ```
 ┌─────────────────────────────────────────┐
 │ Land                                    │
 ├─────────────────────────────────────────┤
-│  Deutschl ▼                             │
+│  Deut ▼                                 │
 ├─────────────────────────────────────────┤
 │  Deutschland                            │
-│  Deutschlandschaft                      │
+│  Germaneness                            │
 │  +                                      │
 └─────────────────────────────────────────┘
 ```

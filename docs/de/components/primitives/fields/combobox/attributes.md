@@ -1,43 +1,43 @@
-# Combobox - Attribute
+# Combobox – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `value` | string | - | Wert |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `options` | array[] | - | Array von Optionen |
-| `placeholder` | string | `null` | Placeholder-Text |
+| `options` | array[] | - | Array mit Optionen |
+| `placeholder` | string | `null` | Platzhaltertext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcon` | boolean | `false` | Icon anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird bei Auswahl ausgeführt |
+|-----------|------|-------------|
+| `onSelect` | function | läuft bei der Auswahl |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `combobox` |
 
-## Auto-Complete-Attribute
+## Attribute der Autovervollständigung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showSuggestions` | boolean | `true` | Vorschläge anzeigen? |
-| `suggestions` | array[] | - | Array von Vorschlägen |
+| `suggestions` | array[] | - | Array mit Vorschlägen |
 
 ## Geerbt von
 

@@ -1,55 +1,55 @@
-# Date Input - Attribute
+# Datumsfeld – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `value` | string | - | Wert (Datum, Zeit oder beides je nach `type`) |
-| `type` | enum | `date` | `date`, `time`, `datetime` (`time`/`datetime` ersetzen die früheren Eigenkomponenten) |
-| `onChange` | function | - | Event bei Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `value` | string | - | Wert (Datum, Uhrzeit oder beides, je nach `type`) |
+| `type` | enum | `date` | `date`, `time`, `datetime` (`time`/`datetime` ersetzen die früheren eigenen Komponenten) |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `minDate` | string | - | Minimaldatum |
-| `maxDate` | string | - | Maximaldatum |
-| `placeholder` | string | `null` | Placeholder-Text |
+| `minDate` | string | - | frühestes Datum |
+| `maxDate` | string | - | spätestes Datum |
+| `placeholder` | string | `null` | Platzhaltertext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcon` | boolean | `true` | Icon anzeigen? |
 | `icon` | string | `calendar` | Icon-Name |
 | `format` | string | `YYYY-MM-DD` | Datumsformat |
-| `format24h` | boolean | `true` | 24-Stunden-Format (bei `time`/`datetime`) |
+| `format24h` | boolean | `true` | 24-Stunden-Format (für `time`/`datetime`) |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onCalendarOpen` | function | Wird beim Öffnen des Kalenders ausgeführt |
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
+|-----------|------|-------------|
+| `onCalendarOpen` | function | läuft, wenn sich der Kalender öffnet |
+| `onOpen` | function | läuft beim Öffnen |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `textbox` |
 
-## Validation-Attribute
+## Validierungsattribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `required` | boolean | `false` | Erforderlich? |
+| `required` | boolean | `false` | Pflichtfeld? |
 | `error` | string | - | Fehlermeldung |
 
-## Range-Attribute
+## Bereichsattribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `range` | boolean | `false` | Datumsbereich auswählen? |
+| `range` | boolean | `false` | einen Datumsbereich wählen? |
 | `endDate` | string | - | Enddatum |
 
 ## Geerbt von

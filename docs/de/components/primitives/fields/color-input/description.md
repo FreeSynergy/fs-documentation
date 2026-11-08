@@ -1,34 +1,34 @@
-# Color Input (Farbfeld)
+# Farbfeld
 
 | Feld | Wert |
-|------|------|
-| **Kategorie** | `fields` |
-| **Erbt von** | `base` |
-| **Varianten** | `palette`, `spectrum`, `code` |
-| **Zustände** | `open`, `error` |
-| **Gesten** | `tap`, `drag` |
-| **Animationen** | `fade-in`, `expand` |
-| **Verwandt** | `emoji-picker`, `field`, `base` |
-| **Status** | dokumentiert |
+|-------|-------|
+| **Category** | `fields` |
+| **Inherits from** | `base` |
+| **Variants** | `palette`, `spectrum`, `code` |
+| **States** | `open`, `error` |
+| **Gestures** | `tap`, `drag` |
+| **Animations** | `fade-in`, `expand` |
+| **Related** | `emoji-picker`, `field`, `base` |
+| **Status** | documented |
 
 ## Beschreibung
-Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
+Ein Farbfeld ist ein Feld zur Farbauswahl mit einem Farbwähler.
 
-## Verwendungszweck
+## Zweck
 
-- Farbe wählen
-- Farb-themes
-- Farb-Code
+- Eine Farbe auswählen
+- Farbthemen
+- Farbcode
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **palette** | Raster mit vorausgewählten Farben (Marken- und Themenfarben) |
-| **spectrum** | Freie Wahl über Farbfläche und Farbton-Slider |
-| **code** | nur Textfeld für Hex-, RGB- oder HSL-Wert |
+|---------|-------------|
+| **palette** | Raster mit vorgewählten Farben (Marken- und Themenfarben) |
+| **spectrum** | freie Wahl über eine Farbfläche und einen Farbtonregler |
+| **code** | nur ein Textfeld für einen Hex-, RGB- oder HSL-Wert |
 
-## Features
+## Funktionen
 
 - Farbpalette
 - Farbspektrum
@@ -36,19 +36,18 @@ Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [emoji-picker](../../../widgets/fields/emoji-picker/): beide öffnen ein Auswahl-Overlay,
-  der Emoji-Picker wählt Zeichen, dieser Farbwerte.
-- Der eigentliche Overlay-Charakter (Farbfläche außerhalb des Feldes) macht die Farbe
-  nicht zu einem reinen Feld: Das Feld selbst ist `code`, der Rest verhält sich wie ein Picker.
-- Reine Anzeige von Farben (ohne Auswahl) gehört in [badge](../../feedback/badge/)
-  bzw. in die Farb-Token, nicht hierher.
+- **Nicht verwechseln mit** [emoji-picker](../../../widgets/fields/emoji-picker/): beide öffnen ein
+  Auswahl-Overlay, der Emoji-Picker wählt Zeichen, dieses Feld Farbwerte.
+- Das eigentliche Overlay (eine Farbfläche außerhalb des Feldes) macht die Farbe nicht zu einem reinen Feld: das Feld selbst ist
+  `code`, der Rest verhält sich wie ein Picker.
+- Farben nur anzeigen (ohne Auswahl) gehört zu [badge](../../feedback/badge/)
+  oder zu den Farb-Tokens, nicht hierher.
 
 ## Best Practices
 
-- In Anwendungen nur `palette` anbieten; freie Farbwahl (`spectrum`) bleibt Design-Werkzeugen
-  und dem Editor vorbehalten.
-- Immer beide Formen zeigen: Farbfeld und Textwert, damit Werte nachträglich korrigierbar bleiben.
-- Kontrast zum Untergrund prüfen; bei sehr hellen oder sehr dunklen Farbwerten den Rand verstärken.
+- In Anwendungen nur `palette` anbieten; die freie Farbwahl (`spectrum`) bleibt Designwerkzeugen und dem Editor vorbehalten.
+- Immer beide Formen zeigen: Farbmuster und Textwert, damit Werte später korrigierbar bleiben.
+- Den Kontrast zum Hintergrund prüfen; bei sehr hellen oder sehr dunklen Farbwerten den Rahmen verstärken.
 
 ## Siehe auch
 

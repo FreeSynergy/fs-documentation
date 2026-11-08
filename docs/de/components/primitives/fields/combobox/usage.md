@@ -1,13 +1,12 @@
-# Combobox (Kombinationsfeld) - Verwendung
+# Combobox – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Combobox ist ein Textfeld + Dropdown.
+Eine Combobox ist ein Textfeld plus eine Auswahlliste.
 
 - Adresssuche
 - Kategorien
@@ -18,19 +17,19 @@ Ein Combobox ist ein Textfeld + Dropdown.
 ### Adresssuche
 
 ```jsx
-<Combobox value="Wert" onChange={aktion} />
+<Combobox value="value" onChange={action} />
 ```
 
 ### Kategorien
 
 ```jsx
-<Combobox value="Wert" options={eintraege} />
+<Combobox value="value" options={entries} />
 ```
 
 ### Suchfeld
 
 ```jsx
-<Combobox value="Wert" placeholder="Platzhalter" />
+<Combobox value="value" placeholder="placeholder" />
 ```
 
 ## Hinweise
