@@ -2,37 +2,37 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `animation` | string | `unfold` | Name der Animation |
-| `foldOrigin` | string | `top` | Knickkante: `top`, `bottom`, `left`, `right` |
-| `startAngle` | number | `-90` | Ausgangswinkel in Grad (90 = kantig) |
-| `endAngle` | number | `0` | Zielwinkel in Grad (liegende Ebene) |
+| `foldOrigin` | string | `top` | Falzkante: `top`, `bottom`, `left`, `right` |
+| `startAngle` | number | `-90` | Startwinkel in Grad (90 = hochkant) |
+| `endAngle` | number | `0` | Zielwinkel in Grad (flach liegend) |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `duration` | number | `450` | Dauer in ms |
 | `timingFunction` | string | `ease-out` | schwungvoller Start, weiches Ende |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `both` | geklappter Startzustand auch vor dem Start |
-| `onAnimateEnd` | function | - | Wird nach dem vollständigen Aufklappen ausgeführt |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `both` | der gefaltete Startzustand gilt auch vor dem Start |
+| `onAnimateEnd` | function | - | Wird ausgeführt, nachdem das Element vollständig entfaltet ist |
 
-## Falt-Attribute
+## Falzattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `perspective` | number | `800` | Kameraabstand in px (kleiner = stärkerer 3D-Effekt) |
-| `segments` | number | `1` | Anzahl Falze (mehrere Segmente = wellenförmig) |
+| `segments` | number | `1` | Anzahl der Falze (mehrere Segmente = wellenförmig) |
 | `segmentStagger` | number | `60` | Versatz der Segmente in ms |
-| `backfaceVisible` | boolean | `false` | Rückseite während des Schwenks sichtbar? |
-| `shadow` | string | `auto` | Wandernder Schatten während des Klappens |
+| `backfaceVisible` | boolean | `false` | Ist die Rückseite während des Schwingens sichtbar? |
+| `shadow` | string | `auto` | mitlaufender Schatten beim Entfalten |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `aria-label` | string | - | Beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `fallbackAnimation` | string | `expand` | Ersatz ohne 3D-Drehung |
+| `fallbackAnimation` | string | `expand` | Ersatz ohne die 3D-Drehung |

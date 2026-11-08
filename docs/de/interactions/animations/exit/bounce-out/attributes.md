@@ -2,35 +2,35 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start des Verabschiedens ausgeführt |
-| `onAnticipation` | function | - | Wird beim Ausholen (Stauchung) ausgeführt |
-| `onAnimateEnd` | function | - | Wird nach dem vollständigen Verschwinden ausgeführt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `onAnimateStart` | function | - | Wird ausgeführt, wenn der Abschied beginnt |
+| `onAnticipation` | function | - | Wird bei der Vorbereitung (Stauchung) ausgeführt |
+| `onAnimateEnd` | function | - | Wird ausgeführt, sobald das Element vollständig verschwunden ist |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `400` | Gesamtdauer aus Ausholen und Aussprung in ms |
-| `timingFunction` | string | `ease-in` | Beschleunigender Absprung |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Unsichtbarer Endzustand bleibt erhalten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `duration` | number | `400` | Gesamtdauer von Vorbereitung und Sprung in ms |
+| `timingFunction` | string | `ease-in` | beschleunigter Abflug |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | der unsichtbare Endzustand bleibt erhalten |
 
-## Antizipations-Attribute
+## Vorbereitungsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `anticipation` | number | `8` | Ausholen gegen die Ausflugsrichtung in % der Elementgröße |
-| `squash` | number | `0.9` | Stauchung der Skalierung vor dem Aussprung (1 = keine) |
-| `exitDirection` | string | `up` | Richtung des Aussprungs: `up`, `down`, `left`, `right` |
-| `endScale` | number | `0.2` | Skalierung beim Verschwinden (0 = vollständig geschrumpft) |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `anticipation` | number | `8` | Zurückziehen entgegen der Ausgangsrichtung in % der Elementgröße |
+| `squash` | number | `0.9` | Stauchung der Skalierung vor dem Abflug (1 = keine) |
+| `exitDirection` | string | `up` | Richtung des Ausgangssprungs: `up`, `down`, `left`, `right` |
+| `endScale` | number | `0.2` | Skalierung im Moment des Verschwindens (0 = ganz geschrumpft) |
 | `removeOnEnd` | boolean | `true` | Element nach dem Verschwinden aus dem DOM entfernen? |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `aria-label` | string | - | Beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `reducedMotionFallback` | string | - | `instant` – ohne Federung sofort ausblenden |
+| `reducedMotionFallback` | string | - | `instant` – sofort ausblenden, ohne Federn |

@@ -2,16 +2,16 @@
 
 ## Grundlayout
 
-Das Element staucht sich kurz an seiner Position, schnellt dann über die Position hinaus und verschwindet federnd aus der Fläche.
+Das Element staucht sich kurz an seiner Position zusammen, schießt dann darüber hinaus und federt von der Fläche weg.
 
-## Visueller Verlauf (Aussprung nach oben)
+## Visueller Verlauf (Ausgang mit Sprung nach oben)
 
 ```
 ┌────────────────────────────────────────────┐
-│   0 ms    [█████]      scale 1.00 (Ruhe)    │
-│ 120 ms    [███]        scale 0.88 (Ausholen)│
-│ 260 ms    [██] ↑       scale 0.50 (Absprung)│
-│ 400 ms    (leer)       entfernt             │
+│   0 ms    [█████]      Skalierung 1.00 (Ruhe)    │
+│ 120 ms    [███]        Skalierung 0.88 (Zug)     │
+│ 260 ms    [██] ↑       Skalierung 0.50 (Start)   │
+│ 400 ms    (leer)       entfernt                  │
 └────────────────────────────────────────────┘
 ```
 
@@ -19,10 +19,10 @@ Das Element staucht sich kurz an seiner Position, schnellt dann über die Positi
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Squash-Away** | Erst stauchen, dann flach davonziehen (Standard) |
-| **Jump-Away** | Kurzer Sprung nach oben, dann verschwinden |
-| **Side-Flick** | Schnelles Wegschnippen zur Seite |
-| **Shrink-Bounce** | Mit kleinem Überschwingen schrumpfend verschwinden |
+| **Stauchen und weg** | erst stauchen, dann flach wegziehen (Standard) |
+| **Sprung weg** | ein kurzer Sprung nach oben, dann verschwinden |
+| **Seitlicher Schnipser** | ein schneller Schnipser zur Seite weg |
+| **Schrumpfen mit Federn** | verschwinden beim Schrumpfen mit einem kleinen Überschwingen |
 
 ## Dauer
 

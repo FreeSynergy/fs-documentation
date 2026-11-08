@@ -2,34 +2,34 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start der Vergrößerung ausgeführt |
-| `onAnimateEnd` | function | - | Wird beim Erreichen der vollen Größe ausgeführt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `onAnimateStart` | function | - | Wird ausgeführt, wenn die Vergrößerung beginnt |
+| `onAnimateEnd` | function | - | Wird ausgeführt, wenn die volle Größe erreicht ist |
 | `onScaleChange` | function | - | Meldet die aktuelle Skalierung während der Animation |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `250` | Dauer der Einblendung in ms |
-| `timingFunction` | string | `ease-out` | Bremst zur vollen Größe sauber ab |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Volle Größe bleibt nach Ende erhalten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `duration` | number | `250` | Dauer des Einblendens in ms |
+| `timingFunction` | string | `ease-out` | bremst sauber bis zur vollen Größe |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | die volle Größe bleibt nach dem Ende erhalten |
 
-## Skalierungs-Attribute
+## Skalierungsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `startScale` | number | `0.5` | Ausgangsskalierung (muss kleiner als 1 sein) |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `startScale` | number | `0.5` | Startskalierung (muss kleiner als 1 sein) |
 | `endScale` | number | `1` | Zielskalierung in X und Y |
-| `opacitySync` | boolean | `true` | Deckkraft synchron zur Skalierung hochregeln? |
+| `opacitySync` | boolean | `true` | Deckkraft synchron mit der Skalierung erhöhen? |
 | `transformOrigin` | string | `center` | Ursprung der Skalierung (z. B. `center`, `top left`) |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `aria-label` | string | - | Beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
 | `reducedMotionFallback` | string | - | `fade` – nur einblenden statt skalieren |

@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Der obere Rand bleibt stehen, die Unterkante wandert nach oben, bis nur noch eine Linie übrig ist.
+Die obere Kante bleibt stehen. Die untere Kante wandert nach oben, bis nur noch eine Linie übrig ist.
 
 ## Visueller Verlauf
 
@@ -11,9 +11,9 @@ Der obere Rand bleibt stehen, die Unterkante wandert nach oben, bis nur noch ein
 │  0 ms            125 ms          250 ms          │
 │  ┌────────┐      ┌────────┐      ┌────────┐      │
 │  ░░░░░░░░░░      ░░░░░░░░░░      └────────┘      │
-│  ░░░░░░░░░░      └────────┘      Höhe = 0        │
+│  ░░░░░░░░░░      └────────┘      Höhe = 0       │
 │  └────────┘      Höhe 50 %       untere Zeilen   │
-│  Höhe 100 %                      rücken nach     │
+│  Höhe 100 %                      rücken nach oben│
 └──────────────────────────────────────────────────┘
 ```
 
@@ -21,11 +21,11 @@ Der obere Rand bleibt stehen, die Unterkante wandert nach oben, bis nur noch ein
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Vertikal** | `dimension: height` - Standard bei Akkordeons |
-| **Horizontal** | `dimension: width` - Seitenleiste zieht nach links ein |
-| **Beides** | `dimension: both` - Panel schrumpft in beide Richtungen |
-| **Gestaffelt** | `staggerChildren` - Kindzeilen nacheinander |
-| **Mit Fade** | Inhalt wird zusätzlich ausgedünnt, weicherer Übergang |
+| **Vertikal** | `dimension: height` – der Standard für Akkordeons |
+| **Horizontal** | `dimension: width` – die Seitenleiste fährt nach links zurück |
+| **Beides** | `dimension: both` – das Panel schrumpft in beide Richtungen |
+| **Versetzt** | `staggerChildren` – Kindzeilen nacheinander |
+| **Mit Einblenden** | der Inhalt wird zusätzlich ausgeblendet, ein weicherer Übergang |
 
 ## Dauer
 

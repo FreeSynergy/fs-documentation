@@ -2,24 +2,24 @@
 
 ## Beschreibung
 
-Bounce Out verabschiedet ein Element federnd: Es holt kurz in die Gegenrichtung aus (Ausholen/Stauchung), überschießt dann und verschwindet aus der Fläche. Der Ausgang wirkt dadurch deutlich spielerischer als ein schlichtes Ausblenden.
+Bounce Out verabschiedet ein Element mit einer federnden Bewegung: Es zieht sich kurz in die Gegenrichtung zurück (Vorbereitung/Stauchung), schießt dann darüber hinaus und verschwindet von der Fläche. Der Ausgang wirkt dadurch deutlich verspielter als ein einfaches Ausblenden.
 
 ## Verwendung
 
-- Toasts und Badges spielerisch entfernen
-- Gelöschte Einträge aus Listen „wegfedern“ lassen
-- Gamification: Sterne, Punkte und Herzen weghüpfen lassen
-- Modale mit verspieltem Charakter schließen
-- Erledigte Aufgaben aus Checklisten befördern
-- Räum- und Aufräum-Aktionen in Lern- und Kind-Apps
+- Toasts und Badges verspielt entfernen
+- gelöschte Einträge aus Listen "wegfedern" lassen
+- Gamification: Sterne, Punkte und Herzen hüpfen davon
+- modale Dialoge mit verspieltem Charakter schließen
+- erledigte Aufgaben aus Checklisten herauskatapultieren
+- Aufräum- und Löschaktionen in Lern- und Kinder-Apps
 
 ## Dauer
 
-- Typisch: 300–500ms (Ausholen plus Ausschweben)
-- Standardwert: 400ms
-- Ausholen kurz und dezent halten, damit das Verschwinden nicht blockiert wirkt
+- Typisch: 300–500 ms (Vorbereitung plus Wegfliegen)
+- Standardwert: 400 ms
+- Die Vorbereitung kurz und dezent halten, damit das Verschwinden nicht blockiert wirkt
 
 ## Unterschied zu Bounce In
 
-- Bounce Out: Das Element holt an der Startposition aus, verlässt sie dann und verschwindet
-- Bounce In: Das Element kommt von außen, schießt über das Ziel hinaus und pendelt ein
+- Bounce Out: das Element bereitet sich an der Startposition vor, verlässt sie dann und verschwindet.
+- Bounce In: das Element kommt von außen, schießt über das Ziel hinaus und setzt sich dort ab.
