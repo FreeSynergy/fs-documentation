@@ -69,3 +69,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0060 | Die Datenablage heißt `fs-objects`; `fs-store` wird der Laden | akzeptiert, Umbau nach dem Sprint |
 | 0061 | Facetten: ein Programm, mehrere Apps; jedes mit Admin-Frontend | akzeptiert |
 | 0062 | Pakete liegen in Git: Katalog-Repo, ein Tag je Version, TUF, Spiegel überall | akzeptiert |
+| 0063 | Ein Programm, ein Befehl: `fs-<programm>` mit Unterbefehlen | akzeptiert |
