@@ -10,7 +10,7 @@ Ein Programm installierst du von Hand: [FreeSynergy.Store](../programs/platform/
 
 Der Store wird als **Pre-release** auf GitHub veröffentlicht: <https://github.com/FreeSynergy/fs-store/releases>.
 
-Wähle das neueste Release, das als „Pre-release“ markiert ist. Am 2026-11-08 enthalten die Releases `v0.0.1` bis `v0.0.3` diese Dateien (schau in die Liste dort, sie kann wachsen):
+Wähle das neueste Release, das als „Pre-release“ markiert ist. Am 2026-11-08 enthalten die Releases (bis `v0.0.6`) diese Dateien (schau in die Liste dort, sie kann wachsen):
 
 | Für | Datei |
 |-----|-------|
