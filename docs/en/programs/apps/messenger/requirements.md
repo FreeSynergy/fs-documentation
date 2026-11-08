@@ -109,6 +109,30 @@ Data references: [messages standards](../../../data/messages/standards.md) ·
 | Offline: choose which folders and how many days are kept (`sync.scope`) | Ou | `fs-store` sync policy (ADR 0019) | proposed |
 | Summarise a long message (`message.summarize`) | Ou | **local model only** (no cloud, ADR 0029) ⚠️ | proposed |
 
+## Accepted ideas (project owner, 2026-11-08), to be built step by step
+
+All of these are wanted and will be integrated; none is scheduled yet. Order is decided in the planning after the sprint.
+
+| # | Idea | Builds on | Status |
+|---|------|-----------|--------|
+| 1 | Cool-down: before sending a heated message, offer "send now or in 10 minutes"; recall while unread | core | accepted |
+| 2 | Send when the other person is awake (their time zone and quiet hours) | people, calendar | accepted |
+| 3 | Calm notifications: digests, only from people I know, quiet hours | hub `subscribe` | accepted |
+| 4 | Read receipts only both ways: who wants to see them must show them | core | accepted |
+| 5 | Turn a message into a task, an appointment or a wiki page with one action | tasks, calendar, texts (`jobRef` exists) | accepted |
+| 6 | Polls inside a conversation | surveys | accepted |
+| 7 | One conversation, several channels: a thread can move from mail to Matrix and stays one thread | core, providers | accepted |
+| 8 | Without a network: Bluetooth and local Wi-Fi, for meetings and emergencies | ADR 0059 | accepted |
+| 9 | Explain encryption: say why a message is not encrypted and how to change that | core, manifesto | accepted |
+| 10 | Take everything with you: export any conversation in an open format | core (ADR 0046) | accepted |
+| 11 | Group moderation: slow mode, moderation by vote, an open moderation log | groups, surveys, history | accepted |
+| 12 | Announcement channel, one to many (candidate transport: Nostr) | providers | accepted |
+| 13 | Voice messages with a transcript, made on the device | files | accepted |
+| 14 | Translation on the device, with no outside service reading along | ADR 0057 | accepted |
+| 15 | Summarise a long conversation with an AI, only if everyone agreed (ADR 0054) | AI participants | accepted |
+
+Further providers to research: Nostr (public posts, fallback for direct messages), I2P as an anonymity transport (ADR 0059). I2P-Bote is not planned.
+
 ## AIs as participants (provisional, ADR 0054)
 
 From contract draft 0.2, which is still in review. See the [assistant](../assistant/index.md).
