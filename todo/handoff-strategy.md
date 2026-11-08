@@ -5,6 +5,7 @@
 - Landkarte (Entwurf, Programmtabelle noch offen): `docs/en/programs/map.md`, 5 offene Punkte (Marketing, Workflows, Helpdesk, Vorbilder für Groups/Identity/History/Store).
 - Aufträge: `todo/sprint.md` „Runde 3“, Threads T, P, C, A, M; Thread R (Ausbau) schreibt die Strategie nach dem Pilot.
 - **Blinc:** PR 71 ohne KI-Zeile umgeschrieben, git-bug `52784e95…baa1` im Fork `FreeSynergy/Blinc` (`refs/bugs`), Kommentar an Darmie. Klon `/srv/FreeSynergy/blinc`, Darmies CLAUDE.md nur dort und in `blinc-app-fix`. git-bug v0.12.0 in `~/.local/bin`.
+- **Ergänzt 2026-11-09:** Admin = SAP-Fiori-Stil, später eigener FreeSynergy-Stil; Apple-Stil = Apples eigene Apps 1:1; Windows = Vorbild für Funktionen, die es nur dort gibt. Funktions-Vorbilder und Querschnitts-Ziele in `map.md`; Helpdesk (Widget, SIP, Messenger), Wiki (Tango, überall einbindbar), Demokratie (Verfahren aus dem dieBasis-PDF) in den `requirements.md`. Threads F (Vorbilder prüfen) und D (deb + exe) neu in Runde 3. Laufzeit Runde 3: bis So 2026-11-15, 18:00.
 - **Kennzeichnung (Nutzer, 2026-11-09):** in unseren Repos bleibt die KI-Kennzeichnung („Dein Verdienst“), bei Blinc keine.
 
 ## Arbeitsweise ab Runde 3 (Nutzer, 2026-11-08)
