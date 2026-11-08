@@ -1,13 +1,12 @@
-# Code Editor (Code-Editor) - Verwendung
+# Code-Editor – Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Blinc umgestellt ist, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Code Editor ist ein Editor für Quellcode.
+Ein Code-Editor ist ein Editor für Quellcode.
 
 - Code
 - Programmierung
@@ -18,17 +17,17 @@ Ein Code Editor ist ein Editor für Quellcode.
 ### Code
 
 ```jsx
-<CodeEditor value="Wert" onChange={aktion} />
+<CodeEditor value="Value" onChange={action} />
 ```
 
 ### Programmierung
 
 ```jsx
-<CodeEditor value="Wert" language="javascript" />
+<CodeEditor value="Value" language="javascript" />
 ```
 
 ### Skripte
 
 ```jsx
-<CodeEditor value="Wert" readOnly={false} />
+<CodeEditor value="Value" readOnly={false} />
 ```

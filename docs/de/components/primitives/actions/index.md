@@ -1,25 +1,25 @@
-# actions (Aktionen)
+# actions
 
-Band [primitives](../) – nicht weiter zerlegbar.
+Band [primitives](../) – lässt sich nicht weiter aufteilen.
 
-Action-Elemente lösen eine einzelne Handlung aus oder bündeln zusammengehörige Handlungen. Sie verändern Daten oder Zustände, aber nicht die Adresse.
+Aktionselemente lösen eine einzelne Aktion aus oder bündeln verwandte Aktionen. Sie ändern Daten oder Zustände, aber nicht die Adresse.
 
 ## Elemente
 
 - [**button**](./button/) – Ein Button löst eine einzelne Aktion aus.
-- [**button-group**](./button-group/) – Eine Button Group fasst zusammengehörige Buttons zu einer optischen und logischen Einheit zusammen.
-- [**floating-action-button**](./floating-action-button/) – Ein Floating Action Button (FAB) ist ein runder Hauptaktion-Button, der meist rechts unten positioniert ist.
+- [**button-group**](./button-group/) – Eine Button-Gruppe fasst verwandte Buttons zu einer sichtbaren und logischen Einheit zusammen.
+- [**floating-action-button**](./floating-action-button/) – Ein Floating Action Button (FAB) ist ein runder Hauptaktions-Button, meist unten rechts platziert.
 
-## Steckbriefe
+## Profile
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
 | [button](./button/) | `base` | `primary`, `secondary`, `outline`, `ghost`, `danger`, `link` | - | dokumentiert |
 | [button-group](./button-group/) | `base` | `verbund`, `segment`, `split` | - | dokumentiert |
-| [floating-action-button](./floating-action-button/) | `base` | `Standard FAB`, `Mini FAB`, `Extended FAB` | - | dokumentiert |
+| [floating-action-button](./floating-action-button/) | `base` | `standard FAB`, `mini FAB`, `extended FAB` | - | dokumentiert |
 
 ## Siehe auch
 
-- [Komponenten-Übersicht](../../index.md)
-- [Band primitives](../)
+- [Komponentenübersicht](../../index.md)
+- [Band Primitives](../)
 - [Basiskomponente](../basics/base.md)

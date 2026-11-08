@@ -1,7 +1,7 @@
-# Code Editor - Aussehen
+# Code-Editor – Aussehen
 
 ## Grundlayout
-Ein Code Editor ist ein Editor für Quellcode.
+Ein Code-Editor ist ein Editor für Quellcode.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -15,58 +15,58 @@ Ein Code Editor ist ein Editor für Quellcode.
 
 | Variante | Aussehen |
 |----------|----------|
-| **voll** | Zeilennummern links, Vorschlageliste am Cursor |
-| **nur-lesen** | keine Cursor, Kopieren-Knopf oben rechts |
+| **voll** | Zeilennummern links, Vorschlagsliste am Cursor |
+| **nur-lesen** | kein Cursor, Kopieren-Button oben rechts |
 | **vergleich** | zwei Hälften, geänderte Zeilen rot und grün markiert |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
-| Small | 200px | Inline |
+| Small | 200px | inline |
 | Medium | 400px | Standard |
-| Large | 600px | Featured |
-| Full | 100% | Volle Breite |
+| Large | 600px | hervorgehoben |
+| Full | 100% | volle Breite |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Background** | Dunkel | Dunkles Theme |
-| **Text** | Hell | Text-Farbe |
-| **Keyword** | Lila | Schlüsselwörter |
-| **String** | Orange | Strings |
-| **Comment** | Grau | Kommentare |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Hintergrund** | dunkel | dunkles Thema |
+| **Text** | hell | Textfarbe |
+| **Schlüsselwort** | violett | Schlüsselwörter |
+| **Zeichenkette** | orange | Zeichenketten |
+| **Kommentar** | grau | Kommentare |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `line-number` | Zeilennummer hervorheben |
-| `cursor` | Cursor ändern |
+| `line-number` | hebt die Zeilennummer hervor |
+| `cursor` | ändert den Cursor |
 
-## Reaktiv
+## Responsiv
 
-- Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt waagerecht (`swipe`).
-- Unter `small` Bildschirmbreite wird die Vorschlageliste über die Tastatur-blende gesetzt,
-  der Zeilennummernblock wird schmaler.
-- Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander,
-  die Höhe bleibt pro Hälfte begrenzt.
+- Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt horizontal (`swipe`).
+- Unterhalb der Breite `small` wird die Vorschlagsliste über die Tastatur gelegt, der Block mit den
+  Zeilennummern wird schmaler.
+- Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander; die
+  Höhe bleibt pro Hälfte begrenzt.
 
-## Features
+## Funktionen
 
-| Feature | Beschreibung |
-|---------|--------------|
-| **Syntax Highlighting** | Farbige Hervorhebung |
-| **Line Numbers** | Zeilennummern |
-| **Auto-completion** | Autovervollständigung |
-| **Error Detection** | Fehlererkennung |
-| **Multiple Cursors** | Mehrere Cursor |
+| Funktion | Beschreibung |
+|----------|--------------|
+| **Syntax Highlighting** | farbige Hervorhebung |
+| **Zeilennummern** | Zeilennummern |
+| **Auto-Vervollständigung** | Autovervollständigung |
+| **Fehlererkennung** | Fehlererkennung |
+| **Mehrfache Cursor** | mehrere Cursor |
 
 ## Themes
 
 | Theme | Beschreibung |
 |-------|--------------|
-| **Dark** | Dunkles Theme |
-| **Light** | Helles Theme |
-| **Custom** | Benutzerdefiniert |
+| **Dunkel** | dunkles Theme |
+| **Hell** | helles Theme |
+| **Benutzerdefiniert** | eigenes Theme |

@@ -1,126 +1,126 @@
 # Basiskomponente (base)
 
 Die **Basiskomponente** ist die gemeinsame Elternklasse aller FreeSynergy-Komponenten.
-Sie definiert Attribute, Zustände und Abschnitte, die *jede* Komponente erbt.
+Sie legt die Attribute, Zustände und Abschnitte fest, die *jede* Komponente erbt.
 
-!!! important "Festlegung (Standardisierung)"
-    Seit der Standardisierung listet `attributes.md` einer Komponente **nur noch eigene
-    Attribute** plus den Verweis `Geerbt von: base`. Alles, was in dieser Datei steht,
-    wird **nicht** mehr pro Komponente wiederholt. Änderungen an der Basisklasse wirken
-    damit automatisch auf alle Komponenten.
+!!! important "Entscheidung (Standardisierung)"
+    Seit der Standardisierung listet die `attributes.md` einer Komponente nur **ihre eigenen
+    Attribute** plus den Verweis `Inherited from: base`. Alles, was in dieser
+    Datei steht, wird **nicht** pro Komponente wiederholt. Änderungen an der Basisklasse wirken
+    deshalb automatisch auf alle Komponenten.
 
-## Steckbrief (Pflichtmaske)
+## Profil (Pflichtmaske)
 
-Jede `description.md` beginnt mit dieser Tabelle. Sie ist bewusst keine YAML-Frontmatter
-(Frontmatter wurde in diesem Repo bewusst entfernt), sondern eine Markdown-Tabelle:
-sie ist für Menschen lesbar **und** kann von `scripts/check_components.py` ausgewertet werden.
+Jede `description.md` beginnt mit dieser Tabelle. Sie ist bewusst kein YAML-Frontmatter
+(das Frontmatter wurde absichtlich aus diesem Repo entfernt), sondern eine Markdown-Tabelle. Sie ist
+für Menschen lesbar **und** kann von `scripts/check_components.py` ausgewertet werden.
 
 | Feld | Bedeutung | Beispiel (`search-field`) |
 |------|-----------|---------------------------|
-| **Kategorie** | Ordner unter `components/` | `fields` |
-| **Erbt von** | Elternklassen, von `base` ausgehend | `base`, `text-input` |
-| **Varianten** | Varianten auf derselben Seite | `simple`, `autocomplete`, `filter` |
-| **Zustände** | zustätzliche Zustände gegenüber `base` | `loading`, `error` |
-| **Gesten** | Bezug zu [Gesten](../../../interactions/gestures/) | `tap`, `type` |
-| **Animationen** | Bezug zu [Animationen](../../../interactions/animations/) | `fade-in`, `expand` |
-| **Verwandt** | Abgrenzung und Querverweise | `search-input`, `combobox` |
-| **Status** | `dokumentiert` / `nur Skizze` / `fehlt` | `dokumentiert` |
+| **Category** | Ordner unter `components/` | `fields` |
+| **Inherits from** | Elternklassen, beginnend mit `base` | `base`, `text-input` |
+| **Variants** | Varianten auf derselben Seite | `simple`, `autocomplete`, `filter` |
+| **States** | zusätzliche Zustände gegenüber `base` | `loading`, `error` |
+| **Gestures** | Verweis auf [Gesten](../../../interactions/gestures/) | `tap`, `type` |
+| **Animations** | Verweis auf [Animationen](../../../interactions/animations/) | `fade-in`, `expand` |
+| **Related** | Abgrenzung und Querverweise | `search-input`, `combobox` |
+| **Status** | `documented` / `sketch only` / `missing` | `documented` |
 
 ## Geerbte Attribute
 
 ### Identität und Sichtbarkeit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `id` | string | - | eindeutige Kennung |
 | `label` | string | - | Beschriftung (siehe [label](label/)) |
 | `visible` | boolean | `true` | sichtbar? |
-| `enabled` | boolean | `true` | bedienbar? (`disabled` = Umkehrwert) |
+| `enabled` | boolean | `true` | bedienbar? (`disabled` ist das Gegenteil) |
 
 ### Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `size` | enum | `medium` | `small`, `medium`, `large` (siehe Größen-Raster) |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `size` | enum | `medium` | `small`, `medium`, `large` (siehe Größenskala) |
 | `theme` | enum | `default` | `default`, `dark` (folgt der Systemfarbpalette) |
 | `rounded` | boolean | `true` | abgerundete Ecken? |
-| `variant` | enum | - | Variante der Komponente, Werte pro Komponente definiert |
+| `variant` | enum | - | Variante der Komponente, Werte werden pro Komponente festgelegt |
 
-### Größen-Raster
+### Größenskala
 
 | Größe | Höhe | Icon | Schrift | Verwendung |
 |-------|------|------|---------|------------|
-| `small` | 28 px | 14 px | 13 px | dichte Oberflächen, Tabellen |
+| `small` | 28 px | 14 px | 13 px | dichte Flächen, Tabellen |
 | `medium` | 36 px | 16 px | 14 px | Standard |
-| `large` | 44 px | 20 px | 16 px | Touch, principale Aktionen |
+| `large` | 44 px | 20 px | 16 px | Touch, Hauptaktionen |
 
-44 px entspricht zugleich der Mindesttrefferfläche für Touch-Bedienung.
+44 px ist auch die minimale Trefferfläche für die Touch-Bedienung.
 
 ### Zustände (`state`)
 
-Jede Komponente kennt diese Zustandsnamen. `appearance.md` beschreibt, was sich
-pro Zustand visuell ändert; Komponenten dürfen eigene Zustände ergänzen.
+Jede Komponente kennt diese Zustandsnamen. `appearance.md` beschreibt, was sich pro Zustand
+optisch ändert. Komponenten dürfen eigene Zustände ergänzen.
 
-| Zustand | Auslösung |
-|---------|-----------|
+| Zustand | Auslöser |
+|---------|----------|
 | `default` | Ruhezustand |
 | `hover` | Zeiger über dem Element |
 | `active` | gedrückt / ausgewählt |
-| `focus` | Tastatur- oder Fokusnavigation |
+| `focus` | Tastatur oder Fokusnavigation |
 | `disabled` | `enabled = false` |
-| `loading` | Komponente wartet auf eine Antwort |
+| `loading` | die Komponente wartet auf eine Antwort |
 | `error` | Eingabe- oder Aktionsfehler |
 
-### Interaktion und Events
+### Interaktion und Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `tabIndex` | number | Reihenfolge der Tastaturnavigation |
-| `onClick` | function | Auslösen per Zeiger oder Tastatur |
+| `onClick` | function | wird per Zeiger oder Tastatur ausgelöst |
 | `onFocus` | function | Fokus erhalten |
 | `onBlur` | function | Fokus verloren |
 | `gesture` | string[] | unterstützte Gesten (siehe [Gesten](../../../interactions/gestures/)) |
-| `animation` | string | Übergang beim Ein-/Ausblenden (siehe [Animationen](../../../interactions/animations/)) |
+| `animation` | string | Übergang beim Ein- und Ausblenden (siehe [Animationen](../../../interactions/animations/)) |
 
 ### Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `role` | string | ARIA-Rolle; der **Wert** ist komponentenspezifisch und wird im Steckbrief genannt |
-| `aria-label` | string | zugänglicher Name, falls kein sichtbares `label` |
-| `aria-*` | - | Zustands-Markierungen (`aria-disabled`, `aria-busy`, `aria-expanded`, …) |
+| `role` | string | ARIA-Rolle; der **Wert** ist komponentenspezifisch und steht im Profil |
+| `aria-label` | string | zugänglicher Name, wenn es kein sichtbares `label` gibt |
+| `aria-*` | - | Zustandsmarkierungen (`aria-disabled`, `aria-busy`, `aria-expanded`, …) |
 
-## Wann Variante, wann eigene Komponente?
+## Variante oder eigene Komponente?
 
 | Kriterium | → **Variante** (`variant`/`type`) | → **eigene Komponente** |
-|-----------|-----------------------------------|--------------------------|
-| Gleicher Datensatz, gleiche Events | ja | |
+|-----------|-----------------------------------|-------------------------|
+| Gleicher Datensatz, gleiche Ereignisse | ja | |
 | Nur Aussehen oder Andockung ändert sich | ja (`size`, `placement`, `orientation`) | |
 | Eigene Datenstruktur nötig (Vorschlagsliste, Dateistrom, Kalender) | | ja |
-| Eigene Lebensdauer oder Fokus-Verhalten (Overlay, Modal) | | ja |
-| Accessible Role ändert sich (`button` → `menu`) | | ja |
-| Attribute-Überschneidung ≥ 75 % | ja | |
+| Eigene Lebensdauer oder eigenes Fokusverhalten (Overlay, Modal) | | ja |
+| Zugängliche Rolle ändert sich (`button` → `menu`) | | ja |
+| Attributüberlappung ≥ 75 % | ja | |
 
-Echte Vererbung wird über das Feld **Erbt von** im Steckbrief ausgedrückt
-(z. B. `context-menu` erbt von `menu`, `audio` erbt von `media-player`).
+Echte Vererbung wird über das Feld **Inherits from** im Profil ausgedrückt
+(z. B. erbt `context-menu` von `menu`, `audio` erbt von `media-player`).
 
 ## Dateisatz pro Komponente
 
-| Datei | Pflicht | Inhalt (Abschnittsreihenfolge ist fix) |
-|-------|---------|----------------------------------------|
-| `description.md` | ja | Steckbrief → Beschreibung → Verwendungszweck → Varianten → Features → Abgrenzung → Best Practices → Siehe auch |
-| `appearance.md` | ja | Grundlayout → Varianten → Größen → Farben und Zustände → Hover/Fokus → Reaktiv |
-| `attributes.md` | ja | Hauptattribute → Verhalten → Darstellung → Events → Barrierefreiheit → **Geerbt von** |
+| Datei | Pflicht | Inhalt (die Reihenfolge der Abschnitte ist fest) |
+|-------|---------|--------------------------------------------------|
+| `description.md` | ja | Profil → Beschreibung → Zweck → Varianten → Funktionen → Abgrenzung → Best Practices → Siehe auch |
+| `appearance.md` | ja | Grundlayout → Varianten → Größen → Farben und Zustände → Hover/Fokus → responsiv |
+| `attributes.md` | ja | Hauptattribute → Verhalten → Darstellung → Ereignisse → Barrierefreiheit → **inherited from** |
 | `usage.md` | ja | Anwendung, Szenarien und Beispiele in einer Datei |
 
 ## Namenskonvention
 
-Verzeichnisse englisch, Kleinbuchstaben mit Bindestrich; Abschnittsüberschriften deutsch;
-Attributnamen `camelCase` englisch.
+Ordner auf Englisch, klein geschrieben, mit Bindestrichen; Abschnittsüberschriften folgen der Sprache
+des Dokuments; Attributnamen sind `camelCase` auf Englisch.
 
-| Endung | Bedeutung | Beispiel |
+| Suffix | Bedeutung | Beispiel |
 |--------|-----------|----------|
-| `-input` | Feld mit Datentyp | `text-input` |
+| `-input` | Feld mit einem Datentyp | `text-input` |
 | `-picker` | Auswahl mit Overlay oder Dialog | `date-picker` |
 | `-editor` | Bearbeiten von Inhalten | `code-editor` |
 | `-view` | Datenansicht | `list-view` |
@@ -129,6 +129,6 @@ Attributnamen `camelCase` englisch.
 ## Siehe auch
 
 - [Basics – Übersicht](./index.md)
-- [Komponenten-Übersicht](../index.md)
+- [Komponentenübersicht](../index.md)
 - [Gesten](../../../interactions/gestures/) und [Animationen](../../../interactions/animations/)
-- [Standardisierte Daten](../../widgets/data/) — gleiche Idee, nur für Felder und Typen
+- [Standardisierte Daten](../../widgets/data/) – dieselbe Idee, nur für Felder und Typen

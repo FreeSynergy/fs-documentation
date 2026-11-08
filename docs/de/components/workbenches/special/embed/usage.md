@@ -1,18 +1,17 @@
-# Embed (Einbettung) - Verwendung
+# Embed – Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Blinc umgestellt ist, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Externe Seite einbetten
+## Eine externe Seite einbetten
 
 ```jsx
-<Embed source="iframe" src="https://example.org/kalender" title="Kurskalender"
+<Embed source="iframe" src="https://example.org/calendar" title="Course calendar"
        ratio="16:9" onLoad={fit} onError={showFallback} />
 ```
 
-## Anderes Programm einbetten
+## Ein anderes Programm einbetten
 
 ```jsx
 <Embed source="app" appId="calendar" config={{ view: "month", filter: "team-a" }} />
@@ -29,7 +28,7 @@
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Fremde Seite ohne Skripte | `source = "iframe"`, `sandbox` eng setzen |
-| eigenes Programm im Dashboard | `source = "app"`, Kopfzeile des einbettenden Programms ausblenden |
+| fremde Seite ohne Skripte | `source = "iframe"`, `sandbox` eng setzen |
+| eigenes Programm in einem Dashboard | `source = "app"`, Kopfzeile des einbettenden Programms ausblenden |
 | kleiner Baustein in einer Liste | `size = "small"`, `interactive = false` |
-| Inhalt ist nicht erreichbar | `onError` zeigt Hinweis mit Verweis nach außen |
+| Inhalt nicht erreichbar | `onError` zeigt einen Hinweis mit Link nach außen |

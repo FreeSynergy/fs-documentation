@@ -1,8 +1,12 @@
 # Geplante Komponenten
 
-**Status: Vorschlag (2026-11-06), Programmnamen teils älter als der [Gesamtplan](../programs/apps/roadmap.md): Kanban ist jetzt Teil von Tasks, die Galerie Teil von Files.** Siehe auch [Diagramme](charts.md). Keine davon ist schon gebaut oder im Detail dokumentiert. Die Schichten folgen der bestehenden Struktur: Grundelemente, Widgets, Workbenches.
+**Status: Vorschlag (2026-11-06). Programmnamen sind teils älter als der [Gesamtplan](../programs/apps/roadmap.md): Kanban ist jetzt Teil von Tasks, die Galerie Teil von Files.** Siehe auch [Diagramme](charts.md). Keine davon ist bisher gebaut oder im Detail dokumentiert. Die Schichten folgen der bestehenden Struktur: Primitive, Widgets, Workbenches.
 
 Wie bei allen Komponenten gehören Gesten nicht dazu; sie kommen vom Frontend (ADR 0037). Die Namen sind Vorschläge.
+
+## Was es schon gibt (`fs-components` v0.2.0, 2026-11-06)
+
+Veröffentlicht sind der Reader, `text-view`, `avatar-group`, `transfer-list`, `sortable-list`, `lightbox` und `share-dialog`. Sie wurden geprüft, aber ohne echtes Fenster getestet; bisher hat sie niemand von Hand ausprobiert. **Nicht veröffentlicht, obwohl im selben Tag enthalten:** `charts`, das offene Blocker hat, die fünf Chat-Komponenten, die noch geprüft werden, und die Kalenderarbeit.
 
 ## Zuerst bauen: von mehreren Programmen genutzt
 
@@ -23,6 +27,7 @@ Wie bei allen Komponenten gehören Gesten nicht dazu; sie kommen vom Frontend (A
 | **Surveys** | Workbenches `survey-builder`, `survey-form`; Widgets `question`, `matrix-question`, `ranking-list` | `field`, `radio-group`, `checkbox`, `rating`, `slider`, `date-input`, `wizard`, `progress`, `chart`, `table` |
 | **Files (gallery)** | Workbench `gallery-browser` | `lightbox`, `carousel`, `image`, `video`, `map-view`, `timeline`, `description-list`; **ändern** `gallery`: große Sammlungen, virtuelles Scrollen, Gruppierung nach Datum |
 | **Whiteboard** | Widgets `infinite-canvas`, `selection-handles`, `minimap`, `presence-cursors` | `toolbar`, `color-input`, `slider`, `tree-view` (Ebenen), `popover`, `image`; **überarbeiten** Workbench `whiteboard`: englische Variantennamen, kompakte Variante |
+| **Assistant** | Workbench `llm-chat`; Widgets `agent-tree`, `tool-call` | `message-list`, `message-composer`, Langtextansicht auf unserem Textkern |
 | **Streaming** | Workbench `stream-studio`; Widgets `stream-tile`, `level-meter` | `audio`, `video`, `call-controls`, `grid-view`, `message-list`, `badge` (live); **ändern** `media-player`: Live-Modus |
 
 ## Blinc als Basis

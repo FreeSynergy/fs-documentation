@@ -1,15 +1,15 @@
-# media (Medien)
+# media
 
-Band [primitives](../) – nicht weiter zerlegbar.
+Band [primitives](../) – lässt sich nicht weiter aufteilen.
 
-Elemente, die Medien wiedergeben oder darstellen. `media-player` ist die Elternklasse von `audio` und `video`.
+Elemente, die Medien abspielen oder anzeigen. `media-player` ist die Elternklasse von `audio` und `video`.
 
 ## Elemente
 
-- [**icon**](./icon/) – Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt visuell repräsentiert.
-- [**image**](./image/) – Ein Bild-Element zeigt Grafiken, Fotos oder andere visuelle Inhalte an.
+- [**icon**](./icon/) – Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt optisch darstellt.
+- [**image**](./image/) – Ein Bildelement zeigt Grafiken, Fotos oder anderen visuellen Inhalt.
 
-## Steckbriefe
+## Profile
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -18,6 +18,6 @@ Elemente, die Medien wiedergeben oder darstellen. `media-player` ist die Elternk
 
 ## Siehe auch
 
-- [Komponenten-Übersicht](../../index.md)
-- [Band primitives](../)
+- [Komponentenübersicht](../../index.md)
+- [Band Primitives](../)
 - [Basiskomponente](../basics/base.md)

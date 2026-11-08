@@ -1,46 +1,46 @@
-# Code Editor - Attribute
+# Code-Editor – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
 | `value` | string | - | Wert (Code) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `language` | string | `javascript` | Sprache |
 | `readOnly` | boolean | `false` | Nur-Lese-Modus? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onKeyDown` | function | Wird bei Tastendruck ausgeführt |
+| ---------- | ----- | -------------- |
+| `onKeyDown` | function | läuft bei einem Tastendruck |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `textbox` |
 
-## Features-Attribute
+## Funktionsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `showLineNumbers` | boolean | `true` | Zeilennummern anzeigen? |
-| `showGutter` | boolean | `true` | Gutter anzeigen? |
+| `showGutter` | boolean | `true` | Randspalte anzeigen? |
 | `autoCompletion` | boolean | `true` | Autovervollständigung aktivieren? |
 
 ## Editor-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `lineHeight` | number | `1.5` | Zeilenhöhe |
 | `fontSize` | number | `14` | Schriftgröße |
-| `tabSize` | number | `2` | Tab-Größe |
+| `tabSize` | number | `2` | Tab-Breite |
 
 ## Geerbt von
 

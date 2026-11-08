@@ -1,31 +1,31 @@
-# fields (Felder)
+# fields
 
-Band [primitives](../) – nicht weiter zerlegbar.
+Band [primitives](../) – lässt sich nicht weiter aufteilen.
 
-Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
+Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält Label, Hilfetext und Fehlermeldung zusammen.
 
 ## Elemente
 
-- [**checkbox**](./checkbox/) – Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
-- [**color-input**](./color-input/) – Ein Color Input ist ein Farbauswahl-Feld mit Farbpicker.
-- [**combobox**](./combobox/) – Ein Combobox ist ein Textfeld + Dropdown.
-- [**date-input**](./date-input/) – Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
-- [**field**](./field/) – Ein Field ist der Wrapper um ein Eingabefeld: Er verbindet Beschriftung, Hilfetext, Fehlermeldung und Pflicht-Markierung zu einer barrierefreien Einheit.
-- [**input-group**](./input-group/) – Eine Input Group fügt ein Eingabefeld und die Teile, die unmittelbar dazugehören, zu einer zusammenhängenden Fläche zusammen: ein Vorsatz-Zeichen, eine Einheit, ein Dropdown für die Landesvorwahl oder eine Schaltfläche direkt am Feld.
-- [**mention-input**](./mention-input/) – Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
-- [**number-input**](./number-input/) – Ein Number Input ist ein Eingabefeld für Zahlen.
-- [**otp-input**](./otp-input/) – Das Einmalpasswortfeld nimmt einen kurzen numerischen Code auf — je Zeichen ein Feld.
-- [**radio-group**](./radio-group/) – Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
-- [**rating**](./rating/) – Ein Rating ist eine Sterne- oder Punktebewertung.
-- [**search-field**](./search-field/) – Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
-- [**select**](./select/) – Eine Auswahlliste: das Feld zeigt den gewählten Wert, die Optionen liegen hinter einem Klick.
-- [**slider**](./slider/) – Ein Slider ist ein Wertebereich mit Schieberegler.
-- [**switch**](./switch/) – Ein Switch ist ein Ein/Aus-Schalter (Toggle).
-- [**tags-input**](./tags-input/) – Ein Tags Input ist eine Liste von Tags/Etiketten.
-- [**text-input**](./text-input/) – Ein Text Input ist ein einzeiliges Eingabefeld für Text.
-- [**textarea**](./textarea/) – Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
+- [**checkbox**](./checkbox/) – Eine Checkbox ist ein Ja/Nein- oder Mehrfachauswahl-Feld.
+- [**color-input**](./color-input/) – Ein Farbfeld ist ein Feld zur Farbauswahl mit einem Farbwähler.
+- [**combobox**](./combobox/) – Eine Combobox ist ein Textfeld mit einer Auswahlliste.
+- [**date-input**](./date-input/) – Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
+- [**field**](./field/) – Ein Feld ist die Hülle um ein Eingabefeld: Es verbindet Label, Hilfetext, Fehlermeldung und Pflichtmarkierung zu einer zugänglichen Einheit.
+- [**input-group**](./input-group/) – Eine Eingabegruppe verbindet ein Eingabefeld und die Teile, die direkt dazugehören, zu einer zusammenhängenden Fläche: ein Präfixzeichen, eine Einheit, eine Auswahlliste für die Ländervorwahl oder ein Button direkt am Feld.
+- [**mention-input**](./mention-input/) – Ein Mention-Feld ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
+- [**number-input**](./number-input/) – Ein Zahlenfeld ist ein Eingabefeld für Zahlen.
+- [**otp-input**](./otp-input/) – Das Einmalpasswort-Feld nimmt einen kurzen numerischen Code auf – ein Feld pro Zeichen.
+- [**radio-group**](./radio-group/) – Eine Radio-Gruppe ist eine Gruppe von Optionsfeldern (Einfachauswahl).
+- [**rating**](./rating/) – Eine Bewertung ist eine Stern- oder Punktebewertung.
+- [**search-field**](./search-field/) – Ein Suchfeld ist ein Suchkasten mit Filteroptionen.
+- [**select**](./select/) – Eine Auswahlliste: Das Feld zeigt den gewählten Wert, die Optionen liegen hinter einem Klick.
+- [**slider**](./slider/) – Ein Schieberegler ist ein Wertebereich mit einem verschiebbaren Regler.
+- [**switch**](./switch/) – Ein Schalter ist ein Ein-/Aus-Schalter (Toggle).
+- [**tags-input**](./tags-input/) – Ein Tag-Feld ist eine Liste von Tags/Labels.
+- [**text-input**](./text-input/) – Ein Texteingabefeld ist ein einzeiliges Eingabefeld für Text.
+- [**textarea**](./textarea/) – Ein Textbereich ist ein mehrzeiliges Eingabefeld für Text.
 
-## Steckbriefe
+## Profile
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -39,17 +39,17 @@ Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei 
 | [number-input](./number-input/) | `base` | `einfach`, `stepper`, `formatiert` | - | dokumentiert |
 | [otp-input](./otp-input/) | `base`, `text-input` | `einzelboxen`, `block` | `group` | dokumentiert |
 | [radio-group](./radio-group/) | `base` | `einzeln`, `toggle`, `karte` | - | dokumentiert |
-| [rating](./rating/) | `base` | `Star Rating`, `Heart Rating`, `Number Rating` | - | dokumentiert |
-| [search-field](./search-field/) | `base`, `text-input` | `Simple`, `Filter`, `Auto-complete` | - | dokumentiert |
-| [select](./select/) | `base` | `Simple`, `Multi-select`, `Searchable`, `Custom` | - | dokumentiert |
+| [rating](./rating/) | `base` | `star rating`, `heart rating`, `number rating` | - | dokumentiert |
+| [search-field](./search-field/) | `base`, `text-input` | `simple`, `filter`, `auto-complete` | - | dokumentiert |
+| [select](./select/) | `base` | `simple`, `multi-select`, `searchable`, `custom` | - | dokumentiert |
 | [slider](./slider/) | `base`, `number-input` | `einfach`, `bereich` | - | dokumentiert |
-| [switch](./switch/) | `base` | `Standard`, `Round`, `Pill` | - | dokumentiert |
+| [switch](./switch/) | `base` | `standard`, `round`, `pill` | - | dokumentiert |
 | [tags-input](./tags-input/) | `base`, `text-input` | `frei`, `vorschlag`, `nur-lesbar` | - | dokumentiert |
-| [text-input](./text-input/) | `base` | `Standard`, `Floating Label`, `Underline` | - | dokumentiert |
+| [text-input](./text-input/) | `base` | `standard`, `floating label`, `underline` | - | dokumentiert |
 | [textarea](./textarea/) | `base` | `fix`, `mitwachsend`, `chat` | - | dokumentiert |
 
 ## Siehe auch
 
-- [Komponenten-Übersicht](../../index.md)
-- [Band primitives](../)
+- [Komponentenübersicht](../../index.md)
+- [Band Primitives](../)
 - [Basiskomponente](../basics/base.md)

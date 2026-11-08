@@ -1,4 +1,4 @@
-# Dashboard - Aussehen
+# Dashboard – Aussehen
 
 ## Grundlayout
 Ein Dashboard ist eine Übersichtsseite mit Widgets.
@@ -16,52 +16,52 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 ## Varianten
 
 | Variante | Aussehen |
-|----------|----------|
-| **vorlage** | Widgets ohne Greifpunkte, Raster unveränderlich |
-| **anordbar** | Greifpunkt oben links, Rahmen zum Ziehen, Rasterlinien im Bearbeiten-Modus |
-| **bericht** | wie `vorlage`, ohne Bearbeiten-Knopf, dafür Drucken/Aktualisieren |
+| ---------- | ---------- |
+| **vorlage** | Widgets ohne Griffpunkte, Raster nicht veränderbar |
+| **anordbar** | Griffpunkt oben links, Rahmen zum Ziehen, Rasterlinien im Bearbeitungsmodus |
+| **bericht** | wie `vorlage`, ohne Bearbeiten-Button, stattdessen Drucken/Aktualisieren |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
-|-------|--------|------------|
-| Small | 800px | Kleines Dashboard |
+| ------- | -------- | ------------ |
+| Small | 800px | kleines Dashboard |
 | Medium | 1200px | Standard |
-| Large | 1600px | Großes Dashboard |
+| Large | 1600px | großes Dashboard |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Background** | Hell | Hintergrund |
-| **Widget** | Weiß | Widget-Hintergrund |
-| **Border** | Grau | Rand |
+| Zustand | Farbe | Beschreibung |
+| -------- | ------- | -------------- |
+| **Hintergrund** | hell | Hintergrund |
+| **Widget** | weiß | Hintergrund des Widgets |
+| **Rahmen** | grau | Rahmen |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| -------- | -------------- |
+| `shadow` | stärkerer Schatten |
+| `border` | der Rahmen leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- Vierte Spalten ab 1600 px, drei ab 1200 px, zwei ab 800 px, darunter einspaltig;
-  die gespeicherte Reihenfolge bleibt erhalten.
-- Widgets behalten ihre Zeilenspannung, soweit sie in die neue Spaltenzahl passen;
-  sonst wachsen sie in die Höhe.
-- Auf Touch-Geräten beginnt das Verschieben erst nach langem Drücken (`long-press`),
-  die Nachbarrücken mit `reorder` zur Seite.
+- Ab 1600 px vier Spalten, ab 1200 px drei, ab 800 px zwei, darunter eine einzige
+  Spalte; die gespeicherte Reihenfolge bleibt erhalten.
+- Widgets behalten ihre Zeilenhöhe, solange sie in die neue Spaltenzahl passen; sonst werden
+  sie höher.
+- Auf Touch-Geräten beginnt das Verschieben erst nach einem langen Druck (`long-press`), die
+  Nachbarn weichen mit `reorder` aus.
 
 ## Widget-Typen
 
-| Type | Beschreibung |
-|------|--------------|
+| Typ | Beschreibung |
+|-----|--------------|
 | **Card** | Karte |
 | **Chart** | Diagramm |
 | **List** | Liste |
 | **Table** | Tabelle |
-| **Stat** | Statistik |
+| **Stat** | Kennzahl |
 | **Calendar** | Kalender |
 
 ## Drag & Drop

@@ -1,10 +1,10 @@
-# Embed (Einbettung) - Aussehen
+# Embed – Aussehen
 
 ## Grundlayout
 
 ```
 ┌──────────────────────────────────────────────┐
-│  Titel                          ⛶  ↗         │  Kopfzeile (optional)
+│  Title                          ⛶  ↗         │  Kopfzeile (optional)
 ├──────────────────────────────────────────────┤
 │                                              │
 │                                              │  eingebettete Fläche
@@ -12,46 +12,46 @@
 └──────────────────────────────────────────────┘
 ```
 
-Die Kopfzeile entfällt bei `showTitle = false`; das Vollbild- und das Öffnen-Symbol
-erscheinen erst bei Hover oder Fokus.
+Die Kopfzeile entfällt mit `showTitle = false`; die Symbole für Vollbild und Öffnen in neuem Fenster
+erscheinen nur bei Hover oder Fokus.
 
 ## Varianten
 
 | `source` | Aussehen |
 |----------|----------|
 | **app** | wie ein eigenes Programmfenster, ohne eigene Navigationsleiste |
-| **widget** | kompakte Fläche, füllhöhenbegrenzt, seltener Rahmen |
-| **iframe** | fremde Seite randlos, Kopfzeile nur bei `showTitle = true` |
+| **widget** | kompakte Fläche, begrenzte Füllhöhe, dezenterer Rahmen |
+| **iframe** | fremde Seite ohne Rahmen, Kopfzeile nur mit `showTitle = true` |
 
 ## Größen
 
 | Größe | Bedeutung |
 |-------|-----------|
 | `small` | Zeilenhöhe 280 px, z. B. in Listen |
-| `medium` | 480 px Höhe, Standard in Seiten |
+| `medium` | 480 px Höhe, Standard auf Seiten |
 | `large` | füllt die verfügbare Höhe, für Dashboards |
 
-Zusätzlich bestimmt `ratio` das Seitenverhältnis (`auto`, `16:9`, `4:3`, `1:1`).
+Zusätzlich legt `ratio` das Seitenverhältnis fest (`auto`, `16:9`, `4:3`, `1:1`).
 
 ## Farben und Zustände
 
 | Zustand | Aussehen |
 |---------|----------|
-| `default` | Fläche mit Grundfarbe, dezenter 1 px Rahmen |
-| `hover` | Kopfzeilen-Symbole werden sichtbar |
-| `focus` | 2 px Fokus-Ring um die Gesamtfläche |
-| `loading` | Skeleton in der Fläche, Kopfzeile bleibt bedienbar |
-| `error` | Fehlerhinweis in der Fläche, Ursache und Verweis nach außen |
-| `disabled` | Fläche abgeblendet, Bedienung gesperrt |
+| `default` | Fläche mit einer Grundfarbe, feiner 1-px-Rahmen |
+| `hover` | die Symbole der Kopfzeile werden sichtbar |
+| `focus` | 2 px breiter Fokusring um die ganze Fläche |
+| `loading` | Platzhalter in der Fläche, die Kopfzeile bleibt bedienbar |
+| `error` | Fehlerhinweis in der Fläche, Ursache und ein Link nach außen |
+| `disabled` | Fläche abgedunkelt, Bedienung gesperrt |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `reveal` | Kopfzeilen-Werkzeuge erscheinen erst bei Hover oder Fokus |
-| `ring` | Fokus-Ring markiert die gesamte Einbettung |
+| `reveal` | Werkzeuge der Kopfzeile erscheinen nur bei Hover oder Fokus |
+| `ring` | der Fokusring markiert das gesamte Einbettungselement |
 
-## Reaktiv
+## Responsiv
 
-- Bei schmalem Fenster wird die Fläche vollbreit, die Kopfzeile bleibt einzeilig.
-- Bei `responsive = false` behält die Fläche ihre feste Höhe und bekommt Seitenlauf.
+- In einem schmalen Fenster wird die Fläche volle Breite, die Kopfzeile bleibt in einer Zeile.
+- Mit `responsive = false` behält die Fläche ihre feste Höhe und bekommt eine Scrollleiste.

@@ -1,56 +1,56 @@
-# Dashboard (Dashboard)
+# Dashboard
 
 | Feld | Wert |
 |------|------|
-| **Kategorie** | `special` |
-| **Erbt von** | `base` |
-| **Varianten** | `vorlage`, `anordbar`, `bericht` |
-| **Zustände** | `bearbeiten`, `leer` |
-| **Gesten** | `drag`, `tap`, `long-press` |
-| **Animationen** | `reorder`, `cascade`, `stagger` |
-| **Verwandt** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
-| **Status** | dokumentiert |
+| **Category** | `special` |
+| **Inherits from** | `base` |
+| **Variants** | `vorlage`, `anordbar`, `bericht` |
+| **States** | `bearbeiten`, `leer` |
+| **Gestures** | `drag`, `tap`, `long-press` |
+| **Animations** | `reorder`, `cascade`, `stagger` |
+| **Related** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
+| **Status** | documented |
 
 ## Beschreibung
 Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
-## Verwendungszweck
+## Zweck
 
-- Übersicht
-- Analytics
-- Project
+- Überblick
+- Auswertung
+- Projekt
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **vorlage** | feste Anordnung, vom Anwender nicht veränderbar |
-| **anordbar** | Widgets verschieben, Größe ändern, eigene Auswahl |
-| **bericht** | reine Anzeige ohne Bearbeiten-Modus, für geteilte Ansichten |
+| **vorlage** | feste Anordnung, vom Benutzer nicht veränderbar |
+| **anordbar** | Widgets verschieben, in der Größe ändern, eigene Auswahl treffen |
+| **bericht** | nur Anzeige ohne Bearbeitungsmodus, für geteilte Ansichten |
 
-## Features
+## Funktionen
 
 - Widgets
 - Drag & Drop
-- Resize
-- Customize
+- Größe ändern
+- Anpassen
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): das Raster zeigt gleichartige
-  Einträge, das Dashboard unterschiedliche Widgets in unterschiedlichen Größen.
-- **Nicht verwechseln mit** [card](../../../widgets/containers/card/): die Karte ist ein Baustein,
-  das Dashboard ist die Anordnung mehrerer Bausteine samt Einstellung.
-- **Nicht verwechseln mit** [chart](../../../widgets/data/chart/): gezeichnet wird im Diagramm,
-  hier wird nur platziert.
+- **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): Das Raster zeigt gleichartige
+  Einträge, das Dashboard verschiedene Widgets in unterschiedlichen Größen.
+- **Nicht verwechseln mit** [card](../../../widgets/containers/card/): Die Karte ist ein einzelner
+  Baustein, das Dashboard ist die Anordnung mehrerer Bausteine einschließlich ihrer Einstellungen.
+- **Nicht verwechseln mit** [chart](../../../widgets/data/chart/): Gezeichnet wird im Diagramm,
+  hier werden Elemente nur platziert.
 
 ## Best Practices
 
-- Mit einer sinnvollen Standardansicht starten, Konfiguration ist optional.
-- Bearbeiten als eigenen Modus (`bearbeiten`) — im Lesemodus verrutscht nichts.
-- Raster mit Spalten und Zeilen, jedes Widget bringt Mindest- und Maximalgröße mit.
-- Jeder Widget-Ladezustand einzeln behandeln, die Seite nicht komplett sperren.
-- Anordnung je Person speichern und ein Zurücksetzen anbieten.
+- Mit einer sinnvollen Standardansicht beginnen; die Konfiguration ist optional.
+- Bearbeiten als eigener Modus (`bearbeiten`) – im Lesemodus verschiebt sich nichts.
+- Raster mit Spalten und Zeilen; jedes Widget bringt eine minimale und maximale Größe mit.
+- Den Ladezustand jedes Widgets einzeln behandeln, nicht die ganze Seite sperren.
+- Die Anordnung pro Person speichern und einen Zurücksetzen-Schalter anbieten.
 
 ## Siehe auch
 

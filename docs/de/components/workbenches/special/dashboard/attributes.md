@@ -1,44 +1,44 @@
-# Dashboard - Attribute
+# Dashboard – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `widgets` | array[] | - | Array von Widgets |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `widgets` | array[] | - | Liste der Widgets |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `dragAndDrop` | boolean | `true` | Drag & Drop aktivieren? |
-| `responsive` | boolean | `true` | Responsives Layout? |
+| `responsive` | boolean | `true` | responsives Layout? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `columns` | number | `3` | Anzahl Spalten |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `columns` | number | `3` | Anzahl der Spalten |
 | `gap` | number | `16` | Abstand zwischen Widgets |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onWidgetMove` | function | Wird beim Verschieben ausgeführt |
-| `onWidgetResize` | function | Wird beim Resizen ausgeführt |
-| `onWidgetRemove` | function | Wird beim Entfernen ausgeführt |
+| ---------- | ----- | -------------- |
+| `onWidgetMove` | function | läuft beim Verschieben |
+| `onWidgetResize` | function | läuft beim Größenändern |
+| `onWidgetRemove` | function | läuft beim Entfernen |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `region` |
 
 ## Widget-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `type` | string | Widget-Typ |
 | `title` | string | Titel |
 | `content` | string/node | Inhalt |

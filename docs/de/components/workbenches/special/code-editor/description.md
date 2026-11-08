@@ -1,20 +1,20 @@
-# Code Editor (Code-Editor)
+# Code-Editor
 
 | Feld | Wert |
-|------|------|
-| **Kategorie** | `special` |
-| **Erbt von** | `base` |
-| **Varianten** | `voll`, `nur-lesen`, `vergleich` |
-| **Zustände** | `ungespeichert`, `fehler` |
-| **Gesten** | `tap`, `double-tap`, `long-press`, `drag` |
-| **Animationen** | `highlight`, `fade-in` |
-| **Verwandt** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
-| **Status** | dokumentiert |
+| ------ | ------ |
+| **Category** | `special` |
+| **Inherits from** | `base` |
+| **Variants** | `voll`, `nur-lesen`, `vergleich` |
+| **States** | `ungespeichert`, `fehler` |
+| **Gestures** | `tap`, `double-tap`, `long-press`, `drag` |
+| **Animations** | `highlight`, `fade-in` |
+| **Related** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
+| **Status** | documented |
 
 ## Beschreibung
-Ein Code Editor ist ein Editor für Quellcode.
+Ein Code-Editor ist ein Editor für Quellcode.
 
-## Verwendungszweck
+## Zweck
 
 - Code
 - Programmierung
@@ -23,33 +23,33 @@ Ein Code Editor ist ein Editor für Quellcode.
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **voll** | bearbeiten mit Hervorhebung, Vervollständigung und Fehlermarkierung |
+| ---------- | -------------- |
+| **voll** | Bearbeiten mit Hervorhebung, Vervollständigung und Fehlermarkierung |
 | **nur-lesen** | hervorgehobener Code zum Ansehen und Kopieren |
 | **vergleich** | zwei Versionen nebeneinander, Unterschiede markiert |
 
-## Features
+## Funktionen
 
 - Syntax Highlighting
-- Line Numbers
-- Auto-completion
-- Error Detection
+- Zeilennummern
+- Auto-Vervollständigung
+- Fehlererkennung
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht
-  formatted Text, hier Quelltext. Wiki-Syntax ist eine Variante des Texteditors, nicht hiervon.
-- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): ohne Zeilennummern,
-  Hervorhebung und Klammerschluss ist es einfach ein Textfeld.
-- Ausgabe von Programmen ist keine Editor-Aufgabe — sie gehört in eine Ergebnisanzeige.
+- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): Dort entsteht
+  formatierter Text, hier Quellcode. Wiki-Syntax ist eine Variante des Texteditors, nicht dieses Editors.
+- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): Ohne Zeilennummern,
+  Hervorhebung und automatisches Schließen von Klammern ist es einfach ein Textfeld.
+- Die Ausgabe von Programmen ist keine Editor-Aufgabe – sie gehört in eine Ergebnisansicht.
 
 ## Best Practices
 
-- Sprache immer explizit angeben, sonst fehlt die Hervorhebung und die Einrückung ist falsch.
-- `Tab` rückt ein; zum Verlassen des Editors `Esc` oder `Strg+Tab` anbieten.
-- Zeilennummern und horizontales Lineal erst ab mehrzeiligem Inhalt.
-- Ungespeicherte Änderungen deutlich markieren, Schließen rückfragen.
-- Shortcuts an der üblichen Stelle dokumentieren (`Strg+/`, `Strg+F`, `Strg+D`).
+- Immer die Sprache ausdrücklich angeben, sonst fehlen die Hervorhebung und die richtige Einrückung.
+- `Tab` rückt ein; biete `Esc` oder `Strg+Tab` an, um den Editor zu verlassen.
+- Zeilennummern und ein waagerechtes Lineal erst ab mehrzeiligem Inhalt.
+- Ungespeicherte Änderungen deutlich kennzeichnen und vor dem Schließen nachfragen.
+- Tastenkürzel an der üblichen Stelle dokumentieren (`Strg+/`, `Strg+F`, `Strg+D`).
 
 ## Siehe auch
 
