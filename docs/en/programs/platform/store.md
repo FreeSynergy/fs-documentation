@@ -16,14 +16,14 @@ Status: **pre-release, early.** See "Where it stands today" below before you try
 
 ## Where it stands today
 
-- Pre-releases exist on GitHub ([releases](https://github.com/FreeSynergy/fs-store/releases)); on 2026-11-08 the newest is `v0.1.0-rc.5`. The first one (`v0.1.0-rc.1`) is marked "do not use": it cannot verify packages signed by the release workflow.
+- Pre-releases exist on GitHub ([releases](https://github.com/FreeSynergy/fs-store/releases)); on 2026-11-08 the newest is `v0.1.0-rc.6`. The first one (`v0.1.0-rc.1`) is marked "do not use": it cannot verify packages signed by the release workflow.
 - The core works: the source list, reading the catalog, the signature check against the project key, installing from a `tar.gz` into your home folder, switching to the new version in one step and keeping the old one, and a check that the program is not running. It has been tried against a real signed package of Tasks through a local Git catalog.
 - The command line works for the subcommands above. The window is first and provisional.
 - Installing an rpm through `dnf` and `pkexec` is written but has not been run for real (root is asked by the system, never by the Store).
 
 ## What is not there yet
 
-- The public catalog repository and the TUF metadata. Until they exist, packages come straight from the releases of each program.
+- The full catalog: [fs-catalog](https://github.com/FreeSynergy/fs-catalog) offers only the Store, Tasks and People so far. What exists of the TUF metadata is in the Store's DESIGN.md.
 - Replacing the running Store by itself.
 - Facet commands (`fs-contacts` and the like): the format is provisional and not built.
 - Windows, and checks for key expiry.

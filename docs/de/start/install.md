@@ -24,7 +24,7 @@ Wähle das neueste Release, das als „Pre-release“ markiert ist. Ein Release 
 Windows ist noch nicht im Release. Der macOS-Build ist nicht mit einem bezahlten Apple-Zertifikat signiert: Öffne unter macOS die App einmal, dann Systemeinstellungen > Datenschutz & Sicherheit > „Trotzdem öffnen“. Die OpenPGP-Signaturen und Prüfsummen sind der Vertrauensweg.
 
 !!! warning "Stand am 2026-11-08"
-    Das neueste Pre-release am 2026-11-08 ist `v0.1.0-rc.5`. Das erste (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden. Nimm immer das neueste Pre-release der Liste.
+    Das neueste Pre-release am 2026-11-08 ist `v0.1.0-rc.6`. Das erste (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden. Nimm immer das neueste Pre-release der Liste.
 
 ## Schritt 2: die Signatur prüfen
 
@@ -60,10 +60,18 @@ Der Store ist ein Programm, `fs-store`. Ohne Argumente gestartet, öffnet er sei
 
 Installier die Programme, die du willst, aus dem Store, zum Beispiel Tasks oder People. Der Store prüft den Katalog und jedes Paket gegen den Projektschlüssel, behält bei einem Update die alte Version, rollt zurück, wenn ein Update fehlschlägt, und aktualisiert sich selbst auf dieselbe Weise.
 
+Im Fenster oder auf der Kommandozeile:
+
+```bash
+fs-store install fs-tasks
+fs-store install fs-people
+fs-store installed
+```
+
 ## Was noch fehlt
 
 - Eine fertige App für normale Nutzerinnen und Nutzer. Die Fenster sind vorläufig, und sie sagen das auch.
-- Die Katalogquelle wird gerade eingerichtet; bis dahin kommen Pakete direkt aus den Releases der einzelnen Programme.
+- Ein kleiner Katalog: Das Repository [fs-catalog](https://github.com/FreeSynergy/fs-catalog) bietet bisher den Store, Tasks und People an (Stand 2026-11-08).
 - Windows und die Anmeldung. Was als Nächstes kommt, steht im [Gesamtplan](../programs/apps/roadmap.md).
 
 Ist dir etwas kaputt oder unklar aufgefallen? Siehe [Wie du helfen kannst](help.md).

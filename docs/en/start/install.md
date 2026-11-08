@@ -24,7 +24,7 @@ Pick the newest release marked "Pre-release". A release carries these files (the
 Windows is not in the release yet. The macOS build is not signed with a paid Apple certificate: on macOS open the app once, then System Settings > Privacy & Security > "Open Anyway". The OpenPGP signatures and checksums are the trust path.
 
 !!! warning "State on 2026-11-08"
-    The newest pre-release on 2026-11-08 is `v0.1.0-rc.5`. The first one (`v0.1.0-rc.1`) is marked "Do not use": it cannot verify packages signed by the release workflow. Always take the newest pre-release in the list.
+    The newest pre-release on 2026-11-08 is `v0.1.0-rc.6`. The first one (`v0.1.0-rc.1`) is marked "Do not use": it cannot verify packages signed by the release workflow. Always take the newest pre-release in the list.
 
 ## Step 2: check the signature
 
@@ -60,10 +60,18 @@ The Store is one program, `fs-store`. Started without arguments it opens its win
 
 Install the programs you want from the Store, for example Tasks or People. The Store checks the catalog and every package against the project key, keeps the old version when it updates, rolls back if an update fails, and updates itself the same way.
 
+In the window, or on the command line:
+
+```bash
+fs-store install fs-tasks
+fs-store install fs-people
+fs-store installed
+```
+
 ## What is not there yet
 
 - A finished app for ordinary users. The windows are provisional and say so.
-- The catalog source is being set up; until then packages come straight from the releases of each program.
+- A small catalog: the repository [fs-catalog](https://github.com/FreeSynergy/fs-catalog) offers the Store, Tasks and People so far (2026-11-08).
 - Windows, and sign-in. See the [overall plan](../programs/apps/roadmap.md) for what comes next.
 
 Found something broken or unclear? See [How to help](help.md).
