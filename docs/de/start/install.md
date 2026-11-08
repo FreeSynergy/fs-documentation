@@ -21,10 +21,10 @@ Wähle das neueste Release, das als „Pre-release“ markiert ist. Ein Release 
 | macOS | `.dmg` |
 | zum Prüfen | `SHA256SUMS.txt`, eine `.asc`-Signatur neben jeder Datei, der Release-Schlüssel `FreeSynergy-release-key.pgp` |
 
-Windows ist noch nicht gebaut.
+Windows ist noch nicht im Release. Der macOS-Build ist nicht mit einem bezahlten Apple-Zertifikat signiert: Öffne unter macOS die App einmal, dann Systemeinstellungen > Datenschutz & Sicherheit > „Trotzdem öffnen“. Die OpenPGP-Signaturen und Prüfsummen sind der Vertrauensweg.
 
 !!! warning "Stand am 2026-11-08"
-    Das erste Pre-release (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden. Nimm ein neueres Pre-release (`rc.2` oder später), sobald es in der Liste erscheint. Zeigt die Liste nur `rc.1`, warte bitte.
+    Das neueste Pre-release am 2026-11-08 ist `v0.1.0-rc.5`. Das erste (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden. Nimm immer das neueste Pre-release der Liste.
 
 ## Schritt 2: die Signatur prüfen
 
@@ -44,6 +44,8 @@ gpg --fingerprint 16A4A3EE563AEF51FCF0C55DED7B57C4A1904342     # mit der Zeile o
 gpg --verify SHA256SUMS.txt.asc SHA256SUMS.txt                 # muss "Good signature" ausgeben
 sha256sum --ignore-missing -c SHA256SUMS.txt                   # jede Datei, die du heruntergeladen hast: OK
 ```
+
+Die Releases enthalten auch einen Herkunftsnachweis (SLSA), den du mit `gh attestation verify <Datei> --repo FreeSynergy/fs-store` prüfen kannst, und eine SBOM (`*.spdx.json`).
 
 Vertrau der Schlüsseldatei nicht nur deshalb, weil sie mit dem Release kam. Vergleiche den Fingerabdruck mit dieser Seite und mit der Schlüsseldatei im [Dokumentations-Repository](https://github.com/FreeSynergy/fs-documentation). Schlägt eine Prüfung fehl, installiere nichts und sag uns Bescheid.
 
