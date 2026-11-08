@@ -3,7 +3,8 @@
 
 The ADRs are written in German and stay the single source in conventions/decisions/.
 This script copies them to docs/<lang>/decisions/ (content unchanged, German) and writes
-an overview page per language (English / German). Idempotent; --check exits 1 on drift (CI).
+an overview page per language (English / German). Idempotent. The generated files are not committed (.gitignore); run this before `mkdocs build`
+(the deploy workflow does). --check exits 1 on drift.
 Links that point outside the decision folder are turned into plain GitHub links.
 """
 import re, sys
