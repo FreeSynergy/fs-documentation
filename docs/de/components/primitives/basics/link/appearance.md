@@ -1,27 +1,27 @@
-# Link (Verweis) - Aussehen
+# Link – Erscheinungsbild
 
 ## Grundlayout
 
 ```
-standard:      unterstrichen:     external:
-Datenschutz    ein Wiki-Link      OpenProject ↗
+standard:      unterstrichen:   external:
+Privacy        a wiki link      OpenProject ↗
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **standard** | Primärfarbe, Unterstreichung erst bei Hover |
-| **muted** | Sekundärtext, gleiche Hover wie standard |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **standard** | Primärfarbe, nur bei Hover unterstrichen |
+| **muted** | Sekundärtext, gleicher Hover wie standard |
 | **icon** | Icon links oder rechts mit 4 px Abstand |
 | **unterstrichen** | durchgehende Linie, auch im Ruhezustand |
 
 ## Größen
 
-Die Schriftgröße folgt dem umgebenden Text; `size` passt nur das Icon an:
+Die Schriftgröße richtet sich nach dem umgebenden Text; `size` passt nur das Icon an:
 
 | Größe | Icon |
-|-------|------|
+|------|------|
 | `small` | 12 px |
 | `medium` | 14 px |
 | `large` | 18 px |
@@ -29,21 +29,21 @@ Die Schriftgröße folgt dem umgebenden Text; `size` passt nur das Icon an:
 ## Farben und Zustände
 
 | Zustand | Farbe |
-|---------|-------|
+|-------|--------|
 | `default` | Primärfarbe |
-| `hover` | Primärfarbe abgedunkelt plus Unterstreichung |
+| `hover` | Primärfarbe abgedunkelt plus Unterstrich |
 | `active` | beim Drücken stark abgedunkelt |
-| `focus` | 2 px Fokus-Ring |
-| `visited` (extern) | behält Primärfarbe bei |
+| `focus` | 2 px Fokusrahmen |
+| `visited` (extern) | behält die Primärfarbe |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `underline` | Linie erscheint bei Hover (standard) |
-| `ring` | Fokus-Ring bei Tastaturnavigation |
+|--------|-------------|
+| `underline` | die Linie erscheint bei Hover (standard) |
+| `ring` | Fokusrahmen für die Tastaturnavigation |
 
-## Reaktiv
+## Responsiv
 
-- Linkziele bleiben als Trefferfläche mindestens Zeilenhöhe hoch
+- Link-Ziele bleiben mindestens so hoch wie die Zeilenhöhe als Trefferfläche
   (Touch: 44 px, siehe Basiskomponente).

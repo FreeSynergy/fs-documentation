@@ -1,42 +1,41 @@
-# Label (Beschriftung) - Verwendung
+# Label – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Feld beschriften
+## Ein Feld beschriften
 
 ```jsx
-<Label for="username">Benutzername</Label>
+<Label for="username">Username</Label>
 <TextInput id="username" />
 ```
 
 ## Pflichtfeld
 
 ```jsx
-<Label for="email" required={true}>E-Mail</Label>
+<Label for="email" required={true}>Email</Label>
 ```
 
-## Zugrifftaste
+## Zugriffstaste
 
 ```jsx
-<Label for="save" shortcut="S">Speichern</Label>
+<Label for="save" shortcut="S">Save</Label>
 ```
 
-## Verstecktes Label für Screenreader
+## Versteckte Beschriftung für Screenreader
 
 ```jsx
 <SearchInput>
-  <Label hidden={true}>Suchbegriff eingeben</Label>
+  <Label hidden={true}>Enter a search term</Label>
 </SearchInput>
 ```
 
 ## Szenarien
 
 | Szenario | Empfehlung |
-|----------|------------|
+|----------|----------------|
 | Formularfeld | Label zusammen mit [field](../../fields/field/) |
-| Icon-only-Button | `aria-label` am Button, kein Label-Element |
-| Gruppe von Feldern | sichtbare Gruppenüberschrift, kein Einzellabel |
-| Platzhalter als Ersatz | nicht zulässig |
+| Button nur mit Icon | `aria-label` am Button, kein Label-Element |
+| Feldgruppe | eine sichtbare Gruppenüberschrift, keine einzelnen Labels |
+| Platzhalter als Ersatz | nicht erlaubt |

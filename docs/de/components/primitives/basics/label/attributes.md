@@ -1,30 +1,29 @@
-# Label (Beschriftung) - Attribute
+# Label – Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
-[base](../base.md). Das `label`-Attribut der Basisklasse ist hier der
-sichtbare Inhalt.
+Nur **eigene** Attribute. Alles Weitere kommt von der Basisklasse, siehe
+[base](../base.md). Das Attribut `label` der Basisklasse ist hier der sichtbare
+Inhalt.
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `for` | string | - | `id` des beschrifteten Elements |
-| `required` | boolean | `false` | Pflicht-Markierung mit Text |
-| `hidden` | boolean | `false` | visuell versteckt, für Screenreader wirksam |
-| `shortcut` | string | `null` | Zugrifftaste, wird unterstrichen dargestellt |
+| `required` | boolean | `false` | Pflichtkennzeichnung mit Text |
+| `hidden` | boolean | `false` | optisch versteckt, für Screenreader aktiv |
+| `shortcut` | string | `null` | Zugriffstaste, unterstrichen dargestellt |
 
-## Events
+## Ereignisse
 
-Es werden keine eigenen Events genutzt; ein Klick auf das Label wirkt auf
-das verknüpfte Element.
+Keine eigenen Ereignisse; ein Klick auf das Label wirkt auf das verknüpfte Element.
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | `label` |
 | – | – | Verknüpfung über `for`/`id` oder durch Verschachtelung |
-| – | – | Pflicht zusätzlich mit Text („erforderlich“), nicht nur „*“ |
+| – | – | Pflicht zusätzlich mit Text („Pflichtfeld“), nicht nur mit „*“ |
 
 ## Geerbt von
 

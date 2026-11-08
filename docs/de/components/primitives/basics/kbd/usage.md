@@ -1,9 +1,8 @@
-# Kbd (Tastenkennung) - Verwendung
+# Kbd – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Einzelne Taste
 
@@ -11,22 +10,22 @@
 <Kbd shortcut="Esc" />
 ```
 
-## Kombination im Tooltip
+## Kombination in einem Tooltip
 
 ```jsx
-<Tooltip content={<>Speichern <Kbd keys={["Strg", "S"]} /></>} />
+<Tooltip content={<>Save <Kbd keys={["Ctrl", "S"]} /></>} />
 ```
 
-## Shortcut-Übersicht
+## Tastenkürzel-Übersicht
 
 ```jsx
 <Table>
-  <Row action="Suche öffnen"><Kbd keys={["Strg", "K"]} /></Row>
-  <Row action="Speichern"><Kbd keys={["Strg", "S"]} /></Row>
+  <Row action="Open search"><Kbd keys={["Ctrl", "K"]} /></Row>
+  <Row action="Save"><Kbd keys={["Ctrl", "S"]} /></Row>
 </Table>
 ```
 
-## Gedrückten Zustand zeigen (Onboarding)
+## Gedrückt-Zustand anzeigen (Einführung)
 
 ```jsx
 <Kbd shortcut="Enter" active={userPressed} />
@@ -35,8 +34,8 @@
 ## Szenarien
 
 | Szenario | Empfehlung |
-|----------|------------|
-| Tooltip mit Kürzel | `keys`-Kombination rechts im Text |
-| Befehlspalette (`command`) | Kbd pro Kandidat in der Ergebnisliste |
-| Mac-Varianten | `Cmd`/`Strg` je nach Plattform beschriften |
-| Codiierter Inhalt | `code`, kein Kbd |
+|----------|----------------|
+| Tooltip mit Tastenkürzel | `keys`-Kombination rechts neben dem Text |
+| Befehlspalette (`command`) | kbd je Treffer in der Ergebnisliste |
+| Mac-Varianten | Beschriftung `Cmd`/`Ctrl` je nach Plattform |
+| Code-Inhalte | `code`, nicht kbd |
