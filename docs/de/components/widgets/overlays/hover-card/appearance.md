@@ -1,23 +1,23 @@
-# Hover Card (Vorschaukarte) - Aussehen
+# Hover Card - Erscheinungsbild
 
 ## Grundlayout
 
 ```
-Verweis:  [ Anna Berger ]
+Bezug:  [ Anna Berger ]
                  │
           ┌──────▼───────────────────┐
           │ ◯  Anna Berger           │
           │    Projektplanung        │
-          │    zuletzt vor 12 Min.   │
+          │    zuletzt gesehen vor 12 Min. │
           └──────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **profil** | Avatar links, zwei Zeilen Text rechts |
-| **dokument** | Titelzeile, Auszug, Meta-Zeile darunter |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **profil** | Avatar links, zwei Textzeilen rechts |
+| **dokument** | Titelzeile, Auszug, Metazeile darunter |
 | **vorschau** | Bildfläche oben, Titelzeile darunter |
 
 ## Größen
@@ -30,20 +30,20 @@ Verweis:  [ Anna Berger ]
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Karte mit Rahmen und Schatten, Spitze zum Auslöser |
-| `open` | Karte sichtbar, Auslöser leicht hinterlegt |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | Karte mit Rahmen und Schatten, Spitze zeigt auf den Auslöser |
+| `open` | Karte sichtbar, Auslöser leicht gefüllt |
 | `loading` | Skeleton in der Kartenfläche |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `bridge` | unsichtbare Brücke zwischen Auslöser und Karte, damit die Karte nicht zufällt |
-| `shadow` | Schatten hebt die Karte vom Inhalt ab |
+| `bridge` | unsichtbare Brücke zwischen Auslöser und Karte, damit die Karte nicht zuschnappt |
+| `shadow` | der Schatten hebt die Karte vom Inhalt ab |
 
-## Reaktiv
+## Responsiv
 
-- Auf Mobilgeräten ersetzt eine untere Leiste die Karte (Langdruck).
-- Die Karte klappt zur verfügbaren Seite auf; am Rand sitzt sie bündig.
+- Auf mobilen Geräten ersetzt eine untere Leiste die Karte (langes Drücken).
+- Die Karte öffnet sich zur verfügbaren Seite; am Rand liegt sie bündig an.

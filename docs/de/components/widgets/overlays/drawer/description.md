@@ -1,4 +1,4 @@
-# Drawer (Seitenleiste)
+# Drawer
 
 | Feld | Wert |
 |------|------|
@@ -22,44 +22,43 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 
 ## Varianten
 
-| Variant | Position | Beschreibung |
-|---------|----------|--------------|
-| **Left Drawer** | Links | Links |
-| **Right Drawer** | Rechts | Rechts |
-| **Bottom Drawer** | Unten | Unten |
-| **Full Drawer** | Voll | Vollständig |
+| Variante | Position | Beschreibung |
+|----------|----------|--------------|
+| **Left Drawer** | links | links |
+| **Right Drawer** | rechts | rechts |
+| **Bottom Drawer** | unten | unten |
+| **Full Drawer** | vollständig | Vollbild |
 
 !!! info "Einordnung"
-    Das in Bibliotheken separate `sheet` ist keine eigene Komponente, sondern der
-    Bottom Drawer mit reduzierter Höhe und Griffleiste.
+    Das `sheet`, in Bibliotheken getrennt geführt, ist keine eigene Komponente, sondern der untere
+    Drawer mit reduzierter Höhe und einem Griff.
 
-## Features
+## Funktionen
 
-- Header
-- Body
-- Footer
-- Close
-- Dismissible
+- Kopfbereich
+- Inhalt
+- Fußbereich
+- Schließen
+- Wegwischbar
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [sidebar](../../navigation/sidebar/): die Seitenleiste gehört
-  dauerhaft zum Layout; der Drawer kommt auf Zuruf und überdeckt den Inhalt.
-- **Nicht verwechseln mit** [modal](../modal/): das Modal sitzt in der Mitte und will eine
-  Entscheidung; der Drawer bringt Navigation oder Filter an den Rand.
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover ist klein, an ein Element
-  geheftet und erklärt genau dieses.
-- Der Bottom Drawer mit Griffleiste ist die `sheet`-Bauform — eine Variante, keine eigene
-  Komponente.
-- Auf breiter Fläche kann der Drawer dauerhaft offen stehen; dann verhält er sich wie eine
+- **Nicht verwechseln mit** [sidebar](../../navigation/sidebar/): die Seitenleiste gehört dauerhaft
+  zum Layout; der Drawer kommt auf Abruf und legt sich über den Inhalt.
+- **Nicht verwechseln mit** [modal](../modal/): das Modal steht in der Mitte und verlangt eine Entscheidung;
+  der Drawer bringt Navigation oder Filter an den Rand.
+- **Nicht verwechseln mit** [popover](../popover/): ein Popover ist klein, hängt an einem Element und
+  erklärt genau dieses Element.
+- Der untere Drawer mit Griff ist die Form `sheet` — eine Variante, keine eigene Komponente.
+- Auf einer breiten Fläche kann der Drawer dauerhaft offen bleiben; er verhält sich dann wie eine
   Seitenleiste, bleibt aber dieselbe Komponente.
 
 ## Best Practices
 
-- Clear-Content
-- Close-Button
-- Accessibility
-- Feedback
+- Klarer Inhalt
+- Schließen-Schaltfläche
+- Barrierefreiheit
+- Rückmeldung
 
 ## Siehe auch
 

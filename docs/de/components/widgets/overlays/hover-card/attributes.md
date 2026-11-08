@@ -1,39 +1,39 @@
-# Hover Card (Vorschaukarte) - Attribute
+# Hover Card - Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt von der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `target` | string | - | id oder Verweis auf das Ziel der Vorschau |
-| `content` | object | - | vorbefüllte Felder der Karte |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `target` | string | - | ID oder Verweis auf das Ziel der Vorschau |
+| `content` | object | - | vorausgefüllte Felder der Karte |
 | `placement` | enum | `top` | Seite der Karte: `top`, `bottom`, `left`, `right` |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `openDelay` | number | `300` | Verzögerung bis zum Öffnen in ms |
 | `closeDelay` | number | `150` | Verzögerung bis zum Schließen in ms |
-| `pressDuration` | number | `500` | Langdruck in ms, der die Karte auf Touch öffnet |
-| `interactive` | boolean | `true` | Karte darf betreten und bedient werden |
+| `pressDuration` | number | `500` | langes Drücken in ms, das die Karte per Touch öffnet |
+| `interactive` | boolean | `true` | die Karte darf betreten und bedient werden |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onOpen` | function | Karte erscheint |
-| `onClose` | function | Karte verschwindet |
+| `onOpen` | function | die Karte erscheint |
+| `onClose` | function | die Karte verschwindet |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `role` | string | `tooltip` |
-| `aria-describedby` | string | id der Karte, auf den der Auslöser zeigt |
-| `focusable` | boolean | Karte ist über Tastatur erreichbar, wenn `interactive` |
+| `aria-describedby` | string | ID der Karte, auf die der Auslöser zeigt |
+| `focusable` | boolean | die Karte ist per Tastatur erreichbar, wenn `interactive` gesetzt ist |
 
 ## Geerbt von
 

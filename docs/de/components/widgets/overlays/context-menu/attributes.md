@@ -2,32 +2,32 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Menüpunkten |
-| `onSelect` | function | - | Event bei Auswahl |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | Array der Menüeinträge |
+| `onSelect` | function | - | Ereignis bei Auswahl |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `closable` | boolean | `true` | Schließbar? |
-| `keyboardShortcuts` | boolean | `true` | Keyboard-Shortcuts? |
+| `closable` | boolean | `true` | schließbar? |
+| `keyboardShortcuts` | boolean | `true` | Tastenkürzel? |
 
 ## Darstellung
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `position` | object | { x, y } |
-| `anchorEl` | DOM element | Anchor-Element |
+| `anchorEl` | DOM element | Ankerelement |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
-| `onItemClick` | function | Wird beim Klick ausgeführt |
+| `onOpen` | function | wird beim Öffnen ausgeführt |
+| `onClose` | function | wird beim Schließen ausgeführt |
+| `onItemClick` | function | wird beim Klick ausgeführt |
 
 ## Barrierefreiheit
 
@@ -35,14 +35,14 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `menu` |
 
-## Item-Attribute
+## Attribute der Einträge
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
-| `label` | string | Menüpunkt-Label |
-| `icon` | string | Icon-Name |
-| `danger` | boolean | Gefährliche Aktion? |
+| `id` | string | eindeutige ID |
+| `label` | string | Beschriftung des Menüeintrags |
+| `icon` | string | Name des Symbols |
+| `danger` | boolean | gefährliche Aktion? |
 
 ## Geerbt von
 

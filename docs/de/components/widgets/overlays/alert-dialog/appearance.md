@@ -1,4 +1,4 @@
-# Alert Dialog (Bestätigungsdialog) - Aussehen
+# Alert Dialog - Erscheinungsbild
 
 ## Grundlayout
 
@@ -9,42 +9,42 @@
 │  Deine Änderungen an diesem       │
 │  Dokument gehen verloren.         │
 │                                   │
-│        [Abbrechen]  [Verwerfen]   │
+│         [Abbrechen]  [Verwerfen]  │
 └───────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **bestaetigung** | Primärfarbe im Bestätigungs-Button, Titel neutral |
-| **zerstoererisch** | Titelleiste und Button in Fehlerfarbe |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **bestaetigung** | Primärfarbe im Bestätigungsbutton, neutraler Titel |
+| **zerstoererisch** | Titelleiste und Button in der Fehlerfarbe |
 
 ## Größen
 
-| Größe | Breite | Höhenabstand |
-|-------|--------|--------------|
+| Größe | Breite | Vertikaler Abstand |
+|-------|--------|--------------------|
 | `small` | 360 px | 12 px |
 | `medium` | 480 px | 16 px |
 | `large` | 640 px | 20 px |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
+| Zustand | Erscheinungsbild |
+|---------|------------------|
 | `default` | Fläche mit Rahmen, Hintergrund dahinter abgedunkelt |
-| `open` | Fokus auf Abbrechen, 2 px Fokus-Ring |
-| `loading` | Spinner im Bestätigungs-Button, beide Buttons gesperrt |
-| `disabled` | Fläche abgeblendet, keine Aktion möglich |
+| `open` | Fokus auf Abbrechen, 2 px Fokusring |
+| `loading` | Spinner im Bestätigungsbutton, beide Buttons gesperrt |
+| `disabled` | Fläche abgedunkelt, keine Aktion möglich |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tone` | Buttonfläche dunkler bei Hover |
-| `scrim` | Abgedunkelte Fläche hinter dem Dialog, nicht klickbar |
+| `tone` | die Buttonfläche wird beim Überfahren dunkler |
+| `scrim` | abgedunkelte Fläche hinter dem Dialog, nicht klickbar |
 
-## Reaktiv
+## Responsiv
 
-- Auf Mobilgeräten füllt der Dialog die Breite und sitzt am unteren Rand.
+- Auf mobilen Geräten füllt der Dialog die Breite und sitzt am unteren Rand.
 - Lange Begründungen scrollen im Inhalt, die Buttons bleiben sichtbar.

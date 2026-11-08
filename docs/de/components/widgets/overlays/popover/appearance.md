@@ -1,4 +1,4 @@
-# Popover (Inhaltspopover) - Aussehen
+# Popover - Erscheinungsbild
 
 ## Grundlayout
 
@@ -7,16 +7,16 @@
    ┌──────┐          │ ✎  Umbenennen        │
    │  ⋯   │ ◀─────── │ ⎘  Duplizieren       │
    └──────┘          │ 🗑  Löschen           │
-      Auslöser       └──────────────────────┘
+     Auslöser        └──────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **inhalt** | Fläche mit Text/Bild, gleiche Fläche wie `card` |
-| **aktionen** | vertikale Aktionsliste mit Hover-Flächen |
-| **formular** | Fläche mit Feldern und Bestätigungsbutton |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **inhalt** | Fläche mit Text oder Bild, gleiche Fläche wie `card` |
+| **aktionen** | senkrechte Aktionsliste mit Hover-Flächen |
+| **formular** | Fläche mit Feldern und einer Bestätigungsschaltfläche |
 
 ## Größen
 
@@ -26,26 +26,26 @@
 | `medium` | bis 320 px |
 | `large` | bis 480 px |
 
-Die Höhe folgt dem Inhalt und wird bei Überlänge scrollbar.
+Die Höhe folgt dem Inhalt und wird scrollbar, wenn er überläuft.
 
 ## Farben und Zustände
 
 | Teil | Farbe |
 |------|-------|
 | Fläche | Kartenfarbe plus Schatten (eine Stufe höher als `card`) |
-| `arrow` | wie Fläche |
-| Aktionen | Hover wie Menüpunkte |
+| `arrow` | wie die Fläche |
+| Aktionen | Hover wie bei Menüeinträgen |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `fade-in` / `expand` | kurzes Einblenden aus Richtung des Auslösers |
-| `focus-trap` | Tab kreist innerhalb des Popovers, solange es offen ist |
+| `fade-in` / `expand` | kurzes Einblenden aus der Richtung des Auslösers |
+| `focus-trap` | Tab wandert im Popover im Kreis, solange es offen ist |
 
-## Reaktiv
+## Responsiv
 
-- Auf schmalen Bildschirmen wird das Popover zu einer Bodenschublade
-  (volle Breite, von unten) – dieselbe Komponente, andere Presentation.
+- Auf schmalen Bildschirmen wird das Popover zu einer unteren Schublade (volle Breite, von unten) —
+  dieselbe Komponente in anderer Darstellung.
 
-- Kippt automatisch, wenn kein Platz nach der Wunschseite ist.
+- Es klappt automatisch um, wenn auf der gewünschten Seite kein Platz ist.

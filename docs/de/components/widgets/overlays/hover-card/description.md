@@ -1,4 +1,4 @@
-# Hover Card (Vorschaukarte)
+# Hover Card
 
 | Feld | Wert |
 |------|------|
@@ -14,15 +14,15 @@
 
 ## Beschreibung
 
-Die Vorschaukarte zeigt zu einem Verweis die wichtigsten Informationen zum Ziel —
-ohne die Adresse zu wechseln. Sie erscheint bei Zeiger über dem Verweis und verschwindet
-wieder, wenn der Zeiger abzieht.
+Die Vorschaukarte zeigt die wichtigsten Informationen zum Ziel eines Verweises —
+ohne die Adresse zu verändern. Sie erscheint, wenn der Zeiger über dem Verweis liegt,
+und verschwindet wieder, wenn der Zeiger weggeht.
 
 ## Verwendungszweck
 
-- Profilvorschau, wenn ein Name in einem Chat oder einer Liste angetippt wird
+- Profilvorschau, wenn in einem Chat oder einer Liste ein Name angetippt wird
 - Kurzfassung eines Wiki-Artikels oder einer Aufgabe beim Überfahren des Verweises
-- Zieladresse eines externen Verweises lesbar machen
+- Lesbar machen der Zieladresse eines externen Verweises
 
 ## Varianten
 
@@ -30,26 +30,26 @@ wieder, wenn der Zeiger abzieht.
 |----------|--------------|
 | **profil** | Avatar, Name, Rolle, letzte Aktivität |
 | **dokument** | Titel, Auszug, Bearbeiter, Änderungsdatum |
-| **vorschau** | Bild oder erstes Element des Zieles |
+| **vorschau** | Bild oder erstes Element des Ziels |
 
-## Features
+## Funktionen
 
-- Inhalt wird nach einer Verzögerung geladen, nicht beim ersten Drauffahren
-- Karte bleibt offen, wenn der Zeiger in die Karte wandelt (Inhalt ist bedienbar)
-- Auf Touch-Geräten erscheint die Karte nach Langdruck, schließt mit `Esc` oder Tippen
+- Der Inhalt wird nach einer Verzögerung geladen, nicht schon beim ersten Überfahren
+- Die Karte bleibt offen, wenn der Zeiger in die Karte wechselt (der Inhalt ist bedienbar)
+- Auf Touch-Geräten erscheint die Karte nach einem langen Drücken, schließt mit `Esc` oder einem Tippen
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [tooltip](../tooltip/): ein Tooltip erklärt ein Bedienelement
-  in einem Satz, die Karte zeigt Inhalt.
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält Aktionen,
-  die Karte zeigt eine Zusammenfassung.
+- **Nicht verwechseln mit** [tooltip](../tooltip/): ein Tooltip erklärt ein Bedienelement in einem
+  Satz, die Karte zeigt Inhalt.
+- **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält Aktionen, die Karte zeigt
+  eine Zusammenfassung.
 
 ## Best Practices
 
 - Höchstens fünf Informationen pro Karte.
 - Kein Scrollen in der Karte; wer alles lesen will, folgt dem Verweis.
-- Karten nicht in Listen mit vielen Zeilen gleichzeitig laden.
+- Lade in Listen mit vielen Zeilen nicht gleichzeitig alle Karten.
 
 ## Siehe auch
 

@@ -1,4 +1,4 @@
-# Drawer (Seitenleiste) - Verwendung
+# Drawer - Verwendung
 
 ## Einfacher Drawer
 
@@ -15,7 +15,7 @@
 </Drawer>
 ```
 
-## In App
+## In einer Anwendung
 
 ```jsx
 <AppShell>
@@ -51,7 +51,7 @@
 </Drawer>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Drawer 
@@ -64,15 +64,15 @@
 
 ## Beispiele
 
-## Beispiel 1: Mobile-Menu
+## Beispiel 1: Mobiles Menü
 
 ```
 ┌─────────────────────────────────────────┐
 │  ☰ Menü                                 │
 ├─────────────────────────────────────────┤
-│ 🏠 Home                                 │
-│ ℹ️ About                                │
-│ 🛍️ Shop                                │
+│ 🏠 Start                                │
+│ ℹ️ Über uns                             │
+│ 🛍️ Shop                                 │
 │ 📝 Blog                                 │
 │ 👥 Profil                               │
 ├─────────────────────────────────────────┤
@@ -96,7 +96,7 @@
 │   [ ] Mittel                            │
 │   [ ] Niedrig                           │
 │                                         │
-│ [Reset] [Anwenden]                      │
+│ [Zurücksetzen] [Anwenden]               │
 └─────────────────────────────────────────┘
 ```
 
@@ -106,32 +106,32 @@
 ┌─────────────────────────────────────────┐
 │  👤 Profil                              │
 ├─────────────────────────────────────────┤
-│  🖼️ John Doe                            │
-│  Developer                             │
-│  john@example.com                      │
+│  🖼️ Max Muster                          │
+│  Entwickler                             │
+│  max@example.com                        │
 ├─────────────────────────────────────────┤
 │ [Einstellungen]                         │
 │ [Abmelden]                              │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Sidebar (Links)
+## Beispiel 4: Seitenleiste (links)
 
 ```
 ┌─────────────────────────────────────────┐
 │  📱 Menü                                │
 ├─────────────────────────────────────────┤
-│ 🏠 Dashboard                            │
+│ 🏠 Übersicht                            │
 │ 📩 Nachrichten                          │
 │ 📅 Kalender                             │
 │ 👥 Kontakte                             │
 ├─────────────────────────────────────────┤
-│ 📊 Reports                              │
+│ 📊 Berichte                             │
 │ ⚙️ Einstellungen                        │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Checkout-Drawer
+## Beispiel 5: Warenkorb-Drawer
 
 ```
 ┌─────────────────────────────────────────┐
@@ -143,6 +143,6 @@
 │  ─────────────────────────              │
 │  Summe: €79,97                          │
 │                                         │
-│  [Weiter]                                │
+│  [Weiter]                               │
 └─────────────────────────────────────────┘
 ```

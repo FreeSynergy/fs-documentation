@@ -1,4 +1,4 @@
-# Tooltip (Kurzinfo) - Aussehen
+# Tooltip - Erscheinungsbild
 
 ## Grundlayout
 
@@ -20,7 +20,7 @@
 | **right** | rechts neben dem Element |
 | **bottom** | unter dem Element |
 | **left** | links neben dem Element |
-| **auto** | freie Wahl, kippt bei Randnähe |
+| **auto** | freie Wahl, klappt um, wenn es nah an einem Rand ist |
 
 ## Größen
 
@@ -34,20 +34,19 @@
 
 | Teil | Farbe |
 |------|-------|
-| Fläche | dunkle Fläche, im hellen Theme dunkelgrau, im dunklen heller |
+| Fläche | dunkle Fläche, dunkelgrau im hellen Design, heller im dunklen |
 | Text | hoher Kontrast zur Fläche |
 | `arrow` | gleiche Farbe wie die Fläche |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `fade-in` | Einblenden nach `delay` (Standard 400 ms) |
+| `fade-in` | blendet nach `delay` ein (Standard 400 ms) |
 | `fade-out` | kurzes Ausblenden, wenn der Zeiger das Element verlässt |
 
-## Reaktiv
+## Responsiv
 
-- Der Tooltip bleibt innerhalb des Viewports und kippt automatisch auf die
-  Gegenseite.
+- Der Tooltip bleibt im sichtbaren Bereich und klappt automatisch auf die andere Seite.
 
-- Bei `prefers-reduced-motion` ohne Animation sofort sichtbar.
+- Bei `prefers-reduced-motion` erscheint er sofort, ohne Animation.

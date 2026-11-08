@@ -1,41 +1,41 @@
-# Alert Dialog (Bestätigungsdialog) - Attribute
+# Alert Dialog - Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt von der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `title` | string | - | Frage als Titel |
-| `message` | string | - | Auswirkung in einem Satz |
-| `confirmLabel` | string | `Bestätigen` | Verb des Bestätigungs-Buttons |
-| `cancelLabel` | string | `Abbrechen` | Verb des Abbrechen-Buttons |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `title` | string | - | die Frage als Titel |
+| `message` | string | - | die Wirkung in einem Satz |
+| `confirmLabel` | string | `Confirm` | Verb des Bestätigungsbuttons |
+| `cancelLabel` | string | `Cancel` | Verb des Abbrechen-Buttons |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `destructive` | boolean | `false` | zerstörerische Variante (Fehlerfarbe) |
-| `confirmWord` | string | `null` | Wort, das zum Bestätigen getippt werden muss |
+| `confirmWord` | string | `null` | Wort, das zur Bestätigung eingegeben werden muss |
 | `busy` | boolean | `false` | Anfrage läuft, Aktionen gesperrt |
 | `closeOnEsc` | boolean | `true` | `Esc` = Abbrechen |
-| `closeOnOutsideClick` | boolean | `false` | Klick außerhalb bricht nicht ab |
+| `closeOnOutsideClick` | boolean | `false` | ein Klick außerhalb bricht nicht ab |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onConfirm` | function | Bestätigt |
-| `onCancel` | function | Abgebrochen oder `Esc` |
+| `onConfirm` | function | bestätigt |
+| `onCancel` | function | abgebrochen oder `Esc` |
 
 ## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `role` | string | `alertdialog` | - |
-| `aria-describedby` | string | - | id des Meldungstextes |
-| `initialFocus` | enum | `cancel` | zuerst fokussierter Button |
+| `aria-describedby` | string | - | ID des Nachrichtentextes |
+| `initialFocus` | enum | `cancel` | Button, der zuerst den Fokus erhält |
 
 ## Geerbt von
 

@@ -1,46 +1,46 @@
-# Tooltip (Kurzinfo) - Attribute
+# Tooltip - Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt von der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `content` | string | - | angezeigter Text, kein HTML und keine Aktionen |
 | `placement` | enum | `auto` | `top`, `right`, `bottom`, `left`, `auto` |
 | `open` | boolean | `null` | gesteuerte Sichtbarkeit (`null` = automatisch) |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `trigger` | enum | `hover` | `hover`, `focus`, `longpress` |
 | `delay` | number | `400` | Verzögerung vor dem Einblenden in ms |
 | `hideDelay` | number | `100` | Verzögerung vor dem Ausblenden in ms |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `arrow` | boolean | `true` | Pfeil zum Bezugselement |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `arrow` | boolean | `true` | Pfeil, der auf das Bezugselement zeigt |
 | `maxWidth` | number | `240` | maximale Breite in px |
 | `offset` | number | `8` | Abstand zum Element in px |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onShow` | function | Tooltip wurde angezeigt |
-| `onHide` | function | Tooltip wurde verborgen |
+| `onShow` | function | der Tooltip wurde angezeigt |
+| `onHide` | function | der Tooltip wurde ausgeblendet |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `role` | string | `tooltip` |
-| – | – | Das Bezugselement erhält `aria-describedby` auf den Tooltip |
-| – | – | Interaktiver Inhalt ist nicht zulässig |
+| – | – | das Bezugselement erhält `aria-describedby`, das auf den Tooltip zeigt |
+| – | – | interaktiver Inhalt ist nicht erlaubt |
 
 ## Geerbt von
 

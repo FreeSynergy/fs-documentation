@@ -1,7 +1,7 @@
-# Context Menu (Rechtsklick-Menü) - Aussehen
+# Context Menu - Erscheinungsbild
 
 ## Grundlayout
-Ein Context Menu wird durch Rechtsklick oder lange Touch-Aktion geöffnet.
+Ein Kontextmenü wird per Rechtsklick oder durch eine lange Berührung geöffnet.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -10,47 +10,47 @@ Ein Context Menu wird durch Rechtsklick oder lange Touch-Aktion geöffnet.
 │ 🗑️ Löschen                              │
 │ ─────────────────────                   │
 │ 🔄 Aktualisieren                        │
-│ ℹ️ Eigenschaften                         │
+│ ℹ️ Eigenschaften                        │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Auslöser | Aussehen |
-|----------|----------|----------|
+| Variante | Auslöser | Erscheinungsbild |
+|----------|----------|------------------|
 | **Standard** | Rechtsklick (Desktop) | Menü am Zeiger |
-| **Long Press** | lange Touch-Aktion | Menü über dem Objekt, Full-Width auf schmaler Fläche |
-| **Overflow Menu** | Klick auf drei Punkte | Menü unter der Schaltfläche |
+| **Long Press** | lange Berührung | Menü über dem Objekt, auf schmaler Fläche volle Breite |
+| **Overflow Menu** | Klick auf drei Punkte | Menü unter dem Button |
 
 ## Größen
 
 | Größe | Breite | Schriftgröße | Verwendung |
-|-------|--------|-------------|------------|
-| Small | 150px | 12px | Wenige Optionen |
+|-------|--------|--------------|------------|
+| Small | 150px | 12px | wenige Optionen |
 | Medium | 200px | 14px | Standard |
-| Large | 250px | 16px | Viele Optionen |
+| Large | 250px | 16px | viele Optionen |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Active** | Primärfarbe | Aktiver Menüpunkt |
-| **Hover** | Heller | Hover-Zustand |
-| **Disabled** | Grau | Deaktivierte Optionen |
-| **Danger** | Rot | Gefährliche Aktionen |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Aktiv** | Primärfarbe | aktiver Menüeintrag |
+| **Hover** | heller | Zustand beim Überfahren |
+| **Deaktiviert** | Grau | deaktivierte Optionen |
+| **Gefährlich** | Rot | gefährliche Aktionen |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `background` | Hintergrund ändert sich |
-| `color` | Farbe ändert sich |
-| `border-radius` | Ecken abgerundet |
+| `background` | der Hintergrund wechselt |
+| `color` | die Farbe wechselt |
+| `border-radius` | die Ecken sind abgerundet |
 
-## Reaktiv
+## Responsiv
 
-Das Menü klappt von der Auslösungsstelle weg und wechselt die Seite, wenn zum Bildschirmrand
-zu wenig Platz ist (`pop-in` von der jeweiligen Ecke). Ist es höher als der freie Raum,
+Das Menü klappt vom Auslösepunkt weg auf und wechselt die Seite, wenn bis zum Bildschirmrand
+zu wenig Platz ist (`pop-in` aus der jeweiligen Ecke). Ist es höher als der freie Platz,
 scrollt es selbst; der Auslösepunkt bleibt sichtbar.
 
 ```css
@@ -64,13 +64,13 @@ scrollt es selbst; der Auslösepunkt bleibt sichtbar.
 
 | Icon | Bedeutung |
 |------|-----------|
-| 📋 | Bearbeiten |
-| 📄 | Kopieren |
-| 🗑️ | Löschen |
-| 🔄 | Aktualisieren |
-| ℹ️ | Informationen |
+| 📋 | bearbeiten |
+| 📄 | kopieren |
+| 🗑️ | löschen |
+| 🔄 | aktualisieren |
+| ℹ️ | Information |
 
-## Separator
+## Trennlinie
 
 ```
 ┌─────────────────────────────────────────┐

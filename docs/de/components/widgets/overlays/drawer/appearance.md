@@ -1,4 +1,4 @@
-# Drawer (Seitenleiste) - Aussehen
+# Drawer - Erscheinungsbild
 
 ## Grundlayout
 Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
@@ -6,7 +6,7 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 ```
 ┌─────────────────────────────────────────┐
 │  ┌───────────────────────────────────┐  │
-│  │ [✕] Menü                        │  │
+│  │ [✕] Menü                          │  │
 │  ├───────────────────────────────────┤  │
 │  │                                   │  │
 │  │   Inhalt                          │  │
@@ -18,43 +18,43 @@ Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
 
 ## Varianten
 
-| Variant | Position | Beschreibung |
-|---------|----------|--------------|
-| **Left Drawer** | Links | Links |
-| **Right Drawer** | Rechts | Rechts |
-| **Bottom Drawer** | Unten | Unten |
-| **Full Drawer** | Voll | Vollständig |
+| Variante | Position | Beschreibung |
+|---------------|----------|--------------|
+| **Left Drawer** | links | links |
+| **Right Drawer** | rechts | rechts |
+| **Bottom Drawer** | unten | unten |
+| **Full Drawer** | vollständig | Vollbild |
 
 ## Größen
 
 | Größe | Breite/Höhe | Verwendung |
-|-------|-------------|------------|
-| Small | 200px | Wenige Elemente |
+| ------- | ------------- | ------------ |
+| Small | 200px | wenige Einträge |
 | Medium | 300px | Standard |
-| Large | 400px | Viele Elemente |
-| Full | 100% | Volle Breite/Höhe |
+| Large | 400px | viele Einträge |
+| Full | 100% | volle Breite/Höhe |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Background** | Hell | Hintergrund |
-| **Header** | Hell | Titelzeile |
-| **Overlay** | Dunkel | Hintergrund abdunkeln |
+| Zustand | Farbe | Beschreibung |
+| -------- | ------- | -------------- |
+| **Hintergrund** | hell | Hintergrund |
+| **Kopfbereich** | hell | Titelleiste |
+| **Overlay** | dunkel | Hintergrund abdunkeln |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| -------- | -------------- |
+| `shadow` | stärkerer Schatten |
+| `border` | der Rahmen leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-Der Drawer gleitet von der Kante herein (`slide-in`) und überdeckt den Inhalt mit
-Schatten; auf breiter Fläche kann er dauerhaft offen stehen und teilt den Raum dann wie
-[split-view](../../containers/split-view/). Auf schmaler Fläche wird der linke Drawer zum
-Overlay mit Abblenden, der Bottom Drawer füllt höchstens 80 % der Höhe.
+Der Drawer gleitet vom Rand herein (`slide-in`) und legt sich mit einem Schatten über den Inhalt;
+auf einer breiten Fläche kann er dauerhaft offen bleiben und teilt dann den Platz wie
+[split-view](../../containers/split-view/). Auf einer schmalen Fläche wird der linke Drawer zu einem
+Overlay mit Abdunkelung, der untere Drawer füllt höchstens 80 % der Höhe.
 
 ```css
 .drawer { position: fixed; top: 0; bottom: 0; left: 0; width: 300px;
@@ -67,7 +67,7 @@ Overlay mit Abblenden, der Bottom Drawer füllt höchstens 80 % der Höhe.
   .scrim { display: none; }
 }
 @media (max-width: 600px) {
-  .drawer--bottom { max-height: 80vh; }                        /* Bottom Drawer */
+  .drawer--bottom { max-height: 80vh; }                        /* unterer Drawer */
 }
 ```
 
@@ -76,7 +76,7 @@ Overlay mit Abblenden, der Bottom Drawer füllt höchstens 80 % der Höhe.
 ```
 ┌─────────────────────────────────────────┐
 │  ┌───────────────────────────────────┐  │
-│  │ [✕] Menü                        │  │
+│  │ [✕] Menü                          │  │
 │  │                                   │  │
 │  │   Inhalt                          │  │
 │  └───────────────────────────────────┘  │

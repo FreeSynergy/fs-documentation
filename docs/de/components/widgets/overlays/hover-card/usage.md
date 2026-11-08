@@ -1,18 +1,17 @@
-# Hover Card (Vorschaukarte) - Verwendung
+# Hover Card - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Die Karte hängt an einem Verweis. Sie wird nur geöffnet, wenn der Zeiger stabil auf dem
-Auslöser liegt; der Inhalt kommt aus dem bereits geladenen Datensatz oder wird nachgeladen.
+Die Karte hängt an einem Verweis. Sie öffnet sich nur, wenn der Zeiger ruhig auf dem
+Auslöser liegt; der Inhalt kommt aus dem bereits geladenen Datensatz oder wird danach abgerufen.
 
 ## Beispiele
 
-### Profilvorschau an einem Namen
+### Profilvorschau bei einem Namen
 
 ```jsx
 <HoverCard target={user.id} variant="profil" placement="top" />
@@ -28,6 +27,6 @@ Auslöser liegt; der Inhalt kommt aus dem bereits geladenen Datensatz oder wird 
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Name in Chatnachricht | `variant = "profil"`, `openDelay = 300` |
+| Name in einer Chat-Nachricht | `variant = "profil"`, `openDelay = 300` |
 | Verweis in einer Tabelle | `variant = "dokument"`, `size = "small"` |
-| Touch-Oberfläche | Langdruck, Karte als untere Leiste |
+| Touch-Fläche | langes Drücken, Karte als untere Leiste |

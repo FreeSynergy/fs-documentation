@@ -1,4 +1,4 @@
-# Modal (Modaler Dialog) - Verwendung
+# Modal - Verwendung
 
 ## Einfaches Modal
 
@@ -8,7 +8,7 @@
   isOpen={isOpen}
   onClose={() => setIsOpen(false)}
 >
-  <p>Möchten Sie fortfahren?</p>
+  <p>Möchtest du fortfahren?</p>
   <Modal.Footer>
     <Button onClick={() => setIsOpen(false)}>Abbrechen</Button>
     <Button variant="primary" onClick={handleConfirm}>Bestätigen</Button>
@@ -26,7 +26,7 @@
 >
   <form>
     <Input label="Name" value={name} onChange={setName} />
-    <Input label="Email" value={email} onChange={setEmail} />
+    <Input label="E-Mail" value={email} onChange={setEmail} />
   </form>
   <Modal.Footer>
     <Button onClick={() => setIsOpen(false)}>Abbrechen</Button>
@@ -35,7 +35,7 @@
 </Modal>
 ```
 
-## In App
+## In einer Anwendung
 
 ```jsx
 <App>
@@ -45,12 +45,12 @@
     isOpen={showInfo}
     onClose={() => setShowInfo(false)}
   >
-    <p>Hier ist die Info...</p>
+    <p>Hier sind die Infos ...</p>
   </Modal>
 </App>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Modal 
@@ -71,10 +71,10 @@
 │ [✕] Bestätigung                         │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Möchten Sie wirklich löschen?         │
+│   Dieses Element endgültig löschen?     │
 │                                         │
 ├─────────────────────────────────────────┤
-│  [Nein]               [Ja]              │
+│  [Nein]                 [Ja]            │
 └─────────────────────────────────────────┘
 ```
 
@@ -86,7 +86,7 @@
 ├─────────────────────────────────────────┤
 │ Name                                    │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━        │
-│ Email                                   │
+│ E-Mail                                  │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━        │
 │                                         │
 ├─────────────────────────────────────────┤
@@ -101,9 +101,9 @@
 │ [✕] Info                                │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Diese Funktion ermöglicht...          │
+│   Mit dieser Funktion kannst du ...     │
 │                                         │
-│   Weitere Informationen...              │
+│   Weitere Informationen ...             │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -115,9 +115,9 @@
 │ [✕] Fehler                              │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Es ist ein Fehler aufgetreten.        │
+│   Ein Fehler ist aufgetreten.           │
 │                                         │
-│   Bitte versuchen Sie es später erneut. │
+│   Bitte versuche es später erneut.      │
 │                                         │
 ├─────────────────────────────────────────┤
 │         [OK]                            │

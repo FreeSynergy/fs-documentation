@@ -1,4 +1,4 @@
-# Tooltip (Kurzinfo)
+# Tooltip
 
 | Feld | Wert |
 |------|------|
@@ -13,15 +13,14 @@
 
 ## Beschreibung
 
-Ein Tooltip zeigt eine kurze Erklärung zu einem Element – als Text, ohne
-interaktiven Inhalt. Er erscheint bei Hover oder Langdruck und verschwindet
-von selbst.
+Ein Tooltip zeigt eine kurze Erklärung zu einem Element — als Text, ohne interaktiven
+Inhalt. Er erscheint beim Überfahren oder langen Drücken und verschwindet von selbst.
 
 ## Verwendungszweck
 
-- Erklärung von Icon-only-Buttons und abgekürzten Werten
-- Kurzer Zusatz zu einem Feld (nicht als Ersatz für ein Label)
-- Vollständiger Text, wenn ein Feld den Inhalt nur anzeigt
+- Erklären von Schaltflächen nur mit Icon und abgekürzten Werten
+- Ein kurzer Zusatz zu einem Feld (nicht als Ersatz für ein Label)
+- Vollständiger Text, wenn ein Feld nur seinen Inhalt anzeigt
 
 ## Varianten
 
@@ -30,29 +29,29 @@ von selbst.
 | **top** | über dem Element (Standard) |
 | **bottom** | unter dem Element |
 | **left** / **right** | seitlich |
-| **auto** | wählt bei Platzmangel selbst die beste Seite |
+| **auto** | wählt selbst die beste Seite, wenn es eng wird |
 
-## Features
+## Funktionen
 
 - Verzögerung (`delay`) gegen versehentliches Auslösen
 - Pfeil (`arrow`) markiert das Bezugselement
-- Mobil: Auslösung per Langdruck
+- Mobil: wird per langem Drücken ausgelöst
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält
-  interaktive Inhalte, ein Tooltip ausschließlich Text.
-- **Nicht verwechseln mit** [hover-card](../hover-card/): die Hover-Card zeigt eine
-  Vorschau als Karte und bleibt offen, solange der Zeiger im Inhalt bleibt.
-- **Nicht verwechseln mit** [label](../../../primitives/basics/label/): ein Label ist ständig
-  sichtbar und mit dem Element verknüpft.
+- **Nicht verwechseln mit** [popover](../popover/): ein Popover enthält interaktive Inhalte,
+  ein Tooltip nur Text.
+- **Nicht verwechseln mit** [hover-card](../hover-card/): die Vorschaukarte zeigt eine Vorschau als Karte
+  und bleibt offen, solange der Zeiger im Inhalt bleibt.
+- **Nicht verwechseln mit** [label](../../../primitives/basics/label/): ein Label ist dauerhaft sichtbar
+  und fest mit dem Element verbunden.
 
 ## Best Practices
 
-- Unter 100 Zeichen; Sätze statt Absätze.
-- Nie entscheidende Information ausschließlich im Tooltip verstecken.
+- Unter 100 Zeichen; lieber Sätze als Absätze.
+- Entscheidende Informationen nie ausschließlich im Tooltip verbergen.
 - Tastaturnutzer erreichen den Tooltip über `focus`.
-- Icon-only-Buttons brauchen zusätzlich ein `aria-label`.
+- Schaltflächen nur mit Icon brauchen zusätzlich ein `aria-label`.
 
 ## Siehe auch
 

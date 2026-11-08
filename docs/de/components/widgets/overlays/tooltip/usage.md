@@ -1,11 +1,10 @@
-# Tooltip (Kurzinfo) - Verwendung
+# Tooltip - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Icon-only-Button erklären
+## Erklären einer Schaltfläche nur mit Icon
 
 ```jsx
 <IconButton icon="settings" aria-label="Einstellungen">
@@ -13,7 +12,7 @@
 </IconButton>
 ```
 
-## Vollständiger Text für abgeschnittenen Wert
+## Vollständiger Text für einen gekürzten Wert
 
 ```jsx
 <TableCell value={shortTitle}>
@@ -21,17 +20,17 @@
 </TableCell>
 ```
 
-## Tastaturkürzel zeigen
+## Anzeige eines Tastenkürzels
 
 ```jsx
 <Tooltip content="Speichern (Strg + S)" delay={0} />
 ```
 
-## Mobil per Langdruck
+## Mobil per langem Drücken
 
 ```jsx
 <ToolbarItem icon="filter">
-  <Tooltip content="Filtern" trigger="longpress" />
+  <Tooltip content="Filter" trigger="longpress" />
 </ToolbarItem>
 ```
 
@@ -39,7 +38,7 @@
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Icon-only-Button | Tooltip plus `aria-label` |
-| Abgeschnittener Tabellenwert | `placement="top"`, `delay={0}` |
-| Erklärtext zu einem Feld | lieber [field](../../../primitives/fields/field/) mit `help` |
-| Inhalt mit Buttons oder Links | [popover](../popover/), kein Tooltip |
+| Schaltfläche nur mit Icon | Tooltip plus `aria-label` |
+| gekürzter Tabellenwert | `placement="top"`, `delay={0}` |
+| erklärender Text zu einem Feld | besser [field](../../../primitives/fields/field/) mit `help` |
+| Inhalt mit Schaltflächen oder Links | [popover](../popover/), kein Tooltip |

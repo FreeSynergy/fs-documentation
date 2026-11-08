@@ -1,4 +1,4 @@
-# Alert Dialog (Bestätigungsdialog)
+# Alert Dialog
 
 | Feld | Wert |
 |------|------|
@@ -14,42 +14,42 @@
 
 ## Beschreibung
 
-Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird. Er ist die
-Kombination aus [modal](../modal/) (eigener Fokus, blockiert dahinterliegenden Inhalt)
-und [alert](../../../primitives/feedback/alert/) (Meldung mit Typ und Aktion).
+Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird. Er ist die Verbindung aus
+[modal](../modal/) (eigener Fokus, blockiert den Inhalt dahinter) und
+[alert](../../../primitives/feedback/alert/) (eine Meldung mit Typ und Aktion).
 
 ## Verwendungszweck
 
-- Zerstörerische Aktionen absichern (Löschen, Verlassen, Verwerfen)
-- Aktionen ohne Rückgabeweg bestätigen (Senden, Veröffentlichen)
-- Shortcuts ausführen, die nicht rückgängig gemacht werden können
+- Absicherung zerstörerischer Aktionen (löschen, verlassen, verwerfen)
+- Bestätigung von Aktionen ohne Rückweg (senden, veröffentlichen)
+- Ausführung von Abkürzungen, die sich nicht rückgängig machen lassen
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **bestaetigung** | neutrale Frage, Bestätigungs- und Abbrechen-Button |
-| **zerstoererisch** | Fehlerfarbe, Bestätigungs-Button erst nach Eingabe möglich |
+| **bestaetigung** | neutrale Frage, Bestätigen- und Abbrechen-Button |
+| **zerstoererisch** | Fehlerfarbe, der Bestätigungsbutton wird erst nach einer Eingabe möglich |
 
-## Features
+## Funktionen
 
-- Fokus liegt auf der Abbrechen-Aktion, `Esc` bricht ab
-- Bestätigungs-Button kann eine Tipp-Bestätigung verlangen (Name des Objekts)
-- Ladezustand blockiert beide Aktionen, während die Anfrage läuft
-- Kein eigenes Schließen-Symbol: entschieden wird mit einer der zwei Aktionen
+- Der Fokus liegt auf der Abbrechen-Aktion, `Esc` bricht ab
+- Der Bestätigungsbutton kann eine getippte Bestätigung verlangen (den Namen des Objekts)
+- Der Ladezustand sperrt beide Aktionen, solange die Anfrage läuft
+- Kein eigenes Schließen-Symbol: die Entscheidung fällt über eine der beiden Aktionen
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [modal](../modal/): ein Modal ist ein beliebiger Dialog,
-  der Bestätigungsdialog hat genau zwei Auswege und blockiert `Esc`-Verlust nicht.
-- **Nicht verwechseln mit** [toast](../../../primitives/feedback/toast/): ein Toast meldet nach der Tat
-  und bietet Rückgängig an, der Dialog fragt vorher.
+- **Nicht verwechseln mit** [modal](../modal/): ein Modal ist ein beliebiger Dialog, der
+  Bestätigungsdialog hat genau zwei Ausgänge und blockiert nicht ohne `Esc` zu verlieren.
+- **Nicht verwechseln mit** [toast](../../../primitives/feedback/toast/): ein Toast meldet nachträglich
+  und bietet Rückgängig an, der Dialog fragt vorab.
 
 ## Best Practices
 
-- Absicht im Titel nennen („Seite verwerfen?“), Auswirkung im Text.
-- Bestätigungs-Button als Verb („Verwerfen“), nie „OK“.
-- Rückgängige Aktionen nicht abfragen — stattdessen Toast mit Rückgängig.
+- Benenne die Absicht im Titel („Seite verwerfen?“), die Wirkung im Text.
+- Bestätigungsbutton als Verb („Verwerfen“), nie „OK“.
+- Frage nicht bei umkehrbaren Aktionen nach — nimm stattdessen einen Toast mit Rückgängig.
 
 ## Siehe auch
 

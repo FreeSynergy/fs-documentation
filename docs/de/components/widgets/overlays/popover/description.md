@@ -1,4 +1,4 @@
-# Popover (Inhaltspopover)
+# Popover
 
 | Feld | Wert |
 |------|------|
@@ -13,49 +13,48 @@
 
 ## Beschreibung
 
-Ein Popover ist ein kleines Overlay mit interaktivem Inhalt: Aktionen, eine
-Vorschau oder ein kurzes Formular. Es ist an ein Auslöser-Element gedockt,
-übernimmt aber – anders als ein Modal – nicht den ganzen Bildschirm.
+Ein Popover ist ein kleines Overlay mit interaktivem Inhalt: Aktionen, einer Vorschau oder einem
+kurzen Formular. Es hängt an einem Auslöser-Element, nimmt aber — anders als ein Modal — nicht
+den ganzen Bildschirm ein.
 
 ## Verwendungszweck
 
-- Sekundäraktionen an einem Eintrag (mehr-Menü mit Buttons)
-- Schnelleingaben ohne Seitenwechsel (Datum setzen, Label zuweisen)
-- Detailvorschau zu einem Eintrag (Kurzfassung vor dem Öffnen)
+- Zweitaktionen an einem Eintrag (Mehr-Menü mit Schaltflächen)
+- Schnelle Eingabe ohne Seitenwechsel (Datum setzen, Markierung vergeben)
+- Detaillierte Vorschau eines Eintrags (Kurzfassung vor dem Öffnen)
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
 | **inhalt** | Text, Bilder oder Vorschau, keine Formulareingabe |
-| **aktionen** | Liste von Aktionen (Abgrenzung zu context-menu: fester Auslöser) |
-| **formular** | kleines Formular, z. B. Datum oder Farbe setzen |
+| **aktionen** | Liste von Aktionen (Unterschied zum Kontextmenü: fester Auslöser) |
+| **formular** | kleines Formular, z. B. zum Setzen eines Datums oder einer Farbe |
 
-## Features
+## Funktionen
 
-- Fokus wandert in das Popover und nach dem Schließen zum Auslöser zurück
-- Schließen per Klick außerhalb, Escape oder Aktion im Popover
-- Andockposition wie beim [tooltip](../tooltip/)
+- Der Fokus wandert ins Popover und kehrt nach dem Schließen zum Auslöser zurück
+- Schließt sich bei einem Klick außerhalb, bei Escape oder bei einer Aktion im Popover
+- Positionierung am Auslöser wie beim [Tooltip](../tooltip/)
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [tooltip](../tooltip/): Tooltip = nur Text, nie
-  interaktiv.
+- **Nicht verwechseln mit** [tooltip](../tooltip/): Tooltip = nur Text, nie interaktiv.
 
-- **Nicht verwechseln mit** [modal](../modal/): ein Modal blockiert
-  und zentriert; ein Popover bleibt am Auslöser und lässt das Übrige bedienbar.
+- **Nicht verwechseln mit** [modal](../modal/): ein Modal sperrt und steht zentriert; ein Popover bleibt
+  am Auslöser und lässt den Rest bedienbar.
 
-- **Nicht verwechseln mit** [dropdown](../../../primitives/fields/select/): ein Dropdown
-  wählt einen Wert aus einer Liste, ein Popover trägt beliebigen Inhalt.
+- **Nicht verwechseln mit** [dropdown](../../../primitives/fields/select/): ein Dropdown wählt einen
+  Wert aus einer Liste, ein Popover trägt beliebigen Inhalt.
 
-- **Nicht verwechseln mit** [context-menu](../context-menu/): das
-  Kontextmenü folgt dem Rechtsklick, ein Popover einem festen Auslöser.
+- **Nicht verwechseln mit** [context-menu](../context-menu/): das Kontextmenü folgt dem Rechtsklick,
+  ein Popover folgt einem festen Auslöser.
 
 ## Best Practices
 
-- Escape und Klick außerhalb müssen schließen; Fokus kehrt zum Auslöser zurück.
+- Escape und ein Klick außerhalb müssen es schließen; der Fokus kehrt zum Auslöser zurück.
 - `aria-expanded` am Auslöser ist Pflicht.
-- Kein voller Dialog-Ersatz: für mehr als ~5 Eingabefelder ein `modal` verwenden.
+- Kein Ersatz für einen vollständigen Dialog: bei mehr als ~5 Eingabefeldern ein `modal` verwenden.
 
 ## Siehe auch
 

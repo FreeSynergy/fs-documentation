@@ -1,9 +1,8 @@
-# Popover (Inhaltspopover) - Verwendung
+# Popover - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Aktionen an einem Eintrag
 
@@ -11,7 +10,7 @@
 <Popover trigger="click" placement="bottom" variant="aktionen" content={entryActions} />
 ```
 
-## Schneller Dialog: Fälligkeit setzen
+## Schneller Dialog: Fälligkeitsdatum setzen
 
 ```jsx
 <Popover
@@ -28,7 +27,7 @@
 <Popover trigger="hover" placement="right" dismiss="click-outside" content={previewCard} />
 ```
 
-## Gesteuert öffnen und schließen
+## Gesteuertes Öffnen und Schließen
 
 ```jsx
 <Popover open={menuOpen} onClose={() => setMenuOpen(false)} content={rowMenu} />
@@ -39,6 +38,6 @@
 | Szenario | Empfehlung |
 |----------|------------|
 | Mehr-Menü an Tabellenzeilen | `aktionen`, `trigger="click"` |
-| Datum/Farbe schnell setzen | `formular`, `closeOnAction` |
-| Link-Ziel-Vorschau | [hover-card](../hover-card/), sonst `inhalt` mit `trigger="hover"` |
-| Zentrierter Bestätigungsdialog | [modal](../modal/) bzw. [alert-dialog](../alert-dialog/) |
+| Datum oder Farbe schnell setzen | `formular`, `closeOnAction` |
+| Vorschau eines Linkziels | [hover-card](../hover-card/), sonst `inhalt` mit `trigger="hover"` |
+| zentrierter Bestätigungsdialog | [modal](../modal/) oder [alert-dialog](../alert-dialog/) |

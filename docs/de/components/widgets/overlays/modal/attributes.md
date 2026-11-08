@@ -1,43 +1,43 @@
-# Modal (Modaler Dialog) - Attribute
+# Modal - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `title` | string | - | Titel |
-| `isOpen` | boolean | `false` | Ist geöffnet? |
-| `onClose` | function | - | Event beim Schließen |
+| `isOpen` | boolean | `false` | ist es geöffnet? |
+| `onClose` | function | - | Ereignis beim Schließen |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `closable` | boolean | `true` | Schließbar? |
-| `overlayClosable` | boolean | `true` | Klick auf Overlay schließt? |
-| `keyboardClosable` | boolean | `true` | ESC schließt? |
+| `closable` | boolean | `true` | schließbar? |
+| `overlayClosable` | boolean | `true` | schließt ein Klick auf das Overlay das Modal? |
+| `keyboardClosable` | boolean | `true` | schließt ESC das Modal? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
-| `onActionClick` | function | Wird bei Aktion-Klick ausgeführt |
+| `onOpen` | function | wird beim Öffnen ausgeführt |
+| `onClose` | function | wird beim Schließen ausgeführt |
+| `onActionClick` | function | wird bei einem Klick auf eine Aktion ausgeführt |
 
 ## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `role` | string | - | ARIA-Rolle: `dialog` |
 | `aria-modal` | boolean | `true` | Modal-Modus? |
 
-## Action-Attribute
+## Aktionsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `confirmLabel` | string | `Speichern` | Bestätigungs-Label |
-| `cancelLabel` | string | `Abbrechen` | Abbrech-Label |
-| `onConfirm` | function | - | Wird bei Bestätigung ausgeführt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `confirmLabel` | string | `Save` | Beschriftung der Bestätigung |
+| `cancelLabel` | string | `Cancel` | Beschriftung des Abbruchs |
+| `onConfirm` | function | - | wird bei Bestätigung ausgeführt |
 
 ## Geerbt von
 
