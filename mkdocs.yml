@@ -68,6 +68,7 @@ plugins:
             4 Interactions: Interactions
             5 Data standards: Data standards
             6 Manifesto: Manifesto
+            7 Decisions: Decisions
         - locale: de
           name: Deutsch
           build: true
@@ -79,6 +80,7 @@ plugins:
             4 Interactions: Interaktionen
             5 Data standards: Datenstandards
             6 Manifesto: Manifest
+            7 Decisions: Entscheidungen
 
 markdown_extensions:
   - abbr
