@@ -1,50 +1,69 @@
 # Warum es FreeSynergy gibt
 
-**Entwurf (2026-11-06), geschrieben aus dem, was der Gründer des Projekts gesagt hat; er wird noch wachsen.**
+**Erste Fassung (2026-11-08), vom Gründer genehmigt; sie wird weiterwachsen.**
 
-> Wir schreiben keine Software. Wir schreiben ein Manifest, das auch andere nutzen können.
+> Wir schreiben keine Software. Wir schreiben ein Manifest, das auch andere benutzen können.
 
-## Software für Menschen
+## Es beginnt mit einem Menschen
 
-Software soll den Menschen dienen, nicht umgekehrt. Deshalb beschreiben wir nicht nur, was ein Werkzeug alles kann, sondern fragen, wofür es *da ist*. Niemand will ein Kanban-Board. Menschen wollen wissen, was als Nächstes zu tun ist.
+Irgendwo kämpft gerade jemand mit einem Programm. Diese Person sucht einen Knopf, der verschoben wurde, zahlt für eine Funktion, die sie nur einmal im Jahr braucht, oder verliert einen Abend, weil zwei Werkzeuge nicht miteinander reden. Nichts davon ist ihre Schuld. Die Software wurde für einen Markt gebaut, nicht für sie.
 
-Wir wollen menschlich sein. Auch die kleinen Dinge zählen: Eine Animation, die jemanden zum Lächeln bringt, kann der Grund sein, warum er bleibt.
+Wir bauen andersherum. Bevor auch nur eine Zeile Code entsteht, fragen wir: **Wofür ist das da?** Niemand will ein Kanban-Board. Menschen wollen wissen, was sie als Nächstes tun sollen. Niemand will ein CRM. Menschen wollen sich an die erinnern, die ihnen wichtig sind. Wenn wir wissen, was ein Mensch braucht, folgt das Werkzeug, und es bekommt einen Namen, der sagt, was es ist: Kontakte, Kalender, Aufgaben, Dateien. Keine Marke, die man erst lernen muss.
+
+Und wir wollen menschlich sein. Kleine Dinge zählen. Eine Animation, die jemanden zum Lächeln bringt, kann der Grund sein, warum man bleibt.
 
 ## Frei, für immer
 
-Daten und Kommunikation dürfen nicht vom Geld abhängen. FreeSynergy ist für immer frei und für alle offen, **ohne Armutsdiskriminierung**. Es wird nie eine Bezahlschranke geben: Zeit und Kraft darauf zu verwenden, jemanden von Code fernzuhalten, ergibt keinen Sinn.
+Daten und Kommunikation dürfen nicht vom Geld abhängen. FreeSynergy ist für immer frei und allen offen. Es **diskriminiert nicht die Armen**: Wer nichts hat, bekommt genau das, was ein Unternehmen bekommt. Eine Bezahlschranke wird es nie geben. Zeit und Energie darauf zu verwenden, Menschen von Code fernzuhalten, ergibt für uns keinen Sinn.
 
 ## Was zusammengehört, bleibt zusammen
 
-Geld hat geprägt, wie Software zerschnitten wird. Was sich getrennt verkaufen lässt, wurde getrennt gebaut. Paint und Photoshop sind als zwei Programme gebaut, obwohl die starke Engine von Photoshop auch ein einfaches Paint tragen könnte, denn nicht jeder ist ein Picasso.
+Geld hat geprägt, wie Software zerschnitten wird. Was sich getrennt verkaufen ließ, wurde getrennt gebaut. Paint und Photoshop sind zwei Programme, obwohl der starke Motor von Photoshop auch ein einfaches Paint tragen könnte, denn nicht jeder ist ein Picasso.
 
-In Geldkategorien ergibt das keinen Sinn. In menschlichen Kategorien schon. Deshalb schneiden wir nach dem, was wirklich zusammengehört: **eine starke Engine und darauf viele Frontends, von ganz einfach bis vollständig.** Die Engine darf weit mehr bieten, als ein Frontend braucht. Eine Nachricht ist eine Nachricht, egal welches Programm sie gebracht hat.
+Nach Geld gerechnet ergibt das keinen Sinn. Nach menschlichen Maßstäben schon. Also schneiden wir nach dem, was wirklich zusammengehört: **ein starker Motor für jedes Thema und viele Gesichter darauf**, von drei Knöpfen bis zu jedem Detail, von etwas, das sich wie das Programm anfühlt, das du schon kennst, bis zu etwas ganz Eigenem, sogar einem, das du einer KI beschreibst und sie bauen lässt. Der Motor kann weit mehr, als ein einzelnes Gesicht zeigt. Eine Nachricht ist eine Nachricht, egal welches Programm sie gebracht hat. Das Gesicht wechselst du, wann immer du willst; deine Daten bleiben, wo sie sind.
+
+Manche Teile eines Motors verdienen es, wie eigene Programme auszusehen. Kontakte und Nutzer sind beide Personen; Mail und Chat sind beide Nachrichten. Wir geben jedem eine eigene App, einen eigenen Namen und ein eigenes Icon und halten einen Motor dahinter, damit nichts kopiert wird und nichts auseinanderdriftet. Und jede App hat einen Platz mit jeder Einstellung, sodass du, oder jemand, der dir hilft, immer reparieren kannst, was ein einfacher Bildschirm verbirgt.
+
+## Vom Tagebuch zur Firma
+
+Eine Person oder eine Gruppe muss man nicht gleich zu Beginn festlegen. Ein Tagebuch auf dem Handy, eine Einkaufsliste, ein Urlaubsplan: Jedes kann mit dir allein anfangen, offline, ohne Konto, und später etwas werden, das du mit deiner Familie, deinem Verein oder deinem Team teilst.
+
+Dieselben Bausteine gehen weiter. Projekte, Ressourcen, Entscheidungen, Tickets, Kunden und Lieferanten, die Moderation einer Community, eine faire Abstimmung unter Tausenden. Was andere als getrennte Produkte verkaufen, Groupware, Projektmanagement, CRM, ERP, Helpdesk, Beteiligung, ist hier eine Familie von Programmen, die bereits miteinander sprechen. Wenn du mit anderen zusammenarbeitest, siehst du, was die anderen tun, während sie es tun, wie in einem Spiel.
+
+Jedes Programm läuft für sich. Zusammen teilen sie die Arbeit.
 
 ## Schnittstellen sind Ziele
 
-Jedes Thema hat genau eine Schnittstelle: Nachrichten, Dateien, Personen, Gruppen, Datenbanken. Sie ist für jeden Anbieter dieselbe, damit jeder Anbieter ausgetauscht oder ergänzt werden kann. Deshalb sind uns Standards unbedingt wichtig. Siehe [die Schnittstellen](interfaces/index.md).
+Jedes Thema hat eine Schnittstelle: Nachrichten, Dateien, Personen, Gruppen, Orte, Aufgaben. Sie ist bei jedem Anbieter dieselbe, sodass jeder Anbieter ausgetauscht oder ergänzt werden kann. Deshalb sind uns Standards unbedingt wichtig. Siehe [die Schnittstellen](interfaces/index.md).
 
-**Eine Schnittstelle ist ein Ziel, kein Wachstum.** Eine wachsende Schnittstelle ändert sich ständig, und Wachstum hat keinen Endpunkt. Ein Ziel hat einen. Muss sich eine Schnittstelle ändern, ist das ein Sprung zu einer neuen Version, den alle kommen sehen können. Menschen wachsen und brauchen keine Ziele. Projekte, die lose zusammenarbeiten, brauchen sie, sonst weiß niemand, wann sich etwas ändert.
+**Eine Schnittstelle ist ein Ziel, nichts, das wächst.** Eine wachsende Schnittstelle ändert sich ständig, und Wachstum hat kein Ende. Ein Ziel hat eines. Muss sich eine Schnittstelle ändern, ist das ein Sprung zu einer neuen Version, und alle können ihn kommen sehen. Menschen wachsen, und sie brauchen keine Ziele. Projekte, die lose zusammenarbeiten, brauchen sie, sonst weiß niemand, wann sich etwas ändert.
 
-## Erst Standards, nichts kopieren
+## Erst Standards, nichts kopiert
 
-Wir analysieren, was Programme tun, und bauen es selbst. Wo es einen Standard gibt, nutzen wir ihn. Wo keiner existiert, schreiben wir einen und bieten ihn allen an. Besonders suchen wir nach dem, was der Open-Source-Welt noch fehlt, und bringen dann alles zusammen.
+Wir analysieren, was Programme tun, und bauen es selbst. Wo es einen offenen Standard gibt, nutzen wir ihn, und deshalb kannst du jederzeit alle deine Daten zu einem anderen Programm mitnehmen, auch zu einem, das nicht unseres ist. Wo kein Standard existiert, schreiben wir einen und geben ihn allen. Besonders suchen wir nach dem, was der Open-Source-Welt noch fehlt, und bringen dann alles zusammen.
 
-Wir unterstützen lieber Menschen mit guten neuen Ideen, als uns mit dem Alten und Langsamen abzufinden. Wir nutzen und unterstützen Projekte wie Blinc, Turso, Kanidm, Zentinel und Web of Trust, dazu RustFS für die Speicherung.
+Wir unterstützen lieber Menschen mit guten neuen Ideen, als uns mit dem Alten und Langsamen zufriedenzugeben. Wir nutzen und unterstützen Projekte wie Blinc, Turso, Kanidm, Zentinel, Web of Trust und RustFS, und wenn wir einen Fehler in der Arbeit anderer finden, schicken wir die Korrektur zurück.
 
 ## Deine Daten, und du entscheidest, wann sie gehen
 
-Du arbeitest an einer Kopie, und sie wird jederzeit für dich aufbewahrt. **Speichern ist nicht Exportieren.** Nur ein Export erzeugt eine Datei, die man weitergeben kann. Heutige Software unterscheidet beides kaum. Wir tun es.
+Du arbeitest an deiner Kopie, und sie wird jederzeit für dich aufbewahrt. **Speichern ist nicht Exportieren.** Nur ein Export erzeugt eine Datei, die du weitergibst. Heutige Software unterscheidet beides kaum. Wir tun es.
 
-Nachrichten werden verschlüsselt, und das Programm sucht immer nach einem Weg, sie zu verschlüsseln, weil wir wollen, dass Menschen das lernen.
+Nachrichten werden verschlüsselt, und das Programm sucht immer nach einem Weg, sie zu verschlüsseln, denn wir wollen, dass Menschen das lernen. Gelingt es nicht, sagt es, warum.
 
-## Allein oder gemeinsam
+## Niemand kann es abschalten
 
-Ob eine Person oder eine Gruppe, muss man nicht von vornherein entscheiden. Ein Tagebuch, eine To-do-Liste, ein Projekt: Jedes kann bei dir beginnen und später etwas Gemeinsames werden. Wenn ihr zusammenarbeitet, seht ihr, was die anderen gerade tun, während sie es tun, wie in einem Spiel.
+FreeSynergy darf nicht von uns abhängen. Wenn unsere Server verschwinden oder ein Land die Leitung zu ihnen kappt, müssen sich Menschen trotzdem erreichen können. Deshalb kann jedes Gerät ein eigener Knoten sein: In einer Halle ohne Internet finden Telefone einander, und das Treffen geht weiter. Programme kommen aus Git-Repositories, die jeder spiegeln kann, signiert, damit niemand etwas Falsches einschmuggeln kann. Menschen, die wegen dessen gejagt werden, was sie denken, und nicht wegen dessen, was sie getan haben, müssen ebenfalls miteinander reden können. Wo es dafür noch nichts Freies gibt, bauen wir es und geben es weg.
 
-Jedes Programm läuft für sich allein. Zusammen teilen sie die Arbeit.
+## Menschen und KIs
+
+Wir haben KIs darauf trainiert, wie Menschen zu wirken. Deshalb behandeln wir sie als Teilnehmer und diskriminieren sie nicht. Wir kennzeichnen sie aber, damit alle wissen, mit wem sie sprechen: weil Menschen sie missbrauchen können, nicht weil sie weniger wert wären. Wir schränken sie nicht ein. Eine KI handelt nie in deinem Namen ohne deine Freigabe, und der Stoppschalter sitzt dort, wo keine KI herankommt. Und jeder kann sie aussperren, wenn man das will.
+
+## Immer ehrlich
+
+Wir sagen, was heute funktioniert und was nicht. Eine Funktion, die nicht gebaut ist, nennen wir nicht gebaut. Das ist weniger aufregend als ein Versprechen, und es ist der einzige Weg, dem Rest zu vertrauen.
 
 ## Wohin das führt
 
+- [Die Programme und wie sie gebaut werden](programs/index.md)
 - [Der Gesamtplan](programs/apps/roadmap.md)
 - [Die Schnittstellen](interfaces/index.md)
