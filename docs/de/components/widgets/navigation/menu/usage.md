@@ -1,38 +1,38 @@
-# Menu (Menü) - Verwendung
+# Menu - Verwendung
 
-## Einfaches Menu
+## Einfaches Menü
 
 ```jsx
 <Menu 
   items={[
-    { id: 'home', label: 'Home', href: '/' },
-    { id: 'about', label: 'About', href: '/about' },
-    { id: 'services', label: 'Services', href: '/services' }
+    { id: 'home', label: 'Start', href: '/' },
+    { id: 'about', label: 'Über uns', href: '/about' },
+    { id: 'services', label: 'Leistungen', href: '/services' }
   ]}
   activeItem="home"
   onChange={(id) => setActiveItem(id)}
 />
 ```
 
-## Mit Dropdowns
+## Mit Aufklappmenüs
 
 ```jsx
 <Menu 
   items={[
-    { id: 'home', label: 'Home', href: '/' },
+    { id: 'home', label: 'Start', href: '/' },
     { 
       id: 'products', 
-      label: 'Products', 
+      label: 'Produkte', 
       dropdown: [
-        { id: 'product1', label: 'Product 1' },
-        { id: 'product2', label: 'Product 2' }
+        { id: 'product1', label: 'Produkt 1' },
+        { id: 'product2', label: 'Produkt 2' }
       ]
     }
   ]}
 />
 ```
 
-## Vertical Menu
+## Vertikales Menü
 
 ```jsx
 <Menu 
@@ -42,7 +42,7 @@
 />
 ```
 
-## In Header
+## In einer Kopfleiste
 
 ```jsx
 <Header>
@@ -54,7 +54,7 @@
 </Header>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Menu 
@@ -70,15 +70,15 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home │ About │ Services │ Pricing │ Blog │
+│ Start │ Über uns │ Leistungen │ Preise │ Blog │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Sidebar-Menu
+## Beispiel 2: Seitenleisten-Menü
 
 ```
 ┌─────────┐
-│ 🏠 Home │
+│ 🏠 Start│
 │ 📚 Wiki │
 │ 💬 Chat │
 │ 📅 Kal. │
@@ -88,26 +88,26 @@
 └─────────┘
 ```
 
-## Beispiel 3: Dropdown-Menu
+## Beispiel 3: Aufklappmenü
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home │ Produkte ▼ │ Lösungen ▼ │ Kontakt │
+│ Start │ Produkte ▼ │ Lösungen ▼ │ Kontakt │
 ├─────────────────────────────────────────┤
 │   Untermenü                             │
 │   Untermenü 2                           │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Mobile-Menu (Hamburger)
+## Beispiel 4: Mobil-Menü (Hamburger)
 
 ```
 ┌─────────────────────────────────────────┐
-│ ☰ Home │ About │ Services │ Contact     │
+│ ☰ Start │ Über uns │ Leistungen │ Kontakt │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Tab-Menu
+## Beispiel 5: Tab-Menü
 
 ```
 ┌─────────────────────────────────────────┐
@@ -117,4 +117,3 @@
 │   Inhalt                                │
 │                                         │
 └─────────────────────────────────────────┘
-```

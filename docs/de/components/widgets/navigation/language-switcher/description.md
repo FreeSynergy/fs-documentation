@@ -1,4 +1,4 @@
-# Language Switcher (Sprachumschalter)
+# Language Switcher
 
 | Feld | Wert |
 |------|------|
@@ -12,11 +12,11 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
+Ein Sprachumschalter ist ein Bedienelement zum Wechseln der Sprache der Anwendung.
 
 ## Verwendungszweck
 
-- Spracheinstellungen ändern
+- Ändern der Spracheinstellung
 - Mehrsprachigkeit
 - Regionale Anpassung
 
@@ -24,48 +24,48 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **dropdown** | aktuelle Sprache plus Aufklappliste |
-| **knopetreihe** | jede Sprache als eigener Knopf (bis drei Sprachen) |
-| **flaggen** | nur Zeichen, mit Tooltip |
-| **kombiniert** | Knopfreihe mit `…`-Dropdown für weitere Sprachen |
+| **dropdown** | aktuelle Sprache plus eine aufklappbare Liste |
+| **knopetreihe** | jede Sprache als eigene Schaltfläche (bis zu drei Sprachen) |
+| **flaggen** | nur Symbole, mit Tooltip |
+| **kombiniert** | Reihe von Schaltflächen mit einem `…`-Dropdown für weitere Sprachen |
 
-## Features
+## Funktionen
 
 - Automatische Erkennung
-- Persistente Einstellung
-- Live-Wechsel
-- Kein Reload nötig
+- Dauerhaft gespeicherte Einstellung
+- Wechsel im laufenden Betrieb
+- Kein Neuladen nötig
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [select](../../../primitives/fields/select/): ein Feldwert bleibt im Formular,
-  die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
-- **Nicht verwechseln mit** [menu](../menu/): das Menü ruft Aktionen auf, dieser Schalter
-  wechselt nur eine Einstellung.
+- **Nicht verwechseln mit** [select](../../../primitives/fields/select/): ein Feldwert bleibt im
+  Formular, die Sprache gilt für die ganze Anwendung und wird dauerhaft gemerkt.
+- **Nicht verwechseln mit** [menu](../menu/): ein Menü löst Aktionen aus, dieser Umschalter ändert
+  nur eine Einstellung.
 - Flaggen stehen nicht für Sprachen: Englisch wird in vielen Ländern gesprochen.
 
 ## Best Practices
 
-- Sprachnamen in der jeweiligen Sprache schreiben ("Deutsch", "English", "Français").
-- Sprachkurse (`de`, `en`) zeigen statt Flaggen, wenn es um Sprache und nicht um Region geht.
-- Standardsprache aus dem System übernehmen, Auswahl im Profil und am Gerät merken.
-- Ohne Neuladen umschalten; fehlende Überschriften in der Zweitsprache kennzeichnen.
-- Rechts-nach-links-Sprachen mitdenken (Layoutspiegelung), nicht nur übersetzen.
+- Schreib Sprachnamen in der Sprache selbst („Deutsch“, „English“, „Français“).
+- Zeig Sprachcodes (`de`, `en`) statt Flaggen, wenn es um Sprache und nicht um Region geht.
+- Übernimm die Standardsprache aus dem System, merke die Auswahl im Profil und auf dem Gerät.
+- Wechsle ohne Neuladen; markiere Überschriften, die in der Zweitsprache fehlen.
+- Denk an Rechts-nach-links-Sprachen (gespiegeltes Layout), nicht nur an Übersetzungen.
 
-## Größe-Varianten
+## Größenvarianten
 
 | Größe | Verwendung |
 |-------|------------|
-| Small | In der Header-Leiste |
-| Medium | In den Einstellungen |
-| Large | Auf der Startseite |
+| Small | in der Kopfleiste |
+| Medium | in den Einstellungen |
+| Large | auf der Startseite |
 
-## Farb-Varianten
+## Farbvarianten
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Default** | Normal | Standard-Style |
-| **Active** | Primärfarbe | Aktive Sprache |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Standard** | normal | Standardstil |
+| **Aktiv** | Primärfarbe | aktive Sprache |
 
 ## Sprachen
 
@@ -80,6 +80,6 @@ Ein Language Switcher ist ein UI-Element zum Wechseln der Anwendungssprache.
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Select](../../../primitives/fields/select/) — Wert in einem Formular
-- [Toolbar](../toolbar/) — üblicher Ort des Schalters
+- [Select](../../../primitives/fields/select/) — ein Wert in einem Formular
+- [Toolbar](../toolbar/) — der übliche Platz für den Umschalter
 - [Basiskomponente](../../../primitives/basics/base.md)

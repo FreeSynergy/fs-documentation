@@ -2,18 +2,18 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `languages` | array[] | - | Array von Sprachen |
-| `currentLanguage` | string | - | Aktuelle Sprache |
-| `onChange` | function | - | Event bei Sprachwechsel |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `languages` | array[] | - | Array der Sprachen |
+| `currentLanguage` | string | - | aktuelle Sprache |
+| `onChange` | function | - | Ereignis beim Sprachwechsel |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| `onOpen` | function | wird beim Öffnen ausgeführt |
+| `onClose` | function | wird beim Schließen ausgeführt |
 
 ## Barrierefreiheit
 
@@ -21,26 +21,26 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `combobox` |
 
-## Sprach-Attribute
+## Sprachattribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `code` | string | Sprachcode (z.B. 'de', 'en') |
+| `code` | string | Sprachcode (z. B. 'de', 'en') |
 | `label` | string | Anzeigename |
 | `flag` | string | Flaggen-Emoji |
 
-## Varianten-Attribute
+## Variantenattribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showCurrentLanguage` | boolean | `true` | Aktuelle Sprache anzeigen? |
+| `showCurrentLanguage` | boolean | `true` | aktuelle Sprache anzeigen? |
 | `showFlags` | boolean | `true` | Flaggen anzeigen? |
 
-## Features-Attribute
+## Funktionsattribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `autoDetect` | boolean | `false` | Automatische Erkennung? |
+| `autoDetect` | boolean | `false` | automatische Erkennung? |
 | `persist` | boolean | `true` | Einstellung speichern? |
 | `reload` | boolean | `false` | Seite neu laden? |
 

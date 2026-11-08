@@ -1,8 +1,8 @@
-# Menu (Menü) - Aussehen
+# Menu - Erscheinungsbild
 
 ## Grundlayout
 
-Ein Menu ist eine klickbare Menüleiste, die oft oben platziert wird.
+Ein Menü ist eine klickbare Menüleiste, oft oben platziert.
 
 ## Varianten
 
@@ -10,59 +10,59 @@ Ein Menu ist eine klickbare Menüleiste, die oft oben platziert wird.
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home │ About │ Services │ Contact       │
+│ Start │ Über uns │ Leistungen │ Kontakt │
 └─────────────────────────────────────────┘
 ```
 
-### Vertical (Sidebar)
+### Vertikal (Seitenleiste)
 
 ```
 ┌─────────┐
-│ Home    │
-│ About   │
-│ Services│
-│ Contact │
+│ Start   │
+│ Über uns│
+│ Leistung│
+│ Kontakt │
 └─────────┘
 ```
 
 ## Größen
 
 | Größe | Höhe | Schriftgröße | Verwendung |
-|-------|------|-------------|------------|
-| Small | 32px | 12px | Inline |
+| ------- | ------ | ------------- | ------------ |
+| Small | 32px | 12px | im Text |
 | Medium | 48px | 14px | Standard |
-| Large | 64px | 16px | Featured |
+| Large | 64px | 16px | hervorgehoben |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Active** | Primärfarbe | Aktiver Menüpunkt |
-| **Inactive** | Grau | Inaktive Menüpunkte |
-| **Hover** | Heller | Hover-Zustand |
-| **Disabled** |ausgegraut | Deaktivierte Menüpunkte |
+| Zustand | Farbe | Beschreibung |
+| -------- | ------- | -------------- |
+| **Aktiv** | Primärfarbe | aktiver Menüeintrag |
+| **Inaktiv** | Grau | inaktive Menüeinträge |
+| **Hover** | heller | Zustand beim Überfahren |
+| **Deaktiviert** | ausgegraut | deaktivierte Menüeinträge |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
-| `background` | Hintergrund ändert sich |
-| `border-bottom` | Unterstrich erscheint |
-| `shadow` | Schatten erscheint |
+| -------- | -------------- |
+| `color` | die Farbe wechselt |
+| `background` | der Hintergrund wechselt |
+| `border-bottom` | eine Unterstreichung erscheint |
+| `shadow` | ein Schatten erscheint |
 
-## Reaktiv
+## Responsiv
 
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volles Menu sichtbar |
-| Mobile (<480px) | Hamburger-Menu |
+| Haltepunkt | Verhalten |
+| ------------ | ----------- |
+| Desktop (>768px) | das ganze Menü ist sichtbar |
+| Mobil (<480px) | Hamburger-Menü |
 
-## Dropdown-Menu
+## Aufklappmenü
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home │ About ▼ │ Services ▼ │ Contact   │
+│ Start │ Über uns ▼ │ Leistungen ▼ │ Kontakt │
 ├─────────────────────────────────────────┤
 │   Untermenü                             │
 │   Untermenü 2                           │

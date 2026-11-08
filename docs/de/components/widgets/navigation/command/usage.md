@@ -1,14 +1,13 @@
-# Command (Befehlspalette) - Verwendung
+# Command - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Die Palette wird einmal pro Programmfenster angelegt und ist global über das Kürzel
-erreichbar. Sie erhält die Befehle der aktuell aktiven Ansicht.
+Die Palette wird einmal pro Programmfenster erzeugt und ist über das Tastenkürzel global erreichbar.
+Sie erhält die Befehle der gerade aktiven Ansicht.
 
 ## Beispiele
 
@@ -18,7 +17,7 @@ erreichbar. Sie erhält die Befehle der aktuell aktiven Ansicht.
 <Command commands={commands} hotkey="ctrl+k" onSelect={run} />
 ```
 
-### Befehle aus einer Werkzeugleiste heraus öffnen
+### Befehle aus einer Werkzeugleiste öffnen
 
 ```jsx
 <Command commands={viewCommands} open={paletteOpen} onClose={close} />
@@ -29,5 +28,5 @@ erreichbar. Sie erhält die Befehle der aktuell aktiven Ansicht.
 | Szenario | Empfehlung |
 |----------|------------|
 | Desktop-Client | `hotkey = "ctrl+k"`, Palette zentriert |
-| Mobile | `inline` in der Seitenleiste, kein Kürzel |
-| Befehl nicht gefunden | Hinweis mit Vorschlägen statt leerer Liste |
+| Mobil | `inline` in der Seitenleiste, kein Tastenkürzel |
+| Befehl nicht gefunden | Hinweis mit Vorschlägen statt einer leeren Liste |

@@ -1,4 +1,4 @@
-# Command (Befehlspalette) - Aussehen
+# Command - Erscheinungsbild
 
 ## Grundlayout
 
@@ -8,19 +8,19 @@
         ├────────────────────────────────────────┤
         │ Aktionen                               │
         │   Aufgabe anlegen               Strg N │
-        │ Ansichten                                │
+        │ Ansichten                              │
         │   Zum Kalender wechseln         Strg 3 │
-        │ Programme                                │
+        │ Programme                              │
         │   Whiteboard öffnen             Strg W │
         └────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **palette** | Overlay mittig, 640 px breit, dunkler Hintergrund dahinter |
-| **inline** | ohne Hintergrund, Breite der Elternbox |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **palette** | zentriertes Overlay, 640 px breit, dunkler Hintergrund dahinter |
+| **inline** | kein Hintergrund, Breite des übergeordneten Feldes |
 
 ## Größen
 
@@ -32,22 +32,22 @@
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
+| Zustand | Erscheinungsbild |
+|---------|------------------|
 | `default` | Eingabefeld hell, Trefferliste neutral |
 | `open` | Fokus im Eingabefeld, erster Treffer markiert |
 | `hover` | Zeilenhintergrund eine Stufe dunkler |
 | `empty` | Hinweis „Kein Treffer“ plus Vorschläge |
 | `loading` | Skeleton in der Trefferliste |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `reveal` | Kürzel rechts in der Zeile, dezent |
+| `reveal` | Tastenkürzel rechts in der Zeile, dezent |
 | `ring` | Markierung des aktiven Treffers über die ganze Zeile |
 
-## Reaktiv
+## Responsiv
 
 - Auf schmalen Bildschirmen füllt die Palette die volle Breite und Höhe.
-- Die Trefferliste scrollt; Eingabezeile bleibt oben stehen.
+- Die Trefferliste scrollt; die Eingabezeile bleibt oben fixiert.

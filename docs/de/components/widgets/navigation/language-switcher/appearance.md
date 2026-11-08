@@ -1,8 +1,8 @@
-# Language Switcher - Aussehen
+# Language Switcher - Erscheinungsbild
 
 ## Grundlayout
 
-Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
+Ein Sprachumschalter zeigt die aktuelle Sprache und erlaubt den Wechsel.
 
 ## Varianten
 
@@ -18,7 +18,7 @@ Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
 └─────────────────────────────────────────┘
 ```
 
-### Buttons
+### Schaltflächen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -38,30 +38,30 @@ Ein Language Switcher zeigt die aktuelle Sprache und ermöglicht den Wechsel.
 
 | Größe | Verwendung |
 |-------|------------|
-| Small | In der Header-Leiste (24px) |
-| Medium | In den Einstellungen (48px) |
-| Large | Auf der Startseite (64px) |
+| Small | in der Kopfleiste (24px) |
+| Medium | in den Einstellungen (48px) |
+| Large | auf der Startseite (64px) |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Default** | Normal | Standard-Style |
-| **Active** | Primärfarbe | Aktive Sprache |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Standard** | normal | Standardstil |
+| **Aktiv** | Primärfarbe | aktive Sprache |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `scale` | Vergrößerung |
-| `color` | Farbe ändert sich |
-| `shadow` | Schatten stärker |
+| `color` | die Farbe wechselt |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- In der Kopf- und Werkzeugleiste steht der Schalter in `small`; wird der Platz knapp,
-  bleibt nur das Sprachkürzel (`DE`) übrig, der Name entfällt.
-- Auf schmalen Bildschirmen wechselt die Knopfreihe zur Variante `kombiniert`; der Rest
-  der Sprachen steckt im Dropdown.
-- Längere Sprachnamen (`Español`, `Português`) kürzen nicht, sie bestimmen die Breite des
-  Schalters — deshalb in Leisten das Kürzel bevorzugen.
+- In Kopfleiste und Werkzeugleiste sitzt der Umschalter in `small`; wird es eng, bleibt nur das
+  Sprachkürzel (`DE`) und der Name entfällt.
+- Auf schmalen Bildschirmen wechselt die Schaltflächenreihe zur Variante `kombiniert`; die übrigen
+  Sprachen stehen im Dropdown.
+- Längere Sprachnamen (`Español`, `Português`) werden nicht gekürzt, sie bestimmen die Breite des
+  Umschalters — deshalb bevorzugen Leisten das Kürzel.

@@ -25,7 +25,7 @@
 />
 ```
 
-## In Header
+## In der Kopfleiste
 
 ```jsx
 <Header>
@@ -39,7 +39,7 @@
 </Header>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <LanguageSwitcher 
@@ -55,11 +55,11 @@
 
 ## Beispiele
 
-## Beispiel 1: Header-Wechsel
+## Beispiel 1: Umschalter in der Kopfleiste
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🏠 Home  📚 Wiki  📬 Nachrichten        │
+│ 🏠 Start  📚 Wiki  📬 Nachrichten       │
 │                                🇩🇪 🇬🇧  │
 └─────────────────────────────────────────┘
 ```
@@ -92,7 +92,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Flaggen-Buttons
+## Beispiel 4: Flaggen-Schaltflächen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -100,7 +100,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Auto-Detect
+## Beispiel 5: automatische Erkennung
 
 ```
 ┌─────────────────────────────────────────┐

@@ -1,12 +1,12 @@
-# Pagination - Aussehen
+# Pagination - Erscheinungsbild
 
 ## Grundlayout
 
-Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
+Pagination ist eine Navigation für große Listen, die die Daten auf Seiten verteilt.
 
 ## Varianten
 
-### Numeric (Numerisch)
+### Nummeriert
 
 ```
 ┌─────────────────────────────────────────┐
@@ -14,7 +14,7 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 └─────────────────────────────────────────┘
 ```
 
-### Previous/Next
+### Vor/Zurück
 
 ```
 ┌─────────────────────────────────────────┐
@@ -22,7 +22,7 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 └─────────────────────────────────────────┘
 ```
 
-### Load More
+### Mehr laden
 
 ```
 ┌─────────────────────────────────────────┐
@@ -30,52 +30,52 @@ Pagination ist eine Navigation für große Listen, die Daten in Seiten aufteilt.
 └─────────────────────────────────────────┘
 ```
 
-### Infinite Scroll
+### Endloses Scrollen
 
 ```
 ┌─────────────────────────────────────────┐
-│ (Automatisch nachladen beim Scrollen)   │
+│ (lädt beim Scrollen automatisch nach)   │
 └─────────────────────────────────────────┘
 ```
 
 ## Größen
 
 | Größe | Schriftgröße | Verwendung |
-|-------|-------------|------------|
-| Small | 12px | Inline |
+| ------- | ------------- | ------------ |
+| Small | 12px | im Text |
 | Medium | 14px | Standard |
-| Large | 16px | Featured |
+| Large | 16px | hervorgehoben |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Active** | Primärfarbe | Aktuelle Seite |
-| **Inactive** | Grau | Inaktive Seiten |
-| **Hover** | Heller | Hover-Zustand |
-| **Disabled** | Grau | Deaktivierte Buttons |
+| Zustand | Farbe | Beschreibung |
+| -------- | ------- | -------------- |
+| **Aktiv** | Primärfarbe | aktuelle Seite |
+| **Inaktiv** | Grau | inaktive Seiten |
+| **Hover** | heller | Zustand beim Überfahren |
+| **Deaktiviert** | Grau | deaktivierte Schaltflächen |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `background` | Seitenzahl bekommt eine Fläche |
-| `ring` | Fokus-Ring bei Tastaturnavigation |
-| `underline` | Unterstrich beim aktiven Eintrag |
+| -------- | -------------- |
+| `background` | die Seitenzahl erhält eine gefüllte Fläche |
+| `ring` | Fokusring bei Tastaturnavigation |
+| `underline` | Unterstreichung beim aktiven Eintrag |
 | `none` | deaktivierte Pfeile ohne Rückmeldung |
 
-## Reaktiv
+## Responsiv
 
-| Breakpoint | Verhalten |
-|------------|-----------|
-| Desktop (>768px) | Volle Pagination sichtbar |
-| Tablet (480-768px) | Kompakt |
-| Mobile (<480px) | Previous/Next oder Load More |
+| Haltepunkt | Verhalten |
+| ------------ | ----------- |
+| Desktop (>768px) | die volle Pagination ist sichtbar |
+| Tablet (480-768px) | kompakt |
+| Mobil (<480px) | Vor/Zurück oder Mehr laden |
 
-## Features
+## Funktionen
 
-- **Total Items**: Gesamtanzahl der Elemente
-- **Current Page**: Aktuelle Seite
-- **Items per Page**: Elemente pro Seite
-- **Jump to Page**: Direkt zu Seite springen
-- **Page Size Selector**: Anzahl pro Seite ändern
+- **Total Items**: Gesamtzahl der Einträge
+- **Current Page**: aktuelle Seite
+- **Items per Page**: Einträge pro Seite
+- **Jump to Page**: direkt zu einer Seite springen
+- **Page Size Selector**: Anzahl der Einträge pro Seite ändern

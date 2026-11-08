@@ -2,39 +2,39 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `currentPage` | number | 1 | Aktuelle Seite |
-| `totalItems` | number | - | Gesamtanzahl |
-| `itemsPerPage` | number | 10 | Elemente pro Seite |
-| `onChange` | function | - | Event bei Seitenwechsel |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `currentPage` | number | 1 | aktuelle Seite |
+| `totalItems` | number | - | Gesamtzahl |
+| `itemsPerPage` | number | 10 | Einträge pro Seite |
+| `onChange` | function | - | Ereignis bei Seitenwechsel |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `showTotal` | boolean | `false` | Gesamtanzahl anzeigen? |
-| `showPageSizes` | boolean | `false` | Page-Size-Selector anzeigen? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `showTotal` | boolean | `false` | Gesamtzahl anzeigen? |
+| `showPageSizes` | boolean | `false` | Auswahl der Seitengröße anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onPageChange` | function | Wird bei Seitenwechsel ausgeführt |
-| `onPageSizeChange` | function | Wird bei Page-Size-Änderung ausgeführt |
+| ---------- | ----- | -------------- |
+| `onPageChange` | function | wird bei einem Seitenwechsel ausgeführt |
+| `onPageSizeChange` | function | wird ausgeführt, wenn sich die Seitengröße ändert |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `navigation` |
 
-## Navigation-Attribute
+## Navigationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `showFirstLast` | boolean | `false` | First/Last-Buttons anzeigen? |
-| `showEllipsis` | boolean | `true` | Ellipsis anzeigen? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `showFirstLast` | boolean | `false` | Schaltflächen für erste/letzte Seite? |
+| `showEllipsis` | boolean | `true` | Auslassungszeichen anzeigen? |
 
 ## Geerbt von
 

@@ -1,4 +1,4 @@
-# Command (Befehlspalette)
+# Command
 
 | Feld | Wert |
 |------|------|
@@ -14,42 +14,42 @@
 
 ## Beschreibung
 
-Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste.
-Sie startet Programme, wechselt Ansichten und führt Aktionen aus — erreicht durch
-Tastenkürzel statt durch Menüsuche.
+Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste. Sie startet
+Programme, wechselt Ansichten und führt Aktionen aus — erreichbar über ein Tastenkürzel, statt
+sich durch Menüs zu suchen.
 
 ## Verwendungszweck
 
 - Schneller Zugriff auf Programme und Ansichten im Desktop-Client
-- Aktionen ausführen, ohne den Kontext zu verlassen
-- Kurzhilfe: welche Befehle in dieser Ansicht verfügbar sind
+- Ausführen von Aktionen, ohne den Kontext zu verlassen
+- Kurze Hilfe: welche Befehle in dieser Ansicht verfügbar sind
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **palette** | zentriertes Overlay, per `Strg`/`Cmd` + `K` |
-| **inline** | Palette eingebettet in eine Seitenleiste oder Werkzeugleiste |
+| **palette** | zentriertes Overlay, über `Strg`/`Cmd` + `K` |
+| **inline** | Palette, eingebettet in einer Seitenleiste oder Werkzeugleiste |
 
-## Features
+## Funktionen
 
-- Suchbegriffe werden entkontextet gestartet („neue Aufgabe“ findet das Ziel)
+- Suchbegriffe lassen sich auch ohne Kontext starten („neue Aufgabe“ findet das Ziel)
 - Treffer gruppiert nach Programm, Ansicht und Aktion
-- Letzte und häufige Befehle stehen oben, auch ohne Eingabe
-- Tastaturnavigation: `Pfeil hoch/runter`, `Enter` ausführen, `Esc` schließen
+- Zuletzt und häufig genutzte Befehle stehen auch ohne Eingabe oben
+- Tastaturnavigation: `Pfeil hoch/runter`, `Enter` führt aus, `Esc` schließt
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [search-field](../../../primitives/fields/search-field/): Suche findet Inhalte,
+- **Nicht verwechseln mit** [search-field](../../../primitives/fields/search-field/): die Suche findet Inhalte,
   die Palette führt Aktionen aus.
-- **Nicht verwechseln mit** [menu](../menu/): Menüs zeigen das Angebot vollständig,
-  die Palette nur passende Treffer.
+- **Nicht verwechseln mit** [menu](../menu/): Menüs zeigen das gesamte Angebot, die Palette nur
+  passende Treffer.
 
 ## Best Practices
 
-- Befehle nach Verb Objekt benennen („Aufgabe anlegen“, nicht „Neu“).
-- Pro Befehl ein Kürzel anzeigen, wenn eines existiert.
-- Ergebnisse nach 50 Treffern abschneiden und zum Präzisieren auffordern.
+- Befehle als Verb und dann Objekt benennen („Aufgabe anlegen“, nicht „Neu“).
+- Zeig pro Befehl ein Tastenkürzel, sofern es eines gibt.
+- Schneide die Ergebnisse nach 50 Treffern ab und bitte den Nutzer, genauer zu werden.
 
 ## Siehe auch
 

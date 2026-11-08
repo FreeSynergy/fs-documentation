@@ -1,6 +1,6 @@
 # Pagination - Verwendung
 
-## Numerische Pagination
+## Nummerierte Pagination
 
 ```jsx
 <Pagination 
@@ -11,7 +11,7 @@
 />
 ```
 
-## Previous/Next Pagination
+## Vor/Zurück-Pagination
 
 ```jsx
 <Pagination 
@@ -22,7 +22,7 @@
 />
 ```
 
-## Load More
+## Mehr laden
 
 ```jsx
 <List items={items}>
@@ -33,7 +33,7 @@
 </List>
 ```
 
-## With Page Size Selector
+## Mit Auswahl der Seitengröße
 
 ```jsx
 <Pagination 
@@ -43,7 +43,7 @@
 />
 ```
 
-## In Table
+## In einer Tabelle
 
 ```jsx
 <Table 
@@ -59,7 +59,7 @@
 />
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Pagination 
@@ -76,11 +76,11 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name │ Alter │                         │
+│ ID │ Name │ Alter │                     │
 ├─────────────────────────────────────────┤
-│ 1  │ John │ 25    │                         │
-│ 2  │ Jane │ 30    │                         │
-│ 3  │ Bob  │ 28    │                         │
+│ 1  │ John │ 25    │                     │
+│ 2  │ Jane │ 30    │                     │
+│ 3  │ Bob  │ 28    │                     │
 ├─────────────────────────────────────────┤
 │ [◀] 1 2 3 4 5 [▶]                       │
 │ 1-10 von 100                            │
@@ -96,7 +96,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Load More
+## Beispiel 3: Mehr laden
 
 ```
 ┌─────────────────────────────────────────┐
@@ -108,22 +108,22 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Infinite Scroll
+## Beispiel 4: Endloses Scrollen
 
 ```
 ┌─────────────────────────────────────────┐
 │ Artikel 1                               │
 │ Artikel 2                               │
 │ ...                                     │
-│ (Automatisch nachladen beim Scrollen)   │
+│ (lädt beim Scrollen automatisch nach)   │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Mit Page Size
+## Beispiel 5: Mit Seitengröße
 
 ```
 ┌─────────────────────────────────────────┐
 │ [◀] 1 2 3 4 5 [▶]                       │
-│ Zeige 10/20/50/100 Einträge pro Seite   │
+│ 10/20/50/100 Einträge pro Seite anzeigen│
 └─────────────────────────────────────────┘
 ```

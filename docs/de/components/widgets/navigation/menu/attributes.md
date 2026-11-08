@@ -1,53 +1,53 @@
-# Menu (Menü) - Attribute
+# Menu - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Menüpunkten |
-| `activeItem` | string/number | - | Aktiver Menüpunkt |
-| `onChange` | function | - | Event bei Auswahl |
-| `isOpen` | boolean | `false` | Ist geöffnet? |
-| `onToggle` | function | - | Event beim Öffnen/Schließen |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `items` | array[] | - | Array der Menüeinträge |
+| `activeItem` | string/number | - | aktiver Menüeintrag |
+| `onChange` | function | - | Ereignis bei Auswahl |
+| `isOpen` | boolean | `false` | ist es geöffnet? |
+| `onToggle` | function | - | Ereignis beim Öffnen/Schließen |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `variant` | enum | `horizontal` | Stil: `horizontal`, `vertical` |
-| `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
-| `closable` | boolean | `false` | Schließbar? |
-| `closeOnOutsideClick` | boolean | `true` | Bei Klick außerhalb schließen? |
-| `keyboardNavigation` | boolean | `true` | Keyboard-Navigation? |
+| `collapsible` | boolean | `false` | einklappbar? |
+| `closable` | boolean | `false` | schließbar? |
+| `closeOnOutsideClick` | boolean | `true` | Schließen bei Klick außerhalb? |
+| `keyboardNavigation` | boolean | `true` | Tastaturnavigation? |
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `showIcons` | boolean | `false` | Icons anzeigen? |
-| `showLabels` | boolean | `true` | Labels anzeigen? |
+| `showLabels` | boolean | `true` | Beschriftungen anzeigen? |
 | `color` | enum | `default` | Farbe: `default`, `light`, `primary` |
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
-| `hamburgerBreakpoint` | number | Breakpoint für Hamburger |
+| ---------- | ----- | -------------- |
+| `responsive` | boolean | responsives Layout? |
+| `hamburgerBreakpoint` | number | Haltepunkt für das Hamburger-Menü |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird beim Selektieren ausgeführt |
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| ---------- | ----- | -------------- |
+| `onSelect` | function | wird bei Auswahl ausgeführt |
+| `onOpen` | function | wird beim Öffnen ausgeführt |
+| `onClose` | function | wird beim Schließen ausgeführt |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `menubar` |
-| `aria-expanded` | boolean | Ist erweitert? |
+| `aria-expanded` | boolean | ist es aufgeklappt? |
 
 ## Geerbt von
 

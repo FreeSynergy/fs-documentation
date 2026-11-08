@@ -1,40 +1,40 @@
-# Command (Befehlspalette) - Attribute
+# Command - Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt von der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `commands` | array[] | - | Befehle mit Titel, Gruppe, Kürzel und Ziel |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `commands` | array[] | - | Befehle mit Titel, Gruppe, Tastenkürzel und Ziel |
 | `query` | string | `""` | eingegebener Suchtext |
-| `open` | boolean | `false` | Palette ist sichtbar |
+| `open` | boolean | `false` | die Palette ist sichtbar |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `hotkey` | string | `ctrl+k` | Tastenkürzel zum Öffnen |
-| `grouped` | boolean | `true` | Treffer nach Gruppe anzeigen |
-| `maxResults` | number | `50` | Obergrenze der Treffer |
+| `grouped` | boolean | `true` | Treffer gruppiert anzeigen |
+| `maxResults` | number | `50` | obere Grenze für Treffer |
 | `recentCount` | number | `5` | zuletzt genutzte Befehle ohne Eingabe |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onQuery` | function | Suchtext geändert |
-| `onSelect` | function | Befehl ausgeführt |
-| `onOpen` | function | Palette geöffnet |
-| `onClose` | function | Palette geschlossen |
+| `onQuery` | function | Suchtext wurde geändert |
+| `onSelect` | function | Befehl wurde ausgeführt |
+| `onOpen` | function | Palette wurde geöffnet |
+| `onClose` | function | Palette wurde geschlossen |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `role` | string | `dialog` |
-| `aria-activedescendant` | string | id des markierten Treffers |
+| `aria-activedescendant` | string | ID des markierten Treffers |
 | `label` | string | Pflicht, z. B. „Befehle suchen“ |
 
 ## Geerbt von
