@@ -16,6 +16,8 @@ Einzeilig einfügen, N ersetzen:
 
 Die fünf Threads der Runde 1 sind fertig. Runde 2 hat fünf neue Threads; S, M und U starten nach dem Ende der Umbenennung (Nutzer), D sofort. **Sprint.md immer von GitHub lesen** (`git -C /srv/FreeSynergy/fs-documentation fetch -q && git -C /srv/FreeSynergy/fs-documentation show origin/main:todo/sprint.md`), der lokale geteilte Baum ist veraltet. Mechanische Arbeit (Suchen und Ersetzen, Doku nachziehen, Listen) an Haiku-Agenten geben, sie verbrauchen am wenigsten; Code-Prüfung vor jedem Tag weiter durch einen zweiten Agenten, der den Code nicht schrieb.
 
+**Verbrauch (Nutzer, 2026-11-08):** 87 % des Wochenlimits verbraucht. **Bei 95 % halten alle Threads an:** offene Arbeit committen und pushen, Stand in die `DESIGN.md`, eine Zeile in `todo/handoff-programming.md`. Opus sparsam einsetzen (Prüfungen vor Tags), Sonnet und Haiku für den Rest.
+
 Startzeilen:
 ```text
 /loop Du bist Thread R (Umbenennung) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread R der Reihe nach ab.
