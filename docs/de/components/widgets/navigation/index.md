@@ -2,20 +2,20 @@
 
 Band [widgets](../) – kennt seinen Inhalt, wenn es gebaut wird.
 
-Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Reiter, Seitenleisten und Pfadanzeigen.
+Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten, Tabs, Seitenleisten und Pfadanzeigen.
 
 ## Elemente
 
-- [**bottom-navigation**](./bottom-navigation/) – Die untere Navigation liegt am unteren Bildschirmrand und ist typisch für Mobile-first-Design.
+- [**bottom-navigation**](./bottom-navigation/) – Die untere Navigation ist eine Navigation am unteren Bildschirmrand, typisch für Mobile-first-Design.
 - [**breadcrumb**](./breadcrumb/) – Ein Breadcrumb ist eine Pfadnavigation (Start > Wiki > Seite).
 - [**command**](./command/) – Die Befehlspalette ist ein Overlay mit einem Eingabefeld und einer Trefferliste.
-- [**language-switcher**](./language-switcher/) – Ein Sprachumschalter ist ein Bedienelement zum Ändern der Anwendungssprache.
-- [**menu**](./menu/) – Ein Menü ist eine geordnete Liste von Menüpunkten, die Aktionen auslösen oder Ansichten umschalten.
-- [**pagination**](./pagination/) – Die Seitennummerierung teilt eine lange Liste in Abschnitte und bietet das Wechseln zwischen ihnen.
-- [**radial-menu**](./radial-menu/) – Ein Kreismenü ordnet Menüpunkte um einen Mittelpunkt an.
+- [**language-switcher**](./language-switcher/) – Ein Sprachumschalter ist ein Bedienelement zum Wechseln der Anwendungssprache.
+- [**menu**](./menu/) – Ein Menü ist eine geordnete Liste von Menüpunkten, die Aktionen auslösen oder Ansichten wechseln.
+- [**pagination**](./pagination/) – Die Seitennummerierung teilt eine lange Liste in Abschnitte auf und bietet das Wechseln zwischen ihnen.
+- [**radial-menu**](./radial-menu/) – Ein Radialmenü (kreisförmiges Menü) ordnet Menüpunkte um einen Mittelpunkt an.
 - [**sidebar**](./sidebar/) – Die Seitenleiste ist eine vertikale Navigationsspalte, meist am linken oder rechten Rand der Anwendung.
-- [**tabs**](./tabs/) – Reiter sind Tabs zum Wechseln zwischen Ansichten.
-- [**toolbar**](./toolbar/) – Eine Werkzeugleiste ist eine Reihe von Buttons/Icons für häufige Aktionen.
+- [**tabs**](./tabs/) – Tabs sind Reiter zum Wechseln zwischen Ansichten.
+- [**toolbar**](./toolbar/) – Eine Werkzeugleiste ist eine Reihe von Knöpfen/Icons für häufige Aktionen.
 
 ## Profile
 
@@ -35,5 +35,5 @@ Elemente, die den Weg durch das Programm zeigen oder umschalten: Menüs, Leisten
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Widgets](../)
+- [Band widgets](../)
 - [Basiskomponente](../../primitives/basics/base.md)

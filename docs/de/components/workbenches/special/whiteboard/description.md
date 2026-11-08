@@ -24,7 +24,7 @@ Ein Whiteboard ist eine Zeichenfläche für die Zusammenarbeit.
 
 | Variante | Beschreibung |
 | ---------- | -------------- |
-| **zeichnung** | freies Zeichnen mit Stift und Radiergummi |
+| **zeichnung** | freies Zeichnen mit Stift und Radierer |
 | **formen** | Rechtecke, Pfeile und Verbinder, mit Einrasten |
 | **notizen** | Haftnotizen als Karten auf der Fläche |
 | **vorlage** | vorbereitete Fläche (Raster, Spalten, Swimlanes) |
@@ -41,23 +41,24 @@ Ein Whiteboard ist eine Zeichenfläche für die Zusammenarbeit.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): Dort entsteht
-  Text, hier eine Fläche.
-- **Nicht verwechseln mit** [map-view](../../../widgets/special/map-view/): Die Zeichenfläche hat keinen geografischen Bezug.
-- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): Ein Whiteboard erzeugt Inhalte,
+- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht Text,
+  hier eine Fläche.
+- **Nicht verwechseln mit** [map-view](../../../widgets/special/map-view/): die Zeichenfläche hat keinen geografischen Bezug.
+- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): ein Whiteboard erzeugt Inhalte,
   eine Galerie zeigt vorhandene Inhalte.
 
 ## Best Practices
 
-- Fläche ohne harte Grenze, der Anzeigebereich wird verwaltet; ein optionales Raster hilft beim Ausrichten.
+- Fläche ohne harte Grenze, der Viewport wird verwaltet; ein optionales Raster hilft beim
+  Ausrichten.
 - Rückgängig/Wiederholen gehört zum Whiteboard – auch nach gemeinsamer Bearbeitung.
-- Beim Zusammenarbeiten sind die Zeiger der anderen Personen sichtbar und durch Farbe unterscheidbar.
+- Bei gemeinsamer Arbeit sind die Zeiger der anderen Personen sichtbar und durch Farbe unterscheidbar.
 - Formen rasten ein und zeigen Ausrichtungshilfen, sonst bleibt nichts lesbar.
 - Als Bild **und** als bearbeitbare Daten exportieren, damit die Arbeit später weitergehen kann.
 
 ## Siehe auch
 
 - [special – Übersicht](../index.md)
-- [Rich Text Editor](../../fields/rich-text-editor/) — Text statt Fläche
-- [Map View](../../../widgets/special/map-view/) — Fläche mit geografischem Bezug
+- [Rich-Text-Editor](../../fields/rich-text-editor/) — Text statt Fläche
+- [Kartenansicht](../../../widgets/special/map-view/) — Fläche mit geografischem Bezug
 - [Basiskomponente](../../../primitives/basics/base.md)

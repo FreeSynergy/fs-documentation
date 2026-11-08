@@ -1,8 +1,8 @@
 # Embed – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt ist, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Eine externe Seite einbetten
 
@@ -27,8 +27,8 @@
 ## Szenarien
 
 | Szenario | Empfehlung |
-|----------|------------|
+|----------|----------------|
 | fremde Seite ohne Skripte | `source = "iframe"`, `sandbox` eng setzen |
 | eigenes Programm in einem Dashboard | `source = "app"`, Kopfzeile des einbettenden Programms ausblenden |
 | kleiner Baustein in einer Liste | `size = "small"`, `interactive = false` |
-| Inhalt nicht erreichbar | `onError` zeigt einen Hinweis mit Link nach außen |
+| Inhalt ist nicht erreichbar | `onError` zeigt einen Hinweis mit Link nach außen |

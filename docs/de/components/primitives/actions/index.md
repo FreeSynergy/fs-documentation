@@ -2,12 +2,12 @@
 
 Band [primitives](../) – lässt sich nicht weiter aufteilen.
 
-Aktionselemente lösen eine einzelne Aktion aus oder bündeln verwandte Aktionen. Sie ändern Daten oder Zustände, aber nicht die Adresse.
+Aktionselemente lösen eine einzelne Aktion aus oder bündeln zusammengehörige Aktionen. Sie ändern Daten oder Zustände, aber nicht die Adresse.
 
 ## Elemente
 
 - [**button**](./button/) – Ein Button löst eine einzelne Aktion aus.
-- [**button-group**](./button-group/) – Eine Button-Gruppe fasst verwandte Buttons zu einer sichtbaren und logischen Einheit zusammen.
+- [**button-group**](./button-group/) – Eine Button-Gruppe fasst zusammengehörige Buttons zu einer optischen und logischen Einheit zusammen.
 - [**floating-action-button**](./floating-action-button/) – Ein Floating Action Button (FAB) ist ein runder Hauptaktions-Button, meist unten rechts platziert.
 
 ## Profile
@@ -21,5 +21,5 @@ Aktionselemente lösen eine einzelne Aktion aus oder bündeln verwandte Aktionen
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Primitives](../)
+- [Band primitives](../)
 - [Basiskomponente](../basics/base.md)

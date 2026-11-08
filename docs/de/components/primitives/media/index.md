@@ -6,8 +6,8 @@ Elemente, die Medien abspielen oder anzeigen. `media-player` ist die Elternklass
 
 ## Elemente
 
-- [**icon**](./icon/) – Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt optisch darstellt.
-- [**image**](./image/) – Ein Bildelement zeigt Grafiken, Fotos oder anderen visuellen Inhalt.
+- [**icon**](./icon/) – Ein Icon ist ein symbolisches Grafikelement, das eine Funktion oder ein Objekt visuell darstellt.
+- [**image**](./image/) – Ein Bildelement zeigt Grafiken, Fotos oder andere visuelle Inhalte.
 
 ## Profile
 
@@ -19,5 +19,5 @@ Elemente, die Medien abspielen oder anzeigen. `media-player` ist die Elternklass
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Primitives](../)
+- [Band primitives](../)
 - [Basiskomponente](../basics/base.md)

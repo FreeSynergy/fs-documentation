@@ -23,4 +23,4 @@ Die Grundlagen, von denen alle anderen Komponenten ausgehen: die Basisklasse mit
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Primitives](../)
+- [Band primitives](../)

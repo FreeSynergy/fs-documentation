@@ -30,30 +30,30 @@ Ein Code-Editor ist ein Editor für Quellcode.
 
 ## Funktionen
 
-- Syntax Highlighting
+- Syntax-Highlighting
 - Zeilennummern
-- Auto-Vervollständigung
+- Autovervollständigung
 - Fehlererkennung
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): Dort entsteht
-  formatierter Text, hier Quellcode. Wiki-Syntax ist eine Variante des Texteditors, nicht dieses Editors.
-- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): Ohne Zeilennummern,
-  Hervorhebung und automatisches Schließen von Klammern ist es einfach ein Textfeld.
-- Die Ausgabe von Programmen ist keine Editor-Aufgabe – sie gehört in eine Ergebnisansicht.
+- **Nicht verwechseln mit** [rich-text-editor](../../fields/rich-text-editor/): dort entsteht formatierter
+  Text, hier Quellcode. Wiki-Syntax ist eine Variante des Texteditors, nicht dieses hier.
+- **Nicht verwechseln mit** [textarea](../../../primitives/fields/textarea/): ohne Zeilennummern,
+  Hervorhebung und automatisches Schließen von Klammern ist es nur ein Textfeld.
+- Die Ausgabe von Programmen ist keine Aufgabe des Editors – sie gehört in eine Ergebnisansicht.
 
 ## Best Practices
 
-- Immer die Sprache ausdrücklich angeben, sonst fehlen die Hervorhebung und die richtige Einrückung.
-- `Tab` rückt ein; biete `Esc` oder `Strg+Tab` an, um den Editor zu verlassen.
-- Zeilennummern und ein waagerechtes Lineal erst ab mehrzeiligem Inhalt.
+- Immer die Sprache ausdrücklich angeben, sonst fehlen Hervorhebung und Einrückung.
+- `Tab` rückt ein; biete `Esc` oder `Ctrl+Tab` an, um den Editor zu verlassen.
+- Zeilennummern und ein horizontales Lineal erst ab mehrzeiligem Inhalt.
 - Ungespeicherte Änderungen deutlich kennzeichnen und vor dem Schließen nachfragen.
-- Tastenkürzel an der üblichen Stelle dokumentieren (`Strg+/`, `Strg+F`, `Strg+D`).
+- Tastenkürzel an der üblichen Stelle dokumentieren (`Ctrl+/`, `Ctrl+F`, `Ctrl+D`).
 
 ## Siehe auch
 
 - [special – Übersicht](../index.md)
-- [Rich Text Editor](../../fields/rich-text-editor/) — formatierter Text
+- [Rich-Text-Editor](../../fields/rich-text-editor/) — formatierter Text
 - [Whiteboard](../whiteboard/) — Skizzen statt Code
 - [Basiskomponente](../../../primitives/basics/base.md)

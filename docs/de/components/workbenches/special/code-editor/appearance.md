@@ -1,4 +1,4 @@
-# Code-Editor – Aussehen
+# Code-Editor – Erscheinungsbild
 
 ## Grundlayout
 Ein Code-Editor ist ein Editor für Quellcode.
@@ -13,60 +13,59 @@ Ein Code-Editor ist ein Editor für Quellcode.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
+| Variante | Erscheinungsbild |
+|---------|------------|
 | **voll** | Zeilennummern links, Vorschlagsliste am Cursor |
-| **nur-lesen** | kein Cursor, Kopieren-Button oben rechts |
+| **nur-lesen** | kein Cursor, Kopierknopf oben rechts |
 | **vergleich** | zwei Hälften, geänderte Zeilen rot und grün markiert |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
-|-------|------|------------|
-| Small | 200px | inline |
-| Medium | 400px | Standard |
-| Large | 600px | hervorgehoben |
-| Full | 100% | volle Breite |
+|-------|------|-------------|
+| Klein | 200px | im Textfluss |
+| Mittel | 400px | Standard |
+| Groß | 600px | hervorgehoben |
+| Voll | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Zustand | Farbe | Beschreibung |
-|---------|-------|--------------|
+|--------------|--------|----------------------|
 | **Hintergrund** | dunkel | dunkles Thema |
 | **Text** | hell | Textfarbe |
-| **Schlüsselwort** | violett | Schlüsselwörter |
+| **Schlüsselwort** | lila | Schlüsselwörter |
 | **Zeichenkette** | orange | Zeichenketten |
 | **Kommentar** | grau | Kommentare |
 
-## Effekte bei Hover und Fokus
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
+|-------------|-----------------------------|
 | `line-number` | hebt die Zeilennummer hervor |
 | `cursor` | ändert den Cursor |
 
 ## Responsiv
 
 - Der Editor füllt die Breite; Code bricht nicht um, sondern scrollt horizontal (`swipe`).
-- Unterhalb der Breite `small` wird die Vorschlagsliste über die Tastatur gelegt, der Block mit den
-  Zeilennummern wird schmaler.
+- Unterhalb der Bildschirmbreite `small` wird die Vorschlagsliste über die Tastatur gelegt, der Zeilennummernbereich wird schmaler.
 - Die Vergleichsvariante stellt die beiden Hälften untereinander statt nebeneinander; die
   Höhe bleibt pro Hälfte begrenzt.
 
 ## Funktionen
 
 | Funktion | Beschreibung |
-|----------|--------------|
-| **Syntax Highlighting** | farbige Hervorhebung |
+|---------------------|---------------------------|
+| **Syntax-Highlighting** | farbige Hervorhebung |
 | **Zeilennummern** | Zeilennummern |
-| **Auto-Vervollständigung** | Autovervollständigung |
+| **Autovervollständigung** | Autovervollständigung |
 | **Fehlererkennung** | Fehlererkennung |
-| **Mehrfache Cursor** | mehrere Cursor |
+| **Mehrere Cursor** | mehrere Cursor |
 
 ## Themes
 
 | Theme | Beschreibung |
-|-------|--------------|
+|-------|-------------|
 | **Dunkel** | dunkles Theme |
 | **Hell** | helles Theme |
-| **Benutzerdefiniert** | eigenes Theme |
+| **Eigenes** | benutzerdefiniert |

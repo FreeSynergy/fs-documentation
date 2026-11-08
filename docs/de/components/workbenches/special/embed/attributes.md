@@ -1,12 +1,12 @@
 # Embed – Attribute
 
-Nur **eigene** Attribute. Alles Übrige kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Weitere kommt von der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
 | Attribut | Typ | Standard | Beschreibung |
-|----------|-----|----------|--------------|
+|-----------|------|---------|-------------|
 | `source` | enum | `iframe` | Art der Einbettung: `app`, `widget`, `iframe` |
 | `src` | string | - | Quell-URL (nur `source = iframe`) |
 | `appId` | string | - | Programm-ID (nur `source = app`) |
@@ -19,7 +19,7 @@ Nur **eigene** Attribute. Alles Übrige kommt aus der Basisklasse, siehe
 ## Verhalten
 
 | Attribut | Typ | Standard | Beschreibung |
-|----------|-----|----------|--------------|
+|-----------|------|---------|-------------|
 | `responsive` | boolean | `true` | die Fläche passt sich der Breite an |
 | `interactive` | boolean | `true` | Eingaben im eingebetteten Inhalt erlauben |
 | `ratio` | enum | `auto` | Seitenverhältnis: `auto`, `16:9`, `4:3`, `1:1` |
@@ -29,21 +29,21 @@ Nur **eigene** Attribute. Alles Übrige kommt aus der Basisklasse, siehe
 ## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `onLoad` | function | der Inhalt ist bereit |
 | `onError` | function | der Inhalt konnte nicht geladen werden |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | `region` für `app` und `widget`, `iframe` für `iframe` |
-| `title` | string | dient zugleich als Name für unterstützende Technologien |
+| `title` | string | dient zugleich als Name für unterstützende Technik |
 
 ## Kommunikation
 
 | Attribut | Typ | Standard | Beschreibung |
-|----------|-----|----------|--------------|
+|-----------|------|---------|-------------|
 | `postMessage` | boolean | `false` | Nachrichtenaustausch mit dem Inhalt |
 | `origin` | string | - | erlaubter Ursprung, bei `postMessage` erforderlich |
 

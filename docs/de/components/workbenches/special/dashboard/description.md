@@ -1,7 +1,7 @@
 # Dashboard
 
 | Feld | Wert |
-|------|------|
+|-------|-------|
 | **Category** | `special` |
 | **Inherits from** | `base` |
 | **Variants** | `vorlage`, `anordbar`, `bericht` |
@@ -23,9 +23,9 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
+|---------|-------------|
 | **vorlage** | feste Anordnung, vom Benutzer nicht veränderbar |
-| **anordbar** | Widgets verschieben, in der Größe ändern, eigene Auswahl treffen |
+| **anordbar** | Widgets verschieben, Größe ändern, eigene Auswahl treffen |
 | **bericht** | nur Anzeige ohne Bearbeitungsmodus, für geteilte Ansichten |
 
 ## Funktionen
@@ -37,20 +37,20 @@ Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): Das Raster zeigt gleichartige
+- **Nicht verwechseln mit** [grid-view](../../../widgets/data/grid-view/): das Raster zeigt gleichartige
   Einträge, das Dashboard verschiedene Widgets in unterschiedlichen Größen.
-- **Nicht verwechseln mit** [card](../../../widgets/containers/card/): Die Karte ist ein einzelner
-  Baustein, das Dashboard ist die Anordnung mehrerer Bausteine einschließlich ihrer Einstellungen.
-- **Nicht verwechseln mit** [chart](../../../widgets/data/chart/): Gezeichnet wird im Diagramm,
-  hier werden Elemente nur platziert.
+- **Nicht verwechseln mit** [card](../../../widgets/containers/card/): die Karte ist ein einzelner Baustein,
+  das Dashboard ist die Anordnung mehrerer Bausteine samt ihren Einstellungen.
+- **Nicht verwechseln mit** [chart](../../../widgets/data/chart/): das Zeichnen passiert im Diagramm,
+  hier werden Dinge nur platziert.
 
 ## Best Practices
 
-- Mit einer sinnvollen Standardansicht beginnen; die Konfiguration ist optional.
+- Mit einer sinnvollen Standardansicht beginnen, Konfiguration ist optional.
 - Bearbeiten als eigener Modus (`bearbeiten`) – im Lesemodus verschiebt sich nichts.
 - Raster mit Spalten und Zeilen; jedes Widget bringt eine minimale und maximale Größe mit.
 - Den Ladezustand jedes Widgets einzeln behandeln, nicht die ganze Seite sperren.
-- Die Anordnung pro Person speichern und einen Zurücksetzen-Schalter anbieten.
+- Die Anordnung pro Person speichern und einen Zurücksetzen-Knopf anbieten.
 
 ## Siehe auch
 

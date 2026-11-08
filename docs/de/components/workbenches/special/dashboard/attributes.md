@@ -4,7 +4,7 @@
 
 | Attribut | Typ | Standard | Beschreibung |
 | ---------- | ----- | --------- | -------------- |
-| `widgets` | array[] | - | Liste der Widgets |
+| `widgets` | array[] | - | Array mit Widgets |
 
 ## Verhalten
 
@@ -37,7 +37,7 @@
 ## Widget-Attribute
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `id` | string | eindeutige ID |
 | `type` | string | Widget-Typ |
 | `title` | string | Titel |

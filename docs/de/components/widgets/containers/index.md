@@ -7,9 +7,9 @@ Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, einklappbare G
 ## Elemente
 
 - [**accordion**](./accordion/) – Ein Akkordeon ist ein Stapel aus Kopfzeilen, die Inhalte ein- und ausklappen.
-- [**card**](./card/) – Die Karte ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen zeigt.
+- [**card**](./card/) – Die Karte ist ein Container-Element, das Inhalte in einem strukturierten Kasten mit Titel, Inhalt und optionalen Aktionen zeigt.
 - [**panel**](./panel/) – Ein Panel ist ein großer Container mit Kopfzeile, Inhalt und Fußzeile.
-- [**scroll-area**](./scroll-area/) – Ein Scrollbereich ist eine Fläche mit fester Größe, deren Inhalt scrollt.
+- [**scroll-area**](./scroll-area/) – Ein Scroll-Bereich ist eine Fläche mit festem Maß, deren Inhalt scrollt.
 - [**split-view**](./split-view/) – Eine geteilte Ansicht ist ein Layout mit zwei Bereichen nebeneinander.
 - [**wizard**](./wizard/) – Ein Wizard ist ein schrittweises Formular für komplexe Aufgaben.
 
@@ -27,5 +27,5 @@ Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, einklappbare G
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Widgets](../)
+- [Band widgets](../)
 - [Basiskomponente](../../primitives/basics/base.md)

@@ -4,7 +4,7 @@
 
 | Attribut | Typ | Standard | Beschreibung |
 | ---------- | ----- | --------- | -------------- |
-| `toolbar` | array[] | - | Liste der Werkzeugleisten-Buttons |
+| `toolbar` | array[] | - | Array mit Werkzeugleisten-Knöpfen |
 | `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
@@ -19,7 +19,7 @@
 | Attribut | Typ | Beschreibung |
 | ---------- | ----- | -------------- |
 | `onDraw` | function | läuft beim Zeichnen |
-| `onClear` | function | läuft beim Löschen |
+| `onClear` | function | läuft beim Leeren |
 | `onExport` | function | läuft beim Export |
 
 ## Barrierefreiheit

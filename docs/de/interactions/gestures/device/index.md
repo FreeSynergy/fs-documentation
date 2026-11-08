@@ -1,36 +1,36 @@
-# Gerätegesten (device)
+# Geräte-Gesten (device)
 
-Gerätegesten erkennen keine Berührung, sondern eine **Bewegung des Geräts selbst**
-über Beschleunigungs- und Gyrosensoren (Beschleunigungsmesser, Gyroskop).
+Geräte-Gesten erkennen keine Berührung, sondern eine **Bewegung des Geräts selbst**
+über Beschleunigungs- und Gyrosensoren (Accelerometer, Gyroskop).
 
-Die Anzahl der Zeiger spielt keine Rolle: Ein-Punkt und Mehrpunkt gibt es
-hier nicht, kein Finger berührt etwas.
+Die Anzahl der Zeiger spielt keine Rolle: Ein- und Mehrpunkt gibt es hier nicht,
+kein Finger berührt etwas.
 
 ## Elemente
 
-- **shake** – schnelle Hin- und Her-Bewegung (Rückgängig, Fehlerrückmeldung)
-- **tilt** – Gerät kippen (Steuern, Kompass)
-- **flip** – Gerät umdrehen (Lautlos-Modus, Anruf stummschalten)
-- **wave** – Hand vor dem Sensor bewegen (Anruf annehmen, Assistent)
+- **shake** – schnelle Hin-und-her-Bewegung (Rückgängig, Fehlerrückmeldung)
+- **tilt** – Neigen des Geräts (Steuern, Kompass)
+- **flip** – Umdrehen des Geräts (Stummmodus, Anruf stummschalten)
+- **wave** – eine Hand vor dem Sensor bewegen (Anruf annehmen, Assistent)
 
 ## Zuordnung
 
 | Situation | Geste |
-|-----------|-------|
+|-----------|---------|
 | Rückgängig / verwerfen | shake |
-| Inhalt kippen oder steuern | tilt |
-| Nicht stören aktivieren | flip |
-| Bedienung mit freien Händen | wave |
+| Inhalt neigen/steuern | tilt |
+| Nicht stören einschalten | flip |
+| Freihändige Bedienung | wave |
 
 ## Barrierefreiheit
 
-Gerätegesten fallen unter WCAG 2.5.4 (Bewegungsauslösung): Jede sensorbasierte
-Aktion **muss** eine reguläre Bedienalternative haben (Button, Menüpunkt). Sensor-
+Geräte-Gesten fallen unter WCAG 2.5.4 (Motion Actuation): Jede sensorbasierte
+Aktion **muss** eine reguläre UI-Alternative haben (Button, Menüpunkt). Sensor-
 Rückmeldung (Vibration) nur mit Zustimmung und abschaltbar (`hapticFeedback`,
 `respectReducedMotion`).
 
 ## Siehe auch
 
-- [Übersicht der Gesten](../index.md)
-- [Shake-Animation](../../animations/feedback/shake/description.md) – dasselbe Muster wie bei der Ausgabe-Rückmeldung
+- [Gesten-Übersicht](../index.md)
+- [Shake-Animation](../../animations/feedback/shake/description.md) – dasselbe Muster als Ausgabe-Rückmeldung
 - [Wiggle-Animation](../../animations/feedback/wiggle/description.md) – Gerät ruhig halten, das Element wackelt

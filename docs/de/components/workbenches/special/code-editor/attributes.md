@@ -12,7 +12,7 @@
 | Attribut | Typ | Standard | Beschreibung |
 | --- | --- | --- | --- |
 | `language` | string | `javascript` | Sprache |
-| `readOnly` | boolean | `false` | Nur-Lese-Modus? |
+| `readOnly` | boolean | `false` | Nur-Lesen-Modus? |
 
 ## Ereignisse
 
@@ -40,7 +40,7 @@
 |---|---|---|---|
 | `lineHeight` | number | `1.5` | Zeilenhöhe |
 | `fontSize` | number | `14` | Schriftgröße |
-| `tabSize` | number | `2` | Tab-Breite |
+| `tabSize` | number | `2` | Tabulatorbreite |
 
 ## Geerbt von
 

@@ -2,20 +2,20 @@
 
 Band [primitives](../) – lässt sich nicht weiter aufteilen.
 
-Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält Label, Hilfetext und Fehlermeldung zusammen.
+Elemente zur Eingabe und Auswahl von Werten. Das Feld (`field`) hält Beschriftung, Hilfetext und Fehlermeldung zusammen.
 
 ## Elemente
 
 - [**checkbox**](./checkbox/) – Eine Checkbox ist ein Ja/Nein- oder Mehrfachauswahl-Feld.
 - [**color-input**](./color-input/) – Ein Farbfeld ist ein Feld zur Farbauswahl mit einem Farbwähler.
-- [**combobox**](./combobox/) – Eine Combobox ist ein Textfeld mit einer Auswahlliste.
+- [**combobox**](./combobox/) – Eine Combobox ist ein Textfeld plus eine Auswahlliste.
 - [**date-input**](./date-input/) – Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
-- [**field**](./field/) – Ein Feld ist die Hülle um ein Eingabefeld: Es verbindet Label, Hilfetext, Fehlermeldung und Pflichtmarkierung zu einer zugänglichen Einheit.
+- [**field**](./field/) – Ein Feld ist die Hülle um ein Eingabefeld: Es verbindet Beschriftung, Hilfetext, Fehlermeldung und Pflichtkennzeichnung zu einer barrierefreien Einheit.
 - [**input-group**](./input-group/) – Eine Eingabegruppe verbindet ein Eingabefeld und die Teile, die direkt dazugehören, zu einer zusammenhängenden Fläche: ein Präfixzeichen, eine Einheit, eine Auswahlliste für die Ländervorwahl oder ein Button direkt am Feld.
 - [**mention-input**](./mention-input/) – Ein Mention-Feld ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
 - [**number-input**](./number-input/) – Ein Zahlenfeld ist ein Eingabefeld für Zahlen.
 - [**otp-input**](./otp-input/) – Das Einmalpasswort-Feld nimmt einen kurzen numerischen Code auf – ein Feld pro Zeichen.
-- [**radio-group**](./radio-group/) – Eine Radio-Gruppe ist eine Gruppe von Optionsfeldern (Einfachauswahl).
+- [**radio-group**](./radio-group/) – Eine Radio-Gruppe ist eine Gruppe von Optionsfeldern (Einzelauswahl).
 - [**rating**](./rating/) – Eine Bewertung ist eine Stern- oder Punktebewertung.
 - [**search-field**](./search-field/) – Ein Suchfeld ist ein Suchkasten mit Filteroptionen.
 - [**select**](./select/) – Eine Auswahlliste: Das Feld zeigt den gewählten Wert, die Optionen liegen hinter einem Klick.
@@ -51,5 +51,5 @@ Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält Label,
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Primitives](../)
+- [Band primitives](../)
 - [Basiskomponente](../basics/base.md)

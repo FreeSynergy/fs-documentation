@@ -17,5 +17,5 @@ Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Kar
 ## Siehe auch
 
 - [Komponentenübersicht](../../index.md)
-- [Band Widgets](../)
+- [Band widgets](../)
 - [Basiskomponente](../../primitives/basics/base.md)

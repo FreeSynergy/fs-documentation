@@ -1,11 +1,11 @@
-# Whiteboard – Aussehen
+# Whiteboard – Erscheinungsbild
 
 ## Grundlayout
 Ein Whiteboard ist eine Zeichenfläche für die Zusammenarbeit.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [Pencil] [Eraser] [Shapes] [Text]       │  ← Werkzeugleiste
+│ [Stift] [Radierer] [Formen] [Text]      │  ← Werkzeugleiste
 ├─────────────────────────────────────────┤
 │                                         │
 │      🖌️                                  │
@@ -18,57 +18,57 @@ Ein Whiteboard ist eine Zeichenfläche für die Zusammenarbeit.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **zeichnung** | Stift- und Radiergummi-Werkzeuge, freie Striche |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **zeichnung** | Stift- und Radierwerkzeug, freie Striche |
 | **formen** | Werkzeugkasten mit Figuren und Verbindern |
 | **notizen** | Karten auf der Fläche, farbige Notizen |
-| **vorlage** | vorgezeichnete Flächen, Spalten und Swimlanes |
+| **vorlage** | vorbereitete Flächen, Spalten und Swimlanes |
 
 ## Größen
 
 | Größe | Breite/Höhe | Verwendung |
-|-------|-------------|------------|
-| Small | 400x300px | inline |
-| Medium | 600x400px | Standard |
-| Large | 800x600px | hervorgehoben |
-| Full | 100% | volle Breite |
+|------|--------------|-------------|
+| Klein | 400x300px | im Textfluss |
+| Mittel | 600x400px | Standard |
+| Groß | 800x600px | hervorgehoben |
+| Voll | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Zustand | Farbe | Beschreibung |
-|---------|-------|--------------|
+|--------------|-------------|----------------------|
 | **Hintergrund** | weiß/grün | Hintergrund |
 | **Stift** | schwarz | Stift |
 | **Formen** | farbig | Formen |
 | **Text** | Schrift | Text |
 
-## Effekte bei Hover und Fokus
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
+|--------|-------------|
 | `scale` | Vergrößerung |
 | `shadow` | stärkerer Schatten |
 
 ## Responsiv
 
-- `Full` füllt den Anzeigebereich abzüglich der Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
-  und der Anzeigebereich scrollt.
-- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen wandert sie nach unten,
-  und die Buttons bleiben mindestens 44 px groß.
+- `Voll` füllt den Viewport abzüglich der Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
+  und der Viewport scrollt.
+- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen wandert sie nach unten, und die
+  Knöpfe bleiben mindestens 44 px groß.
 - `pinch`/`spread` ändern die Skalierung, `drag` verschiebt die Fläche; die Strichstärke bleibt
   gleich, die Striche werden nicht dicker.
 
-## Werkzeugleisten-Buttons
+## Werkzeugleisten-Knöpfe
 
-| Button | Funktion |
+| Knopf | Funktion |
 |--------|----------|
-| **Pencil** | Stift |
-| **Eraser** | Radiergummi |
-| **Shapes** | Formen |
+| **Stift** | Stift |
+| **Radierer** | Radierer |
+| **Formen** | Formen |
 | **Text** | Text |
-| **Color** | Farbe |
-| **Clear** | alles löschen |
+| **Farbe** | Farbe |
+| **Leeren** | alles löschen |
 | **Export** | Export |
 
 ## Rasterhintergrund
