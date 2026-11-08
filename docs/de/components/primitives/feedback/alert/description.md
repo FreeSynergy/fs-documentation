@@ -1,27 +1,28 @@
-# Alert (Warnung)
+# Alert
 
 | Feld | Wert |
-|------|------|
-| **Kategorie** | `feedback` |
-| **Erbt von** | `base` |
-| **Varianten** | `inline`, `banner` |
-| **Typen** | `info`, `success`, `warning`, `error` |
-| **Zustände** | `dismissing` |
-| **Gesten** | `tap` |
-| **Animationen** | `fade-in`, `collapse` |
-| **Verwandt** | `toast`, `badge`, `progress` |
-| **Rolle** | `alert` |
-| **Status** | dokumentiert |
+|-------|-------|
+| **Category** | `feedback` |
+| **Inherits from** | `base` |
+| **Variants** | `inline`, `banner` |
+| **Types** | `info`, `success`, `warning`, `error` |
+| **States** | `dismissing` |
+| **Gestures** | `tap` |
+| **Animations** | `fade-in`, `collapse` |
+| **Related** | `toast`, `badge`, `progress` |
+| **Role** | `alert` |
+| **Status** | documented |
 
 !!! info "Standardisierung"
-    Die frühere Komponente `banner` ist als Variante in `alert` aufgegangen: `inline` (in einem Inhalt) und `banner` (über einer Ansicht, fixiert).
+    Die bisherige Komponente `banner` ist als Variante in `alert` aufgegangen: `inline` (innerhalb
+    eines Inhalts) und `banner` (über einer Ansicht, fixiert).
 
 ## Beschreibung
-Ein Alert ist eine Status-Meldung (Info, Warning, Error, Success).
+Ein Alert ist eine Statusmeldung (Info, Warnung, Fehler, Erfolg).
 
-## Verwendungszweck
+## Zweck
 
-- Status-Meldungen anzeigen
+- Statusmeldungen anzeigen
 - Fehler anzeigen
 - Erfolge anzeigen
 - Warnungen anzeigen
@@ -29,40 +30,40 @@ Ein Alert ist eine Status-Meldung (Info, Warning, Error, Success).
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **inline** | Meldung im Inhalt, dort wo sie auftritt (Standard) |
-| **banner** | quer über einer Ansicht, fixiert (`sticky`) |
+|---------|-------------|
+| **inline** | Meldung innerhalb des Inhalts, dort wo sie auftritt (Standard) |
+| **banner** | über die Ansicht gelegt, fixiert (`sticky`) |
 
-## Features
+## Funktionen
 
-- Dismissible (Schließbar)
+- Schließbar (kann geschlossen werden)
 - Icon
-- Title
-- Description
-- Action Button
+- Titel
+- Beschreibung
+- Aktionsschaltfläche
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [toast](../toast/): ein Toast erscheint kurz und verschwindet
-  von selbst, ein `alert` bleibt stehen, bis er geschlossen oder behoben ist.
-- **Nicht verwechseln mit** [badge](../badge/): ein Badge kennzeichnet ein Element,
+  von selbst, ein `alert` bleibt, bis er geschlossen oder erledigt ist.
+- **Nicht verwechseln mit** [badge](../badge/): ein Badge markiert ein Element,
   eine Meldung braucht Text.
 
 ## Best Practices
 
 - Klarer Text
-- Konsistente Farben
-- Action-Buttons
-- Accessibility
+- Einheitliche Farben
+- Aktionsbuttons
+- Barrierefreiheit
 
 ## Typen (`type`)
 
 | Typ | Farbe | Beschreibung |
-|-----|-------|--------------|
-| `info` | Blau | Informationsmeldung |
-| `success` | Grün | Erfolgsmeldung |
-| `warning` | Orange/Gelb | Warnmeldung |
-| `error` | Rot | Fehlermeldung |
+|------|--------|-------------|
+| `info` | blau | Informationsmeldung |
+| `success` | grün | Erfolgsmeldung |
+| `warning` | orange/gelb | Warnung |
+| `error` | rot | Fehlermeldung |
 
 ## Siehe auch
 

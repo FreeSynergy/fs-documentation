@@ -1,42 +1,41 @@
-# Alert (Warnung) - Verwendung
+# Alert – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Alert ist eine Status-Meldung (Info, Warning, Error, Success).
+Ein Alert ist eine Statusmeldung (Info, Warnung, Fehler, Erfolg).
 
-- Status-Meldungen anzeigen
+- Statusmeldungen anzeigen
 - Fehler anzeigen
 - Erfolge anzeigen
 - Warnungen anzeigen
 
 ## Beispiele
 
-### Status-Meldungen anzeigen
+### Statusmeldung anzeigen
 
 ```jsx
-<Alert type="info" title="Titel" message="Nachricht" />
+<Alert type="info" title="Title" message="Message" />
 ```
 
 ### Fehler anzeigen
 
 ```jsx
-<Alert type="info" title="Titel" dismissible={false} />
+<Alert type="info" title="Title" dismissible={false} />
 ```
 
-### Erfolge anzeigen
+### Erfolg anzeigen
 
 ```jsx
-<Alert type="info" title="Titel" closable={false} />
+<Alert type="info" title="Title" closable={false} />
 ```
 
 ## Hinweise
 
-- Barrierefreiheit: Rolle `alert`; Bedienelemente zusätzlich mit `label` oder `aria-label` benennen
+- Barrierefreiheit: Rolle `alert`; die Bedienelemente zusätzlich mit `label` oder `aria-label` benennen
 - Gesten: `tap`
 - Übergänge: `fade-in`, `collapse`
 - Siehe auch: [toast](../../feedback/toast/), [badge](../../feedback/badge/), [progress](../../feedback/progress/)

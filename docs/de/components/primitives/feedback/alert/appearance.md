@@ -1,7 +1,7 @@
-# Alert - Aussehen
+# Alert – Erscheinungsbild
 
 ## Grundlayout
-Ein Alert ist eine Status-Meldung (Info, Warning, Error, Success).
+Ein Alert ist eine Statusmeldung (Info, Warnung, Fehler, Erfolg).
 
 ```
 ┌─────────────────────────────────────────┐
@@ -15,42 +15,42 @@ Ein Alert ist eine Status-Meldung (Info, Warning, Error, Success).
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **inline** | Rahmenlose Fläche im Inhalt, links ein Icon |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **inline** | rahmenloser Bereich innerhalb des Inhalts, links ein Icon |
 | **banner** | volle Breite über der Ansicht, abgesetzter Hintergrund, fixiert |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
-|-------|--------|------------|
-| Small | 200px | Inline |
-| Medium | 400px | Standard |
-| Large | 600px | Featured |
-| Full | 100% | Volle Breite |
+|------|-------|-----|
+| small | 200px | im Textfluss |
+| medium | 400px | Standard |
+| large | 600px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Info** | Blau | Informationsmeldung |
-| **Success** | Grün | Erfolgsmeldung |
-| **Warning** | Orange | Warnmeldung |
-| **Error** | Rot | Fehlermeldung |
+|--------|--------|-------------|
+| **info** | blau | Informationsmeldung |
+| **success** | grün | Erfolgsmeldung |
+| **warning** | orange | Warnung |
+| **error** | rot | Fehlermeldung |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `shadow` | Schatten stärker |
-| `border-left` | Linie leuchtet auf |
+|--------|-------------|
+| `shadow` | der Schatten wird stärker |
+| `border-left` | die Linie links leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-Eine inline-Meldung fließt mit dem Inhalt mit; die banner-Variante bleibt oben stehen
-(`sticky`), während der Inhalt weiterläuft. Beim Schließen schrumpft die Meldung auf ihre
-Linienhöhe (`fade-out`, `collapse`), damit der restliche Inhalt nachrückt. Bei schmaler
-Breite stapeln sich die Aktionen untereinander.
+Eine Inline-Meldung fließt mit dem Inhalt mit; die Banner-Variante bleibt oben
+(`sticky`), während der Inhalt weiterscrollt. Beim Schließen schrumpft die Meldung auf
+ihre Zeilenhöhe (`fade-out`, `collapse`), damit der restliche Inhalt nachrückt. Bei schmalen
+Breiten stehen die Aktionen untereinander.
 
 ```css
 .alert--banner { position: sticky; top: 0; z-index: 20; }
@@ -58,20 +58,20 @@ Breite stapeln sich die Aktionen untereinander.
 .alert--dismissing { opacity: 0; max-height: 0; }   /* fade-out + collapse */
 
 @media (max-width: 600px) {
-  .alert-actions { flex-direction: column; }        /* Aktionen untereinander */
+  .alert-actions { flex-direction: column; }        /* actions stacked */
 }
 ```
 
 ## Typen
 
 | Typ | Farbe | Beschreibung |
-|-----|-------|--------------|
-| `info` | Blau | Informationsmeldung |
-| `success` | Grün | Erfolgsmeldung |
-| `warning` | Orange/Gelb | Warnmeldung |
-| `error` | Rot | Fehlermeldung |
+|------|--------|-------------|
+| `info` | blau | Informationsmeldung |
+| `success` | grün | Erfolgsmeldung |
+| `warning` | orange/gelb | Warnung |
+| `error` | rot | Fehlermeldung |
 
-## Dismissible
+## Schließbar
 
 ```
 ┌─────────────────────────────────────────┐

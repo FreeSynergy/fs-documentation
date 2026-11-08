@@ -1,46 +1,46 @@
-# Alert - Attribute
+# Alert – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `type` | enum | `info` | Typ: `info`, `success`, `warning`, `error` |
 | `title` | string | - | Titel |
-| `message` | string | - | Nachricht |
+| `message` | string | - | Meldung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `dismissible` | boolean | `false` | Schließbar? |
-| `closable` | boolean | `false` | Schließbar? |
-| `sticky` | boolean | `true` | Fixiert oben? |
+| `dismissible` | boolean | `false` | schließbar? |
+| `closable` | boolean | `false` | schließbar? |
+| `sticky` | boolean | `true` | oben fixiert? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onClose` | function | Wird beim Schließen ausgeführt |
-| `onAction` | function | Wird bei Aktion ausgeführt |
+|-----------|------|-------------|
+| `onClose` | function | läuft beim Schließen |
+| `onAction` | function | läuft bei der Aktion |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `alert` |
 
-## Action-Attribute
+## Aktions-Attribute
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `actionLabel` | string | Aktion-Label |
-| `onActionClick` | function | Wird bei Aktion-Klick ausgeführt |
-| `actionLabel2` | string | Zweite Aktion-Label |
-| `onActionClick2` | function | Wird bei zweiter Aktion-Klick ausgeführt |
+|-----------|------|-------------|
+| `actionLabel` | string | Beschriftung der Aktion |
+| `onActionClick` | function | läuft beim Klick auf die Aktion |
+| `actionLabel2` | string | Beschriftung der zweiten Aktion |
+| `onActionClick2` | function | läuft beim Klick auf die zweite Aktion |
 
 ## Icon-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcon` | boolean | `true` | Icon anzeigen? |
 

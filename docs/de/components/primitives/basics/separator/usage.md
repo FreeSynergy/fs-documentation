@@ -1,18 +1,17 @@
-# Separator (Trennlinie) - Verwendung
+# Separator – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Menügruppen trennen
 
 ```jsx
 <Menu>
-  <MenuItem label="Umbenennen" />
+  <MenuItem label="Rename" />
   <Separator />
-  <MenuItem label="Archivieren" />
-  <MenuItem label="Löschen" variant="danger" />
+  <MenuItem label="Archive" />
+  <MenuItem label="Delete" variant="danger" />
 </Menu>
 ```
 
@@ -29,8 +28,8 @@
 ## Alternative mit Beschriftung
 
 ```jsx
-<Separator label="oder" />
-<Button label="Neues Dokument" variant="primary" />
+<Separator label="or" />
+<Button label="New document" variant="primary" />
 ```
 
 ## Dekorative Linie unter einer Überschrift
@@ -42,8 +41,8 @@
 ## Szenarien
 
 | Szenario | Empfehlung |
-|----------|------------|
+|----------|----------------|
 | Menü mit verschiedenen Aktionsarten | `horizontal`, Rolle `separator` |
 | Zwei Seiten einer Detailansicht | `vertical` |
 | Formularabschnitte | `horizontal` mit `spacing` 16 |
-| Reine Optik ohne Struktur | `dekorativ` plus `aria-hidden` |
+| Reines Aussehen ohne Struktur | `dekorativ` plus `aria-hidden` |

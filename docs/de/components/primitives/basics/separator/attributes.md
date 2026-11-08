@@ -1,29 +1,29 @@
-# Separator (Trennlinie) - Attribute
+# Separator – Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Weitere kommt von der Basisklasse, siehe
 [base](../base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `orientation` | enum | `horizontal` | `horizontal`, `vertical` |
 | `variant` | enum | `horizontal` | `horizontal`, `vertical`, `mit-beschriftung`, `dekorativ`, `inset` |
-| `label` | string | `null` | Text mittig in der Linie (nur horizontal) |
+| `label` | string | `null` | Text, mittig in der Linie (nur horizontal) |
 | `inset` | number \| string | `0` | Einzug in px oder Prozent |
 | `spacing` | number | `8` | Abstand zu den Nachbarn in px |
 
-## Events
+## Ereignisse
 
-Es werden keine Events genutzt; ein Separator ist reine Anzeige.
+Es werden keine Ereignisse genutzt; ein Separator dient nur der Anzeige.
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `role` | string | `separator` bei struktureller Trennung (Menügruppen, Toolgruppen) |
-| – | – | Dekorative Trennlinien erhalten `aria-hidden="true"` |
-| – | – | Senkrechte Trenner ohne Strukturwirkung sind immer `aria-hidden` |
+|-----------|------|-------------|
+| `role` | string | `separator` für strukturelle Trennung (Menügruppen, Werkzeuggruppen) |
+| – | – | dekorative Trennlinien erhalten `aria-hidden="true"` |
+| – | – | senkrechte Trenner ohne strukturelle Wirkung sind immer `aria-hidden` |
 
 ## Geerbt von
 

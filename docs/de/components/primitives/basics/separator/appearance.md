@@ -1,4 +1,4 @@
-# Separator (Trennlinie) - Aussehen
+# Separator – Erscheinungsbild
 
 ## Grundlayout
 
@@ -7,7 +7,7 @@ horizontal:
 ──────────────────────────────
 
 mit-beschriftung:
-────────────  oder  ───────────
+────────────  oder  ────────────
 
 vertical:
 ┌──────────┐ │ ┌──────────┐
@@ -17,18 +17,18 @@ vertical:
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **horizontal** | 1 px Linie in neutraler Trennfarbe |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **horizontal** | 1 px Linie in einer neutralen Trennfarbe |
 | **vertical** | 1 px Linie, Höhe = Zeilenhöhe der Nachbarn |
-| **mit-beschriftung** | zwei Linienabschnitte mit Text dazwischen |
-| **dekorativ** | gleiche Linie, oft stärker (2 px) und in Theme-Farbe |
-| **inset** | Einzug so breit wie die Icon-Spalte der Liste |
+| **mit-beschriftung** | zwei Linienstücke mit Text dazwischen |
+| **dekorativ** | dieselbe Linie, oft stärker (2 px) und in der Themenfarbe |
+| **inset** | eingerückt um die Breite der Icon-Spalte der Liste |
 
 ## Größen
 
 | Größe | Linienstärke |
-|-------|--------------|
+|------|-------------|
 | `small` | 1 px |
 | `medium` | 1 px |
 | `large` | 2 px |
@@ -36,17 +36,17 @@ vertical:
 ## Farben und Zustände
 
 | Teil | Farbe |
-|------|-------|
-| Linie (neutral) | Trennfarbe, im hellen Theme hellgrau, im dunklen dunkler |
+|------|------|
+| Linie (neutral) | Trennfarbe, helles Grau im hellen Theme, dunkler im dunklen |
 | Beschriftung | Sekundärtext |
-| dekorativ | Theme-Akzent möglich |
+| dekorativ | Themen-Akzent möglich |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
+|--------|-------------|
 | – | keine; ein Separator ist nicht bedienbar |
 
-## Reaktiv
+## Responsiv
 
-- Bei Umbruch von Leisten wird ein `vertical`-Separator zu `horizontal`.
+- Wenn Leisten umbrechen, wird ein `vertical`-Separator zu `horizontal`.

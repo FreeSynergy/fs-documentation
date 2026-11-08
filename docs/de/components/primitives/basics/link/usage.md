@@ -1,41 +1,40 @@
-# Link (Verweis) - Verwendung
+# Link – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Verweis auf ein Objekt
 
 ```jsx
-<Link href="/crm/kontakt/4711">Kontakt Meier, Anna</Link>
+<Link href="/crm/contact/4711">Contact Meier, Anna</Link>
 ```
 
 ## Externer Verweis
 
 ```jsx
-<Link href="https://projekte.example.org/t/205" external={true} icon="external">
-  Aufgabe 205
+<Link href="https://projects.example.org/t/205" external={true} icon="external">
+  Task 205
 </Link>
 ```
 
 ## Download
 
 ```jsx
-<Link href="/api/dateien/anhang.pdf" download="anhang.pdf">Anhang herunterladen</Link>
+<Link href="/api/files/attachment.pdf" download="attachment.pdf">Download attachment</Link>
 ```
 
-## Sprungmarke im Artikel
+## Sprungmarke in einem Artikel
 
 ```jsx
-<Link href="#kapitel-3" variant="muted">zu Kapitel 3</Link>
+<Link href="#chapter-3" variant="muted">to chapter 3</Link>
 ```
 
 ## Szenarien
 
 | Szenario | Empfehlung |
-|----------|------------|
-| Zwischen Objekten springen | `standard` |
-| In Fließtext | `unterstrichen` |
-| Webbrowse extern | `external` plus Icon |
-| Aktion ohne Adresswechsel | [button](../../actions/button/), kein Link |
+|----------|----------------|
+| Springen zwischen Objekten | `standard` |
+| Im Fließtext | `unterstrichen` |
+| Extern im Webbrowser | `external` plus ein Icon |
+| Aktion ohne Adressänderung | [button](../../actions/button/), kein Link |
