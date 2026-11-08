@@ -1,4 +1,4 @@
-# Button Group (Schaltflächengruppe) - Aussehen
+# Button-Gruppe – Aussehen
 
 ## Grundlayout
 
@@ -6,24 +6,24 @@ Verbund (zwei Buttons teilen sich eine Kante):
 
 ```
 ┌────────────┬────────────┐
-│  Speichern │  Abbrechen │
+│    Save    │   Cancel   │
 └────────────┴────────────┘
 ```
 
-Segmented Control (genau ein Segment aktiv):
+Segmentierte Auswahl (genau ein Segment aktiv):
 
 ```
 ┌──────────┬──────────┬──────────┐
-│  Liste   │  Raster  │  Zeitleiste
+│  List    │  Grid    │ Timeline │
 └──────────┴──────────┴──────────┘
-   aktiv = eingefärbte Fläche
+   aktiv = farbige Fläche
 ```
 
 Split-Button:
 
 ```
 ┌──────────────────┬─────┐
-│  Speichern       │  ▾  │
+│  Save            │  ▾  │
 └──────────────────┴─────┘
 ```
 
@@ -31,34 +31,34 @@ Split-Button:
 
 | Variante | Aussehen |
 |----------|----------|
-| **verbund** | Innenseiten ohne Rundung, nur außen abgerundet |
-| **segment** | ein gemeinsamer Rahmen, Segmenttrenner als feine Linien |
-| **split** | wie `verbund`, letztes Element deutlich schmaler (nur Pfeil) |
+| **verbund** | die inneren Seiten sind nicht abgerundet, nur die Außenseite ist abgerundet |
+| **segment** | ein gemeinsamer Rahmen, Trennlinien zwischen den Segmenten als dünne Linien |
+| **split** | wie `verbund`, das letzte Element ist deutlich schmaler (nur Pfeil) |
 
 ## Größen
 
-Die Größentabelle von [Button](../button/) gilt für alle Gruppenelemente;
-Elemente unterschiedlicher Größe dürfen nicht in einer Gruppe stehen.
+Die Größentabelle von [Button](../button/) gilt für jedes Element der Gruppe;
+Elemente unterschiedlicher Größe dürfen nicht in derselben Gruppe stehen.
 
 ## Farben und Zustände
 
 | Zustand | Aussehen |
 |---------|----------|
-| `default` | wie Einzelbutton, Innenseiten geteilt |
-| `hover` | Ton eine Stufe dunkler, wie Button |
-| `active` (Segment ausgewählt) | eingefärbte Fläche, Text in Primärfarbe |
-| `focus` | Ring um das gesamte Element, nicht um die Gruppe |
+| `default` | wie ein einzelner Button, innere Seiten gemeinsam |
+| `hover` | Ton eine Stufe dunkler, wie bei einem Button |
+| `active` (Segment ausgewählt) | farbige Fläche, Text in der Primärfarbe |
+| `focus` | Ring um das ganze Element, nicht um die Gruppe |
 | `disabled` | 40 % Deckkraft des Elements |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tone` | Flächenton wechselt wie beim Einzelbutton |
-| `ring` | Fokusring am Element; Gruppenrand bleibt unverändert |
-| `indicator` | Auswahl durch Fläche, nicht nur durch Farbe |
+| `tone` | der Flächenton ändert sich wie bei einem einzelnen Button |
+| `ring` | Fokusring am Element; der Gruppenrahmen bleibt unverändert |
+| `indicator` | Auswahl wird durch die Fläche gezeigt, nicht nur durch Farbe |
 
-## Reaktiv
+## Responsiv
 
-- Zu breite Gruppen werden auf schmalen Bildschirmen vertikal gestapelt.
-- Beschriftungen dürfen nicht umbrechen; bei Platzmangel auf Icons umstellen.
+- Zu breite Gruppen werden auf schmalen Bildschirmen untereinander gestapelt.
+- Beschriftungen dürfen nicht umbrechen; wenn der Platz knapp wird, auf Icons umschalten.

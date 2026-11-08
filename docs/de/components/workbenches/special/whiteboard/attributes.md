@@ -1,44 +1,44 @@
-# Whiteboard - Attribute
+# Whiteboard – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `toolbar` | array[] | - | Array von Toolbar-Buttons |
-| `onChange` | function | - | Event bei Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `toolbar` | array[] | - | Liste der Werkzeugleisten-Buttons |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `interactive` | boolean | `true` | Interaktiv? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `interactive` | boolean | `true` | interaktiv? |
 | `grid` | boolean | `true` | Raster anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onDraw` | function | Wird beim Zeichnen ausgeführt |
-| `onClear` | function | Wird beim Löschen ausgeführt |
-| `onExport` | function | Wird beim Exportieren ausgeführt |
+| ---------- | ----- | -------------- |
+| `onDraw` | function | läuft beim Zeichnen |
+| `onClear` | function | läuft beim Löschen |
+| `onExport` | function | läuft beim Export |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `region` |
 
-## Features-Attribute
+## Funktionsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `undoRedo` | boolean | `true` | Rückgängig/Wiederherstellen? |
-| `collaborative` | boolean | `false` | Kollaborativ? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `undoRedo` | boolean | `true` | Rückgängig/Wiederholen? |
+| `collaborative` | boolean | `false` | gemeinsam bearbeitbar? |
 
 ## Export-Attribute
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `exportFormats` | array[] | `['png', 'jpg', 'pdf']` |
 
 ## Geerbt von

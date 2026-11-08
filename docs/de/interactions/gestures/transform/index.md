@@ -1,18 +1,18 @@
-# Transformations-Gesten (transform)
+# Transformationsgesten (transform)
 
-Transformations-Gesten bewegen **zwei oder mehr Zeiger relativ zueinander**:
-Abstand oder Winkel der Zeiger verändert den Inhalt (Zoom, Rotation).
+Transformationsgesten bewegen **zwei oder mehr Zeiger zueinander**: Der Abstand
+oder der Winkel der Zeiger verändert den Inhalt (Zoom, Drehung).
 
-Single-Point ist hier ausgeschlossen – Abstand und Winkel existieren erst ab
-zwei Zeigern. Die genaue Fingerzahl ist eine Einstellung (`pointerCount`),
-nach oben durch das Gerät begrenzt: Spread zu fünft ist dieselbe Geste wie
-zu zweit.
+Ein-Punkt ist hier unmöglich – Abstand und Winkel gibt es erst ab zwei
+Zeigern. Die genaue Fingerzahl ist eine Einstellung (`pointerCount`), nach oben
+begrenzt durch das Gerät: Auseinanderziehen mit fünf Fingern ist dieselbe Geste wie mit
+zwei.
 
 ## Elemente
 
-- **pinch** - Zeiger zusammenziehen (Zoom out)
-- **spread** - Zeiger auseinanderziehen (Zoom in)
-- **rotate** - Zeiger um einen Mittelpunkt drehen (Rotation)
+- **pinch** – Zeiger bewegen sich aufeinander zu (verkleinern)
+- **spread** – Zeiger bewegen sich auseinander (vergrößern)
+- **rotate** – Zeiger drehen sich um einen Mittelpunkt (Drehung)
 
 ## Zuordnung
 
@@ -20,16 +20,16 @@ zu zweit.
 |-----------|-------|
 | Inhalt verkleinern | pinch |
 | Inhalt vergrößern | spread |
-| Drehen (Karten, Bilder, Canvas) | rotate |
+| Drehen (Karten, Bilder, Zeichenfläche) | rotate |
 
 ## Barrierefreiheit
 
-Nach WCAG 2.5.1 braucht jede Transformation eine Einzeiger-Alternative
-(Zoom-Buttons, Rotations-Griff, Slider). Pinch-Zoom im Browser über
-`touch-action` steuerbar halten.
+Nach WCAG 2.5.1 braucht jede Transformation eine Alternative mit einem einzelnen Zeiger (Zoom-
+Buttons, Drehgriff, Schieberegler). Die Browser-Pinch-Zoom-Steuerung bleibt über
+`touch-action` bedienbar.
 
 ## Siehe auch
 
-- [Gesten Übersicht](../index.md)
-- [Zoom-In-Animation](../../animations/entrance/zoom-in/description.md) - Antwort auf Zoom-Gesten
-- [Rotate-Animation](../../animations/transition/rotate/description.md) - Antwort auf Dreh-Gesten
+- [Übersicht der Gesten](../index.md)
+- [Zoom-in-Animation](../../animations/entrance/zoom-in/description.md) – Antwort auf Zoom-Gesten
+- [Rotate-Animation](../../animations/transition/rotate/description.md) – Antwort auf Drehgesten

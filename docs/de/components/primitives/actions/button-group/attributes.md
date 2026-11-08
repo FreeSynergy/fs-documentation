@@ -1,37 +1,37 @@
-# Button Group (Schaltflächengruppe) - Attribute
+# Button-Gruppe – Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt aus der Basisklasse, siehe
 [base](../../basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Buttons bzw. Segmente der Gruppe |
-| `value` | string \| array | `null` | aktuell gewählter Wert (bei `segment`) |
-| `selectionMode` | enum | `single` | `single`, `multiple` (nur bei `segment`) |
-| `attached` | boolean | `true` | Elemente ohne Zwischenraum aneinander |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | die Buttons oder Segmente der Gruppe |
+| `value` | string \| array | `null` | aktuell gewählter Wert (für `segment`) |
+| `selectionMode` | enum | `single` | `single`, `multiple` (nur für `segment`) |
+| `attached` | boolean | `true` | Elemente liegen ohne Abstand aneinander |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `variant` | enum | `verbund` | `verbund`, `segment`, `split` |
 | `orientation` | enum | `horizontal` | `horizontal`, `vertical` |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onSelect` | function | Auswahl geändert (nur bei `segment`) |
-| `onAction` | function | Aktion eines Elements ausgelöst |
+| `onSelect` | function | Auswahl hat sich geändert (nur für `segment`) |
+| `onAction` | function | Aktion eines Elements wurde ausgelöst |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `role` | string | `group`; bei `segment` zusätzlich `radiogroup` oder `tablist` |
-| `aria-label` | string | Gruppenbeschriftung, wenn kein sichtbarer Titel |
+| `role` | string | `group`; für `segment` zusätzlich `radiogroup` oder `tablist` |
+| `aria-label` | string | Gruppenbeschriftung, wenn kein sichtbarer Titel vorhanden ist |
 | `aria-pressed` | boolean | Zustand eines `verbund`-Elements |
 | `aria-checked` | boolean | Zustand eines Segments |
 

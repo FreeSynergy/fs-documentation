@@ -1,17 +1,17 @@
-# Whiteboard - Aussehen
+# Whiteboard – Aussehen
 
 ## Grundlayout
-Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
+Ein Whiteboard ist eine Zeichenfläche für die Zusammenarbeit.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [Pencil] [Eraser] [Shapes] [Text]       │  ← Toolbar
+│ [Pencil] [Eraser] [Shapes] [Text]       │  ← Werkzeugleiste
 ├─────────────────────────────────────────┤
 │                                         │
 │      🖌️                                  │
 │      Whiteboard-Fläche                  │
 │                                         │
-│      (Zeichenfläche)                    │
+│      (Zeichenbereich)                   │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -20,46 +20,46 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 
 | Variante | Aussehen |
 |----------|----------|
-| **zeichnung** | Werkzeuge Stift und Radierer, freie Striche |
+| **zeichnung** | Stift- und Radiergummi-Werkzeuge, freie Striche |
 | **formen** | Werkzeugkasten mit Figuren und Verbindern |
-| **notizen** | Karten auf der Fläche, farbige Zettel |
-| **vorlage** | vorgezeichnete Flächen, Spalten und Ablaufschienen |
+| **notizen** | Karten auf der Fläche, farbige Notizen |
+| **vorlage** | vorgezeichnete Flächen, Spalten und Swimlanes |
 
 ## Größen
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
-| Small | 400x300px | Inline |
+| Small | 400x300px | inline |
 | Medium | 600x400px | Standard |
-| Large | 800x600px | Featured |
-| Full | 100% | Volle Breite |
+| Large | 800x600px | hervorgehoben |
+| Full | 100% | volle Breite |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Background** | Weiß/Grün | Hintergrund |
-| **Pencil** | Schwarz | Stift |
-| **Shapes** | Farbig | Formen |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Hintergrund** | weiß/grün | Hintergrund |
+| **Stift** | schwarz | Stift |
+| **Formen** | farbig | Formen |
 | **Text** | Schrift | Text |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
+| `shadow` | stärkerer Schatten |
 
-## Reaktiv
+## Responsiv
 
-- `Full` füllt den Viewport abzüglich Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
-  und der Ausschnitt scrollt.
-- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen rutscht sie
-  nach unten und die Knöpfe bleiben mindestens 44 px groß.
-- `pinch`/`spread` ändern den Maßstab, `drag` verschiebt die Fläche; die Linienstärke bleibt
+- `Full` füllt den Anzeigebereich abzüglich der Werkzeugleiste; sonst wächst die Fläche mit dem Inhalt
+  und der Anzeigebereich scrollt.
+- Die Werkzeugleiste bleibt beim Scrollen erreichbar; auf schmalen Bildschirmen wandert sie nach unten,
+  und die Buttons bleiben mindestens 44 px groß.
+- `pinch`/`spread` ändern die Skalierung, `drag` verschiebt die Fläche; die Strichstärke bleibt
   gleich, die Striche werden nicht dicker.
 
-## Toolbar-Buttons
+## Werkzeugleisten-Buttons
 
 | Button | Funktion |
 |--------|----------|
@@ -68,10 +68,10 @@ Ein Whiteboard ist eine Zeichenfläche für Kollaboration.
 | **Shapes** | Formen |
 | **Text** | Text |
 | **Color** | Farbe |
-| **Clear** | Alles löschen |
-| **Export** | Exportieren |
+| **Clear** | alles löschen |
+| **Export** | Export |
 
-## Grid-Background
+## Rasterhintergrund
 
 ```
 ┌─────────────────────────────────────────┐

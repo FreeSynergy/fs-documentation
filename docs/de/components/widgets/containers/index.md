@@ -1,19 +1,19 @@
-# containers (Container)
+# containers
 
-Band [widgets](../) – kennt seine Inhalte beim Bauen.
+Band [widgets](../) – kennt seinen Inhalt, wenn es gebaut wird.
 
-Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, aufklappbare Gruppen, geteilte Ansichten und Assistenten.
+Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, einklappbare Gruppen, geteilte Ansichten und Assistenten.
 
 ## Elemente
 
-- [**accordion**](./accordion/) – Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können.
-- [**card**](./card/) – Die Card (Karte) ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen darstellt.
-- [**panel**](./panel/) – Ein Panel ist ein großer Container mit Header, Inhalt und Footer.
-- [**scroll-area**](./scroll-area/) – Ein Laufbereich ist eine Fläche mit festem Maß, deren Inhalt läuft.
-- [**split-view**](./split-view/) – Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
-- [**wizard**](./wizard/) – Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
+- [**accordion**](./accordion/) – Ein Akkordeon ist ein Stapel aus Kopfzeilen, die Inhalte ein- und ausklappen.
+- [**card**](./card/) – Die Karte ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen zeigt.
+- [**panel**](./panel/) – Ein Panel ist ein großer Container mit Kopfzeile, Inhalt und Fußzeile.
+- [**scroll-area**](./scroll-area/) – Ein Scrollbereich ist eine Fläche mit fester Größe, deren Inhalt scrollt.
+- [**split-view**](./split-view/) – Eine geteilte Ansicht ist ein Layout mit zwei Bereichen nebeneinander.
+- [**wizard**](./wizard/) – Ein Wizard ist ein schrittweises Formular für komplexe Aufgaben.
 
-## Steckbriefe
+## Profile
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -26,6 +26,6 @@ Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, aufklappbare G
 
 ## Siehe auch
 
-- [Komponenten-Übersicht](../../index.md)
-- [Band widgets](../)
+- [Komponentenübersicht](../../index.md)
+- [Band Widgets](../)
 - [Basiskomponente](../../primitives/basics/base.md)
