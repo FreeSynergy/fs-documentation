@@ -12,6 +12,42 @@ Einzeilig einfügen, N ersetzen:
 /loop Du bist Thread N im Sprint. Lies /srv/FreeSynergy/fs-documentation/todo/sprint.md, dann arbeite deine Liste der Reihe nach ab, auch mit vielen Agenten, und nimm nach jedem fertigen Punkt den nächsten.
 ```
 
+## Runde 3 (Nutzer, 2026-11-09): Datentypen, Components, vier Frontends – Pilot People
+
+**Grundlage:** ADR 0066 (`conventions/decisions/0066-datentypen-und-vier-frontends.md`) und die Landkarte `docs/en/programs/map.md`. **Ziel der Woche:** Bis Freitag haben möglichst alle Programme ein erzeugtes Admin-Frontend, das grundlegend funktioniert; People zusätzlich mit Einfach-, Apple- und Windows-Frontend. **Reihenfolge:** Mo–Di Pilot People (Threads T, P, C, A, M), danach verteilt die Strategie den Ausbau auf die übrigen Programme (Thread R). Die Regeln unten gelten weiter. Meldungen an den Koordinator (Haiku), nicht an die Strategie.
+
+**Blinc-Beiträge (Nutzer, 2026-11-09):** In Commits, PRs und Issues für `project-blinc/Blinc` **keine KI-Kennzeichnung**, Regeln in `/srv/FreeSynergy/blinc/CLAUDE.md` (git-bug, volle 64-stellige ID als Trailer; `git config git-bug.git-transport git`). In unseren eigenen Repos bleibt die Kennzeichnung.
+
+### Thread T – Grundtypen und Typbeschreibung (Sonnet, startet sofort)
+1. In `fs-interfaces` ein Schema `types.capnp`: die Grundtypen aus `map.md` (zuerst E-Mail, Telefon, Name, Adresse, Ort, Datum/Zeit, Sprache, Link, Bild, Schlüssel, Auswahl, Stichworte, Verweis), je mit Standard im Kommentar.
+2. Im selben Schema die **Typbeschreibung**: Felder (Name, Grundtyp, Pflicht, mehrfach, Beschriftung als Übersetzungs-Schlüssel), Befehle (Name, Eingabe, Ergebnis). Muster: Registry; Trait `DescribesType`.
+3. Rust-Umsetzung der Grundtypen (prüfen, normalisieren, vorschlagen) als eigenes Crate, Name vorläufig `fs-types`, Ort nach `coding.md` begründen und in der `DESIGN.md` festhalten.
+4. Prüfen, ob ein freies Crate JSContact/vCard abdeckt (Kandidat `calcard`, Lizenz und Reifegrad); Ergebnis in die `DESIGN.md`, nicht selbst nachbauen, was es gibt.
+5. Früh einen Entwurf taggen (v0.0.N), damit P, C und A anfangen können.
+
+### Thread P – `fs-people` auf JSContact (Sonnet, startet nach dem ersten Tag von T)
+1. `Person` vollständig nach `docs/en/data/people/jscontact/description.md` (RFC 9553 `Card`), alle Felder der Tabelle; vorhandene Daten migrieren, nichts verlieren.
+2. Typbeschreibung von `Person` melden (Trait `DescribesType` aus T), mit den Befehlen: anlegen, ändern (PatchObject), suchen, löschen, prüfen, vorschlagen (z. B. E-Mail-Domains aus vorhandenen Kontakten).
+3. vCard-Import und -Export über RFC 9554, wenn T ein Crate gefunden hat.
+
+### Thread C – Components je Grundtyp und Stile (Sonnet, startet sofort mit dem Stil-System)
+1. In `fs-components` das Stil-System: Tokens für Abstände, Zeilenhöhen, Schriftgrößen, Radien, Farben, Effekte (Glas, Fläche, Schatten) und ein Iconset je Stil. Vier Stile: Admin, Einfach, Apple, Windows. Maße für Apple und Windows aus Thread M.
+2. Je Grundtyp vier Components: Eingabe, Anzeige, kompakt, Zelle. Zuerst E-Mail (gegliedert, mit Vorschlägen über den Befehl „vorschlagen“), Name, Telefon, Adresse, Datum.
+3. Alles, was Blinc nicht kann (z. B. Glas, eine bestimmte Zeilenhöhe), genau messen und als git-bug-Eintrag mit Beleg in unserem Blinc-Klon festhalten; der Strategie gebündelt melden.
+
+### Thread A – erzeugtes Admin-Frontend (Sonnet, startet nach dem ersten Tag von T)
+1. Ein Frontend, das aus einer Typbeschreibung Liste, Detail, Formular und Befehle erzeugt, mit den Components aus C und der Fensterhülle nach ADR 0065.
+2. Zuerst für People, dann für jedes Programm, das eine Typbeschreibung liefert.
+
+### Thread M – Maßblätter Apple und Windows (Haiku, startet sofort)
+1. Aus den öffentlichen Leitlinien (Apple Human Interface Guidelines, Microsoft Fluent 2) die Maße zusammentragen: Abstände, Raster, Schriftgrößen und Zeilenhöhen, Radien, Materialien (Glas, Mica/Acrylic), Farben, Fokus, Listenzeilen. Mit Quelle je Wert.
+2. Offene Schriften mit ähnlichen Maßen vorschlagen (Lizenz je Schrift).
+3. Für People: Aufbau der Kontakte-App auf macOS und der Kontaktansicht unter Windows (People/Outlook) beschreiben, mit Maßen. Bildschirmfotos nur lokal unter `/srv/FreeSynergy/.scratch/reference/`, **nie in ein Repo**.
+4. Ergebnis: `docs/en/components/styles/apple.md` und `windows.md`; danach `scripts/gen_component_indexes.py --lang en`.
+
+### Thread R – Ausbau auf alle Programme (ab Mittwoch, Liste folgt von der Strategie)
+Je Programm: Datentyp nach seinem Standard, Typbeschreibung, Admin-Frontend. Die Strategie schreibt die Liste, sobald der Pilot steht.
+
 ## Runde 2 (Nutzer, 2026-11-07 abends): Laden `fs-store` lauffähig und installierbar
 
 Die fünf Threads der Runde 1 sind fertig. Runde 2 hat fünf neue Threads; S, M und U starten nach dem Ende der Umbenennung (Nutzer), D sofort. **Sprint.md immer von GitHub lesen** (`git -C /srv/FreeSynergy/fs-documentation fetch -q && git -C /srv/FreeSynergy/fs-documentation show origin/main:todo/sprint.md`), der lokale geteilte Baum ist veraltet. Mechanische Arbeit (Suchen und Ersetzen, Doku nachziehen, Listen) an Haiku-Agenten geben, sie verbrauchen am wenigsten; Code-Prüfung vor jedem Tag weiter durch einen zweiten Agenten, der den Code nicht schrieb.

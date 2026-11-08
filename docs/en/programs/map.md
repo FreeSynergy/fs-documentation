@@ -1,6 +1,6 @@
 # Map of the programs
 
-**Status: draft for the owner (2026-11-08), nothing decided yet.** This page puts every program, facet and suite in
+**Status: draft (2026-11-08); the layers and the four frontends are decided (ADR 0066, 2026-11-09), the program table is still open.** This page puts every program, facet and suite in
 one place, together with the data types each one owns and the frontends it gets. It is the starting point of round 3:
 first we agree on this map, then on the data types and interfaces, and only then do we build.
 
@@ -20,18 +20,20 @@ first we agree on this map, then on the data types and interfaces, and only then
 The backend announces, for each data type, its fields, their basic types and its commands. A frontend never decides
 what an e-mail address is; it only decides where it shows the e-mail component.
 
-## Four frontends for every program
+## Four frontends for every program (ADR 0066)
 
 | Frontend | Purpose | Built how |
 |----------|---------|-----------|
 | **Admin** | Every field, every setting, every command. The safety net. | Generated from the data type description, the same code for all programs |
 | **Simple** | For people with little experience: few buttons, large, clear. | By hand, one style for all programs |
-| **Reference A** | Rebuilt to the measurements of a well-known program: spacing, sizes, corners, layout, effects. Our own icons and texts, none of theirs. Doubles as a test of what the GUI engine can do. | By hand, from a measurement sheet |
-| **Reference B** | The same with a second, different program. | By hand, from a measurement sheet |
+| **Apple style** | Rebuilt to measure after Apple's design language: spacing, line heights, font sizes, corners, glass, layout. | By hand, from a measurement sheet |
+| **Windows style** | The same after Microsoft's Fluent design: flat surfaces, its spacing and corners. | By hand, from a measurement sheet |
 
-For each reference program the category already has a written analysis (`frontends/<program>/latest/layout.md` and
-others). What is missing is a **measurement sheet**: exact spacing, font sizes, corner radii, colours of areas,
-shadows and effects, taken from screenshots that stay local and are never published.
+The measurement sheets come from the public guidelines (Apple Human Interface Guidelines, Microsoft Fluent 2) and from
+screenshots of the platforms' own apps that stay local and are never published. The exact rebuild also tests what the
+GUI engine can do. Our own icons, texts and open fonts with similar measurements; none of theirs.
+
+The analyses of well-known programs per category (`frontends/<program>/latest/`) stay the source for **functions**.
 
 ## Basic types (first list)
 
@@ -59,7 +61,7 @@ shadows and effects, taken from screenshots that stay local and are never publis
 
 ## Programs
 
-| Program | Owns (standard) | Uses | Facets (proposed) | Suites | Reference candidates (analysed) |
+| Program | Owns (standard) | Uses | Facets (proposed) | Suites | Analysed programs (functions) |
 |---------|-----------------|------|-------------------|--------|-------------------------------|
 | `fs-people` | `Person` (JSContact `Card`) | groups, files | Contacts, Users, AIs, Partners, Team, Members | Groupware, CRM, Democracy | GNOME Contacts, KAddressBook, Monica, Nextcloud Contacts |
 | `fs-groups` | `Group`, membership (AS2, SCIM) | people | Groups | all | **none analysed** |
@@ -102,5 +104,5 @@ Platform without its own frontend: `fs-objects` (keeping objects), `fs-hub` (sha
    Serverless Workflow, BPMN), or later?
 3. **Helpdesk**: suite as proposed above, or own program?
 4. **Groups, identity, history, store**: no reference programs analysed yet; Haiku researches candidates.
-5. **Styles**: first proposal of four — *Glass* (round corners, blur), *Solid* (straight edges, flat colours),
-   *Classic* (dense, many columns), *Large* (for the simple frontend). Each with an icon set of our own.
+5. **Styles**: the first four are fixed by the frontends: *Admin* (dense), *Simple* (large), *Apple* (round corners,
+   glass), *Windows* (flat, Fluent spacing). Each with an icon set of our own. More can follow.
