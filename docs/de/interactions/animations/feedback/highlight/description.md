@@ -2,16 +2,18 @@
 
 ## Beschreibung
 
-Highlight lässt den Hintergrund eines Elements kurz aufleuchten und wieder abklingen. Die Fläche bleibt dabei an ihrer Position; nur die Farbe ändert sich, um den Blick auf eine bestimmte Stelle zu lenken.
+Highlight lässt den Hintergrund eines Elements kurz aufleuchten und blendet ihn dann wieder aus.
+Die Fläche bleibt dabei an ihrer Position; nur die Farbe ändert sich, um den Blick auf eine
+bestimmte Stelle zu lenken.
 
 ## Verwendung
 
-- Fundstelle nach einer Suche im Text
-- Sprungmarke oder Ankerlink in langen Dokumenten
-- Neu eingefügter Eintrag in einer Liste
-- Korrigiertes Eingabefeld nach der Validierung
-- Zielbereich im Onboarding („Hier findest du die Einstellungen“)
-- Markierter Bereich nach dem Speichern
+- die gefundene Textstelle nach einer Suche
+- eine Sprungmarke oder ein Anker-Link in langen Dokumenten
+- ein neu eingefügter Eintrag in einer Liste
+- ein korrigiertes Eingabefeld nach der Prüfung
+- der Zielbereich im Onboarding („Hier findest du die Einstellungen“)
+- ein markierter Bereich nach dem Speichern
 
 ## Dauer
 
@@ -20,6 +22,6 @@ Highlight lässt den Hintergrund eines Elements kurz aufleuchten und wieder abkl
 
 ## Unterschied zu Ripple
 
-- Ripple: Welle mit erkennbarem Ursprung am Klickpunkt, Ausbreitung über das Element
-- Highlight: Flächiges Aufleuchten des ganzen Hintergrundes ohne Ursprungspunkt
-- Glow: Endloses Leuchten um die Kontur als anhaltender Status; Highlight ist zeitlich begrenzt
+- Ripple: eine Welle mit erkennbarem Ursprung am Klickpunkt, die sich über das Element ausbreitet
+- Highlight: ein flächiges Aufleuchten des gesamten Hintergrunds ohne Ursprungspunkt
+- Glow: ein dauerhaftes Leuchten um die Kontur als Statusanzeige; Highlight ist zeitlich begrenzt
