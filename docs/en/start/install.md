@@ -10,7 +10,7 @@ You install one program by hand, [FreeSynergy.Store](../programs/platform/store.
 
 The Store is published as a **pre-release** on GitHub: <https://github.com/FreeSynergy/fs-store/releases>.
 
-Pick the newest release marked "Pre-release". On 2026-11-08 the first one, `v0.0.1`, carries these files (look at the list there, it can grow):
+Pick the newest release marked "Pre-release". On 2026-11-08 the releases `v0.0.1` to `v0.0.3` carry these files (look at the list there, it can grow):
 
 | For | File |
 |-----|------|
@@ -18,7 +18,7 @@ Pick the newest release marked "Pre-release". On 2026-11-08 the first one, `v0.0
 | any Linux, no root needed | `.tar.gz` (x86_64 and aarch64) |
 | checking | `SHA256SUMS.txt`, one `.asc` signature next to every file, the release key `FreeSynergy-release-key.pgp`, an SBOM (`.spdx.json`) |
 
-Packages for Debian and Ubuntu (`.deb`), Arch, AppImage and macOS (`.dmg`) are not in `v0.0.1`; earlier builds had them. Windows is not built yet. If you use a macOS build later: it is not signed with a paid Apple certificate, so open the app once, then System Settings > Privacy & Security > "Open Anyway". The OpenPGP signatures and checksums are the trust path.
+Packages for Debian and Ubuntu (`.deb`), Arch, AppImage and macOS (`.dmg`) are not in these releases; earlier builds had them. Windows is not built yet. If you use a macOS build later: it is not signed with a paid Apple certificate, so open the app once, then System Settings > Privacy & Security > "Open Anyway". The OpenPGP signatures and checksums are the trust path.
 
 !!! warning "State on 2026-11-08"
     Always take the newest release in the list. Version numbers were reset to `0.0.N` ([ADR 0064](../decisions/0064-versionen-ab-0-0-1.md)): `0.0.N` means development, `0.1.0` means a person can use it, `1.0.0` means two independent users of its interface. The earlier builds (`0.1.0-rc.N`) were removed. If you installed one as an rpm, remove it once (`sudo dnf remove fs-store`) before installing the new one, because the new number is lower and would not count as an update.
