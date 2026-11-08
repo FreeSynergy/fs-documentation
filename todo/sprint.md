@@ -45,6 +45,11 @@ Einzeilig einfügen, N ersetzen:
 3. Für People: Aufbau der Kontakte-App auf macOS und der Kontaktansicht unter Windows (People/Outlook) beschreiben, mit Maßen. Bildschirmfotos nur lokal unter `/srv/FreeSynergy/.scratch/reference/`, **nie in ein Repo**.
 4. Ergebnis: `docs/en/components/styles/apple.md` und `windows.md`; danach `scripts/gen_component_indexes.py --lang en`.
 
+### Thread F – Funktions-Vorbilder prüfen und analysieren (Haiku, startet sofort)
+1. Die Tabelle „Function references“ in `docs/en/programs/map.md` prüfen: gibt es das Programm noch, stimmt die genannte Funktion? Korrekturen direkt in die Tabelle, mit Quelle.
+2. Für jedes dort genannte Programm, das unter `frontends/` der Kategorie noch fehlt, eine Analyse im üblichen Aufbau anlegen (`index.md`, `latest/description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`), nur Funktionen, nichts kopiert (ADR 0012, 0013, 0025). Neue Kategorien bei Bedarf: notes, history, store, start.
+3. Die Fähigkeiten in die `requirements.md` der Kategorie übernehmen (Status `proposed`).
+
 ### Thread R – Ausbau auf alle Programme (ab Mittwoch, Liste folgt von der Strategie)
 Je Programm: Datentyp nach seinem Standard, Typbeschreibung, Admin-Frontend. Die Strategie schreibt die Liste, sobald der Pilot steht.
 
