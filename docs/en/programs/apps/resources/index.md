@@ -1,8 +1,28 @@
 # Resources
 
+## In short
+
+Resources keeps what a group has and what it needs: things, rooms, material in stock, and people's time. You can reserve something for a stretch of time, post a need, or post an offer. It answers the question: what do we have, what do we need, and who has time? Two people cannot book the same room by accident, and nobody else can take your time.
+
+## What is different here
+
+- Your own capacity, meaning your time, belongs to you. Only you decide what is shown and allocated. What a group sees is a share you give.
+- A reservation is checked in one step, so two people cannot overbook together.
+- Material that is used up is counted as used up.
+- Things and people's time are one program on purpose, because they share planning.
+- No standard for a resource model was found. Resources owns its interface, `resources.capnp` in `fs-interfaces`, a draft marked provisional.
+
+## Where it stands today
+
+Latest tag: `v0.2.0`. There is **no window and no server yet**. A server must refuse your capacity calls until it knows who is asking.
+
+Today it handles things, rooms and material, with stock worked out from what has been finished. Reservations cannot overbook, and finishing one frees the thing or uses up the material. It can show the free time of a thing over a range, keep your own capacity, allocations and shares to groups in a store of its own, and work out the load of a group using the Groups interface. Needs and offers work, and accepting an offer makes the reservation. It has 115 tests and was checked by an independent reviewer over four rounds.
+
+What is not there yet: costs, support for MSPDI (a project plan file format), and skills. There are no warehouses, batches or valuation. This is availability, not an ERP.
+
 `FreeSynergy.Resources` (`fs-resources`) answers: **what do we have, what do we need, and who has time?**
 
-**Status: [core](https://github.com/FreeSynergy/fs-resources) v0.1.0, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
+**Status: [core](https://github.com/FreeSynergy/fs-resources) v0.2.0, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
 
 ## Why
 

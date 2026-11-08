@@ -1,6 +1,26 @@
 # Streaming systems
 
-**`FreeSynergy.Streaming` (`fs-streaming`) is planned, no code yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+## In short
+
+Streaming takes one live stream and sends it on to several places at the same moment, and records it. You do not need a provider in the middle. It answers the question: how do I show something once and bring it everywhere, without handing my stream key to anyone?
+
+## What is different here
+
+- The stream is passed on untouched, so quality is not lost and the machine does little work.
+- A slow or dead target never slows the sender or the other targets.
+- Keys are treated as secrets. The key you publish with is shown once and only a hash is kept. Keys never appear in logs or errors.
+- If the sender drops, the targets stay connected for a while and the stream continues when it returns.
+- Streaming owns its interface, `streaming.capnp` in `fs-interfaces`. It is a draft and marked provisional.
+
+## Where it stands today
+
+Latest tag: `v0.2.0` (stage 1 of the design). There is **no window and no server yet**.
+
+Today it can receive one RTMP stream and send it to many RTMP or RTMPS targets, record the stream to a folder as FLV, and check a target before going live, as far as that can be known. It has 94 tests with real sockets.
+
+What is not there yet: it has only been tested on loopback with ffmpeg, never against a real streaming platform. Receiving is plain RTMP and stays on loopback by default. Handing a recording to Files is not built; everything else in the contract is reported as "not possible". A forwarding loop through another machine cannot be detected from here.
+
+**Status: stage 1 `v0.2.0` in [`fs-streaming`](https://github.com/FreeSynergy/fs-streaming) (forward and record, tested on loopback only), no window yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
 
 ## Overview
 

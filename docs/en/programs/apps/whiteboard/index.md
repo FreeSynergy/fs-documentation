@@ -1,6 +1,26 @@
 # Whiteboards
 
-**`FreeSynergy.Whiteboard` (`fs-whiteboard`) is planned, no code yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+## In short
+
+Whiteboard is an endless board for ideas. You put down pages, shapes, text, connectors and drawings, and several people can change the same board at the same time. It answers the question: how do we think together on one picture without getting in each other's way?
+
+## What is different here
+
+- Two people changing the same board are merged property by property. If you move a shape while someone else recolours it, both changes stay.
+- The merge does not depend on the order in which changes arrive. Property tests check this.
+- Your undo only undoes your own steps. It skips a property that someone else has changed since.
+- A board can be exported as SVG.
+- Whiteboard owns its interface, `whiteboard.capnp` in `fs-interfaces`. It is a draft and marked provisional.
+
+## Where it stands today
+
+Latest tag: `v0.2.0` (stage 1 of the design). There is **no window and no server yet**.
+
+What works today is the core: boards, pages and every kind of element in the contract; merging of changes from two sides; undo for each editor; groups, copy, align, lock and reorder; a fast way to find what is in view; and export to SVG. PNG and PDF export answer "not possible". It has 104 tests with real stores and was checked by an independent reviewer over several rounds.
+
+What is not there yet: nothing sends changes between devices, so the merge is not used anywhere. Live presence, sharing, libraries, templates and comments are planned, not built.
+
+**Status: first core `v0.2.0` in [`fs-whiteboard`](https://github.com/FreeSynergy/fs-whiteboard), no window yet (stage 1).** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
 
 ## Overview
 

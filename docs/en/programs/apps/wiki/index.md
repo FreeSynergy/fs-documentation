@@ -1,5 +1,22 @@
 # Wiki Systems
 
+## In short
+
+FreeSynergy Wiki turns texts into connected pages. Pages link to each other, and you can see what links to a page. It answers the question: where do the things we write live, so that we can find, link and keep them?
+
+## What is different here
+
+- A text is stored as text plus layers, not as one flat file. The database is the truth, and files are exports.
+- Saving is not exporting: nothing is written to your files until you press Export. If both the file and the database changed, the program shows you the conflict instead of overwriting either.
+- You can import a folder of Markdown files, edit in the program, and export Markdown again when you decide to.
+- Wiki owns the open text interface, so other programs can reach texts through one interface instead of keeping their own text model.
+
+## Where it stands today
+
+Latest tag: `v0.4.0`. You can create, edit, move, delete and list texts by path, with links, backlinks and search. Moving a text or a folder rewrites the links to it. Markdown can be imported and exported. An overwrite is refused when someone else saved first, and other programs are told when a text changes. A small server offers all of this over a local socket. There is a first window, the reader: a tree of pages, reading with formatting, following links, back, search, editing and saving, and an Export button. Unsaved drafts are backed up and offered back after a crash. The first start imports a documentation folder (about 30 seconds for 1,400 pages).
+
+Not there yet (planned): typing in the real window has not been verified by tests; no other editors, no collections or shelves, no templates inside the program. The edit lock works inside one process only. Some characters (certain emoji) show as boxes, and very wide tables can run past the edge. The interface is a draft with no consumer yet.
+
 ## Overview
 
 This section contains documentation for various wiki systems and knowledge platforms.

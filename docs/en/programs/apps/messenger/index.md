@@ -1,5 +1,31 @@
 # Messenger and Instant Messaging
 
+## In short
+
+FreeSynergy Messenger is one place for mail, chat and AI agents. It treats a message as a message, whichever network brought it. You read, answer, search and file in one place, and connectors do the talking to the outside world. A message is only sent if it can be sent encrypted.
+
+## What is different here
+
+- Encrypted only: if no way to encrypt a message to all its recipients exists, it is not sent, and there is no override.
+- Incoming messages are marked with what the connector really knows. Anything not proven end-to-end is never shown as secure.
+- The original of every mail is kept byte for byte.
+- AIs are participants, not hidden listeners. Each one is marked, none acts without a release from you, and an emergency stop wins over everything.
+- Messenger owns its open interface; mail, chat and agents are connectors under one program.
+
+## Where it stands today
+
+Latest tag: `v0.4.0`. Today it is the core, without a window. It has a message model for mail, chat and agents, with conversations, paging that does not jump when new mail arrives, unread marks, drafts, search, pin, move, flag and forward. Encrypted-only sending refuses clearly and names the recipients that cannot be reached. Messages are stored with their original. A mail connector fetches over IMAP or JMAP and sends over SMTP or JMAP, with OpenPGP and Autocrypt; it is tested against a local Stalwart test server only. An AI guard gives each AI an invitation, a release per kind of action, questions for risky steps, keeps secrets away from AIs, and has an emergency stop.
+
+Not there yet (planned): a window, a server, chat connectors (Matrix and others) and Telegram. Messages stay on the device they arrived on, on purpose, until the key vault exists, and account passwords cannot be stored yet. Editing and reacting to a message, scheduled sending, mail rules, HTML bodies, key discovery, STARTTLS and S/MIME answer "not possible". The rule that all members must agree before an AI joins a conversation is not built, and the guard's rules are provisional. The interface is a draft with no consumer yet.
+
+## Planned facets
+
+Facets are parts of a program that look like apps of their own (see [Programs](../../index.md)). Proposed for `fs-messenger`:
+
+- Mail (proposed)
+- Chat (proposed)
+- Forum, possibly (proposed)
+
 ## Overview
 
 This section contains documentation for various messengers and communication platforms.

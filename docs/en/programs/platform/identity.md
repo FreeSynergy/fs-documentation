@@ -1,8 +1,23 @@
 # Identity wrapper
 
+## In short
+
+Identity is meant to become the one place where signing in and access to systems are handled. We describe how it should behave, and Kanidm, an open identity server, does the work where it can. Today it is a small bridge, not yet a sign-in.
+
+## What is different here
+
+- Kanidm never decides who belongs to what. [Groups](groups.md) decides, and Kanidm mirrors it.
+- Kanidm sits behind our own interface. We take on what it cannot do and hand control back when it can.
+- If you do not run Kanidm, all programs still run alone.
+- Our own small client talks to Kanidm's REST interface, checked against Kanidm 1.12.0.
+
+## Where it stands today
+
+Latest tag: `v0.2.0`. The adapter creates, reads, updates, lists and removes groups in Kanidm so that they match Groups, and can be repeated safely. It ran once against a real Kanidm 1.12.0 container. There is no sign-in yet: no passwords, OAuth2 clients, SCIM, PAM or RADIUS. It cannot create invitations or grant rights in Kanidm. The name of the repository is provisional.
+
 Signing in, and access to systems. We define how it behaves; Kanidm carries it out where it can.
 
-**Status: planned, no code yet (2026-11-06).** Back to the [overall plan](../apps/roadmap.md). The repository name `fs-identity` is provisional. Details:
+**Status: only a Kanidm adapter for groups, `v0.2.0`; no sign-in yet.** Back to the [overall plan](../apps/roadmap.md). The repository name `fs-identity` is provisional. Details: 
 [Kanidm research](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/kanidm-control.md), source read
 at Kanidm 1.13.0-dev (latest release 1.12.0), not run against a live server.
 

@@ -1,5 +1,30 @@
 # Calendar Systems
 
+## In short
+
+Calendar keeps your events, including the ones that repeat, in the right time zone. It shows them by month, week, day or as an agenda, and your tasks appear beside them. It answers the question: where do I need to be, and when?
+
+## What is different here
+
+- Events follow the open JSCalendar standard (RFC 8984), and this program owns it.
+- Events import and export as iCalendar and as JSCalendar JSON; the original file text is kept for every event.
+- An event keeps its wall-clock time across daylight saving. If a file holds a time zone the program cannot read, it refuses that event rather than store it at the wrong time.
+- Tasks are not copied in. The calendar asks the Tasks program for them.
+- Events marked sensitive are left out of exports unless you release them by name.
+
+## Where it stands today
+
+Latest tag: `v0.7.0`. You can create, edit, delete and list events, find what happens in a time range, and use repeating events with single occurrences changed, removed or added. Invitations can be sent, accepted, tentatively accepted and declined. The agenda mixes events and tasks. A small server and a first, provisional window (month, week, day, agenda, import and export) exist.
+
+Not there yet: editing repeat rules or single occurrences, answering invitations, alerts and several calendars in the window; CalDAV, invitations by e-mail and free/busy calculation. The calendar server is not yet connected to a task server. Importing large files is slow (about 45 seconds for 4,000 events). Some late corrections to the core have been tested but not yet reviewed by a second reader. The interface is a draft with no consumer yet.
+
+## Planned facets
+
+Proposed, not built:
+
+- Calendar: your events and appointments.
+- Booking: reserving things and places, together with `fs-resources`.
+
 ## Overview
 
 This section contains documentation for various calendar and time management systems.

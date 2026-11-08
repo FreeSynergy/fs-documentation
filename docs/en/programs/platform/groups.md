@@ -1,8 +1,23 @@
 # Groups
 
+## In short
+
+Groups keeps track of who belongs together: a family, a team, a club, a department inside a bigger one. It also answers who may do what. You can invite people, and only the person invited can accept.
+
+## What is different here
+
+- Groups work alone. No directory server is needed. If you run one such as Kanidm, Groups can mirror its state there, but the directory never decides.
+- Groups can nest, and a group can have several parents. A loop is refused, and the answer names the path.
+- Membership counts through nesting, and the answer says how a person got in.
+- AI agents are never administrators of a group.
+
+## Where it stands today
+
+Latest tag: `v0.3.0`. You can create, nest and delete groups, add members with a role, send invitations that expire, and delegate and revoke rights. There is no window and no server yet. Delegated rights only answer questions; nothing enforces them, and nobody is authenticated yet. Some rules are still provisional while the project owner decides them. Following between groups is planned, not built.
+
 `fs-groups`: belonging together, and deciding who may do what.
 
-**Status: draft interface in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces) v0.3.0, code in progress (2026-11-06).** Back to the [overall plan](../apps/roadmap.md).
+**Status: core `v0.3.0` in [`fs-groups`](https://github.com/FreeSynergy/fs-groups), no window; the interface is a draft in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces).** Back to the [overall plan](../apps/roadmap.md).
 
 ## Why it comes early
 

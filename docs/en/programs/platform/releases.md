@@ -1,5 +1,21 @@
 # Releases
 
+## In short
+
+This is how FreeSynergy programs reach you. One shared set of build and release recipes checks, packages, signs and describes every program, so each one is treated the same way. The aim is that you can check that a download really is ours.
+
+## What is different here
+
+- Everything is free of charge, for you and for us.
+- Each release comes with checksums, an OpenPGP signature, a software bill of materials and build provenance, so you can see what is inside and who built it.
+- We say openly what we cannot do yet. macOS and Windows builds are not signed by the platform vendors, and the repository explains how to open them anyway.
+- Releases start as drafts and are never published automatically.
+- The store app, FreeSynergy.Store, is planned to refuse any package without a valid signature. It is not public yet, and there is nothing to download.
+
+## Where it stands today
+
+There is no release tag yet. The shared workflows exist and the repositories use them. The first real run, on `fs-capnpc`, produced a draft release with Linux, macOS and Windows packages, a bill of materials and checksums. Signing has not been shown in a real release run yet. AppImage, exe, dmg, Flatpak, containers and mobile are untried. The store is planned: today it exists only as a design and a core library, in a repository that is not public.
+
 How FreeSynergy programs reach people. **Status (2026-11-06): the shared workflows exist. `capnp-compiler` 0.1.1 is on crates.io; its signed release on GitHub is still a draft.** ADR 0051.
 
 ## Only free ways

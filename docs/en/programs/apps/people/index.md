@@ -1,5 +1,34 @@
 # Contact and CRM Management
 
+## In short
+
+People holds the people in your life: friends, family, colleagues, customers, and groups of them. Each person is one card, and one card can carry several roles. It answers the question: who is this?
+
+## What is different here
+
+- A card follows the open JSContact standard (RFC 9553). Anything the program does not understand is kept, not thrown away.
+- You can bring contacts in as vCard and take them out again; the original text is kept per card.
+- Cards marked sensitive stay out of exports unless you release them by name. Roles are kept apart from the card, so an export does not reveal them.
+- If a participant is an AI, the card says so. The mark restricts nothing; it only tells you who you are dealing with.
+- People works alone. Other FreeSynergy programs can refer to a person by id instead of keeping their own copy.
+
+## Where it stands today
+
+Latest tag: `v0.6.0`. You can create, edit, delete, list and search cards, import and export vCard, and keep groups, several roles per person and relations. The program can propose that two cards are the same person; nothing is merged until you confirm. A small server and a first, provisional window exist.
+
+Not there yet: managing groups, relations and roles or setting the sensitive mark in the window, undo and live updates, sign-in (the acting person is a placeholder), CardDAV and sync between devices. The interface is a draft with no second user yet, so it may still change.
+
+## Planned facets
+
+Proposed, not built:
+
+- Contacts: your address book.
+- Users: people who use the system.
+- AIs: participants that are AI.
+- Partners: leads, customers and suppliers.
+- Team: the people you work with.
+- Members: members of a group or association.
+
 ## Overview
 
 This section contains documentation for various contact and CRM systems.
