@@ -96,6 +96,43 @@ Platform without its own frontend: `fs-objects` (keeping objects), `fs-hub` (sha
 | Media | files (Gallery), streaming |
 | Marketplace | later |
 
+## Cross-cutting goals (owner, 2026-11-09)
+
+1. **Command palette** over all programs; the commands come from the type descriptions (seen in Raycast, Linear).
+2. **Input in plain language** for dates, tasks and contacts ("lunch with Ana Fri 1 pm"; Fantastical, Things, Todoist).
+3. **Typed notes:** a tag turns a note into a data type with fields (Tana supertags, Frappe DocTypes; confirms ADR 0066).
+4. **Screener:** someone new reaches you only after you let them in, for mail and chat (HEY).
+5. **Guides recorded as commands** and the **wiki embeddable everywhere** (Tango; see wiki requirements).
+6. **Deciding together** with the procedures in the democracy requirements (Polis, Loomio, systemic consensing,
+   growing voting radius).
+
+## Function references (proposal, to be checked)
+
+Programs whose makers thought further than the rest. We take ideas, never code or looks (ADR 0025).
+
+| Area | Programs and their standout idea |
+|------|----------------------------------|
+| People | Monica: life events, "last talked", keep-in-touch; Google Contacts: merge suggestions; Apple: NameDrop |
+| Mail | HEY: Screener, Imbox/Feed/Paper Trail; Superhuman: keyboard, split inbox; Spark: team comments on a mail; Fastmail: masked addresses; Delta Chat: chat over e-mail |
+| Chat | Zulip: a topic on every message; Signal; Telegram: topics, scheduled messages; Discord: drop-in voice rooms, roles per channel; Element: spaces, bridges |
+| Calendar | Fantastical: plain-language input; Notion Calendar: time zones side by side, share free slots; Cal.com: booking pages; Reclaim/Motion: tasks placed into free time |
+| Tasks | Things 3: Today/This Evening/Someday, quick entry; OmniFocus: perspectives, review; Todoist: filter language; Linear: triage, cycles, speed; Taskwarrior: computed urgency |
+| Files | Dolphin: split view, terminal panel, places, service menus; Finder: Quick Look; Everything: instant search; Dropbox: file requests; Seafile: client-side encrypted libraries; Syncthing: device-to-device |
+| Gallery | Immich: plain-language search, faces, map, partner sharing; Apple Photos: text in images, duplicates |
+| Wiki, notes | Tango: guides from clicks; Tana: supertags; Obsidian: backlinks, canvas; Logseq: block references; Notion: databases in pages |
+| Maps | Google Earth: 3D globe, guided tours; Street View; OsmAnd: offline, contour lines; Organic Maps; uMap: own maps in minutes; Felt: maps together |
+| History | Day One: place and weather recorded, "on this day"; ActivityWatch: automatic; Exist.io: correlations |
+| Resources, ERP | ERPNext/Frappe: DocTypes generate forms; SAP: Fiori design system for dense business data; Odoo: linked modules; Grocy: household stock; Snipe-IT: check-in/out |
+| Decisions | Polis, Loomio, LiquidFeedback, Decidim, Consul; dieBasis procedures (see democracy) |
+| Whiteboard | tldraw: feel; Excalidraw: hand-drawn, end-to-end encrypted; FigJam: stamps, timer, voting |
+| Streaming | OBS: scenes; YouTube Studio: live control room, analytics; StreamYard: guests in the browser; Ecamm Live (Mac); Owncast; PeerTube |
+| Store | F-Droid: anti-feature labels, reproducible builds; Obtainium: straight from Git releases; Flathub: verified publishers |
+| Start | Raycast, Alfred: one palette for everything; KDE Plasma: activities |
+| Helpdesk | Chatwoot: all channels in one inbox, website widget; Zammad: SIP/CTI, collision detection; Help Scout: customer sidebar |
+| CRM | Twenty: own objects; Attio: enrichment |
+| Workflows | n8n, Huginn, Windmill, Apple Shortcuts, Power Automate |
+| Marketing | Plausible, Umami, Listmonk |
+
 ## Open points of this draft
 
 1. **Marketing** (analysed: Matomo, Plausible, Mautic): own program with its own data, or a suite over messenger and

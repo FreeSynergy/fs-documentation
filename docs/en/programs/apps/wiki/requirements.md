@@ -28,7 +28,9 @@ Known defect: `editIf` reports a conflict as a text prefix, not as a typed `Prob
 |------------|---------|-----------------|--------|
 | Blocks and databases with views | Notion | open, larger decision | proposed |
 | Real-time co-editing | Wiki.js (Yjs) | open, belongs to P2P (ADR 0059) | proposed |
-| Capture clicks into a step-by-step guide | Tango | open | proposed |
+| Capture clicks into a step-by-step guide | Tango | open | **planned (owner, 2026-11-09)** |
+| Record a guide from our own apps as **commands**, not only screenshots: every step is a command from the type description, so the guide is exact, translatable and can be replayed or shown as an overlay inside the app | own idea after Tango | type description (ADR 0066) | planned |
+| **The wiki is embeddable everywhere:** any program can show a page or a block (help, descriptions, knowledge base in the helpdesk widget) through the texts contract | owner, 2026-11-09 | texts contract | planned |
 
 ## Not planned (deliberately)
 
