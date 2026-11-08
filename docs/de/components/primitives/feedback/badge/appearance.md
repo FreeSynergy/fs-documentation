@@ -1,15 +1,15 @@
-# Badge (Abzeichen) - Aussehen
+# Badge - Erscheinungsbild
 
 ## Grundlayout
 
 ```
 ┌────────┐   ┌────────┐   ●   ┌╌╌╌╌╌╌╌┐
-│  offen │   │   12   │       │ offen  │
+│  offen │   │   12   │       │  offen │
 └────────┘   └────────┘       └╌╌╌╌╌╌╌┘
-   status      counter        dot      outline
+   Status      Zähler        Punkt    Umriss
 ```
 
-An einem Element (Zähler über einem Icon):
+Auf einem Element (eine Zahl über einem Icon):
 
 ```
         ┌───┐
@@ -21,12 +21,12 @@ An einem Element (Zähler über einem Icon):
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **status** | Fläche mit Statusfarbe, dunkler oder heller Text je nach Farbe |
-| **counter** | abgerundete Fläche, Ziffern, min. Höhe wie Schriftgröße |
-| **dot** | 8 px Kreis in Statusfarbe |
-| **outline** | 1 px Rahmen in Statusfarbe, transparenter Grund |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **status** | Fläche in der Statusfarbe, dunkler oder heller Text je nach Farbe |
+| **counter** | abgerundete Fläche mit Ziffern, Mindesthöhe gleich der Schriftgröße |
+| **dot** | Kreis mit 8 px in der Statusfarbe |
+| **outline** | 1 px Rahmen in der Statusfarbe, transparenter Hintergrund |
 
 ## Größen
 
@@ -36,7 +36,7 @@ An einem Element (Zähler über einem Icon):
 | `medium` | 20 px | 12 px |
 | `large` | 24 px | 14 px |
 
-Der `dot` wächst nicht mit: er bleibt 8 px (small/medium) bzw. 10 px (large).
+Der `dot` wächst nicht mit. Er bleibt bei 8 px (small/medium) bzw. 10 px (large).
 
 ## Farben und Zustände
 
@@ -48,17 +48,17 @@ Der `dot` wächst nicht mit: er bleibt 8 px (small/medium) bzw. 10 px (large).
 | `warning` | orange |
 | `error` | rot |
 
-Badges sind reine Anzeige: sie haben keine Hover- und Zustandswechsel außer
-einer kurzen Ein-/Ausblend-Animation, wenn sich der Wert ändert.
+Badges dienen nur der Anzeige. Abgesehen von einer kurzen Ein- und Ausblendanimation,
+wenn sich der Wert ändert, gibt es keine Hover- oder Zustandsänderungen.
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tooltip` | optional Kurzerklärung des Status (siehe [tooltip](../../../widgets/overlays/tooltip/)) |
-| – | eigener Hover ist nicht vorgesehen |
+| `tooltip` | optionale kurze Erklärung des Status (siehe [tooltip](../../../widgets/overlays/tooltip/)) |
+| – | ein eigener Hover ist nicht vorgesehen |
 
-## Reaktiv
+## Responsiv
 
-- Auf schmalen Bildschirmen wird ein Zähler-Badge am Navigationspunkt durch ein
-  `dot` ersetzt, wenn der Zahlenwert nicht mehr lesbar ist.
+- Auf schmalen Bildschirmen wird ein Zähler-Badge an einem Navigationspunkt durch einen
+  `dot` ersetzt, wenn die Zahl nicht mehr lesbar ist.

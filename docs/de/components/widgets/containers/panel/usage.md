@@ -1,35 +1,34 @@
-# Panel (Container) - Verwendung
+# Panel - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Panel ist ein großer Container mit Header, Inhalt und Footer.
+Ein Panel ist ein großer Container mit Kopfzeile, Inhalt und Fußzeile.
 
-- Große Inhalt Blöcke
+- Große Inhaltsblöcke
 - Layout-Container
-- Filter-Panel
+- Filterbereich
 - Dashboard-Widget
 
 ## Beispiele
 
-### Große Inhalt Blöcke
+### Große Inhaltsblöcke
 
 ```jsx
-<Panel title="Titel" content="Inhalt" footer="footer" />
+<Panel title="Title" content="Content" footer="footer" />
 ```
 
 ### Layout-Container
 
 ```jsx
-<Panel title="Titel" content="Inhalt" collapsible={false} />
+<Panel title="Title" content="Content" collapsible={false} />
 ```
 
-### Filter-Panel
+### Filterbereich
 
 ```jsx
-<Panel title="Titel" content="Inhalt" draggable={false} />
+<Panel title="Title" content="Content" draggable={false} />
 ```

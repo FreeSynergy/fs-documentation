@@ -1,4 +1,4 @@
-# Panel (Container)
+# Panel (Bereich)
 
 | Feld | Wert |
 |------|------|
@@ -12,66 +12,67 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Panel ist ein großer Container mit Header, Inhalt und Footer. Unterscheidet sich von Card durch größere Größe und Layout-Verwendung.
+Ein Panel ist ein großer Container mit Kopfzeile, Inhalt und Fußzeile. Es unterscheidet
+sich von einer Card durch seine größere Fläche und seinen Einsatz in Layouts.
 
 ## Verwendungszweck
 
-- Große Inhalt Blöcke
+- Große Inhaltsblöcke
 - Layout-Container
-- Filter-Panel
+- Filterbereich
 - Dashboard-Widget
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Default** | Standard-Panel mit Header |
-| **Collapsible** | Header klappt Inhalt ein/aus |
-| **Draggable** | Verschiebbar |
-| **Filter** | Mit Filter-Optionen |
+| Variante | Beschreibung |
+|----------|--------------|
+| **standard** | Standard-Panel mit Kopfzeile |
+| **einklappbar** | die Kopfzeile klappt den Inhalt ein und aus |
+| **verschiebbar** | kann verschoben werden |
+| **filter** | mit Filteroptionen |
 
-## Features
+## Funktionen
 
-- Collapsible (Ein/Ausklappen)
-- Draggable (Verschieben)
-- Resize (Größe ändern)
-- Custom Header (benutzerdefinierter Header)
+- Einklappbar (Ein- und Ausklappen)
+- Verschiebbar (Bewegen)
+- Größenänderung (Größe anpassen)
+- Eigene Kopfzeile
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [card](../card/): die Karte zeigt einen Inhalt mit Titel und Aktionen,
-  das Panel fasst Bedienelemente oder einen Arbeitsbereich zusammen (Plan Abschnitt 4, Zeile 16 —
-  beide bleiben, gemeinsame Container-Basis).
-- **Nicht verwechseln mit** [split-view](../split-view/): die geteilte Ansicht zerlegt die Fläche
-  in Bereiche, das Panel ist einer dieser Bereiche.
+- **Nicht verwechseln mit** [card](../card/): Die Card zeigt einen Inhalt mit Titel und Aktionen.
+  Das Panel fasst Bedienelemente oder einen Arbeitsbereich zusammen (Plan Abschnitt 4, Zeile 16 —
+  beide bleiben, mit einer gemeinsamen Container-Basis).
+- **Nicht verwechseln mit** [split-view](../split-view/): Die Split View teilt die Fläche
+  in Bereiche. Das Panel ist einer dieser Bereiche.
 - **Nicht verwechseln mit** [drawer](../../overlays/drawer/) oder [modal](../../overlays/modal/):
-  ein Panel bleibt im Layout und überdeckt nichts.
-- **Nicht verwechseln mit** [accordion](../accordion/): das Akkordeon ist eine Gruppe von
-  Köpfen, das Panel ein einzelner Bereich.
+  Ein Panel bleibt im Layout und überdeckt nichts.
+- **Nicht verwechseln mit** [accordion](../accordion/): Das Accordion ist eine Gruppe von
+  Kopfzeilen, das Panel ein einzelner Bereich.
 
 ## Best Practices
 
-- Header nennt den Bereich, nicht die Aktion.
-- Größe und Innenabstand in einer Anwendung einheitlich halten.
-- Einklappbaren Panel-Zustand merken, `aria-expanded` setzen.
-- Panelkörper scrollt selbst, die Seite nicht mitscrollen lassen.
+- Die Kopfzeile benennt den Bereich, nicht die Aktion.
+- Größe und innerer Abstand bleiben innerhalb einer Anwendung gleich.
+- Den Zustand eines einklappbaren Panels merken und `aria-expanded` setzen.
+- Der Panel-Inhalt scrollt selbst. Die Seite darf nicht mitscrollen.
 
-## Struktur
+## Aufbau
 
 ```
 ┌─────────────────────────────────────────┐
-│ Header / Titel                          │  ← Header
+│ Kopfzeile / Titel                       │  ← Kopfzeile
 ├─────────────────────────────────────────┤
 │                                         │
 │   Inhalt                                │
 │   ...                                   │
-│                                         │  ← Body
+│                                         │  ← Inhalt
 ├─────────────────────────────────────────┤
-│ Footer / Aktionen                       │  ← Footer
+│ Fußzeile / Aktionen                     │  ← Fußzeile
 └─────────────────────────────────────────┘
 ```
 
 ## Siehe auch
 
 - [containers – Übersicht](../index.md)
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base-Komponente](../../../primitives/basics/base.md)

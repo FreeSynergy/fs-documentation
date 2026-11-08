@@ -1,4 +1,4 @@
-# Card
+# Card (Karte)
 
 | Feld | Wert |
 |------|------|
@@ -12,59 +12,61 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Die Card (Karte) ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen darstellt. Wird häufig in Dashboards, Listen und Grid-Layouts verwendet.
+Die Card ist ein Container-Element. Es zeigt Inhalte in einem strukturierten Kasten
+mit Titel, Inhalt und optionalen Aktionen. Oft wird sie in Dashboards, Listen und
+Rasterlayouts genutzt.
 
 ## Verwendungszweck
 
-- Gruppierung zusammengehöriger Informationen
-- Visuelle Trennung von Inhalten
-- Anzeige von Mini-Übersichten (z.B. Kunde, Aufgabe, Nachricht)
+- Zusammengehörige Informationen gruppieren
+- Inhalte optisch trennen
+- Kleine Übersichten zeigen (z. B. Kunde, Aufgabe, Nachricht)
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **standard** | leichte Erhebung, weicher Rand |
-| **flach** | ohne Schatten, nur Flächenfarbe |
-| **umrandet** | dünner Rand, kein Schatten |
+| **standard** | leichte Erhöhung, weiche Kante |
+| **flach** | kein Schatten, nur die Flächenfarbe |
+| **umrandet** | dünner Rahmen, kein Schatten |
 | **medien** | Bild- oder Medienbereich über oder neben dem Inhalt |
 
-## Features
+## Funktionen
 
-- Kopf mit Titel und maximal zwei Aktionen
+- Eine Kopfzeile mit Titel und höchstens zwei Aktionen
 - Medien-, Inhalts- und Fußbereich sind optional
-- Auswahl- und Verschiebezustand (in Rastern und Dashboards)
+- Zustand „ausgewählt“ und Ziehen (in Rastern und Dashboards)
 - Einklappbar bei langen Karten
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [panel](../panel/): das Panel fasst Bedienelemente oder einen
-  Arbeitsbereich zusammen, die Karte stellt **einen** Inhalt mit Titel und Aktionen dar.
-- **Nicht verwechseln mit** einer Zeile in [list-view](../../data/list-view/): die Zeile ist kompakt
-  und gleichförmig, die Karte frei aufgebaut.
-- **Nicht verwechseln mit** [hover-card](../../overlays/hover-card/): die Vorschaukarte ist ein Overlay.
-- **Nicht verwechseln mit** [grid-view](../../data/grid-view/): das Raster ordnet Karten, es ist
-  nicht die Karte selbst.
+- **Nicht verwechseln mit** [panel](../panel/): Das Panel fasst Bedienelemente oder einen
+  Arbeitsbereich zusammen. Die Card zeigt **einen** Inhalt mit Titel und Aktionen.
+- **Nicht verwechseln mit** einer Zeile in [list-view](../../data/list-view/): Die Zeile ist kompakt
+  und gleichförmig, die Card frei gestaltet.
+- **Nicht verwechseln mit** [hover-card](../../overlays/hover-card/): Die Vorschau-Karte ist ein Overlay.
+- **Nicht verwechseln mit** [grid-view](../../data/grid-view/): Das Raster ordnet Cards an. Es ist
+  nicht die Card selbst.
 
 ## Best Practices
 
-- Eine Karte, ein Thema; höchstens drei Aktionen, eine davon deutlich.
-- Titel kurz halten, Untertitel für den Kontext, beides nicht vertauschen.
-- Karten in Serien gleich hoch bauen; zu lange Texte kürzen statt umbrechen lassen.
-- Klickbare Karten brauchen eine deutliche Rückmeldung und eine Tastaturalternative.
+- Eine Card, ein Thema. Höchstens drei Aktionen, davon eine hervorgehoben.
+- Den Titel kurz halten. Den Untertitel für Kontext nutzen, die beiden nicht vertauschen.
+- Cards in einer Reihe auf gleiche Höhe bringen. Zu lange Texte eher kürzen als umbrechen lassen.
+- Klickbare Cards brauchen eine klare Rückmeldung und eine Tastaturalternative.
 
-## Typische Inhalte
+## Typischer Inhalt
 
-- Titel/Überschrift
+- Titel und Überschrift
 - Textinhalt
-- Icons/Emojis
-- Buttons/Aktionen
-- Bilder/Thumbnails
+- Icons und Emojis
+- Buttons und Aktionen
+- Bilder und Vorschaubilder
 - Status-Badges
 
 ## Siehe auch
 
 - [containers – Übersicht](../index.md)
-- [Panel](../panel/) — Rahmen für Bedienung
-- [Grid View](../../data/grid-view/) — Karten anordnen
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Panel](../panel/) — Rahmen für Bedienelemente
+- [Grid View](../../data/grid-view/) — Anordnen von Cards
+- [Base-Komponente](../../../primitives/basics/base.md)

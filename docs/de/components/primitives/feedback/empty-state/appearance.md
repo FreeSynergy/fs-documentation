@@ -1,4 +1,4 @@
-# Empty State (Leerer Zustand) - Aussehen
+# Empty State - Erscheinungsbild
 
 ## Grundlayout
 
@@ -7,7 +7,7 @@
         │                               │
         │            ▤                  │  Icon 48 px, gedämpfte Farbe
         │   Noch keine Aufgaben         │  ein Satz, 15 px
-        │   [ Erste Aufgabe anlegen ]   │  primary-Button
+        │  [ Erste Aufgabe anlegen ]    │  Primärbutton
         │   Tastatur: Strg N            │  optional, gedämpft
         │                               │
         └───────────────────────────────┘
@@ -15,11 +15,11 @@
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **leer** | Icon neutral, Aktion in Primärfarbe |
-| **kein-treffer** | Such-Icon, Text nennt den Suchbegriff |
-| **fehler** | Icon in Fehlerfarbe, Aktion „Erneut versuchen“ |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **leer** | neutrales Icon, Aktion in der Primärfarbe |
+| **kein-treffer** | Suchicon, der Text nennt den Suchbegriff |
+| **fehler** | Icon in der Fehlerfarbe, Aktion „Erneut versuchen“ |
 
 ## Größen
 
@@ -31,20 +31,20 @@
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
+| Zustand | Erscheinungsbild |
+|---------|------------------|
 | `default` | Icon und Text gedämpft, Aktion farbig |
-| `hover` | nur die Aktion reagiert (Ton) |
-| `loading` | Skeleton anstelle von Text und Aktion |
+| `hover` | nur die Aktion reagiert (tone) |
+| `loading` | ein Skeleton statt Text und Aktion |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tone` | wie beim [button](../../actions/button/) |
-| `fade-in` | Einblenden, wenn die Liste leer wird |
+| `tone` | wie beim [Button](../../actions/button/) |
+| `fade-in` | blendet ein, wenn die Liste leer wird |
 
-## Reaktiv
+## Responsiv
 
-- Auf schmalen Flächen stapeln sich Icon, Text und Aktion; Breite maximal 90 %.
-- Der Text bricht in maximal drei Zeilen um.
+- Auf schmalen Flächen stapeln sich Icon, Text und Aktion. Die Breite ist höchstens 90 %.
+- Der Text umbricht auf höchstens drei Zeilen.

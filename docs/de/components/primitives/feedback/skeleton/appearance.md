@@ -1,17 +1,17 @@
-# Skeleton (Platzhalter) - Aussehen
+# Skeleton - Erscheinungsbild
 
 ## Grundlayout
 
 ```
-text:
+Text:
 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ▓▓▓▓▓▓▓▓▓▓
 
-list-item:
+Listeneintrag:
 ○ ▓▓▓▓▓▓▓▓▓▓▓▓
   ▓▓▓▓▓▓▓
 
-card:
+Card:
 ┌──────────────┐
 │ ▓▓▓▓▓▓▓▓▓▓  │
 │ ▓▓▓▓▓▓▓      │
@@ -20,20 +20,20 @@ card:
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
+| Variante | Erscheinungsbild |
+|----------|------------------|
 | **text** | abgerundete Balken in Zeilenhöhe |
 | **rect** | Fläche mit `round`-Ecken |
-| **circle** | Kreis in `size` |
-| **card** | mehrere Rechtecke in Kartenanordnung |
+| **circle** | Kreis in der `size` |
+| **card** | mehrere Rechtecke in Card-Anordnung |
 | **list-item** | Kreis links, Balken rechts |
-| **table-row** | Balken je Spalte, Breite nach Spaltenbreite |
+| **table-row** | Balken pro Spalte, Breite folgt der Spaltenbreite |
 | **avatar** | Kreis plus zwei Balken |
 
 ## Größen
 
-Breite und Höhe kommen aus den Attributen; ohne Angabe gilt die Größe der
-Zielkomponente. Textbalken folgen dem Größen-Raster:
+Breite und Höhe kommen aus den Attributen. Ist keines gesetzt, gilt die Größe der
+Zielkomponente. Textbalken folgen der Größenskala:
 
 | Größe | Zeilenhöhe |
 |-------|------------|
@@ -46,16 +46,16 @@ Zielkomponente. Textbalken folgen dem Größen-Raster:
 | Teil | Farbe |
 |------|-------|
 | Fläche | neutrale Fläche, im hellen Theme grau, im dunklen heller |
-| `shimmer` | heller Streifen wandert über die Fläche |
-| `pulse` | Fläche atmet zwischen zwei Deckkraftstufen |
+| `shimmer` | ein hellerer Streifen läuft über die Fläche |
+| `pulse` | die Fläche atmet zwischen zwei Deckkraft-Stufen |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| – | keine; ein Skeleton ist nicht bedienbar |
+| – | keine. Ein Skeleton ist nicht bedienbar. |
 
-## Reaktiv
+## Responsiv
 
-- Skeletons erben die responsive Breite des Elternbereichs.
-- Bei `prefers-reduced-motion` Animation auf `none`; die Fläche bleibt statisch.
+- Skeletons übernehmen die responsive Breite des übergeordneten Bereichs.
+- Mit `prefers-reduced-motion` wird die Animation zu `none`. Die Fläche bleibt statisch.

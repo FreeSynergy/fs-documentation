@@ -1,24 +1,23 @@
-# Scroll Area (Laufbereich) - Verwendung
+# Scroll Area - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Der Laufbereich bekommt ein festes Maß von außen (flexible Höhe der Spalte) und
-übernimmt alles Weitere: Indikatoren, Verläufe, Nachladen, Follow.
+Der Scroll Area bekommt von außen eine feste Abmessung (flexible Höhe der
+Spalte) und übernimmt alles andere: Anzeigen, Verläufe, Nachladen und Follow.
 
 ## Beispiele
 
-### Chatverlauf, der neuen Inhalt verfolgt
+### Ein Chatverlauf, der neuen Inhalten folgt
 
 ```jsx
 <ScrollArea height="100%" direction="vertikal" follow={true} onEndReached={loadOlder} />
 ```
 
-### Waagerechte Werkzeugleiste
+### Eine horizontale Werkzeugleiste
 
 ```jsx
 <ScrollArea direction="horizontal" scrollbar="automatisch" edges={true} />
@@ -28,6 +27,6 @@ Der Laufbereich bekommt ein festes Maß von außen (flexible Höhe der Spalte) u
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Nachrichtenausgang | `follow = true`, Nachladen oben mit `keepPosition` |
-| Tabelle in einer Karte | Laufbereich nur für die Körperzeilen, Kopf bleibt stehen |
-| Werkzeugleiste schmal | `direction = "horizontal"`, Verläufe als Hinweis |
+| Nachrichtenausgang | `follow = true`, oben nachladen mit `keepPosition` |
+| Tabelle in einer Card | Scroll Area nur für die Datenzeilen, die Kopfzeile bleibt stehen |
+| Schmale Werkzeugleiste | `direction = "horizontal"`, Verläufe als Hinweis |

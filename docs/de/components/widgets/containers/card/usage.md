@@ -1,34 +1,34 @@
 # Card - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Die Card (Karte) ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen darstellt.
+Die Card ist ein Container-Element. Es zeigt Inhalte in einem strukturierten Kasten
+mit Titel, Inhalt und optionalen Aktionen.
 
-- Gruppierung zusammengehöriger Informationen
-- Visuelle Trennung von Inhalten
-- Anzeige von Mini-Übersichten (z.B. Kunde, Aufgabe, Nachricht)
+- Zusammengehörige Informationen gruppieren
+- Inhalte optisch trennen
+- Kleine Übersichten zeigen (z. B. Kunde, Aufgabe, Nachricht)
 
 ## Beispiele
 
-### Gruppierung zusammengehöriger Informationen
+### Zusammengehörige Informationen gruppieren
 
 ```jsx
-<Card title="Titel" subtitle="Untertitel" content="Inhalt" />
+<Card title="Title" subtitle="Subtitle" content="Content" />
 ```
 
-### Visuelle Trennung von Inhalten
+### Inhalte optisch trennen
 
 ```jsx
-<Card title="Titel" subtitle="Untertitel" interactive={false} />
+<Card title="Title" subtitle="Subtitle" interactive={false} />
 ```
 
-### Anzeige von Mini-Übersichten (z.B. Kunde, Aufgabe, Nachricht)
+### Kleine Übersichten zeigen (z. B. Kunde, Aufgabe, Nachricht)
 
 ```jsx
-<Card title="Titel" subtitle="Untertitel" responsive={true} />
+<Card title="Title" subtitle="Subtitle" responsive={true} />
 ```

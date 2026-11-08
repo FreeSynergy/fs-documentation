@@ -1,4 +1,4 @@
-# Progress (Fortschrittsanzeige) - Aussehen
+# Progress - Erscheinungsbild
 
 ## Grundlayout
 
@@ -18,12 +18,12 @@ circular:
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **linear** | Balken in Primärfarbe, Rest neutrale Spur |
-| **circular** | Ring, Fortschritt im Uhrzeigersinn ab 12 Uhr |
-| **mit-label** | Prozentwert oder Text über dem Balken bzw. im Kreis |
-| **unbestimmt** | Segment wandernd in der Spur, ohne Prozentangabe |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **linear** | Balken in der Primärfarbe, der Rest als neutrale Spur |
+| **circular** | Ring, der Fortschritt läuft im Uhrzeigersinn ab 12 Uhr |
+| **mit-label** | Prozentwert oder Text über dem Balken oder im Kreis |
+| **unbestimmt** | ein Segment läuft über die Spur, ohne Prozentangabe |
 
 ## Größen
 
@@ -35,21 +35,21 @@ circular:
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
+| Zustand | Erscheinungsbild |
+|---------|------------------|
 | `default` | Primärfarbe |
 | `success` (100 %) | grün |
 | `error` (Abbruch/Fehler) | rot |
-| `indeterminate` | Segment in Primärfarbe, Spur sichtbar |
+| `indeterminate` | Segment in der Primärfarbe, Spur sichtbar |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tooltip` | optional Details („12 von 40 Dateien“) |
-| – | eigener Hover/Fokus ist nicht vorgesehen |
+| `tooltip` | optionale Details („12 von 40 Dateien“) |
+| – | ein eigener Hover oder Fokus ist nicht vorgesehen |
 
-## Reaktiv
+## Responsiv
 
-- `linear` folgt der Containerbreite; `circular` skaliert mit `size`
-  oder explizitem `strokeWidth`.
+- `linear` folgt der Breite des Containers. `circular` skaliert mit `size`
+  oder einer festen `strokeWidth`.

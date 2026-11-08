@@ -6,55 +6,55 @@
 | **Erbt von** | `base` |
 | **Varianten** | `linear`, `circular`, `mit-label`, `unbestimmt` |
 | **Zustände** | `indeterminate`, `completed` |
-| **Gesten** | keine — reine Anzeige |
+| **Gesten** | keine – nur Anzeige |
 | **Animationen** | `progress`, `pulse` |
 | **Verwandt** | `spinner`, `slider`, `skeleton`, `toast`, `base` |
 | **Status** | dokumentiert |
 
 ## Beschreibung
 
-Eine Progress-Anzeige zeigt, wie weit eine begonnene Aktion fortgeschritten ist –
-oder dass sie läuft, ohne dass der Wert bekannt ist.
+Eine Fortschrittsanzeige zeigt, wie weit eine gestartete Aktion ist. Oder sie zeigt,
+dass sie läuft, ohne dass der Wert bekannt ist.
 
 ## Verwendungszweck
 
-- Dateitransfers, Import/Export, Generierung von Berichten
-- Rückmeldung bei mehrstufigen Aktionen (Wizard-Schritte)
-- Kapazitätsanzeige (Speicher, Kontingent)
+- Dateiübertragungen, Import und Export, Erstellen von Berichten
+- Rückmeldung bei mehrstufigen Aktionen (Schritte eines Assistenten)
+- Anzeige von Kapazität (Speicher, Kontingent)
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
 | **linear** | Balken von links nach rechts |
-| **circular** | Kreisring, für kompakte Flächen |
-| **mit-label** | Prozentwert oder Text über bzw. im Balken |
+| **circular** | Ring, für kompakte Flächen |
+| **mit-label** | Prozentwert oder Text über oder im Balken |
 | **unbestimmt** | Animation ohne Wert, wenn die Dauer unbekannt ist |
 
-## Features
+## Funktionen
 
-- frei konfigurierbarer Wertebereich (`min`/`max`)
-- Farbumschaltung bei Erfolg oder Fehler
-- Weiche Wertänderung statt Sprung
+- Frei konfigurierbarer Wertebereich (`min`/`max`)
+- Die Farbe wechselt bei Erfolg oder Fehler
+- Sanfte Wertänderung statt eines Sprungs
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [spinner](../spinner/): ein Spinner zeigt keine
-  Fortschrittsmenge an.
+- **Nicht verwechseln mit** [spinner](../spinner/): Ein Spinner zeigt keinen Fortschritt
+  in Zahlen.
 
-- **Nicht verwechseln mit** [slider](../../fields/slider/): ein Slider ist eine
-  **Eingabe**, Progress ist reine Anzeige.
+- **Nicht verwechseln mit** [slider](../../fields/slider/): Ein Slider ist eine
+  **Eingabe**. Progress dient nur der Anzeige.
 
-- **Nicht verwechseln mit** [skeleton](../skeleton/): Skeleton zeigt ein Layout,
-  Progress eine begonnene Aktion.
+- **Nicht verwechseln mit** [skeleton](../skeleton/): Ein Skeleton zeigt einen Aufbau,
+  Progress eine gestartete Aktion.
 
 ## Best Practices
 
-- Unbestimmte Anzeige nur, wenn ein Wert wirklich nicht ermittelbar ist.
-- Fortschritt niemals als einzige Rückmeldung lassen – am Ende eine Meldung
+- Die unbestimmte Anzeige nur nutzen, wenn sich ein Wert wirklich nicht bestimmen lässt.
+- Fortschritt nie als einzige Rückmeldung lassen. Am Ende eine Meldung zeigen
   ([toast](../toast/)).
 
-- Wert in Prozent nur anzeigen, wenn er aussagekräftig ist („3 von 10 Dateien“
+- Den Wert nur dann in Prozent zeigen, wenn er aussagekräftig ist („3 von 10 Dateien“
   ist besser als „30 %“).
 
 ## Siehe auch
@@ -62,4 +62,4 @@ oder dass sie läuft, ohne dass der Wert bekannt ist.
 - [Spinner](../spinner/)
 - [Skeleton](../skeleton/)
 - [Toast](../toast/)
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

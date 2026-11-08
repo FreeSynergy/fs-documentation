@@ -1,37 +1,37 @@
-# Badge (Abzeichen) - Attribute
+# Badge - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 [base](../../basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `value` | string \| number | - | angezeigter Text oder Zähler |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `value` | string \| number | - | der angezeigte Text oder Zähler |
 | `max` | number | `99` | Obergrenze, darüber „99+“ |
-| `dot` | boolean | `false` | nur Punkt statt Fläche |
+| `dot` | boolean | `false` | nur ein Punkt statt einer Fläche |
 | `showZero` | boolean | `false` | Null anzeigen oder ausblenden |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `variant` | enum | `status` | `status`, `counter`, `dot`, `outline` |
 | `status` | enum | `neutral` | `neutral`, `info`, `success`, `warning`, `error` |
 
-## Events
+## Ereignisse
 
-Es werden keine Events genutzt; ein Badge ist reine Anzeige.
+Es werden keine Ereignisse genutzt. Ein Badge dient nur der Anzeige.
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `aria-label` | string | Pflicht, wenn `value` allein nicht verständlich ist („3 neue Nachrichten“) |
-| `aria-live` | string | `polite`, wenn sich der Zähler ohne Nutzeraktion ändert |
-| `role` | string | `status` bei Zählern, sonst kein interaktives role |
+| `aria-label` | string | nötig, wenn `value` allein nicht verständlich ist („3 neue Nachrichten“) |
+| `aria-live` | string | `polite`, wenn sich der Zähler ohne Zutun des Nutzers ändert |
+| `role` | string | `status` für Zähler, sonst keine interaktive Rolle |
 
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `rounded`, `state`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../basics/base.md)
+[Base-Komponente](../../basics/base.md)

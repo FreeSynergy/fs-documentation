@@ -1,4 +1,4 @@
-# Scroll Area (Laufbereich)
+# Scroll Area (Scrollbereich)
 
 | Feld | Wert |
 |------|------|
@@ -14,46 +14,46 @@
 
 ## Beschreibung
 
-Ein Laufbereich ist eine Fläche mit festem Maß, deren Inhalt läuft. Er ergänzt
-Bildlauf indicators, Randverläufe und Tastaturnavigation und nimmt Inhalt in einer
-Konstante Höhe auf.
+Ein Scroll Area ist eine Fläche mit fester Abmessung, deren Inhalt scrollt. Er
+ergänzt Scrollbalken, Randverläufe und Tastaturbedienung. So bleibt der Inhalt
+auf einer gleichbleibenden Höhe.
 
 ## Verwendungszweck
 
 - Chats und Verläufe mit fester Höhe in einer Spalte
-- Lange Listen innerhalb einer Karte oder eines Panels
-- Waagerechte Bereiche wie Werkzeugleisten oder Bildreihen
+- Lange Listen in einer Card oder einem Panel
+- Horizontale Bereiche wie Werkzeugleisten oder Bildreihen
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **vertikal** | nur höhenbegrenzt, Standard |
-| **horizontal** | nur breitenbegrenzt |
-| **beides** | Fläche mit beiden Laufrichtungen |
+| **vertikal** | nur die Höhe begrenzt, Standard |
+| **horizontal** | nur die Breite begrenzt |
+| **beides** | Fläche mit beiden Scrollrichtungen |
 
-## Features
+## Funktionen
 
-- Randverlauf zeigt an, dass es weitergeht
-- Bildlauf folgt dem Inhalt automatisch (`follow`), etwa bei neuen Nachrichten
-- Leiste blendet ein, wenn gelaufen wird, und aus bei Ruhe
-- Tastatur: `Pfeiltasten`, `Page Up/Down`, `Pos1`/`Ende`
+- Ein Randverlauf zeigt, dass es weiteren Inhalt gibt
+- Das Scrollen folgt dem Inhalt automatisch (`follow`), z. B. bei neuen Nachrichten
+- Der Scrollbalken blendet beim Scrollen ein und im Ruhezustand aus
+- Tastatur: `Pfeiltasten`, `Bild auf/ab`, `Pos1`/`Ende`
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [list-view](../../data/list-view/): die Liste ordnet Inhalte,
-  der Laufbereich regelt nur das Laufen.
-- **Nicht verwechseln mit** `overflow: auto`: ohne Verläufe, ohne Indikatoren,
-  ohne Follow-Verhalten.
+- **Nicht verwechseln mit** [list-view](../../data/list-view/): Die Liste ordnet Inhalte an.
+  Der Scroll Area regelt nur das Scrollen.
+- **Nicht verwechseln mit** `overflow: auto`: Dort gibt es keine Verläufe, keine
+  Anzeigen und kein Nachziehen.
 
 ## Best Practices
 
-- Pro Bildschirm-area höchstens zwei voneinander unabhängige Laufbereiche.
-- Beim Nachladen oben die Scroll-Position halten, sonst springt der Inhalt.
-- Reduzierte Bewegung beachten: kein sanftes Nachziehen bei `respectReducedMotion`.
+- Höchstens zwei unabhängig scrollende Bereiche pro Bildschirmbereich.
+- Beim Nachladen oben die Scrollposition halten. Sonst springt der Inhalt.
+- Reduzierte Bewegung respektieren: kein sanftes Nachziehen mit `respectReducedMotion`.
 
 ## Siehe auch
 
 - [Split View](../split-view/)
 - [List View](../../data/list-view/)
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base-Komponente](../../../primitives/basics/base.md)

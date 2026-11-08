@@ -1,51 +1,51 @@
-# Scroll Area (Laufbereich) - Aussehen
+# Scroll Area - Erscheinungsbild
 
 ## Grundlayout
 
 ```
 ┌──────────────────────────────┐
-│ Inhalt Zeile 1               │
-│ Inhalt Zeile 2               │
-│ Inhalt Zeile 3               │
-│ ⋮        ▮                   │  Leiste rechts, blendet bei Ruhe aus
-│ Inhalt Zeile n        ▮      │
+│ Inhaltszeile 1               │
+│ Inhaltszeile 2               │
+│ Inhaltszeile 3               │
+│ ⋮        ▮                   │  Scrollbalken rechts, blendet im Ruhezustand aus
+│ Inhaltszeile n        ▮      │
 └──────────────────────────────┘
-   Verlauf oben und unten, wenn es weitergeht
+   Verlauf oben und unten, wenn mehr vorhanden ist
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **vertikal** | Leiste rechts, Verläufe oben und unten |
-| **horizontal** | Leiste unten, Verläufe links und rechts |
-| **beides** | beide Leisten, Ecken ausgespart |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **vertikal** | Scrollbalken rechts, Verläufe oben und unten |
+| **horizontal** | Scrollbalken unten, Verläufe links und rechts |
+| **beides** | beide Scrollbalken, die Ecke bleibt frei |
 
 ## Größen
 
-| Größe | Leistenbreite | Verlauf |
-|-------|---------------|---------|
+| Größe | Breite des Scrollbalkens | Verlauf |
+|-------|--------------------------|---------|
 | `small` | 6 px | 12 px |
 | `medium` | 8 px | 20 px |
 | `large` | 12 px | 28 px |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Leiste ausgeblendet, Verlauf nur bei Bedarf |
-| `hover` | Leiste erscheint in neutralem Grauton |
-| `dragging` | Leiste dunkler, Breite +2 px |
-| `atTop` / `atBottom` | Verlauf der betreffenden Seite verschwindet |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | Scrollbalken verborgen, Verlauf nur bei Bedarf |
+| `hover` | Scrollbalken erscheint in neutralem Grau |
+| `dragging` | Scrollbalken dunkler, Breite +2 px |
+| `atTop` / `atBottom` | der Verlauf auf dieser Seite verschwindet |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `fade` | Verläufe an den Rändern signalisieren weiteren Inhalt |
-| `ring` | Fokus-Ring, wenn der Bereich über Tastatur bedienbar ist |
+| `fade` | Verläufe am Rand zeigen, dass mehr Inhalt folgt |
+| `ring` | Fokusring, wenn der Bereich per Tastatur bedient werden kann |
 
-## Reaktiv
+## Responsiv
 
-- Auf Touch-Geräten erscheint die Leiste nie; gelaufen wird per Geste.
-- Bei reduced Motion entfallen Verläufe und sanftes Nachziehen.
+- Auf Touchgeräten erscheint der Scrollbalken nie. Gescrollt wird per Geste.
+- Bei reduzierter Bewegung entfallen Verläufe und sanftes Nachziehen.

@@ -1,11 +1,10 @@
-# Badge (Abzeichen) - Verwendung
+# Badge - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Zähler an der Navigation
+## Ein Zähler an der Navigation
 
 ```jsx
 <BottomNavigationItem
@@ -15,22 +14,22 @@
 />
 ```
 
-## Status an einem Listen-Eintrag
+## Status an einem Listeneintrag
 
 ```jsx
 <ListViewItem
-  title="Antrag 1042"
+  title="Anfrage 1042"
   badge={<Badge status="warning" value="in Prüfung" />}
 />
 ```
 
-## Punkt für neue Aktivitäten
+## Ein Punkt für neue Aktivität
 
 ```jsx
 <Icon name="bell" badge={<Badge dot status="info" />} />
 ```
 
-## Zähler mit verständlichem Text für Screenreader
+## Ein Zähler mit Text, den Screenreader verstehen
 
 ```jsx
 <Badge
@@ -45,6 +44,6 @@
 | Szenario | Empfehlung |
 |----------|------------|
 | Neue Nachrichten | `counter` an der Navigation |
-| Pipeline-Status in Tabellen | `status` mit einheitlicher Farbpalette |
-| Platz geringer als 3 Zeichen | `dot` |
+| Pipeline-Status in Tabellen | `status` mit einer einheitlichen Farbpalette |
+| Weniger Platz als 3 Zeichen | `dot` |
 | Tags, die entfernt werden sollen | `tags-input`, kein Badge |

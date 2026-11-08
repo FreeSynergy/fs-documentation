@@ -1,14 +1,13 @@
-# Empty State (Leerer Zustand) - Verwendung
+# Empty State - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Der leere Zustand ersetzt die Liste, nicht einen Hinweis über der Liste. Er erscheint
-erst, wenn feststeht, dass kein Inhalt da ist — während des Ladens steht ein Skeleton.
+Der Empty State ersetzt die Liste, nicht einen Hinweis über der Liste. Er erscheint
+erst, wenn sicher ist, dass kein Inhalt da ist. Während des Ladens steht dort ein Skeleton.
 
 ## Beispiele
 
@@ -22,7 +21,7 @@ erst, wenn feststeht, dass kein Inhalt da ist — während des Ladens steht ein 
 ### Filter ohne Treffer
 
 ```jsx
-<EmptyState variant="kein-treffer" query={q} title="Kein Treffer"
+<EmptyState variant="kein-treffer" query={q} title="Keine Treffer"
             actionLabel="Filter zurücksetzen" onReset={clear} />
 ```
 
@@ -30,6 +29,6 @@ erst, wenn feststeht, dass kein Inhalt da ist — während des Ladens steht ein 
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Bereich das erste Mal geöffnet | `variant = "leer"` mit Anlage-Aktion |
-| Suche ergibt nichts | `variant = "kein-treffer"`, Suchbegriff anzeigen |
-| Ladefehler | `variant = "fehler"` mit Wiederholen |
+| Bereich wird zum ersten Mal geöffnet | `variant = "leer"` mit Aktion zum Anlegen |
+| Suche liefert nichts | `variant = "kein-treffer"`, Suchbegriff anzeigen |
+| Fehler beim Laden | `variant = "fehler"` mit Wiederholung |

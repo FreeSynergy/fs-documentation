@@ -1,27 +1,27 @@
-# Progress (Fortschrittsanzeige) - Attribute
+# Progress - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 [base](../../basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | number | `0` | aktueller Fortschritt |
-| `min` | number | `0` | Untergrenze |
-| `max` | number | `100` | Obergrenze |
+| `min` | number | `0` | untere Grenze |
+| `max` | number | `100` | obere Grenze |
 | `indeterminate` | boolean | `false` | Wert unbekannt, Animation läuft |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `variant` | enum | `linear` | `linear`, `circular` |
 | `showLabel` | boolean | `false` | Prozentwert oder Text anzeigen |
-| `strokeWidth` | number | - | Balkenhöhe bzw. Ringstärke |
+| `strokeWidth` | number | - | Balkenhöhe oder Ringstärke |
 | `status` | enum | `active` | `active`, `success`, `error` |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
@@ -34,10 +34,10 @@ Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 | `role` | string | `progressbar` |
 | `aria-valuenow` | number | `value` |
 | `aria-valuemin` / `aria-valuemax` | number | `min` / `max` |
-| `aria-busy` | boolean | `true` solange `indeterminate` |
-| `aria-label` | string | Worauf sich der Fortschritt bezieht |
+| `aria-busy` | boolean | `true`, solange `indeterminate` gilt |
+| `aria-label` | string | worauf sich der Fortschritt bezieht |
 
 ## Geerbt von
 
 `id`, `visible`, `size`, `theme`, `rounded`, `state`, `animation`, `aria-*` →
-[Basiskomponente](../../basics/base.md)
+[Base-Komponente](../../basics/base.md)

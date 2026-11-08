@@ -1,9 +1,8 @@
-# Progress (Fortschrittsanzeige) - Verwendung
+# Progress - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Upload mit Prozentangabe
 
@@ -16,19 +15,19 @@
 />
 ```
 
-## Besser als Prozent: konkrete Zahl
+## Besser als Prozent: eine konkrete Zahl
 
 ```jsx
 <Progress value={doneFiles} max={totalFiles} showLabel={true} />
 ```
 
-## Unbestimmter Vorgang
+## Ein Vorgang ohne bekannten Fortschritt
 
 ```jsx
-<Progress indeterminate={true} aria-label="Index wird erstellt" />
+<Progress indeterminate={true} aria-label="Index wird aufgebaut" />
 ```
 
-## Kreisförmig in einer Karte
+## Kreisförmig, in einer Card
 
 ```jsx
 <Card title="Speicher">
@@ -41,6 +40,6 @@
 | Szenario | Empfehlung |
 |----------|------------|
 | Datei-Upload, Import | `linear` mit `showLabel` |
-| Kompakte Statusanzeige in Karten | `circular` |
-| Dauer unbekannt | `indeterminate`, nach spätestens 10 s Text ergänzen |
-| Abschluss | Farbwechsel auf `success` plus [toast](../toast/) |
+| Kompakte Statusanzeige in Cards | `circular` |
+| Dauer unbekannt | `indeterminate`, nach höchstens 10 s einen Text ergänzen |
+| Abschluss | Farbwechsel zu `success` plus [toast](../toast/) |
