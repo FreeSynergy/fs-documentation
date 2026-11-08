@@ -10,21 +10,18 @@ Ein Programm installierst du von Hand: [FreeSynergy.Store](../programs/platform/
 
 Der Store wird als **Pre-release** auf GitHub veröffentlicht: <https://github.com/FreeSynergy/fs-store/releases>.
 
-Wähle das neueste Release, das als „Pre-release“ markiert ist. Ein Release enthält diese Dateien (die genaue Auswahl kann sich von Release zu Release ändern, schau also in die Liste dort):
+Wähle das neueste Release, das als „Pre-release“ markiert ist. Am 2026-11-08 enthält das erste, `v0.0.1`, diese Dateien (schau in die Liste dort, sie kann wachsen):
 
 | Für | Datei |
 |-----|-------|
-| Fedora und andere rpm-Systeme | `.rpm` |
-| Debian und Ubuntu | `.deb` |
-| Arch | `.pkg.tar.zst` |
-| jedes Linux, ohne root-Rechte nötig | `.tar.gz` oder `.AppImage` (x86_64 und aarch64) |
-| macOS | `.dmg` |
-| zum Prüfen | `SHA256SUMS.txt`, eine `.asc`-Signatur neben jeder Datei, der Release-Schlüssel `FreeSynergy-release-key.pgp` |
+| Fedora und andere rpm-Systeme | `.rpm` (x86_64 und aarch64) |
+| jedes Linux, ohne root-Rechte nötig | `.tar.gz` (x86_64 und aarch64) |
+| zum Prüfen | `SHA256SUMS.txt`, eine `.asc`-Signatur neben jeder Datei, der Release-Schlüssel `FreeSynergy-release-key.pgp`, eine SBOM (`.spdx.json`) |
 
-Windows ist noch nicht im Release. Der macOS-Build ist nicht mit einem bezahlten Apple-Zertifikat signiert: Öffne unter macOS die App einmal, dann Systemeinstellungen > Datenschutz & Sicherheit > „Trotzdem öffnen“. Die OpenPGP-Signaturen und Prüfsummen sind der Vertrauensweg.
+Pakete für Debian und Ubuntu (`.deb`), Arch, AppImage und macOS (`.dmg`) sind nicht in `v0.0.1`; frühere Builds hatten sie. Windows ist noch nicht gebaut. Falls du später einen macOS-Build nutzt: Er ist nicht mit einem bezahlten Apple-Zertifikat signiert, öffne die App also einmal, dann Systemeinstellungen > Datenschutz & Sicherheit > „Trotzdem öffnen“. Die OpenPGP-Signaturen und Prüfsummen sind der Vertrauensweg.
 
 !!! warning "Stand am 2026-11-08"
-    Nimm immer das neueste Release der Liste. Die Versionsnummern werden auf `0.0.N` zurückgesetzt ([ADR 0064](../decisions/0064-versionen-ab-0-0-1.md)): `0.0.N` heißt Entwicklung, `0.1.0` heißt, ein Mensch kann es benutzen, `1.0.0` heißt, zwei unabhängige Nutzer verwenden seine Schnittstelle. Frühere Builds (`0.1.0-rc.N`) sind als „Do not use“ markiert oder werden entfernt. Hast du einen als rpm installiert, entferne ihn einmal (`sudo dnf remove fs-store`), bevor du den neuen installierst, denn die neue Nummer ist niedriger und würde nicht als Update zählen.
+    Nimm immer das neueste Release der Liste. Die Versionsnummern wurden auf `0.0.N` zurückgesetzt ([ADR 0064](../decisions/0064-versionen-ab-0-0-1.md)): `0.0.N` heißt Entwicklung, `0.1.0` heißt, ein Mensch kann es benutzen, `1.0.0` heißt, zwei unabhängige Nutzer verwenden seine Schnittstelle. Die früheren Builds (`0.1.0-rc.N`) wurden entfernt. Hast du einen als rpm installiert, entferne ihn einmal (`sudo dnf remove fs-store`), bevor du den neuen installierst, denn die neue Nummer ist niedriger und würde nicht als Update zählen.
 
 ## Schritt 2: die Signatur prüfen
 
