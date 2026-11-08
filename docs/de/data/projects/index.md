@@ -1,29 +1,29 @@
 # Projekte
 
-Boards, Listen, Aufgaben-Beziehungen, Meilensteine, Rollen im Projekt. Das ist die Domäne mit der **größten regulären Lücke**: ❌ kein etablierter Standard gefunden (Kandidaten W6C XML Schema, MSPDI, PMI WBS sind ⚠️ unbelegt — siehe [standards.md](../standards.md)).
+Boards, Listen, Aufgaben-Beziehungen, Meilensteine, Rollen im Projekt. Das ist die Domäne mit der **größten regulären Lücke**: ❌ kein etablierter Standard gefunden (die Kandidaten W6C XML Schema, MSPDI, PMI WBS sind ⚠️ nicht belegt — siehe [standards.md](../standards.md)).
 
 ## Bestand
 
-| Stück | Beleg | Rolle bei FreeSynergy |
-|-------|-------|-----------------------|
-| ❌ Projekt-/Board-Struktur | ❌/⚠️ | **unser Spec-Kandidat Nr. 3** (nach Block/Dokument und WoT) |
-| **ISO 21502:2020** (ISO/TC 258) | ✅ Existenz belegt 2026-11-02 | Prozess-Leitfaden Projektmanagement, **kein Datenformat** — Rollen-/Vokabularreferenz |
-| **MSPDI (`mspdi_pj12.xsd`)** | ✅ Existenz belegt 2026-11-02 | De-facto-XML-Import/Export (MS Project); kein offener Standard |
-| **JSCalendar `Task`** | ✅ | Aufgaben als kanonisches Task-Objekt (Wiederverwendung aus [events/](../events/index.md)) |
-| **W3C Organization Ontology** (`vocab-org`) | ✅ URL geprüft, Inhalt ungelesen | Rollen/Hierarchie-Baustein für Projektmitgliedschaften |
-| **schema.org `Project`** | ⚠️ Existenz nicht verifiziert | vor Verwendung belegen |
+| Baustein | Beleg | Rolle in FreeSynergy |
+|-------|----------|---------------------|
+| ❌ Projekt-/Board-Struktur | ❌/⚠️ | **unser Spezifikationskandidat Nr. 3** (nach Block/Dokument und WoT) |
+| **ISO 21502:2020** (ISO/TC 258) | ✅ Existenz belegt 2026-11-02 | Prozessleitfaden für Projektmanagement, **kein Datenformat** — Referenz für Rollen und Vokabular |
+| **MSPDI (`mspdi_pj12.xsd`)** | ✅ Existenz belegt 2026-11-02 | de-facto XML-Import/-Export (MS Project); kein offener Standard |
+| **JSCalendar `Task`** | ✅ | Aufgaben als kanonisches Aufgabenobjekt (übernommen aus [events/](../events/index.md)) |
+| **W3C Organization Ontology** (`vocab-org`) | ✅ URL geprüft, Inhalt nicht gelesen | Baustein für Rollen und Hierarchie in Projektmitgliedschaften |
+| **schema.org `Project`** | ⚠️ Existenz nicht geprüft | vor der Nutzung belegen |
 
-## Vorläufige Strukturidee (eigene Festlegung, zur Diskussion)
+## Vorläufige Strukturidee (unsere eigene Entscheidung, zur Diskussion offen)
 
-`Projekt` (Beziehung zu `Team`/`Contact`) → `Board` → `Liste` → `Task` (JSCalendar) mit Relationen (blockiert, dupliziert) und `Milestone` (JSCalendar-`Event`). Beziehungstypen als Enums nach unserer Enum-Regel.
+`project` (Beziehung zu `Team`/`Contact`) → `board` → `list` → `task` (JSCalendar) mit Beziehungen (blockiert, Duplikat) und `milestone` (JSCalendar `Event`). Beziehungsarten als Enums nach unserer Enum-Regel.
 
 ## Offene Punkte
 
-- Standardsuche abgeschlossen (2026-11-02): keine offene RFC/W3C-Daten-Spec gefunden; Details in [standards.md → Nachrecherche](../standards.md) — nicht erneut recherchieren
-- Reihenfolge der Spec-Arbeit: Block/Dokument zuerst, weil Tasks oft Blöcke referenzieren
-- Webhook-/Automatisierungs-Ereignisse (`task.moved`) sind Envelope-Thema, nicht Domänenmodell
+- Standardsuche abgeschlossen (2026-11-02): keine offene RFC-/W3C-Datenspezifikation gefunden; Details in [standards.md → Folgerecherche](../standards.md) — nicht erneut recherchieren
+- Reihenfolge der Spezifikationsarbeit: zuerst Block/Dokument, weil Aufgaben oft auf Blöcke verweisen
+- Webhook-/Automatisierungsereignisse (`task.moved`) sind ein Umschlag-Thema, kein Fachmodell
 
 ## Siehe auch
 
 - [standards.md → Was wir erfinden müssen](../standards.md)
-- [events/](../events/index.md) (Task-Standard), [modell-Übersicht](../models.md)
+- [events/](../events/index.md) (Aufgaben-Standard), [Modell-Übersicht](../models.md)

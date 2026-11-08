@@ -2,19 +2,19 @@
 
 Formate legen fest, **wie** Daten gespeichert und zwischen Programmen ausgetauscht werden. Die Modelle in [models.md](models.md) sind formatunabhängig.
 
-## Überblick
+## Übersicht
 
 | Format | Typ | Verwendung | Kurzbeispiel |
-|--------|-----|------------|--------------|
-| **JSON** | strukturiert | API-Responses, Config, Export | `{"id":"doc_1","title":"Wiki"}` |
+|--------|------|-------|---------------|
+| **JSON** | strukturiert | API-Antworten, Config, Export | `{"id":"doc_1","title":"Wiki"}` |
 | **NDJSON** | zeilenbasiert | Streams, Bulk-Export, Logs | `{"id":"msg_1"}\n{"id":"msg_2"}` |
-| **YAML** | strukturiert + Kommentare | Config-Dateien (Homer, Homepage) | `services:\n  - name: Wiki` |
-| **TOML** | strukturiert + Kommentare | Projekt- und Tool-Config | `[app]\nname = "Homarr"` |
+| **YAML** | strukturiert + Kommentare | Konfigurationsdateien (Homer, Homepage) | `services:\n  - name: Wiki` |
+| **TOML** | strukturiert + Kommentare | Projekt- und Tool-Konfiguration | `[app]\nname = "Homarr"` |
 | **CSV/TSV** | tabellarisch | Import/Export von Listen | `id,title\n1,Wiki` |
-| **XML** | strukturiert | Alt-Systeme, RSS/Atom | `<item><title>Wiki</title></item>` |
-| **MessagePack** | binär | interne Kompaktübertragung | `{"id":"doc_1"}` (binär) |
-| **Parquet** | binär, spaltenweise | Analytics, große Exporte | Datei-Export aus `chart` |
-| **Markdown + Frontmatter** | Text + Metadaten | Wiki-Inhalt, Dokumentationen | `---\ntitle: Wiki\n---` |
+| **XML** | strukturiert | Altsysteme, RSS/Atom | `<item><title>Wiki</title></item>` |
+| **MessagePack** | binär | interner kompakter Transfer | `{"id":"doc_1"}` (binär) |
+| **Parquet** | binär, spaltenorientiert | Analytik, große Exporte | Dateiexport aus `chart` |
+| **Markdown + Frontmatter** | Text + Metadaten | Wiki-Inhalte, Dokumentation | `---\ntitle: Wiki\n---` |
 | **iCalendar (ICS)** | Kalenderstandard | Termine, Serien | `BEGIN:VEVENT` |
 | **vCard (VCF)** | Kontaktdatenstandard | Kontakte | `BEGIN:VCARD` |
 | **GeoJSON** | Geodaten | Karten, Orte | `{"type":"Point","coordinates":[13.4,52.5]}` |
@@ -22,25 +22,25 @@ Formate legen fest, **wie** Daten gespeichert und zwischen Programmen ausgetausc
 
 ## JSON
 
-Standardformat für alle API-Kommunikation.
+Standardformat für die gesamte API-Kommunikation.
 
 ```json
 {
   "id": "doc_01HZX9",
-  "title": "FreeSynergy Übersicht",
+  "title": "FreeSynergy-Überblick",
   "status": "active",
   "createdAt": "2026-10-01T09:00:00+02:00",
-  "tags": ["doku", "wiki"],
+  "tags": ["docs", "wiki"],
   "author": { "id": "user_01HZXA", "displayName": "Anna Weber" }
 }
 ```
 
 Regeln:
 
-- UTF-8, keine BOM
-- Keys in `camelCase`
-- Keine Duplikate von Keys, keine Kommentare
-- Zahlen ohne führende Nullen, keine `NaN`/`Infinity`
+- UTF-8, ohne BOM
+- Schlüssel in `camelCase`
+- keine doppelten Schlüssel, keine Kommentare
+- Zahlen ohne führende Nullen, kein `NaN`/`Infinity`
 
 ## NDJSON (JSON Lines)
 
@@ -48,7 +48,7 @@ Ein JSON-Dokument pro Zeile — für Streams und Bulk-Import.
 
 ```json
 {"id":"msg_01","channelId":"chan_01","body":"Hallo"}
-{"id":"msg_02","channelId":"chan_01","body":"Wie geht's?"}
+{"id":"msg_02","channelId":"chan_01","body":"Wie geht es dir?"}
 ```
 
 ## YAML
@@ -81,7 +81,7 @@ provider = "oidc"
 
 ## CSV / TSV
 
-Erste Zeile = Header, Trennzeichen `,` (CSV) oder `\t` (TSV).
+Erste Zeile = Kopfzeile, Trennzeichen `,` (CSV) oder `\t` (TSV).
 
 ```csv
 id,displayName,email,status
@@ -91,8 +91,8 @@ user_02,"Weber, Anna",anna2@example.org,invited
 
 Regeln:
 
-- Trennzeichen und Zeilenumbrüche in Werten mit `"` quoten
-- Header-Zeile Pflicht, `camelCase`-Spaltennamen
+- Trennzeichen und Zeilenumbrüche in Werten mit `"` einschließen
+- Kopfzeile ist Pflicht, Spaltennamen in `camelCase`
 - Zeichensatz UTF-8 (BOM nur für Excel-Kompatibilität)
 
 ## Markdown + Frontmatter
@@ -159,28 +159,28 @@ END:VCARD
 }
 ```
 
-## Wann welches Format?
+## Welches Format wofür?
 
-| Ziel | Format | Begründung |
-|------|--------|------------|
-| API-Austausch | JSON | allgegenwärtig, typisiert validierbar |
+| Ziel | Format | Grund |
+|------|--------|-------|
+| API-Austausch | JSON | überall verbreitet, typisiert und prüfbar |
 | Config mit Kommentaren | YAML oder TOML | lesbar, Kommentare erlaubt |
-| Statische Dashboards | YAML | keine Datenbank nötig (Homer, Homepage) |
-| Bulk-Export / Import | NDJSON | zeilenweise, streamingfähig |
+| statische Dashboards | YAML | keine Datenbank nötig (Homer, Homepage) |
+| Bulk-Export / -Import | NDJSON | zeilenweise, streambar |
 | Tabellen-Import (Fremdsysteme) | CSV/TSV | breit unterstützt |
-| Kalender-Exchange | ICS | Standard, CalDAV-kompatibel |
-| Kontakt-Exchange | VCF | Standard, CardDAV-kompatibel |
+| Kalenderaustausch | ICS | Standard, CalDAV-kompatibel |
+| Kontaktaustausch | VCF | Standard, CardDAV-kompatibel |
 | Karten/Orte | GeoJSON | direkt in `map-view` nutzbar |
-| Analytics-Export | Parquet | spaltenweise, kompakt |
+| Analytik-Export | Parquet | spaltenorientiert, kompakt |
 | Inhalte/Dokumente | Markdown + Frontmatter | diffbar, versionierbar |
 
 ## Kodierung und Escaping
 
-- **Zeichensatz**: UTF-8 immer, ohne BOM (Ausnahme: CSV für Excel)
-- **Zeilenumbruch**: `\n` in Dateien, `\r\n` nur in ICS/vCard nach Standard
-- **Escaping**: HTML wird in `markdown`-Feldern nicht gespeichert, sondern beim Rendern erzeugt
-- **Datum/Zeit**: ISO 8601 mit Offset, Uhrzeit ohne Lokalisierung
-- **Zahlen**: Punkt als Dezimaltrennzeichen, Tausendertrennzeichen nur in Anzeige
+- **Zeichensatz**: immer UTF-8, ohne BOM (Ausnahme: CSV für Excel)
+- **Zeilenumbruch**: `\n` in Dateien, `\r\n` nur in ICS/vCard gemäß Standard
+- **Escaping**: HTML wird nicht in `markdown`-Feldern gespeichert, sondern beim Rendern erzeugt
+- **Datum/Uhrzeit**: ISO 8601 mit Offset, Zeit ohne Lokalisierung
+- **Zahlen**: Punkt als Dezimaltrennzeichen, Tausendertrennzeichen nur in der Anzeige
 
 ## Siehe auch
 

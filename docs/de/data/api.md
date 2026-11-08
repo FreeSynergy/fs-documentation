@@ -1,6 +1,6 @@
 # Daten-API (standardisiert)
 
-Alle Programme stellen ihre Daten nach demselben Muster bereit, damit Workflows, Importe und Masken ohne Sonderbehandlung funktionieren. Konkret dokumentierte Abweichungen stehen in der `api.md` des jeweiligen Programms (`apps/<kategorie>/masks/<programm>/api.md`).
+Alle Programme stellen ihre Daten nach demselben Muster bereit. So funktionieren Workflows, Importe und Frontends ohne Sonderbehandlung. Konkrete Abweichungen stehen in der `api.md` des jeweiligen Programms (`apps/<category>/frontends/<program>/api.md`).
 
 ## Übersicht
 
@@ -22,9 +22,9 @@ Alle Programme stellen ihre Daten nach demselben Muster bereit, damit Workflows,
 | `GET` | `/api/v1/<resource>/{id}` | einzeln laden |
 | `PATCH` | `/api/v1/<resource>/{id}` | teilweise ändern |
 | `PUT` | `/api/v1/<resource>/{id}` | vollständig ersetzen |
-| `DELETE` | `/api/v1/<resource>/{id}` | löschen (Soft-Delete wenn vorhanden) |
-| `GET` | `/api/v1/<resource>/{id}/revisions` | Versionsgeschichte |
-| `POST` | `/api/v1/<resource>/{id}/restore` | Soft-Delete rückgängig |
+| `DELETE` | `/api/v1/<resource>/{id}` | löschen (Soft-Delete, wenn vorhanden) |
+| `GET` | `/api/v1/<resource>/{id}/revisions` | Versionsverlauf |
+| `POST` | `/api/v1/<resource>/{id}/restore` | Soft-Delete rückgängig machen |
 | `POST` | `/api/v1/<resource>/batch` | mehrere Operationen in einem Request |
 | `GET` | `/api/v1/<resource>/export` | Export (JSON, NDJSON, CSV) |
 | `POST` | `/api/v1/<resource>/import` | Import (JSON, NDJSON, CSV) |
@@ -42,16 +42,16 @@ Authorization: Bearer fs_live_9f2c1a…
 Accept: application/json
 ```
 
-### Header-Standard
+### Standard-Header
 
 | Header | Beschreibung |
 |--------|--------------|
 | `Authorization` | `Bearer <token>` oder `Basic <base64>` |
 | `X-Api-Key` | Alternative zum Bearer-Token |
-| `X-Workspace-Id` | Ziel-Workspace bei Mandantenfähigkeit |
+| `X-Workspace-Id` | Ziel-Workspace in Mehrmandanten-Umgebungen |
 | `X-Request-Id` | UUID zur Nachverfolgung, wird zurückgegeben |
 | `Accept-Language` | `de`, `en`, `fr` |
-| `If-Match` | ETag für optimistische Sperre |
+| `If-Match` | ETag für die optimistische Sperre |
 | `Idempotency-Key` | UUID für wiederholbare `POST` |
 
 ### OAuth2
@@ -80,7 +80,7 @@ Accept: application/json
 }
 ```
 
-Einzelressource:
+Einzelne Ressource:
 
 ```json
 {
@@ -101,7 +101,7 @@ Einzelressource:
 |-----------|-----|---------|--------------|
 | `limit` | number | `25` | 1–100 Einträge |
 | `cursor` | string | - | Cursor der nächsten Seite |
-| `offset` | number | `0` | alternativ zum Cursor |
+| `offset` | number | `0` | Alternative zum Cursor |
 
 ```bash
 curl -H "Authorization: Bearer $FS_TOKEN" \
@@ -116,9 +116,9 @@ curl -H "Authorization: Bearer $FS_TOKEN" \
 | `filter` (mehrere) | `filter=status:eq:open;dueAt:lt:2026-12-01` | mit `;` kombiniert (UND) |
 | `sort` | `sort=-dueAt,title` | `-` = absteigend |
 | `q` | `q=budget` | Volltextsuche |
-| `fields` | `fields=id,title,status` | Feldeinschränkung (Sparse Fieldsets) |
-| `expand` | `expand=assignees,tags` | Referenzen ausrollen |
-| `includeDeleted` | `true` | Soft-Gelöschte mitliefern |
+| `fields` | `fields=id,title,status` | Felder einschränken (Sparse Fieldsets) |
+| `expand` | `expand=assignees,tags` | Referenzen ausklappen |
+| `includeDeleted` | `true` | auch Soft-Gelöschtes mitliefern |
 
 ```bash
 curl -H "Authorization: Bearer $FS_TOKEN" \
@@ -161,7 +161,7 @@ curl -X PATCH "https://hub.example.org/api/v1/tasks/task_01HZXG" \
 }
 ```
 
-Antwort pro Operation mit `index`, `status` und `data` oder `error`; Abbruch bei `stopOnError: true`.
+Antwort pro Operation mit `index`, `status` und `data` oder `error`. Mit `stopOnError: true` bricht die Verarbeitung ab.
 
 ## Fehlerformat
 
@@ -184,7 +184,7 @@ Antwort pro Operation mit `index`, `status` und `data` oder `error`; Abbruch bei
 | 403 | `forbidden` | Recht fehlt |
 | 404 | `not_found` | Ressource existiert nicht |
 | 409 | `conflict` | ETag-Konflikt, Duplikat oder Sperre |
-| 413 | `payload_too_large` | Körper zu groß |
+| 413 | `payload_too_large` | Body zu groß |
 | 422 | `unprocessable` | Schema gültig, Fachregel verletzt |
 | 429 | `rate_limited` | Kontingent erschöpft |
 | 500 | `internal_error` | Serverfehler |
@@ -197,15 +197,15 @@ Antwort pro Operation mit `index`, `status` und `data` oder `error`; Abbruch bei
 | `ETag` + `If-Match` | optimistische Sperre bei `PATCH`/`PUT` |
 | `Last-Modified` + `If-None-Match` | Cache, Antwort `304` |
 | `updatedSince` | Delta-Abfrage: `GET /tasks?updatedSince=2026-10-30T00:00:00Z` |
-| `deletedSince` | Synchronisation mit gelöschten Datensätzen |
-| `syncToken` | persistenter Marker für Voll-/Delta-Abgleich |
+| `deletedSince` | Synchronisation inklusive gelöschter Datensätze |
+| `syncToken` | persistenter Marker für den Abgleich (voll/Delta) |
 
 ## Rate Limits
 
 | Bereich | Standard |
 |---------|----------|
 | Standard-Token | 600 Anfragen / Minute |
-| Write-Operationen | 120 / Minute |
+| Schreibvorgänge | 120 / Minute |
 | Batch | 30 Anfragen / Minute, max. 100 Operationen |
 | Import/Export | 10 / Stunde |
 
@@ -249,7 +249,7 @@ Payload:
 }
 ```
 
-Signatur-Header: `X-FS-Signature: sha256=<hmac(secret, body)>`; Zustellversuche mit Backoff (1 min, 5 min, 30 min, 2 h, 6 h).
+Signatur-Header: `X-FS-Signature: sha256=<hmac(secret, body)>`. Zustellversuche mit Backoff (1 min, 5 min, 30 min, 2 h, 6 h).
 
 ## SDKs und Clients
 
@@ -283,5 +283,5 @@ client.tasks.update(
 - [Standardfelder](fields.md)
 - [Datenformate](formats.md)
 - [Konventionen](conventions.md)
-- [Desktop-Masken — API-Beispiele](../programs/platform/desktop/frontends/)
+- [Desktop-Frontends — API-Beispiele](../programs/platform/desktop/frontends/)
 - [Workflows](../programs/suites/workflows/)

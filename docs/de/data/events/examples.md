@@ -1,13 +1,13 @@
 # Termine – Beispiele
 
-Alle Feldnamen aus der ✅ geprüften RFC-8984-Feldliste in [standards.md](standards.md).
+Alle Feldnamen stammen aus der ✅ geprüften Feldliste von RFC 8984 in [standards.md](standards.md).
 
-## 1. `Event` mit Teilnehmern (kanonischer Speicher)
+## 1. `Event` mit Teilnehmenden (kanonische Speicherung)
 
 ```json
 {
   "@type": "Event",
-  "uid": "01HTZM2Q6T8V3N9K5R7D1XWZ2P",
+  "uid": "018ebf41-5cda-76c7-94cc-b83b43de7c56",
   "created": "2026-11-02T09:00:00Z",
   "updated": "2026-11-02T09:00:00Z",
   "sequence": 0,
@@ -18,7 +18,7 @@ Alle Feldnamen aus der ✅ geprüften RFC-8984-Feldliste in [standards.md](stand
   "status": "confirmed",
   "freeBusyStatus": "busy",
   "locations": {
-    "loc1": { "name": "Rathaus Berlin", "link": "https://<instanz>/geodata/01HTZK9F2W7P3D8S5V1BQ6XH4M" }
+    "loc1": { "name": "Rathaus Berlin", "link": "https://<instance>/geodata/018ebf34-bc5c-7d86-9464-bb0aee6ec494" }
   },
   "participants": {
     "p1": {
@@ -44,12 +44,12 @@ Alle Feldnamen aus der ✅ geprüften RFC-8984-Feldliste in [standards.md](stand
 }
 ```
 
-## 2. Wöchentliche Serie mit einem Override
+## 2. Wöchentliche Serie mit einer Ausnahme
 
 ```json
 {
   "@type": "Event",
-  "uid": "01HTZM4W0C5B8J2H6F9G0S1D3E",
+  "uid": "018ebf42-700c-7ad1-a144-cf4c0190b46e",
   "title": "Jour fixe",
   "start": "2026-11-03T10:00:00Z",
   "duration": "PT30M",
@@ -62,14 +62,14 @@ Alle Feldnamen aus der ✅ geprüften RFC-8984-Feldliste in [standards.md](stand
 }
 ```
 
-## 3. `Task` (auch von [projects/](../projects/index.md) genutzt)
+## 3. `Task` (auch genutzt von [projects/](../projects/index.md))
 
 ```json
 {
   "@type": "Task",
   "uid": "01HTZM7Y2L4P9Q8R0T6V3B5N7C",
-  "title": "Protokoll der Sprint-Review schreiben",
-  "relatedTo": "01HTZM2Q6T8V3N9K5R7D1XWZ2P",
+  "title": "Protokoll des Sprint-Reviews schreiben",
+  "relatedTo": "018ebf41-5cda-76c7-94cc-b83b43de7c56",
   "due": "2026-11-12T17:00:00Z",
   "priority": 1,
   "percentComplete": 0,
@@ -77,7 +77,7 @@ Alle Feldnamen aus der ✅ geprüften RFC-8984-Feldliste in [standards.md](stand
 }
 ```
 
-## 4. Teiländerung: Participant antwortet ab (RFC-8984-Pfadform, ✅)
+## 4. Teiländerung: ein Teilnehmer sagt ab (Pfadform nach RFC 8984, ✅)
 
 ```json
 {
@@ -87,18 +87,18 @@ Alle Feldnamen aus der ✅ geprüften RFC-8984-Feldliste in [standards.md](stand
 }
 ```
 
-## 5. Antwort im Envelope (Beschluss 2)
+## 5. Antwort im Umschlag (Entscheidung 2)
 
 ```json
 {
   "@context": "https://www.w3.org/ns/activitystreams",
   "type": "Update",
-  "actor": "https://<instanz>/profile/01HTZK5C8R4M6YQ2N9XGZ7TQ1A",
+  "actor": "https://<instance>/profile/018ebf32-b118-750d-ab8a-a9ec3e7d5c2a",
   "object": {
     "@type": "Event",
-    "uid": "01HTZM2Q6T8V3N9K5R7D1XWZ2P",
+    "uid": "018ebf41-5cda-76c7-94cc-b83b43de7c56",
     "participants": {
-      "p2": { "participationStatus": "declined", "participationComment": "Kollision mit Kunde." }
+      "p2": { "participationStatus": "declined", "participationComment": "Kollidiert mit einem Kundentermin." }
     }
   }
 }

@@ -9,35 +9,35 @@ Konventionen halten Dokumentation und Daten über alle Kategorien hinweg konsist
 | Felder und Attribute | `camelCase` | `createdAt`, `displayName` |
 | JSON-Schlüssel in Configs | `kebab-case` oder `camelCase` (pro Datei einheitlich) | `tap-threshold` / `tapThreshold` |
 | Verzeichnis- und Dateinamen | `kebab-case` | `long-press/`, `fade-in/` |
-| Kategorien | lowercase, deutscher Name wenn üblich | `projektmanagement`, `whiteboards` |
-| Programmverzeichnisse | offizieller Projektname, lowercase | `homarr`, `mediawiki`, `xwiki` |
+| Kategorien | Kleinbuchstaben, der übliche Name | `projectmanagement`, `whiteboards` |
+| Programm-Verzeichnisse | offizieller Projektname, Kleinbuchstaben | `homarr`, `mediawiki`, `xwiki` |
 | Konstanten und Umgebungsvariablen | `SCREAMING_SNAKE_CASE` | `FS_API_TOKEN` |
-| Enums | lowercase, Singular, `_` bei Leerzeichen | `in_progress` |
-| Events | `<resource>.<aktion>` lowercase | `document.published` |
+| Enums | Kleinbuchstaben, Singular, `_` für Leerzeichen | `in_progress` |
+| Events | `<resource>.<action>`, Kleinbuchstaben | `document.published` |
 
-## Datei-Konventionen
+## Dateikonventionen
 
-### Programme (Skins)
+### Programme (Frontends)
 
-Jedes Programm in `apps/<kategorie>/masks/<programm>/` bekommt **sieben** Dateien:
+Jedes Programm in `apps/<category>/frontends/<program>/` bekommt **sieben** Dateien:
 
 | Datei | Inhalt |
 |-------|--------|
-| `index.md` | Übersicht + Links auf die sechs anderen Dateien |
-| `description.md` | Was das Programm macht, Vorteile, Abgrenzung, Technische Details |
-| `features.md` | Funktionen, Widgets/Plugins, Was es NICHT kann |
-| `menu.md` | Menüpunkte, Kontextmenüs, Rollen-Menüs |
-| `structure.md` | Fenster-Struktur (ASCII), UI/UX, Accessibility, Performance |
-| `shortcuts.md` | Alle Tastatur-Shortcuts (immer separat!) |
-| `api.md` | API-Art, Auth, Endpunkte, Beispiele, Rate Limits, SDKs |
+| `index.md` | Übersicht + Links zu den anderen sechs Dateien |
+| `description.md` | was das Programm tut, Vorteile, Abgrenzung, technische Details |
+| `features.md` | Funktionen, Widgets/Plugins, was es NICHT tut |
+| `menus.md` | Menüpunkte, Kontextmenüs, Rollenmenüs |
+| `layout.md` | Fensteraufbau (ASCII), UI/UX, Barrierefreiheit, Performance |
+| `shortcuts.md` | alle Tastenkürzel (immer separat!) |
+| `api.md` | API-Typ, Auth, Endpoints, Beispiele, Rate Limits, SDKs |
 
 ### Komponenten
 
-`components/<band>/<gruppe>/<element>/` mit `description.md`, `appearance.md`, `attributes.md` und `usage.md`. Bänder = Ebenen: `primitives`, `widgets`, `workbenches`.
+`components/<band>/<group>/<element>/` mit `description.md`, `appearance.md`, `attributes.md` und `usage.md`. Bands = Ebenen: `primitives`, `widgets`, `workbenches`.
 
 ### Gesten
 
-`gestures/<kategorie>/<geste>/` mit `description.md`, `attributes.md`, `appearance.md`
+`gestures/<category>/<gesture>/` mit `description.md`, `attributes.md`, `appearance.md`
 (Kategorien: `tap`, `swipe`, `transform`, `special`, `device`, `combined`).
 
 ### Animationen
@@ -46,30 +46,29 @@ Jedes Programm in `apps/<kategorie>/masks/<programm>/` bekommt **sieben** Dateie
 
 ### Daten
 
-Querschnitts-Dateien direkt in `data/`: `index.md`, `standards.md`, `mappings.md`, `formats.md`, `models.md`, `fields.md`, `conventions.md`, `api.md`.
+Querschnittsdateien direkt in `data/`: `index.md`, `standards.md`, `mappings.md`, `formats.md`, `models.md`, `fields.md`, `conventions.md`, `api.md`.
 
-Darunter gilt: **Datendomäne → Standard → Dateien**:
+Darunter gilt die Regel: **Datendomäne → Standard → Dateien**:
 
 ```
-data/<domaene>/index.md                      Übersicht + Tabelle der Standards der Domäne
-data/<domaene>/<standard>/description.md    allgemeine Beschreibung (was, Umfang, Grenzen)
-data/<domaene>/<standard>/storage.md     wie Daten darin gespeichert werden (DB, Dateien, Patches)
-data/<domaene>/<standard>/beispiele.md       optional, bei Bedarf
-data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standardfelder
+data/<domain>/index.md                       Übersicht + Tabelle der Standards der Domäne
+data/<domain>/<standard>/description.md      allgemeine Beschreibung (was, Umfang, Grenzen)
+data/<domain>/<standard>/storage.md          wie Daten darin gespeichert werden (DB, Dateien, Patches)
+data/<domain>/<standard>/examples.md         optional, wenn nötig
+data/<domain>/<standard>/mapping.md          optional, unsere Felder ↔ Standardfelder
 ```
 
-- Domänenverzeichnisse: lowercase, ASCII (`contacts`, `identity`, `geodata`)
-- Standardverzeichnisse: offizieller Kurzname, lowercase (`jscontact`, `jscalendar`, `vcard`)
-- Jeder Eintrag endet wie überall mit `## Siehe auch`
+- Domänen-Verzeichnisse: Kleinbuchstaben, ASCII (`contacts`, `identity`, `geodata`)
+- Standard-Verzeichnisse: offizieller Kurzname, Kleinbuchstaben (`jscontact`, `jscalendar`, `vcard`)
+- jeder Eintrag endet, wie überall, mit `## Siehe auch`
 
 ## Links
 
 - Querverweise innerhalb eines Programms: relativ (`[api.md](api.md)`)
-- Verweise über Bereiche hinweg: relativ mit `../` (von `data/` aus: `[Gesten](../interactions/gestures/)`)
-- Kategorien-Index immer als Verzeichnislink (von `data/` aus: `[Messenger](../programs/apps/messenger/)`)
-- Jede Datei endet mit einem `## Siehe auch`-Abschnitt
-- Keine Links auf Dateien, die nicht existieren – Ausnahme: Querverweise
-  innerhalb der eigenen Sprachversion (Regel 6 der Sprachkonvention)
+- Verweise über Bereiche hinweg: relativ mit `../` (aus `data/`: `[Gesten](../interactions/gestures/)`)
+- Kategorie-Index immer als Verzeichnislink (aus `data/`: `[Messenger](../programs/apps/messenger/)`)
+- jede Datei endet mit einem Abschnitt `## Siehe auch`
+- keine Links auf Dateien, die nicht existieren, Ausnahme: Querverweise innerhalb der eigenen Sprachversion (Regel 6 der Sprachkonvention)
 
 ## Sprachkonvention
 
@@ -77,22 +76,18 @@ data/<domaene>/<standard>/mapping.md         optional, unsere Felder ↔ Standar
 2. Englisch (`docs/en/`) spiegelt die Verzeichnisstruktur (Französisch pausiert)
 3. Verzeichnis- und Dateinamen sind sprachunabhängig (gleiches Schema in `de/` und `en/`)
 4. Produkt- und Projektnamen bleiben unübersetzt
-5. Fachbegriffe aus UI und API bleiben englisch (`Modal`, `Toast`, `Endpoint`)
-6. **Nie sprachübergreifend verlinken:** In `en/` (und späteren Sprachen) zeigt
-   jeder Querverweis auf die eigene Sprachversion (`en → en`), niemals auf
-   `de/` – auch wenn die Zieldatei dort noch nicht existiert; die Übersetzung
-   folgt noch. Sprachwechsel erfolgt ausschließlich über die Sprachumschaltung
-   in `index.md`
+5. technische Begriffe aus UI und API bleiben englisch (`Modal`, `Toast`, `Endpoint`)
+6. **nie sprachübergreifend verlinken:** in `en/` (und späteren Sprachen) zeigt jeder Querverweis auf die eigene Sprachversion (`en → en`), nie auf `de/`, auch wenn die Zieldatei dort noch fehlt; die Übersetzung folgt. Der Sprachwechsel läuft nur über den Sprachumschalter in `index.md`
 
 ## Versionierung und Kompatibilität
 
 | Regel | Beschreibung |
 |-------|--------------|
 | SemVer | `MAJOR.MINOR.PATCH` für Schemas und API-Versionen |
-| Additive Änderungen | neue Felder sind `MINOR`, keine Breaking Changes |
-| Breaking Change | Feld entfernen/umbenennen oder Typ ändern ist `MAJOR` |
-| API-Version im Pfad | `/api/v1/…`; alte Versionen mindestens 12 Monate |
-| Deprecation | Feld bleibt mit `deprecated: true` markiert, mindestens 2 Minor-Releases |
+| additive Änderungen | neue Felder sind `MINOR`, keine Breaking Changes |
+| Breaking Change | Entfernen/Umbenennen eines Feldes oder Ändern seines Typs ist `MAJOR` |
+| API-Version im Pfad | `/api/v1/…`; alte Versionen für mindestens 12 Monate |
+| Deprecation | Feld bleibt mit `deprecated: true` markiert, mindestens 2 Minor-Releases lang |
 | Changelog | Änderungen an Modellen in `data/` dokumentieren |
 
 ## JSON-Schema-Muster
@@ -126,7 +121,7 @@ Standard-Schema-Aufbau für jedes Modell:
 }
 ```
 
-Beispiel-Dokument dazu:
+Beispieldokument dazu:
 
 ```json
 {
@@ -143,31 +138,31 @@ Beispiel-Dokument dazu:
 
 | Regel | Beschreibung |
 |-------|--------------|
-| Pflichtfelder | `required` im Schema; fehlendes Pflichtfeld = `400 validation_error` |
-| Null-Werte | optionale Felder dürfen `null` sein, Pflichtfelder nicht |
+| Pflichtfelder | `required` im Schema; ein fehlendes Pflichtfeld = `400 validation_error` |
+| null-Werte | optionale Felder dürfen `null` sein, Pflichtfelder nicht |
 | Enums | nur dokumentierte Werte; unbekannte Werte = `422` |
-| Längen | `maxLength` dokumentieren und im UI sichtbar machen |
+| Längen | `maxLength` dokumentieren und in der UI sichtbar machen |
 | Referenzen | müssen existieren oder `null` sein; tote Referenzen werden bereinigt |
-| Duplikate | `slug`, `email`, `username` sind eindeutig im Geltungsbereich |
-| Zeitzonen | `timezone` muss ein IANA-Identifier sein |
+| Duplikate | `slug`, `email`, `username` sind innerhalb des Bereichs eindeutig |
+| Zeitzonen | `timezone` muss eine IANA-Kennung sein |
 | Dateien | `mimeType` und `size` sind Pflicht, `checksum` empfohlen |
-| Paginierung | Listen werden niemals unbegrenzt geliefert; Default `limit=25`, Maximum `100` |
+| Pagination | Listen werden nie unbegrenzt ausgeliefert; Default `limit=25`, Maximum `100` |
 
 ## Internationalisierung
 
 | Punkt | Konvention |
 |-------|------------|
 | Sprachcodes | ISO 639-1: `de`, `en`, `fr` |
-| Regionale Codes | nur wo nötig: `de-DE`, `fr-CH` |
-| Übersetzungsdateien | `locales/<code>.json` mit `camelCase`-Keys |
-| Fallback | fehlender Key → `de`, niemals Key-Anzeige im UI |
-| Datum/Zeit in UI | nach `locale` formatieren, Daten immer ISO 8601 |
+| Regionalcodes | nur wo nötig: `de-DE`, `fr-CH` |
+| Übersetzungsdateien | `locales/<code>.json` mit `camelCase`-Schlüsseln |
+| Fallback | fehlender Schlüssel → `de`, den Schlüssel nie in der UI zeigen |
+| Datum/Uhrzeit in der UI | nach `locale` formatieren, Daten immer ISO 8601 |
 | Zahlen | Daten immer mit Punkt; Anzeige nach `locale` |
 
 ```json
 {
   "task.status.open": "Offen",
-  "task.status.in_progress": "In Bearbeitung",
+  "task.status.in_progress": "In Arbeit",
   "task.status.done": "Erledigt"
 }
 ```
@@ -176,22 +171,22 @@ Beispiel-Dokument dazu:
 
 | Feld | Pflicht für | Beschreibung |
 |------|-------------|--------------|
-| `ariaLabel` | alle interaktiven Elemente | Screenreader-Text |
+| `ariaLabel` | alle interaktiven Elemente | Text für Screenreader |
 | `role` | alle interaktiven Elemente | ARIA-Rolle |
-| `altText` | `image`, `avatar`, `icon` | Alternativtext |
+| `altText` | `image`, `avatar`, `icon` | alternativer Text |
 | `respectReducedMotion` | alle Animationen | Animationen reduzieren |
-| `alternativeAction` | Gesten | Tastatur-/Button-Äquivalent |
+| `alternativeAction` | Gesten | Tastatur-/Button-Entsprechung |
 | `keyboardShortcut` | alle Aktionen | in `shortcuts.md` dokumentieren |
 
 ## Qualitätssicherung
 
-- Jede neue Programm-Doku enthält alle sieben Dateien (keine leeren Platzhalter)
-- Kurzform-Dateien (`index.md`) verlinken auf alle übrigen
-- `shortcuts.md` und `api.md` sind nie in anderen Dateien enthalten
-- Fehlende Funktionen werden ausdrücklich benannt („Was X NICHT kann“)
-- Erfundene Shortcuts oder Endpoints sind ein Fehler — lieber „nicht vorhanden“
-- **Standard-Pate:** Jedes Feld in `fields.md` nennt in [standards.md](standards.md) einen Beleg (Standard samt Nummer) oder ist ausdrücklich als **eigene Festlegung** markiert. Ein Feld ohne Beleg und ohne Markierung ist ein Fehler
-- **Keine erfundenen Standard-Nummern:** Eine RFC- oder Spec-Nummer wird nur genannt, wenn sie nachgesehen wurde. ungeprüfte Angaben werden mit ⚠️ gekennzeichnet
+- jede neue Programmdokumentation enthält alle sieben Dateien (keine leeren Platzhalter)
+- Kurzdateien (`index.md`) verlinken auf alle anderen
+- `shortcuts.md` und `api.md` werden nie in andere Dateien eingebettet
+- fehlende Funktionen werden ausdrücklich benannt („Was X NICHT tut“)
+- erfundene Tastenkürzel oder Endpoints sind ein Fehler; besser „nicht vorhanden“ schreiben
+- **Standard-Verantwortung:** jedes Feld in `fields.md` nennt einen Beleg in [standards.md](standards.md) (Standard plus Nummer) oder ist ausdrücklich als **eigene Entscheidung** markiert. Ein Feld ohne Beleg und ohne Markierung ist ein Fehler
+- **keine erfundenen Standardnummern:** eine RFC- oder Spezifikationsnummer wird nur genannt, wenn sie nachgeschlagen wurde. Ungeprüfte Aussagen werden mit ⚠️ markiert
 
 ## Siehe auch
 
