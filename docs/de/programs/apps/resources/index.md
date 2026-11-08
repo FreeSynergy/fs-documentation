@@ -24,7 +24,7 @@ Noch nicht vorhanden: Kosten, Unterstützung für MSPDI (ein Dateiformat für Pr
 
 `FreeSynergy.Resources` (`fs-resources`) beantwortet die Frage: **Was haben wir, was brauchen wir, und wer hat Zeit?**
 
-**Status: [Kern](https://github.com/FreeSynergy/fs-resources) v0.2.0, keine GUI; vorläufiger Entwurf der Schnittstelle (2026-11-06).** Siehe den [Gesamtplan](../roadmap.md).
+**Status: [Kern](https://github.com/FreeSynergy/fs-resources) v0.0.1, keine GUI; vorläufiger Entwurf der Schnittstelle (2026-11-06).** Siehe den [Gesamtplan](../roadmap.md).
 
 ## Warum
 

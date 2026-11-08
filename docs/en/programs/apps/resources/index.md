@@ -16,7 +16,7 @@ Resources keeps what a group has and what it needs: things, rooms, material in s
 
 ## Where it stands today
 
-Latest tag: `v0.2.0`. There is **no window and no server yet**. A server must refuse your capacity calls until it knows who is asking.
+Latest tag: `v0.0.1`. There is **no window and no server yet**. A server must refuse your capacity calls until it knows who is asking.
 
 Today it handles things, rooms and material, with stock worked out from what has been finished. Reservations cannot overbook, and finishing one frees the thing or uses up the material. It can show the free time of a thing over a range, keep your own capacity, allocations and shares to groups in a store of its own, and work out the load of a group using the Groups interface. Needs and offers work, and accepting an offer makes the reservation. It has 115 tests and was checked by an independent reviewer over four rounds.
 
@@ -24,7 +24,7 @@ What is not there yet: costs, support for MSPDI (a project plan file format), an
 
 `FreeSynergy.Resources` (`fs-resources`) answers: **what do we have, what do we need, and who has time?**
 
-**Status: [core](https://github.com/FreeSynergy/fs-resources) v0.2.0, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
+**Status: [core](https://github.com/FreeSynergy/fs-resources) v0.0.1, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
 
 ## Why
 

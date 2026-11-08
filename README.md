@@ -20,36 +20,36 @@ Why we do this is written down in the [manifesto](https://freesynergy.github.io/
 
 ## The programs
 
-Status is as of 2026-11-08 and kept honest. "Core" means the engine works and is tested, but there is nothing to click yet. "First window" means a provisional window exists. Tags are the latest on GitHub.
+Status is as of 2026-11-08 and kept honest. "Core" means the engine works and is tested, but there is nothing to click yet. "First window" means a provisional window exists. Tags are the latest on GitHub. Version numbers start at `0.0.1` and count up in the last place; `0.1.0` is given only when a person can use the program and it passes the owner's hands-on test, `1.0.0` only when two independent users use its interface ([ADR 0064](https://github.com/FreeSynergy/fs-documentation/blob/main/conventions/decisions/0064-versionen-ab-0-0-1.md)).
 
 | Program | Purpose | Repo | Status |
 |---------|---------|------|--------|
-| People | know who someone is | [fs-people](https://github.com/FreeSynergy/fs-people) | Core and a first window, `v0.6.0` |
-| Calendar | be somewhere at some time | [fs-calendar](https://github.com/FreeSynergy/fs-calendar) | Core and a first window, `v0.7.0` |
-| Tasks | know what to do next | [fs-tasks](https://github.com/FreeSynergy/fs-tasks) | Core and a first window (list and status view, no real boards), `v0.8.0` |
-| Files | keep and find anything | [fs-files](https://github.com/FreeSynergy/fs-files) | Core and server, no window, `v0.6.0` |
-| Maps | know where | [fs-maps](https://github.com/FreeSynergy/fs-maps) | Core (tiles, offline regions, places), no map drawing yet, `v0.2.0` |
-| Wiki | write and know together | [fs-wiki](https://github.com/FreeSynergy/fs-wiki) | Core and a first reader window with editing, `v0.4.0` |
-| Messenger | say something to someone | [fs-messenger](https://github.com/FreeSynergy/fs-messenger) | Core, AI guard and mail connector, no window, `v0.4.0` |
-| Groups | belong together | [fs-groups](https://github.com/FreeSynergy/fs-groups) | Core, no window, `v0.3.0` |
-| History | remember what I or we did | [fs-history](https://github.com/FreeSynergy/fs-history) | Core, no window, `v0.1.1` |
-| Resources | know what we have and need | [fs-resources](https://github.com/FreeSynergy/fs-resources) | Core, no window, `v0.2.0` |
-| Surveys | ask, and decide together | [fs-surveys](https://github.com/FreeSynergy/fs-surveys) | Core, no window, `v0.3.0` |
-| Whiteboard | think visually | [fs-whiteboard](https://github.com/FreeSynergy/fs-whiteboard) | Core (stage 1), no window, `v0.2.0` |
-| Streaming | show something, and bring it everywhere | [fs-streaming](https://github.com/FreeSynergy/fs-streaming) | Stage 1 (forward and record), tested on loopback only, `v0.2.0` |
+| People | know who someone is | [fs-people](https://github.com/FreeSynergy/fs-people) | Core and a first window, `v0.0.2` |
+| Calendar | be somewhere at some time | [fs-calendar](https://github.com/FreeSynergy/fs-calendar) | Core and a first window, `v0.0.1` |
+| Tasks | know what to do next | [fs-tasks](https://github.com/FreeSynergy/fs-tasks) | Core and a first window (list and status view, no real boards), `v0.0.2` |
+| Files | keep and find anything | [fs-files](https://github.com/FreeSynergy/fs-files) | Core and server, no window, `v0.0.1` |
+| Maps | know where | [fs-maps](https://github.com/FreeSynergy/fs-maps) | Core (tiles, offline regions, places), no map drawing yet, `v0.0.1` |
+| Wiki | write and know together | [fs-wiki](https://github.com/FreeSynergy/fs-wiki) | Core and a first reader window with editing, `v0.0.1` |
+| Messenger | say something to someone | [fs-messenger](https://github.com/FreeSynergy/fs-messenger) | Core, AI guard and mail connector, no window, `v0.0.1` |
+| Groups | belong together | [fs-groups](https://github.com/FreeSynergy/fs-groups) | Core, no window, `v0.0.1` |
+| History | remember what I or we did | [fs-history](https://github.com/FreeSynergy/fs-history) | Core, no window, `v0.0.1` |
+| Resources | know what we have and need | [fs-resources](https://github.com/FreeSynergy/fs-resources) | Core, no window, `v0.0.1` |
+| Surveys | ask, and decide together | [fs-surveys](https://github.com/FreeSynergy/fs-surveys) | Core, no window, `v0.0.1` |
+| Whiteboard | think visually | [fs-whiteboard](https://github.com/FreeSynergy/fs-whiteboard) | Core (stage 1), no window, `v0.0.1` |
+| Streaming | show something, and bring it everywhere | [fs-streaming](https://github.com/FreeSynergy/fs-streaming) | Stage 1 (forward and record), tested on loopback only, `v0.0.1` |
 | Store | install and keep everything up to date | not public yet (local repo `fs-launcher`) | Design and a small core, coming |
 
 Building blocks, which matter because everything above stands on them:
 
 | Block | Purpose | Repo | Status |
 |-------|---------|------|--------|
-| Objects | one place for what programs keep | [fs-objects](https://github.com/FreeSynergy/fs-objects) | Working, `v0.6.0` |
-| Hub | let the programs find each other | [fs-hub](https://github.com/FreeSynergy/fs-hub) | Working on one device, Linux, `v0.4.0` |
-| Identity | know who is allowed in | [fs-identity](https://github.com/FreeSynergy/fs-identity) | Only a Kanidm adapter for groups, no sign-in yet, `v0.2.0` |
-| Interfaces | the contracts everything agrees on | [fs-interfaces](https://github.com/FreeSynergy/fs-interfaces) | All drafts, none 1.0, `v0.47.0` |
-| JSCalendar | the same time for everyone | [fs-jscalendar](https://github.com/FreeSynergy/fs-jscalendar) | Library, `v0.1.3` |
-| Components | one look, one feel | [fs-components](https://github.com/FreeSynergy/fs-components) | Working, partly provisional, `v0.3.0` |
-| Capnpc | build the contracts with Rust alone | [fs-capnpc](https://github.com/FreeSynergy/fs-capnpc) | Working, `v0.1.1` |
+| Objects | one place for what programs keep | [fs-objects](https://github.com/FreeSynergy/fs-objects) | Working, `v0.0.1` |
+| Hub | let the programs find each other | [fs-hub](https://github.com/FreeSynergy/fs-hub) | Working on one device, Linux, `v0.0.1` |
+| Identity | know who is allowed in | [fs-identity](https://github.com/FreeSynergy/fs-identity) | Only a Kanidm adapter for groups, no sign-in yet, `v0.0.1` |
+| Interfaces | the contracts everything agrees on | [fs-interfaces](https://github.com/FreeSynergy/fs-interfaces) | All drafts, none 1.0, `v0.0.1` |
+| JSCalendar | the same time for everyone | [fs-jscalendar](https://github.com/FreeSynergy/fs-jscalendar) | Library, `v0.0.1` |
+| Components | one look, one feel | [fs-components](https://github.com/FreeSynergy/fs-components) | Working, partly provisional, `v0.0.2` |
+| Capnpc | build the contracts with Rust alone | [fs-capnpc](https://github.com/FreeSynergy/fs-capnpc) | Working, `v0.0.1` |
 | Release | one way to ship, free of charge | [fs-release](https://github.com/FreeSynergy/fs-release) | In use, first run green, no tag yet |
 
 What we do not have yet, plainly: no program has a finished app for ordinary users, there is no sign-in, nothing syncs between devices, and every interface is still a draft. Messages and some data stay on the device they were made on until a key vault exists.

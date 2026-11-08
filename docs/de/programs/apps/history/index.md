@@ -24,7 +24,7 @@ Noch nicht da: Wer etwas getan hat, ist vorerst leer, und die Zeit ist der Zeitp
 
 `FreeSynergy.History` (`fs-history`) beantwortet die Frage: **Was habe ich, oder was haben wir getan?** Es zeigt deine eigenen Daten als Zeitleiste, ob für eine Person oder für ein Projekt. Das wurde zuerst `fs-timeline` genannt.
 
-**Status: [core](https://github.com/FreeSynergy/fs-history) v0.1.1, keine GUI; vorläufiger Entwurf der Schnittstelle (2026-11-06).** Siehe den [Gesamtplan](../roadmap.md).
+**Status: [core](https://github.com/FreeSynergy/fs-history) v0.0.1, keine GUI; vorläufiger Entwurf der Schnittstelle (2026-11-06).** Siehe den [Gesamtplan](../roadmap.md).
 
 ## Idee
 

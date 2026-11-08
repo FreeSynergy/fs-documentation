@@ -16,13 +16,13 @@ Streaming takes one live stream and sends it on to several places at the same mo
 
 ## Where it stands today
 
-Latest tag: `v0.2.0` (stage 1 of the design). There is **no window and no server yet**.
+Latest tag: `v0.0.1` (stage 1 of the design). There is **no window and no server yet**.
 
 Today it can receive one RTMP stream and send it to many RTMP or RTMPS targets, record the stream to a folder as FLV, and check a target before going live, as far as that can be known. It has 94 tests with real sockets.
 
 What is not there yet: it has only been tested on loopback with ffmpeg, never against a real streaming platform. Receiving is plain RTMP and stays on loopback by default. Handing a recording to Files is not built; everything else in the contract is reported as "not possible". A forwarding loop through another machine cannot be detected from here.
 
-**Status: stage 1 `v0.2.0` in [`fs-streaming`](https://github.com/FreeSynergy/fs-streaming) (forward and record, tested on loopback only), no window yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+**Status: stage 1 `v0.0.1` in [`fs-streaming`](https://github.com/FreeSynergy/fs-streaming) (forward and record, tested on loopback only), no window yet.** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
 
 ## Overview
 

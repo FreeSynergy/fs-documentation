@@ -22,7 +22,7 @@ Heute funktioniert der Kern: Flächen, Seiten und jede Art von Element aus dem V
 
 Noch nicht vorhanden: Nichts überträgt Änderungen zwischen Geräten, daher wird das Zusammenführen nirgends genutzt. Live-Anwesenheit, Freigabe, Bibliotheken, Vorlagen und Kommentare sind geplant, aber noch nicht gebaut.
 
-**Status: erster Kern `v0.2.0` in [`fs-whiteboard`](https://github.com/FreeSynergy/fs-whiteboard), noch kein Fenster (Stufe 1).** Siehe das [Design](design.md), die [Anforderungen](requirements.md) und die [Roadmap](../roadmap.md).
+**Status: erster Kern `v0.0.1` in [`fs-whiteboard`](https://github.com/FreeSynergy/fs-whiteboard), noch kein Fenster (Stufe 1).** Siehe das [Design](design.md), die [Anforderungen](requirements.md) und die [Roadmap](../roadmap.md).
 
 ## Übersicht
 

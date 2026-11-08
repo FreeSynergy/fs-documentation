@@ -19,7 +19,7 @@ Neueste Version: `v0.3.0`. Du kannst Gruppen anlegen, verschachteln und löschen
 
 `fs-groups`: Zusammengehören und entscheiden, wer was darf.
 
-**Status: Kern `v0.3.0` in [`fs-groups`](https://github.com/FreeSynergy/fs-groups), kein Fenster; die Schnittstelle ist ein Entwurf in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces).** Zurück zum [Gesamtplan](../apps/roadmap.md).
+**Status: Kern `v0.0.1` in [`fs-groups`](https://github.com/FreeSynergy/fs-groups), kein Fenster; die Schnittstelle ist ein Entwurf in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces).** Zurück zum [Gesamtplan](../apps/roadmap.md).
 
 ## Warum es früh kommt
 

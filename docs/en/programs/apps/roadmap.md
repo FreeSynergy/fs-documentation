@@ -31,13 +31,13 @@ Stand-alone apps without their own data are **facets** (ADR 0061): the gallery i
 | Know who someone is, with roles | [`fs-people`](https://github.com/FreeSynergy/fs-people) | Core with roles and draft interface, no GUI |
 | Be somewhere at some time | [`fs-calendar`](https://github.com/FreeSynergy/fs-calendar) | Core exists, no GUI |
 | Know where | [`fs-maps`](https://github.com/FreeSynergy/fs-maps) | Core exists, no GUI |
-| Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists; first workbench in [`fs-components`](https://github.com/FreeSynergy/fs-components) v0.1.0, app not finished |
+| Write and know together | [`fs-wiki`](https://github.com/FreeSynergy/fs-wiki) (crate `fs-text`) | Core exists; first workbench in [`fs-components`](https://github.com/FreeSynergy/fs-components) v0.0.1, app not finished |
 | Say something to someone | [`fs-messenger`](messenger/contract.md) | Draft contract |
 | Know what to do next | [`fs-tasks`](https://github.com/FreeSynergy/fs-tasks) ([design](tasks/design.md)) | Core exists, no GUI; draft interface |
-| Remember what I or we did | [`fs-history`](history/index.md) | Core v0.1.0, no GUI; provisional draft interface |
-| Know what we have and need | [`fs-resources`](resources/index.md) | Core v0.1.0, no GUI; provisional draft interface |
-| Ask, and decide together | [`fs-surveys`](surveys/design.md) ([repo](https://github.com/FreeSynergy/fs-surveys)) | Core v0.1.0, no GUI; draft interface |
-| Think visually | [`fs-whiteboard`](whiteboard/design.md) | Core v0.1.0 (stage 1), no GUI |
+| Remember what I or we did | [`fs-history`](history/index.md) | Core v0.0.1, no GUI; provisional draft interface |
+| Know what we have and need | [`fs-resources`](resources/index.md) | Core v0.0.1, no GUI; provisional draft interface |
+| Ask, and decide together | [`fs-surveys`](surveys/design.md) ([repo](https://github.com/FreeSynergy/fs-surveys)) | Core v0.0.1, no GUI; draft interface |
+| Think visually | [`fs-whiteboard`](whiteboard/design.md) | Core v0.0.1 (stage 1), no GUI |
 | Talk to AI, and work with every program through it | [A messenger frontend](assistant/index.md), not a program of its own | Idea |
 | Show something, and bring it everywhere | [`fs-streaming`](streaming/design.md) | Draft interface, stage 1 in progress |
 

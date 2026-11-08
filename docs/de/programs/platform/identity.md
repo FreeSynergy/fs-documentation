@@ -19,7 +19,7 @@ Neueste Version: `v0.2.0`. Der Adapter legt Gruppen in Kanidm an, liest, aktuali
 
 Anmeldung und Zugang zu Systemen. Wir legen fest, wie es sich verhält; Kanidm führt es aus, wo es kann.
 
-**Status: nur ein Kanidm-Adapter für Gruppen, `v0.2.0`; noch keine Anmeldung.** Zurück zum [Gesamtplan](../apps/roadmap.md). Der Repository-Name `fs-identity` ist vorläufig. Details:
+**Status: nur ein Kanidm-Adapter für Gruppen, `v0.0.1`; noch keine Anmeldung.** Zurück zum [Gesamtplan](../apps/roadmap.md). Der Repository-Name `fs-identity` ist vorläufig. Details:
 [Kanidm-Recherche](https://github.com/FreeSynergy/fs-documentation/blob/main/temp/research/kanidm-control.md), Quelltext gelesen bei Kanidm 1.13.0-dev (neueste Veröffentlichung 1.12.0), nicht gegen einen Live-Server ausgeführt.
 
 ## Idee

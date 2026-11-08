@@ -16,7 +16,7 @@ Calendar keeps your events, including the ones that repeat, in the right time zo
 
 ## Where it stands today
 
-Latest tag: `v0.7.0`. You can create, edit, delete and list events, find what happens in a time range, and use repeating events with single occurrences changed, removed or added. Invitations can be sent, accepted, tentatively accepted and declined. The agenda mixes events and tasks. A small server and a first, provisional window (month, week, day, agenda, import and export) exist.
+Latest tag: `v0.0.1`. You can create, edit, delete and list events, find what happens in a time range, and use repeating events with single occurrences changed, removed or added. Invitations can be sent, accepted, tentatively accepted and declined. The agenda mixes events and tasks. A small server and a first, provisional window (month, week, day, agenda, import and export) exist.
 
 Not there yet: editing repeat rules or single occurrences, answering invitations, alerts and several calendars in the window; CalDAV, invitations by e-mail and free/busy calculation. The calendar server is not yet connected to a task server. Importing large files is slow (about 45 seconds for 4,000 events). Some late corrections to the core have been tested but not yet reviewed by a second reader. The interface is a draft with no consumer yet.
 

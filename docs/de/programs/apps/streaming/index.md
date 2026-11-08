@@ -22,7 +22,7 @@ Heute kann es einen RTMP-Stream empfangen und an viele RTMP- oder RTMPS-Ziele se
 
 Noch nicht vorhanden: Es wurde nur auf Loopback mit ffmpeg getestet, nie gegen eine echte Streaming-Plattform. Der Empfang ist einfaches RTMP und bleibt standardmäßig auf Loopback. Eine Aufnahme an Files zu übergeben ist nicht gebaut; alles andere im Vertrag wird als „nicht möglich“ gemeldet. Eine Weiterleitungsschleife über eine andere Maschine kann von hier aus nicht erkannt werden.
 
-**Status: Stufe 1 `v0.2.0` in [`fs-streaming`](https://github.com/FreeSynergy/fs-streaming) (weiterleiten und aufzeichnen, nur auf Loopback getestet), noch kein Fenster.** Siehe das [Design](design.md), die [Anforderungen](requirements.md) und den [Gesamtplan](../roadmap.md).
+**Status: Stufe 1 `v0.0.1` in [`fs-streaming`](https://github.com/FreeSynergy/fs-streaming) (weiterleiten und aufzeichnen, nur auf Loopback getestet), noch kein Fenster.** Siehe das [Design](design.md), die [Anforderungen](requirements.md) und den [Gesamtplan](../roadmap.md).
 
 ## Übersicht
 

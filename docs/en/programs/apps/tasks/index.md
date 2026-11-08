@@ -16,7 +16,7 @@ Tasks keeps what you, or your group, have to do. Each task can have a due date, 
 
 ## Where it stands today
 
-Latest tag: `v0.8.0`. You can create, edit, assign, label, relate, list and delete tasks, and find them by due date range, progress, label, or a word in the title or description. Import and export of iCalendar tasks work. Other programs are told when a task changes, and an overwrite is refused if someone else changed the task meanwhile. A small server offers all of this over a local socket, and a first, provisional window shows a list and a status view. The calendar already shows tasks through this interface.
+Latest tag: `v0.0.2`. You can create, edit, assign, label, relate, list and delete tasks, and find them by due date range, progress, label, or a word in the title or description. Import and export of iCalendar tasks work. Other programs are told when a task changes, and an overwrite is refused if someone else changed the task meanwhile. A small server offers all of this over a local socket, and a first, provisional window shows a list and a status view. The calendar already shows tasks through this interface.
 
 Not there yet: real boards (the status view is not a board; moving a card changes the task's status for everyone), repeating tasks beyond keeping them, assigning people, relations, checklists, comments, attachments and reminders in the window, and undo. The window reads the data directly, and there is no sign-in yet. The interface is a draft with one user (the calendar).
 

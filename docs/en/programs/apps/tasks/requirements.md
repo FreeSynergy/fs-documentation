@@ -16,7 +16,7 @@ owner's interface and not repeated here: events and calendar views by `fs-calend
 `relation.create`, `label.assign` (provisional, see the repo's `DESIGN.md`). The `card.*` ids below are the board-view
 names of the same actions. Both kept for now; the owner is to settle them.
 
-Status: `implemented` · `planned` · `proposed`. **"core"** = built in `fs-tasks-core` (version 0.4.1, no GUI, interface
+Status: `implemented` · `planned` · `proposed`. **"core"** = built in `fs-tasks-core` (latest tag v0.0.2, no GUI, interface
 still a draft). Boards, columns and `task_link` are not started: the `Boards` interface is a placeholder without methods.
 
 **Seen in** — analysed frontends: [Tr](../../suites/projectmanagement/frontends/trello/index.md) Trello ·

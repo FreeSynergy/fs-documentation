@@ -16,7 +16,7 @@ History is a timeline of your own work, without anyone watching you. It notices 
 
 ## Where it stands today
 
-Latest tag: `v0.1.1`. There is **no window and no server yet**.
+Latest tag: `v0.0.1`. There is **no window and no server yet**.
 
 Today there is a timeline of activities from other programs, newest first, with filters and paging. A digest groups runs of events on the same object. You can forget entries by filter, for the past only. It reads from the FreeSynergy hub through the adapter `fs-history-hub`, tested against a real hub. It has 49 tests and was checked by an independent reviewer over three rounds.
 
@@ -25,7 +25,7 @@ What is not there yet: who did something is empty for now, and the time is when 
 `FreeSynergy.History` (`fs-history`) answers: **what have I, or we, done?** It shows your own data as a timeline, whether
 for one person or for a project. This is what was first called `fs-timeline`.
 
-**Status: [core](https://github.com/FreeSynergy/fs-history) v0.1.1, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
+**Status: [core](https://github.com/FreeSynergy/fs-history) v0.0.1, no GUI; provisional draft interface (2026-11-06).** See the [overall plan](../roadmap.md).
 
 ## Idea
 

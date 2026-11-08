@@ -15,11 +15,11 @@ Groups keeps track of who belongs together: a family, a team, a club, a departme
 
 ## Where it stands today
 
-Latest tag: `v0.3.0`. You can create, nest and delete groups, add members with a role, send invitations that expire, and delegate and revoke rights. There is no window and no server yet. Delegated rights only answer questions; nothing enforces them, and nobody is authenticated yet. Some rules are still provisional while the project owner decides them. Following between groups is planned, not built.
+Latest tag: `v0.0.1`. You can create, nest and delete groups, add members with a role, send invitations that expire, and delegate and revoke rights. There is no window and no server yet. Delegated rights only answer questions; nothing enforces them, and nobody is authenticated yet. Some rules are still provisional while the project owner decides them. Following between groups is planned, not built.
 
 `fs-groups`: belonging together, and deciding who may do what.
 
-**Status: core `v0.3.0` in [`fs-groups`](https://github.com/FreeSynergy/fs-groups), no window; the interface is a draft in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces).** Back to the [overall plan](../apps/roadmap.md).
+**Status: core `v0.0.1` in [`fs-groups`](https://github.com/FreeSynergy/fs-groups), no window; the interface is a draft in [`fs-interfaces`](https://github.com/FreeSynergy/fs-interfaces).** Back to the [overall plan](../apps/roadmap.md).
 
 ## Why it comes early
 

@@ -16,7 +16,7 @@ People holds the people in your life: friends, family, colleagues, customers, an
 
 ## Where it stands today
 
-Latest tag: `v0.6.0`. You can create, edit, delete, list and search cards, import and export vCard, and keep groups, several roles per person and relations. The program can propose that two cards are the same person; nothing is merged until you confirm. A small server and a first, provisional window exist.
+Latest tag: `v0.0.2`. You can create, edit, delete, list and search cards, import and export vCard, and keep groups, several roles per person and relations. The program can propose that two cards are the same person; nothing is merged until you confirm. A small server and a first, provisional window exist.
 
 Not there yet: managing groups, relations and roles or setting the sensitive mark in the window, undo and live updates, sign-in (the acting person is a placeholder), CardDAV and sync between devices. The interface is a draft with no second user yet, so it may still change.
 

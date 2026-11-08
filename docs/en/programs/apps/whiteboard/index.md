@@ -16,13 +16,13 @@ Whiteboard is an endless board for ideas. You put down pages, shapes, text, conn
 
 ## Where it stands today
 
-Latest tag: `v0.2.0` (stage 1 of the design). There is **no window and no server yet**.
+Latest tag: `v0.0.1` (stage 1 of the design). There is **no window and no server yet**.
 
 What works today is the core: boards, pages and every kind of element in the contract; merging of changes from two sides; undo for each editor; groups, copy, align, lock and reorder; a fast way to find what is in view; and export to SVG. PNG and PDF export answer "not possible". It has 104 tests with real stores and was checked by an independent reviewer over several rounds.
 
 What is not there yet: nothing sends changes between devices, so the merge is not used anywhere. Live presence, sharing, libraries, templates and comments are planned, not built.
 
-**Status: first core `v0.2.0` in [`fs-whiteboard`](https://github.com/FreeSynergy/fs-whiteboard), no window yet (stage 1).** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
+**Status: first core `v0.0.1` in [`fs-whiteboard`](https://github.com/FreeSynergy/fs-whiteboard), no window yet (stage 1).** See the [design](design.md), the [requirements](requirements.md) and the [roadmap](../roadmap.md).
 
 ## Overview
 

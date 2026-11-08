@@ -16,7 +16,7 @@ Files looks after your files and folders. It knows what each file is, how big it
 
 ## Where it stands today
 
-Latest tag: `v0.6.0`. Folders, rename, move, copy, trash, restore and purge work, as do resumable uploads with a checksum, search, sorting and filters. "Rescan" takes over files put into the folder from outside and deletes nothing. A small server offers all of this over a local socket. The S3 backend was tested once against a real RustFS server, not in the automatic tests.
+Latest tag: `v0.0.1`. Folders, rename, move, copy, trash, restore and purge work, as do resumable uploads with a checksum, search, sorting and filters. "Rescan" takes over files put into the folder from outside and deletes nothing. A small server offers all of this over a local socket. The S3 backend was tested once against a real RustFS server, not in the automatic tests.
 
 Not there yet: a window, sharing, versions, encryption of file contents, sync, WebDAV and previews. Replacing a file is not offered. The interface is a draft marked provisional, and nothing uses it yet.
 

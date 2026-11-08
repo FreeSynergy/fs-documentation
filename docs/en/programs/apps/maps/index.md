@@ -16,7 +16,7 @@ FreeSynergy Maps brings map data to your device and keeps the places you care ab
 
 ## Where it stands today
 
-Latest tag: `v0.2.0`. Today it is the core, without a window. It can read map tiles from a remote or local PMTiles file and cache them on disk with a hard size limit and a seven-day expiry. It can download a region for offline use, telling you the number of tiles and a size estimate first, with a tile limit, progress and a cancel option. It keeps places as GeoJSON (create, update, delete, find by name, find everything inside an area) and reads and writes `geo:` links.
+Latest tag: `v0.0.1`. Today it is the core, without a window. It can read map tiles from a remote or local PMTiles file and cache them on disk with a hard size limit and a seven-day expiry. It can download a region for offline use, telling you the number of tiles and a size estimate first, with a tile limit, progress and a cancel option. It keeps places as GeoJSON (create, update, delete, find by name, find everything inside an area) and reads and writes `geo:` links.
 
 Not there yet (planned): a window and the drawing of maps (tile decoding, styles, search by address and routes are not started), a server so other programs can reach it, live notification when a place changes. The interface for places is a draft with no consumer yet.
 
