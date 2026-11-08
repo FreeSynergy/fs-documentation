@@ -16,11 +16,11 @@ Muster: `Projekt · Wunsch · Begründung · Status (offen / Issue #… / erledi
 - Kleinere: `Scroll` hat kein `flex_1`; `min_w` neben `w(0.0)` wird ignoriert; Textfeld bricht enger um als seine Box; `cn_styles`-Doku nennt das nicht vorhandene `register_cn_styles`.
 (Befunde `temp/research/blinc-health-and-parsers.md`; Antwort des Autors 2026-11-05 in ADR 0009)
 
-### Absturz beim Vergrößern des Fensters (Blinc 0.6.0, Thread S, 2026-11-08; Fix liegt vor, Issue/PR schreibt der Nutzer)
+### Absturz beim Vergrößern des Fensters (Blinc 0.6.0, Thread S, 2026-11-08; gemeldet als Issue #66 und PR #67)
 - **Fehler:** `blinc_app` `context/compositor.rs`, `try_render_with_compositor`: Die Größe des statischen Zwischenspeichers kommt aus der Fenstergröße (`windowed_ctx.physical_width`), die Oberflächen-Textur, in die kopiert wird, hat noch die Größe des letzten `Resized`-Ereignisses (ein Bild zurück). `copy_texture_to_texture` einer größeren Ebene in die kleinere Textur ist ein wgpu-Validierungsfehler und bricht ab (`Copy of X 0..1278 would end up overrunning the bounds of the Destination texture of X size 1276`, danach `SurfaceAcquireSemaphores still in use` nur als Folge des Abbruchs).
 - **Nachstellung ohne Fenster:** `fs-components` `crates/fs-components-widgets/tests/resize_surface.rs` (Oberfläche 2 px schmaler als die übergebene Größe).
 - **Fix (eine Zeile):** am Anfang von `try_render_with_compositor` `let (width, height) = (target_texture.width(), target_texture.height());`. Wir nutzen ihn als `[patch.crates-io] blinc_app` aus `FreeSynergy/blinc-app-fix` (blinc_app 0.6.0 plus dieser Zeile; Apache-2.0, Hinweis in `NOTICE`). Jeder App-Workspace braucht den Patch, bis Blinc ihn hat; ein Patch in einer Bibliothek gilt für die Programme darüber nicht.
-- Status: offen (Issue/PR beim Autor; Ablauf siehe unten).
+- Status: gemeldet 2026-11-08: Issue https://github.com/project-blinc/Blinc/issues/66, PR https://github.com/project-blinc/Blinc/pull/67 (Strategie im Auftrag des Nutzers). Patch `blinc-app-fix` entfernen, sobald ein Blinc-Release den Fix hat.
 
 
 **Ablauf beim Autor:** git-bug-Issue anlegen → im GitHub-Issue erwähnen → bei neuen Funktionen
