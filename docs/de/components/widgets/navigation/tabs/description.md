@@ -1,7 +1,7 @@
-# Tabs (Reiter)
+# Tabs
 
 | Feld | Wert |
-|------|------|
+| ------ | ------ |
 | **Kategorie** | `navigation` |
 | **Erbt von** | `base` |
 | **Varianten** | `reiter`, `pille`, `karte` |
@@ -12,9 +12,9 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Tabs sind Reiter zum Umschalten zwischen Ansichten.
+Tabs (Reiter) dienen dazu, zwischen Ansichten zu wechseln.
 
-## Verwendungszweck
+## Zweck
 
 - Ansichten
 - Kategorien
@@ -23,38 +23,39 @@ Tabs sind Reiter zum Umschalten zwischen Ansichten.
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **reiter** | klassische Reiter mit Unterstreichung des aktiven |
-| **pille** | abgerundete Fläche, passt in Werkzeugleisten |
-| **karte** | Reiter sitzen auf einer Karte, der Rahmen gehört zum Inhalt |
+| ---------- | -------------- |
+| **reiter** | klassische Reiter, der aktive ist unterstrichen |
+| **pille** | abgerundete gefüllte Fläche, passt in Toolbars |
+| **karte** | die Reiter sitzen auf einer Karte, der Rahmen gehört zum Inhalt |
 
-## Features
+## Funktionen
 
-- Active Tab
-- Closable
-- Keyboard-Navigation
+- Aktiver Reiter
+- Schließbar
+- Tastaturnavigation
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [accordion](../../containers/accordion/): Reiter zeigen immer nur einen
-  Bereich, das Akkordeon mehrere untereinander.
-- **Nicht verwechseln mit** [breadcrumb](../breadcrumb/): Reiter wechseln Inhalte, der Brotpfad
-  zeigt eine Ebene in einer Hierarchie.
-- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): die wechselt die Ansicht,
-  Reiter wechseln nur den Inhalt **innerhalb** der Ansicht.
-- Eine Auswahl für ein Formular ist eine [radio-group](../../../primitives/fields/radio-group/), keine Reiterleiste.
+- **Nicht verwechseln mit** [accordion](../../containers/accordion/): Reiter zeigen immer nur
+  einen Bereich, das Akkordeon mehrere, untereinander gestapelt.
+- **Nicht verwechseln mit** [breadcrumb](../breadcrumb/): Reiter wechseln den Inhalt, die
+  Breadcrumb zeigt eine Ebene in einer Hierarchie.
+- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): Diese wechselt die
+  Ansicht, Reiter wechseln nur den Inhalt **innerhalb** der Ansicht.
+- Eine Auswahl für ein Formular ist eine [radio-group](../../../primitives/fields/radio-group/),
+  keine Reiterleiste.
 
 ## Best Practices
 
 - Zwei bis sieben Reiter; darüber gehört die Auswahl in eine Liste oder Navigation.
-- Inhalte beim Wechsel behalten (nicht neu laden), Scrollposition je Reiter merken.
+- Beim Wechseln den Inhalt behalten (nicht neu laden), die Scroll-Position pro Reiter merken.
 - Pfeiltasten zum Wechseln, `role="tab"` und `aria-selected` für Screenreader.
-- Schließen-Knopf nur, wenn Reiter geöffnete Dokumente darstellen (z. B. Editoren).
+- Schließen-Knopf nur, wenn Reiter geöffnete Dokumente darstellen (z. B. in Editoren).
 - Zu lange Titel kürzen und den vollen Namen als Tooltip zeigen.
 
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Accordion](../../containers/accordion/) — Bereiche untereinander
-- [Bottom Navigation](../bottom-navigation/) — Ansichtswechsel
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Accordion](../../containers/accordion/) — untereinander gestapelte Bereiche
+- [Bottom Navigation](../bottom-navigation/) — Ansichten wechseln
+- [Base-Komponente](../../../primitives/basics/base.md)

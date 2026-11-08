@@ -12,58 +12,60 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Die Sidebar ist eine vertikale Navigationssäule, die normalerweise links oder rechts am Rand der Anwendung positioniert ist. Sie bietet schnellen Zugriff auf Hauptfunktionen und wird oft in Desktop-Anwendungen und Messenger verwendet.
+Die Sidebar ist eine vertikale Navigationsspalte, meist am linken oder rechten Rand der
+Anwendung. Sie bietet schnellen Zugriff auf die wichtigsten Funktionen und wird oft in
+Desktop-Anwendungen und Messengern verwendet.
 
-## Verwendungszweck
+## Zweck
 
-- Schneller Zugriff auf Hauptfunktionen
-- Organisation von Menüpunkten in Gruppen
-- Anzeige von Statusinformationen (z.B. Benutzerprofil, Nachrichtenzähler)
+- Schneller Zugriff auf die wichtigsten Funktionen
+- Menüpunkte in Gruppen ordnen
+- Statusinformationen zeigen (z. B. Benutzerprofil, Nachrichtenzähler)
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **angeheftet** | dauerhaft am Rand, Contentbereich daneben |
-| **ikonenleiste** | schmale Leiste mit Symbolen, Namen erst bei Hover oder Auswahl |
-| **einklappbar** | breit mit Namen, per Knopf auf die Ikonenleiste reduziert |
+|---------|-------------|
+| **angeheftet** | dauerhaft am Rand, daneben der Inhaltsbereich |
+| **ikonenleiste** | schmale Leiste mit Icons, Namen nur bei Hover oder Auswahl |
+| **einklappbar** | breit mit Namen, per Knopf auf die Icon-Leiste reduzierbar |
 
-Auf kleinen Bildschirmen wird die Seitenleiste zum [drawer](../../overlays/drawer/),
-sie ist dann ein Overlay und rückt den Inhalt nicht mehr.
+Auf kleinen Bildschirmen wird die Sidebar zum [drawer](../../overlays/drawer/). Sie ist dann
+ein Overlay und schiebt den Inhalt nicht mehr zur Seite.
 
-## Features
+## Funktionen
 
-- Gruppen mit Köpfen und Trennern
+- Gruppen mit Überschriften und Trennlinien
 - Zähler oder Status an den Punkten ([badge](../../../primitives/feedback/badge/))
 - Profilkopf oben, Einstellungen unten
-- durchsuchbar bei vielen Punkten, Tastaturnavigation mit Pfeiltasten
+- Durchsuchbar bei vielen Punkten, Tastaturnavigation mit den Pfeiltasten
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [drawer](../../overlays/drawer/): der Drawer überdeckt den Inhalt,
-  die Seitenleiste nimmt ihm dauerhaft Platz weg.
-- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): die eine sitzt am Rand,
-  die andere am unteren Rand kleiner Bildschirme.
-- **Nicht verwechseln mit** [tree-view](../../data/tree-view/): hier stehen Ziele und Aktionen,
+- **Nicht verwechseln mit** [drawer](../../overlays/drawer/): Der Drawer legt sich über den Inhalt,
+  die Sidebar nimmt ihm dauerhaft Platz weg.
+- **Nicht verwechseln mit** [bottom-navigation](../bottom-navigation/): Das eine sitzt am Rand,
+  das andere am unteren Rand kleiner Bildschirme.
+- **Nicht verwechseln mit** [tree-view](../../data/tree-view/): Hier stehen Ziele und Aktionen,
   dort beliebige Daten.
 
 ## Best Practices
 
 - Wichtiges oben, Gruppen mit Überschrift, höchstens zwei Ebenen.
-- Der aktive Punkt ist dauerhaft zu erkennen (Fläche plus Text, nicht nur Farbe).
-- Einklappen merkt sich den Zustand; in der Ikonenleiste braucht jeder Punkt einen Tooltip.
+- Der aktive Punkt ist dauerhaft erkennbar (Fläche und Text, nicht nur Farbe).
+- Das Einklappen merkt sich den Zustand; in der Icon-Leiste braucht jeder Punkt einen Tooltip.
 - Auf kleinen Bildschirmen als Drawer öffnen und nach der Auswahl wieder schließen.
-- Breite per Ziehen ändern nur, wenn die Mindestbreite lesbar bleibt (mindestens 200 px).
+- Die Breite nur durch Ziehen ändern, wenn die Mindestbreite lesbar bleibt (mindestens 200 px).
 
 ## Typische Positionen
 
-- Links (Standard bei LTR-Sprachen)
-- Rechts (bei RTL-Sprachen oder spezifischen Layouts)
-- Oben (als Horizontale Leiste - dann meist "Topbar" genannt)
+- Links (Standard bei Sprachen mit Leserichtung von links nach rechts)
+- Rechts (für Sprachen mit Leserichtung von rechts nach links oder bestimmte Layouts)
+- Oben (als horizontale Leiste — dann meist „Topbar“ genannt)
 
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Drawer](../../overlays/drawer/) — Seitenleiste als Overlay
+- [Drawer](../../overlays/drawer/) — Sidebar als Overlay
 - [Menu](../menu/) — Menüpunkte in der Leiste
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base-Komponente](../../../primitives/basics/base.md)

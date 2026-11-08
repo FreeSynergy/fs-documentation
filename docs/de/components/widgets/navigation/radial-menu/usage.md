@@ -1,8 +1,8 @@
-# Radial Menu (Kreismenü) - Verwendung
+# Radial Menu - Verwendung
 
-## Eckenmenü mit Hover (oben rechts)
+## Eckmenü mit Hover (oben rechts)
 
-Der Klassiker: Punkte sitzen in der Ecke, wachsen bei Hover und schieben ihre
+Der Klassiker: Die Punkte sitzen in der Ecke, wachsen beim Überfahren und schieben ihre
 Unterpunkte nach innen in die Fläche (`clamp` macht aus dem Vollkreis einen Fächer).
 
 ```jsx
@@ -11,22 +11,22 @@ Unterpunkte nach innen in die Fläche (`clamp` macht aus dem Vollkreis einen Fä
   variant="facher"
   trigger="hover"
   items={[
-    { id: 'neu', icon: 'plus', label: 'Neu' },
-    { id: 'teilen', icon: 'share', label: 'Teilen',
+    { id: 'new', icon: 'plus', label: 'Neu' },
+    { id: 'share', icon: 'share', label: 'Teilen',
       children: [
         { id: 'link', icon: 'link', label: 'Link kopieren' },
         { id: 'mail', icon: 'mail', label: 'E-Mail' }
       ] },
-    { id: 'einstellungen', icon: 'cog', label: 'Einstellungen' }
+    { id: 'settings', icon: 'cog', label: 'Einstellungen' }
   ]}
   onSelect={(id) => run(id)}
 />
 ```
 
-## Freier Anker mitten in der Fläche
+## Freier Anker in der Mitte der Fläche
 
-Anker auf freie Koordinaten oder auf ein anderes Element setzen — das Menü erscheint
-dort, wo der Nutzer arbeitet (Whiteboard, Karte, Editor).
+Den Anker auf freie Koordinaten oder ein anderes Element setzen. Das Menü erscheint dort,
+wo der Nutzer arbeitet (Whiteboard, Karte, Editor).
 
 ```jsx
 <RadialMenu
@@ -36,24 +36,24 @@ dort, wo der Nutzer arbeitet (Whiteboard, Karte, Editor).
   items={palette}
 />
 
-<RadialMenu anchor="#avatar-42" items={personenAktionen} />
+<RadialMenu anchor="#avatar-42" items={personActions} />
 ```
 
 ## Unterpunkte im nächsten Ring
 
-Hover auf einem Punkt öffnet dessen `children` im zweiten Ring; bei drei Ebenen
+Beim Überfahren eines Punktes öffnen sich dessen `children` im zweiten Ring. Bei drei Ebenen
 entspricht `levels={3}` drei Ringen.
 
 ```jsx
 <RadialMenu
   anchor="center"
   levels={3}
-  activeItem={hoveredItem}      // Kinder erscheinen im nächsten Ring
+  activeItem={hoveredItem}      // Unterpunkte erscheinen im nächsten Ring
   dimInactive
   items={[
-    { id: 'dokument', icon: 'file', children: [
-        { id: 'umbenennen', icon: 'pencil' },
-        { id: 'versionen', icon: 'history', children: [
+    { id: 'document', icon: 'file', children: [
+        { id: 'rename', icon: 'pencil' },
+        { id: 'versions', icon: 'history', children: [
             { id: 'v1', label: 'v1' },
             { id: 'v2', label: 'v2' }
         ] }
@@ -62,30 +62,31 @@ entspricht `levels={3}` drei Ringen.
 />
 ```
 
-## Sektoren statt Punkte (Pie-Menu)
+## Sektoren statt Punkte (Pie Menu)
 
-Große Trefferflächen, Auswahl rein über die Richtung — gut auf Touch und Controllern.
+Große Trefferflächen, Auswahl allein über die Richtung — gut auf Touch und Controllern.
 
 ```jsx
 <RadialMenu
   variant="sektoren"
   trigger="long-press"
-  items={werkzeugModi}
+  items={toolModes}
 />
 ```
 
 ## Kontextmenü am Zeiger
 
-Rechtsklick öffnet dasselbe Menü an der Zeigerposition — die runde Variante des
+Ein Rechtsklick öffnet dasselbe Menü an der Zeigerposition — die runde Variante des
 [context-menu](../../overlays/context-menu/).
 
 ```jsx
-<RadialMenu variant="kontext" items={kontextAktionen} />
+<RadialMenu variant="kontext" items={contextActions} />
 ```
 
-## Speed-Dial am Floating Action Button
+## Speed Dial am Floating Action Button
 
-Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bildschirmmitte.
+Der FAB verankert das Kreismenü (`anchor: "fab"`). Der Fächer wird zur Bildschirmmitte hin
+beschnitten.
 
 ```jsx
 <FloatingActionButton icon="plus" />
@@ -93,7 +94,7 @@ Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bilds
   anchor="fab"
   variant="facher"
   trigger="tap"
-  items={schnellzugriff}
+  items={quickAccess}
 />
 ```
 
@@ -101,7 +102,7 @@ Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bilds
 
 ```jsx
 <RadialMenu keyboardNavigation items={items} />
-// Pfeiltasten: im Ring herum · Enter: eine Ebene hinein · Esc: zurück bzw. schließen
+// Pfeiltasten: im Ring bewegen · Enter: eine Ebene tiefer · Esc: zurück oder schließen
 ```
 
 ## Beispiele
@@ -111,25 +112,25 @@ Der FAB verankert das Kreismenü (`anchor: "fab"`), der Fächer klemmt zur Bilds
 ```
 geschlossen        Hover                Unterpunkt aktiv
     ●          ╲      ◆             ╲    ◆ ○
- (Punkt in     ╲    (wächst,      ╲   (Ring 2 fächert
-  Ecke)        ╲    wandert aus)   ╲   aus ◆ heraus)
+ (Punkt in      ╲    (wächst,      ╲   (Ring 2 fächert
+  der Ecke)     ╲    rückt raus)   ╲   aus ◆ heraus)
 ```
 
 ### Beispiel 2: Launcher mit zwei Ringen
 
 ```
         ○  ○  ○
-      ○  ◆  ●  ◆  ○        ● Anker · ◆ Ring 1 · ○ Ring 2 (Kinder
-        ○  ◆  ○              des aktiven ◆, im coneAngle sichtbar)
+      ○  ◆  ●  ◆  ○        ● Anker · ◆ Ring 1 · ○ Ring 2 (Unterpunkte
+        ○  ◆  ○              des aktiven ◆, sichtbar innerhalb von coneAngle)
 ```
 
-### Beispiel 3: Speed-Dial unten rechts
+### Beispiel 3: Speed Dial unten rechts
 
 ```
                       ┌──────────────┐
                       │        ○   ◆ │   Anker = Ecke unten rechts,
-                      │      ○   ◆   │   Ring als Halbfächer nach
-                      │    ○   ◆  ●  │   innen geklemmt
+                      │      ○   ◆   │   Ring nach innen beschnitten
+                      │    ○   ◆  ●  │   als Halbfächer
                       └──────────────┘
 ```
 

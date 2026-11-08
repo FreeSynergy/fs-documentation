@@ -7,9 +7,9 @@
 │  🏠 Dashboard    │
 │  📩 Nachrichten  │
 │  📅 Termine      │
-│  ──────────────── │
+│  ────────────────│
 │  👤 Profil       │
-│  ⚙️ Einstellungen │
+│  ⚙️ Einstellungen│
 └──────────────────┘
 ```
 
@@ -29,7 +29,7 @@
 └──────────────────┘
 ```
 
-## Sidebar mit Sub-Menüs
+## Sidebar mit Untermenüs
 
 ```
 ┌────────────────────┐
@@ -44,7 +44,7 @@
 └────────────────────┘
 ```
 
-## Code-Beispiel (Pseudocode)
+## Codebeispiel (Pseudocode)
 
 ```rust
 Sidebar {
@@ -76,7 +76,7 @@ Sidebar {
 }
 ```
 
-## Integration in Programme
+## Einsatz in Programmen
 
 - **Messenger**: Server-Navigation, Kanäle, Kontakte
 - **Desktop**: App-Übersicht, Einstellungen, Profile
@@ -85,28 +85,28 @@ Sidebar {
 
 ## Beispiele
 
-## Beispiel 1: Messenger Sidebar (ähnlich Element/Discord)
+## Beispiel 1: Messenger-Sidebar (ähnlich Element/Discord)
 
 ```
 ┌──────────────────────────┐
 │  🔵 FreeSynergy          │
 ├──────────────────────────┤
 │  📩 Alle Nachrichten     │
-│  💬 Privatchat           │
+│  💬 Privater Chat        │
 │  📊 Team-Kanal           │
-│  🎮 Gaming-Channel       │
+│  🎮 Gaming-Kanal         │
 ├──────────────────────────┤
 │  👥 Kontakte             │
 │  📅 Termine              │
 ├──────────────────────────┤
 │  ──────────────────────  │
-│  🏠 Workspace             │
+│  🏠 Arbeitsbereich       │
 │  ⚙️ Einstellungen        │
 │  ❓ Hilfe                │
 └──────────────────────────┘
 ```
 
-## Beispiel 2: Desktop Shell
+## Beispiel 2: Desktop-Shell
 
 ```
 ┌──────────────────────────┐
@@ -128,7 +128,7 @@ Sidebar {
 └──────────────────────────┘
 ```
 
-## Beispiel 3: CRM mit Sub-Menüs
+## Beispiel 3: CRM mit Untermenüs
 
 ```
 ┌──────────────────────────┐
@@ -152,5 +152,5 @@ Sidebar {
 
 ## Interaktive Beispiele
 
-Zwei Beispiele sind als Demo vorgesehen und noch nicht angelegt: eine Sidebar mit
-Dropdown-Gruppen und eine Sidebar, deren Gruppen sich ein- und ausklappen lassen.
+Zwei Beispiele sind als Demos geplant, aber noch nicht angelegt: eine Sidebar mit
+aufklappbaren Gruppen und eine Sidebar, deren Gruppen sich ein- und ausklappen lassen.

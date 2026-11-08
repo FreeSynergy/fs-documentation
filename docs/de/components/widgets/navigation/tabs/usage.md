@@ -5,9 +5,9 @@
 ```jsx
 <Tabs 
   tabs={[
-    { id: 'tab1', label: 'Tab 1', content: 'Inhalt 1' },
-    { id: 'tab2', label: 'Tab 2', content: 'Inhalt 2' },
-    { id: 'tab3', label: 'Tab 3', content: 'Inhalt 3' }
+    { id: 'tab1', label: 'Reiter 1', content: 'Inhalt 1' },
+    { id: 'tab2', label: 'Reiter 2', content: 'Inhalt 2' },
+    { id: 'tab3', label: 'Reiter 3', content: 'Inhalt 3' }
   ]}
   activeTab="tab1"
   onChange={(id) => setActiveTab(id)}
@@ -19,15 +19,15 @@
 ```jsx
 <Tabs 
   tabs={[
-    { id: 'tab1', label: 'Home', icon: 'home', content: '...' },
-    { id: 'tab2', label: 'Profile', icon: 'user', content: '...' },
-    { id: 'tab3', label: 'Settings', icon: 'settings', content: '...' }
+    { id: 'tab1', label: 'Start', icon: 'home', content: '...' },
+    { id: 'tab2', label: 'Profil', icon: 'user', content: '...' },
+    { id: 'tab3', label: 'Einstellungen', icon: 'settings', content: '...' }
   ]}
   showIcons={true}
 />
 ```
 
-## Closable Tabs
+## Schließbare Reiter
 
 ```jsx
 <Tabs 
@@ -37,7 +37,7 @@
 />
 ```
 
-## Vertical Tabs
+## Senkrechte Reiter
 
 ```jsx
 <Tabs 
@@ -47,7 +47,7 @@
 />
 ```
 
-## In Card
+## In einer Karte
 
 ```jsx
 <Card>
@@ -59,23 +59,23 @@
 </Card>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Tabs 
   tabs={tabs}
-  onSelect={(id) => console.log('Selected:', id)}
-  onClose={(id) => console.log('Closed:', id)}
+  onSelect={(id) => console.log('Ausgewählt:', id)}
+  onClose={(id) => console.log('Geschlossen:', id)}
 />
 ```
 
 ## Beispiele
 
-## Beispiel 1: Einstellungen-Tabs
+## Beispiel 1: Einstellungs-Reiter
 
 ```
 ┌─────────────────────────────────────────┐
-│ Allgemein │ Sicherheit │ Benutzer      │
+│ Allgemein │ Sicherheit │ Benutzer       │
 ├─────────────────────────────────────────┤
 │                                         │
 │   Einstellungen anzeigen                │
@@ -83,51 +83,51 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Profil-Tabs
+## Beispiel 2: Profil-Reiter
 
 ```
 ┌─────────────────────────────────────────┐
-│ Overview │ Beiträge │ Fotos │ Freunde   │
+│ Übersicht │ Beiträge │ Fotos │ Freunde  │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Profil-Inhalt                         │
+│   Profilinhalt                          │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Form-Tabs
+## Beispiel 3: Formular-Reiter
 
 ```
 ┌─────────────────────────────────────────┐
 │ Schritt 1 │ Schritt 2 │ Schritt 3       │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Formular-Inhalt                       │
+│   Formularinhalt                        │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Chat-Tabs
+## Beispiel 4: Chat-Reiter
 
 ```
 ┌─────────────────────────────────────────┐
 │ Chat │ Gruppen │ Anfragen │ Archiv      │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Chat-Inhalt                           │
+│   Chatinhalt                            │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Dokumentation-Tabs
+## Beispiel 5: Dokumentations-Reiter
 
 ```
 ┌─────────────────────────────────────────┐
-│ Übersicht │ Installation │ Usage         │
-│ API       │ Beispiel      │                 │
+│ Übersicht │ Installation │ Verwendung   │
+│ API       │ Beispiel     │              │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Dokumentations-Inhalt                 │
+│   Dokumentationsinhalt                  │
 │                                         │
 └─────────────────────────────────────────┘
 ```

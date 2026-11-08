@@ -2,47 +2,47 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `tabs` | array[] | - | Array von Tab-Objekten (id, label, content) |
-| `activeTab` | string/number | - | Aktiver Tab (id) |
-| `onChange` | function | - | Event bei Tab-Wechsel |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `tabs` | array[] | - | Liste der Reiter-Objekte (id, label, content) |
+| `activeTab` | string/number | - | aktiver Reiter (id) |
+| `onChange` | function | - | Ereignis beim Reiterwechsel |
 | `position` | enum | `top` | Position: `top`, `bottom`, `left`, `right` |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `closable` | boolean | `false` | Tabs schließbar? |
-| `scrollable` | boolean | `false` | Scrollbar? |
-| `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `closable` | boolean | `false` | sind Reiter schließbar? |
+| `scrollable` | boolean | `false` | scrollbar? |
+| `collapsible` | boolean | `false` | einklappbar? |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `showIcons` | boolean | `false` | Icons anzeigen? |
-| `showLabels` | boolean | `true` | Labels anzeigen? |
+| `showLabels` | boolean | `true` | Beschriftungen anzeigen? |
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
-| `hideLabelsOnMobile` | boolean | Labels auf Mobile verstecken? |
+| ---------- | ----- | -------------- |
+| `responsive` | boolean | responsives Layout? |
+| `hideLabelsOnMobile` | boolean | Beschriftungen auf dem Smartphone ausblenden? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird beim Selektieren ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
+| ---------- | ----- | -------------- |
+| `onSelect` | function | läuft bei Auswahl |
+| `onClose` | function | läuft beim Schließen |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `tablist` |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../../primitives/basics/base.md)
