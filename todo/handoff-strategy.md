@@ -1,5 +1,12 @@
 # Übergabe: Strategie-Sitzung (Stand 2026-11-08, Sprint-Ende)
 
+## Runde 3 geplant (2026-11-09)
+- **ADR 0066:** Grundtypen → Datentypen → Typbeschreibung vom Backend (Felder, Befehle) → Components je Grundtyp (Eingabe, Anzeige, kompakt, Zelle) → vier Frontends je Programm: Admin (erzeugt), Einfach, Apple-Stil, Windows-Stil (nach Maß, eigene Icons, offene Schriften). Pilot People, dann alle; Ziel Freitag: alle Programme mit Admin-Frontend.
+- Landkarte (Entwurf, Programmtabelle noch offen): `docs/en/programs/map.md`, 5 offene Punkte (Marketing, Workflows, Helpdesk, Vorbilder für Groups/Identity/History/Store).
+- Aufträge: `todo/sprint.md` „Runde 3“, Threads T, P, C, A, M; Thread R (Ausbau) schreibt die Strategie nach dem Pilot.
+- **Blinc:** PR 71 ohne KI-Zeile umgeschrieben, git-bug `52784e95…baa1` im Fork `FreeSynergy/Blinc` (`refs/bugs`), Kommentar an Darmie. Klon `/srv/FreeSynergy/blinc`, Darmies CLAUDE.md nur dort und in `blinc-app-fix`. git-bug v0.12.0 in `~/.local/bin`.
+- **Kennzeichnung (Nutzer, 2026-11-09):** in unseren Repos bleibt die KI-Kennzeichnung („Dein Verdienst“), bei Blinc keine.
+
 ## Arbeitsweise ab Runde 3 (Nutzer, 2026-11-08)
 - **Zwei feste Sitzungen:** **Opus = Strategie** (diese Datei; plant mit dem Nutzer, entscheidet, vergibt ADRs, schreibt Aufträge) und **Haiku = Koordinator** (`todo/coordinator.md`; startet auf Kommando Arbeits-Agenten, sammelt deren Meldungen, gibt nur Entscheidungen und Blocker gebündelt an Opus).
 - Arbeits-Threads melden **an Haiku, nicht an Opus.** Opus bleibt kurz: lieber eine neue Opus-Sitzung je Thema mit dieser Datei als Gedächtnis als eine sehr lange.
