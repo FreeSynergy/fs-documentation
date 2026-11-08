@@ -1,4 +1,4 @@
-# Textarea (Mehrzeiliges Textfeld) - Aussehen
+# Textarea - Erscheinungsbild
 
 ## Grundlayout
 Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
@@ -8,7 +8,7 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 │ Nachricht                               │
 ├─────────────────────────────────────────┤
 │                                         │
-│  Dies ist ein Text...                   │
+│  Das ist ein Text...                    │
 │  Mehrzeiliger Text                      │
 │                                         │
 │                                         │
@@ -17,63 +17,63 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **fix** | Rahmen fester Höhe, innen Scrollbalken |
-| **mitwachsend** | Rahmen wächst zeilenweise, Obergrenze als Scrollbereich |
-| **chat** | randlose Zeile über der Leiste, wächst bis drei Zeilen |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **fix** | Rahmen mit fester Höhe, innen ein Scrollbalken |
+| **mitwachsend** | der Rahmen wächst Zeile für Zeile, die Obergrenze wird zum Scrollbereich |
+| **chat** | rahmenlose Zeile über der Leiste, wächst bis zu drei Zeilen |
 
 ## Größen
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
-| Small | 200x100px | Inline |
-| Medium | 300x150px | Standard |
-| Large | 500x200px | Featured |
-| Full | 100% | Volle Breite |
+| small | 200x100px | inline |
+| medium | 300x150px | Standard |
+| large | 500x200px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **active** | dunkel | aktiver Zustand |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Das Feld füllt die Breite des Containers; die Höhe bleibt in Prozent des Viewports begrenzt
-  (maximal 60 %), damit darunter liegende Bedienelemente erreichbar bleiben.
-- Auf schmalen Bildschirmen entfällt der Größen-Ziehgriff (`drag`), die Höhe ergibt sich aus
+- Das Feld füllt die Breite des Containers. Die Höhe bleibt als Prozentwert der
+  Viewport-Höhe begrenzt (höchstens 60 %), damit Bedienelemente darunter erreichbar bleiben.
+- Auf schmalen Bildschirmen entfällt der Griff zum Vergrößern (`drag`). Die Höhe folgt
   dem Inhalt bis zur Obergrenze.
-- Beim Senden im Chat-Modus fällt das Feld animiert auf eine Zeile zurück (`collapse`-Übergang
-  über `expand`).
+- Beim Senden im Chat-Modus schrumpft das Feld animiert auf eine Zeile zurück
+  (Übergang `collapse` über `expand`).
 
-## Auto-resize
+## Automatische Größenanpassung
 
 ```
 ┌─────────────────────────────────────────┐
 │ Nachricht                               │
 ├─────────────────────────────────────────┤
-│  Dies ist ein Text...                   │
+│  Das ist ein Text...                    │
 │  Mehrzeiliger Text                      │
 │  Neuer Text                             │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
 └─────────────────────────────────────────┘
 ```
 
-## Validation States
+## Validierungszustände
 
-| State | Beschreibung |
-|-------|--------------|
-| **Valid** | Grün |
-| **Invalid** | Rot |
-| **Warning** | Orange |
+| Zustand | Beschreibung |
+|---------|--------------|
+| **valid** | grün |
+| **invalid** | rot |
+| **warning** | orange |

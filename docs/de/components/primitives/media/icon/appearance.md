@@ -1,33 +1,34 @@
-# Icon - Aussehen
+# Icon - Erscheinungsbild
 
 ## Grundlayout
 
-Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angezeigt werden können.
+Icons sind skalierbare Grafiken. Sie können in verschiedenen Formen und Größen
+angezeigt werden.
 
 ## Varianten
 
 ```css
-/* Circular (Rund) */
+/* rund */
 .icon-circular {
   border-radius: 50%;
 }
 
-/* Square (Viereckig) */
+/* quadratisch */
 .icon-square {
   border-radius: 0;
 }
 
-/* Rectangular (Rechteckig) */
+/* rechteckig */
 .icon-rectangular {
   border-radius: 4px;
 }
 
-/* Hexagonal (Sechseckig) */
+/* sechseckig */
 .icon-hexagonal {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-/* Pill (Pillenform) */
+/* Pille */
 .icon-pill {
   border-radius: 999px;
 }
@@ -35,13 +36,13 @@ Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angeze
 
 ## Größen
 
-| Größe | Breite/Höhe | Margin | Verwendung |
-|-------|-------------|--------|------------|
-| Small | 16px | 0 | Inline-Icons |
-| Medium | 24px | 0 | Navigation, Buttons |
-| Large | 32px | 0 | Cards, Panels |
-| XL | 48px | 0 | Hero-Sectionen |
-| XXL | 64px | 0 | Landing-Pages |
+| Größe | Breite/Höhe | Abstand | Verwendung |
+|-------|-------------|---------|------------|
+| small | 16px | 0 | Icons im Text |
+| medium | 24px | 0 | Navigation, Buttons |
+| large | 32px | 0 | Cards, Panels |
+| XL | 48px | 0 | Hero-Bereiche |
+| XXL | 64px | 0 | Landingpages |
 
 ## Farben und Zustände
 
@@ -50,7 +51,7 @@ Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angeze
   color: var(--icon-color);
 }
 
-/* Variants */
+/* Varianten */
 .icon-primary { --icon-color: var(--primary-color); }
 .icon-secondary { --icon-color: var(--secondary-color); }
 .icon-success { --icon-color: var(--success-color); }
@@ -59,46 +60,46 @@ Icons sind skalierbare Grafiken, die in verschiedenen Formen und Größen angeze
 .icon-neutral { --icon-color: var(--neutral-color); }
 ```
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `zoom` | Icon wächst auf das 1,1-fache |
-| `border` | Kreis oder Rahmen erscheint hinter dem Icon |
-| `shadow` | leichter Schatten hebt das Icon an |
-| `ring` | Fokus-Ring bei Tastaturnavigation |
+| `zoom` | das Icon wächst auf das 1,1-Fache |
+| `border` | hinter dem Icon erscheint ein Kreis oder Rahmen |
+| `shadow` | ein leichter Schatten hebt das Icon an |
+| `ring` | Fokusring für die Tastaturnavigation |
 | `none` | keine Rückmeldung (rein dekorative Icons) |
 
-## Reaktiv
+## Responsiv
 
-- In Werkzeugleisten und auf Mobil wird das Icon eine Stufe größer dargestellt
-  (mindestens 24 px), die Trefferfläche bleibt 44 px.
-- In Fließtext bleibt das Icon auf `small` (16 px) und folgt der Schriftzeile.
-- Skalierung erfolgt proportional; die Konturstärke bleibt ab 16 px lesbar,
-  sonst auf eine vereinfachte Form wechseln.
+- In Werkzeugleisten und auf dem Handy wird das Icon eine Stufe größer dargestellt
+  (mindestens 24 px). Der Trefferbereich bleibt 44 px.
+- Im Fließtext bleibt das Icon `small` (16 px) und folgt der Textzeile.
+- Die Skalierung erfolgt proportional. Die Linienstärke bleibt ab 16 px gut lesbar.
+  Andernfalls wird auf eine vereinfachte Form umgestellt.
 
-## Styling-Attribute
+## Gestaltungsattribute
 
 | Attribut | Wert | Beschreibung |
 |----------|------|--------------|
 | `size` | `small`, `medium`, `large`, `xl`, `xxl` | Größe des Icons |
 | `shape` | `circular`, `square`, `rectangular`, `hexagonal`, `pill` | Form |
 | `color` | `primary`, `secondary`, `success`, `warning`, `error`, `neutral`, `#hex` | Farbe |
-| `interactive` | `true`, `false` | Ist das Icon klickbar? |
+| `interactive` | `true`, `false` | ist das Icon klickbar? |
 | `hoverEffect` | `zoom`, `border`, `shadow`, `none` | Hover-Effekt |
 
-## Icon-Sets (Common)
+## Icon-Sets (gängig)
 
-| Set | Beschreibung | Library |
-|-----|-------------|---------|
-| **Material Icons** | Google's Design System | material-design-icons |
-| **Phosphor Icons** | Flexible SVG-Icons | @phosphor-icons/react |
-| **Feather Icons** | Minimalistische Icons | feather-icons |
-| **Iconify** | Unified icon framework | iconify |
+| Set | Beschreibung | Bibliothek |
+|-----|--------------|------------|
+| **Material Icons** | Googles Designsystem | material-design-icons |
+| **Phosphor Icons** | flexible SVG-Icons | @phosphor-icons/react |
+| **Feather Icons** | minimalistische Icons | feather-icons |
+| **Iconify** | einheitliches Icon-Framework | iconify |
 
 ## Best Practices
 
-- Konsistente Größe innerhalb einer Komponente
-- Kontrast zum Hintergrund gewährleisten
-- Hover-Effekt bei interaktiven Icons
-- Alt-Text für Barrierefreiheit (z.B. `aria-label="Startseite"`)
+- Innerhalb einer Komponente gleiche Größe verwenden
+- Kontrast zum Hintergrund sicherstellen
+- Hover-Effekt für interaktive Icons
+- Alternativtext für Barrierefreiheit (z. B. `aria-label="Startseite"`)

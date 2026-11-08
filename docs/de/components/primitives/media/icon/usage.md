@@ -1,6 +1,6 @@
 # Icon - Verwendung
 
-## Einfaches Icon
+## Ein einfaches Icon
 
 ```jsx
 // React-Beispiel
@@ -16,19 +16,19 @@ import { Icon } from '@freesynergy/ui';
 </svg>
 ```
 
-## Interaktives Icon
+## Ein interaktives Icon
 
 ```jsx
-<Icon 
-  name="mdi:pencil" 
-  size="medium" 
+<Icon
+  name="mdi:pencil"
+  size="medium"
   interactive={true}
   onClick={() => console.log('Bearbeiten')}
   hoverEffect="zoom"
 />
 ```
 
-## Icon mit Hover-Text (Tooltip)
+## Ein Icon mit Hinweistext (Tooltip)
 
 ```jsx
 <Tooltip content="Startseite">
@@ -36,29 +36,29 @@ import { Icon } from '@freesynergy/ui';
 </Tooltip>
 ```
 
-## Loading-Icon (Spin)
+## Ladeicon (drehend)
 
 ```jsx
-<Icon 
-  name="mdi:loading" 
-  size="medium" 
-  spin={true} 
+<Icon
+  name="mdi:loading"
+  size="medium"
+  spin={true}
   animationDuration={1000}
 />
 ```
 
-## Responsive Icon
+## Ein responsives Icon
 
 ```jsx
-<Icon 
-  name="mdi:search" 
-  size="medium" 
+<Icon
+  name="mdi:search"
+  size="medium"
   responsiveSize={true}
   hideOnMobile={true}
 />
 ```
 
-## Icon mit Badge
+## Ein Icon mit Badge
 
 ```jsx
 <div style={{ position: 'relative' }}>
@@ -67,7 +67,7 @@ import { Icon } from '@freesynergy/ui';
 </div>
 ```
 
-## Icon in Button
+## Ein Icon im Button
 
 ```jsx
 <Button variant="primary">
@@ -76,28 +76,28 @@ import { Icon } from '@freesynergy/ui';
 </Button>
 ```
 
-## Icon in Navigation
+## Ein Icon in der Navigation
 
 ```jsx
-<MenuItem 
-  icon="mdi:home" 
-  label="Startseite" 
+<MenuItem
+  icon="mdi:home"
+  label="Startseite"
   onClick={() => navigate('/')}
 />
 ```
 
-## Icon in List-Item
+## Ein Icon in einem Listenelement
 
 ```jsx
 <ListItem>
   <Icon name="mdi:file-pdf" size="small" shape="rectangular" color="error" />
-  <span>Dokument.pdf</span>
+  <span>dokument.pdf</span>
 </ListItem>
 ```
 
 ## Beispiele
 
-## Beispiel 1: Navigation Icons
+## Beispiel 1: Navigationsicons
 
 ```
 ┌──────────────────────────┐
@@ -112,7 +112,7 @@ import { Icon } from '@freesynergy/ui';
 └──────────────────────────┘
 ```
 
-## Beispiel 2: Toolbar Icons
+## Beispiel 2: Werkzeugleisten-Icons
 
 ```
 ┌────────────────────────────────────────────┐
@@ -120,39 +120,39 @@ import { Icon } from '@freesynergy/ui';
 └────────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Action Icons
+## Beispiel 3: Aktions-Icons
 
 ```
 ┌──────────────────────────┐
-│ 📥 Download              │
-│ 📤 Upload                │
+│ 📥 Herunterladen         │
+│ 📤 Hochladen             │
 │ 🖨️ Drucken               │
 │ 📧 E-Mail                │
 │ 🔗 Teilen                │
 └──────────────────────────┘
 ```
 
-## Beispiel 4: Status Icons
+## Beispiel 4: Status-Icons
 
 ```
 Online:   ● (grün)
 Offline:  ● (grau)
-Away:     ● (orange)
-Busy:     ● (rot)
+Abwesend: ● (orange)
+Beschäftigt: ● (rot)
 ```
 
-## Beispiel 5: Form Icons
+## Beispiel 5: Formular-Icons
 
 ```
 ┌──────────────────────────┐
 │ 🏷️ Tag                   │
 │ 📎 Anhang                │
 │ 📅 Datum                 │
-│ ⏰ Zeit                  │
+│ ⏰ Uhrzeit               │
 └──────────────────────────┘
 ```
 
-## Beispiel 6: File Type Icons
+## Beispiel 6: Dateityp-Icons
 
 ```
 📄 PDF-Dokument
@@ -161,10 +161,10 @@ Busy:     ● (rot)
 🎬 Video
 📁 Ordner
 📝 Textdokument
-.xlsx Tabellenkalkulation
+.xlsx Tabelle
 ```
 
-## Beispiel 7: Social Media Icons
+## Beispiel 7: Social-Media-Icons
 
 ```
 📘 Facebook
@@ -175,13 +175,13 @@ Busy:     ● (rot)
 🐙 GitHub
 ```
 
-## Beispiel 8: Settings Icons
+## Beispiel 8: Einstellungs-Icons
 
 ```
 ⚙️ Allgemein
 🔒 Sicherheit
 👥 Benutzer
 🌐 Sprache
-📱 Mobile
+📱 Mobil
  bell Benachrichtigungen
 ```

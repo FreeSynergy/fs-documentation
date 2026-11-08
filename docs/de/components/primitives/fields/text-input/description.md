@@ -1,10 +1,10 @@
-# Text Input (Einzeiliges Textfeld)
+# Text Input (Texteingabe)
 
 | Feld | Wert |
 |------|------|
 | **Kategorie** | `fields` |
 | **Erbt von** | `base` |
-| **Varianten** | `Standard`, `Floating Label`, `Underline` |
+| **Varianten** | `standard`, `floating label`, `underline` |
 | **Zustände** | `filled`, `error` |
 | **Gesten** | `tap`, `double-tap`, `long-press` |
 | **Animationen** | `highlight` |
@@ -14,10 +14,9 @@
 ## Beschreibung
 Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 
-!!! info "Standardisierung"
-    Die früheren Komponenten `email-input`, `url-input` und `phone-input` sind
-    als `type`-Werte in dieser Komponente aufgegangen: `text`, `email`, `url`,
-    `phone`, `password`.
+!!! info "Vereinheitlichung"
+    Die früheren Komponenten `email-input`, `url-input` und `phone-input` wurden in
+    diese Komponente als `type`-Werte zusammengeführt: `text`, `email`, `url`, `phone`, `password`.
 
 ## Verwendungszweck
 
@@ -27,51 +26,52 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Standard** | Normal |
-| **Floating Label** | Label schwebt über |
-| **Underline** | Nur Unterstreichung |
+| Variante | Beschreibung |
+|----------|--------------|
+| **standard** | normal |
+| **floating label** | das Label schwebt oben |
+| **underline** | nur eine Unterstreichung |
 
-## Features
+## Funktionen
 
-- Placeholder
-- Error-State
-- Validation
+- Platzhalter
+- Fehlerzustand
+- Validierung
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [textarea](../textarea/): dieses Feld ist einzeilig; Absätze gehören
-  ins mehrzeilige Feld.
-- **Nicht verwechseln mit** [search-field](../search-field/): ein Suchfeld löst bei Eingabe etwas
-  aus, dieses Feld nimmt einen Wert entgegen.
-- **Nicht verwechseln mit** [number-input](../number-input/): Telefonnummern, Postleitzahlen und
-  Kontonummern sind Text, keine Rechenwerte.
-- Beschriftung, Hilfetext und Fehlerzeile liefert [field](../field/) – das Feld selbst ist nur
+- **Nicht verwechseln mit** [textarea](../textarea/): Dieses Feld ist einzeilig. Absätze
+  gehören in das mehrzeilige Feld.
+- **Nicht verwechseln mit** [search-field](../search-field/): Ein Suchfeld löst bei der Eingabe
+  etwas aus. Dieses Feld nimmt einen Wert entgegen.
+- **Nicht verwechseln mit** [number-input](../number-input/): Telefonnummern, PLZ und
+  Kontonummern sind Text, keine Werte für Berechnungen.
+- Label, Hilfetext und Fehlerzeile kommen vom [field](../field/). Das Feld selbst ist nur
   die Eingabezeile.
 
 ## Best Practices
 
-- Das Label bleibt sichtbar; der Placeholder ersetzt es nicht (er verschwindet beim Tippen).
-- Autofill-Anworten zuordnen (`name`, `email`, `tel`), sonst funktionieren Passwörter und Adressen
-  in Passwortmanagern nicht.
-- Validierung erst nach dem Verlassen des Feldes, Fehler direkt unter dem Feld in Textform.
-- Bei `password` Anzeige-Knopf anbieten, Anforderungen vorher nennen statt beim Absenden zeigen.
-- `maxlength` nur wo nötig; dann Zähler anzeigen.
+- Das Label bleibt sichtbar. Der Platzhalter ersetzt es nicht, er verschwindet beim Tippen.
+- Autofill-Angaben setzen (`name`, `email`, `tel`). Sonst funktionieren Passwort-Manager
+  und Adressvorschläge nicht.
+- Erst validieren, wenn das Feld verlassen wurde. Fehlertexte direkt unter dem Feld.
+- Bei `password` einen Anzeigen-Button anbieten und die Anforderungen vorab nennen,
+  nicht erst beim Absenden.
+- `maxlength` nur, wenn nötig. Dann einen Zähler zeigen.
 
 ## Typen (`type`)
 
 | Typ | Beschreibung |
 |-----|--------------|
-| `text` | Freier Text (Standard) |
-| `email` | E-Mail-Adresse mit Validierung |
-| `url` | Web-Adresse mit Validierung |
-| `phone` | Telefonnummer mit Ländercode |
-| `password` | Maskierte Eingabe |
+| `text` | freier Text (Standard) |
+| `email` | E-Mail-Adresse mit Prüfung |
+| `url` | Webadresse mit Prüfung |
+| `phone` | Telefonnummer mit Ländervorwahl |
+| `password` | verdeckte Eingabe |
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
 - [Field](../field/) — Label, Hilfe und Fehlermeldung
 - [Textarea](../textarea/) — mehrzeilig
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

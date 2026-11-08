@@ -1,23 +1,24 @@
-# Bild (Image) - Aussehen
+# Image - Erscheinungsbild
 
 ## Grundlayout
 
-Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effekten und Loading-Zuständen.
+Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effekten
+und Ladezuständen.
 
 ## Varianten
 
 ```css
-/* Rectangular (Rechteckig) - Standard */
+/* rechteckig - Standard */
 .image-rectangular {
   border-radius: 4px;
 }
 
-/* Circular (Rund) */
+/* rund */
 .image-circular {
   border-radius: 50%;
 }
 
-/* Pill (Pillenform) */
+/* Pille */
 .image-pill {
   border-radius: 999px;
 }
@@ -27,40 +28,40 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
-| Thumbnail | 100px | Listen, Grids |
-| Small | 200px | Profile, kleine Karten |
-| Medium | 400px | Cards, Panels |
-| Large | 600px | Featured-Images |
-| Full | 1920px+ | Hero-Sectionen, Backgrounds |
+| thumbnail | 100px | Listen, Raster |
+| small | 200px | Profile, kleine Cards |
+| medium | 400px | Cards, Panels |
+| large | 600px | hervorgehobene Bilder |
+| full | 1920px+ | Hero-Bereiche, Hintergründe |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Bild füllt die Zelle, leichter Schatten je nach `shadow` |
-| `hover` | Zoom oder Overlay mit Aktionen, gemäß `hoverEffect` |
-| `geladen` | Platzhalter in Grundfarbe bis zum Ladende |
-| `fehler` | Rahmen mit Symbol, Rückfallbild falls gesetzt |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | das Bild füllt die Zelle, ein leichter Schatten je nach `shadow` |
+| `hover` | Zoom oder ein Overlay mit Aktionen, je nach `hoverEffect` |
+| `geladen` | Platzhalter in der Grundfarbe, bis das Laden endet |
+| `fehler` | Rahmen mit einem Symbol, Ersatzbild, falls eines gesetzt ist |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `zoom` | Bild vergrößert sich (1.1x) |
-| `overlay` | Overlay mit Info/Icons |
-| `border` | Rand leuchtet auf |
-| `opacity` | Deckkraft ändert sich |
+| `zoom` | das Bild wächst (1,1-fach) |
+| `overlay` | Overlay mit Infos oder Icons |
+| `border` | der Rahmen leuchtet auf |
+| `opacity` | die Deckkraft ändert sich |
 
-## Reaktiv
+## Responsiv
 
-- `responsive = true` liefert je Breite eine passende Auflösung; die Anzeigefläche bleibt
+- `responsive = true` liefert pro Breite eine passende Auflösung. Der Anzeigebereich bleibt
   gleich groß, damit die Seite beim Laden nicht springt.
-- In Rastern und Karten hält `fit = cover` das Seitenverhältnis, `fit = contain` lässt
-  auf schmalen Bildschirmen Rand zu.
-- Hintergrundbilder skalieren mit dem Viewport (`Full`), der Text darüber bleibt bei
-  mindestens 4,5:1 Kontrast — sonst dunkler Schleier darüber.
+- In Rastern und Cards hält `fit = cover` das Seitenverhältnis. `fit = contain` fügt auf
+  schmalen Bildschirmen Ränder hinzu.
+- Hintergrundbilder skalieren mit dem Viewport (`full`). Der Text darüber bleibt bei
+  mindestens 4,5:1 Kontrast. Sonst wird ein dunkler Schleier darübergelegt.
 
-## Loading-Zustand
+## Ladezustand
 
 ### Skeleton (Platzhalter)
 
@@ -82,19 +83,19 @@ Bilder werden in verschiedenen Formen und Größen angezeigt, oft mit Hover-Effe
 └────────────────────────┘
 ```
 
-## Fit-Mode-Varianten
+## Varianten des Einpassens
 
-| Mode | Beschreibung | Verwendung |
-|------|-------------|------------|
-| `cover` | Bild füllt Container, überschüssiger Bereich abgeschnitten | Hero-Bilder |
-| `contain` | Bild passt komplett in Container, eventuell Rand | Produktbilder |
-| `fill` | Bild wird gestreckt, um Container zu füllen | Hintergrundbilder |
+| Modus | Beschreibung | Verwendung |
+|-------|--------------|------------|
+| `cover` | das Bild füllt den Container, überstehende Bereiche werden abgeschnitten | Hero-Bilder |
+| `contain` | das Bild passt ganz in den Container, eventuell mit Rand | Produktbilder |
+| `fill` | das Bild wird auf die Containergröße gestreckt | Hintergrundbilder |
 
-## Border & Shadow
+## Rahmen und Schatten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| `default` | Kein Rand, leichter Schatten |
-| `outlined` | Heller Rand, kein Schatten |
-| `elevated` | Starkes Shadow, keine Border |
-| `rounded` | Abgerundete Ecken (8px) |
+| Variante | Beschreibung |
+|----------|--------------|
+| `default` | kein Rahmen, leichter Schatten |
+| `outlined` | leichter Rahmen, kein Schatten |
+| `elevated` | starker Schatten, kein Rahmen |
+| `rounded` | abgerundete Ecken (8px) |

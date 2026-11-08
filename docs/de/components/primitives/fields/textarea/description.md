@@ -24,36 +24,36 @@ Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **fix** | vorgegebene Höhe, längere Eingabe scrollt im Feld |
-| **mitwachsend** | Höhe wächst mit dem Text bis zu einer Obergrenze |
-| **chat** | wächst bis drei Zeilen, Enter sendet, `Umschalt+Enter` bricht um |
+| **fix** | feste Höhe, längere Eingaben scrollen im Feld |
+| **mitwachsend** | die Höhe wächst mit dem Text bis zu einer Obergrenze |
+| **chat** | wächst bis zu drei Zeilen. Enter sendet, `Shift+Enter` macht einen Zeilenumbruch. |
 
-## Features
+## Funktionen
 
-- Auto-resize
-- Placeholder
-- Validation
+- Automatische Größenanpassung
+- Platzhalter
+- Validierung
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [text-input](../text-input/): hier stehen Absätze und lange Sätze,
-  dort genau eine Zeile.
-- **Nicht verwechseln mit** [rich-text-editor](../../../workbenches/fields/rich-text-editor/): dieses Feld speichert reinen
-  Text ohne Formatierung.
-- **Nicht verwechseln mit** [code-editor](../../../workbenches/special/code-editor/): Fließtext braucht keine
-  Zeilennummern und keine Syntaxhervorhebung.
+- **Nicht verwechseln mit** [text-input](../text-input/): Hier stehen Absätze und lange
+  Sätze, dort genau eine Zeile.
+- **Nicht verwechseln mit** [rich-text-editor](../../../workbenches/fields/rich-text-editor/): Dieses Feld speichert
+  reinen Text ohne Formatierung.
+- **Nicht verwechseln mit** [code-editor](../../../workbenches/special/code-editor/): Fließtext braucht
+  keine Zeilennummern und keine Syntaxhervorhebung.
 
 ## Best Practices
 
-- Anfangshöhe nach erwarteter Länge (Kommentar drei Zeilen, Beschreibung acht Zeilen).
-- `mitwachsend` immer mit Obergrenze, sonst verdrängt das Feld die ganze Ansicht.
-- Zeichenzähler nur anzeigen, wenn es ein Limit gibt.
-- `Tab` verlässt das Feld; einen Tabsprung nur anbieten, wenn Code eingegeben wird.
-- Senden per `Enter` nur im Chat-Modus, sonst `Strg+Enter` — Versehentliches Absenden ist teuer.
+- Die Starthöhe nach der erwarteten Länge wählen (Kommentar drei Zeilen, Beschreibung acht Zeilen).
+- `mitwachsend` immer mit einer Obergrenze versehen. Sonst drückt das Feld die ganze Ansicht weg.
+- Einen Zeichenzähler nur zeigen, wenn es eine Grenze gibt.
+- `Tab` verlässt das Feld. Einen Tabulator nur anbieten, wenn Code eingegeben wird.
+- Senden mit `Enter` nur im Chat-Modus, sonst `Strg+Enter`. Versehentliches Senden ist teuer.
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Text Input](../text-input/) — einzeilig
+- [Text Input](../text-input/) — eine Zeile
 - [Rich Text Editor](../../../workbenches/fields/rich-text-editor/) — formatierter Text
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

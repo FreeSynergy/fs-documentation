@@ -1,20 +1,20 @@
-# Textarea (Mehrzeiliges Textfeld) - Verwendung
+# Textarea - Verwendung
 
-## Einfaches Textarea
+## Ein einfaches Textarea
 
 ```jsx
-<Textarea 
+<Textarea
   label="Nachricht"
   value={message}
   onChange={setMessage}
-  placeholder="Ihre Nachricht..."
+  placeholder="Deine Nachricht…"
 />
 ```
 
-## Auto-Resize
+## Automatische Größenanpassung
 
 ```jsx
-<Textarea 
+<Textarea
   label="Kommentar"
   value={comment}
   onChange={setComment}
@@ -24,16 +24,16 @@
 />
 ```
 
-## In Formular
+## In einem Formular
 
 ```jsx
 <Form>
-  <TextInput 
+  <TextInput
     label="Betreff"
     value={subject}
     onChange={setSubject}
   />
-  <Textarea 
+  <Textarea
     label="Nachricht"
     value={message}
     onChange={setMessage}
@@ -41,10 +41,10 @@
 </Form>
 ```
 
-## mit Character Counter
+## Mit Zeichenzähler
 
 ```jsx
-<Textarea 
+<Textarea
   label="Beschreibung"
   value={description}
   onChange={setDescription}
@@ -53,10 +53,10 @@
 />
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
-<Textarea 
+<Textarea
   label="Nachricht"
   value={message}
   onChange={setMessage}
@@ -74,7 +74,7 @@
 │ Nachricht                               │
 ├─────────────────────────────────────────┤
 │                                         │
-│  Dies ist eine Nachricht...             │
+│  Das ist eine Nachricht...              │
 │  Mehrzeiliger Text                      │
 │                                         │
 │                                         │
@@ -87,7 +87,7 @@
 ┌─────────────────────────────────────────┐
 │ Kommentar                               │
 ├─────────────────────────────────────────┤
-│  👤 John Doe                            │
+│  👤 Max Mustermann                      │
 │  Sehr gut!                              │
 │                                         │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
@@ -102,14 +102,14 @@
 │ Beschreibung                            │
 ├─────────────────────────────────────────┤
 │  Diese Anwendung...                     │
-│  Sie ermöglicht...                      │
+│  Sie macht es möglich...                │
 │  Mit Funktionen...                      │
 │                                         │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: mit Auto-Resize
+## Beispiel 4: mit automatischer Größenanpassung
 
 ```
 ┌─────────────────────────────────────────┐
@@ -119,17 +119,5 @@
 │  Punkt 2                                │
 │  Punkt 3                                │
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-└─────────────────────────────────────────┘
-```
-
-## Beispiel 5: mit Limit
-
-```
-┌─────────────────────────────────────────┐
-│ Beschreibung (max. 200 Zeichen)         │
-├─────────────────────────────────────────┤
-│  Dies ist ein Text...                   │
-│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━    │
-│  (145/200 Zeichen)                      │
 └─────────────────────────────────────────┘
 ```

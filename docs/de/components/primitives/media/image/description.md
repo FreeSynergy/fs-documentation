@@ -1,4 +1,4 @@
-# Bild (Image)
+# Image (Bild)
 
 | Feld | Wert |
 |------|------|
@@ -12,84 +12,85 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Bild-Element zeigt Grafiken, Fotos oder andere visuelle Inhalte an. Es ist eines der grundlegendsten Medien-Elemente in FreeSynergy.
+Ein Bildelement zeigt Grafiken, Fotos oder anderen visuellen Inhalt. Es gehört zu den
+grundlegendsten Medienelementen in FreeSynergy.
 
 ## Verwendungszweck
 
 - Profilfotos anzeigen
 - Produktbilder in Katalogen
 - Bilder in Artikeln und Dokumenten
-- Background-Images
-- Thumbnails
+- Hintergrundbilder
+- Vorschaubilder
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einfach** | Bild im Inhaltsfluss, eigene Höhe oder Seitenverhältnis |
-| **vignette** | zugeschnittenes Vorschaubild in Listen und Karten |
+| **einfach** | Bild im Inhaltsfluss, eigene Höhe oder eigenes Seitenverhältnis |
+| **vignette** | zugeschnittenes Vorschaubild in Listen und Cards |
 | **hintergrund** | Bild hinter anderem Inhalt (`backgroundSize`, `backgroundPosition`) |
 
 Zuschnitt und Form sind keine Varianten, sondern die Attribute `fit` und `shape`.
 
-## Features
+## Funktionen
 
-- Responsives Bild: passende Auflösung je Breite (`srcSet`, `sizes`)
-- Spätes Laden (`lazy`) mit Platzhalter (`skeleton`) oder Spinner
-- Rückfallebene, wenn die Datei fehlt (`onErrorFallback`)
-- Alt-Text für Screenreader, `role = presentation` bei reiner Zierde
+- Responsives Bild: pro Breite eine passende Auflösung (`srcSet`, `sizes`)
+- Verzögertes Laden (`lazy`) mit einem Platzhalter (`skeleton`) oder einem Spinner
+- Ersatzbild, wenn die Datei fehlt (`onErrorFallback`)
+- Alternativtext für Screenreader, `role = presentation` für reine Dekoration
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [icon](../icon/): Icons sind kleine, einfärbbare Symbole der Oberfläche.
-- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): eine Galerie ist der Verband mehrerer Bilder
-  samt Großansicht, das Bild ist ein einzelnes Element.
-- **Nicht verwechseln mit** [avatar](../../../widgets/data/avatar/): ein Avatar identifiziert eine Person.
-- Das Aufziehen auf volle Bildschirmgröße gehört in die Galerie bzw. ein Overlay, nicht ins Bild.
+- **Nicht verwechseln mit** [icon](../icon/): Icons sind kleine, einfärbbare Symbole der Fläche.
+- **Nicht verwechseln mit** [gallery](../../../widgets/media/gallery/): Eine Galerie fasst
+  mehrere Bilder mit einer großen Ansicht zusammen. Das Bild ist ein einzelnes Element.
+- **Nicht verwechseln mit** [avatar](../../../widgets/data/avatar/): Ein Avatar identifiziert eine Person.
+- Das Vergrößern auf Vollbild gehört in die Galerie oder ein Overlay, nicht in das Bild.
 
 ## Best Practices
 
-- Alt-Text beschreibt den Inhalt, nicht den Dateinamen; Zierbilder bekommen kein Alt-Text-Ziel.
-- Immer mehrere Auflösungen anbieten und die Anzeigegröße vorgeben, damit Bilder nicht springen.
-- Seitenverhältnis fest setzen, sonst verrutscht die Seite beim Laden.
-- Klickbare Bilder brauchen ein deutliches Symbol und eine Tastaturalternative.
-- Bei Fehler die Rückfallebene zeigen, nie ein gebrochenes Bild stehen lassen.
+- Der Alternativtext beschreibt den Inhalt, nicht den Dateinamen. Dekorative Bilder bekommen keinen Alternativtext.
+- Immer mehrere Auflösungen anbieten und die Anzeigegröße festlegen, damit Bilder nicht springen.
+- Das Seitenverhältnis fest vorgeben. Sonst verschiebt sich die Seite beim Laden.
+- Klickbare Bilder brauchen ein klares Symbol und eine Tastaturalternative.
+- Bei einem Fehler das Ersatzbild zeigen. Nie ein kaputtes Bild stehen lassen.
 
 ## Formate
 
 | Format | Beschreibung | Verwendung |
-|--------|-------------|------------|
-| **JPEG/JPG** | Komprimiert, farbenfroh | Fotos, Bilder mit Farben |
-| **PNG** | Transparenz, keine Komprimierung | Logos, Icons, Grafiken |
-| **GIF** | Animation, Transparenz | Kleine Animationen |
-| **WEBP** | Moderne Formate, kleine Dateigröße | Moderne Web-Applikationen |
-| **SVG** | Vektorgraphik, skalierbar | Icons, Logos, Grafiken |
-| **AVIF** | Neuestes Format, sehr klein | Hochwertige Bilder |
+|--------|--------------|------------|
+| **JPEG/JPG** | komprimiert, farbig | Fotos, farbige Bilder |
+| **PNG** | Transparenz, keine Kompression | Logos, Icons, Grafiken |
+| **GIF** | Animation, Transparenz | kleine Animationen |
+| **WEBP** | modernes Format, kleine Dateigröße | moderne Webanwendungen |
+| **SVG** | Vektorgrafik, skalierbar | Icons, Logos, Grafiken |
+| **AVIF** | neuestes Format, sehr klein | hochwertige Bilder |
 
-## Styling-Attribute
+## Gestaltungsattribute
 
 | Attribut | Wert | Beschreibung |
 |----------|------|--------------|
-| `src` | string | Bild-URL |
-| `alt` | string | Alt-Text für Barrierefreiheit |
+| `src` | string | URL des Bildes |
+| `alt` | string | Alternativtext für Barrierefreiheit |
 | `size` | enum | `thumbnail`, `small`, `medium`, `large`, `full` |
 | `shape` | enum | `rectangular`, `circular`, `pill` |
 | `fit` | enum | `cover`, `contain`, `fill` |
 | `loading` | enum | `lazy`, `eager` |
-| `interactive` | boolean | Ist das Bild klickbar? |
+| `interactive` | boolean | ist das Bild klickbar? |
 
 ## Hover-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `zoom` | Bild vergrößert sich |
-| `opacity` | Deckkraft ändert sich |
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten wird stärker |
+| `zoom` | das Bild wächst |
+| `opacity` | die Deckkraft ändert sich |
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
 ## Siehe auch
 
 - [media – Übersicht](../index.md)
-- [Gallery](../../../widgets/media/gallery/) — mehrere Bilder mit Großansicht
-- [Icon](../icon/) — Symbol statt Foto
-- [Basiskomponente](../../basics/base.md)
+- [Gallery](../../../widgets/media/gallery/) — mehrere Bilder mit großer Ansicht
+- [Icon](../icon/) — ein Symbol statt eines Fotos
+- [Base-Komponente](../../basics/base.md)
