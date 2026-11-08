@@ -2,19 +2,19 @@
 
 ## Grundlayout
 
-Alle betroffenen Elemente bleiben in ihrem Behälter; ihre Position wird nicht neu berechnet dargestellt, sondern als Bewegung nachgefahren. Das gezogene Element liegt dabei leicht erhöht (Schatten), die anderen weichen seitlich oder vertikal aus.
+Alle betroffenen Elemente bleiben in ihrem Container. Ihre Positionsänderung wird nicht als Neuberechnung gezeigt, sondern als Bewegung verfolgt. Das gezogene Element liegt leicht erhoben (Schatten), die anderen weichen seitlich oder senkrecht aus.
 
 ## Visueller Verlauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│  0 ms (neu sortiert)     160 ms          320 ms      │
+│  0 ms (neu sortiert)   160 ms          320 ms        │
 │                                                      │
 │  A A                    A _ B              A B C     │
 │  B B        ->          B A                A B C     │
 │  C C                    C C                A B C     │
 │                                                      │
-│  B wandert nach oben, A rückt nach unten; C bleibt    │
+│  B wandert nach oben, A nach unten; C bleibt stehen  │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -22,10 +22,10 @@ Alle betroffenen Elemente bleiben in ihrem Behälter; ihre Position wird nicht n
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Standard** | alle versetzten Elemente wandern gleichzeitig (320 ms) |
-| **Nur Verschiebung** | `messung: transform` – billigste Variante, keine Neuberechnung |
-| **Mit Einrasten** | `einrasten: 2` – Element setzt leicht über und federt zurück |
-| **Nach Filtern** | entfernte Elemente per [Fade Out](../../exit/fade-out/description.md), die übrigen rücken per Reorder nach |
+| **Standard** | alle verdrängten Elemente wandern gleichzeitig (320 ms) |
+| **Nur Verschiebung** | `messung: transform` – die günstigste Variante ohne Neuberechnung |
+| **Mit Einrasten** | `einrasten: 2` – das Element rastet leicht über und federt zurück |
+| **Nach Filterung** | entfernte Elemente per [Fade Out](../../exit/fade-out/description.md), der Rest rückt per Reorder nach |
 
 ## Dauer
 

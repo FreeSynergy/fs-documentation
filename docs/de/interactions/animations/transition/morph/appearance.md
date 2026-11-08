@@ -2,13 +2,13 @@
 
 ## Grundlayout
 
-Ein Element behält Position und Fläche; seine Kontur wandert ohne Sprung von einer Form zur nächsten.
+Ein Element behält seine Position und Fläche. Seine Kontur wandert ohne Sprung von einer Form zur nächsten.
 
 ## Visueller Verlauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│eckig         abgerundet    fast rund     Endform     │
+│eckig         abgerundet    fast rund    Endform      │
 │                                                      │
 │+--------+  .--------.  ( -------- )  ( ........ )    │
 │                                                      │
@@ -22,9 +22,9 @@ Ein Element behält Position und Fläche; seine Kontur wandert ohne Sprung von e
 |----------|--------------|
 | **Icon-Morph** | zwei Icons werden zu einem durchgehenden Pfad |
 | **Radius-Morph** | Rechteck ↔ Kreis über den Eckenradius |
-| **Flächen-Morph** | kleines Element wächst zur Panel-Form (FAB) |
-| **Farb-Morph** | Füllung wechselt weich mit der Form |
-| **Pfad-Morph** | freie SVG-Pfade mit Stützpunkt-Zuordnung |
+| **Flächen-Morph** | ein kleines Element wächst zur Panel-Form (FAB) |
+| **Farb-Morph** | die Füllung wechselt weich zusammen mit der Form |
+| **Pfad-Morph** | freie SVG-Pfade mit einer Zuordnung von Stützpunkten |
 
 ## Dauer
 

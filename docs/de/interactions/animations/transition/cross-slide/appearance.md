@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Beide Elemente liegen in derselben Fläche, die seitlich begrenzt und abgeschnitten ist. Sie bewegen sich gegenläufig mit gleicher Geschwindigkeit, ohne Größen- oder Deckkraftänderung.
+Beide Elemente liegen auf derselben Fläche, die seitlich begrenzt und abgeschnitten ist. Sie bewegen sich mit gleicher Geschwindigkeit in entgegengesetzte Richtungen, ohne Änderung von Größe oder Deckkraft.
 
 ## Visueller Verlauf
 
@@ -13,9 +13,9 @@ Beide Elemente liegen in derselben Fläche, die seitlich begrenzt und abgeschnit
 │  ┌─────┐          ┌─────┐             ┌─────┐       │
 │  │ Tab1│ Tab2     │Tab1 │Tab2    Tab1 │ Tab2│       │
 │  └─────┘          └─────┘             └─────┘       │
-│   T1 bei 0        je 50 % Weg        T2 bei 0        │
+│   T1 bei 0        jeweils 50 % des Weges  T2 bei 0  │
 │                                                      │
-│  richtung: left – Inhalt wandert nach links hinaus   │
+│  richtung: left – Inhalt gleitet nach links hinaus   │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -24,9 +24,9 @@ Beide Elemente liegen in derselben Fläche, die seitlich begrenzt und abgeschnit
 | Variante | Beschreibung |
 |----------|--------------|
 | **Standard** | `richtung: left`, volle Breite, gleichzeitige Bewegung |
-| **Rückwärts** | `richtung: right` – deutlich als „zurück“ lesbar |
+| **Rückwärts** | `richtung: right` – klar lesbar als "zurück" |
 | **Vertikal** | `richtung: up` für Stapel, Benachrichtigungen, Monatslisten |
-| **Versetzt** | `anteilUeberlappung: 0.3` – altesElement geht erst, dann kommt das neue |
+| **Versetzt** | `anteilUeberlappung: 0.3` – das `altesElement` geht zuerst, dann kommt das neue |
 
 ## Dauer
 
