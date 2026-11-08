@@ -2,27 +2,27 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `src` | string | - | Quell-URL |
-| `controls` | boolean | `true` | Steuerung anzeigen? |
+| `controls` | boolean | `true` | Bedienelemente anzeigen? |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `autoplay` | boolean | `false` | Auto-Wiedergabe? |
-| `muted` | boolean | `false` | Stumm? |
-| `loop` | boolean | `false` | Wiederholen? |
+| `autoplay` | boolean | `false` | automatisch abspielen? |
+| `muted` | boolean | `false` | stumm? |
+| `loop` | boolean | `false` | wiederholen? |
 | `playlist` | array[] | - | Playlist |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onPlay` | function | Wird beim Start ausgeführt |
-| `onPause` | function | Wird beim Pausieren ausgeführt |
-| `onEnded` | function | Wird beim Ende ausgeführt |
+| `onPlay` | function | wird beim Start ausgeführt |
+| `onPause` | function | wird beim Pausieren ausgeführt |
+| `onEnded` | function | wird am Ende ausgeführt |
 
 ## Barrierefreiheit
 
@@ -30,17 +30,17 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `video`/`audio` |
 
-## Features-Attribute
+## Funktions-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showCaptions` | boolean | `false` | Untertitel anzeigen? |
 | `showPlaylist` | boolean | `false` | Playlist anzeigen? |
 | `showFullscreen` | boolean | `true` | Vollbild erlauben? |
 
-## Playback-Attribute
+## Wiedergabe-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `defaultPlaybackRate` | number | `1` | Standard-Wiedergabegeschwindigkeit |
 | `playbackRates` | array[] | `[0.5, 1, 1.5, 2]` | Geschwindigkeiten |

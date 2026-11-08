@@ -1,13 +1,13 @@
-# Carousel (Karussell) - Verwendung
+# Carousel - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Eine Slideshow ist eine Bilder- oder Inhaltsschleife.
+Eine Diashow ist eine Schleife aus Bildern oder Inhalten.
 
 - Bildergalerien
 - Produktpräsentationen
@@ -19,17 +19,17 @@ Eine Slideshow ist eine Bilder- oder Inhaltsschleife.
 ### Bildergalerien
 
 ```jsx
-<Carousel images={eintraege} autoplay={false} interval={5000} />
+<Carousel images={entries} autoplay={false} interval={5000} />
 ```
 
 ### Produktpräsentationen
 
 ```jsx
-<Carousel images={eintraege} autoplay={false} loop={true} />
+<Carousel images={entries} autoplay={false} loop={true} />
 ```
 
 ### Werbung
 
 ```jsx
-<Carousel images={eintraege} autoplay={false} loop={true} />
+<Carousel images={entries} autoplay={false} loop={true} />
 ```

@@ -1,17 +1,17 @@
-# Audio - Aussehen
+# Audio - Erscheinungsbild
 
 ## Grundlayout
 
-Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
+Audio-Elemente zeigen Bedienknöpfe, eine Fortschrittsleiste und eine Zeitanzeige.
 
 ## Varianten
-### Compact (Kompakt)
+### kompakt
 ```
 ┌──────────────────────────────┐
 │ [▶]  ▓▓▓▓▓▓▓▓░░░░░  1:23 / 3:45  │
 └──────────────────────────────┘
 ```
-### Standard (Standard)
+### standard
 ```
 ┌─────────────────────────────────────────┐
 │ [⏮] [◀] [▶] [▶] [⏭]                   │
@@ -20,7 +20,7 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 │ 0:00                                              3:45 │
 └─────────────────────────────────────────┘
 ```
-### Minimal (Minimal)
+### minimal
 ```
 ┌──────────────┐
 │ [▶] [🔊]    │
@@ -29,23 +29,23 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 
 | Icon | Funktion |
 |------|----------|
-| ⏯️ | Play/Pause (Toggle) |
-| ⏭️ | Nächster Track |
-| ⏮️ | Vorheriger Track |
+| ⏯️ | Abspielen/Pause (Umschalter) |
+| ⏭️ | nächster Titel |
+| ⏮️ | vorheriger Titel |
 | 🔊 | Lautstärke |
-| 🔇 | Stumm |
+| 🔇 | stummschalten |
 | 🔄 | Wiederholen |
-| 📋 | Wiedergabeliste |
+| 📋 | Playlist |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
-| Compact | 32px | Inline, Chat, Listen |
-| Small | 48px | Cards, Panels |
-| Medium | 64px | Standard |
-| Large | 80px | Featured-Audio |
-| XL | 120px | Hero-Audio |
+| compact | 32px | inline, Chat, Listen |
+| small | 48px | Karten, Panels |
+| medium | 64px | Standard |
+| large | 80px | hervorgehobenes Audio |
+| XL | 120px | Audio als Blickfang |
 
 ## Farben und Zustände
 
@@ -63,20 +63,20 @@ Audio-Elemente zeigen Steuerungsknöpfe, Fortschrittsbalken und Zeitanzeige an.
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `scale` | Controls skaliert (1.1x) |
-| `color` | Farbe ändert sich |
-| `shadow` | Schatten wird stärker |
-| `opacity` | Deckkraft ändert sich |
+| `scale` | vergrößert die Bedienelemente (1,1-fach) |
+| `color` | die Farbe ändert sich |
+| `shadow` | der Schatten wird stärker |
+| `opacity` | die Deckkraft ändert sich |
 
-## Reaktiv
+## Responsiv
 
 | Breakpoint | Verhalten |
 |------------|-----------|
-| Desktop (>768px) | Volle Steuerung sichtbar |
-| Tablet (480-768px) | Kompakt-Layout |
-| Mobile (<480px) | Minimal-Layout |
+| Desktop (>768px) | alle Bedienelemente sichtbar |
+| Tablet (480–768px) | kompaktes Layout |
+| Mobil (<480px) | minimales Layout |
 
-## Progress Bar Styling
+## Gestaltung der Fortschrittsleiste
 
 ```css
 .audio-progress {

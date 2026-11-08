@@ -1,4 +1,4 @@
-# Media Player (Medienwiedergabe)
+# Media Player
 
 | Feld | Wert |
 |------|------|
@@ -12,51 +12,51 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Media Player wiedergibt Videos und Audios.
+Ein Media Player spielt Videos und Audio ab.
 
 ## Verwendungszweck
 
 - Videos
-- Audios
+- Audio
 - Medien
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einzeln** | eine Datei, Fläche und Steuerung gehören zusammen |
-| **playlist** | mehrere Dateien, Liste mit nächster/vorheriger |
-| **steuerung** | nur die Leiste; Bild- oder Tonfläche wird vom Nutzer gestellt |
+| **einzeln** | eine Datei, Fläche und Bedienelemente gehören zusammen |
+| **playlist** | mehrere Dateien, eine Liste mit Weiter/Zurück |
+| **steuerung** | nur die Leiste; die Bild- oder Tonfläche stellt der Nutzer bereit |
 
 ## Features
 
-- Play/Pause
-- Volume
-- Progress
-- Fullscreen
-- Captions
+- Abspielen/Pause
+- Lautstärke
+- Fortschritt
+- Vollbild
+- Untertitel
 
 ## Abgrenzung
 
-- Diese Komponente ist die **Elternklasse** von [audio](../audio/) und [video](../video/):
-  Steuerung, Playlist und Untertitel sind hier definiert, die beiden Kinder nennen nur ihre
-  Unterschiede (Plan Abschnitt 4, Zeile 13).
-- **Nicht verwechseln mit** [embed](../../../workbenches/special/embed/): ein eingebetteter Player einer fremden
-  Plattform ist kein eigener Wiedergeber.
-- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): dort ist der Balken eine Anzeige,
-  hier ist er eine Sprungmarke in der Datei.
+- Diese Komponente ist die **Oberklasse** von [audio](../audio/) und [video](../video/):
+  Bedienelemente, Playlist und Untertitel sind hier definiert, die beiden Unterklassen benennen nur
+  ihre Unterschiede (Planabschnitt 4, Zeile 13).
+- **Nicht verwechseln mit** [embed](../../../workbenches/special/embed/): ein eingebetteter Player einer
+  fremden Plattform ist kein eigener Player.
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): dort ist der Balken eine
+  Anzeige, hier ist er eine Sprungmarke innerhalb der Datei.
 
 ## Best Practices
 
-- Untertitel immer anbieten, auch wenn der Ton standardmäßig aus ist.
-- Steuerung nach drei Sekunden ausblenden, aber per Tastatur und Fokus jederzeit erreichbar lassen.
+- Immer Untertitel anbieten, auch wenn der Ton standardmäßig aus ist.
+- Die Bedienelemente nach drei Sekunden ausblenden, aber jederzeit per Tastatur und Fokus erreichbar lassen.
 - Autoplay nur ohne Ton; sonst wartet die Anwendung auf eine bewusste Entscheidung.
-- Puffer- und Ladestatus sichtbar machen, Zeit immer als `mm:ss`.
+- Den Puffer- und Ladezustand sichtbar machen, Zeiten immer als `mm:ss` anzeigen.
 - Vollbild und Bild-in-Bild anbieten, damit die Wiedergabe den Arbeitsbereich nicht blockiert.
 
 ## Siehe auch
 
 - [media – Übersicht](../index.md)
-- [Audio](../audio/) und [Video](../video/) — die beiden Kinder
+- [Audio](../audio/) und [Video](../video/) — die beiden Unterklassen
 - [Embed](../../../workbenches/special/embed/) — Player anderer Anbieter
 - [Basiskomponente](../../../primitives/basics/base.md)

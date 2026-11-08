@@ -1,4 +1,4 @@
-# Table (Tabelle)
+# Table
 
 | Feld | Wert |
 |------|------|
@@ -12,7 +12,7 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
+Eine Tabelle ist eine tabellarische Darstellung mit Zeilen und Spalten.
 
 ## Verwendungszweck
 
@@ -24,40 +24,41 @@ Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einfach** | statische Zeilen und Spalten ohne Steuerung |
+| **einfach** | statische Zeilen und Spalten ohne Bedienelemente |
 | **daten** | Sortierung, Filter, Auswahl und Seitenzahlen |
-| **baum** | Zeilen mit Einklappung für verschachtelte Daten |
-| **inline-bearbeitung** | Zellbearbeitung direkt in der Tabelle |
+| **baum** | Zeilen mit Ein- und Ausklappen für verschachtelte Daten |
+| **inline-bearbeitung** | Zellen direkt in der Tabelle bearbeiten |
 
 ## Features
 
-- Sortierung und Filter je Spalte
+- Sortierung und Filter pro Spalte
 - Zeilenauswahl mit Sammelaktionen
-- Spaltenbreite per Ziehen, erste Spalte fixierbar
-- Kopfzeile bleibt beim Scrollen stehen
+- Spaltenbreite per Ziehen, die erste Spalte kann fixiert werden
+- Die Kopfzeile bleibt beim Scrollen stehen
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [list-view](../list-view/): eine Tabelle vergleicht Werte in Spalten,
-  eine Liste gestaltet jede Zeile frei.
-- **Nicht verwechseln mit** [description-list](../description-list/): die beschreibt ein Objekt,
+  eine Liste ordnet jede Zeile frei an.
+- **Nicht verwechseln mit** [description-list](../description-list/): diese beschreibt ein Objekt,
   die Tabelle viele.
-- **Nicht verwechseln mit** [tree-view](../tree-view/): verschachtelte Daten mit Navigations-
-  charakter gehören dorthin, verschachtelte Datensätze in die Variante `baum`.
-- Kopfzeilen-Steuerung ersetzt keine eigene Filterbaugruppe ([repeater](../repeater/)).
+- **Nicht verwechseln mit** [tree-view](../tree-view/): verschachtelte Daten mit navigatorischem
+  Charakter gehören dorthin, verschachtelte Datensätze gehören in die Variante `baum`.
+- Kopfzeilen-Bedienelemente ersetzen keinen eigenen Filteraufbau ([repeater](../repeater/)).
 
 ## Best Practices
 
-- Zahlen rechts, Texte links, Datums in einem Format; Kopfzeile fett und fixiert.
-- Nur sortierbare Spalten mit Sortiersymbol kennzeichnen, Sortierung über Navigation hinweg merken.
-- Auswahl über Kästchen in der ersten Spalte; Sammelaktionen erscheinen erst mit Auswahl.
-- Quer-Scrollen vermeiden: auf schmalen Bildschirmen Spalten auswählbar machen oder in Karten
-  übergehen.
-- Inline-Bearbeitung mit deutlichen Grenzen und `Esc` als Abbruch, sonst wirkt die Tabelle leer.
+- Zahlen rechts, Texte links, Datumsangaben in einem Format; Kopfzeile fett und fixiert.
+- Nur sortierbare Spalten mit einem Sortierzeichen markieren; die Sortierung über die Navigation hinweg merken.
+- Auswahl über Checkboxen in der ersten Spalte; Sammelaktionen erscheinen erst, wenn etwas
+  ausgewählt ist.
+- Horizontales Scrollen vermeiden: auf schmalen Bildschirmen Spalten ausblendbar machen oder
+  zu Karten wechseln.
+- Inline-Bearbeitung braucht klare Ränder und `Esc` als Abbrechen, sonst wirkt die Tabelle leer.
 
 ## Siehe auch
 
 - [data – Übersicht](../index.md)
-- [List View](../list-view/) — freie Zeilen
-- [Tree View](../tree-view/) — Hierarchie statt flache Liste
+- [List View](../list-view/) — frei angeordnete Zeilen
+- [Tree View](../tree-view/) — Hierarchie statt flacher Liste
 - [Basiskomponente](../../../primitives/basics/base.md)

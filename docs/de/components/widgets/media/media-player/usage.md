@@ -1,16 +1,16 @@
-# Media Player (Medienwiedergabe) - Verwendung
+# Media Player - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Media Player wiedergibt Videos und Audios.
+Ein Media Player spielt Videos und Audio ab.
 
 - Videos
-- Audios
+- Audio
 - Medien
 
 ## Beispiele
@@ -18,17 +18,17 @@ Ein Media Player wiedergibt Videos und Audios.
 ### Videos
 
 ```jsx
-<MediaPlayer src="/beispiel/pfad" controls={true} />
+<MediaPlayer src="/example/path" controls={true} />
 ```
 
-### Audios
+### Audio
 
 ```jsx
-<MediaPlayer src="/beispiel/pfad" autoplay={false} />
+<MediaPlayer src="/example/path" autoplay={false} />
 ```
 
 ### Medien
 
 ```jsx
-<MediaPlayer src="/beispiel/pfad" muted={false} />
+<MediaPlayer src="/example/path" muted={false} />
 ```

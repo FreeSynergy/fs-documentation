@@ -1,70 +1,70 @@
-# Table (Tabelle) - Aussehen
+# Table - Erscheinungsbild
 
 ## Grundlayout
-Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
+Eine Tabelle ist eine tabellarische Darstellung mit Zeilen und Spalten.
 
 ```
 ┌─────────────────────────────────────────┐
 │ ID │ Name │ Alter │ Aktion               │
 ├─────────────────────────────────────────┤
-│ 1  │ John │ 25    │ [Bearbeiten] [Lösch] │
-│ 2  │ Jane │ 30    │ [Bearbeiten] [Lösch] │
-│ 3  │ Bob  │ 28    │ [Bearbeiten] [Lösch] │
+│ 1  │ John │ 25    │ [Bearbeiten] [Löschen]│
+│ 2  │ Jane │ 30    │ [Bearbeiten] [Löschen]│
+│ 3  │ Bob  │ 28    │ [Bearbeiten] [Löschen]│
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einfach** | Kopfzeile, Zeilen, keine Steuerung |
-| **daten** | Sortiersymbole in der Kopfzeile, Seitenzahlen darunter |
-| **baum** | Einzug pro Ebene, Einklapp-Dreieck links |
-| **inline-bearbeitung** | aktivierte Zelle zeigt Feld mit Rand, Rest bleibt ruhig |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **einfach** | Kopfzeile, Zeilen, keine Bedienelemente |
+| **daten** | Sortierzeichen im Kopf, Seitenzahlen darunter |
+| **baum** | eine Einrückung pro Ebene, Aufklapp-Dreieck links |
+| **inline-bearbeitung** | die aktive Zelle zeigt ein Feld mit Rand, der Rest bleibt ruhig |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 400px | Inline |
-| Medium | 600px | Standard |
-| Large | 800px | Featured |
-| Full | 100% | Volle Breite |
+| small | 400px | inline |
+| medium | 600px | Standard |
+| large | 800px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Header** | Hell | Header-Zeile |
-| **Row** | Weiß/Alt | Zeilen |
-| **Hover** | Heller | Hover-Zustand |
-| **Active** | Primärfarbe | Aktive Zeile |
-| **Disabled** | Grau | Deaktivierte Zeile |
+| **Header** | hell | Kopfzeile |
+| **Row** | weiß/abwechselnd | Zeilen |
+| **Hover** | heller | Hover-Zustand |
+| **Active** | Primärfarbe | aktive Zeile |
+| **Disabled** | grau | deaktivierte Zeile |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `background` | Hintergrund ändert sich |
-| `border` | Rand leuchtet auf |
+| `background` | der Hintergrund ändert sich |
+| `border` | der Rand leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- Die Tabelle füllt die Breite; reicht sie nicht, scrollt sie waagerecht (`swipe`) und die
-  erste Spalte bleibt stehen.
-- Unter `small` Bildschirmbreite werden die Aktionen pro Zeile hinter ein Menü gesetzt und die
-  Kopfzeile bleibt beim vertikalen Scrollen sichtbar.
-- Spaltenbreiten passen per `drag`; Zeilenhöhen wachsen nur, wenn Text umbricht, sonst bleiben
-  sie auf einer Zeile (mindestens 44 px).
+- Die Tabelle füllt die Breite; reicht sie nicht, scrollt sie horizontal (`swipe`) und
+  die erste Spalte bleibt stehen.
+- Unterhalb einer kleinen Bildschirmbreite (`small`) wandern die Aktionen pro Zeile hinter ein Menü,
+  und die Kopfzeile bleibt beim vertikalen Scrollen sichtbar.
+- Spaltenbreiten lassen sich per `drag` anpassen; Zeilen werden nur höher, wenn Text umbricht,
+  sonst bleiben sie einzeilig (mindestens 44 px).
 
 ## Sortierung
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID ▼ │ Name ▲ │ Alter │ Aktion            │
+│ ID ▼ │ Name ▲ │ Alter │ Aktion          │
 ├─────────────────────────────────────────┤
-│ 1  │ John │ 25    │ [Bearbeiten] [Lösch] │
-│ 2  │ Jane │ 30    │ [Bearbeiten] [Lösch] │
-│ 3  │ Bob  │ 28    │ [Bearbeiten] [Lösch] │
+│ 1  │ John │ 25  │ [Bearbeiten] [Löschen]│
+│ 2  │ Jane │ 30  │ [Bearbeiten] [Löschen]│
+│ 3  │ Bob  │ 28  │ [Bearbeiten] [Löschen]│
 └─────────────────────────────────────────┘
 ```

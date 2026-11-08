@@ -1,28 +1,28 @@
-# Media Player - Aussehen
+# Media Player - Erscheinungsbild
 
 ## Grundlayout
 
-Ein Media Player wiedergibt Videos und Audios.
+Ein Media Player spielt Videos und Audio ab.
 
 ## Varianten
 
-### Video Player
+### Videoplayer
 
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
 │      📽️                                │
-│      (Video-Player)                     │
+│      (Videoplayer)                      │
 │                                         │
-│      [▶] [⏸] [Volume] [Fullscreen]     │
+│      [▶] [⏸] [Lautstärke] [Vollbild]   │
 └─────────────────────────────────────────┘
 ```
 
-### Audio Player
+### Audioplayer
 
 ```
 ┌─────────────────────────────────────────┐
-│  [▶] [⏸] [Volume] [Progress]  0:00     │
+│  [▶] [⏸] [Lautstärke] [Fortschritt]  0:00 │
 └─────────────────────────────────────────┘
 ```
 
@@ -30,43 +30,43 @@ Ein Media Player wiedergibt Videos und Audios.
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
-| Small | 320x180px | Inline |
+| Small | 320x180px | inline |
 | Medium | 640x360px | Standard |
-| Large | 1280x720px | Featured |
-| Full | 100% | Volle Breite |
+| Large | 1280x720px | hervorgehoben |
+| Full | 100% | volle Breite |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Background** | Schwarz/Dunkel | Hintergrund |
-| **Controls** | Weiß/Licht | Steuerungselemente |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Background** | schwarz/dunkel | Hintergrund |
+| **Controls** | weiß/hell | Bedienelemente |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `controls` | Controls erscheinen |
-| `shadow` | Schatten stärker |
+| `controls` | die Bedienelemente erscheinen |
+| `shadow` | stärkerer Schatten |
 
-## Reaktiv
+## Responsiv
 
-- Die Fläche hält das Seitenverhältnis der Datei (meist 16:9) und skaliert mit der Breite;
-  `Full` füllt den Viewport, die Steuerleiste bleibt darunter oder darüber.
-- Unter `small` Bildschirmbreite wird die Playlist unter die Fläche gesetzt und die
-  Lautstärke weicht dem Untertitel-Knopf.
-- Die Steuerung blendet im Spielzustand nach drei Sekunden aus (`fade-out`) und kommt bei
-  Zeigerbewegung, Fokus oder Tastendruck zurück.
+- Die Fläche behält das Seitenverhältnis der Datei (meist 16:9) und skaliert mit der Breite;
+  `Full` füllt den Viewport, die Bedienleiste bleibt darunter oder darüber.
+- Unterhalb einer kleinen Bildschirmbreite (`small`) wird die Playlist unter die Fläche gesetzt,
+  und die Lautstärke macht Platz für den Untertitel-Knopf.
+- Die Bedienelemente blenden beim Abspielen nach drei Sekunden aus (`fade-out`) und erscheinen
+  bei Mausbewegung, Fokus oder Tastendruck wieder.
 
-## Controls
+## Bedienelemente
 
-| Control | Funktion |
-|---------|----------|
-| **Play/Pause** | Wiedergabe starten/pausieren |
-| **Volume** | Lautstärke |
-| **Progress** | Fortschrittsbalken |
-| **Fullscreen** | Vollbild |
-| **Captions** | Untertitel |
+| Bedienelement | Funktion |
+|---------------|----------|
+| **Play/Pause** | Wiedergabe starten/anhalten |
+| **Lautstärke** | Lautstärke |
+| **Fortschritt** | Fortschrittsleiste |
+| **Vollbild** | Vollbild |
+| **Untertitel** | Untertitel |
 
 ## Playlist
 

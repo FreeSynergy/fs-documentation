@@ -1,11 +1,11 @@
-# Carousel (Karussell) - Aussehen
+# Carousel - Erscheinungsbild
 
 ## Grundlayout
-Eine Folie sichtbar, Pfeile links und rechts, Punktreihe darunter.
+Eine Folie ist sichtbar, links und rechts Pfeile, darunter eine Reihe Punkte.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [◀]   🖼️   [▶]                         │
+│ [◀]   🖼️   [▶]                          │
 │      Bild 1                             │
 │  ● ○ ○ ○                                │
 └─────────────────────────────────────────┘
@@ -13,42 +13,42 @@ Eine Folie sichtbar, Pfeile links und rechts, Punktreihe darunter.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
+| Variante | Erscheinungsbild |
+|----------|------------------|
 | **automatik** | Pause-Knopf erscheint über der Folie |
 | **manuell** | nur Pfeile und Punkte |
-| **miniaturen** | Streifen kleiner Vorschaubilder unter der Folie |
-| **überblenden** | keine Schiebebewegung, weicher Farbwechsel |
+| **miniaturen** | Streifen mit kleinen Vorschaubildern unter der Folie |
+| **überblenden** | keine Schiebebewegung, sondern ein weiches Überblenden |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 300px | Kleine Slideshows |
+| Small | 300px | kleine Diashows |
 | Medium | 500px | Standard |
-| Large | 700px | Große Slideshows |
-| Full | 100% | Volle Breite |
+| Large | 700px | große Diashows |
+| Full | 100% | volle Breite |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Active Dot** | Primärfarbe | Aktiver Punkt |
-| **Inactive Dot** | Grau | Inaktive Punkte |
-| **Hover** | Heller | Hover-Zustand |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Active Dot** | Primärfarbe | aktiver Punkt |
+| **Inactive Dot** | grau | inaktive Punkte |
+| **Hover** | heller | Hover-Zustand |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `zoom` | Bild vergrößert sich |
-| `overlay` | Overlay mit Info |
+| `zoom` | das Bild wird größer |
+| `overlay` | Overlay mit Informationen |
 
-## Reaktiv
+## Responsiv
 
-- Das Karussell behält sein Seitenverhältnis; unter `small` Bildschirmbreite wird es vollbreit
-  und die Pfeile werden durch Wischen ersetzt.
-- Die Miniaturen-Leiste scrollt seitlich und zentriert die aktive Vorschau; auf schmalen
-  Bildschirmen entfällt sie zugunsten der Punktreihe.
-- Der Übergang ist `cross-slide` (Schieben) bzw. `cross-fade` (Variante `überblenden`);
-  bei reduzierter Bewegung wird ersatzlos getauscht.
+- Der Carousel behält sein Seitenverhältnis; unterhalb einer kleinen Bildschirmbreite (`small`)
+  wird er volle Breite und die Pfeile werden durch Wischen ersetzt.
+- Der Miniaturstreifen scrollt seitlich und zentriert die aktive Vorschau; auf schmalen
+  Bildschirmen entfällt er zugunsten der Punkte-Reihe.
+- Der Übergang ist `cross-slide` (Schieben) oder `cross-fade` (Variante `überblenden`);
+  bei reduzierter Bewegung werden die Folien ohne Effekt getauscht.

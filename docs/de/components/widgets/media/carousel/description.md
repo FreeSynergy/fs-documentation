@@ -1,4 +1,4 @@
-# Carousel (Karussell)
+# Carousel
 
 | Feld | Wert |
 |------|------|
@@ -12,8 +12,8 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Karussell zeigt Inhalte nacheinander an einer Stelle: eine Folie sichtbar, die anderen
-bereit, gewechselt per Knopf, Wisch oder automatisch.
+Ein Carousel zeigt Inhalte nacheinander an einer Stelle: eine Folie ist sichtbar, die anderen
+stehen bereit, gewechselt wird per Knopf, Wischen oder automatisch.
 
 ## Verwendungszweck
 
@@ -26,37 +26,37 @@ bereit, gewechselt per Knopf, Wisch oder automatisch.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **automatik** | wechselt von selbst weiter |
+| **automatik** | läuft von selbst weiter |
 | **manuell** | nur Knöpfe und Wischen |
-| **miniaturen** | Vorschaubildstreifen unter der Folie |
+| **miniaturen** | Streifen mit Vorschaubildern unter der Folie |
 | **überblenden** | Übergang als Überblendung statt Schieben |
 
 ## Features
 
-- Navigation (Vor/Zurück)
-- Autoplay
-- Thumbs (Vorschaubilder)
-- Touch-Swipe (Mobile)
+- Navigation (vor/zurück)
+- Automatisches Abspielen
+- Miniaturen (Vorschaubilder)
+- Wischgeste (Mobil)
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [gallery](../gallery/): die Galerie zeigt viele Bilder gleichzeitig und
-  vergrößert bei Bedarf, das Karussell zeigt immer nur eines (Plan Abschnitt 4, Zeile 14).
+  vergrößert sie bei Bedarf, der Carousel zeigt immer nur eins (Planabschnitt 4, Zeile 14).
 - **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs setzen eine Auswahl voraus,
-  ein Karussell kann sich selbst drehen.
-- Der Inhalt einer Folie ist eine eigene Komponente — der Text gehört nicht in das Karussell.
+  ein Carousel kann selbst weiterlaufen.
+- Der Inhalt einer Folie ist eine Komponente für sich – der Text gehört nicht in den Carousel.
 
 ## Best Practices
 
-- Automatik bei Hover, Fokus und für Bewegungsempfindlichkeit pausieren; nicht schneller als
-  fünf Sekunden pro Folie.
-- Punkt- oder Zahlenanzeige zeigt immer Gesamtzahl und aktuelle Position.
-- Höchstens etwa sieben Folien; alles Weitere gehört in eine Liste oder Galerie.
-- Auf Mobil Wischaktion anbieten und die Pfeile ausblenden, damit die Fläche frei bleibt.
+- Den Automatikbetrieb bei Hover, bei Fokus und für Bewegungsempfindliche anhalten; nicht schneller
+  als alle fünf Sekunden eine Folie.
+- Eine Punkte- oder Zahlanzeige zeigt immer die Gesamtzahl und die aktuelle Position.
+- Höchstens etwa sieben Folien; mehr gehört in eine Liste oder Galerie.
+- Auf dem Smartphone die Wischgeste anbieten und die Pfeile ausblenden, damit die Fläche frei bleibt.
 
 ## Siehe auch
 
 - [media – Übersicht](../index.md)
 - [Gallery](../gallery/) — viele Bilder auf einmal
-- [Grid View](../../data/grid-view/) — Raster statt Abfolge
+- [Grid View](../../data/grid-view/) — Raster statt Reihenfolge
 - [Basiskomponente](../../../primitives/basics/base.md)

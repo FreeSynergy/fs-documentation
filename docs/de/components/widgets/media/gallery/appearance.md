@@ -1,12 +1,12 @@
-# Gallery - Aussehen
+# Gallery - Erscheinungsbild
 
 ## Grundlayout
 
-Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kachelansicht.
+Galerien zeigen Bilder in verschiedenen Anordnungen: als Raster, Carousel oder Kachelansicht.
 
 ## Varianten
 
-### Grid (Raster)
+### Raster (`raster`)
 
 ```
 ┌──────────┬──────────┬──────────┐
@@ -18,7 +18,7 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 └──────────┴──────────┴──────────┘
 ```
 
-### Masonry (Unregelmäßig)
+### Masonry (unregelmäßig)
 
 ```
 ┌──────────┬──────────┐
@@ -37,7 +37,7 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 └──────────┴──────────┘
 ```
 
-### Zeile
+### Zeile (`zeile`)
 
 ```
 ┌────────┬────────┬────────┬────────┐
@@ -45,9 +45,9 @@ Galerien zeigen Bilder in verschiedenen Layouts an: Raster, Karussell oder Kache
 └────────┴────────┴────────┴────────┘
 ```
 
-Die Abfolge einzelner Bilder übernimmt [carousel](../carousel/).
+Die Abfolge einzelner Bilder übernimmt der [carousel](../carousel/).
 
-### Lightbox (Großansicht)
+### Lightbox (große Ansicht)
 
 ```
 ┌─────────────────────────────────────┐
@@ -64,55 +64,55 @@ Die Abfolge einzelner Bilder übernimmt [carousel](../carousel/).
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
-| Thumbnail | 100px | Listen, Grids |
-| Small | 200px | Cards, kleine Galerien |
+| Thumbnail | 100px | Listen, Raster |
+| Small | 200px | Karten, kleine Galerien |
 | Medium | 400px | Standard-Galerien |
-| Large | 600px | Featured-Galerien |
-| Full | 800px+ | Hero-Galerien |
+| Large | 600px | hervorgehobene Galerien |
+| Full | 800px+ | Galerien als Blickfang |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Kachel ohne Rand, Bild füllt die Zelle |
-| `hover` | leichter Zoom, halbtransparente Leiste mit Aktionen |
-| `selected` | 2 px Rand in Primärfarbe |
-| `geöffnet` | Hintergrund abdunkeln, Bild zentriert in der Lightbox |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | Kachel ohne Rand, das Bild füllt die Zelle |
+| `hover` | leichte Vergrößerung, eine halbtransparente Leiste mit Aktionen |
+| `selected` | 2 px Rand in der Primärfarbe |
+| `geöffnet` | Hintergrund abdunkeln, Bild in der Lightbox zentriert |
 | `geladen` | Platzhalter (`skeleton`), bis das Bild da ist |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `zoom` | Bild vergrößert sich (1.1x) |
-| `overlay` | Overlay mit Info/Icons |
-| `border` | Rand leuchtet auf |
-| `scale` | Bild skaliert leicht |
+| `zoom` | das Bild wird größer (1,1-fach) |
+| `overlay` | Overlay mit Informationen/Icons |
+| `border` | der Rand leuchtet auf |
+| `scale` | das Bild skaliert leicht |
 
-## Reaktiv
+## Responsiv
 
 | Breakpoint | Verhalten |
 |------------|-----------|
-| Desktop (>768px) | Volle Galerie mit Navigation |
-| Tablet (480-768px) | 2 Spalten, kompakt |
-| Mobile (<480px) | 1 Spalte, Carousel |
+| Desktop (>768px) | volle Galerie mit Navigation |
+| Tablet (480–768px) | 2 Spalten, kompakt |
+| Mobil (<480px) | 1 Spalte, Carousel |
 
-## Overlay-Styling
+## Gestaltung des Overlays
 
 ```
 ┌────────────────────────┐
 │  🖼️                  │
-│  overlay             │
+│  Overlay             │
 │  [🔍] [ℹ️] [❤️]       │
 └────────────────────────┘
 ```
 
-## Navigation-Buttons
+## Navigationsknöpfe
 
-| Button | Icon | Funktion |
-|--------|------|----------|
-| Prev | ⏮️ | Vorheriges Bild |
-| Next | ⏭️ | Nächstes Bild |
-| Close | ✕ | Galerie schließen |
-| Fullscreen | ⛶ | Vollbild |
-| Share | 🔗 | Teilen |
+| Knopf | Icon | Funktion |
+|-------|------|----------|
+| Zurück | ⏮️ | vorheriges Bild |
+| Weiter | ⏭️ | nächstes Bild |
+| Schließen | ✕ | Galerie schließen |
+| Vollbild | ⛶ | Vollbild |
+| Teilen | 🔗 | teilen |

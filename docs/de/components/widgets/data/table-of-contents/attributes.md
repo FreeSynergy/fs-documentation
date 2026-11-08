@@ -2,23 +2,23 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Item-Objekten (title, href, children) |
-| `activeItem` | string | - | Aktiver Abschnitt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | Array mit Eintrags-Objekten (title, href, children) |
+| `activeItem` | string | - | aktueller Abschnitt |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
-| `interactive` | boolean | `false` | Interaktiv? |
+| `collapsible` | boolean | `false` | einklappbar? |
+| `interactive` | boolean | `false` | interaktiv? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
+| `onHover` | function | wird beim Hover ausgeführt |
 
 ## Barrierefreiheit
 
@@ -26,18 +26,18 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `navigation` |
 
-## Item-Attribute
+## Eintrags-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `title` | string | Titel |
 | `href` | string | Link |
 | `children` | array[] | Unterpunkte |
 
 ## Scroll-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `scrollSpy` | boolean | `false` | Scroll-Spy aktivieren? |
 

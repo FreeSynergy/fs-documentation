@@ -2,63 +2,64 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `images` | array[] | - | Array von Bildern (src, alt, title) |
-| `variant` | enum | `grid` | Layout: `grid`, `masonry`, `carousel`, `lightbox` |
-| `columns` | number | `3` | Anzahl Spalten (Grid) |
-| `gap` | number | `16` | Abstand zwischen Bildern |
-| `responsive` | boolean | `true` | Responsives Layout? |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `images` | array[] | - | Array mit Bildern (src, alt, title) |
+| `variant` | enum | `grid` | Anordnung: `grid`, `masonry`, `carousel`, `lightbox` |
+| `columns` | number | `3` | Anzahl der Spalten (Raster) |
+| `gap` | number | `16` | Abstand zwischen den Bildern |
+| `responsive` | boolean | `true` | responsives Layout? |
 
 ## Verhalten
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onClickImage` | function | Wird beim Klick auf Bild ausgeführt |
-| `onSwipe` | function | Wird beim Swipe ausgeführt |
-| `onZoom` | function | Wird beim Zoom ausgeführt |
-| `lightBox` | boolean | Lightbox beim Klick öffnen? |
+| `onClickImage` | function | wird beim Klick auf ein Bild ausgeführt |
+| `onSwipe` | function | wird beim Wischen ausgeführt |
+| `onZoom` | function | wird beim Zoomen ausgeführt |
+| `lightBox` | boolean | beim Klick eine Lightbox öffnen? |
 
 ## Darstellung
+
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `animationDuration` | number | Dauer in ms |
 | `transition` | enum | Übergang: `fade`, `slide`, `scale` |
-| `showLoading` | boolean | Loading-Zustand anzeigen? |
+| `showLoading` | boolean | Ladezustand anzeigen? |
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `aspectRatio` | string | Seitenverhältnis (z.B. "4/3") |
+| `aspectRatio` | string | Seitenverhältnis (z. B. "4/3") |
 | `fit` | enum | `cover`, `contain`, `fill` |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onImageLoad` | function | Wird beim Laden des Bildes ausgeführt |
-| `onGalleryChange` | function | Wird bei Galerie-Wechsel ausgeführt |
+| `onImageLoad` | function | wird ausgeführt, wenn das Bild geladen ist |
+| `onGalleryChange` | function | wird ausgeführt, wenn sich die Galerie ändert |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `aria-live` | string | Live-Ankündigung |
+| `aria-live` | string | Live-Ansage |
 
 ## Carousel-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `autoplay` | boolean | `false` | Auto-Slideshow? |
+| `autoplay` | boolean | `false` | automatische Diashow? |
 | `interval` | number | `5000` | Intervall in ms |
-| `loop` | boolean | `true` | Endlosschleife? |
-| `showNavigation` | boolean | `true` | Vor/Zurück-Buttons? |
+| `loop` | boolean | `true` | endlose Schleife? |
+| `showNavigation` | boolean | `true` | Knöpfe vor/zurück? |
 | `showThumbnails` | boolean | `true` | Vorschaubilder? |
 
 ## Filter-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `categoryFilter` | string | Filter nach Kategorie |
+| `categoryFilter` | string | nach Kategorie filtern |
 | `searchQuery` | string | Suchanfrage |
 | `showFilter` | boolean | Filter anzeigen? |
 

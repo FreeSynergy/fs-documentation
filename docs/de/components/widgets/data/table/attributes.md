@@ -1,27 +1,27 @@
-# Table (Tabelle) - Attribute
+# Table - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `columns` | array[] | - | Array von Spalten |
-| `data` | array[] | - | Array von Daten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `columns` | array[] | - | Array mit Spalten |
+| `data` | array[] | - | Array mit Daten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `variant` | enum | `data` | Stil: `simple`, `data`, `tree`, `inline-edit` |
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onRowClick` | function | Wird beim Zeilen-Klick ausgeführt |
-| `onSortChange` | function | Wird bei Sortieränderung ausgeführt |
-| `onFilterChange` | function | Wird bei Filteränderung ausgeführt |
-| `onRowDoubleClick` | function | Wird beim Doppelklick ausgeführt |
+| `onRowClick` | function | wird beim Klick auf eine Zeile ausgeführt |
+| `onSortChange` | function | wird ausgeführt, wenn sich die Sortierung ändert |
+| `onFilterChange` | function | wird ausgeführt, wenn sich der Filter ändert |
+| `onRowDoubleClick` | function | wird bei einem Doppelklick ausgeführt |
 
 ## Barrierefreiheit
 
@@ -29,31 +29,31 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `table` |
 
-## Column-Attribute
+## Spalten-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `key` | string | Spalten-Schlüssel |
-| `title` | string | Spalten-Titel |
-| `dataIndex` | string | Daten-Feld |
-| `sortable` | boolean | Sortierbar? |
-| `filterable` | boolean | Filterbar? |
+| `key` | string | Spaltenschlüssel |
+| `title` | string | Spaltentitel |
+| `dataIndex` | string | Datenfeld |
+| `sortable` | boolean | sortierbar? |
+| `filterable` | boolean | filterbar? |
 
-## Features-Attribute
+## Funktions-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showHeader` | boolean | `true` | Header anzeigen? |
-| `showPagination` | boolean | `false` | Pagination anzeigen? |
-| `showBorder` | boolean | `true` | Rand anzeigen? |
-| `showStriped` | boolean | `false` | Gestreift? |
+| `showHeader` | boolean | `true` | Kopfzeile anzeigen? |
+| `showPagination` | boolean | `false` | Paginierung anzeigen? |
+| `showBorder` | boolean | `true` | Rahmen anzeigen? |
+| `showStriped` | boolean | `false` | gestreift? |
 | `showHover` | boolean | `true` | Hover-Effekt? |
 
-## Pagination-Attribute
+## Paginierungs-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `pagination` | object | Pagination-Konfiguration |
+| `pagination` | object | Konfiguration der Paginierung |
 | `total` | number | Gesamtanzahl |
 | `pageSize` | number | Elemente pro Seite |
 

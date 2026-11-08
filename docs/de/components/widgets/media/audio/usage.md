@@ -12,7 +12,7 @@ import { AudioPlayer } from '@freesynergy/ui';
 />
 ```
 
-## Autoplay mit Mute
+## Automatisch abspielen, stumm
 
 ```jsx
 <AudioPlayer 
@@ -23,21 +23,21 @@ import { AudioPlayer } from '@freesynergy/ui';
 />
 ```
 
-## Mit Wiedergabeliste
+## Mit Playlist
 
 ```jsx
 <AudioPlayer 
   playlist={[
-    { title: "Episode 1", src: "/audio/episode1.mp3" },
-    { title: "Episode 2", src: "/audio/episode2.mp3" },
-    { title: "Episode 3", src: "/audio/episode3.mp3" }
+    { title: "Folge 1", src: "/audio/episode1.mp3" },
+    { title: "Folge 2", src: "/audio/episode2.mp3" },
+    { title: "Folge 3", src: "/audio/episode3.mp3" }
   ]}
   controls={true}
   shuffle={true}
 />
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <AudioPlayer 
@@ -49,19 +49,19 @@ import { AudioPlayer } from '@freesynergy/ui';
 />
 ```
 
-## In Chat
+## Im Chat
 
 ```jsx
 <Message>
   <Avatar name={sender} />
   <div>
     <AudioPlayer src={audioUrl} size="compact" />
-    <span>Audio-Nachricht</span>
+    <span>Sprachnachricht</span>
   </div>
 </Message>
 ```
 
-## In Podcast-App
+## In einer Podcast-App
 
 ```jsx
 <PodcastEpisode episode={currentEpisode}>
@@ -74,7 +74,7 @@ import { AudioPlayer } from '@freesynergy/ui';
 </PodcastEpisode>
 ```
 
-## Audio-Liste
+## Audioliste
 
 ```jsx
 <AudioList>
@@ -97,22 +97,22 @@ import { AudioPlayer } from '@freesynergy/ui';
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎙️ Meine Podcasts                       │
+│ 🎙️ Meine Podcasts                      │
 ├─────────────────────────────────────────┤
 │                                         │
 │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
-│ [▶] Episode 42: KI in der Zukunft      │
+│ [▶] Folge 42: KI in der Zukunft        │
 │     45:30 / 1:23:45                     │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Musik-Player
+## Beispiel 2: Musikplayer
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎵 Song Title                          │
-│ 🎸 Artist Name                         │
+│ 🎵 Titel des Songs                      │
+│ 🎸 Name des Künstlers                   │
 ├─────────────────────────────────────────┤
 │ [⏮] [◀] [▶] [▶] [⏭]                   │
 │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
@@ -121,7 +121,7 @@ import { AudioPlayer } from '@freesynergy/ui';
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Audio-Nachrichten (Chat)
+## Beispiel 3: Sprachnachrichten (Chat)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -133,7 +133,7 @@ import { AudioPlayer } from '@freesynergy/ui';
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Audio-Liste
+## Beispiel 4: Audioliste
 
 ```
 ┌─────────────────────────────────────────┐
@@ -145,11 +145,11 @@ import { AudioPlayer } from '@freesynergy/ui';
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Audio-Player mit Playlist
+## Beispiel 5: Audioplayer mit Playlist
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎵 Wiedergabeliste                      │
+│ 🎵 Playlist                             │
 ├─────────────────────────────────────────┤
 │ 1. Song A  [▶]                          │
 │ 2. Song B  [⏸]                          │
@@ -161,11 +161,11 @@ import { AudioPlayer } from '@freesynergy/ui';
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 6: Audio-Visualizer
+## Beispiel 6: Audio-Visualisierung
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎵 Live Audio                            │
+│ 🎵 Live-Audio                           │
 ├─────────────────────────────────────────┤
 │  ──  ─────  ─  ─────  ───               │
 │  ─────  ─  ─────  ─────  ─              │
@@ -176,7 +176,7 @@ import { AudioPlayer } from '@freesynergy/ui';
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 7: Audio in List-Item
+## Beispiel 7: Audio in einem Listeneintrag
 
 ```
 ┌─────────────────────────────────────────┐
@@ -188,13 +188,13 @@ import { AudioPlayer } from '@freesynergy/ui';
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 8: Audio mit Progress
+## Beispiel 8: Audio mit Fortschritt
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎧 Hörspiel                             │
+│ 🎧 Audiowiedergabe                      │
 ├─────────────────────────────────────────┤
-│ Kapitel 1: Der Anfang                  │
+│ Kapitel 1: Der Anfang                   │
 │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
 │ 0:00                                      30:00 │
 │ [🔊] [⏮] [◀] [▶] [⏭] [Loop]           │

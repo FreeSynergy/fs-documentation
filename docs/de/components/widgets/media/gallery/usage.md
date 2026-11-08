@@ -1,9 +1,9 @@
 # Gallery - Verwendung
 
-## Einfache Grid-Galerie
+## Einfache Raster-Galerie
 
 ```jsx
-<Gallery 
+<Gallery
   images={[
     { src: "/images/photo1.jpg", alt: "Bild 1" },
     { src: "/images/photo2.jpg", alt: "Bild 2" },
@@ -17,7 +17,7 @@
 ## Lightbox-Galerie
 
 ```jsx
-<Gallery 
+<Gallery
   images={imageArray}
   lightBox={true}
   showThumbnails={true}
@@ -28,7 +28,7 @@
 ## Carousel-Galerie
 
 ```jsx
-<Gallery 
+<Gallery
   images={imageArray}
   variant="carousel"
   autoplay={true}
@@ -40,7 +40,7 @@
 ## Masonry-Galerie
 
 ```jsx
-<Gallery 
+<Gallery
   images={imageArray}
   variant="masonry"
   gap={20}
@@ -51,7 +51,7 @@
 ## Mit Filter
 
 ```jsx
-<Gallery 
+<Gallery
   images={imageArray}
   categoryFilter={selectedCategory}
   showFilter={true}
@@ -60,11 +60,11 @@
 />
 ```
 
-## In Modal
+## In einem Modal
 
 ```jsx
 <Modal>
-  <Gallery 
+  <Gallery
     images={selectedAlbum.images}
     lightBox={true}
     showNavigation={true}
@@ -72,10 +72,10 @@
 </Modal>
 ```
 
-## Responsive Gallery
+## Responsive Galerie
 
 ```jsx
-<Gallery 
+<Gallery
   images={imageArray}
   responsive={true}
   columns={{
@@ -87,10 +87,10 @@
 />
 ```
 
-## Gallery mit Progress
+## Galerie mit Ladeanzeige
 
 ```jsx
-<Gallery 
+<Gallery
   images={imageArray}
   showLoading={true}
   loadingState="skeleton"
@@ -104,7 +104,7 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎨 Meine Arbeit                         │
+│ 🎨 Meine Arbeiten                       │
 ├─────────────────────────────────────────┤
 │ ┌──────┐ ┌──────┐ ┌──────┐             │
 │ │      │ │      │ │      │             │
@@ -119,7 +119,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Product Gallery
+## Beispiel 2: Produktgalerie
 
 ```
 ┌─────────────────────────────────────────┐
@@ -131,11 +131,11 @@
 │ └─────────────────────────────────────┘ │
 ├─────────────────────────────────────────┤
 │ [🖼️] [🖼️] [🖼️] [🖼️]                   │
-│   Kleine Vorschaubilder                 │
+│   kleine Vorschaubilder                 │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Photo Wall
+## Beispiel 3: Fotowand
 
 ```
 ┌─────────────────────────────────────────┐
@@ -154,7 +154,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Carousel-Slideshow
+## Beispiel 4: Carousel-Diashow
 
 ```
 ┌─────────────────────────────────────────┐
@@ -172,15 +172,15 @@
 │ [✕]                                     │
 │                                         │
 │      🖼️                                │
-│      (Großansicht)                     │
+│      (große Ansicht)                    │
 │                                         │
-│   [◀]            [▶]                   │
+│   [◀]            [▶]                    │
 │                                         │
-│    Bild 1 von 20                       │
+│    Bild 1 von 20                        │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 6: Gallery in Card
+## Beispiel 6: Galerie in einer Karte
 
 ```
 ┌─────────────────────────────────────┐
@@ -191,11 +191,11 @@
 │ │ 🖼️  │ 🖼️  │ 🖼️  │              │
 │ └──────┴──────┴──────┘              │
 │                                     │
-│ [Alle 12 Fotos anzeigen →]          │
+│ [alle 12 Fotos anzeigen →]          │
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 7: Social Photo Feed
+## Beispiel 7: Foto-Feed in sozialen Medien
 
 ```
 ┌─────────────────────────────────────────┐
@@ -209,11 +209,11 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 8: Video Thumbnail Gallery
+## Beispiel 8: Video-Vorschaugalerie
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎥 Letzte Uploads                       │
+│ 🎥 Neueste Uploads                      │
 ├─────────────────────────────────────────┤
 │ ┌──────┐ ┌──────┐ ┌──────┐             │
 │ │[▶]   │ │[▶]   │ │[▶]   │             │

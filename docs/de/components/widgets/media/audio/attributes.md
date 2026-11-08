@@ -2,59 +2,59 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `src` | string | - | Audio-URL |
-| `controls` | boolean | `true` | Steuerung anzeigen? |
-| `autoplay` | boolean | `false` | Auto-Wiedergabe? |
-| `muted` | boolean | `false` | Stumm? |
-| `loop` | boolean | `false` | Wiederholen? |
-| `volume` | number | `0.8` | Lautstärke (0-1) |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `src` | string | - | URL des Audios |
+| `controls` | boolean | `true` | Bedienelemente anzeigen? |
+| `autoplay` | boolean | `false` | automatisch abspielen? |
+| `muted` | boolean | `false` | stumm? |
+| `loop` | boolean | `false` | wiederholen? |
+| `volume` | number | `0.8` | Lautstärke (0–1) |
 | `currentTime` | number | `0` | Startzeit in Sekunden |
 
 ## Verhalten
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onPlay` | function | Wird beim Start ausgeführt |
-| `onPause` | function | Wird beim Pausieren ausgeführt |
-| `onTimeUpdate` | function | Wird bei Zeitaktualisierung ausgeführt |
-| `onEnded` | function | Wird beim Ende ausgeführt |
-| `onVolumeChange` | function | Wird bei Lautstärkeänderung ausgeführt |
+| `onPlay` | function | wird beim Start ausgeführt |
+| `onPause` | function | wird beim Pausieren ausgeführt |
+| `onTimeUpdate` | function | wird bei einer Zeitaktualisierung ausgeführt |
+| `onEnded` | function | wird am Ende ausgeführt |
+| `onVolumeChange` | function | wird ausgeführt, wenn sich die Lautstärke ändert |
 
 ## Darstellung
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `showVisualizer` | boolean | Audio-Visualizer anzeigen? |
+| `showVisualizer` | boolean | Audio-Visualisierung anzeigen? |
 | `visualizerStyle` | enum | Stil: `bars`, `waves`, `circle` |
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `responsive` | boolean | Responsive-Layout verwenden? |
-| `compactOnMobile` | boolean | Kompakt-Layout auf Mobile? |
+| `responsive` | boolean | responsives Layout verwenden? |
+| `compactOnMobile` | boolean | kompaktes Layout auf dem Smartphone? |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `aria-live` | string | Live-Ankündigung: `polite`, `assertive` |
+| `aria-live` | string | Live-Ansage: `polite`, `assertive` |
 
 ## Playlist-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `playlist` | array[] | Array von Audio-Objekten |
-| `shuffle` | boolean | Zufällige Wiedergabe? |
-| `currentIndex` | number | Aktueller Track-Index |
+| `playlist` | array[] | Array mit Audio-Objekten |
+| `shuffle` | boolean | Zufallswiedergabe? |
+| `currentIndex` | number | Index des aktuellen Titels |
 
 ## Steuerungs-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `showPlayPause` | boolean | Play/Pause-Button anzeigen? |
-| `showSkip` | boolean | Vor/Zurück-Buttons anzeigen? |
+| `showPlayPause` | boolean | Abspielen/Pause-Knopf anzeigen? |
+| `showSkip` | boolean | Vor-/Zurück-Knöpfe anzeigen? |
 | `showVolume` | boolean | Lautstärkeregler anzeigen? |
-| `showProgress` | boolean | Fortschrittsbalken anzeigen? |
+| `showProgress` | boolean | Fortschrittsleiste anzeigen? |
 | `showTime` | boolean | Zeitanzeige anzeigen? |
 
 ## Geerbt von

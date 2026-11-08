@@ -1,4 +1,4 @@
-# Table of Contents (Inhaltsverzeichnis)
+# Table of Contents
 
 | Feld | Wert |
 |------|------|
@@ -12,7 +12,7 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
+Ein Inhaltsverzeichnis ist eine Übersicht über Kapitel und Abschnitte.
 
 ## Verwendungszweck
 
@@ -27,38 +27,38 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 |----------|--------------|
 | **randspalte** | neben dem Text, bleibt beim Scrollen stehen |
 | **block** | am Anfang des Textes als Liste |
-| **aufklappbar** | eingeklappter Knopf, Liste klappt darüber auf |
+| **aufklappbar** | eingeklappter Knopf, die Liste klappt darüber auf |
 
 ## Features
 
-- Scroll Spy (Markiert aktuelle Section)
-- Click to Scroll (Springen zu Section)
-- Collapsible Sections (Ein/Ausklappen)
+- Scroll-Spy (markiert den aktuellen Abschnitt)
+- Klick zum Springen (springt zu einem Abschnitt)
+- Einklappbare Abschnitte (ein- und ausklappen)
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [tree-view](../tree-view/): das Verzeichnis zeigt Überschriften **eines**
-  Textes mit Sprungzielen, die Baumansicht zeigt beliebige Datenhierarchien.
-- **Nicht verwechseln mit** [sidebar](../../navigation/sidebar/): die Seitenleiste wechselt die
-  Ansicht, dieses Verzeichnis bleibt in derselben und scrollt darin.
-- **Nicht verwechseln mit** [breadcrumb](../../navigation/breadcrumb/): der Brotpfad zeigt, wo man
-  ist; das Verzeichnis, was es alles gibt.
-- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs tauschen Inhalt, hier bleibt alles
-  auf einer Fläche.
+- **Nicht verwechseln mit** [tree-view](../tree-view/): die Inhaltsliste zeigt die Überschriften **eines**
+  Textes mit Sprungzielen, die Tree View zeigt beliebige Datenhierarchien.
+- **Nicht verwechseln mit** [sidebar](../../navigation/sidebar/): die Sidebar wechselt die
+  Ansicht, diese Inhaltsliste bleibt in derselben Ansicht und scrollt darin.
+- **Nicht verwechseln mit** [breadcrumb](../../navigation/breadcrumb/): der Breadcrumb zeigt, wo du
+  bist; die Inhaltsliste zeigt, was es gibt.
+- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs tauschen Inhalte aus, hier bleibt
+  alles auf einer Fläche.
 
 ## Best Practices
 
 - Nur Überschriften ab der zweiten Ebene, höchstens drei Ebenen tief.
 - Die gerade sichtbare Überschrift markieren (Scroll-Spy) und die URL mit dem Anker aktualisieren.
-- Sprung weich scrollen, aber `Sprung zum Abschnitt`-Ziel deutlich sichtbar machen.
-- Auf schmalen Bildschirmen auf `aufklappbar` wechseln, nicht die halbe Höhe belegen.
-- Nummerierung nur übernehmen, wenn der Text sie auch sichtbar trägt.
+- Beim Springen sanft scrollen, das Ziel "Zum Abschnitt" aber gut sichtbar halten.
+- Auf schmalen Bildschirmen zu `aufklappbar` wechseln, nicht die halbe Höhe belegen.
+- Die Nummerierung nur übernehmen, wenn sie auch im Text sichtbar ist.
 
 ## Layout
 
 ```
 ┌─────────────────────────────────────────┐
-│ 📚 Inhaltsverzeichnis                   │
+│ 📚 Inhalt                               │
 │                                         │
 │  1. Kapitel 1                           │
 │  2. Kapitel 2                           │

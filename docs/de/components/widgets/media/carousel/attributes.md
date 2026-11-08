@@ -1,25 +1,25 @@
-# Carousel (Karussell) - Attribute
+# Carousel - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `images` | array[] | - | Array von Bildern |
-| `autoplay` | boolean | `false` | Auto-Play? |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `images` | array[] | - | Array mit Bildern |
+| `autoplay` | boolean | `false` | automatisch abspielen? |
 | `interval` | number | `5000` | Intervall in ms |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `loop` | boolean | `true` | Endlosschleife? |
+| `loop` | boolean | `true` | endlose Schleife? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onSlideChange` | function | Wird bei Slide-Wechsel ausgeführt |
-| `onHover` | function | Wird beim Hover ausgeführt |
+| `onSlideChange` | function | wird ausgeführt, wenn sich die Folie ändert |
+| `onHover` | function | wird beim Hover ausgeführt |
 
 ## Barrierefreiheit
 
@@ -27,17 +27,17 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `region` |
 
-## Image-Attribute
+## Bild-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `src` | string | Bild-URL |
-| `alt` | string | Alt-Text |
+| `src` | string | URL des Bildes |
+| `alt` | string | Alternativtext |
 | `title` | string | Titel |
 
-## Navigation-Attribute
+## Navigations-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showNavigation` | boolean | `true` | Navigation anzeigen? |
 | `showThumbnails` | boolean | `true` | Vorschaubilder anzeigen? |

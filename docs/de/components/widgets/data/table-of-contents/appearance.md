@@ -1,11 +1,11 @@
-# Table of Contents - Aussehen
+# Table of Contents - Erscheinungsbild
 
 ## Grundlayout
-Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
+Ein Inhaltsverzeichnis ist eine Übersicht über Kapitel und Abschnitte.
 
 ```
 ┌─────────────────────────────────────────┐
-│ 📚 Inhaltsverzeichnis                   │
+│ 📚 Inhalt                               │
 │                                         │
 │  1. Kapitel 1                           │
 │  2. Kapitel 2                           │
@@ -17,54 +17,54 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **randspalte** | schmaler Streifen am Rand, Kopfzeile sticky |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **randspalte** | schmaler Streifen am Rand, Kopfzeile bleibt stehen |
 | **block** | Liste im Textfluss, leicht eingerückt |
-| **aufklappbar** | Knopf mit Liste darüber, Liste überdeckt den Text |
+| **aufklappbar** | Knopf mit der Liste darüber, die Liste verdeckt den Text |
 
 ## Größen
 
 | Größe | Schriftgröße | Verwendung |
-|-------|-------------|------------|
-| Small | 12px | Inline |
-| Medium | 14px | Standard |
-| Large | 16px | Featured |
+|-------|--------------|------------|
+| small | 12px | inline |
+| medium | 14px | Standard |
+| large | 16px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Active** | Primärfarbe | Aktueller Abschnitt |
-| **Inactive** | Grau | Inaktive Abschnitte |
-| **Hover** | Heller | Hover-Zustand |
+| **Active** | Primärfarbe | aktueller Abschnitt |
+| **Inactive** | grau | inaktive Abschnitte |
+| **Hover** | heller | Hover-Zustand |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `color` | Farbe ändert sich |
-| `border-bottom` | Unterstrich erscheint |
+| `color` | die Farbe ändert sich |
+| `border-bottom` | eine Unterstreichung erscheint |
 
-## Reaktiv
+## Responsiv
 
-- Als Randspalte ist die Liste maximal 240 px breit und bleibt beim Scrollen stehen
-  (eigener Scrollbereich, wenn sie höher als der Viewport ist).
-- Unter `small` Bildschirmbreite entfällt die Randspalte; die Variante `aufklappbar`
-  öffnet sich über dem Text und schließt nach der Auswahl.
-- Unterpunkte klappen mit `expand`/`collapse` auf, der aktive Punkt bleibt markiert,
-  auch wenn die Liste selbst gescrollt hat.
+- Als Randspalte ist die Liste höchstens 240 px breit und bleibt beim Scrollen stehen
+  (mit eigenem Scrollbereich, wenn sie höher als der Viewport ist).
+- Unterhalb einer kleinen Bildschirmbreite (`small`) entfällt die Randspalte; die Variante `aufklappbar`
+  öffnet sich über dem Text und schließt sich nach einer Auswahl.
+- Unterpunkte klappen mit `expand`/`collapse` auf; der aktive Punkt bleibt markiert,
+  auch wenn die Liste selbst gescrollt wurde.
 
-## Collapsible Sections
+## Einklappbare Abschnitte
 
 ```
 ┌─────────────────────────────────────────┐
-│ 📚 Inhaltsverzeichnis                   │
+│ 📚 Inhalt                               │
 │                                         │
 │ ▶ 1. Kapitel 1                          │
 │ ▶ 2. Kapitel 2                          │
-│   └─ 2.1. Unterkapitel 1               │
-│   └─ 2.2. Unterkapitel 2               │
+│   └─ 2.1. Unterkapitel 1                │
+│   └─ 2.2. Unterkapitel 2                │
 │ ▶ 3. Kapitel 3                          │
 └─────────────────────────────────────────┘
 ```

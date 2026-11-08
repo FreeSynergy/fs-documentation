@@ -1,13 +1,13 @@
-# Table of Contents (Inhaltsverzeichnis) - Verwendung
+# Table of Contents - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
+Ein Inhaltsverzeichnis ist eine Übersicht über Kapitel und Abschnitte.
 
 - Dokumentation
 - Bücher
@@ -19,17 +19,17 @@ Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
 ### Dokumentation
 
 ```jsx
-<TableOfContents items={eintraege} activeItem="activeItem" />
+<TableOfContents items={entries} activeItem="activeItem" />
 ```
 
 ### Bücher
 
 ```jsx
-<TableOfContents items={eintraege} collapsible={false} />
+<TableOfContents items={entries} collapsible={false} />
 ```
 
 ### Webseiten
 
 ```jsx
-<TableOfContents items={eintraege} interactive={false} />
+<TableOfContents items={entries} interactive={false} />
 ```

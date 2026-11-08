@@ -1,6 +1,6 @@
-# Table (Tabelle) - Verwendung
+# Table - Verwendung
 
-## Einfache Table
+## Einfache Tabelle
 
 ```jsx
 <Table 
@@ -19,14 +19,14 @@
 <Table 
   columns={[
     { key: 'name', title: 'Name', dataIndex: 'name', sortable: true },
-    { key: 'email', title: 'Email', dataIndex: 'email', sortable: true }
+    { key: 'email', title: 'E-Mail', dataIndex: 'email', sortable: true }
   ]}
   data={users}
   onSortChange={handleSortChange}
 />
 ```
 
-## Mit Pagination
+## Mit Paginierung
 
 ```jsx
 <Table 
@@ -40,7 +40,7 @@
 />
 ```
 
-## mit Row Selection
+## Mit Zeilenauswahl
 
 ```jsx
 <Table 
@@ -53,14 +53,14 @@
 />
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Table 
   columns={columns}
   data={data}
-  onRowClick={(record) => console.log('Clicked:', record)}
-  onRowDoubleClick={(record) => console.log('Double Clicked:', record)}
+  onRowClick={(record) => console.log('Geklickt:', record)}
+  onRowDoubleClick={(record) => console.log('Doppelklick:', record)}
 />
 ```
 
@@ -70,11 +70,11 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name │ Alter │ E-Mail                │
+│ ID │ Name │ Alter │ E-Mail               │
 ├─────────────────────────────────────────┤
-│ 1  │ John │ 25    │ john@example.com      │
-│ 2  │ Jane │ 30    │ jane@example.com      │
-│ 3  │ Bob  │ 28    │ bob@example.com       │
+│ 1  │ John │ 25    │ john@example.com     │
+│ 2  │ Jane │ 30    │ jane@example.com     │
+│ 3  │ Bob  │ 28    │ bob@example.com      │
 └─────────────────────────────────────────┘
 ```
 
@@ -82,45 +82,45 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name ▲ │ Alter │ E-Mail              │
+│ ID │ Name ▲ │ Alter │ E-Mail             │
 ├─────────────────────────────────────────┤
-│ 1  │ John   │ 25    │ john@example.com      │
-│ 2  │ Jane   │ 30    │ jane@example.com      │
-│ 3  │ Bob    │ 28    │ bob@example.com       │
+│ 1  │ John   │ 25    │ john@example.com   │
+│ 2  │ Jane   │ 30    │ jane@example.com   │
+│ 3  │ Bob    │ 28    │ bob@example.com    │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: mit Pagination
+## Beispiel 3: mit Paginierung
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name │ Alter │ E-Mail                │
+│ ID │ Name │ Alter │ E-Mail               │
 ├─────────────────────────────────────────┤
-│ 1  │ John │ 25    │ john@example.com      │
-│ 2  │ Jane │ 30    │ jane@example.com      │
+│ 1  │ John │ 25    │ john@example.com     │
+│ 2  │ Jane │ 30    │ jane@example.com     │
 ├─────────────────────────────────────────┤
-│ [1] [2] [3] [4] [5] [Nächste →]         │
+│ [1] [2] [3] [4] [5] [Weiter →]          │
 │ 1-10 von 100                            │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: mit Row Selection
+## Beispiel 4: mit Zeilenauswahl
 
 ```
 ┌─────────────────────────────────────────┐
-│ [✓] ID │ Name │ Alter │ E-Mail             │
+│ [✓] ID │ Name │ Alter │ E-Mail           │
 ├─────────────────────────────────────────┤
-│ [✓] 1  │ John │ 25    │ john@example.com     │
-│ [✓] 2  │ Jane │ 30    │ jane@example.com     │
-│ [ ] 3  │ Bob  │ 28    │ bob@example.com      │
+│ [✓] 1  │ John │ 25    │ john@example.com │
+│ [✓] 2  │ Jane │ 30    │ jane@example.com │
+│ [ ] 3  │ Bob  │ 28    │ bob@example.com  │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: mit Actions
+## Beispiel 5: mit Aktionen
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name │ Alter │ E-Mail │ Aktion       │
+│ ID │ Name │ Alter │ E-Mail │ Aktion      │
 ├─────────────────────────────────────────┤
 │ 1  │ John │ 25    │ john@example.com │ [✏️] [🗑️] │
 │ 2  │ Jane │ 30    │ jane@example.com │ [✏️] [🗑️] │
