@@ -2,16 +2,16 @@
 
 ## Beschreibung
 
-Scale In lässt ein Element von der Größe 0 % auf 100 % wachsen, ohne dass es seinen Platz im Layout verlässt. Der Wachstumspunkt (`transformOrigin`) bestimmt, aus welcher Richtung das Element zu erscheinen scheint.
+Scale In lässt ein Element von 0 % auf 100 % wachsen, ohne dass es seinen Platz im Layout verlässt. Der Wachstumspunkt (`transformOrigin`) bestimmt, aus welcher Richtung das Element zu kommen scheint.
 
 ## Verwendung
 
-- Dialoge und Popovers, die beim Öffnen „aufgehen“
-- Menüs und Tooltips, die aus ihrem Auslöser herauswachsen
+- Dialoge und Popover, die sich beim Öffnen "aufklappen"
+- Menüs und Tooltips, die aus ihrem Auslöser wachsen
 - Badges, Chips und Zähler, die neu ins Layout kommen
-- Icon-Wechsel beim Aktivieren eines Toggles
-- Fokuspunkt im Onboarding (erstes neues Element)
-- Popover, das aus einem Icon-Button herauswächst
+- Icon-Wechsel, wenn ein Schalter betätigt wird
+- Blickpunkt im Onboarding (das erste neue Element)
+- Popover, das aus einem Icon-Button wächst
 
 ## Dauer
 
@@ -20,6 +20,6 @@ Scale In lässt ein Element von der Größe 0 % auf 100 % wachsen, ohne dass es 
 
 ## Unterschied zu Zoom In
 
-- Zoom In: startet meist bei einem Zwischenwert (z. B. 50–70 %) und wirkt durch zusätzliche Tiefen- bzw. Perspektivwirkung wie ein Heranfahren an das Element
-- Scale In: beginnt exakt bei 0 %, arbeitet ohne Perspektive und bleibt flach in der Betrachterebene
-- Bounce In: wächst ebenfalls auf 100 %, endet aber mit federndem Überschießen über die Endgröße
+- Zoom In: beginnt meist bei einem Zwischenwert (z. B. 50–70 %) und wirkt durch einen zusätzlichen Tiefen- oder Perspektiveneffekt wie ein Heranfahren an das Element.
+- Scale In: beginnt genau bei 0 %, kommt ohne Perspektive aus und bleibt in der Betrachterebene flach.
+- Bounce In: wächst ebenfalls auf 100 %, endet aber mit einem federnden Überschwingen über die Endgröße.

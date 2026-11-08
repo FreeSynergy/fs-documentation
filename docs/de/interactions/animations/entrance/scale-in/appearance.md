@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Das Element bleibt an seiner Position verankert und füllt seinen Layout-Slot von einem Punkt aus auf.
+Das Element bleibt an seiner Position verankert und füllt seinen Layoutplatz von einem einzigen Punkt aus nach außen.
 
 ## Visueller Verlauf
 
@@ -13,7 +13,7 @@ Das Element bleibt an seiner Position verankert und füllt seinen Layout-Slot vo
 │  ·        [───]   [──────]  [────────]           │
 │  0 %      35 %    70 %      100 %                │
 │                                                  │
-│  Fixer Mittelpunkt, Breite und Höhe wachsen      │
+│  fester Mittelpunkt, Breite und Höhe wachsen     │
 └──────────────────────────────────────────────────┘
 ```
 
@@ -21,11 +21,11 @@ Das Element bleibt an seiner Position verankert und füllt seinen Layout-Slot vo
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Mitte** | Wachstumspunkt in der Elementmitte (Standard) |
-| **Auslöser** | Wachstumspunkt am Button; Menü scheint herauszuwachsen |
-| **Nur Breite** | `axis: x` - Höhe bleibt währenddessen konstant |
-| **Nur Höhe** | `axis: y` - Breite bleibt währenddessen konstant |
-| **Plus Fade** | Deckkraft steigt parallel, wirkt weicher |
+| **Mitte** | Wachstumspunkt in der Mitte des Elements (Standard) |
+| **Auslöser** | Wachstumspunkt am Button; das Menü scheint daraus zu wachsen |
+| **Nur Breite** | `axis: x` – die Höhe bleibt derweil gleich |
+| **Nur Höhe** | `axis: y` – die Breite bleibt derweil gleich |
+| **Mit Einblenden** | die Deckkraft steigt parallel, wirkt weicher |
 
 ## Dauer
 

@@ -2,24 +2,24 @@
 
 ## Beschreibung
 
-Slide In lässt ein Element von außerhalb der sichtbaren Fläche in seine Endposition gleiten – wahlweise von links, rechts, oben oder unten. Häufig wird die Bewegung mit einem leichten Fade kombiniert.
+Slide In lässt ein Element von außerhalb des sichtbaren Bereichs in seine Endposition gleiten – je nach Wahl von links, rechts, oben oder unten. Die Bewegung wird oft mit einem leichten Einblenden kombiniert.
 
 ## Verwendung
 
-- Drawer und Sidebars einziehen (Navigation, Filter)
-- Bottom Sheets und Mobile-Dialoge von unten hereinlassen
+- Schubladen und Seitenleisten einschieben (Navigation, Filter)
+- Bottom Sheets und mobile Dialoge von unten heraufziehen
 - Toasts am Bildschirmrand einfliegen lassen
-- Seitenwechsel in Assistenten und Carousel-Views
-- Menü- und Untermenü-Einblendung aus der Menüachse heraus
+- Seitenwechsel in Assistenten und Karussell-Ansichten
+- Menü und Untermenü entfalten sich aus der Menüachse
 - Listeneinträge beim Scrollen von unten nachrücken lassen
 
 ## Dauer
 
-- Typisch: 200–400ms
-- Drawer und Sheets: 250–350ms, Toasts: 200–250ms
-- Diagonale Variante: Kombination zweier Richtungen
+- Typisch: 200–400 ms
+- Schubladen und Sheets: 250–350 ms, Toasts: 200–250 ms
+- Diagonale Variante: eine Kombination aus zwei Richtungen
 
 ## Unterschied zu Slide Out
 
-- Slide In: Das Element wandert von außen in die Ansicht und bleibt in seiner Layout-Position
-- Slide Out: Das Element wandert aus der Ansicht nach außen und verlässt sie endgültig
+- Slide In: das Element kommt von außen in die Ansicht und behält seine Layoutposition.
+- Slide Out: das Element verlässt die Ansicht nach außen und ist danach endgültig weg.

@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Die obere Kante liegt fest auf der Ebene, der übrige Inhalt schwenkt aus der Kante heraus nach vorn.
+Die obere Kante liegt flach auf der Ebene. Der restliche Inhalt schwingt aus dieser Kante nach vorn heraus.
 
 ## Visueller Verlauf
 
@@ -11,9 +11,9 @@ Die obere Kante liegt fest auf der Ebene, der übrige Inhalt schwenkt aus der Ka
 │  0 ms           225 ms          450 ms           │
 │  ┌──────────┐   ╭──────────╮    ┌──────────┐     │
 │  ▁▁▁▁▁▁▁▁▁▁     ╲          ╱    ░░░░░░░░░░       │
-│  kantig 90°     ╲        ╱      ░░░░░░░░░░       │
+│  Kante 90°      ╲        ╱      ░░░░░░░░░░       │
 │                 ╲______╱        └──────────┘     │
-│  Höhe ~0        halb geöffnet   flach 0°         │
+│  Höhe ~0        halb offen      flach 0°         │
 └──────────────────────────────────────────────────┘
 ```
 
@@ -21,11 +21,11 @@ Die obere Kante liegt fest auf der Ebene, der übrige Inhalt schwenkt aus der Ka
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Von oben** | `foldOrigin: top` - Standard (Blatt nach unten auf) |
-| **Von der Seite** | `foldOrigin: left` - Karte klappt nach rechts auf |
-| **Mehrere Falze** | `segments: 3` - wellenförmiges Auffalten |
-| **Flach** | `perspective` sehr groß - wirkt fast wie Expand |
-| **Tief** | `perspective` klein - starker 3D-Eindruck |
+| **Von oben** | `foldOrigin: top` – der Standard (Blatt öffnet sich nach unten) |
+| **Von der Seite** | `foldOrigin: left` – die Karte öffnet sich nach rechts |
+| **Mehrere Falze** | `segments: 3` – wellenförmiges Entfalten |
+| **Flach** | sehr großes `perspective` – wirkt fast wie Expand |
+| **Tief** | kleines `perspective` – starker 3D-Eindruck |
 
 ## Dauer
 

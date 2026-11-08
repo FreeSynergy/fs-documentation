@@ -2,9 +2,9 @@
 
 ## Grundlayout
 
-Das Element startet außerhalb des sichtbaren Bereichs und gleitet in gerader Linie an seine Layout-Position, meist begleitet von einem leichten Fade.
+Das Element beginnt außerhalb des sichtbaren Bereichs und gleitet geradlinig an seine Layoutposition. Meist begleitet ein leichtes Einblenden die Bewegung.
 
-## Visueller Verlauf (Beispiel direction: left)
+## Visueller Verlauf (Beispielrichtung: links)
 
 ```
 ┌────────────────────────────────────────────┐
@@ -14,16 +14,16 @@ Das Element startet außerhalb des sichtbaren Bereichs und gleitet in gerader Li
 └────────────────────────────────────────────┘
 ```
 
-`·` = sichtbare Fläche; das Element wandert von links nach rechts in seine Endposition.
+`·` = sichtbarer Bereich; das Element wandert von links nach rechts an seine Endposition.
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Left** | Kommt von links (Standard, Drawer links) |
-| **Right** | Kommt von rechts (Drawer rechts, Toasts) |
-| **Up** | Kommt von unten ins Bild (Bottom Sheet, Listen-Nachrücken) |
-| **Down** | Kommt von oben (Menüleisten, Benachrichtigungs-Schubladen) |
+| **Links** | kommt von links (Standard, linke Schublade) |
+| **Rechts** | kommt von rechts (rechte Schublade, Toasts) |
+| **Oben** | kommt von unten herein (Bottom Sheet, Listeneinträge, die nach oben rücken) |
+| **Unten** | kommt von oben (Menüleisten, Benachrichtigungs-Schubladen) |
 
 ## Dauer
 

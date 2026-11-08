@@ -2,9 +2,7 @@
 
 ## Grundlayout
 
-Der Ankerkern bleibt stehen. Jeder Punkt beginnt bei `scale 0` in der Ankermitte und
-wandert entlang seines Winkelstrahls auf seine Ringposition. Bewegung ist radial:
-Der kürzeste Weg zum Punkt ist zugleich die Richtung, die ausgewählt wird.
+Der Ankerkern bleibt an seinem Platz. Jeder Punkt beginnt bei `scale 0` in der Mitte des Ankers und wandert auf dem Strahl seines Winkels zu seiner Ringposition. Die Bewegung ist radial: Der kürzeste Weg zu einem Punkt ist zugleich die Richtung, die gewählt wird.
 
 ## Visueller Verlauf
 
@@ -13,9 +11,9 @@ Der kürzeste Weg zum Punkt ist zugleich die Richtung, die ausgewählt wird.
 │   0 ms           70 ms            150 ms           220 ms    │
 │                                                              │
 │     ●          ◆   ●   ◆       ◆  ◆ ● ◆  ◆      ◆ ○ ◆       │
-│  nur Kern    Punkte bei 30 %  Ring 1 fast      Ring 1 steht,│
-│  s = 0       Radius, s = 0.4   fertig, α = 1    Ring 2 tritt │
-│  α = 0       α = 0.5                            aus ihm aus  │
+│  nur Kern     Punkte bei 30 %  Ring 1 fast     Ring 1 fertig,│
+│  s = 0        Radius, s = 0.4  fertig, α = 1   Ring 2 folgt  │
+│  α = 0        α = 0.5                           daraus       │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -23,11 +21,11 @@ Der kürzeste Weg zum Punkt ist zugleich die Richtung, die ausgewählt wird.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Standard** | Punkte im Uhrzeigersinn gestaffelt, ein Ring (220 ms) |
+| **Standard** | Punkte im Uhrzeigersinn versetzt, ein Ring (220 ms) |
 | **Ringe nacheinander** | Ring 2 startet `ringStep` nach dem letzten Punkt von Ring 1 |
-| **Fächer** | an Ecke oder Kante: nur der ungeklemmte Winkelbereich füllt sich |
-| **Sanft** | ohne Overshoot, `ease-out` – für dichte Menüs |
-| **Mit Overshoot** | Punkte schießen 4 % über die Ringposition hinaus und federn zurück |
+| **Fächer** | an einer Ecke oder Kante: nur der nicht abgeschnittene Winkelbereich füllt sich |
+| **Sanft** | ohne Überschwingen, `ease-out` – für dichte Menüs |
+| **Mit Überschwingen** | Punkte schießen 4 % über die Ringposition und federn zurück |
 
 ## Dauer
 
@@ -40,5 +38,5 @@ Der kürzeste Weg zum Punkt ist zugleich die Richtung, die ausgewählt wird.
 
 - [Animationen Übersicht](../../index.md)
 - [Radial In](../../exit/radial-in/description.md)
-- [Radial Menu](../../../../components/widgets/navigation/radial-menu/description.md)
+- [Radialmenü](../../../../components/widgets/navigation/radial-menu/description.md)
 - [Stagger](../../organization/stagger/description.md)
