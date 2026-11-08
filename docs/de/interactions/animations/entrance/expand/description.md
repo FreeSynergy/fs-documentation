@@ -2,12 +2,13 @@
 
 ## Beschreibung
 
-Expand lässt die Höhe (optional die Breite) eines Elements von 0 auf die natürliche Inhaltshöhe anwachsen. Der Inhalt bleibt dabei in seiner Originalgröße und wird schrittweise freigegeben.
+Expand vergrößert die Höhe (optional die Breite) eines Elements von 0 auf seine natürliche
+Inhaltshöhe. Der Inhalt behält seine ursprüngliche Größe und wird Schritt für Schritt sichtbar.
 
 ## Verwendung
 
-- Akkordeon-Eintrag öffnen
-- „Mehr anzeigen“ / aufklappbare Abschnitte
+- einen Akkordeon-Eintrag öffnen
+- „Mehr anzeigen“ / einklappbare Abschnitte
 - Dropdown- und Untermenü-Panels
 - Detailbereich in Listen und Tabellen
 - Inline-Hilfe unter einem Eingabefeld
@@ -20,6 +21,8 @@ Expand lässt die Höhe (optional die Breite) eines Elements von 0 auf die natü
 
 ## Unterschied zu Collapse
 
-- Collapse: gegenläufig - die Inhaltshöhe wird auf 0 reduziert
-- Unfold: klappt den Inhalt mit 3D-Perspektive aus der Ebene heraus auf; Expand ändert nur die Höhe ohne Drehung
-- Slide In: das Element gleitet von außen in einen bereits vorhandenen Slot; Expand vergrößert den Slot selbst
+- Collapse: entgegengesetzte Richtung – die Inhaltshöhe wird auf 0 reduziert
+- Unfold: öffnet den Inhalt mit 3D-Perspektive aus der Ebene; Expand ändert nur die Höhe
+  ohne Drehung
+- Slide In: Das Element gleitet von außen in einen bereits vorhandenen Platz; Expand vergrößert
+  den Platz selbst

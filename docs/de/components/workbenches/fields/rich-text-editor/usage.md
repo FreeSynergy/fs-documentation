@@ -1,13 +1,12 @@
-# Rich Text Editor (Rich-Text-Editor) - Verwendung
+# Rich Text Editor - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Rich Text Editor ist ein Editor für formatierten Text.
+Ein Rich-Text-Editor ist ein Editor für formatierten Text.
 
 - Dokumente
 - Artikel
@@ -18,7 +17,7 @@ Ein Rich Text Editor ist ein Editor für formatierten Text.
 ### Dokumente
 
 ```jsx
-<RichTextEditor value="Wert" onChange={aktion} />
+<RichTextEditor value="Wert" onChange={action} />
 ```
 
 ### Artikel

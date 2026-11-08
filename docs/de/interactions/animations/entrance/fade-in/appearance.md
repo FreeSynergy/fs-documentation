@@ -1,10 +1,11 @@
-# Fade In - Aussehen
+# Fade In - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element bleibt exakt an seiner Layout-Position und wird ausschließlich über die Deckkraft sichtbar – ohne Bewegung und ohne Größenänderung.
+Das Element bleibt genau an seiner Layoutposition und wird nur über die Deckkraft sichtbar –
+keine Bewegung und keine Größenänderung.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌────────────────────────────────────────────┐
@@ -18,19 +19,19 @@ Das Element bleibt exakt an seiner Layout-Position und wird ausschließlich übe
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Standard** | Weich von 0 auf 1 geblendet (250ms) |
-| **Fast** | 100–150ms für Hover, Tooltip, Mikro-Feedback |
-| **Soft** | 350–400ms mit `ease-out` für Overlays und Modals |
-| **Blur Fade** | Blende kombiniert mit abklingendem Weichzeichner |
+|---------|-------------|
+| **Standard** | sanft von 0 auf 1 überblendet (250 ms) |
+| **Schnell** | 100–150 ms für Hover, Tooltip, Mikro-Feedback |
+| **Weich** | 350–400 ms mit `ease-out` für Overlays und Dialoge |
+| **Blur Fade** | Einblenden kombiniert mit einer abklingenden Unschärfe |
 
 ## Dauer
 
-- Typisch: 150–400ms
-- Standardwert: 250ms
+- Typisch: 150–400 ms
+- Standardwert: 250 ms
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Fade Out](../../exit/fade-out/description.md)
 - [Slide In](../slide-in/description.md)

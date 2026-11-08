@@ -2,37 +2,37 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `animation` | string | `expand` | Name der Animation |
 | `dimension` | string | `height` | `height`, `width` oder `both` |
-| `startHeight` | number | `0` | Ausgangshöhe in px |
+| `startHeight` | number | `0` | Starthöhe in px |
 | `endHeight` | string \| number | `auto` | Zielhöhe (`auto` = gemessene Inhaltshöhe) |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `duration` | number | `300` | Dauer in ms |
-| `timingFunction` | string | `ease-in-out` | für Höhenänderungen meist symmetrisch |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `both` | Start- und Endzustand außerhalb der Laufzeit halten |
-| `onAnimateEnd` | function | - | Wird nach dem vollständigen Öffnen ausgeführt |
+| `timingFunction` | string | `ease-in-out` | meist symmetrisch bei Höhenänderungen |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `both` | hält Start- und Endzustand außerhalb der Laufzeit |
+| `onAnimateEnd` | function | - | läuft, nachdem das Element vollständig geöffnet ist |
 
-## Höhen-Attribute
+## Höhenattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `overflow` | string | `hidden` | Noch nicht sichtbarer Inhalt wird abgeschnitten |
-| `measureMode` | string | `scroll` | Messung der Zielhöhe: `scroll`, `explicit`, `lazy` |
-| `maxHeight` | number | `none` | Obergrenze in px, darüber Scrollbereich |
-| `innerFade` | number | `0` | Kind-Elemente zusätzlich einblenden (0 = aus) |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `overflow` | string | `hidden` | noch nicht sichtbarer Inhalt wird abgeschnitten |
+| `measureMode` | string | `scroll` | Messen der Zielhöhe: `scroll`, `explicit`, `lazy` |
+| `maxHeight` | number | `none` | Obergrenze in px, darüber ein Scrollbereich |
+| `innerFade` | number | `0` | Kindelemente zusätzlich einblenden (0 = aus) |
 | `deferRender` | boolean | `false` | Inhalt erst beim Öffnen rendern |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `focusOnOpen` | boolean | `false` | Fokus nach dem Öffnen in den neuen Inhalt legen |
+| `focusOnOpen` | boolean | `false` | Fokus nach dem Öffnen in den neuen Inhalt setzen |

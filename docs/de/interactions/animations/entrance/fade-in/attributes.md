@@ -2,33 +2,33 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start des Einblendens ausgeführt |
-| `onAnimateEnd` | function | - | Wird nach dem vollständigen Einblenden ausgeführt |
-| `onVisibilityChange` | function | - | Meldet den Sichtbarkeitswechsel (hidden → visible) |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `onAnimateStart` | function | - | läuft, wenn das Einblenden beginnt |
+| `onAnimateEnd` | function | - | läuft, nachdem das Element vollständig sichtbar ist |
+| `onVisibilityChange` | function | - | meldet die Sichtbarkeitsänderung (versteckt → sichtbar) |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `250` | Einblendedauer in ms |
-| `timingFunction` | string | `ease-out` | Weicher Start, ruhige Landung |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Endzustand (voll sichtbar) nach Ende beibehalten |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `duration` | number | `250` | Dauer des Einblendens in ms |
+| `timingFunction` | string | `ease-out` | sanfter Start, ruhige Landung |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | hält den Endzustand (vollständig sichtbar) nach dem Ende |
 
 ## Deckkraft-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `fromOpacity` | number | `0` | Startdeckkraft (0 = voll transparent) |
-| `toOpacity` | number | `1` | Zieldeckkraft (1 = voll sichtbar) |
-| `blur` | number | `0` | Weichzeichner in px beim Start, klingt beim Einblenden ab |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `fromOpacity` | number | `0` | Start-Deckkraft (0 = vollständig transparent) |
+| `toOpacity` | number | `1` | Ziel-Deckkraft (1 = vollständig sichtbar) |
+| `blur` | number | `0` | Unschärfe in px am Start, klingt beim Einblenden ab |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
 | `reducedMotionFallback` | string | - | `instant` (sofort sichtbar) oder `short-fade` |

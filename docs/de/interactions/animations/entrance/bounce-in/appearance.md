@@ -1,28 +1,29 @@
-# Bounce In - Aussehen
+# Bounce In - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element trifft von außen oder aus kleiner Skalierung ein, schießt über die Endposition hinaus und pendelt federnd zur Ruhe ein.
+Das Element kommt von außen oder aus einer kleinen Skalierung, schießt über die Endposition
+hinaus und setzt sich mit einer federnden Schwingung ab.
 
-## Visueller Verlauf (Skalen-Bounce)
+## Visueller Ablauf (Skalierungs-Bounce)
 
 ```
 ┌────────────────────────────────────────────┐
-│   0 ms    [▫]          scale 0.5 (Einflug)  │
-│ 220 ms    [██████]     scale 1.12 (drüber)  │
-│ 360 ms    [████]       scale 0.94 (zurück)  │
-│ 500 ms    [█████]      scale 1.00 (Ruhe)    │
+│   0 ms    [▫]          Skalierung 0.5 (Ankunft) │
+│ 220 ms    [██████]     Skalierung 1.12 (darüber) │
+│ 360 ms    [████]       Skalierung 0.94 (zurück)  │
+│ 500 ms    [█████]      Skalierung 1.00 (Ruhe)    │
 └────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Pop** | Startet bei `startScale: 0` und poppt auf |
-| **Drop** | Fällt von oben ein (`dropHeight` größer 0) und federt beim Aufprall |
-| **Slide-Bounce** | Kommt von der Seite und federt in die Endposition |
-| **Soft** | Nur 1 Rückfederung mit geringem Overshoot (6–8 %) |
+|---------|-------------|
+| **Pop** | startet bei `startScale: 0` und springt auf |
+| **Drop** | fällt von oben ein (`dropHeight` größer als 0) und federt beim Aufprall |
+| **Slide-Bounce** | kommt von der Seite und federt in die Endposition |
+| **Soft** | nur ein Zurückfedern mit einem kleinen Überschwingen (6–8 %) |
 
 ## Dauer
 
@@ -31,6 +32,6 @@ Das Element trifft von außen oder aus kleiner Skalierung ein, schießt über di
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Bounce Out](../../exit/bounce-out/description.md)
 - [Slide In](../slide-in/description.md)

@@ -2,24 +2,27 @@
 
 ## Beschreibung
 
-Bounce In bringt ein Element federnd in seine Endposition: Es schießt über das Ziel hinaus, federt ein- oder mehrfach zurück und kommt dann zur Ruhe. Der Bewegungscharakter ist spielerisch und aufmerksamkeitsstark.
+Bounce In bringt ein Element mit einer federnden Bewegung in seine Endposition: Es schießt
+über das Ziel hinaus, federt ein- oder mehrmals zurück und kommt dann zur Ruhe. Der Charakter
+der Bewegung ist verspielt und erregt Aufmerksamkeit.
 
 ## Verwendung
 
-- Erfolgsmeldungen und Badges aufmerksam „reinsetzen“ (z. B. Häkchen)
-- Sticker, Emojis und gamifizierte Elemente platzieren
-- Modale in Produkten mit verspieltem Charakter öffnen
-- Warenkorb-Zugaben mit einem Hüpfer quittieren
+- Erfolgsmeldungen und Badges mit einem spürbaren „Absetzen“ landen lassen (z. B. ein Häkchen)
+- Sticker, Emojis und spielerische Elemente platzieren
+- Dialoge in Produkten mit verspieltem Charakter öffnen
+- Hinzufügen in den Warenkorb mit einem kleinen Hüpfer quittieren
 - Onboarding-Elemente hervorheben
-- Neue Einträge in Listen und Kanban-Boards eintreffen lassen
+- neue Einträge in Listen und Kanban-Boards ankommen lassen
 
 ## Dauer
 
-- Typisch: 400–700ms (inklusive Ausfedern)
-- Kurze Variante für Badges und Icons: 300–400ms
-- Das Ausfedern nicht zu kurz ansetzen, sonst wirkt die Feder hart
+- Typisch: 400–700 ms (inklusive Zurückfedern)
+- Kurze Variante für Badges und Icons: 300–400 ms
+- Das Zurückfedern nicht zu kurz wählen, sonst wirkt die Feder hart
 
 ## Unterschied zu Bounce Out
 
-- Bounce In: Das Element überschreitet beim Eintreffen die Endposition und federt zur Ruhe ein
-- Bounce Out: Das Element federt an der Startposition kurz an, bevor es sie verlässt und verschwindet
+- Bounce In: Beim Ankommen schießt das Element über die Endposition und federt zur Ruhe
+- Bounce Out: Das Element lehnt sich an der Startposition kurz zurück, bevor es sie verlässt
+  und verschwindet

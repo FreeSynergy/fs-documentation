@@ -1,10 +1,11 @@
-# Expand - Aussehen
+# Expand - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Von einer Linie ausgehend wächst der Slot nach unten; der Inhalt bleibt unskaliert und wird freigelegt.
+Ausgehend von einer einzelnen Zeile wächst der Bereich nach unten. Der Inhalt bleibt unskaliert
+und wird nach und nach sichtbar.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -14,19 +15,19 @@ Von einer Linie ausgehend wächst der Slot nach unten; der Inhalt bleibt unskali
 │                  └────────┘      ░░░░░░░░░░      │
 │                  Höhe 50 %       └────────┘      │
 │  Inhalt wird                     Höhe = Inhalt   │
-│  freigelegt, nicht skaliert                      │
+│  aufgedeckt, nicht skaliert                      │
 └──────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Vertikal** | `dimension: height` - Standard bei Akkordeons |
-| **Horizontal** | `dimension: width` - Panel klappt nach rechts auf |
-| **Mit Scroll** | `maxHeight` begrenzt, Rest scrollbar |
-| **Mit Fade** | `innerFade` blendet Kind-Elemente zusätzlich ein |
-| **Lazy** | `deferRender` - Inhalt erscheint erst beim Öffnen |
+|---------|-------------|
+| **Vertikal** | `dimension: height` – der Standard für Akkordeons |
+| **Horizontal** | `dimension: width` – der Bereich öffnet sich nach rechts |
+| **Mit Scroll** | `maxHeight` begrenzt die Höhe, der Rest ist scrollbar |
+| **Mit Fade** | `innerFade` blendet zusätzlich die Kindelemente ein |
+| **Verzögert** | `deferRender` – der Inhalt erscheint erst beim Öffnen |
 
 ## Dauer
 
@@ -34,6 +35,6 @@ Von einer Linie ausgehend wächst der Slot nach unten; der Inhalt bleibt unskali
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Collapse](../../exit/collapse/description.md)
 - [Unfold](../unfold/description.md)
