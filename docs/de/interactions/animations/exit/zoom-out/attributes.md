@@ -2,34 +2,34 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start der Verkleinerung ausgeführt |
-| `onAnimateEnd` | function | - | Wird nach dem vollständigen Verschwinden ausgeführt |
-| `onElementHidden` | function | - | Meldet, dass das Element ausgeblendet wurde |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `onAnimateStart` | function | - | läuft, wenn das Schrumpfen beginnt |
+| `onAnimateEnd` | function | - | läuft, sobald das Element vollständig verschwunden ist |
+| `onElementHidden` | function | - | meldet, dass das Element ausgeblendet wurde |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `200` | Dauer der Ausblendung in ms |
-| `timingFunction` | string | `ease-in` | Beschleunigtes Schrumpfen wirkt absichtsvoll |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Unsichtbarer Endzustand bleibt erhalten |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `duration` | number | `200` | Dauer des Ausblendens in ms |
+| `timingFunction` | string | `ease-in` | ein beschleunigtes Schrumpfen wirkt bewusst |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | der unsichtbare Endzustand bleibt erhalten |
 
-## Skalierungs-Attribute
+## Skalierungsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `startScale` | number | `1` | Ausgangsskalierung (volle Größe) |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `startScale` | number | `1` | Startskalierung (volle Größe) |
 | `endScale` | number | `0` | Zielskalierung (0 = vollständig geschrumpft) |
-| `opacitySync` | boolean | `true` | Deckkraft synchron zur Skalierung ausregeln? |
+| `opacitySync` | boolean | `true` | Deckkraft synchron zur Skalierung ausblenden? |
 | `removeOnEnd` | boolean | `false` | Element nach dem Schrumpfen aus dem DOM entfernen? |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `reducedMotionFallback` | string | - | `instant` – ohne Skalierung sofort ausblenden |
+| `reducedMotionFallback` | string | - | `instant` – sofort ausblenden ohne Skalierung |

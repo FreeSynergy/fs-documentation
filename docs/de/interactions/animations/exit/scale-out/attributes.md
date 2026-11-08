@@ -2,36 +2,36 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `animation` | string | `scale-out` | Name der Animation |
-| `startScale` | number | `1` | Ausgangsgröße als Faktor |
+| `startScale` | number | `1` | Startgröße als Faktor |
 | `endScale` | number | `0` | Zielgröße als Faktor (0 = verschwindet) |
-| `transformOrigin` | string | `center` | Schrumpfpunkt; oft `top right` beim Auslöser |
+| `transformOrigin` | string | `center` | Schrumpfpunkt; oft `top right` am Auslöser |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `180` | Dauer in ms (Ausgänge gern kürzer als Eingänge) |
-| `timingFunction` | string | `ease-in` | Ausgänge meist `ease-in` |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Endzustand (0 %) bis zum Entfernen halten |
-| `iterationCount` | number | `1` | Ausgänge laufen genau einmal |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `duration` | number | `180` | Dauer in ms (Austritte oft kürzer als Eintritte) |
+| `timingFunction` | string | `ease-in` | Austritte meist `ease-in` |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | hält den Endzustand (0 %) bis zum Entfernen |
+| `iterationCount` | number | `1` | Austritte laufen genau einmal |
 
-## Achsen-Attribute
+## Achsenattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `axis` | string | `both` | `both`, `x` oder `y` |
-| `scaleX` | number | `1` | Zusätzlicher Faktor für die Breite |
-| `scaleY` | number | `1` | Zusätzlicher Faktor für die Höhe |
-| `removeAfter` | boolean | `true` | Element nach dem Ende aus dem Layout entfernen |
+| `scaleX` | number | `1` | zusätzlicher Faktor für die Breite |
+| `scaleY` | number | `1` | zusätzlicher Faktor für die Höhe |
+| `removeAfter` | boolean | `true` | Element nach dem Ende aus dem Layout nehmen |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `removeImmediately` | boolean | `false` | Element ohne Animation sofort entfernen |
+| `removeImmediately` | boolean | `false` | Element sofort ohne Animation entfernen |

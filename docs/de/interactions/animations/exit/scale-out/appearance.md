@@ -1,10 +1,10 @@
-# Scale Out - Aussehen
+# Scale Out - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element behält seinen Mittelpunkt und zieht sich bis auf einen Punkt zusammen.
+Das Element behält seinen Mittelpunkt und zieht sich auf einen einzigen Punkt zusammen.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -13,19 +13,19 @@ Das Element behält seinen Mittelpunkt und zieht sich bis auf einen Punkt zusamm
 │  [────────] [─────] [─]     ·                    │
 │  100 %      70 %    35 %    0 %                  │
 │                                                  │
-│  Schrumpfpunkt erreicht, Slot wird freigegeben   │
+│  Schrumpfpunkt erreicht, der Platz wird frei     │
 └──────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Mitte** | Schrumpfpunkt in der Elementmitte (Standard) |
-| **Zum Auslöser** | Schrumpft in Richtung Korb-, X- oder Menü-Button |
-| **Plus Fade** | Deckkraft sinkt mit, verhindert harte Kanten |
-| **Nur Breite** | `axis: x` - kollabiert seitlich |
-| **Platz bleibt** | `removeAfter: false` - Slot bleibt reserviert |
+|---------|-------------|
+| **Mitte** | Schrumpfpunkt in der Mitte des Elements (Standard) |
+| **Zum Auslöser** | schrumpft zum Warenkorb-, X- oder Menüknopf hin |
+| **Mit Fade** | die Deckkraft sinkt mit, verhindert harte Kanten |
+| **Nur Breite** | `axis: x` – fällt seitlich zusammen |
+| **Platz bleibt** | `removeAfter: false` – der Platz bleibt reserviert |
 
 ## Dauer
 
@@ -33,6 +33,6 @@ Das Element behält seinen Mittelpunkt und zieht sich bis auf einen Punkt zusamm
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Scale In](../../entrance/scale-in/description.md)
 - [Collapse](../collapse/description.md)

@@ -2,34 +2,34 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start der Ausbewegung ausgeführt |
-| `onAnimateEnd` | function | - | Wird beim vollständigen Verlassen der Ansicht ausgeführt |
-| `onSlideProgress` | function | - | Meldet den Fortschritt der Bewegung (0–1) |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `onAnimateStart` | function | - | läuft, wenn die Austrittsbewegung beginnt |
+| `onAnimateEnd` | function | - | läuft, wenn der Bereich vollständig verlassen ist |
+| `onSlideProgress` | function | - | meldet den Fortschritt der Bewegung (0–1) |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `250` | Dauer der Ausbewegung in ms |
-| `timingFunction` | string | `ease-in` | Beschleunigender Ausgang wirkt absichtsvoll |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Element bleibt nach Ende außerhalb der Ansicht |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `duration` | number | `250` | Dauer der Austrittsbewegung in ms |
+| `timingFunction` | string | `ease-in` | ein beschleunigter Austritt wirkt bewusst |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | das Element bleibt nach dem Ende außerhalb des Bereichs |
 
-## Richtungs-Attribute
+## Richtungsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `direction` | string | `right` | `left`, `right`, `up` (nach oben), `down` (nach unten) |
-| `distance` | number \| string | `100%` | Wegstrecke bis außerhalb in px oder Prozent |
-| `combineFade` | boolean | `false` | Ausbewegung mit Fade Out der Deckkraft kombinieren? |
+| `distance` | number \| string | `100%` | zurückgelegte Strecke bis außerhalb, in px oder Prozent |
+| `combineFade` | boolean | `false` | Austrittsbewegung mit einem Ausblenden der Deckkraft kombinieren? |
 | `removeOnEnd` | boolean | `false` | Element nach dem Hinausgleiten aus dem DOM entfernen? |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
 | `reducedMotionFallback` | string | - | `instant` – bei reduzierter Bewegung sofort ausblenden |

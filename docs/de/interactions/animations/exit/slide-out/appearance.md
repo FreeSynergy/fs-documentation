@@ -1,10 +1,11 @@
-# Slide Out - Aussehen
+# Slide Out - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element gleitet von seiner Layout-Position in gerader Linie über den Rand des sichtbaren Bereichs hinaus und verschwindet dort.
+Das Element gleitet von seiner Layoutposition geradlinig über den Rand des sichtbaren Bereichs
+hinaus und verschwindet dort.
 
-## Visueller Verlauf (Beispiel direction: right)
+## Visueller Ablauf (Beispielrichtung: rechts)
 
 ```
 ┌────────────────────────────────────────────┐
@@ -14,16 +15,16 @@ Das Element gleitet von seiner Layout-Position in gerader Linie über den Rand d
 └────────────────────────────────────────────┘
 ```
 
-`·` = sichtbare Fläche; das Element wandert nach rechts und verlässt den Ansichtsbereich.
+`·` = sichtbarer Bereich; das Element wandert nach rechts und verlässt den Anzeigebereich.
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Left** | Gleitet nach links hinaus (Drawer links schließen) |
-| **Right** | Gleitet nach rechts hinaus (Standard, Swipe-Entfernen) |
-| **Up** | Gleitet nach oben hinaus (Mobile-Dialoge) |
-| **Down** | Gleitet nach unten hinaus (Bottom Sheets, Menüs) |
+|---------|-------------|
+| **Links** | gleitet nach links hinaus (Schließen eines linken Drawers) |
+| **Rechts** | gleitet nach rechts hinaus (Standard, Wegwischen) |
+| **Oben** | gleitet nach oben aus dem Bild (mobile Dialoge) |
+| **Unten** | gleitet nach unten aus dem Bild (Bottom Sheets, Menüs) |
 
 ## Dauer
 
@@ -32,6 +33,6 @@ Das Element gleitet von seiner Layout-Position in gerader Linie über den Rand d
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Slide In](../../entrance/slide-in/description.md)
 - [Fade Out](../fade-out/description.md)

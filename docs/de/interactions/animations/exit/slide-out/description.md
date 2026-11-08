@@ -2,24 +2,25 @@
 
 ## Beschreibung
 
-Slide Out lässt ein Element in gerader Linie aus der sichtbaren Fläche hinausgleiten – nach links, rechts, oben oder unten. Die Fläche wird frei oder gibt Platz für nachrückende Inhalte.
+Slide Out lässt ein Element geradlinig aus dem sichtbaren Bereich gleiten – nach links, rechts,
+oben oder unten. Der Platz wird frei oder bietet Raum für Inhalte, die nachrücken.
 
 ## Verwendung
 
-- Drawer und Sidebars beim Schließen ausfahren
-- Bottom Sheets per Schließen-Button oder Wisch zurückgleiten lassen
-- Toasts nach der Anzeigedauer hinausschieben
-- Seitenwechsel: alte Seite gegenläufig zur neuen hinausgleiten
+- Drawer und Sidebars beim Schließen herausschieben
+- Bottom Sheets über den Schließen-Knopf oder eine Wischgeste zurückgleiten lassen
+- Toasts nach ihrer Anzeigezeit hinausschieben
+- Seitenwechsel: Die alte Seite gleitet gegenläufig zur neuen hinaus
 - Menüs und Popovers in Richtung ihrer Menüachse schließen
-- Erledigte Listeneinträge nach rechts aus der Liste schieben
+- erledigte Listeneinträge nach rechts aus der Liste herausgleiten lassen
 
 ## Dauer
 
-- Typisch: 200–350ms
-- Ausgänge werden meist etwas kürzer und schneller animiert als Eingänge
-- Swipe-basiertes Entfernen: 150–200ms, folgt der Geste
+- Typisch: 200–350 ms
+- Austritte werden meist etwas kürzer und schneller animiert als Eintritte
+- Entfernen per Wischgeste: 150–200 ms, folgt der Geste
 
 ## Unterschied zu Slide In
 
-- Slide Out: Das Element verlässt die Ansicht in Bewegungsrichtung und verschwindet
-- Slide In: Das Element kommt von außerhalb und endet in seiner Layout-Position
+- Slide Out: Das Element verlässt den Bereich in Bewegungsrichtung und verschwindet
+- Slide In: Das Element kommt von außen und endet an seiner Layoutposition
