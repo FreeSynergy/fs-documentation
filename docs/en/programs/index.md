@@ -93,3 +93,12 @@ How each category's well-known programs are analysed (functions only, nothing co
 | [Animations](../interactions/animations/) | Transitions and feedback in the interfaces |
 | [Standardised data](../data/) | Fields, models and the API pattern of all programs |
 
+
+## The decisions behind this page
+
+- [ADR 0061: Facets](../decisions/0061-facetten.md): one program, several apps, each with an admin frontend.
+- [ADR 0062: Packages live in Git](../decisions/0062-paket-repos-in-git.md): a catalog repository, one tag per version, signed, mirrors anywhere.
+- [ADR 0063: One program, one command](../decisions/0063-ein-programm-ein-befehl.md): `fs-<program>` with subcommands; each facet has a command of its own.
+- [ADR 0064: Versions start at 0.0.1](../decisions/0064-versionen-ab-0-0-1.md): what `0.0.N`, `0.1.0` and `1.0.0` mean.
+
+The decision records are written in German; see [all decisions](../decisions/index.md).

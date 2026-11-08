@@ -56,3 +56,12 @@ Referenzbeispiele: [Wiki/Skins](apps/wiki/frontends/), [Messenger/Skins](apps/me
 3. Sieben Dateien nach dem Schema oben schreiben (Deutsch zuerst)
 4. `apps/<kategorie>/masks/index.md` um den Eintrag ergänzen
 5. Fehlende Funktionen ausdrücklich benennen — nichts erfinden
+
+## Die Entscheidungen hinter dieser Seite
+
+- [ADR 0061: Facetten](../decisions/0061-facetten.md): ein Programm, mehrere Apps, jede mit einem Admin-Frontend.
+- [ADR 0062: Pakete liegen in Git](../decisions/0062-paket-repos-in-git.md): ein Katalog-Repository, ein Tag je Version, signiert, Spiegel überall.
+- [ADR 0063: Ein Programm, ein Befehl](../decisions/0063-ein-programm-ein-befehl.md): `fs-<programm>` mit Unterbefehlen; jede Facette hat einen eigenen Befehl.
+- [ADR 0064: Versionen ab 0.0.1](../decisions/0064-versionen-ab-0-0-1.md): was `0.0.N`, `0.1.0` und `1.0.0` bedeuten.
+
+Die Entscheidungen sind auf Deutsch geschrieben; [alle Entscheidungen](../decisions/index.md).
