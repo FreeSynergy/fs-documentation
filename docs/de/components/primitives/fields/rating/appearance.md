@@ -1,12 +1,12 @@
-# Rating - Aussehen
+# Rating - Erscheinungsbild
 
 ## Grundlayout
 
-Ein Rating ist eine Sterne- oder Punktebewertung.
+Eine Bewertung ist eine Bewertung mit Sternen oder Punkten.
 
 ## Varianten
 
-### Star Rating
+### Sternbewertung
 
 ```
 ┌─────────────────────────────────────────┐
@@ -14,7 +14,7 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 └─────────────────────────────────────────┘
 ```
 
-### Heart Rating
+### Herzbewertung
 
 ```
 ┌─────────────────────────────────────────┐
@@ -22,7 +22,7 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 └─────────────────────────────────────────┘
 ```
 
-### Number Rating
+### Zahlenbewertung
 
 ```
 ┌─────────────────────────────────────────┐
@@ -34,33 +34,33 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 80px | Inline |
-| Medium | 120px | Standard |
-| Large | 160px | Featured |
+| small | 80px | inline |
+| medium | 120px | Standard |
+| large | 160px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Filled** | Gold | Gefüllte Symbole |
-| **Empty** | Grau | Leere Symbole |
-| **Disabled** | Grau | Deaktiviert |
+| **filled** | gold | gefüllte Symbole |
+| **empty** | grau | leere Symbole |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `scale` | Vergrößerung |
-| `transform` | Hebung |
+| `transform` | Anheben |
 
-## Reaktiv
+## Responsiv
 
-- Symbole bleiben mindestens 24 px groß; auf Touch-Geräten wird die Trefferfläche pro Stufe
-  auf 44 px erweitert, ohne dass der Streifen breiter wird.
-- Bei schmalem Raum rutscht die Bewertungszahl unter den Streifen statt daneben.
-- Einmal tippen genügt; `drag` über den Streifen erlaubt feines Nachjustieren, loslassen bestätigt.
+- Die Symbole bleiben mindestens 24 px groß. Auf Touchgeräten wächst der Trefferbereich
+  pro Stufe auf 44 px, ohne dass die Leiste breiter wird.
+- Auf schmalem Raum rutscht die Bewertungszahl unter die Leiste statt daneben.
+- Ein Tipp genügt. Mit `drag` über die Leiste lässt sich fein einstellen. Loslassen bestätigt.
 
-## With Count
+## Mit Anzahl
 
 ```
 ┌─────────────────────────────────────────┐
@@ -68,7 +68,7 @@ Ein Rating ist eine Sterne- oder Punktebewertung.
 └─────────────────────────────────────────┘
 ```
 
-## Read-only
+## Nur lesen
 
 ```
 ┌─────────────────────────────────────────┐

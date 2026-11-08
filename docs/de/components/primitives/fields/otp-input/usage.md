@@ -1,24 +1,23 @@
-# OTP Input (Einmalpasswort) - Verwendung
+# OTP Input (Einmalcode) - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Das Feld gehört in einen Anmelde- oder Bestätigungsdialog. Es meldet erst fertig,
-wenn alle Zeichen gesetzt sind; die Prüfung übernimmt das Programm.
+Das Feld gehört in einen Anmelde- oder Bestätigungsdialog. Es meldet erst „fertig“,
+wenn alle Zeichen gesetzt sind. Die Prüfung übernimmt das Programm.
 
 ## Beispiele
 
-### Zweitfaktor bei der Anmeldung
+### Zweiter Faktor bei der Anmeldung
 
 ```jsx
 <OtpInput length={6} autoComplete="one-time-code" onComplete={verify} />
 ```
 
-### Bestätigung mit Neusenden
+### Bestätigung mit erneutem Senden
 
 ```jsx
 <OtpInput length={6} value={code} error={failed} onResend={resend} />
@@ -29,5 +28,5 @@ wenn alle Zeichen gesetzt sind; die Prüfung übernimmt das Programm.
 | Szenario | Empfehlung |
 |----------|------------|
 | TOTP-App | `length = 6`, `digits = 10` |
-| E-Mail-Code | `length = 6`, `digits = 36`, Autofill behalten |
+| E-Mail-Code | `length = 6`, `digits = 36`, Autofill beibehalten |
 | Code abgelaufen | Fehlerzustand und Countdown für `onResend` |

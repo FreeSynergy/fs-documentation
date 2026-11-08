@@ -1,13 +1,12 @@
-# Radio Group (Optionsgruppe) - Verwendung
+# Radio Group - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
+Eine Radio Group ist eine Gruppe von Optionsfeldern (Einfachauswahl).
 
 - Auswahlmöglichkeiten
 - Optionen
@@ -18,17 +17,17 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 ### Auswahlmöglichkeiten
 
 ```jsx
-<RadioGroup options={eintraege} onChange={aktion} />
+<RadioGroup options={entries} onChange={action} />
 ```
 
 ### Optionen
 
 ```jsx
-<RadioGroup options={eintraege} name="Name" />
+<RadioGroup options={entries} name="name" />
 ```
 
 ### Einstellungen
 
 ```jsx
-<RadioGroup options={eintraege} showIcons={false} />
+<RadioGroup options={entries} showIcons={false} />
 ```

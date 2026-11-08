@@ -2,22 +2,22 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `options` | array[] | - | Array von Options-Objekten |
-| `value` | string/number | - | Aktueller Wert |
-| `onChange` | function | - | Event bei Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `options` | array[] | - | Liste der Optionsobjekte |
+| `value` | string/number | - | aktueller Wert |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `variant` | enum | `default` | Stil: `default`, `toggle` |
-| `name` | string | - | Name für Form |
+| `name` | string | - | Name für das Formular |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcons` | boolean | `false` | Icons anzeigen? |
 
@@ -27,16 +27,16 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `radiogroup` |
 
-## Option-Attribute
+## Attribute der Optionen
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `value` | string/number | Wert |
-| `label` | string | Label-Text |
-| `icon` | string | Icon-Name |
+| `label` | string | Beschriftung |
+| `icon` | string | Name des Icons |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../basics/base.md)

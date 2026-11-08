@@ -14,43 +14,44 @@
 
 ## Beschreibung
 
-Das Einmalpasswortfeld nimmt einen kurzen numerischen Code auf — je Zeichen ein Feld.
-Es unterstützt Einfügen aus der Zwischenablage und Autofill aus dem Betriebssystem.
+Das Feld für ein Einmalpasswort nimmt einen kurzen numerischen Code entgegen. Pro Zeichen
+gibt es ein Feld. Es unterstützt Einfügen aus der Zwischenablage und das Autofill
+des Betriebssystems.
 
 ## Verwendungszweck
 
-- Anmeldung mit Zweitfaktor
-- Bestätigung einer gefährlichen Aktion
-- Verifizieren einer E-Mail-Adresse oder Telefonnummer
+- Anmeldung mit einem zweiten Faktor
+- Bestätigung einer riskanten Aktion
+- Prüfung einer E-Mail-Adresse oder Telefonnummer
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einzelboxen** | eine Box pro Zeichen, Standard |
-| **block** | ein Feld mit Zeichenabständen, für schmale Flächen |
+| **einzelboxen** | ein Kästchen pro Zeichen, Standard |
+| **block** | ein Feld mit Zeichenabstand, für schmale Flächen |
 
-## Features
+## Funktionen
 
-- Vervollständigt automatisch, wenn der Code eingefügt wird
-- Autofill aus dem Betriebssystem (`autocomplete = one-time-code`)
-- Nach dem letzten Zeichen wird geprüft, nicht nach jedem
-- Fehler: Felder leeren und kurz schütteln, Code neu eingeben
+- Vervollständigt sich von allein, wenn der Code eingefügt wird
+- Autofill des Betriebssystems (`autocomplete = one-time-code`)
+- Geprüft wird nach dem letzten Zeichen, nicht nach jedem einzelnen
+- Bei einem Fehler werden die Felder geleert und kurz geschüttelt. Der Code wird neu eingegeben.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [text-input](../text-input/) mit `password`: ein Passwort
-  ist langfristig und frei gewählt, der Code kurz und maschinell erzeugt.
-- **Nicht verwechseln mit** [tags-input](../tags-input/): dort entstehen mehrere Werte,
-  hier ergibt jedes Zeichen einen Teil eines Wertes.
+- **Nicht verwechseln mit** [text-input](../text-input/) mit `password`: Ein Passwort ist
+  langlebig und frei gewählt. Der Code ist kurz und maschinell erzeugt.
+- **Nicht verwechseln mit** [tags-input](../tags-input/): Dort entstehen mehrere Werte.
+  Hier ist jedes Zeichen Teil eines einzigen Werts.
 
 ## Best Practices
 
-- Länge aus dem Anbieter übernehmen (meist 6), nicht raten.
-- Neuen Code erst nach Ablauf der Frist anfordern, mit Countdown.
-- Keine Zeichen maskieren — der Code ist kurz und wird kontrolliert.
+- Die Länge vom Anbieter übernehmen (meist 6). Nicht raten.
+- Einen neuen Code erst nach Ablauf der Frist anfordern, mit Countdown.
+- Keine Zeichen verbergen. Der Code ist kurz und wird geprüft.
 
 ## Siehe auch
 
 - [Text Input](../text-input/)
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

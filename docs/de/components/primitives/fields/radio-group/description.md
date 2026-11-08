@@ -12,7 +12,7 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
+Eine Radio Group ist eine Gruppe von Optionsfeldern (Einfachauswahl).
 
 ## Verwendungszweck
 
@@ -24,35 +24,35 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einzeln** | Klassischer Kreis mit Label untereinander |
-| **toggle** | Optionen als aneinandergrenzende Knöpfe (segmentiert) |
+| **einzeln** | klassischer Kreis, Beschriftungen untereinander |
+| **toggle** | Optionen als aneinanderliegende Buttons (segmentiert) |
 | **karte** | Optionen als Karten mit Titel und Beschreibung |
 
-## Features
+## Funktionen
 
-- One Selection
-- Labels
+- Eine Auswahl
+- Beschriftungen
 - Icons
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [checkbox](../checkbox/): hier ist genau eine Option gültig,
-  dort sind mehrere gleichzeitig möglich.
-- **Nicht verwechseln mit** [select](../select/): Radio-Optionen sind alle sichtbar,
-  die Auswahlliste versteckt sie hinter einem Klick.
-- **Nicht verwechseln mit** [button-group](../../actions/button-group/): eine Knopfgruppe löst
-  Aktionen aus, diese Gruppe setzt einen Formularwert.
+- **Nicht verwechseln mit** [checkbox](../checkbox/): Hier ist genau eine Option gültig.
+  Dort sind mehrere gleichzeitig möglich.
+- **Nicht verwechseln mit** [select](../select/): Die Optionen der Radio Group sind alle sichtbar.
+  Die Auswahlliste versteckt sie hinter einem Klick.
+- **Nicht verwechseln mit** [button-group](../../actions/button-group/): Eine Button-Gruppe löst
+  Aktionen aus. Diese Gruppe setzt einen Formularwert.
 
 ## Best Practices
 
-- Bis etwa sieben Optionen Radio verwenden, darüber `select`.
-- Vorauswahl setzen oder ausdrücklich "keine Angabe" als eigene Option vorsehen.
-- Gruppe als Ganzes beschriften (`fieldset`/`legend`) — die einzelne Option braucht kein Label.
-- Gefährliche Optionen zuletzt und mit Bestätigung anbieten.
+- Radio bis etwa sieben Optionen verwenden, darüber `select`.
+- Eine Vorauswahl setzen oder „keine Präferenz“ als eigene Option anbieten.
+- Die Gruppe als Ganzes beschriften (`fieldset`/`legend`). Die einzelne Option braucht kein eigenes Label.
+- Gefährliche Optionen zuletzt anbieten und mit einer Bestätigung absichern.
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
 - [Checkbox](../checkbox/) — Mehrfachauswahl
 - [Select](../select/) — Auswahlliste
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

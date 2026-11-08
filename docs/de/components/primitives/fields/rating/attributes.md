@@ -2,31 +2,31 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | number | - | Wert (Bewertung) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `readonly` | boolean | `false` | Nur Anzeige? |
+| `readonly` | boolean | `false` | nur Anzeige? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `max` | number | `5` | Maximale Bewertung |
+| `max` | number | `5` | höchste Bewertung |
 | `showCount` | boolean | `false` | Anzahl anzeigen? |
 | `count` | number | - | Anzahl der Bewertungen |
-| `decimal` | boolean | `false` | Dezimalstellen? |
+| `decimal` | boolean | `false` | Nachkommastellen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
+| `onHover` | function | wird beim Überfahren ausgeführt |
 
 ## Barrierefreiheit
 
@@ -38,4 +38,4 @@
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../basics/base.md)

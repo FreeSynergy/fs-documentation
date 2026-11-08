@@ -1,43 +1,43 @@
-# OTP Input (Einmalpasswort) - Attribute
+# OTP Input (Einmalcode) - Attribute
 
 Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
 [base](../../basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `length` | number | `6` | Anzahl der Zeichen |
-| `value` | string | `""` | eingegebener Code |
+| `value` | string | `""` | der eingegebene Code |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `digits` | number | `10`| Zeichenmenge: 10 Ziffern, 36 alphanumerisch |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `digits` | number | `10`| Zeichenvorrat: 10 Ziffern, 36 alphanumerisch |
 | `paste` | boolean | `true` | Einfügen eines ganzen Codes erlauben |
 | `autoComplete` | string | `one-time-code` | Autofill des Betriebssystems |
-| `verifyOnComplete` | boolean | `true` | prüfen, wenn das letzte Zeichen gesetzt ist |
-| `mask` | boolean | `false` | Zeichen verdecken |
+| `verifyOnComplete` | boolean | `true` | prüfen, sobald das letzte Zeichen gesetzt ist |
+| `mask` | boolean | `false` | Zeichen verbergen |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onChange` | function | Teilwert geändert |
-| `onComplete` | function | alle Zeichen gesetzt |
-| `onResend` | function | neuer Code angefordert |
+| `onChange` | function | Teilwert hat sich geändert |
+| `onComplete` | function | alle Zeichen sind gesetzt |
+| `onResend` | function | neuer Code wurde angefordert |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `role` | string | `group`, einzelne Felder `textbox` |
-| `aria-label` | string | je Box nötig, z. B. „Zeichen 3 von 6“ |
-| `aria-describedby` | string | id des Hilfetextes unter den Boxen |
+| `role` | string | `group`, die einzelnen Felder `textbox` |
+| `aria-label` | string | pro Kästchen nötig, z. B. „Zeichen 3 von 6“ |
+| `aria-describedby` | string | ID des Hilfetexts unter den Kästchen |
 
 ## Geerbt von
 
 `id`, `visible`, `enabled`, `size`, `theme`, `rounded`, `state`, `tabIndex`,
 `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`, `aria-*` →
-[Basiskomponente](../../basics/base.md)
+[Base-Komponente](../../basics/base.md)

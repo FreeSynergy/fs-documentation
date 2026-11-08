@@ -1,47 +1,47 @@
-# OTP Input (Einmalpasswort) - Aussehen
+# OTP Input (Einmalcode) - Erscheinungsbild
 
 ## Grundlayout
 
 ```
 ┌───┬───┬───┬───┬───┬───┐
-│ 4 │ 2 │ 9 │   │   │   │   eine Box pro Zeichen, aktive Box mit Ring
+│ 4 │ 2 │ 9 │   │   │   │   ein Kästchen pro Zeichen, aktives Kästchen mit Ring
 └───┴───┴───┴───┴───┴───┘
         Code abgelaufen?  [Neuen senden · 24 s]
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einzelboxen** | getrennte Quadrate mit Rahmen |
-| **block** | ein Feld, Zeichen mit Schriftabstand |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **einzelboxen** | einzelne Kästchen mit Rahmen |
+| **block** | ein Feld, Zeichen mit Buchstabenabstand |
 
 ## Größen
 
-| Größe | Box | Abstand |
-|-------|-----|---------|
+| Größe | Kästchen | Abstand |
+|-------|----------|---------|
 | `small` | 32 px | 4 px |
 | `medium` | 44 px | 6 px |
 | `large` | 56 px | 8 px |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Rahmen neutral, Feld leer |
-| `active` | aktive Box mit Primärring |
-| `filled` | alle Boxen gefüllt, Prüfbutton wird aktiv |
-| `loading` | Prüfbutton mit Spinner, Felder gesperrt |
-| `error` | Rahmen in Fehlerfarbe, kurzes Schütteln, danach leeren |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | neutraler Rahmen, Feld leer |
+| `active` | aktives Kästchen mit Primärring |
+| `filled` | alle Kästchen gefüllt, der Prüfen-Button wird aktiv |
+| `loading` | Prüfen-Button mit Spinner, Felder gesperrt |
+| `error` | Rahmen in der Fehlerfarbe, kurzes Wackeln, dann zurückgesetzt |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `ring` | Primärring auf der aktiven Box |
-| `shake` | bei falschem Code, siehe [shake](../../../../interactions/animations/feedback/shake/) |
+| `ring` | Primärring am aktiven Kästchen |
+| `shake` | bei einem falschen Code, siehe [shake](../../../../interactions/animations/feedback/shake/) |
 
-## Reaktiv
+## Responsiv
 
-- Boxgröße schrumpft bis 32 px; darunter wechselt die Komponente zu `block`.
-- Der Hilfetext unter den Boxen bricht um, die Boxen bleiben einzeilig.
+- Die Kästchengröße schrumpft bis auf 32 px. Darunter wechselt die Komponente auf `block`.
+- Der Hilfetext unter den Kästchen bricht um. Die Kästchen bleiben in einer Zeile.

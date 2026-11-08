@@ -1,52 +1,52 @@
-# Bild (Image) - Verwendung
+# Image - Verwendung
 
-## Einfaches Bild
+## Ein einfaches Bild
 
 ```jsx
-<Image 
-  src="/images/photo.jpg" 
-  size="medium" 
+<Image
+  src="/images/photo.jpg"
+  size="medium"
   alt="Beschreibung"
 />
 ```
 
-## Circular Image
+## Rundes Bild
 
 ```jsx
-<Image 
-  src="/images/profile.jpg" 
-  shape="circular" 
+<Image
+  src="/images/profile.jpg"
+  shape="circular"
   size="large"
   alt="Profilbild"
 />
 ```
 
-## mit Hover-Effekt
+## Mit Hover-Effekt
 
 ```jsx
-<Image 
-  src="/images/product.jpg" 
+<Image
+  src="/images/product.jpg"
   interactive={true}
   hoverEffect="zoom"
   onClick={() => openProductDetails()}
 />
 ```
 
-## Lazy Loading
+## Verzögertes Laden
 
 ```jsx
-<Image 
-  src="/images/large-photo.jpg" 
-  size="full" 
+<Image
+  src="/images/large-photo.jpg"
+  size="full"
   loading="lazy"
   alt="Großes Foto"
 />
 ```
 
-## Background Image
+## Hintergrundbild
 
 ```jsx
-<Card 
+<Card
   backgroundImage="/images/banner.jpg"
   backgroundSize="cover"
   backgroundPosition="center"
@@ -56,10 +56,10 @@
 </Card>
 ```
 
-## Responsive Image
+## Responsives Bild
 
 ```jsx
-<Image 
+<Image
   src="/images/photo.jpg"
   responsive={true}
   srcSet={[
@@ -71,17 +71,17 @@
 />
 ```
 
-## mit Fallback
+## Mit Ersatzbild
 
 ```jsx
-<Image 
+<Image
   src="/images/optional.jpg"
   alt="Optional"
   onErrorFallback="/images/default.jpg"
 />
 ```
 
-## In List-Item
+## In einem Listenelement
 
 ```jsx
 <ListItem>
@@ -90,12 +90,12 @@
 </ListItem>
 ```
 
-## Grid-Layout
+## Rasteranordnung
 
 ```jsx
 <ImageGrid columns={3} gap={16}>
   {images.map((img, index) => (
-    <Image 
+    <Image
       key={index}
       src={img.src}
       alt={img.alt}
@@ -108,11 +108,11 @@
 
 ## Beispiele
 
-## Beispiel 1: Profil-Bilder in Liste
+## Beispiel 1: Profilbilder in einer Liste
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🧑‍🤝‍🧑 Teilnehmer                       │
+│ 🧑‍🤝‍🧑 Teilnehmende                       │
 ├─────────────────────────────────────────┤
 │ 🖼️ Alice                              │
 │ 🖼️ Bob                                │
@@ -121,7 +121,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Produkt-Galerie
+## Beispiel 2: Produktgalerie
 
 ```
 ┌─────────────────────────────────────────┐
@@ -145,7 +145,7 @@
 ┌─────────────────────────────────────────┐
 │                                         │
 │      🖼️                                │
-│      Hero-Bild                         │
+│      Hero-Bild                          │
 │                                         │
 │     Titel                               │
 │     Beschreibung                        │
@@ -161,7 +161,7 @@
 ├─────────────────────────────────────────┤
 │ 👤 Alice                                │
 │ 🖼️                                    │
-│ Sehr schönes Bild! ❤️ 23 💬 5          │
+│ Sehr schönes Foto! ❤️ 23 💬 5          │
 │                                         │
 │ 👤 Bob                                  │
 │ 🖼️  🖼️                                │
@@ -184,7 +184,7 @@
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 6: Avatar-Grid
+## Beispiel 6: Avatar-Raster
 
 ```
 ┌─────────────────────────────────────┐
@@ -196,7 +196,7 @@
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 7: Gallery mit Lightbox
+## Beispiel 7: Galerie mit Lightbox
 
 ```
 ┌─────────────────────────────────────┐
@@ -210,13 +210,13 @@
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 8: Background Image
+## Beispiel 8: Hintergrundbild
 
 ```
 ┌─────────────────────────────────────┐
 │                                     │
 │      🖼️ (Hintergrundbild)           │
-│      Text über dem Bild             │
+│      Text über dem Bild            │
 │                                     │
 └─────────────────────────────────────┘
 ```

@@ -1,7 +1,7 @@
-# Radio Group - Aussehen
+# Radio Group - Erscheinungsbild
 
 ## Grundlayout
-Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
+Eine Radio Group ist eine Gruppe von Optionsfeldern (Einfachauswahl).
 
 ```
 ┌─────────────────────────────────────────┐
@@ -13,45 +13,45 @@ Eine Radio Group ist eine Gruppe von Optionsfeldern (einzelfach).
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einzeln** | Kreis mit Punkt, Label rechts daneben |
-| **toggle** | Knopfreihe, aktive Option flächig gefüllt |
-| **karte** | Karte mit Radius, aktiver Rand in Primärfarbe |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **einzeln** | Kreis mit Punkt, Beschriftung rechts davon |
+| **toggle** | Reihe von Buttons, die aktive Option als Fläche gefüllt |
+| **karte** | Card mit Radius, aktiver Rahmen in der Primärfarbe |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 20px | Inline |
-| Medium | 24px | Standard |
-| Large | 28px | Featured |
+| small | 20px | inline |
+| medium | 24px | Standard |
+| large | 28px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Selected** | Primärfarbe | Ausgewählt |
-| **Unselected** | Grau | Nicht ausgewählt |
-| **Disabled** | Grau | Deaktiviert |
+| **selected** | Primärfarbe | ausgewählt |
+| **unselected** | grau | nicht ausgewählt |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `border` | der Rahmen leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- Unter `small` Bildschirmbreite werden die Optionen einspaltig und Zeile für Zeile
+- Unterhalb der Breite `small` stehen die Optionen in einer Spalte. Jede Zeile ist
   mindestens 44 px hoch.
-- Die segmentierte Variante wechselt bei schmalem Raum untereinander; die Trennlinien
+- Die segmentierte Variante stapelt sich auf schmalem Raum untereinander. Die Trennlinien
   bleiben erhalten, damit die Gruppe als zusammengehörig erkennbar bleibt.
-- Kartenvarianten stapeln einspaltig, Icon und Beschreibung bleiben linksbündig.
+- Kartenvarianten stapeln sich in einer Spalte. Icon und Beschreibung bleiben linksbündig.
 
-## With Icons
+## Mit Icons
 
 ```
 ┌─────────────────────────────────────────┐
