@@ -2,12 +2,12 @@
 
 Feldnamen ausschließlich aus den ✅ geprüften Standards (RFC 7946, RFC 5870, RFC 9553 §2.5.1).
 
-## 1. Ort als GeoJSON-`Feature` (kanonischer Speicher)
+## 1. Ort als GeoJSON-`Feature` (kanonische Speicherung)
 
 ```json
 {
   "type": "Feature",
-  "id": "01HTZK9F2W7P3D8S5V1BQ6XH4M",
+  "id": "018ebf34-bc5c-7d86-9464-bb0aee6ec494",
   "geometry": {
     "type": "Point",
     "coordinates": [13.4050, 52.5200]
@@ -31,7 +31,7 @@ Feldnamen ausschließlich aus den ✅ geprüften Standards (RFC 7946, RFC 5870, 
 }
 ```
 
-## 3. Postadresse als JSContact-`Address` (Komponenten, kein Freitext)
+## 3. Postanschrift als JSContact-`Address` (Komponenten, kein Freitext)
 
 ```json
 {
@@ -48,7 +48,7 @@ Feldnamen ausschließlich aus den ✅ geprüften Standards (RFC 7946, RFC 5870, 
 }
 ```
 
-## 4. Adresse in einem anderen Land — gleiches Modell
+## 4. Adresse in einem anderen Land — dasselbe Modell
 
 ```json
 {
@@ -64,14 +64,14 @@ Feldnamen ausschließlich aus den ✅ geprüften Standards (RFC 7946, RFC 5870, 
 }
 ```
 
-## 5. Verknüpfung von zwei Domänen (Termin → Ort)
+## 5. Zwei Domänen verknüpfen (Termin → Ort)
 
 Ein Termin in [events/](../events/index.md) speichert nur die Referenz:
 
 ```json
 {
   "locations": {
-    "loc1": { "name": "Rathaus Berlin", "link": "https://<instanz>/geodata/01HTZK9F2W7P3D8S5V1BQ6XH4M" }
+    "loc1": { "name": "Rathaus Berlin", "link": "https://<instance>/geodata/018ebf34-bc5c-7d86-9464-bb0aee6ec494" }
   }
 }
 ```
