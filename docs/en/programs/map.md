@@ -24,7 +24,7 @@ what an e-mail address is; it only decides where it shows the e-mail component.
 
 | Frontend | Purpose | Built how |
 |----------|---------|-----------|
-| **Admin** | Every field, every setting, every command. The safety net. | Generated from the data type description, the same code for all programs |
+| **Admin** | Every field, every setting, every command. The safety net. Looks like SAP Fiori (a public design system for dense business data). | Generated from the data type description, the same code for all programs |
 | **Simple** | For people with little experience: few buttons, large, clear. | By hand, one style for all programs |
 | **Apple style** | Rebuilt to measure after Apple's design language: spacing, line heights, font sizes, corners, glass, layout. | By hand, from a measurement sheet |
 | **Windows style** | The same after Microsoft's Fluent design: flat surfaces, its spacing and corners. | By hand, from a measurement sheet |
@@ -32,6 +32,11 @@ what an e-mail address is; it only decides where it shows the e-mail component.
 The measurement sheets come from the public guidelines (Apple Human Interface Guidelines, Microsoft Fluent 2) and from
 screenshots of the platforms' own apps that stay local and are never published. The exact rebuild also tests what the
 GUI engine can do. Our own icons, texts and open fonts with similar measurements; none of theirs.
+
+Apple style uses Apple's own apps as the template: rebuilt 1:1 first, then filled with functions, changed later if
+needed. For Windows the value is in the **functions**: programs that exist only on Windows show what open software
+on Linux still lacks. Later a **FreeSynergy style** of our own, quite different from all of these (ADR 0066,
+addition of 2026-11-09).
 
 The analyses of well-known programs per category (`frontends/<program>/latest/`) stay the source for **functions**.
 

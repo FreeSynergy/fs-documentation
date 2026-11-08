@@ -17,6 +17,12 @@ Die Schnittstellen wurden beim Programmieren ausgesucht statt vorher festgelegt;
 6. **Stile** (Maße, Farben, Effekte, **ein eigenes Iconset**) sind wiederverwendbar. Keine fremden Icons, Logos, Texte oder Schriften: SF Pro und Segoe UI sind nicht frei, wir nehmen offene Schriften mit ähnlichen Maßen.
 7. **Reihenfolge:** Pilot `fs-people` (Grundtypen, `Person`, Typbeschreibung, Components, Admin), danach alle anderen Programme über das erzeugte Admin-Frontend.
 
+## Ergänzung (Nutzer, 2026-11-09)
+- **Admin-Frontend im Stil von SAP Fiori** (öffentliches Design-System für dichte Geschäftsdaten). Später ein **eigener FreeSynergy-Stil**, der ganz anders ist.
+- **Apple-Stil: Apple ist dabei, mit Apples eigenen Apps als Vorlage,** weil sie gut aussehen. Erst 1:1 nachbauen, dann mit Funktionen füllen, später ändern, falls nötig (auch bei Ärger). Es ist nur ein Frontend; die Engine darunter ist das Wichtigere – beides soll die Menschen umhauen.
+- **Windows: der Wert liegt in den Funktionen.** Programme, die es nur unter Windows gibt, sind Vorbild, damit alle mit offener Software davon profitieren. Beim Aussehen ist uns egal, ob es nah an Microsoft ist.
+- **Haiku recherchiert und macht die Bildschirmfotos** für den Nachbau (nur lokal, nie in ein Repo).
+
 ## Folgen
 - Die Analysen der bekannten Programme je Kategorie bleiben Quelle für **Funktionen**; das Aussehen kommt aus den vier Frontends.
 - Die Schnittstellen in `docs/en/interfaces/` werden aus den Typbeschreibungen abgeleitet und als Ziel v1 festgelegt (ADR 0045).

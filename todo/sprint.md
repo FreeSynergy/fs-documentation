@@ -39,16 +39,23 @@ Einzeilig einfügen, N ersetzen:
 1. Ein Frontend, das aus einer Typbeschreibung Liste, Detail, Formular und Befehle erzeugt, mit den Components aus C und der Fensterhülle nach ADR 0065.
 2. Zuerst für People, dann für jedes Programm, das eine Typbeschreibung liefert.
 
-### Thread M – Maßblätter Apple und Windows (Haiku, startet sofort)
+### Thread M – Maßblätter und Bildschirmfotos: Apple, Windows, SAP Fiori (Haiku, startet sofort)
+0. **Nachtrag 2026-11-09 (Nutzer):** Apple-Stil = Apples eigene Apps, **erst 1:1 nachbauen**. Admin-Stil = **SAP Fiori** (Maße aus den öffentlichen Fiori-Richtlinien). Windows: zuerst Programme suchen, die es **nur unter Windows** gibt und die unter Linux fehlen (je Kategorie, mit der besonderen Funktion) – Liste nach `docs/en/programs/map.md`, Abschnitt „Windows-only“. Bildschirmfotos aus offiziellen Quellen (Hersteller-Seiten, Dokumentation, Presse) laden, lokal unter `/srv/FreeSynergy/.scratch/reference/<stil>/<programm>/`, je Bild die Quelle in eine `SOURCES.txt` daneben; **nie in ein Repo**.
 1. Aus den öffentlichen Leitlinien (Apple Human Interface Guidelines, Microsoft Fluent 2) die Maße zusammentragen: Abstände, Raster, Schriftgrößen und Zeilenhöhen, Radien, Materialien (Glas, Mica/Acrylic), Farben, Fokus, Listenzeilen. Mit Quelle je Wert.
 2. Offene Schriften mit ähnlichen Maßen vorschlagen (Lizenz je Schrift).
 3. Für People: Aufbau der Kontakte-App auf macOS und der Kontaktansicht unter Windows (People/Outlook) beschreiben, mit Maßen. Bildschirmfotos nur lokal unter `/srv/FreeSynergy/.scratch/reference/`, **nie in ein Repo**.
-4. Ergebnis: `docs/en/components/styles/apple.md` und `windows.md`; danach `scripts/gen_component_indexes.py --lang en`.
+4. Ergebnis: `docs/en/components/styles/apple.md`, `windows.md` und `fiori.md`; danach `scripts/gen_component_indexes.py --lang en`.
 
 ### Thread F – Funktions-Vorbilder prüfen und analysieren (Haiku, startet sofort)
 1. Die Tabelle „Function references“ in `docs/en/programs/map.md` prüfen: gibt es das Programm noch, stimmt die genannte Funktion? Korrekturen direkt in die Tabelle, mit Quelle.
 2. Für jedes dort genannte Programm, das unter `frontends/` der Kategorie noch fehlt, eine Analyse im üblichen Aufbau anlegen (`index.md`, `latest/description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`), nur Funktionen, nichts kopiert (ADR 0012, 0013, 0025). Neue Kategorien bei Bedarf: notes, history, store, start.
 3. Die Fähigkeiten in die `requirements.md` der Kategorie übernehmen (Status `proposed`).
+
+### Thread D – Pakete auch als .deb und .exe (Sonnet baut, Haiku rollt aus; startet sofort)
+Nutzer, 2026-11-09: Im letzten Sprint gab es nur rpm. Wer den Store und die Neuigkeiten sehen will, braucht auch Debian/Ubuntu und Windows.
+1. **Sonnet:** In `fs-release` die gemeinsamen Workflows um `.deb` (Debian 13, Ubuntu 24.04) und Windows (`.exe` in einem `.zip`, dazu ein Installer `.msi`, wenn er ohne Aufwand geht) erweitern; Windows-Build auf dem Windows-Runner. Signieren wie bisher mit dem Projektschlüssel (detached `.asc`); Windows-Code-Signatur erst mit SignPath (ADR 0051), bis dahin den SmartScreen-Hinweis in `releases.md` erklären. Jedes Paket auf seinem System probeweise installieren und starten (Debian-Container, Windows-Runner).
+2. **Sonnet:** Der Store (`fs-store`) erkennt das System und bietet das passende Paket an (rpm, deb, exe); was nicht geht, sagt ausdrücklich `Unsupported`.
+3. **Haiku:** Danach in allen App-Repos den neuen Workflow einbinden und je eine neue Version (v0.0.N+1) freigeben; prüfen, dass jede Release-Seite rpm, deb und exe mit Signatur hat. Bei einem Fehler, den Haiku nicht in einem Versuch löst: an den Koordinator melden, der startet Sonnet.
 
 ### Thread R – Ausbau auf alle Programme (ab Mittwoch, Liste folgt von der Strategie)
 Je Programm: Datentyp nach seinem Standard, Typbeschreibung, Admin-Frontend. Die Strategie schreibt die Liste, sobald der Pilot steht.
