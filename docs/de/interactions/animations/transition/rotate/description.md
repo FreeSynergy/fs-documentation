@@ -2,24 +2,24 @@
 
 ## Beschreibung
 
-Rotate dreht ein Element um einen definierten Winkel um seine eigene Achse – etwa ein Chevron von 0° auf 180° – und bleibt in der neuen Ausrichtung stehen. Es ist ein einmaliger Zustandswechsel, keine Dauerbewegung.
+Rotate dreht ein Element um einen festgelegten Winkel um die eigene Achse – zum Beispiel einen Winkelpfeil von 0° auf 180° – und bleibt danach in der neuen Ausrichtung. Es ist eine einmalige Zustandsänderung, keine fortlaufende Bewegung.
 
 ## Verwendung
 
-- Chevron/Pfeil im Akkordeon von ▾ auf ▴ drehen (180°)
-- Hamburger-Menü-Icon per Drehung in ein X überführen
-- Sortierrichtung anzeigen (aufsteigend ↔ absteigend, 180°)
-- Plus-Icon zum Schließen-Icon drehen (45°)
-- Aktiv-/Inaktiv-Status durch Icon-Drehung quittieren
-- Kompass- und Ausrichtungs-Elemente in Schritten weiterdrehen
+- den Winkelpfeil eines Akkordeons von ▾ auf ▴ (180°) drehen
+- ein Hamburger-Menüicon durch Drehen in ein X verwandeln
+- die Sortierrichtung zeigen (aufsteigend ↔ absteigend, 180°)
+- ein Plus-Icon in ein Schließen-Icon drehen (45°)
+- einen aktiven oder inaktiven Status durch Drehen eines Icons bestätigen
+- Kompass- und Ausrichtungselemente schrittweise weiterdrehen
 
 ## Dauer
 
-- Typisch: 200–500ms pro Drehung
-- Icon-Drehungen: 180–300ms
-- Volle 360°-Drehung als Quittierung: 400–500ms
+- Typisch: 200–500 ms pro Drehung
+- Icon-Drehungen: 180–300 ms
+- Eine volle Drehung um 360° als Bestätigung: 400–500 ms
 
 ## Unterschied zu Spin
 
-- Rotate: Einmalige Drehung auf einen definierten Endwinkel; danach bleibt das Element stehen
-- Spin: Endlose Drehung ohne Endwinkel als Aktivitäts- oder Ladeanzeige
+- Rotate: eine einmalige Drehung auf einen festen Endwinkel. Danach steht das Element still.
+- Spin: eine endlose Drehung ohne Endwinkel als Aktivitäts- oder Ladeanzeige

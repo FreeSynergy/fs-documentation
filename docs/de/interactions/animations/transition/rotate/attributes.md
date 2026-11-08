@@ -2,34 +2,34 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onAnimateStart` | function | - | Wird beim Start der Drehung ausgeführt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `onAnimateStart` | function | - | Wird ausgeführt, wenn die Drehung beginnt |
 | `onRotate` | function | - | Wird bei jeder Winkeländerung fortlaufend ausgeführt |
-| `onAnimateEnd` | function | - | Wird beim Erreichen des Zielwinkels ausgeführt |
+| `onAnimateEnd` | function | - | Wird ausgeführt, wenn der Zielwinkel erreicht ist |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `duration` | number | `300` | Dauer der Drehung in ms |
-| `timingFunction` | string | `ease-in-out` | Natürlicher Drehstart und Drehstopp |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Zielwinkel bleibt als neuer Zustand stehen |
+| `timingFunction` | string | `ease-in-out` | ein natürlicher Start und Stopp der Drehung |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | der Zielwinkel bleibt als neuer Zustand |
 
-## Winkel-Attribute
+## Winkelattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `angle` | number | `180` | Zielwinkel in Grad (negativ = gegen den Uhrzeigersinn) |
 | `transformOrigin` | string | `center` | Drehpunkt: `center`, `top left`, `50% 100%` … |
-| `rotationDirection` | string | `shortest` | `cw`, `ccw` oder `shortest` (kürzeste Drehrichtung) |
-| `stateAngle` | boolean | `true` | Endwinkel als dauerhaften Zustand merken (z. B. auf-/zugeklappt)? |
+| `rotationDirection` | string | `shortest` | `cw`, `ccw` oder `shortest` (die kürzeste Drehrichtung) |
+| `stateAngle` | boolean | `true` | Endwinkel als bleibenden Zustand merken (z. B. geöffnet/geschlossen)? |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `aria-label` | string | - | Beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
-| `reducedMotionFallback` | string | - | `instant` – Winkel ohne Drehung wechseln |
+| `reducedMotionFallback` | string | - | `instant` – den Winkel ohne Drehung ändern |

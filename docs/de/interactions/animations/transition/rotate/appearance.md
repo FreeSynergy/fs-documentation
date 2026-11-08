@@ -2,15 +2,15 @@
 
 ## Grundlayout
 
-Ein Element dreht sich einmalig um seinen Drehpunkt auf einen festen Zielwinkel und verharrt danach in der neuen Ausrichtung.
+Ein Element dreht sich einmal um seinen Drehpunkt auf einen festen Zielwinkel und bleibt danach in der neuen Ausrichtung.
 
-## Visueller Verlauf (Chevron, angle: 180)
+## Visueller Verlauf (Winkelpfeil, Winkel: 180)
 
 ```
 ┌────────────────────────────────────────────┐
-│   0 ms      ▾          zugeklappt (0°)      │
-│ 150 ms      ◄          halbe Drehung (90°)  │
-│ 300 ms      ▴          aufgeklappt (180°)   │
+│   0 ms      ▾          eingeklappt (0°)    │
+│ 150 ms      ◄          halbe Drehung (90°) │
+│ 300 ms      ▴          ausgeklappt (180°)  │
 └────────────────────────────────────────────┘
 ```
 
@@ -18,10 +18,10 @@ Ein Element dreht sich einmalig um seinen Drehpunkt auf einen festen Zielwinkel 
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Quarter** | Drehung um 90° (Icons, Karussell-Pfeile) |
-| **Half** | Drehung um 180° (Chevron, Sortierrichtung) |
-| **Full** | volle 360°-Drehung als einmaliges Quittieren |
-| **Corner-Pivot** | Drehpunkt an einer Ecke (`transformOrigin`), klapptartiger Effekt |
+| **Viertel** | eine Drehung um 90° (Icons, Karussellpfeile) |
+| **Halb** | eine Drehung um 180° (Winkelpfeil, Sortierrichtung) |
+| **Voll** | eine volle Drehung um 360° als einmalige Bestätigung |
+| **Ecken-Drehpunkt** | der Drehpunkt an einer Ecke (`transformOrigin`), wirkt wie eine Klappe |
 
 ## Dauer
 
