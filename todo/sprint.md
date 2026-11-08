@@ -16,7 +16,7 @@ Einzeilig einfügen, N ersetzen:
 
 Die fünf Threads der Runde 1 sind fertig. Runde 2 hat fünf neue Threads; S, M und U starten nach dem Ende der Umbenennung (Nutzer), D sofort. **Sprint.md immer von GitHub lesen** (`git -C /srv/FreeSynergy/fs-documentation fetch -q && git -C /srv/FreeSynergy/fs-documentation show origin/main:todo/sprint.md`), der lokale geteilte Baum ist veraltet. Mechanische Arbeit (Suchen und Ersetzen, Doku nachziehen, Listen) an Haiku-Agenten geben, sie verbrauchen am wenigsten; Code-Prüfung vor jedem Tag weiter durch einen zweiten Agenten, der den Code nicht schrieb.
 
-**Verbrauch (Nutzer, 2026-11-08):** 87 % des Wochenlimits verbraucht. **Bei 95 % halten alle Threads an:** offene Arbeit committen und pushen, Stand in die `DESIGN.md`, eine Zeile in `todo/handoff-programming.md`. Opus sparsam einsetzen (Prüfungen vor Tags), Sonnet und Haiku für den Rest.
+**Verbrauch (Nutzer, 2026-11-08, 93 %):** Keine 95-%-Grenze mehr – arbeiten, bis das Kontingent aufgebraucht ist. Darum nach jedem fertigen Schritt pushen und eine Zeile in `todo/handoff-programming.md`, damit beim Abbruch nichts verloren geht. **Vorrang:** (1) der Store läuft sauber (installieren, öffnen, aktualisieren, Fehler sichtbar); (2) die Programme laufen und funktionieren aus dem Store heraus; Schönheit der Components danach. Das Löschen alter Tags/Releases wartet auf das Ja des Nutzers zur konkreten Liste (morgen).
 
 Startzeilen:
 ```text
