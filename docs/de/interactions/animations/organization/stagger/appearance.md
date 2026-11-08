@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander versetzt – wie eine Staffellauf-Startaufstellung.
+Die Kindelemente starten ihre identische Animation jeweils versetzt zueinander – wie die Startaufstellung bei einem Staffellauf.
 
 ## Visueller Verlauf
 
@@ -10,10 +10,10 @@ Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander versetzt �
 ┌──────────────────────────────────────────────────────┐
 │t = 0 ms        50 ms         100 ms        150 ms    │
 │                                                      │
-│[Kind 1] ████████                                     │
-│[Kind 2]   ████████                                   │
-│[Kind 3]     ████████                                 │
-│[Kind 4]       ████████                               │
+│[Kind 1]  ████████                                    │
+│[Kind 2]    ████████                                  │
+│[Kind 3]      ████████                                │
+│[Kind 4]        ████████                              │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -21,11 +21,11 @@ Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander versetzt �
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Vorwärts** | Start beim ersten Kind (Standard) |
-| **Rückwärts** | Ausgang startet beim letzten Kind |
-| **Zufällig** | Reihenfolge je Durchlauf neu gewürfelt |
-| **Gruppen** | `gruppenLimit` bremst lange Listen ein |
-| **Zeilenweise** | Raster: Offset aus Zeile × Spalte |
+| **Vorwärts** | beginnt beim ersten Kind (Standard) |
+| **Rückwärts** | der Ausgang beginnt beim letzten Kind |
+| **Zufällig** | die Reihenfolge wird bei jedem Durchlauf neu gemischt |
+| **Gruppen** | `gruppenLimit` bändigt lange Listen |
+| **Zeile für Zeile** | Raster: der Versatz ergibt sich aus Zeile × Spalte |
 
 ## Dauer
 

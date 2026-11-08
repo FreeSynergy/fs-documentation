@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander, aber die Reihenfolge folgt dem Layout und nicht der Listenreihenfolge. Der Abstand zwischen zwei Starts ist nicht konstant, sondern wächst oder schrumpft.
+Die Kindelemente starten ihre identische Animation nacheinander. Die Reihenfolge folgt dabei dem Layout und nicht der Reihenfolge in der Liste. Der Abstand zwischen zwei Starts ist nicht konstant, er wird größer oder kleiner.
 
 ## Visueller Verlauf
 
@@ -11,7 +11,7 @@ Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander, aber die 
 │t = 0 ms      50 ms      120 ms      210 ms      320 ms   │
 │                                                          │
 │[K1] ████████                                             │
-│[K2]    ████████              Abstand:  50 ms             │
+│[K2]    ████████              Abstand:   50 ms            │
 │[K3]       ████████                    +70 ms             │
 │[K4]          ████████               +90 ms  (wachsend)   │
 │[K5]             ████████                                 │
@@ -22,15 +22,15 @@ Die Kind-Elemente starten ihre jeweils gleiche Animation nacheinander, aber die 
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Von links oben** | `richtung: top-left`, `achse: auto` (Standard) |
-| **Von außen nach innen** | `richtung: center-out` – Ränder zuerst |
-| **Abbremsend** | `stepGrowth` negativ – Startimpuls groß, Ende ruhig |
+| **Von oben links** | `richtung: top-left`, `achse: auto` (Standard) |
+| **Von außen nach innen** | `richtung: center-out` – zuerst die Ränder |
+| **Abbremsend** | `stepGrowth` negativ – ein großer Anfangsimpuls, ein ruhiges Ende |
 | **Wellen** | `wellenLaenge` 3–4 – ganze Gruppen starten gemeinsam |
 
 ## Dauer
 
 - Typisch: 50 ms Grundabstand, wachsend bis `stepLimit`
-- Gesamtdauer nie über etwa 800 ms, sonst wirkt die Fläche träge
+- Insgesamt nie mehr als etwa 800 ms, sonst wirkt die Fläche träge
 
 ## Siehe auch
 

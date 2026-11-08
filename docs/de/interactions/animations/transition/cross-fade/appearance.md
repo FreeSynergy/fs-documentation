@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Zwei Elemente liegen exakt übereinander; die Deckkraft des einen sinkt, während die des anderen steigt.
+Zwei Elemente liegen genau übereinander. Die Deckkraft des einen sinkt, während die des anderen steigt.
 
 ## Visueller Verlauf
 
@@ -12,7 +12,7 @@ Zwei Elemente liegen exakt übereinander; die Deckkraft des einen sinkt, währen
 │                                                      │
 │██████       ███▒▒▒▒▒      ▒▒▒▒░░░░       ░░░░░░      │
 │                                                      │
-│A = altes Element, B = neues; Deckkraft gesamt ≈ 100 %│
+│A = altes Element, B = neues; Gesamtdeckkraft ≈ 100 % │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -20,11 +20,11 @@ Zwei Elemente liegen exakt übereinander; die Deckkraft des einen sinkt, währen
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Simultan** | beide überblenden gleichzeitig (Standard) |
-| **Versetzt** | `overlap: 0`, erst aus-, dann einblenden |
-| **Mit Zoom** | neues Element skaliert leicht mit (`skalaMit`) |
+| **Gleichzeitig** | beide blenden gleichzeitig über (Standard) |
+| **Versetzt** | `overlap: 0`, erst ausblenden, dann einblenden |
+| **Mit Zoom** | das neue Element skaliert leicht mit (`skalaMit`) |
 | **Kurz** | 150–200 ms für Icons und Statusanzeigen |
-| **Hart** | sofortiger Tausch (reduced motion) |
+| **Hart** | ein sofortiger Tausch (reduzierte Bewegung) |
 
 ## Dauer
 
