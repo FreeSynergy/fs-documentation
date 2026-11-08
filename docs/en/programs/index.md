@@ -94,11 +94,12 @@ How each category's well-known programs are analysed (functions only, nothing co
 | [Standardised data](../data/) | Fields, models and the API pattern of all programs |
 
 
-## The decisions behind this page
+## The decisions behind this page, in simple words
 
-- [ADR 0061: Facets](../decisions/0061-facetten.md): one program, several apps, each with an admin frontend.
-- [ADR 0062: Packages live in Git](../decisions/0062-paket-repos-in-git.md): a catalog repository, one tag per version, signed, mirrors anywhere.
-- [ADR 0063: One program, one command](../decisions/0063-ein-programm-ein-befehl.md): `fs-<program>` with subcommands; each facet has a command of its own.
-- [ADR 0064: Versions start at 0.0.1](../decisions/0064-versionen-ab-0-0-1.md): what `0.0.N`, `0.1.0` and `1.0.0` mean.
+- **Facets** ([ADR 0061](../decisions/0061-facetten.md)). People look for "Contacts", not for "people records". So a program can show parts of itself as apps of their own, with their own name and icon. You install Contacts; the program `fs-people` comes along. Every program and every facet also has an **admin frontend** with every setting, as a safety net.
+- **One command** ([ADR 0063](../decisions/0063-ein-programm-ein-befehl.md)). Every program is one command with the program's name, `fs-tasks`, `fs-people`, and subcommands like `git` has them. Without arguments it opens the window. A facet has a command of its own that is a link to its program, for example `fs-contacts`.
+- **Packages live in Git** ([ADR 0062](../decisions/0062-paket-repos-in-git.md)). Programs are not tied to one website. A catalog lists them, each version is a Git tag, everything is signed, and anyone who can host Git can mirror it. You trust the signatures, not the place.
+- **Version numbers** ([ADR 0064](../decisions/0064-versionen-ab-0-0-1.md)). Everything starts at `0.0.1` and counts up in the last place. `0.1.0` is given when a person can use a program and it passes the owner's hands-on test, `1.0.0` when two independent users use its interface. A high number should not promise more than we can show.
+- **The same window everywhere** ([ADR 0065](../decisions/0065-standard-fensterhuelle.md), accepted in principle, details still a proposal). Every window has the same basics: a standard menu with fixed shortcuts, an "About" with the version one click away, help on F1 (from the wiki if it is installed, otherwise from this documentation), messages that belong to their cause and never linger in the wrong view, errors that are never silent, and a restart after an update.
 
 The decision records are written in German; see [all decisions](../decisions/index.md).

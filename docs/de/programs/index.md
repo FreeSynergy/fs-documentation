@@ -94,11 +94,12 @@ Wie die bekannten Programme jeder Kategorie analysiert werden (nur Funktionen, n
 | [Standardisierte Daten](../data/) | Felder, Modelle und das API-Muster aller Programme |
 
 
-## Die Entscheidungen hinter dieser Seite
+## Die Entscheidungen hinter dieser Seite, in einfachen Worten
 
-- [ADR 0061: Facetten](../decisions/0061-facetten.md): ein Programm, mehrere Apps, jede mit einem Admin-Frontend.
-- [ADR 0062: Pakete liegen in Git](../decisions/0062-paket-repos-in-git.md): ein Katalog-Repository, ein Tag je Version, signiert, Spiegel überall.
-- [ADR 0063: Ein Programm, ein Befehl](../decisions/0063-ein-programm-ein-befehl.md): `fs-<program>` mit Unterbefehlen; jede Facette hat einen eigenen Befehl.
-- [ADR 0064: Versionen ab 0.0.1](../decisions/0064-versionen-ab-0-0-1.md): was `0.0.N`, `0.1.0` und `1.0.0` bedeuten.
+- **Facetten** ([ADR 0061](../decisions/0061-facetten.md)). Menschen suchen „Kontakte“, nicht „Personendatensätze“. Darum kann ein Programm Teile von sich als eigene Apps zeigen, mit eigenem Namen und Icon. Du installierst Contacts, und das Programm `fs-people` kommt mit. Jedes Programm und jede Facette hat außerdem ein **Admin-Frontend** mit allen Einstellungen, als Sicherheitsnetz.
+- **Ein Befehl** ([ADR 0063](../decisions/0063-ein-programm-ein-befehl.md)). Jedes Programm ist ein Befehl mit dem Namen des Programms, `fs-tasks`, `fs-people`, und hat Unterbefehle wie `git`. Ohne Argumente öffnet er das Fenster. Eine Facette hat einen eigenen Befehl, der ein Link auf ihr Programm ist, zum Beispiel `fs-contacts`.
+- **Pakete liegen in Git** ([ADR 0062](../decisions/0062-paket-repos-in-git.md)). Programme hängen nicht an einer einzigen Webseite. Ein Katalog listet sie, jede Version ist ein Git-Tag, alles ist signiert, und jeder, der Git betreiben kann, kann es spiegeln. Du vertraust den Signaturen, nicht dem Ort.
+- **Versionsnummern** ([ADR 0064](../decisions/0064-versionen-ab-0-0-1.md)). Alles beginnt bei `0.0.1` und zählt an der letzten Stelle hoch. `0.1.0` gibt es, wenn ein Mensch ein Programm benutzen kann und es den Handtest des Besitzers besteht, `1.0.0`, wenn zwei unabhängige Nutzer seine Schnittstelle verwenden. Eine hohe Zahl soll nicht mehr versprechen, als wir zeigen können.
+- **Überall dasselbe Fenster** ([ADR 0065](../decisions/0065-standard-fensterhuelle.md), im Grundsatz angenommen, die Einzelheiten sind noch ein Vorschlag). Jedes Fenster hat dieselben Grundlagen: ein Standard-Menü mit festen Tastenkürzeln, ein „Über“ mit der Version einen Klick entfernt, Hilfe auf F1 (aus dem Wiki, wenn es installiert ist, sonst aus dieser Dokumentation), Meldungen, die zu ihrem Anlass gehören und nie in der falschen Ansicht hängen bleiben, Fehler, die nie still sind, und einen Neustart nach einem Update.
 
-Die Entscheidungsdokumente sind auf Deutsch geschrieben; siehe [alle Entscheidungen](../decisions/index.md).
+Die Entscheidungen sind auf Deutsch geschrieben; [alle Entscheidungen](../decisions/index.md).

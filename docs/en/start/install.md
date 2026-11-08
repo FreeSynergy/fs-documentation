@@ -49,7 +49,16 @@ Do not trust the key file only because it came with the release. Compare the fin
 ## Step 3: install the Store
 
 - **Fedora:** `sudo dnf install ./fs-store-*.rpm` (root is asked by your system, not by us).
-- **Without root:** unpack the `.tar.gz` somewhere in your home folder, or make the `.AppImage` executable and start it.
+- **Without root (no `sudo`):** the `.tar.gz` holds one folder with the program `fs-store`. Unpack it into your home folder and run it from there:
+
+  ```bash
+  tar xzf fs-store-*-linux-x86_64.tar.gz     # or ...-linux-aarch64.tar.gz
+  mkdir -p ~/.local/bin
+  cp fs-store-*/fs-store ~/.local/bin/
+  fs-store                                    # opens the window; if "command not found", use ~/.local/bin/fs-store
+  ```
+
+  Programs you install from the Store this way also go to your home folder (`~/.local`), so nothing needs root.
 
 The Store is one program, `fs-store`. Started without arguments it opens its window. On the command line it works like `git`: `fs-store sources`, `fs-store available`, `fs-store install <package>`, `fs-store installed`. See [the Store](../programs/platform/store.md) for what works today.
 
