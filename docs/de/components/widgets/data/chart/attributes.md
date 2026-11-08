@@ -2,35 +2,35 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `data` | array[] | - | Array von Daten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `data` | array[] | - | Array mit Daten |
 | `type` | string | `line` | Typ: `line`, `bar`, `pie`, `doughnut`, `scatter`, `radar` |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `interactive` | boolean | `true` | Interaktiv? |
+| `interactive` | boolean | `true` | interaktiv? |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showLegend` | boolean | `true` | Legende anzeigen? |
 | `showTooltip` | boolean | `true` | Tooltip anzeigen? |
 | `showGrid` | boolean | `true` | Gitter anzeigen? |
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `1000` | Dauer in ms |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
-| `onDataChange` | function | Wird bei Datenänderung ausgeführt |
+| `onHover` | function | wird beim Hover ausgeführt |
+| `onDataChange` | function | wird ausgeführt, wenn sich die Daten ändern |
 
 ## Barrierefreiheit
 
@@ -38,11 +38,11 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `img` |
 
-## Data-Attribute
+## Daten-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `labels` | array[] | Labels |
+| `labels` | array[] | Beschriftungen |
 | `values` | array[] | Werte |
 | `colors` | array[] | Farben |
 

@@ -12,63 +12,64 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Avatar ist ein visuelles Repräsentations-Element für einen Benutzer. Es kann aus einem Foto, Initialen oder einem Icon bestehen.
+Ein Avatar ist ein visuelles Element für einen Nutzer. Es kann ein Foto, Initialen
+oder ein Icon sein.
 
 ## Verwendungszweck
 
-- Benutzerprofile in Listen und Chat anzeigen
-- Aktivitätsanzeige (Wer hat was gemacht?)
-- Nutzerzuordnung in Kommentaren, Aufgaben, etc.
+- Nutzerprofile in Listen und Chats zeigen
+- Aktivitätsanzeige (wer hat was getan?)
+- Nutzer in Kommentaren, Aufgaben usw. zuweisen
 
 ## Varianten
 
 | Variante (`variant`) | Beschreibung |
 |----------------------|--------------|
-| **image** | Foto der Person, bei Ladefehler Rückfall auf Initialen |
-| **initials** | ein bis zwei Buchstaben des Anzeigenamens |
+| **image** | Foto der Person, fällt bei einem Ladefehler auf die Initialen zurück |
+| **initials** | ein oder zwei Buchstaben des Anzeigenamens |
 | **icon** | Symbol für Gruppen, Rollen oder automatische Nutzer |
 | **placeholder** | neutrale Silhouette, wenn nichts bekannt ist |
 
-Die Form ist keine Variante, sondern wird über `shape` (`circular`, `square`, `pill`) und
-`size` gesteuert.
+Die Form ist keine Variante, sondern wird über `shape` (`circular`, `square`,
+`pill`) und `size` gesteuert.
 
 ## Features
 
 - Rückfallkette: Foto → Initialen → Icon → Platzhalter
-- Statusbadge (online, abwesend, beschäftigt) an fester Position
-- Alternativer Name ist Pflicht, sonst ist der Avatar für Screenreader leer
-- Klickbar nur, wenn eine Kontaktkarte oder ein Profil folgt (`interactive`)
+- Status-Badge (online, abwesend, beschäftigt) an einer festen Position
+- Ein alternativer Name ist Pflicht, sonst ist der Avatar für Screenreader leer
+- Nur anklickbar, wenn eine Kontaktkarte oder ein Profil folgt (`interactive`)
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [icon](../../../primitives/media/icon/): ein Icon steht für einen Befehl oder eine
-  Sache, ein Avatar stellt ein Subjekt dar.
-- **Nicht verwechseln mit** [image](../../../primitives/media/image/): Bilder zeigen Inhalt, Avatare identifizieren.
-- Das Statusbadge neben dem Avatar ist ein [badge](../../../primitives/feedback/badge/), nicht Teil des Avatars.
+  Sache, ein Avatar steht für eine Person.
+- **Nicht verwechseln mit** [image](../../../primitives/media/image/): Bilder zeigen Inhalte, Avatare identifizieren.
+- Das Status-Badge neben einem Avatar ist ein [badge](../../../primitives/feedback/badge/), kein Teil des Avatars.
 
 ## Best Practices
 
-- Avatar immer mit Alt-Text (Name des Benutzers)
-- Fallback auf Initialen, wenn kein Bild vorhanden
-- Konsistente Form innerhalb einer Anwendung
-- Hover-Effekt für Interaktivität
+- Den Avatar immer mit einem Alternativtext (Name des Nutzers) versehen
+- Auf Initialen zurückfallen, wenn kein Bild vorliegt
+- Die Form innerhalb einer Anwendung einheitlich halten
+- Hover-Effekt für die Interaktivität
 
 ## Status-Badges
-Avatare können Status-Badges anzeigen:
+Avatare können Status-Badges zeigen:
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Online** | Grün | Benutzer ist online |
-| **Offline** | Grau | Benutzer ist offline |
-| **Away** | Orange | Benutzer ist abwesend |
-| **Busy** | Rot | Benutzer ist beschäftigt |
-| **In-Meeting** | Blau | Benutzer ist in Meeting |
+| **Online** | grün | der Nutzer ist online |
+| **Offline** | grau | der Nutzer ist offline |
+| **Away** | orange | der Nutzer ist abwesend |
+| **Busy** | rot | der Nutzer ist beschäftigt |
+| **In-meeting** | blau | der Nutzer ist in einer Besprechung |
 
 ## Hover-Effekte
 
-- **Zoom**: Avatar vergrößert sich leicht
-- **Border**: Rand leuchtet auf
-- **Shadow**: Schatten wird stärker
+- **Zoom**: der Avatar wird leicht größer
+- **Border**: der Rand leuchtet auf
+- **Shadow**: der Schatten wird stärker
 
 ## Siehe auch
 

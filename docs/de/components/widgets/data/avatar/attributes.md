@@ -2,10 +2,10 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `name` | string | - | Name des Benutzers (für Initials) |
-| `src` | string | - | URL zum Benutzerbild |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `name` | string | - | Name des Nutzers (für die Initialen) |
+| `src` | string | - | URL des Nutzerbildes |
 | `shape` | enum | `circular` | Form: `circular`, `square`, `pill` |
 | `variant` | enum | `initials` | Inhalt: `image`, `initials`, `icon`, `placeholder` |
 | `status` | enum | `offline` | Status: `online`, `offline`, `away`, `busy`, `in-meeting` |
@@ -14,22 +14,22 @@
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird ausgeführt beim Hover |
+| `onHover` | function | wird beim Hover ausgeführt |
 
 ## Darstellung
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `responsiveSize` | boolean | Größe basierend auf Screen-Größe anpassen |
-| `hideOnMobile` | boolean | Auf Mobile verstecken |
+| `responsiveSize` | boolean | Größe an die Bildschirmgröße anpassen |
+| `hideOnMobile` | boolean | auf dem Smartphone ausblenden |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `alt` | string | Alt-Text für Bilder |
+| `alt` | string | Alternativtext für Bilder |
 
-## Status-Badge Attribute
+## Attribute des Status-Badges
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|

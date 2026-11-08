@@ -1,7 +1,7 @@
-# Calendar View - Aussehen
+# Calendar View - Erscheinungsbild
 
 ## Grundlayout
-Eine Calendar View zeigt Termine in einem Kalender an.
+Eine Calendar View zeigt Termine in einem Kalender.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -17,8 +17,8 @@ Eine Calendar View zeigt Termine in einem Kalender an.
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
+| Variante | Beschreibung |
+|----------|--------------|
 | **Monthly View** | Monatsansicht |
 | **Weekly View** | Wochenansicht |
 | **Daily View** | Tagesansicht |
@@ -28,30 +28,30 @@ Eine Calendar View zeigt Termine in einem Kalender an.
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 250px | Kleine Kalender |
-| Medium | 350px | Standard |
-| Large | 500px | Große Kalender |
-| Full | 100% | Volle Breite |
+| small | 250px | kleine Kalender |
+| medium | 350px | Standard |
+| large | 500px | große Kalender |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Today** | Primärfarbe | Heute |
-| **Selected** | Dunkel | Ausgewählter Tag |
-| **Event** | Grün | Mit Termin |
+| **Today** | Primärfarbe | heute |
+| **Selected** | dunkel | ausgewählter Tag |
+| **Event** | grün | hat einen Termin |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `background` | Hintergrund ändert sich |
-| `border` | Rand leuchtet auf |
+| `background` | der Hintergrund ändert sich |
+| `border` | der Rand leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- Der Monatswechsel per `swipe` ist ein `slide-in` der gesamten Rasters.
-- Unter `small` Bildschirmbreite zeigt die Wochenansicht drei Tage, die Tagesansicht bleibt
-  vollbreit; die Agenda-Variante verdrängt das Raster ganz.
-- Die Zeitachse der Tages- und Wochenansicht ist mindestens 44 px pro Stunde breit;
-  `pinch` ändert die Zeitskala, der Inhalt bleibt lesbar.
+- Den Monat per `swipe` zu wechseln ist ein `slide-in` des gesamten Rasters.
+- Unterhalb einer kleinen Bildschirmbreite (`small`) zeigt die Wochenansicht drei Tage, die Tagesansicht
+  bleibt volle Breite; die Agenda-Variante ersetzt das Raster vollständig.
+- Die Zeitachse der Tages- und Wochenansicht ist pro Stunde mindestens 44 px breit;
+  `pinch` ändert den Zeitmaßstab, der Inhalt bleibt lesbar.

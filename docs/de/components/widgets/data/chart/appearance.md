@@ -1,8 +1,8 @@
-# Chart - Aussehen
+# Chart - Erscheinungsbild
 
 ## Grundlayout
 
-Ein Chart ist eine Datenvisualisierung (Diagramme).
+Ein Chart ist eine Datenvisualisierung (Diagramm).
 
 ## Varianten
 
@@ -10,13 +10,13 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 |----------|--------------|
 | **Line** | Verlauf über die Zeit |
 | **Bar** | Vergleich einzelner Werte |
-| **Pie** | Anteil an einem Ganzen |
-| **Doughnut** | Anteil mit Freifläche für eine Gesamtzahl |
-| **Scatter** | Zwei Größen gegeneinander |
+| **Pie** | Anteil am Ganzen |
+| **Doughnut** | Anteil mit freiem Raum für eine Summe |
+| **Scatter** | zwei Größen gegeneinander |
 | **Heatmap** | Dichte über zwei Achsen |
-| **Radar** | Mehrere Dimensionen einer Entität |
+| **Radar** | mehrere Dimensionen eines Objekts |
 
-### Line Chart
+### Liniendiagramm
 
 ```
 ┌─────────────────────────────────────────┐
@@ -29,7 +29,7 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 └─────────────────────────────────────────┘
 ```
 
-### Bar Chart
+### Balkendiagramm
 
 ```
 ┌─────────────────────────────────────────┐
@@ -42,7 +42,7 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 └─────────────────────────────────────────┘
 ```
 
-### Pie Chart
+### Kreisdiagramm
 
 ```
 ┌─────────────────────────────────────────┐
@@ -58,30 +58,30 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 
 | Größe | Breite/Höhe | Verwendung |
 |-------|-------------|------------|
-| Small | 300x200px | Inline |
-| Medium | 500x300px | Standard |
-| Large | 700x400px | Featured |
+| small | 300x200px | inline |
+| medium | 500x300px | Standard |
+| large | 700x400px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Background** | Weiß | Hintergrund |
-| **Grid** | Grau | Gitterlinien |
-| **Data** | Farben | Daten-Serien |
+| **Background** | weiß | Hintergrund |
+| **Grid** | grau | Gitterlinien |
+| **Data** | Farben | Datenreihen |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `tooltip` | Tooltip erscheint |
-| `highlight` | Segment hervorheben |
+| `tooltip` | ein Tooltip erscheint |
+| `highlight` | hebt ein Segment hervor |
 
-## Reaktiv
+## Responsiv
 
-- Das Diagramm skaliert in der Breite mit dem Container; die Höhe bleibt proportional,
-  mindestens aber 200 px.
-- Unter `small` Bildschirmbreite fällt die Legende unter die Zeichnung, Achsenbeschriftungen
-  werden ausgedünnt (jede zweite Beschriftung).
-- Zu viele Balken oder Punkte werden zu Gruppen zusammengefasst, statt überlappend gezeichnet;
+- Das Chart skaliert in der Breite mit dem Container; die Höhe bleibt proportional,
+  aber mindestens 200 px.
+- Unterhalb einer kleinen Bildschirmbreite (`small`) wandert die Legende unter die Zeichnung,
+  Achsenbeschriftungen werden ausgedünnt (jede zweite).
+- Zu viele Balken oder Punkte werden zusammengefasst, statt sich zu überlappen;
   `pinch` vergrößert den Zeitabschnitt einer Linie, `drag` verschiebt ihn.

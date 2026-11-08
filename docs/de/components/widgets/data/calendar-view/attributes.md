@@ -2,30 +2,30 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `date` | string | - | Aktuelles Datum |
-| `events` | array[] | - | Array von Event-Objekten |
-| `onChange` | function | - | Event bei Datum-Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `date` | string | - | aktuelles Datum |
+| `events` | array[] | - | Array mit Termin-Objekten |
+| `onChange` | function | - | Ereignis bei Datumsänderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
-## Events
+## Ereignisse
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `title` | string | Titel |
 | `date` | string | Datum |
 | `description` | string | Beschreibung |
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onDateChange` | function | Wird bei Datum-Änderung ausgeführt |
-| `onEventClick` | function | Wird bei Event-Klick ausgeführt |
+| `onDateChange` | function | wird ausgeführt, wenn sich das Datum ändert |
+| `onEventClick` | function | wird beim Klick auf einen Termin ausgeführt |
 
 ## Barrierefreiheit
 
@@ -33,9 +33,9 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `grid` |
 
-## Navigation-Attribute
+## Navigations-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showNavigation` | boolean | `true` | Navigation anzeigen? |
 

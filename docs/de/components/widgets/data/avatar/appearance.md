@@ -1,24 +1,25 @@
-# Avatar - Aussehen
+# Avatar - Erscheinungsbild
 
 ## Grundlayout
 
-Avatare sind visuelle Repräsentationen von Benutzern, die in verschiedenen Formen und Größen angezeigt werden können.
+Avatare sind visuelle Darstellungen von Nutzern, die in verschiedenen Formen und
+Größen gezeigt werden können.
 
 ## Varianten
 
 ```css
-/* Circular (Rund) - Standard */
+/* Rund - Standard */
 .avatar-circular {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
 }
 
-/* Square (Viereckig) */
+/* Quadratisch */
 .avatar-square {
   border-radius: 4px;
 }
 
-/* Pill (Pillenform) */
+/* Pille */
 .avatar-pill {
   border-radius: 999px;
   aspect-ratio: auto;
@@ -29,52 +30,51 @@ Avatare sind visuelle Repräsentationen von Benutzern, die in verschiedenen Form
 
 | Größe | Pixel | Verwendung |
 |-------|-------|------------|
-| XSmall | 24px | In List-Items, Chat-Minimal |
+| XSmall | 24px | in Listeneinträgen, minimaler Chat |
 | Small | 32px | Standard in Listen |
-| Medium | 48px | Profile, Cards |
-| Large | 64px | Featured-Profile |
-| XL | 96px | Grosszügige Darstellung |
-| XXL | 128px+ | Hero-Sectionen |
+| Medium | 48px | Profile, Karten |
+| Large | 64px | hervorgehobene Profile |
+| XL | 96px | großzügige Darstellung |
+| XXL | 128px+ | Blickfänge |
 
 ## Farben und Zustände
 
 | Farbe | Initialen |
 |-------|-----------|
-| Blau | A-D |
-| Grün | E-H |
-| Orange | I-L |
-| Rot | M-P |
-| Pink | Q-T |
-| Lila | U-Z |
+| blau | A–D |
+| grün | E–H |
+| orange | I–L |
+| rot | M–P |
+| pink | Q–T |
+| lila | U–Z |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `zoom` | Avatar vergrößert sich leicht (1.1x) |
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten wird stärker |
-| `none` | Kein Effekt |
+| `zoom` | der Avatar wird leicht größer (1,1-fach) |
+| `border` | der Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `none` | kein Effekt |
 
-## Reaktiv
+## Responsiv
 
-- In Listen bleibt der Avatar konstant `small` (32 px), auch auf schmalen Bildschirmen;
-  nur in Profildarstellungen wächst er mit.
-- Der Klickbereich um einen kleinen Avatar wird auf 44 px erweitert, ohne dass sich die
-  Bildgröße ändert.
-- Lädt das Bild langsam, erscheint zuerst der Initialen-Fallback, das Foto blendet
-  anschließend mit `fade-in` ein.
+- In Listen bleibt der Avatar bei `small` (32 px), auch auf schmalen Bildschirmen;
+  er wird nur in Profilansichten größer.
+- Der Klickbereich um einen kleinen Avatar wächst auf 44 px, ohne dass sich die Bildgröße ändert.
+- Lädt das Bild langsam, erscheinen zuerst die Initialen; danach blendet das Foto
+  mit `fade-in` ein.
 
-## Status-Badge Positionen
+## Positionen des Status-Badges
 
 | Position | Beschreibung |
 |----------|--------------|
-| **Bottom-Right** | Unten rechts (Standard) |
-| **Top-Right** | Oben rechts |
-| **Bottom-Left** | Unten links |
-| **Center** | In der Mitte |
+| **Unten rechts** | unten rechts (Standard) |
+| **Oben rechts** | oben rechts |
+| **Unten links** | unten links |
+| **Mitte** | in der Mitte |
 
-## Styling-Attribute
+## Attribute für das Erscheinungsbild
 
 | Attribut | Wert | Beschreibung |
 |----------|------|--------------|
@@ -82,4 +82,4 @@ Avatare sind visuelle Repräsentationen von Benutzern, die in verschiedenen Form
 | `shape` | `circular`, `square`, `pill` | Form |
 | `variant` | `image`, `initials`, `icon`, `placeholder` | Inhalt |
 | `status` | `online`, `offline`, `away`, `busy`, `in-meeting` | Status |
-| `interactive` | `true`, `false` | Ist klickbar? |
+| `interactive` | `true`, `false` | anklickbar? |

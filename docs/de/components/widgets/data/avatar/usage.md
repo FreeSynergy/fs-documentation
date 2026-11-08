@@ -38,7 +38,7 @@
 />
 ```
 
-## Avatar in List-Item
+## Avatar in einem Listeneintrag
 
 ```jsx
 <ListItem>
@@ -47,7 +47,7 @@
 </ListItem>
 ```
 
-## Avatar in Chat
+## Avatar im Chat
 
 ```jsx
 <Message>
@@ -75,7 +75,7 @@
 </Dropdown>
 ```
 
-## Avatar Grid
+## Avatar-Raster
 
 ```jsx
 <UserGrid>
@@ -105,50 +105,50 @@
 └────────────────────────────────────┘
 ```
 
-## Beispiel 2: Profil-Card
+## Beispiel 2: Profilkarte
 
 ```
 ┌─────────────────────────────┐
 │                             │
 │     🖼️ John Doe            │
 │                             │
-│     Developer               │
+│     Entwickler              │
 │     john@example.com        │
 │                             │
 └─────────────────────────────┘
 ```
 
-## Beispiel 3: Team-Liste
+## Beispiel 3: Teamliste
 
 ```
 ┌────────────────────────────────────────────┐
-│ 🧑‍💻 Team Mitgleider                       │
+│ 🧑‍💻 Teammitglieder                        │
 ├────────────────────────────────────────────┤
-│ 👤 Alice    ✓  Developer                  │
+│ 👤 Alice    ✓  Entwicklerin               │
 │ 👤 Bob      •  Designer                   │
-│ 👤 Carol    -  Product Manager            │
-│ 👤 Dave     ✓  Developer                  │
+│ 👤 Carol    -  Produktmanagerin           │
+│ 👤 Dave     ✓  Entwickler                 │
 └────────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Kommentar-Liste
+## Beispiel 4: Kommentarliste
 
 ```
 ┌────────────────────────────────────────────┐
 │ 📝 Kommentare                              │
 ├────────────────────────────────────────────┤
-│ 👤 John Doe: "Sehr gutes Projekt!"        │
-│    🖼️ Bild                                 │
+│ 👤 John Doe: "Tolles Projekt!"            │
+│    🖼️ Bild                                │
 │                                            │
 │ 👤 Jane Smith: "Danke für das Feedback"   │
 └────────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Benutzer-Auswahl
+## Beispiel 5: Nutzerauswahl
 
 ```
 ┌──────────────────────────┐
-│ Benutzer auswählen       │
+│ Nutzer auswählen         │
 ├──────────────────────────┤
 │ [👤 Alice] [👤 Bob]      │
 │ [👤 Carol] [👤 Dave]     │
@@ -156,21 +156,21 @@
 └──────────────────────────┘
 ```
 
-## Beispiel 6: Avatar Stack
+## Beispiel 6: Avatar-Stapel
 
 ```
 ┌──────────────────────────┐
 │ 📦 Team:                 │
 │ 👤 👤 👤 👤              │
-│ (+3 mehr)                │
+│ (+3 weitere)             │
 └──────────────────────────┘
 ```
 
-## Beispiel 7: Status-Anzeige
+## Beispiel 7: Statusanzeige
 
 ```
 Online:   🟢 John, Jane, Alice
-Away:     🟠 Bob
+Abwesend: 🟠 Bob
 Offline:  ⚫ Carol, Dave
 ```
 

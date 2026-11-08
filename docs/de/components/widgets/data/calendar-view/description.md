@@ -1,4 +1,4 @@
-# Calendar View (Kalenderansicht)
+# Calendar View
 
 | Feld | Wert |
 |------|------|
@@ -12,19 +12,19 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Eine Calendar View zeigt Termine in einem Kalender an.
+Eine Calendar View zeigt Termine in einem Kalender.
 
 ## Verwendungszweck
 
 - Termine anzeigen
 - Kalender
 - Planung
-- Scheduling
+- Terminierung
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
+| Variante | Beschreibung |
+|----------|--------------|
 | **Monthly View** | Monatsansicht |
 | **Weekly View** | Wochenansicht |
 | **Daily View** | Tagesansicht |
@@ -32,37 +32,37 @@ Eine Calendar View zeigt Termine in einem Kalender an.
 
 ## Features
 
-- Navigation (Vor/Zurück)
-- Drag-and-Drop (Termine verschieben)
-- Resize (Terminlänge ändern)
-- Events anzeigen
+- Navigation (vor/zurück)
+- Drag and Drop (Termine verschieben)
+- Resize (Länge eines Termins ändern)
+- Anzeige von Ereignissen
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [date-picker](../../fields/date-picker/): diese Ansicht zeigt Termine,
-  sie wählt kein Datum aus. Der gezeigte Kern ist derselbe — Raster, Marken, Einträge nach
-  Typ und Farbe — die Ansicht ist nur größer und hat Platz für Zeiträume.
-- **Kein Menü, kein Export.** Die Ansicht ist ein Widget (Ebene 2). Eine Kalender-App
-  (Ebene 4) bettet sie im ganzen Bildschirm und bringt Menü, Sichten, Bearbeiten, Export
-  und Ausgabeformate erst mit — die Ansicht selbst bleibt dieselbe, sie wird nicht
-  noch einmal gebaut.
+  sie wählt kein Datum aus. Der Kern ist derselbe – Raster, Markierungen, Einträge nach
+  Typ und Farbe –, die Ansicht ist nur größer und hat Platz für Zeiträume.
+- **Kein Menü, kein Export.** Die Ansicht ist ein Widget (Stufe 2). Eine Kalender-App
+  (Stufe 4) bettet sie in einen ganzen Bildschirm ein und bringt Menü, Ansichten, Bearbeitung,
+  Export und Ausgabeformate mit – die Ansicht selbst bleibt dieselbe und wird nicht
+  ein zweites Mal gebaut.
 - **Nicht verwechseln mit** [range-calendar](../../fields/range-calendar/): dort wählt man einen Zeitraum
   als Filter, hier ist der Zeitraum die Ansicht.
-- **Nicht verwechseln mit** [timeline](../timeline/): eine Zeitlinie erklärt Abläufe,
+- **Nicht verwechseln mit** [timeline](../timeline/): eine Timeline erklärt Abfolgen,
   der Kalender zeigt Belegung.
-- Wer keine Zeitskala braucht, ist mit [list-view](../list-view/) besser bedient.
+- Wer keine Zeitskala braucht, ist mit der [list-view](../list-view/) besser bedient.
 
 ## Best Practices
 
-- Heutigen Tag und die aktuelle Uhrzeit durchgehend markieren.
-- Überlappende Termine seitlich aufteilen, nie übereinander legen.
-- Verschieben per `drag` auf ein Raster einrasten lassen (15 Minuten) und Rückgängig anbieten.
+- Das heutige Datum und die aktuelle Uhrzeit einheitlich markieren.
+- Überlappende Termine seitlich aufteilen, niemals übereinanderstapeln.
+- Ein `drag` auf ein Raster (15 Minuten) einrasten lassen und Rückgängig anbieten.
 - Höchstens sechs Kategorienfarben; darüber ist die Ansicht nicht mehr lesbar.
-- Auf schmalen Bildschirmen automatisch in die Agenda-Ansicht wechseln.
+- Auf schmalen Bildschirmen automatisch zur Agenda-Ansicht wechseln.
 
 ## Siehe auch
 
 - [data – Übersicht](../index.md)
 - [List View](../list-view/) — Agenda ohne Zeitskala
-- [Range Calendar](../../fields/range-calendar/) — Zeitraum wählen
+- [Range Calendar](../../fields/range-calendar/) — Zeitraum auswählen
 - [Basiskomponente](../../../primitives/basics/base.md)
