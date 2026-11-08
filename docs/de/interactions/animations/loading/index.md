@@ -1,27 +1,27 @@
-# Laden (loading)
+# Laden (Loading)
 
-Ladeanimationen überbrücken eine Wartezeit und beantworten drei verschiedene Fragen:
-*Was passiert gerade?* (Dots), *Wie lange noch?* (Progress) und *Was kommt?* (Skeleton).
+Lade-Animationen überbrücken eine Wartezeit und beantworten drei verschiedene Fragen:
+*Was passiert gerade?* (Punkte), *wie lange noch?* (Fortschritt) und *was kommt?* (Skeleton).
 
 ## Elemente
 
-- **progress** - messbarer Fortschritt (Balken, Kreis)
-- **skeleton** - Platzhalterformen im Layout des späteren Inhalts
-- **typing** - Tipp-Indikator (drei Punkte in Chats)
-- **dots** - drei punktierte Ladekugeln als kompakter Aktivitätsindikator
+- **progress** – messbarer Fortschritt (Balken, Kreis)
+- **skeleton** – Platzhalterformen im Layout des späteren Inhalts
+- **typing** – Tippanzeige (drei Punkte in Chats)
+- **dots** – drei Punkte als Lade-Kugeln, als kompakte Aktivitätsanzeige
 
 ## Welche zuerst?
 
 | Fall | Animation |
 |------|-----------|
-| Layout der Inhalte bekannt | skeleton |
+| Layout des Inhalts bekannt | skeleton |
 | Fortschritt messbar | progress |
 | unter 1 s Wartezeit | keine – sonst flackert es |
 | kurze Anfrage, unbekannter Umfang | dots |
-| Antwort aus einem Chat-Partner | typing |
+| Antwort von einem Chatpartner | typing |
 
 ## Siehe auch
 
-- [Animationen Übersicht](../index.md)
-- [Endlos (loop)](../loop/) - dauerhafte Signale ohne Ladebezug
-- [Liste (list-view)](../../../components/widgets/data/list-view/description.md) - Skeleton in Listen
+- [Übersicht Animationen](../index.md)
+- [Schleife](../loop/) – dauerhafte Signale ohne Ladebezug
+- [Listenansicht](../../../components/widgets/data/list-view/description.md) – Skeleton in Listen

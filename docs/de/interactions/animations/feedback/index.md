@@ -1,32 +1,32 @@
-# Feedback (feedback)
+# Rückmeldung (Feedback)
 
-Feedback-Animationen antworten direkt auf eine Eingabe. Sie sind kurz (meist unter 500 ms)
-und verändern nie das Layout – der Nutzer soll verstehen, was seine Aktion bewirkt hat.
+Rückmeldungs-Animationen antworten direkt auf eine Eingabe. Sie sind kurz (meist unter
+500 ms) und verändern nie das Layout – die Person soll verstehen, was ihre Aktion bewirkt hat.
 
 ## Elemente
 
-- **shake** - kurz horizontal rütteln (Fehler, abgelehnte Eingabe)
-- **wiggle** - leicht wackeln (Bearbeitungsmodus)
-- **ripple** - Welle vom Berührungspunkt aus breiten lassen
-- **press** - beim Drücken minimal absinken
-- **lift** - bei Hover oder Fokus anheben (Schatten wächst)
-- **tick-draw** - Erfolgshäkchen als Linie zeichnen
-- **highlight** - Hintergrund kurz aufleuchten lassen (Fundstelle)
-- **elastic** - über die Endposition hinausschwingen
-- **rubber-band** - übermäßiges Ziehen federt zurück (Over-Scroll)
+- **shake** – kurz waagerecht rütteln (Fehler, abgelehnte Eingabe)
+- **wiggle** – leicht wackeln (Bearbeitungsmodus)
+- **ripple** – eine Welle vom Berührungspunkt ausbreiten
+- **press** – beim Drücken minimal einsinken
+- **lift** – bei Hover oder Fokus anheben (der Schatten wächst)
+- **tick-draw** – einen Erfolgshaken als Linie zeichnen
+- **highlight** – den Hintergrund kurz aufleuchten lassen (gefundene Stelle)
+- **elastic** – über die Endposition hinausschwingen
+- **rubber-band** – übermäßiges Ziehen federt zurück (Überscrollen)
 
 ## Zuordnung
 
 | Situation | Animation |
 |-----------|-----------|
-| Aktion gelungen | ripple, tick-draw |
-| Bedienschritt aktiv | press, lift |
+| Aktion erfolgreich | ripple, tick-draw |
+| ein Bedienschritt ist aktiv | press, lift |
 | Aktion abgelehnt | shake, wiggle |
 | Inhalt geändert oder gefunden | highlight |
 | Grenze erreicht | rubber-band, elastic |
 
 ## Siehe auch
 
-- [Animationen Übersicht](../index.md)
-- [Gesten](../../gestures/) - shake und wiggle sind hier Ausgabe, dort Eingabe
-- [Endlos (loop)](../loop/) - dauerhafte Signale statt einmaliger Antwort
+- [Übersicht Animationen](../index.md)
+- [Gesten](../../gestures/) – shake und wiggle sind hier Ausgabe, dort Eingabe
+- [Schleife](../loop/) – dauerhafte Signale statt einmaliger Antwort

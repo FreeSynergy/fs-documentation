@@ -1,7 +1,7 @@
-# Checkbox (Ankreuzfeld) - Aussehen
+# Checkbox – Erscheinungsbild
 
 ## Grundlayout
-Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
+Eine Checkbox ist ein Ja/Nein- oder Mehrfachauswahl-Feld.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -13,43 +13,43 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Default** | Standard-Quadrat |
-| **Toggle** | Schalter-Stil |
-| **Indeterminate** | Teilweise ausgewählt |
+| Variante | Beschreibung |
+|---------|-------------|
+| **Default** | normales Quadrat |
+| **Toggle** | Schalter-Optik |
+| **Indeterminate** | teilweise ausgewählt |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
-|-------|--------|------------|
-| Small | 20px | Inline |
-| Medium | 24px | Standard |
-| Large | 28px | Featured |
+|------|-----|-----|
+| small | 20px | im Textfluss |
+| medium | 24px | Standard |
+| large | 28px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Checked** | Primärfarbe | Ausgewählt |
-| **Unchecked** | Grau | Nicht ausgewählt |
-| **Disabled** | Grau | Deaktiviert |
-| **Hover** | Heller | Hover-Zustand |
+|--------|--------|-------------|
+| **checked** | Primärfarbe | ausgewählt |
+| **unchecked** | grau | nicht ausgewählt |
+| **disabled** | grau | deaktiviert |
+| **hover** | heller | Hover-Zustand |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
+|--------|-------------|
 | `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Bei schmaler Breite rutscht das Label unter die Box; die Trefferfläche bleibt mindestens 44 px hoch.
-- Optionsgruppen werden einspaltig gestapelt, der Einzug der Unterpunkte bleibt erhalten.
-- Auf Touch-Geräten wird die Box auf `large` (28 px) hochskaliert, das Label bleibt in der Schriftgröße von `medium`.
+- Bei schmalen Breiten rutscht die Beschriftung unter das Kästchen; die Trefferfläche bleibt mindestens 44 px hoch.
+- Optionsgruppen werden in einer Spalte gestapelt, der Einzug von Unterpunkten bleibt erhalten.
+- Auf Touchgeräten wächst das Kästchen auf `large` (28 px), die Beschriftung behält die Schriftgröße von `medium`.
 
-## With Icons
+## Mit Icons
 
 ```
 ┌─────────────────────────────────────────┐

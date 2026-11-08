@@ -1,28 +1,28 @@
-# Endlos (loop)
+# Schleife (Loop)
 
-Endlos-Animationen laufen wiederholt, bis ein Zustand endet. Sie brauchen eine lange
-Dauer (800–2000 ms pro Zyklus) und pausieren, sobald das Element nicht sichtbar ist.
+Schleifen-Animationen laufen wiederholt, bis ein Zustand endet. Sie brauchen eine lange Dauer
+(800–2000 ms pro Zyklus) und pausieren, sobald das Element nicht sichtbar ist.
 
 ## Elemente
 
-- **spin** - dauerhaftes Drehen (Loader, Aktivität)
-- **pulse** - zyklisches An- und Abschwellen (Aufmerksamkeit)
-- **heartbeat** - doppelter Puls im Rhythmus einer Herzfrequenz
-- **glow** - Leuchten um die Kontur (Auswahl, Live-Status)
+- **spin** – eine dauerhafte Drehung (Lader, Aktivität)
+- **pulse** – ein zyklisches Anschwellen und Schrumpfen (Aufmerksamkeit)
+- **heartbeat** – ein doppelter Puls im Rhythmus eines Herzschlags
+- **glow** – ein Leuchten um die Kontur (Auswahl, Live-Status)
 
 ## Abgrenzung
 
-Dauerhafte Ladezustände mit Struktur stehen in [Laden (loading)](../loading/),
-Bewegungen von Ebenen in [Bewegung (movement)](../movement/).
+Dauerhafte Ladezustände mit Struktur stehen in [loading](../loading/), Bewegungen
+von Ebenen stehen in [movement](../movement/).
 
-## Pflichtregeln
+## Verbindliche Regeln
 
 - `iterationCount: infinite` immer an einen Zustand binden (Fortschritt, Verbindung)
-- außerhalb des Viewports pausieren (`playState: paused`)
-- nie zwei Endlos-Animationen im selben Sichtfeld gleichzeitig
+- außerhalb des Sichtbereichs pausieren (`playState: paused`)
+- nie zwei Schleifen-Animationen gleichzeitig im selben Sichtfeld
 
 ## Siehe auch
 
-- [Animationen Übersicht](../index.md)
-- [Laden (loading)](../loading/)
-- [Feedback (feedback)](../feedback/) - einmalige Antwort statt Dauerbetrieb
+- [Übersicht Animationen](../index.md)
+- [Laden](../loading/)
+- [Rückmeldung](../feedback/) – eine einmalige Antwort statt laufender Bewegung

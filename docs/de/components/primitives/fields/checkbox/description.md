@@ -1,20 +1,20 @@
-# Checkbox (Ankreuzfeld)
+# Checkbox
 
 | Feld | Wert |
-|------|------|
-| **Kategorie** | `fields` |
-| **Erbt von** | `base` |
-| **Varianten** | `Default`, `Toggle`, `Indeterminate` |
-| **Zustände** | `checked`, `indeterminate` |
-| **Gesten** | `tap` |
-| **Animationen** | `tick-draw`, `press` |
-| **Verwandt** | `switch`, `radio-group`, `field`, `base` |
-| **Status** | dokumentiert |
+|-------|-------|
+| **Category** | `fields` |
+| **Inherits from** | `base` |
+| **Variants** | `Default`, `Toggle`, `Indeterminate` |
+| **States** | `checked`, `indeterminate` |
+| **Gestures** | `tap` |
+| **Animations** | `tick-draw`, `press` |
+| **Related** | `switch`, `radio-group`, `field`, `base` |
+| **Status** | documented |
 
 ## Beschreibung
-Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
+Eine Checkbox ist ein Ja/Nein- oder Mehrfachauswahl-Feld.
 
-## Verwendungszweck
+## Zweck
 
 - Einstellungen
 - Optionen
@@ -23,32 +23,33 @@ Ein Checkbox ist ein Ja/Nein- oder Mehrfachauswahlfeld.
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Default** | Standard-Quadrat mit Häkchen |
-| **Toggle** | Kasten ohne Häkchen, Auswahl ist flächig hervorgehoben |
-| **Indeterminate** | Gemischter Zustand – einige, aber nicht alle Unteroptionen ausgewählt |
+|---------|-------------|
+| **Default** | normales Quadrat mit Haken |
+| **Toggle** | Kästchen ohne Haken, die Auswahl wird als Fläche hervorgehoben |
+| **Indeterminate** | gemischter Zustand – einige, aber nicht alle Unteroptionen ausgewählt |
 
-## Features
+## Funktionen
 
-- Checked
-- Indeterminate
-- Disabled
+- Ausgewählt
+- Teilweise ausgewählt
+- Deaktiviert
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [switch](../switch/): der Schalter wendet die Änderung sofort an,
-  die Checkbox bestätigt eine Auswahl, die erst beim Absenden des Formulars wirkt.
-- **Nicht verwechseln mit** [radio-group](../radio-group/): Radio erlaubt genau eine Auswahl
-  aus mehreren, die Checkbox mehrere gleichzeitig.
-- Eine Einzel-Checkbox für "ein/aus" bleibt trotzdem eine Checkbox, wenn der Nutzer
-  zwischendurch speichern kann (Formular-Kontext).
+- **Nicht verwechseln mit** [switch](../switch/): der Schalter wirkt
+  sofort, die Checkbox bestätigt eine Auswahl, die erst beim Absenden des
+  Formulars greift.
+- **Nicht verwechseln mit** [radio-group](../radio-group/): Radio erlaubt genau eine
+  Wahl aus mehreren, die Checkbox erlaubt mehrere gleichzeitig.
+- Eine einzelne Checkbox für „an/aus“ bleibt eine Checkbox, wenn die Person dazwischen speichern kann
+  (Formularkontext).
 
 ## Best Practices
 
-- Label immer an die Box binden – ein Klick auf den Text schaltet mit.
-- `indeterminate` nur für Gruppenköpfe verwenden; der gespeicherte Wert bleibt `false`.
-- Zustandsänderung animieren (`tick-draw`), aber Bewegung nie als einzigen Hinweis auf den Zustand.
-- Fehler erst nach dem Verlassen des Feldes anzeigen, nicht beim ersten leeren Zustand.
+- Die Beschriftung immer mit dem Kästchen verbinden – ein Klick auf den Text schaltet es ebenfalls um.
+- `indeterminate` nur für Gruppenköpfe nutzen; der gespeicherte Wert bleibt `false`.
+- Den Zustandswechsel animieren (`tick-draw`), aber Bewegung nie als einzigen Hinweis auf den Zustand nutzen.
+- Fehler erst zeigen, wenn das Feld verlassen wurde, nicht schon beim ersten leeren Zustand.
 
 ## Siehe auch
 

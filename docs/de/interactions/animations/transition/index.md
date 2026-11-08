@@ -1,31 +1,30 @@
-# Zustandswechsel (transition)
+# Übergang (Transition)
 
-Übergangsanimationen verändern einen bestehenden Zustand, ohne Elemente zu erzeugen oder
-zu entfernen. Beide Zustände sind derselben Fläche zugeordnet; die Animation macht den
-Wechsel nachvollziehbar.
+Übergangs-Animationen verändern einen bestehenden Zustand, ohne Elemente zu erzeugen oder zu entfernen.
+Beide Zustände gehören zur selben Fläche; die Animation macht die Änderung nachvollziehbar.
 
 ## Elemente
 
-- **flip** - um 180° drehen (Vorder- und Rückseite)
-- **rotate** - um die eigene Achse drehen
-- **morph** - Form weich in eine andere Form wandeln
-- **cross-fade** - zwei Elemente überblenden einander
-- **cross-slide** - zwei Elemente schieben sich gegenseitig aus dem Bild
-- **reorder** - Listenelemente tauschen weich ihre Plätze (FLIP)
+- **flip** – um 180° drehen (Vorder- und Rückseite)
+- **rotate** – um die eigene Achse drehen
+- **morph** – eine Form sanft in eine andere Form überführen
+- **cross-fade** – zwei Elemente blenden ineinander über
+- **cross-slide** – zwei Elemente schieben einander aus dem Bild
+- **reorder** – Listenelemente tauschen sanft ihre Plätze (FLIP)
 
 ## Auswahl
 
-| Wechsel | Animation |
-|---------|-----------|
+| Änderung | Animation |
+|--------|-----------|
 | gleiches Element, neue Form | morph |
-| anderes Element, kein Richtungsbezug | cross-fade |
-| anderes Element, mit Reihenfolge | cross-slide |
+| anderes Element, ohne Richtungsbezug | cross-fade |
+| anderes Element, mit einer Reihenfolge | cross-slide |
 | zwei Seiten eines Objekts | flip |
-| Reihenfolge ändert sich | reorder |
-| Winkel ändert sich | rotate (dauerhaft als [Spin](../loop/spin/description.md)) |
+| die Reihenfolge ändert sich | reorder |
+| der Winkel ändert sich | rotate (dauerhaft als [Spin](../loop/spin/description.md)) |
 
 ## Siehe auch
 
-- [Animationen Übersicht](../index.md)
-- [Eingang (entrance)](../entrance/), [Ausgang (exit)](../exit/)
-- [Tabs](../../../components/widgets/navigation/tabs/description.md), [Accordion](../../../components/widgets/containers/accordion/description.md)
+- [Übersicht Animationen](../index.md)
+- [Einblenden](../entrance/), [Ausblenden](../exit/)
+- [Tabs](../../../components/widgets/navigation/tabs/description.md), [Akkordeon](../../../components/widgets/containers/accordion/description.md)

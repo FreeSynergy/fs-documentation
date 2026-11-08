@@ -1,27 +1,27 @@
-# Bewegung (movement)
+# Bewegung (Movement)
 
-Bewegungsanimationen hängen an Scrollen oder an der Position im Dokument, nicht an einer
-einzelnen Aktion. Sie verändern die Geschwindigkeit von Ebenen zueinander.
+Bewegungs-Animationen hängen am Scrollen oder an der Position im Dokument, nicht an einer
+einzelnen Aktion. Sie verändern das Tempo von Ebenen im Verhältnis zueinander.
 
 ## Elemente
 
-- **parallax** - Ebenen bewegen sich unterschiedlich schnell
+- **parallax** – Ebenen bewegen sich mit unterschiedlichem Tempo
 
 ## Abgrenzung
 
-Parallax ist an den Scrollfortschritt gebunden und wiederholbar; eine einmalige
-Verschiebung eines Elements gehört in [Eingang](../entrance/) oder
-[Zustandswechsel](../transition/).
+Parallax ist an den Scroll-Fortschritt gebunden und wiederholbar; eine einmalige Verschiebung
+eines Elements gehört zu [Einblenden](../entrance/) oder
+[Übergang](../transition/).
 
-## Pflichtregeln
+## Verbindliche Regeln
 
-- maximal zwei Ebenen mit deutlichem Geschwindigkeitsunterschied
-- bei `prefers-reduced-motion` vollständig abschalten – Bewegung im Sichtfeld ist
-  für viele Nutzer der stärkste Auslöser von Unbehagen
-- nie mit Textblöcken kombinieren, deren Lesefluss dadurch kippt
+- höchstens zwei Ebenen mit deutlich unterschiedlichem Tempo
+- unter `prefers-reduced-motion` vollständig abschalten – Bewegung im Sichtfeld ist für viele
+  Menschen der stärkste Auslöser von Unbehagen
+- nie mit Textblöcken kombinieren, deren Lesefluss dadurch kippen würde
 
 ## Siehe auch
 
-- [Animationen Übersicht](../index.md)
-- [Stagger](../organization/stagger/description.md) - zeitliche statt räumliche Staffelung
-- [Barrierefreiheit](../index.md#barrierefreiheit)
+- [Übersicht Animationen](../index.md)
+- [Staffelung](../organization/stagger/description.md) – eine zeitliche statt räumliche Staffelung
+- [Barrierefreiheit](../index.md#accessibility)
