@@ -159,7 +159,7 @@ Alle Sitzungen sind beendet, Arbeit liegt noch in den Worktrees. Zuerst den eige
 
 ## Regeln für alle
 **Reihenfolge bei jedem neuen Stück Code (Nutzer, 2026-11-07, ADR 0043)**
-1. **Muster zuerst:** Eines aus `conventions/coding.md` §2 aussuchen und in einem Satz begründen. Passt keines, nicht eines erfinden, sondern der Strategie melden.
+1. **Muster zuerst:** Eines aus `conventions/coding.md` §2 aussuchen und in einem Satz begründen. Passt keines, nicht eines erfinden, sondern der Strategie melden. **Muster und Trait sind gleich wichtig (Nutzer, 2026-11-08).** Gibt es einen Standard, ist er der Trait: die Schnittstelle folgt ihm.
 2. **Dann der Trait:** Erst die Schnittstelle schreiben, ohne Umsetzung, passend zum Vertrag in `fs-interfaces`. Zwischen Programmen immer Cap'n Proto, nie der Kern eines anderen Programms.
 3. **Dann Tests gegen den Trait,** danach erst die Umsetzung.
 4. Muster, Trait und Grund stehen im Modul-Kopf und in der Muster-Karte der `DESIGN.md`. Das Wort `Pattern:` allein ist kein Nachweis: Die Prüfung vor dem Tag vergleicht das genannte Muster mit dem Code.
