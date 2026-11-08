@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Drei gleich große Punkte stehen in einer Zeile auf einer Grundlinie und bewegen sich zeitversetzt. Der Indikator ist so hoch wie die umgebende Textzeile und stört den Zeilenfluss nicht.
+Drei gleich große Punkte stehen in einer Reihe auf einer Grundlinie und bewegen sich zeitversetzt. Der Indikator ist so hoch wie die umgebende Textzeile und stört den Zeilenfluss nicht.
 
 ## Visueller Verlauf
 
@@ -22,9 +22,9 @@ Drei gleich große Punkte stehen in einer Zeile auf einer Grundlinie und bewegen
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Heben** | `modus: bounce` – Punkte steigen über die Grundlinie (Standard) |
-| **Blinken** | `modus: fade` – Punkte wechseln die Deckkraft, keine Bewegung |
-| **Wachsen** | `modus: scale` – Punkte werden größer und kleiner |
+| **Heben** | `modus: bounce` – die Punkte steigen über die Grundlinie (Standard) |
+| **Blinken** | `modus: fade` – die Punkte wechseln die Deckkraft, keine Bewegung |
+| **Wachsen** | `modus: scale` – die Punkte werden größer und kleiner |
 | **Zwei Punkte** | `anzahl: 2` für sehr schmale Plätze (Buttons mit Icon) |
 
 ## Dauer

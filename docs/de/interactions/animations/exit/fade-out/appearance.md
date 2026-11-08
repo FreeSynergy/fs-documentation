@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Das Element bleibt an seiner Layout-Position und wird nur über die Deckkraft unsichtbar – eine Layout-Verschiebung findet nicht statt.
+Das Element bleibt an seiner Layoutposition und wird nur über die Deckkraft unsichtbar. Eine Verschiebung im Layout findet nicht statt.
 
 ## Visueller Verlauf
 
@@ -10,8 +10,8 @@ Das Element bleibt an seiner Layout-Position und wird nur über die Deckkraft un
 ┌────────────────────────────────────────────┐
 │   0 ms            100 ms          200 ms   │
 │                                            │
-│   [Titel]         ░░ Titel ░░  (unsichtbar) │
-│   α = 1           α = 0.5        α = 0     │
+│   [Titel]         ░░ Titel ░░  (unsichtbar)│
+│   α = 1           α = 0.5         α = 0    │
 └────────────────────────────────────────────┘
 ```
 
@@ -19,15 +19,15 @@ Das Element bleibt an seiner Layout-Position und wird nur über die Deckkraft un
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Standard** | Weich ausblenden, Element bleibt im DOM |
-| **Fast** | 100–150ms für Mikro-Feedback und kleine Elemente |
-| **With Remove** | Nach dem Ausblenden aus dem DOM entfernen (`removeOnEnd`) |
-| **Blur Fade** | Mit zunehmendem Weichzeichner beim Ausblenden |
+| **Standard** | sanft ausblenden, das Element bleibt im DOM |
+| **Schnell** | 100–150 ms für Mikro-Feedback und kleine Elemente |
+| **Mit Entfernen** | nach dem Ausblenden aus dem DOM entfernen (`removeOnEnd`) |
+| **Unscharf ausblenden** | beim Ausblenden wird die Unschärfe größer |
 
 ## Dauer
 
-- Typisch: 150–300ms
-- Standardwert: 200ms
+- Typisch: 150–300 ms
+- Standardwert: 200 ms
 
 ## Siehe auch
 

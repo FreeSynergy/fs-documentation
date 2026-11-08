@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Eine Schiene, deren gefüllter Bereich mit dem Fortschritt von links nach rechts (beim Ring im Uhrzeigersinn) mitwächst.
+Eine Leiste, deren gefüllter Bereich mit dem Fortschritt von links nach rechts wächst (bei einem Ring im Uhrzeigersinn).
 
 ## Visueller Verlauf
 
@@ -12,7 +12,7 @@ Eine Schiene, deren gefüllter Bereich mit dem Fortschritt von links nach rechts
 │                                                      │
 │[--------]   [###------]   [######---]   [########]   │
 │                                                      │
-│unbestimmt:  [~~>~~~~]   [~~~>~~~]   Segment pendelt  │
+│unbestimmt: [~~>~~~~]   [~~~>~~~]   Segment wandert   │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -20,15 +20,15 @@ Eine Schiene, deren gefüllter Bereich mit dem Fortschritt von links nach rechts
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Balken** | klassische horizontale Füllung mit Prozentwert |
+| **Balken** | die klassische horizontale Füllung mit Prozentangabe |
 | **Ring** | kreisförmiger Fortschritt, z. B. in runden Icons |
 | **Segmente** | diskrete Schritte (1/5, 2/5 …) für Assistenten |
-| **Unbestimmt** | wanderndes Segment, wenn die Zielgröße unbekannt ist |
-| **Kompakt** | dünner Balken am Seitenrand (z. B. Lesefortschritt) |
+| **Unbestimmt** | ein wandernder Abschnitt, wenn die Zielgröße unbekannt ist |
+| **Kompakt** | eine dünne Leiste am Seitenrand (z. B. Lesefortschritt) |
 
 ## Dauer
 
-- Typisch: 200–500 ms pro Wertänderung, Loop 1000–1500 ms
+- Typisch: 200–500 ms pro Wertänderung, Schleife 1000–1500 ms
 
 ## Siehe auch
 
