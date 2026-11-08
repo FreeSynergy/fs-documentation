@@ -2,29 +2,29 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `steps` | array[] | - | Array von Step-Objekten |
-| `activeStep` | number | 0 | Aktueller Schritt |
-| `onChange` | function | - | Event bei Schritt-Wechsel |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `steps` | array[] | - | Array mit Schritt-Objekten |
+| `activeStep` | number | 0 | aktueller Schritt |
+| `onChange` | function | - | Ereignis beim Schrittwechsel |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `validation` | boolean | `false` | Validierung pro Schritt? |
-| `clickable` | boolean | `false` | Klickbar? |
+| `validation` | boolean | `false` | pro Schritt prüfen? |
+| `clickable` | boolean | `false` | anklickbar? |
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onNext` | function | Wird beim Weiter-Klick ausgeführt |
-| `onBack` | function | Wird beim Zurück-Klick ausgeführt |
-| `onComplete` | function | Wird beim Fertig-Klick ausgeführt |
-| `onStepClick` | function | Wird beim Schritt-Klick ausgeführt |
+| `onNext` | function | wird beim Klick auf "Weiter" ausgeführt |
+| `onBack` | function | wird beim Klick auf "Zurück" ausgeführt |
+| `onComplete` | function | wird beim Klick auf "Fertigstellen" ausgeführt |
+| `onStepClick` | function | wird beim Klick auf einen Schritt ausgeführt |
 
 ## Barrierefreiheit
 
@@ -32,17 +32,17 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `region` |
 
-## Step-Attribute
+## Schritt-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `title` | string | Titel |
 | `description` | string | Beschreibung |
 | `content` | string/node | Inhalt |
-| `completed` | boolean | Abgeschlossen? |
+| `completed` | boolean | abgeschlossen? |
 
-## Validation-Attribute
+## Validierungs-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|

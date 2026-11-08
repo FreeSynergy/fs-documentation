@@ -2,30 +2,30 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `leftContent` | node/string | - | Linker Inhalt |
-| `rightContent` | node/string | - | Rechter Inhalt |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `leftContent` | node/string | - | linker Inhalt |
+| `rightContent` | node/string | - | rechter Inhalt |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `collapsible` | boolean | `false` | Ein-/Ausklappbar? |
+| `collapsible` | boolean | `false` | einklappbar? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `responsive` | boolean | `true` | Responsives Layout? |
-| `stackBreakpoint` | number | `768` | Breakpoint für Stack |
+| `responsive` | boolean | `true` | responsives Layout? |
+| `stackBreakpoint` | number | `768` | Schwelle für das Untereinander-Stapeln |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onResize` | function | Wird beim Resizen ausgeführt |
-| `onCollapse` | function | Wird beim Kollabieren ausgeführt |
+| `onResize` | function | wird beim Verändern der Größe ausgeführt |
+| `onCollapse` | function | wird beim Einklappen ausgeführt |
 
 ## Barrierefreiheit
 
@@ -33,13 +33,13 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `region` |
 
-## Resizing-Attribute
+## Attribute zum Verändern der Größe
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `minWidth` | number | `200` | Minimale Breite |
-| `maxWidth` | number | `500` | Maximale Breite |
-| `defaultWidth` | number | `250` | Standard-Breite |
+| `minWidth` | number | `200` | minimale Breite |
+| `maxWidth` | number | `500` | maximale Breite |
+| `defaultWidth` | number | `250` | Standardbreite |
 
 ## Geerbt von
 

@@ -1,4 +1,4 @@
-# Split View (Geteilter Bildschirm)
+# Split View
 
 | Feld | Wert |
 |------|------|
@@ -12,53 +12,53 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
+Eine Split View ist ein Layout mit zwei nebeneinanderliegenden Bereichen.
 
 ## Verwendungszweck
 
-- Liste + Detailansicht
+- Listen- + Detailansicht
 - Vergleichsansichten
 - Sidebar + Hauptinhalt
-- Previews
+- Vorschauen
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Fixed Split** | Fixe Breite |
-| **Resizable Split** | Breite per Drag änderbar |
-| **Responsive** | Auto-Adjustierung |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Fixed Split** | feste Breite |
+| **Resizable Split** | Breite lässt sich per Ziehen ändern |
+| **Responsive** | passt sich automatisch an |
 
 !!! info "Einordnung"
-    Der in Bibliotheken übliche Baustein `resizable` ist keine eigene Komponente, sondern
-    die Variante `Resizable Split` dieser Komponente (Entscheidungsregel in
-    [Basiskomponente](../../../primitives/basics/base.md): gleicher Datensatz, anderes Verhalten beim Ziehen).
+    Der Baustein, den Bibliotheken meist `resizable` nennen, ist keine eigene Komponente,
+    sondern die Variante `Resizable Split` dieser Komponente (Entscheidungsregel in der
+    [Basiskomponente](../../../primitives/basics/base.md): gleiche Datenmenge, unterschiedliches Verhalten beim Ziehen).
 
 ## Features
 
-- Resizable (Breite änderbar)
-- Draggable (Verschiebbar)
-- Responsive (Auto-Adjustierung)
-- Collapsible (Ein/Ausklappen)
+- Veränderbar (Breite ändern)
+- Verschiebbar (verschieben)
+- Responsiv (passt sich automatisch an)
+- Einklappbar (ein- und ausklappen)
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [panel](../panel/): ein Panel ist *ein* Behälter; der Split View
-  teilt die Fläche in zwei zueinander gehörige Bereiche mit Trennlinie.
-- **Nicht verwechseln mit** [drawer](../../overlays/drawer/): der Drawer legt sich über den
+- **Nicht verwechseln mit** [panel](../panel/): ein Panel ist *ein* Container; die Split View
+  teilt die Fläche in zwei zusammengehörige Bereiche mit einer Trennlinie.
+- **Nicht verwechseln mit** [drawer](../../overlays/drawer/): der Drawer liegt über dem
   Inhalt; hier bleiben beide Bereiche gleichzeitig sichtbar.
 - **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs wechseln denselben Bereich,
-  der Split View zeigt beide Bereiche zugleich (Liste und Detail).
-- **Nicht verwechseln mit** [accordion](../accordion/): vertikal gestapelt und einklappbar,
+  die Split View zeigt beide Bereiche auf einmal (Liste und Detail).
+- **Nicht verwechseln mit** [accordion](../accordion/): dieses ist vertikal gestapelt und einklappbar,
   nicht seitlich geteilt.
-- Einklappen eines Bereichs ist ein Zustand (`collapsed`), keine eigene Komponente.
+- Einen Bereich einzuklappen ist ein Zustand (`collapsed`), keine eigene Komponente.
 
 ## Best Practices
 
-- Clear-Order
-- Responsive
-- Accessibility
-- Feedback
+- Klare Reihenfolge
+- Responsiv
+- Barrierefreiheit
+- Rückmeldung
 
 ## Layout
 

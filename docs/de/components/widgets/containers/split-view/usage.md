@@ -1,22 +1,22 @@
-# Split View (Geteilter Bildschirm) - Verwendung
+# Split View - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
+Eine Split View ist ein Layout mit zwei nebeneinanderliegenden Bereichen.
 
-- Liste + Detailansicht
+- Listen- + Detailansicht
 - Vergleichsansichten
 - Sidebar + Hauptinhalt
-- Previews
+- Vorschauen
 
 ## Beispiele
 
-### Liste + Detailansicht
+### Listen- + Detailansicht
 
 ```jsx
 <SplitView leftContent="Inhalt" rightContent="Inhalt" />

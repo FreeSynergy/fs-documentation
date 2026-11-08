@@ -1,7 +1,7 @@
-# Split View - Aussehen
+# Split View - Erscheinungsbild
 
 ## Grundlayout
-Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
+Eine Split View ist ein Layout mit zwei nebeneinanderliegenden Bereichen.
 
 ```
 ┌─────────────────┬──────────────────────┐
@@ -14,38 +14,38 @@ Ein Split View ist ein Layout mit zwei Bereichen side-by-side.
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Fixed Split** | Fixe Breite |
-| **Resizable Split** | Breite per Drag änderbar |
-| **Responsive** | Auto-Adjustierung |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Fixed Split** | feste Breite |
+| **Resizable Split** | Breite lässt sich per Ziehen ändern |
+| **Responsive** | passt sich automatisch an |
 
 ## Größen
 
 | Bereich | Breite | Verwendung |
 |---------|--------|------------|
 | **Sidebar** | 250px | Standard |
-| **Content** | Auto | Verbleibender Platz |
+| **Content** | auto | restlicher Platz |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Sidebar** | Hell | Sidebar-Hintergrund |
-| **Content** | Hell | Content-Hintergrund |
-| **Separator** | Grau | Trennlinie |
+| **Sidebar** | hell | Hintergrund der Sidebar |
+| **Content** | hell | Hintergrund des Inhalts |
+| **Separator** | grau | Trennlinie |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `resize-cursor` | Resize-Cursor |
-| `border` | Rand leuchtet auf |
+| `resize-cursor` | Cursor zum Verändern der Größe |
+| `border` | der Rand leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
 | Breakpoint | Verhalten |
 |------------|-----------|
-| Desktop (>768px) | Side-by-Side |
-| Tablet (480-768px) | Vertical Stack |
-| Mobile (<480px) | Accordion |
+| Desktop (>768px) | nebeneinander |
+| Tablet (480–768px) | untereinander gestapelt |
+| Mobil (<480px) | Akkordeon |

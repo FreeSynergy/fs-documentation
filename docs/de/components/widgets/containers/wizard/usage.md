@@ -1,17 +1,17 @@
-# Wizard (Assistent) - Verwendung
+# Wizard - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
+Ein Wizard ist ein schrittweises Formular für komplexe Aufgaben.
 
 - Schritt-für-Schritt-Anleitungen
 - Komplexe Formulare
-- Einrichtungs-Assistenten
+- Einrichtungsassistenten
 - Onboarding
 
 ## Beispiele
@@ -19,19 +19,19 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
 ### Schritt-für-Schritt-Anleitungen
 
 ```jsx
-<Wizard steps={eintraege} activeStep={0} onChange={aktion} />
+<Wizard steps={entries} activeStep={0} onChange={aktion} />
 ```
 
 ### Komplexe Formulare
 
 ```jsx
-<Wizard steps={eintraege} activeStep={0} validation={false} />
+<Wizard steps={entries} activeStep={0} validation={false} />
 ```
 
-### Einrichtungs-Assistenten
+### Einrichtungsassistenten
 
 ```jsx
-<Wizard steps={eintraege} activeStep={0} clickable={false} />
+<Wizard steps={entries} activeStep={0} clickable={false} />
 ```
 
 ## Hinweise

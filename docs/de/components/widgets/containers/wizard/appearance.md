@@ -1,7 +1,7 @@
-# Wizard - Aussehen
+# Wizard - Erscheinungsbild
 
 ## Grundlayout
-Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
+Ein Wizard ist ein schrittweises Formular für komplexe Aufgaben.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -11,48 +11,48 @@ Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
 │   Inhalt des Schritts                   │
 │                                         │
 ├─────────────────────────────────────────┤
-│ [Zurück]              [Weiter →]        │
+│ [Zurück]               [Weiter →]       │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Horizontal** | Horizontaler Step Indicator |
-| **Vertical** | Vertikaler Step Indicator |
-| **Stepper** | Mit visueller Fortschrittsanzeige |
-| **schrittanzeige** | Nur Anzeige der Schritte, ohne Führung |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Horizontal** | waagerechte Schrittanzeige |
+| **Vertical** | senkrechte Schrittanzeige |
+| **Stepper** | mit einer visuellen Fortschrittsanzeige |
+| **schrittanzeige** | nur die Schritte anzeigen, ohne Führung |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 300px | Kleine Wizards |
-| Medium | 500px | Standard |
-| Large | 700px | Große Wizards |
-| Full | 100% | Volle Breite |
+| small | 300px | kleine Wizards |
+| medium | 500px | Standard |
+| large | 700px | große Wizards |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Active Step** | Primärfarbe | Aktueller Schritt |
-| **Completed Step** | Grün | Abgeschlossener Schritt |
-| **Pending Step** | Grau | Ausstehender Schritt |
+| **Active step** | Primärfarbe | aktueller Schritt |
+| **Completed step** | grün | abgeschlossener Schritt |
+| **Pending step** | grau | ausstehender Schritt |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `color` | Farbe ändert sich |
-| `border-bottom` | Unterstrich erscheint |
+| `color` | die Farbe ändert sich |
+| `border-bottom` | eine Unterstreichung erscheint |
 
-## Reaktiv
+## Responsiv
 
-Der Schrittwechsel ist ein Schiebe-Übergang: vorwärts von rechts (`slide-in`), rückwärts
-gespiegelt; der Step Indicator folgt mit `progress`. Auf schmaler Fläche wird der vertikale
-Indicator zur Zeile aus Zähler und Leiste, der Inhalt bleibt in einer Spalte.
+Der Wechsel zwischen Schritten ist eine Schiebebewegung: vorwärts von rechts (`slide-in`),
+rückwärts gespiegelt; die Schrittanzeige folgt mit `progress`. Auf einer schmalen Fläche wird die
+senkrechte Anzeige zu einer Zeile aus Zähler und Leiste, der Inhalt bleibt einspaltig.
 
 ```css
 .wizard-step        { transition: transform 200ms, opacity 200ms; }

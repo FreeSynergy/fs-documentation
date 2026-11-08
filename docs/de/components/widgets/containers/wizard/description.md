@@ -1,4 +1,4 @@
-# Wizard (Assistent)
+# Wizard
 
 | Feld | Wert |
 |------|------|
@@ -12,64 +12,65 @@
 | **Status** | dokumentiert |
 
 !!! info "Standardisierung"
-    Die frühere Komponente `stepper` ist als Variante in `wizard` aufgegangen: `assistent` (mit Führung) und `schrittanzeige` (nur Anzeige der Schritte).
+    Die frühere Komponente `stepper` ist eine Variante von `wizard` geworden: `assistent` (mit
+    Führung) und `schrittanzeige` (nur die Schritte anzeigen).
 
 ## Beschreibung
-Ein Wizard ist ein schritt-für-schritt-Formular für komplexe Aufgaben.
+Ein Wizard ist ein schrittweises Formular für komplexe Aufgaben.
 
 ## Verwendungszweck
 
 - Schritt-für-Schritt-Anleitungen
 - Komplexe Formulare
-- Einrichtungs-Assistenten
+- Einrichtungsassistenten
 - Onboarding
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Horizontal** | Horizontaler Step Indicator |
-| **Vertical** | Vertikaler Step Indicator |
-| **Stepper** | Mit visueller Fortschrittsanzeige |
-| **schrittanzeige** | nur Anzeige der Schritte, ohne Führung |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Horizontal** | waagerechte Schrittanzeige |
+| **Vertical** | senkrechte Schrittanzeige |
+| **Stepper** | mit einer visuellen Fortschrittsanzeige |
+| **schrittanzeige** | nur die Schritte anzeigen, ohne Führung |
 
 ## Features
 
-- Step Indicator (Fortschrittsanzeige)
-- Back/Next-Navigation
-- Validation (Pro Schritt)
-- Save Draft (Zwischenspeichern)
+- Schrittanzeige (Fortschrittsanzeige)
+- Navigation zurück/weiter
+- Validierung (pro Schritt)
+- Entwurf speichern (Zwischenspeicherung)
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [modal](../../overlays/modal/): ein Wizard *kann* in einem Modal
-  laufen; er ist aber durch die geordnete Schrittfolge und die Prüfung pro Schritt definiert,
+- **Nicht verwechseln mit** [modal](../../overlays/modal/): ein Wizard *kann* in einem
+  Modal laufen, definiert ist er aber durch seine geordnete Schrittfolge und die Prüfung pro Schritt,
   das Modal durch das Overlay selbst.
-- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs sind frei umschaltbar, der
-  Wizard führt durch eine Folge und prüft vor dem Weitergehen.
-- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): die Fortschrittsbalken-
-  Komponente zeigt nur einen Anteil; der Step Indicator zeigt Position, Erledigtes und
-  Ausstehendes pro Schritt.
-- Die Variante `schrittanzeige` (früher `stepper`) führt nicht — sie zeigt nur Schritte an.
+- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs sind frei wechselbar, der
+  Wizard führt durch eine Folge und prüft, bevor es weitergeht.
+- **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): der Fortschrittsbalken
+  zeigt nur einen Anteil; die Schrittanzeige zeigt die Position, was erledigt ist und was pro Schritt
+  noch aussteht.
+- Die Variante `schrittanzeige` (früher `stepper`) führt nicht – sie zeigt nur Schritte an.
 
 ## Best Practices
 
-- Clarity (Klarheit)
-- Feedback (Rückmeldung)
-- Progress (Fortschritt)
-- Flexibility (Flexibilität)
+- Klarheit
+- Rückmeldung
+- Fortschritt
+- Flexibilität
 
 ## Struktur
 
 ```
 ┌─────────────────────────────────────────┐
-│ Schritt 1 von 5                         │  ← Step Indicator
+│ Schritt 1 von 5                         │  ← Schrittanzeige
 ├─────────────────────────────────────────┤
 │                                         │
 │   Inhalt des Schritts                   │
-│                                         │  ← Body
+│                                         │  ← Inhalt
 ├─────────────────────────────────────────┤
-│ [Zurück]              [Weiter →]        │  ← Footer
+│ [Zurück]               [Weiter →]       │  ← Fuß
 └─────────────────────────────────────────┘
 ```
 
