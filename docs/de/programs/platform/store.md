@@ -16,7 +16,7 @@ Status: **Pre-release, früh.** Lies vor dem Ausprobieren unten den Abschnitt �
 
 ## Wo es heute steht
 
-- Pre-releases gibt es auf GitHub ([releases](https://github.com/FreeSynergy/fs-store/releases)); am 2026-11-08 ist `v0.1.0-rc.9` das neueste. Das erste (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden.
+- Pre-releases gibt es auf GitHub ([releases](https://github.com/FreeSynergy/fs-store/releases)). Die Versionsnummern werden auf `0.0.N` zurückgesetzt ([ADR 0064](../../decisions/0064-versionen-ab-0-0-1.md)); die älteren `0.1.0-rc.N`-Builds sind als „do not use“ markiert oder werden entfernt.
 - Der Kern funktioniert: die Quellenliste, das Lesen des Katalogs, die Signaturprüfung gegen den Projektschlüssel, die Installation aus einer `tar.gz` in deinen Home-Ordner, das Umschalten auf die neue Version in einem Schritt bei gleichzeitigem Behalten der alten sowie eine Prüfung, ob das Programm gerade läuft. Getestet wurde er mit einem echten signierten Paket von Tasks über einen lokalen Git-Katalog.
 - Die Kommandozeile funktioniert für die oben genannten Unterbefehle. Das Fenster ist das Erste und vorläufig.
 - Die Installation eines rpm über `dnf` und `pkexec` ist geschrieben, aber noch nicht echt ausgeführt worden (root-Rechte fragt das System ab, nie der Store).
