@@ -1,0 +1,17 @@
+fs-interfaces v0.45.0
+fs-tasks v0.8.0
+fs-groups v0.2.0
+fs-files v0.6.0
+fs-maps v0.2.0
+fs-streaming v0.2.0
+fs-whiteboard v0.2.0
+fs-wiki v0.4.0
+fs-people v0.6.0
+fs-calendar v0.7.0
+fs-identity v0.2.0
+fs-messenger v0.4.0
+fs-surveys v0.2.0
+fs-hub v0.4.0
+fs-objects v0.6.0
+fs-resources v0.2.0
+fs-history v0.2.0
