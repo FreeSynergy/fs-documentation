@@ -2,13 +2,13 @@
 
 ## Kurz gesagt
 
-FreeSynergy Maps bringt Kartendaten auf dein Gerät und behält die Orte, die dir wichtig sind. Es beantwortet die Frage: Kann ich meine eigene Karte haben und sie trotzdem nutzen, wenn das Netz weg ist? Es lädt eine Karte Stück für Stück, nur das, was du ansiehst, und du kannst eine ganze Region zur Offline-Nutzung herunterladen.
+FreeSynergy Maps bringt Kartendaten auf dein Gerät und behält die Orte, die dir wichtig sind. Es beantwortet die Frage: Kann ich meine eigene Karte haben und sie trotzdem nutzen, wenn das Netz weg ist? Es lädt eine Karte Stück für Stück, nur das, was du gerade ansiehst, und du kannst eine ganze Region zur Offline-Nutzung herunterladen.
 
-**Befehl:** `fs-maps`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, nicht jedes ist es schon).
+**Befehl:** `fs-maps`, ein Befehl je Programm mit Unterbefehlen ([ADR 0063](../../../decisions/0063-ein-programm-ein-befehl.md); Programme werden umgestellt, wenn sie ohnehin angefasst werden, deshalb ist noch nicht jedes so weit).
 
 ## Was hier anders ist
 
-- Es gibt keinen Standard-Kartenserver, und nichts wird kopiert. Du zeigst es auf eine Kartenquelle deiner Wahl, im offenen PMTiles-Format.
+- Es gibt keinen Standard-Kartenserver, und nichts wird kopiert. Du zeigst Maps auf eine Kartenquelle deiner Wahl, im offenen PMTiles-Format.
 - Es belastet öffentliche Server nicht: Es nutzt die Kachelserver von OpenStreetMap nicht, verlangt eine eindeutige User-Agent-Kennung und stellt nur wenige Anfragen.
 - Der vorgeschriebene Quellenhinweis wird in jede heruntergeladene Region geschrieben.
 - Orte werden als GeoJSON gespeichert, ein offener Standard. Maps besitzt die Schnittstelle für Orte.
@@ -16,13 +16,13 @@ FreeSynergy Maps bringt Kartendaten auf dein Gerät und behält die Orte, die di
 
 ## Wo es heute steht
 
-Neueste Version: `v0.2.0`. Heute ist es der Kern, ohne Fenster. Es kann Kacheln aus einer entfernten oder lokalen PMTiles-Datei lesen und sie auf der Festplatte zwischenspeichern, mit einer harten Größengrenze und einem Verfall nach sieben Tagen. Es kann eine Region zur Offline-Nutzung herunterladen und vorher die Anzahl der Kacheln und eine Größenschätzung nennen, mit einer Kachelgrenze, Fortschrittsanzeige und einer Abbruchoption. Es hält Orte als GeoJSON (anlegen, aktualisieren, löschen, nach Name finden, alles innerhalb eines Gebiets finden) und liest und schreibt `geo:`-Links.
+Neueste Version: `v0.0.1`. Heute ist es der Kern, ohne Fenster. Es kann Kacheln aus einer entfernten oder lokalen PMTiles-Datei lesen und sie auf der Festplatte zwischenspeichern, mit einer harten Größengrenze und einem Verfall nach sieben Tagen. Es kann eine Region zur Offline-Nutzung herunterladen und vorher die Anzahl der Kacheln und eine Größenschätzung nennen, mit einer Kachelgrenze, Fortschrittsanzeige und einer Abbruchoption. Es hält Orte als GeoJSON (anlegen, aktualisieren, löschen, nach Name finden, alles innerhalb eines Gebiets finden) und liest und schreibt `geo:`-Links.
 
-Noch nicht da (geplant): ein Fenster und das Zeichnen von Karten (Kachel-Dekodierung, Stile, Suche nach Adressen und Routen sind nicht begonnen), ein Server, damit andere Programme es erreichen können, und Live-Benachrichtigungen, wenn sich ein Ort ändert. Die Schnittstelle für Orte ist ein Entwurf ohne Anbindung.
+Noch nicht da (geplant): ein Fenster und das Zeichnen von Karten (Kachel-Dekodierung, Stile, Suche nach Adressen und Routen sind noch nicht begonnen), ein Server, damit andere Programme es erreichen können, und Live-Benachrichtigungen, wenn sich ein Ort ändert. Die Schnittstelle für Orte ist ein Entwurf ohne Anbindung.
 
 ## Übersicht
 
-Dieser Bereich enthält Dokumentation für verschiedene Karten- und GIS-Systeme.
+Dieser Bereich enthält Dokumentation zu verschiedenen Karten- und GIS-Systemen.
 
 ## Verfügbare Systeme
 
@@ -44,11 +44,11 @@ Dieser Bereich enthält Dokumentation für verschiedene Karten- und GIS-Systeme.
 
 ## Was ist ein Kartensystem?
 
-Ein Kartensystem ist eine Software zur Erstellung, Anzeige und Analyse von Karten und geografischen Daten. Kartensysteme umfassen:
+Ein Kartensystem ist Software zum Erstellen, Anzeigen und Auswerten von Karten und Geodaten. Kartensysteme umfassen:
 
-- Kartenanzeige und -navigation
-- Geodaten-Verwaltung
-- Kartenebenen und -stile
+- Kartenanzeige und Navigation
+- Verwaltung von Geodaten
+- Kartenebenen und Stile
 - Geocodierung und umgekehrte Geocodierung
 - Routenplanung und Navigation
 - Geoanalyse
@@ -66,7 +66,7 @@ Ein Kartensystem ist eine Software zur Erstellung, Anzeige und Analyse von Karte
 
 - **Visualisierung**: Geografische Daten sichtbar machen
 - **Analyse**: Geoanalyse
-- **Integration**: Integration mit anderen Daten
+- **Integration**: Verbindung mit anderen Daten
 - **Interaktivität**: Interaktive Karten
 - **Mobil**: Mobile Kartenanwendungen
 
@@ -74,7 +74,7 @@ Ein Kartensystem ist eine Software zur Erstellung, Anzeige und Analyse von Karte
 
 Bei der Wahl eines Kartensystems solltest du folgende Kriterien berücksichtigen:
 
-- **Funktionen**: Welche Funktionen sind nötig?
+- **Funktionen**: Welche Funktionen werden gebraucht?
 - **Skalierbarkeit**: Wie viele Karten und Nutzer?
 - **Bedienbarkeit**: Wie benutzerfreundlich ist es?
 - **Integration**: Integration mit anderen Werkzeugen
@@ -100,10 +100,10 @@ Weitere Informationen findest du in der Dokumentation der einzelnen Kartensystem
 
 ## Frontends
 
-<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
 Analysierte Programme (7), nach Funktion, nichts kopiert (ADR 0012/0013):
 
-- [Leaflet](frontends/leaflet/index.md) — Leaflet (BSD-2-Clause) ist die schlanke JavaScript-Kartenbibliothek: Rasterkacheln, Marker, Polygone, Wechsel von Ebenen, Touch-Unterstützung — der Standard, auf dem uMap und Tausende Kartenwidgets aufsetzen.
+- [Leaflet](frontends/leaflet/index.md) — Leaflet (BSD-2-Clause) ist die schlanke JavaScript-Kartenbibliothek: Rasterkacheln, Marker, Polygone, Wechsel von Ebenen, Touch-Unterstützung – der Standard, auf dem uMap und Tausende Kartenwidgets aufsetzen.
 - [MapLibre](frontends/maplibre/index.md) — MapLibre (BSD, ein Fork von Mapbox GL JS nach der Lizenzänderung) ist die **Vektorkarten-Engine**: Kacheln und Stil-JSON (GL Style Spec), WebGL-Rendering mit 3D-Neigung, eigene Stile (Maputnik), selbst gehos…
 - [OpenStreetMap](frontends/openstreetmap/index.md) — OpenStreetMap (OSM) ist die weltweite gemeinschaftliche Kartenplattform: Jeder bearbeitet die Geodaten („das Wiki der Karten“).
 - [Organic Maps](frontends/organic-maps/index.md) — Organic Maps (GPL, abonnementfreie gemeinnützige App) ist die schlanke Offline-Karten- und Navigations-App (Android/iOS/Desktop): schnell, sparsam mit Daten (keine Tracking- oder Werbelogik), OSM-basiert, mit eigenen Orten…

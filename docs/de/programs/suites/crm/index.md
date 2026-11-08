@@ -1,95 +1,95 @@
 # CRM
 
-## Übersicht
+## Überblick
 
-Dieser Bereich enthält Dokumentation für verschiedene CRM-Systeme (Customer Relationship Management).
+Dieser Bereich enthält Dokumentation zu verschiedenen CRM-Systemen (Customer Relationship Management, Kundenbeziehungsmanagement).
 
 ## Verfügbare Systeme
 
-- **civicrm** - Constituent Relationship Management
-- **suitecrm** - Open Source CRM
-- **odoo** - Business Management Software (CRM-Modul)
+- **civicrm** - Verwaltung von Mitgliedern und Kontakten
+- **suitecrm** - Open-Source-CRM
+- **odoo** - Software für die Betriebsführung (CRM-Modul)
 - **frappe** - Modernes ERP mit CRM
-- **metronic** - CRM System
-- **pipedrive** - Sales Pipeline Management
-- **lessonly** - Customer Data Platform
-- **salesforce** - CRM Platform
-- **hubspot** - CRM Platform
-- **zoho-crm** - CRM Software
-- **insightly** - CRM und Project Management
-- **pabbly-crm** - CRM Software
+- **metronic** - CRM-System
+- **pipedrive** - Verwaltung der Verkaufspipeline
+- **lessonly** - Plattform für Kundendaten
+- **salesforce** - CRM-Plattform
+- **hubspot** - CRM-Plattform
+- **zoho-crm** - CRM-Software
+- **insightly** - CRM und Projektmanagement
+- **pabbly-crm** - CRM-Software
 - **capsule** - CRM für kleine Unternehmen
-- **sugarcrm** - CRM Platform
-- **roistat** - Marketing Analytics und CRM
+- **sugarcrm** - CRM-Plattform
+- **roistat** - Marketing-Analyse und CRM
 
 ## Was ist CRM?
 
-CRM (Customer Relationship Management) ist ein Konzept zur systematischen Verwaltung von Kundenbeziehungen. CRM-Systeme umfassen:
+CRM (Customer Relationship Management) ist ein Konzept für die systematische Pflege von Kundenbeziehungen. CRM-Systeme umfassen:
 
-- Kontaktdaten verwalten
-- Interaktionen und Kommunikation verfolgen
-- Vertriebspipeline verwalten
-- Verkaufschancen (Opportunities) verfolgen
-- Kundenanalyse und Segmentation
+- Verwaltung von Kontaktdaten
+- Erfassung von Kontakten und Kommunikation
+- Verwaltung der Verkaufspipeline
+- Verfolgung von Verkaufschancen
+- Kundenanalyse und Segmentierung
 - Automatisierung von Marketing- und Vertriebsprozessen
 
 ## Anwendungsbereiche
 
-- **Vertrieb**: Lead-Generierung und Opportunity-Management
-- **Kundenservice**: Kundenservice und Support
+- **Vertrieb**: Lead-Gewinnung und Verwaltung von Chancen
+- **Kundenservice**: Kundenbetreuung und Support
 - **Marketing**: Kampagnen und Kundensegmente
 - **E-Commerce**: Kundenverwaltung für Online-Shops
-- **Dienstleistung**: Dienstleister-Kunden verwalten
+- **Dienstleistungen**: Verwaltung der Kunden von Dienstleistern
 
 ## Vorteile von CRM-Systemen
 
-- **Kundennähe**: Alle Kundeninformationen an einem Ort
-- **Verkaufsförderung**: Verkaufschancen identifizieren
-- **Kundenbindung**: Bessere Kundenbetreuung
-- **Analyse**: Kundenanalyse und Berichte
-- **Automatisierung**: Automatisierung von Prozessen
-- **Integration**: Verbindung mit anderen Tools
+- **Nähe zum Kunden**: Alle Kundeninformationen an einem Ort
+- **Vertriebsunterstützung**: Verkaufschancen erkennen
+- **Kundenbindung**: Bessere Betreuung der Kunden
+- **Auswertung**: Kundenanalysen und Berichte
+- **Automatisierung**: Prozesse automatisieren
+- **Integration**: Verbindung mit anderen Werkzeugen
 
 ## Auswahlkriterien
 
-Bei der Wahl eines CRM-Systems sollten folgende Kriterien berücksichtigt werden:
+Bei der Wahl eines CRM-Systems solltest du folgende Kriterien berücksichtigen:
 
-- **Funktionen**: Welche Features sind erforderlich?
+- **Funktionen**: Welche Funktionen werden gebraucht?
 - **Skalierbarkeit**: Wie viele Kunden und Kontakte?
-- **Benutzerfreundlichkeit**: Wie einfach ist die Bedienung?
-- **Integration**: Wie gut passt das System in die bestehende Infrastruktur?
+- **Bedienbarkeit**: Wie einfach ist die Bedienung?
+- **Integration**: Wie gut passt das System zur bestehenden Infrastruktur?
 - **Kosten**: Kostenlos oder kostenpflichtig?
-- **Mobile Zugriff**: Mobile Apps verfügbar?
+- **Mobiler Zugriff**: Gibt es mobile Apps?
 
 ## Verwandte Kategorien
 
-- [Marketing](../../apps/marketing/) - Marketing-Tools und Analytics
-- [Helpdesk](../../apps/helpdesk/) - Support und Ticketsysteme
-- [Projektmanagement](../projectmanagement/) - Project Management
+- [Marketing](../../apps/marketing/) - Marketing-Werkzeuge und Analysen
+- [Helpdesk](../../apps/helpdesk/) - Support- und Ticketsysteme
+- [Projektmanagement](../projectmanagement/) - Projektmanagement
 
 ## Schnellstart
 
-1. **CRM auswählen**: Basierend auf den Anforderungen ein System wählen
-2. **Installation/Account**: System installieren oder Account erstellen
-3. **Konfiguration**: System anpassen und konfigurieren
-4. **Daten importieren**: Existing Kunden und Kontakte importieren
-5. **Workflow definieren**: Vertriebs- und Marketingprozesse definieren
+1. **CRM auswählen**: Wähle ein System anhand der Anforderungen
+2. **Installation/Konto**: System installieren oder Konto anlegen
+3. **Konfiguration**: System anpassen und einrichten
+4. **Daten importieren**: Bestehende Kunden und Kontakte importieren
+5. **Workflow festlegen**: Vertriebs- und Marketingprozesse festlegen
 
-## Mehr Informationen
+## Weitere Informationen
 
-Weitere Informationen finden Sie in der Dokumentation der einzelnen CRM-Systeme.
+Weitere Informationen findest du in der Dokumentation der einzelnen CRM-Systeme.
 
 ## Frontends
 
-<!-- gen:frontends (Spiegel von docs/en; ADR 0011) — edits inside are overwritten -->
-Analysierte Programme (6), nach Funktionen, nichts kopiert (ADR 0012/0013):
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysierte Programme (6), nach Funktion, nichts kopiert (ADR 0012/0013):
 
-- [civicrm](frontends/civicrm/index.md) — CiviCRM ist das offene CRM für Verbände, NGOs und Vereine („Constituent Relationship Management“): Kontakte, Spenden, Mitgliedschaften, Veranstaltungen, Kampagnen und Fälle — eingebettet in ein CMS…
-- [espocrm](frontends/espocrm/index.md) — EspoCRM ist ein schlankes, schnelles Open-Source-CRM (PHP + Backbone/JS, SPA): Leads, Opportunities, Accounts, Kontakte und Aktivitäten — mit grafischem Entity-Manager, Workflows und sauberer REST-…
-- [hubspot](frontends/hubspot/index.md) — HubSpot ist die Marketing-first-CRM-Suite (SaaS): freies CRM (Kontakte, Firmen, Deals, Tickets) plus kostenpflichtige Hubs für Marketing (E-Mail, Kampagnen, Landing Pages), Sales (Sequenzen, Pipeli…
-- [pipedrive](frontends/pipedrive/index.md) — Pipedrive ist ein cloud-basiertes Sales-CRM, das um die Vertriebspipeline strukturiert ist: Deals wandern in Spalten (Stages) von der Qualifizierung bis zum Abschluss, ergänzt um Leads, Kontakte, F…
-- [salesforce](frontends/salesforce/index.md) — Salesforce ist die führende kommerzielle CRM-Plattform (SaaS): Leads, Accounts, Contacts, Opportunities und Dutzende Clouds (Service, Marketing, Commerce, Analytics) auf einem modellierbaren Datenk…
-- [suitecrm](frontends/suitecrm/index.md) — SuiteCRM ist ein quelloffenes CRM (AGPL-3.0), das 2013 als Fork der offenen SugarCRM-Suite entstand und heute von der Community um SalesAgility weiterentwickelt wird.
+- [CiviCRM](frontends/civicrm/index.md) — CiviCRM ist das offene CRM für Vereine, NGOs und Clubs („Constituent Relationship Management“): Kontakte, Spenden, Mitgliedschaften, Veranstaltungen, Kampagnen und Fälle – eingebettet in ein CMS (Drupal, Joomla o…
+- [EspoCRM](frontends/espocrm/index.md) — EspoCRM ist ein schlankes, schnelles Open-Source-CRM (PHP + Backbone/JS, SPA): Leads, Verkaufschancen, Accounts, Kontakte und Aktivitäten – mit grafischem Entitäten-Manager, Workflows und einer sauberen REST-API.
+- [HubSpot](frontends/hubspot/index.md) — HubSpot ist die auf Marketing ausgerichtete CRM-Suite (SaaS): ein kostenloses CRM (Kontakte, Unternehmen, Deals, Tickets) plus kostenpflichtige Hubs für Marketing (E-Mail, Kampagnen, Landingpages), Vertrieb (Sequenzen, Pipelines) und Se…
+- [Pipedrive](frontends/pipedrive/index.md) — Pipedrive ist ein cloudbasiertes Vertriebs-CRM, das um die Verkaufspipeline herum aufgebaut ist: Deals wandern durch Spalten (Phasen) von der Qualifizierung bis zum Abschluss, ergänzt durch Leads, Kontakte, Organisationen, Aktivitäten …
+- [Salesforce](frontends/salesforce/index.md) — Salesforce ist die führende kommerzielle CRM-Plattform (SaaS): Leads, Accounts, Kontakte, Verkaufschancen und dutzende Clouds (Service, Marketing, Commerce, Analytics) auf einem anpassbaren Datenkern (Standard …
+- [SuiteCRM](frontends/suitecrm/index.md) — SuiteCRM ist ein Open-Source-CRM (AGPL-3.0), das 2013 als Fork der offenen Suite SugarCRM entstand und heute von der Community um SalesAgility weiterentwickelt wird.
 
 Übersicht: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

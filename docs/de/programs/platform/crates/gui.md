@@ -29,7 +29,7 @@ Bewertungsstand: 2026-11-02
 
 ## Fazit / Entscheidung (Stand 2026-11)
 
-**Blinc ist der Hauptfavorit.** Begründung: Einziger Kandidat mit allen drei K kern-Anforderungen gleichzeitig (echtes CSS + Canvas-Kits für Whiteboard/Maps + ohne VDOM auf allen Plattformen inkl. Mobile). Autor direkt erreichbar und erweiterungsbereit (Gesten, Komponenten) — dieser Hebel existiert bei keinem anderen Crate. Verbleibende Risiken: kleiner Bus-Faktor, 0.6.0-Übergang, Web nur Preview.
+**Blinc ist der Hauptfavorit.** Begründung: Einziger Kandidat mit allen drei Kernanforderungen gleichzeitig (echtes CSS + Canvas-Kits für Whiteboard/Maps + ohne VDOM auf allen Plattformen inkl. Mobile). Autor direkt erreichbar und erweiterungsbereit (Gesten, Komponenten) — dieser Hebel existiert bei keinem anderen Crate. Verbleibende Risiken: kleiner Bus-Faktor, 0.6.0-Übergang, Web nur Preview.
 **Absicherung:** Dioxus+Blitz als Fallback beobachten (bestes CSS, aber Canvas-Lücke), Makepads Gesten-Aufbau als Referenz für Blinc-Erweiterungen nutzen.
 
 ## Offene Punkte / zu verifizieren
