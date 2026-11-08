@@ -1,4 +1,20 @@
-# Übergabe: Strategie-Sitzung (Stand 2026-11-06)
+# Übergabe: Strategie-Sitzung (Stand 2026-11-08, Sprint-Ende)
+
+## Arbeitsweise ab Runde 3 (Nutzer, 2026-11-08)
+- **Zwei feste Sitzungen:** **Opus = Strategie** (diese Datei; plant mit dem Nutzer, entscheidet, vergibt ADRs, schreibt Aufträge) und **Haiku = Koordinator** (`todo/coordinator.md`; startet auf Kommando Arbeits-Agenten, sammelt deren Meldungen, gibt nur Entscheidungen und Blocker gebündelt an Opus).
+- Arbeits-Threads melden **an Haiku, nicht an Opus.** Opus bleibt kurz: lieber eine neue Opus-Sitzung je Thema mit dieser Datei als Gedächtnis als eine sehr lange.
+- Aufträge schreibt Opus als Abschnitt in `todo/sprint.md` (Runde N, je Thread eine Liste); Haiku startet je Liste einen Agenten (Sonnet zum Programmieren, Haiku für Mechanisches/Übersetzen, Opus nur für Prüfungen vor Tags).
+- Der Nutzer redet mit **Opus über Ideen und Pläne**, mit **Haiku über Status und Kleinkram**.
+
+## Stand am Sprint-Ende (2026-11-08, 18:00, Wochenlimit verbraucht)
+- **Store läuft:** `fs-store` v0.0.7 (rpm, signiert, Katalog `fs-catalog` mit TUF-Vorbereitung, Kartenseite, Warteschlange, „Update all“, Einstellungen, Deinstallieren, Root-Sperre). Im Katalog: store, tasks, people, files, maps, calendar (je v0.0.2–0.0.4). Nutzer hat Store per rpm installiert.
+- **Versionen zurückgesetzt** (ADR 0064): alle Repos v0.0.N, alte Tags/Releases gelöscht.
+- **Neue ADRs dieser Nacht:** 0058 (Kontakte = Profile, Verknüpfen nur nach Rückfrage), 0061 (Facetten), 0062 (Pakete in Git + TUF), 0063 (ein Befehl je Programm, Facetten als Link), 0064 (Versionen), 0065 (Standard-Fensterhülle: Menü, Version, Hilfe, Meldungen, Neustart nach Update).
+- **Blinc:** wir haben 4 Fehler gemeldet (Issues 66, 68, 69, 70) und 2 PRs (67 Resize mit Test, 71 Klassenstile). 69 vom Autor behoben, 68 mit Theme-Weg beantwortet. Unser Patch-Fork `FreeSynergy/blinc-app-fix` (a139138) in allen Apps, bis Blinc released.
+- **Offen bei den Apps (Handtest des Nutzers):** weiße Schrift beim Tippen; AltGr/@ ergibt „2“ (Tastatur); Trägheit beim Tippen (unser Code <1 ms, Ursache in Blinc-Zeichnen vermutet); Shell-Trait nach ADR 0065 noch nicht getaggt; gegliedertes `email-input` mit Domain-Vorschlägen geplant; eigene eingebettete Schrift.
+- **Live-Probe** (echtes Fenster in verschachteltem KWin mit echter Eingabe) von Thread G – Grundlage für automatische Oberflächen-Tests.
+- **Aufgeräumt:** 55 Worktrees entfernt (~300 GB). Stehen geblieben mit ungesicherter Arbeit: `.wt-cal-lease` (5), `.wt-fs-maps-server` (10), `.wt-doc-d` (14), `.wt-de-c` (12, wohl verzichtbar), `.wt-fs-store` (nicht gepusht) – in Runde 3 prüfen.
+- **Erste Aufgabe Runde 3:** mit dem Nutzer planen (Kandidaten unten unter „Offen bei uns“: Blinc-Fehler, Shell-Trait, Server auf Debian, Web/WASM über den Hub, Marketplace, Nostr/I2P, Messenger-Ideen, Wiki-Vertrag, Resources besprechen).
 
 Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht die andere Sitzung (`todo/handoff-programming.md`).
 
@@ -9,10 +25,10 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 - Der Nutzer entscheidet, wir empfehlen. Jede Entscheidung landet im selben Schritt in der öffentlichen Doku.
 - Vergibt ADR-Nummern. Prüft Meldungen der Programmier-Sitzung gegen GitHub und gegen den Wortlaut des Nutzers.
 - Nur eigene Dateien committen (`git commit -- <pfade>`). Nach Änderungen an `docs/*/components`: `scripts/gen_component_indexes.py --lang en` und `--lang de`, sonst scheitert das Deployment.
-- Keine Übersetzung von selbst starten (ADR 0053). Die Haiku-Stapel sind beendet.
+- Übersetzen ist erlaubt (Nutzer, 2026-11-07): Doku und alles Installierte in Deutsch und Englisch, `en/` ist die Quelle, mechanisch durch Haiku.
 
 ## Offen beim Nutzer
-0. **Sprint bis Sonntag 2026-11-08: `todo/sprint.md`.**
+0. **Sprint beendet (2026-11-08, 18:00). Runde 3 beginnt mit gemeinsamer Planung.**
 1. **KIs aussperren:** vorerst bestätigt (ADR 0054). Offen: ein Mensch, ein Konto, ohne die Anonymität zu verlieren; RLTP erklären und entscheiden.
 2. **Schlüssel auf keys.openpgp.org:** bestätigt (2026-11-07).
 3. **Schlüssel ersetzt (2026-11-07):** neu `16A4A3EE563AEF51FCF0C55DED7B57C4A1904342`, vom Nutzer erzeugt, auf keys.openpgp.org bestätigt, in `fs-release` und `releases.md`. Alte Secrets gelöscht, alter Entwurf gelöscht. Alter Schlüssel widerrufen (2026-11-07), Widerruf auf keys.openpgp.org (Signatur 0x20 geprüft) und in `fs-release`. Neue Secrets erst, wenn ein Release ansteht.
