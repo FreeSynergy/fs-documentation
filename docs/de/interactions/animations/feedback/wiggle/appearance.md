@@ -1,10 +1,11 @@
-# Wiggle - Aussehen
+# Wiggle - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element steht an seinem Platz und kippt in kleinem Winkel abwechselnd nach links und rechts.
+Das Element steht an seinem Platz und kippt abwechselnd um einen kleinen Winkel nach links und
+nach rechts.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -14,19 +15,19 @@ Das Element steht an seinem Platz und kippt in kleinem Winkel abwechselnd nach l
 │  ╰───╯        ╰───╯         ╰───╯       ╰───╯    │
 │  -2 °         0 °          +2 °         0 °      │
 │                                                  │
-│  Drehpunkt unten Mitte, direction alternate      │
+│  Drehpunkt unten Mitte, Richtung wechselt        │
 └──────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Rotation** | `achse: rotate` - Standard, Wippen um wenige Grad |
-| **Versetzt** | `achse: x` - seitliches Wippen ohne Kippen |
-| **Gruppe** | `phaseOffset` - alle Symbole wippen versetzt |
-| **Auslaufend** | `decay: true` - Beruhigung nach dem Loslassen |
-| **Modus-Dauer** | `iterationCount: infinite` während des Editierens |
+|---------|-------------|
+| **Drehung** | `achse: rotate` – der Standard, wackelt um wenige Grad |
+| **Verschoben** | `achse: x` – wackelt seitlich, ohne zu kippen |
+| **Gruppe** | `phaseOffset` – alle Icons wackeln versetzt zueinander |
+| **Auslaufend** | `decay: true` – beruhigt sich nach dem Loslassen |
+| **Dauermodus** | `iterationCount: infinite` während der Bearbeitung |
 
 ## Dauer
 
@@ -34,6 +35,6 @@ Das Element steht an seinem Platz und kippt in kleinem Winkel abwechselnd nach l
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Shake](../shake/description.md)
 - [Pulse](../../loop/pulse/description.md)
