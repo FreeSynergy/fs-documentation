@@ -60,6 +60,8 @@ Ziel: Auf diesem Rechner (Fedora) installiert der Laden ein echtes FreeSynergy-P
 **Für Thread D:** neue Seite `docs/en/programs/index.md` (ADR 0061, Facetten) in die Navigation aufnehmen, gut sichtbar unter „Programme“.
 **Für Thread S:** ADR 0061: Der Katalog führt Facetten als eigene Apps mit Logo; installiert wird das Programm. Format der Facetten-Liste im Manifest des Programms festlegen.
 
+**Für Thread S (Nutzer, 2026-11-08): ADR 0062** – Pakete in Git (Katalog-Repo `fs-catalog` mit AppStream + **TUF ganz**, ein Tag je Version in Paket-Repos, flach geholt mit `gix`, Spiegel überall, HTTPS als zweiter Weg). Vorrang bleibt: der Laden ist morgen installierbar.
+
 ### Thread M: Messenger (startet nach der Meldung „Umbenennung fertig“ von Thread R)
 1. **Mail-Schlüssel (Nutzer, 2026-11-07):** v6 für unsere eigenen Schlüssel, v4 zusätzlich anbieten, damit GnuPG und RNP lesen können. Branch `mail-v4` (`460c6a6`) ist nur eine ungeprüfte Sicherung: prüfen, neu aufsetzen wo nötig.
 2. `matrix` zu v0.4.0: `prev_content`-Nachweis nur für Räume des eigenen Servers; verdrängter Raum aus `away` (über 256) gilt als nie angenommen und wird neu geprüft (Strategie, vorläufig, „im Zweifel zu“).
