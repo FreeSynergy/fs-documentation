@@ -24,7 +24,7 @@ Pick the newest release marked "Pre-release". A release carries these files (the
 Windows is not in the release yet. The macOS build is not signed with a paid Apple certificate: on macOS open the app once, then System Settings > Privacy & Security > "Open Anyway". The OpenPGP signatures and checksums are the trust path.
 
 !!! warning "State on 2026-11-08"
-    The newest pre-release on 2026-11-08 is `v0.1.0-rc.6`. The first one (`v0.1.0-rc.1`) is marked "Do not use": it cannot verify packages signed by the release workflow. Always take the newest pre-release in the list.
+    The newest pre-release on 2026-11-08 is `v0.1.0-rc.9`. The first one (`v0.1.0-rc.1`) is marked "Do not use": it cannot verify packages signed by the release workflow. Always take the newest pre-release in the list.
 
 ## Step 2: check the signature
 

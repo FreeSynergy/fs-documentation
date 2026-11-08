@@ -24,7 +24,7 @@ Wähle das neueste Release, das als „Pre-release“ markiert ist. Ein Release 
 Windows ist noch nicht im Release. Der macOS-Build ist nicht mit einem bezahlten Apple-Zertifikat signiert: Öffne unter macOS die App einmal, dann Systemeinstellungen > Datenschutz & Sicherheit > „Trotzdem öffnen“. Die OpenPGP-Signaturen und Prüfsummen sind der Vertrauensweg.
 
 !!! warning "Stand am 2026-11-08"
-    Das neueste Pre-release am 2026-11-08 ist `v0.1.0-rc.6`. Das erste (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden. Nimm immer das neueste Pre-release der Liste.
+    Das neueste Pre-release am 2026-11-08 ist `v0.1.0-rc.9`. Das erste (`v0.1.0-rc.1`) ist als „Do not use“ markiert: Es kann keine Pakete prüfen, die vom Release-Workflow signiert wurden. Nimm immer das neueste Pre-release der Liste.
 
 ## Schritt 2: die Signatur prüfen
 
