@@ -2,20 +2,20 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `checked` | boolean | `false` | Ein oder Aus? |
-| `onChange` | function | - | Event bei Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `checked` | boolean | `false` | an oder aus? |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `label` | string | - | Label-Text |
+| `label` | string | - | Beschriftungstext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
@@ -28,7 +28,7 @@
 
 ## Label-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `labelPosition` | enum | `right` | Position: `left`, `right` |
 

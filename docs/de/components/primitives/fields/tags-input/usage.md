@@ -1,36 +1,36 @@
-# Tags Input (Tags-Feld) - Verwendung
+# Tags Input - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Tags Input ist eine Liste von Tags/Etiketten.
+Ein Tags Input ist eine Liste aus Tags/Labels.
 
 - Hashtags
 - Kategorien
-- Schlagworte
+- Schlagwörter
 
 ## Beispiele
 
 ### Hashtags
 
 ```jsx
-<TagsInput tags={eintraege} onChange={aktion} />
+<TagsInput tags={entries} onChange={aktion} />
 ```
 
 ### Kategorien
 
 ```jsx
-<TagsInput tags={eintraege} placeholder="Platzhalter" />
+<TagsInput tags={entries} placeholder="Platzhalter" />
 ```
 
-### Schlagworte
+### Schlagwörter
 
 ```jsx
-<TagsInput tags={eintraege} showRemove={true} />
+<TagsInput tags={entries} showRemove={true} />
 ```
 
 ## Hinweise

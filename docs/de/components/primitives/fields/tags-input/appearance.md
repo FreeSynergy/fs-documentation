@@ -1,22 +1,22 @@
-# Tags Input - Aussehen
+# Tags Input - Erscheinungsbild
 
 ## Grundlayout
-Ein Tags Input ist eine Liste von Tags/Etiketten.
+Ein Tags Input ist eine Liste aus Tags/Labels.
 
 ```
 ┌─────────────────────────────────────────┐
 │ Tags:                                   │
 ├─────────────────────────────────────────┤
 │  [Java] [Python] [React]                │
-│  + Neue Tag                             │
+│  + Neuer Tag                            │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **frei** | Chips im Feld, dahinter freie Eingabe mit Einfüge-Knopf |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **frei** | Chips im Feld, danach freie Eingabe mit Einfügen-Knopf |
 | **vorschlag** | Eingabe mit Vorschlagsliste, neue Chips sind gesperrt |
 | **nur-lesbar** | Chips ohne Schließen-Knopf, kein Eingabefeld |
 
@@ -24,44 +24,44 @@ Ein Tags Input ist eine Liste von Tags/Etiketten.
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | Inline |
-| Medium | 300px | Standard |
-| Large | 400px | Featured |
-| Full | 100% | Volle Breite |
+| small | 200px | inline |
+| medium | 300px | Standard |
+| large | 400px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Tag** | Primärfarbe | Tag-Farbe |
-| **Hover** | Heller | Hover-Zustand |
-| **Disabled** | Grau | Deaktiviert |
+| **tag** | Primärfarbe | Farbe des Tags |
+| **hover** | heller | Hover-Zustand |
+| **disabled** | grau | deaktiviert |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `background` | Hintergrund ändert sich |
-| `shadow` | Schatten stärker |
+| `background` | der Hintergrund ändert sich |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Chips brechen in die nächste Zeile um, das Feld wächst in der Höhe; `Full` füllt die Breite
+- Chips brechen in die nächste Zeile um, das Feld wird höher; `full` füllt die Breite
   des Containers.
-- Auf schmalen Bildschirmen wird die Vorschlagsliste zur bodenbündigen Leiste, die Chips
-  bleiben oben sichtbar.
-- Der Schließen-Knopf ist mindestens 24 px groß; auf Touch-Geräten genügt langes Drücken
+- Auf schmalen Bildschirmen wird die Vorschlagsliste zu einer am unteren Rand verankerten Leiste,
+  die Chips bleiben oben sichtbar.
+- Der Schließen-Knopf ist mindestens 24 px groß; auf Touch-Geräten reicht ein langer Druck
   zum Entfernen, damit der Chip nicht versehentlich verschwindet.
 
 ## Chip-Formen
 
 | Form | Beschreibung |
 |------|--------------|
-| **Simple** | nur Text |
-| **Mit Icon** | Icon links im Chip |
-| **Mit Remove** | `✕` rechts zum Entfernen |
+| **simple** | nur Text |
+| **mit Icon** | Icon links im Chip |
+| **mit Entfernen** | `✕` rechts zum Entfernen |
 
-## Auto-Complete
+## Auto-complete
 
 ```
 ┌─────────────────────────────────────────┐

@@ -1,11 +1,11 @@
-# List (Aufzählung) - Verwendung
+# List View - Verwendung
 
-## Einfache List
+## Einfache Liste
 
 ```jsx
 <List 
   items={['Element 1', 'Element 2', 'Element 3']}
-  onClick={(item, index) => console.log('Clicked:', item)}
+  onClick={(item, index) => console.log('Geklickt:', item)}
 />
 ```
 
@@ -19,7 +19,7 @@
 />
 ```
 
-## mit Badges
+## Mit Badges
 
 ```jsx
 <List 
@@ -29,7 +29,7 @@
 />
 ```
 
-## In Card
+## In einer Karte
 
 ```jsx
 <Card title="Dateien">
@@ -41,20 +41,20 @@
 </Card>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <List 
   items={items}
-  onClick={(item) => console.log('Clicked:', item)}
+  onClick={(item) => console.log('Geklickt:', item)}
   onHover={(item) => console.log('Hover:', item)}
-  onActionClick={(item, action) => console.log('Action:', action)}
+  onActionClick={(item, action) => console.log('Aktion:', action)}
 />
 ```
 
 ## Beispiele
 
-## Beispiel 1: Einfache Liste
+## Beispiel 1: einfache Liste
 
 ```
 ┌─────────────────────────────────────────┐

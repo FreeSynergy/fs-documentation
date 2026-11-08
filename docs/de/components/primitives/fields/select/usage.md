@@ -1,9 +1,9 @@
-# Select (Auswahlliste) - Verwendung
+# Select - Verwendung
 
-## Einfaches Dropdown
+## Ein einfaches Dropdown
 
 ```jsx
-<Dropdown 
+<Dropdown
   label="Land"
   value={country}
   onChange={setCountry}
@@ -18,20 +18,20 @@
 ## Mit Suche
 
 ```jsx
-<Dropdown 
+<Dropdown
   label="Benutzer"
   value={user}
   onChange={setUser}
   options={users}
   searchable={true}
-  placeholder="Benutzer suchen..."
+  placeholder="Benutzer suchen…"
 />
 ```
 
-## Multi-Select
+## Mehrfachauswahl
 
 ```jsx
-<Dropdown 
+<Dropdown
   label="Kategorien"
   value={categories}
   onChange={setCategories}
@@ -41,38 +41,38 @@
 />
 ```
 
-## In Formular
+## In einem Formular
 
 ```jsx
 <Form>
-  <Dropdown 
+  <Dropdown
     label="Status"
     value={status}
     onChange={setStatus}
     options={[
       { value: 'open', label: 'Offen' },
-      { value: 'in-progress', label: 'In Bearbeitung' },
+      { value: 'in-progress', label: 'In Arbeit' },
       { value: 'done', label: 'Erledigt' }
     ]}
   />
 </Form>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
-<Dropdown 
+<Dropdown
   label="Land"
   options={options}
-  onSelect={(value) => console.log('Selected:', value)}
-  onOpen={() => console.log('Open')}
-  onClose={() => console.log('Close')}
+  onSelect={(value) => console.log('Ausgewählt:', value)}
+  onOpen={() => console.log('Geöffnet')}
+  onClose={() => console.log('Geschlossen')}
 />
 ```
 
 ## Beispiele
 
-## Beispiel 1: Länderauswahl
+## Beispiel 1: Land auswählen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -87,11 +87,11 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: Benutzer-Auswahl
+## Beispiel 2: Benutzer auswählen
 
 ```
 ┌─────────────────────────────────────────┐
-│ Verantwortlicher                        │
+│ Zuständig                               │
 ├─────────────────────────────────────────┤
 │  John Doe ▼                             │
 ├─────────────────────────────────────────┤
@@ -102,13 +102,13 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Kategorien (Multi-Select)
+## Beispiel 3: Kategorien (Mehrfachauswahl)
 
 ```
 ┌─────────────────────────────────────────┐
 │ Kategorien                              │
 ├─────────────────────────────────────────┤
-│  [Java] [Python] [React] ▼             │
+│  [Java] [Python] [React] ▼              │
 ├─────────────────────────────────────────┤
 │  [✓] Java                               │
 │  [✓] Python                             │
@@ -118,7 +118,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Status-Auswahl
+## Beispiel 4: Status auswählen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -127,7 +127,7 @@
 │  🟢 Offen ▼                             │
 ├─────────────────────────────────────────┤
 │  🟢 Offen                               │
-│  🟡 In Bearbeitung                      │
+│  🟡 In Arbeit                           │
 │  🟢 Erledigt                            │
 │  🔴 Abgelehnt                           │
 └─────────────────────────────────────────┘
@@ -137,9 +137,9 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ Produkt suchen...                       │
+│ Produkte suchen…                        │
 ├─────────────────────────────────────────┤
-│  P                                       │
+│  P                                      │
 ├─────────────────────────────────────────┤
 │  Produkt 1                              │
 │  Produkt 2                              │

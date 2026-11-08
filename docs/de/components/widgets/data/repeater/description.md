@@ -1,4 +1,4 @@
-# Repeater (Wiederholer)
+# Repeater
 
 | Feld | Wert |
 |------|------|
@@ -12,7 +12,7 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Repeater ist ein Wiederholtes Layout für Listen.
+Ein Repeater ist ein sich wiederholendes Layout für Listen.
 
 ## Verwendungszweck
 
@@ -27,34 +27,34 @@ Ein Repeater ist ein Wiederholtes Layout für Listen.
 |----------|--------------|
 | **liste** | ein Eintrag pro Zeile (Standard) |
 | **raster** | Einträge als Karten nebeneinander |
-| **eingabe** | wiederholte Formularzeilen, z. B. Positionszeilen mit Hinzufügen/Löschen |
+| **eingabe** | wiederholte Formularzeilen, z. B. Positionen mit Hinzufügen/Löschen |
 
 ## Features
 
 - Filter
-- Sort
-- Search
-- Pagination
+- Sortierung
+- Suche
+- Paginierung
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [list-view](../list-view/): die Listenansicht zeigt Einträge,
-  der Repeater ist die ganze Baugruppe aus Suche, Filter, Sortierung, Seiten und Template.
+- **Nicht verwechseln mit** [list-view](../list-view/): die List View zeigt Einträge, der Repeater ist
+  das Gesamtpaket aus Suche, Filter, Sortierung, Seiten und Vorlage.
 - **Nicht verwechseln mit** [table](../table/): die Tabelle bringt ihre eigene Spaltenstruktur mit,
-  der Repeater wiederholt ein frei definiertes Template.
-- Die Variante `eingabe` ersetzt keine einzelnen Felder – sie wiederholt eine Feldgruppe.
+  der Repeater wiederholt eine frei definierte Vorlage.
+- Die Variante `eingabe` ersetzt keine einzelnen Felder – sie wiederholt eine Gruppe von Feldern.
 
 ## Best Practices
 
-- Reihenfolge der Bedienelemente einheitlich: Suche, Filter, Sortierung, Ergebniszahl.
-- Gilt ein Filter, muss er sichtbar und mit einem Knopf zurücknehmbar sein (`gefiltert`).
-- Entweder Seitenzahlen oder nachladendes Scrollen, beides zusammen verwirrt.
-- Leere Daten und leeres Suchergebnis unterschiedlich beschriften.
-- Das Template nur einmal definieren; neue Einträge erben es, statt es zu kopieren.
+- Die Reihenfolge der Bedienelemente einheitlich halten: Suche, Filter, Sortierung, Trefferzahl.
+- Ist ein Filter aktiv, muss er sichtbar sein und mit einem Knopf entfernbar (`gefiltert`).
+- Entweder Seitenzahlen oder Scrollen mit Nachladen; beides zusammen verwirrt.
+- Leere Daten und ein leeres Suchergebnis unterschiedlich beschriften.
+- Die Vorlage nur einmal definieren; neue Einträge übernehmen sie, statt sie zu kopieren.
 
 ## Siehe auch
 
 - [data – Übersicht](../index.md)
-- [List View](../list-view/) — reine Ansicht ohne Steuerung
+- [List View](../list-view/) — reine Ansicht ohne Bedienelemente
 - [Pagination](../../navigation/pagination/) — Seitennavigation
 - [Basiskomponente](../../../primitives/basics/base.md)

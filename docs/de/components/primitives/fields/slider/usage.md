@@ -1,13 +1,13 @@
-# Slider (Schieberegler) - Verwendung
+# Slider - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Slider ist ein Wertebereich mit Schieberegler.
+Ein Slider ist ein Wertebereich mit einem verschiebbaren Regler.
 
 - Lautstärke
 - Bewertung

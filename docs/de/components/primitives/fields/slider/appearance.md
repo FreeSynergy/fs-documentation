@@ -1,7 +1,7 @@
-# Slider - Aussehen
+# Slider - Erscheinungsbild
 
 ## Grundlayout
-Ein Slider ist ein Wertebereich mit Schieberegler.
+Ein Slider ist ein Wertebereich mit einem verschiebbaren Regler.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -13,47 +13,47 @@ Ein Slider ist ein Wertebereich mit Schieberegler.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einfach** | ein Knopf, links gefüllter Bereich |
-| **bereich** | zwei Knöpfe, der Abschnitt dazwischen ist gefüllt |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **einfach** | ein Griff, Füllfläche links |
+| **bereich** | zwei Griffe, der Abschnitt dazwischen ist gefüllt |
 
-Senkrechte Regler sind keine eigene Variante, sondern `orientation = vertikal`.
+Vertikale Slider sind keine eigene Variante, sondern `orientation = vertikal`.
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | Inline |
-| Medium | 300px | Standard |
-| Large | 400px | Featured |
-| Full | 100% | Volle Breite |
+| small | 200px | inline |
+| medium | 300px | Standard |
+| large | 400px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Track** | Grau | Track-Farbe |
-| **Filled** | Primärfarbe | Filled-Farbe |
-| **Thumb** | Primärfarbe | Thumb-Farbe |
-| **Disabled** | Grau | Deaktiviert |
+| **track** | grau | Farbe der Leiste |
+| **filled** | Primärfarbe | Farbe des gefüllten Teils |
+| **thumb** | Primärfarbe | Farbe des Griffs |
+| **disabled** | grau | deaktiviert |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Der Track füllt die verfügbare Breite (`Full` in Werkzeugleisten), die Knöpfe bleiben
-  16 px (Desktop) bzw. 24 px (Touch) groß; die Trefferfläche um den Knopf bleibt 44 px.
-- Auf schmalen Bildschirmen rutschen Wert und Skalenenden über bzw. unter den Track,
+- Die Leiste füllt die verfügbare Breite (`full` in Toolbars), die Griffe bleiben
+  16 px (Desktop) bzw. 24 px (Touch) groß; der Trefferbereich um den Griff bleibt 44 px.
+- Auf schmalen Bildschirmen rutschen Wert und Skalenenden über oder unter die Leiste,
   nicht daneben.
-- Ein Tipp auf den Track springt zum getroffenen Punkt, der Knopf folgt `elastic`.
+- Ein Tipp auf die Leiste springt zur getroffenen Stelle, der Griff folgt mit `elastic`.
 
-## With Labels
+## Mit Beschriftung
 
 ```
 ┌─────────────────────────────────────────┐
@@ -62,7 +62,7 @@ Senkrechte Regler sind keine eigene Variante, sondern `orientation = vertikal`.
 └─────────────────────────────────────────┘
 ```
 
-## Vertical Slider
+## Vertikaler Slider
 
 ```
 ┌─────────────────────────────────────────┐

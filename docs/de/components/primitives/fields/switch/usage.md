@@ -1,16 +1,16 @@
-# Switch (Schalter) - Verwendung
+# Switch - Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
+    Blinc umgestellt wird, werden die Beispiele in `usage.md` in einem eigenen Durchlauf
     ersetzt.
 
 ## Anwendung
 
-Ein Switch ist ein Ein/Aus-Schalter (Toggle).
+Ein Switch ist ein Ein-/Aus-Schalter (Toggle).
 
 - Einstellungen
-- Features
+- Funktionen
 - Status
 
 ## Beispiele
@@ -21,7 +21,7 @@ Ein Switch ist ein Ein/Aus-Schalter (Toggle).
 <Switch checked={false} onChange={aktion} />
 ```
 
-### Features
+### Funktionen
 
 ```jsx
 <Switch checked={false} animate={true} />

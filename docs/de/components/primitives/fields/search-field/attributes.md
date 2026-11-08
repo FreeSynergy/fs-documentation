@@ -1,31 +1,31 @@
-# Search Field (Suchfeld mit Filter) - Attribute
+# Search Field - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | string | - | Wert (Suchbegriff) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `placeholder` | string | `null` | Placeholder-Text |
-| `showClear` | boolean | `true` | Clear-Button anzeigen? |
+| `placeholder` | string | `null` | Platzhaltertext |
+| `showClear` | boolean | `true` | Clear-Knopf anzeigen? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcon` | boolean | `true` | Icon anzeigen? |
-| `icon` | string | `search` | Icon-Name |
+| `icon` | string | `search` | Name des Icons |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onSubmit` | function | Wird bei Submit ausgeführt |
+| `onSubmit` | function | wird beim Absenden ausgeführt |
 
 ## Barrierefreiheit
 
@@ -33,20 +33,20 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `search` |
 
-## Auto-Complete-Attribute
+## Attribute für Auto-complete
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showSuggestions` | boolean | `false` | Vorschläge anzeigen? |
-| `suggestions` | array[] | - | Array von Vorschlägen |
+| `suggestions` | array[] | - | Array mit Vorschlägen |
 
 ## Filter-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `showFilters` | boolean | `false` | Filter anzeigen? |
-| `filters` | array[] | - | Array von Filtern |
-| `onFilterChange` | function | - | Wird bei Filteränderung ausgeführt |
+| `filters` | array[] | - | Array mit Filtern |
+| `onFilterChange` | function | - | wird ausgeführt, wenn sich ein Filter ändert |
 
 ## Geerbt von
 

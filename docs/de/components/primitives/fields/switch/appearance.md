@@ -1,8 +1,8 @@
-# Switch - Aussehen
+# Switch - Erscheinungsbild
 
 ## Grundlayout
 
-Ein Switch ist ein Ein/Aus-Schalter (Toggle).
+Ein Switch ist ein Ein-/Aus-Schalter (Toggle).
 
 ## Varianten
 
@@ -10,25 +10,25 @@ Ein Switch ist ein Ein/Aus-Schalter (Toggle).
 
 ```
 ┌─────────────────────────────────────────┐
-│ [   ON   ]                              │
+│ [   EIN   ]                             │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-### Round (Rund)
+### Rund
 
 ```
 ┌─────────────────────────────────────────┐
-│ (   ON   )                              │
+│ (   EIN   )                             │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-### Pill (Pillenform)
+### Pille
 
 ```
 ┌─────────────────────────────────────────┐
-│  [ ON ]                                 │
+│  [ EIN ]                                │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -37,45 +37,45 @@ Ein Switch ist ein Ein/Aus-Schalter (Toggle).
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 40px | Inline |
-| Medium | 56px | Standard |
-| Large | 72px | Featured |
+| small | 40px | inline |
+| medium | 56px | Standard |
+| large | 72px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Off** | Grau | Aus |
-| **On** | Primärfarbe | Ein |
-| **Disabled** | Grau | Deaktiviert |
+| **off** | grau | aus |
+| **on** | Primärfarbe | an |
+| **disabled** | grau | deaktiviert |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `scale` | Vergrößerung |
-| `shadow` | Schatten stärker |
-| `border` | Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `border` | der Rand leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- Der Schalter skaliert nicht unter `small` (40 px); die Trefferfläche rundherum bleibt 44 px.
-- In Listen und auf schmalen Bildschirmen steht der Schalter rechtsbündig auf eigener Zeile,
+- Der Switch wird unterhalb von `small` (40 px) nicht kleiner; der Trefferbereich um ihn bleibt 44 px.
+- In Listen und auf schmalen Bildschirmen steht der Switch rechtsbündig in einer eigenen Zeile,
   das Label bricht links darüber um.
-- Auf Touch-Geräten darf der Knopf auch geschoben werden (`drag`); loslassen schaltet in die
-  nächstliegende Lage.
+- Auf Touch-Geräten lässt sich der Griff auch ziehen (`drag`); beim Loslassen springt er in die
+  nähere Stellung.
 
 ## Animationen
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `slide-in` | Knopf wandert zur anderen Seite |
-| `fade-in` | Flächenfarbe wechselt weich |
+| `slide-in` | der Griff wandert auf die andere Seite |
+| `fade-in` | die Oberflächenfarbe wechselt sanft |
 
-## With Labels
+## Mit Beschriftung
 
 ```
 ┌─────────────────────────────────────────┐
-│ Feature aktivieren        [   ON   ]    │
+│ Funktion aktivieren        [   EIN   ]  │
 └─────────────────────────────────────────┘
 ```

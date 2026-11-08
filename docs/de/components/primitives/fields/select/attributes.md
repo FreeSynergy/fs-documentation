@@ -1,32 +1,32 @@
-# Select (Auswahlliste) - Attribute
+# Select - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | string/number/array | - | Wert |
-| `onChange` | function | - | Event bei Änderung |
-| `options` | array[] | - | Array von Optionen |
+| `onChange` | function | - | Ereignis bei Änderung |
+| `options` | array[] | - | Array mit Optionen |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `placeholder` | string | `null` | Placeholder-Text |
+| `placeholder` | string | `null` | Platzhaltertext |
 | `multiple` | boolean | `false` | Mehrfachauswahl? |
 | `searchable` | boolean | `false` | Suche erlauben? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcon` | boolean | `false` | Icon anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onSelect` | function | Wird bei Auswahl ausgeführt |
+| `onSelect` | function | wird bei Auswahl ausgeführt |
 
 ## Barrierefreiheit
 
@@ -34,19 +34,19 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `combobox` |
 
-## Option-Attribute
+## Attribute der Option
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `value` | string/number | Wert |
-| `label` | string | Label-Text |
+| `label` | string | Beschriftung |
 
-## Auto-Complete-Attribute
+## Attribute für Auto-complete
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showSuggestions` | boolean | `true` | Vorschläge anzeigen? |
-| `suggestions` | array[] | - | Array von Vorschlägen |
+| `suggestions` | array[] | - | Array mit Vorschlägen |
 
 ## Geerbt von
 

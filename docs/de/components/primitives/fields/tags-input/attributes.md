@@ -2,31 +2,31 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `tags` | array[] | - | Array von Tags |
-| `onChange` | function | - | Event bei Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `tags` | array[] | - | Array mit Tags |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `maxTags` | number | - | Maximale Anzahl |
-| `placeholder` | string | `null` | Placeholder-Text |
+| `maxTags` | number | - | maximale Anzahl |
+| `placeholder` | string | `null` | Platzhaltertext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showRemove` | boolean | `true` | Remove-Button anzeigen? |
-| `separator` | string | `,` | Separator für mehrere Tags |
+| `showRemove` | boolean | `true` | Entfernen-Knopf anzeigen? |
+| `separator` | string | `,` | Trennzeichen für mehrere Tags |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onTagAdd` | function | Wird beim Hinzufügen ausgeführt |
-| `onTagRemove` | function | Wird beim Entfernen ausgeführt |
+| `onTagAdd` | function | wird beim Hinzufügen ausgeführt |
+| `onTagRemove` | function | wird beim Entfernen ausgeführt |
 
 ## Barrierefreiheit
 
@@ -38,16 +38,16 @@
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
-| `label` | string | Label-Text |
+| `id` | string | eindeutige ID |
+| `label` | string | Beschriftungstext |
 | `value` | string | Wert |
 
-## Auto-Complete-Attribute
+## Attribute für Auto-complete
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showSuggestions` | boolean | `false` | Vorschläge anzeigen? |
-| `suggestions` | array[] | - | Array von Vorschlägen |
+| `suggestions` | array[] | - | Array mit Vorschlägen |
 
 ## Geerbt von
 

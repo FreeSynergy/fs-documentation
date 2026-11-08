@@ -1,60 +1,61 @@
-# Search Field (Suchfeld mit Filter) - Aussehen
+# Search Field - Erscheinungsbild
 
 ## Grundlayout
 Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Suche...                             │
+│ 🔍 Suchen…                              │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Simple** | Einfache Suche |
-| **Filter** | Mit Filtern |
-| **Auto-complete** | Mit Vorschlägen |
+| Variante | Beschreibung |
+|----------|--------------|
+| **simple** | Einfache Suche |
+| **filter** | Mit Filtern |
+| **auto-complete** | Mit Vorschlägen |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 150px | Inline |
-| Medium | 250px | Standard |
-| Large | 350px | Featured |
-| Full | 100% | Volle Breite |
+| small | 150px | inline |
+| medium | 250px | Standard |
+| large | 350px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **active** | dunkel | aktiver Zustand |
+| **disabled** | grau | deaktiviert |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+| `border` | der Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- In Werkzeugleisten kann das Feld eingeklappt sein; ein Klick auf das Suchsymbol klappt es
-  auf volle Leistenbreite auf (`expand`).
-- Unter `small` Bildschirmbreite wird das Feld vollbreit über der Liste gesetzt, die Filter
-  rutschen hinter einen Aufklapp-Knopf.
-- Vorschlagsliste maximal acht Zeilen, danach scrollt sie; Trefferstellen werden `highlight`et.
+- In Toolbars kann das Feld eingeklappt werden; ein Klick auf das Suchsymbol klappt es auf die
+  volle Leistenbreite auf (`expand`).
+- Unterhalb einer kleinen Bildschirmbreite (`small`) wird das Feld oberhalb der Liste auf volle
+  Breite gesetzt, die Filter wandern hinter eine Schaltfläche zum Ausklappen.
+- Die Vorschlagsliste zeigt höchstens acht Zeilen, danach wird gescrollt; Treffer werden
+  mit `highlight` markiert.
 
-## Clear-Button
+## Clear-Knopf
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Suche...                    [✕]      │
+│ 🔍 Suchen…                     [✕]      │
 └─────────────────────────────────────────┘
 ```
 
@@ -62,9 +63,9 @@ Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Suche...                             │
+│ 🔍 Suchen…                              │
 ├─────────────────────────────────────────┤
 │  [Filter 1] [Filter 2] [Filter 3]       │
-│  [Reset]                                │
+│  [Zurücksetzen]                         │
 └─────────────────────────────────────────┘
 ```

@@ -2,32 +2,32 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | number | - | Wert |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `min` | number | `0` | Minimalwert |
-| `max` | number | `100` | Maximalwert |
+| `min` | number | `0` | minimaler Wert |
+| `max` | number | `100` | maximaler Wert |
 | `step` | number | `1` | Schrittweite |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showLabels` | boolean | `false` | Labels anzeigen? |
+| `showLabels` | boolean | `false` | Beschriftungen anzeigen? |
 | `showValue` | boolean | `true` | Wert anzeigen? |
-| `vertical` | boolean | `false` | Vertikal? |
+| `vertical` | boolean | `false` | vertikal? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onChangeEnd` | function | Wird bei Änderungsende ausgeführt |
+| `onChangeEnd` | function | wird am Ende einer Änderung ausgeführt |
 
 ## Barrierefreiheit
 
@@ -35,12 +35,12 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `slider` |
 
-## Range-Attribute
+## Bereichs-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `range` | boolean | `false` | Bereichsauswahl? |
-| `minRange` | number | - | Minimale Bereichsgröße |
+| `minRange` | number | - | minimale Bereichsgröße |
 
 ## Geerbt von
 

@@ -1,4 +1,4 @@
-# Tags Input (Tags-Feld)
+# Tags Input
 
 | Feld | Wert |
 |------|------|
@@ -12,43 +12,43 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Tags Input ist eine Liste von Tags/Etiketten.
+Ein Tags Input ist eine Liste aus Tags/Labels.
 
 ## Verwendungszweck
 
 - Hashtags
 - Kategorien
-- Schlagworte
+- Schlagwörter
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **frei** | neuer Tag entsteht aus der Eingabe (Komma oder Enter) |
-| **vorschlag** | nur vorhandene Tags, Auswahl aus Vorschlagsliste |
-| **nur-lesbar** | Tags anzeigen ohne Löschen und Ergänzen |
+| **frei** | ein neuer Tag entsteht aus der Eingabe (Komma oder Enter) |
+| **vorschlag** | nur vorhandene Tags, gewählt aus einer Vorschlagsliste |
+| **nur-lesbar** | Tags anzeigen, ohne zu löschen oder hinzuzufügen |
 
 ## Features
 
 - Auto-complete
 - Filter
-- Remove
+- Entfernen
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [badge](../../feedback/badge/): ein Badge zeigt einen Status, ein Tag
-  ist editierbarer Inhalt mit Löschen-Knopf.
+  ist bearbeitbarer Inhalt mit einem Lösch-Knopf.
 - **Nicht verwechseln mit** [mention-input](../mention-input/): Tags sind freie Begriffe,
-  eine Erwähnung zeigt auf einen Kontakt.
-- **Nicht verwechseln mit** [select](../select/) mit Mehrfachauswahl: dort gibt es nur, was die
+  eine Erwähnung verweist auf einen Kontakt.
+- **Nicht verwechseln mit** [select](../select/) mit Mehrfachauswahl: dort existiert nur, was die
   Liste bietet; hier entstehen neue Werte aus der Eingabe.
 
 ## Best Practices
 
-- Duplikate verhindern (Groß-/Kleinschreibung egal), stattdessen den vorhandenen Tag hervorheben.
-- Rücktaste in leerer Eingabe entfernt den letzten Tag – das ist der schnellste Weg.
-- Höchstzahl setzen und anzeigen ("8 von 10"), sonst werden Datensätze unbrauchbar.
-- Verbotene Zeichen ablehnen und begründen, nicht still entfernen.
+- Doppelte verhindern (Groß-/Kleinschreibung spielt keine Rolle), stattdessen den vorhandenen Tag hervorheben.
+- Backspace in einer leeren Eingabe entfernt den letzten Tag – das ist der schnellste Weg.
+- Ein Maximum setzen und anzeigen ("8 von 10"), sonst werden die Einträge unbrauchbar.
+- Unerlaubte Zeichen ablehnen und den Grund nennen, nicht stillschweigend entfernen.
 
 ## Siehe auch
 

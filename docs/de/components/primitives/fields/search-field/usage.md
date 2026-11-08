@@ -1,22 +1,22 @@
-# Search Field (Suchfeld mit Filter) - Verwendung
+# Search Field - Verwendung
 
-## Einfaches Search Field
+## Ein einfaches Suchfeld
 
 ```jsx
-<SearchField 
+<SearchField
   value={searchTerm}
   onChange={setSearchTerm}
-  placeholder="Suche..."
+  placeholder="Suchen…"
 />
 ```
 
-## Mit Auto-Complete
+## Mit Auto-complete
 
 ```jsx
-<SearchField 
+<SearchField
   value={searchTerm}
   onChange={setSearchTerm}
-  placeholder="Produkte suchen..."
+  placeholder="Produkte suchen…"
   showSuggestions={true}
   suggestions={suggestions}
   onSelect={handleSelect}
@@ -26,7 +26,7 @@
 ## Mit Filtern
 
 ```jsx
-<SearchField 
+<SearchField
   value={searchTerm}
   onChange={setSearchTerm}
   showFilters={true}
@@ -35,48 +35,48 @@
 />
 ```
 
-## In Table
+## In einer Tabelle
 
 ```jsx
-<DataTable 
+<DataTable
   data={data}
   columns={columns}
   search={
-    <SearchField 
+    <SearchField
       value={searchTerm}
       onChange={setSearchTerm}
-      placeholder="Tabelle durchsuchen..."
+      placeholder="Tabelle durchsuchen…"
     />
   }
 />
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
-<SearchField 
+<SearchField
   value={searchTerm}
   onChange={setSearchTerm}
-  onSubmit={() => console.log('Search:', searchTerm)}
-  onClear={() => console.log('Clear')}
+  onSubmit={() => console.log('Suche:', searchTerm)}
+  onClear={() => console.log('Leeren')}
 />
 ```
 
 ## Beispiele
 
-## Beispiel 1: Einfache Suche
+## Beispiel 1: einfache Suche
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Suche...                             │
+│ 🔍 Suchen…                              │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 2: mit Auto-Complete
+## Beispiel 2: mit Auto-complete
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Suche...                             │
+│ 🔍 Suchen…                              │
 ├─────────────────────────────────────────┤
 │  Produkt 1                              │
 │  Produkt 2                              │
@@ -89,29 +89,29 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Produkte...                          │
+│ 🔍 Produkte…                            │
 ├─────────────────────────────────────────┤
 │  [Kategorie] [Preis] [Status]           │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: in Tabelle
+## Beispiel 4: in einer Tabelle
 
 ```
 ┌─────────────────────────────────────────┐
-│ ID │ Name │ Alter │ Aktion               │
+│ ID │ Name │ Alter │ Aktion              │
 ├─────────────────────────────────────────┤
-│ 🔍 Suche...                             │
+│ 🔍 Suchen…                              │
 ├─────────────────────────────────────────┤
-│ 1  │ John │ 25    │ [Bearbeiten]         │
-│ 2  │ Jane │ 30    │ [Bearbeiten]         │
+│ 1  │ John │ 25    │ [Bearbeiten]        │
+│ 2  │ Jane │ 30    │ [Bearbeiten]        │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: mit Clear
+## Beispiel 5: mit Clear-Knopf
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🔍 Suche...                    [✕]      │
+│ 🔍 Suchen…                     [✕]      │
 └─────────────────────────────────────────┘
 ```

@@ -1,10 +1,10 @@
-# Select (Auswahlliste)
+# Select
 
 | Feld | Wert |
 |------|------|
 | **Kategorie** | `fields` |
 | **Erbt von** | `base` |
-| **Varianten** | `Simple`, `Multi-select`, `Searchable`, `Custom` |
+| **Varianten** | `simple`, `multi-select`, `searchable`, `custom` |
 | **Zustände** | `open`, `no-results` |
 | **Gesten** | `tap`, `swipe` |
 | **Animationen** | `expand`, `fade-in` |
@@ -16,46 +16,47 @@ Eine Auswahlliste: das Feld zeigt den gewählten Wert, die Optionen liegen hinte
 
 ## Verwendungszweck
 
-- Auswahl
+- Auswählen
 - Filter
 - Kategorien
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Simple** | Einfache Liste |
-| **Multi-select** | Mehrfachauswahl |
-| **Searchable** | Mit Suche |
-| **Custom** | Benutzerdefiniert |
+| Variante | Beschreibung |
+|----------|--------------|
+| **simple** | Einfache Liste |
+| **multi-select** | Mehrfachauswahl |
+| **searchable** | Mit Suche |
+| **custom** | Angepasst |
 
 ## Features
 
-- Search
-- Multi-select
-- Customizable
+- Suche
+- Mehrfachauswahl
+- Anpassbar
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [combobox](../combobox/): hier kann nur gewählt werden, was die Liste
-  bietet; die Combobox lässt zusätzlich Freitext zu (Plan Abschnitt 4, Zeile 5).
+  bietet; die Combobox erlaubt zusätzlich freien Text (Planabschnitt 4, Zeile 5).
 - **Nicht verwechseln mit** [context-menu](../../../widgets/overlays/context-menu/): ein Kontextmenü ruft
   Aktionen auf, diese Liste setzt einen Feldwert.
-- **Nicht verwechseln mit** nativer Auswahlliste: `native-select` ist eine Variante, die das
-  System-Overlay des Betriebssystems benutzt.
-- Unter sieben Optionen ist [radio-group](../radio-group/) meist die schnellere Bedienung.
+- **Nicht verwechseln mit** dem nativen Select: `native-select` ist eine Variante, die das
+  System-Overlay des Betriebssystems verwendet.
+- Unterhalb von sieben Optionen ist [radio-group](../radio-group/) meist die schnellere Bedienung.
 
 ## Best Practices
 
-- Ab etwa acht Optionen `select`, darunter Radio-Gruppe.
-- Gruppe mit `disabled` als Platzhalterzeile anbieten ("Bitte wählen"), nie eine Scheinoption "--".
-- Lange Listen gliedern (`Optgroupen`) und ab 20 Optionen durchsuchbar machen.
-- Mehrfachauswahl als Chips anzeigen und zählen; "Alle" explizit anbieten.
-- Vorauswahl nur, wenn sie wirklich die erwartete Antwort ist.
+- Ab etwa acht Optionen `select` verwenden, darunter eine Radio-Gruppe.
+- Als Platzhalterzeile eine Option mit `disabled` anbieten ("Bitte wählen"), niemals eine
+  falsche Option "--".
+- Lange Listen gliedern (`optgroup`) und ab 20 Optionen durchsuchbar machen.
+- Mehrfachauswahl als Chips zeigen und zählen; "Alle" ausdrücklich anbieten.
+- Nur vorauswählen, wenn das wirklich die erwartete Antwort ist.
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Combobox](../combobox/) — Liste mit Freitext
+- [Combobox](../combobox/) — Liste mit freiem Text
 - [Radio Group](../radio-group/) — kurze Optionslisten
 - [Basiskomponente](../../basics/base.md)

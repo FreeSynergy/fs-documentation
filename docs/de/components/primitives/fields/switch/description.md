@@ -1,10 +1,10 @@
-# Switch (Schalter)
+# Switch
 
 | Feld | Wert |
 |------|------|
 | **Kategorie** | `fields` |
 | **Erbt von** | `base` |
-| **Varianten** | `Standard`, `Round`, `Pill` |
+| **Varianten** | `standard`, `round`, `pill` |
 | **Zustände** | `checked`, `loading` |
 | **Gesten** | `tap`, `drag` |
 | **Animationen** | `elastic`, `press` |
@@ -12,43 +12,43 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Switch ist ein Ein/Aus-Schalter (Toggle).
+Ein Switch ist ein Ein-/Aus-Schalter (Toggle).
 
 ## Verwendungszweck
 
 - Einstellungen
-- Features
+- Funktionen
 - Status
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Standard** | Rechteck |
-| **Round** | Rund |
-| **Pill** | Pillenform |
+| Variante | Beschreibung |
+|----------|--------------|
+| **standard** | Rechteck |
+| **round** | rund |
+| **pill** | Pillenform |
 
 ## Features
 
-- Checked/Unchecked
+- Aktiviert/deaktiviert
 - Animation
-- Hover-Effect
+- Hover-Effekt
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [checkbox](../checkbox/): der Schalter wirkt **sofort**, die Checkbox
-  bestätigt eine Auswahl, die erst beim Speichern gilt (Plan Abschnitt 4, Zeile 9 — beide bleiben
-  eigen, gemeinsame Basis ist das boolesche Feld).
-- **Nicht verwechseln mit** [button](../../actions/button/): ein Knopf löst einmal eine Aktion aus,
-  der Schalter hält einen Zustand.
-- Reine Statusanzeige ("online") ist kein Schalter, sondern ein [badge](../../feedback/badge/).
+- **Nicht verwechseln mit** [checkbox](../checkbox/): der Switch wirkt **sofort**, die Checkbox
+  bestätigt eine Auswahl, die erst beim Speichern gilt (Planabschnitt 4, Zeile 9 –
+  beide bleiben getrennt, die Gemeinsamkeit ist das Boolean-Feld).
+- **Nicht verwechseln mit** [button](../../actions/button/): ein Button löst eine Aktion einmalig aus,
+  der Switch hält einen Zustand.
+- Eine reine Statusanzeige ("online") ist kein Switch, sondern ein [badge](../../feedback/badge/).
 
 ## Best Practices
 
 - Nur verwenden, wenn die Änderung ohne Bestätigung wirksam werden darf.
-- Die Beschriftung beschreibt den Sachverhalt ("Benachrichtigungen"), nicht die Aktion;
-  der Zustand sieht man am Schalter.
-- Wirkt die Änderung langsam, den Knopf als `loading` zeigen und mehrfachklicken sperren.
+- Das Label beschreibt die Sache ("Benachrichtigungen"), nicht die Aktion;
+  der Zustand ist am Switch sichtbar.
+- Ist die Änderung langsam, den Griff als `loading` zeigen und wiederholtes Klicken blockieren.
 - Gefährliche Schalter (Synchronisation aus, Konto löschen) zusätzlich bestätigen lassen.
 
 ## Siehe auch

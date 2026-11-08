@@ -2,22 +2,22 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Item-Objekten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | Array mit Eintrags-Objekten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 | `variant` | enum | `default` | Stil: `default`, `card`, `list` |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
+| `onHover` | function | wird beim Hover ausgeführt |
 
 ## Barrierefreiheit
 
@@ -25,27 +25,27 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `list` |
 
-## Item-Attribute
+## Eintrags-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `title` | string | Titel |
 | `content` | string/node | Inhalt |
-| `image` | string | Bild-URL |
+| `image` | string | URL des Bildes |
 
 ## Filter-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `filter` | string | Filter-String |
-| `onFilter` | function | Filter-Funktion |
+| `filter` | string | Filterzeichenfolge |
+| `onFilter` | function | Filterfunktion |
 
-## Sort-Attribute
+## Sortier-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `sort` | string | Sort-Feld |
+| `sort` | string | Sortierfeld |
 | `sortOrder` | enum | `asc`, `desc` |
 
 ## Geerbt von

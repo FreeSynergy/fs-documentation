@@ -1,25 +1,25 @@
-# Repeater - Aussehen
+# Repeater - Erscheinungsbild
 
 ## Grundlayout
-Ein Repeater ist ein Wiederholtes Layout für Listen.
+Ein Repeater ist ein sich wiederholendes Layout für Listen.
 
 ```
 ┌─────────────────────────────────────────┐
-│ Item 1                                  │
+│ Element 1                               │
 │ Inhalt 1                                │
 ├─────────────────────────────────────────┤
-│ Item 2                                  │
+│ Element 2                               │
 │ Inhalt 2                                │
 ├─────────────────────────────────────────┤
-│ Item 3                                  │
+│ Element 3                               │
 │ Inhalt 3                                │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
+| Variante | Erscheinungsbild |
+|----------|------------------|
 | **liste** | Einträge untereinander, Trennlinien dazwischen |
 | **raster** | Einträge als Karten in Spalten |
 | **eingabe** | Feldgruppen untereinander, unten ``+ Zeile hinzufügen`` |
@@ -28,32 +28,32 @@ Ein Repeater ist ein Wiederholtes Layout für Listen.
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | Kleine Repeaters |
-| Medium | 300px | Standard |
-| Large | 400px | Große Repeaters |
-| Full | 100% | Volle Breite |
+| small | 200px | kleine Repeater |
+| medium | 300px | Standard |
+| large | 400px | große Repeater |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Item** | Hell | Item-Hintergrund |
-| **Hover** | Heller | Hover-Zustand |
-| **Active** | Primärfarbe | Aktiver Item |
+| **Item** | hell | Hintergrund des Eintrags |
+| **Hover** | heller | Hover-Zustand |
+| **Active** | Primärfarbe | aktiver Eintrag |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `shadow` | Schatten stärker |
-| `transform` | Leichte Hebung |
-| `border` | Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `transform` | leichtes Anheben |
+| `border` | der Rand leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- Die Steuerleiste (Suche, Filter, Sortierung) bricht auf schmalen Bildschirmen in zwei Zeilen um
+- Auf schmalen Bildschirmen bricht die Bedienleiste (Suche, Filter, Sortierung) in zwei Zeilen um
   und bleibt beim Scrollen oben stehen.
-- Die Raster-Variante folgt denselben Spaltenschwellen wie [grid-view](../grid-view/);
-  die Listen-Variante bleibt einspaltig.
-- Beim Seitenwechsel wird der Listenanfang `scroll-area`-seitig nach oben gesetzt,
+- Die Rastervariante folgt denselben Spaltenschwellen wie [grid-view](../grid-view/);
+  die Listenvariante bleibt einspaltig.
+- Wechselt die Seite, wird der Listenanfang im `scroll-area` nach oben gesetzt;
   neue Einträge erscheinen mit `fade-in`.

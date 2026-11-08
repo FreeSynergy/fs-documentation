@@ -1,33 +1,33 @@
-# List (Aufzählung) - Attribute
+# List View - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Item-Objekten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | Array mit Eintrags-Objekten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `variant` | enum | `simple` | Stil: `simple`, `with-icons`, `with-avatars`, `with-badges`, `with-actions` |
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showIcons` | boolean | `false` | Icons anzeigen? |
 | `showAvatars` | boolean | `false` | Avatare anzeigen? |
 | `showBadges` | boolean | `false` | Badges anzeigen? |
-| `showActions` | boolean | `false` | Actions anzeigen? |
+| `showActions` | boolean | `false` | Aktionen anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
-| `onActionClick` | function | Wird bei Action-Klick ausgeführt |
+| `onHover` | function | wird beim Hover ausgeführt |
+| `onActionClick` | function | wird beim Klick auf eine Aktion ausgeführt |
 
 ## Barrierefreiheit
 
@@ -35,14 +35,14 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `list` |
 
-## Item-Attribute
+## Eintrags-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
-| `label` | string | Label-Text |
-| `icon` | string | Icon-Name |
-| `avatar` | string | Avatar-URL |
+| `id` | string | eindeutige ID |
+| `label` | string | Beschriftungstext |
+| `icon` | string | Name des Icons |
+| `avatar` | string | URL des Avatars |
 | `badge` | string/number | Badge-Text |
 
 ## Geerbt von
