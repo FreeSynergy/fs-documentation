@@ -2,36 +2,36 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `animation` | string | `pop-in` | Name der Animation |
-| `onAnimateStart` | function | - | Wird beim Start ausgeführt |
-| `onAnimateEnd` | function | - | Wird nach dem Aufkommen ausgeführt |
+| `onAnimateStart` | function | - | läuft am Anfang |
+| `onAnimateEnd` | function | - | läuft, nachdem das Element gelandet ist |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `duration` | number | `250` | Dauer in ms |
 | `timingFunction` | string | `cubic-bezier(.34,1.56,.64,1)` | schneller Anstieg, weiche Landung |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `fillMode` | string | `forwards` | Endzustand (volle Größe) beibehalten |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `fillMode` | string | `forwards` | hält den Endzustand (volle Größe) |
 
-## Größen-Attribute
+## Größenattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `fromScale` | number | `0.8` | Startgröße |
 | `toScale` | number | `1` | Zielgröße |
 | `overshoot` | number | `1.06` | Faktor, über den das Element hinausschießt |
-| `bounces` | number | `1` | Anzahl Nachschwingungen nach dem Overshoot |
+| `bounces` | number | `1` | Anzahl der Nachschwingungen nach dem Überschwingen |
 | `origin` | string | `center` | Bezugspunkt: `center`, `top`, `bottom-left` … |
-| `fromOpacity` | number | `0` | Startdeckkraft (0 = voll transparent) |
+| `fromOpacity` | number | `0` | Start-Deckkraft (0 = vollständig transparent) |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
 | `reducedMotionFallback` | string | `short-fade` | `instant` (sofort sichtbar) oder `short-fade` |

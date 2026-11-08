@@ -1,10 +1,11 @@
-# Pop Out - Aussehen
+# Pop Out - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element bleibt bis zum Ende der Animation an seiner Layout-Position und schrumpft ausschließlich in der Darstellung. Erst wenn die Animation fertig ist, wird der Platz freigegeben.
+Das Element bleibt bis zum Ende der Animation an seiner Layoutposition und schrumpft nur in der
+Darstellung. Erst wenn die Animation beendet ist, gibt es seinen Platz auf.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -19,11 +20,11 @@ Das Element bleibt bis zum Ende der Animation an seiner Layout-Position und schr
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Standard** | Ausholen 1.04, dann auf 0 schrumpfen (200 ms) |
-| **Ohne Ausholen** | `anticipation: 1` – sachlicher, weniger verspielt |
+|---------|-------------|
+| **Standard** | Vorwegnahme 1.04, dann auf 0 schrumpfen (200 ms) |
+| **Ohne Vorwegnahme** | `anticipation: 1` – sachlicher, weniger verspielt |
 | **Schnell** | 120–180 ms für Badges und Zähler |
-| **Platz bleibt** | `removeAfterEnd: false` – Lücke bleibt bestehen (z. B. Raster) |
+| **Platz bleibt** | `removeAfterEnd: false` – die Lücke bleibt (z. B. in einem Raster) |
 
 ## Dauer
 
@@ -32,7 +33,7 @@ Das Element bleibt bis zum Ende der Animation an seiner Layout-Position und schr
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Pop In](../../entrance/pop-in/description.md)
 - [Scale Out](../scale-out/description.md)
 - [Cascade](../../organization/cascade/description.md)

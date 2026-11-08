@@ -1,10 +1,11 @@
-# Pop In - Aussehen
+# Pop In - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element behält seine Layout-Position und ändert nur Deckkraft und eigene Größe. Der Overshoot wirkt ausschließlich auf die Darstellung – angrenzende Elemente verschieben sich nicht.
+Das Element behält seine Layoutposition und ändert nur Deckkraft und eigene Größe. Das
+Überschwingen wirkt nur auf die Darstellung – benachbarte Elemente verschieben sich nicht.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -19,11 +20,11 @@ Das Element behält seine Layout-Position und ändert nur Deckkraft und eigene G
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Standard** | Overshoot 1.06, eine Nachschwingung (250 ms) |
-| **Flach** | `overshoot: 1` – wächst ohne Überschießen (wirkt nüchtern) |
+|---------|-------------|
+| **Standard** | Überschwingen 1.06, ein Nachschwingen (250 ms) |
+| **Flach** | `overshoot: 1` – wächst ohne Überschwingen (wirkt nüchterner) |
 | **Schnell** | 150–200 ms für Badges und Zähler |
-| **Von Ecke** | `origin: bottom-left` – wächst aus der Icon-Ecke heraus |
+| **Aus der Ecke** | `origin: bottom-left` – wächst aus der Ecke des Icons |
 
 ## Dauer
 
@@ -32,7 +33,7 @@ Das Element behält seine Layout-Position und ändert nur Deckkraft und eigene G
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Pop Out](../../exit/pop-out/description.md)
 - [Scale In](../scale-in/description.md)
 - [Bounce In](../bounce-in/description.md)

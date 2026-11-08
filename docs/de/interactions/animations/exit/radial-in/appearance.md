@@ -1,33 +1,33 @@
-# Radial In - Aussehen
+# Radial In - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Der Ankerkern bleibt als Sammelpunkt stehen. Jeder Punkt verlässt seine Ringposition
-und wandert auf seinem Winkelstrahl zurück zur Ankermitte, wobei er schrumpft und
-ausbleicht. Ringe lösen sich von außen nach innen auf.
+Der Ankerkern bleibt als Sammelpunkt stehen. Jeder Punkt verlässt seine Ringposition und wandert
+entlang seines Winkelstrahls zurück zur Ankermitte, dabei schrumpft und verblasst er. Die Ringe
+lösen sich von außen nach innen auf.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │   0 ms           50 ms            110 ms           160 ms    │
 │                                                              │
-│  ◆ ○ ◆         ◆   ●   ◆       ◆  ◆ ●          nur Kern ●   │
-│  alle Ringe   Ring 2 fast     nur Ring 1      s = 0, α = 0   │
-│  stehen       weg, α → 0      auf halben      Kern blendet   │
-│                               Radius, s → 0   zuletzt aus    │
+│  ◆ ○ ◆         ◆   ●   ◆       ◆  ◆ ●          nur Kern ●    │
+│  alle Ringe    Ring 2 fast      nur Ring 1      s = 0, α = 0  │
+│  stehen        weg, α → 0       halber Radius,  Kern verblasst│
+│                                 s → 0           zuletzt       │
 └──────────────────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Standard** | alle Punkte zugleich, kurze lineare Sogbewegung (160 ms) |
-| **Ringe nacheinander** | äußerster Ring zuerst, `ringStep` nach innen durchgereicht |
-| **Nur Zweig** | verlässt der Zeiger einen Punkt, wandert nur dessen Unterpunkt-Ring zurück |
-| **Fächer** | an Ecke oder Kante: Punkte treten in die Ecke zurück |
-| **Sog** | Punkte beschleunigen zum Anker (`ease-in`), wirkt „eingezogen“ |
+|---------|-------------|
+| **Standard** | alle Punkte gleichzeitig, eine kurze lineare Zugbewegung (160 ms) |
+| **Ringe nacheinander** | zuerst der äußerste Ring, `ringStep` wirkt nach innen |
+| **Nur Zweig** | verlässt der Zeiger einen Punkt, wandert nur dessen Unterring zurück |
+| **Fächer** | an einer Ecke oder Kante: Die Punkte wandern zurück in die Ecke |
+| **Ziehen** | Punkte beschleunigen zum Anker (`ease-in`), wirkt „eingesogen“ |
 
 ## Dauer
 
@@ -38,6 +38,6 @@ ausbleicht. Ringe lösen sich von außen nach innen auf.
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Radial Out](../../entrance/radial-out/description.md)
 - [Radial Menu](../../../../components/widgets/navigation/radial-menu/description.md)
