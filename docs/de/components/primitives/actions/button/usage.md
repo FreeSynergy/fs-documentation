@@ -1,50 +1,49 @@
-# Button (Schaltfläche) - Verwendung
+# Button – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Standardschaltfläche
+## Standard-Button
 
 ```jsx
-<Button label="Speichern" variant="primary" onClick={save} />
+<Button label="Save" variant="primary" onClick={save} />
 ```
 
-## Variantenduo in einem Dialog
+## Variantenpaar in einem Dialog
 
 ```jsx
-<Dialog title="Seite schließen?">
-  <Button label="Abbrechen" variant="secondary" onClick={close} />
-  <Button label="Verwerfen" variant="danger" onClick={discard} />
+<Dialog title="Close page?">
+  <Button label="Cancel" variant="secondary" onClick={close} />
+  <Button label="Discard" variant="danger" onClick={discard} />
 </Dialog>
 ```
 
 ## Icon-Button mit Beschriftung für Screenreader
 
 ```jsx
-<Button icon="settings" iconOnly={true} aria-label="Einstellungen öffnen" />
+<Button icon="settings" iconOnly={true} aria-label="Open settings" />
 ```
 
 ## Ladezustand beim Speichern
 
 ```jsx
-<Button label="Senden" variant="primary" loading={sending} onClick={send} />
+<Button label="Send" variant="primary" loading={sending} onClick={send} />
 ```
 
 ## Formular absenden
 
 ```jsx
 <Form onSubmit={save}>
-  <Button label="Speichern" type="submit" variant="primary" />
+  <Button label="Save" type="submit" variant="primary" />
 </Form>
 ```
 
 ## Szenarien
 
 | Szenario | Empfehlung |
-|----------|------------|
-| Dokument speichern | ein `primary`, Rest `secondary` |
+|----------|----------------|
+| Dokument speichern | ein `primary`, der Rest `secondary` |
 | Zerstörerische Aktion | `danger` + Bestätigungsdialog |
-| Werkzeugleiste mit vielen Aktionen | [button-group](../button-group/) statt Einzelbuttons |
+| Werkzeugleiste mit vielen Aktionen | [button-group](../button-group/) statt einzelner Buttons |
 | Zurück-Navigation | `link`, kein Button |

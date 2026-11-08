@@ -1,22 +1,22 @@
-# Floating Action Button - Verwendung
+# Floating Action Button – Verwendung
 
-## Standard FAB
+## Standard-FAB
 
 ```jsx
 <FAB 
   icon="plus"
-  onClick={() => console.log('Neu')}
+  onClick={() => console.log('New')}
 />
 ```
 
-## Extended FAB (Mit Text)
+## Erweiterter FAB (mit Text)
 
 ```jsx
 <FAB 
   variant="extended"
   icon="plus"
-  label="Neu"
-  onClick={() => console.log('Neu')}
+  label="New"
+  onClick={() => console.log('New')}
 />
 ```
 
@@ -30,7 +30,7 @@
 />
 ```
 
-## In App
+## In einer App
 
 ```jsx
 <AppShell>
@@ -43,7 +43,7 @@
 </AppShell>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignisbehandlern
 
 ```jsx
 <FAB 
@@ -64,7 +64,7 @@
                     └─────────┘
 ```
 
-## Beispiel 2: Todo-App
+## Beispiel 2: Aufgaben-App
 
 ```
                     ┌──────────────┐
@@ -81,11 +81,11 @@
                     └─────────┘
 ```
 
-## Beispiel 4: Gallery-App
+## Beispiel 4: Galerie-App
 
 ```
                     ┌──────────────┐
-                    │  📷  Neues  │
+                    │  📷  Neu     │
                     └──────────────┘
 ```
 

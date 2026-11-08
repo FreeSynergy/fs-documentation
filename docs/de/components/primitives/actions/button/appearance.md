@@ -1,64 +1,64 @@
-# Button (Schaltfläche) - Aussehen
+# Button – Erscheinungsbild
 
 ## Grundlayout
 
 ```
 ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
-│  Speichern   │   │  Abbrechen   │   │  🗑  Löschen │
+│    Save      │   │    Cancel    │   │   🗑 Delete   │
 └──────────────┘   └──────────────┘   └──────────────┘
-   primary            secondary           danger
+     primary            secondary           danger
 ```
 
 Mit Icon:
 
 ```
 ┌──────────────────┐   ┌──────────┐
-│  💾  Speichern   │   │   💾     │
+│   💾  Save       │   │    💾    │
 └──────────────────┘   └──────────┘
   iconPosition="left"   icon-only
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **primary** | Primärfarbe gefüllt, heller Text |
-| **secondary** | neutrale Fläche, dunkler Text |
-| **outline** | 1 px Rahmen in Primärfarbe, transparenter Grund |
-| **ghost** | kein Rahmen, Hintergrund erst bei Hover |
-| **danger** | Fehlerfarbe gefüllt |
-| **link** | kein Rahmen, Text in Primärfarbe, Unterstreichung bei Hover |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **primary** | gefüllt mit der Primärfarbe, helle Schrift |
+| **secondary** | neutrale Fläche, dunkle Schrift |
+| **outline** | 1 px Rahmen in der Primärfarbe, transparenter Hintergrund |
+| **ghost** | kein Rahmen, Hintergrund nur bei Hover |
+| **danger** | gefüllt mit der Fehlerfarbe |
+| **link** | kein Rahmen, Text in der Primärfarbe, bei Hover unterstrichen |
 
 ## Größen
 
-| Größe | Höhe | Padding (x) | Schrift |
-|-------|------|-------------|---------|
+| Größe | Höhe | Innenabstand (x) | Schrift |
+|------|--------|-------------|------|
 | `small` | 28 px | 10 px | 13 px |
 | `medium` | 36 px | 14 px | 14 px |
 | `large` | 44 px | 18 px | 16 px |
 
-Icon-only-Buttons sind quadratisch (Höhe = Breite).
+Buttons nur mit Icon sind quadratisch (Höhe = Breite).
 
 ## Farben und Zustände
 
 | Zustand | primary | outline | ghost |
-|---------|---------|---------|-------|
-| `default` | Primär | Primär-Rahmen | transparent |
-| `hover` | Primär abgedunkelt | leichter Primär-Farbton | grauer Hintergrund |
-| `active` | Primär stark abgedunkelt | Primär-Farbton | grauer Hintergrund |
-| `focus` | 2 px Fokus-Ring außen | 2 px Fokus-Ring außen | 2 px Fokus-Ring außen |
-| `disabled` | 40 % Deckkraft, kein Zeiger | gleich | gleich |
-| `loading` | Spinner statt Label, Aktion gesperrt | gleich | gleich |
+|-------|---------|---------|-------|
+| `default` | Primärfarbe | Rahmen in Primärfarbe | transparent |
+| `hover` | Primärfarbe abgedunkelt | helle Primärtönung | grauer Hintergrund |
+| `active` | Primärfarbe stark abgedunkelt | Primärtönung | grauer Hintergrund |
+| `focus` | 2 px Fokusrahmen außen | 2 px Fokusrahmen außen | 2 px Fokusrahmen außen |
+| `disabled` | 40 % Deckkraft, kein Zeiger | ebenso | ebenso |
+| `loading` | Spinner statt Beschriftung, Aktion gesperrt | ebenso | ebenso |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `tone` | Fläche wird eine Stufe dunkler |
-| `shadow` | Schatten hebt den Button leicht an |
-| `ring` | Fokus-Ring bei Tastaturnavigation, immer sichtbar |
+|--------|-------------|
+| `tone` | die Fläche wird eine Stufe dunkler |
+| `shadow` | ein Schatten hebt den Button leicht an |
+| `ring` | Fokusring für die Tastaturnavigation, immer sichtbar |
 
-## Reaktiv
+## Responsiv
 
-- Ab `small` Bildschirmbreite werden primäre Aktionen full-width untereinander gesetzt.
-- Beschriftungsumbruch ist deaktiviert; zu lange Labels werden mit Auslassung gekürzt.
+- Ab der Bildschirmbreite `small` werden Hauptaktionen auf volle Breite untereinander gesetzt.
+- Umbruch der Beschriftung ist deaktiviert; zu lange Beschriftungen werden mit Auslassungspunkten gekürzt.

@@ -1,48 +1,48 @@
-# Floating Action Button - Attribute
+# Floating Action Button – Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `icon` | string | - | Icon-Name |
-| `label` | string | - | Button-Label (für Extended FAB) |
+| `label` | string | - | Beschriftung des Buttons (für den erweiterten FAB) |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `position` | enum | `bottom-right` | Position |
 | `showBadge` | boolean | `false` | Badge anzeigen? |
-| `badgeValue` | string/number | - | Badge-Wert |
+| `badgeValue` | string/number | - | Wert des Badges |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `size` | enum | `standard` | Größe: `standard`, `mini`, `extended` |
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `animate` | boolean | `true` | Animationen aktivieren? |
-| `rippleEffect` | boolean | `true` | Ripple-Effekt? |
+| `rippleEffect` | boolean | `true` | Welleneffekt? |
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `responsive` | boolean | `true` | Responsives Layout? |
+| `responsive` | boolean | `true` | responsives Layout? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
+|-----------|------|-------------|
+| `onHover` | function | läuft beim Hover |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `button` |
 
 ## Varianten-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `color` | enum | `primary` | Farbe: `primary`, `secondary`, `danger` |
 

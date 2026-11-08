@@ -1,43 +1,43 @@
-# Button (Schaltfläche) - Attribute
+# Button – Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Weitere kommt von der Basisklasse, siehe
 [base](../../basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `variant` | enum | `secondary` | hier mit festem Wertebereich: `primary`, `secondary`, `outline`, `ghost`, `danger`, `link` |
 | `type` | enum | `button` | Formularrolle: `button`, `submit`, `reset` |
-| `loading` | boolean | `false` | Ladezustand, blockiert Mehrfachauslösung |
+| `loading` | boolean | `false` | Ladezustand, verhindert wiederholtes Auslösen |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `fullWidth` | boolean | `false` | volle Breite der Elternbox |
-| `preventDoubleClick` | boolean | `true` | zweite Auslösung innerhalb 300 ms ignorieren |
-| `group` | string | `null` | Gruppen-id, wenn der Button zu einem `button-group` gehört |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `fullWidth` | boolean | `false` | volle Breite des übergeordneten Kastens |
+| `preventDoubleClick` | boolean | `true` | ein zweites Auslösen innerhalb von 300 ms ignorieren |
+| `group` | string | `null` | Gruppen-ID, wenn der Button zu einer `button-group` gehört |
 
-## Events
+## Ereignisse
 
-Es werden nur die geerbten Events genutzt: `onClick`, `onFocus`, `onBlur`.
+Es werden nur die geerbten Ereignisse genutzt: `onClick`, `onFocus`, `onBlur`.
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `aria-label` | string | Pflicht bei `iconOnly = true` |
+|-----------|------|-------------|
+| `aria-label` | string | erforderlich, wenn `iconOnly = true` |
 | `aria-busy` | boolean | gesetzt, solange `loading = true` |
 | `role` | string | `button` |
 
 ## Icon
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `icon` | string | `null` | Icon-Name (siehe [icon](../../media/icon/)) |
 | `iconPosition` | enum | `left` | `left`, `right`, `none` |
-| `iconOnly` | boolean | `false` | quadratischer Button ohne Text; verlangt `aria-label` |
+| `iconOnly` | boolean | `false` | quadratischer Button ohne Text; benötigt `aria-label` |
 
 ## Geerbt von
 
