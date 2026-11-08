@@ -1,7 +1,7 @@
-# Accordion - Aussehen
+# Accordion - Erscheinungsbild
 
 ## Grundlayout
-Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können.
+Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein- und ausklappen.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -19,50 +19,50 @@ Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **standard** | Köpfe untereinander, einer offen |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **standard** | Kopfzeilen untereinander, eine davon offen |
 | **mehrere** | mehrere Inhalte gleichzeitig sichtbar |
-| **einzel** | ein einzelner Kopf ohne Gruppierung |
+| **einzel** | eine einzelne Kopfzeile ohne Gruppierung |
 
 ## Größen
 
 | Größe | Schriftgröße | Verwendung |
-|-------|-------------|------------|
-| Small | 12px | Inline |
-| Medium | 14px | Standard |
-| Large | 16px | Featured |
+|-------|--------------|------------|
+| small | 12px | inline |
+| medium | 14px | Standard |
+| large | 16px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Active Header** | Primärfarbe | Aktiver Header |
-| **Inactive Header** | Grau | Inaktiver Header |
-| **Content** | Dunkel | Inhalt |
+| **aktive Kopfzeile** | Primärfarbe | aktive Kopfzeile |
+| **inaktive Kopfzeile** | grau | inaktive Kopfzeile |
+| **Inhalt** | dunkel | Inhalt |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `color` | Farbe ändert sich |
-| `background` | Hintergrund ändert sich |
-| `border-bottom` | Unterstrich erscheint |
+| `color` | die Farbe ändert sich |
+| `background` | der Hintergrund ändert sich |
+| `border-bottom` | eine Unterstreichung erscheint |
 
-## Reaktiv
+## Responsiv
 
-- Der Akkordeonstapel ist immer vollbreit; die Kopfzeile wächst mit dem Text,
-  der Inhaltbereich ist höchstens so hoch wie der Viewport.
-- Auf schmalen Bildschirmen rutscht das Pfeilsymbol nach links und der Titel bleibt
-  linksbündig; die Kopfzeile wird mindestens 44 px hoch.
-- Beim Schließen rücken die folgenden Köpfe ohne Sprung nach, die Scrollposition des
-  angeklickten Kopfes bleibt erhalten.
+- Der Accordion-Stapel ist immer voll breit. Die Kopfzeile wächst mit dem Text,
+  der Inhaltsbereich ist höchstens so hoch wie der Viewport.
+- Auf schmalen Bildschirmen rutscht das Pfeilsymbol nach links, der Titel bleibt
+  linksbündig. Die Kopfzeile ist mindestens 44 px hoch.
+- Beim Schließen rücken die folgenden Kopfzeilen ohne Sprung nach oben. Die Scrollposition
+  der angeklickten Kopfzeile bleibt erhalten.
 
 ## Animationen
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `expand` | Inhalt klappt auf |
-| `collapse` | Inhalt klappt zu |
-| `fade-in` | Inhalt blendet ein |
-| `rotate` | Pfeil dreht um 90 Grad |
+| `expand` | der Inhalt klappt auf |
+| `collapse` | der Inhalt klappt zu |
+| `fade-in` | der Inhalt blendet ein |
+| `rotate` | der Pfeil dreht sich um 90 Grad |

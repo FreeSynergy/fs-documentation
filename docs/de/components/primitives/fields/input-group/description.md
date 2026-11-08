@@ -1,4 +1,4 @@
-# Input Group (Feldgruppe)
+# Input Group (Eingabegruppe)
 
 | Feld | Wert |
 |------|------|
@@ -14,58 +14,58 @@
 
 ## Beschreibung
 
-Eine Input Group fügt ein Eingabefeld und die Teile, die unmittelbar dazugehören, zu
-einer zusammenhängenden Fläche zusammen: ein Vorsatz-Zeichen, eine Einheit, ein Dropdown
-für die Landesvorwahl oder eine Schaltfläche direkt am Feld. Es bleibt ein Wert; die
-Nachbarteile erklären oder begrenzen ihn.
+Eine Input Group verbindet ein Eingabefeld mit den Teilen, die direkt dazugehören,
+zu einer zusammenhängenden Fläche. Das sind ein Präfixzeichen, eine Einheit, eine
+Auswahl für die Ländervorwahl oder ein Button direkt am Feld. Sie bleibt ein
+einziger Wert. Die angrenzenden Teile erklären oder begrenzen ihn.
 
 ## Verwendungszweck
 
 - Einheiten und Vorzeichen anzeigen (`€`, `kg`, `https://`)
-- Eine passende Aktion direkt ans Feld setzen (Suchen, Kopieren, Anmelden)
-- Kurze Voreinstellung am Feld (Landesvorwahl, Protokoll)
-- Passwörter mit Umschalt-Icon absichern
+- Eine passende Aktion direkt am Feld platzieren (Suche, Kopieren, Anmelden)
+- Eine kurze Vorauswahl am Feld (Ländervorwahl, Protokoll)
+- Passwörter mit einem Umschalt-Icon absichern
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **praefix** | fester Vorsatz links im Feld (Icon, Einheit, Vorzeichen) |
-| **suffix** | fester Nachsatz rechts im Feld (Einheit, Status-Icon) |
-| **aktion** | Schaltfläche am Feld, meist rechts |
-| **auswahl** | kleines Dropdown als Vorsatz, z. B. Landesvorwahl |
+| **praefix** | fester Präfix links im Feld (Icon, Einheit, Zeichen) |
+| **suffix** | fester Suffix rechts im Feld (Einheit, Status-Icon) |
+| **aktion** | Button am Feld, meist rechts |
+| **auswahl** | kleine Auswahlliste als Präfix, z. B. für die Ländervorwahl |
 
-## Features
+## Funktionen
 
-- Gemeinsame Höhe, Kante und Radius wie das Feld selbst
-- Fokus liegt weiter beim Feld; die Gruppe markiert ihn mit
-- Vorsatz und Nachsatz sind reine Anzeige, die Aktion ist ein richtbarer Button
-- Links und rechts kombinierbar, je Seite höchstens ein Teil
+- Gleiche Höhe, Kante und Rundung wie das Feld selbst
+- Der Fokus liegt weiter beim Feld. Die Gruppe zeigt ihn nur an.
+- Präfix und Suffix sind nur Anzeige. Die Aktion ist ein fokussierbarer Button.
+- Links und rechts kombinierbar, pro Seite höchstens ein Teil
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [field](../field/): der Wrapper gehört *um* das Feld herum
-  (Beschriftung, Hilfetext, Fehlermeldung), die Gruppe sitzt *im* Feld neben dem Wert.
-  Beide werden kombiniert, nicht ersetzt.
-- **Nicht verwechseln mit** [button-group](../../actions/button-group/): dort sind alle
-  Teile gleichwertige Aktionen; hier trägt ein Teil den Wert, die anderen erklären ihn.
-- **Nicht verwechseln mit** [search-field](../search-field/): das Suchfeld bringt
-  Suchlogik mit (Vorschläge, Leeren, Tastatur). Die Gruppe ist nur die Bauform aus
-  Icon, Feld und Knopf.
-- **Nicht verwechseln mit** [tags-input](../tags-input/): hier entsteht ein Wert mit
-  Dekoration, dort eine Menge von Werten.
+- **Nicht verwechseln mit** [field](../field/): Der Wrapper liegt *um* das Feld
+  (Label, Hilfetext, Fehlermeldung). Die Gruppe liegt *im* Feld neben dem
+  Wert. Beide werden kombiniert, sie ersetzen sich nicht.
+- **Nicht verwechseln mit** [button-group](../../actions/button-group/): Dort sind alle
+  Teile gleichrangige Aktionen. Hier trägt ein Teil den Wert, die anderen erklären ihn.
+- **Nicht verwechseln mit** [search-field](../search-field/): Das Suchfeld bringt
+  Suchlogik mit (Vorschläge, Leeren, Tastatur). Die Gruppe ist nur der Aufbau aus
+  Icon, Feld und Button.
+- **Nicht verwechseln mit** [tags-input](../tags-input/): Hier entsteht ein einzelner
+  Wert mit Zierelementen, dort eine Menge von Werten.
 
 ## Best Practices
 
-- Nur eine Tabulator-Reihenfolge: Gruppe und Vorsatz bekommen keinen eigenen Fokus.
-- Entscheidende Information gehört in das [label](../../basics/label/), nie in einen
-  Vorsatz — Vorsätze sind für Screenreader Zusatztext.
-- Die Schaltfläche in der Gruppe wirkt auf den Feldwert, nicht auf die Seite.
-- Bei mehr als zwei Zusatzteilen lieber zwei Felder in einer Zeile.
+- Nur eine Tab-Reihenfolge: Die Gruppe und das Präfix bekommen keinen eigenen Fokus.
+- Wichtige Information gehört in das [Label](../../basics/label/), nie in ein
+  Präfix. Präfixe sind nur zusätzlicher Text für Screenreader.
+- Der Button in der Gruppe wirkt auf den Feldwert, nicht auf die ganze Seite.
+- Bei mehr als zwei zusätzlichen Teilen lieber zwei Felder in einer Zeile nutzen.
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
 - [Text Input](../text-input/) — das Feld in der Gruppe
-- [Field](../field/) — Beschriftung und Fehlermeldung außerhalb
-- [Basiskomponente](../../basics/base.md)
+- [Field](../field/) — Label und Fehlermeldung außen
+- [Base-Komponente](../../basics/base.md)

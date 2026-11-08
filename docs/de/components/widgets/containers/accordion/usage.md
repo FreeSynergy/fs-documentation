@@ -1,35 +1,34 @@
-# Accordion (Akkordeon) - Verwendung
+# Accordion - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können.
+Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein- und ausklappen.
 
-- Platz sparen durch Ein-/Ausklappen
-- FAQ-Sectionen
-- Einstellungs-Gruppen
+- Platz sparen durch Ein- und Ausklappen
+- FAQ-Abschnitte
+- Einstellungsgruppen
 - Kategorien mit Unterpunkten
 
 ## Beispiele
 
-### Platz sparen durch Ein-/Ausklappen
+### Platz sparen durch Ein- und Ausklappen
 
 ```jsx
-<Accordion items={eintraege} onChange={aktion} />
+<Accordion items={entries} onChange={action} />
 ```
 
-### FAQ-Sectionen
+### FAQ-Abschnitte
 
 ```jsx
-<Accordion items={eintraege} collapsible={true} />
+<Accordion items={entries} collapsible={true} />
 ```
 
-### Einstellungs-Gruppen
+### Einstellungsgruppen
 
 ```jsx
-<Accordion items={eintraege} animate={true} />
+<Accordion items={entries} animate={true} />
 ```

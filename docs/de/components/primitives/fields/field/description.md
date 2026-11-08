@@ -13,13 +13,13 @@
 
 ## Beschreibung
 
-Ein Field ist der Wrapper um ein Eingabefeld: Er verbindet Beschriftung,
+Ein Field ist der Wrapper um ein Eingabefeld. Er verbindet Beschriftung,
 Hilfetext, Fehlermeldung und Pflicht-Markierung zu einer barrierefreien
 Einheit. Das eigentliche Feld bleibt eine eigene Komponente.
 
 ## Verwendungszweck
 
-- Barrierefreier Rahmen um jedes Eingabefeld
+- Ein barrierefreier Rahmen um jedes Eingabefeld
 - Hilfetext und Fehler an der richtigen Stelle anzeigen
 - Konsistente Abstände und Labelposition in Formularen
 
@@ -29,38 +29,38 @@ Einheit. Das eigentliche Feld bleibt eine eigene Komponente.
 |----------|--------------|
 | **vertikal** | Label über dem Feld (Standard) |
 | **horizontal** | Label links neben dem Feld (dichte Formulare) |
-| **inline** | nur Label, ohne Hilfetext (z. B. in Werkzeugleisten) |
+| **inline** | nur das Label, ohne Hilfetext (z. B. in Werkzeugleisten) |
 
-## Features
+## Funktionen
 
-- Fehler- und Hilfetext mit eigenem Zeilenplatz (nichts überlagert)
-- Pflicht-Markierung mit Text, nicht nur Sternchen
+- Fehler- und Hilfetext bekommen eigene Zeilen. Nichts überlappt.
+- Pflichtfelder werden mit Text markiert, nicht nur mit einem Sternchen.
 - Zeichenzähler (`counter`) für Textfelder
-- Verknüpfung von Label und Fehlertext über `id`/`aria-describedby`
+- Label und Fehlertext sind über `id`/`aria-describedby` verknüpft
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [label](../../basics/label/): das Label ist nur die
-  Beschriftung; das Field ergänzt Hilfe, Fehler und Abstand.
+- **Nicht verwechseln mit** [label](../../basics/label/): Das Label ist nur
+  die Beschriftung. Das Field ergänzt Hilfetext, Fehler und Abstände.
 
-- **Nicht verwechseln mit** [search-field](../search-field/): das ist
-  eine komplette Eingabekomponente, kein Wrapper.
+- **Nicht verwechseln mit** [search-field](../search-field/): Das ist
+  eine vollständige Eingabekomponente, kein Wrapper.
 
-- **Nicht verwechseln mit** [description-list](../../../widgets/data/description-list/): Label-Wert-Paare
+- **Nicht verwechseln mit** [description-list](../../../widgets/data/description-list/): Wertepaare
   in Detailansichten, ohne Eingabe.
-- **Nicht verwechseln mit** [input-group](../input-group/): die Gruppe sitzt im Feld neben
-  dem Wert, dieser Wrapper außerhalb (Label, Hilfe, Fehler).
+- **Nicht verwechseln mit** [input-group](../input-group/): Die Gruppe sitzt im Feld
+  neben dem Wert, dieser Wrapper außen (Label, Hilfe, Fehler).
 
 ## Best Practices
 
-- Jedes Feld braucht ein sichtbares Label – ein `placeholder` ersetzt es nicht.
-- Fehlermeldung konkret benennen („Datum liegt in der Vergangenheit“).
-- Fehler zusätzlich durch Icon und Text kennzeichnen, nicht nur durch Farbe.
-- Hilfetext nur, wenn er echte Entscheidungen hilft.
+- Jedes Feld braucht ein sichtbares Label. Ein `placeholder` ersetzt es nicht.
+- Benenne die Fehlermeldung konkret („Das Datum liegt in der Vergangenheit“).
+- Markiere Fehler zusätzlich mit Icon und Text, nicht nur mit Farbe.
+- Hilfetext nur, wenn er bei Entscheidungen wirklich hilft.
 
 ## Siehe auch
 
 - [Label](../../basics/label/)
 - [Text Input](../text-input/)
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)
 - [Standardisierte Daten](../../../widgets/data/)

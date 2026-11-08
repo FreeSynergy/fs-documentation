@@ -1,19 +1,18 @@
-# Input Group (Feldgruppe) - Verwendung
+# Input Group - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Die Gruppe wird um ein bestehendes Feld gebaut, nicht statt es. Beschriftung, Hilfetext
-und Fehlermeldung bleiben außerhalb beim [field](../field/); die Gruppe enthält nur das
-Feld und die Teile, die denselben Wert erklären.
+Die Gruppe wird um ein vorhandenes Feld gebaut, nicht anstelle davon. Label,
+Hilfetext und Fehlermeldung bleiben außen beim [Field](../field/). Die Gruppe
+enthält nur das Feld und die Teile, die denselben Wert erklären.
 
 ## Beispiele
 
-### Adresse mit Protokoll-Vorsatz
+### Eine Adresse mit Protokoll-Präfix
 
 ```jsx
 <InputGroup prefix="https://" field={<TextInput value={host} onChange={setHost} />} />
@@ -31,7 +30,7 @@ Feld und die Teile, die denselben Wert erklären.
 <InputGroup action="Suchen" onAction={runSearch} field={<TextInput value={q} onChange={setQ} />} />
 ```
 
-### Landesvorwahl als Vorsatz-Auswahl
+### Ländervorwahl als Präfix-Auswahl
 
 ```jsx
 <InputGroup prefixOptions={dialCodes} onPrefixChange={setDial}
@@ -42,8 +41,8 @@ Feld und die Teile, die denselben Wert erklären.
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Einheit oder Vorzeichen | `prefix` bzw. `suffix`, keine eigene Beschriftung |
-| Aktion am Feld | `action` plus `actionOnEnter`, Button beschriften |
-| Landesvorwahl, Protokoll | `prefixOptions` statt Freitext |
-| Passwort sichtbar/versteckt | `suffix` als Umschalt-Icon, mit `aria-label` |
-| Feld mit Hilfetext | Gruppe im Feldbereich, [field](../field/) drumherum |
+| Einheit oder Vorzeichen | `prefix` oder `suffix`, ohne eigene Beschriftung |
+| Aktion am Feld | `action` plus `actionOnEnter`. Gib dem Button ein Label |
+| Ländervorwahl, Protokoll | `prefixOptions` statt Freitext |
+| Passwort sichtbar/verborgen | `suffix` als Umschalt-Icon, mit `aria-label` |
+| Feld mit Hilfetext | Gruppe im Feldbereich, [field](../field/) außen herum |

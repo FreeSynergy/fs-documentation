@@ -1,11 +1,11 @@
-# Number Input - Aussehen
+# Number Input - Erscheinungsbild
 
 ## Grundlayout
 Ein Number Input ist ein Eingabefeld für Zahlen.
 
 ```
 ┌─────────────────────────────────────────┐
-│ Anzahl                                  │
+│ Menge                                   │
 ├─────────────────────────────────────────┤
 │  [ 123 ]                                │
 │                                         │
@@ -14,58 +14,58 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
+| Variante | Erscheinungsbild |
+|----------|------------------|
 | **einfach** | Zahlenfeld ohne Bedienelemente |
-| **stepper** | kleine Pfeiltaste gestapelt rechts am Feld |
-| **formatiert** | Wert rechtsbündig, Einheit grau hinter dem Wert |
+| **stepper** | kleine Pfeiltasten übereinander rechts am Feld |
+| **formatiert** | Wert rechts ausgerichtet, Einheit grau hinter dem Wert |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
-| Small | 32px | Inline |
-| Medium | 48px | Standard |
-| Large | 64px | Featured |
+| small | 32px | inline |
+| medium | 48px | Standard |
+| large | 64px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **active** | dunkel | aktiver Zustand |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Die Schritt-Knöpfe sind quadratisch und mindestens 32 px, auf Touch-Geräten 44 px;
-  bei `small` Bildschirmbreite werden sie links und außen neben das Feld gestellt.
-- Der Wert bleibt rechtsbündig; zu lange Zahlen kürzen nicht, das Feld wächst mit.
-- Auf Touch-Geräten erscheint die Zifferntastatur, bei `formatiert` ohne Gruppierungszeichen.
+- Die Schrittbuttons sind quadratisch und mindestens 32 px groß, auf Touchgeräten 44 px.
+  Bei der Breite `small` stehen sie außerhalb, links neben dem Feld.
+- Der Wert bleibt rechts ausgerichtet. Lange Zahlen werden nicht gekürzt, das Feld wächst mit.
+- Auf Touchgeräten erscheint die Zahlentastatur. Bei `formatiert` ohne Tausendertrennzeichen.
 
-## Step-Buttons
+## Schrittbuttons
 
 ```
 ┌─────────────────────────────────────────┐
-│ Anzahl                                  │
+│ Menge                                   │
 ├─────────────────────────────────────────┤
 │  [ 123 ]   [▲]                          │
 │            [▼]                          │
 └─────────────────────────────────────────┘
 ```
 
-## Validation States
+## Validierungszustände
 
-| State | Beschreibung |
-|-------|--------------|
-| **Valid** | Grün |
-| **Invalid** | Rot |
-| **Warning** | Orange |
+| Zustand | Beschreibung |
+|---------|--------------|
+| **valid** | grün |
+| **invalid** | rot |
+| **warning** | orange |

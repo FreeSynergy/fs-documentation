@@ -12,67 +12,67 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein-/ausklappen können.
+Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein- und ausklappen.
 
 ## Verwendungszweck
 
-- Platz sparen durch Ein-/Ausklappen
-- FAQ-Sectionen
-- Einstellungs-Gruppen
+- Platz sparen durch Ein- und Ausklappen
+- FAQ-Abschnitte
+- Einstellungsgruppen
 - Kategorien mit Unterpunkten
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **standard** | Stapel von Köpfen, einer nach dem anderen offen |
+| **standard** | Stapel von Kopfzeilen, nacheinander jeweils eine offen |
 | **mehrere** | mehrere Bereiche gleichzeitig offen |
-| **einzel** | nur ein Kopf, kein Stapel |
-| **deaktiviert** | Kopf sichtbar, aber nicht schaltbar |
+| **einzel** | nur eine Kopfzeile, kein Stapel |
+| **deaktiviert** | Kopfzeile sichtbar, aber nicht umschaltbar |
 
 !!! info "Einordnung"
-    Ein einzelnes aufklappbares Element ohne Gruppierung (in Bibliotheken `collapsible`) ist
-die Variante `einzel` dieses Akkordeons: `items` mit einem Eintrag und
-`multiple = false`.
+    Ein einzelnes einklappbares Element ohne Gruppierung (in Bibliotheken `collapsible`
+    genannt) ist die Variante `einzel` dieses Accordions: `items` mit einem Eintrag
+    und `multiple = false`.
 
-## Features
+## Funktionen
 
-- Expand/Collapse
-- Animation (Ein-/Ausklapp-Animation)
-- Keyboard-Navigation
-- Accessibility (Barrierefreiheit)
+- Auf- und Zuklappen
+- Animation beim Auf- und Zuklappen
+- Tastaturnavigation
+- Barrierefreiheit
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs zeigen immer nur einen Inhalt,
-  das Akkordeon kann mehrere gleichzeitig zeigen.
-- **Nicht verwechseln mit** [panel](../panel/): ein Panel steht für sich, die Akkordeonköpfe
-  gehören zu einer gemeinsamen Gruppe.
-- **Nicht verwechseln mit** [tree-view](../../data/tree-view/): hier wird Inhalt ein- und ausgeklappt,
-  dort Datenhierarchie durchblättert.
-- **Nicht verwechseln mit** [table-of-contents](../../data/table-of-contents/): das Verzeichnis
-  springt zu Inhalten, es verbirgt sie nicht.
+- **Nicht verwechseln mit** [tabs](../../navigation/tabs/): Tabs zeigen immer nur einen Inhalt.
+  Das Accordion kann mehrere gleichzeitig zeigen.
+- **Nicht verwechseln mit** [panel](../panel/): Ein Panel steht für sich allein. Die Kopfzeilen
+  eines Accordions gehören zu einer gemeinsamen Gruppe.
+- **Nicht verwechseln mit** [tree-view](../../data/tree-view/): Hier werden Inhalte
+  ein- und ausgeklappt. Dort wird durch eine Datenhierarchie geblättert.
+- **Nicht verwechseln mit** [table-of-contents](../../data/table-of-contents/): Das Inhaltsverzeichnis
+  springt zum Inhalt. Es blendet ihn nicht aus.
 
 ## Best Practices
 
-- Der wichtigste Bereich ist anfangs offen, der Rest geschlossen.
-- Die ganze Kopfzeile ist der Schaltfläche, der Pfeil ist nur das Hinweiszeichen.
-- Tastatur: `Enter`/`Leertaste` schaltet, Pfeiltasten springen zwischen den Köpfen;
+- Der wichtigste Bereich ist beim Start offen, der Rest geschlossen.
+- Die ganze Kopfzeile ist der Button. Der Pfeil ist nur die Anzeige.
+- Tastatur: `Enter`/`Leertaste` schaltet um, Pfeiltasten springen zwischen den Kopfzeilen.
   `aria-expanded` beschreibt den Zustand.
-- Höchstens etwa acht Köpfe; darüber ist eine Navigation besser als Einklappen.
-- Lange Inhalte nicht einklappen, die man zum Vergleichen braucht.
+- Höchstens etwa acht Kopfzeilen. Darüber ist eine Navigation besser als Einklappen.
+- Lange Inhalte, die Nutzer zum Vergleichen brauchen, nicht einklappen.
 
 ## Verhalten
 
 | Verhalten | Beschreibung |
 |-----------|--------------|
-| **Single Expand** | Nur einer offen |
-| **Multiple Expand** | Mehrere offen |
-| **Accordion Group** | Gruppen von Accordion-Items |
+| **einzeln öffnen** | nur einer ist offen |
+| **mehrfach öffnen** | mehrere sind offen |
+| **Accordion-Gruppe** | Gruppen von Accordion-Einträgen |
 
 ## Siehe auch
 
 - [containers – Übersicht](../index.md)
-- [Panel](../panel/) — eigenständiger Bereich
+- [Panel](../panel/) — ein eigenständiger Bereich
 - [Tabs](../../navigation/tabs/) — immer nur ein Inhalt
-- [Basiskomponente](../../../primitives/basics/base.md)
+- [Base-Komponente](../../../primitives/basics/base.md)

@@ -1,7 +1,7 @@
-# Mention Input - Aussehen
+# Mention Input - Erscheinungsbild
 
 ## Grundlayout
-Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
+Ein Mention Input ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -11,44 +11,44 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **feld** | einzeilig, gewählte Personen als Chips mit Schließen-Knopf |
-| **inline** | normaler Text, erwähnte Namen farbig hinterlegt |
-| **mehrzeilig** | Editorfläche, Chips und Text mischen sich |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **feld** | einzeilig, ausgewählte Personen als Chips mit Schließen-Button |
+| **inline** | normaler Text, erwähnte Namen farbig hervorgehoben |
+| **mehrzeilig** | Editorbereich, Chips und Text gemischt |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | Inline |
-| Medium | 300px | Standard |
-| Large | 400px | Featured |
-| Full | 100% | Volle Breite |
+| small | 200px | inline |
+| medium | 300px | Standard |
+| large | 400px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Mention** | Primärfarbe | Erwähnte Benutzer |
-| **Active** | Dunkel | Aktiver Zustand |
+| **default** | hell | Standard |
+| **mention** | Primärfarbe | erwähnte Benutzer |
+| **active** | dunkel | aktiver Zustand |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- Die Vorschlagsliste folgt der Cursorposition und klappt nach oben, wenn unten kein Platz ist.
-- Auf schmalen Bildschirmen wird die Liste zur bodenbündigen Leiste über der Tastatur.
-- Chips brechen in die nächste Zeile um; zu lange Namen werden mit Auslassung gekürzt,
-  der Vollname bleibt als Tooltip erhalten.
+- Die Vorschlagsliste folgt der Cursorposition. Sie klappt nach oben, wenn unten kein Platz ist.
+- Auf schmalen Bildschirmen wird die Liste zu einer unten verankerten Leiste über der Tastatur.
+- Chips brechen in die nächste Zeile um. Zu lange Namen werden mit Auslassungspunkten gekürzt.
+  Der volle Name bleibt als Tooltip verfügbar.
 
-## Auto-Complete
+## Autovervollständigung
 
 ```
 ┌─────────────────────────────────────────┐
@@ -61,7 +61,7 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 └─────────────────────────────────────────┘
 ```
 
-## Selected Users
+## Ausgewählte Benutzer
 
 ```
 ┌─────────────────────────────────────────┐

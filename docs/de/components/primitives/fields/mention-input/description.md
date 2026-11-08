@@ -1,4 +1,4 @@
-# Mention Input (Erwähnungsfeld)
+# Mention Input (Erwähnungseingabe)
 
 | Feld | Wert |
 |------|------|
@@ -12,41 +12,42 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
+Ein Mention Input ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
 
 ## Verwendungszweck
 
 - Chat
 - Kommentare
-- Messages
+- Nachrichten
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **feld** | eigenes Feld nur für Erwähnungen (z. B. Empfänger) |
-| **inline** | Erwähnung mitten im Fließtext eines Kommentars |
+| **feld** | ein eigenes Feld nur für Erwähnungen (z. B. Empfänger) |
+| **inline** | eine Erwähnung mitten im laufenden Text eines Kommentars |
 | **mehrzeilig** | Chat-Editor mit mehreren Zeilen und Erwähnungen |
 
-## Features
+## Funktionen
 
-- @-Mention
-- Auto-complete
-- Selected Users
+- Erwähnung mit @
+- Autovervollständigung
+- Ausgewählte Benutzer
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [tags-input](../tags-input/): Tags sind freie Begriffe,
-  eine Erwähnung zeigt auf einen Kontakt und löst eine Benachrichtigung aus.
-- **Nicht verwechseln mit** [combobox](../combobox/): die Combobox schreibt einen Wert ins Feld,
-  die Erwähnung bettet die Person in einen laufenden Text ein.
-- Getippter Text wie „@john“ ohne Auswahl ist **keine** Erwähnung und erzeugt keine Meldung.
+- **Nicht verwechseln mit** [tags-input](../tags-input/): Tags sind freie Begriffe.
+  Eine Erwähnung verweist auf einen Kontakt und löst eine Benachrichtigung aus.
+- **Nicht verwechseln mit** [combobox](../combobox/): Die Combobox schreibt einen Wert in das
+  Feld. Die Erwähnung bettet die Person in den laufenden Text ein.
+- Getippter Text wie „@john“ ohne Auswahl ist **keine** Erwähnung und erzeugt
+  keine Benachrichtigung.
 
 ## Best Practices
 
-- Vorschlagsliste erst nach `@` und einem weiteren Zeichen öffnen, Treffer nach Nähe sortieren.
-- Eine eingefügte Erwähnung mit einer einzigen Rücktaste löschen (atomar behandeln).
-- Sichtbar immer der Anzeigename, intern die Kontakt-ID – niemals den Namen speichern.
+- Die Vorschlagsliste erst nach `@` und einem weiteren Zeichen öffnen. Treffer nach Nähe sortieren.
+- Eine eingefügte Erwähnung mit einem einzigen Backspace löschen (wie ein unteilbares Element behandeln).
+- Immer den Anzeigenamen zeigen, intern die Kontakt-ID speichern. Den Namen nie speichern.
 - Bei `long-press` die Kontaktkarte öffnen ([hover-card](../../../widgets/overlays/hover-card/) am Desktop).
 
 ## Siehe auch
@@ -54,4 +55,4 @@ Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
 - [fields – Übersicht](../index.md)
 - [Tags Input](../tags-input/) — freie Begriffe statt Kontakte
 - [Emoji Picker](../../../widgets/fields/emoji-picker/) — Zeichen einfügen
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

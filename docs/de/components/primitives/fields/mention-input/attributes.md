@@ -2,29 +2,29 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `value` | string | - | Wert (Text mit Mentions) |
-| `onChange` | function | - | Event bei Änderung |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `value` | string | - | Wert (Text mit Erwähnungen) |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `users` | array[] | - | Array von Benutzern |
-| `placeholder` | string | `null` | Placeholder-Text |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `users` | array[] | - | Liste der Benutzer |
+| `placeholder` | string | `null` | Platzhaltertext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `showSelectedCount` | boolean | `false` | Ausgewählte Anzahl anzeigen? |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `showSelectedCount` | boolean | `false` | Anzahl der Auswahl anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onMentionSelect` | function | Wird bei Mention-Auswahl ausgeführt |
+| `onMentionSelect` | function | wird bei der Auswahl einer Erwähnung ausgeführt |
 
 ## Barrierefreiheit
 
@@ -32,15 +32,15 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `combobox` |
 
-## Auto-Complete-Attribute
+## Attribute der Autovervollständigung
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `showSuggestions` | boolean | `true` | Vorschläge anzeigen? |
-| `trigger` | string | `@` | Trigger-Zeichen |
+| `trigger` | string | `@` | Auslösezeichen |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../basics/base.md)

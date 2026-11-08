@@ -2,30 +2,30 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | number | - | Wert |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `min` | number | - | Minimalwert |
-| `max` | number | - | Maximalwert |
+| `min` | number | - | kleinster Wert |
+| `max` | number | - | größter Wert |
 | `step` | number | `1` | Schrittweite |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showStepButtons` | boolean | `true` | Step-Buttons anzeigen? |
+| `showStepButtons` | boolean | `true` | Schrittbuttons anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onKeyDown` | function | Wird bei Tastendruck ausgeführt |
+| `onKeyDown` | function | wird bei einem Tastendruck ausgeführt |
 
 ## Barrierefreiheit
 
@@ -33,15 +33,15 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `spinbutton` |
 
-## Validation-Attribute
+## Validierungsattribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `required` | boolean | `false` | Erforderlich? |
+| `required` | boolean | `false` | Pflichtfeld? |
 | `error` | string | - | Fehlermeldung |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../basics/base.md)

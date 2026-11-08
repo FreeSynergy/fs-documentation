@@ -1,58 +1,58 @@
-# Input Group (Feldgruppe) - Aussehen
+# Input Group - Erscheinungsbild
 
 ## Grundlayout
 
 ```
 ┌──────────┬────────────────────────────┐
-│ https:// │ free-synergy.org           │   Vorsatz links, Wert rechts davon
+│ https:// │ free-synergy.org           │   Präfix links, Wert rechts davon
 └──────────┴────────────────────────────┘
 
 ┌────────────────────────────┬─────┐
-│ Suche nach Dateien         │ 🔍  │   Aktion rechts, gemeinsame Außenecke
+│ Nach Dateien suchen        │ 🔍  │   Aktion rechts, gemeinsame äußere Ecke
 └────────────────────────────┴─────┘
 ```
 
-Feld und Anbauteile bilden eine Fläche: Innenkanten werden geteilt, nur die äußeren Ecken
-sind gerundet.
+Feld und angesetzte Teile bilden eine Fläche. Innere Kanten sind gemeinsam,
+nur die äußeren Ecken sind abgerundet.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **praefix** | abgesetzter Streifen links, gleiche Höhe wie das Feld |
-| **suffix** | abgesetzter Streifen rechts |
-| **aktion** | Schaltfläche in Feldhöhe, getrennt durch Innenkante |
-| **auswahl** | Vorsatz mit Pfeil, öffnet ein kleines Menü |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **praefix** | versetzter Streifen links, gleiche Höhe wie das Feld |
+| **suffix** | versetzter Streifen rechts |
+| **aktion** | Button in Feldhöhe, durch eine innere Kante abgetrennt |
+| **auswahl** | Präfix mit Pfeil, öffnet ein kleines Menü |
 
 ## Größen
 
-Anschluss an das Größen-Raster der [Basiskomponente](../../basics/base.md):
+Gekoppelt an die Größenstufen der [Base-Komponente](../../basics/base.md):
 
-| Größe | Höhe | Icon im Anbauteil | Schrift |
-|-------|------|-------------------|---------|
+| Größe | Höhe | Icon im angesetzten Teil | Schrift |
+|-------|------|--------------------------|---------|
 | `small` | 28 px | 14 px | 13 px |
 | `medium` | 36 px | 16 px | 14 px |
 | `large` | 44 px | 20 px | 16 px |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Anbauteil auf-neutraler Fläche, Trennkante sichtbar |
-| `focus-within` | Feldrand in Primärfarbe, Anbauteil bleibt neutral |
-| `filled` | Wert gesetzt, Aktions-Schaltfläche wird aktiv |
-| `error` | Rand der ganzen Gruppe in Fehlerfarbe |
-| `disabled` | Gruppe abgeblendet, Anbauteil mit |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | angesetztes Teil auf neutraler Fläche, Trennkante sichtbar |
+| `focus-within` | Feldrahmen in der Primärfarbe, angesetztes Teil bleibt neutral |
+| `filled` | Wert gesetzt, der Aktions-Button wird aktiv |
+| `error` | Rahmen der ganzen Gruppe in der Fehlerfarbe |
+| `disabled` | Gruppe abgedunkelt, angesetztes Teil mit ihr |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `highlight` | Anbauteil und Feld reagieren gemeinsam auf Fokus |
-| `tone` | Aktions-Schaltfläche eine Stufe dunkler bei Hover |
-| `ring` | Fokusring um die gesamte Gruppe bei Tastaturnavigation |
+| `highlight` | angesetztes Teil und Feld reagieren gemeinsam auf den Fokus |
+| `tone` | Aktions-Button wird beim Hover eine Stufe dunkler |
+| `ring` | Fokusring um die ganze Gruppe für die Tastaturnavigation |
 
-## Reaktiv
+## Responsiv
 
 ```css
 .input-group { display: flex; align-items: stretch; }
@@ -61,9 +61,9 @@ Anschluss an das Größen-Raster der [Basiskomponente](../../basics/base.md):
 .input-group > :last-child  { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
 
 @media (max-width: 480px) {
-  .input-group--aktion { flex-direction: column; }   /* Aktion unter das Feld */
+  .input-group--aktion { flex-direction: column; }   /* Aktion unter dem Feld */
 }
 ```
 
-Auf schmaler Fläche rutscht die Aktion unter das Feld; Vorsätze bleiben am Feld, weil sie
-zum Wert gehören.
+Auf einer schmalen Fläche rutscht die Aktion unter das Feld. Präfixe bleiben am
+Feld, weil sie zum Wert gehören.

@@ -1,36 +1,35 @@
-# Mention Input (Erwähnungsfeld) - Verwendung
+# Mention Input - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Mention Input ist ein Textfeld mit Benutzer-/Kontakt-Erwähnung.
+Ein Mention Input ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
 
 - Chat
 - Kommentare
-- Messages
+- Nachrichten
 
 ## Beispiele
 
 ### Chat
 
 ```jsx
-<MentionInput value="Wert" onChange={aktion} />
+<MentionInput value="value" onChange={action} />
 ```
 
 ### Kommentare
 
 ```jsx
-<MentionInput value="Wert" users={eintraege} />
+<MentionInput value="value" users={entries} />
 ```
 
-### Messages
+### Nachrichten
 
 ```jsx
-<MentionInput value="Wert" placeholder="Platzhalter" />
+<MentionInput value="value" placeholder="placeholder" />
 ```
 
 ## Hinweise

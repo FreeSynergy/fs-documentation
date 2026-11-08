@@ -2,31 +2,31 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `title` | string | - | Titel |
 | `subtitle` | string | - | Untertitel |
 | `content` | string/node | - | Inhalt |
-| `actions` | array[] | - | Array von Action-Objekten |
+| `actions` | array[] | - | Liste der Aktionsobjekte |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `variant` | enum | `default` | Stil: `default`, `flat`, `outlined`, `elevated` |
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `responsive` | boolean | `true` | Responsives Layout? |
+| `responsive` | boolean | `true` | responsives Layout? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onActionClick` | function | Wird beim Action-Klick ausgeführt |
+| `onActionClick` | function | wird ausgeführt, wenn eine Aktion angeklickt wird |
 
 ## Barrierefreiheit
 
@@ -34,15 +34,15 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `region` |
 
-## Media-Attribute
+## Medien-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `media` | string/object | - | Bild/Thumbnail |
+| `media` | string/object | - | Bild oder Vorschaubild |
 | `mediaPosition` | enum | `top` | Position: `top`, `bottom`, `left` |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../../primitives/basics/base.md)

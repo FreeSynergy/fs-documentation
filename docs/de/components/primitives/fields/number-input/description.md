@@ -1,4 +1,4 @@
-# Number Input (Nummernfeld)
+# Number Input (Zahleneingabe)
 
 | Feld | Wert |
 |------|------|
@@ -16,7 +16,7 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 
 ## Verwendungszweck
 
-- Altersangabe
+- Ein Alter angeben
 - Mengen
 - Preise
 - Werte
@@ -25,35 +25,35 @@ Ein Number Input ist ein Eingabefeld für Zahlen.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einfach** | Nur Zahlenfeld, Tastatur ohne Schritt-Knöpfe |
-| **stepper** | Feld mit `−` und `+` daneben, Halten beschleunigt |
-| **formatiert** | Wert mit Einheit und lokaler Gruppierung (`1.250 g`) |
+| **einfach** | nur ein Zahlenfeld, Tastatur ohne Schrittbuttons |
+| **stepper** | Feld mit `−` und `+` daneben. Halten beschleunigt. |
+| **formatiert** | Wert mit Einheit und landesüblicher Gruppierung (`1.250 g`) |
 
-## Features
+## Funktionen
 
-- Min/Max-Werte
+- Minimal- und Maximalwerte
 - Schrittweite
 - Validierung
-- Auto-formatting
+- Automatische Formatierung
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [slider](../slider/): der Regler wählt grob und zeigt den Wertebereich,
-  dieses Feld braucht den exakten Wert. Beide teilen sich die Wertlogik (`min`, `max`, `step`).
-- **Nicht verwechseln mit** [text-input](../text-input/): Zahlenfolgen, die keine Zahlen sind
-  (Telefonnummer, PLZ, Kontonummer) gehören in `text-input` mit `type = text`.
-- **Nicht verwechseln mit** [rating](../rating/): eine Bewertung ist eine Skala, keine Zahleneingabe.
+- **Nicht verwechseln mit** [slider](../slider/): Der Slider wählt grob aus und zeigt den
+  Wertebereich. Dieses Feld braucht den genauen Wert. Beide nutzen dieselbe Wertelogik (`min`, `max`, `step`).
+- **Nicht verwechseln mit** [text-input](../text-input/): Ziffernfolgen, die keine
+  Zahlen sind (Telefonnummer, PLZ, Kontonummer), gehören in `text-input` mit `type = text`.
+- **Nicht verwechseln mit** [rating](../rating/): Eine Bewertung ist eine Skala, kein Number Input.
 
 ## Best Practices
 
-- `min`, `max` und `step` immer setzen; Werte außerhalb als Fehler zeigen, nicht still klemmen.
-- Gruppierungszeichen nur in der Anzeige verwenden, gespeichert wird die nackte Zahl.
-- Einheit als festes Suffix außerhalb des Wertes, damit umgerechnet werden kann.
-- Für Beträge Währung und Genauigkeit vorgeben, nicht frei tippen lassen.
+- Immer `min`, `max` und `step` setzen. Werte außerhalb als Fehler anzeigen, nicht stillschweigend begrenzen.
+- Gruppierungszeichen nur in der Anzeige verwenden. Gespeichert wird die reine Zahl.
+- Die Einheit als festes Suffix außerhalb des Wertes setzen, damit sie umrechenbar bleibt.
+- Bei Beträgen Währung und Genauigkeit festlegen, statt freie Eingabe zu erlauben.
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Slider](../slider/) — gleitende Wertewahl
+- [Slider](../slider/) — Auswahl eines Werts per Schieber
 - [Text Input](../text-input/) — Zeichenketten statt Zahlen
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

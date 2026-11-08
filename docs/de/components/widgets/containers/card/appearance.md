@@ -1,59 +1,60 @@
-# Card - Aussehen
+# Card - Erscheinungsbild
 
 ## Grundlayout
-Eine Card ist ein Container-Element, das Inhalte in einer strukturierten Box mit Titel, Inhalt und optionalen Aktionen darstellt.
+Eine Card ist ein Container-Element. Es zeigt Inhalte in einem strukturierten Kasten
+mit Titel, Inhalt und optionalen Aktionen.
 
 ```
 ┌─────────────────────────────┐
-│ 🏠 Titel der Karte          │
+│ 🏠 Titel der Card           │
 ├─────────────────────────────┤
 │                             │
-│   Hier ist der Inhalt       │
+│   Hier steht der Inhalt     │
 │   der Card.                 │
 │   Mehrzeiliger Text.        │
 │                             │
 ├─────────────────────────────┤
-│  [Btn 1]  [Btn 2]  ⋯       │
+│  [Btn 1]  [Btn 2]  ⋯        │
 └─────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Default** | Standard mit Header |
-| **Flat** | Ohne Schatten |
-| **Outlined** | Nur Randlinie |
-| **Elevated** | Stark erhöht mit Schatten |
-| **Media** | Mit Bild/Thumbnail |
+| Variante | Beschreibung |
+|----------|--------------|
+| **default** | Standard mit Kopfzeile |
+| **flat** | ohne Schatten |
+| **outlined** | nur ein Umriss |
+| **elevated** | stark angehoben mit Schatten |
+| **media** | mit Bild oder Vorschaubild |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | In List-Items |
-| Medium | 300px | Standard |
-| Large | 400px | Featured |
-| Full | 100% | Volle Breite |
+| small | 200px | in Listenelementen |
+| medium | 300px | Standard |
+| large | 400px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Secondary** | Sekundärfarbe | Sekundär |
-| **Danger** | Rot | Gefährlich |
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **secondary** | Sekundärfarbe | sekundär |
+| **danger** | rot | gefährlich |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `shadow` | Schatten stärker |
-| `transform` | Leichte Hebung |
-| `border` | Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `transform` | leichtes Anheben |
+| `border` | der Rahmen leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
 ```css
 .card:hover {

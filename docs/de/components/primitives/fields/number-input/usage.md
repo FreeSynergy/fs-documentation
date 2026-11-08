@@ -1,35 +1,34 @@
-# Number Input (Nummernfeld) - Verwendung
+# Number Input - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
 Ein Number Input ist ein Eingabefeld für Zahlen.
 
-- Altersangabe
+- Ein Alter angeben
 - Mengen
 - Preise
 - Werte
 
 ## Beispiele
 
-### Altersangabe
+### Ein Alter angeben
 
 ```jsx
-<NumberInput onChange={aktion} />
+<NumberInput onChange={action} />
 ```
 
 ### Mengen
 
 ```jsx
-<NumberInput onChange={aktion} step={1} />
+<NumberInput onChange={action} step={1} />
 ```
 
 ### Preise
 
 ```jsx
-<NumberInput onChange={aktion} showStepButtons={true} />
+<NumberInput onChange={action} showStepButtons={true} />
 ```

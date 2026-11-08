@@ -2,31 +2,31 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Accordion-Items |
-| `activeItem` | string/number | - | Aktives Item |
-| `onChange` | function | - | Event bei Wechsel |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | Liste der Accordion-Einträge |
+| `activeItem` | string/number | - | aktiver Eintrag |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `collapsible` | boolean | `true` | Kollabierbar? |
+| `collapsible` | boolean | `true` | einklappbar? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onExpand` | function | Wird beim Expandieren ausgeführt |
-| `onCollapse` | function | Wird beim Kollabieren ausgeführt |
+| `onExpand` | function | wird beim Aufklappen ausgeführt |
+| `onCollapse` | function | wird beim Zuklappen ausgeführt |
 
 ## Barrierefreiheit
 
@@ -34,16 +34,16 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `tablist` |
 
-## Item-Attribute
+## Eintrag-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
-| `header` | string/node | Header-Text |
+| `id` | string | eindeutige ID |
+| `header` | string/node | Text der Kopfzeile |
 | `content` | string/node | Inhalt |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../../primitives/basics/base.md)
