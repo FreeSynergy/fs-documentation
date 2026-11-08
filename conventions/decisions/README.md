@@ -71,3 +71,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0062 | Pakete liegen in Git: Katalog-Repo, ein Tag je Version, TUF, Spiegel überall | akzeptiert |
 | 0063 | Ein Programm, ein Befehl: `fs-<programm>` mit Unterbefehlen; Facetten als Link `fs-<facette>` | akzeptiert |
 | 0064 | Versionsnummern beginnen bei 0.0.1; 0.1.0 erst nach Handtest | akzeptiert |
+| 0065 | Ein Standard für jedes Fenster: Menü, Version, Hilfe, Meldungen | akzeptiert im Grundsatz |
