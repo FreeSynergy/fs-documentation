@@ -2,16 +2,18 @@
 
 ## Beschreibung
 
-Ripple sendet eine kreisförmige Welle vom Punkt der Berührung aus: Der Kreis wächst über das Element hinaus und löst sich dabei auf. Die Animation bestätigt genau dort, wo der Nutzer ausgelöst hat.
+Ripple sendet eine kreisförmige Welle vom Berührungspunkt aus: Der Kreis wächst über das Element
+hinaus und löst sich dabei auf. Die Animation bestätigt genau die Stelle, an der der Nutzer etwas
+ausgelöst hat.
 
 ## Verwendung
 
-- Tap- und Klick-Feedback auf Buttons und Icons
-- Bestätigung in Navigationsleisten und Tabs
-- Zeilen in Listen und Karten beim Antippen
-- Sichtbarmachen des genauen Touchpunkts auf großen Flächen
-- Material-ähnliche Oberflächen als Standard-Feedback
-- Bestätigung eines Menüeintrags auf dem Tablet
+- Tipp- und Klickrückmeldung bei Schaltflächen und Icons
+- Bestätigung in Navigationsleisten und Reitern
+- Zeilen in Listen und Karten beim Tippen
+- den genauen Berührungspunkt auf großen Flächen sichtbar machen
+- materialartige Flächen als Standardrückmeldung
+- einen Menüeintrag auf dem Tablet bestätigen
 
 ## Dauer
 
@@ -20,6 +22,8 @@ Ripple sendet eine kreisförmige Welle vom Punkt der Berührung aus: Der Kreis w
 
 ## Unterschied zu Highlight
 
-- Highlight: Der Hintergrund des gesamten Elements leuchtet gleichmäßig auf, ohne erkennbaren Ursprungspunkt
-- Pulse: Das ganze Element schwillt periodisch an und ab; Ripple ist einmalig pro Interaktion und ortsgebunden
-- Elastic: Das Element selbst federt; Ripple überlagert das Element nur mit einer Farbe
+- Highlight: der Hintergrund des gesamten Elements leuchtet gleichmäßig auf, ohne erkennbaren
+  Ursprungspunkt
+- Pulse: das ganze Element schwillt periodisch an und ab; Ripple geschieht einmal pro Interaktion
+  und ist an einen Ort gebunden
+- Elastic: das Element selbst federt; Ripple legt nur eine Farbe über das Element

@@ -2,37 +2,37 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `animation` | string | `ripple` | Name der Animation |
 | `wellenUrsprung` | string | `click` | `click` (Berührungspunkt) oder `center` |
 | `farbe` | string | `onSurface 0.2` | Füllfarbe der Welle mit Deckkraft |
-| `radius` | string \| number | `auto` | Zielradius; `auto` = ganze Fläche erreichen |
+| `radius` | string \| number | `auto` | Zielradius; `auto` = gesamte Fläche erreichen |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `duration` | number | `450` | Ausbreitungsdauer einer Welle in ms |
-| `timingFunction` | string | `ease-out` | Welle wird beim Wachsen langsamer |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `iterationCount` | number | `1` | Eine Welle pro Interaktion |
-| `fillMode` | string | `none` | Welle verschwindet vollständig |
+| `timingFunction` | string | `ease-out` | die Welle verlangsamt sich beim Wachsen |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `iterationCount` | number | `1` | eine Welle pro Interaktion |
+| `fillMode` | string | `none` | die Welle verschwindet vollständig |
 
-## Wellen-Attribute
+## Wellenattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `startRadius` | number | `0` | Startradius in px |
 | `spreadDuration` | number | `450` | Zeit bis zum Erreichen des Zielradius |
 | `fadeAnteil` | number | `0.6` | Anteil der Dauer, in dem die Welle ausblendet |
-| `containInElement` | boolean | `true` | Welle an der Elementkontur beschneiden |
-| `maxWellen` | number | `3` | Gleichzeitige Wellen, älteste wird ersetzt |
+| `containInElement` | boolean | `true` | Welle an der Elementkontur abschneiden |
+| `maxWellen` | number | `3` | gleichzeitige Wellen, die älteste wird ersetzt |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
 | `focusRipple` | boolean | `true` | Welle auch bei Tastaturfokus auslösen |

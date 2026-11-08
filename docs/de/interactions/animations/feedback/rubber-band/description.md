@@ -2,26 +2,27 @@
 
 ## Beschreibung
 
-Rubber Band zeigt den Widerstand einer scrollbaren Fläche beim Überziehen: Zieht der Nutzer über den Rand hinaus, folgt der Inhalt nur gedämpft.
-Beim Loslassen federt er elastisch in die Randlage zurück.
-Die Auslenkung entsteht ausschließlich durch die Geste – ohne Zug bleibt der Inhalt an seinem Rand.
+Rubber Band zeigt den Widerstand einer scrollbaren Fläche, wenn sie zu weit gezogen wird. Zieht
+der Nutzer über den Rand hinaus, folgt der Inhalt nur gedämpft. Nach dem Loslassen federt er
+elastisch in die Randposition zurück. Die Auslenkung entsteht allein durch die Geste. Ohne Ziehen
+bleibt der Inhalt an seinem Rand.
 
 ## Verwendung
 
-- Over-Scroll oben und unten in Listen und Artikeln
-- Horizontale Listen am Ende der Strecke
+- Überscrollen oben und unten in Listen und Artikeln
+- horizontale Listen am Ende der Strecke
 - Karten und zoombare Bilder mit gedämpften Rändern
-- Paging: der Einzug signalisiert das Ende der Liste
-- Einzugsbereich als Start für Pull-to-Refresh
-- Drag & Drop an Containergrenzen
+- Blättern: Das Herausziehen zeigt das Ende der Liste an
+- der Bereich beim Herausziehen als Anfang von Zum-Aktualisieren-Ziehen
+- Drag & Drop an Behältergrenzen
 
 ## Dauer
 
-- Typisch: Rückfederung 300–500 ms; Folgebewegung direkt (gesteengesteuert)
+- Typisch: Zurückfedern 300–500 ms; die Bewegung davor folgt direkt der Geste
 
 ## Unterschied zu Elastic und Bounce Out
 
-- Elastic: eine Bewegung ohne Gestik, die von selbst überschießt; Rubber Band
-  folgt zuerst dem Finger und federt erst nach dem Loslassen zurück.
-- Bounce Out: federt vor dem Verschwinden; Rubber Band endet immer in der
-  Ruhelage, das Element bleibt sichtbar.
+- Elastic: eine Bewegung ohne Geste, die von allein über das Ziel hinausschießt; Rubber Band folgt
+  zuerst dem Finger und federt erst nach dem Loslassen zurück.
+- Bounce Out: federt, bevor das Element verschwindet; Rubber Band endet immer in der Ruheposition,
+  das Element bleibt sichtbar.

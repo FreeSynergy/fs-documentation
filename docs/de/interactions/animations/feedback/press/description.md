@@ -2,24 +2,29 @@
 
 ## Beschreibung
 
-Press senkt ein Element beim Drücken minimal ab (`scale` etwa 0.97) und hebt die Deckkraft oder den Schatten leicht an. Beim Loslassen federt es in die Ausgangslage zurück. Die Animation ist bewusst kaum sichtbar – sie bestätigt den Berührungspunkt, ohne die Aufmerksamkeit vom Inhalt zu ziehen.
+Press senkt ein Element beim Drücken minimal ab (`scale` um 0.97) und hebt die Deckkraft oder den
+Schatten leicht an. Beim Loslassen federt es in seine Ausgangsposition zurück. Die Animation ist
+bewusst kaum sichtbar: Sie bestätigt den Berührungspunkt, ohne die Aufmerksamkeit vom Inhalt
+abzulenken.
 
 ## Verwendung
 
-- Buttons, Icons und Chips bei gedrückter Taste oder Finger
-- Karten und Zeilen, die beim Antippen aktivierbar sind, siehe [card](../../../../components/widgets/containers/card/description.md)
-- Tasten einer Werkzeugleiste und Segmentsteuerungen
-- Umschalten von Schaltern (zusätzlich zum Zustandswechsel)
-- Touchscreens, wo es keinen Hover-Zustand gibt
-- Bedienelemente auf einer Tastatur, wenn die Leertaste oder Eingabe gehalten wird
+- Schaltflächen, Icons und Chips, solange Taste oder Finger gehalten werden
+- Karten und Zeilen, die per Tippen aktiviert werden können, siehe [card](../../../../components/widgets/containers/card/description.md)
+- Werkzeugleisten-Schaltflächen und Segmentsteuerungen
+- Schalter beim Umlegen (zusätzlich zur Zustandsänderung)
+- Touchscreens, auf denen es keinen Hover-Zustand gibt
+- Bedienelemente per Tastatur, wenn Leertaste oder Eingabe gehalten werden
 
 ## Dauer
 
-- Typisch: 100–150 ms für das Absteigen, 120–180 ms für die Rückkehr
-- Halten: Endzustand bleibt bis zum Loslassen stehen
-- Nicht länger als 200 ms – sonst wirkt das Element träge
+- Typisch: 100–150 ms beim Herunterdrücken, 120–180 ms bei der Rückkehr
+- Halten: Der Endzustand bleibt bis zum Loslassen
+- Nicht länger als 200 ms, sonst wirkt das Element träge
 
 ## Unterschied zu Ripple und Elastic
 
-- Ripple zeichnet eine Welle vom Berührungspunkt und läuft nach dem Loslassen aus; Press verändert das ganze Element nur, solange gedrückt wird.
-- Elastic überschießt nach einer Bewegung über die Endposition; Press bewegt sich innerhalb der Endposition nach innen.
+- Ripple zeichnet eine Welle vom Berührungspunkt, die nach dem Loslassen ausläuft; Press verändert
+  das ganze Element nur, solange es gedrückt wird.
+- Elastic schießt nach einer Bewegung über die Endposition hinaus; Press bewegt sich nach innen,
+  innerhalb der Endposition.

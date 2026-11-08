@@ -1,30 +1,31 @@
-# Ripple - Aussehen
+# Ripple - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Eine halbtransparente Kreisfläche startet am Berührungspunkt, wächst und verblasst innerhalb des Elements.
+Ein halbtransparenter Kreis beginnt am Berührungspunkt, wächst und verblasst innerhalb des
+Elements.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────┐
 │  0 ms        150 ms      300 ms      450 ms      │
 │    ●          ( ● )     (   ●   ) (     ●     )  │
 │  R = 0       R = 40 %    R = 85 %    α = 0       │
-│  Start am Berührungspunkt, blendet zum Ende      │
-│  aus und wird an der Kontur beschnitten          │
+│  beginnt am Berührungspunkt, verblasst am Ende   │
+│  und wird an der Kontur abgeschnitten            │
 └──────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Ab Touchpunkt** | `wellenUrsprung: click` - Standard auf Touchgeräten |
-| **Zentriert** | `wellenUrsprung: center` - Einheitlich bei Tastaturbedienung |
-| **Ausgefärbt** | `farbe` stark gesättigt - deutliche Bestätigung |
-| **Überlaufend** | `containInElement: false` - Welle ragt über die Kontur |
-| **Mehrfach** | `maxWellen` > 1 - schnelle Tiposerie |
+|---------|-------------|
+| **Vom Berührungspunkt** | `wellenUrsprung: click` – der Standard auf Touchgeräten |
+| **Zentriert** | `wellenUrsprung: center` – einheitlich bei Tastaturbedienung |
+| **Farbig** | `farbe` stark gesättigt – eine deutliche Bestätigung |
+| **Überlaufend** | `containInElement: false` – die Welle reicht über die Kontur hinaus |
+| **Mehrere** | `maxWellen` > 1 – eine schnelle Folge von Tippern |
 
 ## Dauer
 
@@ -32,6 +33,6 @@ Eine halbtransparente Kreisfläche startet am Berührungspunkt, wächst und verb
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Highlight](../highlight/description.md)
 - [Shake](../shake/description.md)

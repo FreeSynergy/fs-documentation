@@ -2,37 +2,37 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `animation` | string | `shake` | Name der Animation |
-| `amplitude` | number | `8` | Ausschlag in px ab der Ruhelage |
-| `cycles` | number | `3` | Anzahl Hin und Her innerhalb eines Durchlaufs |
-| `achse` | string | `x` | `x` (horizontal), `y` (vertikal), `rotate` |
+| `amplitude` | number | `8` | Auslenkung in px aus der Ruheposition |
+| `cycles` | number | `3` | Anzahl der Hin- und Her-Bewegungen innerhalb eines Durchlaufs |
+| `achse` | string | `x` | `x` (waagerecht), `y` (senkrecht), `rotate` |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `duration` | number | `400` | Gesamtdauer in ms |
 | `timingFunction` | string | `ease-in-out` | weiche Umkehr an den Wendepunkten |
-| `delay` | number | `0` | Verzögerung bis zum Start in ms |
-| `iterationCount` | number | `1` | Feedback läuft einmal, nicht endlos |
-| `fillMode` | string | `none` | Element endet immer in der Ruhelage |
+| `delay` | number | `0` | Verzögerung vor dem Start in ms |
+| `iterationCount` | number | `1` | die Rückmeldung läuft einmal, nicht endlos |
+| `fillMode` | string | `none` | das Element endet immer in der Ruheposition |
 
-## Amplitude-Attribute
+## Amplitudenattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `decay` | boolean | `true` | Ausschlag klingt pro Zyklus ab |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `decay` | boolean | `true` | die Auslenkung klingt pro Zyklus ab |
 | `decayFactor` | number | `0.7` | Verhältnis aufeinanderfolgender Amplituden |
-| `waveform` | string | `sinusoidal` | `sinusoidal` oder `linear` (hakelig) |
+| `waveform` | string | `sinusoidal` | `sinusoidal` oder `linear` (ruckartig) |
 | `richtung` | string | `beide` | `beide`, `links zuerst`, `rechts zuerst` |
-| `interruptible` | boolean | `true` | Neuer Shake ersetzt den laufenden |
+| `interruptible` | boolean | `true` | ein neues Shake ersetzt das laufende |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
 | `announceError` | boolean | `true` | Fehler zusätzlich als Text/ARIA melden |

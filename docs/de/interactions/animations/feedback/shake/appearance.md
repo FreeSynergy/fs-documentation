@@ -1,32 +1,33 @@
-# Shake - Aussehen
+# Shake - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Das Element bleibt an seiner Position im Layout und pendet in kleinen Schritten um diese Mitte.
+Das Element bleibt an seiner Position im Layout und schwingt in kleinen Schritten um diese Mitte.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  Rütteln um die Ruhelage, Amplitude klingt ab    │
+│  wackelt um die Ruheposition, die Amplitude      │
+│  klingt ab                                       │
 │                                                  │
-│  -8 px → [LOGIN]                                 │
-│      +6 px → [LOGIN]                             │
-│    -4 px → [LOGIN]                               │
-│        +2 px → [LOGIN]                           │
-│  0 px  → [LOGIN]   Ruhelage nach 400 ms          │
+│  -8 px → [ANMELDEN]                              │
+│      +6 px → [ANMELDEN]                          │
+│    -4 px → [ANMELDEN]                            │
+│        +2 px → [ANMELDEN]                        │
+│  0 px  → [ANMELDEN]   nach 400 ms in Ruhe        │
 └──────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Standard** | horizontal, 8 px, 3 Zyklen mit Abklingen |
-| **Vertikal** | `achse: y` - nickt bei abgelehnter Bestätigung |
-| **Rotierend** | `achse: rotate` - leichtes Verdrehen um wenige Grad |
-| **Hart** | `waveform: linear`, `decay: false` - mechanischer Eindruck |
-| **Dezent** | 3 px Amplitude, 2 Zyklen für subtile Hinweise |
+|---------|-------------|
+| **Standard** | waagerecht, 8 px, 3 Zyklen mit Abklingen |
+| **Vertikal** | `achse: y` – nickt bei einer abgelehnten Bestätigung |
+| **Drehend** | `achse: rotate` – eine leichte Drehung um wenige Grad |
+| **Hart** | `waveform: linear`, `decay: false` – ein mechanischer Eindruck |
+| **Dezent** | 3 px Amplitude, 2 Zyklen für zurückhaltende Hinweise |
 
 ## Dauer
 
@@ -34,6 +35,6 @@ Das Element bleibt an seiner Position im Layout und pendet in kleinen Schritten 
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Wiggle](../wiggle/description.md)
 - [Ripple](../ripple/description.md)

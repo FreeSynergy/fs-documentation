@@ -1,38 +1,39 @@
-# Rubber Band - Aussehen
+# Rubber Band - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Der Inhalt liegt plan an der Randkante; beim Ziehen über den Rand entsteht eine gedämpfte Lücke, die nach dem Loslassen wieder zuschnappt.
+Der Inhalt liegt bündig am Rand. Wird über den Rand hinaus gezogen, entsteht ein gedämpfter
+Abstand, der sich nach dem Loslassen wieder schließt.
 
-## Visueller Verlauf
+## Visueller Ablauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│Randlage          Auszug              Zurückfedern    │
+│Randposition      herausziehen     zurückfedern        │
 │                                                      │
 │[Inhalt·····]  ┈┈┈ Rand ┈┈┈       [Inhalt·····]       │
-│[···········]  [   Lücke    ]     [···········]       │
-│[····Ende···]  [ Inhalt···· ]     [····Ende···]       │
-│[···········]  [ folgt Zug  ]     [···········]       │
+│[············]  [    Abstand  ]    [············]       │
+│[····Ende····]  [ Inhalt··· ]     [····Ende····]      │
+│[············]  [ folgt dem Zug]  [············]       │
 └──────────────────────────────────────────────────────┘
 ```
 
 ## Varianten
 
 | Variante | Beschreibung |
-|----------|--------------|
-| **Vertikal** | Standard für Listen und Artikel |
-| **Horizontal** | seitenweise Karussells und Tabellen |
-| **Einseitig** | nur oben (z. B. Start für Pull-to-Refresh) |
-| **Zäh** | `widerstand: 0.15`, starker Gummiband-Widerstand |
-| **Aus** | harte Ränder ohne Auslenkung (reduced motion) |
+|---------|-------------|
+| **Vertikal** | der Standard für Listen und Artikel |
+| **Horizontal** | blätternde Karussells und Tabellen |
+| **Einseitig** | nur oben (z. B. der Anfang von Zum-Aktualisieren-Ziehen) |
+| **Straff** | `widerstand: 0.15`, starker Gummibandwiderstand |
+| **Aus** | harte Ränder ohne jede Auslenkung (reduzierte Bewegung) |
 
 ## Dauer
 
-- Typisch: Rückfederung 300–500 ms
+- Typisch: Zurückfedern 300–500 ms
 
 ## Siehe auch
 
-- [Animationen Übersicht](../../index.md)
+- [Übersicht Animationen](../../index.md)
 - [Elastic](../elastic/description.md)
 - [Stagger](../../organization/stagger/description.md)

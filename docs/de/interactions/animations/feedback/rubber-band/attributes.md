@@ -2,31 +2,31 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `rubberBand` | boolean | `true` | Gummiband-Widerstand aktiviert |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `rubberBand` | boolean | `true` | Gummibandwiderstand aktiviert |
 | `achse` | string | `vertikal` | `vertikal`, `horizontal` oder `beide` |
-| `widerstand` | number | `0.35` | Folgefaktor: 1 = folgt 1:1, kleiner = zäher |
+| `widerstand` | number | `0.35` | Folgefaktor: 1 = folgt 1:1, kleiner = straffer |
 
-## Animations-Attribute
+## Animationsattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `duration` | number | `400` | Rückfederung nach dem Loslassen in ms |
-| `timingFunction` | string | `spring` | federnder Rücklauf in die Randlage |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `duration` | number | `400` | Zurückfedern nach dem Loslassen in ms |
+| `timingFunction` | string | `spring` | federnde Rückkehr in die Randposition |
 
 ## Rubber-Band-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `maxAuszug` | number | `120` | maximaler Auszug über den Rand in px |
-| `randEinzug` | number | `0` | freier Weg, bevor der Widerstand einsetzt (px) |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `maxAuszug` | number | `120` | maximales Herausziehen über den Rand in px |
+| `randEinzug` | number | `0` | freie Strecke, bevor der Widerstand einsetzt (px) |
 | `trigger` | string | `scroll` | `scroll`, `drag` oder `beides` |
 | `seite` | string | `beide` | `beide`, `anfang`, `ende` der Liste |
 
-## Accessibility (Barrierefreiheit)
+## Barrierefreiheit
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `aria-label` | string | - | Beschreibender Text |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `aria-label` | string | - | beschreibender Text |
 | `respectReducedMotion` | boolean | `true` | Animation bei prefers-reduced-motion reduzieren? |
