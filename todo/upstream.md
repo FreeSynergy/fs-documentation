@@ -11,6 +11,8 @@ Muster: `Projekt · Wunsch · Begründung · Status (offen / Issue #… / erledi
 - Emoji ohne Schrift: leer gezeichnet, aber mit Breite; mit `blinc_noto_emoji::register()` viele als Kästchen.
 - 3000 Absätze ohne `min_h(0)`: Abbruch mit wgpu-`write_buffer`-Validierungsfehler statt Fehlermeldung.
 - Ein Absatz mit 30 KB: Sekunden beim Textmessen (vorher 8,7 s im Release).
+- `blinc_cn` 0.6.0: `textarea` hat keine Farb-Methoden (`input` hat `text_color`, `idle_bg_color`); gemeldet: https://github.com/project-blinc/Blinc/issues/68. Bis dahin per CSS-Klasse versuchen (ungeprüft, ob es in 0.6.0 greift). Der `input` setzt in 0.6.0 selbst keine Textfarbe (nur CSS `.cn-input { color }`).
+- `blinc_theme` 0.6.0 Linux: die Abfrage des XDG-Portals (`org.freedesktop.appearance color-scheme`) ist nicht gebaut (`detect_xdg_color_scheme` gibt `None`); nur `GTK_THEME` und `gsettings`, Rückfall hell.
 - `BlincContextState::init` löst beim zweiten Aufruf einen Panic aus, auch über Threads hinweg.
 - **Kein Haken beim Schließen des Fensters:** Entwürfe gehen ohne eigene Sicherung verloren (wir sichern deshalb selbst).
 - Kleinere: `Scroll` hat kein `flex_1`; `min_w` neben `w(0.0)` wird ignoriert; Textfeld bricht enger um als seine Box; `cn_styles`-Doku nennt das nicht vorhandene `register_cn_styles`.
