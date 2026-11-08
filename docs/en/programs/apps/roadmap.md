@@ -18,7 +18,7 @@ Everything is sorted by purpose, not by what a tool looks like. Four questions d
 Every topic has one [interface](../../interfaces/index.md), the same for every provider. **Each standard has exactly one
 owning program, so there is one point of truth,** and other programs reach it through that interface.
 
-Stand-alone apps without their own data are **facets** (ADR 0061): the gallery is a facet of `fs-files`, Contacts a facet of `fs-people`. See [what is what](../kinds.md).
+Stand-alone apps without their own data are **facets** (ADR 0061): the gallery is a facet of `fs-files`, Contacts a facet of `fs-people`. See [what is what](../index.md#how-it-is-built).
 
 ## Programs
 
@@ -101,7 +101,7 @@ The closed-source products were checked only partly; each note lists what was ve
 
 | # | Question | Recommendation |
 |---|----------|----------------|
-| 1 | Should views also be stand-alone programs? | **Decided (2026-11-07):** yes, as their own starters without data of their own; technically they stay frontends. Named **facets** in ADR 0061 ([what is what](../kinds.md)) |
+| 1 | Should views also be stand-alone programs? | **Decided (2026-11-07):** yes, as their own starters without data of their own; technically they stay frontends. Named **facets** in ADR 0061 ([what is what](../index.md#how-it-is-built)) |
 | 2 | Prompt for export on leaving? | **Decided (2026-11-07):** ask once, with "remember my answer"; everything is saved anyway, this is only about export to a file ([details](files/design.md#saving-and-exporting)) |
 
 **Decided on 2026-11-06:** one `fs-people`, each person with several [roles](../../interfaces/roles.md); codecs are outsourced, open ones first; every existing core is reworked against the interface catalogue, and all interfaces live in

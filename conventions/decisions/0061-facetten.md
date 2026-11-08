@@ -1,6 +1,6 @@
 # 0061 – Facetten: ein Programm, mehrere Apps; jedes mit Admin-Frontend
 
-Status: akzeptiert (Nutzer, 2026-11-08) · ergänzt ADR 0021 (Motor und Frontend), 0036 (Laden), 0049 (Ordnung nach Zweck) · öffentlich: `docs/en/programs/kinds.md`
+Status: akzeptiert (Nutzer, 2026-11-08) · ergänzt ADR 0021 (Motor und Frontend), 0036 (Laden), 0049 (Ordnung nach Zweck) · öffentlich: `docs/en/programs/index.md`
 
 ## Anlass (Nutzer)
 `fs-people` bleibt das Programm. Menschen suchen aber „Kontakte“, nicht „People“; wer E-Mail will, versteht nicht, dass `fs-messenger` auch Mail kann. Ein Frontend, das wie ein Mail-Programm aussieht, reicht nicht: Es muss für die Menschen wie ein eigenes Programm wirken.
