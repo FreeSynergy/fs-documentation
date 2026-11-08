@@ -23,6 +23,7 @@ Startzeilen:
 /loop Du bist Thread R (Umbenennung) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread R der Reihe nach ab.
 /loop Du bist Thread S (Laden fs-store) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread S der Reihe nach ab.
 /loop Du bist Thread D (Doku-Seite) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread D der Reihe nach ab.
+/loop Du bist Thread G (Oberflächen) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“), dann arbeite die Liste von Thread G der Reihe nach ab. Keine langen Pausen (höchstens 60–120 s); fehlt eine Entscheidung, vorläufig nehmen, notieren, weiter.
 /loop Du bist Thread M (Messenger) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“). Warte, bis Thread R „Umbenennung fertig“ meldet (in todo/handoff-programming.md oder per Nachricht), dann arbeite die Liste von Thread M ab.
 /loop Du bist Thread U (Umfragen) im Sprint, Runde 2. Lies sprint.md von GitHub (Befehl im Abschnitt „Runde 2“). Warte, bis Thread R „Umbenennung fertig“ meldet (in todo/handoff-programming.md oder per Nachricht), dann arbeite die Liste von Thread U ab.
 ```
@@ -63,6 +64,22 @@ Ziel: Auf diesem Rechner (Fedora) installiert der Laden ein echtes FreeSynergy-P
 **Für Thread S (Nutzer, 2026-11-08): ADR 0062** – Pakete in Git (Katalog-Repo `fs-catalog` mit AppStream + **TUF ganz**, ein Tag je Version in Paket-Repos, flach geholt mit `gix`, Spiegel überall, HTTPS als zweiter Weg). Vorrang bleibt: der Laden ist morgen installierbar.
 
 **Für alle (Nutzer, 2026-11-08): ADR 0063** – ein Programm, ein Befehl: `fs-<programm>` ohne Argumente = Oberfläche, Unterbefehle wie `git` (`fs-store install …`, `fs-tasks serve`), Feature `gui` für Bauten ohne Bildschirm; keine `-cli`/`-app`/`-server`-Binaries mehr. Laden zuerst, andere beim nächsten Anfassen.
+
+### Thread G: Oberflächen (Nutzer, 2026-11-08; neuer Tab)
+Reihenfolge: **People** (mit Facette Contacts, ADR 0061/0063), **Groups**, **Maps**, **Whiteboard**, **Files** (mit Facette Gallery). Jede App über Cap'n Proto am Server ihres Programms, auf `fs-components`, mit dem Blinc-Patch (`blinc-app-fix`, rev 1c5d217). Jede App ein Binary `fs-<programm>` (ADR 0063), Admin-Frontend (ADR 0061), Paket über `fs-release`, Eintrag im Katalog `fs-catalog` (mit Thread S abstimmen), damit der Nutzer sie **aus dem Store installiert**. Reihenfolge je Stück: Trait, Muster, Tests, Umsetzung; zweite Prüfung vor dem Tag. Erst läuft eine App wirklich, dann die nächste. Texte über `words`.
+
+### Zusatz für Thread S (Nutzer, 2026-11-08)
+- **Programme aus dem Store installieren ist Ziel Nr. 1**, der Nutzer will nichts mehr von Hand herunterladen.
+- **Updates von selbst:** Jedes installierte Programm weiß, woher es kommt (Quelle und Katalog im Installationsregister des Stores). Vorschlag Strategie, vorläufig: Der Store prüft regelmäßig (systemd-User-Timer bzw. beim Start) und aktualisiert alle Programme selbst, mit TUF-Prüfung und Rücksprung; ein Programm fragt beim Start den Store über `store.capnp` („gibt es ein Update für mich?“) und zeigt einen Hinweis. Kein Programm lädt selbst herunter (eine Stelle der Wahrheit). Abschalten je Programm möglich.
+
+### Zusatz für Thread R (Nutzer, 2026-11-08), nach Calendar/Wiki
+Wiki-Vertrag `texts.capnp` erweitern nach `docs/en/programs/apps/wiki/requirements.md` (Tabelle „Required“): Versionsgeschichte lesen und wiederherstellen, Papierkorb mit Wiederherstellen, Bereiche/Ordner mit Reihenfolge, Vorlagen und Weiterleitungen, Suche mit Ausschnitten und Filtern; `editIf`-Konflikt als typisiertes `Problem`. Erst Trait, dann Muster, dann Tests, dann Kern und Server.
+
+### Zusatz für Thread U (Nutzer, 2026-11-08), nach seiner Liste
+ADR 0058 „Verknüpfen“ in `fs-people`: Profile mit oder ohne Person; Vorschlag bei passenden Daten (Telefon, E-Mail, …) nur mit Rückfrage; selbst verknüpfen und lösen; Übernahme nach Freigabe ist ein eigener Schritt (noch nicht bauen, nur Schnittstelle vorsehen). Trait, Muster (Specification + State), Tests, Umsetzung.
+
+### Zusatz für Thread D (Nutzer, 2026-11-08)
+Recherche mit Haiku: **Marketplace** (Verschenken, Tauschen, Leihen, auch Verkaufen; Kleinanzeigen-artig). Standards prüfen: ValueFlows (REA, Schenk- und Tauschwirtschaft), schema.org `Offer`/`Demand`, ActivityStreams/ActivityPub (FEPs zu Marktplätzen), GoodRelations. Vorhandene Seiten `docs/*/programs/suites/marketplace/` lesen. Ergebnis `temp/research/marketplace-standards.md`, jede Aussage mit Quelle. Noch kein Code.
 
 ### Thread M: Messenger (startet nach der Meldung „Umbenennung fertig“ von Thread R)
 1. **Mail-Schlüssel (Nutzer, 2026-11-07):** v6 für unsere eigenen Schlüssel, v4 zusätzlich anbieten, damit GnuPG und RNP lesen können. Branch `mail-v4` (`460c6a6`) ist nur eine ungeprüfte Sicherung: prüfen, neu aufsetzen wo nötig.
