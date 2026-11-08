@@ -2,78 +2,78 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `src` | string | - | Video-URL |
-| `controls` | boolean | `true` | Steuerung anzeigen? |
-| `autoplay` | boolean | `false` | Auto-Wiedergabe? |
-| `muted` | boolean | `false` | Stumm? |
-| `loop` | boolean | `false` | Wiederholen? |
+| `controls` | boolean | `true` | Bedienelemente anzeigen? |
+| `autoplay` | boolean | `false` | automatisch abspielen? |
+| `muted` | boolean | `false` | stumm? |
+| `loop` | boolean | `false` | wiederholen? |
 | `poster` | string | - | Vorschaubild |
-| `playsInline` | boolean | `false` | Inline-Wiedergabe (Mobile)? |
+| `playsInline` | boolean | `false` | Wiedergabe im Inline-Modus (Mobil)? |
 
 ## Verhalten
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onPlay` | function | Wird beim Start ausgeführt |
-| `onPause` | function | Wird beim Pausieren ausgeführt |
-| `onEnded` | function | Wird beim Ende ausgeführt |
-| `onTimeUpdate` | function | Wird bei Zeitaktualisierung ausgeführt |
+| `onPlay` | function | wird beim Start ausgeführt |
+| `onPause` | function | wird beim Pausieren ausgeführt |
+| `onEnded` | function | wird am Ende ausgeführt |
+| `onTimeUpdate` | function | wird bei einer Zeitaktualisierung ausgeführt |
 
 ## Darstellung
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
-| `aspectRatio` | string | Seitenverhältnis (z.B. "16/9") |
+| `responsive` | boolean | responsives Layout? |
+| `aspectRatio` | string | Seitenverhältnis (z. B. "16/9") |
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `showLoading` | boolean | Loading-Zustand anzeigen? |
-| `fadeIn` | boolean | Einblendung anzeigen? |
+| `showLoading` | boolean | Ladezustand anzeigen? |
+| `fadeIn` | boolean | Einblenden anzeigen? |
 | `fadeInDuration` | number | Dauer in ms |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onLoad` | function | Wird beim Laden des Videos ausgeführt |
-| `onError` | function | Wird bei Fehler ausgeführt |
-| `onFullscreenChange` | function | Wird bei Fullscreen-Wechsel ausgeführt |
+| `onLoad` | function | wird ausgeführt, wenn das Video geladen ist |
+| `onError` | function | wird bei einem Fehler ausgeführt |
+| `onFullscreenChange` | function | wird ausgeführt, wenn sich der Vollbildzustand ändert |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `aria-live` | string | Live-Ankündigung |
-| `captions` | string | URL zu Untertiteln |
+| `aria-live` | string | Live-Ansage |
+| `captions` | string | URL der Untertitel |
 
 ## Steuerungs-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `showPlayPause` | boolean | Play/Pause-Button anzeigen? |
-| `showSkip` | boolean | Vor/Zurück-Buttons anzeigen? |
+| `showPlayPause` | boolean | Abspielen/Pause-Knopf anzeigen? |
+| `showSkip` | boolean | Vor-/Zurück-Knöpfe anzeigen? |
 | `showVolume` | boolean | Lautstärkeregler anzeigen? |
-| `showProgress` | boolean | Fortschrittsbalken anzeigen? |
+| `showProgress` | boolean | Fortschrittsleiste anzeigen? |
 | `showTime` | boolean | Zeitanzeige anzeigen? |
-| `showFullscreen` | boolean | Vollbild-Button anzeigen? |
+| `showFullscreen` | boolean | Vollbild-Knopf anzeigen? |
 
 ## Playlist-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `playlist` | array[] | Array von Video-Objekten |
-| `shuffle` | boolean | Zufällige Wiedergabe? |
-| `currentIndex` | number | Aktueller Video-Index |
+| `playlist` | array[] | Array mit Video-Objekten |
+| `shuffle` | boolean | Zufallswiedergabe? |
+| `currentIndex` | number | Index des aktuellen Videos |
 
-## Video-Spezifische Attribute
+## Video-spezifische Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `crossorigin` | string | CORS-Attribut |
 | `preload` | enum | `auto`, `metadata`, `none` |
-| `poster` | string | Vorschaubild-URL |
+| `poster` | string | URL des Vorschaubildes |
 | `quality` | enum | Standardqualität |
 
 ## Geerbt von

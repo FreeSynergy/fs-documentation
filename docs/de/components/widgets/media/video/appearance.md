@@ -1,12 +1,12 @@
-# Video - Aussehen
+# Video - Erscheinungsbild
 
 ## Grundlayout
 
-Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit an.
+Videoplayer zeigen Bedienknöpfe, eine Fortschrittsleiste, Lautstärke und Zeit.
 
 ## Varianten
 
-### Compact (Kompakt)
+### kompakt
 
 ```
 ┌─────────────────────────────────────────┐
@@ -14,7 +14,7 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 └─────────────────────────────────────────┘
 ```
 
-### Standard (Standard)
+### standard
 
 ```
 ┌─────────────────────────────────────────┐
@@ -25,7 +25,7 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 └─────────────────────────────────────────┘
 ```
 
-### Minimal (Minimal)
+### minimal
 
 ```
 ┌─────────────────────────────────────────┐
@@ -37,10 +37,10 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 320px | Inline-Videos, Kommentare |
-| Medium | 640px | Cards, Panels |
-| Large | 1280px | Featured-Videos |
-| Full | 1920px | Hero-Videos, Fullscreen |
+| small | 320px | Videos inline, Kommentare |
+| medium | 640px | Karten, Panels |
+| large | 1280px | hervorgehobene Videos |
+| full | 1920px | Videos als Blickfang, Vollbild |
 
 ## Farben und Zustände
 
@@ -58,31 +58,31 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `scale` | Controls skaliert (1.1x) |
-| `opacity` | Deckkraft ändert sich |
-| `border` | Rand leuchtet auf |
+| `scale` | vergrößert die Bedienelemente (1,1-fach) |
+| `opacity` | die Deckkraft ändert sich |
+| `border` | der Rand leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
 | Breakpoint | Verhalten |
 |------------|-----------|
-| Desktop (>768px) | Volle Steuerung sichtbar |
-| Tablet (480-768px) | Kompakt-Layout |
-| Mobile (<480px) | Minimal-Layout |
+| Desktop (>768px) | alle Bedienelemente sichtbar |
+| Tablet (480–768px) | kompaktes Layout |
+| Mobil (<480px) | minimales Layout |
 
-## Steuerungs-Buttons
+## Bedienknöpfe
 
-| Button | Icon | Funktion |
-|--------|------|----------|
-| Play/Pause | ▶️ / ⏸️ | Wiedergabe starten/pausieren |
-| Previous | ⏮️ | Vorheriges Video (Playlist) |
-| Next | ⏭️ | Nächstes Video (Playlist) |
-| Volume | 🔊 | Lautstärke |
-| Mute | 🔇 | Stumm |
-| Fullscreen | ⛶ | Vollbild |
-| Settings | ⚙️ | Einstellungen |
+| Knopf | Icon | Funktion |
+|-------|------|----------|
+| Play/Pause | ▶️ / ⏸️ | Wiedergabe starten/anhalten |
+| zurück | ⏮️ | vorheriges Video (Playlist) |
+| weiter | ⏭️ | nächstes Video (Playlist) |
+| Lautstärke | 🔊 | Lautstärke |
+| stumm | 🔇 | stummschalten |
+| Vollbild | ⛶ | Vollbild |
+| Einstellungen | ⚙️ | Einstellungen |
 
-## Progress Bar
+## Fortschrittsleiste
 
 ```
 ┌─────────────────────────────────────────┐
@@ -94,18 +94,18 @@ Video-Player zeigen Steuerungsknöpfe, Fortschrittsbalken, Lautstärke und Zeit 
 
 ## Overlay-Elemente
 
-### Loading Overlay
+### Lade-Overlay
 
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
 │      🔄                                 │
-│      Laden...                           │
+│      Lädt...                            │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-### Info Overlay
+### Info-Overlay
 
 ```
 ┌─────────────────────────────────────────┐

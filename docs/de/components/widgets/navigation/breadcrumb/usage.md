@@ -1,11 +1,11 @@
 # Breadcrumb - Verwendung
 
-## Einfaches Breadcrumb
+## Einfacher Breadcrumb
 
 ```jsx
 <Breadcrumb 
   items={[
-    { label: 'Home', href: '/' },
+    { label: 'Start', href: '/' },
     { label: 'Wiki', href: '/wiki' },
     { label: 'Seite', href: '/wiki/seite' }
   ]}
@@ -17,7 +17,7 @@
 ```jsx
 <Breadcrumb 
   items={[
-    { label: 'Home', icon: 'home', href: '/' },
+    { label: 'Start', icon: 'home', href: '/' },
     { label: 'Wiki', icon: 'book', href: '/wiki' },
     { label: 'Seite', icon: 'file', href: '/wiki/seite' }
   ]}
@@ -25,7 +25,7 @@
 />
 ```
 
-## Mit Separator
+## Mit Trennzeichen
 
 ```jsx
 <Breadcrumb 
@@ -34,7 +34,7 @@
 />
 ```
 
-## Collapsed Breadcrumb
+## Eingeklappter Breadcrumb
 
 ```jsx
 <Breadcrumb 
@@ -43,7 +43,7 @@
 />
 ```
 
-## In Header
+## Im Header
 
 ```jsx
 <Header>
@@ -55,7 +55,7 @@
 </Header>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Breadcrumb 
@@ -66,14 +66,14 @@
 
 ## Beispiele
 
-## Beispiel 1: Wiki-Page
+## Beispiel 1: Wiki-Seite
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home > Wiki > Dokumentation > Komponenten│
+│ Start > Wiki > Dokumentation > Komponenten │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Dokumentations-Inhalt                 │
+│   Inhalt der Dokumentation              │
 │                                         │
 └─────────────────────────────────────────┘
 ```
@@ -82,7 +82,7 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🏠 Home > 📁 Dokumente > 📁 Projekte    │
+│ 🏠 Start > 📁 Dokumente > 📁 Projekte   │
 ├─────────────────────────────────────────┤
 │                                         │
 │   Datei-Liste                           │
@@ -94,7 +94,7 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🏠 Home > 🛍️ Shop > 📦 Produkte         │
+│ 🏠 Start > 🛍️ Shop > 📦 Produkte       │
 ├─────────────────────────────────────────┤
 │                                         │
 │   Produktübersicht                      │
@@ -102,7 +102,7 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 4: Benutzer-Profile
+## Beispiel 4: Benutzerprofile
 
 ```
 ┌─────────────────────────────────────────┐
@@ -114,14 +114,14 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: Dokument-Management
+## Beispiel 5: Dokumentenverwaltung
 
 ```
 ┌─────────────────────────────────────────┐
 │ 📁 Dokumente > 📄 Verträge > 2024       │
 ├─────────────────────────────────────────┤
 │                                         │
-│   Vertrags-Übersicht                    │
+│   Vertragsübersicht                     │
 │                                         │
 └─────────────────────────────────────────┘
 ```

@@ -5,16 +5,16 @@
 ```jsx
 <BottomNavigation 
   items={[
-    { id: 'home', icon: 'home', label: 'Home' },
-    { id: 'mail', icon: 'mail', label: 'Mail' },
-    { id: 'calendar', icon: 'calendar', label: 'Calendar' }
+    { id: 'home', icon: 'home', label: 'Start' },
+    { id: 'mail', icon: 'mail', label: 'Post' },
+    { id: 'calendar', icon: 'calendar', label: 'Kalender' }
   ]}
   activeItem="home"
-  onChange={(id) => console.log('Selected:', id)}
+  onChange={(id) => console.log('Ausgewählt:', id)}
 />
 ```
 
-## With Text Labels
+## Mit Textbeschriftung
 
 ```jsx
 <BottomNavigation 
@@ -23,7 +23,7 @@
 />
 ```
 
-## Icon Only
+## Nur Icon
 
 ```jsx
 <BottomNavigation 
@@ -33,7 +33,7 @@
 />
 ```
 
-## In App
+## In einer App
 
 ```jsx
 <AppShell>
@@ -46,12 +46,12 @@
 </AppShell>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <BottomNavigation 
   items={items}
-  onSelect={(id) => console.log('Selected:', id)}
+  onSelect={(id) => console.log('Ausgewählt:', id)}
   onHover={(id) => console.log('Hover:', id)}
 />
 ```
@@ -63,7 +63,7 @@
 ```
 ┌─────────────────────────────────────────┐
 │ 🏠  📩  📅  👥  ⚙️                     │
-│ Home Mail Cal Cont. Settings            │
+│ Start Post Kal. Kont. Einst.            │
 └─────────────────────────────────────────┘
 ```
 
@@ -72,7 +72,7 @@
 ```
 ┌─────────────────────────────────────────┐
 │ 🗨️  📝  🔍  ⭐  👤                     │
-│ Chat  New  Search  Favorites  Profile   │
+│ Chat  Neu  Suche  Favoriten  Profil     │
 └─────────────────────────────────────────┘
 ```
 
@@ -81,7 +81,7 @@
 ```
 ┌─────────────────────────────────────────┐
 │ 🏠  🔍  📦  ⭐  👤                     │
-│ Home  Search  Orders  Favorites  Profile│
+│ Start  Suche  Bestellungen  Favoriten  Profil│
 └─────────────────────────────────────────┘
 ```
 
@@ -90,7 +90,7 @@
 ```
 ┌─────────────────────────────────────────┐
 │ 🏠  🔍  📝  ❤️  👤                     │
-│ Home  Search  Post  Likes  Profile      │
+│ Start  Suche  Beitrag  Likes  Profil    │
 └─────────────────────────────────────────┘
 ```
 
@@ -99,6 +99,6 @@
 ```
 ┌─────────────────────────────────────────┐
 │ 📊  📈  💰  👥  ⚙️                     │
-│ Stats  Analytics  Finance  Users  Settings│
+│ Statistik  Analyse  Finanzen  Nutzer  Einstellungen│
 └─────────────────────────────────────────┘
 ```

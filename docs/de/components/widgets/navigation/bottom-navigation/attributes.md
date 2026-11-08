@@ -2,42 +2,42 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Nav-Objekten (id, icon, label) |
-| `activeItem` | string | - | Aktiver Nav-Punkt |
-| `onChange` | function | - | Event bei Auswahl |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `items` | array[] | - | Array mit Navigationsobjekten (id, icon, label) |
+| `activeItem` | string | - | aktiver Navigationseintrag |
+| `onChange` | function | - | Ereignis bei Auswahl |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `circular` | boolean | `false` | Runde Buttons? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `circular` | boolean | `false` | runde Knöpfe? |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `color` | enum | `primary` | Farbe: `primary`, `secondary`, `neutral` |
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `responsive` | boolean | `true` | Responsives Layout? |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `responsive` | boolean | `true` | responsives Layout? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSelect` | function | Wird bei Auswahl ausgeführt |
-| `onHover` | function | Wird beim Hover ausgeführt |
+| ---------- | ----- | -------------- |
+| `onSelect` | function | wird bei Auswahl ausgeführt |
+| `onHover` | function | wird beim Hover ausgeführt |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `navigation` |
 
 ## Geerbt von

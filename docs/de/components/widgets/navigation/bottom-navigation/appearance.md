@@ -1,29 +1,30 @@
-# Bottom Navigation (Mobile) - Aussehen
+# Bottom Navigation - Erscheinungsbild
 
 ## Grundlayout
 
-Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
+Die Bottom Navigation ist eine Navigation am unteren Bildschirmrand, typisch für
+Mobile-first-Design.
 
 ## Varianten
 
-### Active Icon (Aktiver Punkt hervorgehoben)
+### Aktives Icon (der aktive Eintrag ist hervorgehoben)
 
 ```
 ┌─────────────────────────────────────────┐
 │   🏠    📩   📅   👥   ⚙️              │
-│   Home  Mail CalContactsSettings      │
+│   Start Post Kal. Kontakt Einst.        │
 └─────────────────────────────────────────┘
 ```
 
-### Text Labels (Mit Text)
+### Textbeschriftung (mit Text)
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home │ Mail │ Cal │ Cont. │ Settings    │
+│ Start │ Post │ Kal. │ Kont. │ Einst.    │
 └─────────────────────────────────────────┘
 ```
 
-### Icon Only (Nur Icons)
+### Nur Icon (nur Symbole)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -35,37 +36,36 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 
 | Größe | Höhe | Icon-Größe | Verwendung |
 |-------|------|------------|------------|
-| Small | 48px | 20px | Wenige Punkte |
+| Small | 48px | 20px | wenige Einträge |
 | Medium | 56px | 24px | Standard |
-| Large | 64px | 28px | Viele Punkte |
+| Large | 64px | 28px | viele Einträge |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Active** | Primärfarbe | Aktiver Punkt |
-| **Inactive** | Grau | Inaktive Punkte |
-| **Hover** | Heller | Hover-Zustand |
+| Zustand | Farbe | Beschreibung |
+|---------|-------|--------------|
+| **Active** | Primärfarbe | aktiver Eintrag |
+| **Inactive** | grau | inaktive Einträge |
+| **Hover** | heller | Hover-Zustand |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `color` | Farbe ändert sich |
+| `color` | die Farbe ändert sich |
 | `scale` | Vergrößerung |
 | `shadow` | Schatten |
 
-## Reaktiv
+## Responsiv
 
-- Die Leiste ist immer vollbreit und bleibt am unteren Rand stehen; ihr Inhalt wird
-  gleichmäßig auf die Punkte verteilt.
-- Reicht der Platz für Beschriftungen nicht, fällt sie auf `icon only` zurück und der Name
-  erscheint erst nach der Auswahl als Kurztext.
-- Auf großen Bildschirmen wechselt die Anwendung üblicherweise auf
-  [sidebar](../sidebar/) oder [toolbar](../toolbar/); die Leiste bleibt dann erhalten, wenn
-  die Anwendung mobil bleibt, sonst entfällt sie.
+- Die Leiste ist immer volle Breite und bleibt am unteren Rand; ihr Inhalt verteilt sich
+  gleichmäßig auf die Einträge.
+- Reicht der Platz für Beschriftungen nicht, fällt sie auf `nur Icon` zurück, und der Name
+  erscheint erst als kurzer Text, nachdem der Eintrag gewählt wurde.
+- Auf großen Bildschirmen wechselt die Anwendung meist zu [sidebar](../sidebar/) oder
+  [toolbar](../toolbar/); die Leiste bleibt, wenn die Anwendung mobil bleibt, sonst entfällt sie.
 
-## Max 5 Punkte
+## Maximal 5 Einträge
 
 ```
 ┌─────────────────────────────────────────┐
@@ -77,6 +77,6 @@ Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-F
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `fade-in` | Beschriftung blendet ein |
-| `scale-in` | aktives Symbol wächst |
-| `slide-in` | Indikator wandert zum aktiven Punkt |
+| `fade-in` | die Beschriftung blendet ein |
+| `scale-in` | das aktive Symbol wird größer |
+| `slide-in` | die Markierung wandert zum aktiven Eintrag |

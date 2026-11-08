@@ -1,67 +1,67 @@
-# Breadcrumb - Aussehen
+# Breadcrumb - Erscheinungsbild
 
 ## Grundlayout
-Breadcrumbs zeigen den Pfad an (Home > Wiki > Seite > Unterpunkt).
+Breadcrumbs zeigen den Pfad (Start > Wiki > Seite > Unterpunkt).
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home > Wiki > Seite > Unterpunkt        │
+│ Start > Wiki > Seite > Unterpunkt       │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Default** | Mit Pfeil-Separator (>) |
-| **Arrow** | Mit Pfeil (→) |
-| **Slash** | Mit Schrägstrich (/) |
-| **Chevron** | Mit spitzen Klammern (›) |
+| Variante | Beschreibung |
+| --------- | -------------- |
+| **Default** | mit Pfeiltrennzeichen (>) |
+| **Arrow** | mit Pfeil (→) |
+| **Slash** | mit Schrägstrich (/) |
+| **Chevron** | mit spitzen Klammern (›) |
 
 ## Größen
 
 | Größe | Schriftgröße | Verwendung |
-|-------|-------------|------------|
-| Small | 12px | Inline |
+| ------- | ------------- | ------------ |
+| Small | 12px | inline |
 | Medium | 14px | Standard |
-| Large | 16px | Featured |
+| Large | 16px | hervorgehoben |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
+| Zustand | Farbe | Beschreibung |
+| -------- | ------- | -------------- |
 | **Home** | Primärfarbe | Start |
-| **Active** | Dunkel | Aktueller Pfad |
-| **Inactive** | Grau | Nicht aktuelle Pfade |
-| **Hover** | Heller | Hover-Zustand |
+| **Active** | dunkel | aktueller Pfad |
+| **Inactive** | grau | inaktive Pfade |
+| **Hover** | heller | Hover-Zustand |
 
 ## Hover- und Fokus-Effekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
-| `underline` | Unterstrich erscheint |
-| `opacity` | Deckkraft ändert sich |
+| -------- | -------------- |
+| `color` | die Farbe ändert sich |
+| `underline` | eine Unterstreichung erscheint |
+| `opacity` | die Deckkraft ändert sich |
 
-## Reaktiv
+## Responsiv
 
-- Der letzte Punkt wird zuerst gekürzt, dann die Mitte: Wurzel und aktueller Ort bleiben
-  immer sichtbar, dazwischen erscheint `…` als Aufklappmenü.
-- Auf schmalen Bildschirmen reicht oft nur `zurueck` — ein Knopf mit dem vorherigen Namen.
-- Der Pfad bricht nicht um; er bleibt einzeilig und wächst mit der verfügbaren Breite.
+- Der letzte Eintrag wird zuerst gekürzt, dann die Mitte: die Wurzel und der aktuelle Ort
+  bleiben immer sichtbar, dazwischen erscheint `…` als aufklappbares Menü.
+- Auf schmalen Bildschirmen reicht oft `zurueck` – ein Knopf mit dem vorherigen Namen.
+- Der Pfad bricht nie um; er bleibt in einer Zeile und wächst mit der verfügbaren Breite.
 
-## With Icons
+## Mit Icons
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🏠 Home > 📚 Wiki > 📄 Seite > 📝 Text │
+│ 🏠 Start > 📚 Wiki > 📄 Seite > 📝 Text │
 └─────────────────────────────────────────┘
 ```
 
-## Collapsed Breadcrumbs (bei wenig Platz)
+## Eingeklappte Breadcrumbs (bei wenig Platz)
 
 ```
 ┌─────────────────────────────────────────┐
-│ Home > ... > Seite > Unterpunkt         │
+│ Start > ... > Seite > Unterpunkt        │
 └─────────────────────────────────────────┘
 ```

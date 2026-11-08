@@ -2,42 +2,42 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Breadcrumb-Objekten (label, href, icon) |
-| `separator` | string | `>` | Separator: `>`, `>`, `/`, `›`, `•` |
-| `activeIndex` | number | - | Aktueller Index (für Highlighting) |
-| `collapsed` | boolean | `false` | Eingeklappt bei wenig Platz? |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `items` | array[] | - | Array mit Breadcrumb-Objekten (label, href, icon) |
+| `separator` | string | `>` | Trennzeichen: `>`, `>`, `/`, `›`, `•` |
+| `activeIndex` | number | - | aktueller Index (zum Hervorheben) |
+| `collapsed` | boolean | `false` | eingeklappt, wenn der Platz knapp ist? |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `onHomeClick` | function | - | Wird beim Klick auf Home ausgeführt |
-| `truncate` | boolean | `false` | Kürzen bei wenig Platz? |
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
+| `onHomeClick` | function | - | wird ausgeführt, wenn Start angeklickt wird |
+| `truncate` | boolean | `false` | bei knappem Platz kürzen? |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `showIcons` | boolean | `false` | Icons anzeigen? |
 | `color` | string | `neutral` | Farbe |
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `responsive` | boolean | Responsives Layout? |
-| `truncateBreakpoint` | number | Breakpoint für Kürzen |
+| ---------- | ----- | -------------- |
+| `responsive` | boolean | responsives Layout? |
+| `truncateBreakpoint` | number | Schwelle für das Kürzen |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onNavigate` | function | Wird bei Navigation ausgeführt |
-| `onTruncate` | function | Wird beim Kürzen ausgeführt |
+| ---------- | ----- | -------------- |
+| `onNavigate` | function | wird bei der Navigation ausgeführt |
+| `onTruncate` | function | wird ausgeführt, wenn der Pfad gekürzt wird |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `navigation` |
 
 ## Geerbt von

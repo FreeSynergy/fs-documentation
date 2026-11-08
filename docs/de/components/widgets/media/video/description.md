@@ -12,40 +12,40 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steuerungsfunktionen wie Play/Pause, Volume und Fullscreen.
+Ein Video-Element spielt Videos in verschiedenen Formaten ab. Es bietet Bedienelemente
+wie Abspielen/Pause, Lautstärke und Vollbild.
 
 ## Verwendungszweck
 
-- Anleitungsvideos anzeigen
+- Anleitungsvideos zeigen
 - Produktvideos präsentieren
-- Video-Kommentare wiedergeben
-- Live-Streams anzeigen
-- Hintergrund-Videos
+- Videokommentare abspielen
+- Live-Streams zeigen
+- Hintergrundvideos
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **einzeln** | gewöhnliche Wiedergabe mit voller Steuerung |
-| **hintergrund** | endlos, stumm und ohne Steuerung hinter anderem Inhalt |
-| **live** | Laufender Stream ohne Vorspulen, Zeitangabe durch „live“ ersetzt |
+| **einzeln** | normale Wiedergabe mit allen Bedienelementen |
+| **hintergrund** | endlos, stumm und ohne Bedienelemente hinter anderen Inhalten |
+| **live** | laufender Stream ohne Vorspulen, die Zeitanzeige wird durch "live" ersetzt |
 
 ## Features
 
-- Play/Pause-Button
+- Abspielen/Pause-Knopf
 - Lautstärkeregler
-- Fortschrittsbalken
-- Vollbild-Modus
--Untertitel
-
-- Qualitätsauswahl
-- Geschwindigkeitseinstellung
+- Fortschrittsleiste
+- Vollbildmodus
+- Untertitel
+- Auswahl der Qualität
+- Einstellung der Geschwindigkeit
 
 ## Abgrenzung
 
-- Das Video erbt von [media-player](../media-player/) und nennt hier nur, was dazukommt:
+- Das Video erbt von [media-player](../media-player/) und benennt hier nur, was dazukommt:
   Bildfläche, Vorschaubild und Vollbild.
-- **Nicht verwechseln mit** [audio](../audio/): ohne Bild ist es Audio — das Standbild allein ist
+- **Nicht verwechseln mit** [audio](../audio/): ohne Bild ist es Audio – das Standbild allein ist
   ein [image](../../../primitives/media/image/).
 - **Nicht verwechseln mit** [embed](../../../workbenches/special/embed/): Videos fremder Plattformen werden
   eingebettet, nicht abgespielt.
@@ -53,36 +53,36 @@ Ein Video-Element wiedergibt Videos in verschiedenen Formaten. Es bietet Steueru
 ## Best Practices
 
 - Immer ein Vorschaubild (`poster`) setzen, sonst ist vor dem Start nichts zu sehen.
-- Autoplay nur stumm und in Endlosschleife; sonst startet Wiedergabe nur auf Wunsch.
-- Untertitel mitführen — auch für Meetings und Sprachnachrichten.
-- Qualität automatisch wählen und manuell umschaltbar lassen.
-- Auf Mobil inline abspielen (`playsInline`), sonst springt das System in seinen eigenen Player.
+- Autoplay nur stumm und in einer Endlosschleife; sonst startet die Wiedergabe nur auf Wunsch.
+- Untertitel mitliefern – auch bei Besprechungen und Sprachnachrichten.
+- Die Qualität automatisch wählen und manuell umschaltbar lassen.
+- Auf dem Smartphone inline abspielen (`playsInline`), sonst springt das System in seinen eigenen Player.
 
 ## Formate
 
 | Format | Beschreibung | Verwendung |
-|--------|-------------|------------|
-| **MP4** | Standard-Format, weit verbreitet | Alle Video-Anwendungen |
-| **WEBM** | Open Source, kleine Dateigröße | Web-Applikationen |
-| **OGV** | Open Source-Format | Alternatives Format |
-| **MKV** | Container-Format, viele Streams | Hochwertige Videos |
+|--------|--------------|------------|
+| **MP4** | Standardformat, weit verbreitet | alle Video-Verwendungen |
+| **WEBM** | Open Source, kleine Dateigröße | Webanwendungen |
+| **OGV** | Open-Source-Format | alternatives Format |
+| **MKV** | Containerformat, viele Spuren | hochwertige Videos |
 
 ## Steuerungs-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `src` | string | Video-URL |
-| `controls` | boolean | Steuerung anzeigen? |
-| `autoplay` | boolean | Auto-Wiedergabe? |
-| `muted` | boolean | Stumm? |
-| `loop` | boolean | Wiederholen? |
+| `controls` | boolean | Bedienelemente anzeigen? |
+| `autoplay` | boolean | automatisch abspielen? |
+| `muted` | boolean | stumm? |
+| `loop` | boolean | wiederholen? |
 | `poster` | string | Vorschaubild |
-| `playsInline` | boolean | Inline-Wiedergabe (Mobile) |
-| `volume` | number | Lautstärke (0-1) |
+| `playsInline` | boolean | Wiedergabe im Inline-Modus (Mobil) |
+| `volume` | number | Lautstärke (0–1) |
 
 ## Siehe auch
 
 - [media – Übersicht](../index.md)
-- [Media Player](../media-player/) — gemeinsame Steuerung
+- [Media Player](../media-player/) — gemeinsame Bedienelemente
 - [Audio](../audio/) — ohne Bild
 - [Basiskomponente](../../../primitives/basics/base.md)

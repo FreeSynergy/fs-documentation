@@ -1,4 +1,4 @@
-# Bottom Navigation (Mobile)
+# Bottom Navigation
 
 | Feld | Wert |
 |------|------|
@@ -12,54 +12,55 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Bottom Navigation ist eine Navigation unten am Bildschirm, typisch für Mobile-First-Design.
+Die Bottom Navigation ist eine Navigation am unteren Bildschirmrand, typisch für
+Mobile-first-Design.
 
 ## Verwendungszweck
 
-- Hauptnavigation auf Mobile
-- 3-5 Hauptpunkte
-- Schneller Zugriff mit Daumen
+- Hauptnavigation auf dem Smartphone
+- 3–5 Hauptpunkte
+- Schneller Zugriff mit dem Daumen
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Active Icon** | Aktiver Punkt hervorgehoben |
-| **Text Labels** | Mit Text |
-| **Icon Only** | Nur Icons (weniger Platz) |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Active Icon** | der aktive Eintrag ist hervorgehoben |
+| **Text Labels** | mit Text |
+| **Icon Only** | nur Symbole (weniger Platz) |
 
 !!! info "Einordnung"
-    Die in Bibliotheken eigene Navbar (`navigation-menu`) ist hier eine Variante: oben
-    angedockt mit `placement = "top"`. Die horizontale Menüleiste ist
+    Die Navbar, die Bibliotheken getrennt führen (`navigation-menu`), ist hier eine Variante:
+    oben angedockt mit `placement = "top"`. Die horizontale Menüleiste ist
     [`menu`](../menu/) mit der Variante `menubar`.
 
 ## Features
 
-- Maximum 5 Hauptpunkte
-- Clear-Indicator (aktiver Punkt)
-- Animation (bei Wechsel)
-- Accessibility (Barrierefreiheit)
+- Maximal 5 Hauptpunkte
+- Klare Markierung (aktiver Eintrag)
+- Animation (beim Wechsel)
+- Barrierefreiheit
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [tabs](../tabs/): Tabs wechseln Inhalt **innerhalb** einer Ansicht,
+- **Nicht verwechseln mit** [tabs](../tabs/): Tabs wechseln Inhalte **innerhalb** einer Ansicht,
   diese Leiste wechselt die Ansicht selbst.
-- **Nicht verwechseln mit** [sidebar](../sidebar/): die Seitenleiste ist dauerhaft am Rand,
+- **Nicht verwechseln mit** [sidebar](../sidebar/): die Sidebar sitzt dauerhaft am Rand,
   diese Leiste gehört an den unteren Rand kleiner Bildschirme.
-- **Nicht verwechseln mit** [toolbar](../toolbar/): eine Werkzeugleiste enthält Aktionen,
+- **Nicht verwechseln mit** [toolbar](../toolbar/): eine Toolbar enthält Aktionen,
   diese Leiste enthält Ziele.
 - Eine einzelne Hauptaktion gehört zum [floating-action-button](../../../primitives/actions/floating-action-button/).
 
 ## Best Practices
 
-- Nur Hauptfunktionen; Sekundäres in die erste Ebene der Ansicht, nicht in die Leiste.
-- Höchstens fünf Punkte, jeder mit Klartext, wenn Platz ist.
-- Der aktive Punkt ist dauerhaft zu erkennen, nicht nur durch Farbe.
-- Leiste bleibt über der Tastatur stehen und respektiert die Gestensteuerung des Geräts.
+- Nur Hauptfunktionen; Nebensächliches gehört auf die erste Ebene der Ansicht, nicht in die Leiste.
+- Höchstens fünf Einträge, jeweils mit Text, wenn Platz ist.
+- Der aktive Eintrag muss erkennbar bleiben, nicht nur an der Farbe.
+- Die Leiste bleibt über der Tastatur und respektiert die Gestensteuerung des Geräts.
 
 ## Siehe auch
 
 - [navigation – Übersicht](../index.md)
-- [Tabs](../tabs/) — Inhalt innerhalb einer Ansicht
+- [Tabs](../tabs/) — Inhalte innerhalb einer Ansicht
 - [Sidebar](../sidebar/) — Navigation am Rand
 - [Basiskomponente](../../../primitives/basics/base.md)

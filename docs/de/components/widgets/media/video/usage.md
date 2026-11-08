@@ -11,7 +11,7 @@
 />
 ```
 
-## Autoplay mit Mute
+## Automatisch abspielen, stumm
 
 ```jsx
 <Video 
@@ -47,7 +47,7 @@
 />
 ```
 
-## Responsive Video
+## Responsives Video
 
 ```jsx
 <Video 
@@ -58,7 +58,7 @@
 />
 ```
 
-## In Card
+## In einer Karte
 
 ```jsx
 <Card>
@@ -72,7 +72,7 @@
 </Card>
 ```
 
-## mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Video 
@@ -84,7 +84,7 @@
 />
 ```
 
-## In Modal
+## In einem Modal
 
 ```jsx
 <Modal>
@@ -98,15 +98,15 @@
 
 ## Beispiele
 
-## Beispiel 1: Video-Player
+## Beispiel 1: Videoplayer
 
 ```
 ┌─────────────────────────────────────────┐
-│ 🎬 Video Titel                          │
+│ 🎬 Videotitel                           │
 ├─────────────────────────────────────────┤
 │                                         │
 │      🖼️                                │
-│      (Video-Anzeige)                   │
+│      (Videoanzeige)                     │
 │                                         │
 │ [⏮] [◀] [▶] [▶] [⏭]                   │
 │ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
@@ -126,14 +126,14 @@
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Video in Card
+## Beispiel 3: Video in einer Karte
 
 ```
 ┌─────────────────────────────────────┐
 │ 🎥 Tutorial                         │
 ├─────────────────────────────────────┤
 │                                     │
-│      🖼️                           │
+│      🖼️                            │
 │      (Video)                        │
 │                                     │
 │ Titel des Tutorials                 │
@@ -143,7 +143,7 @@
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 4: Video-Galerie
+## Beispiel 4: Videogalerie
 
 ```
 ┌─────────────────────────────────────┐
@@ -179,20 +179,20 @@
 │ 📺 Video mit Untertiteln            │
 ├─────────────────────────────────────┤
 │                                     │
-│      🖼️                           │
+│      🖼️                            │
 │      [Deutsch]                      │
 │                                     │
 │ [▶]  ━━━━━━━━━━━━━━━━━  0:00 / 10:00│
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 7: Video Playlist
+## Beispiel 7: Video-Playlist
 
 ```
 ┌─────────────────────────────────────┐
 │ 🎬 Playlist                         │
 ├─────────────────────────────────────┤
-│ 1. [▶] Video 1  5:30  (Aktuell)     │
+│ 1. [▶] Video 1  5:30  (aktuell)     │
 │ 2. [⏸] Video 2  7:15                │
 │ 3. [⏸] Video 3  4:20                │
 │ 4. [⏸] Video 4  8:45                │
@@ -201,7 +201,7 @@
 └─────────────────────────────────────┘
 ```
 
-## Beispiel 8: Video in Chat
+## Beispiel 8: Video im Chat
 
 ```
 ┌─────────────────────────────────────┐
