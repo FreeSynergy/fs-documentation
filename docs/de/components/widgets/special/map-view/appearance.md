@@ -1,7 +1,7 @@
-# Map View - Aussehen
+# Map View - Erscheinungsbild
 
-## Grundlayout
-Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
+## Grundaufbau
+Eine Kartenansicht zeigt interaktive Karten (Google Maps, Leaflet, OpenStreetMap).
 
 ```
 ┌─────────────────────────────────────────┐
@@ -15,52 +15,52 @@ Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **standort** | ein Marker zentriert, Adresszeile darüber |
-| **sammlung** | viele Marker, Liste oder Punktehaufen bei großer Dichte |
-| **route** | Linien und Flächen, Start und Ziel als unterschiedliche Zeichen |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **standort** | ein zentrierter Marker, darüber die Adresszeile |
+| **sammlung** | viele Marker, bei hoher Dichte als Liste oder Cluster |
+| **route** | Linien und Flächen, Start und Ziel als unterschiedliche Symbole |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
-|-------|--------|------------|
-| Small | 300px | Inline |
-| Medium | 500px | Standard |
-| Large | 700px | Featured |
-| Full | 100% | Volle Breite |
+|------|-------|-----|
+| Klein | 300px | in Textzeilen |
+| Mittel | 500px | Standard |
+| Groß | 700px | hervorgehoben |
+| Voll | 100% | volle Breite |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Map** | Abhängig vom Theme | Karten-Theme |
-| **Marker** | Rot/Primär | Markierungen |
-| **Controls** | Weiß/Schwarz | Steuerungselemente |
+| Zustand | Farbe | Beschreibung |
+|-------|--------|-------------|
+| **Karte** | hängt vom Thema ab | Kartenthema |
+| **Marker** | Rot/Primärfarbe | Markierungen |
+| **Bedienelemente** | Weiß/Schwarz | Steuerelemente |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `zoom` | Zoom beim Scrollen |
-| `drag` | Verschieben |
+|--------|-------------|
+| `zoom` | Zoomen beim Scrollen |
+| `drag` | Karte verschieben |
 
-## Reaktiv
+## Responsives Verhalten
 
-- Die Karte füllt die verfügbare Breite; als Inline-Karte ist sie mindestens 200 px hoch.
-- Unter `small` Bildschirmbreite werden Zoom- und Stil-Knöpfe zu einer kleinen Leiste unten,
-  die Steuerung bleibt mindestens 44 px groß.
-- Zwei Finger bewegen und skalieren (`drag`, `pinch`); einfaches Scrollen über der Karte
-  verschiebt die Seite, nicht die Karte — Zoom per Scrollen erst nach Klick auf die Karte.
+- Die Karte füllt die verfügbare Breite; als eingebettete Karte ist sie mindestens 200 px hoch.
+- Unterhalb der Breite `small` werden die Zoom- und Stil-Schaltflächen zu einer kleinen Leiste
+  am unteren Rand. Die Bedienelemente bleiben mindestens 44 px groß.
+- Zwei Finger verschieben und skalieren (`drag`, `pinch`). Normales Scrollen über der Karte
+  scrollt die Seite, nicht die Karte. Zum Zoomen per Scrollen zuerst auf die Karte klicken.
 
-## Map-Types
+## Kartentypen
 
-| Type | Beschreibung |
-|------|--------------|
-| **Roadmap** | Standard-Straßenkarte |
-| **Satellite** | Satellitenansicht |
-| **Hybrid** | Hybrid aus Roadmap & Satellite |
-| **Terrain** | Geländeansicht |
+| Typ | Beschreibung |
+|------|-------------|
+| **Straßenkarte** | normale Straßenkarte |
+| **Satellit** | Satellitenansicht |
+| **Hybrid** | Mischung aus Straßenkarte und Satellit |
+| **Gelände** | Geländeansicht |
 
 ## Marker
 
@@ -71,7 +71,7 @@ Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
 └─────────────────────────────────────────┘
 ```
 
-## Controls
+## Bedienelemente
 
 ```
 ┌─────────────────────────────────────────┐

@@ -1,36 +1,35 @@
-# Map View (Kartenansicht) - Verwendung
+# Map View - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Map View zeigt interaktive Karten an (Google Maps, Leaflet, OpenStreetMap).
+Eine Kartenansicht zeigt interaktive Karten (Google Maps, Leaflet, OpenStreetMap).
 
-- Standort-Anzeige
+- Anzeige eines Ortes
 - Kartenansicht
-- Geo-Daten
+- Geodaten
 
 ## Beispiele
 
-### Standort-Anzeige
+### Anzeige eines Ortes
 
 ```jsx
-<MapView center={einstellungen} onChange={aktion} />
+<MapView center={settings} onChange={action} />
 ```
 
 ### Kartenansicht
 
 ```jsx
-<MapView center={einstellungen} mapType="roadmap" />
+<MapView center={settings} mapType="roadmap" />
 ```
 
-### Geo-Daten
+### Geodaten
 
 ```jsx
-<MapView center={einstellungen} interactive={true} />
+<MapView center={settings} interactive={true} />
 ```
 
 ## Hinweise

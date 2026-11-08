@@ -2,40 +2,40 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+| ---------- | ----- | --------- | -------------- |
 | `value` | string | - | Wert (HTML) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
-| `placeholder` | string | `null` | Placeholder-Text |
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
+| `placeholder` | string | `null` | Platzhaltertext |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onSave` | function | Wird beim Speichern ausgeführt |
+| ---------- | ----- | -------------- |
+| `onSave` | function | läuft beim Speichern |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+| ---------- | ----- | -------------- |
 | `role` | string | ARIA-Rolle: `textbox` |
 
 ## Toolbar-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showToolbar` | boolean | `true` | Toolbar anzeigen? |
-| `toolbarButtons` | array[] | - | Array von Buttons |
+| `toolbarButtons` | array[] | - | Liste der Schaltflächen |
 
-## Features-Attribute
+## Funktions-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
-|---|---|---|---|
+| Attribut | Typ | Standard | Beschreibung |
+| --- | --- | --- | --- |
 | `enableImages` | boolean | `true` | Bilder erlauben? |
 | `enableLinks` | boolean | `true` | Links erlauben? |
 | `enableCode` | boolean | `true` | Code erlauben? |
@@ -45,4 +45,4 @@
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../../primitives/basics/base.md)

@@ -12,7 +12,7 @@
 />
 ```
 
-## Mit Separatoren
+## Mit Trennern
 
 ```jsx
 <Toolbar 
@@ -26,7 +26,7 @@
 />
 ```
 
-## Floating Toolbar
+## Schwebende Toolbar
 
 ```jsx
 <FloatingToolbar 
@@ -35,7 +35,7 @@
 />
 ```
 
-## In App
+## In einer App
 
 ```jsx
 <AppShell>
@@ -48,12 +48,12 @@
 </AppShell>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <Toolbar 
   buttons={buttons}
-  onButtonClick={(id) => console.log('Clicked:', id)}
+  onButtonClick={(id) => console.log('Geklickt:', id)}
 />
 ```
 
@@ -76,11 +76,11 @@
 └─────────────────────────────────────────────────────┘
 ```
 
-## Beispiel 3: Chat-Tools
+## Beispiel 3: Chat-Werkzeuge
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│ [🖼️] [ sticker] [🎤] [📹] [📁] [😀]                │
+│ [🖼️] [ Sticker] [🎤] [📹] [📁] [😀]                │
 └─────────────────────────────────────────────────────┘
 ```
 

@@ -2,55 +2,55 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
 | `center` | object | - | Mittelpunkt {lat, lng} |
-| `zoom` | number | - | Zoom-Level |
-| `onChange` | function | - | Event bei Änderung |
+| `zoom` | number | - | Zoomstufe |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `mapType` | enum | `roadmap` | Typ: `roadmap`, `satellite`, `hybrid`, `terrain` |
-| `interactive` | boolean | `true` | Interaktiv? |
+| `interactive` | boolean | `true` | interaktiv? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onDragEnd` | function | Wird beim Ziehen beendet ausgeführt |
-| `onZoomChange` | function | Wird bei Zoom-Änderung ausgeführt |
+|-----------|------|-------------|
+| `onDragEnd` | function | läuft, wenn das Verschieben endet |
+| `onZoomChange` | function | läuft, wenn sich die Zoomstufe ändert |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `region` |
 
 ## Marker-Attribute
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `markers` | array[] | Array von Markern |
-| `onClickMarker` | function | Wird beim Klick auf Marker ausgeführt |
+|-----------|------|-------------|
+| `markers` | array[] | Liste der Marker |
+| `onClickMarker` | function | läuft, wenn ein Marker angeklickt wird |
 
-## Features-Attribute
+## Funktions-Attribute
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showControls` | boolean | `true` | Steuerungselemente anzeigen? |
+| `showControls` | boolean | `true` | Bedienelemente anzeigen? |
 | `showMarker` | boolean | `true` | Marker anzeigen? |
 | `showTraffic` | boolean | `false` | Verkehr anzeigen? |
 
 ## API-Attribute
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `apiKey` | string | API-Schlüssel (Google Maps) |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../../primitives/basics/base.md)

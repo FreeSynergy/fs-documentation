@@ -1,30 +1,30 @@
-# Toolbar (Symbolleiste) - Aussehen
+# Toolbar - Erscheinungsbild
 
-## Grundlayout
+## Grundaufbau
 
-Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
+Eine Toolbar ist eine Reihe von Schaltflächen/Icons für häufige Aktionen.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **standard** | einzeilige Leiste mit Symbolen |
-| **kontext** | Leiste tauscht ihre Knöpfe, wenn sich die Auswahl ändert |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **standard** | einzeilige Leiste mit Icons |
+| **kontext** | die Leiste tauscht ihre Schaltflächen, wenn sich die Auswahl ändert |
 | **ribbon** | zwei oder drei Zeilen mit Gruppenüberschriften |
 
-### Horizontal (Standard)
+### Waagerecht (standard)
 ```
 ┌─────────────────────────────────────────────────────┐
 │ [📄] [✏️] [✂️] [✔️] [❌] [🔍] [⚙️]                  │
 └─────────────────────────────────────────────────────┘
 ```
-### Floating (Schwebend)
+### Schwebend
 ```
                     ┌─────────────────────────────┐
                     │ [📄] [✏️] [✂️] [✔️]        │
                     └─────────────────────────────┘
 ```
-### Sidebar (Links/Rechts)
+### Seitlich (links/rechts)
 ```
 ┌─────┬─────────────────────────────────────────────┐
 │     │ [📄] [✏️] [✂️] [✔️] [❌] [🔍] [⚙️]         │
@@ -35,48 +35,48 @@ Eine Toolbar ist eine Reihe von Buttons/Icons für häufige Aktionen.
 
 ## Größen
 
-| Größe | Icon-Größe | Button-Größe | Verwendung |
-|-------|------------|--------------|------------|
-| Small | 16px | 32px | Inline |
-| Medium | 24px | 48px | Standard |
-| Large | 32px | 64px | Featured |
+| Größe | Icongröße | Schaltflächengröße | Verwendung |
+|------|-----------|-------------|-----|
+| Klein | 16px | 32px | in Textzeilen |
+| Mittel | 24px | 48px | Standard |
+| Groß | 32px | 64px | hervorgehoben |
 
 ## Farben und Zustände
 
-| Status | Farbe | Beschreibung |
-|--------|-------|--------------|
-| **Primary** | Primärfarbe | Hauptaktion |
-| **Secondary** | Sekundärfarbe | Sekundäre Aktion |
-| **Danger** | Rot | Gefährliche Aktion |
-| **Disabled** | Grau | Deaktivierte Aktion |
+| Zustand | Farbe | Beschreibung |
+|-------|--------|-------------|
+| **Primär** | Primärfarbe | Hauptaktion |
+| **Sekundär** | Sekundärfarbe | Nebenaktion |
+| **Gefahr** | Rot | gefährliche Aktion |
+| **Deaktiviert** | Grau | deaktivierte Aktion |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `color` | Farbe ändert sich |
-| `background` | Hintergrund ändert sich |
-| `scale` | Leichte Vergrößerung |
-| `shadow` | Schatten erscheint |
+|--------|-------------|
+| `color` | die Farbe ändert sich |
+| `background` | der Hintergrund ändert sich |
+| `scale` | leichte Vergrößerung |
+| `shadow` | ein Schatten erscheint |
 
-## Reaktiv
+## Responsives Verhalten
 
-- Die Leiste ist vollbreit und bleibt beim Scrollen oben stehen (`geklebt`); der Inhalt der
-  Gruppe rechts rutscht zuerst weg.
-- Passt die Reihe nicht mehr, wandern die übrigen Knöpfe hinter ein ``+``-Aufklappfeld,
-  das die Gruppen beibehält.
-- Auf Touch-Geräten sind die Knöpfe mindestens 44 px groß; auf großen Bildschirmen kann
-  `Symbol und Text` gezeigt werden, auf kleinen nur das Symbol.
+- Die Leiste hat volle Breite und bleibt beim Scrollen oben stehen (`geklebt`). Die Gruppe
+  rechts rutscht zuerst weg.
+- Passt die Zeile nicht mehr, wandern die übrigen Schaltflächen hinter ein Aufklappfeld `+`,
+  das die Gruppen behält.
+- Auf Touchgeräten sind die Schaltflächen mindestens 44 px groß. Auf großen Bildschirmen kann
+  `Icon und Text` angezeigt werden, auf kleinen nur das Icon.
 
-## Beschriftung der Knöpfe
+## Beschriftung der Schaltflächen
 
 | Form | Beschreibung |
-|------|--------------|
-| **nur Symbol** | Standard, mit Tooltip |
-| **nur Text** | wenn kein eindeutiges Symbol existiert |
-| **Symbol und Text** | neue oder mehrdeutige Aktionen |
+|------|-------------|
+| **nur Icon** | Standard, mit Tooltip |
+| **nur Text** | wenn kein eindeutiges Icon existiert |
+| **Icon und Text** | neue oder mehrdeutige Aktionen |
 
-## Separator
+## Trenner
 
 ```
 ┌─────────────────────────────────────────────────────┐

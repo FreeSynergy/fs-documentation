@@ -2,62 +2,62 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `buttons` | array[] | - | Array von Button-Objekten |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|-------------|
+| `buttons` | array[] | - | Liste der Schaltflächen-Objekte |
 | `variant` | enum | `default` | Stil: `default`, `floating`, `sidebar` |
 | `position` | enum | `top` | Position: `top`, `bottom`, `left`, `right` |
-| `tabs` | array[] | - | Array von Tab-Objekten |
-| `activeTab` | string | - | Aktiver Tab |
-| `onChange` | function | - | Event bei Tab-Wechsel |
+| `tabs` | array[] | - | Liste der Reiter-Objekte |
+| `activeTab` | string | - | aktiver Reiter |
+| `onChange` | function | - | Ereignis beim Reiterwechsel |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showLabels` | boolean | `true` | Labels anzeigen? |
+| `showLabels` | boolean | `true` | Beschriftungen anzeigen? |
 | `showIcons` | boolean | `true` | Icons anzeigen? |
-| `collapsed` | boolean | `false` | Eingeklappt? |
-| `autoHide` | boolean | `true` | Automatisch ausblenden? |
-| `target` | DOM element | - | Ziel-Element |
-| `offset` | object | - | { x, y } Offset zur Position |
-| `groups` | array[] | - | Array von Group-Objekten |
-| `commands` | array[] | - | Array von Command-Objekten |
-| `minimized` | boolean | `false` | Minimiert? |
-| `collapsible` | boolean | `true` | Ein-/Ausklappbar? |
+| `collapsed` | boolean | `false` | eingeklappt? |
+| `autoHide` | boolean | `true` | automatisch ausblenden? |
+| `target` | DOM-Element | - | Zielelement |
+| `offset` | object | - | { x, y }-Versatz zur Position |
+| `groups` | array[] | - | Liste der Gruppen-Objekte |
+| `commands` | array[] | - | Liste der Befehls-Objekte |
+| `minimized` | boolean | `false` | minimiert? |
+| `collapsible` | boolean | `true` | einklappbar? |
 | `size` | enum | `standard` | Größe: `compact`, `standard`, `large` |
 
-## Events
+## Ereignisse
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `onButtonClick` | function | Wird beim Button-Klick ausgeführt |
-| `onExpand` | function | Wird beim Erweitern ausgeführt |
-| `onCollapse` | function | Wird beim Einklappen ausgeführt |
-| `onVisibilityChange` | function | Wird bei Sichtbarkeitsänderung ausgeführt |
-| `onSelect` | function | Wird beim Selektieren ausgeführt |
-| `onMinimize` | function | Wird beim Minimieren ausgeführt |
+|-----------|------|-------------|
+| `onButtonClick` | function | läuft beim Klick auf eine Schaltfläche |
+| `onExpand` | function | läuft beim Ausklappen |
+| `onCollapse` | function | läuft beim Einklappen |
+| `onVisibilityChange` | function | läuft, wenn sich die Sichtbarkeit ändert |
+| `onSelect` | function | läuft bei Auswahl |
+| `onMinimize` | function | läuft beim Minimieren |
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `keyboardShortcuts` | boolean | `true` | Keyboard-Shortcuts aktivieren? |
+| `keyboardShortcuts` | boolean | `true` | Tastenkürzel aktivieren? |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
+|-----------|------|-------------|
 | `role` | string | ARIA-Rolle: `toolbar` |
 
-## Button-Attribute
+## Schaltflächen-Attribute
 
 | Attribut | Typ | Beschreibung |
-|----------|-----|--------------|
-| `id` | string | Eindeutige ID |
-| `icon` | string | Icon-Name |
-| `label` | string | Button-Label |
+|-----------|------|-------------|
+| `id` | string | eindeutige ID |
+| `icon` | string | Iconname |
+| `label` | string | Beschriftung der Schaltfläche |
 | `variant` | enum | `primary`, `secondary`, `danger` |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../../primitives/basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../../primitives/basics/base.md)

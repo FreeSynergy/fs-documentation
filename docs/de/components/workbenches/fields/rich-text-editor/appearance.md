@@ -1,83 +1,83 @@
-# Rich Text Editor - Aussehen
+# Rich Text Editor - Erscheinungsbild
 
-## Grundlayout
-Ein Rich Text Editor ist ein WYSIWYG-Editor für formatierten Text.
+## Grundaufbau
+Ein Rich-Text-Editor ist ein WYSIWYG-Editor für formatierten Text.
 
 ```
 ┌─────────────────────────────────────────┐
-│ [B] [I] [U] [ Strikes] [ Color]         │  ← Toolbar
+│ [B] [I] [U] [ Durchgestrichen] [ Farbe] │  ← Toolbar
 ├─────────────────────────────────────────┤
 │                                         │
-│  (Editor-Bereich)                       │
+│  (Editorbereich)                        │
 │                                         │
-│  Hier ist der Text...                   │
+│  Hier steht der Text...                 │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **wysiwyg** | Formatierungsleiste oben, Text wie im Druckbild |
+| Variante | Erscheinungsbild |
+|---------|------------|
+| **wysiwyg** | Formatierungsleiste oben, Text wie im gedruckten Layout |
 | **wiki-syntax** | Syntaxfeld links, Vorschau rechts (oder als Reiter) |
 
 ## Größen
 
 | Größe | Höhe | Verwendung |
-|-------|------|------------|
-| Small | 200px | Inline |
-| Medium | 400px | Standard |
-| Large | 600px | Featured |
-| Full | 100% | Volle Breite |
+|------|--------|-------------|
+| Klein | 200px | in Textzeilen |
+| Mittel | 400px | Standard |
+| Groß | 600px | hervorgehoben |
+| Voll | 100% | volle Breite |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | heller Grund, randloser Textbereich |
-| `focus` | Rand in Primärfarbe, Cursor sichtbar |
-| `unspeichert` | kleiner Punkt am Rand, Speichern-Knopf hervorgehoben |
-| `error` | roter Rand, betroffene Stelle unterstrichen |
+| Zustand | Erscheinungsbild |
+|-------------|-------------------------------------------------------|
+| `default` | heller Grund, Textfläche ohne Rahmen |
+| `focus` | Rahmen in der Primärfarbe, Cursor sichtbar |
+| `unspeichert` | kleiner Punkt am Rand, Speichern-Schaltfläche hervorgehoben |
+| `error` | roter Rahmen, die betroffene Stelle ist unterstrichen |
 | `disabled` | grauer Grund, Leiste ausgegraut |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+|--------|-------------|
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | stärkerer Schatten |
 
-## Reaktiv
+## Responsives Verhalten
 
-- Die Formatierungsleiste bleibt beim Scrollen oben stehen; passt sie nicht in eine Zeile,
-  rutschen weitere Werkzeuge hinter ein ``+``-Aufklappfeld.
-- Unter `small` Bildschirmbreite wird die Vorschau von `wiki-syntax` zum Reiter statt
-  zur Nebenspalte.
-- Der Editorbereich wächst mit dem Text (`auto-resize`), `Full` füllt die Viewport-Höhe
-  abzüglich Leiste.
+- Die Formatierungsleiste bleibt beim Scrollen oben stehen. Passt sie nicht in eine Zeile,
+  wandern weitere Werkzeuge hinter ein Aufklappfeld `+`.
+- Unterhalb der Breite `small` wird die Vorschau bei `wiki-syntax` zu einem Reiter statt einer
+  Seitenspalte.
+- Der Editorbereich wächst mit dem Text (`auto-resize`). `Voll` füllt die Bildschirmhöhe
+  abzüglich der Leiste.
 
-## Toolbar-Buttons
+## Toolbar-Schaltflächen
 
-| Button | Funktion |
-|--------|----------|
-| **B** | Fett |
-| **I** | Kursiv |
-| **U** | Unterstrichen |
-| ** Strikes** | Durchgestrichen |
-| ** Color** | Farbe |
-| ** Heading** | Überschriften |
-| ** List** | Listen |
+| Schaltfläche | Funktion |
+|------------|--------------------|
+| **B** | fett |
+| **I** | kursiv |
+| **U** | unterstrichen |
+| ** Durchgestrichen** | durchgestrichen |
+| ** Farbe** | Farbe |
+| ** Überschrift** | Überschriften |
+| ** Liste** | Listen |
 | ** Link** | Links |
-| ** Image** | Bilder |
-| ** Code** | Code-Block |
+| ** Bild** | Bilder |
+| ** Code** | Codeblock |
 
-## Placeholder
+## Platzhalter
 
 ```
 ┌─────────────────────────────────────────┐
 │ [B] [I] [U] ...                         │
 ├─────────────────────────────────────────┤
-│  Dies ist ein Platzhalter...            │
+│  Das ist ein Platzhaltertext...         │
 └─────────────────────────────────────────┘
 ```
