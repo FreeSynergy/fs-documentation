@@ -1,4 +1,4 @@
-# Chart (Diagramm)
+# Chart
 
 | Feld | Wert |
 |------|------|
@@ -30,36 +30,37 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 | **doughnut** | Anteil mit Freifläche für eine Gesamtzahl |
 | **scatter** | zwei Größen gegeneinander |
 | **heatmap** | Dichte über zwei Achsen |
-| **radar** | mehrere Dimensionen einer Entität |
+| **radar** | mehrere Dimensionen eines Objekts |
 
-## Features
+## Funktionen
 
 - Interaktiv
-- Responsive
-- Animations
+- Responsiv
+- Animationen
 - Export
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [table](../table/): die Tabelle ist die verlässliche Zahlenansicht,
-  das Diagramm nur die ergänzende Form. Beides zusammen ist richtig, das Diagramm allein nicht.
+- **Nicht verwechseln mit** [table](../table/): die Tabelle ist die verlässliche Art, Zahlen zu sehen,
+  das Chart nur die ergänzende Form. Beides zusammen ist richtig, das Chart allein nicht.
 - **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): ein Balken zeigt einen Anteil,
-  ein Diagramm vergleicht Werte.
+  ein Chart vergleicht Werte.
 - **Nicht verwechseln mit** [dashboard](../../../workbenches/special/dashboard/): das Dashboard ordnet mehrere
-  Diagramme und Karten, es zeichnet selbst nichts.
+  Charts und Karten an, es zeichnet selbst nichts.
 
 ## Best Practices
 
-- Zeitreihen als Linie, Vergleiche als Balken, Anteile nur bei maximal fünf Kategorien als Kreis.
-- Achsen und Einheiten beschriften; ein Diagramm ohne Achsenbeschriftung ist Dekoration.
-- Farben aus den Farbtoken der Anwendung, nicht frei gemischt; Legende neben der Zeichnung.
-- Immer eine Zahlenalternative anbieten (Tabelle oder Einzelwerte), damit die Information
+- Zeitreihen als Linie, Vergleiche als Balken, Anteile als Kreis nur bei höchstens fünf Kategorien.
+- Beschrifte die Achsen und Einheiten; ein Chart ohne Achsenbeschriftung ist Dekoration.
+- Nimm die Farben aus den Farb-Tokens der Anwendung und mische sie nicht frei; setze die Legende
+  neben die Zeichnung.
+- Biete immer eine numerische Alternative (Tabelle oder einzelne Werte) an, damit die Information
   nicht nur visuell verfügbar ist.
-- Leere Daten als `leer` mit Hinweis beschriften, nicht als leere Fläche stehen lassen.
+- Kennzeichne leere Daten als `leer` mit einem Hinweis, lass keine leere Fläche stehen.
 
 ## Siehe auch
 
 - [data – Übersicht](../index.md)
 - [Table](../table/) — Zahlen in Zeilen und Spalten
-- [Dashboard](../../../workbenches/special/dashboard/) — mehrere Diagramme anordnen
+- [Dashboard](../../../workbenches/special/dashboard/) — Anordnung mehrerer Charts
 - [Basiskomponente](../../../primitives/basics/base.md)

@@ -2,28 +2,28 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `events` | array[] | - | Array von Event-Objekten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `events` | array[] | - | Array von Ereignisobjekten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
-## Events
+## Ereignisse
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `date` | string | Datum |
 | `title` | string | Titel |
 | `description` | string | Beschreibung |
-| `icon` | string | Icon-Name |
+| `icon` | string | Name des Symbols |
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
+| `onHover` | function | wird beim Überfahren ausgelöst |
 
 ## Barrierefreiheit
 

@@ -1,14 +1,13 @@
-# Range Calendar (Bereichskalender) - Verwendung
+# Range Calendar - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Der Kalender steht meist in einer Filterleiste oder einem Dialog. Das Ergebnis wird als
-lesbarer Zeitraum außerhalb des Kalenders angezeigt.
+Der Kalender steht meist in einer Filterleiste oder einem Dialog. Das Ergebnis wird
+außerhalb des Kalenders als lesbarer Zeitraum angezeigt.
 
 ## Beispiele
 
@@ -28,6 +27,6 @@ lesbarer Zeitraum außerhalb des Kalenders angezeigt.
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Berichtsfilter | `presets` mit 7, 30 und Quartal |
+| Filter für Berichte | `presets` mit 7, 30 und Quartal |
 | Urlaub eintragen | `min = heute`, Tageszähler anzeigen |
-| Mobile Filterleiste | `months = 1`, Wischgeste zum Monatswechsel |
+| Filterleiste auf dem Smartphone | `months = 1`, Wischgeste zum Wechseln des Monats |

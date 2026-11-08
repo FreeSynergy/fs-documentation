@@ -2,32 +2,32 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | string | - | Wert (Emoji) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `placeholder` | string | `null` | Placeholder-Text |
+| `placeholder` | string | `null` | Platzhaltertext |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `showSearch` | boolean | `true` | Suche anzeigen? |
-| `showRecent` | boolean | `true` | Letzte Emojis anzeigen? |
+| `showRecent` | boolean | `true` | zuletzt verwendete Emojis anzeigen? |
 | `showCategories` | boolean | `true` | Kategorien anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onOpen` | function | Wird beim Öffnen ausgeführt |
-| `onClose` | function | Wird beim Schließen ausgeführt |
-| `onSelect` | function | Wird bei Auswahl ausgeführt |
+| `onOpen` | function | wird beim Öffnen ausgeführt |
+| `onClose` | function | wird beim Schließen ausgeführt |
+| `onSelect` | function | wird bei Auswahl ausgeführt |
 
 ## Barrierefreiheit
 
@@ -35,9 +35,9 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `button` |
 
-## Categories-Attribute
+## Attribute der Kategorien
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `categories` | array[] | - | Array von Kategorien |
 

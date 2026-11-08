@@ -1,7 +1,7 @@
-# Grid View - Aussehen
+# Grid View - Erscheinungsbild
 
 ## Grundlayout
-Grid View ist eine Karten/Raster-Darstellung von Elementen.
+Eine Grid View ist eine Karten- bzw. Rasteransicht von Elementen.
 
 ```
 ┌──────────┬──────────┬──────────┐
@@ -16,48 +16,48 @@ Grid View ist eine Karten/Raster-Darstellung von Elementen.
 ```
 
 ## Varianten
-| Variant | Beschreibung |
-|---------|--------------|
-| **Fixed Grid** | Feste Spaltenanzahl |
-| **Responsive Grid** | Anpassbare Spalten |
-| **Masonry Grid** | Unregelmäßige Karten |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Fixed Grid** | feste Anzahl an Spalten |
+| **Responsive Grid** | anpassbare Spalten |
+| **Masonry Grid** | unregelmäßige Karten |
 
 | Spalten | Beschreibung |
 |---------|--------------|
-| **1** | Ein Spalte |
-| **2** | Zwei Spalten |
-| **3** | Drei Spalten |
-| **4** | Vier Spalten |
+| **1** | eine Spalte |
+| **2** | zwei Spalten |
+| **3** | drei Spalten |
+| **4** | vier Spalten |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | Kleine Grids |
-| Medium | 300px | Standard |
-| Large | 400px | Große Grids |
-| Full | 100% | Volle Breite |
+| small | 200px | kleine Raster |
+| medium | 300px | Standard |
+| large | 400px | große Raster |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Card** | Hell | Karten-Hintergrund |
-| **Hover** | Heller | Hover-Zustand |
-| **Active** | Primärfarbe | Aktiver Karte |
+| **Karte** | hell | Hintergrund der Karte |
+| **Hover** | heller | Zustand beim Überfahren |
+| **Aktiv** | Primärfarbe | aktive Karte |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `shadow` | Schatten stärker |
-| `transform` | Leichte Hebung |
-| `border` | Rand leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `transform` | leichtes Anheben |
+| `border` | der Rahmen leuchtet auf |
 
-## Reaktiv
+## Responsiv
 
-- **Responsive Grid** rechnet mit Mindestkartenbreite: 3 Spalten ab 900 px, 2 ab 600 px,
-  1 darunter; **Fixed Grid** behält die Spaltenzahl und skaliert die Karten.
-- **Masonry Grid** füllt die kürzeste Spalte; auf schmalen Bildschirmen wird sie einspaltig.
-- Neue Karten erscheinen mit `stagger`, beim Umsortieren per `drag` wandern die Nachbarn
-  in die Lücke (`reorder`).
+- **Responsive Grid** rechnet mit einer minimalen Kartenbreite: 3 Spalten ab 900 px, 2 ab
+  600 px, darunter 1; **Fixed Grid** behält die Anzahl der Spalten und skaliert die Karten.
+- **Masonry Grid** füllt die kürzeste Spalte; auf schmalen Bildschirmen wird es eine Spalte.
+- Neue Karten erscheinen mit `stagger`; beim Umsortieren per `drag` rücken die Nachbarn in die
+  Lücke (`reorder`).

@@ -2,32 +2,32 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `items` | array[] | - | Array von Item-Objekten |
-| `columns` | number | 3 | Anzahl Spalten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `items` | array[] | - | Array von Elementobjekten |
+| `columns` | number | 3 | Anzahl der Spalten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `gap` | number | 16 | Abstand zwischen Items |
+| `gap` | number | 16 | Abstand zwischen den Elementen |
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `responsive` | boolean | `true` | Responsives Layout? |
+| Attribut | Typ | Standard | Beschreibung |
+|-----------|------|---------|--------------|
+| `responsive` | boolean | `true` | responsives Layout? |
 | `columns` | object | - | { xs: 1, sm: 2, md: 3, lg: 4 } |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onHover` | function | Wird beim Hover ausgeführt |
+| `onHover` | function | wird beim Überfahren ausgelöst |
 
 ## Barrierefreiheit
 
@@ -35,14 +35,14 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `grid` |
 
-## Item-Attribute
+## Attribute der Elemente
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `title` | string | Titel |
 | `content` | string/node | Inhalt |
-| `image` | string | Bild-URL |
+| `image` | string | URL des Bildes |
 
 ## Geerbt von
 

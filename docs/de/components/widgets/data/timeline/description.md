@@ -1,4 +1,4 @@
-# Timeline (Zeitlinie)
+# Timeline
 
 | Feld | Wert |
 |------|------|
@@ -16,7 +16,7 @@ Eine Timeline ist eine chronologische Darstellung von Ereignissen.
 
 ## Verwendungszweck
 
-- Verlauf anzeigen
+- Darstellung eines Verlaufs
 - Aktivitäten
 - Historie
 - Projektphasen
@@ -28,33 +28,33 @@ Eine Timeline ist eine chronologische Darstellung von Ereignissen.
 | **senkrecht** | Einträge untereinander, Linie links (Standard) |
 | **waagerecht** | Einträge nebeneinander, scrollt seitlich |
 | **karten** | jeder Eintrag als Karte an der Linie |
-| **ereignisse** | kompakt: Icon, Zeitpunkt, ein Text |
+| **ereignisse** | kompakt: Symbol, Zeitpunkt, ein Text |
 
-## Features
+## Funktionen
 
-- Date
-- Title
-- Description
-- Icon
-- Actions
+- Datum
+- Titel
+- Beschreibung
+- Symbol
+- Aktionen
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [calendar-view](../calendar-view/): der Kalender hat eine Zeitskala
-  und zeigt Belegung, die Zeitlinie zeigt Reihenfolge ohne Skala.
-- **Nicht verwechseln mit** [wizard](../../containers/wizard/): der Assistent führt durch noch offene Schritte,
-  die Zeitlinie schaut auf Vergangenes zurück.
+  und zeigt Belegung, die Timeline zeigt die Reihenfolge ohne Skala.
+- **Nicht verwechseln mit** [wizard](../../containers/wizard/): der Assistent führt durch Schritte, die
+  noch offen sind, die Timeline blickt auf das Vergangene zurück.
 - **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): ein Balken zeigt einen Anteil,
-  die Zeitlinie zeigt die einzelnen Punkte.
-- Eine [list-view](../list-view/) ist zeitlos und umsortierbar; die Zeitlinie bleibt chronologisch.
+  die Timeline zeigt die einzelnen Punkte.
+- Eine [list-view](../list-view/) ist zeitlos und kann umsortiert werden; die Timeline bleibt chronologisch.
 
 ## Best Practices
 
-- Neueste Einträge zuerst, wenn es um Aktivität geht; bei Plänen umgekehrt und deutlich beschriften.
-- Relative Zeit anzeigen ("vor 3 Tagen") und den exakten Zeitpunkt als Tooltip bereithalten.
-- Nach Tag oder Woche gruppieren, sonst verliert die Linie ihre Struktur.
-- Icon für den Typ, Farbe für den Status – beides gemischt ist nicht mehr lesbar.
-- Rückwärts nachladen (ältere Einträge), damit der Anfang sofort sichtbar ist.
+- Bei Aktivitäten die neuesten Einträge zuerst; bei Plänen umgekehrt, und das deutlich kennzeichnen.
+- Zeig die relative Zeit („vor 3 Tagen“) und halte den genauen Zeitpunkt als Tooltip bereit.
+- Gruppiere nach Tag oder Woche, sonst verliert die Linie ihre Struktur.
+- Symbol für die Art, Farbe für den Status — beides zu mischen ist nicht mehr lesbar.
+- Lade rückwärts (ältere Einträge), damit der Anfang sofort sichtbar ist.
 
 ## Layout
 
@@ -74,6 +74,6 @@ Eine Timeline ist eine chronologische Darstellung von Ereignissen.
 ## Siehe auch
 
 - [data – Übersicht](../index.md)
-- [Calendar View](../calendar-view/) — Belegung auf Zeitskala
-- [Wizard](../../containers/wizard/) — offene Schritte führen
+- [Calendar View](../calendar-view/) — Belegung auf einer Zeitskala
+- [Wizard](../../containers/wizard/) — Führung durch offene Schritte
 - [Basiskomponente](../../../primitives/basics/base.md)

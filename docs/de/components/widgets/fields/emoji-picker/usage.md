@@ -1,36 +1,35 @@
-# Emoji Picker (Emoji-Auswahl) - Verwendung
+# Emoji Picker - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
+Ein Emoji Picker ist eine Emoji-Auswahl für Chat und Kommentare.
 
 - Chat
 - Kommentare
-- Messages
+- Nachrichten
 
 ## Beispiele
 
 ### Chat
 
 ```jsx
-<EmojiPicker value="Wert" onChange={aktion} />
+<EmojiPicker value="value" onChange={action} />
 ```
 
 ### Kommentare
 
 ```jsx
-<EmojiPicker value="Wert" placeholder="Platzhalter" />
+<EmojiPicker value="value" placeholder="Platzhalter" />
 ```
 
-### Messages
+### Nachrichten
 
 ```jsx
-<EmojiPicker value="Wert" showSearch={true} />
+<EmojiPicker value="value" showSearch={true} />
 ```
 
 ## Hinweise

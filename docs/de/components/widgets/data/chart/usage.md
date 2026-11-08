@@ -1,9 +1,8 @@
-# Chart (Diagramm) - Verwendung
+# Chart - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
@@ -18,19 +17,19 @@ Ein Chart ist eine Datenvisualisierung (Diagramme).
 ### Statistiken
 
 ```jsx
-<Chart data={eintraege} type="line" />
+<Chart data={entries} type="line" />
 ```
 
 ### Diagramme
 
 ```jsx
-<Chart data={eintraege} interactive={true} />
+<Chart data={entries} interactive={true} />
 ```
 
 ### Grafiken
 
 ```jsx
-<Chart data={eintraege} showLegend={true} />
+<Chart data={entries} showLegend={true} />
 ```
 
 ## Hinweise

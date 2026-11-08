@@ -1,34 +1,33 @@
-# File Upload (Datei-Upload) - Verwendung
+# File Upload - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein File Upload ist ein Element für Dateiauswahl und Upload.
+Ein File Upload ist ein Element zum Auswählen und Hochladen von Dateien.
 
-- Dateien hochladen
+- Hochladen von Dateien
 - Bilder
 - Dokumente
 
 ## Beispiele
 
-### Dateien hochladen
+### Hochladen von Dateien
 
 ```jsx
-<FileUpload value={eintraege} onChange={aktion} />
+<FileUpload value={entries} onChange={action} />
 ```
 
 ### Bilder
 
 ```jsx
-<FileUpload value={eintraege} multiple={false} />
+<FileUpload value={entries} multiple={false} />
 ```
 
 ### Dokumente
 
 ```jsx
-<FileUpload value={eintraege} showProgress={true} />
+<FileUpload value={entries} showProgress={true} />
 ```

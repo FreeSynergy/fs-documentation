@@ -1,4 +1,4 @@
-# Date Picker (Datumsauswahl) - Aussehen
+# Date Picker - Erscheinungsbild
 
 ## Grundlayout
 
@@ -17,71 +17,71 @@
 │  + 3 weitere                  │
 │  [+ Eintrag]                  │
 ├───────────────────────────────┤
-│  Heute · Morgen · Nächste Wo. │
+│  Heute · Morgen · Nächste Woche │
 └───────────────────────────────┘
 
 ▓ ausgewählt   ● Termin   ▪ Aufgabe   · ein weiterer Eintrag
 ```
 
-Ohne Datenanbindung (`sources` leer) entfallen Rastermarken und Tagesliste; das Overlay
-besteht dann nur aus Monatsraster und Schnellauswahl.
+Ohne Datenverbindung (`sources` leer) entfallen die Markierungen im Raster und die Tagesliste;
+das Overlay besteht dann nur aus dem Monatsraster und der Schnellauswahl.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einzeln** | ein Tag farbig gefüllt |
-| **bereich** | Start und Ende gefüllt, dazwischen hell unterlegt |
-| **wiederkehrend** | Kalender plus Regelzeile darunter |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **einzeln** | ein Tag in Farbe gefüllt |
+| **bereich** | Anfang und Ende gefüllt, dazwischen leicht getönt |
+| **wiederkehrend** | Kalender plus eine Regelzeile darunter |
 
 ## Größen
 
-| Größe | Tagfläche | Overlaybreite | Tagesliste |
-|-------|-----------|---------------|------------|
+| Größe | Tagesfläche | Overlay-Breite | Tagesliste |
+|-------|-------------|----------------|------------|
 | `small` | 28 px | 260 px | zwei Zeilen, Punkte 4 px |
 | `medium` | 36 px | 320 px | vier Zeilen, Punkte 6 px |
 | `large` | 44 px | 400 px | sechs Zeilen, Punkte 6 px |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
+| Zustand | Erscheinungsbild |
+|---------|------------------|
 | `default` | Tage neutral, Wochenende gedämpft |
-| `hover` | Tagfläche leicht hinterlegt |
-| `active` | Tag in Primärfarbe gefüllt, heller Text |
-| `outOfRange` | Tag ausgegraut, nicht wählbar |
+| `hover` | Tagesfläche leicht getönt |
+| `active` | Tag in der Primärfarbe gefüllt, helle Schrift |
+| `outOfRange` | Tag ausgegraut, nicht auswählbar |
 | `open` | Overlay mit Schatten, aktueller Monat hervorgehoben |
-| `loading` | Raster weiter bedienbar, Tagesliste mit Skeletonzeilen |
-| `error` | Tagesliste mit Fehlerzeile und Wiederholen, Marken des Fensters fehlen |
+| `loading` | Raster bleibt bedienbar, Tagesliste mit Skeleton-Zeilen |
+| `error` | Tagesliste mit Fehlerzeile und Wiederholen, die Markierungen des Fensters fehlen |
 
-Eintragstypen behalten ihre Farbe über alle Ansichten hinweg; die Zuordnung kommt aus
+Eintragstypen behalten ihre Farbe in allen Ansichten; die Zuordnung kommt aus
 dem Datensatz (`color`), sonst aus dem Typ.
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `ring` | Fokusring auf dem gewählten Tag, Tastaturnavigation |
-| `fade-in` | Overlay blendet ein, Monatswechsel seitlich |
-| `tooltip` | Zeigt bei einer Tagemarke die Titel der Einträge (max. drei) |
-| `lift` | Gezogener Eintrag folgt dem Zeiger, Zieltag wird hinterlegt |
+| `ring` | Fokusring auf dem ausgewählten Tag, Tastaturnavigation |
+| `fade-in` | das Overlay blendet ein, Monatswechsel gleiten seitlich |
+| `tooltip` | zeigt die Titel der Einträge für eine Tagesmarkierung (max. drei) |
+| `lift` | ein gezogener Eintrag folgt dem Zeiger, der Zieltag wird getönt |
 
-## Reaktiv
+## Responsiv
 
-- Unter 500 px Breite wird das Overlay zur bodenbündigen Fläche mit Listenansicht.
+- Unter 500 px Breite wird das Overlay zu einer am unteren Rand verankerten Fläche mit einer Listenansicht.
 - Monatswechsel per Wischgeste.
-- Tagesliste wird unter dem Raster vollständig ausgespielt; die Punkte entfallen, der
-  Zähler steht am Wochentag.
-- Langer Druck auf einen Tag öffnet die Schnellaufnahme für diesen Tag.
+- Die Tagesliste wird unter dem Raster vollständig ausgeklappt; die Punkte entfallen, der
+  Zähler sitzt beim Wochentag.
+- Ein langes Drücken auf einen Tag öffnet die Schnelleingabe für diesen Tag.
 
-## Tageseinträge
+## Einträge pro Tag
 
-| Element | Aussehen |
-|---------|----------|
-| Tagemarke | ein Punkt je Eintrag, horizontal gereiht, max. `entryLimit` |
-| Zählermarke | mehr Einträge als `entryLimit`: ein Punkt mit Zahl |
-| Serienmarke | Punkt mit unterbrochenem Rand, Signal für `recurrenceRule` |
-| Erledigt | Punkt abgedämpft, Titel durchgestrichen (`status = done`) |
-| Mehrtägig | Marke setzt sich über die betroffenen Tage als durchgehender Balken fort |
-| Tagesliste | Titel, Uhrzeit bzw. `allDay`, Typ als Punkt; Einträge des gewählten Tages |
-| Schnellaufnahme | eine Zeile mit Titel und Zeitfeld unter der Liste, nur bei `creatable` |
+| Element | Erscheinungsbild |
+|---------|------------------|
+| Tagesmarkierung | ein Punkt pro Eintrag, waagerecht aufgereiht, max. `entryLimit` |
+| Zählermarkierung | mehr Einträge als `entryLimit`: ein Punkt mit einer Zahl |
+| Serienmarkierung | Punkt mit gestricheltem Rand, Hinweis auf `recurrenceRule` |
+| Erledigt | Punkt gedämpft, Titel durchgestrichen (`status = done`) |
+| Mehrtägig | die Markierung läuft als ununterbrochener Balken über die betroffenen Tage |
+| Tagesliste | Titel, Uhrzeit oder `allDay`, Typ als Punkt; die Einträge des gewählten Tages |
+| Schnelleingabe | eine Zeile mit Titel- und Zeitfeld unter der Liste, nur bei `creatable` |

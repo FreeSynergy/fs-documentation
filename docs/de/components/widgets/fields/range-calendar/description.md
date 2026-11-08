@@ -1,4 +1,4 @@
-# Range Calendar (Bereichskalender)
+# Range Calendar
 
 | Feld | Wert |
 |------|------|
@@ -14,8 +14,8 @@
 
 ## Beschreibung
 
-Der Bereichskalender wählt einen zusammenhängenden Zeitraum. Er zeigt zwei Monate
-nebeneinander, damit der Beginn im linken und das Ende im rechten Monat liegen kann.
+Der Range Calendar wählt einen zusammenhängenden Zeitraum. Er zeigt zwei Monate
+nebeneinander, damit der Anfang im linken und das Ende im rechten Monat liegen kann.
 
 ## Verwendungszweck
 
@@ -27,27 +27,27 @@ nebeneinander, damit der Beginn im linken und das Ende im rechten Monat liegen k
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **zwei-monate** | zwei Monate nebeneinander, Standard im Desktop |
-| **ein-monat** | ein Monat, Monatswechsel durch Wischen |
+| **zwei-monate** | zwei Monate nebeneinander, Standard am Desktop |
+| **ein-monat** | ein Monat, Monatswechsel per Wischen |
 
-## Features
+## Funktionen
 
-- Auswahl beginnt mit dem ersten Klick, zweiter Klick setzt das Ende
-- Vorhersage des Bereichs, solange der Zeiger wandert
-- Voreingestellte Bereiche: heute, 7 Tage, 30 Tage, dieses Quartal
+- Die Auswahl beginnt mit dem ersten Klick, der zweite Klick setzt das Ende
+- Vorschau des Zeitraums, während sich der Zeiger bewegt
+- Schnellauswahl (`presets`): heute, 7 Tage, 30 Tage, dieses Quartal
 - Tageszähler („14 Tage“) unter dem Raster
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [date-picker](../date-picker/) mit `bereich`: dort sitzt die
-  Auswahl an einem Feld, der Bereichskalender ist die eigene Fläche in Filterleisten.
+  Auswahl an einem Feld, der Range Calendar ist eine eigene Fläche in Filterleisten.
 - **Nicht verwechseln mit** [calendar-view](../../data/calendar-view/): die Ansicht zeigt
-  Termine, dieser wählt einen Zeitraum.
+  Termine, dieser Wähler wählt einen Zeitraum.
 
 ## Best Practices
 
-- Maximale Länge setzen, wenn Auswertungen sonst zu groß werden.
-- Den gewählten Zeitraum als Text anzeigen, nicht nur im Kalender.
+- Setze eine maximale Länge, wenn Auswertungen sonst zu groß würden.
+- Zeig den gewählten Zeitraum als Text, nicht nur im Kalender.
 
 ## Siehe auch
 

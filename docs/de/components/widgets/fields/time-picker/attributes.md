@@ -1,38 +1,38 @@
-# Time Picker (Zeitauswahl) - Attribute
+# Time Picker - Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt von der Basisklasse, siehe
 [base](../../../primitives/basics/base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | time | `null` | gewählte Uhrzeit |
 | `step` | number | `15` | Raster in Minuten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `min` | time | `00:00` | früheste Zeit |
-| `max` | time | `23:59` | späteste Zeit |
-| `hour12` | boolean | `false` | 12-Stunden-Darstellung |
-| `blocked` | array[] | `[]` | Zeiten, die nicht wählbar sind |
-| `freeInput` | boolean | `true` | Tippen erlauben, auf Raster korrigieren |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `min` | time | `00:00` | früheste Uhrzeit |
+| `max` | time | `23:59` | späteste Uhrzeit |
+| `hour12` | boolean | `false` | Anzeige im 12-Stunden-Format |
+| `blocked` | array[] | `[]` | Uhrzeiten, die nicht gewählt werden können |
+| `freeInput` | boolean | `true` | Eingabe per Tippen erlauben, auf das Raster korrigieren |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onChange` | function | Uhrzeit geändert |
+| `onChange` | function | Uhrzeit wurde geändert |
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
 | `role` | string | `listbox`, Einträge `option` |
-| `aria-selected` | boolean | gewählte Zeit |
-| `label` | string | Pflicht, z. B. „Beginn“ |
+| `aria-selected` | boolean | gewählte Uhrzeit |
+| `label` | string | Pflicht, z. B. „Start“ |
 
 ## Geerbt von
 

@@ -1,36 +1,36 @@
-# Tree View (Baumansicht) - Attribute
+# Tree View - Attribute
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `data` | array[] | - | Array von Node-Objekten |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `data` | array[] | - | Array von Knotenobjekten |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `variant` | enum | `simple` | Stil: `simple`, `with-icons`, `with-checkboxes`, `draggable` |
 | `multiple` | boolean | `false` | Mehrfachauswahl? |
-| `interactive` | boolean | `false` | Interaktiv? |
+| `interactive` | boolean | `false` | interaktiv? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showIcons` | boolean | `false` | Icons anzeigen? |
+| `showIcons` | boolean | `false` | Symbole anzeigen? |
 | `showCheckboxes` | boolean | `false` | Checkboxen anzeigen? |
 | `indent` | number | `24` | Einrückung in px |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onExpand` | function | Wird beim Expandieren ausgeführt |
-| `onCollapse` | function | Wird beim Kollabieren ausgeführt |
-| `onSelect` | function | Wird bei Auswahl ausgeführt |
-| `onDragStart` | function | Wird beim Drag-Start ausgeführt |
-| `onDragEnd` | function | Wird beim Drag-Ende ausgeführt |
+| `onExpand` | function | wird beim Ausklappen ausgeführt |
+| `onCollapse` | function | wird beim Einklappen ausgeführt |
+| `onSelect` | function | wird bei Auswahl ausgeführt |
+| `onDragStart` | function | wird zu Beginn eines Ziehens ausgeführt |
+| `onDragEnd` | function | wird am Ende eines Ziehens ausgeführt |
 
 ## Barrierefreiheit
 
@@ -38,15 +38,15 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `tree` |
 
-## Node-Attribute
+## Knotenattribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `id` | string | Eindeutige ID |
+| `id` | string | eindeutige ID |
 | `title` | string | Titel |
-| `children` | array[] | Kinder-Nodes |
-| `icon` | string | Icon-Name |
-| `checked` | boolean | Ausgewählt? |
+| `children` | array[] | untergeordnete Knoten |
+| `icon` | string | Name des Symbols |
+| `checked` | boolean | ausgewählt? |
 
 ## Geerbt von
 

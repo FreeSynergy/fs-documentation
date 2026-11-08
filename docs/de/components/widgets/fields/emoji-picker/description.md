@@ -1,4 +1,4 @@
-# Emoji Picker (Emoji-Auswahl)
+# Emoji Picker
 
 | Feld | Wert |
 |------|------|
@@ -12,41 +12,41 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
+Ein Emoji Picker ist eine Emoji-Auswahl für Chat und Kommentare.
 
 ## Verwendungszweck
 
 - Chat
 - Kommentare
-- Messages
+- Nachrichten
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **inline** | Auswahl ist dauerhaft unter dem Feld eingeblendet (Komponiermodus) |
-| **overlay** | Klappe am Cursor, schließt nach der Auswahl |
+| **inline** | die Auswahl bleibt dauerhaft unter dem Feld sichtbar (Schreibmodus) |
+| **overlay** | Klappe am Cursor, schließt sich nach der Auswahl |
 | **reaktion** | minimales Raster mit wenigen Emojis über einer Nachricht |
 
-## Features
+## Funktionen
 
-- Categories
-- Search
-- Recent
+- Kategorien
+- Suche
+- Zuletzt verwendet
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [mention-input](../../../primitives/fields/mention-input/): eine Erwähnung wählt eine Person
-  aus einem Datensatz aus und erzeugt eine Verknüpfung, ein Emoji ist nur ein Zeichen.
+  aus einem Datensatz und erzeugt einen Verweis, ein Emoji ist nur ein Zeichen.
 - **Nicht verwechseln mit** [icon](../../../primitives/media/icon/): Emojis gehören zum Inhalt, Icons zur
-  Bedienoberfläche. Für Buttons und Menüs immer `icon` verwenden.
-- Der Picker wählt aus, er erzeugt keine eigenen Inhalte.
+  Benutzeroberfläche. Für Schaltflächen und Menüs immer `icon` verwenden.
+- Der Picker trifft eine Auswahl, er erzeugt selbst keinen Inhalt.
 
 ## Best Practices
 
-- Zuerstgenutzte Emojis oben halten; Kategorien über Reiter, nicht über endloses Scrollen.
-- Einfügen immer an der Cursorposition, nicht am Ende des Textes.
-- Haut- und Geschlechtsvarianten nur anbieten, wenn der Nutzer sie explizit wählt.
+- Die meistgenutzten Emojis oben halten; Kategorien über Reiter, nicht über endloses Scrollen.
+- Immer an der Cursorposition einfügen, nicht am Textende.
+- Hautton- und Geschlechtsvarianten nur anbieten, wenn der Nutzer sie ausdrücklich wählt.
 - Reaktionen auf eine Nachricht begrenzen (max. eine pro Person und Emoji), sonst wird
   die Auswertung unlesbar.
 
@@ -54,5 +54,5 @@ Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
 
 - [fields – Übersicht](../index.md)
 - [Mention Input](../../../primitives/fields/mention-input/) — Personen statt Zeichen
-- [Rich Text Editor](../../../workbenches/fields/rich-text-editor/) — Chat- und Kommentar-Eingabe
+- [Rich Text Editor](../../../workbenches/fields/rich-text-editor/) — Eingabe für Chat und Kommentare
 - [Basiskomponente](../../../primitives/basics/base.md)

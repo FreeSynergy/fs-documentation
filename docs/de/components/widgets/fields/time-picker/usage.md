@@ -1,24 +1,23 @@
-# Time Picker (Zeitauswahl) - Verwendung
+# Time Picker - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Die Auswahl erscheint beim Antippen des Zeitfeldes. Beginn und Ende eines Termins werden
-gemeinsam betrachtet, damit das Ende nie vor dem Begin liegt.
+Die Auswahl erscheint beim Antippen des Uhrzeitfelds. Beginn und Ende eines Termins
+werden gemeinsam betrachtet, damit das Ende nie vor dem Beginn liegt.
 
 ## Beispiele
 
-### Terminbeginn
+### Beginn eines Termins
 
 ```jsx
-<TimePicker label="Beginn" value={start} step={15} onChange={setStart} />
+<TimePicker label="Start" value={start} step={15} onChange={setStart} />
 ```
 
-### Belegte Zeiten ausblenden
+### Belegte Uhrzeiten ausblenden
 
 ```jsx
 <TimePicker blocked={roomBookings} min="08:00" max="18:00" />
@@ -28,6 +27,6 @@ gemeinsam betrachtet, damit das Ende nie vor dem Begin liegt.
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Termin anlegen | `step = 15`, Ende automatisch nachziehen |
+| Termin anlegen | `step = 15`, Ende automatisch mitziehen |
 | Zeiterfassung | `step = 6`, `freeInput = true` |
 | Raumbuchung | `blocked` aus dem Kalender des Raums |

@@ -2,30 +2,30 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `value` | file/array | - | Datei(en) |
-| `onChange` | function | - | Event bei Änderung |
+| `onChange` | function | - | Ereignis bei Änderung |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `multiple` | boolean | `false` | Mehrere Dateien? |
+| `multiple` | boolean | `false` | mehrere Dateien? |
 
 ## Darstellung
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `showProgress` | boolean | `true` | Progress anzeigen? |
+| `showProgress` | boolean | `true` | Fortschritt anzeigen? |
 | `showPreview` | boolean | `false` | Vorschau anzeigen? |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onDrop` | function | Wird beim Drop ausgeführt |
-| `onError` | function | Wird bei Fehler ausgeführt |
+| `onDrop` | function | wird beim Ablegen ausgeführt |
+| `onError` | function | wird bei einem Fehler ausgeführt |
 
 ## Barrierefreiheit
 
@@ -33,12 +33,12 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `button` |
 
-## Validation-Attribute
+## Validierungsattribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `accept` | string | Akzeptierte Dateitypen (z.B. `.jpg,.png`) |
-| `maxSize` | number | Maximale Dateigröße in bytes |
+| `accept` | string | erlaubte Dateitypen (z. B. `.jpg,.png`) |
+| `maxSize` | number | maximale Dateigröße in Bytes |
 
 ## Geerbt von
 

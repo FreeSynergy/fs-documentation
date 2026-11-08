@@ -1,4 +1,4 @@
-# Range Calendar (Bereichskalender) - Aussehen
+# Range Calendar - Erscheinungsbild
 
 ## Grundlayout
 
@@ -15,36 +15,36 @@
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **zwei-monate** | zwei Raster nebeneinander, Trennlinie dazwischen |
-| **ein-monat** | ein Raster, Monatswechsel seitlich |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **zwei-monate** | zwei Raster nebeneinander, ein Trenner dazwischen |
+| **ein-monat** | ein Raster, Monatswechsel gleitet seitlich |
 
 ## Größen
 
-| Größe | Tagfläche | Breite |
-|-------|-----------|--------|
+| Größe | Tagesfläche | Breite |
+|-------|-------------|--------|
 | `small` | 28 px | 520 px |
 | `medium` | 36 px | 660 px |
 | `large` | 44 px | 800 px |
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
+| Zustand | Erscheinungsbild |
+|---------|------------------|
 | `default` | Tage neutral |
-| `selecting` | Bereich vom Beginn bis zum Zeiger hell unterlegt |
-| `active` | Beginn und Ende gefüllt, Mitte hell |
+| `selecting` | der Bereich vom Anfang bis zum Zeiger leicht getönt |
+| `active` | Anfang und Ende gefüllt, die Mitte hell |
 | `outOfRange` | Tage außerhalb von `min`/`max` ausgegraut |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `bridge` | zusammenhängende Fläche über beide Monate hinweg |
-| `ring` | Fokusring auf Beginn und Ende |
+| `bridge` | eine zusammenhängende Fläche über beide Monate |
+| `ring` | Fokusring auf Anfang und Ende |
 
-## Reaktiv
+## Responsiv
 
-- Unter 700 px Breite auf `ein-monat` umschalten.
-- Monatswechsel per Wischgeste, ohne Knöpfe.
+- Unter 700 px Breite auf `ein-monat` wechseln.
+- Monatswechsel per Wischgeste, ohne Schaltflächen.

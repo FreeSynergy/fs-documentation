@@ -1,4 +1,4 @@
-# Description List (Beschreibungsliste)
+# Description List
 
 | Feld | Wert |
 |------|------|
@@ -14,8 +14,8 @@
 
 ## Beschreibung
 
-Eine Beschreibungsliste zeigt Wertpaare aus Bezeichnung und Wert — die Detailansicht
-eines Datensatzes. Sie ist lesen optimiert und nicht zum Bearbeiten gedacht.
+Eine Description List zeigt Paare aus Label und Wert — die Detailansicht eines
+Datensatzes. Sie ist auf das Lesen optimiert, nicht auf das Bearbeiten.
 
 ## Verwendungszweck
 
@@ -27,30 +27,30 @@ eines Datensatzes. Sie ist lesen optimiert und nicht zum Bearbeiten gedacht.
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **zweispaltig** | Bezeichnung links, Wert rechts (Desktop) |
-| **gestapelt** | Bezeichnung über dem Wert (schmale Fläche) |
-| **inline** | Paare im Textfluss, durch Trennzeichen getrennt |
+| **zweispaltig** | Label links, Wert rechts (Desktop) |
+| **gestapelt** | Label über dem Wert (schmale Fläche) |
+| **inline** | Paare im Textfluss, getrennt durch Trennzeichen |
 
-## Features
+## Funktionen
 
-- Werte dürfen eigene Bausteine enthalten: [avatar](../avatar/),
+- Werte können eigene Bausteine enthalten: [avatar](../avatar/),
   [badge](../../../primitives/feedback/badge/), [link](../../../primitives/basics/link/), [tag](../../../primitives/fields/tags-input/)
 - Fehlende Werte bleiben als Platzhalter sichtbar oder werden ausgeblendet
 - Gruppen mit Zwischenüberschriften für lange Detailansichten
-- Kopieren eines Wertes über ein Icon pro Zeile
+- Kopieren eines Werts über ein Symbol pro Zeile
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [table](../table/): eine Tabelle vergleicht viele Datensätze
-  nach gleichen Feldern, die Beschreibungsliste zeigt ein Objekt.
+  anhand der gleichen Felder, die Description List zeigt ein Objekt.
 - **Nicht verwechseln mit** [field](../../../primitives/fields/field/): Felder bearbeiten Werte,
   diese Liste stellt sie dar.
 
 ## Best Practices
 
-- Reihenfolge nach Lesbarkeit, nicht nach Datenbankspalten.
-- Leere Werte ausblenden, außer sie sind aussagekräftig („keine Frist“).
-- Höchstens zwei Spalten; mehr wird unruhig.
+- Ordne nach Lesbarkeit, nicht nach Datenbankspalten.
+- Blende leere Werte aus, außer sie haben eine Bedeutung („kein Fälligkeitsdatum“).
+- Höchstens zwei Spalten; mehr wird unübersichtlich.
 
 ## Siehe auch
 

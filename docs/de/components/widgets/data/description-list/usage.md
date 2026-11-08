@@ -1,14 +1,13 @@
-# Description List (Beschreibungsliste) - Verwendung
+# Description List - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Die Liste steht in Detailansichten und Karten. Werte, die bearbeitet werden sollen,
-führt man per Klick auf ein Feld über — die Liste selbst bleibt Darstellung.
+Die Liste steht in Detailansichten und Karten. Werte, die bearbeitet werden sollen, werden
+durch Klick auf ein Feld geöffnet — die Liste selbst bleibt Darstellung.
 
 ## Beispiele
 
@@ -28,6 +27,6 @@ führt man per Klick auf ein Feld über — die Liste selbst bleibt Darstellung.
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Detailseite eines Datensatzes | `columns = 2`, Gruppen für mehr als zwölf Werte |
+| Detailseite eines Datensatzes | `columns = 2`, Gruppen bei mehr als zwölf Werten |
 | Schmale Seitenleiste | `variant = "gestapelt"` |
-| Werte im Fließtext | `variant = "inline"` |
+| Werte im laufenden Text | `variant = "inline"` |

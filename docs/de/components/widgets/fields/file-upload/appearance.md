@@ -1,16 +1,16 @@
-# File Upload - Aussehen
+# File Upload - Erscheinungsbild
 
 ## Grundlayout
 
-Ein File Upload ist ein Element für Dateiauswahl und Upload.
+Ein File Upload ist ein Element zum Auswählen und Hochladen von Dateien.
 
 ## Varianten
 
-### File Picker
+### Dateiauswahl
 
 ```
 ┌─────────────────────────────────────────┐
-│ [📁 Datei auswählen]                    │
+│ [📁 Datei wählen]                       │
 └─────────────────────────────────────────┘
 ```
 
@@ -19,18 +19,18 @@ Ein File Upload ist ein Element für Dateiauswahl und Upload.
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
-│   Ziehen Sie Ihre Datei hierher         │
+│   Datei hier ablegen                    │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-### Image Preview
+### Bildvorschau
 
 ```
 ┌─────────────────────────────────────────┐
 │  🖼️                                    │
 │                                         │
-│  [Dateiname.jpg]     [✕]                │
+│  [dateiname.jpg]     [✕]                │
 └─────────────────────────────────────────┘
 ```
 
@@ -38,42 +38,42 @@ Ein File Upload ist ein Element für Dateiauswahl und Upload.
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 200px | Inline |
-| Medium | 300px | Standard |
-| Large | 400px | Featured |
-| Full | 100% | Volle Breite |
+| small | 200px | im Text |
+| medium | 300px | Standard |
+| large | 400px | hervorgehoben |
+| full | 100% | volle Breite |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+| **Standard** | hell | Standard |
+| **Primär** | Primärfarbe | primär |
+| **Aktiv** | dunkel | aktiver Zustand |
+| **Deaktiviert** | Grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
-| `background` | Hintergrund ändert sich |
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
+| `background` | der Hintergrund wechselt |
 
-## Reaktiv
+## Responsiv
 
-- Die Drop-Zone wächst mit dem Inhalt: ohne Datei füllt sie die volle Breite,
-  mit Dateiliste wird sie zur Liste unter dem Auslöser.
+- Die Ablagefläche wächst mit dem Inhalt: ohne Datei füllt sie die volle Breite,
+  mit einer Dateiliste wird sie unter dem Auslöser zu einer Liste.
 - Auf schmalen Bildschirmen stapeln sich Vorschau und Dateiname untereinander,
-  der Entfernen-Knopf bleibt rechts oben erreichbar.
-- Unter `small` Bildschirmbreite wird die Drop-Zone auf `Full` gestellt und der
-  Auslöser als Vollbreiter Button gesetzt.
+  die Entfernen-Schaltfläche bleibt oben rechts erreichbar.
+- Unterhalb der Bildschirmbreite `small` wird die Ablagefläche auf `Full` gesetzt und der
+  Auslöser wird zu einer Schaltfläche in voller Breite.
 
-## Progress-Indicator
+## Fortschrittsanzeige
 
 ```
 ┌─────────────────────────────────────────┐
-│ Datei.jpg                               │
-│ ▓▓▓▓▓▓▓▓▓▓░░░░░░  75%                  │
+│ datei.jpg                               │
+│ ▓▓▓▓▓▓▓▓▓▓░░░░░░  75%                   │
 └─────────────────────────────────────────┘
 ```

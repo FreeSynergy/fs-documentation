@@ -1,4 +1,4 @@
-# Time Picker (Zeitauswahl) - Aussehen
+# Time Picker - Erscheinungsbild
 
 ## Grundlayout
 
@@ -16,10 +16,10 @@
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **liste** | Liste mit 7 sichtbaren Zeilen, Scrollbalken dezent |
-| **ziffernblatt** | Kreis mit Stundenpunkt, innerer Kreis für Minuten |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **liste** | Liste mit 7 sichtbaren Zeilen, dezente Scrollleiste |
+| **ziffernblatt** | Kreis mit Stundenzeiger, innerer Kreis für die Minuten |
 
 ## Größen
 
@@ -31,21 +31,21 @@
 
 ## Farben und Zustände
 
-| Zustand | Aussehen |
-|---------|----------|
-| `default` | Zeiten neutral |
-| `hover` | Zeile leicht hinterlegt |
-| `active` | gewählte Zeile in Primärfarbe |
-| `open` | Overlay mit Schatten, gewählte Zeile mittig |
+| Zustand | Erscheinungsbild |
+|---------|------------------|
+| `default` | Uhrzeiten neutral |
+| `hover` | Zeile leicht getönt |
+| `active` | gewählte Zeile in der Primärfarbe |
+| `open` | Overlay mit Schatten, gewählte Zeile in der Mitte |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
 | `ring` | Fokusrahmen auf der aktiven Zeile |
-| `fade-in` | Overlay blendet ein |
+| `fade-in` | das Overlay blendet ein |
 
-## Reaktiv
+## Responsiv
 
-- Auf Mobilgeräten erscheint die Liste als bodenbündige Fläche.
+- Auf mobilen Geräten erscheint die Liste als am unteren Rand verankerte Fläche.
 - `ziffernblatt` wird unter 400 px Breite durch die Liste ersetzt.

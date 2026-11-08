@@ -1,4 +1,4 @@
-# Grid View (Rasteransicht)
+# Grid View
 
 | Feld | Wert |
 |------|------|
@@ -12,7 +12,7 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Grid View ist eine Karten/Raster-Darstellung von Elementen.
+Eine Grid View ist eine Karten- bzw. Rasteransicht von Elementen.
 
 ## Verwendungszweck
 
@@ -23,36 +23,37 @@ Grid View ist eine Karten/Raster-Darstellung von Elementen.
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **Fixed Grid** | Feste Spaltenanzahl |
-| **Responsive Grid** | Anpassbare Spalten |
-| **Masonry Grid** | Unregelmäßige Karten |
+| Variante | Beschreibung |
+|----------|--------------|
+| **Fixed Grid** | feste Anzahl an Spalten |
+| **Responsive Grid** | anpassbare Spalten |
+| **Masonry Grid** | unregelmäßige Karten |
 
-## Features
+## Funktionen
 
-- Responsive
-- Hover-Effect
-- Selection
-- Drag-and-Drop
+- Responsiv
+- Hover-Effekt
+- Auswahl
+- Drag and Drop
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [list-view](../list-view/): die Liste zeigt pro Eintrag eine Zeile,
-  die Rasteransicht eine Karte mit mehreren Feldern.
-- **Nicht verwechseln mit** [table](../table/): eine Tabelle vergleicht Werte über Spalten,
+- **Nicht verwechseln mit** [list-view](../list-view/): die Liste zeigt eine Zeile pro Eintrag,
+  die Grid View eine Karte mit mehreren Feldern.
+- **Nicht verwechseln mit** [table](../table/): eine Tabelle vergleicht Werte über Spalten hinweg,
   ein Raster stellt Objekte nebeneinander.
-- **Nicht verwechseln mit** [gallery](../../media/gallery/): die Galerie ist ein zusammenhängender
-  Medienverband mit Vergrößerung, das Raster ist eine generische Objektansicht.
-- **Nicht verwechseln mit** [carousel](../../media/carousel/): das Karussell zeigt nacheinander,
-  das Raster gleichzeitig.
+- **Nicht verwechseln mit** [gallery](../../media/gallery/): die Galerie ist eine zusammenhängende
+  Gruppe von Medien mit Vergrößerung, das Raster ist eine allgemeine Objektansicht.
+- **Nicht verwechseln mit** [carousel](../../media/carousel/): das Karussell zeigt eines nach dem
+  anderen, das Raster alle gleichzeitig.
 
 ## Best Practices
 
-- Karten einheitlich hoch halten; zu lange Titel kürzen, nicht umbrechen lassen.
-- Die Karte selbst ist die Hauptaktion; weitere Aktionen erst bei Hover oder langes Drücken.
-- Auswahl über Kästchen in der Ecke, nicht über den Kartenklick – sonst verrutscht man beim Markieren.
-- Ansichtswechsel (Raster ↔ Liste) und Sortierung merken, nicht zurücksetzen.
+- Halte die Karten gleich hoch; kürze zu lange Titel, statt sie umbrechen zu lassen.
+- Die Karte selbst ist die Hauptaktion; weitere Aktionen nur bei Hover oder langem Drücken.
+- Wähle über eine Checkbox in der Ecke aus, nicht per Klick auf die Karte — sonst rutscht man
+  beim Markieren leicht ab.
+- Merke dir den Wechsel der Ansicht (Raster ↔ Liste) und die Sortierung, setze sie nicht zurück.
 - Auf schmalen Bildschirmen zwei Spalten für Bilder, eine Spalte für Textkarten.
 
 ## Siehe auch

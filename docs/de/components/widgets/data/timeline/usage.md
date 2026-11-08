@@ -1,35 +1,34 @@
-# Timeline (Zeitlinie) - Verwendung
+# Timeline - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung zu Rust und Blinc wechselt,
+    werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
 Eine Timeline ist eine chronologische Darstellung von Ereignissen.
 
-- Verlauf anzeigen
+- Darstellung eines Verlaufs
 - Aktivitäten
 - Historie
 - Projektphasen
 
 ## Beispiele
 
-### Verlauf anzeigen
+### Darstellung eines Verlaufs
 
 ```jsx
-<Timeline events={eintraege} />
+<Timeline events={entries} />
 ```
 
 ### Aktivitäten
 
 ```jsx
-<Timeline events={eintraege} interactive={false} />
+<Timeline events={entries} interactive={false} />
 ```
 
 ### Historie
 
 ```jsx
-<Timeline events={eintraege} interactive={false} />
+<Timeline events={entries} interactive={false} />
 ```

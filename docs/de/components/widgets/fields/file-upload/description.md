@@ -1,4 +1,4 @@
-# File Upload (Datei-Upload)
+# File Upload
 
 | Feld | Wert |
 |------|------|
@@ -12,45 +12,45 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein File Upload ist ein Element für Dateiauswahl und Upload.
+Ein File Upload ist ein Element zum Auswählen und Hochladen von Dateien.
 
 ## Verwendungszweck
 
-- Dateien hochladen
+- Hochladen von Dateien
 - Bilder
 - Dokumente
 
 ## Varianten
 
-| Variant | Beschreibung |
-|---------|--------------|
-| **File Picker** | Dateiauswahl |
-| **Drag & Drop** | Drag&Drop |
+| Variante | Beschreibung |
+|----------|--------------|
+| **File Picker** | Auswahl einer Datei |
+| **Drag & Drop** | Ziehen und Ablegen |
 | **Image Preview** | Vorschau |
 
-## Features
+## Funktionen
 
-- Progress
-- Preview
-- Validation
+- Fortschritt
+- Vorschau
+- Validierung
 
 ## Abgrenzung
 
 - **Nicht verwechseln mit** [image](../../../primitives/media/image/): das Bild zeigt eine vorhandene Datei,
-  der Upload bringt Dateien erst ins System.
+  der Upload bringt Dateien ins System.
 - **Nicht verwechseln mit** [progress](../../../primitives/feedback/progress/): der Fortschrittsbalken ist hier
-  nur eingebettet; dargestellt wird er von `progress`.
-- Der Upload nimmt Dateien entgegen, er verwaltet sie nicht – die Liste liegt in
+  nur eingebettet; `progress` ist das, was ihn zeichnet.
+- Der Upload nimmt Dateien entgegen, er verwaltet sie nicht — die Liste liegt in
   [list-view](../../data/list-view/).
 
 ## Best Practices
 
-- Typ und Größe **vor** dem Upload prüfen und den Fehler benennen ("max. 5 MB"),
+- Typ und Größe **vor** dem Hochladen prüfen und den Fehler benennen („max. 5 MB“),
   nicht erst nach der Serverantwort.
-- Pro Datei eigener Fortschritt mit Abbruch- und Entfernen-Knopf.
-- Drag & Drop zusätzlich zum Datei-Dialog anbieten, nie als einzigen Weg.
-- Nach dem Upload Dateiname, Größe und Vorschau anzeigen; Mehrfachauswahl klar zählen
-  ("3 Dateien, 12 MB").
+- Eigener Fortschritt pro Datei mit einer Abbrechen- und einer Entfernen-Schaltfläche.
+- Drag & Drop zusätzlich zum Dateidialog anbieten, nie als einzige Möglichkeit.
+- Nach dem Hochladen Dateiname, Größe und Vorschau zeigen; bei Mehrfachauswahl klar zählen
+  („3 Dateien, 12 MB“).
 
 ## Siehe auch
 

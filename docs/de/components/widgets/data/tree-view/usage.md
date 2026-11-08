@@ -1,6 +1,6 @@
-# Tree View (Baumansicht) - Verwendung
+# Tree View - Verwendung
 
-## Einfacher Tree View
+## Einfache Tree View
 
 ```jsx
 <TreeView 
@@ -9,7 +9,7 @@
 />
 ```
 
-## mit Checkboxen
+## Mit Checkboxen
 
 ```jsx
 <TreeView 
@@ -20,7 +20,7 @@
 />
 ```
 
-## Draggable
+## Verschiebbar
 
 ```jsx
 <TreeView 
@@ -31,7 +31,7 @@
 />
 ```
 
-## In Card
+## In einer Karte
 
 ```jsx
 <Card title="Dateiverzeichnis">
@@ -43,7 +43,7 @@
 </Card>
 ```
 
-## Mit Event-Handlern
+## Mit Ereignis-Handlern
 
 ```jsx
 <TreeView 
@@ -107,15 +107,15 @@
 ┌─────────────────────────────────────────┐
 │ CEO                                     │
 │   └─ CTO                                │
-│       └─ Dev Team                       │
+│       └─ Dev-Team                       │
 │           └─ Frontend                   │
 │           └─ Backend                    │
 │   └─ CFO                                │
-│       └─ Finance                        │
+│       └─ Finanzen                       │
 └─────────────────────────────────────────┘
 ```
 
-## Beispiel 5: mit Icons
+## Beispiel 5: mit Symbolen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -124,6 +124,6 @@
 │   └─ 📄 Projekt 2                       │
 ├─────────────────────────────────────────┤
 │ 📷 Bilder                               │
-│   └─ 🖼️ Urlaub 2023                    │
+│   └─ 🖼️ Urlaub 2023                     │
 └─────────────────────────────────────────┘
 ```
