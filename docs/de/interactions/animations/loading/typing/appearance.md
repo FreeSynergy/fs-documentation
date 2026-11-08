@@ -2,17 +2,17 @@
 
 ## Grundlayout
 
-Drei kleine Punkte in einer Sprechblase; der gehobene Punkt wandert als Welle von links nach rechts.
+Drei kleine Punkte in einer Sprechblase. Der angehobene Punkt wandert als Welle von links nach rechts.
 
 ## Visueller Verlauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│Frame 1        Frame 2        Frame 3        Frame 4  │
+│Bild 1          Bild 2          Bild 3         Bild 4 │
 │                                                      │
 │· · ·          • · ·          · • ·          · · •    │
 │                                                      │
-│Der hohe Punkt wandert links → rechts (Welle)         │
+│der hohe Punkt wandert links → rechts (eine Welle)    │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -20,11 +20,11 @@ Drei kleine Punkte in einer Sprechblase; der gehobene Punkt wandert als Welle vo
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Welle** | Punkte heben sich nacheinander an (Standard) |
-| **Blinken** | Punkte wechseln zyklisch die Deckkraft |
-| **Hüpfen** | Punkte überspringen ihre Ruhelage kurz |
-| **Balken** | drei Stäbe statt Punkte (Status „bearbeitet“) |
-| **Angepasst** | Farbe und Größe folgen dem Chat-Theme |
+| **Welle** | die Punkte heben sich nacheinander (Standard) |
+| **Blinken** | die Punkte wechseln zyklisch ihre Deckkraft |
+| **Hüpfen** | die Punkte springen kurz über ihre Ruheposition |
+| **Balken** | drei Balken statt Punkten (Status "wird bearbeitet") |
+| **Angepasst** | Farbe und Größe folgen dem Theme des Chats |
 
 ## Dauer
 

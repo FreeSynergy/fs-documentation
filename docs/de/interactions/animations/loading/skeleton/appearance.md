@@ -2,7 +2,7 @@
 
 ## Grundlayout
 
-Graue Platzhalterformen (Balken, Kreise, Blöcke) in den Maßen des späteren Inhalts, über die im Loop ein heller Schimmer wandert.
+Graue Platzhalterformen (Balken, Kreise, Blöcke) in den Maßen des späteren Inhalts. Ein leichter Schimmer wandert in einer Schleife über sie.
 
 ## Visueller Verlauf
 
@@ -21,11 +21,11 @@ Graue Platzhalterformen (Balken, Kreise, Blöcke) in den Maßen des späteren In
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Zeilen** | Textzeilen unterschiedlicher Breite |
-| **Liste** | Avatar-Kreis plus zwei Textbalken pro Zeile |
-| **Karte** | Bildblock, Titelzeile und zwei Textzeilen |
-| **Tabelle** | Kopfzeile plus gleichmäßige Datenzeilen |
-| **Statisch** | ohne Schimmer, nur graue Formen (reduced motion) |
+| **Zeilen** | Textzeilen mit unterschiedlicher Breite |
+| **Liste** | ein Avatar-Kreis plus zwei Textbalken pro Zeile |
+| **Karte** | ein Bildblock, eine Titelzeile und zwei Textzeilen |
+| **Tabelle** | eine Kopfzeile plus gleichmäßige Datenzeilen |
+| **Statisch** | ohne Schimmer, nur graue Formen (reduzierte Bewegung) |
 
 ## Dauer
 

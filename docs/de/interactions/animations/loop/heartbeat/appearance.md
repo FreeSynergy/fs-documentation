@@ -8,7 +8,7 @@ Das Element steht still, macht zwei kurze Schläge und bleibt dann für den Rest
 
 ```
 ┌──────────────────────────────────────────────────┐
-│  Ein Zyklus = 1000 ms (72 bpm)                   │
+│  ein Zyklus = 1000 ms (72 bpm)                   │
 │                                                  │
 │  Zeit   0     100    170    240      1000 ms     │
 │  Skala  1.00  1.12   1.05   1.09    1.00         │
@@ -23,11 +23,11 @@ Das Element steht still, macht zwei kurze Schläge und bleibt dann für den Rest
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Standard** | `lub-dub`, 72 bpm, zwei Peaks mit Ruhephase |
-| **Verstärkt** | `schlagSkala` 1.25 - deutlich sichtbarer Schlag |
-| **Ruhig** | 55 bpm, kleine Amplitude für dauerhafte Live-Anzeige |
-| **Hektisch** | 110 bpm, `pauseAnteil` 0.2 - Alarm-Charakter |
-| **Einmalig** | `iterationCount: 1` bei Bestätigung einer Aktion |
+| **Standard** | `lub-dub`, 72 bpm, zwei Spitzen mit einer Ruhephase |
+| **Verstärkt** | `schlagSkala` 1.25 – ein deutlich sichtbarer Schlag |
+| **Ruhig** | 55 bpm, kleine Amplitude für eine dauerhafte Live-Anzeige |
+| **Hektisch** | 110 bpm, `pauseAnteil` 0.2 – ein Alarmcharakter |
+| **Einmal** | `iterationCount: 1` bei der Bestätigung einer Aktion |
 
 ## Dauer
 

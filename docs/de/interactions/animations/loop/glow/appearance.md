@@ -2,18 +2,18 @@
 
 ## Grundlayout
 
-Das Element steht still; um seine Kontur liegt ein weicher, farbiger Schein, der langsam an- und abschwillt.
+Das Element steht still. Um seine Kontur liegt ein weicher, farbiger Schein, der langsam anschwillt und wieder abnimmt.
 
 ## Visueller Verlauf
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│Frame 1        Frame 2        Frame 3        Frame 4  │
+│Bild 1         Bild 2          Bild 3         Bild 4  │
 │                                                      │
 │[■]            ~[■]~          ~~[■]~~        ~[■]~    │
-│aus            schwach        hell           schwach  │
+│aus            schwach         hell           schwach  │
 │                                                      │
-│Intensität: 0 → 50 → 100 → 50 % (Endlos-Loop)         │
+│Intensität: 0 → 50 → 100 → 50 % (endlose Schleife)    │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -21,15 +21,15 @@ Das Element steht still; um seine Kontur liegt ein weicher, farbiger Schein, der
 
 | Variante | Beschreibung |
 |----------|--------------|
-| **Konstant** | Schein steht mit fester Intensität (Auswahl) |
-| **Pulsierend** | Schein atmet im Loop (Live-Status, Präsenz) |
-| **Kontur** | Schein folgt exakt der Elementform (SVG/Border-Radius) |
-| **Rechteckig** | Schein als Weichzeichner-Rechteck, günstiger zu rendern |
-| **Ein-/Ausstieg** | Schein baut sich beim Aktivieren weich auf und ab |
+| **Konstant** | der Schein steht auf fester Intensität (Auswahl) |
+| **Pulsierend** | der Schein atmet in der Schleife (Live-Status, Anwesenheit) |
+| **Kontur** | der Schein folgt genau der Form des Elements (SVG/Eckenradius) |
+| **Rechteckig** | der Schein als unscharfes Rechteck, günstiger zu rendern |
+| **Ein/Aus** | der Schein baut sich bei Aktivierung weich auf und ab |
 
 ## Dauer
 
-- Typisch: 1000–2000 ms pro Zyklus, Ein-/Ausstieg 200–400 ms
+- Typisch: 1000–2000 ms pro Zyklus, Ein-/Ausblenden 200–400 ms
 
 ## Siehe auch
 
