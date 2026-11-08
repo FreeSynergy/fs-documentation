@@ -1,11 +1,10 @@
-# Skeleton (Platzhalter) - Verwendung
+# Skeleton - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Liste beim Laden
+## Eine Liste während des Ladens
 
 ```jsx
 <ListView>
@@ -15,13 +14,13 @@
 </ListView>
 ```
 
-## Artikeltext beim Laden
+## Ein Artikeltext während des Ladens
 
 ```jsx
 <Skeleton shape="text" lines={5} width="100%" />
 ```
 
-## Tabelle mit passenden Spaltenbreiten
+## Eine Tabelle mit passenden Spaltenbreiten
 
 ```jsx
 <Table columns={columns}>
@@ -29,7 +28,7 @@
 </Table>
 ```
 
-## Kartenraster
+## Ein Raster aus Cards
 
 ```jsx
 <GridView>
@@ -42,6 +41,6 @@
 | Szenario | Empfehlung |
 |----------|------------|
 | Listen und Tabellen | `list-item` / `table-row`, max. 3 Wiederholungen |
-| Textbereich | `text` mit `lines` der erwarteten Länge |
-| Bild oder Diagramm | `rect` in fester Höhe |
-| Inhalt vorhanden, aber leer | keine Skeletons – Meldung oder leerer Zustand |
+| Textbereich | `text` mit `lines` passend zur erwarteten Länge |
+| Bild oder Diagramm | `rect` mit fester Höhe |
+| Inhalt existiert, ist aber leer | keine Skeletons, sondern eine Meldung oder ein Empty State |

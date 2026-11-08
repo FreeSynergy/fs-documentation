@@ -1,21 +1,21 @@
-# Spinner (Ladeanzeige) - Aussehen
+# Spinner - Erscheinungsbild
 
 ## Grundlayout
 
 ```
-einfach:          mit-text:              inline:
-   ◌              ◌  Wird geladen…       Text … ◌
+einfach:          mit-text:               inline:
+   ◌              ◌  Lädt…                Text … ◌
 ```
 
-Der Ring besteht aus einem offenen Kreis, dessen vorderes Segment rotiert.
+Der Ring besteht aus einem offenen Kreis, dessen vorderes Segment sich dreht.
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
-| **einfach** | offener Ring, ein Segment in Primärfarbe |
-| **mit-text** | links Spinner, rechts Text in Sekundärfarbe |
-| **inline** | Ring auf Schriftzhöhe, ohne Zusatzabstand |
+| Variante | Erscheinungsbild |
+|----------|------------------|
+| **einfach** | offener Ring, ein Segment in der Primärfarbe |
+| **mit-text** | Spinner links, Text in der Sekundärfarbe rechts |
+| **inline** | Ring in Texthöhe, ohne zusätzlichen Abstand |
 
 ## Größen
 
@@ -29,17 +29,17 @@ Der Ring besteht aus einem offenen Kreis, dessen vorderes Segment rotiert.
 
 | Teil | Farbe |
 |------|-------|
-| Rotierendes Segment | Primärfarbe |
+| drehendes Segment | Primärfarbe |
 | `track` (Hintergrundring) | neutrale Spur, 30 % Deckkraft |
-| Begleittext | Sekundärfarbe |
+| begleitender Text | Sekundärfarbe |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| – | keine; ein Spinner ist nicht bedienbar |
+| – | keine. Ein Spinner ist nicht bedienbar. |
 
-## Reaktiv
+## Responsiv
 
 - Bei reduzierter Bewegung (`prefers-reduced-motion`) wird die Drehung durch
   ein pulsierendes Segment ersetzt.

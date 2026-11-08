@@ -2,36 +2,36 @@
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
 | `type` | enum | `info` | Typ: `info`, `success`, `warning`, `error` |
 | `title` | string | - | Titel |
-| `message` | string | - | Nachricht |
+| `message` | string | - | Meldungstext |
 
 ## Verhalten
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
-| `autoDismiss` | boolean | `true` | Automatisch schließen? |
+| `autoDismiss` | boolean | `true` | automatisch schließen? |
 | `dismissDelay` | number | `3000` | Verzögerung in ms |
-| `closable` | boolean | `true` | Schließbar? |
+| `closable` | boolean | `true` | schließbar? |
 
 ## Darstellung
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `position` | enum | `top-right` | Position: `top-right`, `bottom-right`, `top-left`, `bottom-left`, `center` |
 
-| Attribut | Typ | Default | Beschreibung |
+| Attribut | Typ | Standard | Beschreibung |
 |---|---|---|---|
 | `animate` | boolean | `true` | Animationen aktivieren? |
 | `animationDuration` | number | `300` | Dauer in ms |
 
-## Events
+## Ereignisse
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `onClose` | function | Wird beim Schließen ausgeführt |
-| `onDismiss` | function | Wird beim Auto-Schließen ausgeführt |
+| `onClose` | function | wird beim Schließen ausgeführt |
+| `onDismiss` | function | wird beim automatischen Schließen ausgeführt |
 
 ## Barrierefreiheit
 
@@ -39,15 +39,15 @@
 |----------|-----|--------------|
 | `role` | string | ARIA-Rolle: `alert` |
 
-## Action-Attribute
+## Aktions-Attribute
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| `actionLabel` | string | Aktion-Label |
-| `onActionClick` | function | Wird bei Aktion-Klick ausgeführt |
+| `actionLabel` | string | Beschriftung der Aktion |
+| `onActionClick` | function | wird ausgeführt, wenn die Aktion angeklickt wird |
 
 ## Geerbt von
 
 `visible`, `enabled`/`disabled`, `size`, `theme`, `rounded`, `state`,
 `tabIndex`, `onClick`, `onFocus`, `onBlur`, `animation`, `gesture`,
-`aria-label`, `aria-*` → [Basiskomponente](../../basics/base.md)
+`aria-label`, `aria-*` → [Base-Komponente](../../basics/base.md)

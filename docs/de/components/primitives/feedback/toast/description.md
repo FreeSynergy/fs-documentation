@@ -1,10 +1,10 @@
-# Toast (Benachrichtigung)
+# Toast (Kurzmeldung)
 
 | Feld | Wert |
 |------|------|
 | **Kategorie** | `feedback` |
 | **Erbt von** | `base` |
-| **Varianten** | `Info`, `Success`, `Warning`, `Error` |
+| **Varianten** | `info`, `success`, `warning`, `error` |
 | **Zustände** | `paused`, `dismissing` |
 | **Gesten** | `tap`, `swipe` |
 | **Animationen** | `slide-in`, `fade-out`, `stagger` |
@@ -12,48 +12,48 @@
 | **Status** | dokumentiert |
 
 ## Beschreibung
-Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
+Ein Toast ist eine Benachrichtigung als Pop-up. Sie erscheint meist oben rechts.
 
 ## Verwendungszweck
 
 - Kurze Benachrichtigungen
-- Erfolgs-Meldungen
-- Fehler-Meldungen
-- Informations-Meldungen
+- Erfolgsmeldungen
+- Fehlermeldungen
+- Informationsmeldungen
 
 ## Varianten
 
-| Variant | Farbe | Beschreibung |
-|---------|-------|--------------|
-| **Info** | Blau | Informationsmeldung |
-| **Success** | Grün | Erfolgsmeldung |
-| **Warning** | Orange/Gelb | Warnmeldung |
-| **Error** | Rot | Fehlermeldung |
+| Variante | Farbe | Beschreibung |
+|----------|-------|--------------|
+| **info** | blau | Informationsmeldung |
+| **success** | grün | Erfolgsmeldung |
+| **warning** | orange/gelb | Warnmeldung |
+| **error** | rot | Fehlermeldung |
 
-## Features
+## Funktionen
 
-- Auto-dismiss (Automatisches Schließen)
-- Dismissible (Benutzerdefiniertes Schließen)
-- Action Button
-- Position (Top Right, Bottom Right, etc.)
+- Automatisches Schließen
+- Schließbar (vom Nutzer geschlossen)
+- Aktions-Button
+- Position (oben rechts, unten rechts usw.)
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [alert](../alert/): ein Toast verschwindet von selbst und verlangt
-  keine Reaktion; eine Alert-Meldung bleibt, bis sie geschlossen oder behoben ist.
-- **Nicht verwechseln mit** [alert-dialog](../../../widgets/overlays/alert-dialog/): wenn der Nutzer
-  entscheiden muss, ist ein Dialog nötig — ein Toast überbrückt keine Entscheidung.
-- **Nicht verwechseln mit** [popover](../../../widgets/overlays/popover/): ein Popover ist an ein Element
-  gebunden, der Toast an eine Bildecke.
-- **Nicht verwechseln mit** [badge](../badge/): ein Badge markiert dauerhaft, ein Toast meldet
-  einmalig ein Ereignis.
+- **Nicht verwechseln mit** [alert](../alert/): Ein Toast verschwindet von allein und
+  verlangt keine Reaktion. Eine Alert-Meldung bleibt, bis sie geschlossen oder erledigt ist.
+- **Nicht verwechseln mit** [alert-dialog](../../../widgets/overlays/alert-dialog/): Muss der Nutzer
+  entscheiden, braucht es einen Dialog. Ein Toast ersetzt keine Entscheidung.
+- **Nicht verwechseln mit** [popover](../../../widgets/overlays/popover/): Ein Popover hängt an
+  einem Element, der Toast an einer Bildschirmecke.
+- **Nicht verwechseln mit** [badge](../badge/): Ein Badge markiert dauerhaft etwas.
+  Ein Toast meldet ein Ereignis einmalig.
 
 ## Best Practices
 
 - Klarer Text
-- Short (Kurz)
-- Non-intrusive (Nicht störend)
-- Feedback
+- Kurz
+- Nicht aufdringlich
+- Rückmeldung
 
 ## Layout
 
@@ -67,6 +67,6 @@ Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
 ## Siehe auch
 
 - [feedback – Übersicht](../index.md)
-- [Alert](../alert/) — Meldung, die stehen bleibt
+- [Alert](../alert/) — eine Meldung, die bleibt
 - [Alert Dialog](../../../widgets/overlays/alert-dialog/) — wenn der Nutzer entscheiden muss
-- [Basiskomponente](../../basics/base.md)
+- [Base-Komponente](../../basics/base.md)

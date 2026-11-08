@@ -1,4 +1,4 @@
-# Text Input (Einzeiliges Textfeld) - Aussehen
+# Text Input - Erscheinungsbild
 
 ## Grundlayout
 
@@ -17,7 +17,7 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 └─────────────────────────────────────────┘
 ```
 
-### Floating Label
+### Schwebendes Label
 
 ```
 ┌─────────────────────────────────────────┐
@@ -27,7 +27,7 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 └─────────────────────────────────────────┘
 ```
 
-### Underline
+### Unterstrichen
 
 ```
 ┌─────────────────────────────────────────┐
@@ -41,44 +41,44 @@ Ein Text Input ist ein einzeiliges Eingabefeld für Text.
 
 | Größe | Höhe | Verwendung |
 |-------|------|------------|
-| Small | 32px | Inline |
-| Medium | 48px | Standard |
-| Large | 64px | Featured |
+| small | 32px | inline |
+| medium | 48px | Standard |
+| large | 64px | hervorgehoben |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Default** | Hell | Standard |
-| **Primary** | Primärfarbe | Primär |
-| **Active** | Dunkel | Aktiver Zustand |
-| **Disabled** | Grau | Deaktiviert |
+| **default** | hell | Standard |
+| **primary** | Primärfarbe | primär |
+| **active** | dunkel | aktiver Zustand |
+| **disabled** | grau | deaktiviert |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `border` | Rand leuchtet auf |
-| `shadow` | Schatten stärker |
+| `border` | der Rahmen leuchtet auf |
+| `shadow` | der Schatten wird stärker |
 
-## Reaktiv
+## Responsiv
 
-- In Formularen stehen die Felder auf schmalen Bildschirmen vollbreit unter ihrem Label,
-  Zwei-Spalten-Raster fallen auf eine Spalte zurück.
-- Auf Touch-Geräten wird die Höhe mindestens 44 px; der Text bleibt linksbündig und scrollt
-  innerhalb des Feldes, die Schriftgröße wächst nicht über 16 px (kein Zoom auf Mobil).
-- Das aktive Feld wird über die Tastatur hinweg sichtbar gehalten, die Fehlerzeile rutscht
-  darunter, ohne das nächste Feld zu überdecken.
+- In Formularen stehen die Felder auf schmalen Bildschirmen voll breit unter ihrem Label.
+  Zweispaltige Raster fallen auf eine Spalte zurück.
+- Auf Touchgeräten ist die Höhe mindestens 44 px. Der Text bleibt linksbündig und scrollt
+  im Feld. Die Schrift wird nicht größer als 16 px (kein Zoom auf dem Handy).
+- Das aktive Feld bleibt über der Tastatur sichtbar. Die Fehlerzeile rutscht darunter,
+  ohne das nächste Feld zu verdecken.
 
-## Validation States
+## Validierungszustände
 
-| State | Beschreibung |
-|-------|--------------|
-| **Valid** | Grün |
-| **Invalid** | Rot |
-| **Warning** | Orange |
+| Zustand | Beschreibung |
+|---------|--------------|
+| **valid** | grün |
+| **invalid** | rot |
+| **warning** | orange |
 
-## Placeholder
+## Platzhalter
 
 ```
 ┌─────────────────────────────────────────┐

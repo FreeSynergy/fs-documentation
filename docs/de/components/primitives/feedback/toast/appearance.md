@@ -1,7 +1,7 @@
-# Toast - Aussehen
+# Toast - Erscheinungsbild
 
 ## Grundlayout
-Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
+Ein Toast ist eine Benachrichtigung als Pop-up. Sie erscheint meist oben rechts.
 
 ```
 ┌─────────────────────────────────────────┐
@@ -12,43 +12,43 @@ Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
 
 ## Varianten
 
-| Variant | Farbe | Beschreibung |
-|---------|-------|--------------|
-| **Info** | Blau | Informationsmeldung |
-| **Success** | Grün | Erfolgsmeldung |
-| **Warning** | Orange/Gelb | Warnmeldung |
-| **Error** | Rot | Fehlermeldung |
+| Variante | Farbe | Beschreibung |
+|----------|-------|--------------|
+| **info** | blau | Informationsmeldung |
+| **success** | grün | Erfolgsmeldung |
+| **warning** | orange/gelb | Warnmeldung |
+| **error** | rot | Fehlermeldung |
 
 ## Größen
 
 | Größe | Breite | Verwendung |
 |-------|--------|------------|
-| Small | 250px | Kurze Nachrichten |
-| Medium | 350px | Standard |
-| Large | 450px | Lange Nachrichten |
+| small | 250px | kurze Meldungen |
+| medium | 350px | Standard |
+| large | 450px | lange Meldungen |
 
 ## Farben und Zustände
 
 | Status | Farbe | Beschreibung |
 |--------|-------|--------------|
-| **Info** | Blau | Informationsmeldung |
-| **Success** | Grün | Erfolgsmeldung |
-| **Warning** | Orange | Warnmeldung |
-| **Error** | Rot | Fehlermeldung |
+| **info** | blau | Informationsmeldung |
+| **success** | grün | Erfolgsmeldung |
+| **warning** | orange | Warnmeldung |
+| **error** | rot | Fehlermeldung |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| `shadow` | Schatten stärker |
-| `transform` | Leichte Hebung |
+| `shadow` | der Schatten wird stärker |
+| `transform` | leichtes Anheben |
 
-## Reaktiv
+## Responsiv
 
-Toasts stehen in einem Stapel an einer Bildecke; neue Meldungen rutschen mit `stagger` darunter.
-Überfahren pausiert den Auto-Dismiss-Zähler (`paused`), Wegwischen (`swipe`) entfernt die
-Meldung mit `fade-out`. Auf schmaler Fläche nimmt der Toast die ganze Breite ein und sitzt
-unten, damit er erreichbar bleibt.
+Toasts stehen als Stapel in einer Bildschirmecke. Neue Meldungen gleiten mit `stagger`
+darunter hinein. Beim Hover hält der Zähler für das automatische Schließen an (`paused`).
+Wischen (`swipe`) entfernt die Meldung mit `fade-out`. Auf einer schmalen Fläche nimmt
+der Toast die volle Breite ein und sitzt unten, damit er erreichbar bleibt.
 
 ```css
 .toast-stack { position: fixed; top: 16px; right: 16px; display: flex;
@@ -62,17 +62,17 @@ unten, damit er erreichbar bleibt.
 }
 ```
 
-## Positionierung
+## Position
 
 | Position | Beschreibung |
 |----------|--------------|
-| **Top Right** | Oben rechts (Standard) |
-| **Bottom Right** | Unten rechts |
-| **Top Left** | Oben links |
-| **Bottom Left** | Unten links |
-| **Center** | In der Mitte |
+| **oben rechts** | Standard |
+| **unten rechts** | unten rechts |
+| **oben links** | oben links |
+| **unten links** | unten links |
+| **Mitte** | in der Mitte |
 
-## Auto-Dismiss
+## Automatisches Schließen
 
 ```
 ┌─────────────────────────────────────────┐

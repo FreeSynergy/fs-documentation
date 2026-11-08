@@ -1,34 +1,33 @@
-# Toast (Benachrichtigung) - Verwendung
+# Toast - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Toast ist eine Pop-up-Benachrichtigung, die meist oben rechts erscheint.
+Ein Toast ist eine Benachrichtigung als Pop-up. Sie erscheint meist oben rechts.
 
 - Kurze Benachrichtigungen
-- Erfolgs-Meldungen
-- Fehler-Meldungen
-- Informations-Meldungen
+- Erfolgsmeldungen
+- Fehlermeldungen
+- Informationsmeldungen
 
 ## Beispiele
 
 ### Kurze Benachrichtigungen
 
 ```jsx
-<Toast type="info" title="Titel" message="Nachricht" />
+<Toast type="info" title="Titel" message="Meldung" />
 ```
 
-### Erfolgs-Meldungen
+### Erfolgsmeldungen
 
 ```jsx
 <Toast type="info" title="Titel" autoDismiss={true} />
 ```
 
-### Fehler-Meldungen
+### Fehlermeldungen
 
 ```jsx
 <Toast type="info" title="Titel" dismissDelay={3000} />

@@ -1,9 +1,8 @@
-# Spinner (Ladeanzeige) - Verwendung
+# Spinner - Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Umsetzung auf Rust und Blinc
+    wechselt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Ladezustand in einem Bereich
 
@@ -13,11 +12,11 @@
 </Panel>
 ```
 
-## Kompakter Aktivitätshinweis in einer Leiste
+## Ein kompakter Aktivitätshinweis in einer Leiste
 
 ```jsx
 <Toolbar>
-  <Spinner size="small" track={false} aria-label="Synchronisation läuft" />
+  <Spinner size="small" track={false} aria-label="Synchronisierung läuft" />
 </Toolbar>
 ```
 
@@ -34,7 +33,7 @@
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Speichern, Antwort < 2 s | `loading` am [button](../../actions/button/) |
-| Laden einer Ansicht | `mit-text` mittig im Bereich |
-| Synchronisation im Hintergrund | `small` in der Statuszeile |
-| Dauer bekannt / große Datenmenge | [progress](../progress/) statt Spinner |
+| Speichern, Antwort < 2 s | `loading` am [Button](../../actions/button/) |
+| Laden einer Ansicht | `mit-text`, zentriert im Bereich |
+| Synchronisation im Hintergrund | `small` in der Statusleiste |
+| Dauer bekannt oder große Datenmenge | [progress](../progress/) statt Spinner |
