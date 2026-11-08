@@ -1,36 +1,35 @@
-# Date Input (Datumsfeld) - Verwendung
+# Datumsfeld – Verwendung
 
 !!! note
-    Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Die Beispiele bleiben syntaxneutral. Sobald die Implementierung auf Rust und
+    Blinc umstellt, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
 ## Anwendung
 
-Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
+Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
 
 - Geburtsdatum
-- Terminauswahl
-- Datumsangabe
+- Einen Termin auswählen
+- Ein Datum angeben
 
 ## Beispiele
 
 ### Geburtsdatum
 
 ```jsx
-<DateInput value="Wert" type="date" onChange={aktion} />
+<DateInput value="value" type="date" onChange={action} />
 ```
 
-### Terminauswahl
+### Einen Termin auswählen
 
 ```jsx
-<DateInput value="Wert" type="date" minDate="minDate" />
+<DateInput value="value" type="date" minDate="minDate" />
 ```
 
-### Datumsangabe
+### Ein Datum angeben
 
 ```jsx
-<DateInput value="Wert" type="date" maxDate="maxDate" />
+<DateInput value="value" type="date" maxDate="maxDate" />
 ```
 
 ## Hinweise

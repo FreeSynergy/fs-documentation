@@ -1,32 +1,32 @@
-# Field (Feld-Wrapper) - Aussehen
+# Feld – Erscheinungsbild
 
 ## Grundlayout
 
 ```
 vertikal:                     horizontal:
 
-Benutzername *                Benutzername *
+Username *                    Username *
 ┌────────────────────────┐    ┌────────────────────────┐
 │                        │    │                        │
 └────────────────────────┘    └────────────────────────┘
-Melde dich mit deiner          (Feld rechts vom Label)
-E-Mail-Adresse an
+Mit deiner E-Mail-Adresse     (Feld rechts neben dem Label)
+anmelden
 ```
 
 Fehlerzustand:
 
 ```
-E-Mail *
+Email *
 ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
-│ ✕  fehlerhafte@doma   │
+│ ✕  broken@doma.in     │
 └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘
-⚠ Diese E-Mail ist nicht gültig.
+⚠ Diese E-Mail-Adresse ist ungültig.
 ```
 
 ## Varianten
 
-| Variante | Aussehen |
-|----------|----------|
+| Variante | Erscheinungsbild |
+|---------|------------|
 | **vertikal** | Label über dem Feld, Hilfetext unter dem Feld |
 | **horizontal** | Label mit fester Breite links, Feld rechts |
 | **inline** | Label und Feld in einer Zeile, kein Hilfetext |
@@ -34,30 +34,29 @@ E-Mail *
 ## Größen
 
 | Größe | Label-Schrift | Hilfetext |
-|-------|---------------|-----------|
+|------|------------|-----------|
 | `small` | 12 px | 11 px |
 | `medium` | 14 px | 12 px |
 | `large` | 16 px | 14 px |
 
-Das umschlossene Feld behält seine eigene Größe.
+Das eingeschlossene Feld behält seine eigene Größe.
 
 ## Farben und Zustände
 
 | Teil | Farbe |
-|------|-------|
+|------|------|
 | Label | Primärtext |
-| Pflicht-Markierung `*` | Fehlerfarbe |
+| Pflichtkennzeichnung `*` | Fehlerfarbe |
 | Hilfetext | Sekundärtext |
-| Fehlerzustand | Feldrand und Text in Fehlerfarbe |
+| Fehlerzustand | Feldrahmen und Text in der Fehlerfarbe |
 
-## Hover- und Fokus-Effekte
+## Hover- und Fokuseffekte
 
 | Effekt | Beschreibung |
-|--------|--------------|
-| `expand` | Hilfetext/Fehler blendet ein, der Block wächst sauber nach |
-| – | Hover gehört zum Feld, nicht zum Wrapper |
+|--------|-------------|
+| `expand` | Hilfetext/Fehler blendet ein, der Block wächst sauber nach unten |
+| – | Hover gehört zum Feld, nicht zur Hülle |
 
-## Reaktiv
+## Responsiv
 
-- Unterhalb einer schmalen Breite wechselt `horizontal` automatisch auf
-  `vertikal`.
+- Unterhalb einer schmalen Breite wechselt `horizontal` automatisch zu `vertikal`.

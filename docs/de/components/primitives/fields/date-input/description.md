@@ -1,37 +1,38 @@
-# Date Input (Datumsfeld)
+# Datumsfeld
 
 | Feld | Wert |
-|------|------|
-| **Kategorie** | `fields` |
-| **Erbt von** | `base` |
-| **Varianten** | `date`, `time`, `datetime` |
-| **Zustände** | `open`, `error` |
-| **Gesten** | `tap`, `swipe` |
-| **Animationen** | `fade-in`, `slide-in` |
-| **Verwandt** | `date-picker`, `time-picker`, `range-calendar`, `calendar-view` |
-| **Status** | dokumentiert |
+|-------|-------|
+| **Category** | `fields` |
+| **Inherits from** | `base` |
+| **Variants** | `date`, `time`, `datetime` |
+| **States** | `open`, `error` |
+| **Gestures** | `tap`, `swipe` |
+| **Animations** | `fade-in`, `slide-in` |
+| **Related** | `date-picker`, `time-picker`, `range-calendar`, `calendar-view` |
+| **Status** | documented |
 
 !!! info "Standardisierung"
-    Die früheren Komponenten `datetime-input` und `time-input` sind als `type`-Werte in `date-input` aufgegangen: `date`, `time`, `datetime`.
+    Die früheren Komponenten `datetime-input` und `time-input` sind in `date-input`
+    als `type`-Werte aufgegangen: `date`, `time`, `datetime`.
 
 ## Beschreibung
-Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
+Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
 
-## Verwendungszweck
+## Zweck
 
 - Geburtsdatum
-- Terminauswahl
-- Datumsangabe
+- Einen Termin auswählen
+- Ein Datum angeben
 
 ## Varianten
 
 | Variante (`type`) | Beschreibung |
-|-------------------|--------------|
-| **date** | nur Datum, Kalender reicht |
-| **time** | nur Uhrzeit, Uhrzeit-Raster statt Kalender |
+|------------------|-------------|
+| **date** | nur Datum, ein Kalender genügt |
+| **time** | nur Uhrzeit, ein Uhrzeitraster statt Kalender |
 | **datetime** | Datum und Uhrzeit gemeinsam in einem Feld |
 
-## Features
+## Funktionen
 
 - Kalender
 - Formatierung
@@ -39,24 +40,25 @@ Ein Date Input ist ein Datumsauswahl-Feld mit Kalender.
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** [date-picker](../../../widgets/fields/date-picker/): das Datumsfeld nimmt auch getippte
-  Werte an und ist Teil des Formulars; der Picker ist das reine Auswahl-Overlay ohne Texteingabe.
+- **Nicht verwechseln mit** [date-picker](../../../widgets/fields/date-picker/): das Datumsfeld nimmt auch
+  getippte Werte an und ist Teil des Formulars; der Picker ist das reine Auswahl-Overlay
+  ohne Texteingabe.
 - **Nicht verwechseln mit** [calendar-view](../../../widgets/data/calendar-view/): die Kalenderansicht zeigt
   Termine, sie wählt kein Datum aus.
-- **Nicht verwechseln mit** [range-calendar](../../../widgets/fields/range-calendar/): hier werden Anfang **und** Ende
-  gewählt, nicht ein Einzelwert.
+- **Nicht verwechseln mit** [range-calendar](../../../widgets/fields/range-calendar/): dort wählt man
+  Anfang **und** Ende, nicht einen einzelnen Wert.
 
 ## Best Practices
 
-- Anzeige immer im lokalen Format (`TT.MM.JJJJ`), Speicherung intern in ISO 8601.
-- Unsinnige Werte ablehnen (`min`/`max`), aber einen falsch getippten Text nicht still korrigieren –
-  Fehlerzustand zeigen und den Text stehen lassen.
-- Bei `time` das 12-/24-Stunden-Format aus der Sprache nehmen, nicht hart einstellen.
-- Tastaturbedienung anbieten: Pfeiltasten ändern das markierte Segment, PageUp/PageDown den Monat.
+- Immer im lokalen Format anzeigen, intern als ISO 8601 speichern.
+- Unsinnige Werte (`min`/`max`) ablehnen, aber getippten Text nicht stillschweigend korrigieren –
+  den Fehlerzustand zeigen und den Text stehen lassen.
+- Bei `time` das 12-/24-Stunden-Format aus der Sprache übernehmen, nicht fest vorgeben.
+- Tastaturbedienung anbieten: Pfeiltasten ändern das markierte Segment, Bild auf/ab den Monat.
 
 ## Siehe auch
 
 - [fields – Übersicht](../index.md)
-- [Date Picker](../../../widgets/fields/date-picker/) — Auswahl per Overlay
+- [Date Picker](../../../widgets/fields/date-picker/) — Auswahl über ein Overlay
 - [Time Picker](../../../widgets/fields/time-picker/) — Uhrzeitauswahl
 - [Basiskomponente](../../basics/base.md)
