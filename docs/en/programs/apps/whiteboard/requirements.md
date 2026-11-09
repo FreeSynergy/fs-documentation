@@ -80,6 +80,9 @@ So the board model is a **gap → own spec candidate**. Proven building blocks: 
 | API and webhooks on board changes (`board.subscribe`) | Mi (REST, webhooks); Dr, Ex, Mu, Op, Td: none | AS2 activities on the board resource ⚠️ | proposed |
 | End-to-end encrypted rooms (`board.encrypt`) | Ex (key in URL fragment); Dr, Td: none | key handling via platform; encryption at rest ADR 0024; scheme not decided | proposed |
 | Reuse images and objects from a media library, collections (`library.media`) | Op (library, stacks) | link to the media/file programs ⚠️ | proposed |
+| Stamps and short emote bursts as reactions on the board or an object (`reaction.add`) | FigJam | ephemeral presence event for bursts; stamp as AS2 `Like`-style activity ⚠️ | proposed |
+| Short message shown at one's own pointer, then gone (`presence.say`) | FigJam (cursor chat) | ephemeral presence event | proposed |
+| Timer and voting with hidden votes until the session ends, results per session (`session.timer`, `vote.cast`) | FigJam; Mi, Mu | gap → own spec; see the facilitation line above | proposed |
 
 ## Not planned (deliberately)
 

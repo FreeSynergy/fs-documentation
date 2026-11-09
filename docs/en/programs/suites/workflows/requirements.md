@@ -14,5 +14,10 @@ Status: `implemented` · `planned` · `proposed`
 
 | Capability | Seen in | Data / standard | Status |
 |------------|---------|-----------------|--------|
+| Agents that watch sources and pass events along a graph | Huginn | open | proposed |
+| Script as the unit: generated form, endpoint and job from one definition | Windmill | OpenAPI (published by the program) | proposed |
+| Shared flows with import questions for the recipient | Apple Shortcuts | open | proposed |
+| Environments (development/production) with roles around flows | Power Automate | open | proposed |
+| Plain-language flow creation | Power Automate | open | proposed |
 
 ## Not planned (deliberately)

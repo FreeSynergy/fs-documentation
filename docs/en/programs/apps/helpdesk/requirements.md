@@ -26,5 +26,8 @@ Every channel is a provider of `fs-messenger`; the helpdesk is a suite over task
 
 | Capability | Seen in | Data / standard | Status |
 |------------|---------|-----------------|--------|
+| One inbox per channel with shared assignment rules, teams and agent capacity (`inbox.assign`) | Chatwoot | messages via `fs-messenger` providers | proposed |
+| Voice call logged in the conversation timeline with recording (`call.log`) | Chatwoot | telephony provider interface (see Channels) | proposed |
+| Pre-chat form and contact attributes collected by the website widget (`contact.collect`) | Chatwoot | people record | proposed |
 
 ## Not planned (deliberately)

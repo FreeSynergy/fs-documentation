@@ -14,5 +14,8 @@ Status: `implemented` · `planned` · `proposed`
 
 | Capability | Seen in | Data / standard | Status |
 |------------|---------|-----------------|--------|
+| Own object types with their own fields, same permissions as built-in ones (`object.define`) | Twenty; EspoCRM (entity manager) | typed schema; gap → own spec | proposed |
+| Table, kanban and calendar views with filters, sort, grouping saved per view (`view.save`) | Twenty | view = stored query | proposed |
+| Records filled in automatically from outside data (`record.enrich`) | Attio | source and time per field ⚠️; consent needed (people first) | proposed |
 
 ## Not planned (deliberately)

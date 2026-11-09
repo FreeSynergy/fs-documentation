@@ -31,6 +31,10 @@ Known defect: `editIf` reports a conflict as a text prefix, not as a typed `Prob
 | Capture clicks into a step-by-step guide | Tango | open | **planned (owner, 2026-11-09)** |
 | Record a guide from our own apps as **commands**, not only screenshots: every step is a command from the type description, so the guide is exact, translatable and can be replayed or shown as an overlay inside the app | own idea after Tango | type description (ADR 0066) | planned |
 | **The wiki is embeddable everywhere:** any program can show a page or a block (help, descriptions, knowledge base in the helpdesk widget) through the texts contract | owner, 2026-11-09 | texts contract | planned |
+| Typed notes: a tag gives a node a template of fields, inheritance between tags, table of all tagged nodes | Tana, Logseq (DB version) | type description (ADR 0066) | proposed |
+| Backlinks and unlinked mentions per page | Obsidian, Logseq | derived index over the texts contract | proposed |
+| Block references and live embeds of single blocks | Logseq | reference to a block id in the texts contract; open | proposed |
+| Canvas: free 2D board of notes, media and pages with labelled connections | Obsidian | JSON Canvas (open format) as import/export; own model open | proposed |
 
 ## Not planned (deliberately)
 

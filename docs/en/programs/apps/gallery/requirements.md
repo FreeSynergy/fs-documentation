@@ -88,6 +88,8 @@ Data references: [standards](../../../data/standards.md) ·
 | Set an album cover and sort order (`album.sort`) | Ly | view parameters of `album.list` | proposed |
 | Strip location from a shared copy (`share.create` option) | — (our idea, no frontend) | removes IPTC/Exif GPS in the shared rendition | proposed |
 | Embed a shared album in other pages (iframe) | Da | frontend path on `share.create` | proposed |
+| Find photos by text inside the image (OCR / Live Text) (`media.search` option) | Apple Photos (Da: OCR) | derived text index, local only; storage format: gap | proposed |
+| Detect duplicates and merge to one original, others to trash (`media.merge`) | Apple Photos | checksum and similarity; merge keeps one `Image`, rest to `fs-files` trash | proposed |
 
 ## Not planned (deliberately)
 

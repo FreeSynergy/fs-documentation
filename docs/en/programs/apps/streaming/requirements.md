@@ -86,6 +86,13 @@ only as in the feature files: ⚠️ standard and number to verify before they g
 | Connect a platform account and publish there (`target.connect`) | Rt (30+ platforms); Wz and Ob explicitly lack it | a publishing-target provider behind its own interface; platform OAuth ⚠️; fallback is URL + key | proposed · stage 1 |
 | Show platform chats in one view (`chat.aggregate`) | Rt | owned by `fs-messenger`; streaming only links to its interface | proposed · stage 1 |
 | Embed a player on other pages (`player.embed`) | Rr, Rt, Am (test player) | HLS/WebRTC player as a reusable component (ADR 0037) | proposed · stage 1 |
+| Operator screen with stream health and live viewer numbers while the broadcast runs (`stream.monitor`) | YouTube Studio | health indicators and counts as events; stage 1 | proposed · stage 1 |
+| Mark live numbers as preliminary and show processed final analytics later (`stream.report`) | YouTube Studio | analytics per stream, CSV export ⚠️ | proposed · stage 1 |
+| Invite a guest by link, joining from a browser without software or account; optional sign-in (`guest.invite`) | StreamYard | WHIP/WHEP or WebRTC ⚠️; link as resource with expiry | proposed · stage 1 |
+| Guest limit set by the host machine's capacity, not only by plan (`guest.limit`) | Ecamm Live | capacity setting ⚠️ | proposed |
+| Single-streamer server with built-in viewer page and chat (`channel.publish`) | Owncast | RTMP ingest; chat via `fs-messenger` interface | proposed · stage 1 |
+| Make a stream followable from the fediverse as an actor (`stream.follow`) | Owncast, PeerTube | ActivityPub (W3C) with WebFinger and HTTP Signatures; see AS2 in `data/` | proposed · stage 1 |
+| Let viewers share the stream load with each other (`stream.peer`) | PeerTube | WebRTC P2P ⚠️ | proposed · stage 1 |
 
 ## From the design (not from the frontends)
 

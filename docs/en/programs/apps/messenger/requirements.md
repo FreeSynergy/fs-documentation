@@ -108,6 +108,23 @@ Data references: [messages standards](../../../data/messages/standards.md) ·
 | Sending aliases per account (`account.alias`) | Ap | JMAP `Identity` | proposed |
 | Offline: choose which folders and how many days are kept (`sync.scope`) | Ou | `fs-store` sync policy (ADR 0019) | proposed |
 | Summarise a long message (`message.summarize`) | Ou | **local model only** (no cloud, ADR 0029) ⚠️ | proposed |
+| Screening: a first-time sender is held until the person approves or refuses them (`sender.screen`) | HEY (Screener) | contacts + trust; decision stored as JSContact vendor property; JMAP keyword for held mail | proposed |
+| Sort approved mail by kind into separate lists: people, newsletters, receipts (`message.classify` with named kinds) | HEY (Imbox, Feed, Paper Trail) | local classification, JMAP keyword / mailbox role | proposed |
+| Piles for later: set aside for reference, reply later, bubble up again at a time (`message.setAside`, `message.replyLater`) | HEY (Set Aside, Reply Later, Bubble Up) | JMAP keywords; return time as in `conversation.snooze` | proposed |
+| Save a text snippet from a message (number, link, code) into a library (`clip.save`) | HEY (Clips) | AS2 `Note` with Web Annotation `TextQuoteSelector` (ADR 0033) | proposed |
+| Collect several threads on one named page and share it (`collection.create`, `collection.share`) | HEY (Collections) | AS2 `Collection` of references | proposed |
+| Split the inbox into several lists by rules on sender, domain, recipient, subject or label (`view.save` with split) | Superhuman Mail (Split Inbox); Ou (search folders), Ap (smart mailboxes) | stored query; JMAP `Email/query` filter | proposed |
+| One command palette for all actions, opened by a single shortcut (`command.palette`) | Superhuman Mail (Cmd+K) | frontend path over the capability list (ADR 0021) | proposed |
+| Private comments on a message, visible only to team members, never sent to the sender (`message.comment`) | Spark (Team Comments) | AS2 `Note` with restricted `audience`; stored in the team's conversation, not in the mail | proposed |
+| Write a reply together (shared draft) (`draft.share`) | Spark (Shared Draft) | draft object shared over `fs-store` sync (ADR 0019) | proposed |
+| Shared inbox: several people answer one address with roles (`inbox.share`) | Spark (Shared Inbox); Chatwoot, Zammad (helpdesk) | JMAP shared mailboxes (ACL, RFC 8621); roles by group (`group.role`) | proposed |
+| Masked addresses: create a random address per sign-up, label it, switch it off, see who leaked it (`account.alias` with mask) | Fastmail (Masked Email) | JMAP `Identity` / vendor extension ⚠️; own domain possible | proposed |
+| A topic on every message of a group conversation; replies go to the topic in view; topics can be moved, resolved, muted (`topic.set`, `topic.move`, `topic.resolve`, `topic.mute`) | Zulip; Te (topics in groups, admin-created) | AS2 `context`; Matrix `m.thread` ⚠️ no equal concept; MIMI topic | proposed |
+| Views by topic: recent topics, topics with unread messages (`conversation.list` with topic view) | Zulip (Inbox, Recent conversations) | view parameter | proposed |
+| Chat delivered over mail-like relays that keep no profile data (names, pictures, groups stay on the devices) | Delta Chat | OpenPGP, Autocrypt; chatmail relays | proposed |
+| Small sandboxed apps inside a chat without internet access (`app.run`) | Delta Chat (webxdc) | webxdc packages via Git (ADR 0036) ⚠️ | proposed |
+| Sticker packs that people create and share, encrypted (`media.search` source) | Signal | packages via Git (ADR 0036) | proposed |
+| Show the full key fingerprints of both sides for comparison (`key.verify`) | Delta Chat (Encryption Info); Signal ⚠️ | OpenPGP RFC 9580 fingerprints; MLS credentials | proposed |
 
 ## Accepted ideas (project owner, 2026-11-08), to be built step by step
 

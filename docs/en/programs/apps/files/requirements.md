@@ -57,6 +57,9 @@ Status: `implemented` · `planned` · `proposed`
 | Download a folder as one archive | Nc, Rc | `Blob` | proposed |
 | Dry run and delete limit before a sync | Rc | rule | proposed |
 | Undo of the last move, rename or delete | Do, Na | frontend, needs reversible calls | proposed |
+| Instant search by name from a local index, updated from the file system's change log (`file.search` fast path) | Everything | derived index, gap | proposed |
+| File request: ask outside people to send files into a chosen folder, without an account (naming rule, password, deadline) | Dropbox | gap, shared specification | proposed |
+| Device-to-device sync without a central server, devices named by key fingerprint | Syncthing | activity log (ADR 0019) | proposed |
 
 ## Not planned (deliberately)
 

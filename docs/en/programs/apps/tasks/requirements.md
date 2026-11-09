@@ -106,6 +106,14 @@ Data references: [projects index](../../../data/projects/index.md) ·
 | Intake form that creates cards (`form.submit`) | As | gap | proposed |
 | Link commits to a card (`card.linkCommit`) | Ta, Ji, Re | JSCalendar `links`; forge side not evaluated | proposed |
 | Import a board from other tools (`board.import`) | We (Trello, CSV), Ta (Jira, Asana, Trello, GitHub), Pl (version-dependent) | mapping to be written ⚠️ | proposed |
+| Day-oriented lists: Today, This Evening, Someday (`task.schedule`, view) | Things 3 | JSCalendar `start` / `due`; evening and someday: gap | proposed |
+| Quick entry from anywhere, plain-language dates (`task.create`) | Things 3, Todoist | JSCalendar `Task`; parser is a frontend function | proposed |
+| Saved views (perspectives) over all tasks | OmniFocus | saved query over `Task`; query model open | proposed |
+| Periodic project review with review interval and reviewed mark (`project.review`) | OmniFocus | gap → own property of the project | proposed |
+| Filter query language with and/or/not, grouping, wildcards (`task.filter`) | Todoist | own query syntax, to be defined against JSCalendar properties | proposed |
+| Triage inbox for incoming items: accept, decline, duplicate, snooze (`task.triage`) | Linear | `Relation` `kind: duplicates` (gap); status model own | proposed |
+| Cycles: repeating time-boxed iterations with rollover and progress graph (`cycle.create`) | Linear | gap → own `Cycle` object | proposed |
+| Computed urgency from weighted, configurable terms (`task.urgency`) | Taskwarrior | derived value; coefficients per user, not stored on the task | proposed |
 
 ## Not planned (deliberately)
 

@@ -49,6 +49,11 @@ what is happening, as in the other contracts.
 | Filter and cross-tabulate results (`result.filter`) | ⚠️ | derived | proposed |
 | Translated surveys (`survey.translate`) | ⚠️ | AS2 `nameMap` | proposed |
 | Federated poll to other servers (`poll.federate`) | *arch.* | AS2 `Question`, ActivityPub | proposed |
+| Decide inside the discussion thread, outcome kept with the reasoning (`survey.thread`) | Loomio | gap | proposed |
+| Show clusters of opinion and common ground instead of a single winner (`result.groups`) | Polis | derived; maths component | proposed |
+| Delegate one's vote per topic, revocable (`vote.delegate`) | LiquidFeedback | gap | proposed |
+| Participation spaces with chosen components (`space.compose`) | Decidim | gap | proposed |
+| Several participation modes on one site: debate, proposal, budget, poll (`space.modes`) | Consul Democracy, Decidim | gap | proposed |
 
 ## Not planned (deliberately)
 
