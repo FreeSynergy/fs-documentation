@@ -14,6 +14,9 @@ Frontends of well-known programs in this category, analysed for their **function
 | [VSCodium](vscodium/index.md) | [latest](vscodium/latest/description.md) | VSCodium is an open-source version of Microsoft Visual Studio Code. |
 | [Wiki.js](wikijs/index.md) | [3.1.1](wikijs/3.1.1/description.md), [latest](wikijs/latest/description.md) | Wiki.js is an open-source, self-hosted wiki engine. |
 | [XWiki](xwiki/index.md) | [latest](xwiki/latest/description.md) | XWiki is a powerful enterprise wiki platform with advanced features for knowledge management. |
+| [Logseq](logseq/index.md) | [latest](logseq/latest/description.md) | Logseq is an open-source outliner with block references and a database version with typed tags. |
+| [Obsidian](obsidian/index.md) | [latest](obsidian/latest/description.md) | Obsidian is a local-first Markdown notes app with backlinks and a Canvas board. |
+| [Tana](tana/index.md) | [latest](tana/latest/description.md) | Tana is an outliner with supertags that turn nodes into typed objects. |
 
 ## File set per program (ADR 0012)
 

@@ -14,6 +14,7 @@ Frontends of well-known programs in this category, analysed for their **function
 | [Nextcloud Photos](nextcloud-photos/index.md) | [latest](nextcloud-photos/latest/description.md) | The Photos app of Nextcloud is the gallery surface on top of the Files app: chronology, albums, Shared view, folder selection and (from NC 25+) Recognizer/facial-recognition integration. |
 | [PhotoPrism](photoprism/index.md) | [latest](photoprism/latest/description.md) | PhotoPrism indexes an existing photo collection, recognises content and faces, and presents it as a searchable web gallery with albums and sharing. |
 | [Piwigo](piwigo/index.md) | [latest](piwigo/latest/description.md) | Piwigo is a classic web-toolkit photo gallery: category tree, roles and permissions per folder, themes, extensions and a complete webservice API. |
+| [Apple Photos](apple-photos/index.md) | [latest](apple-photos/latest/description.md) | Apple Photos is the photo library of Apple platforms; notable for text in images (Live Text) and a merge-able Duplicates album. |
 
 ## File set per program (ADR 0012)
 

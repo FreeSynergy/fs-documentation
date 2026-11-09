@@ -6,11 +6,16 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
+| [Cal.com](cal-com/index.md) | [latest](cal-com/latest/description.md) | Scheduling product: public booking pages per event type, availability rules, REST API v2. |
 | [DAViCal](davical/index.md) | [latest](davical/latest/description.md) | DAViCal is a CalDAV/CardDAV server written in PHP on PostgreSQL — a lean, protocol-faithful self-hosted calendar/contact store with web administration. |
+| [Fantastical](fantastical/index.md) | [latest](fantastical/latest/description.md) | Commercial calendar and task client for Apple platforms and Windows, known for plain-language input. |
 | [Google Calendar](google-calendar/index.md) | [latest](google-calendar/latest/description.md) | Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscrip… |
 | [Merkuro Calendar](merkuro/index.md) | [latest](merkuro/latest/description.md) | Merkuro Calendar is the **modern calendar client of the KDE desktop environment** (Qt 6/QML/Kirigami, convergent on desktop and Plasma Mobile). |
+| [Motion](motion/index.md) | [latest](motion/latest/description.md) | Planner with calendar and tasks; an auto-scheduler places tasks into free time. |
+| [Notion Calendar](notion-calendar/index.md) | [latest](notion-calendar/latest/description.md) | Calendar client with several time zones side by side and scheduling links for free slots. |
 | [Nextcloud Calendar](nextcloud-calendar/index.md) | [latest](nextcloud-calendar/latest/description.md) | The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar) above the CalDAV backend (sabre/dav) of the Nextcloud server. |
 | [Outlook calendar](outlook-calendar/index.md) | [latest](outlook-calendar/latest/description.md) | The calendar component of the Microsoft Outlook line: web app (outlook.com / Outlook on the web), the new and the classic Outlook for Windows, Outlook for Mac and iOS/Android — data in the mailbox … |
+| [Reclaim](reclaim/index.md) | [latest](reclaim/latest/description.md) | Web service over a calendar that places tasks, habits and focus time into free time. |
 | [GNOME Planner](planner/index.md) | [latest](planner/latest/description.md) | Planner is the project planner on GNOME (app ID `app.drey.Planner`): tasks with start/finish, work, costs and dependencies (FS/SS/FF/SF with lag), resources with their own working calendars, critic… |
 
 ## File set per program (ADR 0012)

@@ -6,6 +6,8 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
+| [Felt](felt/index.md) | [latest](felt/latest/description.md) | Felt is a browser-based mapping and GIS service where several people edit the same map at once; shared by link, embeddable, with REST API, JS SDK and webhooks. |
+| [Google Earth](google-earth/index.md) | [latest](google-earth/latest/description.md) | Google Earth shows the planet as a 3D globe in the browser and in mobile apps, with measuring, Street View, guided tours and shareable projects. |
 | [Leaflet](leaflet/index.md) | [latest](leaflet/latest/description.md) | Leaflet (BSD-2-Clause) is the lightweight JavaScript map library: raster tiles, markers, polygons, layer switching, touch support — the standard on which uMap and thousands of map widgets sit. |
 | [MapLibre](maplibre/index.md) | [latest](maplibre/latest/description.md) | MapLibre (BSD, a fork from Mapbox GL JS after the licence change) is the **vector-map engine**: tiles + style JSON (GL Style Spec), WebGL rendering with 3D tilts, custom styles (Maputnik), self-hos… |
 | [OpenStreetMap](openstreetmap/index.md) | [latest](openstreetmap/latest/description.md) | OpenStreetMap (OSM) is the worldwide collaborative mapping platform: everyone edits the geodata ("the wiki of maps"). |
