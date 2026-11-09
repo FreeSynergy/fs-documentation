@@ -1,14 +1,32 @@
-# Homer Dokumentation
+# Homer
 
-## Übersicht
+> Kategorie: [desktop](../../index.md)
+
+## Was es ist
 
 Homer ist ein statisches Dashboard für selbst gehostete Dienste: Eine YAML-Datei beschreibt Gruppen und Kacheln, eine kleine Single-Page-Anwendung rendert daraus die Startseite. Es gibt kein Backend, keine Datenbank und keine Anmeldung.
 
-## Dateistruktur
+## Bemerkenswerte Ideen
 
-- [menu.md](latest/menus.md) - Seitenbereiche, Icon-Links und Betriebsrollen
-- [features.md](latest/features.md) - Kacheln, Suche, Themes, Konfiguration und Grenzen
-- [description.md](latest/description.md) - Beschreibung und Abgrenzung zu Homarr, Heimdall und Dashy
-- [structure.md](latest/layout.md) - UI/UX, Spalten- und Kachelstruktur
-- [shortcuts.md](latest/shortcuts.md) - Tastatursteuerung (meist Browser-Tasten, fehlende klar markiert)
-- [api.md](latest/api.md) - Keine API: Stattdessen Konfigurationsdatei `config.yml` als Schnittstelle
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Vorhandene Pflichtdateien |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Ausführliche Beschreibung, Abgrenzung, für wen es geeignet ist |
+| [features.md](latest/features.md) | Was das Programm kann — und was nicht |
+| [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
+| [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
+| [shortcuts.md](latest/shortcuts.md) | Tastenkürzel |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->

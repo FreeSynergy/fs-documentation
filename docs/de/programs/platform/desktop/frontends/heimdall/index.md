@@ -1,14 +1,32 @@
-# Heimdall Dokumentation
+# Heimdall
 
-## Übersicht
+> Kategorie: [desktop](../../index.md)
 
-Heimdall ist ein Application-Dashboard auf Laravel-Basis: App-Kacheln, optionale Statistik-Kacheln und Panels bilden eine persönliche Startseite für selbst gehostete Dienste. Die Inhalte werden in der Oberfläche verwaltet, die Laufzeitumgebung in `.env` konfiguriert.
+## Was es ist
 
-## Dateistruktur
+Heimdall ist ein Application-Dashboard auf Laravel-Basis: App-Kacheln, optionale Statistik-Kacheln und Panels bilden eine persönliche Startseite für selbst gehostete Dienste. Die Inhalte werden in der Benutzeroberfläche verwaltet; die Laufzeitumgebung wird in `.env` konfiguriert.
 
-- [menu.md](latest/menus.md) - Alle Menüpunkte, Panel- und App-Kontextmenüs
-- [features.md](latest/features.md) - Apps, Enhanced Apps, Server-Statistiken, Konfiguration
-- [description.md](latest/description.md) - Beschreibung und Abgrenzung zu Homarr, Homer und Dashy
-- [structure.md](latest/layout.md) - UI/UX, Panel- und Kachelstruktur
-- [shortcuts.md](latest/shortcuts.md) - Tastatursteuerung (inkl. klar als fehlend markierter Tasten)
-- [api.md](latest/api.md) - Schnittstellen: Laravel-Routen, Enhanced-App-API-Keys, Konfigurationsdateien
+## Bemerkenswerte Ideen
+
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Vorhandene Pflichtdateien |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Ausführliche Beschreibung, Abgrenzung, für wen es geeignet ist |
+| [features.md](latest/features.md) | Was das Programm kann — und was nicht |
+| [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
+| [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
+| [shortcuts.md](latest/shortcuts.md) | Tastenkürzel |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->

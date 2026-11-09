@@ -1,14 +1,32 @@
-# Dashy Dokumentation
+# Dashy
 
-## Übersicht
+> Kategorie: [desktop](../../index.md)
 
-Dashy ist ein anpassbares Self-Hosted-Dashboard für das eigene Netzwerk: App-Kacheln, Statusanzeigen, Widgets, Themes und Suche werden über `conf.yml` (oder JSON) beschrieben und lassen sich optional in einer interaktiven Oberfläche bearbeiten. Eine optionale REST-API liest und schreibt die Konfiguration.
+## Was es ist
 
-## Dateistruktur
+Dashy ist ein anpassbares Self-Hosted-Dashboard für dein eigenes Netzwerk: App-Kacheln, Statusanzeigen, Widgets, Themes und Suche werden über `conf.yml` (oder JSON) beschrieben und lassen sich optional in einer interaktiven Oberfläche bearbeiten. Eine optionale REST-API liest und schreibt die Konfiguration.
 
-- [menu.md](latest/menus.md) - Kopfzeile, Einstellungspanel, Rechtsklick-Menüs, Rollen
-- [features.md](latest/features.md) - Kacheln, Statusprüfungen, Widgets, Themes, Authentifizierung
-- [description.md](latest/description.md) - Beschreibung und Abgrenzung zu Homarr, Heimdall und Homer
-- [structure.md](latest/layout.md) - UI/UX, Sektionen, Raster und Ansichtsvarianten
-- [shortcuts.md](latest/shortcuts.md) - Tastatursteuerung (Tippen sucht, `Esc`, `Alt+Enter`, Hotkeys)
-- [api.md](latest/api.md) - Optionale REST-API, Authentifizierung, Config-Zugriff
+## Bemerkenswerte Ideen
+
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Vorhandene Pflichtdateien |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Ausführliche Beschreibung, Abgrenzung, für wen es geeignet ist |
+| [features.md](latest/features.md) | Was das Programm kann — und was nicht |
+| [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
+| [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
+| [shortcuts.md](latest/shortcuts.md) | Tastenkürzel |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->

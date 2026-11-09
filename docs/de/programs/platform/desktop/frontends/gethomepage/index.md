@@ -1,16 +1,32 @@
-# gethomepage (Bibliothek) Dokumentation
+# gethomepage (Bibliothek)
 
-## Übersicht
+> Kategorie: [desktop](../../index.md)
 
-`gethomepage` bezeichnet die **API-Bibliotheksschicht** des Projekts `gethomepage/homepage`: die Service-Clients, Proxy-Handler, Konfigurationsleser und Hilfsfunktionen, die aus den YAML-Angaben der `services.yaml` tatsächliche HTTP-Aufrufe an Sonarr, Pi-hole, Proxmox, Docker oder Kubernetes machen. Die Bibliothek besitzt **keine eigene Oberfläche** – Bedienung und Konfiguration laufen über das Dashboard.
+## Was es ist
 
-## Dateistruktur
+`gethomepage` bezeichnet die **API-Bibliotheksschicht** des Projekts `gethomepage/homepage`: die Service-Clients, Proxy-Handler, Konfigurationsleser und Hilfsfunktionen, die die YAML-Einträge in `services.yaml` in echte HTTP-Aufrufe an Sonarr, Pi-hole, Proxmox, Docker oder Kubernetes umsetzen. Die Bibliothek hat **keine eigene Benutzeroberfläche** – Bedienung und Konfiguration laufen über das Dashboard.
 
-- [menu.md](latest/menus.md) - Modul- und Paketverzeichnis der Bibliothek (kein UI-Menü)
-- [features.md](latest/features.md) - Client-Funktionen, Handler-Typen, Validierung, Caching
-- [description.md](latest/description.md) - Zweck und Abgrenzung zur Dashboard-Anwendung
-- [structure.md](latest/layout.md) - Bibliotheksstruktur, Ebenen und Aufrufpfad
-- [shortcuts.md](latest/shortcuts.md) - Build-, Dev- und CLI-Kommandos statt Tastenkürzel
-- [api.md](latest/api.md) - Bibliotheks-API: Clients je Dienst, Methoden, Parameter
+## Bemerkenswerte Ideen
 
-- [Homepage (Dashboard)](../homepage/index.md) - Anwendung, die diese Bibliothek verwendet
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Vorhandene Pflichtdateien |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Ausführliche Beschreibung, Abgrenzung, für wen es geeignet ist |
+| [features.md](latest/features.md) | Was das Programm kann — und was nicht |
+| [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
+| [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
+| [shortcuts.md](latest/shortcuts.md) | Tastenkürzel |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->

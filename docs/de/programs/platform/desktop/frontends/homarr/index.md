@@ -1,14 +1,32 @@
-# Homarr Dokumentation
+# Homarr
 
-## Übersicht
+> Kategorie: [desktop](../../index.md)
 
-Homarr ist ein Self-Hosted Dashboard für Homelabs: Dienste, Container und Verknüpfungen werden in frei konfigurierbaren Boards (Widget-Rastern) gesammelt, live überwacht und per Klick geöffnet. Der Server läuft als Next.js-Anwendung, die gesamte Oberfläche wird über die Weboberfläche konfiguriert.
+## Was es ist
 
-## Dateistruktur
+Homarr ist ein Self-Hosted-Dashboard für Homelabs: Dienste, Container und Links werden in frei konfigurierbaren Boards (Widget-Rastern) gesammelt, live überwacht und mit einem Klick geöffnet. Der Server läuft als Next.js-Anwendung; die gesamte Oberfläche wird über die Weboberfläche konfiguriert.
 
-- [menu.md](latest/menus.md) - Alle Menüpunkte, Board- und Widget-Menüs
-- [features.md](latest/features.md) - Widgets, Integrationen und Konfiguration
-- [description.md](latest/description.md) - Beschreibung und Abgrenzung zu Heimdall, Homer und Dashy
-- [structure.md](latest/layout.md) - UI/UX, Board-Aufbau und Struktur
-- [shortcuts.md](latest/shortcuts.md) - Tastatursteuerung (und klar als fehlend markierte Shortcuts)
-- [api.md](latest/api.md) - API-Dokumentation (tRPC, OpenAPI-Referenz, Integrationen)
+## Bemerkenswerte Ideen
+
+_Zu tun: Was kann dieses Programm, das andere nicht können? Warum ist es hier dokumentiert (ADR 0013)?_
+
+## Dokumentierte Versionen
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Vorhandene Pflichtdateien |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| Datei | Inhalt |
+|------|----------|
+| [description.md](latest/description.md) | Ausführliche Beschreibung, Abgrenzung, für wen es geeignet ist |
+| [features.md](latest/features.md) | Was das Programm kann — und was nicht |
+| [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
+| [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
+| [shortcuts.md](latest/shortcuts.md) | Tastenkürzel |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
+
+⚠️ Fehlende Pflichtdateien: `themes/index.md`
+<!-- /gen:versions -->
