@@ -1,27 +1,27 @@
-# Kbd (Tastenkennung) - Attribute
+# Kbd – Attribute
 
-Nur **eigene** Attribute. Alles andere kommt aus der Basisklasse, siehe
+Nur **eigene** Attribute. Alles Übrige kommt aus der Basisklasse, siehe
 [base](../base.md).
 
 ## Hauptattribute
 
-| Attribut | Typ | Default | Beschreibung |
-|----------|-----|---------|--------------|
-| `shortcut` | string | - | Taste oder Kombination, z. B. `Strg+S` |
-| `keys` | array[] | - | Einzelkappen einer Kombination (statt `key`) |
-| `separator` | string | `+` | Zeichen zwischen den Kappen |
+| Attribut | Typ | Standard | Beschreibung |
+|----------|-----|----------|--------------|
+| `shortcut` | string | - | Taste oder Kombination, z. B. `Ctrl+S` |
+| `keys` | array[] | - | einzelne Tastenkappen einer Kombination (statt `key`) |
+| `separator` | string | `+` | Zeichen zwischen den Tastenkappen |
 | `active` | boolean | `false` | gerade gedrückt? |
 
-## Events
+## Ereignisse
 
-Es werden keine Events genutzt; das Abhören von Tasten gehört zur Anwendung.
+Es werden keine Ereignisse genutzt; das Abhören von Tasten gehört zur Anwendung.
 
 ## Barrierefreiheit
 
 | Attribut | Typ | Beschreibung |
 |----------|-----|--------------|
-| – | – | als ganzes Element vorlesbar machen (`aria-label="Strg plus S"`) |
-| – | – | Modifikatoren ausgeschrieben benennen, Symbole nur zusätzlich |
+| – | – | das ganze Element lesbar machen (`aria-label="Ctrl plus S"`) |
+| – | – | Modifikatoren als ausgeschriebene Wörter nennen, Symbole nur zusätzlich |
 
 ## Geerbt von
 

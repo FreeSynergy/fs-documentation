@@ -1,62 +1,61 @@
-# Kbd (Tastenkennung)
+# Kbd
 
 | Feld | Wert |
 |------|------|
-| **Kategorie** | `basics` |
-| **Erbt von** | `base` |
-| **Varianten** | `einzeln`, `kombination` |
-| **Zustände** | `active` (Taste gedrückt) |
-| **Gesten** | keine — reine Anzeige |
-| **Animationen** | `press` |
-| **Verwandt** | `badge`, `tooltip`, `base` |
-| **Status** | dokumentiert |
+| **Category** | `basics` |
+| **Inherits from** | `base` |
+| **Variants** | `einzeln`, `kombination` |
+| **States** | `active` (Taste gedrückt) |
+| **Gestures** | keine – nur Anzeige |
+| **Animations** | `press` |
+| **Related** | `badge`, `tooltip`, `base` |
+| **Status** | documented |
 
 ## Beschreibung
 
-Kbd stellt eine einzelne Taste oder eine Tastenkombination optisch dar –
-wie auf einer Tastaturkappe. Es wird in Hilfetexten, Tooltips und den
-Shortcut-Dokumentationen der Programme verwendet.
+Kbd zeigt eine einzelne Taste oder eine Tastenkombination optisch an – so, wie sie
+auf einer Tastenkappe steht. Verwendet wird es in Hilfetexten, Tooltips und in der
+Tastenkürzel-Dokumentation der Programme.
 
-## Verwendungszweck
+## Zweck
 
-- Shortcuts in Tooltipps und Kontexthilfen (`Strg + S`)
-- Kurzbefehle in Übersichten und Onboarding-Touren
-- Druck-/Aktiv-Zustand beim Lernen von Shortcuts
+- Tastenkürzel in Tooltips und Kontexthilfe (`Strg + S`)
+- Tastaturkürzel in Übersichten und Einführungen
+- Gedrückt-/Aktiv-Zustand beim Lernen von Tastenkürzeln
 
 ## Varianten
 
 | Variante | Beschreibung |
 |----------|--------------|
 | **einzeln** | eine Taste, z. B. `Esc` |
-| **kombination** | mehrere Kbd-Elemente mit „+“ dazwischen |
+| **kombination** | mehrere Kbd-Elemente mit einem "+" dazwischen |
 
-## Features
+## Funktionen
 
-- Kappe mit Rand und leichtem Schatten, wie eine Tastenoberfläche
+- Tastenkappe mit Rahmen und leichtem Schatten, wie eine Tastenfläche
 - Modifikatoren (`Strg`, `Alt`, `⇧`) als eigene Kappen
-- `active` zeigt den gerade gedrückten Zustand
+- `active` zeigt den Zustand, der gerade gedrückt wird
 
 ## Abgrenzung
 
-- **Nicht verwechseln mit** `code`: Code-Ausschnitte sind Fließtext in
-  Monospace; Kbd ist eine Taste.
+- **Nicht verwechseln mit** `code`: Code-Schnipsel sind Fließtext in Festbreitenschrift;
+  Kbd ist eine Taste.
 
-- **Nicht verwechseln mit** [badge](../../feedback/badge/): ein Badge zeigt
-  Status, keine Taste.
+- **Nicht verwechseln mit** [badge](../../feedback/badge/): Ein Badge zeigt einen Status,
+  keine Taste.
 
-- Kurzbefehle immer als Kombination aus Kbd-Elementen setzen, nicht als
-  ein Textblock.
+- Tastenkürzel immer als Kombination aus Kbd-Elementen setzen, nicht als einen Textblock.
 
 ## Best Practices
 
-- Pro Sprache korrekt benennen (deutsch `Strg`, englisch `Ctrl`) – die
-  Beschriftung folgt der UI-Sprache.
+- Die Namen je nach Sprache richtig setzen (Deutsch `Strg`, Englisch `Ctrl`) – die Beschriftung
+  folgt der Oberflächensprache.
 
-- In Tooltipps: Kbd rechts im Text, mit Abstand.
-- Nicht mehr als drei Modifikatoren + eine Taste.
+- In Tooltips: Kbd rechts neben dem Text, mit Abstand.
+- Nicht mehr als drei Modifikatoren plus eine Taste.
 
 ## Siehe auch
 
 - [Tooltip](../../../widgets/overlays/tooltip/)
-- [Command](../../../widgets/navigation/command/) — Shortcuts suchen und ausführen
+- [Command](../../../widgets/navigation/command/) – Tastenkürzel finden und ausführen
 - [Basiskomponente](../base.md)

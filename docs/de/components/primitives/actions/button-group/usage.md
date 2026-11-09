@@ -1,17 +1,16 @@
-# Button Group (Schaltflächengruppe) - Verwendung
+# Button-Gruppe – Verwendung
 
 !!! note
     Die Beispiele sind syntaxneutral gehalten. Sobald die Umsetzung auf Rust und
-    Blinc umgestellt wird, werden `usage.md`-Beispiele in einem eigenen Durchlauf
-    ersetzt.
+    Blinc umgestellt ist, werden die Beispiele in `usage.md` in einem eigenen Durchgang ersetzt.
 
-## Zwei Aktionen als Einheit
+## Zwei Aktionen als eine Einheit
 
 ```jsx
 <ButtonGroup items={[saveButton, publishButton]} variant="verbund" />
 ```
 
-## Ansicht wechseln (Segmented Control)
+## Ansicht umschalten (segmentierte Auswahl)
 
 ```jsx
 <ButtonGroup
@@ -19,14 +18,14 @@
   value={viewMode}
   onSelect={setViewMode}
   items={[
-    { value: "list", label: "Liste" },
-    { value: "grid", label: "Raster" },
-    { value: "timeline", label: "Zeitleiste" }
+    { value: "list", label: "List" },
+    { value: "grid", label: "Grid" },
+    { value: "timeline", label: "Timeline" }
   ]}
 />
 ```
 
-## Ausrichtung im Editor (Mehrfachauswahl)
+## Ausrichtung in einem Editor (Mehrfachauswahl)
 
 ```jsx
 <ButtonGroup
@@ -38,13 +37,13 @@
 />
 ```
 
-## Hauptaktion mit Dropdown (Split-Button)
+## Hauptaktion mit Auswahlliste (Split-Button)
 
 ```jsx
 <ButtonGroup
   variant="split"
   items={[
-    { label: "Speichern", onClick: save },
+    { label: "Save", onClick: save },
     { icon: "chevron-down", menu: saveAsMenu }
   ]}
 />
@@ -54,7 +53,7 @@
 
 | Szenario | Empfehlung |
 |----------|------------|
-| Editor-Werkzeuge (fett, kursiv, unterstrichen) | `segment`, `selectionMode="multiple"` |
+| Werkzeuge im Editor (fett, kursiv, unterstrichen) | `segment`, `selectionMode="multiple"` |
 | Dialog: Speichern / Speichern unter | `split` |
-| Zwei gleichrangige Aktionen im Formular | getrennte Buttons, keine Gruppe |
-| Viele Optionen (> 5) | `select` statt Segmentgruppe |
+| Zwei gleichrangige Aktionen in einem Formular | getrennte Buttons, keine Gruppe |
+| Viele Optionen (> 5) | `select` statt einer Segmentgruppe |

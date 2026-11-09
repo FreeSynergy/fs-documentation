@@ -1,4 +1,4 @@
-# Kbd (Tastenkennung) - Aussehen
+# Kbd – Aussehen
 
 ## Grundlayout
 
@@ -6,7 +6,7 @@
 einzeln:        kombination:
 
 ┌─────┐         ┌──────┐   ┌───┐
-│ Esc │         │ Strg │ + │ S │
+│ Esc │         │ Ctrl │ + │ S │
 └─────┘         └──────┘   └───┘
 ```
 
@@ -14,8 +14,8 @@ einzeln:        kombination:
 
 | Variante | Aussehen |
 |----------|----------|
-| **einzeln** | kleine Kappe: 1 px Rand, 4 px Rundung, dezenter Schatten unten |
-| **kombination** | Kappen mit „+“ in Sekundärfarbe dazwischen |
+| **einzeln** | kleine Tastenkappe: 1 px Rahmen, 4 px Rundung, leichter Schatten darunter |
+| **kombination** | Tastenkappen mit einem "+" in der Sekundärfarbe dazwischen |
 
 ## Größen
 
@@ -29,16 +29,16 @@ einzeln:        kombination:
 
 | Zustand | Aussehen |
 |---------|----------|
-| `default` | helle Fläche, Primärtext, Rand in Trennfarbe |
-| `active` | Fläche in Primärfarbe, Text invertiert, Schatten reduziert |
+| `default` | helle Fläche, Primärtext, Rahmen in der Trennlinienfarbe |
+| `active` | Fläche in der Primärfarbe, Text invertiert, Schatten reduziert |
 
-## Hover- und Fokus-Effekte
+## Effekte bei Hover und Fokus
 
 | Effekt | Beschreibung |
 |--------|--------------|
-| – | keine; Kbd ist reine Anzeige |
+| – | keine; Kbd dient nur der Anzeige |
 
-## Reaktiv
+## Responsiv
 
-- Kbd bricht mit dem Text um; Kombinationen werden nicht zerrissen
-  (`white-space: nowrap` je Kappe).
+- Kbd bricht mit dem Text um; Kombinationen werden nicht auseinandergerissen
+  (`white-space: nowrap` pro Tastenkappe).
