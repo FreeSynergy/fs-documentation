@@ -34,8 +34,8 @@ screenshots of the platforms' own apps that stay local and are never published. 
 GUI engine can do. Our own icons, texts and open fonts with similar measurements; none of theirs.
 
 Apple style uses Apple's own apps as the template: rebuilt 1:1 first, then filled with functions, changed later if
-needed. For Windows the value is in the **functions**: programs that exist only on Windows show what open software
-on Linux still lacks. Later a **FreeSynergy style** of our own, quite different from all of these (ADR 0066,
+needed. Windows style is also rebuilt 1:1, one Windows program per category, preferably one that does not exist on Linux,
+so everyone profits from it in open software. Deliberately no Linux programs as templates: we have those already. Later a **FreeSynergy style** of our own, quite different from all of these (ADR 0066,
 addition of 2026-11-09).
 
 The analyses of well-known programs per category (`frontends/<program>/latest/`) stay the source for **functions**.

@@ -32,15 +32,16 @@ Einzeilig einfügen, N ersetzen:
 
 ### Thread C – Components je Grundtyp und Stile (Sonnet, startet sofort mit dem Stil-System)
 1. In `fs-components` das Stil-System: Tokens für Abstände, Zeilenhöhen, Schriftgrößen, Radien, Farben, Effekte (Glas, Fläche, Schatten) und ein Iconset je Stil. Vier Stile: Admin, Einfach, Apple, Windows. Maße für Apple und Windows aus Thread M.
-2. Je Grundtyp vier Components: Eingabe, Anzeige, kompakt, Zelle. Zuerst E-Mail (gegliedert, mit Vorschlägen über den Befehl „vorschlagen“), Name, Telefon, Adresse, Datum.
+2. Je Grundtyp vier Components: Eingabe, Anzeige, kompakt, Zelle. **Vorher die Handtest-Fehler der Eingabe beheben oder bei Blinc belegen:** AltGr+Q (`@`) ergibt „2“, weiße Schrift beim Tippen, Trägheit beim Tippen – ohne `@` keine E-Mail-Component. Zuerst E-Mail (gegliedert, mit Vorschlägen über den Befehl „vorschlagen“), Name, Telefon, Adresse, Datum.
 3. Alles, was Blinc nicht kann (z. B. Glas, eine bestimmte Zeilenhöhe), genau messen und als git-bug-Eintrag mit Beleg in unserem Blinc-Klon festhalten; der Strategie gebündelt melden.
 
 ### Thread A – erzeugtes Admin-Frontend (Sonnet, startet nach dem ersten Tag von T)
+Ort: eigenes Crate in `fs-components` (Name vorläufig `fs-admin-frontend`), eigener Worktree; C und A dürfen beide in `fs-components` arbeiten, aber nur in ihren eigenen Crates. Stil: SAP Fiori (Maße aus Thread M).
 1. Ein Frontend, das aus einer Typbeschreibung Liste, Detail, Formular und Befehle erzeugt, mit den Components aus C und der Fensterhülle nach ADR 0065.
 2. Zuerst für People, dann für jedes Programm, das eine Typbeschreibung liefert.
 
 ### Thread M – Maßblätter und Bildschirmfotos: Apple, Windows, SAP Fiori (Haiku, startet sofort)
-0. **Nachtrag 2026-11-09 (Nutzer):** Apple-Stil = Apples eigene Apps, **erst 1:1 nachbauen**. Admin-Stil = **SAP Fiori** (Maße aus den öffentlichen Fiori-Richtlinien). Windows: zuerst Programme suchen, die es **nur unter Windows** gibt und die unter Linux fehlen (je Kategorie, mit der besonderen Funktion) – Liste nach `docs/en/programs/map.md`, Abschnitt „Windows-only“. Bildschirmfotos aus offiziellen Quellen (Hersteller-Seiten, Dokumentation, Presse) laden, lokal unter `/srv/FreeSynergy/.scratch/reference/<stil>/<programm>/`, je Bild die Quelle in eine `SOURCES.txt` daneben; **nie in ein Repo**.
+0. **Nachtrag 2026-11-09 (Nutzer):** Apple-Stil = Apples eigene Apps, **erst 1:1 nachbauen**. Admin-Stil = **SAP Fiori** (Maße aus den öffentlichen Fiori-Richtlinien). Windows-Stil: **je Kategorie ein Windows-Programm, ebenfalls 1:1 nachbauen**, bevorzugt eines, das es unter Linux nicht gibt; **keine Linux-Programme als Vorlage**. Vorschlagsliste (Kategorie, Programm, besondere Funktion) nach `docs/en/programs/map.md`, Abschnitt „Windows templates“, und dem Nutzer über den Koordinator zur Auswahl geben. Bildschirmfotos aus offiziellen Quellen (Hersteller-Seiten, Dokumentation, Presse) laden, lokal unter `/srv/FreeSynergy/.scratch/reference/<stil>/<programm>/`, je Bild die Quelle in eine `SOURCES.txt` daneben; **nie in ein Repo**.
 1. Aus den öffentlichen Leitlinien (Apple Human Interface Guidelines, Microsoft Fluent 2) die Maße zusammentragen: Abstände, Raster, Schriftgrößen und Zeilenhöhen, Radien, Materialien (Glas, Mica/Acrylic), Farben, Fokus, Listenzeilen. Mit Quelle je Wert.
 2. Offene Schriften mit ähnlichen Maßen vorschlagen (Lizenz je Schrift).
 3. Für People: Aufbau der Kontakte-App auf macOS und der Kontaktansicht unter Windows (People/Outlook) beschreiben, mit Maßen. Bildschirmfotos nur lokal unter `/srv/FreeSynergy/.scratch/reference/`, **nie in ein Repo**.
@@ -50,6 +51,7 @@ Einzeilig einfügen, N ersetzen:
 1. Die Tabelle „Function references“ in `docs/en/programs/map.md` prüfen: gibt es das Programm noch, stimmt die genannte Funktion? Korrekturen direkt in die Tabelle, mit Quelle.
 2. Für jedes dort genannte Programm, das unter `frontends/` der Kategorie noch fehlt, eine Analyse im üblichen Aufbau anlegen (`index.md`, `latest/description.md`, `features.md`, `layout.md`, `menus.md`, `shortcuts.md`, `api.md`), nur Funktionen, nichts kopiert (ADR 0012, 0013, 0025). Neue Kategorien bei Bedarf: notes, history, store, start.
 3. Die Fähigkeiten in die `requirements.md` der Kategorie übernehmen (Status `proposed`).
+4. Nebenbei: die stehen gebliebenen Worktrees `.wt-cal-lease`, `.wt-fs-maps-server`, `.wt-doc-d`, `.wt-de-c`, `.wt-fs-store` prüfen – ungesicherte Arbeit auf einen Branch `rescue/<name>` pushen, dann eine Löschliste an den Koordinator; gelöscht wird erst nach Ja des Nutzers.
 
 ### Thread D – Pakete auch als .deb und .exe (Sonnet baut, Haiku rollt aus; startet sofort)
 Nutzer, 2026-11-09: Im letzten Sprint gab es nur rpm. Wer den Store und die Neuigkeiten sehen will, braucht auch Debian/Ubuntu und Windows.

@@ -20,7 +20,7 @@ Die Schnittstellen wurden beim Programmieren ausgesucht statt vorher festgelegt;
 ## Ergänzung (Nutzer, 2026-11-09)
 - **Admin-Frontend im Stil von SAP Fiori** (öffentliches Design-System für dichte Geschäftsdaten). Später ein **eigener FreeSynergy-Stil**, der ganz anders ist.
 - **Apple-Stil: Apple ist dabei, mit Apples eigenen Apps als Vorlage,** weil sie gut aussehen. Erst 1:1 nachbauen, dann mit Funktionen füllen, später ändern, falls nötig (auch bei Ärger). Es ist nur ein Frontend; die Engine darunter ist das Wichtigere – beides soll die Menschen umhauen.
-- **Windows: der Wert liegt in den Funktionen.** Programme, die es nur unter Windows gibt, sind Vorbild, damit alle mit offener Software davon profitieren. Beim Aussehen ist uns egal, ob es nah an Microsoft ist.
+- **Windows-Stil: ebenfalls 1:1 nachbauen, je Kategorie ein Windows-Programm.** Bevorzugt Programme, die es unter Linux nicht gibt, damit alle mit offener Software davon profitieren. **Bewusst keine Linux-Programme als Vorlage** – die haben wir schon. Beim Aussehen ist es uns egal, wie nah es an Microsoft ist.
 - **Haiku recherchiert und macht die Bildschirmfotos** für den Nachbau (nur lokal, nie in ein Repo).
 
 ## Folgen
