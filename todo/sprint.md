@@ -16,6 +16,8 @@ Einzeilig einfügen, N ersetzen:
 
 **Grundlage:** ADR 0066 (`conventions/decisions/0066-datentypen-und-vier-frontends.md`) und die Landkarte `docs/en/programs/map.md`. **Ziel der Woche:** Bis Freitag haben möglichst alle Programme ein erzeugtes Admin-Frontend, das grundlegend funktioniert; People zusätzlich mit Einfach-, Apple- und Windows-Frontend. **Reihenfolge:** Mo–Di Pilot People (Threads T, P, C, A, M), danach verteilt die Strategie den Ausbau auf die übrigen Programme (Thread R). Die Regeln unten gelten weiter. Meldungen an den Koordinator (Haiku), nicht an die Strategie.
 
+**Regel (Nutzer, 2026-11-10, ADR 0066):** Kein Render-Code und kein Aussehen in einem Programm-Repo. Alles, was etwas zeigt (auch Kanban, Kalender, Editor), ist eine Component in `fs-components`; das Programm liefert Daten und Trait, das Frontend setzt zusammen. Fehlt eine Component, wird sie in `fs-components` gebaut.
+
 **Blinc-Beiträge (Nutzer, 2026-11-09):** In Commits, PRs und Issues für `project-blinc/Blinc` **keine KI-Kennzeichnung**, Regeln in `/srv/FreeSynergy/blinc/CLAUDE.md` (git-bug, volle 64-stellige ID als Trailer; `git config git-bug.git-transport git`). In unseren eigenen Repos bleibt die Kennzeichnung.
 
 ### Thread T – Grundtypen und Typbeschreibung (Sonnet, startet sofort)
@@ -33,7 +35,15 @@ Einzeilig einfügen, N ersetzen:
 ### Thread C – Components je Grundtyp und Stile (Sonnet, startet sofort mit dem Stil-System)
 1. In `fs-components` das Stil-System: Tokens für Abstände, Zeilenhöhen, Schriftgrößen, Radien, Farben, Effekte (Glas, Fläche, Schatten) und ein Iconset je Stil. Vier Stile: Admin, Einfach, Apple, Windows. Maße für Apple und Windows aus Thread M.
 2. Je Grundtyp vier Components: Eingabe, Anzeige, kompakt, Zelle. **Vorher die Handtest-Fehler der Eingabe beheben oder bei Blinc belegen:** AltGr+Q (`@`) ergibt „2“, weiße Schrift beim Tippen, Trägheit beim Tippen – ohne `@` keine E-Mail-Component. Zuerst E-Mail (gegliedert, mit Vorschlägen über den Befehl „vorschlagen“), Name, Telefon, Adresse, Datum.
-3. Alles, was Blinc nicht kann (z. B. Glas, eine bestimmte Zeilenhöhe), genau messen und als git-bug-Eintrag mit Beleg in unserem Blinc-Klon festhalten; der Strategie gebündelt melden.
+3. Bestand prüfen: Render-Code oder Aussehen in den App-Repos (z. B. Kalender-Raster, Kanban, Editor) auflisten; was dort liegt, wird zur Component in `fs-components` (Liste an den Koordinator, Umzug in Thread R).
+4. Alles, was Blinc nicht kann (z. B. Glas, eine bestimmte Zeilenhöhe), genau messen und als git-bug-Eintrag mit Beleg in unserem Blinc-Klon festhalten; der Strategie gebündelt melden.
+
+### Thread B – Blinc: Geschwindigkeit und PR 71 (Sonnet, startet sofort, Vorrang)
+Arbeitsort `/srv/FreeSynergy/blinc` (Fork `FreeSynergy/Blinc`), Regeln aus der dortigen `CLAUDE.md`: keine KI-Kennzeichnung, git-bug-Trailer mit voller ID, `git-bug.git-transport=git`.
+1. **PR 71** (https://github.com/project-blinc/Blinc/pull/71): auf `upstream/main` rebasen, Konflikt in `CHANGELOG.md` lösen. Darmies Einwand umsetzen: nicht den ganzen Baum neu stylen (`apply_stylesheet_base_styles`, ~18 µs je Knoten, 3× das Update), sondern nur die Knoten, deren Props `incremental_update` ersetzt hat, über `apply_stylesheet_base_styles_for_subtree`. Dasselbe im Web-Runner (`web.rs`, `build_and_update`, Zweig `VisualOnly`). Mit seiner Messung (153/753/3003 Knoten) vorher/nachher messen, die Zahlen in den git-bug-Eintrag, kurz auf GitHub antworten, Force-Push.
+2. **Unser Patch-Fork `blinc-app-fix` enthält die teure Fassung** – alle Apps zahlen sie bei jedem Update. Sofort auf die neue Fassung bringen und die Apps neu bauen.
+3. **Geschwindigkeit messen:** Mit der Live-Probe (kwin --virtual + echte Eingabe) die Zeit von Taste bis Bild in Tasks und Kalender messen und aufschlüsseln (Builder, `incremental_update` – bei 3003 Knoten schon 17,6 ms –, Stil, Layout, Zeichnen). Befunde als git-bug-Einträge mit Beleg; Vorschläge an Darmie erst als Eintrag, PR erst nach seiner Zustimmung.
+4. **Fehler im Kalender (Handtest Nutzer):** Langes Drücken lässt die Seitenleiste von rechts nach links verschwinden, manchmal ändert sich die Schrift. In der Live-Probe nachstellen, Ursache finden (unser Code oder Blinc), beheben oder belegt melden.
 
 ### Thread A – erzeugtes Admin-Frontend (Sonnet, startet nach dem ersten Tag von T)
 Ort: eigenes Crate in `fs-components` (Name vorläufig `fs-admin-frontend`), eigener Worktree; C und A dürfen beide in `fs-components` arbeiten, aber nur in ihren eigenen Crates. Stil: SAP Fiori (Maße aus Thread M).

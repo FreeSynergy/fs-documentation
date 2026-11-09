@@ -23,6 +23,13 @@ Die Schnittstellen wurden beim Programmieren ausgesucht statt vorher festgelegt;
 - **Windows-Stil: ebenfalls 1:1 nachbauen, je Kategorie ein Windows-Programm.** Bevorzugt Programme, die es unter Linux nicht gibt, damit alle mit offener Software davon profitieren. **Bewusst keine Linux-Programme als Vorlage** – die haben wir schon. Beim Aussehen ist es uns egal, wie nah es an Microsoft ist.
 - **Haiku recherchiert und macht die Bildschirmfotos** für den Nachbau (nur lokal, nie in ein Repo).
 
+## Regel: keine Darstellung im Programm (Nutzer, 2026-11-10)
+- **Alles, was etwas zeigt, ist eine Component in `fs-components`** – vom Eingabefeld bis zu Kanban, Kalender, Editor und Writer. Dort stehen die Render-Logik und das Aussehen (Stile), sonst nirgends.
+- **Das Programm** liefert nur Daten und die Schnittstelle (Trait, Typbeschreibung, Befehle), über die ein Frontend sie bekommt.
+- **Das Frontend** setzt zusammen: welche Components, welcher Stil, welche Anordnung.
+- Grund: Wiederverwendbarkeit. Was einmal als Component existiert, nutzen alle Programme und alle Frontends.
+- Ein Programm setzt keine Component ein, die es in `fs-components` nicht gibt; fehlt eine, wird sie dort gebaut.
+
 ## Folgen
 - Die Analysen der bekannten Programme je Kategorie bleiben Quelle für **Funktionen**; das Aussehen kommt aus den vier Frontends.
 - Die Schnittstellen in `docs/en/interfaces/` werden aus den Typbeschreibungen abgeleitet und als Ziel v1 festgelegt (ADR 0045).
