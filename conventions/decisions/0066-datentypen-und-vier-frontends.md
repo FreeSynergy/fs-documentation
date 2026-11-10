@@ -35,6 +35,13 @@ Die Schnittstellen wurden beim Programmieren ausgesucht statt vorher festgelegt;
 - **Anschalten geschieht von selbst:** Die Typbeschreibung meldet je Befehl, ob er unterstützt ist. Ein Bedienelement für einen nicht unterstützten Befehl ist sichtbar, aber gesperrt, mit dem Hinweis „kommt noch“. Sobald der Kern den Befehl meldet, ist es frei – ohne Änderung am Frontend.
 - Die verschiedenen Frontends sind unser **Maßstab**: Sie halten fest, was wir zugesagt haben.
 
+## Regel: Vorbild ist das beste Programm (Nutzer, 2026-11-10, gilt immer)
+Je Kategorie wird das Programm Vorbild, das in **Funktionen, UX und UI** am besten ist, egal ob Open Source, nur im Web oder eingestellt (z. B. das eingestellte Microsoft Whiteboard: wenn es das beste ist, ist das ein Grund, zu uns zu kommen). Gesucht wird gerade das, was es im Open-Source-Bereich **nicht** gibt; die Funktionen der Open-Source-Programme kommen zusätzlich hinein. Haiku sucht dazu je Kategorie alle bekannten Programme zusammen, Opus vergleicht und empfiehlt, der Nutzer entscheidet.
+
+## Galerie und Studio (Nutzer, 2026-11-10)
+- **Galerie** (Facette von `fs-files`) zeigt Bilder und Videos von hier **und von weiter weg**: YouTube, Vimeo, Odysee, PeerTube sind Quellen der Galerie, angebunden wie KIs in People (Anbieter hinter einer Schnittstelle).
+- **Studio** (Facette von `fs-streaming`): Live-Produktion und Live-Schnitt, Szenen, Gäste, an mehrere Ziele senden (OBS, Restream, StreamYard, vMix …).
+
 ## Folgen
 - Die Analysen der bekannten Programme je Kategorie bleiben Quelle für **Funktionen**; das Aussehen kommt aus den vier Frontends.
 - Die Schnittstellen in `docs/en/interfaces/` werden aus den Typbeschreibungen abgeleitet und als Ziel v1 festgelegt (ADR 0045).

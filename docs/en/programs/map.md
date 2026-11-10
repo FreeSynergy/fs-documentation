@@ -66,6 +66,8 @@ No Linux program is a template. Measures and sources: `docs/en/components/styles
 | Identity | Settings > Accounts, plus Windows Hello | A settings page, not a program |
 | History | none | No template |
 
+**Rule for templates (owner, 2026-11-10, always):** the template of a category is the program with the best features, UX and UI, whether open source, web only or discontinued. We look for what open source does **not** have; the open-source features come in on top. Research for whiteboard, surveys, studio/streaming and videos is running (all known programs per category, then a recommendation). **Gallery** shows local files and remote sources (YouTube, Vimeo, Odysee, PeerTube) through a provider interface, like AIs in People; **Studio** (facet of `fs-streaming`) is live production (OBS, Restream, StreamYard, vMix). ADR 0066.
+
 ## Basic types (first list)
 
 | Basic type | Standard | Used by |
@@ -107,7 +109,7 @@ No Linux program is a template. Measures and sources: `docs/en/components/styles
 | `fs-resources` | resource, need (gap, own spec) | people, calendar | Inventory, Booking (with calendar) | ERP, Project mgmt, Democracy | ERP: Dolibarr, ERPNext, Odoo, Tryton |
 | `fs-surveys` | `Question`, vote (AS2, gap) | people, groups | Polls, Votes | Democracy, Project mgmt | Decidim, Polis, LiquidFeedback, Consul, adhocracy+ |
 | `fs-whiteboard` | board (gap, own spec) | files | Whiteboard | Project mgmt | Excalidraw, tldraw, draw.io, OpenBoard |
-| `fs-streaming` | stream (WHIP/WHEP) | files | Studio, Live | Media | OBS Studio, Restreamer, MediaMTX |
+| `fs-streaming` | stream (WHIP/WHEP) | files | Studio (live production and live cutting), Live | Media | OBS Studio, Restreamer, MediaMTX |
 | `fs-store` (the store) | catalog entry, package (TUF) | – | Store | – | **none analysed** |
 | desktop | – (start page, uses all) | all | Start | – | Homarr, Dashy, Homepage, Heimdall |
 
