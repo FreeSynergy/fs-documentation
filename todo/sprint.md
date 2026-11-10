@@ -92,6 +92,8 @@ Aufteilung (je Liste ein Sonnet-Agent; nie zwei in dasselbe Programm-Repo):
 
 Reihenfolge, wenn das Kontingent knapp wird: R0, R1, R2, R3, R4.
 
+**Ein Kanal (Nutzer, 2026-11-10):** Der Nutzer spricht nur mit der Strategie. Der Koordinator (Haiku) übernimmt die Koordination und stellt **alle** Fragen an die Strategie, nicht an den Nutzer. Die Strategie entscheidet das Technische selbst und erklärt dem Nutzer nur echte Entscheidungen. Braucht etwas das Ja des Nutzers (Veröffentlichen, Löschen, Neustart vom Nutzer gestoppter Agenten), holt die Strategie es ein und schreibt es dem Koordinator als „Nutzer sagt ja (an Strategie, Datum)“; das gilt als direkte Antwort.
+
 **Entscheidungen der Strategie für R (2026-11-10, auf Fragen des Koordinators):**
 1. Reihenfolge `fs-components`: erst C prüfen (Opus), mergen, taggen; dann A auf `main` rebasen, prüfen, taggen. R1–R4 bleiben bis dahin auf Commit `4688cee` und wechseln danach auf den Tag.
 2. **Liste = `find` mit leerem Suchwort und Blättern (Cursor)**, für alle Typen gleich; kein eigener Listen-Befehl je Programm.
