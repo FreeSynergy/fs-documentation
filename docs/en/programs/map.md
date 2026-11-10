@@ -99,6 +99,7 @@ No Linux program is a template. Measures and sources: `docs/en/components/styles
 | `fs-people` | `Person` (JSContact `Card`) | groups, files | Contacts, Users, AIs, Partners, Team, Members | Groupware, CRM, Democracy | GNOME Contacts, KAddressBook, Monica, Nextcloud Contacts |
 | `fs-groups` | `Group`, membership (AS2, SCIM) | people | Groups | all | **none analysed** |
 | identity (`fs-identity`) | account, sign-in (Kanidm wrapper) | people | Users (with people) | all | **none analysed** |
+| `fs-vault` | secret: password, passkey, TOTP, keys (CXF, Secret Service) | people, groups | Passwords, Keys | all | to research: 1Password, Apple Passwords, Bitwarden, KeePassXC (ADR 0067) |
 | `fs-messenger` | `Message`, conversation (AS2, JMAP Mail, MIMI) | people, files | Mail, Chat, Assistant, possibly Forum | Groupware, CRM, Helpdesk | Thunderbird, Element, Telegram, Kontact, Apple Mail, Outlook, Discord, Mastodon |
 | `fs-calendar` | `Event` (JSCalendar) | people, maps, resources | Calendar, Booking | Groupware, Project mgmt | Merkuro, Google Calendar, Nextcloud Calendar, Outlook Calendar, Planner, DAViCal |
 | `fs-tasks` | `Task` (JSCalendar, RFC 9253) | people, calendar, groups | To-dos, Tickets | Project mgmt, Helpdesk | Planka, OpenProject, Taiga, Trello, Wekan, Redmine, Jira, Asana |
