@@ -27,6 +27,12 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 4. Maps zeigt getippten Text nicht: Ursache finden, an der gemeinsamen Stelle beheben.
 5. Ein automatischer Test „Tippen“ (Probe mit `de`-Belegung, obige Zeichen, Zeit je Taste) läuft lokal und in GitHub (Läufer mit virtuellem Bildschirm) für People, Maps, Tasks, Kalender, Wiki, Store.
 
+**Q0 – Blinc an genau einer Stelle (Vorrang 0, Nutzer 2026-11-10: „schwarzer Bildschirm bei Files immer noch“):** Ursache: Cargo wendet `[patch]` nur im obersten Projekt an. Darum trägt heute **jedes** Programm eigene Patch-Zeilen für `blinc-app-fix`/`blinc-layout-fix`, mit verschiedenen Ständen (fs-store `a139138`, fs-people und fs-components ohne Pin, der Rest `5180d4e`/`cb17db8`); eine Korrektur kommt nicht überall an. Neu:
+1. Ein Blinc-Stand für alle: Branch `freesynergy` im Fork `FreeSynergy/Blinc` = Upstream + alle unsere Korrekturen (PR 71, 72, 73 …), getaggt `fs-blinc-N`. Die Repos `blinc-app-fix`/`blinc-layout-fix` laufen aus.
+2. **Nur `fs-components` hängt an Blinc** (git-Abhängigkeit auf den Tag) und reicht es weiter (`fs_components::blinc`). Programme haben keine eigene Blinc-Abhängigkeit und keine `[patch]`-Zeilen; `gates.sh` lehnt beides ab.
+3. Wird Blinc korrigiert: neuer `fs-blinc`-Tag → neuer `fs-components`-Tag → automatisch in allen Programmen hochziehen (ein Skript/Workflow), Tests grün, neue Versionen in den Store. Ein Fehler, eine Stelle, überall weg.
+4. Prüfen, warum Files den schwarzen Bildschirm zeigt: alte installierte Version oder fehlender Patch; mit der Live-Probe belegen, nach 1–3 erneut prüfen.
+
 **Q2 – GitHub-Workflows (Haiku zählt, Sonnet behebt):** Über 280 rote Läufe. Haiku erstellt die Liste nach Ursache (nicht nach Repo); Sonnet behebt Ursachen zentral in `fs-release`, danach je Repo. Forks (`kanidm`, `tuwunel`, `zentinel`, Blinc-Forks): Upstream-Workflows im Fork abschalten oder auf unsere Änderung beschränken. Ziel: alles grün, rote Läufe blockieren Tags.
 
 **Q3 – Store (Sonnet):**
