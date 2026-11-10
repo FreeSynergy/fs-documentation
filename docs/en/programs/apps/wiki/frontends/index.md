@@ -10,7 +10,6 @@ Frontends of well-known programs in this category, analysed for their **function
 | [MediaWiki](mediawiki/index.md) | [1.46](mediawiki/1.46/description.md), [latest](mediawiki/latest/description.md) | MediaWiki is the wiki engine behind Wikipedia and the other Wikimedia projects. |
 | [Notion](notion/index.md) | [2026-11-07](notion/2026-11-07/description.md), [latest](notion/latest/description.md) | Notion is a hosted all-in-one workspace for notes, documents and databases, built from typed blocks. |
 | [Tango](tango/index.md) | [latest](tango/latest/description.md) | Tango turns recorded clicks into step-by-step guides; not a wiki, documented for its capture-to-guide idea. |
-| [Tango.io](tango.io/index.md) | [latest](tango.io/latest/description.md) | Tango.io is a modern knowledge management platform focused on collaboration. |
 | [VSCodium](vscodium/index.md) | [latest](vscodium/latest/description.md) | VSCodium is an open-source version of Microsoft Visual Studio Code. |
 | [Wiki.js](wikijs/index.md) | [3.1.1](wikijs/3.1.1/description.md), [latest](wikijs/latest/description.md) | Wiki.js is an open-source, self-hosted wiki engine. |
 | [XWiki](xwiki/index.md) | [latest](xwiki/latest/description.md) | XWiki is a powerful enterprise wiki platform with advanced features for knowledge management. |

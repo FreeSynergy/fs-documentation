@@ -91,7 +91,6 @@ Analysierte Programme (8), nach Funktion, nichts kopiert (ADR 0012/0013):
 - [MediaWiki](frontends/mediawiki/index.md) — MediaWiki ist die Wiki-Engine hinter Wikipedia und den anderen Wikimedia-Projekten.
 - [Notion](frontends/notion/index.md) — Notion ist ein gehosteter All-in-one-Arbeitsbereich für Notizen, Dokumente und Datenbanken, aufgebaut aus typisierten Blöcken.
 - [Tango](frontends/tango/index.md) — Tango verwandelt aufgezeichnete Klicks in Schritt-für-Schritt-Anleitungen; kein Wiki, dokumentiert wegen seiner Idee von der Erfassung bis zur Anleitung.
-- [Tango.io](frontends/tango.io/index.md) — Tango.io ist eine moderne Plattform für Wissensmanagement mit Schwerpunkt auf Zusammenarbeit.
 - [VSCodium](frontends/vscodium/index.md) — VSCodium ist eine quelloffene Version von Microsoft Visual Studio Code.
 - [Wiki.js](frontends/wikijs/index.md) — Wiki.js ist eine quelloffene, selbst gehostete Wiki-Engine.
 - [XWiki](frontends/xwiki/index.md) — XWiki ist eine leistungsstarke Enterprise-Wiki-Plattform mit erweiterten Funktionen für Wissensmanagement.

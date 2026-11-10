@@ -9,7 +9,6 @@ Frontends bekannter Programme dieser Kategorie, analysiert nach ihren **Funktion
 | [Confluence](confluence/index.md) | [latest](confluence/latest/description.md) | Confluence ist eine Enterprise-Wiki-Plattform von Atlassian für Team-Zusammenarbeit. |
 | [MediaWiki](mediawiki/index.md) | [latest](mediawiki/latest/description.md) | MediaWiki ist die beliebteste Wiki-Software, die u.a. von Wikipedia verwendet wird. |
 | [Notion](notion/index.md) | [latest](notion/latest/description.md) | Notion ist eine All-in-one-Plattform für Notizen, Dokumentation und Zusammenarbeit. |
-| [Tango.io](tango.io/index.md) | [latest](tango.io/latest/description.md) | Tango.io ist eine moderne Wissensmanagement-Plattform, die sich auf Zusammenarbeit konzentriert. |
 | [VSCodium](vscodium/index.md) | [latest](vscodium/latest/description.md) | VSCodium ist eine Open-Source-Version von Microsoft Visual Studio Code. |
 | [Wiki.js](wikijs/index.md) | [latest](wikijs/latest/description.md) | Wiki.js ist ein moderner, leichtgewichtiger Wiki-System basierend auf Node.js. |
 | [XWiki](xwiki/index.md) | [latest](xwiki/latest/description.md) | XWiki ist eine leistungsstarke Enterprise-Wiki-Plattform mit erweiterten Funktionen für Wissensmanagement. |
