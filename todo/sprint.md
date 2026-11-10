@@ -41,7 +41,7 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 
 **Merkposten (Nutzer, 2026-11-10, später):**
 - Subdomains heißen wie das Programm ohne `fs-` (`people.…`, `identity.…`); änderbar.
-- Server-Aufbau später.
+- Server-Aufbau später. **Vorschlag Strategie (2026-11-10):** Debian 13 (Trixie) als Grundsystem (unsere deb-Pakete werden schon auf debian:13 getestet). Prinzip „Server sind austauschbar“: das System bleibt minimal; alle Programme kommen als unsere Pakete, alle Daten liegen an einer Stelle (`/srv/freesynergy`, verschlüsselt, ADR 0067) mit Sicherung; Umzug = neuer Server, Pakete installieren, Daten einspielen, DNS umstellen – das ist auch der Weg für große Updates. Kanidm, Zentinel (und Stalwart) als Forks bei uns: nur zum Bauen unserer Pakete und Testen fester Versionen, keine eigene Weiterentwicklung; Korrekturen gehen upstream (ADR 0015); Upstream-Workflows im Fork aus.
 - Der Store bietet auch passende fremde Programme an (Kanidm, Zentinel …), gern mit eigenen, austauschbaren Frontends.
 - **Paketquellen nach Standard:** Aus dem Katalog entstehen echte Paketquellen, die man ins System einbindet: dnf/rpm (createrepo, signiert), apt (signiertes `InRelease`), Flatpak (OSTree), Windows (winget), macOS (Homebrew-Tap); Programme, Facetten, Frontends, Themes als eigene Pakete mit Abhängigkeiten. Eigene ADR, wenn Q1–Q3 grün sind.
 
