@@ -17,7 +17,7 @@ Einzeilig einfügen, N ersetzen:
 Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müssen funktionieren, bevor neue Frontends kommen. **Jeder Fehler wird an einer Stelle behoben, sodass er überall weg ist** (Component oder Blinc, nie im Programm).
 
 **Arbeitsweise (neu):**
-- Die Strategie (Opus) startet selbst einen frischen Haiku-Koordinator, wenn sie ihn braucht, und kontrolliert ihn. **Haiku koordiniert und prüft nur, programmiert nie.** Programmiert wird von Sonnet, wenn nötig Opus.
+- Koordinator ist die Sonnet-Sitzung `freesynergy-86` (/loop); sie startet die Agenten und meldet gebündelt an die Strategie (Opus). **Haiku koordiniert und prüft nur, programmiert nie.** Programmiert wird von Sonnet, wenn nötig Opus.
 - **Grün vor Tag:** Ein Tag oder Update gibt es nur, wenn dieselben Tests lokal **und** auf GitHub grün sind. Jedes Programm wird in dieser Runde höchstens ein- bis zweimal angefasst: erst fertig prüfen, dann einmal ändern.
 
 **Q1 – Texteingabe (Sonnet, Vorrang 1, eine Stelle für alle):**
@@ -34,6 +34,8 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 2. **Nur `fs-components` hängt an Blinc** (git-Abhängigkeit auf den Tag) und reicht es weiter (`fs_components::blinc`). Programme haben keine eigene Blinc-Abhängigkeit und keine `[patch]`-Zeilen; `gates.sh` lehnt beides ab.
 3. Wird Blinc korrigiert: neuer `fs-blinc`-Tag → neuer `fs-components`-Tag → automatisch in allen Programmen hochziehen (ein Skript/Workflow), Tests grün, neue Versionen in den Store. Ein Fehler, eine Stelle, überall weg.
 4. Prüfen, warum Files den schwarzen Bildschirm zeigt: alte installierte Version oder fehlender Patch; mit der Live-Probe belegen, nach 1–3 erneut prüfen.
+
+**Q1c – Tasten-Stau (Strategie, 2026-11-11):** Ursache belegt: Blinc blockiert den Ereignis-Faden in `get_current_texture()` (bis 1 s, wartet auf ein Swapchain-Bild) und liest dabei keine Eingaben → Tasten kommen gebündelt (9–16 von 20 Läufen; Qt im selben KWin ohne Stau). Korrektur jetzt im Branch `freesynergy` (fs-blinc-3), PR an Upstream erst nach Zustimmung (Issue 75). Zuerst die kleine Lösung messen (`pre_present_notify`, Redraw nur auf Frame-Callback, Frame-Latenz 2), sonst Render-Faden getrennt vom Ereignis-Faden. Abnahme: Stau < 1/20 in Formular und Maps, keine 1-s-Hänger, Leerlauf-CPU nicht höher, Tipptest grün, Opus-Review. Q0 wartet nicht darauf: Q0 mit fs-blinc-2 taggen, fs-blinc-3 ist dann der erste normale Bump über die eine Stelle. fs-maps rückt in der Migration direkt hinter fs-files/fs-store.
 
 **Q2 – GitHub-Workflows (Haiku zählt, Sonnet behebt):** Über 280 rote Läufe. Haiku erstellt die Liste nach Ursache (nicht nach Repo); Sonnet behebt Ursachen zentral in `fs-release`, danach je Repo. Forks (`kanidm`, `tuwunel`, `zentinel`, Blinc-Forks): Upstream-Workflows im Fork abschalten oder auf unsere Änderung beschränken. Ziel: alles grün, rote Läufe blockieren Tags.
 
