@@ -33,16 +33,16 @@ JSContact ist ein standardisiertes, **reines JSON-Kontaktmodell**: RFC 9553 („
 | `links` | map | Links zu Web-Profilen |
 | `media` | map | Fotos, Audio, Logos (URL oder Data-URI) |
 | `localizations` | map | locale-abhängige Übersetzungen von Textfeldern |
-| `anniversaries` | map | besondere Daten (Geburtstag, Jubiläen) als `Annual`-Objekte |
+| `anniversaries` | `Id[Anniversary]` | besondere Daten als `Anniversary`-Objekte: `kind` = `birth`, `death` oder `wedding`, dazu `date` (PartialDate oder Timestamp) und optional `place`. Geburts- und Todesdatum liegen hier, nicht in `personalInfo` |
 | `keywords` / `notes` | map | Verschlagwortung, Freitext |
-| `personalInfo` | `PersonalInfo` | `birthDate`, `deathDate`, `gender`, `subType` |
+| `personalInfo` | `Id[PersonalInfo]` | persönliche Informationen wie Fachkenntnisse, Hobbys und Interessen: `kind` (Pflicht) = `expertise`, `hobby` oder `interest`, `value` (Pflicht), optional `level` (`high`, `medium`, `low`), `listAs`, `label` |
 | `extensions` | map | standardisierter Erweiterungspunkt für eigene Felder |
 
 ## Abdeckung unserer Anforderungen
 
 | Anforderung | JSContact | Hinweis |
 |-------------|-----------|---------|
-| Personen- und Firmenkarten | ✅ | `Organization[]`, `kind`-Unterscheidung via `personalInfo.subType` |
+| Personen- und Firmenkarten | ✅ | `Organization[]`; das Karten-`kind` (`individual`, `group`, `org`, `location`, `device`, `application`; Standard `individual`) unterscheidet Personen- und Firmenkarten |
 | Mehrere Adressen/Telefonnummern je Karte | ✅ | maps mit Typ-Schlüsseln |
 | Historie/Revision | ⚠️ | Standard definiert kein Revisionsmodell – Umsetzung siehe [storage.md](storage.md) |
 | Kundenstatus (`lifecycle`: lead/prospect/customer/churned) | ❌ | existiert in keinem Standard → als `extensions`-Erweiterung (⚠️ Mechanismus noch belegen, offener Punkt in [kontakt/index.md](../index.md)) |

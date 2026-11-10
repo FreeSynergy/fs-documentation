@@ -33,16 +33,16 @@ JSContact is a standardised, **pure JSON contact model**: RFC 9553 ("JSContact: 
 | `links` | map | links to web profiles |
 | `media` | map | photos, audio, logos (URL or data URI) |
 | `localizations` | map | locale-dependent translations of text fields |
-| `anniversaries` | map | special dates (birthday, anniversaries) as `Annual` objects |
+| `anniversaries` | `Id[Anniversary]` | special dates as `Anniversary` objects: `kind` = `birth`, `death` or `wedding`, plus `date` (PartialDate or Timestamp) and optional `place`. Birth and death dates live here, not in `personalInfo` |
 | `keywords` / `notes` | map | tagging, free text |
-| `personalInfo` | `PersonalInfo` | `birthDate`, `deathDate`, `gender`, `subType` |
+| `personalInfo` | `Id[PersonalInfo]` | personal information such as expertise, hobbies and interests: `kind` (mandatory) = `expertise`, `hobby` or `interest`, `value` (mandatory), optional `level` (`high`, `medium`, `low`), `listAs`, `label` |
 | `extensions` | map | standardised extension point for own fields |
 
 ## Coverage of our requirements
 
 | Requirement | JSContact | Note |
 |-------------|-----------|------|
-| Personal and company cards | ✅ | `Organization[]`, `kind` distinction via `personalInfo.subType` |
+| Personal and company cards | ✅ | `Organization[]`; the card-level `kind` (`individual`, `group`, `org`, `location`, `device`, `application`; default `individual`) distinguishes person and company cards |
 | Several addresses/phone numbers per card | ✅ | maps with type keys |
 | History/revision | ⚠️ | the standard defines no revision model – implementation see [storage.md](storage.md) |
 | Customer status (`lifecycle`: lead/prospect/customer/churned) | ❌ | exists in no standard → as an `extensions` extension (⚠️ mechanism still to be evidenced, open point in [people/index.md](../index.md)) |
