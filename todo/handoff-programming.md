@@ -279,3 +279,15 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 - **Vorlagen-Recherche** (Haiku, `.scratch/reference/`, nur lokal): Abschnitt „Windows templates“ in `docs/en/programs/map.md` (de-Fassung fehlt). Offen für den Nutzer: Whiteboard, Surveys, Streaming, Videos (Microsoft-Angaben). Bilder für R6 nur lokal, Outlook- und To-Do-Bilder nicht herunterladbar; nächster Schritt: Bilder im Browser nachprüfen.
 - **Vault-Recherche**: `temp/research/vault-encryption.md` auf `origin/main` (`7527ff9e`), Offen-Liste: CXP-Status, OpenMLS-Audit, Linux-Browserwege außer credentialsd, Windows-API-Anforderungen, UX-Vergleich. Nächster Schritt: nächste Runde (fs-vault).
 - **fs-documentation**: lokaler `main` hat einen Commit `d485e779` (gleicher Inhalt wie `7527ff9e`) und 73 fremde, uncommittete Änderungen im Hauptverzeichnis. Nicht anfassen, nicht `reset`en.
+
+## Koordinator Runde 3b (2026-11-10 abends)
+
+- fs-interfaces v0.0.15 fertig: clippy pedantic in fs-types-Tests behoben (main 518fef4).
+- fs-interfaces v0.0.16 fertig: Windows-Port, Named Pipe nur eigene SID, Control.stop, gemeinsamer --facet-Parser rpc::parse_facet (Opus ok; main 57f7c3b).
+- fs-interfaces v0.0.17 fertig: Versions-Handshake connect_matching, Control.version, stop_server gibt Unsupported (Opus 2x ok; main 298cebc). Offen: ESRCH als beendet werten, thread::Builder.
+- fs-files win-port in main (9285663, Opus ok). Fenster lehnt --facet ab, kommt mit Q0-Migration. Tag 0.0.6 nach Q0.
+- fs-store Q3 in main (cc17315 und 666770e): Updates auf der Startseite, Jobliste, display_name FreeSynergy.Name, Neuladen per Epoche (Opus 3x). Offen: catch_unwind bei fetch-Panic.
+- Q1a: kein Blinc-Defekt. fs-blinc-1 (6b74373c) im Fork FreeSynergy/Blinc. Messung fs-people: 8–11 ms/Taste; alter Pin zeigt getippten Text nicht. git-bug b9318d2e57f0f82b298eb5605c539a7467d0c0c661cdd1f206f0a0b886b75cb0 (Frame-Loop).
+- Q0 (Opus): nein. fs-components main ohne fs-components-map/fs-admin-frontend, bump-Skript, Regel-Reihenfolge. q0-integration und fs-release-Härtung laufen.
+- fs-catalog: fs-files auf v0.0.2 zurückgesetzt (b9dd57c), sign grün.
+- Release-Ablauf steht in .scratch/release-flow.md.
