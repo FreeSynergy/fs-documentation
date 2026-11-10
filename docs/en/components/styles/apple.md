@@ -152,8 +152,8 @@ noted):
 
 | Font | Licence | Note |
 |------|---------|------|
-| Inter | SIL Open Font License 1.1 | Neutral grotesque, large x-height, close to SF in use. Licence from memory, to be checked on the font's page before shipping. |
-| Noto Sans | SIL Open Font License 1.1 | Wide language coverage. Licence from memory, to be checked. |
+| Inter | SIL Open Font License 1.1 (checked 2026-11-10 in https://github.com/rsms/inter, "Copyright (c) 2016 The Inter Project Authors") | Neutral grotesque, large x-height, close to SF in use. |
+| Noto Sans | SIL Open Font License 1.1 (checked 2026-11-10 in https://github.com/notofonts/noto-fonts, "Copyright 2018 The Noto Project Authors") | Wide language coverage. |
 
 For the Apple style use **Inter** first; it has the closest feel for the text styles above. Check the licence text in
 the font package before any release.

@@ -106,8 +106,8 @@ Source: `list`, `field`, `content_ui`, `text` categories.
 
 | Font | Licence | Note |
 |------|---------|------|
-| Noto Sans | SIL Open Font License 1.1 | Neutral humanist sans with a large x-height; similar text width to 72 at 14 px. Licence from memory; check before shipping. |
-| Inter | SIL Open Font License 1.1 | Designed for interface text at 12 to 16 px; close to 72 in use. Licence from memory; check before shipping. |
+| Noto Sans | SIL Open Font License 1.1 (checked 2026-11-10 in https://github.com/notofonts/noto-fonts) | Neutral humanist sans with a large x-height; text width to be compared with 72 at 14 px. |
+| Inter | SIL Open Font License 1.1 (checked 2026-11-10 in https://github.com/rsms/inter) | Designed for interface text at 12 to 16 px. |
 
 Use **Inter** for the Admin style first; Noto Sans as the fallback where a script is missing. Check the measures with
 the metric test before the tag (text width of long labels in table cells).

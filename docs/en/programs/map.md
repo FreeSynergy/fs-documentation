@@ -40,6 +40,32 @@ addition of 2026-11-09).
 
 The analyses of well-known programs per category (`frontends/<program>/latest/`) stay the source for **functions**.
 
+## Windows templates (approved by the owner, 2026-11-10)
+
+The Windows style is rebuilt 1:1 from one Windows program per category, preferably one without a Linux counterpart.
+No Linux program is a template. Measures and sources: `docs/en/components/styles/windows.md`.
+
+| Category (program or facet) | Windows program | Notes |
+|-----------------------------|-----------------|-------|
+| People | Outlook | People view of the new Outlook for Windows |
+| Mail (messenger) | Outlook | Mail module of the new Outlook |
+| Calendar | Outlook | Calendar module of the new Outlook |
+| Groups | Microsoft Teams | |
+| Tasks | Microsoft To Do | |
+| Files | File Explorer | |
+| Gallery (facet of files) | Photos | Microsoft Photos |
+| Videos | Media Player | Check which of the two players is meant: the new Media Player app, or Windows Media Player Legacy (optional feature) |
+| Wiki | OneNote | |
+| Maps | Google Earth | Google Earth Pro for Windows. Street View gets no frontend of its own |
+| Whiteboard | Microsoft Whiteboard | **Open:** Microsoft's support page says the standalone Whiteboard apps for Windows retire on 2026-10-16 (Whiteboard stays in Teams and on the web, for work and school accounts). Needs a decision before the rebuild |
+| Surveys | Microsoft Forms | **Open:** Forms is a web service without a Windows app |
+| Resources | Excel | |
+| Streaming | YouTube Studio | **Open:** YouTube Studio is a web service without a Windows app; its Live Control Room is the reference |
+| Store | Microsoft Store | |
+| Start | Start menu and Widgets | |
+| Identity | Settings > Accounts, plus Windows Hello | A settings page, not a program |
+| History | none | No template |
+
 ## Basic types (first list)
 
 | Basic type | Standard | Used by |

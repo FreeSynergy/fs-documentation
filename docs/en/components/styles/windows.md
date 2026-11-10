@@ -153,60 +153,57 @@ now live in the **new Outlook for Windows**, which shows a People view.
 - **Dimensions** (pane widths, card width, row heights): **not published**. Measure from screenshots of the new Outlook
   and record them here with source and date.
 
-## 8. Windows program templates (proposal, for the user to choose)
+## 8. Windows program templates (approved 2026-11-10)
 
-Requested by the sprint, Thread M, item 4. This list follows the programs in `docs/en/programs/map.md`. **Note:** the
-map has no section "Windows templates"; this list is therefore the first proposal, to be copied into `map.md` once the
-user has chosen. The Windows-only status of each candidate is **to be checked** before the choice is made; none was
-checked in this pass unless marked.
+Approved by the owner through the coordinator. The list is entered in `docs/en/programs/map.md`, section "Windows
+templates". Three entries are open and need a decision (see the notes there): Whiteboard (the standalone Windows app
+retires on 2026-10-16 according to Microsoft's support page), Forms and YouTube Studio (web services, no Windows app).
 
-| Category (map program) | Windows program | Special feature | Linux counterpart (must not be a template) |
-|------------------------|-----------------|-----------------|----------------------------------------------|
-| People | Outlook (People view) | Duplicate linking, organisational profile enrichment | none native |
-| Groups | Microsoft Teams | Teams and channels with members | none native (web only; to check) |
-| Calendar | Outlook Calendar | Shared free time, time zones side by side (to check) | none native |
-| Messenger (mail) | Outlook (Mail) | Focused inbox, rules | none native |
-| Tasks | Microsoft To Do | "My Day", lists, reminders | none native (web only) |
-| Files | File Explorer | Quick access, libraries, preview pane | not a Linux program; Explorer is Windows |
-| Gallery (files) | Microsoft Photos | People and place groups, search (to check) | none native |
-| Videos (files) | Movies & TV | Video library and playback | none native |
-| Wiki, notes | Microsoft OneNote | Notebooks, sections, pages | none native (web only) |
-| Maps | **unclear** (Windows Maps status to check) | – | – |
-| Whiteboard | Microsoft Whiteboard | Unlimited canvas, pen input (to check whether still a shipped app) | web only |
-| Surveys | **no Windows program** (Microsoft Forms is web) | – | – |
-| History | Windows activity history (status to check) | – | – |
-| Resources, ERP | Microsoft Excel | Tables, formulas (not a Linux program) | none native |
-| Store | Microsoft Store | Package catalogue, updates | Linux stores are Linux programs; not used |
-| Desktop (start) | Start menu and Widgets | Pinned apps, recommended items | – |
-| Streaming | **no clean candidate** | – | – |
-| Identity | Settings > Accounts, Windows Hello | PIN, face and fingerprint sign-in | – (a settings page, not a program) |
+| Category | Windows program | Linux counterpart |
+|----------|-----------------|-------------------|
+| People | Outlook (People view) | none native |
+| Mail | Outlook (Mail) | none native |
+| Calendar | Outlook (Calendar) | none native |
+| Groups | Microsoft Teams | none native |
+| Tasks | Microsoft To Do | none native |
+| Files | File Explorer | not a Linux program |
+| Gallery (facet of Files) | Microsoft Photos | none native |
+| Videos | Media Player (new app or Windows Media Player Legacy, to decide) | none native |
+| Wiki | Microsoft OneNote | none native |
+| Maps | Google Earth Pro (Windows; no Street View frontend) | to check (Linux desktop build) |
+| Whiteboard | Microsoft Whiteboard (open: retirement) | web only |
+| Surveys | Microsoft Forms (open: web only) | web only |
+| Resources | Microsoft Excel | none native |
+| Streaming | YouTube Studio (open: web only) | web only |
+| Store | Microsoft Store | Linux stores are Linux programs; not used |
+| Start | Start menu and Widgets | not a Linux program |
+| Identity | Settings > Accounts, plus Windows Hello | a settings page |
+| History | none | no template |
 
-Decisions needed from the user, through the coordinator:
+## 9. Open fonts (chosen)
 
-1. Pick one per category, or accept the first option in each row.
-2. Decide the conflicts: Outlook appears for People and for Mail; Teams for Groups.
-3. Decide Maps, Surveys, History, Streaming and Identity (rows marked above).
+| Font | Licence (checked 2026-11-10) | Use |
+|------|------------------------------|-----|
+| Selawik | SIL Open Font License 1.1; copyright Microsoft; the name "Selawik" is reserved, so derived versions must be renamed (Microsoft Learn font list: https://learn.microsoft.com/en-us/typography/font-list/selawik) | Windows style. Open replacement for Segoe UI, metrically compatible with it |
+| Inter | SIL Open Font License 1.1 (licence file of https://github.com/rsms/inter, "Copyright (c) 2016 The Inter Project Authors") | Apple style, and fallback for Windows if Selawik does not suit |
+| Noto Sans | SIL Open Font License 1.1 (licence file of https://github.com/notofonts/noto-fonts, "Copyright 2018 The Noto Project Authors") | Script fallback |
 
-## 9. Open fonts with similar measures
-
-| Font | Licence | Note |
-|------|---------|------|
-| Selawik | SIL Open Font License 1.1, copyright Microsoft, "Selawik" is a reserved font name | Open replacement for Segoe UI, **metrically compatible** with it (Microsoft Learn font list: https://learn.microsoft.com/en-us/typography/font-list/selawik). First choice for the Windows style. Derived versions must be renamed (reserved name). |
-| Inter | SIL Open Font License 1.1 | Close feel to Segoe UI at small sizes. Licence from memory; check the font package before shipping. |
-| Noto Sans | SIL Open Font License 1.1 | Wide script coverage. Licence from memory; check before shipping. |
-
-Selawik is the closest in measures; it is the first candidate for the Windows style, with Inter as the fallback if its
-letter shapes do not suit.
+Before a release, ship the licence file next to each font file and check the reserved-name rule for Selawik.
 
 ## 10. Screenshots
 
-Downloaded from official Microsoft Learn pages, stored **outside any repository** under
-`/srv/FreeSynergy/.scratch/reference/windows/` with a `SOURCES.txt` per folder:
+Under `/srv/FreeSynergy/.scratch/reference/windows/` (never in a repository), each folder with a `SOURCES.txt`:
 
-- `mica/` : `mica-light-theme.png`, `mica-dark-theme.png`, `mica-alt-tabs.png` (Mica material page)
-- `acrylic/` : `acrylic-light-theme-base.png`, `acrylic-dark-theme-base.png` (Acrylic material page)
-- `corners/` : `button.png`, `flyout.png` (Geometry page, rounded corners)
+- `mica/`: `mica-light-theme.png`, `mica-dark-theme.png`, `mica-alt-tabs.png` (Microsoft Learn, Mica material)
+- `acrylic/`: `acrylic-light-theme-base.png`, `acrylic-dark-theme-base.png` (Microsoft Learn, Acrylic material)
+- `corners/`: `button.png`, `flyout.png` (Microsoft Learn, Geometry in Windows 11)
 
-Not yet collected: People / new Outlook contact view (no official screenshot reached in this pass), and the chosen
-Windows templates (section 8). Next step after the choice: take them from the program's Microsoft page or the Microsoft
-Store listing.
+Still missing, per approved program:
+
+- **Outlook and To Do**: Microsoft's support page "Use My Day with To Do in Outlook" has screenshots (`new-outlook-my-day-calendar-tab`, `new-outlook-to-do-my-day-to-do-tab-open-to-do`). The image links the tool returned do not resolve (404), so they are not downloaded.
+- **File Explorer**: support page "File Explorer in Windows" (https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows); image links returned by the tool do not resolve yet.
+- **Teams**: support page "Overview of teams and channels" (https://support.microsoft.com/en-us/office/overview-of-teams-and-channels-c3d63c10-77d5-4204-a566-53ddcf723b46).
+- **Settings > Sign-in options**: https://support.microsoft.com/en-us/accounts-billing/security/sign-in-options-in-windows.
+- **Photos, Media Player, OneNote, Excel, Google Earth Pro, Forms, YouTube Studio, Store, Start, Widgets**: no screenshot found in this pass; the support pages were searched, but their images were not fetchable.
+
+Next step: open the official pages in a browser, check the image addresses there, and download them with a SOURCES.txt entry for each image.
