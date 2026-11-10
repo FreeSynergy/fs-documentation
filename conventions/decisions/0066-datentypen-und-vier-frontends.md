@@ -42,6 +42,11 @@ Je Kategorie wird das Programm Vorbild, das in **Funktionen, UX und UI** am best
 - **Galerie** (Facette von `fs-files`) zeigt Bilder und Videos von hier **und von weiter weg**: YouTube, Vimeo, Odysee, PeerTube sind Quellen der Galerie, angebunden wie KIs in People (Anbieter hinter einer Schnittstelle).
 - **Studio** (Facette von `fs-streaming`): Live-Produktion und Live-Schnitt, Szenen, Gäste, an mehrere Ziele senden (OBS, Restream, StreamYard, vMix …).
 
+## Regel: Arbeiten gegen echte Vorbilder, mehrere zugleich (Nutzer, 2026-11-10)
+- Es wird immer an mehreren Dingen zugleich gearbeitet und gegen **echte Vorbilder** nachgebaut. Nur so lässt sich genau sagen „das sieht nicht so aus – warum?“ und niemand kann sich ein „ist schon OK“ einreden.
+- Zur Gegenprobe werden die Frontends **ausgetauscht** (2 oder 4 an demselben Kern): funktioniert eines und das andere nicht, liegt der Fehler in der Component oder in Blinc, nicht im Programm. Erst wenn alle funktionieren, gilt der Stand als richtig.
+- Reihenfolge: zuerst Runde 3b (Tippen, Installieren, grün), dann die Frontends nach Vorbild, dann Installieren direkt aus unseren Paketquellen (rpm, deb).
+
 ## Folgen
 - Die Analysen der bekannten Programme je Kategorie bleiben Quelle für **Funktionen**; das Aussehen kommt aus den vier Frontends.
 - Die Schnittstellen in `docs/en/interfaces/` werden aus den Typbeschreibungen abgeleitet und als Ziel v1 festgelegt (ADR 0045).
