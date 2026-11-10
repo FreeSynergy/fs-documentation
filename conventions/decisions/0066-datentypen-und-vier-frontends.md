@@ -30,6 +30,11 @@ Die Schnittstellen wurden beim Programmieren ausgesucht statt vorher festgelegt;
 - Grund: Wiederverwendbarkeit. Was einmal als Component existiert, nutzen alle Programme und alle Frontends.
 - Ein Programm setzt keine Component ein, die es in `fs-components` nicht gibt; fehlt eine, wird sie dort gebaut.
 
+## Regel: Frontends sind das Ziel, Funktionen werden nur angeschaltet (Nutzer, 2026-11-10)
+- Die Frontends werden **jetzt vollständig und 1:1** gebaut, mit allen Bedienelementen, auch für Funktionen, die der Kern noch nicht hat. Danach ändern sie sich nicht mehr; die Funktionen kommen Schritt für Schritt dazu.
+- **Anschalten geschieht von selbst:** Die Typbeschreibung meldet je Befehl, ob er unterstützt ist. Ein Bedienelement für einen nicht unterstützten Befehl ist sichtbar, aber gesperrt, mit dem Hinweis „kommt noch“. Sobald der Kern den Befehl meldet, ist es frei – ohne Änderung am Frontend.
+- Die verschiedenen Frontends sind unser **Maßstab**: Sie halten fest, was wir zugesagt haben.
+
 ## Folgen
 - Die Analysen der bekannten Programme je Kategorie bleiben Quelle für **Funktionen**; das Aussehen kommt aus den vier Frontends.
 - Die Schnittstellen in `docs/en/interfaces/` werden aus den Typbeschreibungen abgeleitet und als Ziel v1 festgelegt (ADR 0045).

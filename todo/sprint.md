@@ -86,6 +86,9 @@ Aufteilung (je Liste ein Sonnet-Agent; nie zwei in dasselbe Programm-Repo):
 
 Reihenfolge, wenn das Kontingent knapp wird: R0, R1, R2, R3, R4.
 
+**Regel für R (Nutzer, 2026-11-10, ADR 0066):** Frontends werden **jetzt vollständig 1:1** gebaut, mit allen Bedienelementen der Vorlage, auch für Funktionen, die der Kern noch nicht hat. Die Typbeschreibung meldet je Befehl `supported` ja/nein (Thread T ergänzt das in `types.capnp`, falls es fehlt); nicht unterstützte Bedienelemente sind sichtbar, gesperrt, mit Hinweis „kommt noch“, und werden frei, sobald der Kern den Befehl meldet – ohne Änderung am Frontend. Für jedes Programm gilt deshalb: alle Befehle aus der `requirements.md` in die Typbeschreibung aufnehmen (die fehlenden mit `supported = false`).
+- **R6 (Sonnet, je Programm nach R0–R4):** die Frontends Einfach, Apple und Windows 1:1 nach den Vorlagen (Thread M, Bildschirmfotos), in dieser Reihenfolge der Programme: People, Tasks, Kalender, Dateien, Wiki, Rest. Was bis Sonntag nicht fertig wird, läuft in der nächsten Runde weiter.
+
 ## Runde 2 (Nutzer, 2026-11-07 abends): Laden `fs-store` lauffähig und installierbar
 
 Die fünf Threads der Runde 1 sind fertig. Runde 2 hat fünf neue Threads; S, M und U starten nach dem Ende der Umbenennung (Nutzer), D sofort. **Sprint.md immer von GitHub lesen** (`git -C /srv/FreeSynergy/fs-documentation fetch -q && git -C /srv/FreeSynergy/fs-documentation show origin/main:todo/sprint.md`), der lokale geteilte Baum ist veraltet. Mechanische Arbeit (Suchen und Ersetzen, Doku nachziehen, Listen) an Haiku-Agenten geben, sie verbrauchen am wenigsten; Code-Prüfung vor jedem Tag weiter durch einen zweiten Agenten, der den Code nicht schrieb.
