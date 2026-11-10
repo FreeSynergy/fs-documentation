@@ -25,8 +25,8 @@ for the right to hand out free software, so we don't.
 
 | Platform | Formats | Note |
 |----------|---------|------|
-| Linux | deb, rpm, tar.gz, AppImage, Flatpak, Arch | |
-| Windows | msi, exe, zip | Unsigned, so Windows shows a warning. A free signing programme for open-source projects is being considered |
+| Linux | deb (Debian 13, Ubuntu 24.04), rpm, tar.gz, AppImage, Flatpak, Arch | |
+| Windows | zip (with the `.exe`), msi, setup.exe | Not yet signed with a Windows certificate, so SmartScreen warns (see below). A free signing programme for open-source projects is being considered (SignPath, ADR 0051) |
 | macOS | Universal dmg | Unsigned, so macOS shows a warning. We pay Apple nothing; a donated account would be acceptable |
 | Android | F-Droid | |
 | iOS | Build only | No free way to distribute |
@@ -46,7 +46,24 @@ for the right to hand out free software, so we don't.
 Shared workflows live in [`fs-release`](https://github.com/FreeSynergy/fs-release), so every repository releases the same way.
 Releases start as drafts, and become public when they bring people something.
 
-**Tried so far:** tar.gz for Linux and macOS universal, deb, rpm, Arch, Windows msi and zip, SPDX SBOM, checksums.
+**Tried so far:** tar.gz for Linux and macOS universal, deb, rpm, Arch, Windows zip, msi and setup.exe, SPDX SBOM, checksums.
 OpenPGP signatures too, with the [release key](https://github.com/FreeSynergy/fs-release/blob/main/release-signing-key.asc), fingerprint
 `16A4 A3EE 563A EF51 FCF0  C55D ED7B 57C4 A190 4342`, until 2029-11-07, made by the project owner himself (2026-11-07). **Do not trust the earlier key** `C40F 0FBA 5C4C F71D 7BEB  B5C6 5478 A473 8FFE EB69`: an AI agent created it and knew its passphrase. Nothing public was signed with it, and it was revoked on 2026-11-07.
-**Not tried yet:** AppImage, exe, dmg, Flatpak, containers, mobile.
+**Not tried yet:** AppImage, dmg, Flatpak, containers, mobile.
+
+## Tested before the draft exists
+
+Every package is installed on the system it is meant for, every program is started once and the package is removed again;
+if one step fails, there is no release. `deb` is tried in a Debian 13 and an Ubuntu 24.04 container (x86_64 and aarch64), the
+Windows `zip`, `msi` and `setup.exe` on a Windows runner. Not tested this way yet: `rpm`, AppImage, dmg.
+
+## Windows: the SmartScreen warning
+
+A Windows certificate costs money every year, and Microsoft would be the only one earning from free software. So the Windows
+files are **not signed with a Windows certificate yet**. When you start the `.msi` or the `-setup.exe`, Windows shows "Windows
+protected your PC". That is no sign of a problem with the file, only of the missing certificate. Click **More info**, then
+**Run anyway**. The `.zip` has no installer: unpack it and start the `.exe` inside (SmartScreen may ask the same once).
+
+What you can check instead is the OpenPGP signature (`.asc` next to every file) and `SHA256SUMS.txt` against the
+[release key](https://github.com/FreeSynergy/fs-release/blob/main/release-signing-key.asc). As soon as SignPath (a free signing
+service for open-source projects) agrees, the Windows files get a real signature and the warning goes away over time.
