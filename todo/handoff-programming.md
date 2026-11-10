@@ -291,3 +291,14 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 - Q0 (Opus): nein. fs-components main ohne fs-components-map/fs-admin-frontend, bump-Skript, Regel-Reihenfolge. q0-integration und fs-release-Härtung laufen.
 - fs-catalog: fs-files auf v0.0.2 zurückgesetzt (b9dd57c), sign grün.
 - Release-Ablauf steht in .scratch/release-flow.md.
+- fs-release Q2b: publish-Job (Draft→Pre-Release, nur bei vollständigen Dateien+.asc) in main 3571366.
+- fs-catalog bump.yml in main 0113798: alle 15 Min, Pull, eigenes GITHUB_TOKEN, Signatur gegen Fingerprint 16A4A3EE563AEF51FCF0C55DED7B57C4A1904342, nur FreeSynergy/-Repos. Generator überspringt Drafts mit `::warning::`; sign Mo/Do mit 35 Tagen Gültigkeit; Issue bei rotem sign.
+- Gates zentral in main 7964f55: scripts/gates.sh, actions/gates, RUST_VERSION 1.99.1. Release-Build gepinnt auf ac3030b.
+- check_blinc-Regel in main d6afdca: Schalter `.fs-rules.toml` `blinc = "components-only"` (Standard AUS), dazu bump-components.sh. Regel-Lücken geschlossen in 9789178 und 43198b3.
+- Forks: Upstream-Workflows in kanidm, tuwunel und zentinel abgeschaltet (.scratch/q2b-forks.md).
+- Q2a Ursachenliste: .scratch/q2-ci-causes.md (694 rote Läufe in der Stichprobe, 8 aktuell rot auf main).
+- fs-wiki win-port in main 34f0278: cap-std-Export, File::try_lock, stop_self, --facet über parse_facet, aux.rs→side_records.rs. Offen: Hub-Port nach Windows später (nicht Runde 3b); Page.change→typisierter Edit nach Q0; Windows übernimmt Rechte/Besitzer einer ersetzten Export-Datei nicht = bekannte Grenze.
+- Blinc: fs-blinc-1/-2 im Fork FreeSynergy/Blinc. Upstream-PR 74 (Caret-Kerning), Issue 75 (Frame-Loop/Keep-Alive-Frage an Darmie, hängt an ihm).
+- Q1b Tipptest-Action: fs-release Branch q1b-typing-test, in Überarbeitung nach Opus. Maps-Ursache = alte Pins (Q0 behebt).
+- Q0: q0-integration in fs-components (Kern fs-blinc-2, fs-admin-frontend, fs-components-map) in Überarbeitung nach Opus.
+- Immutable releases: Nutzer sagt vorerst NEIN (erneut fragen, wenn Runde 3b grün).
