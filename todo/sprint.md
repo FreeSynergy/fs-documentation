@@ -48,7 +48,7 @@ Einzeilig einfügen, N ersetzen:
 Arbeitsort `/srv/FreeSynergy/blinc` (Fork `FreeSynergy/Blinc`), Regeln aus der dortigen `CLAUDE.md`: keine KI-Kennzeichnung, git-bug-Trailer mit voller ID, `git-bug.git-transport=git`.
 1. **PR 71** (https://github.com/project-blinc/Blinc/pull/71): auf `upstream/main` rebasen, Konflikt in `CHANGELOG.md` lösen. Darmies Einwand umsetzen: nicht den ganzen Baum neu stylen (`apply_stylesheet_base_styles`, ~18 µs je Knoten, 3× das Update), sondern nur die Knoten, deren Props `incremental_update` ersetzt hat, über `apply_stylesheet_base_styles_for_subtree`. Dasselbe im Web-Runner (`web.rs`, `build_and_update`, Zweig `VisualOnly`). Mit seiner Messung (153/753/3003 Knoten) vorher/nachher messen, die Zahlen in den git-bug-Eintrag, kurz auf GitHub antworten, Force-Push.
 2. **Unser Patch-Fork `blinc-app-fix` enthält die teure Fassung** – alle Apps zahlen sie bei jedem Update. Sofort auf die neue Fassung bringen und die Apps neu bauen.
-3. **Geschwindigkeit messen:** Mit der Live-Probe (kwin --virtual + echte Eingabe) die Zeit von Taste bis Bild in Tasks und Kalender messen und aufschlüsseln (Builder, `incremental_update` – bei 3003 Knoten schon 17,6 ms –, Stil, Layout, Zeichnen). Befunde als git-bug-Einträge mit Beleg; Vorschläge an Darmie erst als Eintrag, PR erst nach seiner Zustimmung.
+3. **Geschwindigkeit messen:** Mit der Live-Probe (kwin --virtual + echte Eingabe) die Zeit von Taste bis Bild in Tasks und Kalender messen und aufschlüsseln (Builder, `incremental_update` – bei 3003 Knoten schon 17,6 ms –, Stil, Layout, Zeichnen). Befunde als git-bug-Einträge mit Beleg; **Abgrenzung (Strategie, 2026-11-10):** Fehlerbehebungen gehen nach Test und Live-Probe direkt als PR. Umbauten an Blincs Aufbau für mehr Geschwindigkeit (z. B. kein Baum-Vergleich, kein Zeichnen im Leerlauf) zuerst als Eintrag mit Beleg und Vorschlag an Darmie, PR erst nach seiner Zustimmung.
 4. **Fehler im Kalender (Handtest Nutzer):** Langes Drücken lässt die Seitenleiste von rechts nach links verschwinden, manchmal ändert sich die Schrift. In der Live-Probe nachstellen, Ursache finden (unser Code oder Blinc), beheben oder belegt melden.
 
 ### Thread A – erzeugtes Admin-Frontend (Sonnet, startet nach dem ersten Tag von T)
@@ -91,6 +91,15 @@ Aufteilung (je Liste ein Sonnet-Agent; nie zwei in dasselbe Programm-Repo):
 - **R5 (Haiku):** sobald ein Programm getaggt ist: Release prüfen (rpm, deb, exe, Signaturen), Katalog-Eintrag, Installation im Store prüfen; Fehler, die es nicht in einem Versuch löst, an den Koordinator (der startet Sonnet).
 
 Reihenfolge, wenn das Kontingent knapp wird: R0, R1, R2, R3, R4.
+
+**Entscheidungen der Strategie für R (2026-11-10, auf Fragen des Koordinators):**
+1. Reihenfolge `fs-components`: erst C prüfen (Opus), mergen, taggen; dann A auf `main` rebasen, prüfen, taggen. R1–R4 bleiben bis dahin auf Commit `4688cee` und wechseln danach auf den Tag.
+2. **Liste = `find` mit leerem Suchwort und Blättern (Cursor)**, für alle Typen gleich; kein eigener Listen-Befehl je Programm.
+3. **Ändern ist im Frontend typisiert** (Feld für Feld); das Backend macht daraus das PatchObject. Kein PatchObject-JSON im Formular, auch nicht übergangsweise (das Frontend soll sich später nicht ändern). Thread T ergänzt den Typ „Änderung“ (Feldpfad + typisierter Wert) im Schema.
+4. **`sortAs`:** gespeichert wird nur die RFC-Form (Map); die alte Textform wird beim Lesen erkannt und beim nächsten Speichern umgeschrieben.
+5. **Beim Ändern: fehlt = unverändert, leer (null) = geleert** (wie PatchObject). Thread T schreibt es ins Schema.
+6. **Befehle auf einem Datensatz** = Befehle, deren Eingabe ein Verweis auf den eigenen Typ ist, dazu ändern und löschen. Thread T schreibt es ins Schema.
+7. Thread D Teil 3 entfällt als eigener Schritt: die Aufrufer nutzen `release.yml@main`, jeder neue Tag aus R baut rpm, deb und exe; R5 prüft. Kein Agent geht in ein Repo, in dem ein R-Agent arbeitet.
 
 **Regel für R (Nutzer, 2026-11-10, ADR 0066):** Frontends werden **jetzt vollständig 1:1** gebaut, mit allen Bedienelementen der Vorlage, auch für Funktionen, die der Kern noch nicht hat. Die Typbeschreibung meldet je Befehl `supported` ja/nein (Thread T ergänzt das in `types.capnp`, falls es fehlt); nicht unterstützte Bedienelemente sind sichtbar, gesperrt, mit Hinweis „kommt noch“, und werden frei, sobald der Kern den Befehl meldet – ohne Änderung am Frontend. Für jedes Programm gilt deshalb: alle Befehle aus der `requirements.md` in die Typbeschreibung aufnehmen (die fehlenden mit `supported = false`).
 - **R6 (Sonnet, je Programm nach R0–R4):** die Frontends Einfach, Apple und Windows 1:1 nach den Vorlagen (Thread M, Bildschirmfotos), in dieser Reihenfolge der Programme: People, Tasks, Kalender, Dateien, Wiki, Rest. Was bis Sonntag nicht fertig wird, läuft in der nächsten Runde weiter.
