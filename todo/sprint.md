@@ -69,8 +69,22 @@ Nutzer, 2026-11-09: Im letzten Sprint gab es nur rpm. Wer den Store und die Neui
 2. **Sonnet:** Der Store (`fs-store`) erkennt das System und bietet das passende Paket an (rpm, deb, exe); was nicht geht, sagt ausdrücklich `Unsupported`.
 3. **Haiku:** Danach in allen App-Repos den neuen Workflow einbinden und je eine neue Version (v0.0.N+1) freigeben; prüfen, dass jede Release-Seite rpm, deb und exe mit Signatur hat. Bei einem Fehler, den Haiku nicht in einem Versuch löst: an den Koordinator melden, der startet Sonnet.
 
-### Thread R – Ausbau auf alle Programme (ab Mittwoch, Liste folgt von der Strategie)
-Je Programm: Datentyp nach seinem Standard, Typbeschreibung, Admin-Frontend. Die Strategie schreibt die Liste, sobald der Pilot steht.
+### Thread R – alle Programme mit Frontend in den Store (ab 2026-11-10, Nutzer: „Frontends für alle Programme, dann online, inklusive aller Funktionen“)
+**Ziel bis So 2026-11-15, 18:00:** Jedes Programm ist im Store installierbar (rpm, deb, exe), hat das erzeugte Admin-Frontend (Fiori) und darüber **jede Funktion, die sein Kern hat**. Was der Kern noch nicht kann, sagt ausdrücklich `Unsupported`. Gleiche Schritte für jedes Programm:
+1. Typbeschreibung (`DescribesType`) für jeden eigenen Datentyp nach seinem Standard, mit **allen** Befehlen des Kerns; Katalog `types` im eigenen Schema in `fs-interfaces` (nur die eigene Datei, `pull --rebase`, nächster Tag).
+2. Die App = Fensterhülle (ADR 0065) + `fs-admin-frontend` über diesen Katalog. Vorhandener Render-Code im App-Repo (Kalender-Raster, Kanban, Karte, Editor …) zieht als Component nach `fs-components` (eigenes Crate je Component, eigener Worktree) und wird von dort benutzt (ADR 0066).
+3. Alle Apps auf `blinc-app-fix`/`blinc-layout-fix` in der schnellen Fassung (Thread B).
+4. `gates.sh`, Prüfung durch einen Opus-Agenten, Tag v0.0.N, Release mit rpm, deb, exe, Eintrag im Katalog `fs-catalog`; im Store installieren, öffnen, eine Funktion ausführen.
+
+Aufteilung (je Liste ein Sonnet-Agent; nie zwei in dasselbe Programm-Repo):
+- **R1:** `fs-tasks`, `fs-calendar` (JSCalendar `Task`/`Event`; Components Kalender-Raster, Kanban, Zeitleiste).
+- **R2:** `fs-files` (mit Facette Galerie), `fs-maps`, `fs-wiki` (Components Dateiliste, Galerie-Raster, Karte, Text-Editor).
+- **R3:** `fs-groups`, `fs-surveys`, `fs-resources`, `fs-history` (Component Ergebnis-Diagramme aus `charts`).
+- **R4:** `fs-messenger`, `fs-whiteboard`, `fs-streaming` (am wenigsten fertig: Admin über das Vorhandene, Rest `Unsupported`).
+- **R0 (zuerst, Pilot):** `fs-people` – C und A mergen und taggen, P taggen, App mit Admin-Frontend in den Store. Danach für People zusätzlich die Frontends **Einfach, Apple, Windows** (eigener Sonnet-Agent nach Thread M).
+- **R5 (Haiku):** sobald ein Programm getaggt ist: Release prüfen (rpm, deb, exe, Signaturen), Katalog-Eintrag, Installation im Store prüfen; Fehler, die es nicht in einem Versuch löst, an den Koordinator (der startet Sonnet).
+
+Reihenfolge, wenn das Kontingent knapp wird: R0, R1, R2, R3, R4.
 
 ## Runde 2 (Nutzer, 2026-11-07 abends): Laden `fs-store` lauffähig und installierbar
 
