@@ -12,6 +12,39 @@ Einzeilig einfügen, N ersetzen:
 /loop Du bist Thread N im Sprint. Lies /srv/FreeSynergy/fs-documentation/todo/sprint.md, dann arbeite deine Liste der Reihe nach ab, auch mit vielen Agenten, und nimm nach jedem fertigen Punkt den nächsten.
 ```
 
+## Runde 3b (Nutzer, 2026-11-10 abends): Qualität vor Neuem – Vorrang vor allem in Runde 3
+
+Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müssen funktionieren, bevor neue Frontends kommen. **Jeder Fehler wird an einer Stelle behoben, sodass er überall weg ist** (Component oder Blinc, nie im Programm).
+
+**Arbeitsweise (neu):**
+- Die Strategie (Opus) startet selbst einen frischen Haiku-Koordinator, wenn sie ihn braucht, und kontrolliert ihn. **Haiku koordiniert und prüft nur, programmiert nie.** Programmiert wird von Sonnet, wenn nötig Opus.
+- **Grün vor Tag:** Ein Tag oder Update gibt es nur, wenn dieselben Tests lokal **und** auf GitHub grün sind. Jedes Programm wird in dieser Runde höchstens ein- bis zweimal angefasst: erst fertig prüfen, dann einmal ändern.
+
+**Q1 – Texteingabe (Sonnet, Vorrang 1, eine Stelle für alle):**
+1. Tastaturbelegung: Zeichen kommen aus dem Text des Systems (winit `KeyEvent.text`, IME-Commit), nicht aus einer eigenen US-Tabelle. Beleg in der Live-Probe mit `LAYOUT=de`: `@ € { } [ ] \ | ~ ä ö ü ß µ` und AltGr-Kombinationen. Behebung in Blinc (PR ohne KI-Hinweis), Übernahme in `blinc-app-fix`.
+2. Schriftmessung: Messen und Zeichnen nehmen dieselbe Schrift (ein Font-Resolver), Cursor steht genau hinter dem letzten Zeichen.
+3. Tempo: Eine Taste ändert nur den Textknoten (kein Neuaufbau des Baums). Ziel: Taste bis Bild unter 8 ms im Release-Build, gemessen in der Probe.
+4. Maps zeigt getippten Text nicht: Ursache finden, an der gemeinsamen Stelle beheben.
+5. Ein automatischer Test „Tippen“ (Probe mit `de`-Belegung, obige Zeichen, Zeit je Taste) läuft lokal und in GitHub (Läufer mit virtuellem Bildschirm) für People, Maps, Tasks, Kalender, Wiki, Store.
+
+**Q2 – GitHub-Workflows (Haiku zählt, Sonnet behebt):** Über 280 rote Läufe. Haiku erstellt die Liste nach Ursache (nicht nach Repo); Sonnet behebt Ursachen zentral in `fs-release`, danach je Repo. Forks (`kanidm`, `tuwunel`, `zentinel`, Blinc-Forks): Upstream-Workflows im Fork abschalten oder auf unsere Änderung beschränken. Ziel: alles grün, rote Läufe blockieren Tags.
+
+**Q3 – Store (Sonnet):**
+1. Updates stehen auf der Startseite, nicht im Menü.
+2. Installieren läuft im Hintergrund; alles andere bleibt klickbar, mehrere Aufträge in einer Liste.
+3. In allen Beschreibungen und Fenstern heißen Programme **FreeSynergy.Name** (z. B. FreeSynergy.People), nie `fs-…`; `fs-…` nur für Repo, Paket, Befehl.
+4. Danach fs-store v0.0.9 (rpm, deb), Veröffentlichung nach Ja des Nutzers.
+
+**Q4 – Windows-Port (Entscheidungen der Strategie):** Tags erst nach Q2-grün, Reihenfolge `fs-interfaces` zuerst. fs-wiki-Export handle-genau (`cap-std`), keine Pfadprüfung. Facette als Startparameter (`--facet`), der Link `fs-<facette>` (ADR 0063) setzt ihn unter Linux nur. Hintergrundserver beenden über eine Stopp-Anfrage im Protokoll (Windows kennt kein SIGTERM).
+
+**Danach:** Runde 3 weiter (Frontends R0–R6), nur auf grünem Stand.
+
+**Merkposten (Nutzer, 2026-11-10, später):**
+- Subdomains heißen wie das Programm ohne `fs-` (`people.…`, `identity.…`); änderbar.
+- Server-Aufbau später.
+- Der Store bietet auch passende fremde Programme an (Kanidm, Zentinel …), gern mit eigenen, austauschbaren Frontends.
+- **Paketquellen nach Standard:** Aus dem Katalog entstehen echte Paketquellen, die man ins System einbindet: dnf/rpm (createrepo, signiert), apt (signiertes `InRelease`), Flatpak (OSTree), Windows (winget), macOS (Homebrew-Tap); Programme, Facetten, Frontends, Themes als eigene Pakete mit Abhängigkeiten. Eigene ADR, wenn Q1–Q3 grün sind.
+
 ## Runde 3 (Nutzer, 2026-11-09): Datentypen, Components, vier Frontends – Pilot People
 
 **Grundlage:** ADR 0066 (`conventions/decisions/0066-datentypen-und-vier-frontends.md`) und die Landkarte `docs/en/programs/map.md`. **Ziel der Woche:** Bis Freitag haben möglichst alle Programme ein erzeugtes Admin-Frontend, das grundlegend funktioniert; People zusätzlich mit Einfach-, Apple- und Windows-Frontend. **Reihenfolge:** Mo–Di Pilot People (Threads T, P, C, A, M), danach verteilt die Strategie den Ausbau auf die übrigen Programme (Thread R). Die Regeln unten gelten weiter. Meldungen an den Koordinator (Haiku), nicht an die Strategie.
