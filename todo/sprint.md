@@ -27,6 +27,8 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 4. Maps zeigt getippten Text nicht: Ursache finden, an der gemeinsamen Stelle beheben.
 5. Ein automatischer Test „Tippen“ (Probe mit `de`-Belegung, obige Zeichen, Zeit je Taste) läuft lokal und in GitHub (Läufer mit virtuellem Bildschirm) für People, Maps, Tasks, Kalender, Wiki, Store.
 
+**Freigabe (Nutzer an Strategie, 2026-11-10):** Jede Programmversion aus Runde 3b darf als **Pre-release** veröffentlicht werden, sobald sie lokal und auf GitHub grün und von Opus geprüft ist. Keine Einzelfrage mehr nötig. Löschen braucht weiter ein eigenes Ja.
+
 **Q0 – Blinc an genau einer Stelle (Vorrang 0, Nutzer 2026-11-10: „schwarzer Bildschirm bei Files immer noch“):** Ursache: Cargo wendet `[patch]` nur im obersten Projekt an. Darum trägt heute **jedes** Programm eigene Patch-Zeilen für `blinc-app-fix`/`blinc-layout-fix`, mit verschiedenen Ständen (fs-store `a139138`, fs-people und fs-components ohne Pin, der Rest `5180d4e`/`cb17db8`); eine Korrektur kommt nicht überall an. Neu:
 1. Ein Blinc-Stand für alle: Branch `freesynergy` im Fork `FreeSynergy/Blinc` = Upstream + alle unsere Korrekturen (PR 71, 72, 73 …), getaggt `fs-blinc-N`. Die Repos `blinc-app-fix`/`blinc-layout-fix` laufen aus.
 2. **Nur `fs-components` hängt an Blinc** (git-Abhängigkeit auf den Tag) und reicht es weiter (`fs_components::blinc`). Programme haben keine eigene Blinc-Abhängigkeit und keine `[patch]`-Zeilen; `gates.sh` lehnt beides ab.
