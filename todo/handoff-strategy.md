@@ -71,3 +71,16 @@ Für eine neue Sitzung, die entscheidet und dokumentiert. Programmieren macht di
 - Rollen: Forschung fertig (`temp/research/roles-standards.md`), fünf Entscheidungen beim Nutzer.
 - Schnittstelle `Trust`: RLTP weiterlesen (`personhood-predicates`, `trust-layer`), Betreiber-Verweis klären.
 - Manifest als echten Text ausschreiben, dazu ein Werbetext für das Projekt und Beschreibungen der Programme (Nutzer, 2026-11-07: „Texte, die die Menschen umhauen“).
+
+## Übergabe Koordinator, 2026-11-10
+
+Direkte Ja-Antworten des Nutzers an den Koordinator (Stand dieser Sitzung):
+- Thread R starten; Löschliste von Thread F löschen (Ja, direkt); Windows-Vorlagen wie von der Strategie übermittelt (Ja).
+- Antworten 1 bis 3 und 5 als Ja; 4 („weiß ich nicht, frag Opus“) an Opus; 5 exe und zip zum Testen herausgeben (nur nach Windows-Port, von der Strategie entschieden); 6 bis 8 an Opus.
+
+Noch offen, Nutzer-Ja nötig (nicht erteilt, nichts davon ausgeführt):
+- Löschungen: fehlgeschlagene fs-wiki-Tags v0.0.3 bis v0.0.5, `wiki/frontends/tango.io`, Build-Verzeichnisse unter `.scratch`.
+- Veröffentlichung fs-store v0.0.9 (Entwurf, wartet auf Windows-Port und Nutzer).
+- Wiederaufnahme des fs-tasks-Agenten (`e18def6`, ungeprüft).
+
+Entscheidungen, die bei der Strategie liegen (Windows-Port): Tag-Freigabe und Reihenfolge (fs-interfaces zuerst), fs-wiki-Export (Pfad-Prüfung oder Handle-genau), Facette (`FS_COMMAND` oder Startparameter), geordnetes Beenden von Hintergrundservern (Stopp-Anfrage im Protokoll). Die Strategie hat diese vier noch nicht beantwortet.
