@@ -18,6 +18,10 @@ Einzeilig einfügen, N ersetzen:
 
 **Regel (Nutzer, 2026-11-10, ADR 0066):** Kein Render-Code und kein Aussehen in einem Programm-Repo. Alles, was etwas zeigt (auch Kanban, Kalender, Editor), ist eine Component in `fs-components`; das Programm liefert Daten und Trait, das Frontend setzt zusammen. Fehlt eine Component, wird sie in `fs-components` gebaut.
 
+**Blinc-Fehler beheben, nicht nur melden (Nutzer, 2026-11-10):** Jede eigene Änderung an Blinc, die funktioniert, geht als **Pull Request** an `project-blinc/Blinc` – vorher im Fork mit Test und in der Live-Probe geprüft (bei Tastatur mit `LAYOUT=de`), **ohne jede KI-Kennzeichnung**, Regeln aus `/srv/FreeSynergy/blinc/CLAUDE.md`. Ein PR je Fehler. Zuerst: AltGr/`@` (Tastatur) und `fix-incremental-layout-rules` (Kalender-Seitenleiste).
+
+**Geschwindigkeits-Ziel (Nutzer, 2026-11-10):** Nur was sich ändert, wird neu berechnet und gezeichnet; im Leerlauf kein Bild; Ziel 120 fps (8,3 ms je Bild). Ziele und Stand: `docs/en/programs/platform/crates/gui.md`, Abschnitt „Speed goals“. Thread B legt dazu Einträge bei Blinc an (Leerlauf zeichnet 60 Bilder/s; ganzer Baum-Vergleich bei jeder Änderung; Bildrate fest 60 Hz) und schlägt Darmie Lösungen vor.
+
 **Blinc-Fehler melden (Nutzer, 2026-11-10):** Jeder gefundene Fehler in Blinc geht **an den Nutzer**: über den Koordinator, gebündelt, je Fehler eine Zeile (was, git-bug-ID, Beleg, Stand: behoben im Fork / PR / wartet auf Darmie).
 
 **Blinc-Beiträge (Nutzer, 2026-11-09):** In Commits, PRs und Issues für `project-blinc/Blinc` **keine KI-Kennzeichnung**, Regeln in `/srv/FreeSynergy/blinc/CLAUDE.md` (git-bug, volle 64-stellige ID als Trailer; `git config git-bug.git-transport git`). In unseren eigenen Repos bleibt die Kennzeichnung.

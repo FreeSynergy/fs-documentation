@@ -32,6 +32,22 @@ Evaluation status: 2026-11-02
 **Blinc is the main favourite.** Reason: it is the only candidate that meets all three core requirements at once (real CSS, canvas kits for whiteboard and maps, and no VDOM on all platforms including mobile). The author is directly reachable and open to extensions (gestures, components) — this lever exists for no other crate. Remaining risks: small bus factor, the 0.6.0 transition, web only as preview.
 **Safeguard:** keep watching Dioxus + Blitz as a fallback (best CSS, but canvas gap); use Makepad's gesture design as a reference for Blinc extensions.
 
+## Speed goals (owner, 2026-11-10)
+
+**Only what changes is touched.** Nothing is recomputed, restyled, laid out or drawn unless something changed, and then
+only the part that changed. When nothing changes, nothing is drawn at all.
+
+| Goal | Today (thread B, 2026-11-10) |
+|------|------------------------------|
+| Idle: no frames | Blinc draws 60 frames a second while idle (1.1–1.7 ms each) |
+| A change touches only the changed nodes (no full tree diff) | `incremental_update` compares the whole tree: 5 ms per click; restyle now only replaced nodes (PR 71) |
+| Every frame fits **8.3 ms**, so **120 fps** is possible (goal, not a must) | frames without rebuild 1–4 ms ✅; with rebuild 10.5 ms ❌ |
+| Draw with the display's refresh rate | fixed 60 Hz |
+
+Games usually redraw the whole picture every frame, but they keep everything ready on the GPU and never recompute what
+did not change. For a user interface the expensive part is the recomputing (rebuild, diff, style, layout), so that is
+where "only what changes" matters most; partial redraw (damage regions) comes second.
+
 ## Open items / to be verified
 
 - **Dioxus/Blitz:** status of "Dioxus Native" (wgpu renderer) for Android and iOS; SVG coverage in Blitz.
