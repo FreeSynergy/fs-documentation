@@ -73,12 +73,12 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 
     Die Pakete der Hersteller werden gespiegelt (ADR 0068). Die Zentinel-Control-Plane wird für unsere Architektur in Rust nachgebaut: die Funktionen, nicht der Code; vorher die Lizenz prüfen.
 - **Groß/klein per Umschalttaste (Nutzer):**
-  - 1× kurz: reihum ALLES GROSS → Erster Buchstabe der Markierung groß → alles klein.
+  - 1× kurz: ALLES GROSS. 2× kurz: Erster Buchstabe der Markierung groß. 3× kurz: alles klein (Nutzer: Anzahl der Tipper, nicht reihum).
   - 4× kurz: Wörter nach Wörterbuch richtig großschreiben (Substantive).
   - 5× kurz: jedes Wort mit großem Anfangsbuchstaben.
   - Achtung: 5× Umschalt öffnet unter Windows die Einrastfunktion.
 - **Eingabe mit festen Zeichen (Nutzer):** Ein Feld sieht aus wie EIN Feld. Feste Zeichen (`@`, `://`, `.` im Datum, `:` in der Zeit) stehen innerhalb des Feldes, nicht als getrennte Kästen. Beim Tippen gibt es Ergänzungen wie bei YouTube (lokal, keine Anfrage nach außen).
-- **Wiederherstellen auch nach normalem Schließen: JA (Nutzer).**
+- **Wiederherstellen auch nach normalem Schließen: JA (Nutzer).** Gespeichert wird **automatisch**, ohne Nachfrage. Wer zwei Zustände ausprobieren will, legt einen **Klon** an: eine benannte Kopie des Zustands, zwischen denen man wechseln kann.
   - Dazu ein Knopf „Speichern“.
   - Der Nutzer definiert: **Speichern** heißt, das Programm öffnet sich so, wie man es verlassen hat. **Export** heißt, es wird in eine Datei geschrieben. Das entspricht ADR 0046.
   - ADR 0069, Frage F1, wird damit beantwortet.
@@ -94,7 +94,7 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 - **Files und Streaming:** Files verteilt Dateien (Teilen, Sync, Bereichs-Downloads, damit ein Video gleich anläuft). Live-Streaming ist `fs-streaming`.
 - **Einfach-Frontend, Gesten (einmal für alle einfachen Frontends definiert):**
   - Die Ansicht ist immer eine Vorschau. Nach links wischen heißt zurück.
-  - Markieren und nach unten ziehen: Es erscheinen ein Papierkorb (in den Papierkorb) und ein X (endgültig löschen).
+  - Markieren und nach unten ziehen: Es erscheinen ein Papierkorb (in den Papierkorb) und ein X (endgültig löschen). Nach dem X steht einige Sekunden „Gelöscht – Rückgängig“, erst dann wird wirklich gelöscht. Es gibt keinen Dialog (Nutzer: Ja).
   - Der runde Knopf oben rechts ist noch zu besprechen.
   - Die Components dafür werden überarbeitet.
 - **Wir wählen zwei Frontends, aber die Ergebnisse aller Vorbilder bleiben nutzbar.** Darum liegen die Recherchen dauerhaft in `temp/research/` (dateimanager*.md, server-kanidm-zentinel-tuwunel.md, update-neustart*.md).
