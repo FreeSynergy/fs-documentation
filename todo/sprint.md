@@ -135,6 +135,17 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Jedes Programm bekommt so ein Handbuch im Wiki.
     - Teile davon werden zur Beschreibung im Store/Installer.
     - Lokal zuerst: Das Paket enthält beim Bau eine Kopie der Blöcke.
+- **Idee des Nutzers, nach dem Meilenstein „Wir benutzen es selbst“:**
+  - **Files erkennt und startet Programme** (freedesktop Desktop Entry, mimeapps).
+    - Installierte, signierte Programme starten mit einem Klick.
+    - Heruntergeladene Programme starten nie ohne deutliche Rückfrage.
+  - **Der Desktop ist eine Facette von Files:** Verknüpfungen plus Workbench-Kacheln (ADR 0037). Vorbild: Windows Explorer bzw. Finder sind auch der Desktop.
+    - Unter Wayland braucht es layer-shell (KWin ja, GNOME nein).
+  - **Der Store liefert die Ordner „Programme“ (installiert) und „Verfügbar“ (Katalog)** als Speicher-Anbieter für Files (ADR 0070). Pakete im Katalog sind „Dateien, die noch nicht auf dem Rechner sind“, ähnlich wie bei OneDrive.
+    - Die Installationslogik (Signatur, Abhängigkeiten, Updates, Neustart) bleibt im Store-Kern.
+  - **Offen beim Nutzer:**
+    - Soll der Desktop den KDE-Desktop ersetzen, oder genügt zuerst eine Startseite?
+    - Ist er mit dieser Aufteilung einverstanden?
 - **Files MUSS Versionierung (Git) und Backup haben (Nutzer).** Das macht Files zu einem sehr wichtigen Programm.
   - Erst Recherche (Haiku), dann Vergleich (Opus), dann ADR. Kein Code vorher.
   - Zu prüfen: `gix`, restic-Format mit `rustic_core`, eigene Versionen über die BLAKE3-Inhalte.
