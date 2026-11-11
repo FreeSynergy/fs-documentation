@@ -135,6 +135,14 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Jedes Programm bekommt so ein Handbuch im Wiki.
     - Teile davon werden zur Beschreibung im Store/Installer.
     - Lokal zuerst: Das Paket enthält beim Bau eine Kopie der Blöcke.
+- **Workflows JETZT (Nutzer, 2026-11-12), nicht später:**
+  - Der Installationskatalog ist ein Workflow. Installieren ist eine Anweisung, was gemacht werden soll; ein Paket schnüren ist dasselbe in umgekehrter Reihenfolge.
+  - Workflows werden standardisiert UND dargestellt: Knoten und Linien, wie auf einem Whiteboard (`fs-whiteboard` hat schon Verbinder).
+  - Handelnde können sein: Mensch, LLM (Strategie, Koordinator, Agenten), Maschine, Programm.
+  - Zuerst nur standardisierte Befehle, also eine feste Liste von Schritten.
+  - **Unsere eigene Arbeitsweise wird analysiert und als Workflow abgebildet,** den ein Programm nachbilden kann (Auftrag → Bau → Gates → Opus → CI → Tag → Release → Katalog → Signatur → Nutzertest).
+  - Vorbilder recherchieren: n8n und andere.
+  - Grund des Nutzers: Was immer gleich abläuft, spart als Standard viele Tokens.
 - **Idee des Nutzers (Entwurf jetzt, Umbau nach dem Meilenstein „Wir benutzen es selbst“):**
   - **Files erkennt und startet Programme** (freedesktop Desktop Entry, mimeapps).
     - Installierte, signierte Programme starten mit einem Klick.
