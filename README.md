@@ -116,7 +116,7 @@ All documentation is maintained in multiple languages to ensure global accessibi
 
 ### Checks before pushing
 
-`scripts/check-docs.sh` runs the same documentation checks as CI (component standard en/de, component and frontend indexes). Enable it as a pre-push hook once per clone (local setting only):
+`scripts/check-docs.sh` runs the same documentation checks as CI (component standard en/de, component and frontend indexes, and `mkdocs build --strict` after `scripts/gen_decisions.py` when mkdocs is installed; otherwise that step is reported as skipped). Enable it as a pre-push hook once per clone (local setting only):
 
 ```
 git config core.hooksPath .githooks
