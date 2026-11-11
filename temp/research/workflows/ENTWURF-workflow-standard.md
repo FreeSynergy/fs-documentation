@@ -4,6 +4,8 @@ Status: Entwurf, kein ADR, kein Code. Grundlage: `A1-standards.md`, `A2-programm
 
 Nutzerentscheid (gesetzt): Installieren ist eine Anweisung (ein Workflow), Paket schnüren ist derselbe Workflow rückwärts. Workflows werden standardisiert UND gezeigt (Knoten und Linien wie auf einem Whiteboard). Handelnde: Mensch, LLM, Maschine, Programm. Zuerst nur eine feste Liste standardisierter Befehle. Was immer gleich abläuft, wird Standard und spart Tokens.
 
+**Fassung 2 (gleicher Tag), Nutzerrichtung über Strategie:** „Ein Gantt ist nichts anderes als ein Workflow, also ist ein Workflow eine Facette des Projektmanagements.“ Der Abschnitt **N (Ein Modell)** direkt nach den Quellen ersetzt die frühere Besitzer-Empfehlung (Bibliothek → Programm `fs-workflows`) und schärft (3) und (5) nach. Wo die Teile unten widersprechen, gilt N.
+
 ## Neu geprüfte Primärquellen (Lücken aus A1 geschlossen)
 
 | Frage | Befund | Quelle |
@@ -24,6 +26,86 @@ Nutzerentscheid (gesetzt): Installieren ist eine Anweisung (ein Workflow), Paket
 
 **Machbarkeit Teilmenge mit offener Lizenz: ja.** Spec Apache-2.0, `swf-core` 1.0.0-alpha14 Apache-2.0 (A1) zum Lesen/Prüfen. Ehrliche Grenze: Die Spec kennt keine Profile; was wir bauen, ist eine **dokumentierte Teilmenge** („FS-Profil“), keine konforme Laufzeit. Jede FS-Datei ist gültiges SW-YAML, aber nicht jede SW-Datei läuft bei uns. Das ist der Preis für „feste Liste zuerst“ und wird so benannt.
 
+## N. Ein Modell: Workflow ist eine Facette des Projektmanagements (Fassung 2)
+
+Zusätzlich geprüft: RFC 8984 (https://www.rfc-editor.org/rfc/rfc8984.html): Participant `kind` = `individual` | `group` | `location` | `resource` („a non-human resource other than a location, such as a projector“); Rollen `owner`, `attendee`, `optional`, `informational`, `chair`, `contact`; **je Participant** `progress`, `progressUpdated`, `percentComplete` („only allowed for participants of a Task“); Task-`progress` ohne Wert wird aus den Participants abgeleitet (§5.2.5: alle completed → completed, einer failed → failed …); Task hat `estimatedDuration`, `relatedTo`, `participants` und `links` (Link: `href`, `contentType`, `size`, `rel`, `title`; laut IANA-Tabelle §8.2.6 für Task gültig). Code-Stand: `fs-jscalendar` `Participant` hat `name`, `email`, `kind`, `roles`, `participationStatus` … aber **kein** `progress` je Participant (`/srv/FreeSynergy/fs-jscalendar/crates/fs-jscalendar/src/model/participant.rs`); unbekannte und `freesynergy.net:`-Eigenschaften bleiben in `extra` erhalten (`fs-tasks-core/src/model/mod.rs`). `tasks.capnp` v0.0.19: `assign(id, name, email)` kennt nur Personen mit E-Mail; `editIf` (compare-and-set) und `Readiness` sind da; `Boards` ist Platzhalter.
+
+### N1 Ein Modell, mehrere Ansichten
+
+| Begriff | Ist im Projektmanagement | Wo (Besitzer fs-tasks) |
+|---|---|---|
+| Workflow-Definition | **Projekt-Vorlage** | eigenes Objekt `Template` (neben `Board`), Inhalt = SW-YAML im FS-Profil |
+| Lauf | **Projekt** (Instanz der Vorlage, mit Eingaben) | ein Loro-Dokument je Projekt (ADR 0073 §8); Tasks sind Projektionen |
+| Schritt | **Task** (JSCalendar) | `title`, `estimatedDuration`, `relatedTo` (RFC 9253), `participants` (Zuständiger), `progress` + berechnete `Readiness` |
+| Abhängigkeit | Relation `FINISHTOSTART` / `DEPENDS-ON` (+ `freesynergy.net:gap`) | wie Plan Schritt 1 |
+| Gantt, Kanban, Workflow-Graph, Liste | **Facetten/Ansichten** auf dasselbe Projekt | Gantt = `schedule`, Kanban = `Board`, Graph = Whiteboard-Ansicht + Layout-Objekt |
+
+Übersetzung SW-DSL → Tasks beim Anlegen des Projekts: `do`-Folge → Kette `FINISHTOSTART`; `fork` → parallele Tasks ohne Relation untereinander (im Task-Graph natürlich, darf deshalb ins Profil); `call` → Maschinen-Task mit Ausführungs-Eigenschaft; `listen` (Freigabe) → menschlicher Task; `switch`, `for`, `try/catch`, `wait`, `raise` siehe N3. **Rückwärtssprünge mit `then: <früherer Task>` sind im Profil verboten** (ein Task-Graph ist azyklisch; ein Zyklus wäre `Readiness::conflict`); Wiederholung nur über `retry` oder `for`.
+
+### N2 Handelnde sind gleich
+
+Jeder Handelnde (Mensch, LLM-Agent, Maschine, Programm) **nimmt sich einen startklaren Task** (`readiness = ready`, er ist Zuständiger), setzt ihn auf `in-process`, arbeitet, schreibt Ergebnis und `completed`/`failed` zurück. Der Unterschied liegt nur im Zuständigen und in der Art der Ausführung:
+
+| Handelnder | Zuständiger (Participant) | Ausführung |
+|---|---|---|
+| Mensch | AS2 `Person`, `kind: individual` | tut es, hakt ab |
+| LLM-Agent | AS2 `Application` + KI-Marke (ADR 0054) | liest Task + Vorgänger-Ergebnisse, schreibt Urteil/Text als Ergebnis |
+| Programm (fs-store, Release-Werkzeug) | AS2 `Application` | führt `freesynergy.net:run` aus |
+| Maschine (CI, dnf, systemd) | AS2 `Service` | wird von einem Runner angestoßen und beobachtet |
+
+Ein **Runner** ist nur ein weiterer Handelnder (`Application`): er hört auf den Feed (`TaskChange::Unblocked`, Plan Schritt 1), nimmt startklare Tasks mit Ausführungs-Eigenschaft, die ihm zugewiesen sind, ruft `call: befehl:version@fs` mit den Eingaben, schreibt Ergebnis und Status zurück. Der Nutzer sieht auf dem Kanban live, welcher Agent/welche Maschine woran arbeitet (Spalte aus `progress`, Symbol aus Akteurstyp). **Nehmen ohne Doppelarbeit:** lokal per `editIf` (Revision); über Geräte hinweg (Loro, kein Schiedsrichter) per Anspruch `freesynergy.net:claim {by, until}` und Regel „ein Runner nimmt nur Tasks aus dem Store seines Besitzers“; doppelte Ansprüche nach Merge werden angezeigt (wie Konflikte in ADR 0073 §8), die Idempotenz (N3) verhindert doppelte Wirkung.
+
+### N3 Was das Task-Modell nicht von selbst kann (ehrlich)
+
+| Bedarf | Definition (Vorlage, SW-YAML) | Task / Projekt (Laufzeit) | Bewertung |
+|---|---|---|---|
+| Datenfluss | `input`/`output`/`export` im FS-Profil, nur Pfade (`${ .vorgaenger.sha }`) | Ergebnis am Task: `freesynergy.net:result` (kleines JSON nach dem `output`-Schema des Befehls, Größengrenze) + JSCalendar `links` für Protokolle/Artefakte (Verweis auf fs-files, nie große Daten im Task). Projekt-Eingaben als Eigenschaft des Projekts | JSCalendar hat dafür nichts; Herstellerfeld nach RFC 8984 §3.3 |
+| Bedingung (`switch`) | Fälle mit `when` | **Entscheidungs-Task**; erst wenn er fertig ist, legt der Runner (bzw. die Instanziierung) den gewählten Zweig als neue Tasks an. Nicht gewählte Zweige entstehen nie; Begründung im Ergebnis des Entscheidungs-Tasks (`chosen`, `reason`) | bewusst „verzögert anlegen“ statt „überspringen“: ein übersprungener Task als `cancelled` würde nach der Strategie-Regel die Nachfolger als `dependencyCancelled` blockieren. So bleibt `Readiness` unverändert |
+| Schleife (`for`) | `for.in`, Obergrenze Pflicht im Profil | Tasks je Element zur Laufzeit angelegt, mit Herkunft (`freesynergy.net:template` + Index) | kein Zyklus im Graph |
+| Wiederholung | `retry` (`limit`, `delay`, `backoff`) | Zähler `freesynergy.net:attempts`, letzter Fehler `freesynergy.net:error` (SW-Fehlertyp-URI). Grenze erreicht → `failed` → Nachfolger `dependencyCancelled` → **Mensch entscheidet** (genau die bestehende Strategie-Regel) | passt ohne Änderung |
+| Zeitlimit | `timeout` | Runner erzwingt; `due` bleibt Planungstermin, nicht Ausführungsgrenze | zwei verschiedene Dinge, getrennt halten |
+| Warten (`wait`) | Dauer | Task mit `estimatedDuration`, Runner als Zeitgeber | Gantt zeigt ihn als Balken |
+| Gegenbefehl / Kompensation | `undo` je Befehl im Katalog | bei Fehler legt der Runner **Gegen-Tasks** in umgekehrter Abhängigkeitsfolge an (sichtbar auf dem Kanban); bei `undo: none` oder Stufe ≥ 4 vorher ein menschlicher Freigabe-Task | SW-DSL und JSCalendar haben keine Kompensation: FS-Erweiterung (Saga) |
+| Freigabe | `listen` auf Freigabe | **menschlicher Task** (bzw. LLM-Task fürs Urteil); Freigabe = Abschluss, Ergebnis trägt `approvedRef` (Commit-SHA). Profil-Prüfung beim Anlegen: vor jedem Task ab Stufe 4 / „P“ liegt ein Freigabe-Task eines `Person`-Zuständigen | natürlich im Task-Modell |
+| Idempotenz | Befehl deklariert seine Ergebnisprobe („schon erledigt?“) | `freesynergy.net:run.key` = Projekt-Id + Task-Uid; Runner prüft vor der Ausführung | nötig, weil Ansprüche über Geräte doppelt sein können |
+| Lebenszyklus-Ereignisse | – | TaskFeed + AS2-Aktivitäten (`Update` mit `attributedTo` = Handelnder) | statt der SW-Ereignisse `org.open-workflow-specification.*` |
+
+### N4 Format und Wahrheit
+
+- **SW-YAML (FS-Profil) bleibt das Format für Vorlagen**: Definition, Import, Export, Signatur. Gespeichert als Text im `Template`-Objekt (AS2-Hülle), nicht als Muster-Tasks, weil `switch`/`retry`/`undo` als Tasks nicht verlustfrei darstellbar sind.
+- **Wahrheit des Laufs = das Projekt in fs-tasks**: Loro-Dokument je Projekt (ADR 0073 §3/§8), Task-Objekte und Index sind Projektionen. Bis ADR 0073 angenommen und gebaut ist: die heutigen Store-Objekte (Plan, Abschnitt „Live Kanban“ Punkt e).
+- Ehrliche Grenze: Ein Lauf lässt sich **nicht** verlustfrei zurück in YAML wandeln (Laufzeit-Tasks aus `switch`/`for`/Gegen-Tasks). Export eines Laufs = JSCalendar/iCal (Gantt/Liste); Export einer Vorlage = YAML (+ BPMN später).
+- Whiteboard-Graph: Knoten tragen `freesynergy.net:template` (Vorlage, Version, Schritt-Pfad), damit die Ansicht Laufzeit-Tasks dem Vorlagen-Knoten zuordnet; Layout bleibt eigenes Objekt (Abschnitt 3).
+
+### N5 Repos: fs-tasks besitzt Plan und Lauf (ersetzt die frühere Empfehlung)
+
+| | Früher: Bibliothek → Programm `fs-workflows` | Jetzt: fs-tasks besitzt Vorlage + Projekt, Runner = eigener Handelnder |
+|---|---|---|
+| Modell | zwei Zustände (Lauf-Schritt + Haltepunkt-Task), Abbildung nötig | **ein** Modell; Readiness, Zyklen, `schedule`, Board gelten für alles |
+| Sichtbarkeit | Lauf nur im Workflow-Programm, Haltepunkte im Kanban | alles live im Kanban/Gantt/Graph |
+| ADR 0050 | SW-DSL als eigener Standard mit eigenem Besitzer | SW-YAML ist Import/Export-Format der Vorlage, wie iCal für Tasks; Besitzer je Objektart: `Template`, `Project`, `Task`, `Board` = Projektmanagement → fs-tasks |
+| Größe | zusätzliches Repo, zusätzliche Schnittstelle | fs-tasks wächst (Gefahr „Gottprogramm“) → gegensteuern: Runner nicht in fs-tasks-core, eigener Prozess |
+| Last | Sekundenschritte außerhalb des Task-Verlaufs | viele kleine Änderungen im vollen Loro-Verlauf (ADR 0073 §7, keine Kürzung): Runner bündelt Statusänderungen, Protokolle nur als `links` |
+| Bootstrap | Läufer-Bibliothek ohne Tasks nutzbar | **Problem:** fs-store muss installieren können, ohne dass fs-tasks installiert ist (auch fs-tasks selbst). Lösung: Runner-Kern als Bibliothek, die eine Vorlage **im Speicher** als Projekt ohne Store ausführt (gleiches Modell, gleiche reine Funktionen `readiness`/`schedule`); ist fs-tasks da, wird der Lauf dort angelegt und sichtbar |
+
+**Empfehlung: Nutzerrichtung übernehmen.** fs-tasks besitzt `Template` und `Project` (Lauf). Runner = eigener Prozess und eigener Akteur (`Application`), nach ADR 0063 als Unterbefehl (z. B. `fs-tasks runner`) oder kleines eigenes Programm (offene Frage), mit einem Runner-Kern-Crate, das auch fs-store für den Bootstrap einbindet. Die **Befehle** gehören ihren Besitzern (Install-Befehle: fs-store; Release-Befehle: Release-Werkzeug); der Katalog ist nur die Liste ihrer Beschreibungen, der Runner ruft sie über deren Schnittstelle bzw. Befehlszeile. Voraussetzung dafür: Graph, Readiness und `schedule` bleiben reine Funktionen ohne Store (so im Plan Schritt 1 vorgesehen) und sind ohne den Rest von fs-tasks-core nutzbar.
+
+### N6 Folgen für den Tasks-Agenten JETZT (nur Felder/Schema, kein Runner)
+
+Alles **angehängt** (neue Ordinals ab @17 in `TaskItems`, keine Änderung bestehender), Herstellerfelder mit `freesynergy.net:` in `extra`, damit nichts umgebaut wird:
+
+1. **Zuständiger = Akteur beliebiger Art.** `assign(id, name, email)` reicht nicht (nur Person mit E-Mail). Neu vorsehen: `assignActor(id, actorIri, actorType, name)`; am Participant `freesynergy.net:actor` (IRI), `freesynergy.net:actorType` (`Person` | `Application` | `Service` | `Group` | `Organization`, AS2-Akteurstypen), `freesynergy.net:ai` (bool, ADR 0054). `kind` bleibt JSCalendar-Wert (`individual` für Personen; für Nicht-Menschen offene Frage `resource`). Indexfeld `assignee_actor` und Filter `assignee` + `ready` in `TaskFilter` („was ist für mich startklar“).
+2. **Fortschritt je Zuständigem** (RFC 8984: `progress`, `progressUpdated`, `percentComplete` am Participant; Task-Fortschritt daraus abgeleitet nach §5.2.5). Fehlt heute in `fs-jscalendar` `Participant`: Bedarfsmeldung an fs-jscalendar; fs-tasks darf beim Lesen den Task-`progress` nicht ohne Rücksicht auf Participant-Werte setzen.
+3. **Ausführungs-Eigenschaft reservieren:** `freesynergy.net:run` = `{ call, with, timeout, retry, risk, preview, key }` als undurchsichtiges JSON; fs-tasks prüft nur die Form, interpretiert nichts, gibt sie verlustfrei weiter (Rundreise-Test JSON und iCal; im iCal-Export als `X-`-Eigenschaft oder im Exportbericht genannt, nie still weg).
+4. **Ergebnisfelder reservieren:** `freesynergy.net:result` (JSON, Größengrenze in DESIGN.md), `freesynergy.net:attempts`, `freesynergy.net:error` (Problem-Typ-URI), `freesynergy.net:claim {by, until}`; Artefakte über JSCalendar `links` (Standard, schon im Modell erlaubt).
+5. **Herkunft aus Vorlage:** `freesynergy.net:template` = `{ id, version, path, index }`.
+6. **Projekt = Lauf:** Zugehörigkeit eines Tasks zu einem Projekt als `Envelope.context` bzw. Indexfeld `project`; Platzhalter-Schnittstellen `Templates` und `Projects` neben `Boards` (ohne Methoden, wie `Boards` heute), Fähigkeits-Ids reserviert: `template.read`, `template.import`, `template.export`, `project.instantiate`.
+7. **Readiness unverändert** lassen: der Entwurf vermeidet „übersprungen“ (verzögertes Anlegen, N3); `failed` nach erschöpftem `retry` → `dependencyCancelled` ist gewollt. Die Regel „Clients dulden unbekannte Werte“ steht schon im Schema.
+8. **Feed:** `TaskChange::Unblocked` wie geplant bauen; er ist der Auslöser für jeden Runner. Kommentare bleiben Gespräch: Runner-Protokolle sind `links`/`result`, keine Kommentare (ein Runner darf eine Zusammenfassung kommentieren, Autor = seine Akteurs-IRI, das Modell erlaubt es schon).
+9. **Board:** Standardspalte aus `progress` gilt auch für Maschinen-Tasks; Filter/Symbol nach `actorType` vorsehen.
+
+Unberührt: die Release-Kette als ein Befehl (Stufe 0) bleibt, wie in (4) beschrieben; sie wird später die erste Vorlage (`release.sw.yaml`).
+
 ## (1) Format: Empfehlung
 
 **Quelle: Serverless Workflow DSL 1.0.x als YAML, eingeschränkt auf ein FS-Profil. Diagramm ist Ansicht.** Kein Eigenbau, kein BPMN als Quelle.
@@ -38,7 +120,8 @@ Begründung:
 
 **FS-Profil, Stufe 0** (alles andere wird von der Prüfung abgelehnt, Specification-Muster):
 - erlaubt: `do`, `call` **nur** `<befehl>:<version>@fs` (unser Katalog), `switch`, `try`/`catch`/`retry`, `wait`, `listen` (nur Freigabe- und CI-Ereignisse), `emit`, `raise`, `set` (nur Konstanten).
-- nicht in Stufe 0: `fork`, `for`, `run.*` (kein freies Shell im Workflow; Shell lebt nur **in** einem Katalogbefehl), `call http/openapi/grpc/asyncapi/a2a/mcp`, jq-Ausdrücke außer reinen Pfaden `${ .eingabe.repo }` (keine Logik in Ausdrücken, kein Injektionsweg).
+- Fassung 2: `fork` ist erlaubt (parallele Tasks), `for` mit Pflicht-Obergrenze erlaubt (Tasks zur Laufzeit), `then`-Rückwärtssprünge verboten (N1).
+- nicht in Stufe 0 (Fassung 1): `fork`, `for`, `run.*` (kein freies Shell im Workflow; Shell lebt nur **in** einem Katalogbefehl), `call http/openapi/grpc/asyncapi/a2a/mcp`, jq-Ausdrücke außer reinen Pfaden `${ .eingabe.repo }` (keine Logik in Ausdrücken, kein Injektionsweg).
 
 **Abbildung unserer Begriffe** (Schlüssel mit Herstellerpräfix wie RFC 8984 §3.3 und `freesynergy.net:gap` im Tasks-Plan):
 
@@ -58,7 +141,7 @@ Falls `function.yaml` kein `metadata` trägt [nicht belegt], steht derselbe Bloc
 
 Crates: `swf-core` (gepinnt) hinter eigener Schnittstelle `WorkflowSource` (Adapter), eigener kleiner Läufer statt `swf-runtime` (Reife unbelegt). Diagramm-Ausgabe zuerst als Mermaid/SVG (wie das offizielle SDK), später Whiteboard.
 
-## (2) Wem gehört das Thema
+## (2) Wem gehört das Thema (Fassung 1, überholt durch N5)
 
 Unterscheidung: **Workflow** = Vorlage von Schritten mit Abhängigkeiten (Dokument nach SW-DSL). **Lauf** = Ausführung mit Zustand je Schritt. **Task** = JSCalendar-Aufgabe mit Readiness (fs-tasks, v0.0.19 `readiness`/`blockedBy`/`dependents`).
 
@@ -154,7 +237,9 @@ Gemeinsam: Eingabe `repo`, `lauf-id`; jede Ausführung schreibt einen Eintrag in
 
 ---
 1. Format: Serverless Workflow DSL (Apache-2.0) als Quelle mit eigener Teilmenge „FS-Profil“, Diagramm nur als Ansicht, BPMN nur als Export. Einverstanden?
-2. Besitzer: erst Bibliothek, später eigenes Programm (Arbeitsname `fs-workflows`); fs-tasks bekommt nur die Haltepunkte als Aufgaben. Einverstanden, und welcher Name?
+2. (Fassung 2) Besitzer fs-tasks (Vorlage = Projekt-Vorlage, Lauf = Projekt), Runner als eigener Handelnder: als Unterbefehl `fs-tasks runner` oder als kleines eigenes Programm?
+2a. Bootstrap: Darf fs-store den Runner-Kern einbinden und eine Installation ohne fs-tasks im Speicher ausführen (sichtbar erst, wenn fs-tasks da ist)?
+2b. Nicht-menschliche Zuständige: JSCalendar `kind: resource` („wie ein Beamer“) verwenden oder nur unser Feld `freesynergy.net:actorType`?
 3. Risikostufen: Die Skala (ansehen … systemweit) gilt für den eigenen Rechner. Veröffentlichen (push, Tag, Release, Katalog) trifft alle Nutzer. Eigene Stufe 6 „veröffentlichen“ oder eine zweite Achse „Reichweite“?
 4. Release-Kette Stufe 0 vor dem Meilenstein als Entwicklerwerkzeug bauen (spart sofort Tokens), oder erst danach?
 5. Opus-JA: darf die Kette danach selbst weiterlaufen bis Tag/Release, oder bleibt vor `tag` immer ein Halt für Strategie?
