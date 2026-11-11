@@ -47,6 +47,14 @@ Je Kategorie wird das Programm Vorbild, das in **Funktionen, UX und UI** am best
 - Zur Gegenprobe werden die Frontends **ausgetauscht** (2 oder 4 an demselben Kern): funktioniert eines und das andere nicht, liegt der Fehler in der Component oder in Blinc, nicht im Programm. Erst wenn alle funktionieren, gilt der Stand als richtig.
 - Reihenfolge: zuerst Runde 3b (Tippen, Installieren, grün), dann die Frontends nach Vorbild, dann Installieren direkt aus unseren Paketquellen (rpm, deb).
 
+## Regel: Workbench zeigt an, die Einstellungen bestimmen, wohin die Daten gehen (Nutzer, 2026-11-12)
+- **Jedes Programm bekommt eine Workbench in `fs-components`** (People, Groups, Tasks, Files …), damit jedes andere Programm diese Daten anzeigen kann. Beispiel: Die Workbench **Messages** zeigt Nachrichten an. Dasselbe zeigt die App Messenger.
+- **Unterschied zwischen App und Workbench:** Die App arbeitet mit Servern und speichert. Die Workbench speichert nicht selbst. Sie nimmt die Daten an und gibt sie an das Ziel weiter, das eingestellt ist. So arbeiten Components immer.
+- **Wo Daten herkommen und wohin sie gehen, steht in den Einstellungen**, sonst nirgends. Alternativ hat das Objekt ein Eigenschaften-Feld dafür.
+  - Beispiel Kommentare an einer Aufgabe: eigene Schicht, Matrix, Telegram, Mail …
+  - Die Einstellungen prüfen, welche Ziele es auf dem Gerät gibt, und bieten nur diese an.
+- Ein Programm baut also keine eigene Kommentar- oder Nachrichtenablage. Es nutzt die Workbench, und das Ziel ist austauschbar (Muster Strategy bzw. Ports and Adapters, ADR 0043).
+
 ## Folgen
 - Die Analysen der bekannten Programme je Kategorie bleiben Quelle für **Funktionen**; das Aussehen kommt aus den vier Frontends.
 - Die Schnittstellen in `docs/en/interfaces/` werden aus den Typbeschreibungen abgeleitet und als Ziel v1 festgelegt (ADR 0045).
