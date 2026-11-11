@@ -1,7 +1,6 @@
 # Tabs - Erscheinungsbild
 
-## Grundaufbau
-
+## Grundlayout
 Tabs (Reiter) dienen dazu, zwischen Ansichten zu wechseln. Sie können waagerecht oder senkrecht
 angeordnet werden.
 

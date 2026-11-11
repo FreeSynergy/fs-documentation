@@ -8,7 +8,7 @@ Frontends of well-known programs in this category, analysed for their **function
 |---------|----------|------------|
 | [draw.io](drawio/index.md) | [latest](drawio/latest/description.md) | draw.io (diagrams.net) is a free diagram tool for flowcharts, network plans, UML and BPMN. |
 | [Excalidraw](excalidraw/index.md) | [latest](excalidraw/latest/description.md) | Excalidraw is a free, open-source collaborative whiteboard in a hand-drawn style. |
-| [FigJam](figjam/index.md) | [latest](figjam/latest/description.md) | FigJam is the whiteboard of Figma: browser board with sticky notes, sections and connectors, stamps and emotes, and a timer and voting for facilitated sessions. |
+| [FigJam](figjam/index.md) | [latest](figjam/latest/description.md) | FigJam is the whiteboard product of Figma. |
 | [Miro](miro/index.md) | [latest](miro/latest/description.md) | Miro is the commercial online whiteboard (SaaS) for visual collaboration: infinite canvas, shapes/sticky notes, frames, template library (retros, workshops, customer journeys), voting/timer and boa… |
 | [Mural](mural/index.md) | [latest](mural/latest/description.md) | Mural is the workshop whiteboard suite (SaaS) with strong facilitation: canvas with shapes/notes, "Facilitation Sequence" (moderation flows), participation control and templates. |
 | [OpenBoard](openboard/index.md) | [latest](openboard/latest/description.md) | OpenBoard is a free interactive whiteboard tool (C++, Qt) for teaching and presentations: multi-page "boards", pens/text/images, integrated browser, document and note tools, offline-first with a lo… |

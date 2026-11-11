@@ -1,17 +1,17 @@
-# basics
+# basics (Grundlagen)
 
-Band [primitives](../) – lässt sich nicht weiter aufteilen.
+Band [primitives](../) – nicht weiter zerlegbar.
 
-Die Grundlagen, von denen alle anderen Komponenten ausgehen: die Basisklasse mit ihren geerbten Attributen, Zuständen und Tokens sowie die kleinsten Bausteine.
+Grundlagen, von denen alle anderen Komponenten ausgehen: die Basisklasse mit ihren geerbten Attributen, Zuständen und Tokens sowie die kleinsten Bausteine.
 
 ## Elemente
 
-- [**kbd**](./kbd/) – Kbd zeigt eine einzelne Taste oder eine Tastenkombination optisch an, so wie sie auf einer Tastenkappe steht.
+- [**kbd**](./kbd/) – Kbd zeigt eine einzelne Taste oder eine Tastenkombination optisch an – so, wie sie auf einer Tastenkappe steht.
 - [**label**](./label/) – Ein Label ist die Beschriftung eines Steuerelements oder Feldes.
 - [**link**](./link/) – Ein Link ändert die Adresse – er führt zu einer anderen Seite, einem anderen Objekt oder einer Stelle innerhalb der aktuellen Ansicht.
 - [**separator**](./separator/) – Ein Separator trennt Inhalte voneinander: waagerecht zwischen Blöcken, senkrecht zwischen Spalten oder Werkzeuggruppen.
 
-## Profile
+## Steckbriefe
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -22,5 +22,5 @@ Die Grundlagen, von denen alle anderen Komponenten ausgehen: die Basisklasse mit
 
 ## Siehe auch
 
-- [Komponentenübersicht](../../index.md)
+- [Komponenten-Übersicht](../../index.md)
 - [Band primitives](../)

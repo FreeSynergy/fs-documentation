@@ -2,22 +2,21 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `basics` |
-| **Inherits from** | `base` |
-| **Variants** | `ueber-feld`, `inline`, `versteckt`, `pflicht` |
-| **States** | keine gegenüber `base` |
-| **Gestures** | `tap` (das Label fokussiert das Feld) |
-| **Animations** | keine – nur Beschriftung |
-| **Related** | `field`, `base`, `separator` |
-| **Status** | documented |
+| **Kategorie** | `basics` |
+| **Erbt von** | `base` |
+| **Varianten** | `ueber-feld`, `inline`, `versteckt`, `pflicht` |
+| **Zustände** | keine gegenüber `base` |
+| **Gesten** | `tap` (das Label fokussiert das Feld) |
+| **Animationen** | keine – nur Beschriftung |
+| **Verwandt** | `field`, `base`, `separator` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 
 Ein Label ist die Beschriftung eines Steuerelements oder Feldes. Es sagt, was die Person an dieser Stelle
 eingibt oder auslöst – sichtbar oder nur für Screenreader.
 
-## Zweck
-
+## Verwendungszweck
 - Jedes Eingabefeld beschriften (zusammen mit [field](../../fields/field/))
 - Steuerelemente benennen, die keinen eigenen Text haben
 - Zugriffstasten kennzeichnen

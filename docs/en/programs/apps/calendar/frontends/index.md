@@ -6,17 +6,17 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [Cal.com](cal-com/index.md) | [latest](cal-com/latest/description.md) | Scheduling product: public booking pages per event type, availability rules, REST API v2. |
+| [Cal.com](cal-com/index.md) | [latest](cal-com/latest/description.md) | Cal.com is a scheduling product: the owner defines event types and availability, and others book a slot on a public page. |
 | [DAViCal](davical/index.md) | [latest](davical/latest/description.md) | DAViCal is a CalDAV/CardDAV server written in PHP on PostgreSQL — a lean, protocol-faithful self-hosted calendar/contact store with web administration. |
-| [Fantastical](fantastical/index.md) | [latest](fantastical/latest/description.md) | Commercial calendar and task client for Apple platforms and Windows, known for plain-language input. |
+| [Fantastical](fantastical/index.md) | [latest](fantastical/latest/description.md) | Fantastical is a commercial calendar and task app from Flexibits for Apple platforms and Windows. |
 | [Google Calendar](google-calendar/index.md) | [latest](google-calendar/latest/description.md) | Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscrip… |
 | [Merkuro Calendar](merkuro/index.md) | [latest](merkuro/latest/description.md) | Merkuro Calendar is the **modern calendar client of the KDE desktop environment** (Qt 6/QML/Kirigami, convergent on desktop and Plasma Mobile). |
-| [Motion](motion/index.md) | [latest](motion/latest/description.md) | Planner with calendar and tasks; an auto-scheduler places tasks into free time. |
-| [Notion Calendar](notion-calendar/index.md) | [latest](notion-calendar/latest/description.md) | Calendar client with several time zones side by side and scheduling links for free slots. |
+| [Motion](motion/index.md) | [latest](motion/latest/description.md) | Motion (usemotion.com) is a commercial planner with calendar, tasks and projects. |
 | [Nextcloud Calendar](nextcloud-calendar/index.md) | [latest](nextcloud-calendar/latest/description.md) | The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar) above the CalDAV backend (sabre/dav) of the Nextcloud server. |
+| [Notion Calendar](notion-calendar/index.md) | [latest](notion-calendar/latest/description.md) | Notion Calendar (formerly Cron) is a calendar client by Notion for desktop and web. |
 | [Outlook calendar](outlook-calendar/index.md) | [latest](outlook-calendar/latest/description.md) | The calendar component of the Microsoft Outlook line: web app (outlook.com / Outlook on the web), the new and the classic Outlook for Windows, Outlook for Mac and iOS/Android — data in the mailbox … |
-| [Reclaim](reclaim/index.md) | [latest](reclaim/latest/description.md) | Web service over a calendar that places tasks, habits and focus time into free time. |
 | [GNOME Planner](planner/index.md) | [latest](planner/latest/description.md) | Planner is the project planner on GNOME (app ID `app.drey.Planner`): tasks with start/finish, work, costs and dependencies (FS/SS/FF/SF with lag), resources with their own working calendars, critic… |
+| [Reclaim](reclaim/index.md) | [latest](reclaim/latest/description.md) | Reclaim (Reclaim.ai) is a web service that works on top of a Google or Outlook calendar and places tasks, habits and meetings into free time. |
 
 ## File set per program (ADR 0012)
 

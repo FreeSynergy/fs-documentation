@@ -2,22 +2,21 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `basics` |
-| **Inherits from** | `base` |
-| **Variants** | `standard`, `muted`, `icon`, `unterstrichen` |
-| **States** | `visited`, `current` |
-| **Gestures** | `tap` |
-| **Animations** | `highlight` |
-| **Related** | `button`, `breadcrumb`, `tabs`, `base` |
-| **Status** | documented |
+| **Kategorie** | `basics` |
+| **Erbt von** | `base` |
+| **Varianten** | `standard`, `muted`, `icon`, `unterstrichen` |
+| **Zustände** | `visited`, `current` |
+| **Gesten** | `tap` |
+| **Animationen** | `highlight` |
+| **Verwandt** | `button`, `breadcrumb`, `tabs`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 
 Ein Link ändert die Adresse – er führt zu einer anderen Seite, einem anderen Objekt oder einer
 Stelle innerhalb der aktuellen Ansicht. Er ist das Navigationselement schlechthin.
 
-## Zweck
-
+## Verwendungszweck
 - Verzweigung zwischen Objekten (Wiki-Artikel, Kontakte, Aufgaben)
 - Externe Verweise auf Webseiten und Dateien
 - Sprungmarken innerhalb langer Dokumente

@@ -6,12 +6,12 @@ Elemente, die Medien wiedergeben oder darstellen. `media-player` ist die Elternk
 
 ## Elemente
 
-- [**audio**](./audio/) – Ein Audio-Element wiedergibt Audiodateien in verschiedenen Formaten.
-- [**video**](./video/) – Ein Video-Element wiedergibt Videos in verschiedenen Formaten.
-- [**media-player**](./media-player/) – Ein Media Player wiedergibt Videos und Audios.
+- [**audio**](./audio/) – Ein Audio-Element spielt Audiodateien in verschiedenen Formaten ab.
+- [**video**](./video/) – Ein Video-Element spielt Videos in verschiedenen Formaten ab.
+- [**media-player**](./media-player/) – Ein Media Player spielt Videos und Audio ab.
 - [**call-controls**](./call-controls/) – Anrufsteuerungen sind die Bedienleiste eines Anrufs: Mikrofon, Kamera, Bildschirmfreigabe und Auflegen.
-- [**carousel**](./carousel/) – Ein Karussell zeigt Inhalte nacheinander an einer Stelle: eine Folie sichtbar, die anderen bereit, gewechselt per Knopf, Wisch oder automatisch.
-- [**gallery**](./gallery/) – Eine Gallery ist ein Container-Element, das mehrere Bilder in einem Raster oder in einer Slideshow anzeigt.
+- [**carousel**](./carousel/) – Ein Carousel zeigt Inhalte nacheinander an einer Stelle: eine Folie ist sichtbar, die anderen stehen bereit, gewechselt wird per Knopf, Wischen oder automatisch.
+- [**gallery**](./gallery/) – Eine Galerie ist ein Container-Element, das mehrere Bilder in einem Raster oder in einer Diashow zeigt.
 
 ## Steckbriefe
 

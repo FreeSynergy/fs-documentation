@@ -2,14 +2,14 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `basics` |
-| **Inherits from** | `base` |
-| **Variants** | `einzeln`, `kombination` |
-| **States** | `active` (Taste gedrückt) |
-| **Gestures** | keine – nur Anzeige |
-| **Animations** | `press` |
-| **Related** | `badge`, `tooltip`, `base` |
-| **Status** | documented |
+| **Kategorie** | `basics` |
+| **Erbt von** | `base` |
+| **Varianten** | `einzeln`, `kombination` |
+| **Zustände** | `active` (Taste gedrückt) |
+| **Gesten** | keine – nur Anzeige |
+| **Animationen** | `press` |
+| **Verwandt** | `badge`, `tooltip`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 
@@ -17,8 +17,7 @@ Kbd zeigt eine einzelne Taste oder eine Tastenkombination optisch an – so, wie
 Tastenkappe steht. Sie wird in Hilfetexten, Tooltips und in der Tastenkürzel-Dokumentation der
 Programme verwendet.
 
-## Zweck
-
+## Verwendungszweck
 - Tastenkürzel in Tooltips und Kontexthilfe (`Strg + S`)
 - Tastenkürzel in Übersichten und Einführungstouren
 - Gedrückt-Zustand beim Lernen von Tastenkürzeln

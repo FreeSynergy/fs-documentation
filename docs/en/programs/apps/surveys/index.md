@@ -31,3 +31,17 @@ See the [roadmap](../roadmap.md) for the plan; the current state is under "Where
 No frontends have been analysed for this category yet. Candidates for the analysis are LimeSurvey, Nextcloud Forms,
 Formbricks, Framadate, Google Forms and Microsoft Forms. The [democracy suite](../../suites/democracy/index.md) is a
 related area.
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (5), by function, nothing copied (ADR 0012/0013):
+
+- [Consul Democracy](frontends/consul/index.md) — Consul Democracy is open-source software for citizen participation by governments and organisations: debates, proposals, voting, participatory budgeting, collaborative legislation and polls.
+- [Decidim](frontends/decidim/index.md) — Decidim is a participatory democracy platform, started by Barcelona City Hall.
+- [LiquidFeedback](frontends/liquidfeedback/index.md) — LiquidFeedback is open-source software for developing proposals and deciding online, published by the Public Software Group (Berlin) under the MIT licence.
+- [Loomio](frontends/loomio/index.md) — Loomio is open-source software for group decision-making: share context, discuss, gather input, vote and keep a record of the outcome.
+- [Polis](frontends/polis/index.md) — Polis is an open-source platform for gathering sentiment from large groups on open-ended questions.
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

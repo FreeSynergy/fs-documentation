@@ -6,22 +6,22 @@ Elemente, die Daten darstellen: Listen, Tabellen, Raster, Bäume, Zeitachsen und
 
 ## Elemente
 
-- [**avatar**](./avatar/) – Ein Avatar ist ein visuelles Repräsentations-Element für einen Benutzer.
-- [**calendar-view**](./calendar-view/) – Eine Calendar View zeigt Termine in einem Kalender an.
+- [**avatar**](./avatar/) – Ein Avatar ist ein visuelles Element für einen Nutzer.
+- [**calendar-view**](./calendar-view/) – Eine Calendar View zeigt Termine in einem Kalender.
 - [**chart**](./chart/) – Ein Chart ist eine Datenvisualisierung (Diagramme).
-- [**description-list**](./description-list/) – Eine Beschreibungsliste zeigt Wertpaare aus Bezeichnung und Wert — die Detailansicht eines Datensatzes.
-- [**grid-view**](./grid-view/) – Grid View ist eine Karten/Raster-Darstellung von Elementen.
+- [**description-list**](./description-list/) – Eine Description List zeigt Paare aus Label und Wert — die Detailansicht eines Datensatzes.
+- [**grid-view**](./grid-view/) – Eine Grid View ist eine Karten- bzw.
 - [**link-preview**](./link-preview/) – Eine Linkvorschau ist eine Vorschaukarte für einen Link, die vom **Absender** erzeugt und an die Nachricht angehängt wird.
 - [**list-view**](./list-view/) – Eine List View ist eine einfache Listenansicht von Elementen.
 - [**mail-view**](./mail-view/) – Eine Mailansicht zeigt eine E-Mail: Kopf (Von, An, Cc, Betreff, Datum), Text als Klartext oder HTML, Anhänge sowie den Signatur- und Verschlüsselungsstatus.
 - [**message-bubble**](./message-bubble/) – Eine Nachrichtenblase zeigt eine Chatnachricht mit Absender, Inhalt, Antwortbezug, Reaktionen, Zustellstatus und Verschlüsselung.
 - [**message-list**](./message-list/) – Eine Nachrichtenliste zeigt die Nachrichten einer Unterhaltung in zeitlicher Reihenfolge, unten verankert.
 - [**reaction-bar**](./reaction-bar/) – Eine Reaktionsleiste zeigt Reaktionen auf eine Nachricht als Emoji mit Anzahl und erlaubt, die eigene Reaktion umzuschalten.
-- [**repeater**](./repeater/) – Ein Repeater ist ein Wiederholtes Layout für Listen.
-- [**table**](./table/) – Eine Table ist eine tabellarische Darstellung mit Zeilen und Spalten.
-- [**table-of-contents**](./table-of-contents/) – Ein Table of Contents ist eine Übersicht über Kapitel/Sectionen.
+- [**repeater**](./repeater/) – Ein Repeater ist ein sich wiederholendes Layout für Listen.
+- [**table**](./table/) – Eine Tabelle ist eine tabellarische Darstellung mit Zeilen und Spalten.
+- [**table-of-contents**](./table-of-contents/) – Ein Inhaltsverzeichnis ist eine Übersicht über Kapitel und Abschnitte.
 - [**timeline**](./timeline/) – Eine Timeline ist eine chronologische Darstellung von Ereignissen.
-- [**tree-view**](./tree-view/) – Ein Tree View ist eine hierarchische Verzeichnisstruktur mit Ein-/Ausklappen.
+- [**tree-view**](./tree-view/) – Eine Tree View ist eine hierarchische Verzeichnisstruktur mit Ein- und Ausklappen.
 
 ## Steckbriefe
 

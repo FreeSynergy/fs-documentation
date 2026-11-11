@@ -44,8 +44,7 @@ zu einem Fächer beschnitten.
     ohne sichtbares Menü. `sektoren` ist die Tortenform, `ring` die heute übliche Form mit
     einzelnen Punktflächen.
 
-## Zweck
-
+## Verwendungszweck
 - wiederkehrende Aktionen an einer festen Stelle, aus dem Muskelgedächtnis heraus bedient
 - Aktionen am Zeiger (Rechtsklick, Long-Press) als runde Variante des Kontextmenüs
 - schneller Zugriff in flächenbasierten Programmen: [whiteboard](../../../workbenches/special/whiteboard/),

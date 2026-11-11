@@ -78,8 +78,9 @@ Further information can be found in the documentation of individual help desk sy
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (8), by function, nothing copied (ADR 0012/0013):
+Analysed programs (9), by function, nothing copied (ADR 0012/0013):
 
+- [Chatwoot](frontends/chatwoot/index.md) — Chatwoot is a customer-support platform where conversations from many channels land in one shared inbox.
 - [Freshdesk](frontends/freshdesk/index.md) — Freshdesk (Freshworks) is a SaaS helpdesk with tickets, knowledge base, SLAs, omnichannel e-mail/phone/chat and Freddy AI.
 - [GLPI](frontends/glpi/index.md) — GLPI is a French-flavoured open-source ITSM: helpdesk tickets plus complete IT asset management (computers, software, contracts, network), reporting that supports projects and budgets.
 - [Helodesk](frontends/helodesk/index.md) — Helodesk is a French SaaS customer-service suite (contact centre): telephony/softphone, e-mail, chat, SMS and callback in one surface, plus cases (tickets), knowledge base, IVR and reporting.

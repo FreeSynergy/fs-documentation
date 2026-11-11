@@ -2,16 +2,16 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `feedback` |
-| **Inherits from** | `base` |
-| **Variants** | `inline`, `banner` |
+| **Kategorie** | `feedback` |
+| **Erbt von** | `base` |
+| **Varianten** | `inline`, `banner` |
 | **Types** | `info`, `success`, `warning`, `error` |
-| **States** | `dismissing` |
-| **Gestures** | `tap` |
-| **Animations** | `fade-in`, `collapse` |
-| **Related** | `toast`, `badge`, `progress` |
+| **Zustände** | `dismissing` |
+| **Gesten** | `tap` |
+| **Animationen** | `fade-in`, `collapse` |
+| **Verwandt** | `toast`, `badge`, `progress` |
 | **Role** | `alert` |
-| **Status** | documented |
+| **Status** | dokumentiert |
 
 !!! info "Standardisierung"
     Die bisherige Komponente `banner` ist als Variante in `alert` aufgegangen: `inline` (innerhalb
@@ -20,8 +20,7 @@
 ## Beschreibung
 Ein Alert ist eine Statusmeldung (Info, Warnung, Fehler, Erfolg).
 
-## Zweck
-
+## Verwendungszweck
 - Statusmeldungen anzeigen
 - Fehler anzeigen
 - Erfolge anzeigen

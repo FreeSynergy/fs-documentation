@@ -7,15 +7,15 @@ Frontends of well-known programs in this category, analysed for their **function
 | Program | Versions | What it is |
 |---------|----------|------------|
 | [Confluence](confluence/index.md) | [latest](confluence/latest/description.md) | Confluence is a team wiki and collaboration product by Atlassian. |
+| [Logseq](logseq/index.md) | [latest](logseq/latest/description.md) | Logseq is an open-source outliner where every bullet is a block that can be referenced from elsewhere; a database version is replacing the Markdown-file version. |
 | [MediaWiki](mediawiki/index.md) | [1.46](mediawiki/1.46/description.md), [latest](mediawiki/latest/description.md) | MediaWiki is the wiki engine behind Wikipedia and the other Wikimedia projects. |
 | [Notion](notion/index.md) | [2026-11-07](notion/2026-11-07/description.md), [latest](notion/latest/description.md) | Notion is a hosted all-in-one workspace for notes, documents and databases, built from typed blocks. |
+| [Obsidian](obsidian/index.md) | [latest](obsidian/latest/description.md) | Obsidian edits a folder of plain Markdown files (a vault), with links between notes, plugins and optional paid Sync and Publish. |
+| [Tana](tana/index.md) | [latest](tana/latest/description.md) | Tana is an outliner where every line is a node and nodes can be turned into typed objects with fields. |
 | [Tango](tango/index.md) | [latest](tango/latest/description.md) | Tango turns recorded clicks into step-by-step guides; not a wiki, documented for its capture-to-guide idea. |
 | [VSCodium](vscodium/index.md) | [latest](vscodium/latest/description.md) | VSCodium is an open-source version of Microsoft Visual Studio Code. |
 | [Wiki.js](wikijs/index.md) | [3.1.1](wikijs/3.1.1/description.md), [latest](wikijs/latest/description.md) | Wiki.js is an open-source, self-hosted wiki engine. |
 | [XWiki](xwiki/index.md) | [latest](xwiki/latest/description.md) | XWiki is a powerful enterprise wiki platform with advanced features for knowledge management. |
-| [Logseq](logseq/index.md) | [latest](logseq/latest/description.md) | Logseq is an open-source outliner with block references and a database version with typed tags. |
-| [Obsidian](obsidian/index.md) | [latest](obsidian/latest/description.md) | Obsidian is a local-first Markdown notes app with backlinks and a Canvas board. |
-| [Tana](tana/index.md) | [latest](tana/latest/description.md) | Tana is an outliner with supertags that turn nodes into typed objects. |
 
 ## File set per program (ADR 0012)
 

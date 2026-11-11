@@ -115,9 +115,11 @@ Further information can be found in the documentation of individual CRM systems.
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (4), by function, nothing copied (ADR 0012/0013):
+Analysed programs (6), by function, nothing copied (ADR 0012/0013):
 
+- [Apple Contacts](frontends/apple-contacts/index.md) — Apple Contacts is the address book built into Apple's operating systems.
 - [GNOME Contacts](frontends/gnome-contacts/index.md) — GNOME Contacts is the lean contact app for GNOME: create contacts, link them, synchronise them with Evolution Data Server sources (local address books, CalDAV/CardDAV accounts, Google, LDAP).
+- [Google Contacts](frontends/google-contacts/index.md) — Google Contacts is the address book tied to a Google Account.
 - [KAddressBook](frontends/kaddressbook/index.md) — KAddressBook is the contact management application of KDE PIM: vCard-based, managed through Akonadi resources (local folders, IMAP-Contacts, CardDAV, LDAP).
 - [Monica](frontends/monica/index.md) — Monica is a self-hosted personal CRM: capture people with all their relationships, activities, gifts, tasks and notes — as a web app (Laravel/Vue) with a REST API.
 - [Nextcloud Contacts](frontends/nextcloud-contacts/index.md) — Nextcloud Contacts is the contact app of the Nextcloud suite: address books in the browser, synchronised over CardDAV with all devices, linked to user accounts, circles/groups and the people area o…

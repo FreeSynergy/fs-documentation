@@ -19,6 +19,27 @@ PeerTube is free software for hosting videos and live streams. Each installation
 ## Protocols and standards used
 ActivityPub, WebRTC, HLS ⚠️ (not stated in the pages read), REST with OpenAPI 3. See [data standards](../../../../data/standards.md).
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
+
 ## Sources
 | Source | Kind | Retrieved |
 |--------|------|-----------|

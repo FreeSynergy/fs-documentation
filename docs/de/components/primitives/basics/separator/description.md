@@ -2,22 +2,21 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `basics` |
-| **Inherits from** | `base` |
-| **Variants** | `horizontal`, `vertical`, `mit-beschriftung`, `dekorativ`, `inset` |
-| **States** | keine – nicht bedienbar |
-| **Gestures** | keine – nicht bedienbar |
-| **Animations** | `cross-fade` (Wechsel `vertical` → `horizontal`) |
-| **Related** | `card`, `panel`, `label`, `menu`, `toolbar`, `base` |
-| **Status** | documented |
+| **Kategorie** | `basics` |
+| **Erbt von** | `base` |
+| **Varianten** | `horizontal`, `vertical`, `mit-beschriftung`, `dekorativ`, `inset` |
+| **Zustände** | keine – nicht bedienbar |
+| **Gesten** | keine – nicht bedienbar |
+| **Animationen** | `cross-fade` (Wechsel `vertical` → `horizontal`) |
+| **Verwandt** | `card`, `panel`, `label`, `menu`, `toolbar`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 
 Ein Separator trennt Inhalte voneinander: waagerecht zwischen Blöcken, senkrecht zwischen
 Spalten oder Werkzeuggruppen. Er kann eine Beschriftung tragen oder rein dekorativ sein.
 
-## Zweck
-
+## Verwendungszweck
 - Gruppen in Menüs und Werkzeugleisten trennen
 - Abschnitte in Formularen und Detailansichten gliedern
 - Ein „oder“-Trenner zwischen gleichwertigen Wegen

@@ -6,7 +6,7 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [Chatwoot](chatwoot/index.md) | [latest](chatwoot/latest/description.md) | Chatwoot is an open-source support platform with one inbox for website chat, e-mail, messengers, social and voice channels. |
+| [Chatwoot](chatwoot/index.md) | [latest](chatwoot/latest/description.md) | Chatwoot is a customer-support platform where conversations from many channels land in one shared inbox. |
 | [Freshdesk](freshdesk/index.md) | [latest](freshdesk/latest/description.md) | Freshdesk (Freshworks) is a SaaS helpdesk with tickets, knowledge base, SLAs, omnichannel e-mail/phone/chat and Freddy AI. |
 | [GLPI](glpi/index.md) | [latest](glpi/latest/description.md) | GLPI is a French-flavoured open-source ITSM: helpdesk tickets plus complete IT asset management (computers, software, contracts, network), reporting that supports projects and budgets. |
 | [Helodesk](helodesk/index.md) | [latest](helodesk/latest/description.md) | Helodesk is a French SaaS customer-service suite (contact centre): telephony/softphone, e-mail, chat, SMS and callback in one surface, plus cases (tickets), knowledge base, IVR and reporting. |

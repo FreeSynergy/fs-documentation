@@ -14,8 +14,7 @@
 ## Beschreibung
 Eine Kartenansicht zeigt interaktive Karten (Google Maps, Leaflet, OpenStreetMap).
 
-## Zweck
-
+## Verwendungszweck
 - Anzeige eines Ortes
 - Kartenansicht
 - Geodaten

@@ -2,20 +2,19 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `fields` |
-| **Inherits from** | `base`, `select` |
-| **Variants** | `einzeln`, `freitext`, `mehrfach` |
-| **States** | `open`, `loading`, `no-results` |
-| **Gestures** | `tap`, `swipe` |
-| **Animations** | `fade-in`, `expand`, `highlight` |
-| **Related** | `select`, `search-field`, `tags-input`, `command` |
-| **Status** | documented |
+| **Kategorie** | `fields` |
+| **Erbt von** | `base`, `select` |
+| **Varianten** | `einzeln`, `freitext`, `mehrfach` |
+| **Zustände** | `open`, `loading`, `no-results` |
+| **Gesten** | `tap`, `swipe` |
+| **Animationen** | `fade-in`, `expand`, `highlight` |
+| **Verwandt** | `select`, `search-field`, `tags-input`, `command` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Eine Combobox ist ein Textfeld plus eine Auswahlliste.
 
-## Zweck
-
+## Verwendungszweck
 - Adresssuche
 - Kategorien
 - Suchfeld

@@ -2,14 +2,14 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `special` |
-| **Inherits from** | `base` |
-| **Variants** | `app`, `widget`, `iframe` |
-| **States** | `geladen`, `fehler` |
-| **Gestures** | `tap`, `drag` (nur mit `interactive`) |
-| **Animations** | `fade-in` |
-| **Related** | `map-view`, `whiteboard`, `dashboard`, `base` |
-| **Status** | documented |
+| **Kategorie** | `special` |
+| **Erbt von** | `base` |
+| **Varianten** | `app`, `widget`, `iframe` |
+| **Zustände** | `geladen`, `fehler` |
+| **Gesten** | `tap`, `drag` (nur mit `interactive`) |
+| **Animationen** | `fade-in` |
+| **Verwandt** | `map-view`, `whiteboard`, `dashboard`, `base` |
+| **Status** | dokumentiert |
 
 !!! info "Standardisierung"
     Die bisherigen Komponenten `app-embed`, `widget-embed` und `iframe-embed` wurden zum Attribut
@@ -21,8 +21,7 @@ Ein **Embed** bindet fremde Inhalte in eine FreeSynergy-Fläche ein: ein anderes
 eine externe Seite. Der Inhalt gehört nicht zur Anwendung; er wird in einer eigenen Fläche angezeigt und
 über eine klar benannte Schnittstelle angesprochen.
 
-## Zweck
-
+## Verwendungszweck
 - Ein FreeSynergy-Programm in ein anderes einbetten (z. B. einen Kalender in ein Dashboard)
 - Ein Widget (Wetter, Uhr, Zähler) auf einer Seite oder einem Dashboard platzieren
 - Eine externe Seite oder einen externen Player einbetten

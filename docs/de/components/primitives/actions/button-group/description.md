@@ -2,22 +2,21 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `actions` |
-| **Inherits from** | `base` |
-| **Variants** | `verbund`, `segment`, `split` |
-| **States** | `selected` (Segment aktiv) |
-| **Gestures** | `tap` |
-| **Animations** | `press`, `highlight` |
-| **Related** | `toolbar`, `tabs`, `tags-input`, `button`, `base` |
-| **Status** | documented |
+| **Kategorie** | `actions` |
+| **Erbt von** | `base` |
+| **Varianten** | `verbund`, `segment`, `split` |
+| **Zustände** | `selected` (Segment aktiv) |
+| **Gesten** | `tap` |
+| **Animationen** | `press`, `highlight` |
+| **Verwandt** | `toolbar`, `tabs`, `tags-input`, `button`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 
 Eine Button-Gruppe fasst zusammengehörige Buttons zu einer optischen und logischen
 Einheit zusammen. Die Zusammengehörigkeit erkennt man daran, wie die Flächen aneinanderstoßen.
 
-## Zweck
-
+## Verwendungszweck
 - Alternativen, die gemeinsam angewendet werden können (Schriftstil, Ausrichtung)
 - Genau eine Wahl ohne eigene Auswahlliste (segmentierte Steuerung)
 - Hauptaktion mit erweitertem Angebot (Split-Button mit Pfeil für die Auswahlliste)

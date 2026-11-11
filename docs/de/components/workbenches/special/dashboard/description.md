@@ -2,20 +2,19 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `special` |
-| **Inherits from** | `base` |
-| **Variants** | `vorlage`, `anordbar`, `bericht` |
-| **States** | `bearbeiten`, `leer` |
-| **Gestures** | `drag`, `tap`, `long-press` |
-| **Animations** | `reorder`, `cascade`, `stagger` |
-| **Related** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
-| **Status** | documented |
+| **Kategorie** | `special` |
+| **Erbt von** | `base` |
+| **Varianten** | `vorlage`, `anordbar`, `bericht` |
+| **Zustände** | `bearbeiten`, `leer` |
+| **Gesten** | `drag`, `tap`, `long-press` |
+| **Animationen** | `reorder`, `cascade`, `stagger` |
+| **Verwandt** | `card`, `chart`, `grid-view`, `split-view`, `scroll-area` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Ein Dashboard ist eine Übersichtsseite mit Widgets.
 
-## Zweck
-
+## Verwendungszweck
 - Überblick
 - Auswertung
 - Projekt

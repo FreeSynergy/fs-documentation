@@ -2,20 +2,19 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `fields` |
-| **Inherits from** | `base` |
-| **Variants** | `palette`, `spectrum`, `code` |
-| **States** | `open`, `error` |
-| **Gestures** | `tap`, `drag` |
-| **Animations** | `fade-in`, `expand` |
-| **Related** | `emoji-picker`, `field`, `base` |
-| **Status** | documented |
+| **Kategorie** | `fields` |
+| **Erbt von** | `base` |
+| **Varianten** | `palette`, `spectrum`, `code` |
+| **Zustände** | `open`, `error` |
+| **Gesten** | `tap`, `drag` |
+| **Animationen** | `fade-in`, `expand` |
+| **Verwandt** | `emoji-picker`, `field`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Ein Farbfeld ist ein Feld zur Farbauswahl mit einem Farbwähler.
 
-## Zweck
-
+## Verwendungszweck
 - Eine Farbe auswählen
 - Farbthemen
 - Farbcode

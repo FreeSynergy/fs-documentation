@@ -7,11 +7,11 @@ Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei 
 ## Elemente
 
 - [**date-picker**](./date-picker/) – Der Datumswähler öffnet ein Kalenderoverlay, in dem ein Datum oder ein Bereich ausgewählt wird.
-- [**emoji-picker**](./emoji-picker/) – Ein Emoji Picker ist eine Emoji-Auswahl für Chat/Kommentare.
-- [**file-upload**](./file-upload/) – Ein File Upload ist ein Element für Dateiauswahl und Upload.
-- [**range-calendar**](./range-calendar/) – Der Bereichskalender wählt einen zusammenhängenden Zeitraum.
+- [**emoji-picker**](./emoji-picker/) – Ein Emoji Picker ist eine Emoji-Auswahl für Chat und Kommentare.
+- [**file-upload**](./file-upload/) – Ein File Upload ist ein Element zum Auswählen und Hochladen von Dateien.
+- [**range-calendar**](./range-calendar/) – Der Range Calendar wählt einen zusammenhängenden Zeitraum.
 - [**rule-editor**](./rule-editor/) – Ein Regeleditor bearbeitet Regeln der Form „wenn ...
-- [**time-picker**](./time-picker/) – Die Zeitauswahl wählt eine Uhrzeit aus einer Liste möglicher Zeiten.
+- [**time-picker**](./time-picker/) – Der Time Picker wählt eine Uhrzeit aus einer Liste möglicher Zeiten.
 
 ## Steckbriefe
 

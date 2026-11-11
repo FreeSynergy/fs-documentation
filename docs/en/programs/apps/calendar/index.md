@@ -111,14 +111,19 @@ Further information can be found in the documentation of individual calendar sys
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (6), by function, nothing copied (ADR 0012/0013):
+Analysed programs (11), by function, nothing copied (ADR 0012/0013):
 
+- [Cal.com](frontends/cal-com/index.md) — Cal.com is a scheduling product: the owner defines event types and availability, and others book a slot on a public page.
 - [DAViCal](frontends/davical/index.md) — DAViCal is a CalDAV/CardDAV server written in PHP on PostgreSQL — a lean, protocol-faithful self-hosted calendar/contact store with web administration.
+- [Fantastical](frontends/fantastical/index.md) — Fantastical is a commercial calendar and task app from Flexibits for Apple platforms and Windows.
 - [Google Calendar](frontends/google-calendar/index.md) — Google Calendar (calendar.google.com) is Google's calendar service: a web interface plus apps for Android, iOS, Wear OS and Apple Watch, coupled with Gmail, Meet, Tasks and (with a premium subscrip…
 - [Merkuro Calendar](frontends/merkuro/index.md) — Merkuro Calendar is the **modern calendar client of the KDE desktop environment** (Qt 6/QML/Kirigami, convergent on desktop and Plasma Mobile).
+- [Motion](frontends/motion/index.md) — Motion (usemotion.com) is a commercial planner with calendar, tasks and projects.
 - [Nextcloud Calendar](frontends/nextcloud-calendar/index.md) — The calendar app of the Nextcloud server: a web interface (Vue 3 + FullCalendar) above the CalDAV backend (sabre/dav) of the Nextcloud server.
+- [Notion Calendar](frontends/notion-calendar/index.md) — Notion Calendar (formerly Cron) is a calendar client by Notion for desktop and web.
 - [Outlook calendar](frontends/outlook-calendar/index.md) — The calendar component of the Microsoft Outlook line: web app (outlook.com / Outlook on the web), the new and the classic Outlook for Windows, Outlook for Mac and iOS/Android — data in the mailbox …
 - [GNOME Planner](frontends/planner/index.md) — Planner is the project planner on GNOME (app ID `app.drey.Planner`): tasks with start/finish, work, costs and dependencies (FS/SS/FF/SF with lag), resources with their own working calendars, critic…
+- [Reclaim](frontends/reclaim/index.md) — Reclaim (Reclaim.ai) is a web service that works on top of a Google or Outlook calendar and places tasks, habits and meetings into free time.
 
 Overview: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

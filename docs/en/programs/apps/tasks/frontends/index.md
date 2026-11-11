@@ -6,11 +6,11 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [Things 3](things-3/index.md) | [latest](things-3/latest/description.md) | Things 3 is a personal to-do app for Apple platforms with fixed day lists (Today, This Evening, Someday) and quick entry. |
-| [OmniFocus](omnifocus/index.md) | [latest](omnifocus/latest/description.md) | OmniFocus is a GTD-style task manager for Apple platforms with perspectives, forecast and project review. |
-| [Taskwarrior](taskwarrior/index.md) | [latest](taskwarrior/latest/description.md) | Taskwarrior is a command-line task manager that ranks tasks by a configurable computed urgency. |
-| [Todoist](todoist/index.md) | [latest](todoist/latest/description.md) | Todoist is a cross-platform task manager known for natural-language dates and a filter query language. |
-| [Linear](linear/index.md) | [latest](linear/latest/description.md) | Linear is a fast issue tracker with triage inbox, cycles and a GraphQL API. |
+| [Linear](linear/index.md) | [latest](linear/latest/description.md) | Linear is a team issue tracker built for speed: keyboard-driven, with cycles (time-boxed iterations), projects, initiatives and a triage inbox. |
+| [OmniFocus](omnifocus/index.md) | [latest](omnifocus/latest/description.md) | OmniFocus is a task manager for Mac, iPhone, iPad, Apple Watch and Vision Pro, plus OmniFocus for the Web, aimed at long-term projects and the weekly review. |
+| [Taskwarrior](taskwarrior/index.md) | [latest](taskwarrior/latest/description.md) | Taskwarrior is a command-line to-do manager. |
+| [Things 3](things-3/index.md) | [latest](things-3/latest/description.md) | Things 3 is a personal to-do app for Mac, iPhone, iPad, Apple Watch and Vision Pro, built around a small set of fixed lists and a calm, fast capture flow. |
+| [Todoist](todoist/index.md) | [latest](todoist/latest/description.md) | Todoist is a cross-platform task manager with projects, sections, labels, priorities and natural-language dates. |
 
 ## File set per program (ADR 0012)
 

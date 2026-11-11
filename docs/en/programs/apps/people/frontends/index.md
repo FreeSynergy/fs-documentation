@@ -6,9 +6,9 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [Apple Contacts](apple-contacts/index.md) | [latest](apple-contacts/latest/description.md) | Apple Contacts is the address book built into Apple's operating systems; NameDrop shares chosen contact details between nearby devices. |
+| [Apple Contacts](apple-contacts/index.md) | [latest](apple-contacts/latest/description.md) | Apple Contacts is the address book built into Apple's operating systems. |
 | [GNOME Contacts](gnome-contacts/index.md) | [latest](gnome-contacts/latest/description.md) | GNOME Contacts is the lean contact app for GNOME: create contacts, link them, synchronise them with Evolution Data Server sources (local address books, CalDAV/CardDAV accounts, Google, LDAP). |
-| [Google Contacts](google-contacts/index.md) | [latest](google-contacts/latest/description.md) | Google Contacts is the address book of a Google Account, with duplicate detection and merge suggestions (Merge & fix). |
+| [Google Contacts](google-contacts/index.md) | [latest](google-contacts/latest/description.md) | Google Contacts is the address book tied to a Google Account. |
 | [KAddressBook](kaddressbook/index.md) | [latest](kaddressbook/latest/description.md) | KAddressBook is the contact management application of KDE PIM: vCard-based, managed through Akonadi resources (local folders, IMAP-Contacts, CardDAV, LDAP). |
 | [Monica](monica/index.md) | [latest](monica/latest/description.md) | Monica is a self-hosted personal CRM: capture people with all their relationships, activities, gifts, tasks and notes — as a web app (Laravel/Vue) with a REST API. |
 | [Nextcloud Contacts](nextcloud-contacts/index.md) | [latest](nextcloud-contacts/latest/description.md) | Nextcloud Contacts is the contact app of the Nextcloud suite: address books in the browser, synchronised over CardDAV with all devices, linked to user accounts, circles/groups and the people area o… |

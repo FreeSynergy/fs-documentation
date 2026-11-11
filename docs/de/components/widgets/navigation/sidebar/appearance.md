@@ -1,7 +1,6 @@
 # Sidebar - Erscheinungsbild
 
-## Grundaufbau
-
+## Grundlayout
 ```
 ┌─────────────┐
 │  Logo/Titel │

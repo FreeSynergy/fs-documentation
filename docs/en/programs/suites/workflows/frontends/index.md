@@ -7,14 +7,14 @@ Frontends of well-known programs in this category, analysed for their **function
 | Program | Versions | What it is |
 |---------|----------|------------|
 | [Apache Airflow](apache-airflow/index.md) | [latest](apache-airflow/latest/description.md) | Apache Airflow (Apache-2.0) orchestrates data-intensive pipelines as **DAGs in Python**: the planner (scheduler) calculates schedules, executors distribute tasks to workers. |
-| [Apple Shortcuts](apple-shortcuts/index.md) | [latest](apple-shortcuts/latest/description.md) | Apple Shortcuts is the on-device automation app of Apple devices: shortcuts built from actions, started in many ways. A personal tool, not a suite. |
-| [Huginn](huginn/index.md) | [latest](huginn/latest/description.md) | Huginn is a self-hosted (MIT) system of agents that watch the web and other sources and pass events to each other. |
+| [Apple Shortcuts](apple-shortcuts/index.md) | [latest](apple-shortcuts/latest/description.md) | Apple Shortcuts is the automation app of Apple devices: a shortcut is a sequence of actions that work with apps, content and web services. |
+| [Huginn](huginn/index.md) | [latest](huginn/latest/description.md) | Huginn is an open-source (MIT) system, self-hosted, in which agents watch the web and other sources and act on what they find. |
 | [Make](make/index.md) | [latest](make/latest/description.md) | Make (formerly Integromat) is the visual SaaS automation platform: scenarios built from modules (trigger → router/iterator/aggregator → actions), 1,500+ apps, visual data paths with bubbles. |
 | [n8n](n8n/index.md) | [latest](n8n/latest/description.md) | n8n is the open-source workflow automation tool (Node.js, "fair-code"): wire nodes into workflows graphically, hundreds of integrations, custom JS/Python code nodes, webhooks as triggers, self-host… |
 | [Node-RED](node-red/index.md) | [latest](node-red/latest/description.md) | Node-RED is the flow-based programming environment (Node.js, Apache-2.0) from IBM's IoT labs: you wire nodes together with wires (messages flow along them), with a dashboard, MQTT/OPC-UA support an… |
-| [Power Automate](power-automate/index.md) | [latest](power-automate/latest/description.md) | Power Automate is Microsoft's hosted flow service with connectors, environments and approvals. A product, not a suite. |
+| [Power Automate](power-automate/index.md) | [latest](power-automate/latest/description.md) | Power Automate is Microsoft's automation service in the Power Platform: flows connect apps and services through connectors, with a web designer and optional Copilot assistance. |
 | [Prefect](prefect/index.md) | [latest](prefect/latest/description.md) | Prefect (Apache-2.0) is modern workflow orchestration in Python: `@flow`/`@task` decorators, deployments (work pools/workers), scheduling, events/automations, observability UI. |
-| [Windmill](windmill/index.md) | [latest](windmill/latest/description.md) | Windmill is an open-source platform where scripts become forms, endpoints and jobs, chained into flows and apps. |
+| [Windmill](windmill/index.md) | [latest](windmill/latest/description.md) | Windmill is an open-source (AGPLv3 community edition) platform for scripts, flows, apps and AI agents, self-hostable or hosted. |
 | [Zapier](zapier/index.md) | [latest](zapier/latest/description.md) | Zapier is the largest SaaS automation library (8,000+ apps): "Zaps" link triggers → actions, multi-step zaps and paths for branching, interfaces/tables/forms as mini apps. |
 
 ## File set per program (ADR 0012)

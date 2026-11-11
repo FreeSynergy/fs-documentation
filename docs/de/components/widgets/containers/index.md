@@ -1,19 +1,19 @@
-# containers
+# containers (Container)
 
-Band [widgets](../) – kennt seinen Inhalt, wenn es gebaut wird.
+Band [widgets](../) – kennt seine Inhalte beim Bauen.
 
-Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, einklappbare Gruppen, geteilte Ansichten und Assistenten.
+Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, aufklappbare Gruppen, geteilte Ansichten und Assistenten.
 
 ## Elemente
 
-- [**accordion**](./accordion/) – Ein Akkordeon ist ein Stapel aus Kopfzeilen, die Inhalte ein- und ausklappen.
-- [**card**](./card/) – Die Karte ist ein Container-Element, das Inhalte in einem strukturierten Kasten mit Titel, Inhalt und optionalen Aktionen zeigt.
+- [**accordion**](./accordion/) – Ein Accordion ist ein Stapel von Kopfzeilen, die Inhalte ein- und ausklappen.
+- [**card**](./card/) – Die Card ist ein Container-Element.
 - [**panel**](./panel/) – Ein Panel ist ein großer Container mit Kopfzeile, Inhalt und Fußzeile.
-- [**scroll-area**](./scroll-area/) – Ein Scroll-Bereich ist eine Fläche mit festem Maß, deren Inhalt scrollt.
-- [**split-view**](./split-view/) – Eine geteilte Ansicht ist ein Layout mit zwei Bereichen nebeneinander.
+- [**scroll-area**](./scroll-area/) – Ein Scroll Area ist eine Fläche mit fester Abmessung, deren Inhalt scrollt.
+- [**split-view**](./split-view/) – Eine Split View ist ein Layout mit zwei nebeneinanderliegenden Bereichen.
 - [**wizard**](./wizard/) – Ein Wizard ist ein schrittweises Formular für komplexe Aufgaben.
 
-## Profile
+## Steckbriefe
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -26,6 +26,6 @@ Boxen und Flächen, die anderen Inhalt aufnehmen: Karten, Panels, einklappbare G
 
 ## Siehe auch
 
-- [Komponentenübersicht](../../index.md)
+- [Komponenten-Übersicht](../../index.md)
 - [Band widgets](../)
 - [Basiskomponente](../../primitives/basics/base.md)

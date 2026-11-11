@@ -2,20 +2,19 @@
 
 | Feld | Wert |
 | ------ | ------ |
-| **Category** | `special` |
-| **Inherits from** | `base` |
-| **Variants** | `zeichnung`, `formen`, `notizen`, `vorlage` |
-| **States** | `gemeinsam`, `offline` |
-| **Gestures** | `drag`, `tap`, `double-tap`, `pinch`, `spread` |
-| **Animations** | `highlight`, `fade-in` |
-| **Related** | `rich-text-editor`, `image`, `map-view`, `dashboard` |
-| **Status** | documented |
+| **Kategorie** | `special` |
+| **Erbt von** | `base` |
+| **Varianten** | `zeichnung`, `formen`, `notizen`, `vorlage` |
+| **Zustände** | `gemeinsam`, `offline` |
+| **Gesten** | `drag`, `tap`, `double-tap`, `pinch`, `spread` |
+| **Animationen** | `highlight`, `fade-in` |
+| **Verwandt** | `rich-text-editor`, `image`, `map-view`, `dashboard` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Ein Whiteboard ist eine Zeichenfläche für die Zusammenarbeit.
 
-## Zweck
-
+## Verwendungszweck
 - Brainstorming
 - Planung
 - Zusammenarbeit

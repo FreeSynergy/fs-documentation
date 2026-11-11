@@ -111,17 +111,24 @@ Further information can be found in the documentation of individual messenger sy
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (9), by function, nothing copied (ADR 0012/0013):
+Analysed programs (16), by function, nothing copied (ADR 0012/0013):
 
 - [Apple Mail](frontends/apple-mail/index.md) — Apple Mail is the mail program that ships with every iPhone, iPad and Mac.
+- [Delta Chat](frontends/delta-chat/index.md) — Delta Chat is a chat messenger whose messages travel as encrypted e-mail-style messages through relays ("chatmail"), or through an ordinary e-mail account used only for this.
 - [Discord](frontends/discord/index.md) — Discord is a proprietary communication platform for gaming communities, with voice/video and a server structure.
 - [Element](frontends/element/index.md) — Element is the open-source messenger for the Matrix protocol, with a decentralised architecture and end-to-end encryption.
+- [Fastmail](frontends/fastmail/index.md) — Fastmail is a paid hosted e-mail service with web and mobile apps; calendar and contacts are part of the offer.
 - [FreeSynergy Simple](frontends/freesynergy-simple/index.md) — Our own, deliberately minimal messenger frontend.
+- [HEY](frontends/hey/index.md) — HEY is a hosted e-mail service with its own apps and web interface.
 - [Kontact](frontends/kontact/index.md) — Kontact is the integrated PIM application for KDE, which unites email, calendar, contacts, tasks and notes in a single application.
 - [Mastodon](frontends/mastodon/index.md) — Mastodon is an open-source microblogging network based on the ActivityPub protocol, and it is decentralised.
 - [Outlook](frontends/outlook/index.md) — Outlook is Microsoft's most popular email client, part of Microsoft 365.
+- [Signal](frontends/signal/index.md) — Signal is a private messenger for text, voice messages, photos, videos, files, voice and video calls and group chats.
+- [Spark](frontends/spark/index.md) — Spark is an e-mail client for existing accounts, available for Windows, Android, Mac, iPhone, iPad and Apple Watch.
+- [Superhuman Mail](frontends/superhuman/index.md) — Superhuman Mail is a paid e-mail client that works on top of existing mail accounts and is built for speed: a command palette, a keyboard-first workflow and a divided inbox.
 - [Telegram](frontends/telegram/index.md) — Telegram is a cloud-based messenger focused on speed, large groups/channels and encryption.
 - [Thunderbird](frontends/thunderbird/index.md) — Thunderbird is Mozilla's open-source email client, cross-platform and email-focused.
+- [Zulip](frontends/zulip/index.md) — Zulip is a team chat organised in channels, in which every message belongs to a topic.
 
 Overview: [frontends](frontends/index.md)
 <!-- /gen:frontends -->

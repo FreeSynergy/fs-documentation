@@ -20,8 +20,9 @@ Photo galleries manage image and video collections: they index holdings, generat
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (8), by function, nothing copied (ADR 0012/0013):
+Analysed programs (9), by function, nothing copied (ADR 0012/0013):
 
+- [Apple Photos](frontends/apple-photos/index.md) — Photos is the photo and video library app of macOS, iOS and iPadOS, synchronised through iCloud Photos.
 - [Coppermine](frontends/coppermine/index.md) — Coppermine (CPG) is a classic web toolkit for photo galleries with albums, categories, comments, ratings and role permissions.
 - [Damselfly](frontends/damselfly/index.md) — Damselfly is a lightweight, fast-starting photo gallery with AI recognition (faces, scenes, text/OCR, similarity search) based on PostgreSQL vectors.
 - [Immich](frontends/immich/index.md) — Immich is a self-hosted photo and video management solution (server + mobile app): uploads from the phone, face and object recognition, timelines, albums, shared galleries and a complete REST API.

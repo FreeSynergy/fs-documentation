@@ -66,3 +66,16 @@ did this successfully. Rounding does not help. So share only with people you tru
 
 **Known open point:** a fault while accepting an offer, followed by an action on the reservation and a repeated decision, can leave offer and
 reservation disagreeing.
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (4), by function, nothing copied (ADR 0012/0013):
+
+- [ERPNext](frontends/erpnext/index.md) — ERPNext is an open-source business management suite built on the Frappe framework.
+- [Grocy](frontends/grocy/index.md) — Grocy is a self-hosted web app for household groceries and chores: stock, shopping list, recipes, meal plan, chores, tasks, equipment and batteries.
+- [Odoo](frontends/odoo/index.md) — Odoo is a suite of business apps (sales, inventory, accounting and more) on one platform, as open-source community and commercial enterprise editions (edition split: Open).
+- [Snipe-IT](frontends/snipe-it/index.md) — Snipe-IT is an open-source IT asset management web app.
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

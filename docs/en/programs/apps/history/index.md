@@ -51,3 +51,15 @@ All answers are provisional. Details: [`DESIGN.md`](https://github.com/FreeSyner
 
 **Known limits:** a lost connection to the hub is not reconnected. The hub delivers the program as the actor and the receive time as the time. Until it passes on the originals, "person" means
 the object's `attributedTo`, so "what I edited in someone else's object" cannot be answered.
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (3), by function, nothing copied (ADR 0012/0013):
+
+- [ActivityWatch](frontends/activitywatch/index.md) — ActivityWatch records what you do on your computer: which program and window is in front, whether you are at the keyboard, which browser tab is open.
+- [Day One](frontends/day-one/index.md) — Day One is a journaling app for Apple devices, Android, Mac, Windows and the web.
+- [Exist.io](frontends/exist-io/index.md) — Exist is a self-tracking service that gathers data from other apps and devices, adds manual entries such as mood, and looks for connections between them.
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

@@ -18,8 +18,7 @@
 ## Beschreibung
 Ein Rich-Text-Editor ist ein Editor für formatierten Text.
 
-## Zweck
-
+## Verwendungszweck
 - Dokumente
 - Artikel
 - Nachrichten

@@ -38,3 +38,17 @@ The [code lives here](https://github.com/FreeSynergy/fs-tasks). See the [overall
 - [Requirements](requirements.md), analysed from eight project tools, written when this was still planned as `fs-kanban`
 
 Frontends analysed so far are under [project management](../../suites/projectmanagement/index.md).
+
+## Frontends
+
+<!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+Analysed programs (5), by function, nothing copied (ADR 0012/0013):
+
+- [Linear](frontends/linear/index.md) — Linear is a team issue tracker built for speed: keyboard-driven, with cycles (time-boxed iterations), projects, initiatives and a triage inbox.
+- [OmniFocus](frontends/omnifocus/index.md) — OmniFocus is a task manager for Mac, iPhone, iPad, Apple Watch and Vision Pro, plus OmniFocus for the Web, aimed at long-term projects and the weekly review.
+- [Taskwarrior](frontends/taskwarrior/index.md) — Taskwarrior is a command-line to-do manager.
+- [Things 3](frontends/things-3/index.md) — Things 3 is a personal to-do app for Mac, iPhone, iPad, Apple Watch and Vision Pro, built around a small set of fixed lists and a calm, fast capture flow.
+- [Todoist](frontends/todoist/index.md) — Todoist is a cross-platform task manager with projects, sections, labels, priorities and natural-language dates.
+
+Overview: [frontends](frontends/index.md)
+<!-- /gen:frontends -->

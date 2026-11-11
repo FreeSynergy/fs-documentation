@@ -1,6 +1,6 @@
 # Map View - Erscheinungsbild
 
-## Grundaufbau
+## Grundlayout
 Eine Kartenansicht zeigt interaktive Karten (Google Maps, Leaflet, OpenStreetMap).
 
 ```

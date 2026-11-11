@@ -2,14 +2,14 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `fields` |
-| **Inherits from** | `base` |
-| **Variants** | `date`, `time`, `datetime` |
-| **States** | `open`, `error` |
-| **Gestures** | `tap`, `swipe` |
-| **Animations** | `fade-in`, `slide-in` |
-| **Related** | `date-picker`, `time-picker`, `range-calendar`, `calendar-view` |
-| **Status** | documented |
+| **Kategorie** | `fields` |
+| **Erbt von** | `base` |
+| **Varianten** | `date`, `time`, `datetime` |
+| **Zustände** | `open`, `error` |
+| **Gesten** | `tap`, `swipe` |
+| **Animationen** | `fade-in`, `slide-in` |
+| **Verwandt** | `date-picker`, `time-picker`, `range-calendar`, `calendar-view` |
+| **Status** | dokumentiert |
 
 !!! info "Standardisierung"
     Die früheren Komponenten `datetime-input` und `time-input` sind in `date-input`
@@ -18,8 +18,7 @@
 ## Beschreibung
 Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
 
-## Zweck
-
+## Verwendungszweck
 - Geburtsdatum
 - Einen Termin auswählen
 - Ein Datum angeben

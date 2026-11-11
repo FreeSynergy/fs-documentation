@@ -2,20 +2,19 @@
 
 | Feld | Wert |
 | ------ | ------ |
-| **Category** | `special` |
-| **Inherits from** | `base` |
-| **Variants** | `voll`, `nur-lesen`, `vergleich` |
-| **States** | `ungespeichert`, `fehler` |
-| **Gestures** | `tap`, `double-tap`, `long-press`, `drag` |
-| **Animations** | `highlight`, `fade-in` |
-| **Related** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
-| **Status** | documented |
+| **Kategorie** | `special` |
+| **Erbt von** | `base` |
+| **Varianten** | `voll`, `nur-lesen`, `vergleich` |
+| **Zustände** | `ungespeichert`, `fehler` |
+| **Gesten** | `tap`, `double-tap`, `long-press`, `drag` |
+| **Animationen** | `highlight`, `fade-in` |
+| **Verwandt** | `rich-text-editor`, `textarea`, `whiteboard`, `dashboard` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Ein Code-Editor ist ein Editor für Quellcode.
 
-## Zweck
-
+## Verwendungszweck
 - Code
 - Programmierung
 - Skripte

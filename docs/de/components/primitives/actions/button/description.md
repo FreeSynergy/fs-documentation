@@ -2,22 +2,21 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `actions` |
-| **Inherits from** | `base` |
-| **Variants** | `primary`, `secondary`, `outline`, `ghost`, `danger`, `link` |
-| **States** | `loading` (mit Sperre gegen Doppelklick) |
-| **Gestures** | `tap`, `long-press` |
-| **Animations** | `press`, `lift` |
-| **Related** | `link`, `switch`, `floating-action-button`, `button-group`, `spinner`, `base` |
-| **Status** | documented |
+| **Kategorie** | `actions` |
+| **Erbt von** | `base` |
+| **Varianten** | `primary`, `secondary`, `outline`, `ghost`, `danger`, `link` |
+| **Zustände** | `loading` (mit Sperre gegen Doppelklick) |
+| **Gesten** | `tap`, `long-press` |
+| **Animationen** | `press`, `lift` |
+| **Verwandt** | `link`, `switch`, `floating-action-button`, `button-group`, `spinner`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 
 Ein Button löst eine einzelne Aktion aus. Er ist die meistgenutzte Komponente überhaupt und der
 Ausgangspunkt fast jeder Interaktion in FreeSynergy.
 
-## Zweck
-
+## Verwendungszweck
 - Aktionen bestätigen oder ausführen (speichern, senden, anlegen)
 - Zentrale Aktion in Dialogen, Formularen und Werkzeugleisten
 - Zusammengehörige Aktionen werden über `button-group` gruppiert

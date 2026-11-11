@@ -2,21 +2,20 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `actions` |
-| **Inherits from** | `base` |
-| **Variants** | `standard FAB`, `mini FAB`, `extended FAB` |
-| **States** | `expanded`, `scroll-hidden` |
-| **Gestures** | `tap`, `long-press` |
-| **Animations** | `ripple`, `pop-in`, `press` |
-| **Related** | `button`, `button-group`, `tooltip` |
-| **Status** | documented |
+| **Kategorie** | `actions` |
+| **Erbt von** | `base` |
+| **Varianten** | `standard FAB`, `mini FAB`, `extended FAB` |
+| **Zustände** | `expanded`, `scroll-hidden` |
+| **Gesten** | `tap`, `long-press` |
+| **Animationen** | `ripple`, `pop-in`, `press` |
+| **Verwandt** | `button`, `button-group`, `tooltip` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Ein Floating Action Button (FAB) ist ein runder Hauptaktions-Button, meist unten rechts
 platziert.
 
-## Zweck
-
+## Verwendungszweck
 - Die wichtigste Aktion zeigen
 - Schneller Zugriff auf die Hauptfunktion
 - Optische Ausrichtung

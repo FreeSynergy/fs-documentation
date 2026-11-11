@@ -6,6 +6,7 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
+| [Apple Photos](apple-photos/index.md) | [latest](apple-photos/latest/description.md) | Photos is the photo and video library app of macOS, iOS and iPadOS, synchronised through iCloud Photos. |
 | [Coppermine](coppermine/index.md) | [latest](coppermine/latest/description.md) | Coppermine (CPG) is a classic web toolkit for photo galleries with albums, categories, comments, ratings and role permissions. |
 | [Damselfly](damselfly/index.md) | [latest](damselfly/latest/description.md) | Damselfly is a lightweight, fast-starting photo gallery with AI recognition (faces, scenes, text/OCR, similarity search) based on PostgreSQL vectors. |
 | [Immich](immich/index.md) | [latest](immich/latest/description.md) | Immich is a self-hosted photo and video management solution (server + mobile app): uploads from the phone, face and object recognition, timelines, albums, shared galleries and a complete REST API. |
@@ -14,7 +15,6 @@ Frontends of well-known programs in this category, analysed for their **function
 | [Nextcloud Photos](nextcloud-photos/index.md) | [latest](nextcloud-photos/latest/description.md) | The Photos app of Nextcloud is the gallery surface on top of the Files app: chronology, albums, Shared view, folder selection and (from NC 25+) Recognizer/facial-recognition integration. |
 | [PhotoPrism](photoprism/index.md) | [latest](photoprism/latest/description.md) | PhotoPrism indexes an existing photo collection, recognises content and faces, and presents it as a searchable web gallery with albums and sharing. |
 | [Piwigo](piwigo/index.md) | [latest](piwigo/latest/description.md) | Piwigo is a classic web-toolkit photo gallery: category tree, roles and permissions per folder, themes, extensions and a complete webservice API. |
-| [Apple Photos](apple-photos/index.md) | [latest](apple-photos/latest/description.md) | Apple Photos is the photo library of Apple platforms; notable for text in images (Live Text) and a merge-able Duplicates album. |
 
 ## File set per program (ADR 0012)
 

@@ -13,6 +13,27 @@ Snipe-IT is an open-source IT asset management web app. It records assets, acces
 - Status labels (undeployable, deployable, archived, pending) say whether an item can be assigned.
 - Documented because it is the clearest model for lending things with a return (ADR 0013).
 
+## Documented versions
+
+<!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 6/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+
+⚠️ Missing required files: `themes/index.md`
+<!-- /gen:versions -->
+
 ## Sources
 
 - ✅ Snipe-IT overview, https://snipe-it.readme.io/docs/overview, retrieved 2026-11-10

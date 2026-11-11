@@ -6,9 +6,9 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [ActivityWatch](activitywatch/index.md) | [latest](activitywatch/latest/description.md) | ActivityWatch records computer use automatically (active window, keyboard activity, browser tab) into a local store with a web interface. |
-| [Day One](day-one/index.md) | [latest](day-one/latest/description.md) | Day One is a journaling app whose entries get place and weather automatically and resurface "on this day". |
-| [Exist.io](exist-io/index.md) | [latest](exist-io/latest/description.md) | Exist is a self-tracking service that gathers data from many apps and devices and looks for correlations. |
+| [ActivityWatch](activitywatch/index.md) | [latest](activitywatch/latest/description.md) | ActivityWatch records what you do on your computer: which program and window is in front, whether you are at the keyboard, which browser tab is open. |
+| [Day One](day-one/index.md) | [latest](day-one/latest/description.md) | Day One is a journaling app for Apple devices, Android, Mac, Windows and the web. |
+| [Exist.io](exist-io/index.md) | [latest](exist-io/latest/description.md) | Exist is a self-tracking service that gathers data from other apps and devices, adds manual entries such as mood, and looks for connections between them. |
 
 ## File set per program (ADR 0012)
 

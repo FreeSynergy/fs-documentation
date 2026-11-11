@@ -1,6 +1,6 @@
 # Rich Text Editor - Erscheinungsbild
 
-## Grundaufbau
+## Grundlayout
 Ein Rich-Text-Editor ist ein WYSIWYG-Editor für formatierten Text.
 
 ```

@@ -1,8 +1,8 @@
-# fields
+# fields (Felder)
 
-Band [primitives](../) – lässt sich nicht weiter aufteilen.
+Band [primitives](../) – nicht weiter zerlegbar.
 
-Elemente zur Eingabe und Auswahl von Werten. Das Feld (`field`) hält Beschriftung, Hilfetext und Fehlermeldung zusammen.
+Elemente zum Eingeben und Auswählen von Werten. Das Feld (`field`) hält dabei Beschriftung, Hilfetext und Fehlermeldung zusammen.
 
 ## Elemente
 
@@ -10,22 +10,22 @@ Elemente zur Eingabe und Auswahl von Werten. Das Feld (`field`) hält Beschriftu
 - [**color-input**](./color-input/) – Ein Farbfeld ist ein Feld zur Farbauswahl mit einem Farbwähler.
 - [**combobox**](./combobox/) – Eine Combobox ist ein Textfeld plus eine Auswahlliste.
 - [**date-input**](./date-input/) – Ein Datumsfeld ist ein Feld zur Datumsauswahl mit einem Kalender.
-- [**field**](./field/) – Ein Feld ist die Hülle um ein Eingabefeld: Es verbindet Beschriftung, Hilfetext, Fehlermeldung und Pflichtkennzeichnung zu einer barrierefreien Einheit.
-- [**input-group**](./input-group/) – Eine Eingabegruppe verbindet ein Eingabefeld und die Teile, die direkt dazugehören, zu einer zusammenhängenden Fläche: ein Präfixzeichen, eine Einheit, eine Auswahlliste für die Ländervorwahl oder ein Button direkt am Feld.
-- [**mention-input**](./mention-input/) – Ein Mention-Feld ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
-- [**number-input**](./number-input/) – Ein Zahlenfeld ist ein Eingabefeld für Zahlen.
-- [**otp-input**](./otp-input/) – Das Einmalpasswort-Feld nimmt einen kurzen numerischen Code auf – ein Feld pro Zeichen.
-- [**radio-group**](./radio-group/) – Eine Radio-Gruppe ist eine Gruppe von Optionsfeldern (Einzelauswahl).
-- [**rating**](./rating/) – Eine Bewertung ist eine Stern- oder Punktebewertung.
-- [**search-field**](./search-field/) – Ein Suchfeld ist ein Suchkasten mit Filteroptionen.
-- [**select**](./select/) – Eine Auswahlliste: Das Feld zeigt den gewählten Wert, die Optionen liegen hinter einem Klick.
-- [**slider**](./slider/) – Ein Schieberegler ist ein Wertebereich mit einem verschiebbaren Regler.
-- [**switch**](./switch/) – Ein Schalter ist ein Ein-/Aus-Schalter (Toggle).
-- [**tags-input**](./tags-input/) – Ein Tag-Feld ist eine Liste von Tags/Labels.
-- [**text-input**](./text-input/) – Ein Texteingabefeld ist ein einzeiliges Eingabefeld für Text.
-- [**textarea**](./textarea/) – Ein Textbereich ist ein mehrzeiliges Eingabefeld für Text.
+- [**field**](./field/) – Ein Field ist der Wrapper um ein Eingabefeld.
+- [**input-group**](./input-group/) – Eine Input Group verbindet ein Eingabefeld mit den Teilen, die direkt dazugehören, zu einer zusammenhängenden Fläche.
+- [**mention-input**](./mention-input/) – Ein Mention Input ist ein Textfeld mit Erwähnungen von Benutzern oder Kontakten.
+- [**number-input**](./number-input/) – Ein Number Input ist ein Eingabefeld für Zahlen.
+- [**otp-input**](./otp-input/) – Das Feld für ein Einmalpasswort nimmt einen kurzen numerischen Code entgegen.
+- [**radio-group**](./radio-group/) – Eine Radio Group ist eine Gruppe von Optionsfeldern (Einfachauswahl).
+- [**rating**](./rating/) – Eine Bewertung ist eine Beurteilung mit Sternen oder Punkten.
+- [**search-field**](./search-field/) – Ein Search Field ist ein Suchfeld mit Filtermöglichkeiten.
+- [**select**](./select/) – Eine Auswahlliste: das Feld zeigt den gewählten Wert, die Optionen liegen hinter einem Klick.
+- [**slider**](./slider/) – Ein Slider ist ein Wertebereich mit einem verschiebbaren Regler.
+- [**switch**](./switch/) – Ein Switch ist ein Ein-/Aus-Schalter (Toggle).
+- [**tags-input**](./tags-input/) – Ein Tags Input ist eine Liste aus Tags/Labels.
+- [**text-input**](./text-input/) – Ein Text Input ist ein einzeiliges Eingabefeld für Text.
+- [**textarea**](./textarea/) – Ein Textarea ist ein mehrzeiliges Eingabefeld für Text.
 
-## Profile
+## Steckbriefe
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -39,7 +39,7 @@ Elemente zur Eingabe und Auswahl von Werten. Das Feld (`field`) hält Beschriftu
 | [number-input](./number-input/) | `base` | `einfach`, `stepper`, `formatiert` | - | dokumentiert |
 | [otp-input](./otp-input/) | `base`, `text-input` | `einzelboxen`, `block` | `group` | dokumentiert |
 | [radio-group](./radio-group/) | `base` | `einzeln`, `toggle`, `karte` | - | dokumentiert |
-| [rating](./rating/) | `base` | `star rating`, `heart rating`, `number rating` | - | dokumentiert |
+| [rating](./rating/) | `base` | `Sternbewertung`, `Herzbewertung`, `Zahlenbewertung` | - | dokumentiert |
 | [search-field](./search-field/) | `base`, `text-input` | `simple`, `filter`, `auto-complete` | - | dokumentiert |
 | [select](./select/) | `base` | `simple`, `multi-select`, `searchable`, `custom` | - | dokumentiert |
 | [slider](./slider/) | `base`, `number-input` | `einfach`, `bereich` | - | dokumentiert |
@@ -50,6 +50,6 @@ Elemente zur Eingabe und Auswahl von Werten. Das Feld (`field`) hält Beschriftu
 
 ## Siehe auch
 
-- [Komponentenübersicht](../../index.md)
+- [Komponenten-Übersicht](../../index.md)
 - [Band primitives](../)
 - [Basiskomponente](../basics/base.md)

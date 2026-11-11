@@ -6,14 +6,14 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
-| [F-Droid](f-droid/index.md) | [latest](f-droid/latest/description.md) | F-Droid is a community catalogue and installer client for free-software Android apps, with Anti-Feature labels and reproducible-build checks. |
-| [Flathub](flathub/index.md) | [latest](flathub/latest/description.md) | Flathub is the main app store for Flatpak on Linux, with verified publishers and client subsets. |
-| [Obtainium](obtainium/index.md) | [latest](obtainium/latest/description.md) | Obtainium is an Android app that installs and updates apps straight from their release pages. |
+| [F-Droid](f-droid/index.md) | [latest](f-droid/latest/description.md) | F-Droid is a community-run catalogue and installer client for free-software Android apps. |
+| [Flathub](flathub/index.md) | [latest](flathub/latest/description.md) | Flathub is the main app store for Flatpak on Linux: a web catalogue plus a repository from which the Flatpak tools and software centres install apps in a sandbox. |
+| [Obtainium](obtainium/index.md) | [latest](obtainium/latest/description.md) | Obtainium is an Android app that installs and updates other apps directly from their release pages (for example Git hosting releases) and notifies the user about new versions. |
 
 ## File set per program (ADR 0012)
 
 ```
-programs/apps/people/frontends/<program>/
+programs/apps/store/frontends/<program>/
 ├── index.md        what it is, notable ideas, documented versions, sources
 ├── changelog.md    changes between documented versions (≥ 2 versions)
 └── <version>/

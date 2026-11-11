@@ -102,10 +102,11 @@ Further information can be found in the documentation of individual whiteboard t
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (6), by function, nothing copied (ADR 0012/0013):
+Analysed programs (7), by function, nothing copied (ADR 0012/0013):
 
 - [draw.io](frontends/drawio/index.md) — draw.io (diagrams.net) is a free diagram tool for flowcharts, network plans, UML and BPMN.
 - [Excalidraw](frontends/excalidraw/index.md) — Excalidraw is a free, open-source collaborative whiteboard in a hand-drawn style.
+- [FigJam](frontends/figjam/index.md) — FigJam is the whiteboard product of Figma.
 - [Miro](frontends/miro/index.md) — Miro is the commercial online whiteboard (SaaS) for visual collaboration: infinite canvas, shapes/sticky notes, frames, template library (retros, workshops, customer journeys), voting/timer and boa…
 - [Mural](frontends/mural/index.md) — Mural is the workshop whiteboard suite (SaaS) with strong facilitation: canvas with shapes/notes, "Facilitation Sequence" (moderation flows), participation control and templates.
 - [OpenBoard](frontends/openboard/index.md) — OpenBoard is a free interactive whiteboard tool (C++, Qt) for teaching and presentations: multi-page "boards", pens/text/images, integrated browser, document and note tools, offline-first with a lo…

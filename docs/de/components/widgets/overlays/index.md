@@ -7,13 +7,13 @@ Elemente, die über anderem Inhalt erscheinen und eigenen Fokus bekommen. Sie ha
 ## Elemente
 
 - [**alert-dialog**](./alert-dialog/) – Ein Bestätigungsdialog fragt nach, bevor eine Aktion ausgeführt wird.
-- [**context-menu**](./context-menu/) – Ein Context Menu (Kontextmenü) wird durch Rechtsklick oder lange Touch-Aktion geöffnet und bietet kontextbezogene Optionen.
+- [**context-menu**](./context-menu/) – Ein Kontextmenü wird per Rechtsklick oder durch eine lange Berührung geöffnet und bietet kontextbezogene Optionen an.
 - [**drawer**](./drawer/) – Ein Drawer ist ein seitliches Overlay-Fenster (einklappbar).
-- [**hover-card**](./hover-card/) – Die Vorschaukarte zeigt zu einem Verweis die wichtigsten Informationen zum Ziel — ohne die Adresse zu wechseln.
+- [**hover-card**](./hover-card/) – Die Vorschaukarte zeigt die wichtigsten Informationen zum Ziel eines Verweises — ohne die Adresse zu verändern.
 - [**key-verification**](./key-verification/) – Eine Schlüsselprüfung lässt eine Person den Schlüssel oder das Gerät eines Gegenübers prüfen und das Vertrauen bestätigen.
-- [**modal**](./modal/) – Ein Modal ist ein Overlay-Fenster mit Fokus auf Inhalt.
-- [**popover**](./popover/) – Ein Popover ist ein kleines Overlay mit interaktivem Inhalt: Aktionen, eine Vorschau oder ein kurzes Formular.
-- [**tooltip**](./tooltip/) – Ein Tooltip zeigt eine kurze Erklärung zu einem Element – als Text, ohne interaktiven Inhalt.
+- [**modal**](./modal/) – Ein Modal ist ein Overlay-Fenster mit Fokus auf dem Inhalt.
+- [**popover**](./popover/) – Ein Popover ist ein kleines Overlay mit interaktivem Inhalt: Aktionen, einer Vorschau oder einem kurzen Formular.
+- [**tooltip**](./tooltip/) – Ein Tooltip zeigt eine kurze Erklärung zu einem Element — als Text, ohne interaktiven Inhalt.
 
 ## Steckbriefe
 

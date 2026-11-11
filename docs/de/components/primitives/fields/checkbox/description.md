@@ -2,20 +2,19 @@
 
 | Feld | Wert |
 |-------|-------|
-| **Category** | `fields` |
-| **Inherits from** | `base` |
-| **Variants** | `Default`, `Toggle`, `Indeterminate` |
-| **States** | `checked`, `indeterminate` |
-| **Gestures** | `tap` |
-| **Animations** | `tick-draw`, `press` |
-| **Related** | `switch`, `radio-group`, `field`, `base` |
-| **Status** | documented |
+| **Kategorie** | `fields` |
+| **Erbt von** | `base` |
+| **Varianten** | `Default`, `Toggle`, `Indeterminate` |
+| **Zustände** | `checked`, `indeterminate` |
+| **Gesten** | `tap` |
+| **Animationen** | `tick-draw`, `press` |
+| **Verwandt** | `switch`, `radio-group`, `field`, `base` |
+| **Status** | dokumentiert |
 
 ## Beschreibung
 Eine Checkbox ist ein Ja/Nein- oder Mehrfachauswahl-Feld.
 
-## Zweck
-
+## Verwendungszweck
 - Einstellungen
 - Optionen
 - Zustimmung

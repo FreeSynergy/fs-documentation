@@ -1,14 +1,14 @@
-# special
+# special (Spezielle Elemente)
 
-Band [widgets](../) – kennt seinen Inhalt, wenn es gebaut wird.
+Band [widgets](../) – kennt seine Inhalte beim Bauen.
 
-Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Karten und Ansichten, die generische Bibliotheken nicht bieten.
+Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Karten und Ansichten, die es bei generischen Bibliotheken nicht gibt.
 
 ## Elemente
 
 - [**map-view**](./map-view/) – Eine Kartenansicht zeigt interaktive Karten (Google Maps, Leaflet, OpenStreetMap).
 
-## Profile
+## Steckbriefe
 
 | Komponente | Erbt von | Varianten | Rolle | Status |
 |------------|----------|-----------|-------|--------|
@@ -16,6 +16,6 @@ Zusammengesetzte Elemente mit eigener Datenstruktur: Editoren, Einbettungen, Kar
 
 ## Siehe auch
 
-- [Komponentenübersicht](../../index.md)
+- [Komponenten-Übersicht](../../index.md)
 - [Band widgets](../)
 - [Basiskomponente](../../primitives/basics/base.md)

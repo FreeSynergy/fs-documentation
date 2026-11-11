@@ -85,11 +85,14 @@ Further information can be found in the documentation of individual wiki systems
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (8), by function, nothing copied (ADR 0012/0013):
+Analysed programs (10), by function, nothing copied (ADR 0012/0013):
 
 - [Confluence](frontends/confluence/index.md) — Confluence is a team wiki and collaboration product by Atlassian.
+- [Logseq](frontends/logseq/index.md) — Logseq is an open-source outliner where every bullet is a block that can be referenced from elsewhere; a database version is replacing the Markdown-file version.
 - [MediaWiki](frontends/mediawiki/index.md) — MediaWiki is the wiki engine behind Wikipedia and the other Wikimedia projects.
 - [Notion](frontends/notion/index.md) — Notion is a hosted all-in-one workspace for notes, documents and databases, built from typed blocks.
+- [Obsidian](frontends/obsidian/index.md) — Obsidian edits a folder of plain Markdown files (a vault), with links between notes, plugins and optional paid Sync and Publish.
+- [Tana](frontends/tana/index.md) — Tana is an outliner where every line is a node and nodes can be turned into typed objects with fields.
 - [Tango](frontends/tango/index.md) — Tango turns recorded clicks into step-by-step guides; not a wiki, documented for its capture-to-guide idea.
 - [VSCodium](frontends/vscodium/index.md) — VSCodium is an open-source version of Microsoft Visual Studio Code.
 - [Wiki.js](frontends/wikijs/index.md) — Wiki.js is an open-source, self-hosted wiki engine.

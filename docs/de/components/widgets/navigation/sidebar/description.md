@@ -16,8 +16,7 @@ Die Sidebar ist eine vertikale Navigationsspalte, meist am linken oder rechten R
 Anwendung. Sie bietet schnellen Zugriff auf die wichtigsten Funktionen und wird oft in
 Desktop-Anwendungen und Messengern verwendet.
 
-## Zweck
-
+## Verwendungszweck
 - Schneller Zugriff auf die wichtigsten Funktionen
 - Menüpunkte in Gruppen ordnen
 - Statusinformationen zeigen (z. B. Benutzerprofil, Nachrichtenzähler)

@@ -19,8 +19,7 @@
 Eine Toolbar ist eine Reihe von Schaltflächen/Icons für häufige Aktionen. Sie steht oft direkt
 unter der Titelleiste.
 
-## Zweck
-
+## Verwendungszweck
 - Schneller Zugriff auf häufige Funktionen
 - Aktionen in einer Leiste bündeln
 - Werkzeuge übersichtlich ordnen

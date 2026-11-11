@@ -1,7 +1,6 @@
 # Toolbar - Erscheinungsbild
 
-## Grundaufbau
-
+## Grundlayout
 Eine Toolbar ist eine Reihe von Schaltflächen/Icons für häufige Aktionen.
 
 ## Varianten

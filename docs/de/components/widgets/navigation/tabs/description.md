@@ -14,8 +14,7 @@
 ## Beschreibung
 Tabs (Reiter) dienen dazu, zwischen Ansichten zu wechseln.
 
-## Zweck
-
+## Verwendungszweck
 - Ansichten
 - Kategorien
 - Optionen
