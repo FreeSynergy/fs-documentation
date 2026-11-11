@@ -84,7 +84,7 @@ Die AS2-Felder `actor`, `object`, `origin`, `instrument`, `target` sind im W3C-V
 
 Damit gilt: **Herkunft bleibt** nach Entfernen des Pakets, bei liegengebliebenen Dateien und für Forensik, obwohl der aktuelle Paket-Stand nicht doppelt gespeichert wird.
 
-**xattr: werden geschrieben (entschieden F3), abschaltbar.** Files schreibt auf lokalen Anbietern `user.xdg.tags`, `user.xdg.comment`, `user.xdg.origin.url`, damit Dolphin und andere Programme die Werte sehen. Ein Schalter (global und je Ort) stellt das ab. Beim Erkennen werden xattr **gelesen** und als „vermerkt“ (fälschbar) eingestuft; weichen sie vom Steckbrief ab (z. B. Dolphin hat ein Schlagwort ergänzt), übernimmt Files die Änderung als **Steckbrief**-Änderung mit Vermerk „von außen“ **[Vorschlag]**. Herkunft aus xattr wird nie zu „belegt“. Auf USB standardmäßig an, auf Netz-Anbietern nicht möglich. Wechseldatenträger und fremde Ordner: xattr sind keine versteckten Dateien, die Regel aus ADR 0071 bleibt eingehalten.
+**xattr: werden geschrieben (entschieden F3), abschaltbar.** Files schreibt auf lokalen Anbietern `user.xdg.tags`, `user.xdg.comment`, `user.xdg.origin.url`, damit Dolphin und andere Programme die Werte sehen. Ein Schalter (global und je Ort) stellt das ab. Beim Erkennen werden xattr **gelesen** und als „vermerkt“ (fälschbar) eingestuft; weichen sie vom Steckbrief ab (z. B. Dolphin hat ein Schlagwort ergänzt), übernimmt Files die Änderung als **Steckbrief**-Änderung mit Vermerk „von außen“ **[Vorschlag]**. Herkunft aus xattr wird nie zu „belegt“. Auf USB/Wechselmedien standardmäßig **aus**, pro Gerät einschaltbar (entschieden F9); auf Netz-Anbietern nicht möglich. Wechseldatenträger und fremde Ordner: xattr sind keine versteckten Dateien, die Regel aus ADR 0071 bleibt eingehalten.
 - **Sidecar-Dateien** (`*.spdx.json`) nur als Export, nie als Ablage.
 
 **Begründung (belegt, §9):**
@@ -99,7 +99,7 @@ Damit gilt: **Herkunft bleibt** nach Entfernen des Pakets, bei liegengebliebenen
 - **Ereignisse:** kein Widerspruch. Eine Aktivität ist keine Wahrheit *über den Eintrag*, sondern ein Protokoll *eigener Handlungen*; ADR 0070 verlangt das selbst („Jede ändernde Handlung ist eine Aktivität im Protokoll des Besitzers … bei Anbietern ohne Objekte ist die Aktivität lokal (Files-Sicht)“). Herkunft aus Ereignissen ist also schon angelegt. Unveränderlich, darum keine zweite veränderliche Wahrheit.
 - **Aktueller Stand:** kein Widerspruch, weil nie gespeichert (nur nachgefragt).
 - **Steckbrief fremder Bäume:** **echter Zusatz** zu ADR 0070 – veränderliche Daten, die fs-files besitzt. Entschieden (F2: ja); beim nächsten Überarbeiten von ADR 0070 so zu formulieren: „Files hält keine Wahrheit **über Inhalt und Struktur** fremder Anbieter; es besitzt den Datentyp **Steckbrief** (Schlagworte, Sammlungen, Beschreibung) und das Protokoll eigener Handlungen.“ (kein neues ADR hier, nur Hinweis)
-- **Neue Spannung: Vergessen gegen Forensik.** fs-history kann Einträge **vergessen** (nur Index; das Hub-Log bleibt). Für Forensik muss die Install-Aktivität im Hub-Log/Store-Log bleiben; „Wirklich löschen“ (ADR 0073 §7, DSGVO) für Install-Ereignisse wäre eine eigene Entscheidung (Frage F8). Außerdem: fs-history setzt `actor` heute leer und `at` = Empfangszeit; für Forensik müssen Original-Actor und -Zeit mitkommen (dort schon beim Hub angefragt).
+- **Neue Spannung: Vergessen gegen Forensik.** fs-history kann Einträge **vergessen** (nur Index; das Hub-Log bleibt). Für Forensik muss die Install-Aktivität im Hub-Log/Store-Log bleiben; Entschieden (F8): Standard behalten; der Mensch darf seine Aktivitäten wirklich löschen (mit Hinweis, dass die Herkunft dann fehlt); systemweite Software-Aktivitäten bleiben mindestens 1 Jahr, löschen nur durch Admin. Außerdem: fs-history setzt `actor` heute leer und `at` = Empfangszeit – das ist ein **Fehler** (git-bug-Kandidat, §8); Original-Actor und -Zeit sind beim Hub schon angefragt.
 
 ### 1.4 Kopieren, Verschieben, Umbenennen
 
@@ -229,7 +229,7 @@ Regeln:
 - Eine Stufe erbt alle Prüfungen der Stufen darunter.
 - Die **Stufe richtet sich nach der Aktion, die Strenge nach der Herkunft**: ein signiertes Katalogpaket startet ohne Rückfrage, eine unbekannte ausführbare Datei nie.
 - Abgelehnte Prüfungen werden **sichtbar** gemeldet (RFC 9457 `Problem`), nie still übergangen; Beispiel `…/problems/files/untrusted-origin`.
-- Kein „immer erlauben“ für Stufe 4b **[Vorschlag]**.
+- Stufe 4b, **neue** Software: immer Admin-Bestätigung in unserer Vorschau, zusätzlich zur polkit-Regel der Distribution (entschieden F10); Updates installierter signierter Pakete nach Distributions-Standard.
 
 ### 4.1 Workflow mit fester Schritt-Liste und Klartext-Vorschau
 
@@ -266,7 +266,7 @@ Was PackageKit laut Primärquellen bietet (Abruf 2026-11-12, Repo `github.com/Pa
 Befunde, die vor einer Entscheidung geklärt werden müssen:
 - **Widerspruch im Schema:** Der Kommentar zu `InstallFiles` nennt `@full_paths` (Pfade), die Signatur ist aber `ah` (Liste von **Dateideskriptoren**). Welche Form der Dienst auf Fedora erwartet, ist **[nicht belegt]** – für uns ist der Dateideskriptor die gewünschte Form (kein TOCTOU).
 - **Zweiter Widerspruch:** Der Kommentar nennt die Berechtigung `org.freedesktop.packagekit.localinstall-untrusted`, die Policy-Datei kennt nur `…package-install-untrusted`. **[nicht belegt]**, welche gilt.
-- `auth_admin_keep` heißt: nach einer Passwortabfrage bleibt die Erlaubnis eine Weile gültig. Unser Wunsch „kein ‚immer erlauben‘ für 4b“ müsste über eine eigene polkit-Regel erreicht werden; ob wir die setzen wollen: offen.
+- `auth_admin_keep` heißt: nach einer Passwortabfrage bleibt die Erlaubnis eine Weile gültig. **Entschieden (F10):** wir folgen der polkit-Regel der Distribution und überstimmen nichts; **neue Software systemweit** verlangt zusätzlich **immer eine Admin-Bestätigung in unserer Vorschau**; Updates installierter signierter Pakete laufen nach Distributions-Standard. Test auf dem Rechner nach dem Meilenstein.
 - Ob PackageKit auf Fedora 45 standardmäßig installiert ist und `dnf5` dort das Backend ist: **[nicht belegt]**.
 - Wessen Schlüssel PackageKit bei `ONLY_TRUSTED` prüft: die **rpm-Schlüssel des Systems**. Unser Projektschlüssel müsste also als rpm-Schlüssel importiert sein (`system-trust-signing-key`). Ablauf **[nicht geprüft]**.
 
@@ -335,7 +335,7 @@ Wie B, aber das Store-Fenster entfällt: Raster/Tabelle/Paketseite werden die **
 | A6 Signierer in `installed.toml` | **ja, vorziehen** | Grundlage für „Vertrauen“ installierter Dateien. |
 | **Neu, klein, nur Store [Vorschlag]:** Dateiliste mit sha256/blake3 je Datei in `installed.toml` (oder daneben) beim Entpacken; `fs-store owner <pfad>` und `fs-store verify <paket>` in der CLI | **erlaubt vorher** | liefert §3 Schritt 2 sofort, ohne Files und ohne neue Schnittstelle. |
 | **Neu [Vorschlag]:** Aktivität `Add`/`Update`/`Remove` je Vorgang (§1.3) | **erlaubt vorher, klein** | Der Store schreibt sie zunächst **lokal, nur anhängend** (z. B. JSON-Lines mit AS2-Objekten im Store-Root) und reicht sie an den Hub, sobald der Weg steht. Herkunft geht so ab sofort nicht mehr verloren. Nur anhängen, nie umschreiben. |
-| **PackageKit-Prüfung** (F6) | **erlaubt vorher, nur Recherche/Spike** | Spike in Wegwerf-VM/Container: `InstallFiles` mit `SIMULATE` und `ONLY_TRUSTED` gegen ein eigenes signiertes rpm; der Code-Pfad `pkexec dnf` bleibt bis zur Entscheidung. |
+| **PackageKit-Prüfung** (F6, F10) | **Test auf dem Rechner erst nach dem Meilenstein** | dann: `InstallFiles` mit `SIMULATE` und `ONLY_TRUSTED` gegen ein eigenes signiertes rpm; bis dahin bleibt `pkexec dnf`. |
 
 **Meilenstein „Wir benutzen es selbst“ (bestätigt, F7):** GitHub + Releases, Store, Tasks als Arbeitsbrett, Wiki mit Doku, Files-Optik, Server-Pakete. Die Store-Arbeit oben dient genau diesem Meilenstein; alles andere wartet.
 
@@ -369,11 +369,18 @@ Wie B, aber das Store-Fenster entfällt: Raster/Tabelle/Paketseite werden die **
 - **F7 Meilenstein bestätigt:** GitHub + Releases, Store, Tasks als Arbeitsbrett, Wiki mit Doku, Files-Optik, Server-Pakete (§7).
 - **Korrektur Herkunft:** Installieren/Aktualisieren/Entfernen, Downloads und Kopien werden als **unveränderliche AS2-Aktivitäten** festgehalten; der aktuelle Paket-Stand wird nur nachgefragt (§1.3, §3).
 
+### Entschieden (Strategie, 2026-11-12, Nachtrag)
+- **F8 Vergessen gegen Forensik:** Standard = **behalten**. Der Mensch darf **seine** Aktivitäten löschen (DSGVO, „wirklich löschen“, ADR 0073 §7), mit Hinweis, dass dann die Herkunft fehlt. **Software-Aktivitäten auf Systemebene** (systemweit installieren/aktualisieren/entfernen) behält der Rechner **mindestens 1 Jahr**; löschen nur durch Admin, mit Hinweis.
+- **F9 xattr auf USB/Wechselmedien:** Standard **AUS** (fremde Geräte; FAT/exFAT kann laut Strategie ohnehin keine xattr – von mir nicht nachgeprüft, [nicht belegt]); **pro Gerät einschaltbar**.
+- **F10 PackageKit:** Wir folgen der **polkit-Regel der Distribution** und überstimmen nichts. **Neue Software systemweit** verlangt **immer eine Admin-Bestätigung in unserer Vorschau**, zusätzlich zur polkit-Regel. **Updates bereits installierter signierter Pakete** laufen nach Distributions-Standard. Test auf dem Rechner **nach dem Meilenstein**.
+- **F11 Repo-Besprechung:** kein Termin; der Nutzer bringt seine Ideen, wenn sie reif sind.
+- **fs-history:** „Aktivitäten ins Log des Handelnden bzw. des Hubs, fs-history nur Index“ **angenommen**. `actor` leer ist ein **Fehler** (siehe unten).
+
+### git-bug-Kandidat (fs-history)
+**Titel:** Aktivität ohne `actor` wird still angenommen. **Befund:** fs-history v0.0.1 setzt `Entry.actor` leer, weil der Hub heute nur den Programmnamen liefert (`/srv/FreeSynergy/fs-history/DESIGN.md`); eine AS2-Aktivität ohne `actor` ist unvollständig und für Herkunft/Forensik wertlos. **Test:** Eine Aktivität ohne `actor` wird abgelehnt bzw. sichtbar gemeldet (Problem), nie still als leer gespeichert. **Behebung:** beim gemeinsamen Heben von fs-history (zusammen mit Original-Actor und -Zeit in `hub.capnp` `Activity`, dort schon angefragt).
+
 ### Offen
-- **F8 Vergessen gegen Forensik:** fs-history kann Einträge vergessen (nur Index), ADR 0073 kennt „wirklich löschen“. Dürfen **Install-/Update-/Entfernen-Aktivitäten** vergessen oder wirklich gelöscht werden, oder bleiben sie als Sicherheitsprotokoll immer (höchstens mit Ablaufzeit)? Vorschlag: bleiben, „vergessen“ blendet sie nur in der Zeitleiste aus.
-- **F9 xattr-Standardwert:** Schreiben auf **USB/Wechseldatenträgern** standardmäßig an oder aus? (Dateien gehen damit an andere Rechner.) Vorschlag: an für Schlagworte/Beschreibung, aus für Herkunfts-URL.
-- **F10 PackageKit und Passwort:** PackageKit erlaubt Systemupdates in der aktiven Sitzung **ohne Passwort** und merkt sich eine Installations-Erlaubnis eine Weile (`auth_admin_keep`). Übernehmen wir diese Standards oder setzen wir eine strengere polkit-Regel?
-- **F11 Repos (Fortsetzung F1):** Termin/Anlass für die angekündigte Besprechung; welche weiteren Ideen sollen vorher geprüft werden?
+- Keine offenen Fragen aus diesem Entwurf. Ausstehend sind nur die Repo-Ideen des Nutzers (F11) und der PackageKit-Test nach dem Meilenstein (F10).
 
 ---
 
