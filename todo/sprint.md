@@ -135,6 +135,12 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Jedes Programm bekommt so ein Handbuch im Wiki.
     - Teile davon werden zur Beschreibung im Store/Installer.
     - Lokal zuerst: Das Paket enthält beim Bau eine Kopie der Blöcke.
+- **Herkunft je Datei (Nutzer, 2026-11-12):**
+  - Installieren, Aktualisieren, Entfernen, Herunterladen und Kopieren werden je als AS2-Aktivität im Verlauf festgehalten, unveränderlich, mit Quelle, Paket, Version, Signatur und Prüfsumme.
+  - Den aktuellen Stand fragt Files weiter beim Store bzw. bei rpm ab.
+  - Files schreibt Schlagworte, Beschreibung und Herkunft zusätzlich als xattr an die Datei, damit alle Programme davon profitieren. Ein Schalter schaltet das ab.
+  - Unbekannte Programme starten nur nach Bestätigung; eine Sandbox wird später geprüft.
+  - Die Liste für den Meilenstein ist bestätigt.
 - **Workflows JETZT (Nutzer, 2026-11-12), nicht später:**
   - Der Installationskatalog ist ein Workflow. Installieren ist eine Anweisung, was gemacht werden soll; ein Paket schnüren ist dasselbe in umgekehrter Reihenfolge.
   - Workflows werden standardisiert UND dargestellt: Knoten und Linien, wie auf einem Whiteboard (`fs-whiteboard` hat schon Verbinder).
