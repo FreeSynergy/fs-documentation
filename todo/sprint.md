@@ -101,6 +101,19 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - **Groups und Wiki nach vorne, Files etwas nach hinten.** Grund: Der Nutzer will die Doku schon ins Wiki legen.
   - Migrationen: People → Tasks → Groups → **Wiki** → Calendar → Maps.
   - Danach bekommt das Wiki einen Import der Doku (Markdown aus fs-documentation).
+- **Gleichzeitig statt nacheinander (Nutzer, 2026-11-12 Nacht; ersetzt die Reihenfolge oben):**
+  - Store, People, Groups, Messenger, Tasks, Files und Wiki werden GLEICHZEITIG weiterentwickelt, damit alle dieselben Schnittstellen benutzen.
+  - **Tasks ist sehr wichtig.** Strategie, Nutzer und Agenten werden selbst damit arbeiten.
+  - Files wird nicht pausiert.
+  - **Stopp-Regel:** Wird in einer gemeinsamen Schicht (Blinc, fs-components, fs-interfaces) ein großer Fehler gefunden, pausieren alle betroffenen Programm-Agenten, bis er an der einen Stelle behoben ist. So baut niemand auf einem falschen Stand weiter.
+- **Mehrere Frontends bauen, zwei auswählen (Nutzer):**
+  - Files wird zu Ende gebaut, mit mehreren Frontends; der Nutzer wählt zwei.
+  - Genauso beim Store/Installer: Er sieht heute „kindisch“ aus. Vorbilder: ArtCraft Launcher (`temp/research/craft-launcher.md`), KDE Discover und weitere. Sie zeigen mehr Informationen.
+- **Beschreibungstexte im Store kommen aus dem Wiki** und werden als Blöcke geladen. Der Nutzer hat dazu eine Idee, die kommt noch.
+- **Der Store bietet alle Arten an:** Programme, Frontends, Server, Themes und Icon-Sets.
+  - Jeder kann eigene Themes und Icon-Sets hochladen und teilen. Themes sind CSS.
+  - Hochladen heißt: eine eigene, signierte Quelle, die andere einbinden (ADR 0068). Gemeinschafts-Angebote sind markiert.
+  - CSS und SVG werden geprüft: keine Skripte, keine fremden Adressen.
 - **Files MUSS Versionierung (Git) und Backup haben (Nutzer).** Das macht Files zu einem sehr wichtigen Programm.
   - Erst Recherche (Haiku), dann Vergleich (Opus), dann ADR. Kein Code vorher.
   - Zu prüfen: `gix`, restic-Format mit `rustic_core`, eigene Versionen über die BLAKE3-Inhalte.
