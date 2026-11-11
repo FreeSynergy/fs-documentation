@@ -23,7 +23,7 @@ Relevant for us: one address per relationship, revocable without changing the re
 
 ## Protocols and standards used
 
-JMAP is not named on the page read; check the vendor's API documentation (Open). See [messages standards](../../../../data/messages/standards.md).
+JMAP is not named on the page read; check the vendor's API documentation (Open). See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 

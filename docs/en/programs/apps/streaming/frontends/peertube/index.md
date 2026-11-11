@@ -17,7 +17,7 @@ PeerTube is free software for hosting videos and live streams. Each installation
 | [latest](latest/description.md) | 2026-11-10 | ✅ |
 
 ## Protocols and standards used
-ActivityPub, WebRTC, HLS ⚠️ (not stated in the pages read), REST with OpenAPI 3. See [data standards](../../../../data/standards.md).
+ActivityPub, WebRTC, HLS ⚠️ (not stated in the pages read), REST with OpenAPI 3. See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

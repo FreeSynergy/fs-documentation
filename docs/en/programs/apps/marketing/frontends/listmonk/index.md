@@ -17,7 +17,7 @@ Listmonk is a self-hosted manager for one-way mailing lists and newsletters. It 
 | [latest](latest/description.md) | 2026-11-10 | ⚠️ |
 
 ## Protocols and standards used
-SMTP (assumed ⚠️, not read); OIDC for sign-in. See [data standards](../../../../data/standards.md).
+SMTP (assumed ⚠️, not read); OIDC for sign-in. See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

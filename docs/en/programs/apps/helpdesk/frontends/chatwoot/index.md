@@ -16,7 +16,7 @@ Chatwoot is a customer-support platform where conversations from many channels l
 | [latest](latest/description.md) | 2026-11-10 | ✅ |
 
 ## Protocols and standards used
-Webhooks, WebSocket, REST; channel protocols are third-party APIs (WhatsApp, Twilio and others). See [data standards](../../../../data/standards.md).
+Webhooks, WebSocket, REST; channel protocols are third-party APIs (WhatsApp, Twilio and others). See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

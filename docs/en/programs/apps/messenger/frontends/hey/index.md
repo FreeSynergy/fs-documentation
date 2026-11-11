@@ -23,7 +23,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-HEY is known for not offering open mail protocols to third-party clients; this was not checked here (Open). See [messages standards](../../../../data/messages/standards.md).
+HEY is known for not offering open mail protocols to third-party clients; this was not checked here (Open). See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 

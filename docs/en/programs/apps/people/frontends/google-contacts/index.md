@@ -22,7 +22,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-Contact data standards are described under [data/people](../../../../data/people/index.md). Which protocols Google Contacts offers for third parties is listed in [api.md](latest/api.md) (Open).
+Contact data standards are described under [data/people](../../../../../data/people/index.md). Which protocols Google Contacts offers for third parties is listed in [api.md](latest/api.md) (Open).
 
 ## Documented versions
 

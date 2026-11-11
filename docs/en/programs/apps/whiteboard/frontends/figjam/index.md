@@ -16,7 +16,7 @@ FigJam is the whiteboard product of Figma. It is a browser-based board with stic
 | [latest](latest/description.md) | 2026-11-10 | ⚠️ |
 
 ## Protocols and standards used
-None open. REST API with access tokens and OAuth2 (see [api](latest/api.md)). Board model: see the gap noted in [data standards](../../../../data/standards.md).
+None open. REST API with access tokens and OAuth2 (see [api](latest/api.md)). Board model: see the gap noted in [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

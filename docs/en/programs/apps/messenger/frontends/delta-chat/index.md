@@ -23,7 +23,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-OpenPGP, Autocrypt, e-mail transport. See [messages standards](../../../../data/messages/standards.md).
+OpenPGP, Autocrypt, e-mail transport. See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 

@@ -16,7 +16,7 @@ Owncast is a server for one streamer: it takes a stream from broadcasting softwa
 | [latest](latest/description.md) | 2026-11-10 | ✅ |
 
 ## Protocols and standards used
-RTMP ingest; ActivityPub, WebFinger, HTTP Signatures, NodeInfo for federation. See [data standards](../../../../data/standards.md).
+RTMP ingest; ActivityPub, WebFinger, HTTP Signatures, NodeInfo for federation. See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

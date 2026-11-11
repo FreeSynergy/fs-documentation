@@ -16,7 +16,7 @@ Twenty is an open-source CRM built as an alternative to the large commercial one
 | [latest](latest/description.md) | 2026-11-10 | ✅ |
 
 ## Protocols and standards used
-REST, GraphQL, webhooks. See [data standards](../../../../data/standards.md).
+REST, GraphQL, webhooks. See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

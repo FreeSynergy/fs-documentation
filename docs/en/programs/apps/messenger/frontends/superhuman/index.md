@@ -23,7 +23,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-Works on existing accounts; which protocols is Open. See [messages standards](../../../../data/messages/standards.md).
+Works on existing accounts; which protocols is Open. See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 

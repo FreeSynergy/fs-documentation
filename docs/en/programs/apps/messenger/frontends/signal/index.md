@@ -22,7 +22,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-Signal Protocol (own). Bridges from Matrix exist (bridge list). See [messages standards](../../../../data/messages/standards.md).
+Signal Protocol (own). Bridges from Matrix exist (bridge list). See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 

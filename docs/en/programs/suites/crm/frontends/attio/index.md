@@ -15,7 +15,7 @@ Attio is a commercial CRM with a flexible data model. Records of people and comp
 | [latest](latest/description.md) | 2026-11-10 | ⚠️ |
 
 ## Protocols and standards used
-REST API, SDK and MCP are named (developer docs not read). See [data standards](../../../../data/standards.md).
+REST API, SDK and MCP are named (developer docs not read). See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

@@ -23,7 +23,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-Own REST API; bridges to Matrix exist (see Matrix bridge list). See [messages standards](../../../../data/messages/standards.md).
+Own REST API; bridges to Matrix exist (see Matrix bridge list). See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 

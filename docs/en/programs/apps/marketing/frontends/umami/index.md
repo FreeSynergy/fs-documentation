@@ -16,7 +16,7 @@ Umami is a privacy-focused web analytics tool. A tracking script sends page view
 | [latest](latest/description.md) | 2026-11-10 | ✅ |
 
 ## Protocols and standards used
-HTTP/JSON API; no data standard for events found. See [data standards](../../../../data/standards.md).
+HTTP/JSON API; no data standard for events found. See [data standards](../../../../../data/standards.md).
 
 ## Documented versions
 

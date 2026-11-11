@@ -8,7 +8,7 @@ ERPNext is an open-source business management suite built on the Frappe framewor
 
 ## Notable ideas
 
-- Every record type is a **DocType**: one definition describes the fields, how records are named, and the database table. The list view and the form view then exist without further code. This is the model for generating our own forms from a data type description (see the Admin view in the [map](../../../map.md)).
+- Every record type is a **DocType**: one definition describes the fields, how records are named, and the database table. The list view and the form view then exist without further code. This is the model for generating our own forms from a data type description (see the Admin view in the [map](../../../../map.md)).
 - Documented here because of that generation principle (ADR 0013); nothing else is taken.
 
 ## Documented versions

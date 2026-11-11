@@ -22,7 +22,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-Contact data standards: [data/people](../../../../data/people/index.md). NameDrop is part of AirDrop (Apple-internal, no open standard known; Open).
+Contact data standards: [data/people](../../../../../data/people/index.md). NameDrop is part of AirDrop (Apple-internal, no open standard known; Open).
 
 ## Documented versions
 

@@ -23,7 +23,7 @@ Why this program is documented here (ADR 0013):
 
 ## Protocols and standards used
 
-Not checked (Open). See [messages standards](../../../../data/messages/standards.md).
+Not checked (Open). See [messages standards](../../../../../data/messages/standards.md).
 
 ## Documented versions
 
