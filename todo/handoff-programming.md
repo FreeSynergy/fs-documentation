@@ -353,3 +353,18 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 - **Karte:** Opus-NEIN auf release-0.0.8 (guard.rs:205/:223 Typ-Truncation, 216 MB Peak bei 9 KB). Als v0.0.9 neu (release-0.0.9 efdcae1: ein Helper wire::low32, Cache-Byte-Obergrenze, Lints, DESIGN-Zahlen aus Messung, Fuzz 300 s/201 950 Läufe ohne Fund); Opus-Vollreview läuft.
 - **Offen/Aufträge (Strategie, sprint.md 4f0870c8):** v0.0.10 `Session::submit` nicht-blockierend (Branch nonblocking-submit), danach fs-files 0.0.8 (`long` als Stillstandsfrist, Abbruch räumt Teildatei/abort; Fortschritt/Heartbeat in fs-interfaces nur zusammen mit `end_server` in v0.0.19, abwärtskompatibel zu Handshake v0.0.17); E-Mail-Feld-Punkt-Bug (Branch fix-email-dot); Update-Neustart Schritte 3,4,7,8 nach v0.0.10; Spike Position/Bildlauf (Branch spike-restore, .scratch/spike-restore.md); Dateiprogramme-Empfehlung liegt (.scratch/filemanager-research/EMPFEHLUNG.md); Frontend-/Server-Agent erst nach Nutzer-Ja.
 - **Merke (bekannt, nicht blockierend):** windows-core fiel in fs-store durch Neuauflösung auf 0.58.0 (nur Windows); TEMP-Commit 03bbcbf + Revert bleiben in fs-store-Historie; fs-files Opus-Nebenpunkte (Aufräumen bei Abbruch, `long` als Stillstandsfrist, `Session::submit` im UI-Thread) = A/B; fs-files DESIGN.md/README bereinigt (5704cce), Verweis auf ADR 0069 noch nachzutragen.
+
+## Regel (2026-11-11, Strategie): virtuelle Sitzung nur über das zentrale Hilfsskript
+
+- Anlass: Ein Spike-Agent führte einmal ein KWin-Lese-Skript gegen den D-Bus der ECHTEN Nutzersitzung aus (nichts verändert, sofort entladen, vom Agenten gemeldet). Nie wieder.
+- Regel: Jeder Test und jeder Spike bindet `scripts/virtual-session.sh` aus fs-release ein (Branch virtual-session, in Arbeit). Es bricht ab, wenn `DBUS_SESSION_BUS_ADDRESS` nicht auf den privaten Bus zeigt oder `WAYLAND_DISPLAY`/`DISPLAY` auf die echte Sitzung zeigen. `qdbus`, `kwin`-Skripte, `dbus-send`, `gdbus` nur über die Wrapper `vs_dbus`/`vs_qdbus`/`vs_gdbus`.
+- Agenten-Vorlage: Satz „Nie die echte Sitzung (D-Bus, KWin, Wayland-Socket) anfassen, auch nicht lesend; nur virtuelle KWin über scripts/virtual-session.sh“ in jeden Auftrag mit Bildschirm/Tasten/Fenstertest.
+
+## Entscheidungen Spike (2026-11-11)
+
+- Restorable speichert: Größe (nur nicht maximiert), maximiert, Screen, Ordner, Ansicht, Sortierung, Auswahl (Schlüssel), Bildlauf {Anker, Pixel}; weglassen: Position, Ausgabe, Formulare, Fragen, Übertragungen, Vorschau. Wiederherstellungs-Reihenfolge Ordner → Ansicht → Sortierung → Auswahl → Bildlauf nach erstem Aufbau (ADR 0069).
+- Blinc A (Fensterzustand lesen) und D (app_id) klein, im Fork, mit fs-blinc-4; B (Ausgabe) und C (xdg-session-management, winit 0.30 kann es nicht) später; git-bug-Einträge im Blinc-Fork.
+
+## Stand 2026-11-11 abends (Koordinator)
+
+- AltGr-Befund: nicht migrierte Programme (fs-people/-tasks/-calendar/-wiki/-maps) binden blinc-app-fix (US-Tastentabelle); fs-blinc-3 hat den Fix (KeyEvent.text, 549867e1). → Migration auf fs-components v0.0.8 jetzt (nicht auf v0.0.10 warten): Reihenfolge fs-people, fs-tasks, fs-calendar, fs-wiki, fs-maps (nach v0.0.9), jede mit eigenem Release + vollem Gate (inkl. Sonderzeichen-Tipptest de+us); email.rs-Kopf nach fs-people-Migration entfernen; Gate-Sperre „nur freigegebene Blinc-Quelle im Cargo.lock“ (fs-release Branch gate-blinc-lock 310d2d5, Opus-Review); danach blinc-app-fix/-layout-fix für Archivierung vormerken (nur mit Nutzer-Ja).
