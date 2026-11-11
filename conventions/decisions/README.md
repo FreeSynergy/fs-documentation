@@ -77,4 +77,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0068 | Fähigkeiten statt fester Anforderungen (provides/requires); fremde Pakete gespiegelt samt Quellcode; `catalog.freesynergy.net` | akzeptiert |
 | 0069 | Update schließt ein laufendes Programm und startet es am selben Punkt neu (Sitzungsdatei, automatisches Speichern, Klon, `suspend_and_exit()`) | akzeptiert (Strategie); F1 entschieden (Nutzer, ja) |
 | 0070 | Thema `storage`: ein Baum für alles, worauf man Zugriff hat (`StorageProvider` neben `BlobBackend`) | akzeptiert (Strategie); Code erst nach 3b grün |
-| 0071 | Versionen, Git und Backup in Files (drei Schichten; `versions` aus 0070 erweitert) | Entwurf (Sonnet) – Prüfung durch die Strategie |
+| 0071 | Versionen, Git und Backup in Files (drei Schichten; `versions` aus 0070 erweitert) | akzeptiert (Strategie); Code erst nach 3b und Wiki/Groups |
