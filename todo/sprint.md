@@ -54,6 +54,21 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 - **Menüs, Leisten und Knöpfe des Vorbilds sind sichtbar**, auch wenn sie noch nichts tun. Nicht fertige Einträge sind als „kommt noch“ erkennbar.
 - **Abnahme durch den Nutzer:** Jede Stufe wird ihm mit Bildern im Vergleich zum Vorbild gezeigt. Er sagt, was gebraucht wird. Erst danach kommen die Funktionen.
 
+**Nutzer, 2026-11-11 abends (Wünsche, alles an EINER Stelle in `fs-components`, später Blinc anbieten):**
+- **Nach einem Update** wird das Programm geschlossen und startet **genau an derselben Stelle** wieder (Ansicht, Auswahl, Bildlauf, Eingaben). Gilt für alle Programme, auch den Store. Grundfunktion, gehört zu 3b. Lob dazu: „endlich mal sehr schnell“.
+- **Klicken im Text:** 2× Wort, 3× Satz, 4× Absatz, 5× ganzer Text.
+- **Groß/klein umschalten:** Text markieren, Umschalttaste einmal kurz antippen. Dann wechselt die Schreibung reihum: ALLES GROSS → Erster Groß → alles klein. Gilt in allen Feldern.
+- **Eingabe je Grundtyp, immer mit dem Datentyp verbunden (ADR 0066):**
+  - E-Mail: Nutzer meldet, dass der Punkt bei der Eingabe fehlt. Das ist zu prüfen.
+  - Internetadresse: Protokoll in einem eigenen Feld, `://` fest. Nach `:` springt die Eingabe ins nächste Feld. Die Domain wird beim Tippen vorgeschlagen und als Tippfeld ergänzt, kein Dropdown.
+  - Datum: Datepicker, auch für Teil-Daten (nur Tag, Tag und Monat …).
+  - Zeit: Timepicker.
+- **Frontends jetzt:** Admin und Einfach. Für die Stil-Frontends sucht Haiku je Kategorie die besten Programme, Opus vergleicht, der Nutzer entscheidet (Regel aus ADR 0066).
+- **In Besprechung:**
+  - Server-Pakete für Kanidm, Tuwunel und Zentinel als `fs-<programm>`: Hülle plus öffentliche Konfiguration, in Doku und Wiki und als Export (Zentinel: KDL).
+  - Die Zentinel-Control-Plane wird für unsere Architektur nachgebaut.
+  - Fähigkeiten-Tags (LDAP, OIDC, SCIM, PAM, RADIUS …) nach ADR 0068.
+
 **Merkposten (Nutzer, 2026-11-10, später):**
 - Subdomains heißen wie das Programm ohne `fs-` (`people.…`, `identity.…`); änderbar.
 - Server-Aufbau später. **Entschieden (Nutzer, 2026-11-10):** Debian 13 (Trixie) als Grundsystem (unsere deb-Pakete werden schon auf debian:13 getestet). Prinzip „Server sind austauschbar“: das System bleibt minimal; alle Programme kommen als unsere Pakete, alle Daten liegen an einer Stelle (`/srv/freesynergy`, verschlüsselt, ADR 0067) mit Sicherung; Umzug = neuer Server, Pakete installieren, Daten einspielen, DNS umstellen – das ist auch der Weg für große Updates. Kanidm, Zentinel (und Stalwart) als Forks bei uns: nur zum Bauen unserer Pakete und Testen fester Versionen, keine eigene Weiterentwicklung; Korrekturen gehen upstream (ADR 0015); Upstream-Workflows im Fork aus.
