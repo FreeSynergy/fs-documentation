@@ -16,7 +16,9 @@ run gen_component_indexes.py --lang de --check
 run gen_frontend_indexes.py --check
 # Same as the CI steps "Publish the decision records" and "Build MkDocs site" (strict).
 MKDOCS="$(command -v mkdocs || true)"
-[ -z "$MKDOCS" ] && [ -x /srv/FreeSynergy/.scratch/venv-mkdocs/bin/mkdocs ] && MKDOCS=/srv/FreeSynergy/.scratch/venv-mkdocs/bin/mkdocs
+# A broken mkdocs on PATH (e.g. installed for another Python) counts as missing.
+[ -n "$MKDOCS" ] && ! "$MKDOCS" --version >/dev/null 2>&1 && MKDOCS=""
+[ -z "$MKDOCS" ] &&[ -x /srv/FreeSynergy/.scratch/venv-mkdocs/bin/mkdocs ] && MKDOCS=/srv/FreeSynergy/.scratch/venv-mkdocs/bin/mkdocs
 if [ -n "$MKDOCS" ]; then
   echo "== gen_decisions.py + mkdocs build --strict"
   python3 scripts/gen_decisions.py >/dev/null || { echo "FAILED: gen_decisions.py" >&2; fail=1; }
