@@ -75,4 +75,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0066 | Datentypen mit festen Components, vier Frontends je Programm | akzeptiert |
 | 0067 | Tresor `fs-vault`; Server hält nur Verschlüsseltes, Gruppenschlüssel (MLS), Suche auf dem Gerät | akzeptiert |
 | 0068 | Fähigkeiten statt fester Anforderungen (provides/requires); fremde Pakete gespiegelt samt Quellcode; `catalog.freesynergy.net` | akzeptiert |
-| 0069 | Update schließt ein laufendes Programm und startet es am selben Punkt neu (Sitzungsdatei, `suspend_and_exit()`) | akzeptiert (Strategie); F1 offen beim Nutzer |
+| 0069 | Update schließt ein laufendes Programm und startet es am selben Punkt neu (Sitzungsdatei, `suspend_and_exit()`) | akzeptiert (Strategie); F1 entschieden (Nutzer, ja) |
