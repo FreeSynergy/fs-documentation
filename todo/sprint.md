@@ -64,10 +64,23 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Datum: Datepicker, auch für Teil-Daten (nur Tag, Tag und Monat …).
   - Zeit: Timepicker.
 - **Frontends jetzt:** Admin und Einfach. Für die Stil-Frontends sucht Haiku je Kategorie die besten Programme, Opus vergleicht, der Nutzer entscheidet (Regel aus ADR 0066).
-- **In Besprechung:**
-  - Server-Pakete für Kanidm, Tuwunel und Zentinel als `fs-<programm>`: Hülle plus öffentliche Konfiguration, in Doku und Wiki und als Export (Zentinel: KDL).
-  - Die Zentinel-Control-Plane wird für unsere Architektur nachgebaut.
-  - Fähigkeiten-Tags (LDAP, OIDC, SCIM, PAM, RADIUS …) nach ADR 0068.
+- **Entschieden (Nutzer, 2026-11-11 spät): zwei neue Sonnet-Agenten**
+  - **Frontends:** Files zuerst, nach der Opus-Empfehlung (`.scratch/filemanager-research/EMPFEHLUNG.md`). Die Dateiansicht wird zum Standardfenster, das Admin-Frontend bleibt. Dazu Mehrfachauswahl und Tasten, danach das Einfach-Frontend. Der Nutzer nimmt jede Stufe mit Bildern ab.
+  - **Server:** Repos `fs-kanidm` und `fs-zentinel` zuerst, dann `fs-tuwunel` (nicht `fs-matrix`: Matrix ist das Protokoll, Tuwunel das Programm). Jedes Repo enthält:
+    - die Hülle,
+    - die öffentliche Konfiguration (Doku, Wiki, Export; Zentinel: KDL; nie Geheimnisse, nur Platzhalter),
+    - die Fähigkeiten-Tags nach ADR 0068 (LDAP, OIDC, SCIM, PAM, RADIUS …).
+
+    Die Pakete der Hersteller werden gespiegelt (ADR 0068). Die Zentinel-Control-Plane wird für unsere Architektur in Rust nachgebaut: die Funktionen, nicht der Code; vorher die Lizenz prüfen.
+- **Groß/klein per Umschalttaste (Nutzer):**
+  - 1× kurz: reihum ALLES GROSS → Erster Buchstabe der Markierung groß → alles klein.
+  - 4× kurz: Wörter nach Wörterbuch richtig großschreiben (Substantive).
+  - 5× kurz: jedes Wort mit großem Anfangsbuchstaben.
+  - Achtung: 5× Umschalt öffnet unter Windows die Einrastfunktion.
+- **Eingabe mit festen Zeichen (Nutzer):** Ein Feld sieht aus wie EIN Feld. Feste Zeichen (`@`, `://`, `.` im Datum, `:` in der Zeit) stehen innerhalb des Feldes, nicht als getrennte Kästen. Beim Tippen gibt es Ergänzungen wie bei YouTube (lokal, keine Anfrage nach außen).
+- **Offen beim Nutzer:**
+  - Files nur eigene Ablage oder auch Home/USB?
+  - Wiederherstellen auch nach normalem Schließen?
 
 **Merkposten (Nutzer, 2026-11-10, später):**
 - Subdomains heißen wie das Programm ohne `fs-` (`people.…`, `identity.…`); änderbar.
