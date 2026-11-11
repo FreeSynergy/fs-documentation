@@ -135,7 +135,7 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Jedes Programm bekommt so ein Handbuch im Wiki.
     - Teile davon werden zur Beschreibung im Store/Installer.
     - Lokal zuerst: Das Paket enthält beim Bau eine Kopie der Blöcke.
-- **Idee des Nutzers, nach dem Meilenstein „Wir benutzen es selbst“:**
+- **Idee des Nutzers (Entwurf jetzt, Umbau nach dem Meilenstein „Wir benutzen es selbst“):**
   - **Files erkennt und startet Programme** (freedesktop Desktop Entry, mimeapps).
     - Installierte, signierte Programme starten mit einem Klick.
     - Heruntergeladene Programme starten nie ohne deutliche Rückfrage.
@@ -143,9 +143,17 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Unter Wayland braucht es layer-shell (KWin ja, GNOME nein).
   - **Der Store liefert die Ordner „Programme“ (installiert) und „Verfügbar“ (Katalog)** als Speicher-Anbieter für Files (ADR 0070). Pakete im Katalog sind „Dateien, die noch nicht auf dem Rechner sind“, ähnlich wie bei OneDrive.
     - Die Installationslogik (Signatur, Abhängigkeiten, Updates, Neustart) bleibt im Store-Kern.
-  - **Offen beim Nutzer:**
-    - Soll der Desktop den KDE-Desktop ersetzen, oder genügt zuerst eine Startseite?
-    - Ist er mit dieser Aufteilung einverstanden?
+  - **Entschieden (Nutzer, 2026-11-12):**
+    - Der Desktop ist zuerst eine Startseite.
+    - Workflows haben vorerst eine feste Schritt-Liste und zeigen vorher im Klartext, was passiert.
+    - **Installieren ist eine Aktion auf einer Datei, wie „öffnen“ oder „starten“.** Es wird nur gründlicher geprüft, je nach Risiko.
+    - **Der Installer ist eine Facette von Files.** Alles, was er kann, kann auch Files.
+    - **Store, Katalog und Files werden zusammengeführt:**
+      - Der Katalog ist die anbietende Seite (Netz oder anderswo).
+      - Files ist die lokale Seite.
+      - Files zeigt bei jeder Datei, woher sie stammt und zu welchem Paket sie gehört. Kommt Schadcode, sieht man sofort die Quelle.
+    - Galerie, Desktop und Git sind ebenfalls Facetten von Files.
+    - Es braucht einen Standard für Datei-Metadaten (Recherche gestartet). Sterne gibt es keine, dafür persönliche Sammlungen/Alben.
 - **Files MUSS Versionierung (Git) und Backup haben (Nutzer).** Das macht Files zu einem sehr wichtigen Programm.
   - Erst Recherche (Haiku), dann Vergleich (Opus), dann ADR. Kein Code vorher.
   - Zu prüfen: `gix`, restic-Format mit `rustic_core`, eigene Versionen über die BLAKE3-Inhalte.
