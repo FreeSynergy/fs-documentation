@@ -7,7 +7,7 @@ Store-Empfehlung `/srv/FreeSynergy/.scratch/frontends/vorbilder-store/EMPFEHLUNG
 Code-Stand `fs-store` v0.0.11, `fs-files` v0.0.7, `fs-interfaces` v0.0.18, `fs-catalog` `02d9710`.
 Markierung: **[nicht belegt]** = in keiner Primärquelle bestätigt; **[Vorschlag]** = eigene Designidee, nicht entschieden.
 
-**Überarbeitung 2026-11-12 (Nutzer/Strategie):** (1) Herkunft wird als **unveränderliche AS2-Ereignisse im Verlauf (fs-history)** festgehalten, der *aktuelle* Paket-Stand weiter beim Store/rpm nachgefragt (§1.3, §3); Widerspruch zu ADR 0070 neu bewertet (§1.3). (2) Antworten F1–F7 eingearbeitet (§8): xattr werden geschrieben (abschaltbar), eigener Steckbrief für fremde Ordner ja, Kopie nicht in Sammlungen, unbekannte Programme nur mit Bestätigung, **PackageKit zuerst prüfen** (§5, Belege §9), Meilenstein festgelegt (§7). Repo-Frage (§6) ist **nicht festgezurrt**.
+**Überarbeitung 2026-11-12 (Nutzer/Strategie):** (1) Herkunft wird als **unveränderliche AS2-Ereignisse im Verlauf (fs-history)** festgehalten, die Paket-Zugehörigkeit **speichert der Store selbst** je Datei (Korrektur 2026-11-12, §1.3, §3; rpm/dpkg nur Gegenprobe); Widerspruch zu ADR 0070 neu bewertet (§1.3). (2) Antworten F1–F7 eingearbeitet (§8): xattr werden geschrieben (abschaltbar), eigener Steckbrief für fremde Ordner ja, Kopie nicht in Sammlungen, unbekannte Programme nur mit Bestätigung, **PackageKit zuerst prüfen** (§5, Belege §9), Meilenstein festgelegt (§7). Repo-Frage (§6) ist **nicht festgezurrt**.
 
 **Nutzerentscheidung, auf die alles aufbaut:**
 - Installieren ist eine **Aktion auf einer Datei** wie „öffnen“ oder „starten“, nur gründlicher geprüft, je nach Risiko.
@@ -18,13 +18,13 @@ Markierung: **[nicht belegt]** = in keiner Primärquelle bestätigt; **[Vorschla
 
 ## 0. Kurzfassung
 
-1. Jede Datei hat **zwei Teile**: (a) einen **Verlauf aus unveränderlichen AS2-Aktivitäten** in fs-history (heruntergeladen, kopiert, installiert, aktualisiert, entfernt – je mit `actor`, `object` samt Prüfsumme, `origin`, `instrument`, `target`); daraus wird die **Herkunft** gelesen, auch nach Entfernen eines Pakets und für Forensik. (b) einen **veränderlichen Steckbrief** (Schlagworte, Sammlungen, Beschreibung) als Datensatz (fs-objects für die eigene Ablage, Begleit-Datenbank von fs-files für fremde Bäume – **entschieden: ja**). Der **aktuelle** Stand „gehört gerade zu Paket X“ wird **nicht gespeichert**, sondern beim Store bzw. rpm nachgefragt. **xattr werden zusätzlich geschrieben** (entschieden, abschaltbar), damit Dolphin & Co. profitieren; Wahrheit sind sie nie, weil `cp -p` und `rsync -a` sie verlieren und S3/WebDAV keine haben.
+1. Jede Datei hat **zwei Teile**: (a) einen **Verlauf aus unveränderlichen AS2-Aktivitäten** in fs-history (heruntergeladen, kopiert, installiert, aktualisiert, entfernt – je mit `actor`, `object` samt Prüfsumme, `origin`, `instrument`, `target`); daraus wird die **Herkunft** gelesen, auch nach Entfernen eines Pakets und für Forensik. (b) einen **veränderlichen Steckbrief** (Schlagworte, Sammlungen, Beschreibung) als Datensatz (fs-objects für die eigene Ablage, Begleit-Datenbank von fs-files für fremde Bäume – **entschieden: ja**). Die **Paket-Zugehörigkeit** („gehört gerade zu Paket X“) **speichert der Store selbst** je Datei (Pfad, Paket, Version, Quelle, Signatur, Prüfsumme) – auf allen Systemen gleich (Linux, Windows, macOS, Redox); `rpm -qf`/`rpm -V`/dpkg sind unter Linux nur **zusätzliche Gegenprobe** für Systemdateien, die wir nicht selbst installiert haben. **xattr werden zusätzlich geschrieben** (entschieden, abschaltbar), damit Dolphin & Co. profitieren; Wahrheit sind sie nie, weil `cp -p` und `rsync -a` sie verlieren und S3/WebDAV keine haben.
 2. Der Katalog ist ein **`StorageProvider`** (ADR 0070) mit den Wurzeln **„Verfügbar“** (nur lesend) und **„Programme“** (installiert). Aktionen (Installieren, Aktualisieren, Entfernen, Zurück zu Version) kommen als **Befehle der Typbeschreibung** (ADR 0066), **nicht** als `copy`/`delete`.
-3. Herkunft wird in fester Reihenfolge aufgelöst und **mit Beleg-Stufe** angezeigt: *belegt* (Verlauf, Signatur, Paket-DB) · *inhaltsgleich* (Hash-Treffer) · *vermerkt* (xattr, fälschbar) · *unbekannt*. „Geändert seit Installation“ wird rot gezeigt (wie `rpm -V`); „war Teil von Paket X 0.0.2, entfernt am …“ bleibt sichtbar.
+3. Herkunft wird in fester Reihenfolge aufgelöst und **mit Beleg-Stufe** angezeigt: *belegt* (Verlauf, Dateiliste des Stores, Signatur) · *inhaltsgleich* (Hash-Treffer) · *vermerkt* (xattr, fälschbar) · *unbekannt*. „Geändert seit Installation“ wird rot gezeigt (`fs-store verify`, Prüfsumme gegen die eigene Dateiliste); „war Teil von Paket X 0.0.2, entfernt am …“ bleibt sichtbar.
 4. Vier Risikostufen **ansehen < öffnen < starten < installieren** (installieren systemweit als 4b), je Stufe feste Prüfungen; jede Stufe ab „starten“ läuft als **Workflow mit Klartext-Vorschau**. Unbekannte Programme starten **nur mit Bestätigung** (entschieden); Sandbox später als Option.
 5. Root bleibt **klein und getrennt**: heute `pkexec dnf install` (fs-store). Als Nächstes wird **PackageKit geprüft** (D-Bus-Dienst mit eigenen polkit-Aktionen, Backend `dnf5`, Aufruf `InstallFiles` mit Flag „nur vertrauenswürdig“); ein eigener Helfer nur, falls PackageKit durchfällt. Files rechnet nie selbst als root.
 6. Repos: **Arbeitsstand** B jetzt, C nach dem Meilenstein – **noch nicht festgelegt** („besprechen wir noch“). Darum gilt: nichts tun, was C (oder eine noch unbekannte Variante) erschwert.
-7. Laufende Store-Arbeit bleibt gültig; **vor dem Meilenstein** (GitHub + Releases, Store, Tasks als Arbeitsbrett, Wiki mit Doku, Files-Optik, Server-Pakete) wird nichts verschoben, umbenannt oder an `storage.capnp` gebaut. Klein und vorbereitend erlaubt: Dateiliste mit Hash in `installed.toml`, `fs-store owner <pfad>`, und das Schreiben der Install-/Update-/Entfernen-Aktivitäten.
+7. Laufende Store-Arbeit bleibt gültig; **vor dem Meilenstein** (GitHub + Releases, Store, Tasks als Arbeitsbrett, Wiki mit Doku, Files-Optik, Server-Pakete) wird nichts verschoben, umbenannt oder an `storage.capnp` gebaut. **Eingeplant** (klein, nur Store): eigene Dateiliste mit Hash je Datei, `fs-store owner <pfad>`, `fs-store verify`, dazu das Schreiben der Install-/Update-/Entfernen-Aktivitäten.
 
 ---
 
@@ -35,7 +35,7 @@ Markierung: **[nicht belegt]** = in keiner Primärquelle bestätigt; **[Vorschla
 | Feld | Inhalt | Woher kommt der Wert | Standard / Abbildung | Fälschbar? |
 |---|---|---|---|---|
 | **Herkunft** (Ereignisse, unveränderlich) | Kette von **AS2-Aktivitäten** zur Datei: heruntergeladen, installiert, aktualisiert, entfernt, kopiert, verschoben, empfangen von Person, importiert, selbst erstellt, außerhalb von Files entstanden – je mit `actor` (Mensch oder markierte KI, ADR 0054), Zeit, `object` (Datei samt Prüfsumme), `origin`, `instrument`, `target` (§1.3) | Files bzw. Store **schreiben eine Aktivität je Vorgang**; nie geändert, nur angehängt; Fremdquellen siehe §3 | AS2 `Add`/`Update`/`Remove`/`Create`/`Move` (ADR 0014, 0020); nach außen zusätzlich `user.xdg.origin.url` | Verlauf: nein. xattr: ja |
-| **Paket – aktueller Stand** | „gehört **gerade** zu Paket X Version Y“ oder „zu keinem Paket“; Zustand ok / geändert / fehlt | **nur nachgefragt**: Store (`installed.toml` + Dateiliste), rpm/dpkg-DB (§3); **nicht gespeichert** | AppStream-Komponenten-Id; rpm `Provides` (ADR 0068) | nein (DB) |
+| **Paket – aktueller Stand** | „gehört **gerade** zu Paket X Version Y“ oder „zu keinem Paket“; Zustand ok / geändert / fehlt | **Dateiliste des Store-Kerns** (vom Store selbst geschrieben, §1.3) = Wahrheit für „was WIR installiert haben“; rpm/dpkg nur Gegenprobe für fremde Systemdateien | AppStream-Komponenten-Id; rpm `Provides` (ADR 0068) | nein (Prüfsumme in der Liste) |
 | **Paket – früher** | „war Teil von Paket X 0.0.2 bis zum Entfernen am …“; „liegengeblieben nach Entfernen“ | aus dem Verlauf (Aktivitäten `Add`/`Remove` mit `instrument` = Paket) | AS2 | nein |
 | **Vertrauen / Signatur** | Stufe a/b/c aus der Store-Empfehlung (Macher+Spiegel / nur unser Schlüssel / nur Prüfsumme) **plus** Stufe „ohne“ für alles ohne Signatur; Schlüssel-Fingerprint, Prüfzeitpunkt | Prüfung beim Herunterladen/Installieren; **an den Hash gebunden** | OpenPGP (rPGP), TUF-Targets | nein, solange der Hash stimmt |
 | **Prüfsumme** | `blake3:<hex>` (fs-files rechnet sie schon beim Hochladen) und, wo der Katalog sie nennt, `sha256` | fs-files beim Schreiben; Katalog/TUF | SPDX `hashValue` beim Export | nein |
@@ -53,13 +53,13 @@ Galerie, Desktop und Git lesen dieselben Daten: die Galerie zeigt Sammlungen als
 |---|---|
 | Fähigkeiten provides/requires/recommends und ihre Auflösung | Katalog (ADR 0068), Resolver `fs-store-core/src/capability.rs` |
 | Spiegel-Herkunft: Macher-Quelle, Macher-Signatur, Quellcode-Datei derselben Version | Katalog (A1/A7 der Lückenliste) |
-| **Dateiliste mit Prüfsumme je Datei** (was das Paket auf die Platte gelegt hat) | beim Entpacken vom Store geschrieben (tar.gz); rpm: `rpm -q --qf`/`rpm -V` |
+| **Dateiliste mit Prüfsumme je Datei** (was das Paket auf die Platte gelegt hat) | **vom Store selbst geschrieben**, für jedes Format: tar.gz beim Entpacken; rpm aus dem Kopf der geprüften rpm-Datei **vor** der Installation (Crate `rpm` liest rpm-Dateien, §9) und nach der Installation gegen die Platte geprüft |
 | Größe (Download, installiert), Datum, Änderungen je Version, Bilder, Icon | Katalog (A1) |
 | Lizenz, Fehler melden, Quellcode-Link | Katalog |
 | Gehaltene Vorversionen (`current/<name>`-Umschaltung) | Store |
 | Export als SBOM | SPDX 3.0.1 / CycloneDX 1.7 als **Sidecar-Export**, nie als Wahrheit |
 
-### 1.3 Speicherort: Ereignisse, Steckbrief, nachgefragter Stand, xattr
+### 1.3 Speicherort: Ereignisse, Steckbrief, Dateiliste des Stores, xattr
 
 Drei Arten von Daten, drei Regeln:
 
@@ -67,7 +67,8 @@ Drei Arten von Daten, drei Regeln:
 |---|---|---|---|---|
 | **Ereignis** (was geschah) | „Kal hat am 2026-11-10 fs-tasks 0.0.3 aus Katalog FreeSynergy installiert; dabei entstand `…/bin/fs-tasks` mit sha256 …“ | **nein**, nur anhängen | Aktivitäten-Log des **Handelnden** (Store für Installieren/Aktualisieren/Entfernen, fs-files für Download/Kopie/Verschieben), über den Hub; **fs-history indiziert** sie nur (fs-history v0.0.1 ist ein abgeleiteter Index der Hub-Aktivitäten) | Store bzw. fs-files (ADR 0050) |
 | **Steckbrief** (was der Mensch dazu sagt) | Schlagworte, Sammlungen, Beschreibung | ja | eigene Ablage: Datei-Objekt in **fs-objects**; fremde Bäume (Home, USB, S3, DAV, SFTP): **Begleit-Datenbank von fs-files** unter `$XDG_DATA_HOME/freesynergy/files/` (**entschieden F2: ja**), Schlüssel `(anbieter-id, eintrags-id)` plus Prüfsumme als zweiter Anker; nie versteckte Dateien in fremde Ordner (ADR 0071) | fs-files |
-| **Aktueller Stand** (was jetzt gilt) | „gehört gerade zu Paket X“, Rechte, Größe, Hash jetzt | ja | **nirgends gespeichert**, immer nachgefragt: Store/rpm/dpkg, Anbieter (`stat`) | Store, rpm, Anbieter |
+| **Installationsstand** (was WIR installiert haben) | je Datei: Pfad, Paket, Version, Quelle, Signatur(-Stufe), Prüfsumme | ja (bei Installieren/Aktualisieren/Entfernen) | **Dateiliste des Store-Kerns** (unten) | Store |
+| **Dateizustand jetzt** | Rechte, Größe, Hash jetzt | – | nie gespeichert, immer vom Anbieter (`stat`) gelesen; der Vergleich Hash-jetzt gegen Liste ergibt ok/geändert/fehlt | Anbieter |
 
 **Aktivitäten beim Installieren, Aktualisieren, Entfernen (Store) [Vorschlag zur Form]:** je Vorgang **eine** Aktivität:
 
@@ -82,7 +83,15 @@ Drei Arten von Daten, drei Regeln:
 
 Die AS2-Felder `actor`, `object`, `origin`, `instrument`, `target` sind im W3C-Vokabular definiert (§9). Downloads: `Create` mit `origin` = URL, `instrument` = Programm (Files/Browser), `object` = Datei samt Hash. Kopien: `Create` mit `origin` = Quelldatei (`fs://…` samt Hash). Verschieben: `Move` mit `origin`/`target`.
 
-Damit gilt: **Herkunft bleibt** nach Entfernen des Pakets, bei liegengebliebenen Dateien und für Forensik, obwohl der aktuelle Paket-Stand nicht doppelt gespeichert wird.
+Damit gilt: **Herkunft bleibt** nach Entfernen des Pakets, bei liegengebliebenen Dateien und für Forensik (Verlauf), und der **aktuelle Stand** steht in der Dateiliste des Stores (veränderlich, eine Wahrheit, ein Besitzer). Verlauf und Liste widersprechen sich nicht: die Liste ist der jüngste Stand, der Verlauf die Kette dorthin; aus dem Verlauf ließe sich die Liste neu aufbauen (Prüfung in Tests).
+
+**Dateiliste des Store-Kerns (Korrektur Nutzer 2026-11-12) [Form: Vorschlag]:**
+- **Inhalt je Datei:** Pfad (relativ zum Installationsort, plus Art des Orts: `store` / `bin-link` / `menu` / `system`), Paket-Id, Version, Format, Quelle (Katalog-URL + `fs-serial`), Signatur-Stufe + Fingerprints, `sha256` (wie im Katalog) und `blake3` (wie fs-files), Größe, Modus, Art (Datei/Link mit Ziel).
+- **Ort:** im Store-Root (`$FS_STORE_ROOT`, sonst `~/.local/share/fs-store`; systemweit später ein System-Ort, [offen]). `installed.toml` behält je Paket nur Kopfdaten (Version, Quelle, `auto_update`, Signierer – Lücke A6) und **verweist** auf eine Liste je Paket und Version, z. B. `files/<paket>/<version>.toml` **[Vorschlag]**; so bleibt `installed.toml` klein und lesbar, und gehaltene Versionen behalten ihre Liste. Später kann eine Datenbank des Store-Kerns dasselbe halten; das Format ist hinter einer Schnittstelle (`FileIndex`, Repository-Muster) austauschbar.
+- **Schreiben:** atomar (temp, `fsync`, `rename`) **vor** dem Umschalten von `current/<name>`; misslingt die Liste, wird nicht umgeschaltet (Zustandsautomat: gehört zu „installieren“, Rückrollen löscht sie).
+- **Größe (Schätzung, [nicht gemessen]):** je Datei etwa 250–350 Byte als TOML (Pfad ~80, zwei Hashes à 64 Hex, Felder). Ein FreeSynergy-Programm mit 10–50 Dateien: 3–20 KiB je Version; 50 Pakete mit je 2 gehaltenen Versionen: wenige MiB. Systempakete mit tausenden Dateien (rpm) gehen in den MiB-Bereich je Paket; dann ist eine Datenbank statt TOML zu erwägen (Schwelle beim ersten großen Paket messen).
+- **Suche „Pfad → Paket“** (`fs-store owner`): Rückwärts-Index Pfad → (Paket, Version), beim Laden aufgebaut oder als eigene Datei; Hash → Paket für „inhaltsgleich“.
+- **Migration alter Installationen ohne Liste** (alles vor dieser Änderung): (1) tar.gz: liegt das geprüfte Artefakt noch vor oder ist es über Katalog/TUF mit bekanntem `sha256` wieder ladbar, wird die Liste **aus dem Archiv** gebaut und mit der Platte verglichen; Abweichungen sind „geändert“ (rot). (2) Ist das Artefakt nicht mehr zu haben: Liste aus dem Ordner `current/<name>/<version>` **so wie er jetzt ist**, sichtbar markiert „**nachträglich erfasst am … – ohne Beleg der Originalfassung**“ (nicht grün, nicht rot). (3) rpm-Installationen des Stores: Liste aus der rpm-Datei, falls noch vorhanden, sonst unter Linux aus der rpm-DB als Gegenprobe übernommen und ebenso markiert. Migration als **einmaliger, wiederholbarer Job** (`fs-store verify --rebuild`), nie still beim Start. Eine Aktivität „nachträglich erfasst“ kommt in den Verlauf.
 
 **xattr: werden geschrieben (entschieden F3), abschaltbar.** Files schreibt auf lokalen Anbietern `user.xdg.tags`, `user.xdg.comment`, `user.xdg.origin.url`, damit Dolphin und andere Programme die Werte sehen. Ein Schalter (global und je Ort) stellt das ab. Beim Erkennen werden xattr **gelesen** und als „vermerkt“ (fälschbar) eingestuft; weichen sie vom Steckbrief ab (z. B. Dolphin hat ein Schlagwort ergänzt), übernimmt Files die Änderung als **Steckbrief**-Änderung mit Vermerk „von außen“ **[Vorschlag]**. Herkunft aus xattr wird nie zu „belegt“. Auf USB/Wechselmedien standardmäßig **aus**, pro Gerät einschaltbar (entschieden F9); auf Netz-Anbietern nicht möglich. Wechseldatenträger und fremde Ordner: xattr sind keine versteckten Dateien, die Regel aus ADR 0071 bleibt eingehalten.
 - **Sidecar-Dateien** (`*.spdx.json`) nur als Export, nie als Ablage.
@@ -97,7 +106,7 @@ Damit gilt: **Herkunft bleibt** nach Entfernen des Pakets, bei liegengebliebenen
 
 **Widerspruch zu ADR 0070 §2 neu geprüft** („Files hält keine Wahrheit, nur Registry, Ansichtszustand, Auswahl“):
 - **Ereignisse:** kein Widerspruch. Eine Aktivität ist keine Wahrheit *über den Eintrag*, sondern ein Protokoll *eigener Handlungen*; ADR 0070 verlangt das selbst („Jede ändernde Handlung ist eine Aktivität im Protokoll des Besitzers … bei Anbietern ohne Objekte ist die Aktivität lokal (Files-Sicht)“). Herkunft aus Ereignissen ist also schon angelegt. Unveränderlich, darum keine zweite veränderliche Wahrheit.
-- **Aktueller Stand:** kein Widerspruch, weil nie gespeichert (nur nachgefragt).
+- **Installationsstand:** kein Widerspruch zu ADR 0070, weil **nicht Files** ihn hält, sondern der **Store-Kern** als Besitzer (ADR 0050). Files zeigt ihn über den Anbieter `fs://catalog` bzw. fragt `owner(pfad)` – genau das Muster „Programm-Bäume, Abbildung beim Besitzer“ (ADR 0070 §5). **Folge für ADR 0070 (Hinweis, kein neues ADR):** neben „Files hält keine Wahrheit über Inhalt und Struktur fremder Anbieter“ festhalten: „Die Wahrheit über Installationen hält der Store-Kern (Dateiliste); Files liest sie.“ Achtung bei einer späteren Repo-Variante A (Store-Crates in fs-files): dann hielte fs-files diese Wahrheit selbst – ein Grund mehr, den Store-Kern als eigenen Besitzer zu behalten, gleich wo der Code liegt.
 - **Steckbrief fremder Bäume:** **echter Zusatz** zu ADR 0070 – veränderliche Daten, die fs-files besitzt. Entschieden (F2: ja); beim nächsten Überarbeiten von ADR 0070 so zu formulieren: „Files hält keine Wahrheit **über Inhalt und Struktur** fremder Anbieter; es besitzt den Datentyp **Steckbrief** (Schlagworte, Sammlungen, Beschreibung) und das Protokoll eigener Handlungen.“ (kein neues ADR hier, nur Hinweis)
 - **Neue Spannung: Vergessen gegen Forensik.** fs-history kann Einträge **vergessen** (nur Index; das Hub-Log bleibt). Für Forensik muss die Install-Aktivität im Hub-Log/Store-Log bleiben; Entschieden (F8): Standard behalten; der Mensch darf seine Aktivitäten wirklich löschen (mit Hinweis, dass die Herkunft dann fehlt); systemweite Software-Aktivitäten bleiben mindestens 1 Jahr, löschen nur durch Admin. Außerdem: fs-history setzt `actor` heute leer und `at` = Empfangszeit – das ist ein **Fehler** (git-bug-Kandidat, §8); Original-Actor und -Zeit sind beim Hub schon angefragt.
 
@@ -165,7 +174,7 @@ Ort `fs://catalog/<pfad>`, Eintrags-Id opak (ADR 0070 Leitgedanke 1), z. B. `pkg
 | `update`, `updateAll` | „Programme“, „Updates“ | 4 |
 | `remove` | „Programme“ | 4 (4b bei rpm) |
 | `rollback` | gehaltene Version | 4 |
-| `verify` | installiertes Paket: Dateiliste gegen Platte (wie `rpm -V`) | 1 |
+| `verify` | installiertes Paket: eigene Dateiliste gegen Platte (`fs-store verify`); unter Linux optional zusätzlich `rpm -V` | 1 |
 | `openSource` | Quellcode-Datei | 2 |
 | `start` | installiertes Programm/Facette | 3 |
 
@@ -178,8 +187,8 @@ Weil der Befehl am **Typ** hängt, kann Files ihn auch für eine Paketdatei im H
 ### 3.1 Auflösung (feste Reihenfolge, erster Treffer gewinnt je Feld)
 
 1. **Verlauf** (AS2-Aktivitäten des Stores und von fs-files, über den Hub, indiziert in fs-history): Suche nach der Datei per Ort **und** per Prüfsumme → *belegt* (wer, wann, woher, mit welchem Paket/Signatur). Findet auch „war Teil von Paket X, entfernt am …“ und liegengebliebene Dateien.
-2. **Aktueller Stand beim Store** (nachgefragt): liegt der Pfad unter `current/<name>/` oder in der Dateiliste eines installierten Pakets → „gehört gerade zu …“, Zustand ok/geändert/fehlt → *belegt*.
-3. **System-Paket-DB**: `rpm -qf <pfad>` bzw. `dpkg -S <pfad>`; Prüfung „geändert?“ über `rpm -V` → *belegt (System)*. Flatpak-Pfade **[nicht belegt, offen]**.
+2. **Dateiliste des Store-Kerns** (`fs-store owner <pfad>`): Pfad steht in der Liste eines installierten Pakets → „gehört gerade zu …“, Hash jetzt gegen Liste → ok / geändert (rot) / fehlt → *belegt*. Auf allen Systemen gleich.
+3. **Nur Linux, nur Gegenprobe, keine Pflichtquelle:** für Dateien, die **nicht** in unserer Liste stehen (Systempakete), `rpm -qf <pfad>` / `dpkg -S <pfad>`, Zustand über `rpm -V` → *belegt (System, Gegenprobe)*. Fehlt das Werkzeug (Windows, macOS, Redox, Linux ohne rpm/dpkg), zeigt Files ehrlich „nicht von uns installiert, keine Systemprüfung verfügbar“. Flatpak-Pfade **[nicht belegt, offen]**.
 4. **Hash-Abgleich**: Prüfsumme gegen den Hash-Index von fs-files und gegen sha256 im signierten Katalog → *inhaltsgleich mit …* (der Inhalt ist sicher derselbe, der Weg dorthin nicht).
 5. **xattr**: `user.xdg.origin.url` (setzen u. a. Browser/KDE), auf macOS `com.apple.quarantine`, auf NTFS-Datenträgern der Strom `Zone.Identifier` → *vermerkt* (fälschbar, nur Hinweis). Ob Linux-Treiber `Zone.Identifier` lesbar machen: **[nicht belegt]**.
 6. Sonst: **„Herkunft unbekannt“** – ehrlich, nie geraten.
@@ -239,7 +248,8 @@ Installieren: fs-tasks 0.0.3 aus „FreeSynergy“
  2. fs-tasks-0.0.3-linux-x86_64.tar.gz laden (14 MiB)
  3. Signatur und Prüfsumme der Datei prüfen
  4. Fähigkeit „identity.oidc ≥1.0“ → erfüllt durch Kanidm
- 5. Entpacken nach ~/.local/share/freesynergy/store/fs-tasks/0.0.3 (Dateiliste merken)
+ 5. Entpacken in den Store-Root (~/.local/share/fs-store/…/fs-tasks/0.0.3)
+ 5a. Dateiliste schreiben: je Datei Pfad, Paket, Version, Quelle, Signatur, Prüfsumme
  6. Umschalten current/fs-tasks → 0.0.3 (0.0.2 bleibt gehalten)
  7. Befehl „fs-tasks“ in ~/.local/bin, Menü-Eintrag „FreeSynergy.Tasks“
  8. Läuft fs-tasks? Dann schließen und am selben Punkt neu starten (ADR 0069)
@@ -333,7 +343,7 @@ Wie B, aber das Store-Fenster entfällt: Raster/Tabelle/Paketseite werden die **
 | **Store-Frontend Variante B** (Raster/Tabelle), **C** (Liste+Detail) als Gegenprobe | **ja** | Tabelle und Paketseite **aus fs-components** bauen (Liste/Zelle/Detail), damit sie in Variante C ohne Umbau die Facette „Programme“ werden. |
 | **Update-Neustart** (ADR 0069, B1–B6) | **ja, unverändert** | bleibt im Store; Weg B braucht den Store als eigenen Prozess (Argument für B/C). |
 | A6 Signierer in `installed.toml` | **ja, vorziehen** | Grundlage für „Vertrauen“ installierter Dateien. |
-| **Neu, klein, nur Store [Vorschlag]:** Dateiliste mit sha256/blake3 je Datei in `installed.toml` (oder daneben) beim Entpacken; `fs-store owner <pfad>` und `fs-store verify <paket>` in der CLI | **erlaubt vorher** | liefert §3 Schritt 2 sofort, ohne Files und ohne neue Schnittstelle. |
+| **Eingeplant vor dem Meilenstein (Nutzer, 2026-11-12), nur Store:** (1) Dateiliste je Paket und Version mit Pfad, Paket, Version, Quelle, Signatur, `sha256`/`blake3` (Form §1.3), geschrieben vor dem Umschalten; (2) `fs-store owner <pfad>` (Pfad → Paket); (3) `fs-store verify [<paket>]` (Liste gegen Platte, geändert = rot), `--rebuild` für die Migration alter Installationen | **ja, eingeplant** | Wahrheit für „was WIR installiert haben“, auf allen Systemen gleich; liefert §3 Schritt 2 ohne Files und ohne neue Schnittstelle. Tests: Liste vor Umschalten, Rückrollen entfernt sie, geänderte Datei wird rot, Migration markiert „nachträglich erfasst“. |
 | **Neu [Vorschlag]:** Aktivität `Add`/`Update`/`Remove` je Vorgang (§1.3) | **erlaubt vorher, klein** | Der Store schreibt sie zunächst **lokal, nur anhängend** (z. B. JSON-Lines mit AS2-Objekten im Store-Root) und reicht sie an den Hub, sobald der Weg steht. Herkunft geht so ab sofort nicht mehr verloren. Nur anhängen, nie umschreiben. |
 | **PackageKit-Prüfung** (F6, F10) | **Test auf dem Rechner erst nach dem Meilenstein** | dann: `InstallFiles` mit `SIMULATE` und `ONLY_TRUSTED` gegen ein eigenes signiertes rpm; bis dahin bleibt `pkexec dnf`. |
 
@@ -367,7 +377,7 @@ Wie B, aber das Store-Fenster entfällt: Raster/Tabelle/Paketseite werden die **
 - **F5 Unbekannte Programme:** nur mit Bestätigung starten; Sandbox später als Option, ob/wie wird noch geprüft (§4).
 - **F6 Root-Weg:** zuerst **PackageKit** prüfen, eigener polkit-Helfer nur als Rückfall (§5).
 - **F7 Meilenstein bestätigt:** GitHub + Releases, Store, Tasks als Arbeitsbrett, Wiki mit Doku, Files-Optik, Server-Pakete (§7).
-- **Korrektur Herkunft:** Installieren/Aktualisieren/Entfernen, Downloads und Kopien werden als **unveränderliche AS2-Aktivitäten** festgehalten; der aktuelle Paket-Stand wird nur nachgefragt (§1.3, §3).
+- **Korrektur Herkunft:** Installieren/Aktualisieren/Entfernen, Downloads und Kopien werden als **unveränderliche AS2-Aktivitäten** festgehalten; der aktuelle Paket-Stand wird **vom Store selbst gespeichert** (Dateiliste je Datei, Korrektur 2026-11-12; rpm/dpkg nur Gegenprobe unter Linux) (§1.3, §3).
 
 ### Entschieden (Strategie, 2026-11-12, Nachtrag)
 - **F8 Vergessen gegen Forensik:** Standard = **behalten**. Der Mensch darf **seine** Aktivitäten löschen (DSGVO, „wirklich löschen“, ADR 0073 §7), mit Hinweis, dass dann die Herkunft fehlt. **Software-Aktivitäten auf Systemebene** (systemweit installieren/aktualisieren/entfernen) behält der Rechner **mindestens 1 Jahr**; löschen nur durch Admin, mit Hinweis.
