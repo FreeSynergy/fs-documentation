@@ -1,0 +1,94 @@
+# 0069 – Ein Update schließt ein laufendes Programm und startet es am selben Punkt neu
+
+Status: Vorschlag der Strategie bis zur Bestätigung (Entwurf 2026-11-11; Opus/Strategie prüfen vor dem Zusammenführen) · präzisiert und ersetzt ADR 0065 Punkt 7 · baut auf ADR 0046 (Speichern ≠ Export, `DraftStore`), 0045 (Themen-Schnittstellen, `Control`), 0063 (ein Befehl, `serve`), 0066 (vier Frontends)
+
+Befund und Quellen: `.scratch/befund-update-neustart.md` (Stand 2026-11-11).
+
+## Ausgangslage
+- Der Store lehnt das Update eines laufenden Fensters heute ab (`UpdateError::Running`). Hintergrund-Server (`fs-<name> serve`) beendet er mit SIGTERM (nie SIGKILL), tauscht und startet sie mit den alten Argumenten neu.
+- Die Laufend-Prüfung sieht Programme unter `/usr` (rpm) nicht; ein rpm-Update ersetzt ein laufendes Fenster ohne Prüfung.
+- Nichts speichert Ansicht, Größe oder Position. Einzige Wiederherstellung: Entwürfe über `DraftStore` (ADR 0046).
+- ADR 0065 Punkt 7 verlangt „erkennen, Zustand sichern, neu starten“, nennt aber weder Format noch Ort noch Trait.
+
+## Entscheidung
+
+### 1. Zwei Wege, eine Funktion
+- **Weg A (zuerst):** Das Fenster bemerkt, dass seine eigene Datei ersetzt wurde (Inode/mtime von `/proc/self/exe`), speichert den Zustand und startet sich selbst neu. Deckt auch `dnf upgrade` ohne Store ab.
+- **Weg B (danach):** Der Store löst aus (findet das Fenster, bittet es zu beenden, installiert, startet neu). Garantiert „Update schließt und startet neu“.
+- Beide benutzen **eine** Funktion `suspend_and_exit()` in der Fensterhülle (`fs-components`, App-Teil). Sie sammelt den Zustand, schreibt die Sitzungsdatei, sichert Entwürfe und beendet das Fenster sauber. Weg B ist nur ein weiterer Auslöser.
+- Ersetzt/präzisiert ADR 0065 Punkt 7: Dort bleibt die Pflicht („nie den Pfad der gelöschten Datei benutzen“; Neustart über `current/<name>/…`, im Store über `program_of`/`own_exe`); Format, Ort, Trait und Ablauf stehen ab jetzt hier. „Oder bietet ‚Jetzt neu starten‘ an“ gilt nur noch als Rückfall, wenn kein Zustand gesichert werden kann.
+
+### 2. Kleinster Schnitt zuerst
+Gebaut wird zuerst: Sitzungsdatei und Trait (Schritte 3, 4 des Befunds), Fensterhülle mit SIGTERM = suspend und Weg A (7), Store: Fenster finden, beenden, neu starten, neue Reihenfolge, rpm-Lücke, Kein-Display-Regel (8, ohne `Control`). Davor ein Spike (2, siehe Offene Punkte) und diese Entscheidung (1).
+- Ergebnis: Fenstergröße, Screen und Ansicht des Datei-Managers kehren nach einem Update zurück.
+- **Später:** `Control.suspend` (Schritt 6) als **eigene `fs-interfaces`-Version, nicht v0.0.19**; ältere Programme antworten `unimplemented`. Bis dahin ist **SIGTERM der einzige Weg** zum Fenster. Danach Workbenches, übrige Programme, Store-Selbst-Update, Ende-zu-Ende-Test, Windows.
+
+### 3. Entscheidungen (Strategie)
+| Frage | Entscheidung |
+|---|---|
+| Ungespeichertes | Wird als **Entwurf über `DraftStore`** gesichert (ADR 0046) und beim Neustart zur Wiederherstellung **angeboten** (nie von selbst zurückgeschrieben). Das Update wird **nicht** zurückgestellt. Gibt es für das Ungespeicherte keinen Draft-Weg, **fragt das Fenster**: Speichern / Verwerfen / Abbrechen (Abbrechen = Update für dieses Programm zurückgestellt). |
+| Rückfrage vor dem Schließen | Keine. Das Fenster zeigt kurz „wird aktualisiert, gleich wieder da“. |
+| Maximalalter der Sitzungsdatei | 30 Tage; ältere werden verworfen. |
+| Windows | Später, nicht jetzt. |
+| Mehrere Fenster | Schlüssel `<name>/<window-id>`; **jedes** Fenster kommt zurück. |
+| Wiederherstellen nach normalem Schließen | **Offene Frage an den Nutzer.** Bis zur Antwort: Zustand wird **immer geschrieben**; beim normalen Start (ohne `--restore`) werden **nur Größe und Screen** angewandt. |
+
+### 4. Regeln
+1. **Positivliste:** gesichert wird nur, was ein Component ausdrücklich als `Restorable` meldet. **Passwort- und Geheimnisfelder bekommen nie `Restorable`** (Regel in die Review-Liste). Freitext standardmäßig nicht. Auswahl nur per stabiler ID/Pfad, nie per Index; fehlt sie, still verwerfen.
+2. **Zustand ist kein Export und keine Sicherung** (ADR 0046): nicht in Exporte und Backups, Menüpunkt „Sitzung vergessen“.
+3. **Wiederherstellen blockiert den Start nie.** Fehler, kaputte Datei, unbekannte Version: Standardzustand, nur der betroffene Teil wird verworfen, Vermerk im Log.
+4. **Kein SIGKILL**, nirgends. Wartet das Fenster nicht rechtzeitig ab (Zeitlimit, z. B. 10 s), bleibt das Programm unersetzt (`Running`, „bitte schließen“).
+5. **Datei:** JSON (serde), `$XDG_STATE_HOME/freesynergy/<name>/session.json` (Standard `~/.local/state/…`); Zustand ist weder Daten noch Konfiguration. Schreiben atomar: temp im selben Ordner, `fsync`, `rename`, Rechte 0600 (neue Funktion; `write_new_private_file` überschreibt nie).
+   ```json
+   {"schema":1,"program":"fs-files","program_version":"0.0.7","saved_at":"…",
+    "windows":{"fs-files/main":{"window":{"w":1200,"h":800,"x":null,"y":null,"maximized":false},
+      "screen":"files","parts":{"files.list":{"v":2,"data":{}}}}}}
+   ```
+6. **Versionierung:** `schema` (Hülle) und `v` je Teil. Unbekanntes oder zu altes `v` ohne Migration: nur dieser Teil verworfen. Unbekanntes `schema` oder kaputtes JSON: ganze Datei verwerfen, normal starten. Programmversion nur zur Diagnose. Je Release Tests mit Alt-Fixtures.
+7. **Trait (Namen vorläufig), in `fs-components-app`:**
+   ```rust
+   pub trait Restorable {
+       fn state_key(&self) -> &str;           // stabil, z. B. "files.list"
+       fn state_version(&self) -> u32;
+       fn save_state(&self) -> Option<serde_json::Value>;
+       fn restore_state(&self, version: u32, value: &serde_json::Value) -> Result<(), RestoreError>;
+       fn migrate(&self, _from: u32, _v: serde_json::Value) -> Option<serde_json::Value> { None }
+   }
+   // Surface: fn restorable(&self) -> Option<&dyn Restorable> { None }
+   ```
+   Nur Ansicht: Auswahl, Bildlauf (Offset + Anker-ID), Sortierung, Filter, Ausklappzustand. Workbenches liefern ihren Teil ohne Programmcode. Ein eigenes Crate (`fs-components-session`) ist zu erwägen, damit Server/CLI ohne Blinc es nutzen können.
+8. **Start:** `--restore` (Argument, gemeinsam wie `parse_size`) oder `FS_RESTORE=1`. Gilt nur nach Update/Neustart, nicht bei jedem Start.
+9. **Neustart-Daten:** Argumente aus `/proc/<pid>/cmdline` **und** Umgebung aus `/proc/<pid>/environ` (DISPLAY, WAYLAND_DISPLAY, XAUTHORITY, XDG_RUNTIME_DIR) werden **vor dem Beenden** gemerkt. Start über `current/<name>/…`, nie über den gelöschten Pfad.
+10. **Neues Fenster erst zeigen, wenn der Zustand angewandt ist**, gleiche Größe/Position; eine Lücke von 1 bis 2 s bleibt.
+
+### 5. Ablauf im Store (Weg B)
+1. Fenster finden (`/proc`: exe unter `packages/<name>` **oder** `/usr/bin`, nicht `serve`, gleicher Nutzer). Das schließt die rpm-Lücke.
+2. Beenden mit SIGTERM (Fensterhülle behandelt es wie suspend), Zeitlimit, dann auf Prozessende warten.
+3. **Reihenfolge:** Fenster zuerst beenden, dann Server (heute umgekehrt bzw. ignoriert: das Fenster stünde ohne Server da). Nach der Installation: **Server zuerst, dann Fenster** (mit `--restore`). Die Server-Schiene (`serve`, SIGTERM, 15 s, gleiche Argumente) bleibt unverändert.
+4. **Kein Display** (Timer-Lauf `fs-store update --all`): Fenster nicht anrühren, Update für dieses Programm **zurückstellen** und als „Update wartet“ zeigen. Ohne laufendes Fenster ändert sich nichts.
+5. **Store-Selbst-Update (Unix):** immer **letzter Schritt** der Batch. Zustand schreiben, neuen Prozess über `own_exe`/Symlink starten (nie rohes `current_exe`), erst nach Lebenszeichen des Neuen (Ready-Handshake: Ready-Datei/Sperre) selbst beenden. Gilt für tar.gz und rpm. Job-Zustand (Downloads) wird nicht wiederhergestellt. **Windows: offen** (Hilfsprozess nötig, erst nach Paketformat-Entscheidung).
+
+## Verhältnis zu anderen ADRs
+- **0065:** Punkt 7 wird hiermit präzisiert (siehe 1.); die Hülle bekommt `suspend_and_exit()` und `Surface::restorable`.
+- **0046:** Entwürfe bleiben im `DraftStore`, nicht in der Sitzungsdatei (kein zweites System für dasselbe Feld).
+- **0045:** `Control.suspend` ist eine Erweiterung des Entwurfs-Schemas, abwärtskompatibel; kommt später (nicht v0.0.19).
+
+## Risiken und offene Punkte
+- **Spike (Schritt 2, läuft separat):** Kann Blinc/winit unter Wayland (KDE) Fensterposition und Bildlauf von außen setzen? Bis zum Ergebnis keine Zusage für Position und Bildlauf; Größe, Screen, Auswahl sind sicher.
+- **Offene Frage an den Nutzer:** Ansicht auch nach normalem Schließen wiederherstellen (siehe Tabelle)?
+- Ungespeichertes ohne Draft-Weg ist der schwierigste Teil (Rückfrage im Fenster). Fenster-Transferzustand (z. B. fs-files `uploads.rs`) ungeprüft; Server-Transfers überleben.
+- `dnf upgrade` ohne Store: nur Weg A fängt es ab.
+- Mehr Code in `fs-components-app`: Crate-Trennung prüfen.
+- Windows (Pfad `%LOCALAPPDATA%\FreeSynergy\<name>\state\`, Pipe statt Signal, Hilfsprozess): später.
+
+## Folgen
+- `fs-components` (app, workbenches): Trait, Sitzungsdatei, `suspend_and_exit()`, `--restore`; danach alle Programme heben ihren fs-components-Tag an.
+- `fs-store`: `find_windows`, Neustart, Reihenfolge, `/usr`, Kein-Display-Regel, Meldungstexte DE/EN („wird aktualisiert, gleich wieder da“, „Update wartet“), Selbst-Update.
+- `fs-interfaces`: `Control.suspend` und `call_limited` in einer eigenen späteren Version.
+- Doku: `fs-components/DESIGN.md` und Store-`DESIGN.md` (Punkt „Offen“) nachziehen.
+
+## English summary
+**Decision:** An update closes a running program and restarts it at the same point. Two paths share one shell function `suspend_and_exit()` in `fs-components`: path A (the window notices its own file was replaced, saves state, re-executes itself) first, path B (the Store triggers it) second. Smallest cut first: session file and `Restorable` trait, shell with SIGTERM = suspend, Store window handling without `Control`; `Control.suspend` follows in its own later `fs-interfaces` version (not v0.0.19).
+
+**Rules:** unsaved input is saved as a draft through `DraftStore` (ADR 0046) and offered on restart, the update is not deferred; if there is no draft path the window asks (save / discard / cancel). Close without confirmation, with a short "updating, back in a moment" notice. Session file max age 30 days. Multiple windows keyed `<name>/<window-id>`, all come back. Windows later. Open question to the user: restore also after a normal close (until answered: always write, apply only size and screen on a normal start).
+Only fields explicitly `Restorable` are saved (positive list; never password fields); state is neither export nor backup; restoring never blocks startup (error means default state, part discarded); never SIGKILL. File: JSON (serde) at `$XDG_STATE_HOME/freesynergy/<name>/session.json`, atomic write, mode 0600, `schema` plus per-part `v` with migrate/discard. Start with `--restore`. Restart arguments and environment are read from `/proc/<pid>/cmdline` and `environ` before exit. Order: window first, then server; after install server first, then window. No display (timer run): do not touch windows, defer that program's update and show "update waiting". Store self-update on Unix is the last step (spawn via `own_exe`, ready handshake, then exit); Windows open; the rpm gap (`/usr`) is closed by also scanning `/usr/bin`. Supersedes/specifies ADR 0065 point 7.
