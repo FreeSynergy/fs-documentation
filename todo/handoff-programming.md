@@ -368,3 +368,10 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 ## Stand 2026-11-11 abends (Koordinator)
 
 - AltGr-Befund: nicht migrierte Programme (fs-people/-tasks/-calendar/-wiki/-maps) binden blinc-app-fix (US-Tastentabelle); fs-blinc-3 hat den Fix (KeyEvent.text, 549867e1). → Migration auf fs-components v0.0.8 jetzt (nicht auf v0.0.10 warten): Reihenfolge fs-people, fs-tasks, fs-calendar, fs-wiki, fs-maps (nach v0.0.9), jede mit eigenem Release + vollem Gate (inkl. Sonderzeichen-Tipptest de+us); email.rs-Kopf nach fs-people-Migration entfernen; Gate-Sperre „nur freigegebene Blinc-Quelle im Cargo.lock“ (fs-release Branch gate-blinc-lock 310d2d5, Opus-Review); danach blinc-app-fix/-layout-fix für Archivierung vormerken (nur mit Nutzer-Ja).
+
+## Regel (2026-11-11, Strategie): Testgeheimnisse nur im Container
+
+- Testgeheimnisse (Passwörter, TOTP-Secrets, Client-Secrets, Schlüssel) entstehen und leben NUR IM Container (`--tmpfs` mode=0700 bzw. Container-Dateisystem). NIE im Host-Dateisystem, nie in der Host-Umgebung, nie in `podman inspect`-sichtbaren Variablen. Zwischen zwei Containern: Podman-Secret (`podman secret create` aus stdin, danach `podman secret rm`) oder gemeinsames tmpfs-Volume mit 0700/0600, nur im Pod.
+- Anlass: Server-Probelauf legte Geheimnisse (Wegwerfwerte) im Host-/dev/shm mit 0644 ab; auf dem Host existiert ein zweiter Nutzer `freesynergy` (uid 1001). Opus-Review fs-kanidm#1: NEIN, Fixes laufen.
+- Podman-Tests: SELinux Enforcing, `:Z` auf allen Bind-Mounts, `--restart=no`, `--memory`, `--pids-limit`, `--cap-drop=all` + nur nötige caps, `no-new-privileges`, Pod-Sperre per `flock`, AVC-Prüfung `journalctl -b -t setroubleshoot --since <start>` (Journal vorher per `logger`-Marker auf Lesbarkeit prüfen, sonst rot), Muster-Scan (ADR 0054) als Teil des Testskripts, kein `seccomp=unconfined`/`label=disable`/`--privileged`.
+- Ursache Tuwunel-Startfehler: Task-Limit (`--pids-limit` 2048 vs. 2048 DB-Threads) → `[global.database.pool] max_workers = 256` (fs-tuwunel#1).
