@@ -114,6 +114,16 @@ All documentation is maintained in multiple languages to ensure global accessibi
 | `temp/` | inbox, drafts, research notes | no |
 | `scripts/` | generators, checkers, fixers | no |
 
+### Checks before pushing
+
+`scripts/check-docs.sh` runs the same documentation checks as CI (component standard en/de, component and frontend indexes). Enable it as a pre-push hook once per clone (local setting only):
+
+```
+git config core.hooksPath .githooks
+```
+
+If an index check fails, run the matching generator without `--check` (`scripts/gen_component_indexes.py --lang <l>`, `scripts/gen_frontend_indexes.py`) and commit the result.
+
 ### License
 
 FreeSynergy is free forever and free for everyone. Licensed under either of
