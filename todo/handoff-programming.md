@@ -321,4 +321,11 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
   3. Kein Test für `run(name, Some(record), …)` (values.rs:117).
 - fs-files `change`-Formular: `unsupported:change` für dieses Release akzeptiert.
 - fs-wiki: Page.change → typisierter Edit (siehe oben).
-- fs-blinc-5: Invalidierungsgrund der ~3,5 Commits/s loggen.
+- Blinc (nächster Tag nach Neuaufsetzen auf Darmies main): Invalidierungsgrund der ~3,5 Commits/s loggen.
+
+## Nachtrag 2026-11-11 (Koordinator, Stand 10:55)
+
+- fs-components v0.0.6 (38eb81b, ohne Karte) getaggt; Karte (q0-integration eb86a9d) wartet auf Opus-Nachprüfung nach v0.0.7.
+- Fall C („Eingabefeld tot“, ~10–15 %): Ursache = Felddaten-Signale gehören dem Seitenbau (Blinc-Fehler ec776dcf). Weg: in fs-components `FieldData` (eigener Scope, Freigabe beim Drop des letzten Klons), Branch fix-slot-detached (993eef9, check grün). Opus: NEIN, vier Pflichtpunkte (Tests beweisen Fall C nicht, Lint zu eng, Texte ohne Tag-Nummer, message_list-Effekt); Nachbesserung läuft.
+- Blinc DataSignals-Variante: drei Opus-Runden; Deadlock beim Entsorgen und Leck durch Rückbezüge behoben. fix-input-signals-clean2 (7ab7f06c, ein Commit auf 8a0251b2): Opus JA für späteren Tag. Keine Tag-Nummer; nächster Tag fs-blinc-4 = neu aufgesetzter Stand auf Darmies main nach den Releases.
+- Offen: git-bug „cn::button lässt 3 Signale pro Bau zurück“; Lint-Regel in fs-release gegen direkte Feldkonstruktoren in Programmen; bump.yml-Cron feuert nicht (manuell dispatch); Worktree-Löschungen nur nach „Nutzer sagt ja“.
