@@ -8,10 +8,10 @@ on:
     branches:
       - main
 
-# Two sessions push often: a newer deploy replaces a running one instead of failing on it.
+# Two sessions push often: a running deploy is never cancelled (a newer one only replaces a waiting one).
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
