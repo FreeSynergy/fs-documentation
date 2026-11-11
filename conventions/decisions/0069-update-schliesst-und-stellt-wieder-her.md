@@ -1,6 +1,6 @@
 # 0069 – Ein Update schließt ein laufendes Programm und startet es am selben Punkt neu
 
-Status: Vorschlag der Strategie bis zur Bestätigung (Entwurf 2026-11-11; Opus/Strategie prüfen vor dem Zusammenführen) · präzisiert und ersetzt ADR 0065 Punkt 7 · baut auf ADR 0046 (Speichern ≠ Export, `DraftStore`), 0045 (Themen-Schnittstellen, `Control`), 0063 (ein Befehl, `serve`), 0066 (vier Frontends)
+Status: akzeptiert (Strategie, 2026-11-11); F1 offen beim Nutzer (Wiederherstellen nach normalem Schließen) · präzisiert und ersetzt ADR 0065 Punkt 7 · baut auf ADR 0046 (Speichern ≠ Export, `DraftStore`), 0045 (Themen-Schnittstellen, `Control`), 0063 (ein Befehl, `serve`), 0066 (vier Frontends)
 
 Befund und Quellen: `.scratch/befund-update-neustart.md` (Stand 2026-11-11).
 
@@ -15,6 +15,8 @@ Befund und Quellen: `.scratch/befund-update-neustart.md` (Stand 2026-11-11).
 ### 1. Zwei Wege, eine Funktion
 - **Weg A (zuerst):** Das Fenster bemerkt, dass seine eigene Datei ersetzt wurde (Inode/mtime von `/proc/self/exe`), speichert den Zustand und startet sich selbst neu. Deckt auch `dnf upgrade` ohne Store ab.
 - **Weg B (danach):** Der Store löst aus (findet das Fenster, bittet es zu beenden, installiert, startet neu). Garantiert „Update schließt und startet neu“.
+- **Keine doppelten Neustarts:** Unter Weg B besitzt der **Store** den Neustart; die Hülle speichert bei SIGTERM, beendet sich und startet sich **nicht** selbst neu. Weg A greift nur, wenn das Fenster von selbst bemerkt, dass seine Datei ersetzt wurde, **und kein SIGTERM kam**. SIGTERM kann auch von Abmelden/Herunterfahren kommen: dann nur speichern, **ohne Rückfrage**, die das Herunterfahren aufhält (Draft-Weg oder Verwerfen statt Dialog).
+- **Nicht mitten im Update neu starten (Weg A):** Bei tar.gz zeigt `/proc/self/exe` auf den Versionsordner und ändert sich nicht; beobachtet wird deshalb das **Ziel des Symlinks `current/<name>`** (Austausch atomar). Bei rpm/deb erst neu starten, wenn die Paket-Transaktion fertig ist (Datei stabil bzw. Sperre von dnf/apt frei); sonst startet das Fenster halb aktualisiert.
 - Beide benutzen **eine** Funktion `suspend_and_exit()` in der Fensterhülle (`fs-components`, App-Teil). Sie sammelt den Zustand, schreibt die Sitzungsdatei, sichert Entwürfe und beendet das Fenster sauber. Weg B ist nur ein weiterer Auslöser.
 - Ersetzt/präzisiert ADR 0065 Punkt 7: Dort bleibt die Pflicht („nie den Pfad der gelöschten Datei benutzen“; Neustart über `current/<name>/…`, im Store über `program_of`/`own_exe`); Format, Ort, Trait und Ablauf stehen ab jetzt hier. „Oder bietet ‚Jetzt neu starten‘ an“ gilt nur noch als Rückfall, wenn kein Zustand gesichert werden kann.
 
@@ -58,7 +60,7 @@ Gebaut wird zuerst: Sitzungsdatei und Trait (Schritte 3, 4 des Befunds), Fenster
    ```
    Nur Ansicht: Auswahl, Bildlauf (Offset + Anker-ID), Sortierung, Filter, Ausklappzustand. Workbenches liefern ihren Teil ohne Programmcode. Ein eigenes Crate (`fs-components-session`) ist zu erwägen, damit Server/CLI ohne Blinc es nutzen können.
 8. **Start:** `--restore` (Argument, gemeinsam wie `parse_size`) oder `FS_RESTORE=1`. Gilt nur nach Update/Neustart, nicht bei jedem Start.
-9. **Neustart-Daten:** Argumente aus `/proc/<pid>/cmdline` **und** Umgebung aus `/proc/<pid>/environ` (DISPLAY, WAYLAND_DISPLAY, XAUTHORITY, XDG_RUNTIME_DIR) werden **vor dem Beenden** gemerkt. Start über `current/<name>/…`, nie über den gelöschten Pfad.
+9. **Neustart-Daten:** Argumente aus `/proc/<pid>/cmdline` werden **vor dem Beenden** gemerkt. Aus `/proc/<pid>/environ` wird **nur eine Positivliste** übernommen: `DISPLAY`, `WAYLAND_DISPLAY`, `XAUTHORITY`, `XDG_RUNTIME_DIR`, `LANG`/`LC_*`; die ganze Umgebung nie (Token möglich). Nichts davon kommt auf die Platte, nur in den Speicher des Stores. Start über `current/<name>/…`, nie über den gelöschten Pfad.
 10. **Neues Fenster erst zeigen, wenn der Zustand angewandt ist**, gleiche Größe/Position; eine Lücke von 1 bis 2 s bleibt.
 
 ### 5. Ablauf im Store (Weg B)
@@ -72,6 +74,9 @@ Gebaut wird zuerst: Sitzungsdatei und Trait (Schritte 3, 4 des Befunds), Fenster
 - **0065:** Punkt 7 wird hiermit präzisiert (siehe 1.); die Hülle bekommt `suspend_and_exit()` und `Surface::restorable`.
 - **0046:** Entwürfe bleiben im `DraftStore`, nicht in der Sitzungsdatei (kein zweites System für dasselbe Feld).
 - **0045:** `Control.suspend` ist eine Erweiterung des Entwurfs-Schemas, abwärtskompatibel; kommt später (nicht v0.0.19).
+
+## Tests
+Der Ende-zu-Ende-Test (Schritt 12) enthält mindestens diese Fälle, jeder **ohne den Fix rot**, wo möglich: (a) Fenster mit Ungespeichertem (Entwurf gesichert und angeboten bzw. Rückfrage); (b) Fenster hängt (Zeitlimit, dann `Running`, nichts ersetzt); (c) kaputte `session.json` (Start im Standardzustand); (d) Timer-Lauf ohne Display (Fenster unberührt, „Update wartet“).
 
 ## Risiken und offene Punkte
 - **Spike (Schritt 2, läuft separat):** Kann Blinc/winit unter Wayland (KDE) Fensterposition und Bildlauf von außen setzen? Bis zum Ergebnis keine Zusage für Position und Bildlauf; Größe, Screen, Auswahl sind sicher.
@@ -90,5 +95,5 @@ Gebaut wird zuerst: Sitzungsdatei und Trait (Schritte 3, 4 des Befunds), Fenster
 ## English summary
 **Decision:** An update closes a running program and restarts it at the same point. Two paths share one shell function `suspend_and_exit()` in `fs-components`: path A (the window notices its own file was replaced, saves state, re-executes itself) first, path B (the Store triggers it) second. Smallest cut first: session file and `Restorable` trait, shell with SIGTERM = suspend, Store window handling without `Control`; `Control.suspend` follows in its own later `fs-interfaces` version (not v0.0.19).
 
-**Rules:** unsaved input is saved as a draft through `DraftStore` (ADR 0046) and offered on restart, the update is not deferred; if there is no draft path the window asks (save / discard / cancel). Close without confirmation, with a short "updating, back in a moment" notice. Session file max age 30 days. Multiple windows keyed `<name>/<window-id>`, all come back. Windows later. Open question to the user: restore also after a normal close (until answered: always write, apply only size and screen on a normal start).
+**Rules:** unsaved input is saved as a draft through `DraftStore` (ADR 0046) and offered on restart, the update is not deferred; if there is no draft path the window asks (save / discard / cancel). Under path B the Store owns the restart (the shell saves on SIGTERM, exits, does not re-exec); path A only fires when the window notices the replaced file itself and no SIGTERM came; SIGTERM may mean logout/shutdown, so then save only, no blocking prompt. Path A watches the target of the `current/<name>` symlink (tar.gz) and waits for the package transaction to finish (rpm/deb). Only an allow-list of the environment is taken from `/proc/<pid>/environ` (DISPLAY, WAYLAND_DISPLAY, XAUTHORITY, XDG_RUNTIME_DIR, LANG/LC_*), kept in memory only. The end-to-end test covers: unsaved work, hanging window (timeout, `Running`), broken session.json, timer run without display. Close without confirmation, with a short "updating, back in a moment" notice. Session file max age 30 days. Multiple windows keyed `<name>/<window-id>`, all come back. Windows later. Open question to the user: restore also after a normal close (until answered: always write, apply only size and screen on a normal start).
 Only fields explicitly `Restorable` are saved (positive list; never password fields); state is neither export nor backup; restoring never blocks startup (error means default state, part discarded); never SIGKILL. File: JSON (serde) at `$XDG_STATE_HOME/freesynergy/<name>/session.json`, atomic write, mode 0600, `schema` plus per-part `v` with migrate/discard. Start with `--restore`. Restart arguments and environment are read from `/proc/<pid>/cmdline` and `environ` before exit. Order: window first, then server; after install server first, then window. No display (timer run): do not touch windows, defer that program's update and show "update waiting". Store self-update on Unix is the last step (spawn via `own_exe`, ready handshake, then exit); Windows open; the rpm gap (`/usr`) is closed by also scanning `/usr/bin`. Supersedes/specifies ADR 0065 point 7.
