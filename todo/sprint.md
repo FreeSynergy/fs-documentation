@@ -97,6 +97,14 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Markieren und nach unten ziehen: Es erscheinen ein Papierkorb (in den Papierkorb) und ein X (endgültig löschen). Nach dem X steht einige Sekunden „Gelöscht – Rückgängig“, erst dann wird wirklich gelöscht. Es gibt keinen Dialog (Nutzer: Ja).
   - Der runde Knopf oben rechts ist noch zu besprechen.
   - Die Components dafür werden überarbeitet.
+- **Vorrang neu (Nutzer, 2026-11-11 spät):**
+  - **Groups und Wiki nach vorne, Files etwas nach hinten.** Grund: Der Nutzer will die Doku schon ins Wiki legen.
+  - Migrationen: People → Tasks → Groups → **Wiki** → Calendar → Maps.
+  - Danach bekommt das Wiki einen Import der Doku (Markdown aus fs-documentation).
+- **Files MUSS Versionierung (Git) und Backup haben (Nutzer).** Das macht Files zu einem sehr wichtigen Programm.
+  - Erst Recherche (Haiku), dann Vergleich (Opus), dann ADR. Kein Code vorher.
+  - Zu prüfen: `gix`, restic-Format mit `rustic_core`, eigene Versionen über die BLAKE3-Inhalte.
+  - Bezug: ADR 0070, Flag `versions`.
 - **Wir wählen zwei Frontends, aber die Ergebnisse aller Vorbilder bleiben nutzbar.** Darum liegen die Recherchen dauerhaft in `temp/research/` (dateimanager*.md, server-kanidm-zentinel-tuwunel.md, update-neustart*.md).
 
 **Merkposten (Nutzer, 2026-11-10, später):**
