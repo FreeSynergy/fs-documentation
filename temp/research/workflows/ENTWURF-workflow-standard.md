@@ -6,6 +6,8 @@ Nutzerentscheid (gesetzt): Installieren ist eine Anweisung (ein Workflow), Paket
 
 **Fassung 2 (gleicher Tag), Nutzerrichtung über Strategie:** „Ein Gantt ist nichts anderes als ein Workflow, also ist ein Workflow eine Facette des Projektmanagements.“ Der Abschnitt **N (Ein Modell)** direkt nach den Quellen ersetzt die frühere Besitzer-Empfehlung (Bibliothek → Programm `fs-workflows`) und schärft (3) und (5) nach. Wo die Teile unten widersprechen, gilt N.
 
+**Fassung 3 (Nutzerkorrektur über Strategie):** „Aufgabe ist Aufgabe. Die Sekretärin tippt, die KI schreibt, in der Abstraktion dasselbe. Das eine beschreibt den Weg (Vorlage), das andere den Zustand (Lauf).“ Keine Sonderwelt: `if`/`switch`, `fork`, Schleifen und **Rücksprünge** sind gewöhnliche Befehle, die zur Laufzeit Tasks anlegen; Rücksprünge sind **erlaubt**. Ausgearbeitet in **N7**; N1/N5/N6 und die Fragen sind angepasst. Entschieden: Runner = `fs-tasks runner`; fs-store bindet den Runner-Kern als Bibliothek ein; Nicht-Menschen = `freesynergy.net:actor` + `actorType`, Export `kind: resource`.
+
 ## Neu geprüfte Primärquellen (Lücken aus A1 geschlossen)
 
 | Frage | Befund | Quelle |
@@ -26,7 +28,7 @@ Nutzerentscheid (gesetzt): Installieren ist eine Anweisung (ein Workflow), Paket
 
 **Machbarkeit Teilmenge mit offener Lizenz: ja.** Spec Apache-2.0, `swf-core` 1.0.0-alpha14 Apache-2.0 (A1) zum Lesen/Prüfen. Ehrliche Grenze: Die Spec kennt keine Profile; was wir bauen, ist eine **dokumentierte Teilmenge** („FS-Profil“), keine konforme Laufzeit. Jede FS-Datei ist gültiges SW-YAML, aber nicht jede SW-Datei läuft bei uns. Das ist der Preis für „feste Liste zuerst“ und wird so benannt.
 
-## N. Ein Modell: Workflow ist eine Facette des Projektmanagements (Fassung 2)
+## N. Ein Modell: Workflow ist eine Facette von Tasks (Fassung 2, ergänzt durch Fassung 3 in N7)
 
 Zusätzlich geprüft: RFC 8984 (https://www.rfc-editor.org/rfc/rfc8984.html): Participant `kind` = `individual` | `group` | `location` | `resource` („a non-human resource other than a location, such as a projector“); Rollen `owner`, `attendee`, `optional`, `informational`, `chair`, `contact`; **je Participant** `progress`, `progressUpdated`, `percentComplete` („only allowed for participants of a Task“); Task-`progress` ohne Wert wird aus den Participants abgeleitet (§5.2.5: alle completed → completed, einer failed → failed …); Task hat `estimatedDuration`, `relatedTo`, `participants` und `links` (Link: `href`, `contentType`, `size`, `rel`, `title`; laut IANA-Tabelle §8.2.6 für Task gültig). Code-Stand: `fs-jscalendar` `Participant` hat `name`, `email`, `kind`, `roles`, `participationStatus` … aber **kein** `progress` je Participant (`/srv/FreeSynergy/fs-jscalendar/crates/fs-jscalendar/src/model/participant.rs`); unbekannte und `freesynergy.net:`-Eigenschaften bleiben in `extra` erhalten (`fs-tasks-core/src/model/mod.rs`). `tasks.capnp` v0.0.19: `assign(id, name, email)` kennt nur Personen mit E-Mail; `editIf` (compare-and-set) und `Readiness` sind da; `Boards` ist Platzhalter.
 
@@ -40,7 +42,7 @@ Zusätzlich geprüft: RFC 8984 (https://www.rfc-editor.org/rfc/rfc8984.html): Pa
 | Abhängigkeit | Relation `FINISHTOSTART` / `DEPENDS-ON` (+ `freesynergy.net:gap`) | wie Plan Schritt 1 |
 | Gantt, Kanban, Workflow-Graph, Liste | **Facetten/Ansichten** auf dasselbe Projekt | Gantt = `schedule`, Kanban = `Board`, Graph = Whiteboard-Ansicht + Layout-Objekt |
 
-Übersetzung SW-DSL → Tasks beim Anlegen des Projekts: `do`-Folge → Kette `FINISHTOSTART`; `fork` → parallele Tasks ohne Relation untereinander (im Task-Graph natürlich, darf deshalb ins Profil); `call` → Maschinen-Task mit Ausführungs-Eigenschaft; `listen` (Freigabe) → menschlicher Task; `switch`, `for`, `try/catch`, `wait`, `raise` siehe N3. **Rückwärtssprünge mit `then: <früherer Task>` sind im Profil verboten** (ein Task-Graph ist azyklisch; ein Zyklus wäre `Readiness::conflict`); Wiederholung nur über `retry` oder `for`.
+Übersetzung SW-DSL → Tasks beim Anlegen des Projekts: `do`-Folge → Kette `FINISHTOSTART`; `fork` → parallele Tasks ohne Relation untereinander (im Task-Graph natürlich, darf deshalb ins Profil); `call` → Maschinen-Task mit Ausführungs-Eigenschaft; `listen` (Freigabe) → menschlicher Task; `switch`, `for`, `try/catch`, `wait`, `raise` siehe N3. ~~Rückwärtssprünge verboten~~ (Fassung 2) → **Fassung 3: Rücksprünge erlaubt**, siehe N7.
 
 ### N2 Handelnde sind gleich
 
@@ -62,7 +64,7 @@ Ein **Runner** ist nur ein weiterer Handelnder (`Application`): er hört auf den
 | Datenfluss | `input`/`output`/`export` im FS-Profil, nur Pfade (`${ .vorgaenger.sha }`) | Ergebnis am Task: `freesynergy.net:result` (kleines JSON nach dem `output`-Schema des Befehls, Größengrenze) + JSCalendar `links` für Protokolle/Artefakte (Verweis auf fs-files, nie große Daten im Task). Projekt-Eingaben als Eigenschaft des Projekts | JSCalendar hat dafür nichts; Herstellerfeld nach RFC 8984 §3.3 |
 | Bedingung (`switch`) | Fälle mit `when` | **Entscheidungs-Task**; erst wenn er fertig ist, legt der Runner (bzw. die Instanziierung) den gewählten Zweig als neue Tasks an. Nicht gewählte Zweige entstehen nie; Begründung im Ergebnis des Entscheidungs-Tasks (`chosen`, `reason`) | bewusst „verzögert anlegen“ statt „überspringen“: ein übersprungener Task als `cancelled` würde nach der Strategie-Regel die Nachfolger als `dependencyCancelled` blockieren. So bleibt `Readiness` unverändert |
 | Schleife (`for`) | `for.in`, Obergrenze Pflicht im Profil | Tasks je Element zur Laufzeit angelegt, mit Herkunft (`freesynergy.net:template` + Index) | kein Zyklus im Graph |
-| Wiederholung | `retry` (`limit`, `delay`, `backoff`) | Zähler `freesynergy.net:attempts`, letzter Fehler `freesynergy.net:error` (SW-Fehlertyp-URI). Grenze erreicht → `failed` → Nachfolger `dependencyCancelled` → **Mensch entscheidet** (genau die bestehende Strategie-Regel) | passt ohne Änderung |
+| Wiederholung | `retry` (`limit`, `delay`, `backoff`) | (Fassung 3: jeder Versuch ist ein neuer Iterations-Task, N7) Zähler `freesynergy.net:attempts`, letzter Fehler `freesynergy.net:error` (SW-Fehlertyp-URI). Grenze erreicht → `failed` → Nachfolger `dependencyCancelled` → **Mensch entscheidet** (genau die bestehende Strategie-Regel) | passt ohne Änderung |
 | Zeitlimit | `timeout` | Runner erzwingt; `due` bleibt Planungstermin, nicht Ausführungsgrenze | zwei verschiedene Dinge, getrennt halten |
 | Warten (`wait`) | Dauer | Task mit `estimatedDuration`, Runner als Zeitgeber | Gantt zeigt ihn als Balken |
 | Gegenbefehl / Kompensation | `undo` je Befehl im Katalog | bei Fehler legt der Runner **Gegen-Tasks** in umgekehrter Abhängigkeitsfolge an (sichtbar auf dem Kanban); bei `undo: none` oder Stufe ≥ 4 vorher ein menschlicher Freigabe-Task | SW-DSL und JSCalendar haben keine Kompensation: FS-Erweiterung (Saga) |
@@ -88,13 +90,13 @@ Ein **Runner** ist nur ein weiterer Handelnder (`Application`): er hört auf den
 | Last | Sekundenschritte außerhalb des Task-Verlaufs | viele kleine Änderungen im vollen Loro-Verlauf (ADR 0073 §7, keine Kürzung): Runner bündelt Statusänderungen, Protokolle nur als `links` |
 | Bootstrap | Läufer-Bibliothek ohne Tasks nutzbar | **Problem:** fs-store muss installieren können, ohne dass fs-tasks installiert ist (auch fs-tasks selbst). Lösung: Runner-Kern als Bibliothek, die eine Vorlage **im Speicher** als Projekt ohne Store ausführt (gleiches Modell, gleiche reine Funktionen `readiness`/`schedule`); ist fs-tasks da, wird der Lauf dort angelegt und sichtbar |
 
-**Empfehlung: Nutzerrichtung übernehmen.** fs-tasks besitzt `Template` und `Project` (Lauf). Runner = eigener Prozess und eigener Akteur (`Application`), nach ADR 0063 als Unterbefehl (z. B. `fs-tasks runner`) oder kleines eigenes Programm (offene Frage), mit einem Runner-Kern-Crate, das auch fs-store für den Bootstrap einbindet. Die **Befehle** gehören ihren Besitzern (Install-Befehle: fs-store; Release-Befehle: Release-Werkzeug); der Katalog ist nur die Liste ihrer Beschreibungen, der Runner ruft sie über deren Schnittstelle bzw. Befehlszeile. Voraussetzung dafür: Graph, Readiness und `schedule` bleiben reine Funktionen ohne Store (so im Plan Schritt 1 vorgesehen) und sind ohne den Rest von fs-tasks-core nutzbar.
+**Empfehlung: Nutzerrichtung übernehmen (entschieden, Fassung 3).** fs-tasks besitzt `Template` und `Project` (Lauf). Runner = **`fs-tasks runner`** (Unterbefehl nach ADR 0063, eigener Prozess, eigener Akteur `Application`); das Runner-Kern-Crate bindet **fs-store als Bibliothek** ein (Bootstrap ohne installiertes fs-tasks, entschieden). Die **Befehle** gehören ihren Besitzern (Install-Befehle: fs-store; Release-Befehle: Release-Werkzeug); der Katalog ist nur die Liste ihrer Beschreibungen, der Runner ruft sie über deren Schnittstelle bzw. Befehlszeile. Voraussetzung dafür: Graph, Readiness und `schedule` bleiben reine Funktionen ohne Store (so im Plan Schritt 1 vorgesehen) und sind ohne den Rest von fs-tasks-core nutzbar.
 
 ### N6 Folgen für den Tasks-Agenten JETZT (nur Felder/Schema, kein Runner)
 
 Alles **angehängt** (neue Ordinals ab @17 in `TaskItems`, keine Änderung bestehender), Herstellerfelder mit `freesynergy.net:` in `extra`, damit nichts umgebaut wird:
 
-1. **Zuständiger = Akteur beliebiger Art.** `assign(id, name, email)` reicht nicht (nur Person mit E-Mail). Neu vorsehen: `assignActor(id, actorIri, actorType, name)`; am Participant `freesynergy.net:actor` (IRI), `freesynergy.net:actorType` (`Person` | `Application` | `Service` | `Group` | `Organization`, AS2-Akteurstypen), `freesynergy.net:ai` (bool, ADR 0054). `kind` bleibt JSCalendar-Wert (`individual` für Personen; für Nicht-Menschen offene Frage `resource`). Indexfeld `assignee_actor` und Filter `assignee` + `ready` in `TaskFilter` („was ist für mich startklar“).
+1. **Zuständiger = Akteur beliebiger Art.** `assign(id, name, email)` reicht nicht (nur Person mit E-Mail). Neu vorsehen: `assignActor(id, actorIri, actorType, name)`; am Participant `freesynergy.net:actor` (IRI), `freesynergy.net:actorType` (`Person` | `Application` | `Service` | `Group` | `Organization`, AS2-Akteurstypen), `freesynergy.net:ai` (bool, ADR 0054). `kind` bleibt JSCalendar-Wert: `individual` für Personen; für Nicht-Menschen gilt `freesynergy.net:actor` + `actorType`, beim Export `kind: resource` (entschieden, Fassung 3). Indexfeld `assignee_actor` und Filter `assignee` + `ready` in `TaskFilter` („was ist für mich startklar“).
 2. **Fortschritt je Zuständigem** (RFC 8984: `progress`, `progressUpdated`, `percentComplete` am Participant; Task-Fortschritt daraus abgeleitet nach §5.2.5). Fehlt heute in `fs-jscalendar` `Participant`: Bedarfsmeldung an fs-jscalendar; fs-tasks darf beim Lesen den Task-`progress` nicht ohne Rücksicht auf Participant-Werte setzen.
 3. **Ausführungs-Eigenschaft reservieren:** `freesynergy.net:run` = `{ call, with, timeout, retry, risk, preview, key }` als undurchsichtiges JSON; fs-tasks prüft nur die Form, interpretiert nichts, gibt sie verlustfrei weiter (Rundreise-Test JSON und iCal; im iCal-Export als `X-`-Eigenschaft oder im Exportbericht genannt, nie still weg).
 4. **Ergebnisfelder reservieren:** `freesynergy.net:result` (JSON, Größengrenze in DESIGN.md), `freesynergy.net:attempts`, `freesynergy.net:error` (Problem-Typ-URI), `freesynergy.net:claim {by, until}`; Artefakte über JSCalendar `links` (Standard, schon im Modell erlaubt).
@@ -105,6 +107,41 @@ Alles **angehängt** (neue Ordinals ab @17 in `TaskItems`, keine Änderung beste
 9. **Board:** Standardspalte aus `progress` gilt auch für Maschinen-Tasks; Filter/Symbol nach `actorType` vorsehen.
 
 Unberührt: die Release-Kette als ein Befehl (Stufe 0) bleibt, wie in (4) beschrieben; sie wird später die erste Vorlage (`release.sw.yaml`).
+
+### N7 Fassung 3: Steuerbefehle legen Tasks an, Rücksprünge erlaubt
+
+**Grundsatz.** Es gibt nur Tasks. Ein Steuerbefehl (`switch`, `fork`, `for`/`while`, Rücksprung `then: <früherer Schritt>`, `retry`) ist ein gewöhnlicher Task mit Ausführungs-Eigenschaft; seine Wirkung ist, **neue Tasks und Relationen anzulegen**. Wer ihn ausführt, ist gleichgültig (Runner, Mensch, KI): Entscheidet ein Mensch an einem `switch`, ist der Entscheidungs-Task einfach ihm zugewiesen. Mensch, KI, Maschine unterscheiden sich nur im Zuständigen und in der Art der Ausführung (N2).
+
+**Profil.**
+- Rücksprung, `for`, `while`: erlaubt; jede Schleife trägt eine **Pflicht-Obergrenze** `freesynergy.net:limit` (Durchläufe). Ohne Obergrenze lehnt die Profil-Prüfung die Vorlage ab. Vorschlag zusätzlich: Gesamtobergrenze an Tasks je Lauf (Frage 2d).
+- `retry` ist derselbe Mechanismus mit Obergrenze `retry.limit` (ein neuer Versuch ist ein neuer Task, Iteration +1), damit es keinen zweiten Wiederholungsweg gibt.
+
+**Rücksprung = neue Iterations-Tasks, nie Wiederbelebung.** Springt Task `X` (Iteration k) zurück auf Schritt `B`, legt der Ausführende die Schritte `B … X` der Vorlage **neu** an (Iteration k+1), mit `FINISHTOSTART` von `X#k` auf `B#k+1`. Die alten Tasks bleiben unverändert `completed` (bzw. `failed`) und werden nie wieder geöffnet; Verlauf und Gantt zeigen jeden Durchlauf.
+
+**Beleg: der Abhängigkeitsgraph eines Laufs bleibt azyklisch.**
+- Regel A (Erzeugen): Ein Steuerbefehl legt nur (1) neue Tasks an und (2) Kanten, deren Ziel ein **neuer** Task ist; Kanten innerhalb des neuen Bündels sind eine Kopie des Vorlagen-Abschnitts **ohne** die Rücksprungkante (die Rücksprungkante wird nie Relation, sie ist nur der Grund für das Anlegen).
+- Satz: Eine Kante u→v erzeugt genau dann einen Zyklus, wenn v schon u erreicht. Ein neuer Task hat bei seiner Entstehung **keine ausgehenden Kanten**, erreicht also nichts; jede Kante auf ihn schließt keinen Zyklus. Das Bündel selbst ist eine Kopie eines rückwärtssprungfreien, also azyklischen Abschnitts. Per Induktion über die Anlege-Schritte bleibt der Graph azyklisch.
+- Regel B (Weiterleiten auf schon angelegte Nachfolger): Ist ein späterer Schritt `D` schon angelegt und muss nun auf `X#k+1` warten statt auf `X#k`, entsteht die Kante `X#k+1 → D`. Sie schließt nur einen Zyklus, wenn `D` den neuen Task `X#k+1` erreicht; dessen einzige Vorgänger liegen aber vor `D` (sonst wäre `D` schon vorher Teil eines Zyklus). Zusätzlich gilt die vorhandene Schranke: `relate` lehnt jede zyklusschließende Kante mit `Error::Cycle` ab (Plan Schritt 1), der Runner prüft also mechanisch statt nur per Beweis. Einfacher Weg, im Profil empfohlen: Schritte **nach** einer Schleife oder Verzweigung werden erst angelegt, wenn sie verlassen ist (verzögertes Anlegen, N3), dann tritt Regel B gar nicht auf.
+- Ein Zyklus kann damit nur noch durch **Menschen-Bearbeitung** oder einen **Merge** zweier Geräte entstehen; dafür bleibt `Readiness::conflict` (angezeigt, nicht abgelehnt, ADR 0073 §8). Strukturänderungen durch Steuerbefehle macht nur der Runner im Store des Besitzers (N2), also gibt es dort keinen Merge-Wettlauf.
+
+**Readiness-Folgen (keine neuen Werte nötig).**
+- Alte Iteration: `done` (bzw. `failed`); neue Iteration: `blocked` durch ihren Vorgänger, dann `ready`.
+- Ein Nachfolger wartet immer auf die **letzte** Iteration (Regel B bzw. verzögertes Anlegen); ein `failed` einer alten Iteration blockiert ihn nicht mehr, weil keine Kante mehr von ihr ausgeht, sobald umgeleitet wurde. Bei verzögertem Anlegen gibt es diese Kante nie.
+- `failed` der letzten Iteration nach erschöpfter Obergrenze → Nachfolger `dependencyCancelled` → Mensch entscheidet (bestehende Strategie-Regel).
+
+**Runner beim Erreichen der Obergrenze.** Er legt **keine** weitere Iteration an. Stattdessen legt er einen **Entscheidungs-Task** an, zugewiesen einem Menschen (aus der Vorlage, sonst dem Auslöser des Laufs): „Schleife <Name> hat <n> von <n> Durchläufen erreicht. Weitere k Durchläufe freigeben / Lauf abbrechen / Zweig <Y> nehmen.“ Bis dahin bleibt alles danach `blocked` durch diesen Task (also normale Readiness). Die Freigabe von k weiteren Durchläufen hebt die Obergrenze **nur für diesen Lauf** (Ergebnis des Entscheidungs-Tasks, im Protokoll), nie in der Vorlage. Bei Stufe ≥ 4 der Schleifenschritte gilt die Freigaberegel aus (6) unverändert.
+
+**Folgen für das Tasks-Datenmodell (ergänzt N6, nur Felder):**
+- `freesynergy.net:loop` = `{ id, iteration, limit }`: `id` = Projekt-Id + Vorlagenpfad des Rücksprungs/der Schleife (eine Schleife = eine Id, auch über Iterationen); `iteration` ab 1; `limit` = gültige Obergrenze dieses Laufs.
+- Verbindung der Durchläufe ohne alte Tasks zu ändern: der neue Task trägt die JSCalendar-Relation **`first`** auf denselben Schritt der Iteration 1 (RFC 8984 `first`: „the first in a series the linking object is part of“). `first`/`next` sind Struktur, nicht blockierend (Plan Schritt 1), sie gehen also nicht in Readiness/Zyklusprüfung ein.
+- `freesynergy.net:template.path` (N6 Punkt 5) bleibt für alle Iterationen gleich; zusammen mit `loop.iteration` ist jeder Task eindeutig einem Vorlagen-Knoten und Durchlauf zugeordnet.
+- Indexfelder `loop_id`, `iteration` (Abfrage „aktueller Durchlauf“, Faltung in Ansichten). `TaskChange` bleibt; keine neue Readiness.
+
+**Darstellung Weg vs. Zustand.**
+- **Weg (Vorlage, Whiteboard-Graph):** der Vorlagengraph **mit** Rücksprungpfeilen (hier sind Zyklen erlaubt, es ist eine Beschreibung, kein Abhängigkeitsgraph), Obergrenze am Pfeil („≤ 5“). Im Lauf zusätzlich ein Zähler am Knoten („Durchlauf 2/5“) und Farbe des aktuellen Zustands.
+- **Zustand (Kanban):** jeder Task eine Karte, Iterationen als „B · 2“; Standard: nur der aktuelle Durchlauf offen, frühere eingeklappt.
+- **Zeit (Gantt):** abgerollt, jede Iteration ein eigener Balken; noch nicht angelegte Schritte optional als „vorgesehen“ (Frage 2c).
+- **Lauf-Graph (Whiteboard, Zustand):** abgerollter DAG der Instanz, wahlweise je Vorlagen-Knoten zu einem Stapel gefaltet.
 
 ## (1) Format: Empfehlung
 
@@ -120,7 +157,7 @@ Begründung:
 
 **FS-Profil, Stufe 0** (alles andere wird von der Prüfung abgelehnt, Specification-Muster):
 - erlaubt: `do`, `call` **nur** `<befehl>:<version>@fs` (unser Katalog), `switch`, `try`/`catch`/`retry`, `wait`, `listen` (nur Freigabe- und CI-Ereignisse), `emit`, `raise`, `set` (nur Konstanten).
-- Fassung 2: `fork` ist erlaubt (parallele Tasks), `for` mit Pflicht-Obergrenze erlaubt (Tasks zur Laufzeit), `then`-Rückwärtssprünge verboten (N1).
+- Fassung 3: `fork` erlaubt (parallele Tasks); `for`, `while` und `then`-Rücksprünge erlaubt, jeweils mit **Pflicht-Obergrenze** `freesynergy.net:limit` (Profil-Prüfung lehnt ohne ab); Umsetzung über Iterations-Tasks (N7).
 - nicht in Stufe 0 (Fassung 1): `fork`, `for`, `run.*` (kein freies Shell im Workflow; Shell lebt nur **in** einem Katalogbefehl), `call http/openapi/grpc/asyncapi/a2a/mcp`, jq-Ausdrücke außer reinen Pfaden `${ .eingabe.repo }` (keine Logik in Ausdrücken, kein Injektionsweg).
 
 **Abbildung unserer Begriffe** (Schlüssel mit Herstellerpräfix wie RFC 8984 §3.3 und `freesynergy.net:gap` im Tasks-Plan):
@@ -237,9 +274,9 @@ Gemeinsam: Eingabe `repo`, `lauf-id`; jede Ausführung schreibt einen Eintrag in
 
 ---
 1. Format: Serverless Workflow DSL (Apache-2.0) als Quelle mit eigener Teilmenge „FS-Profil“, Diagramm nur als Ansicht, BPMN nur als Export. Einverstanden?
-2. (Fassung 2) Besitzer fs-tasks (Vorlage = Projekt-Vorlage, Lauf = Projekt), Runner als eigener Handelnder: als Unterbefehl `fs-tasks runner` oder als kleines eigenes Programm?
-2a. Bootstrap: Darf fs-store den Runner-Kern einbinden und eine Installation ohne fs-tasks im Speicher ausführen (sichtbar erst, wenn fs-tasks da ist)?
-2b. Nicht-menschliche Zuständige: JSCalendar `kind: resource` („wie ein Beamer“) verwenden oder nur unser Feld `freesynergy.net:actorType`?
+2. ~~Besitzer, Runner-Form, Bootstrap, `kind` für Nicht-Menschen~~: entschieden (Fassung 3: fs-tasks, `fs-tasks runner`, fs-store bindet Runner-Kern ein, actor + actorType mit Export `kind: resource`).
+2c. (Fassung 3) Planungsansicht: Sollen im Gantt die noch nicht angelegten Schritte nach einer Verzweigung/Schleife als „vorgesehen“ (nur Ansicht aus der Vorlage, nicht gespeichert) gezeigt werden?
+2d. (Fassung 3) Gibt es neben der Obergrenze je Schleife eine Gesamtobergrenze an Tasks je Lauf (Vorschlag: ja, in der Vorlage, Mensch entscheidet beim Erreichen)?
 3. Risikostufen: Die Skala (ansehen … systemweit) gilt für den eigenen Rechner. Veröffentlichen (push, Tag, Release, Katalog) trifft alle Nutzer. Eigene Stufe 6 „veröffentlichen“ oder eine zweite Achse „Reichweite“?
 4. Release-Kette Stufe 0 vor dem Meilenstein als Entwicklerwerkzeug bauen (spart sofort Tokens), oder erst danach?
 5. Opus-JA: darf die Kette danach selbst weiterlaufen bis Tag/Release, oder bleibt vor `tag` immer ein Halt für Strategie?
