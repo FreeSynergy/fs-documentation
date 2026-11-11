@@ -78,9 +78,26 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - 5× kurz: jedes Wort mit großem Anfangsbuchstaben.
   - Achtung: 5× Umschalt öffnet unter Windows die Einrastfunktion.
 - **Eingabe mit festen Zeichen (Nutzer):** Ein Feld sieht aus wie EIN Feld. Feste Zeichen (`@`, `://`, `.` im Datum, `:` in der Zeit) stehen innerhalb des Feldes, nicht als getrennte Kästen. Beim Tippen gibt es Ergänzungen wie bei YouTube (lokal, keine Anfrage nach außen).
-- **Offen beim Nutzer:**
-  - Files nur eigene Ablage oder auch Home/USB?
-  - Wiederherstellen auch nach normalem Schließen?
+- **Wiederherstellen auch nach normalem Schließen: JA (Nutzer).**
+  - Dazu ein Knopf „Speichern“.
+  - Der Nutzer definiert: **Speichern** heißt, das Programm öffnet sich so, wie man es verlassen hat. **Export** heißt, es wird in eine Datei geschrieben. Das entspricht ADR 0046.
+  - ADR 0069, Frage F1, wird damit beantwortet.
+- **Sprachschalter in den Einstellungen jedes Programms:**
+  - Jede Sprache steht in ihrem eigenen Namen da („Deutsch“, „English“, „Français“) und hat eine Flagge.
+  - Der Nutzer weiß, dass Flaggen unsauber sind; sie helfen beim Erkennen.
+  - Eine Component in `fs-components`.
+- **Files zeigt alles, worauf man Zugriff hat:**
+  - eigene Dateien und Ordner, Home, USB, DAV, S3, fremde Ordner und Rechner;
+  - virtuelle Ordner aus Links;
+  - **Ressourcen der Programme aus deren Daten**, gelesen und bearbeitet über die Schnittstelle des Besitzers (ADR 0050), nie direkt in der Datenbank;
+  - den Baum von Websites.
+- **Files und Streaming:** Files verteilt Dateien (Teilen, Sync, Bereichs-Downloads, damit ein Video gleich anläuft). Live-Streaming ist `fs-streaming`.
+- **Einfach-Frontend, Gesten (einmal für alle einfachen Frontends definiert):**
+  - Die Ansicht ist immer eine Vorschau. Nach links wischen heißt zurück.
+  - Markieren und nach unten ziehen: Es erscheinen ein Papierkorb (in den Papierkorb) und ein X (endgültig löschen).
+  - Der runde Knopf oben rechts ist noch zu besprechen.
+  - Die Components dafür werden überarbeitet.
+- **Wir wählen zwei Frontends, aber die Ergebnisse aller Vorbilder bleiben nutzbar.** Darum liegen die Recherchen dauerhaft in `temp/research/` (dateimanager*.md, server-kanidm-zentinel-tuwunel.md, update-neustart*.md).
 
 **Merkposten (Nutzer, 2026-11-10, später):**
 - Subdomains heißen wie das Programm ohne `fs-` (`people.…`, `identity.…`); änderbar.
