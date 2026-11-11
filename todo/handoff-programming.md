@@ -302,3 +302,23 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 - Q1b Tipptest-Action: fs-release Branch q1b-typing-test, in Überarbeitung nach Opus. Maps-Ursache = alte Pins (Q0 behebt).
 - Q0: q0-integration in fs-components (Kern fs-blinc-2, fs-admin-frontend, fs-components-map) in Überarbeitung nach Opus.
 - Immutable releases: Nutzer sagt vorerst NEIN (erneut fragen, wenn Runde 3b grün).
+- Nachtrag (Stand 2026-11-11 05:30):
+- fs-components v0.0.5 getaggt (main 3f73b6a, Opus ok): Blinc fs-blinc-2 an EINER Stelle; fs-admin-frontend mit Handshake-Meldung und „Try again“; umbrechende Band-Knöpfe. map NICHT enthalten. Lokale Alt-Tags v0.1.0–v0.3.0 nicht gepusht.
+- fs-release main: Tipptest-Action `actions/typing-test` (03d3873): Glyphen gegen DejaVu, Layout `us` wird rot, Abschottung über eigenes Runtime-Dir/Socket/HOME. release-pin ac3030b; rules-followup 9789178 und rules-followup-2 43198b3.
+- Blinc fs-blinc-3 (Fork FreeSynergy/Blinc, 8a0251b2): Swapchain-Bild erst nach der Render-Entscheidung. Ursache des Tasten-Staus belegt: get_current_texture stand vor should_render; bei übersprungenem Frame wurde das Bild nie zurückgegeben → 1,05-s-wgpu-Timeout. Echte Sitzung (KWin/DRM) bestätigt: Stau weg, Median 5,0/10,7 ms.
+- Blinc Upstream-PRs: 71, 72, 73 offen; 74 (Caret-Kerning); 76 (Acquire-Fix); 77 (Keep-Alive default aus, Vorschlag, „Mutter/GNOME ungeprüft“). Issue 75 (Frame-Loop/Keep-Alive-Befund) mit Berichtigungen.
+- fs-blinc-4-candidate 74a9a0bc (Keep-Alive default aus nur unter Wayland, Backoff, Log, Restyle-Test; Opus ok; Tag erst nach den Releases).
+- git-bug b9318d2e… (Stau, Messtabelle echte Sitzung) und d2051fd1… (fs-blinc-4-Paket): Analyse „Textfeld Move-Handler“ widerlegt; ~3,5 Commits/s im Leerlauf ungeklärt, erst Invalidierungsgrund loggen.
+- Q1b: roter typing-test in fs-files/fs-store = Erkennungsfehler (analyze.py:195: caret_bar_single ohne near/rect nimmt blaue Knopfspalte). Fix in fs-release Branch typing-test-caret (Test wird strenger).
+- Migration fs-files: q0-migrate 101684a (Opus: Merge ja). Migration fs-store: q0-migrate 21a514d (Opus-Prüfung läuft; Server-Stopp nach Update, --demo-Testweg).
+- bump.yml-Cron: kein event=schedule seit Merge (22:40). disable/enable 02:03 + Commit unter echtem Konto e7c8acba; Cron 7,22,37,52 → OFFENER PUNKT im Q2-Bericht (Belege). Manueller Weg: `gh workflow run bump.yml`.
+
+## Offene Punkte nach den Releases (git-bug-Ersatz)
+
+- fs-files (Opus-Befunde):
+  1. stderr-Protokoll des gestarteten Servers fehlt; Startfehler erst nach 10 s sichtbar (gui.rs:124).
+  2. Windows: ein Server ohne Control kann nicht beendet werden (nur „end it by hand“, gui.rs:95).
+  3. Kein Test für `run(name, Some(record), …)` (values.rs:117).
+- fs-files `change`-Formular: `unsupported:change` für dieses Release akzeptiert.
+- fs-wiki: Page.change → typisierter Edit (siehe oben).
+- fs-blinc-5: Invalidierungsgrund der ~3,5 Commits/s loggen.
