@@ -49,6 +49,11 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
 
 **Danach:** Runde 3 weiter (Frontends R0–R6), nur auf grünem Stand.
 
+**Nutzer zu den Frontends (2026-11-11):**
+- Jedes Frontend muss **aussehen wie die Fotos seines Vorbilds**, nicht wie unser Standard mit leicht runden Ecken. Form, Ecken, Abstände, Schrift und Farben kommen aus dem Theme des Frontends.
+- **Menüs, Leisten und Knöpfe des Vorbilds sind sichtbar**, auch wenn sie noch nichts tun. Nicht fertige Einträge sind als „kommt noch“ erkennbar.
+- **Abnahme durch den Nutzer:** Jede Stufe wird ihm mit Bildern im Vergleich zum Vorbild gezeigt. Er sagt, was gebraucht wird. Erst danach kommen die Funktionen.
+
 **Merkposten (Nutzer, 2026-11-10, später):**
 - Subdomains heißen wie das Programm ohne `fs-` (`people.…`, `identity.…`); änderbar.
 - Server-Aufbau später. **Entschieden (Nutzer, 2026-11-10):** Debian 13 (Trixie) als Grundsystem (unsere deb-Pakete werden schon auf debian:13 getestet). Prinzip „Server sind austauschbar“: das System bleibt minimal; alle Programme kommen als unsere Pakete, alle Daten liegen an einer Stelle (`/srv/freesynergy`, verschlüsselt, ADR 0067) mit Sicherung; Umzug = neuer Server, Pakete installieren, Daten einspielen, DNS umstellen – das ist auch der Weg für große Updates. Kanidm, Zentinel (und Stalwart) als Forks bei uns: nur zum Bauen unserer Pakete und Testen fester Versionen, keine eigene Weiterentwicklung; Korrekturen gehen upstream (ADR 0015); Upstream-Workflows im Fork aus.
