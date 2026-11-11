@@ -141,6 +141,17 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Files schreibt Schlagworte, Beschreibung und Herkunft zusätzlich als xattr an die Datei, damit alle Programme davon profitieren. Ein Schalter schaltet das ab.
   - Unbekannte Programme starten nur nach Bestätigung; eine Sandbox wird später geprüft.
   - Die Liste für den Meilenstein ist bestätigt.
+- **Idee Module (Nutzer, 2026-11-12, nach dem Meilenstein; Recherche mit niedriger Priorität):**
+  - Module sind eine Schicht zwischen Components und Programmen, keine Facetten.
+  - Ein Programm ist eine Hülle plus Kern plus Module. Module sind auch in anderen Programmen einsetzbar (Export-Dialog ohne Installieren-Modul).
+  - Ein Programm ist ohne Module als Dialog aufrufbar. Vorbild: Zentinel-Agenten (ADR 0045).
+  - Files bekommt Module: Galerie, Installieren (aus fs-store), Git …
+  - Das Whiteboard ist ein vereinfachtes Vektorprogramm. SVG ist der Standard. Modular gebaut, damit es später zu einem vollen Vektorprogramm wachsen kann.
+  - Zu prüfen: WASM Component Model, xdg-desktop-portal FileChooser, Paketart „module“, usvg/resvg/kurbo/lyon, Vorbild Graphite.
+- **fs-icons (Nutzer):**
+  - We10X und das alte `sync/` dürfen raus.
+  - Die alten 62 FreeSynergy-Icons sind vom Nutzer und kommen unter MIT.
+  - Weitere Sets: freie Sets suchen oder selbst zeichnen.
 - **Workflows JETZT (Nutzer, 2026-11-12), nicht später:**
   - Der Installationskatalog ist ein Workflow. Installieren ist eine Anweisung, was gemacht werden soll; ein Paket schnüren ist dasselbe in umgekehrter Reihenfolge.
   - Workflows werden standardisiert UND dargestellt: Knoten und Linien, wie auf einem Whiteboard (`fs-whiteboard` hat schon Verbinder).
