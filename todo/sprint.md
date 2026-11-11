@@ -114,6 +114,27 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Jeder kann eigene Themes und Icon-Sets hochladen und teilen. Themes sind CSS.
   - Hochladen heißt: eine eigene, signierte Quelle, die andere einbinden (ADR 0068). Gemeinschafts-Angebote sind markiert.
   - CSS und SVG werden geprüft: keine Skripte, keine fremden Adressen.
+- **Nutzer, 2026-11-12 Nacht (Antworten):**
+  - **Git in Files:** Liegt eine Datei in einem Git-Repo, zeigt ein Nebenfenster ihre Versionen. Man kann zu einer Version zurückgehen.
+  - **Backup-Ziel trägt der Mensch selbst ein,** z. B. eine Hetzner Storage Box per SSH/SFTP. Ebenso USB, S3 oder node1.
+  - **Lokal zuerst, Platz schonen:** Der Mensch bestimmt, was wann versioniert bzw. gesichert wird. Wir liefern gute Standards, schreiben aber nichts vor.
+    - Heim-PC: kleiner Standard. Server: großzügiger.
+    - Jedes Programm darf seine eigene Strategie haben.
+    - **Jedes Programm hat Backup eingebaut** (eine gemeinsame Schnittstelle), damit das überall möglich ist.
+    - ADR 0071 wird angepasst.
+  - **Bilder statt Worte:** Vorbilder werden 1:1 nachgebaut, damit es ein gemeinsames Bild gibt, nicht um zu kopieren.
+  - **Alle gebauten Frontends werden im Store öffentlich angeboten.** Mehr als vier ist in Ordnung (ergänzt ADR 0066).
+  - **Kollaboration überall, wo mehrere arbeiten:** Alle sehen immer, was gerade los ist. Dafür braucht es EINEN Standard (Recherche).
+    - Wiki: gleichzeitiges Bearbeiten.
+    - Tasks: Kanban, Projektplan und Gantt zeigen live den Stand. Strategie und Nutzer arbeiten selbst damit.
+    - Ein Update, das ein Programm neu startet, ist auch schon Kollaboration.
+  - **Wiki-Export als HTML (+ einfaches JS) und HTML-Import.** Gespeichert wird in unserem Format.
+    - Die Homepage wird im Wiki gebaut, und Zentinel bringt sie online.
+    - Das ganze Wiki ist auch online lesbar, als Wasm und als HTML.
+  - **Blöcke mit Metadaten:** z. B. ist ein Absatz ein Block. Programme greifen auf Blöcke zu.
+    - Jedes Programm bekommt so ein Handbuch im Wiki.
+    - Teile davon werden zur Beschreibung im Store/Installer.
+    - Lokal zuerst: Das Paket enthält beim Bau eine Kopie der Blöcke.
 - **Files MUSS Versionierung (Git) und Backup haben (Nutzer).** Das macht Files zu einem sehr wichtigen Programm.
   - Erst Recherche (Haiku), dann Vergleich (Opus), dann ADR. Kein Code vorher.
   - Zu prüfen: `gix`, restic-Format mit `rustic_core`, eigene Versionen über die BLAKE3-Inhalte.
