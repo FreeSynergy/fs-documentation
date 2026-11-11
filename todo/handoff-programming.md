@@ -339,3 +339,9 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 - Blinc: fix-input-signals-clean2 (7ab7f06c, ein Commit auf 8a0251b2) Opus JA, keine Tag-Nummer; nächster Tag = fs-blinc-4 = neu aufgesetzter Stand auf Darmies main nach den Releases. git-bug für cn::button (3 Signale/Bau) noch einzutragen. #73/#74/#76/#77 offen; Build Book morgen freundlich nachfragen.
 - fs-store Folgepaket: main.rs:27 std::os::unix ohne cfg (Windows-Port); 0.1.0-rc.9-Installationen sehen 0.0.10 nicht als Update (Version kleiner).
 - Offen: fs-interfaces v0.0.18, fs-release Lint-Regel gegen direkte Feldkonstruktoren, Worktree-Löschungen nur nach „Nutzer sagt ja“.
+
+## Nachtrag 2026-11-11 15:00 (Koordinator)
+
+- fs-files v0.0.6 GETAGGT (8a95e00, Opus JA) und als Pre-release veröffentlicht; Katalog 07c6dee, signiert 02d9710; `fs-store check`: „fs-store 0.0.7 -> 0.0.10“ und „fs-files 0.0.2 -> 0.0.6“. Runde 3b Releases damit vollständig (fs-components v0.0.7, fs-store v0.0.10, fs-files v0.0.6).
+- fs-files Folgepaket (Opus, nicht blockierend): remote.rs:202 (Abfragen nach dem Handshake ohne Zeitlimit) und remote.rs:125 (Aufrufe aus dem Fenster ohne Zeitlimit; fs-interfaces hat Timeouts/CALL_TIMEOUT 30 s); DESIGN.md:266/276/305/343/6 nennen fs-components v0.0.5, README.md:11 „Latest tag: v0.0.1“.
+- Weiter offen wie im Nachtrag 13:58 (v0.0.8 mit Karte, tt-faint-caret, Blinc fs-blinc-4 neu aufsetzen, cn::button git-bug, fs-interfaces v0.0.18, Immutable releases erneut fragen nach grüner Runde 3b).
