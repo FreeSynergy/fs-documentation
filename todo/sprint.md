@@ -167,6 +167,14 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Fähigkeiten werden auf Merkmal-Ebene angegeben: Ein Modul nennt die Merkmale, die es beherrscht; eine Datei nennt die Merkmale, die sie benutzt.
     - Der Abgleich ergibt: ganz, teilweise (ehrlich angezeigt, was fehlt) oder nicht.
     - Baut auf ADR 0045 (SupportReport) und ADR 0066 (`supported`) auf.
+- **Neue Namen (Nutzer, 2026-11-12). Umsetzung erst nach dem Meilenstein, zusammen mit der Programmkarte als ADR:**
+  - **fs-data** (neu): Datenbank, Tabellen, Charts. ODS in eigener Schicht, Formel-Engine austauschbar.
+  - **fs-wiki → fs-text:** Texte, mit den Facetten Wiki, Schreiben (.odt) und Website. Das Kern-Crate heißt schon `fs-text`.
+  - **fs-whiteboard → fs-vector:** Vektorgrafik, mit den Facetten Whiteboard, Präsentation (.odp) und Zeichnen. Grundlage sind die VectorCraft-Crates geom und pathops.
+  - Umbenennen ohne Bruch:
+    - GitHub-Umbenennung (Weiterleitung bleibt);
+    - Pakete mit Provides/Obsoletes bzw. Alias, damit installierte fs-wiki/fs-whiteboard sauber auf den neuen Namen aktualisieren;
+    - Themen- bzw. Fähigkeitsnamen einmal angleichen (`texts` bleibt; `whiteboard` → `vector`).
 - **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
