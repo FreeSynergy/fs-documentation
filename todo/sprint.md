@@ -169,7 +169,7 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Baut auf ADR 0045 (SupportReport) und ADR 0066 (`supported`) auf.
 - **Neue Namen (Nutzer, 2026-11-12). Umsetzung erst nach dem Meilenstein, zusammen mit der Programmkarte als ADR:**
   - **fs-data** (neu): Datenbank, Tabellen, Charts. ODS in eigener Schicht, Formel-Engine austauschbar.
-  - **fs-wiki → fs-text:** Texte, mit den Facetten Wiki, Schreiben (.odt) und Website. Das Kern-Crate heißt schon `fs-text`.
+  - **fs-wiki → fs-text:** Texte, mit den Facetten Wiki, Schreiben (.odt) und Website. Das Kern-Crate heißt schon `fs-text`. **`fs-wiki` bleibt als Facette** (Befehl bzw. Link nach ADR 0063). Ebenso bleibt `fs-whiteboard` als Facette von fs-vector.
   - **fs-whiteboard → fs-vector:** Vektorgrafik, mit den Facetten Whiteboard, Präsentation (.odp) und Zeichnen. Grundlage sind die VectorCraft-Crates geom und pathops.
   - Umbenennen ohne Bruch:
     - GitHub-Umbenennung (Weiterleitung bleibt);
