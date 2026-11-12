@@ -150,6 +150,14 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Seiten oder Ausschnitte der unendlichen Fläche sind Folien (auch Zoom-Fahrten wie bei Prezi).
   - Format ODF .odp; Animationen als Bausteine (Blinc hat `blinc_animation`).
   - Damit entsteht eine Office-Familie aus ODF-Formaten: Texte (.odt, Dokumente/Wiki), Tabellen (.ods, Daten), Präsentation (.odp, Whiteboard), dazu Vektor (SVG).
+- **Medien (Nutzer):** Es fehlen noch Foto, Video, Musik und 3D. Kombiniert werden sie mit Whiteboard, Dokumenten und Daten.
+  - **Grundsatz:** Effekte und Fähigkeiten werden nicht in einem Programm erfunden. Sie sind ein eigenes Programm bzw. Modul, und ein Workflow fügt sie zusammen. Niveau anfangs einfach, Hauptsache eine Grundlage.
+  - ODF muss nicht vollständig umgesetzt werden: Was wir anders darstellen, wird beim Export abgebildet bzw. als Bild ausgegeben.
+  - Zu prüfen:
+    - Foto: image, imageproc, PhotoCraft.
+    - Video: GStreamer, Rust-Bindungen (die Pipeline passt zum Workflow-Gedanken).
+    - Musik: symphonia (Dekoder), cpal (Ausgabe).
+    - 3D: glTF (Khronos), Blinc viewport3d.
 - **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
