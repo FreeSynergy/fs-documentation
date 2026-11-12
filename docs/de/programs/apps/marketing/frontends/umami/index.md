@@ -38,7 +38,7 @@ HTTP/JSON-API; kein Datenstandard für Ereignisse gefunden. Siehe [Datenstandard
 | [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
 | [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
 | [shortcuts.md](latest/shortcuts.md) | Tastaturkürzel |
-| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Ratenlimits |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
 
 ⚠️ Fehlende Pflichtdateien: `themes/index.md`
 <!-- /gen:versions -->

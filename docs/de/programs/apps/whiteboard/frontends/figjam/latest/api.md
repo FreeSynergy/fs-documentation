@@ -13,7 +13,7 @@ Figma bietet eine REST-API unter `https://api.figma.com`, mit persönlichen Zugr
 | Webhooks | offiziell ✅ (Ereignisliste offen) |
 | Plugin- / Widget-API | Widgets existieren ✅; API-Details offen |
 | REST-Abdeckung speziell für FigJam | offen (die API-Seite sagt es nicht) |
-| Ratenlimits | auf einer eigenen Seite dokumentiert; Werte offen |
+| Rate Limits | auf einer eigenen Seite dokumentiert; Werte offen |
 
 ## Hinweis zum Frontend
 Das Board-Modell ist geschlossen und proprietär. Für unser Board-Modell siehe die Lücke in den [Datenstandards](../../../../../../data/standards.md).

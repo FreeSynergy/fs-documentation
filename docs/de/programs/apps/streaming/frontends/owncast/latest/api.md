@@ -11,4 +11,4 @@
 | ActivityPub Server-zu-Server | offiziell ✅: WebFinger, HTTP-Signaturen (cavage-Entwurf), NodeInfo mit Softwarename „owncast“, FEPs 67ff, f1d5, 044f |
 | Plugins | JavaScript, Python ✅ |
 
-Authentifizierung und Ratenlimits: offen.
+Authentifizierung und Rate Limits: offen.

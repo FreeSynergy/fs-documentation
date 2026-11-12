@@ -1,4 +1,4 @@
-# Chatwoot – API
+# Chatwoot - API
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -12,4 +12,4 @@
 | Persönliche Zugriffstoken | offiziell ✅ |
 | API-Kanal (eigene Integrationen) | offiziell ✅ |
 
-Ratenlimits: offen.
+Rate Limits: offen.

@@ -6,7 +6,7 @@
 
 ## Was das Programm macht
 
-Entwickelnde schreiben Skripte; Windmill leitet das Eingabeformular aus der Funktionssignatur ab, führt es auf einem Worker aus und bewahrt die Ergebnisse auf. Skripte werden danach zu Flows verknüpft oder über eine Benutzeroberfläche als App bereitgestellt.
+Entwickler schreiben Skripte; Windmill leitet das Eingabeformular aus der Funktionssignatur ab, führt es auf einem Worker aus und bewahrt die Ergebnisse auf. Skripte werden danach zu Flows verknüpft oder über eine Benutzeroberfläche als App bereitgestellt.
 
 ## Abgrenzung
 

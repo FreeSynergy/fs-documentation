@@ -1,4 +1,4 @@
-# Umami – API
+# Umami - API
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -11,4 +11,4 @@
 | MCP-Endpunkt | optional, API-Schlüssel ✅ |
 | Konfigurierbarer Basispfad der internen API | README ✅ |
 
-Ratenlimits, Webhooks: offen.
+Rate Limits, Webhooks: offen.

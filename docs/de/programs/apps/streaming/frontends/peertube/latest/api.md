@@ -10,4 +10,4 @@
 | ActivityPub (Föderation) | offiziell ✅, Leitfaden in der Dokumentation |
 | Plugin- und Theme-API | offiziell ✅ |
 
-Authentifizierung, Ratenlimits, Webhooks: offen.
+Authentifizierung, Rate Limits, Webhooks: offen.

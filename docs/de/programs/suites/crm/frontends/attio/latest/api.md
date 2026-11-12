@@ -4,4 +4,4 @@
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
     This page was machine-translated from the English version and has not yet been reviewed by a person.
 
-Die Entwicklerplattform bietet eine API, ein SDK und ein MCP (auf der Hilfeseite genannt ✅). Webhooks, Authentifizierung und Ratenlimits: offen (Entwicklerdokumentation nicht gelesen).
+Die Entwicklerplattform bietet eine API, ein SDK und ein MCP (auf der Hilfeseite genannt ✅). Webhooks, Authentifizierung und Rate Limits: offen (Entwicklerdokumentation nicht gelesen).

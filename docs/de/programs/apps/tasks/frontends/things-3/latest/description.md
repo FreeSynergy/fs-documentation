@@ -1,4 +1,4 @@
-# Things 3 – Beschreibung
+# Things 3 - Beschreibung
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.

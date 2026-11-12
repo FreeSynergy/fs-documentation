@@ -10,4 +10,4 @@
 | GraphQL (Datensätze lesen und schreiben) | offiziell ✅ |
 | Webhooks bei Datensatzänderungen | offiziell ✅ |
 
-Authentifizierung, Ratenlimits, Endpunktliste: offen.
+Authentifizierung, Rate Limits, Endpunktliste: offen.

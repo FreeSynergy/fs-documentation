@@ -11,4 +11,4 @@
 | Python-Bibliothek (`felt-python`) | Automatisierung | offiziell |
 | Webhooks | Benachrichtigung bei Kartenänderungen | offiziell |
 
-Authentifizierung (API-Tokens), Ratenlimits, Kommentar-Endpunkte: offen (nicht auf der Übersichtsseite).
+Authentifizierung (API-Tokens), Rate Limits, Kommentar-Endpunkte: offen (nicht auf der Übersichtsseite).

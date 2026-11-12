@@ -1,4 +1,4 @@
-# Listmonk – API
+# Listmonk - API
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -6,4 +6,4 @@
 
 In der Dokumentation aufgeführte API-Abdeckung ✅: Abonnenten, Listen, Import, Kampagnen, Medien, Vorlagen, transaktionale E-Mail, Bounces.
 
-Authentifizierung, Ratenlimits, Webhooks: offen.
+Authentifizierung, Rate Limits, Webhooks: offen.

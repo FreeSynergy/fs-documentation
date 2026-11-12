@@ -39,7 +39,7 @@ ActivityPub, WebRTC, HLS ⚠️ (auf den gelesenen Seiten nicht genannt), REST m
 | [layout.md](latest/layout.md) | Fensterstruktur, Bereiche, Panels |
 | [menus.md](latest/menus.md) | Menüstruktur, Kontextmenüs, Menüs nach Rolle |
 | [shortcuts.md](latest/shortcuts.md) | Tastaturkürzel |
-| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Ratenlimits |
+| [api.md](latest/api.md) | APIs und Protokolle, Authentifizierung, Rate Limits |
 
 ⚠️ Fehlende Pflichtdateien: `themes/index.md`
 <!-- /gen:versions -->
