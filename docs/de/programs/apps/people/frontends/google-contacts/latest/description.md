@@ -1,4 +1,4 @@
-# Google Kontakte — Beschreibung
+# Google Contacts — Beschreibung
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -6,14 +6,14 @@
 
 ## Was das Programm macht
 
-Google Kontakte verwaltet das Adressbuch eines Google-Kontos. Einträge werden von Hand angelegt, importiert oder automatisch gesammelt, wenn man an jemanden schreibt, der noch nicht gespeichert ist. Dieselben Daten erscheinen in Gmail, auf Android-Telefonen und in anderen Diensten des Kontos.
+Google Contacts verwaltet das Adressbuch eines Google-Kontos. Einträge werden von Hand angelegt, importiert oder automatisch gesammelt, wenn man an jemanden schreibt, der noch nicht gespeichert ist. Dieselben Daten erscheinen in Gmail, auf Android-Telefonen und in anderen Diensten des Kontos.
 
 ## Abgrenzung
 
 | Verglichen mit | Unterschied |
 |----------------|-------------|
 | Einfache CardDAV-Adressbücher | Duplikate werden vom Programm erkannt und zum Zusammenführen angeboten. |
-| Monica | Keine Beziehungshistorie; Google Kontakte ist ein Adressbuch, kein Beziehungstagebuch. |
+| Monica | Keine Beziehungshistorie; Google Contacts ist ein Adressbuch, kein Beziehungstagebuch. |
 
 ## Für wen geeignet
 

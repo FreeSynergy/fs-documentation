@@ -177,8 +177,8 @@ Windows-App).
 | Calendar | Outlook (Kalender) | keines nativ |
 | Groups | Microsoft Teams | keines nativ |
 | Tasks | Microsoft To Do | keines nativ |
-| Files | Datei-Explorer | kein Linux-Programm |
-| Gallery (Facette von Files) | Microsoft Fotos | keines nativ |
+| Files | File Explorer | kein Linux-Programm |
+| Gallery (Facette von Files) | Microsoft Photos | keines nativ |
 | Videos | Media Player (neue App oder Windows Media Player Legacy, noch zu entscheiden) | keines nativ |
 | Wiki | Microsoft OneNote | keines nativ |
 | Maps | Google Earth Pro (Windows; kein Street-View-Frontend) | zu prüfen (Linux-Desktop-Build) |
@@ -213,7 +213,7 @@ Unter `/srv/FreeSynergy/.scratch/reference/windows/` (nie in einem Repository), 
 Noch fehlend, je genehmigtem Programm:
 
 - **Outlook und To Do**: Microsofts Support-Seite "Use My Day with To Do in Outlook" hat Screenshots (`new-outlook-my-day-calendar-tab`, `new-outlook-to-do-my-day-to-do-tab-open-to-do`). Die Bildlinks, die das Werkzeug zurückgab, lösen nicht auf (404), deshalb nicht heruntergeladen.
-- **Datei-Explorer**: Support-Seite "File Explorer in Windows" (https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows); von dem Werkzeug zurückgegebene Bildlinks lösen noch nicht auf.
+- **File Explorer**: Support-Seite "File Explorer in Windows" (https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows); von dem Werkzeug zurückgegebene Bildlinks lösen noch nicht auf.
 - **Teams**: Support-Seite "Overview of teams and channels" (https://support.microsoft.com/en-us/office/overview-of-teams-and-channels-c3d63c10-77d5-4204-a566-53ddcf723b46).
 - **Einstellungen > Anmeldeoptionen**: https://support.microsoft.com/en-us/accounts-billing/security/sign-in-options-in-windows.
 - **Fotos, Media Player, OneNote, Excel, Google Earth Pro, Forms, YouTube Studio, Store, Start, Widgets**: in diesem Durchgang kein Screenshot gefunden; die Support-Seiten wurden durchsucht, ihre Bilder aber nicht abgerufen.

@@ -1,4 +1,4 @@
-# Apple Kontakte
+# Apple Contacts
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -8,7 +8,7 @@
 
 ## Was es ist
 
-Apple Kontakte ist das Adressbuch, das in Apples Betriebssysteme eingebaut ist. Es synchronisiert Kontakte zwischen Geräten und mit hinzugefügten Konten, bietet eine Karte „Ich“ für die eigenen Angaben und tauscht Kontaktdaten zwischen nahen Geräten aus.
+Apple Contacts ist das Adressbuch, das in Apples Betriebssysteme eingebaut ist. Es synchronisiert Kontakte zwischen Geräten und mit hinzugefügten Konten, bietet eine Karte „Ich“ für die eigenen Angaben und tauscht Kontaktdaten zwischen nahen Geräten aus.
 
 ## Bemerkenswerte Ideen
 

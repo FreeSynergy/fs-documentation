@@ -12,7 +12,7 @@ Eine Person, die Flows baut, legt einen Flow in einem Designer (neu oder klassis
 
 | System | Unterschied |
 |--------|-------------|
-| Apple Kurzbefehle | Persönlich und auf dem Gerät. |
+| Apple Shortcuts | Persönlich und auf dem Gerät. |
 | Zapier, Make | Unabhängige SaaS-Dienste; Power Automate ist an Microsoft-Konten und die Power Platform gebunden. |
 
 ## Offen

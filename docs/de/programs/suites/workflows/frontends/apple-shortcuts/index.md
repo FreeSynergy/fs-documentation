@@ -1,4 +1,4 @@
-# Apple Kurzbefehle
+# Apple Shortcuts
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -8,7 +8,7 @@
 
 ## Was es ist
 
-Apple Kurzbefehle ist die Automatisierungs-App der Apple-Geräte: Ein Kurzbefehl ist eine Folge von Aktionen, die mit Apps, Inhalten und Webdiensten arbeiten. Hinweis: Dies ist ein Werkzeug für persönliche Automatisierung, keine Suite; es ist unter Workflows eingeordnet, weil die Übersicht es dort führt.
+Apple Shortcuts ist die Automatisierungs-App der Apple-Geräte: Ein Kurzbefehl ist eine Folge von Aktionen, die mit Apps, Inhalten und Webdiensten arbeiten. Hinweis: Dies ist ein Werkzeug für persönliche Automatisierung, keine Suite; es ist unter Workflows eingeordnet, weil die Übersicht es dort führt.
 
 ## Bemerkenswerte Ideen
 

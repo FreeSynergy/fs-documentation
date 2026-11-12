@@ -54,8 +54,8 @@ Kein Linux-Programm dient als Vorlage. Maße und Quellen: `docs/de/components/st
 | Calendar | Outlook | Kalender-Modul der neuen Outlook-App |
 | Groups | Microsoft Teams | |
 | Tasks | Microsoft To Do | |
-| Files | Datei-Explorer | |
-| Gallery (Facette von Files) | Fotos | Microsoft Fotos |
+| Files | File Explorer | |
+| Gallery (Facette von Files) | Fotos | Microsoft Photos |
 | Videos | Media Player | Prüfen, welcher der beiden Player gemeint ist: die neue App Media Player oder Windows Media Player Legacy (optionale Funktion) |
 | Wiki | OneNote | |
 | Maps | Google Earth | Google Earth Pro für Windows. Street View bekommt kein eigenes Frontend |
@@ -164,7 +164,7 @@ diesem Lauf nicht geprüft: Immich.
 | Calendar | Fantastical: Eingabe in Alltagssprache ⚠️ (Details aus einem Drittanbieter-Leitfaden von 2019) · Notion Calendar: Zeitzonen nebeneinander, freie Zeitfenster teilen · Cal.com: Buchungsseiten · Reclaim, Motion: Aufgaben in freie Zeit gelegt | ✅ [calendar](apps/calendar/frontends/index.md) · Fantastical ⚠️ |
 | Tasks | Things 3: Heute / Heute Abend / Irgendwann, schnelle Eingabe (⚠️ Tastenkürzel nicht geprüft) · OmniFocus: Perspektiven, Überprüfung (v4) · Todoist: Filtersprache · Linear: Triage, Zyklen; ⚠️ "Geschwindigkeit" nicht geprüft · Taskwarrior: berechnete Dringlichkeit (v3.5.0) | ✅ [tasks](apps/tasks/frontends/index.md) · Linear ⚠️ Geschwindigkeit |
 | Files | Dolphin: geteilte Ansicht, Terminal-Bereich, Orte · **Corrected:** Dienstmenüs nur in den KDE-Entwicklerdokumenten, nicht im Handbuch · Finder: Quick Look · Everything: sofortige Namenssuche (NTFS-Journal, nur Windows) · Dropbox: Dateianfragen (Absender braucht kein Konto) · Seafile: clientseitig verschlüsselte Bibliotheken ⚠️ (nur Desktop-Client; Dateinamen nicht verschlüsselt) · Syncthing: Gerät-zu-Gerät-Synchronisation | ✅ [files](apps/files/frontends/index.md) · Dolphin ⚠️ Dienstmenüs · Seafile ⚠️ |
-| Gallery | Immich: Suche in Alltagssprache, Gesichter, Karte, Teilen mit Partnern (noch nicht geprüft) · Apple Fotos: Duplikate (Album ab macOS Ventura) · **Corrected:** Text in Bildern nicht bestätigt (⚠️) | ✅ [gallery](apps/gallery/frontends/index.md) · Immich offen · Apple Fotos ⚠️ Text |
+| Gallery | Immich: Suche in Alltagssprache, Gesichter, Karte, Teilen mit Partnern (noch nicht geprüft) · Apple Photos: Duplikate (Album ab macOS Ventura) · **Corrected:** Text in Bildern nicht bestätigt (⚠️) | ✅ [gallery](apps/gallery/frontends/index.md) · Immich offen · Apple Photos ⚠️ Text |
 | Wiki, Notizen | Tango: Anleitungen aus Klicks (**Corrected:** das Produkt ist tango.ai) · Tana: Supertags mit Vererbung und Tabellenansicht · Obsidian: Rückverweise, Canvas · Logseq: Blockverweise ⚠️ (nur Forenquelle) · Notion: Datenbanken in Seiten | ✅ [wiki](apps/wiki/frontends/index.md) · Logseq ⚠️ |
 | Maps | Google Earth: 3D-Globus; Projekte (eigene, teilbare Karten), Messen, Höhenprofil (2026) · geführte Touren ⚠️ (nur für den Start 2017 bestätigt) · **Corrected:** Street View ist eine Funktion von Google Maps/Earth, kein Programm (Entscheidung offen) · OsmAnd: offline; Höhenlinien nur mit kostenpflichtigem Plugin · Organic Maps · uMap · Felt: gleichzeitiges Bearbeiten | ✅ [maps](apps/maps/frontends/index.md) · Google Earth ⚠️ Touren · OsmAnd ⚠️ Höhenlinien |
 | History | Day One: Ort und Wetter, "An diesem Tag" (auch im Web seit 2025-09) · ActivityWatch: automatisch, lokal (v0.14.1) · Exist.io: Zusammenhänge; Dienst noch online | ✅ [history](apps/history/frontends/index.md) |
@@ -176,7 +176,7 @@ diesem Lauf nicht geprüft: Immich.
 | Start | Raycast: eine Palette für alles · Alfred: Palette, Workflows (⚠️ nur macOS nicht ausdrücklich genannt) · KDE Plasma: Aktivitäten mit eigenen Favoriten, Widgets, Hintergrund, Fensterregeln; Energie und Leisten gelten für alle (informelle Quellen ⚠️) | ✅ [desktop](platform/desktop/frontends/index.md) · Alfred ⚠️ |
 | Helpdesk | Chatwoot: alle Kanäle in einem Posteingang, Website-Widget · **Corrected:** Zammad hat ein CTI-Anrufprotokoll (Placetel, sipgate, generische CTI-API), kein eigenes SIP; Warnung bei Bearbeitungskonflikten · Help Scout: Kundenseitenleiste | ✅ [helpdesk](apps/helpdesk/frontends/index.md) · Zammad korrigiert |
 | CRM | Twenty: eigene Objekte und Felder (Lizenz aus einer Drittquelle ⚠️) · Attio: Anreicherung | ✅ [crm](suites/crm/frontends/index.md) · Twenty Lizenz ⚠️ |
-| Workflows | n8n: Knoten-Leinwand, Code-Knoten (Anzahl der Integrationen widersprüchlich: 400+ vs. 1500+) · Huginn: Agenten und Ereignisse · Windmill: Skripte werden zu Formularen, Endpunkten und Jobs · Apple Kurzbefehle: persönliches Gerätewerkzeug · Power Automate: gehostetes Produkt | ✅ [workflows](suites/workflows/frontends/index.md) · n8n-Anzahl offen |
+| Workflows | n8n: Knoten-Leinwand, Code-Knoten (Anzahl der Integrationen widersprüchlich: 400+ vs. 1500+) · Huginn: Agenten und Ereignisse · Windmill: Skripte werden zu Formularen, Endpunkten und Jobs · Apple Shortcuts: persönliches Gerätewerkzeug · Power Automate: gehostetes Produkt | ✅ [workflows](suites/workflows/frontends/index.md) · n8n-Anzahl offen |
 | Marketing | Plausible: ohne Cookies, Trichter, Statistik-API · Umami: ohne Cookies, Trichter, Verweildauer, Reisen · Listmonk: Newsletter-Verwaltung (AGPL-3.0) | ✅ [marketing](apps/marketing/frontends/index.md) |
 
 ## Offene Punkte dieses Entwurfs

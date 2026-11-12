@@ -1,4 +1,4 @@
-# Apple Kontakte — Beschreibung
+# Apple Contacts — Beschreibung
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -12,7 +12,7 @@ Kontakte speichert Personen, synchronisiert sie zwischen den Apple-Geräten eine
 
 | Verglichen mit | Unterschied |
 |----------------|-------------|
-| Google Kontakte | Teilen zwischen nahen Geräten (NameDrop) statt Vorschläge aus der Cloud; beide bieten das Zusammenführen von Duplikaten. |
+| Google Contacts | Teilen zwischen nahen Geräten (NameDrop) statt Vorschläge aus der Cloud; beide bieten das Zusammenführen von Duplikaten. |
 | Monica | Ein Adressbuch, kein Beziehungstagebuch. |
 
 ## Für wen geeignet

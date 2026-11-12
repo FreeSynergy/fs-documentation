@@ -1,4 +1,4 @@
-# Google Kontakte
+# Google Contacts
 
 !!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
     Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
@@ -8,7 +8,7 @@
 
 ## Was es ist
 
-Google Kontakte ist das Adressbuch, das an ein Google-Konto gebunden ist. Es wird im Browser genutzt und ist in Android eingebaut; die Kontakte werden auf alle Geräte synchronisiert, die am Konto angemeldet sind. Noch nicht gespeicherte Kontakte werden in einer eigenen Gruppe „Weitere Kontakte“ aufbewahrt.
+Google Contacts ist das Adressbuch, das an ein Google-Konto gebunden ist. Es wird im Browser genutzt und ist in Android eingebaut; die Kontakte werden auf alle Geräte synchronisiert, die am Konto angemeldet sind. Noch nicht gespeicherte Kontakte werden in einer eigenen Gruppe „Weitere Kontakte“ aufbewahrt.
 
 ## Bemerkenswerte Ideen
 
@@ -26,7 +26,7 @@ Warum dieses Programm hier dokumentiert ist (ADR 0013):
 
 ## Verwendete Protokolle und Standards
 
-Standards für Kontaktdaten sind unter [data/people](../../../../../data/people/index.md) beschrieben. Welche Protokolle Google Kontakte Dritten anbietet, steht in [api.md](latest/api.md) (offen).
+Standards für Kontaktdaten sind unter [data/people](../../../../../data/people/index.md) beschrieben. Welche Protokolle Google Contacts Dritten anbietet, steht in [api.md](latest/api.md) (offen).
 
 ## Dokumentierte Versionen
 
