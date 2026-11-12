@@ -1,6 +1,6 @@
 # 0074 – Stil, Bausteine, Bewegung, Klang und Menüs: getrennte Schichten aus Standards
 
-Status: **Entwurf** (Strategie, 2026-11-12), wartet auf die Zustimmung des Gründers · baut auf ADR 0045 (Unsupported, SupportReport), 0065 (Standard-Fensterhülle), 0066 (Typen, Befehle mit `supported`, vier Frontends), 0068 (Fähigkeiten, provides/requires), 0069 (Wiederherstellen), 0073 (Kollaboration)
+Status: **akzeptiert** (Gründer, 2026-11-12, mit Änderungen zu 3, 7 und 8 eingearbeitet); Code nach dem Meilenstein „Wir benutzen es selbst“, das Umstellen des Bestands beginnt sofort · baut auf ADR 0045 (Unsupported, SupportReport), 0065 (Standard-Fensterhülle), 0066 (Typen, Befehle mit `supported`, vier Frontends), 0068 (Fähigkeiten, provides/requires), 0069 (Wiederherstellen), 0073 (Kollaboration)
 
 Grundlage: die Berichte in `.scratch/schichten/` (Stand 2026-11-12): BESTAND-theme-vertrag, BAUSTEINE, KLANG, MENUES, BEWEGUNG-STANDARDS, RECHERCHE-bewegung, KDE-THEMING, BLINC-GLAS. Was dort als „[nicht belegt]“ markiert ist, wird hier nicht als Tatsache übernommen.
 
@@ -28,6 +28,11 @@ Wo ein Standard existiert, nutzen wir ihn. **Wo keiner existiert, schreiben wir 
 | **Anordnung (Frontend)** | Welche Bausteine wo stehen, Navigation, welche Funktion in welchem Menü | Programm-Manifest + Anordnungsdatei (5, 6) | `frontend` |
 | **Bewegung** | Dauer, Kurven, Übergang je Ereignis | DTCG `duration`, `cubicBezier`, `transition`; Ereignisliste (7) | `motion` |
 | **Klang** | Klang je Ereignis | freedesktop Sound Theme + Sound Naming | `sound-theme` |
+| **Haptik** (Telefone, Tablets) | Vibrationsmuster je Ereignis | W3C Vibration API; Muster wie bei Klang an Ereignisse gebunden | `haptics` |
+| **Tastenkürzel** | Tasten je Funktion | IBM CUA als Grundlage (Strg+C …); Profile, z. B. nach KDE, GNOME, macOS, Emacs, Vim | `shortcuts` |
+| **Sprache und Formate** | Texte, Datum, Zahlen, Schreibrichtung | BCP 47, Unicode CLDR | `language` |
+
+Dazu werden **Systemeinstellungen immer gelesen und beachtet**: hell/dunkel (`color-scheme`), Akzentfarbe (`accent-color`), hoher Kontrast (`contrast`) und reduzierte Bewegung (`reduced-motion`) über das Portal `org.freedesktop.appearance`. Schrift und Mauszeiger gehören zum Stil; die Schriften sind frei lizenziert (z. B. SIL OFL).
 
 Im Store bekommt jede Schicht eine **eigene Gruppe** mit Untergruppen, ebenso Programme und Server.
 
@@ -43,8 +48,10 @@ Im Store bekommt jede Schicht eine **eigene Gruppe** mit Untergruppen, ebenso Pr
 
 ### 3. Eigene Stile statt Markenstile
 
-- Wir bauen **5 bis 6 eigene Stile**, jeweils hell und dunkel, von dezent bis verspielt. Arbeitsnamen: **Ruhig**, **Büro**, **Craft**, **Glas**, **Verspielt**, **Kontrast** (hoher Kontrast, große Schrift, für Barrierefreiheit).
-- Stile tragen **keine Markennamen** und übernehmen keine Logos, Markenicons oder Markenfarben.
+- Wir bauen **5 bis 6 eigene Stile**, jeweils hell und dunkel, von dezent bis verspielt. **Namen immer auf Englisch:** **Calm**, **Office**, **Craft**, **Glass**, **Playful**, **Contrast** (hoher Kontrast, große Schrift, für Barrierefreiheit).
+- Der Name ist unser eigener. **Die Beschreibung nennt fair, woran der Stil angelehnt ist**, damit Menschen sich vorstellen können, wie er aussieht. Beispiel: „Calm – angelehnt an Notion und Things“, „Office – angelehnt an Jira, Confluence und Fluent“, „Craft – angelehnt an ArtCraft“.
+- Gefällt uns beim Nachbauen eines Vorbilds ein Stil, bauen wir ihn **zusätzlich als eigenes Theme** nach, wenn der Aufwand klein ist. Die Zeit ist dann schon investiert.
+- Logos, Markenicons und Markenfarben übernehmen wir nicht.
 - **Glas** ist mit Blinc ohne Änderung machbar (Hintergrund-Unschärfe, Transluzenz, ein Schatten). Mehrere Schatten auf Glas bräuchten eine Änderung an Blinc. Dafür gibt es keinen neuen Upstream-PR ohne Freigabe.
 
 ### 4. Vorbilder: 1:1 nachbauen, dann zerlegen
@@ -77,19 +84,20 @@ Das Manifest ist Teil des Pakets und wird im Katalog als Fähigkeit geführt (AD
 ### 7. Ereignisse, Bewegung und Klang
 
 - Es gibt **eine Liste von Oberflächen-Ereignissen**, die jedes Programm gleich meldet: erscheinen, verschwinden, verschieben, auswählen, ziehen, ablegen, erledigt, Fehler, Warnung, neue Nachricht …
-- Ein **Bewegungspaket** ordnet jedem Ereignis einen Übergang zu (DTCG-Tokens). **Standard ist dezent**: kurzes, kaum merkliches Ein- und Ausblenden, nichts hüpft.
+- Es gibt **eine standardisierte Liste von Animationsarten** (z. B. einblenden, ausblenden, durchblenden, gleiten, skalieren, Feder), jede mit ihren Parametern als DTCG-Tokens (Dauer, Kurve, Weg).
+- Ein **Animationsprofil** ordnet jedem Ereignis eine Animationsart mit Standardwerten zu. Profile benutzen **nur** die standardisierten Ereignisse und Animationsarten. Wir bauen **mehrere Profile** (z. B. aus, sanft, lebhaft). Jeder Mensch kann die Werte eines Profils ändern.
+- Neue Animationen, die wir bauen, werden als neue Animationsart in die Liste aufgenommen und stehen dann allen Profilen zur Verfügung.
 - Ein **Klang-Theme** ordnet Ereignissen Klänge zu, und zwar **nur mit Namen aus der freedesktop Sound Naming Specification** (125 Namen in 5 Gruppen laut Abschnittszählung: Warnungen 7, Benachrichtigungen 40, Aktionen 29, Eingabe-Rückmeldung 44, Spiel 5). Wir erfinden keine Klangnamen. Wo uns ein Name fehlt, schlagen wir ihn upstream vor.
 - Vorhandene Klang-Themes (freedesktop-Referenz, KDE Ocean, Yaru) sind **vor der Aufnahme je Datei auf ihre Lizenz zu prüfen**, denn die Angaben der Paketierer widersprechen sich.
 - **Abschaltbar, immer:** Wir lesen die Systemeinstellung (Portal `org.freedesktop.appearance` `reduced-motion`, GNOME `enable-animations`, KDE `AnimationDurationFactor`). Dazu kommen eigene Einstellungen aus / dezent / verspielt sowie Klang an/aus, je Programm überschreibbar. Weil Blinc keinen globalen Schalter hat, setzt fs-components ihn um.
 - Effekte und Animationen in **Inhalten** (Video, Bild, Präsentation) bleiben Workflow-Module und sind nicht Teil dieser Schicht.
 
-### 8. Stil je Programm, Frontends automatisch
+### 8. Das Frontend bringt Standards mit, der Mensch ändert
 
-- Der Mensch wählt **einen Stil** (global, je Programm überschreibbar).
-- Für jedes installierte Programm sucht das System das passende Frontend in dieser Reihenfolge:
-  1. ein Frontend, das ausdrücklich zu diesem Stil gehört;
-  2. sonst das Standard-Frontend des Programms im gewählten Stil.
-- Ein **Stil-Paket** kann als Metapaket Frontends, Icons, Bewegung und Klang mitbringen.
+- **Ein Frontend legt sein Standard-Aussehen fest:** Stil, Icons, Animationsprofil, Klang-Theme, Tastenkürzel-Profil. Es nennt sie im Manifest beim Namen. Ist eines nicht installiert, gilt der Systemstandard.
+- **Der Mensch kann jede Schicht einzeln ändern**, für alle Programme oder nur für eines.
+- Reihenfolge: Wahl des Menschen für dieses Programm → Wahl des Menschen für alle Programme → Standard des Frontends → Systemstandard.
+- Ein **Stil-Paket** kann als Metapaket mehrere Schichten zusammen mitbringen (z. B. Glass mit passendem Animationsprofil und Klang-Theme).
 - **Ein Standard-Frontend kommt immer mit dem Programm.** Ein Programm ist nie ohne Gesicht.
 
 ## Folgen
@@ -106,6 +114,7 @@ Das Manifest ist Teil des Pakets und wird im Katalog als Fähigkeit geführt (AD
 ## Offen
 
 - Werte der fünf bis sechs Stile (nach Bildern, wie immer).
+- Die standardisierte Liste der Ereignisse und Animationsarten (Entwurf nach den Berichten in `.scratch/schichten/`).
 - Wer die Standard-Vorschläge annimmt (freedesktop, W3C-Gruppen) und in welcher Form.
 - Lizenzprüfung der Klang-Themes je Datei.
 - Ob der Editor für Anordnungsdateien ein eigenes Programm oder eine Facette des künftigen Zeichenprogramms wird.
