@@ -1,5 +1,9 @@
 # Logseq - Funktionen
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Hauptfunktionen
 
 - Blockverweise (Fenster auf einen anderen Block) gegenüber Blockeinbettungen (Portal, das direkt bearbeitet werden kann) — laut einem Forenbeitrag; die offizielle Seite dazu war nicht lesbar (offen).

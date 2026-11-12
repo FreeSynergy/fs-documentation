@@ -1,5 +1,9 @@
 # Power Automate - Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Eine Person, die Flows baut, legt einen Flow in einem Designer (neu oder klassisch) oder mit Copilot an. Konnektoren verbinden Cloud- und lokale Dienste. Flows sind an eine Umgebung gebunden; Personen sehen nur die Flows, auf die sie zugreifen dürfen.

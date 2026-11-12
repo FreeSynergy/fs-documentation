@@ -1,5 +1,9 @@
 # LiquidFeedback – Funktionen
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 - Delegation von Stimmrechten, je Thema (auf der Website beschrieben).
 - Integrierte Entwicklung von Vorschlägen und Entscheidung.
 - Präferenzaggregation von Alternativen.

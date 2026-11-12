@@ -1,5 +1,9 @@
 # Exist.io latest — API
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 Entwicklerdokumentation unter developer.exist.io. Die Willkommensseite nennt, dass nur Benutzerkonten auf die API zugreifen können und dass Benutzer Daten in Attribute schreiben können.
 
 | Bereich | Inhalt |

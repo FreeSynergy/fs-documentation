@@ -1,5 +1,9 @@
 # Signal — Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Signal sendet Nachrichten und führt Anrufe über die Datenverbindung durch, Ende-zu-Ende-verschlüsselt; der Anbieter erklärt, dass er Nachrichten nicht lesen und Anrufe nicht mithören kann. Es unterstützt Gruppen und verschlüsselte Sticker.

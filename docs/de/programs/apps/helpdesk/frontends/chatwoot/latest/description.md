@@ -1,5 +1,9 @@
 # Chatwoot – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 Support-Teams antworten Kunden aus einem Posteingang, über welchen Kanal der Kunde auch schreibt. Gespräche erhalten Labels, Prioritäten, Zuweisung und Notizen; Kunden haben Profile mit Verlauf.
 

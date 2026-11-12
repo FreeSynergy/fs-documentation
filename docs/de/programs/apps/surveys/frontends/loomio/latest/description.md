@@ -1,5 +1,9 @@
 # Loomio – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm tut
 
 Eine Gruppe eröffnet einen Verlauf mit Kontext, diskutiert, sammelt Rückmeldungen und stimmt ab. Das Ergebnis und die Begründung bleiben durchsuchbar.

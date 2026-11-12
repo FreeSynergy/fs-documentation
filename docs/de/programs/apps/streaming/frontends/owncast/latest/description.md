@@ -1,5 +1,9 @@
 # Owncast - Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 Owncast betreibt eine persönliche Live-Streaming-Seite. Die Streamerin oder der Streamer richtet die Sendesoftware (das README nennt OBS, Streamlabs und Restream als Beispiele) auf den Server; Zuschauende sehen im Browser zu und chatten. Ein Administrationsbereich konfiguriert den Server.
 

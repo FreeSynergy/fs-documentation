@@ -1,5 +1,9 @@
 # Stil: Windows
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 **Status: Messblatt, Entwurf (2026-11-10).** Der Windows-Stil wird 1:1 nachgebaut, je Kategorie ein Windows-Programm,
 möglichst eines ohne Linux-Gegenstück (ADR 0066, Nachtrag vom 2026-11-09). Kein Linux-Programm dient als Vorlage. Dieses
 Blatt sammelt die Maße aus Microsofts öffentlichen Richtlinien mit der Quelle für jeden Wert. Werte, die in den öffentlichen

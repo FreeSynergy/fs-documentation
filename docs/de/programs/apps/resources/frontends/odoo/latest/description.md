@@ -1,5 +1,9 @@
 # Odoo – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm tut
 
 Odoo bietet viele Geschäfts-Apps in einer Installation: Verkauf, Lager, Buchhaltung und weitere, in der Dokumentation nach Bereich geordnet. Welche Apps installiert sind, bestimmt, was die Oberfläche anbietet.

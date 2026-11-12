@@ -1,5 +1,9 @@
 # Cal.com – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Ermöglicht einer Person oder einem Team, buchbare Besprechungstypen zu veröffentlichen. Besucher wählen einen Slot; die Buchung wird in die verbundenen Kalender des Eigentümers geschrieben. ⚠️ (Ablauf abgeleitet aus den Titeln des Hilfe-Index.)

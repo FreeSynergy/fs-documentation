@@ -1,5 +1,9 @@
 # Google Earth latest — API
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 Google veröffentlicht Entwicklerdokumentation für Google Earth unter `developers.google.com/maps/documentation/earth` (Schnellstart, Migration von der Desktop-App, Versionshinweise; Themen zu Infrastrukturdaten erschienen in Suchergebnissen).
 
 | Thema | Status |

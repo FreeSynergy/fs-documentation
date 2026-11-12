@@ -1,5 +1,9 @@
 # Ecamm Live - Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 Eine einzelne Mac-Anwendung für die Live-Produktion: Kameras und andere Eingänge auswählen, zwischen vorbereiteten Szenen wechseln, Interview-Gäste einbinden und streamen oder aufzeichnen.
 

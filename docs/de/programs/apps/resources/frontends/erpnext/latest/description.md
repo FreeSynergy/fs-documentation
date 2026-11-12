@@ -1,5 +1,9 @@
 # ERPNext – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm tut
 
 ERPNext verwaltet die kaufmännische Seite einer Organisation in einem System: Buchhaltung, Lager, Verkauf, Einkauf, Fertigung und Anlagen. Seine Oberflächen werden größtenteils vom Frappe-Framework aus DocType-Definitionen erzeugt, deshalb sehen alle Module gleich aus und verhalten sich gleich.

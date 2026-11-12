@@ -1,5 +1,9 @@
 # Delta Chat — Funktionen
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 - Kontakte per QR-Code oder Einladungslink hinzufügen; kein öffentliches Verzeichnis.
 - Chatmail-Relais (Standard, änderbar); ein klassisches E-Mail-Konto nur, wenn es ausschließlich mit Chatmail-Apps genutzt wird.
 - Ende-zu-Ende-Verschlüsselung standardmäßig (OpenPGP-Teilmenge, Autocrypt, Secure-Join), auch für Anhänge; Fingerabdrücke werden unter „Encryption Info“ zum Vergleich angezeigt.

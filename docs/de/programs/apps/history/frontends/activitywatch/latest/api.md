@@ -1,5 +1,9 @@
 # ActivityWatch latest — API
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 REST, JSON, Basispfad `/api/0/` auf dem lokalen Server (Playground unter `/api/`). Zeitstempel nach RFC 3339 mit Zeitzone; Dauern in Sekunden.
 
 | Methode und Pfad | Zweck |

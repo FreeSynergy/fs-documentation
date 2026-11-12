@@ -1,5 +1,9 @@
 # Stil: SAP Fiori (Admin-Stil)
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 **Status: Messblatt, Entwurf (2026-11-10).** Das Admin-Frontend wird generiert und sieht aus wie SAP Fiori (ADR 0066;
 Nachtrag 2026-11-09: "Admin-Stil = SAP Fiori, Maße aus den öffentlichen Fiori-Richtlinien"). Dieses Blatt gibt die Maße
 mit ihrer Quelle an.

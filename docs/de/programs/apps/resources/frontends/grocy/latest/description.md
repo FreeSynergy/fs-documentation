@@ -1,5 +1,9 @@
 # Grocy – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm tut
 
 Grocy hält fest, was ein Haushalt besitzt und was zu tun ist. Einkäufe werden erfasst, das Programm meldet, wenn etwas fällig oder knapp ist, und setzt fehlende Artikel auf eine Einkaufsliste. Außerdem verwaltet es Haushaltsaufgaben, eine To-do-Liste, Gerätehandbücher und Termine für den Batterieladestand.

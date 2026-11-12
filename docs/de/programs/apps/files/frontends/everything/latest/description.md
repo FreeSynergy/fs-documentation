@@ -1,5 +1,9 @@
 # Everything – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Führt eine Liste aller Datei- und Ordnernamen auf lokalen Datenträgern und filtert sie live. Es öffnet oder verschiebt Dateien nicht selbst; es ist ein Finder. ✅

@@ -1,5 +1,9 @@
 # Snipe-IT – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm tut
 
 Snipe-IT beantwortet, wer welchen Artikel hat und wo er ist. Jeder Artikeltyp hat eine eigene Verleihregel. Artikel verlassen den Bestand durch Ausgabe (Check-out) und kehren durch Rücknahme (Check-in) zurück; der Status des Artikels entscheidet, was als Nächstes möglich ist.

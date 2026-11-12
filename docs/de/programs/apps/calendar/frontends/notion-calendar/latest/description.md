@@ -1,5 +1,9 @@
 # Notion Calendar – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Ein tastaturorientiertes Kalender-Frontend über vorhandenen Kalenderkonten, mit mehreren gemeinsam angezeigten Zeitzonen und Links, über die anderen freie Slots angeboten werden. Kommerzieller Dienst. ✅

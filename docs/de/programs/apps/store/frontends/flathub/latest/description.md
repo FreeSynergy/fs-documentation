@@ -1,5 +1,9 @@
 # Flathub – Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm tut
 
 Flathub stellt Flatpak-Apps bereit. Nutzer finden sie auf der Website oder in einem Software-Center; das Kommandozeilenwerkzeug oder das Center installiert sie. Apps laufen in einer Sandbox mit angegebenen Berechtigungen.

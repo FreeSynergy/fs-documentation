@@ -1,5 +1,9 @@
 # FigJam - Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 FigJam ist ein gemeinsames Board für Brainstorming, Retrospektiven und Diagramme. Menschen fügen Haftnotizen, Text, Formen, Verbindungen und Zeichnungen hinzu, gruppieren sie in Abschnitten und reagieren aufeinander mit Stickern. Moderationswerkzeuge (Timer, Abstimmung) unterstützen geführte Sitzungen.
 

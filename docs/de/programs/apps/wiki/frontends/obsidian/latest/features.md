@@ -1,5 +1,9 @@
 # Obsidian - Funktionen
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Hauptfunktionen
 
 - Rückverweise-Bereich in der rechten Seitenleiste: verlinkte Erwähnungen und unverlinkte Erwähnungen, mit Optionen zum Einklappen, Kontext und Sortierung; angeheftete Rückverweise als Reiter; Rückverweise am Ende einer Notiz.

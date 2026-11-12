@@ -1,5 +1,9 @@
 # HEY — Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 HEY sortiert eingehende Post danach, was sie ist, und danach, ob der Absender freigegeben ist. Ein neuer Absender landet im Screener; nach der Freigabe geht die Post in die Imbox (wichtig), The Feed (Newsletter) oder Paper Trail (Belege). Post kann beiseitegelegt, für eine spätere Antwort aufgehoben oder weggeschickt werden, um zu einem gewählten Zeitpunkt zurückzukehren.

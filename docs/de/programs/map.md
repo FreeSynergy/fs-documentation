@@ -1,5 +1,9 @@
 # Karte der Programme
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 **Status: Entwurf (2026-11-08); die Schichten und die vier Frontends sind entschieden (ADR 0066, 2026-11-09), die Programmtabelle ist noch offen.** Diese Seite stellt jedes Programm, jede Facette und jede Suite an einer Stelle dar, zusammen mit den Datentypen, die jedes besitzt, und den Frontends, die es bekommt. Sie ist der Ausgangspunkt der Runde 3: Zuerst einigen wir uns auf diese Karte, dann auf Datentypen und Schnittstellen, und erst danach bauen wir.
 
 ## Die Schichten, von unten nach oben

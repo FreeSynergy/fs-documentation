@@ -1,5 +1,9 @@
 # Apple Kontakte — Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Kontakte speichert Personen, synchronisiert sie zwischen den Apple-Geräten einer Person und mit hinzugefügten Konten und erlaubt der Person, die eigenen Angaben zu teilen. Der iPhone-Leitfaden listet diese Themen: Kontaktdaten hinzufügen und verwenden, Kontakte bearbeiten, eigene Kontaktdaten, Konten, Teilen mit NameDrop, Kontakte aus der Telefon-App verwenden, Duplikate zusammenführen oder ausblenden, Synchronisation, Import, Export.

@@ -1,5 +1,9 @@
 # Superhuman Mail — Beschreibung
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Was das Programm macht
 
 Es zeigt die bestehende Post einer Person in einer schnellen Oberfläche. Der Posteingang wird in Listen geteilt (Standard- und eigene Splits), und die meisten Aktionen laufen über die Tastatur oder die Befehlspalette. Splits können auf Absender, Domain, Empfänger, Betreff oder Label beruhen.

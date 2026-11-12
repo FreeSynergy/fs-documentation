@@ -1,5 +1,9 @@
 # Fastmail — API
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Offen
 
 Die gelesene Seite verlinkt nur auf die API-Dokumentation. Protokolle (JMAP, IMAP, CalDAV, CardDAV) und die Schnittstelle zum automatischen Erzeugen maskierter Adressen wurden hier nicht geprüft.

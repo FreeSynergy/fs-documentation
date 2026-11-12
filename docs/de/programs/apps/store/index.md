@@ -1,5 +1,9 @@
 # Store
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Kurz gesagt
 
 Store deckt ab, wo Programme und Apps gefunden, geprüft und installiert werden. Diese Seite ist der Kategorie-Eintrag für die analysierten Referenzprogramme; die unten genannten Frontends sind nur nach ihren Funktionen beschrieben (ADR 0013).

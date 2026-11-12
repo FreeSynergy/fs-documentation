@@ -1,5 +1,9 @@
 # Linear – Funktionen
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 ## Hauptfunktionen
 
 - Triage-Aktionen: annehmen (optionaler Kommentar, Standardstatus), ablehnen (abgebrochen mit Grund), als Duplikat markieren (zusammenführen, Anhänge verschieben), zurückstellen (bis zu einer Zeit oder neuer Aktivität), um weitere Informationen bitten.

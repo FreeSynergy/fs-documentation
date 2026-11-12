@@ -1,5 +1,9 @@
 # Stil: Apple
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 **Status: Messblatt, Entwurf (2026-11-10).** Der Apple-Stil wird 1:1 aus Apples eigenen Apps nachgebaut (ADR 0066,
 Nachtrag vom 2026-11-09). Dieses Blatt sammelt die Maße aus Apples öffentlichen Richtlinien, mit der Quelle für jeden
 Wert. Werte, die in den öffentlichen Richtlinien nicht stehen, sind mit **nicht veröffentlicht** markiert. Sie müssen

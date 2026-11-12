@@ -1,5 +1,9 @@
 # Fastmail — Funktionen
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 - **Masked Email**: jeder Nutzer kann in der App eine Adresse erzeugen; eine pro Anmeldung; von Unternehmen nicht verknüpfbar; wird mit Masken-Symbol und der vergebenen Bezeichnung angezeigt; eine Adresse lässt sich sofort abschalten; eine eigene Domain ist nutzbar.
 - Anbindung an 1Password und Bitwarden.
 - **Aliasse** mit eigenem Absendernamen oder eigener Signatur.

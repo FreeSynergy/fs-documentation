@@ -1,5 +1,9 @@
 # Taskwarrior
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 > Kategorie: [tasks](../../index.md) · Typ: To-do-Manager für die Kommandozeile · Anbieter: GothenburgBitFactory-Community · Lizenz: frei und Open Source (Lizenzversion: Open)
 
 ## Was es ist

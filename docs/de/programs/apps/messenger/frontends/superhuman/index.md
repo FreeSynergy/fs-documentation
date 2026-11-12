@@ -1,5 +1,9 @@
 # Superhuman Mail
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 > Kategorie: [messenger](../../index.md) · Typ: E-Mail-Client (für bestehende Konten) · Anbieter: Superhuman (vormals Grammarly) · Lizenz: proprietär
 
 ## Was es ist

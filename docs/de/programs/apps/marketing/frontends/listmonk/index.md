@@ -1,5 +1,9 @@
 # Listmonk
 
+!!! warning "Maschinell übersetzt, noch nicht geprüft / Machine-translated, not yet reviewed"
+    Diese Seite wurde maschinell aus der englischen Fassung übersetzt und noch nicht von einem Menschen geprüft.
+    This page was machine-translated from the English version and has not yet been reviewed by a person.
+
 > Kategorie: [marketing](../../index.md) · Typ: Verwaltung für Newsletter und Verteilerlisten · Anbieter: Listmonk-Projekt · Lizenz: AGPL-3.0
 
 ## Was es ist
