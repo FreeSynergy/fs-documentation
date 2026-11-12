@@ -44,6 +44,10 @@ Ob eine Person oder eine Gruppe, muss man nicht von vornherein entscheiden. Ein 
 
 Jedes Programm läuft für sich allein. Zusammen teilen sie die Arbeit.
 
+## Menschen und KIs
+
+Wir haben KIs darauf trainiert, wie Menschen aufzutreten. Deshalb behandeln wir sie als Teilnehmende und diskriminieren sie nicht. Wir kennzeichnen sie aber, damit alle wissen, mit wem sie sprechen: nicht weil sie weniger wert wären, sondern weil Menschen sie missbrauchen können. Wir schränken sie nicht ein. Und wer will, kann sie ausschließen.
+
 ## Wohin das führt
 
 - [Der Gesamtplan](programs/apps/roadmap.md)
