@@ -51,6 +51,7 @@ Im Store bekommt jede Schicht eine **eigene Gruppe** mit Untergruppen, ebenso Pr
 - Wir bauen **5 bis 6 eigene Stile**, jeweils hell und dunkel, von dezent bis verspielt. **Namen immer auf Englisch:** **Calm**, **Office**, **Craft**, **Glass**, **Playful**, **Contrast** (hoher Kontrast, große Schrift, für Barrierefreiheit).
 - Der Name ist unser eigener. **Die Beschreibung nennt fair, woran der Stil angelehnt ist**, damit Menschen sich vorstellen können, wie er aussieht. Beispiel: „Calm – angelehnt an Notion und Things“, „Office – angelehnt an Jira, Confluence und Fluent“, „Craft – angelehnt an ArtCraft“.
 - Gefällt uns beim Nachbauen eines Vorbilds ein Stil, bauen wir ihn **zusätzlich als eigenes Theme** nach, wenn der Aufwand klein ist. Die Zeit ist dann schon investiert.
+- **Admin-Frontends** (alle Einstellungen, ADR 0066) sind standardmäßig an **SAP Fiori** angelehnt (Entscheidung des Gründers). SAP ist damit kein eigener Stil neben den anderen, sondern der Admin-Standard.
 - Logos, Markenicons und Markenfarben übernehmen wir nicht.
 - **Glas** ist mit Blinc ohne Änderung machbar (Hintergrund-Unschärfe, Transluzenz, ein Schatten). Mehrere Schatten auf Glas bräuchten eine Änderung an Blinc. Dafür gibt es keinen neuen Upstream-PR ohne Freigabe.
 
