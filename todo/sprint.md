@@ -146,6 +146,10 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Man sieht alle eigenen Daten (soweit entschlüsselt) und baut eigene Charts.
   - Zu prüfen: Vorbilder Grist (Apache-2.0), Airtable, NocoDB, Baserow. Formel-Engine IronCalc (Rust). Format ODF .ods (ISO/IEC 26300).
 - **Schreiben:** ODF .odt als Format (Word-Ersatz). Das Schreiben kommt als Modul ins Wiki bzw. in das spätere Dokumente-Programm; „Wiki“ ist dann eine Facette.
+- **Präsentation (Nutzer):** Whiteboard plus wiederverwendbare Standard-Animationen ergibt einen PowerPoint-Ersatz.
+  - Seiten oder Ausschnitte der unendlichen Fläche sind Folien (auch Zoom-Fahrten wie bei Prezi).
+  - Format ODF .odp; Animationen als Bausteine (Blinc hat `blinc_animation`).
+  - Damit entsteht eine Office-Familie aus ODF-Formaten: Texte (.odt, Dokumente/Wiki), Tabellen (.ods, Daten), Präsentation (.odp, Whiteboard), dazu Vektor (SVG).
 - **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
