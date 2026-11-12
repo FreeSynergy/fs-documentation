@@ -163,6 +163,10 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Fehlt der Handler, besorgt Files ihn über Store bzw. Katalog (AppStream `<provides><mediatype>`).
   - Standards sind die Grundlage, kein Beiwerk.
   - Später ins Manifest, bei der großen Überarbeitung.
+  - **Nicht das Format zählt, sondern was es kann (Nutzer).** „Kann SVG“ heißt nicht „kann jedes SVG lesen“.
+    - Fähigkeiten werden auf Merkmal-Ebene angegeben: Ein Modul nennt die Merkmale, die es beherrscht; eine Datei nennt die Merkmale, die sie benutzt.
+    - Der Abgleich ergibt: ganz, teilweise (ehrlich angezeigt, was fehlt) oder nicht.
+    - Baut auf ADR 0045 (SupportReport) und ADR 0066 (`supported`) auf.
 - **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
