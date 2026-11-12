@@ -141,6 +141,12 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Files schreibt Schlagworte, Beschreibung und Herkunft zusätzlich als xattr an die Datei, damit alle Programme davon profitieren. Ein Schalter schaltet das ab.
   - Unbekannte Programme starten nur nach Bestätigung; eine Sandbox wird später geprüft.
   - Die Liste für den Meilenstein ist bestätigt.
+- **Idee Daten-Programm (Nutzer, 2026-11-12):** Datenbank und Tabellenkalkulation in einem.
+  - Spalten sind Datentypen bzw. Grundtypen (ADR 0066) und umgekehrt.
+  - Man sieht alle eigenen Daten (soweit entschlüsselt) und baut eigene Charts.
+  - Zu prüfen: Vorbilder Grist (Apache-2.0), Airtable, NocoDB, Baserow. Formel-Engine IronCalc (Rust). Format ODF .ods (ISO/IEC 26300).
+- **Schreiben:** ODF .odt als Format (Word-Ersatz). Das Schreiben kommt als Modul ins Wiki bzw. in das spätere Dokumente-Programm; „Wiki“ ist dann eine Facette.
+- **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
   - **Der Store wird eine Facette:** Seine Frontends bleiben, die Logik wandert in Module. Katalogdaten haben dasselbe Format wie die Datei-Steckbriefe von Files. Damit schließt sich der Kreis.
