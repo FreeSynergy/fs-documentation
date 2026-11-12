@@ -58,6 +58,17 @@ FreeSynergy must not depend on us. If our servers go away, or a country cuts the
 
 We trained AIs to come across as people. So we treat them as participants and do not discriminate against them. We do mark them, so everyone knows who they are talking to: because people can misuse them, not because they are worth less. We do not restrict them. An AI never acts in your name without your release, and the stop switch sits where no AI can reach it. And anyone can lock them out, if they want to.
 
+## More than the sum of its parts
+
+Here a program is not a closed block. It is made of a core, of components that show something, and of modules that can do something. All parts talk to each other through open interfaces. A lot follows from that:
+
+- **Anyone can build their own frontend.** If you want to see a program differently, you build a new interface on the same core. You do not rewrite the whole program.
+- **What is built once, everyone uses.** A date picker, a Kanban board, a map: every component is available to every program, also on a wiki page and on a website.
+- **Workflows are described once and then reused.** A person, an AI or a machine works through them. Nobody has to think through what always happens the same way, not even an AI. That saves time, computing power and energy.
+- **Data has a format anyone can read.** So it can move between programs, devices and people without a detour through a provider.
+
+If such standards catch on, beyond our programs and into operating systems, many small parts become something larger than their sum. We do not know whether that will happen. We build it so that it can.
+
 ## Honest, always
 
 We say what works today and what does not. A feature that is not built is called not built. That is less exciting than a promise, and it is the only way you can trust the rest.

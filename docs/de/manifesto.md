@@ -58,6 +58,17 @@ FreeSynergy darf nicht von uns abhängen. Wenn unsere Server verschwinden oder e
 
 Wir haben KIs darauf trainiert, wie Menschen zu wirken. Deshalb behandeln wir sie als Teilnehmer und diskriminieren sie nicht. Wir kennzeichnen sie aber, damit alle wissen, mit wem sie sprechen: weil Menschen sie missbrauchen können, nicht weil sie weniger wert wären. Wir schränken sie nicht ein. Eine KI handelt nie in deinem Namen ohne deine Freigabe, und der Stoppschalter sitzt dort, wo keine KI herankommt. Und jeder kann sie aussperren, wenn man das will.
 
+## Mehr als die Summe seiner Teile
+
+Bei uns ist ein Programm kein abgeschlossener Block. Es besteht aus einem Kern, aus Bausteinen, die etwas anzeigen, und aus Modulen, die etwas können. Alle Teile sprechen über offene Schnittstellen miteinander. Daraus folgt einiges:
+
+- **Jeder kann sein eigenes Frontend bauen.** Wer ein Programm anders sehen will, baut sich eine neue Oberfläche auf denselben Kern. Er muss nicht das ganze Programm neu schreiben.
+- **Was einmal gebaut ist, nutzen alle.** Eine Datumsauswahl, ein Kanban-Board, eine Karte: Jeder Baustein steht jedem Programm zur Verfügung, auch in einer Wiki-Seite und auf einer Website.
+- **Abläufe werden einmal beschrieben und dann wiederverwendet.** Ein Mensch, eine KI oder eine Maschine arbeitet sie ab. Was immer gleich abläuft, muss niemand jedes Mal neu durchdenken, auch keine KI. Das spart Zeit, Rechenleistung und Energie.
+- **Daten haben ein Format, das jeder lesen kann.** Darum lassen sie sich zwischen Programmen, Geräten und Menschen weitergeben, ohne Umweg über einen Anbieter.
+
+Wenn solche Standards sich durchsetzen, über unsere Programme hinaus, bis hinein in Betriebssysteme, dann wird aus vielen kleinen Teilen etwas, das größer ist als ihre Summe. Ob es so kommt, wissen wir nicht. Wir bauen es so, dass es möglich ist.
+
 ## Immer ehrlich
 
 Wir sagen, was heute funktioniert und was nicht. Eine Funktion, die nicht gebaut ist, nennen wir nicht gebaut. Das ist weniger aufregend als ein Versprechen, und es ist der einzige Weg, dem Rest zu vertrauen.
