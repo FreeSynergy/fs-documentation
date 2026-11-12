@@ -4,6 +4,7 @@
 
 DSM provides an **HTTP/JSON API** via a single entry point: `entry.cgi`. Each request describes the desired API, its version and the method:
 
+```
 GET/POST http://<nas>:5000/webapi/entry.cgi?api=SYNO.<Module>.<Name>&version=<n>&method=<name>
 ```
 
@@ -108,6 +109,7 @@ curl -s -k "https://nas.example.internal:5001/webapi/entry.cgi" \
 
 Response:
 
+```json
 {
   "data": { "is_portal_port": false, "sid": "aG9tZXBhZ2U6MTcw…", "synotoken": "sFQ7m2YzQpXk…" },
   "success": true
