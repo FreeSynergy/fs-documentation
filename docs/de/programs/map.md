@@ -40,12 +40,12 @@ geändert. Der Windows-Stil wird ebenfalls 1:1 nachgebaut, je Kategorie ein Wind
 Linux nicht gibt, damit alle in der freien Software davon profitieren. Bewusst keine Linux-Programme als Vorlagen: die
 haben wir schon. Später ein **FreeSynergy-Stil** eigener Art, ganz anders als alle diese (ADR 0066, Nachtrag vom 2026-11-09).
 
-Die Analysen bekannter Programme je Kategorie (`frontends/<programm>/latest/`) bleiben die Quelle für **Funktionen**.
+Die Analysen bekannter Programme je Kategorie (`frontends/<program>/latest/`) bleiben die Quelle für **Funktionen**.
 
 ## Windows-Vorlagen (vom Eigentümer genehmigt, 2026-11-10)
 
 Der Windows-Stil wird 1:1 aus je einem Windows-Programm pro Kategorie nachgebaut, möglichst eines ohne Linux-Gegenstück.
-Kein Linux-Programm dient als Vorlage. Maße und Quellen: `docs/de/components/styles/windows.md`.
+Kein Linux-Programm dient als Vorlage. Maße und Quellen: `docs/en/components/styles/windows.md`.
 
 | Kategorie (Programm oder Facette) | Windows-Programm | Hinweise |
 |-----------------------------------|------------------|----------|
