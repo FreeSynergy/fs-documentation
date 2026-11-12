@@ -17,7 +17,7 @@ Entwickler schreiben Skripte; Windmill leitet das Eingabeformular aus der Funkti
 
 ## Lizenz
 
-Community-Edition unter AGPLv3; API-Clients und OpenAPI-Spezifikation unter Apache 2.0; der Betrieb als verwalteter Dienst erfordert eine kommerzielle Lizenz (README).
+Community-Edition unter AGPLv3; API-Clients und OpenAPI-Spezifikation unter Apache 2.0; der Verkauf als verwalteter Dienst erfordert eine kommerzielle Lizenz (README).
 
 ## Offen
 

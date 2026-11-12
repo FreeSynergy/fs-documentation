@@ -177,7 +177,7 @@ diesem Lauf nicht geprüft: Immich.
 | Helpdesk | Chatwoot: alle Kanäle in einem Posteingang, Website-Widget · **Corrected:** Zammad hat ein CTI-Anrufprotokoll (Placetel, sipgate, generische CTI-API), kein eigenes SIP; Warnung bei Bearbeitungskonflikten · Help Scout: Kundenseitenleiste | ✅ [helpdesk](apps/helpdesk/frontends/index.md) · Zammad korrigiert |
 | CRM | Twenty: eigene Objekte und Felder (Lizenz aus einer Drittquelle ⚠️) · Attio: Anreicherung | ✅ [crm](suites/crm/frontends/index.md) · Twenty Lizenz ⚠️ |
 | Workflows | n8n: Knoten-Leinwand, Code-Knoten (Anzahl der Integrationen widersprüchlich: 400+ vs. 1500+) · Huginn: Agenten und Ereignisse · Windmill: Skripte werden zu Formularen, Endpunkten und Jobs · Apple Shortcuts: persönliches Gerätewerkzeug · Power Automate: gehostetes Produkt | ✅ [workflows](suites/workflows/frontends/index.md) · n8n-Anzahl offen |
-| Marketing | Plausible: ohne Cookies, Trichter, Statistik-API · Umami: ohne Cookies, Trichter, Verweildauer, Reisen · Listmonk: Newsletter-Verwaltung (AGPL-3.0) | ✅ [marketing](apps/marketing/frontends/index.md) |
+| Marketing | Plausible: ohne Cookies, Trichter, Statistik-API · Umami: ohne Cookies, Trichter, Aufbewahrung/Retention, Reisen · Listmonk: Newsletter-Verwaltung (AGPL-3.0) | ✅ [marketing](apps/marketing/frontends/index.md) |
 
 ## Offene Punkte dieses Entwurfs
 

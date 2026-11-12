@@ -216,7 +216,7 @@ Noch fehlend, je genehmigtem Programm:
 - **File Explorer**: Support-Seite "File Explorer in Windows" (https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows); von dem Werkzeug zurückgegebene Bildlinks lösen noch nicht auf.
 - **Teams**: Support-Seite "Overview of teams and channels" (https://support.microsoft.com/en-us/office/overview-of-teams-and-channels-c3d63c10-77d5-4204-a566-53ddcf723b46).
 - **Einstellungen > Anmeldeoptionen**: https://support.microsoft.com/en-us/accounts-billing/security/sign-in-options-in-windows.
-- **Fotos, Media Player, OneNote, Excel, Google Earth Pro, Forms, YouTube Studio, Store, Start, Widgets**: in diesem Durchgang kein Screenshot gefunden; die Support-Seiten wurden durchsucht, ihre Bilder aber nicht abgerufen.
+- **Fotos, Media Player, OneNote, Excel, Google Earth Pro, Forms, YouTube Studio, Store, Start, Widgets**: in diesem Durchgang kein Screenshot gefunden; die Support-Seiten wurden durchsucht, ihre Bilder aber nicht abrufbar.
 
 Nächster Schritt: die offiziellen Seiten im Browser öffnen, die Bildadressen dort prüfen und jedes Bild mit einem
 Eintrag in `SOURCES.txt` herunterladen.
