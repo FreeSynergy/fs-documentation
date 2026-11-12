@@ -100,6 +100,18 @@ Das Manifest ist Teil des Pakets und wird im Katalog als Fähigkeit geführt (AD
 - Reihenfolge: Wahl des Menschen für dieses Programm → Wahl des Menschen für alle Programme → Standard des Frontends → Systemstandard.
 - Ein **Stil-Paket** kann als Metapaket mehrere Schichten zusammen mitbringen (z. B. Glass mit passendem Animationsprofil und Klang-Theme).
 - **Ein Standard-Frontend kommt immer mit dem Programm.** Ein Programm ist nie ohne Gesicht.
+- **Fehlt zu einem Stil das passende Frontend, ist das eine fehlende Abhängigkeit** (ADR 0068). Der Installer bietet die Pakete an, die sie auflösen, mit Bild und Anlehnung. Gibt es keines, sagt er das und nimmt das Standard-Frontend im gewählten Stil.
+
+### 9. Aussehen aus dem Inhalt: Ordner und Kataloge
+
+- Ein Ordner kann eine Datei enthalten, die sein Aussehen in Files ändert: Farbe, Hintergrundbild, Banner, Icon, Anordnung oder einen ganzen Stil. Grundlage ist freedesktop Desktop Entry mit `Type=Directory` (wie KDEs `.directory`), erweitert um unsere Schlüssel. Die Datei wandert mit (Kopieren, USB, Git, Teilen).
+- Ein Katalog kann ebenso sein Aussehen mitbringen. Jeder „Laden“ sieht im Store so aus, wie sein Betreiber es möchte.
+- Regeln (Entscheidung des Gründers, 2026-11-12):
+  1. **Vertrauens-Anzeigen sind nie gestaltbar.** Signatur-Stufe, Risiko, Herkunft, Warnungen und die Vorschau vor dem Installieren stehen immer im Standard-Aussehen und immer sichtbar. Ist das für Menschen nicht verständlich, ändern wir die Anzeige, nicht die Regel.
+  2. **Nur Aussehen, kein Code.** Nur Werte aus dem Theme-Vertrag; keine Skripte, kein WASM.
+  3. **Die Herkunft spielt keine Rolle**, weil nur das Aussehen geändert wird. Wem es nicht gefällt, der löscht die Datei.
+  4. **Zu geringer Kontrast wird nicht überschrieben, sondern gemeldet.** Files warnt, dass Ordner oder Dateien dort schlecht zu sehen sein können.
+  5. **Abschaltbar**: ganz und je Herkunft.
 
 ## Folgen
 
