@@ -141,6 +141,12 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
   - Files schreibt Schlagworte, Beschreibung und Herkunft zusätzlich als xattr an die Datei, damit alle Programme davon profitieren. Ein Schalter schaltet das ab.
   - Unbekannte Programme starten nur nach Bestätigung; eine Sandbox wird später geprüft.
   - Die Liste für den Meilenstein ist bestätigt.
+- **Nutzer, 2026-11-12, später:**
+  - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
+  - **Der Store wird eine Facette:** Seine Frontends bleiben, die Logik wandert in Module. Katalogdaten haben dasselbe Format wie die Datei-Steckbriefe von Files. Damit schließt sich der Kreis.
+  - **Redox OS:** Wenn wir einen Desktop anbieten können, stellen wir ihn bei Redox vor.
+    - Blinc braucht wgpu, Redox hat keine GPU-Treiber.
+    - Ein CPU-Renderer als Rückfall ist nötig (z. B. vello_cpu oder tiny-skia).
 - **Idee Module (Nutzer, 2026-11-12, nach dem Meilenstein; Recherche mit niedriger Priorität):**
   - Module sind eine Schicht zwischen Components und Programmen, keine Facetten.
   - Ein Programm ist eine Hülle plus Kern plus Module. Module sind auch in anderen Programmen einsetzbar (Export-Dialog ohne Installieren-Modul).
