@@ -28,9 +28,9 @@ Wo ein Standard existiert, nutzen wir ihn. **Wo keiner existiert, schreiben wir 
 | **Anordnung (Frontend)** | Welche Bausteine wo stehen, Navigation, welche Funktion in welchem Menü | Programm-Manifest + Anordnungsdatei (5, 6) | `frontend` |
 | **Bewegung** | Dauer, Kurven, Übergang je Ereignis | DTCG `duration`, `cubicBezier`, `transition`; Ereignisliste (7) | `motion` |
 | **Klang** | Klang je Ereignis | freedesktop Sound Theme + Sound Naming | `sound-theme` |
-| **Haptik** (Telefone, Tablets) | Vibrationsmuster je Ereignis | W3C Vibration API; Muster wie bei Klang an Ereignisse gebunden | `haptics` |
-| **Tastenkürzel** | Tasten je Funktion | IBM CUA als Grundlage (Strg+C …); Profile, z. B. nach KDE, GNOME, macOS, Emacs, Vim | `shortcuts` |
-| **Sprache und Formate** | Texte, Datum, Zahlen, Schreibrichtung | BCP 47, Unicode CLDR | `language` |
+| **Haptik** (Telefone, Tablets; Vorschlag, offen) | Vibrationsmuster je Ereignis | W3C Vibration API; Muster wie bei Klang an Ereignisse gebunden | `haptics` |
+| **Tastenkürzel** (Vorschlag, offen) | Tasten je Funktion | IBM CUA als Grundlage (Strg+C …); Profile, z. B. nach KDE, GNOME, macOS, Emacs, Vim | `shortcuts` |
+| **Sprache und Formate** (Vorschlag, offen) | Texte, Datum, Zahlen, Schreibrichtung | BCP 47, Unicode CLDR | `language` |
 
 Dazu werden **Systemeinstellungen immer gelesen und beachtet**: hell/dunkel (`color-scheme`), Akzentfarbe (`accent-color`), hoher Kontrast (`contrast`) und reduzierte Bewegung (`reduced-motion`) über das Portal `org.freedesktop.appearance`. Schrift und Mauszeiger gehören zum Stil; die Schriften sind frei lizenziert (z. B. SIL OFL).
 
