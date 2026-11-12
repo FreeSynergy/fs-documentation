@@ -10,6 +10,11 @@ Diese Dokumentation ist in verschiedenen Sprachen verfügbar:
 - 🇬🇧 **English**: [To the English version](/en/)
 - 🌍 Weitere Sprachen folgen — contribute welcome!
 
+## ❤️ Warum es das gibt
+
+Daten und Kommunikation dürfen nicht vom Geld abhängen, und Software soll den Menschen dienen. Lies das [Manifest](manifesto.md),
+den [Gesamtplan](programs/apps/roadmap.md) und die [Schnittstellen](interfaces/index.md).
+
 ## 🚀 Was du hier findest
 
 - 🔧 Anleitungen zur Einrichtung & Verwendung unserer Tools
