@@ -33,4 +33,3 @@ Stand: `implemented` · `planned` · `proposed`
 | Lebensereignisse und Meilensteine einer Person festhalten (`contact.lifeEvent`) | Monica | JSCalendar `Event`, verknüpft über `relatedTo` ⚠️ | proposed |
 
 ## Nicht geplant (bewusst)
-</content>

@@ -28,4 +28,3 @@ Stand: `implemented` · `planned` · `proposed`
 | Stabile und Beta-Kanäle getrennt führen | Flathub | offen | proposed |
 
 ## Nicht geplant (bewusst)
-</content>

@@ -37,4 +37,3 @@ programs/apps/store/frontends/<program>/
 ```
 
 Protokolle (Matrix, IMAP, CalDAV, …) sind keine Frontends; sie stehen unter [data](../../../../data/standards.md).
-</content>
