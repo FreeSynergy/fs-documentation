@@ -169,12 +169,21 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Baut auf ADR 0045 (SupportReport) und ADR 0066 (`supported`) auf.
 - **Neue Namen (Nutzer, 2026-11-12). Umsetzung erst nach dem Meilenstein, zusammen mit der Programmkarte als ADR:**
   - **fs-data** (neu): Datenbank, Tabellen, Charts. ODS in eigener Schicht, Formel-Engine austauschbar.
-  - **fs-wiki → fs-text:** Texte, mit den Facetten Wiki, Schreiben (.odt) und Website. Das Kern-Crate heißt schon `fs-text`. **`fs-wiki` bleibt als Facette** (Befehl bzw. Link nach ADR 0063). Ebenso bleibt `fs-whiteboard` als Facette von fs-vector.
-  - **fs-whiteboard → fs-vector:** Vektorgrafik, mit den Facetten Whiteboard, Präsentation (.odp) und Zeichnen. Grundlage sind die VectorCraft-Crates geom und pathops.
+  - **fs-wiki → fs-text:** Texte, mit den Facetten Wiki, Schreiben (.odt) und Website. Das Kern-Crate heißt schon `fs-text`. **`fs-wiki` bleibt als Facette** (Befehl bzw. Link nach ADR 0063). Ebenso bleibt `fs-whiteboard` als Facette von fs-draw.
+  - **fs-whiteboard → fs-draw** (Zeichnung, nicht „fs-vector“, Nutzer): Facetten Whiteboard, Präsentation (.odp), Diagramme und Pläne.
+  - **fs-paint** (neu, später): Bilder bzw. Malen (Pixel); **Foto ist eine Facette von fs-paint**; PhotoCraft prüfen.
+  - (Dazu ursprünglich:) Grundlage sind die VectorCraft-Crates geom und pathops.
   - Umbenennen ohne Bruch:
     - GitHub-Umbenennung (Weiterleitung bleibt);
     - Pakete mit Provides/Obsoletes bzw. Alias, damit installierte fs-wiki/fs-whiteboard sauber auf den neuen Namen aktualisieren;
-    - Themen- bzw. Fähigkeitsnamen einmal angleichen (`texts` bleibt; `whiteboard` → `vector`).
+    - Themen- bzw. Fähigkeitsnamen einmal angleichen (`texts` bleibt; `whiteboard` → `draw`).
+- **Effekte und Animationen sind Workflows (Nutzer):**
+  - Effekt = Workflow aus Bild-Operationen (Knoten-Graph).
+  - Animation = Workflow über die Zeit: Eigenschaften ändern sich in einer Zeitleiste, wie ein Gantt.
+  - Beides sind Module des Workflow-Standards mit standardisierter Schrittliste. Vokabular aus vorhandenen Standards:
+    - Effekte: W3C Filter Effects bzw. SVG-Filter-Primitive, für Video OpenFX.
+    - Animation: W3C Web Animations bzw. CSS-Animationen und Lottie.
+  - Beschreibung = Workflow. Ausgeführt wird von spezialisierten Runnern: Effekte auf der GPU (z. B. über `blinc_flow`, die Shader-Graph-Sprache in Blinc), Animationen in der Bild-Schleife.
 - **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
