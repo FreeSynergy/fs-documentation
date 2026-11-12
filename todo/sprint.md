@@ -158,6 +158,11 @@ Der Nutzer: „Das kann ich niemandem vorsetzen.“ Tippen und Installieren müs
     - Video: GStreamer, Rust-Bindungen (die Pipeline passt zum Workflow-Gedanken).
     - Musik: symphonia (Dekoder), cpal (Ausgabe).
     - 3D: glTF (Khronos), Blinc viewport3d.
+- **Grundsatz Einbetten (Nutzer, „wichtig, merken“):** viel mehr einbetten.
+  - Jedes eingebettete Objekt und jede Datei trägt standardisiert, was sie braucht: Medientyp (IANA) plus Modul/Fähigkeit (ADR 0068), optional ein Programm.
+  - Fehlt der Handler, besorgt Files ihn über Store bzw. Katalog (AppStream `<provides><mediatype>`).
+  - Standards sind die Grundlage, kein Beiwerk.
+  - Später ins Manifest, bei der großen Überarbeitung.
 - **Der Nutzer geht gerade alle Programme durch:** weniger, mächtigere Programme. Danach entsteht eine neue Programmkarte als ADR.
 - **Nutzer, 2026-11-12, später:**
   - **Ein Editor für Code und Markdown,** Sprachen bzw. Modi als Module (WASM). Zu prüfen: tree-sitter (MIT, Grammatiken als WASM) und LSP.
