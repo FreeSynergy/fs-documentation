@@ -45,7 +45,7 @@ Für eine neue Strategie-Sitzung (Opus). **Zuerst lesen:** diese Datei, dann das
   - Lifts people → calendar → maps → groups.
 
 ## Regeln, die sich gerade gebildet haben (Details im Memory)
-- **Arbeiten nach Workflows (Nutzer, 13.11.):** Jeder wiederkehrende Ablauf läuft nach seiner Datei in `fs-release/workflows/`:
+- **Arbeiten nach Workflows (Nutzer, 13.11.): ALLE Arbeitsschritte laufen IMMER über einen Workflow, ohne Ausnahme.** Fehlt einer, wird er zuerst geschrieben oder erweitert (Workflow „workflow-pflege“). Später kommen die Workflows per MCP in fs-workflows und laufen dort sichtbar. Die Dateien liegen in `fs-release/workflows/`:
   - vorhanden: lift, release-flow, catalog-bump, cleanup-targets, agent-run;
   - in Arbeit: frontend-round, bugfix, review, dossier, icon-round.
 
