@@ -52,3 +52,10 @@ Reihenfolge der Umsetzung (aus dem Bericht):
 - Container-Registry und Signatur der Container (z. B. Sigstore/OpenPGP) noch nicht entschieden.
 - Installationskonzept für Systemdienste (Folge 6).
 - Module/Handler für eingebettete Inhalte (Embed: jedes eingebettete Ding nennt Medientyp und nötiges Modul, Files holt den Handler): eigene Art `module` oder `addon` mit `<extends/>`. Die Entscheidung folgt, sobald Embed gebaut wird.
+
+## Nachtrag 2026-11-14: Katalogart `workflow`
+Der `kind`-Wert `workflow` (anbietbare Abläufe, z. B. `server-einrichtung`, ADR 0079) kommt zur Tabelle in §1 hinzu. AppStream-Typ: `addon` mit `<extends>` `fs-workflows`. Diese Zuordnung ist **unsere**, die Spezifikation gibt sie nicht vor (wie bei den Stil-Arten in §2). Das Angebot läuft über den Katalog, `fs-marketplace` später.
+
+| kind | AppStream `type` | Beleg |
+|---|---|---|
+| `workflow` | `addon` (`<extends>` `fs-workflows`) | Unsere Zuordnung; „Some components are not standalone, but rather extend existing software“ (Spezifikation, nur zur Art `addon`) |

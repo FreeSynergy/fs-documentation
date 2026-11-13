@@ -17,6 +17,7 @@ ADR 0062 legt den Katalog fest (AppStream + TUF, Pakete als Git-Tags). Kein ADR 
 - Neues Repo `fs-packages`; neue Betriebsart `release-index` in `fs-release/actions/sign-files`.
 - Nach dem Bau: Anleitung für Nutzer (Fingerabdruck prüfen, Quelle eintragen) unter `docs/en/`.
 - Pages-Grenzen (docs.github.com, „GitHub Pages limits“: Seite höchstens 1 GB, weiche 100 GB/Monat) tragen den Anfang; die Aufbewahrung von 3 Versionen hält das Repo klein, der Codeberg-Spiegel mindert die GitHub-Abhängigkeit.
+- Nachtrag 2026-11-14: Die native deb-Signatur entfällt (`dpkg-sig` ist auf den Runnern, Debian 12 und Ubuntu 24.04 nicht mehr verfügbar). Der Schutz läuft über das signierte apt-Repo (diese ADR); `apt install ./x.deb` prüft keine Signatur.
 
 ## Alternativen (verworfen)
 - **Release-Assets als Repo:** `apt` braucht die feste Struktur `dists/…` und `pool/…` unter einer Basis-URL; Assets haben flache Namen und Weiterleitungen.
