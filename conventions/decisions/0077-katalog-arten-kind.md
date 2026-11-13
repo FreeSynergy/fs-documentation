@@ -1,6 +1,6 @@
 # 0077 – Katalog-Arten (`kind`) und Store-Gruppen; Server nur mit rpm/deb
 
-Status: **Entwurf** (Strategie; Nutzer-JA 2026-11-14 zu den Punkten 1 bis 4, Wortlaut noch nicht gegengelesen) · baut auf ADR 0061 (Facetten), 0062 (ein Katalog-Repo), 0064 (Versionen), 0068 (gespiegelte Pakete), 0074 (Schichten, Gruppen im Store), 0075 (Store zeigt Server) · Grundlage: `.scratch/entscheidung-kanidm-katalog.md`
+Status: **akzeptiert** (Strategie, 2026-11-14; Nutzerregel zu Punkt 3: alle Server kommen in den Katalog und sind überall installierbar) · baut auf ADR 0061 (Facetten), 0062 (ein Katalog-Repo), 0064 (Versionen), 0068 (gespiegelte Pakete), 0074 (Schichten, Gruppen im Store), 0075 (Store zeigt Server)
 
 ## Kontext
 Kein ADR legt die `kind`-Werte des Katalogs fest. Ist-Zustand `fs-catalog` main: nur `kind = "program"`, AppStream-Typ fest `desktop-application`. Schema 2 (Branch `unreviewed/catalog-schema2`) kennt `server`, `icon-theme`, `component` (Entwurf). Der Store-Leser verwirft unbekannte Werte (`Skipped`); `PackageKind` in `store.capnp` hat 4 Werte. ADR 0074 verlangt je Schicht eine Store-Gruppe, „ebenso Programme und Server“, nennt aber keinen Wert für Programm und Server. Auslöser: `fs-kanidm` soll als Server in den Katalog.
@@ -51,3 +51,4 @@ Reihenfolge der Umsetzung (aus dem Bericht):
 - Zuordnung der sechs Stil-Arten zu `addon` ist keine Vorgabe der Spezifikation.
 - Container-Registry und Signatur der Container (z. B. Sigstore/OpenPGP) noch nicht entschieden.
 - Installationskonzept für Systemdienste (Folge 6).
+- Module/Handler für eingebettete Inhalte (Embed: jedes eingebettete Ding nennt Medientyp und nötiges Modul, Files holt den Handler): eigene Art `module` oder `addon` mit `<extends/>`. Die Entscheidung folgt, sobald Embed gebaut wird.
