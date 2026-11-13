@@ -22,7 +22,7 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
 3. **Keine Wartezeit auf die fs-workflows-Engine (F1).** Eine minimale Ausführung entsteht jetzt als **Keim der fs-workflows-Engine, in `fs-workflows`** (Crate): Workflow-YAML lesen, Schritte nacheinander, Gates, Wiederaufnahme, Protokoll. Brücke für `node1` bis dahin: ein **protokollierendes Wrapper-Skript** (jeder Befehl, Ausgabe, Exit-Code, Dauer); sein Protokoll wird zur Workflow-YAML.
 4. **Protokoll (F5):** je Befehl Befehl, Ausgabe (Standard, Fehler), Exit-Code, Beginn, Dauer, Schritt, Lauf-ID. Das **volle Protokoll hängt nur an** und liegt in `fs-server` (0020); je Schritt geht eine **Zusammenfassung als AS2-Aktivität** an `fs-history`. Geheimnisse werden vor dem Schreiben geschwärzt und stehen nie im Befehl (Übergabe über Umgebung oder Standardeingabe).
 5. **Variablen je Server** in einem Satz (Schema Teil der Typbeschreibung): Host, Platten, Partitionsgrößen, RAID, Dateisystem, Hostname, Netz, Dienste. Der Ablauf bleibt gleich, nur der Satz wechselt; so wird der nächste Server „genauso“ gebaut.
-6. **Rückwärts (F7, Phase 2):** Der Schritt `bestand` liest einen vorhandenen Server (`lsblk`, Pakete, Units, Netz) und erzeugt daraus einen Variablen-Satz.
+6. **`bestand` (F7):** Der Schritt `bestand` ist ein nur lesendes Prüfskript (OS, Boot, Platten, RAID, Dateisystem, Speicher, Netz, Ports, systemd, Domain ja/nein) und der **erste Schritt jedes Server-Workflows**. Phase 2: Aus seiner Ausgabe entsteht ein Variablen-Satz.
 7. **Anbieter austauschbar** (Ports and Adapters, 0043/0066); Anbieter-Adapter sind **optional** (siehe Nachtrag). Der Adapter **Hetzner** kann Rescue-System und `installimage` mit einer aus den Variablen erzeugten Konfiguration bündeln; ein **ZFS-Spiegel** ist ein eigener Schritt danach (F2). Standard ist „ein System mit SSH“: Absicherung, Paketquelle (0078), Dienste. **NixOS (nixos-anywhere) später als Anbieter-Adapter (F8).**
 8. **Katalogart `workflow` (F3):** anbietbare Abläufe kommen als neue Art `workflow` in den Katalog (Nachtrag in ADR 0077; AppStream `addon` mit `<extends>` `fs-workflows`, **unsere Zuordnung**). Das Angebot läuft über den Katalog, `fs-marketplace` später.
 9. **SSH (F4):** System-`ssh` hinter einem Adapter (Trait, wie ADR 0071); eine Rust-Bibliothek kann später hinter denselben Trait.
@@ -31,7 +31,7 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
    - **Gate `human`** vor jedem Schritt mit Datenverlust (Neuinstallation, Platten löschen/partitionieren, RAID neu).
    - **Trockenlauf:** Plan (alle Befehle, aufgelöste Variablen) vor der Ausführung; Ausführung nur nach Bestätigung.
    - **Idempotenz:** jeder Schritt prüft den Ist-Zustand; **Wiederaufnahme** ab dem letzten gelungenen Schritt.
-   - **Agenten (F6)** geben **nie** `human`-Gates frei (0056). Läufe, deren Schritte alle `gate=none` sind (z. B. Sicherheitsupdates), dürfen Agenten und Zeitpläne starten; Protokoll wie immer.
+   - **Agenten (F6)** geben **nie** `human`-Gates frei (0056) und führen nichts auf einem echten Server aus (Nachtrag „Mensch führt aus“). **[Offen für die Strategie]** Ob Agenten oder Zeitpläne Läufe mit nur `gate=none`-Schritten (z. B. Sicherheitsupdates) starten dürfen: nur auf Systemen, auf denen der Mensch das ausdrücklich eingerichtet hat; der frühere Satz widerspricht sonst der neuen Regel.
 11. **Tests ohne echten Server:** SSH-Fake (Aufzeichnung/Wiedergabe), Container und VM (QEMU) für Platten-, RAID- und ZFS-Schritte.
 
 ## Nachtrag 2026-11-14 (Nutzer): Ausgangspunkt immer SSH-Zugang
@@ -40,6 +40,12 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
 3. **Standardweg:** unsere Schicht („Biotop“: Paketquelle, Dienste, Daten unter `/srv/freesynergy`) auf das vorhandene System, unabhängig von der Plattenaufteilung.
 4. **Plattenumbau** ist ein eigener, optionaler Workflow mit Risiko-Hinweis und Gate `human` (z. B. Root per abgebautem RAID1-Spiegel verkleinern, ZFS-Spiegel auf den Rest).
 5. Der Workflow `server-einrichtung` richtet sich danach aus.
+
+## Nachtrag 2026-11-14 (Nutzer): Mensch führt aus, keine KI auf dem Ziel
+1. **Kein Agent** bekommt SSH oder Root auf einen echten Server, auch nicht `node1`. Der **Mensch** führt die Skripte aus. Agenten schreiben und testen nur lokal (VM, Container) und lesen Protokolle, die der Nutzer liefert.
+2. Jeder Workflow läuft **ohne KI**: deterministische Skripte, Trockenlauf, Protokoll.
+3. Das Werkzeug (`fs-server-run`) ist darauf ausgelegt, dass ein Mensch es **lokal auf dem Ziel** startet; Fernzugriff aus unserer Maschine ist nicht nötig. Der SSH-Modus bleibt für den Menschen optional.
+4. Der Schritt `bestand` (Entscheidung 6) ist der erste Schritt; der Mensch gibt die Ausgabedatei zurück.
 
 ## Alternativen
 | Option | Lizenz (Quelle: LICENSE-Datei im Repo, gelesen 2026-11-14) | Bewertung |
