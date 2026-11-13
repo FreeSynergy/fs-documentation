@@ -9,9 +9,12 @@ Für eine neue Strategie-Sitzung (Opus). **Zuerst lesen:** diese Datei, dann das
 - **Entwurf eines zustandslosen API-Koordinators:** `.scratch/api-runner/coordinator/`. Er wird erst gestartet, wenn das Arbeitsboard live ist, ein Trockenlauf gelaufen ist und Opus ihn geprüft hat.
 
 ## Budget-Plan (Nutzer, 2026-11-13)
-- **API-Guthaben:** ≈ 160 $. Es muss **bis 6.12.** verbraucht sein. Bis Sonntag, 15.11., 18 Uhr nutzen wir die API kräftig (Abo bei 82 %).
+- **API-Guthaben:** 150,79 $ (Console, 13.11. mittags). Es muss **bis 6.12.** verbraucht sein. Bis Sonntag, 15.11., 18 Uhr nutzen wir die API kräftig (Abo bei 82 %).
 - **Woche ab So 15.11., 18 Uhr: KEINE API, nur Abo, Vollgas.** Das Kontingent soll bis Mi/Do aufgebraucht sein. Dann setzt der Nutzer das Wochenkontingent zurück (einmal im Monat möglich), und wir arbeiten bis Sonntag weiter, wieder ohne API.
-- **Woche danach:** Fable für ein gründliches Audit des ganzen Projekts (Plan siehe unten), Kontingent bis Mitte der Woche.
+- **Woche danach (Fable-Woche):** Nur der Fable-Verbrauch lässt sich zurücksetzen. Deshalb gilt:
+  - Fable verbraucht bis Mitte der Woche **≈ 50 %** des Wochenkontingents (Audit des ganzen Projekts, schwierige Einzelstücke). Dann setzt der Nutzer den Fable-Anteil zurück und hat wieder 50 % für den Rest der Woche.
+  - Sonnet/Opus zusammen **höchstens ≈ 50 %** der ganzen Woche.
+  - In der Woche danach gibt es noch einmal ein Wochenkontingent.
 - **Rest-API:** in den Tagen bis 6.12.
 
 ## Stand der Programme (GitHub, Katalog)
