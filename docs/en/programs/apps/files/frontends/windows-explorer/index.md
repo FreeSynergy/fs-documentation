@@ -60,10 +60,10 @@ Start page of pinned and recent folders. A single search across local and remote
 | [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
 | [themes/index.md](latest/themes/index.md) | Themes: colours, typography, spacing — what can be rebuilt |
 | [states.md](latest/states.md) | UI states and transitions |
-| [acceptance.md](latest/acceptance.md) |  |
-| [dialogs.md](latest/dialogs.md) |  |
-| [gaps.md](latest/gaps.md) |  |
-| [workflows.md](latest/workflows.md) |  |
+| [dialogs.md](latest/dialogs.md) | Every dialog: purpose, fields, buttons, default, cancel |
+| [workflows.md](latest/workflows.md) | Step-by-step workflows: goal, prerequisites, steps, failures, undo |
+| [acceptance.md](latest/acceptance.md) | Acceptance checklist: each workflow as a yes/no click test |
+| [gaps.md](latest/gaps.md) | What our program cannot do for these workflows, and what it needs |
 <!-- /gen:versions -->
 
 ## Sources (read 2026-11-06)
