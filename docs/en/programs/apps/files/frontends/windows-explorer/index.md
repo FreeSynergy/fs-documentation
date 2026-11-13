@@ -44,7 +44,26 @@ Start page of pinned and recent folders. A single search across local and remote
 ## Documented versions
 
 <!-- gen:versions (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-No version documented in English yet.
+| Version | Required files present |
+|---------|------------------------|
+| [latest](latest/description.md) | 7/7 |
+
+### latest
+
+| File | Contents |
+|------|----------|
+| [description.md](latest/description.md) | Detailed description, differentiation, who it suits |
+| [features.md](latest/features.md) | What the program can do — and what not |
+| [layout.md](latest/layout.md) | Window structure, regions, panels |
+| [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
+| [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
+| [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+| [themes/index.md](latest/themes/index.md) | Themes: colours, typography, spacing — what can be rebuilt |
+| [states.md](latest/states.md) | UI states and transitions |
+| [acceptance.md](latest/acceptance.md) |  |
+| [dialogs.md](latest/dialogs.md) |  |
+| [gaps.md](latest/gaps.md) |  |
+| [workflows.md](latest/workflows.md) |  |
 <!-- /gen:versions -->
 
 ## Sources (read 2026-11-06)
