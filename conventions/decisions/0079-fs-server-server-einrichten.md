@@ -23,7 +23,7 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
 4. **Protokoll (F5):** je Befehl Befehl, Ausgabe (Standard, Fehler), Exit-Code, Beginn, Dauer, Schritt, Lauf-ID. Das **volle Protokoll hängt nur an** und liegt in `fs-server` (0020); je Schritt geht eine **Zusammenfassung als AS2-Aktivität** an `fs-history`. Geheimnisse werden vor dem Schreiben geschwärzt und stehen nie im Befehl (Übergabe über Umgebung oder Standardeingabe).
 5. **Variablen je Server** in einem Satz (Schema Teil der Typbeschreibung): Host, Platten, Partitionsgrößen, RAID, Dateisystem, Hostname, Netz, Dienste. Der Ablauf bleibt gleich, nur der Satz wechselt; so wird der nächste Server „genauso“ gebaut.
 6. **Rückwärts (F7, Phase 2):** Der Schritt `bestand` liest einen vorhandenen Server (`lsblk`, Pakete, Units, Netz) und erzeugt daraus einen Variablen-Satz.
-7. **Anbieter austauschbar** (Ports and Adapters, 0043/0066), **Hetzner zuerst:** Rescue-System aktivieren und per SSH betreten, `installimage` mit einer aus den Variablen erzeugten Konfiguration; **ZFS-Spiegel als eigener Schritt danach (F2)**, dann Absicherung, Paketquelle (0078), Dienste. Ohne Anbieter-Adapter genügt „ein Rechner mit SSH“. **NixOS (nixos-anywhere) später als Anbieter-Adapter (F8).**
+7. **Anbieter austauschbar** (Ports and Adapters, 0043/0066); Anbieter-Adapter sind **optional** (siehe Nachtrag). Der Adapter **Hetzner** kann Rescue-System und `installimage` mit einer aus den Variablen erzeugten Konfiguration bündeln; ein **ZFS-Spiegel** ist ein eigener Schritt danach (F2). Standard ist „ein System mit SSH“: Absicherung, Paketquelle (0078), Dienste. **NixOS (nixos-anywhere) später als Anbieter-Adapter (F8).**
 8. **Katalogart `workflow` (F3):** anbietbare Abläufe kommen als neue Art `workflow` in den Katalog (Nachtrag in ADR 0077; AppStream `addon` mit `<extends>` `fs-workflows`, **unsere Zuordnung**). Das Angebot läuft über den Katalog, `fs-marketplace` später.
 9. **SSH (F4):** System-`ssh` hinter einem Adapter (Trait, wie ADR 0071); eine Rust-Bibliothek kann später hinter denselben Trait.
 10. **Sicherheitsregeln:**
@@ -33,6 +33,13 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
    - **Idempotenz:** jeder Schritt prüft den Ist-Zustand; **Wiederaufnahme** ab dem letzten gelungenen Schritt.
    - **Agenten (F6)** geben **nie** `human`-Gates frei (0056). Läufe, deren Schritte alle `gate=none` sind (z. B. Sicherheitsupdates), dürfen Agenten und Zeitpläne starten; Protokoll wie immer.
 11. **Tests ohne echten Server:** SSH-Fake (Aufzeichnung/Wiedergabe), Container und VM (QEMU) für Platten-, RAID- und ZFS-Schritte.
+
+## Nachtrag 2026-11-14 (Nutzer): Ausgangspunkt immer SSH-Zugang
+1. Ausgangspunkt ist **immer ein vorhandenes System mit SSH-Zugang** (Root-Server, VServer). Rescue, Robot und vKVM sind **keine Voraussetzung**; ein Neustart geschieht nur per `reboot` aus der Sitzung.
+2. Anbieter-Adapter mit Rescue/`installimage` sind **optional**, nicht Standard; die Phase „Rescue → installimage“ ist ein optionaler Adapter-Workflow.
+3. **Standardweg:** unsere Schicht („Biotop“: Paketquelle, Dienste, Daten unter `/srv/freesynergy`) auf das vorhandene System, unabhängig von der Plattenaufteilung.
+4. **Plattenumbau** ist ein eigener, optionaler Workflow mit Risiko-Hinweis und Gate `human` (z. B. Root per abgebautem RAID1-Spiegel verkleinern, ZFS-Spiegel auf den Rest).
+5. Der Workflow `server-einrichtung` richtet sich danach aus.
 
 ## Alternativen
 | Option | Lizenz (Quelle: LICENSE-Datei im Repo, gelesen 2026-11-14) | Bewertung |
