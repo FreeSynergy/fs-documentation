@@ -1,6 +1,6 @@
 # 0078 – Paketquellen apt/dnf: ein Repo `fs-packages`, getrennt vom Katalog
 
-Status: **Entwurf** (Schreib-Agent, 2026-11-14; Entscheidungen der Strategie, „akzeptiert“ setzt die Strategie) · ergänzt ADR 0062 (Katalog = TUF/AppStream) · baut auf ADR 0051 (offene Signatur), 0068 (gespiegelte Pakete), 0077 (Server als rpm/deb, überall installierbar)
+Status: **akzeptiert** (Strategie, 2026-11-14) · ergänzt ADR 0062 (Katalog = TUF/AppStream) · baut auf ADR 0051 (offene Signatur), 0068 (gespiegelte Pakete), 0077 (Server als rpm/deb, überall installierbar)
 
 ## Kontext
 ADR 0062 legt den Katalog fest (AppStream + TUF, Pakete als Git-Tags). Kein ADR beschreibt eine Paketquelle, die `apt` oder `dnf` direkt lesen. `dpkg-sig` (heutiger Weg für `.deb`) prüft `apt` nicht; Schutz gibt es nur über das Repo (`Release`/`InRelease`). ADR 0077 verlangt, dass jeder Server per rpm/deb überall installierbar ist. Paketquellen sind **Ausgabeformate** aus den Releases, nicht der Katalog.
