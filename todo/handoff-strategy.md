@@ -45,6 +45,11 @@ Für eine neue Strategie-Sitzung (Opus). **Zuerst lesen:** diese Datei, dann das
   - Lifts people → calendar → maps → groups.
 
 ## Regeln, die sich gerade gebildet haben (Details im Memory)
+- **Arbeiten nach Workflows (Nutzer, 13.11.):** Jeder wiederkehrende Ablauf läuft nach seiner Datei in `fs-release/workflows/`:
+  - vorhanden: lift, release-flow, catalog-bump, cleanup-targets, agent-run;
+  - in Arbeit: frontend-round, bugfix, review, dossier, icon-round.
+
+  Aufträge der Strategie sind kurz: „Workflow X für Y, Parameter …“. Berichte nennen nur Workflow, Lauf, Ergebnis/Blocker und Bilder. Sobald das Arbeitsboard (fs-tasks 0.0.8) live ist, legt jeder Lauf seine Schritte als Aufgaben an. Die Graph-Ansicht (fs-workflows mit `project-blinc/blinc_node_editor`, Apache-2.0; Prüfung der Blinc-Version läuft, `.scratch/workflows/NODE-EDITOR.md`) folgt in der Vollgas-Woche gleich nach dem Arbeitsboard.
 - Es heißt **„Frontend“**, nie „Gesicht“. Ansichtsarten sind keine Frontends.
 - **Kein Frontend ohne Dossier:** Zustände, Menüs, Dialoge, Kürzel, **Arbeitsabläufe**. Abgenommen wird durch Durchklicken der Abläufe, nicht per Bild.
 - Vorbilder sind **bezahlte** Produkte. Theme-Namen auf Englisch, mit fairer Anlehnung in der Beschreibung. Admin-Frontends sind an SAP Fiori angelehnt.
