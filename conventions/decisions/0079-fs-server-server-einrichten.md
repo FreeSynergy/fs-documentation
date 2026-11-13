@@ -31,7 +31,7 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
    - **Gate `human`** vor jedem Schritt mit Datenverlust (Neuinstallation, Platten löschen/partitionieren, RAID neu).
    - **Trockenlauf:** Plan (alle Befehle, aufgelöste Variablen) vor der Ausführung; Ausführung nur nach Bestätigung.
    - **Idempotenz:** jeder Schritt prüft den Ist-Zustand; **Wiederaufnahme** ab dem letzten gelungenen Schritt.
-   - **Agenten (F6)** geben **nie** `human`-Gates frei (0056) und führen nichts auf einem echten Server aus (Nachtrag „Mensch führt aus“). **[Offen für die Strategie]** Ob Agenten oder Zeitpläne Läufe mit nur `gate=none`-Schritten (z. B. Sicherheitsupdates) starten dürfen: nur auf Systemen, auf denen der Mensch das ausdrücklich eingerichtet hat; der frühere Satz widerspricht sonst der neuen Regel.
+   - **Agenten (F6)** geben **nie** `human`-Gates frei (0056) und starten **nie** Läufe auf echten Servern (Nachtrag „Mensch führt aus“). Läufe, deren Schritte alle `gate=none` sind (z. B. Sicherheitsupdates), laufen nur über einen **Zeitplan auf dem Server** (systemd-Timer), den der Mensch einmal einrichtet; ohne KI, Protokoll wie immer.
 11. **Tests ohne echten Server:** SSH-Fake (Aufzeichnung/Wiedergabe), Container und VM (QEMU) für Platten-, RAID- und ZFS-Schritte.
 
 ## Nachtrag 2026-11-14 (Nutzer): Ausgangspunkt immer SSH-Zugang
