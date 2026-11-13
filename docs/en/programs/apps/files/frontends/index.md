@@ -17,7 +17,7 @@ Frontends of well-known programs in this category, analysed for their **function
 | [rclone (and the S3-browser type)](rclone/index.md) | — | A command-line program that copies, syncs, mounts and serves files across many storage services. |
 | [Seafile](seafile/index.md) | — | Open-source file sync, share and document collaboration. |
 | [Syncthing](syncthing/index.md) | [latest](syncthing/latest/description.md) | Syncthing is a free program that keeps chosen folders identical between devices directly, with no central server ✅ (concept; the intro page does not state it, see Open). |
-| [Total Commander](total-commander/index.md) | [latest](total-commander/latest/description.md) | A paid (shareware) two-pane file manager for Windows by Christian Ghisler ✅ (home page links to ordering and shareware sites; price not stated there; Wikipedia: shareware on Windows, freeware on Android). |
+| [Total Commander](total-commander/index.md) | [latest](total-commander/latest/description.md) | A paid (shareware) two-pane file manager for Windows by Christian Ghisler ✅ (home page links to ordering and shareware sites; price not stated there; Wikipedia: shareware on Windows, freeware on An… |
 | [Windows Explorer (File Explorer)](windows-explorer/index.md) | [latest](windows-explorer/latest/description.md) | The file manager of Windows. |
 
 ## File set per program (ADR 0012)
