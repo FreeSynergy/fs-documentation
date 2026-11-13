@@ -47,6 +47,10 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
 3. Das Werkzeug (`fs-server-run`) ist darauf ausgelegt, dass ein Mensch es **lokal auf dem Ziel** startet; Fernzugriff aus unserer Maschine ist nicht nötig. Der SSH-Modus bleibt für den Menschen optional.
 4. Der Schritt `bestand` (Entscheidung 6) ist der erste Schritt; der Mensch gibt die Ausgabedatei zurück.
 
+## Nachtrag 2026-11-14 (Strategie): Dateisystem für den Datenteil, ändert F2
+F2 („ZFS-Spiegel als eigener Schritt“) wird ersetzt: **btrfs ist der Standard** für den Datenteil bei Neuaufbau oder Umbau (RAID1 bei zwei Platten, einzeln bei einer). md-RAID1 bleibt für `/boot/efi` und `/boot`. **ZFS nur als optionaler Parameter** (`FS_DATA=zfs`), nie Pflicht. **Vorhandene Systeme** (VServer, EL, Heim-PC) behalten ihr Dateisystem; unsere Schicht läuft auf jedem (Mindestbasis ext4/xfs), Snapshots nur, wo das Dateisystem sie kann; Dienste mit Datenbank erzeugen vor dem Snapshot einen eigenen Dump.
+Gründe: btrfs ist im Kernel, ohne `contrib` oder DKMS; ZFS käme als Fremdmodul dazu. Risiken: RAID5/6 in btrfs gilt als unstabil (nicht verwenden); EL liefert btrfs nicht mit, eine Unterstützung ist **[nicht belegt]**; Snapshots sind nur absturzkonsistent, daher der Dump.
+
 ## Alternativen
 | Option | Lizenz (Quelle: LICENSE-Datei im Repo, gelesen 2026-11-14) | Bewertung |
 |---|---|---|
