@@ -51,6 +51,15 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
 F2 („ZFS-Spiegel als eigener Schritt“) wird ersetzt: **btrfs ist der Standard** für den Datenteil bei Neuaufbau oder Umbau (RAID1 bei zwei Platten, einzeln bei einer). md-RAID1 bleibt für `/boot/efi` und `/boot`. **ZFS nur als optionaler Parameter** (`FS_DATA=zfs`), nie Pflicht. **Vorhandene Systeme** (VServer, EL, Heim-PC) behalten ihr Dateisystem; unsere Schicht läuft auf jedem (Mindestbasis ext4/xfs), Snapshots nur, wo das Dateisystem sie kann; Dienste mit Datenbank erzeugen vor dem Snapshot einen eigenen Dump.
 Gründe: btrfs ist im Kernel, ohne `contrib` oder DKMS; ZFS käme als Fremdmodul dazu. Risiken: RAID5/6 in btrfs gilt als unstabil (nicht verwenden); EL liefert btrfs nicht mit, eine Unterstützung ist **[nicht belegt]**; Snapshots sind nur absturzkonsistent, daher der Dump.
 
+## Nachtrag 2026-11-14 (Strategie): Server-Arten und Wege
+- **Wege:** `server-einrichtung` ist nur **Weg A** (vorhandenes System mit SSH, unsere Schicht darauf). **B** (kexec), **C** (Anbieter-Rescue) und **D** (Plattenumbau) sind eigene Workflows. `node1` zuerst mit A bei unveränderter Platte; D erst, wenn der VM-Lauf grün ist **und** der Nutzer entscheidet.
+- **kexec (B):** in der VM niedrige Priorität (nach A und D). Bei aktivem Secure Boot nur nach Gate `human` „Secure Boot im Firmware-Menü abschalten“, sonst ist B nicht verfügbar.
+- **Netz:** ohne Domain im ersten Wurf nur lokal/LAN; mit Domain zusätzlich ACME DNS-01, ohne offene Ports. Kein Tailscale-artiger Dienst (fremde Koordination, CT-Log); Fern-Verbindung später über unseren Weg (ADR 0059, iroh).
+- **Paketquelle:** zuerst die `github.io`-Adresse, `packages.freesynergy.net` später per DNS des Nutzers.
+- **Anbieter-Adapter:** nur Hetzner, optional.
+- **Container-VServer** (OpenVZ/LXC): Weg A eingeschränkt, B und D nicht unterstützt; `bestand` meldet die Grenzen.
+- **Verschlüsselung:** im ersten Wurf **keine** Plattenverschlüsselung als Standard; Geheimnisse liegen im Tresor (0067), Backups sind verschlüsselt (restic, 0071). Optional später ein Workflow-Schritt: LUKS für den Datenteil, Entsperren per SSH (`dropbear-initramfs`, Debian-Standardpaket), nie mit Schlüsseldatei auf derselben Platte.
+
 ## Alternativen
 | Option | Lizenz (Quelle: LICENSE-Datei im Repo, gelesen 2026-11-14) | Bewertung |
 |---|---|---|
@@ -67,6 +76,7 @@ Gründe: btrfs ist im Kernel, ohne `contrib` oder DKMS; ZFS käme als Fremdmodul
 - ADR 0077: Nachtrag Katalogart `workflow`. ADR 0078: Schritt „Paketquelle“ nutzt die apt/dnf-Quellen.
 
 ## Offen
+- LUKS-Schritt (optional, später), siehe Nachtrag „Server-Arten und Wege“.
 - `installimage` und ZFS: ob ZFS direkt unterstützt wird, ist **[nicht belegt]**; der eigene Schritt danach gilt unabhängig davon.
 - Aufbewahrungsdauer des vollen Protokolls und Umgang mit Ausgaben, die Geheimnisse enthalten (Schwärzung reicht ggf. nicht).
 - Umfang von `bestand` (Phase 2): welche Angaben sich zuverlässig auslesen lassen, ist **[nicht belegt]**.
