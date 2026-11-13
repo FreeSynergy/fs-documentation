@@ -79,6 +79,11 @@ Notion does not number its app versions. Notion's product is updated continuousl
 | [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
 | [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
 | [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+| [states.md](latest/states.md) | UI states and transitions |
+| [dialogs.md](latest/dialogs.md) | Every dialog: purpose, fields, buttons, default, cancel |
+| [workflows.md](latest/workflows.md) | Step-by-step workflows: goal, prerequisites, steps, failures, undo |
+| [acceptance.md](latest/acceptance.md) | Acceptance checklist: each workflow as a yes/no click test |
+| [gaps.md](latest/gaps.md) | What our program cannot do for these workflows, and what it needs |
 
 ⚠️ Missing required files: `themes/index.md`
 <!-- /gen:versions -->
@@ -112,5 +117,15 @@ Fetched 2026-11-07. Each fact cites the page it came from. Facts from search sni
 | S21 | https://developers.notion.com/reference/trash-page |
 | S22 | https://www.notion.com/product |
 | S23 | https://www.notion.so/help/appearance-settings (snippet only, page not fetched) |
+| S24 | Search-result summaries (2026-11-13) of https://www.notion.com/help/intro-to-workspaces, https://www.notion.com/help/transfer-content-to-another-account and the version-history part of S14; cited as "search summary"; pages not fetched, lower certainty |
+| S25 | https://www.notion.com/help/import-data-into-notion (fetched 2026-11-13) |
+| S26 | https://www.notion.com/help/search (fetched 2026-11-13) |
+| S27 | https://www.notion.com/help/back-up-your-data (fetched 2026-11-13) |
+| S28 | https://www.notion.com/help/create-links-and-backlinks (fetched 2026-11-13) |
+| S29 | https://www.notion.com/help/sharing-and-permissions (fetched 2026-11-13) |
+| S30 | https://www.notion.com/help/writing-and-editing-basics (fetched 2026-11-13) |
+| S31 | https://www.notion.com/help/use-pages-offline (fetched 2026-11-13) |
+
+S14 and S12 were re-fetched on 2026-11-13. `https://www.notion.com/help/page-history` returned 404. The workflow pages in `latest/` cite S-numbers; where "[search summary 2026-11-13]" appears, S24 applies.
 
 Pages that returned 404 and are not used as sources: `notion.com/help/intro-to-notion`, `notion.com/help/trash`, `notion.com/help/customize-your-appearance-in-notion`, `developers.notion.com/reference/search-limitations`, `developers.notion.com/reference/get-pages`. The sidebar article (S12) was found under `navigate-with-the-sidebar`.

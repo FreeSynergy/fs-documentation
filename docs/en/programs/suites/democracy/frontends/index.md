@@ -32,7 +32,11 @@ programs/suites/democracy/frontends/<program>/
     ├── events.md         if needed · Events to the outside (webhooks, push, streams)
     ├── limits.md         if needed · Known limitations
     ├── i18n.md           if needed · Localisation, writing direction
-    └── dependencies.md   if needed · Which of our components a frontend in this style needs
+    ├── dependencies.md   if needed · Which of our components a frontend in this style needs
+    ├── dialogs.md        if needed · Every dialog: purpose, fields, buttons, default, cancel
+    ├── workflows.md      if needed · Step-by-step workflows: goal, prerequisites, steps, failures, undo
+    ├── acceptance.md     if needed · Acceptance checklist: each workflow as a yes/no click test
+    └── gaps.md           if needed · What our program cannot do for these workflows, and what it needs
 ```
 
 Protocols (Matrix, IMAP, CalDAV, …) are not frontends; they are described under [data](../../../../data/standards.md).

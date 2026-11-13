@@ -49,6 +49,10 @@ FILESET = [
     ("limits.md", "Known limitations", False),
     ("i18n.md", "Localisation, writing direction", False),
     ("dependencies.md", "Which of our components a frontend in this style needs", False),
+    ("dialogs.md", "Every dialog: purpose, fields, buttons, default, cancel", False),
+    ("workflows.md", "Step-by-step workflows: goal, prerequisites, steps, failures, undo", False),
+    ("acceptance.md", "Acceptance checklist: each workflow as a yes/no click test", False),
+    ("gaps.md", "What our program cannot do for these workflows, and what it needs", False),
 ]
 OLD_NAMES = {"menu.md": "menus.md", "structure.md": "layout.md"}
 

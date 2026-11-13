@@ -94,6 +94,30 @@ Sources: [S12] (official table, read 2026-11-07) and [S13]. The table is a selec
 
 `**text**` bold · `*text*` italic · `~~text~~` strikethrough · `` `code` `` · `#` to `######` plus Space · `1.` plus Space · `*` plus Space · `>` plus Space · three backticks plus Space · `---` plus Space · `[]` plus Space · `<>` plus Space · `:` emoji · `@` mention · `!` image · `{` macro · `[text](url)` link
 
+## Additions (re-read 2026-11-13, [S12])
+
+The official page also lists these. Together with the tables above this is the complete list on that page, except that the heading rows 2 to 5 follow the same pattern as 1 and 6.
+
+| Action | Windows | Mac |
+|--------|---------|-----|
+| Shortcut help (global) | Ctrl+? | Ctrl+? |
+| Table: focus resize handle | Ctrl+Alt+Shift+R | Cmd+Shift+Opt+R |
+| Table: open cell options | Shift+F10 | Shift+F10 |
+| Table: select row | Ctrl+Alt+Shift+Left or Right | Cmd+Shift+Opt+Left or Right |
+| Table: select column | Ctrl+Alt+Shift+Up or Down | Cmd+Shift+Opt+Up or Down |
+| Table: insert column | Ctrl+Alt+= or Ctrl+Alt+- | Cmd+Opt+= or Cmd+Opt+- |
+| Table: insert row | Ctrl+Alt+] or Ctrl+Alt+[ | Cmd+Opt+] or Cmd+Opt+[ |
+
+Autocomplete triggers: `:` emoji, `@` mention, `!` image or media, `{` macro, `/` slash command menu, `[Title](url)` link. Markdown: `[] ` action item, `<> ` decision (see above).
+
+### Whiteboards (separate content type) [S12]
+
+Tools: S sticky, T text box, E ellipse, L line, H hand, V select; Ctrl/Cmd+K link; Ctrl/Cmd+C, X, V; Ctrl/Cmd+Alt/Opt+D duplicate; Del delete; Ctrl/Cmd+A select all; Ctrl/Cmd+Shift+L lock/unlock; arrows nudge, Shift+arrows big nudge; zoom Ctrl/Cmd+plus/minus, 0 = 100 %, Shift+1 fit, Shift+2 selection; Shift+F fullscreen (Mac: Cmd+F), Esc exits; Ctrl/Cmd+J Jira work item; Ctrl/Cmd+] front, [ back; Ctrl/Cmd+. show/hide interface; Shift+M comments.
+
+### Shortcuts for workflows without one
+
+No shortcut is documented for: move, rename, delete, archive, restore, version history, import, export, duplicate, tree navigation with arrow keys, closing a draft. Whether the content tree is operable by keyboard: **[nicht belegt]**. Shortcut remapping: **[nicht belegt]**. These are the workflows of [workflows.md](workflows.md) W4 to W9, W11, W12.
+
 ## Not verified
 
 - Ctrl+Shift+P command palette, Ctrl+, as settings, Ctrl+S save, Ctrl+P print, Ctrl+N, Ctrl+O, Ctrl+W, Ctrl+Shift+F global search, Ctrl+Shift+O/G/H, Ctrl+Shift+V video, Ctrl+Shift+B box: none of these appears in the official table read. The earlier draft listed them. Removed.

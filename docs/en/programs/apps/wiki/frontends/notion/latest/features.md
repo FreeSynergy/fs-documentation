@@ -1,5 +1,7 @@
 # Notion - Features
 
+> **Status 2026-11-13:** This page is an earlier draft; parts are unverified (for example Mermaid, HTML-free claims, "Markdown not supported in the editor" — the official help says Markdown shortcuts convert while typing [S11][S30]). The verified feature list is in the [2026-11-07 snapshot](../2026-11-07/features.md). The user workflows built from official pages are in [workflows.md](workflows.md); states, dialogs, tests and gaps are in [states.md](states.md), [dialogs.md](dialogs.md), [acceptance.md](acceptance.md), [gaps.md](gaps.md).
+
 ## Overview
 
 Notion uses a **block-based visual editor** built on modern web standards. The editor is extremely user-friendly and offers great flexibility in designing content.

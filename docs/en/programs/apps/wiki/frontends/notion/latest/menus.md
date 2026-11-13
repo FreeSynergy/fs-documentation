@@ -1,5 +1,61 @@
 # Notion - Menu Items
 
+> **Status 2026-11-13:** The part "Verified menus and context menus" below rests on official help pages (S-numbers as in [index.md](../index.md)). Everything after it ("Earlier draft") was written before sources were checked and is **partly unverified**: items such as Workspace, Pages, Users, Integrations, Resources, Preferences and the shortcuts in its table were not found in the official pages and were removed in the [2026-11-07 snapshot](../2026-11-07/menus.md). Do not build on the earlier draft.
+
+## Verified menus and context menus
+
+Right-click: the help pages mention right-click only for deleting sub-pages and blocks [S14]. A full right-click menu is **[nicht belegt]**.
+
+### Sidebar [S12]
+
+Search · Home (Recents, Favorites, Teamspaces; also Shared and Private sections) · Chats with Notion AI · Meetings · Inbox (top right) · Library · Templates · Trash · Settings · new-item menu and 📝 button · workspace switcher · **+** next to Private/teamspaces and on hover per page · collapse (<<), resize by dragging the edge, section headings hide/show a section; items in each tab can be shown, hidden, reordered and reset.
+
+### Context menu: page entry in the sidebar (••• on hover) [search summary 2026-11-13][S14]
+
+Delete · Duplicate · Copy link · Rename · Move to. Dragging onto another page nests; dragging onto Trash deletes.
+
+### Page menu (••• at the top right of the page)
+
+Export [S27] · Version history (needs Can edit) [S14] · Customize page: Font (Default, Serif, Mono), Small text, Full width, Table of contents, backlinks and comments toggles [S15][search summary] · Available offline (desktop and mobile) [S31] · More → Import [S25] · Delete [S14]. Top bar of the page: **Share** [S29].
+
+### Context menu: block (⋮⋮ handle, or right-click on desktop) [S30][S14][S28]
+
+Turn into (also into a page) · Duplicate · Move to · Delete · Comment · Copy link to block. Colour via `/color`.
+
+### Context menu: sub-page block / media block (••• on the block) [S14]
+
+Delete. Further items: **[nicht belegt]**.
+
+### Context menu: page in Trash [S14]
+
+Restore (curved arrow in the list) · Delete permanently (on the opened page).
+
+### Context menu: sidebar section, Favorites
+
+Show, hide, reorder items and reset a tab [S12]. Adding to Favorites via menu: **[nicht belegt]** wording (Favorites section exists).
+
+### Context menu: database row / property
+
+Delete a property, restore under Settings → Edit properties → Deleted properties [S14]. Other database menus: **[nicht belegt]** (databases are out of scope for the wiki workflows).
+
+### Context menu: selected text
+
+Formatting via shortcuts (bold, italic, underline, strikethrough, code, link, comment) [S11]. The floating toolbar's buttons: **[nicht belegt]**.
+
+### Context menu: mention / link
+
+Paste URL → "Paste as mention" [S28]. Hover preview [S28].
+
+### Context menu: Search result (desktop Command Search)
+
+cmd+L or cmd+shift+C copies the result's link [S26].
+
+### Settings paths [S25][S27][S31]
+
+Settings → Import · Settings → General → Export all workspace content · Settings → Offline.
+
+## Earlier draft (partly unverified)
+
 ## Overview
 
 Notion is an all-in-one platform for notes, documentation and collaboration. The menu provides access to all main features of the platform.

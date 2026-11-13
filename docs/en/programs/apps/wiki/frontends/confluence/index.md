@@ -48,9 +48,14 @@ Folder for this snapshot: `latest/`.
 | [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
 | [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
 | [themes/index.md](latest/themes/index.md) | Themes: colours, typography, spacing — what can be rebuilt |
+| [states.md](latest/states.md) | UI states and transitions |
 | [events.md](latest/events.md) | Events to the outside (webhooks, push, streams) |
 | [limits.md](latest/limits.md) | Known limitations |
 | [dependencies.md](latest/dependencies.md) | Which of our components a frontend in this style needs |
+| [dialogs.md](latest/dialogs.md) | Every dialog: purpose, fields, buttons, default, cancel |
+| [workflows.md](latest/workflows.md) | Step-by-step workflows: goal, prerequisites, steps, failures, undo |
+| [acceptance.md](latest/acceptance.md) | Acceptance checklist: each workflow as a yes/no click test |
+| [gaps.md](latest/gaps.md) | What our program cannot do for these workflows, and what it needs |
 <!-- /gen:versions -->
 
 ## Sources
@@ -79,5 +84,16 @@ Folder for this snapshot: `latest/`.
 | S20 | Data Center end of life | https://www.atlassian.com/licensing/data-center-end-of-life |
 | S21 | Atlassian Design System, spacing | https://atlassian.design/foundations/spacing |
 | S22 | Connect app scopes (legacy; page shows Connect scopes only) | https://developer.atlassian.com/cloud/confluence/scopes/ |
+| S23 | Create, update, and manage written content (fetched 2026-11-13) | https://support.atlassian.com/confluence-cloud/docs/create-edit-and-publish-a-page/ |
+| S24 | Move, copy, and hide content items (fetched 2026-11-13) | https://support.atlassian.com/confluence-cloud/docs/move-copy-and-hide-pages/ |
+| S25 | Delete, restore, or purge a content item (fetched 2026-11-13) | https://support.atlassian.com/confluence-cloud/docs/delete-restore-or-purge-a-page/ |
+| S26 | Import external documents (fetched 2026-11-13) | https://support.atlassian.com/confluence-cloud/docs/import-content-into-confluence-cloud/ |
+| S27 | Manage uploaded files (fetched 2026-11-13) | https://support.atlassian.com/confluence-cloud/docs/manage-uploaded-files/ |
+| S28 | Archive content items (fetched 2026-11-13) | https://support.atlassian.com/confluence-cloud/docs/archive-pages/ |
+| S29 | Upload a file (search-result summary only, 2026-11-13; page not fetched) | https://support.atlassian.com/confluence-cloud/docs/upload-a-file/ |
+| S30 | Insert and manage links (search-result summary only, 2026-11-13; page not fetched) | https://support.atlassian.com/confluence-cloud/docs/insert-and-manage-links-on-your-pages/ |
+| S31 | Format a page with a template (search-result summary only, 2026-11-13; page not fetched) | https://support.atlassian.com/confluence-cloud/docs/create-a-page-from-a-template/ |
+
+"search summary" in the workflow pages means a search-engine summary (2026-11-13) of the Version history and Search documentation; those pages were not fetched, so the points taken from them (compare, restore comment, archived content in search) are of lower certainty. Sources S23 and S25 to S28 were fetched; the version-history page URL itself was not identified.
 
 Pages that returned 404 or could not be read: webhooks landing page `https://developer.atlassian.com/cloud/confluence/webhooks/` (404 twice); OpenAPI request-body schemas (not reached in the JSON; see `api.md`).

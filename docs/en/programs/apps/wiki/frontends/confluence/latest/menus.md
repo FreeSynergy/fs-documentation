@@ -29,7 +29,7 @@ For you · Recent (filters: Today, Worked on, Owned by me) · Starred · Spaces 
 | Templates and import | [S15] |
 | Archive and delete | [S15] |
 
-Unverified from the earlier draft: Edit, Copy, Move, Delete (as separate items), Permissions, Print.
+Unverified from the earlier draft: Permissions, Print. Move, Duplicate (copy) and Delete are verified since 2026-11-13, see "Context menus by object type" below [S23][S24][S25].
 
 ## Space "•••" menu (next to the space name) [S14][S16]
 
@@ -56,6 +56,58 @@ Unverified.
 ## Dashboard, Saved, Created, Mentions
 
 Not present as named menu items in the Cloud navigation docs read. "Saved" maps to Starred; "Created" maps to Recent with the "Owned by me" filter [S14]. "Dashboard" and "Mentions" as menu names: unverified.
+
+## Context menus by object type (added 2026-11-13)
+
+Atlassian does not describe a right-click menu for the page tree. The menus are **More actions (•••)** menus. Sources: S-numbers as in [index.md](../index.md); the new sources are listed there. A right-click menu as such: **[nicht belegt]**.
+
+### Published page, view mode [S23][S25][S28]
+
+Star · Watch settings · Preview · Find and replace · View changes (only with unpublished edits) · Revert to previous version (only with unpublished edits) · Version history · Move · Duplicate (not while editing) · Convert to live doc · Templates and import · Export (Word, PDF) · Archive · Archive and Delete → Delete (by permission).
+
+### Draft page, editor [S23]
+
+Preview · Find and replace · Move · Templates and import · Convert to live doc · Delete unpublished page / Delete draft. More options → **Publish as** Page or Blog.
+
+### Content tree entry (page, folder) [S23][S24][S28]
+
+Hover: **+** (create child) and ••• . ••• on a draft offers **Delete**. Other entries of the tree menu (move, archive, delete): **[nicht belegt]** as exact list; dragging reorders.
+
+### Folder
+
+Created via **+**; moves like a page [S23]. Own menu entries: **[nicht belegt]**.
+
+### Space (••• next to the space name) [S25][S28][S24]
+
+Space settings → Content → Trash, Archived, Hidden, Reorder; Content manager (Premium/Enterprise); General → Features, Export space; Space access; Attachments.
+
+### Trash entry [S25]
+
+Restore · Purge. Header: Purge All.
+
+### Archived item [S28]
+
+Restore (needs Archive permission). Banner shows the note.
+
+### Version in history [search summary 2026-11-13][S25]
+
+Restore this version · Delete · tick box for Compare.
+
+### Attachment [S27]
+
+Download · Download all (zip) · Properties (rename, comment, MIME type, move, label) · Delete · upload new version (same name) or from preview.
+
+### Imported placeholder "Imported pages" [S26]
+
+A normal restricted page; children can be organised, moved and have permissions set.
+
+### Selected text in the editor [S15]
+
+Inline toolbar (if chosen) with formatting, link, comment. Exact buttons: **[nicht belegt]**.
+
+### Comment [S12]
+
+Comment panel, next/previous comment shortcuts exist; the comment's own menu: **[nicht belegt]**.
 
 ## Role-based menus
 

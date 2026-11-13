@@ -1,5 +1,53 @@
 # Notion - Keyboard Shortcuts
 
+> **Status 2026-11-13:** Use the verified list below. The tables after it ("Earlier draft") include shortcuts that the official page [S11] does not list, among them Ctrl/Cmd+Shift+P (command palette), Ctrl/Cmd+, (settings), F1, Ctrl/Cmd+Shift+F, Ctrl/Cmd+Shift+A; they are **unverified** and must not be built on. See also the [2026-11-07 snapshot](../2026-11-07/shortcuts.md) and [changelog](../changelog.md).
+
+## Verified shortcuts (S11 re-read as listed in the snapshot; S-numbers as in [index.md](../index.md))
+
+Notion writes `cmd/ctrl`: cmd on macOS, ctrl on Windows and Linux.
+
+| Workflow | Key | Function |
+|----------|-----|----------|
+| Search (W8) | cmd/ctrl+P, or cmd/ctrl+K when no block has the cursor | Open search / recent pages [S26][S11] |
+| Search in page | cmd/ctrl+F | Find in page |
+| Navigation | cmd/ctrl+[ and ] | Back / forward |
+| Navigation | cmd/ctrl+shift+U | Up one level in the hierarchy |
+| Navigation | cmd/ctrl+\ | Show or hide the sidebar |
+| Create (W1) | cmd/ctrl+N | New page (desktop) |
+| Create | cmd/ctrl+T | New tab (desktop) |
+| Create | cmd/ctrl+option/shift+9 | New page block |
+| Links (W12) | cmd/ctrl+L | Copy the page URL |
+| Links | cmd/ctrl+K | Add link to selected text |
+| Edit (W2) | Enter / shift+Enter | New block / line break in a block |
+| Edit | Tab / shift+Tab | Nest / un-nest |
+| Edit | Esc | Select the block, or clear the selection |
+| Edit | cmd/ctrl+A | Select the current block |
+| Edit | arrows, shift+arrows, shift+click | Select other blocks, extend, range |
+| Edit | cmd/ctrl+D | Duplicate selected blocks (W6) |
+| Edit | backspace / delete | Delete selected blocks (W7) |
+| Edit | cmd/ctrl+shift+arrow | Move the selected block (W5) |
+| Edit | option/alt+drag | Duplicate content |
+| Edit | cmd/ctrl+/ | Change selected blocks |
+| Edit | cmd/ctrl+Enter | Open a page, tick a to-do, toggle |
+| Edit | cmd/ctrl+option/alt+T | Expand or close all toggles |
+| Edit | cmd/ctrl+option/shift+0 to 8 | Text, headings 1-3, to-do, bullet, numbered, toggle, code |
+| Format | cmd/ctrl+B / I / U | Bold / italic / underline |
+| Format | cmd/ctrl+shift+S | Strikethrough |
+| Format | cmd/ctrl+E | Inline code |
+| Format | cmd/ctrl+shift+H | Last colour |
+| Comment | cmd/ctrl+shift+M | Create a comment |
+| View | cmd/ctrl+shift+L | Dark / light mode |
+| View | cmd/ctrl++ / - | Zoom |
+| View | space | Open or close a full-screen image |
+| Tables | cmd/ctrl+R / D | Fill right / down |
+| Database peek | ctrl+shift+K/J (Mac), ctrl+K/J (Win) | Previous / next database page |
+
+Markdown typing and slash commands (`/h1`, `/page`, `/duplicate`, `/moveto`, `/delete`, `/template`, `/image`, `/file`, `/link`, `/turn`, `/color`) are listed in the [snapshot](../2026-11-07/shortcuts.md).
+
+**No documented shortcut** for: rename, move via dialog, trash, restore, version history, import, export, share, offline toggle. Undo/redo on desktop: **[nicht belegt]** in the table read. Remapping shortcuts: **[nicht belegt]**.
+
+## Earlier draft (partly unverified)
+
 ## Overview
 
 Notion offers extensive keyboard shortcuts for working quickly with the block-based visual editor.
