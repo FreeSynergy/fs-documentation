@@ -63,3 +63,151 @@ Opened by right click; in the file panels also by Shift+F10; if the right button
 ## Directory hotlist menu
 
 Entries open folders, network folders, FTP, file-system-plugin folders, websites, internal functions, programs and documents ✅. Bottom: Add current dir (hidden if listed), Remove current dir (shown only if listed), Configure (editor to add, change, reorder, delete) ✅.
+
+## Menü-Inventar
+
+Machine-readable inventory (format of docs/menue-vergleich.md). Entry names come from the sections above; shortcuts from the official default key list (`KEYBOARD.TXT`) and help pages of Total Commander 11.58 (local copy, read 2026-11-14). Entries without a shortcut have none in these sources (`[nicht belegt]` as a default key; the user may assign one).
+
+Note: F1 opens the help; the sources do not tie F1 to the Index entry, so it is not listed there.
+
+- Files
+  - Change attributes
+  - Pack [Alt+F5]
+  - Unpack specific files [Alt+F6, Alt+F9]
+  - Test archives [Alt+Shift+F9]
+  - Compare by content
+  - Associate with…
+  - Internal associations
+  - Properties [Alt+Enter]
+  - Calculate occupied space [Ctrl+L]
+  - Multi-rename tool [Ctrl+M]
+  - Edit comment [Ctrl+Z]
+  - Print
+  - Split file
+  - Combine files
+  - Encode file
+  - Decode file
+  - Create checksum files
+  - Verify checksums
+  - Quit [Alt+F4]
+- Mark
+  - Select group
+  - Unselect group
+  - Select all [Ctrl+A, Ctrl+Num+]
+  - Unselect all [Ctrl+Num-]
+  - Invert selection [Num*]
+  - Select all with same extension [Alt+Num+]
+  - Save selection
+  - Restore selection [Num/]
+  - Save selection to file
+  - Restore selection from file
+  - Copy selected names to clipboard
+  - Copy names with path
+  - Copy with all details
+  - Copy with path and details
+  - Compare directories
+  - Mark newer, hide same
+- Commands
+  - CD tree [Alt+F10]
+  - Search [Alt+F7]
+  - Search in a separate process [Alt+Shift+F7]
+  - Volume label
+  - System information
+  - Synchronize dirs
+  - Directory hotlist [Ctrl+D]
+  - Go back [Alt+Left]
+  - Open command prompt
+  - Branch view [Ctrl+B]
+  - Open desktop folder
+  - Background transfer manager
+  - Source<->Target [Ctrl+U]
+  - Target=Source
+- Net
+  - Network connections
+  - Disconnect network drives
+  - Share directory
+  - Unshare directory
+  - Show admin shares
+  - FTP commands
+    - FTP connect [Ctrl+F]
+    - FTP new connection [Ctrl+N]
+    - FTP disconnect [Ctrl+Shift+F]
+  - PORT connection to another PC
+- Show
+  - Brief [Ctrl+F1]
+  - Full [Ctrl+F2]
+  - Comments [Ctrl+Shift+F2]
+  - Custom columns [Shift+F1]
+  - Custom view modes
+  - Tree [Ctrl+F8]
+  - Separate tree [Ctrl+Shift+F8]
+  - Thumbnail view [Ctrl+Shift+F1]
+  - Quick view [Ctrl+Q]
+  - Vertical alignment
+  - New folder tab [Ctrl+T]
+  - All files [Ctrl+F10]
+  - Programs [Ctrl+F11]
+  - *.*
+  - Custom… [Ctrl+F12]
+  - Only selected files
+  - Name [Ctrl+F3]
+  - Extension [Ctrl+F4]
+  - Time [Ctrl+F5]
+  - Size [Ctrl+F6]
+  - Unsorted [Ctrl+F7]
+  - Reversed order
+  - Reread source [F2, Ctrl+R]
+- Configuration
+  - Options
+  - Change button bar
+  - Button bar 2 (vertical)
+  - Change settings files directly
+  - Dark<->Normal
+  - Save position
+  - Save settings
+- Start
+  - User-defined favourite programs
+- Help
+  - Index
+  - Keyboard
+  - Registration info
+  - Website
+  - Check for updates now
+  - About
+- Context menu: file or folder [Shift+F10]
+  - System shell menu of the item
+  - X64 or X32 submenu
+  - Copy
+  - Cut
+- Context menu: panel background or current path
+  - New
+  - Paste
+- Context menu: folder tab
+  - Duplicate
+  - Rename or lock
+  - Lock
+  - Locked, changes allowed
+  - Copy to other panel
+  - Save tabs
+  - Load tabs
+  - Close this
+  - Close all
+  - Close duplicates
+  - Recently closed
+  - Configure view modes
+- Context menu: F8 button
+  - Recycle bin local menu
+- Context menu: button bar button
+  - Edit
+  - Delete
+- Context menu: FTP list
+  - Add to download list
+- Context menu: directory hotlist
+  - Add current dir
+  - Remove current dir
+  - Configure
+- Context menu: search result
+  - Go to file
+  - Feed to listbox
+  - View
+  - Edit

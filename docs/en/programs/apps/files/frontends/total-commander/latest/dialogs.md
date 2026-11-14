@@ -26,6 +26,28 @@
 | Directory hotlist editor | Manage favourites | Entries, sub-menus | Add current, Remove current, Configure | | | ✅ |
 | Pack files (Alt+F5) | Create archive | Archive name with packer prefix (e.g. `zip:`); pack with relative paths; recurse into subfolders; multi-disk; move to archive (delete originals after success); self-extracting; one archive per item; leave out base folder; encrypt; compression rate; packer choice | OK, Cancel, Configure | OK | nothing packed | ✅ |
 | Unpack (Alt+F6 / Alt+F9) | Extract | Target path (empty = archive's folder); file mask (Alt+F9 only); name encoding; keep stored paths; overwrite existing without asking; one sub-folder per archive | OK, Cancel | OK | nothing unpacked | ✅ |
-| FTP connection | Log in | Host, user, password | | | | `[nicht belegt]` |
+| FTP connection | Log in | Host, user name, password (help pages dialog_box__connect, dlg_connectdetails, dlg_newconnection) | | | | ✅ (fields; button captions `[nicht belegt]`) |
 | Compare by content | Diff two files | | | | | ✅ named |
 | Options (Configuration) | All settings incl. Quick search, confirmation | | | | | ✅ named |
+| Choose command | named in the official help (dialog page) | | | | | ✅ named |
+| Directory tree | named in the official help (dialog page) | | | | | ✅ named |
+| Select duplicate files | named in the official help (dialog page) | | | | | ✅ named |
+| Create checksum files | named in the official help (dialog page) | | | | | ✅ named |
+| Verify checksums | named in the official help (dialog page) | | | | | ✅ named |
+| Combine files | named in the official help (dialog page) | | | | | ✅ named |
+| Split file | named in the official help (dialog page) | | | | | ✅ named |
+| Encode file | named in the official help (dialog page) | | | | | ✅ named |
+| Decode file | named in the official help (dialog page) | | | | | ✅ named |
+| Edit comment | named in the official help (dialog page) | | | | | ✅ named |
+| Print | named in the official help (dialog page) | | | | | ✅ named |
+| Change UNIX attributes | named in the official help (dialog page) | | | | | ✅ named |
+| Choose encoding | named in the official help (dialog page) | | | | | ✅ named |
+| Firewall settings | named in the official help (dialog page) | | | | | ✅ named |
+| Edit file type | named in the official help (dialog page) | | | | | ✅ named |
+| Edit action | named in the official help (dialog page) | | | | | ✅ named |
+| Associate | named in the official help (dialog page) | | | | | ✅ named |
+| Change start menu | named in the official help (dialog page) | | | | | ✅ named |
+| Change directory menu | named in the official help (dialog page) | | | | | ✅ named |
+| Custom columns | named in the official help (dialog page) | | | | | ✅ named |
+| System information | named in the official help (dialog page) | | | | | ✅ named |
+| Configure lister | named in the official help (dialog page) | | | | | ✅ named |
