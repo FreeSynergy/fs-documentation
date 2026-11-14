@@ -23,7 +23,7 @@ still a draft). Boards, columns and `task_link` are not started: the `Boards` in
 [We](../../suites/projectmanagement/frontends/wekan/index.md) Wekan ·
 [Pl](../../suites/projectmanagement/frontends/planka/index.md) Planka ·
 [Ta](../../suites/projectmanagement/frontends/taiga/index.md) Taiga ·
-[Ji](../../suites/projectmanagement/frontends/jira/index.md) Jira ·
+[Ji](frontends/jira/index.md) Jira ·
 [As](../../suites/projectmanagement/frontends/asana/index.md) Asana ·
 [Op](../../suites/projectmanagement/frontends/openproject/index.md) OpenProject ·
 [Re](../../suites/projectmanagement/frontends/redmine/index.md) Redmine.

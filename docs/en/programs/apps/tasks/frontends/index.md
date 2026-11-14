@@ -6,6 +6,7 @@ Frontends of well-known programs in this category, analysed for their **function
 
 | Program | Versions | What it is |
 |---------|----------|------------|
+| [Jira](jira/index.md) | [latest](jira/latest/description.md) | Jira (Atlassian) is issue and project tracking with workflows: issues move through statuses (To Do→In Progress→Done), with sprints (Jira Software), types, priorities and powerful JQL. |
 | [Linear](linear/index.md) | [latest](linear/latest/description.md) | Linear is a team issue tracker built for speed: keyboard-driven, with cycles (time-boxed iterations), projects, initiatives and a triage inbox. |
 | [OmniFocus](omnifocus/index.md) | [latest](omnifocus/latest/description.md) | OmniFocus is a task manager for Mac, iPhone, iPad, Apple Watch and Vision Pro, plus OmniFocus for the Web, aimed at long-term projects and the weekly review. |
 | [Taskwarrior](taskwarrior/index.md) | [latest](taskwarrior/latest/description.md) | Taskwarrior is a command-line to-do manager. |

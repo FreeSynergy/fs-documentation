@@ -317,6 +317,8 @@ def update_category(level, cat, args, changed, report, suggestions):
     for p in sorted(d.name for d in fdir.iterdir() if d.is_dir()):
         pdir = fdir / p
         idx = pdir / "index.md"
+        if idx.is_file() and "<!-- moved-to:" in idx.read_text(encoding="utf-8"):
+            continue  # notice page of a program that moved: not a program here
         title = title_of(idx, p)
         if args.extract_themes:
             extract_themes(pdir, title, args, changed, report)

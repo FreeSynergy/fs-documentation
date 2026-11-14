@@ -85,10 +85,9 @@ Further information can be found in the documentation of individual project mana
 ## Frontends
 
 <!-- gen:frontends (scripts/gen_frontend_indexes.py) — edits inside are overwritten -->
-Analysed programs (8), by function, nothing copied (ADR 0012/0013):
+Analysed programs (7), by function, nothing copied (ADR 0012/0013):
 
 - [Asana](frontends/asana/index.md) — Asana is task and project work at portfolio level: tasks with fields (due date, assignees, dependencies, custom fields) in projects (list/table/timeline/kanban), teams, workloads and rules automation.
-- [Jira](frontends/jira/index.md) — Jira (Atlassian) is issue and project tracking with workflows: issues move through statuses (To Do→In Progress→Done), with sprints (Jira Software), types, priorities and powerful JQL.
 - [OpenProject](frontends/openproject/index.md) — OpenProject is an open-source project management system for self-hosting (Community Edition plus a commercial Enterprise Edition) with work packages, Gantt planning, agile boards, time and cost tra…
 - [Planka](frontends/planka/index.md) — Planka is a self-hosted, plain kanban board (fair-code: free Community Edition plus a commercial Pro Edition) with projects, boards, lists and cards in real-time collaboration.
 - [Redmine](frontends/redmine/index.md) — Redmine is a free, web-based project management and issue tracking application based on Rails: multiple projects with issue trackers, time tracking, wiki, forums, Gantt/calendar and role-based perm…
