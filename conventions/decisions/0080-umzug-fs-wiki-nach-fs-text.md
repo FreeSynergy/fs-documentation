@@ -22,7 +22,7 @@ Punkt 5.3 verlangt die Umbenennung „als eigene, geprüfte Schritte, mit Weiter
 - **F8 Facetten.** Keine eigenen Repos für Facetten; sie leben in fs-text (ADR 0061), je Facette später ein Katalogeintrag.
 - **Datenregel.** Nutzerdaten (Daten, Entwürfe, Socket) werden **kopiert, nie verschoben oder gelöscht**; der alte Stand bleibt lesbar. Der Store muss den Umzug als **Update** erkennen; das ist **vor dem ersten Release als fs-text zu belegen**, sonst entsteht eine Doppelinstallation.
 
-## Umzugsschritte (Reihenfolge fest)
+## Umzugsschritte (Reihenfolge fest; Schritt 6 verlangt `replaces`, siehe Folgen)
 1. **0.0.11 veröffentlichen** (Tag, Release, Katalog). Rückweg: entfällt.
 2. **Pakete im alten Repo umbenennen** (Branch): Lib → `fs-text-model`, `fs-wiki-*` → `fs-text-*`, Bin `fs-text` mit Link `fs-wiki`; CI-Dateien (release, typing-test, windows) anpassen. Test: alle Gates. Rückweg: Branch verwerfen.
 3. **Repos umbenennen** (nach 0.0.11): Platzhalter `fs-text` sichern und löschen (ersatzweise → `fs-text-archive`), dann `fs-wiki` → `fs-text`; Brauchbares in DESIGN. Rückweg: zurückbenennen (solange `fs-wiki` frei bleibt); der gelöschte Platzhalter ist nur aus der Sicherung wiederherstellbar.
@@ -30,6 +30,8 @@ Punkt 5.3 verlangt die Umbenennung „als eigene, geprüfte Schritte, mit Weiter
 5. **Datenkopie** (Ordner, Entwürfe, Socket `wiki.sock` → `text.sock`, Client probiert beide); Test mit Fixture von 0.0.10, byte-genau. Muss vor Schritt 6 fertig sein.
 6. **Erstes Release als fs-text** (erst wenn `replaces` in Katalog und Store fertig ist, siehe Folgen) (nächster Tag der Zählung) und **Katalog** (siehe Folgen). Rückweg: Release zurückziehen, Katalog zurücksetzen.
 7. **Doku und Pins:** fs-documentation, `fs-interfaces`-Eigner von `texts.capnp`, Verweise in ADR-Statuszeilen (ADR-Texte werden nicht umgeschrieben, nur Folge-ADR).
+8. **Pilot-Facette Wiki** (nach dem ersten Release als fs-text): Das Wiki ist die **erste Facette** und dient als Pilot; daraus entsteht die Vorlage für alle weiteren (Store → Marketplace, Whiteboard → Draw usw.). Inhalt: Katalogeintrag der Facette nach ADR 0061 §7 (verweist auf fs-text, eigener Name, Icon und Beschreibung, **kein eigenes Paket**); Start über den Link `fs-wiki` (argv[0], ADR 0063) mit den Wiki-Frontends; der Store zeigt die Facette und installiert dabei fs-text. Fehlende Regeln werden als Befund in ein Facetten-Muster-Dokument (Doku) und bei Bedarf in einen Folge-ADR geschrieben. Gibt es keinen passenden Workflow, wird per `workflow-pflege` der Workflow `facette-anlegen` geschrieben (für alle Facetten wiederverwendbar).
+9. **Facette herauslösen, Regal/Kollektion:** `fs-text-wiki` (Frontend-Wahl, Lesemodus, Doku-Leser, Menü „Seite“) aus der App lösen; Regal/Kollektion im Kern; Editor, Buch, Website später als weitere Facetten (eigene Aufträge).
 
 ## Folgen
 - **Katalog-ID:** Eintrag `fs-text` (Programm) mit `repo = FreeSynergy/fs-text`, Asset `fs-text-{version}-linux-x86_64.tar.gz`; Facette Wiki als eigener Eintrag (ADR 0061 §7). Der Eintrag `fs-wiki` bleibt in der Übergangszeit.
