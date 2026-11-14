@@ -4,8 +4,8 @@ Sources, all official Atlassian help for Jira Cloud, read on 2026-11-14 through 
 
 ## Menü-Inventar
 
-- Top bar
-  - App switcher
+- Navigation (position "top bar" not stated by the page)
+  - Switch Atlassian apps
   - Search
   - Create
   - AI chat, Notifications, Settings, Account (named as a group only)
@@ -25,10 +25,10 @@ Sources, all official Atlassian help for Jira Cloud, read on 2026-11-14 through 
   - Apps
   - Add tab (plus symbol)
   - Tab: More actions
-    - Set as default view
+    - Set as default
     - Rename
-    - Move left
-    - Move right
+    - Move tab left
+    - Move tab right
     - Remove
   - Space name: More actions
     - Space settings

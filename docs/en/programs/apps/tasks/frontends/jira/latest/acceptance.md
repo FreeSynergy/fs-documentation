@@ -16,4 +16,4 @@ From [workflows](workflows.md). Answer yes or no. A frontend in this style passe
 | A8 | J8 | Columns: add, rename, move, delete, map statuses, limits | ☐ |
 | A9 | J9 | Swimlane methods incl. queries | ☐ |
 | A10 | keys | `C`, `O`, `A`, `I`, `M`, `J`, `K`, `N`, `P`, `?` and the command palette `Cmd+K` / `Ctrl+K` work | ☐ |
-| A11 | menus | The inventory of [menus](menus.md) exists (top bar, sidebar, space navigation, board, backlog, context menus) | ☐ |
+| A11 | menus | The inventory of [menus](menus.md) exists (navigation, sidebar, space navigation, board, backlog, context menus) | ☐ |

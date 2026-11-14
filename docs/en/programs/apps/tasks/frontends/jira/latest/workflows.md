@@ -6,7 +6,7 @@ Format: goal, requirement, steps (user does X -> program shows Y), errors, undo.
 
 ## J1 Create a work item (create-a-work-item-and-a-subtask)
 Requirement: `[nicht belegt]`.
-1. Click the Create symbol in the top bar -> the Quick Create dialog opens.
+1. Click the Create symbol in the navigation -> the Quick Create dialog opens.
 2. Fill Title and the shown fields -> the description grows with the text.
 3. Optionally tick "Create another" -> the dialog stays for the next item with the same space and work type.
 4. Click "Create" -> the work item is made. Or expand to the full form with all fields.
