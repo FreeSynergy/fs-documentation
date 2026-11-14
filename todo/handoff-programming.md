@@ -379,3 +379,14 @@ Keine Agenten laufen mehr (ListAgents zeigt keinen aktiven Subagenten). Stand je
 - 2026-11-11 (Strategie, Nutzer): Alle Programme (Store, People, Groups, Messenger, Tasks, Files, Wiki) werden PARALLEL gegen denselben Stand von fs-interfaces und fs-components gebaut (nur so halten sich alle an dieselben Schnittstellen). Wer etwas an einer gemeinsamen Schicht braucht, ändert sie nicht selbst, sondern meldet es dem Koordinator; die Änderung kommt einmal, alle heben gemeinsam. Tasks ist besonders wichtig (Aufgaben, Zuständige, Status, Abhängigkeiten, Kommentare zuerst). Files wird nicht pausiert.
 - STOPP-REGEL: Findet ein Agent oder Opus einen großen Fehler in einer gemeinsamen Schicht (Blinc, fs-components, fs-interfaces, fs-release-Gate), sagt der Koordinator ALLEN betroffenen Agenten „Stopp“; Fehler wird an einer Stelle mit Test behoben; neuer Tag; alle heben; dann weiter.
 - Build-Lock: 2 Plätze (build-slot.sh, je Build `-m 12G -j8`), Speicher eine Stunde beobachten (`free -g`, kein OOM), erst dann evtl. 3; `-m 1G` nur für Sonden; schwere Prüfungen (Windows-Check, volle Testmatrix) auf GitHub.
+
+## Nachtrag 2026-11-14 (Stand heute; die Tabellen oben sind älter)
+Die Repo-Tabelle oben ist überholt (Tags: fs-components v0.0.19, fs-wiki v0.0.12, fs-interfaces v0.0.20). Neue Regeln und Ziele siehe `todo/handoff-strategy.md` (Regeln von heute). Für Programmier-Läufe gilt zusätzlich:
+- **Bausteine:** vorhandene Familie → Blinc-Widget per Adapter (kein Nachmalen) → neuer Baustein mit Begründung; Stile nur über Tokens/Theme-Vertrag (kein Blinc-Standardlook, keine Sonderwerte in Bausteinen). Abnahmebilder mit den Stilen des echten Programms (`Canvas::with_window_styles`).
+- **Texte:** alles MF2 (de+en), Plural-Selektoren bei Zählvariablen (`texts-check`), kein festkodiertes Wort.
+- **Bildtests:** Toleranzen nur gruppenweise (`SYSTEM_FONT`, `RASTER`), Gegenproben in `tolerance_counter.rs`; Diff-Bilder in `target/pictures-diff/`. CI-Gates exakt lokal nachfahren: `cargo clippy --workspace --all-targets --all-features --locked -- -D warnings`.
+- **Editor:** Trait `TextEditor` (Dokument rein, Operationen raus), Konformitätssammlung gemeinsam; Editor-Wahl ist Ansicht (ADR 0084). Checkbox-Klick = `SetAttrs` auf Block-Id bzw. Zell-Edit.
+- **Daten:** ADR 0085 — Zeiten UTC + Zone, Personen = `PersonRef`; Importer/Exporter als Grenz-Adapter mit Tests.
+- **Server:** Skripte nur lokal testen (VM/Container); echte Server führt der Mensch aus (ADR 0079). Wrapper `fs-server-run` (JSONL), `fs-server-bestand` (read-only).
+- **Cargo:** max 3 parallel über `/srv/FreeSynergy/.scratch/build-slot.sh`; Frontends zuerst.
+- **Offene Kante:** AppWidget::picture ohne UA-Stile (fs-components 0.0.20); `pixels.rs` unter Noto-only.
