@@ -88,4 +88,4 @@ Format: **Kontext → Entscheidung → Folgen**, plus Verweis auf betroffene Dok
 | 0079 | `fs-server`: Server einrichten und verwalten, jeder Schritt protokolliert | akzeptiert (Strategie); Nutzerentscheidung 14.11. |
 | 0080 | Umzug fs-wiki → fs-text: Repo, Crates, Version, Daten, Katalog | akzeptiert (Strategie); Nutzer-JA zu Umbenennung/Löschen und „Projekt“ |
 | 0081 | CI-Ereignisse (CloudEvents) ≠ Programm-Ereignisse (AS2, fs-history); Pull ohne Token, Rot-Issues | akzeptiert (Strategie, 2026-11-14) |
-| 0082 | `fs-server` verbindet: Konfiguration von außen (Typbeschreibung), Adapter je Server (Kanidm, Zentinel, später Mail) | Entwurf (Strategie, 2026-11-14; Nutzerentscheidung 14.11.) |
+| 0082 | `fs-server` verbindet: Konfiguration von außen (Typbeschreibung), Adapter je Server (Kanidm, Zentinel, später Mail) | akzeptiert (Strategie, 2026-11-14; Nutzerentscheidung Vermittler + People/Groups mit Kanidm) |
