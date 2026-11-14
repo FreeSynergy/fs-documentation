@@ -12,7 +12,7 @@ Status: **akzeptiert** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Edito
 2. **Umsetzungen** (feste Namen, 0074):
    - `BlockEditor` (Notion-Art): Enter = neuer Block, „/“-Menü mit den Blocktypen.
    - `RichTextEditor` (WYSIWYG, Confluence-Art): Format-Symbolleiste, Inline-Marken.
-   - `MarkdownEditor` (Classic, heutiger Stand): rohes Markdown.
+   - `SourceEditor` (Classic, heutiger Stand): reiner Text (Markdown, Code, Konfiguration); siehe Nachtrag.
 3. **Frontends wählen** den Baustein; mehrere Frontends dürfen denselben nutzen, ein Frontend darf wechseln lassen. Die Wahl ändert keine Daten.
 4. **Stil bleibt eigene Schicht** (0074): jeder Editor hat feste Baustein-Namen mit benannten Teilen und Zuständen (z. B. `block-editor` mit `block`, `slash-menu`; `rich-text-editor` mit `toolbar`, `mark-button`); Farben, Abstände, Bewegung kommen aus dem Stil, nicht aus dem Editor.
 5. **Eine gemeinsame Konformitäts-Testsammlung** für alle Editoren. Jede Umsetzung muss sie bestehen:
@@ -25,7 +25,7 @@ Status: **akzeptiert** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Edito
 - **Crate-Zuschnitt:** Vertrag und Operationstypen kommen in einen kleinen Crate (Vorschlag `fs-components-editor`), den `fs-components` und die Programme nutzen. So hängt der Vertrag nicht von `fs-text-model` ab und umgekehrt (0080: `fs-components` behält die Bausteine, sonst Zyklus). Die **Abbildung** der Operationen auf das Modell liegt im Programm (`fs-text`), nicht im Baustein.
 - Die Editor-Logik wandert aus den Frontends in `fs-components`; die Frontends behalten nur die Wahl.
 - Die Konformitätssammlung ist ein eigener Testbestand, den jede neue Umsetzung ohne Änderung einbindet.
-- Der Notion- und der Confluence-Editor werden zu `BlockEditor` und `RichTextEditor`; `MarkdownEditor` ist der Rückfall und die Messlatte für Round-trip.
+- Der Notion- und der Confluence-Editor werden zu `BlockEditor` und `RichTextEditor`; `SourceEditor` ist der Rückfall und die Messlatte für Round-trip.
 
 ## Alternativen
 | Option | Bewertung |
@@ -40,3 +40,16 @@ Status: **akzeptiert** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Edito
 - Eingabemethoden (IME, Komposition) je Umsetzung **[nicht belegt]**.
 - Anbindung der Operationen an den Änderungsstrom (Entscheidung 6) **[offen]**.
 - Operationen tragen die Block-Ids aus ADR 0072, damit Übersetzung (sourceRev) und Kollaboration (0073) dieselben Ids sehen.
+
+## Nachtrag 2026-11-14 (akzeptiert, Strategie, 2026-11-14; Nutzerentscheidung): Baustein ≠ Programm, drei Bausteine, Module
+1. **Editor-Baustein ≠ Editor-Programm.** Der **Baustein** (`fs-components`) kann nur bearbeiten: Modell rein, Operationen raus. Das **Programm** (z. B. die Editor-Facette von `fs-text`) öffnet und speichert und wählt Frontend und Baustein.
+2. **Drei grundverschiedene Bausteine:** `SourceEditor` (ersetzt den Namen `MarkdownEditor`: reiner Text, Markdown, Code, Konfiguration), `BlockEditor`, `RichTextEditor` (WYSIWYG). Der Name `MarkdownEditor` entfällt.
+3. **Jeder Baustein ist durch Module erweiterbar**; die Erweiterungspunkte sind Traits je Baustein:
+   - `SourceEditor`: Sprachmodule für Hervorhebung (Grammatik-Standard tree-sitter oder TextMate); Fehlersuche, Formatierung und Vervollständigung über LSP (Language Server Protocol). Markdown ist **ein** Sprachmodul, die Vorschau ein Modul.
+   - `BlockEditor`: Blocktypen und Einträge des „/“-Menüs als Module, auch von anderen Programmen über den Hub (ADR 0019, 0068).
+   - `RichTextEditor`: Marken und Knöpfe der Leiste als Module.
+   - Module sind Hot-Plugins (ADR 0045): geprüft und atomar tauschbar. Katalogart `module`: siehe ADR 0077, Nachtrag 2026-11-14.
+4. **Lizenzbelege** (per `gh api`, lesend, 2026-11-14):
+   - tree-sitter (`tree-sitter/tree-sitter`): Lizenz **MIT** (GitHub-Lizenzerkennung der Datei `LICENSE`). Grammatiken sind eigene Repos mit **eigener Lizenz**: je Grammatik prüfen, nicht pauschal annehmen.
+   - LSP (`microsoft/language-server-protocol`): Datei `License.txt` ist der Text „Attribution 4.0 International“ (**CC-BY-4.0**, GitHub-Erkennung `CC-BY-4.0`). Ob dieselbe Lizenz für alle Dateien des Repos gilt (z. B. Beispielcode), ist **[nicht belegt]**.
+   - TextMate-Grammatiken: Format und Lizenzlage der Spezifikation **[nicht belegt]** (nicht gefunden; das Editor-Repo `textmate/textmate` steht unter GPL-3.0, das sagt nichts über das Grammatik-Format). Bis zum Beleg gilt tree-sitter als Vorzugsweg.
