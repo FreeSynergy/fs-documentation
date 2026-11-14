@@ -24,3 +24,7 @@ Vier technische Bausteine:
 ## Folgen
 - Eigene Spezifikation für den Blockinhalt (Arbeitstitel siehe `data/documents/standards.md`) mit
   neutralem Namen, damit sie bei IETF/W3C eingereicht werden kann.
+
+## Nachtrag (2026-11-14)
+- **Wortwahl Regal:** im Code `shelf`; in der Oberfläche de „Projekt“, en „Project“ (Nutzerwort).
+- **Struktur:** Absatz → Seite → Kollektion (Buch) → Regal (Shelf; eigene Instanz, eigene Rechte).
