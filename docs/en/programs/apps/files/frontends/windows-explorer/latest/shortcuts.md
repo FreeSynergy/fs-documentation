@@ -39,3 +39,14 @@ Source: Microsoft's keyboard-shortcut page, retrieved 2026-11-13 ✅. Ctrl+C / C
 | Tabs | Ctrl+1..9 | Go to tab n |
 | Undo | Ctrl+Z, Ctrl+Y | Undo, redo — `[nicht belegt]` in the Explorer table |
 | Select all | Ctrl+A | `[nicht belegt]` in the Explorer table |
+
+## Additions (retrieved 2026-11-14, platform Windows)
+
+Source: the same Microsoft page (https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec) ✅; the three Num Lock rows are listed in the Windows 10 table only.
+
+| Group | Keys | Action |
+|-------|------|--------|
+| Navigate | Num Lock + * (Windows 10 table) | Show all sub-folders of the selected folder |
+| Navigate | Num Lock + plus (Windows 10 table) | Show the contents of the selected folder |
+| Navigate | Num Lock + minus (Windows 10 table) | Collapse the selected folder |
+| Window | Win+E | Open File Explorer (also on https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows) |

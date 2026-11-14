@@ -21,3 +21,14 @@ The official page names **no dialog**. All below is `[nicht belegt]`: known from
 | Share | Share targets | Targets list (✅ button exists) | | | |
 
 Properties opens with Alt+Enter ✅; Options as described in [menus](menus.md) ✅.
+
+## Additions from opened Microsoft support pages (2026-11-14)
+
+| Dialog | Purpose | Fields / content | Buttons | Mark |
+|--------|---------|------------------|---------|------|
+| Folder options | Behaviour of the Explorer | "Open File Explorer to" (This PC or Home); on the View tab: hide extensions of known types, show hidden files, use check boxes to select; reached via See more > Options | Apply, OK | ✅ (page file-explorer-in-windows, set-file-explorer-to-open-to-this-pc) |
+| Previous versions | Restore an older state of a folder or drive | List of versions | Open (also in File History), Restore, Restore to…; restoring replaces the current version and cannot be undone | ✅ (page backup-and-restore-with-file-history) |
+| Open with | Choose a program | Choose another app | Always, Just once | ✅ (page use-a-screen-reader…) |
+| Sensitivity label (Purview) | Label a file | Apply, Close | Apply, Close | ✅ (page label-and-protect-files…) |
+| Customize menu | Pick context-menu entries (preview) | Switches for Send to, Create shortcut, Print, text labels | | ✅ (Windows 11 preview update notes, 2026-10) |
+| Delete confirmation | Before deleting | Only a setting named; dialog text and buttons not described | | `[nicht belegt]` |
