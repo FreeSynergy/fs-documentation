@@ -34,6 +34,10 @@ Why this program is documented here (ADR 0013). Function analysis only, own word
 | [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
 | [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
 | [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+| [dialogs.md](latest/dialogs.md) | Every dialog: purpose, fields, buttons, default, cancel |
+| [workflows.md](latest/workflows.md) | Step-by-step workflows: goal, prerequisites, steps, failures, undo |
+| [acceptance.md](latest/acceptance.md) | Acceptance checklist: each workflow as a yes/no click test |
+| [gaps.md](latest/gaps.md) | What our program cannot do for these workflows, and what it needs |
 
 ⚠️ Missing required files: `themes/index.md`
 <!-- /gen:versions -->
@@ -43,4 +47,8 @@ Why this program is documented here (ADR 0013). Function analysis only, own word
 |--------|------|-----------|
 | https://culturedcode.com/things/features/ | official features page | ✅ 2026-11-10 |
 | https://culturedcode.com/things/support/articles/2803573/ | official URL-scheme reference | ✅ 2026-11-10 |
-| https://culturedcode.com/things/support/articles/2803582/ | official support article (Magic Plus, Quick Entry) | ⚠️ brief 2026-11-10 |
+| https://culturedcode.com/things/support/articles/2803582/ | official support article (Gestures, Magic Plus) | ⚠️ brief 2026-11-10, 2026-11-14 |
+| https://culturedcode.com/things/support/articles/2785159/ | official keyboard shortcuts (Mac) | ✅ 2026-11-14 |
+| https://culturedcode.com/things/support/articles/2249437/ | official Quick Entry | ✅ 2026-11-14 |
+| https://culturedcode.com/things/support/articles/2803564/ , 2803579, 2803581, 2803583, 2803584, 2803590, 2803555, 2803577, 2803580, 9651894, 3238254, 4001304, 6037627 (all under /things/support/articles/) | official support articles (repeat, when/deadline, tags, calendar, Quick Find, cloud, import, headings, windows, move, sidebar, lists, areas) | ✅ 2026-11-14 |
+| https://culturedcode.com/things/guide/ | official handbook, intro only | ✅ 2026-11-14 |
