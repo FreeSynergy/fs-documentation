@@ -125,6 +125,10 @@ Fetched 2026-11-07. Each fact cites the page it came from. Facts from search sni
 | S29 | https://www.notion.com/help/sharing-and-permissions (fetched 2026-11-13) |
 | S30 | https://www.notion.com/help/writing-and-editing-basics (fetched 2026-11-13) |
 | S31 | https://www.notion.com/help/use-pages-offline (fetched 2026-11-13) |
+| S32 | https://www.notion.com/help/export-your-content (fetched 2026-11-14) |
+| S33 | https://www.notion.com/help/intro-to-workspaces (fetched 2026-11-14; replaces the search summary S24 for the points named below) |
+| S34 | https://www.notion.com/help/start-with-a-template (fetched 2026-11-14) |
+| S35 | https://www.notion.com/help/workspace-settings (fetched 2026-11-14; settings paths only) |
 
 S14 and S12 were re-fetched on 2026-11-13. `https://www.notion.com/help/page-history` returned 404. The workflow pages in `latest/` cite S-numbers; where "[search summary 2026-11-13]" appears, S24 applies.
 

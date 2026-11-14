@@ -1,6 +1,6 @@
 # Notion - Menu Items
 
-> **Status 2026-11-13:** The part "Verified menus and context menus" below rests on official help pages (S-numbers as in [index.md](../index.md)). Everything after it ("Earlier draft") was written before sources were checked and is **partly unverified**: items such as Workspace, Pages, Users, Integrations, Resources, Preferences and the shortcuts in its table were not found in the official pages and were removed in the [2026-11-07 snapshot](../2026-11-07/menus.md). Do not build on the earlier draft.
+> **Status 2026-11-14:** Everything below rests on official help pages (S-numbers as in [index.md](../index.md)). The unverified "Earlier draft" of this file (Workspace, Pages, Users, Integrations, Resources, Preferences, a shortcut table) was removed from `latest/` on 2026-11-14; the folder [2026-11-07](../2026-11-07/menus.md) is frozen and was not touched.
 
 ## Verified menus and context menus
 
@@ -54,183 +54,190 @@ cmd+L or cmd+shift+C copies the result's link [S26].
 
 Settings → Import · Settings → General → Export all workspace content · Settings → Offline.
 
-## Earlier draft (partly unverified)
+## Additions 2026-11-14 (re-read of S12, S14, S15, S25, S26, S29, S30 and S32 to S35)
 
-## Overview
+- **Home** shows the sections Upcoming events, Recents, Favorites, Agents, Teamspaces, Shared pages, Private pages, Notion apps; at the bottom My Tasks, Library, Marketplace, Help, Trash [S12]. Names as listed on the page; the Agents and Marketplace parts depend on the plan: **[nicht belegt]**.
+- **Section menu (••• beside Private, Shared, a teamspace):** Sort (Manual, Last edited), Show (a number of pages up to all), Move section (up, down) [S12].
+- **Page menu (••• at the top right):** Appearance & layout (Default, Serif, Mono; Small text; Full width; Page discussions; Table of contents and inline comments by name), Use with AI, More (Present, Translate, Import, Export, Turn into wiki), Version history, Move to, Duplicate, Archive (beta, plans) and Delete [S14][S15][S25][S30].
+- **Block handle menu (⋮⋮):** Turn into, Color, Copy link to block, Duplicate, Move to, Delete, Comment, Suggest edits, Edit with AI, Ask AI, Word and character count [S30][S14]. The slash words `/duplicate`, `/delete`, `/turn`, `/color` do the same from the keyboard [S30].
+- **Share menu:** tabs Share and Publish; invite a person or group with an access level; General access: only people invited, everyone at the workspace (toggle Hide in search), anyone on the web with the link (Link expires); Request edit access; Page-level access rules (business plans) [S29].
+- **Search window:** sort Best matches, Last edited newest/oldest, Created newest/oldest; filters Title only, Created by, Teamspace, In, Date [S26].
+- **Trash:** search and filters Last edited by, In, Teamspace; no "empty all"; kept 30 days by default [S14].
+- **Right click:** only "Delete" is named for blocks and pages; **[nicht belegt]** beyond that [S14].
 
-Notion is an all-in-one platform for notes, documentation and collaboration. The menu provides access to all main features of the platform.
+## Menü-Inventar
 
-## Main Menu Items
+Machine-readable inventory for `scripts/menue-vergleich`, format of [menue-vergleich](../../../../../../../../docs/menue-vergleich.md). Names as on Notion's help pages (read 2026-11-14), `{de: ...}` our own translation. Shortcuts: macOS first, then Windows/Linux, only where a help page names them for the entry; Notion's own writing "cmd/ctrl" is split into two. Items without a documented shortcut have no bracket. No `id`: Notion names none.
 
-### 1. Workspace
-- **Function**: Main view of the current workspace
-- **Details**:
-  - All pages and databases of the workspace
-  - Personalizable start page
-  - Quick access to frequently used pages
-
-### 2. Pages
-- **Function**: Management of all pages
-- **Details**:
-  - Overview of all available pages
-  - Search for pages
-  - Creation of new pages
-  - Sorting and filtering
-  - Spell check
-  - View history
-
-### 3. Databases
-- **Function**: Database management
-- **Details**:
-  - Table databases
-  - Kanban boards
-  - Calendar views
-  - Gallery views
-  - List views
-  - Projects, tasks, CRM
-
-### 4. Trash
-- **Function**: Manage deleted pages
-- **Details**:
-  - Retention of deleted pages and databases
-  - Restore function
-  - Permanent deletion
-  - Retention period (30 days)
-
-### 5. Media
-- **Function**: File and image management
-- **Details**:
-  - Uploading files
-  - Managing the media library
-  - Image galleries
-  - File links
-
-### 6. Users
-- **Function**: User management
-- **Details**:
-  - Add/remove users
-  - Manage roles and permissions
-  - User profiles
-  - Manage invitations
-
-### 7. Settings
-- **Function**: System configuration
-- **Details**:
-  - General settings
-  - Appearance (design/theme)
-  - Language settings
-  - Notifications
-  - Security settings
-
-### 8. Notifications
-- **Function**: Notification management
-- **Details**:
-  - Activity on shared pages
-  - @mentions
-  - Comments
-  - Reminders
-  - Editing conflicts
-
-### 9. Search
-- **Function**: Content search
-- **Details**:
-  - Global search
-  - Filter options
-  - Search result display
-  - In-page search
-  - Database search
-
-### 10. Templates
-- **Function**: Template management
-- **Details**:
-  - Create and edit templates
-  - Template categories
-  - Share templates
-  - Personal templates
-  - Team templates
-
-### 11. Integrations
-- **Function**: Third-party integrations
-- **Details**:
-  - GitHub integration
-  - Figma integration
-  - Google Drive
-  - Zapier integration
-  - API access
-  - Manage embeds
-
-### 12. Resources
-- **Function**: Help materials
-- **Details**:
-  - Help Center
-  - Tutorial videos
-  - Community posts
-  - Blog articles
-  - Forum access
-
-### 13. Preferences
-- **Function**: User-specific settings
-- **Details**:
-  - Editor settings
-  - Shortcut display
-  - Automatic saving
-  - Preview settings
-  - Export settings
-
-## Context Menus
-
-### Page Menu
-- Edit
-- Move
-- Copy
-- Delete
-- View history
-- Permissions
-- Share page
-- Create template
-- Export
-
-### Database Menu
-- Change view (table/Kanban/calendar)
-- Sort
-- Filter
-- Manage fields
-- Share view
-- Export
-
-### Block Menu (within pages)
-- Duplicate block
-- Delete block
-- Copy block
-- Indent
-- Execute (to-dos)
-- Change block type
-- Copy link
-
-### User Menu (top right)
-- Edit profile
-- Settings
-- Manage workspaces
-- Log out
-- Help
-- Give feedback
-
-## Menu Shortcuts
-
-| Menu | Shortcut | Function |
-|------|----------|----------|
-| Command palette | `Ctrl+Shift+P` / `Cmd+Shift+P` | Search all commands |
-| Quick search | `Ctrl+P` / `Cmd+P` | Search for a page |
-| Global search | `Ctrl+Shift+F` / `Cmd+Shift+F` | Search entire database |
-| Block menu | `/` | Call block actions |
-
-## Summary
-
-Notion offers comprehensive menu items for:
-- **Workspace**: Main view and personalization
-- **Content**: Pages, databases, templates
-- **Administration**: Users, permissions, integrations
-- **Help**: Support, resources, tutorials
-- **Personalization**: Settings, preferences, shortcuts
-
-The menu is context-sensitive and adapts to the current view.
+- Sidebar {de: Seitenleiste}
+  - Search [cmd+K, ctrl+K] {de: Suche}
+  - Home {de: Start}
+  - Chats with Notion AI
+  - Meetings
+  - Inbox {de: Eingang}
+    - Mark all as read
+    - Archive all
+    - Archive read
+  - Library
+  - Templates {de: Vorlagen}
+  - Trash {de: Papierkorb}
+  - Settings {de: Einstellungen}
+  - Marketplace
+  - My Tasks
+  - New item menu {de: Neu-Menü}
+  - Workspace switcher {de: Workspace-Wechsler}
+    - Settings
+    - Log out
+  - Collapse sidebar [cmd+\, ctrl+\] {de: Seitenleiste ein-/ausklappen}
+- Section menu (Private, Shared, teamspace) {de: Bereichsmenü}
+  - Sort {de: Sortieren}
+    - Manual
+    - Last edited
+  - Show
+  - Move section
+    - Move up
+    - Move down
+  - Leave teamspace
+- Home section menu (••• at Home) {de: Menü des Bereichs Start}
+  - Show
+  - Move up
+  - Move down
+  - Hide section
+  - Customize sidebar
+- Page in the sidebar, ••• on hover {de: Seite in der Seitenleiste}
+  - Delete {de: Löschen}
+  - Duplicate {de: Duplizieren}
+  - Copy link [cmd+L, ctrl+L] {de: Link kopieren}
+  - Rename {de: Umbenennen}
+  - Move to {de: Verschieben nach}
+  - Remove from Favorites
+  - Add subpage (+ on hover) {de: Unterseite hinzufügen}
+- Page menu, ••• at the top right {de: Seitenmenü}
+  - Appearance & layout
+    - Default
+    - Serif
+    - Mono
+    - Small text
+    - Full width
+    - Page discussions
+    - Table of contents
+  - Use with AI
+  - More
+    - Present
+    - Translate
+    - Import
+    - Export
+      - PDF
+      - HTML
+      - Markdown & CSV
+    - Turn into wiki
+  - Version history {de: Versionsverlauf}
+  - Move to {de: Verschieben nach}
+  - Duplicate {de: Duplizieren}
+  - Archive {de: Archivieren}
+  - Delete {de: Löschen}
+- Page top bar {de: Seitenkopf}
+  - Share {de: Teilen}
+  - Favorite (star)
+- Block handle menu (⋮⋮) {de: Blockmenü}
+  - Turn into [cmd+/, ctrl+/] {de: Umwandeln in}
+  - Color
+  - Copy link to block
+  - Duplicate [cmd+D, ctrl+D] {de: Duplizieren}
+  - Move to {de: Verschieben nach}
+  - Delete [backspace] {de: Löschen}
+  - Comment [cmd+shift+M, ctrl+shift+M] {de: Kommentar}
+  - Suggest edits
+  - Edit with AI
+  - Ask AI
+  - Word and character count
+- Sub-page or media block, ••• {de: Unterseiten- oder Medienblock}
+  - Delete {de: Löschen}
+- Slash menu (/) {de: Schrägstrich-Menü}
+  - Text
+  - Page {de: Seite}
+  - To-do list
+  - Heading 1
+  - Heading 2
+  - Heading 3
+  - Bulleted list
+  - Numbered list
+  - Toggle list
+  - Divider
+  - Quote
+  - Link to page
+  - Mention
+  - Date or reminder
+  - Equation
+  - Emoji
+  - Image
+  - PDF
+  - Web bookmark
+  - Video
+  - Audio
+  - Code
+  - File
+  - Embed
+  - Duplicate
+  - Move to
+  - Delete
+  - Table of contents
+  - Template button
+  - Breadcrumb
+  - Turn into
+  - Color
+- Text selection toolbar {de: Textauswahl-Leiste}
+  - Bold [cmd+B, ctrl+B] {de: Fett}
+  - Italic [cmd+I, ctrl+I] {de: Kursiv}
+  - Underline [cmd+U, ctrl+U] {de: Unterstrichen}
+  - Strikethrough [cmd+shift+S, ctrl+shift+S] {de: Durchgestrichen}
+  - Inline code [cmd+E, ctrl+E] {de: Inline-Code}
+  - Link [cmd+K, ctrl+K]
+  - Comment [cmd+shift+M, ctrl+shift+M]
+  - Color [cmd+shift+H, ctrl+shift+H] {de: Farbe}
+  - Mention [@]
+- Trash entry {de: Papierkorb-Eintrag}
+  - Restore {de: Wiederherstellen}
+  - Delete permanently {de: Endgültig löschen}
+- Share menu {de: Teilen-Menü}
+  - Share tab
+    - Invite
+    - Copy link
+    - Access level
+      - Full access
+      - Can edit
+      - Can edit content
+      - Can create
+      - Can comment
+      - Can view
+    - Remove
+  - Publish tab
+  - General access
+    - Only people invited
+    - Everyone at the workspace
+    - Anyone on the web with link
+  - Request edit access
+  - Page-level access
+- Search window {de: Suchfenster}
+  - Sort
+    - Best matches
+    - Last edited, newest first
+    - Last edited, oldest first
+    - Created, newest first
+    - Created, oldest first
+  - Filter
+    - Title only
+    - Created by
+    - Teamspace
+    - In
+    - Date
+  - Copy result link [cmd+L, ctrl+L]
+  - Open result in new tab [cmd+click, ctrl+click]
+- Settings paths {de: Einstellungspfade}
+  - Import
+  - Offline
+  - General
+    - Export all workspace content
+  - Security
+  - Teamspaces
+  - Emoji

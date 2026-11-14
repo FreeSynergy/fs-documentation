@@ -144,3 +144,25 @@ Notion pages are live as soon as typed for people who have access; there is no d
 1. Desktop/mobile app only: **•••** → toggle **Available offline** [S31]. Paid plans download recent and favourite pages automatically; sub-pages are not included [S31].
 2. Offline the user can create pages and edit downloaded pages; embeds, AI, forms, buttons need a connection; sharing and permission changes are impossible [S31].
 3. Settings → Offline lists downloaded pages and can stop them [S31].
+
+## Update 2026-11-14 (S14, S25, S29, S32 to S34)
+
+### W11a Export in detail [S32]
+
+1. User opens ••• → Export (PDF: ••• → More → Export) → program shows the dialog with Format and the options named in [dialogs.md](dialogs.md) D15.
+2. User sets format and options, clicks **Export** → program delivers a file, a ZIP when subpages are included, or an e-mailed link for large exports. The whole workspace: Settings → General → Export all workspace content (desktop and web; the link lasts 7 days; processing up to 30 hours) [S32].
+3. **Failure:** PDF errors (export HTML instead), long Windows paths, blocked by an Enterprise "Disable export", guests without Full access. **Undo:** **[nicht belegt]**.
+
+### W9a Version restore, limits [S14]
+
+1. User opens ••• → Version history (needs Can edit) → picks a version → **Restore** → the page shows that version. Retention by plan: 7, 30, 90 days and unlimited (Free, Plus, Business, Enterprise) [search summary, S24; not on the page fetched]. Restoring a database brings back pages and properties, not the content of its rows; each row page is restored on its own. Partial restore: copy blocks from the old version.
+
+### W7a Delete and trash [S14]
+
+1. Page: ••• in the sidebar, or ••• at the top, or drag onto Trash → program moves the page and its subpages to Trash. Block: ⋮⋮ → Delete, or select and press Delete. Trash keeps items 30 days; after that they are gone, and for another 30 days not even the owner can bring them back; Enterprise owners can change the time. No "empty trash"; each page is deleted for good on its own. A page in Trash cannot be edited until it is restored. A confirmation text and the exact name of the restore button: **[nicht belegt]**.
+
+### W1a Favorites, lock, template [S33][S34]
+
+1. **Favorite:** star on the page → the page appears under Favorites (the section appears after the first favorite); star again removes it.
+2. **Lock:** ••• → Lock page → editing is blocked; a database has Lock database (rows can still be added) [S33]. Unlock entry: **[nicht belegt]**.
+3. **Template:** Marketplace → pick → Add (free) or Buy; a template page can be copied with ••• → Duplicate [S34].

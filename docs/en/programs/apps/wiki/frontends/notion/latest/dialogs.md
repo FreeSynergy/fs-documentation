@@ -70,3 +70,55 @@ Every dialog or menu-window found in the help pages read: purpose, fields, butto
 ## D14 Customize page [search summary][S15]
 
 - **Content:** Font (Default, Serif, Mono), Small text, Full width, Table of contents; toggles for backlinks and comments.
+
+## Additions 2026-11-14 (S25, S26, S29, S30, S32 to S34; S14, S12, S15 re-read)
+
+Notion's pages state no default button and no Esc behaviour for any dialog; only the slash menu closes with Esc [S11]. That stays **[nicht belegt]**.
+
+## D15 Export dialog, fields [S32]
+
+- **Opened by:** page ••• → More → Export (PDF), or ••• → Export (HTML, Markdown & CSV); mobile ••• → More → Export.
+- **Fields:** Format (PDF, HTML, Markdown & CSV); Include content, Page format and Scale percent (PDF only); Include subpages; Create folders for subpages. **Button:** Export.
+- **Rules:** subpages in a PDF need a business plan; guests need Full access; an Enterprise setting "Disable export" hides the entry; databases export their current view; form views cannot be exported [S32].
+- **Errors:** a failed PDF is advised to be exported as HTML; very large exports arrive as an e-mailed link; on Windows ZIP paths over 260 characters fail (turn off folders for subpages) [S32]. **Undo:** **[nicht belegt]**.
+
+## D16 Import, buttons and limits [S25]
+
+- **Buttons by source:** Import (Evernote), Continue (Trello), Connect Google account and Select (Google Docs), Merge with CSV (in a database), Convert Zip to pages. Target: a teamspace, Private or an existing database; CSV columns are mapped to properties.
+- **Limits:** desktop and web only; Free 5 MB per file, paid 50 MB (PDF 20 MB), ZIP up to 5 GB; one CSV at a time. **Errors:** named per source (Trello "Unrecognized URL", Google Docs "Import failed" and others); an import only adds rows, it does not update (duplicates possible). **Undo:** **[nicht belegt]**.
+
+## D17 Page icon and cover [S15]
+
+- **Icon picker:** tabs Emoji, Icon, Upload; a random button; checkbox Add to workspace Emoji library (for an upload); Remove. **Cover:** Add cover, Change cover; gallery, Upload, Link, search in an image service. Dialog titles, formats, size limits, errors, undo: **[nicht belegt]**.
+
+## D18 Share dialog, details [S29]
+
+- Tabs **Share** and **Publish**; **Invite**; **Copy link**; access dropdown per entry with **Remove**; **General access** (Only people invited; Everyone at the workspace with Hide in search; Anyone on the web with link with Link expires); **Request edit access** for a person without rights. Errors on guest invitations: organisation domain, domain not allowed, guests blocked, guest limit [S29]. A confirmation on Remove and undo: **[nicht belegt]**.
+
+## D19 Favorites, lock and move [S33][S12]
+
+- Favorites: a star on the page; remove by clicking it again or ••• → Remove from Favorites [S12][S33]. Page menu: Lock page [S33]. Move to: a workspace dropdown moves a page between workspaces, subpages follow into Private [S33]. Layout of the Move to dialog: **[nicht belegt]**.
+
+## Dialog-Inventar
+
+Machine-readable list for `scripts/menue-vergleich`, one dialog per line. Names as in the help; where the help names none, the opening entry is used (see the sections above).
+
+- Search window {de: Suchfenster}
+- Slash menu {de: Schrägstrich-Menü}
+- Mention menu {de: Erwähnungs-Menü}
+- Block menu {de: Blockmenü}
+- Page menu in the sidebar {de: Seitenmenü in der Seitenleiste}
+- Move to {de: Verschieben nach}
+- Import {de: Import}
+- Export {de: Export}
+- Export workspace {de: Workspace exportieren}
+- Share {de: Teilen}
+  - Publish tab
+  - General access
+- Version history {de: Versionsverlauf}
+- Trash {de: Papierkorb}
+- Deleted properties {de: Gelöschte Eigenschaften}
+- Offline settings {de: Offline-Einstellungen}
+- Customize page {de: Seite anpassen}
+- Page icon picker {de: Seitensymbol-Auswahl}
+- Cover dialog {de: Titelbild-Dialog}
