@@ -66,3 +66,5 @@ Entscheidet den Offen-Punkt „`module` oder `addon`“. Der `kind`-Wert `module
 | kind | AppStream `type` | Beleg |
 |---|---|---|
 | `module` | `addon` (`<extends>` erweiterter Baustein/Programm) | Unsere Zuordnung; „Some components are not standalone, but rather extend existing software“ (Spezifikation, nur zur Art `addon`) |
+
+Nutzer-JA 2026-11-14 zur Katalogart `module`. Darstellung im Store: **offen** (später mit dem Nutzer).

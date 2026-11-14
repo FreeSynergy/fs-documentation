@@ -53,3 +53,4 @@ Status: **akzeptiert** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Edito
    - tree-sitter (`tree-sitter/tree-sitter`): Lizenz **MIT** (GitHub-Lizenzerkennung der Datei `LICENSE`). Grammatiken sind eigene Repos mit **eigener Lizenz**: je Grammatik prüfen, nicht pauschal annehmen.
    - LSP (`microsoft/language-server-protocol`): Datei `License.txt` ist der Text „Attribution 4.0 International“ (**CC-BY-4.0**, GitHub-Erkennung `CC-BY-4.0`). Ob dieselbe Lizenz für alle Dateien des Repos gilt (z. B. Beispielcode), ist **[nicht belegt]**.
    - TextMate-Grammatiken: Format und Lizenzlage der Spezifikation **[nicht belegt]** (nicht gefunden; das Editor-Repo `textmate/textmate` steht unter GPL-3.0, das sagt nichts über das Grammatik-Format). Bis zum Beleg gilt tree-sitter als Vorzugsweg.
+5. **Nutzer-JA 2026-11-14** zur Katalogart `module` (ADR 0077). Darstellung der Module im Store: **offen** (später mit dem Nutzer).
