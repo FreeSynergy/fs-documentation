@@ -390,3 +390,16 @@ Die Repo-Tabelle oben ist überholt (Tags: fs-components v0.0.19, fs-wiki v0.0.1
 - **Server:** Skripte nur lokal testen (VM/Container); echte Server führt der Mensch aus (ADR 0079). Wrapper `fs-server-run` (JSONL), `fs-server-bestand` (read-only).
 - **Cargo:** max 3 parallel über `/srv/FreeSynergy/.scratch/build-slot.sh`; Frontends zuerst.
 - **Offene Kante:** AppWidget::picture ohne UA-Stile (fs-components 0.0.20); `pixels.rs` unter Noto-only.
+
+### Nachtrag 2026-11-14 (spät): 
+## Nutzertest fs-wiki 0.0.12 (Notion-Frontend, Vollbild; Bild /home/kal/fs-handtest/fs-wiki-wiki0.0.12.jpg, 2026-11-14)
+Positiv: Überschriften, Tabelle, Zitat, Durchgestrichen/Kursiv, Trenner korrekt. Nutzer: „Wiki entwickelt sich schon sehr gut.“ Hinweis: Fable testet in ca. 1 Woche alles.
+- **U1** Checkbox in Tabellenzelle: lässt sich abhaken, aber NICHT wieder aufheben.
+- **U2** Checkbox außerhalb der Tabelle (Liste) lässt sich gar nicht klicken; Kästchen zu klein und nicht auf der Textgrundlinie.
+- **U3 BLOCK-EDITOR GRUNDSÄTZLICH (Nutzer):** keine einzelnen Eingabe-Kästen je Block — EINE große Schreibfläche wie Notion; Enter macht intern einen neuen Block (unsichtbar), Fokus/Text fließt weiter. Heute beim Anlegen fehleranfällig, sieht „Schrott“ aus; beim Wechsel in ein neues Feld verschwindet manchmal der vorige Inhalt und erscheint beim Tippen wieder (Zustands-/Fokusfehler). → BlockEditor nach ADR 0084 als durchgehende Fläche NEU (Vorrang für fs-wiki 0.0.13 / fs-components).
+- **U4** Seiten-Icon oben angeschnitten (unter der Leiste).
+- **U5** Gliederungs-Symbol am rechten Rand angeschnitten.
+- **U6** Brotkrume ganz links, Inhalt mittig schmal (~490 px bei 1900 px Fenster): Inhaltsbreite nach Notion-Dossier (Standard / „volle Breite“), Brotkrume zum Inhalt ausrichten.
+- **U7** Tabellenschrift kleiner als Fließtext.
+- **U8** Code-Block „cool“ ohne Hintergrund/Rahmen, viel Leerraum.
+Alle mit Test + Gegenprobe; Abnahmebilder mit den Stilen des echten Programms (siehe followups-wiki-0011.md, Abschnitt 0.0.13 Punkt 2).
