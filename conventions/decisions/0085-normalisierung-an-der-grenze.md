@@ -12,6 +12,12 @@ Status: **Entwurf** (Strategie, 2026-11-14; Nutzerregeln, noch nicht als ADR bes
 2. **Zeitpunkte** liegen **immer in UTC**. Wo die lokale Bedeutung zählt (Wiederholungen, „um 9 Uhr Berlin“), steht zusätzlich die **IANA-Zonen-Id**. **Ganztägige Daten und Geburtstage** sind ein **Datum ohne Uhrzeit** und werden nie umgerechnet. Die Ausgabe erfolgt in der Zone des Betrachters.
 3. **Jedes Feld mit dem Namen eines Menschen ist ein Verweis** auf People (Personen-Id wie ein Fremdschlüssel; AS2 `actor`/`Person`, JSContact oder vCard), nie ein freier Name. **Ausnahme** Buchungen, Rechnungen, Verträge und Ähnliches: Verweis **plus eingefrorener Abzug** (Name, Anschrift … zum Zeitpunkt).
 
+4. **Entscheidungen der Strategie (Nutzer, 2026-11-14), Antworten auf die Offen-Fragen:**
+   - **Schwebende Zeit** (ohne Zone) wird an der Grenze aufgelöst: Der Importer setzt die Zone der Person (Einstellung, sonst Gerät) und markiert `zone_assumed`; der Export gibt sie mit Zone aus. Eine echte „überall 8 Uhr“-Zeit kommt später als eigener, ausdrücklicher Typ (bleibt offen). Zone des Betrachters: Einstellung der Person, sonst Gerät.
+   - **Ausnahme Abzug:** alle Dokumente, die nach der Ausstellung rechtlich oder finanziell gelten: Buchung/Reservierung, Bestellung, Rechnung, Quittung/Spendenbescheinigung, Vertrag, Beschluss/Protokoll, Urkunde/Zeugnis. Regel statt Liste: **ausgestellt = eingefroren**.
+   - **Ein Typ** `PersonRef { id, abzug: Option<…> }`; der Abzug ist Teil des Typs.
+   - **Bestand** wird einzeln in den Programm-Runden behoben, Reihenfolge: zuerst `fs-types` DateTime UTC-normiert plus Zone (Basis), dann Kalender-Einladungen und Kanban-`assignee` auf `PersonRef`, dann Tasks mit ganztägiger Fälligkeit (als bugfix-Einträge in den Welle-1-Listen).
+
 ## Vorschlag (Strategie)
 ### 1. Adapter an der Grenze
 - Jeder **Importer** ist ein Adapter (Ports and Adapters, ADR 0043/0066): Fremdformat lesen, in das innere Modell **normalisieren** (Zeiten nach Regel 2, Namen nach Regel 3), erst dann speichern. Jeder **Exporter** wandelt das innere Modell **für das Ziel** (zum Beispiel iCalendar-Zeitangaben, vCard-Namen) und ist ein eigener Befehl, nicht Speichern (ADR 0046).
@@ -24,16 +30,16 @@ Status: **Entwurf** (Strategie, 2026-11-14; Nutzerregeln, noch nicht als ADR bes
 | Zeitpunkt (ein Ereignis ist geschehen oder beginnt) | UTC, RFC 3339 mit `Z` (JSCalendar `UTCDateTime`) | Zeitstempel, `created`, Protokoll |
 | Termin mit lokaler Bedeutung | lokale Zeit **und** IANA-Zonen-Id (JSCalendar `LocalDateTime` plus `timeZone`); abgeleiteter UTC-Wert zum Sortieren und Abfragen | „jeden Dienstag 9 Uhr, Europe/Berlin“ |
 | Ganztägig, Geburtstag, Stichtag ohne Uhrzeit | Datum `JJJJ-MM-TT` (JSCalendar `showWithoutTime` bzw. reines Datum), **keine Zone, keine Umrechnung** | Neujahr, 14.11. |
-| „Schwebende“ Zeit (ohne Zone) | **[offen]** | siehe Offen |
+| „Schwebende“ Zeit (ohne Zone) | wird an der Grenze **aufgelöst**: Importer setzt die Zone der Person (Einstellung, sonst Gerät) und markiert `zone_assumed`; Export gibt sie mit Zone aus | iCalendar-Zeit ohne `TZID` |
 - Warum beides: UTC allein verliert, was der Mensch meinte. Ändern sich die Zonenregeln, verschiebt sich „9 Uhr Berlin“ in UTC; die Zonen-Id bewahrt die Absicht. Belegt ist das im Text von RFC 9557: Eine benannte IANA-Zone bedeutet, dass die zum Zeitpunkt der Auslegung **aktuellen** Regeln gelten sollen.
 - Die Ausgabe wandelt zur Zone des Betrachters (Einstellung der Person, sonst Gerät). Die Zonen-Regeln liefert die tz-Datenbank; `fs-jscalendar` nimmt schon die neueste gefundene (System oder gebündelt).
 - Rechnen bleibt bei den Eigentümern: Wiederholungen rechnet `fs-calendar` in der Zone des Termins (heute so), nicht in UTC.
 
 ### 3. Personen
 - Ein Feld mit dem Namen eines Menschen hat den Typ **Personen-Verweis** (Personen-Id; in AS2 ein `actor`/`Person`, im Fachstandard JSContact/vCard bei `fs-people`). Ein freier Name ist **kein** erlaubter Feldinhalt.
-- **Ausnahme eingefrorener Abzug:** Wo ein Dokument rechtlich oder buchhalterisch zum Zeitpunkt gilt (Buchung, Rechnung, Vertrag), trägt das Feld den Verweis **und** einen Abzug (Name, Anschrift … wie zum Zeitpunkt). Der Abzug ändert sich nie, auch wenn die Person später umzieht oder den Namen ändert. Wer „aktuell“ will, folgt dem Verweis; wer „damals“ will, liest den Abzug.
+- **Ausnahme eingefrorener Abzug:** Wo ein Dokument nach der Ausstellung rechtlich oder finanziell gilt (Regel „ausgestellt = eingefroren“; Arten siehe Nutzerentscheidung 4), trägt das Feld den Verweis **und** einen Abzug (Name, Anschrift … wie zum Zeitpunkt). Der Abzug ändert sich nie, auch wenn die Person später umzieht oder den Namen ändert. Wer „aktuell“ will, folgt dem Verweis; wer „damals“ will, liest den Abzug.
 - **Gemeinsamer Baustein „Personen-Verweis“** (Muster Strategy: Auswahl und Auflösung hinter einem Trait):
-  - **Typ** in `fs-interfaces` (ein Basistyp neben `Date`/`DateTime`; Id, optional Abzug), damit jedes Programm denselben Typ in seiner Typbeschreibung nennt (ADR 0066: Oberflächen aus der Typbeschreibung).
+  - **Typ** `PersonRef { id, abzug: Option<…> }` in `fs-interfaces` (ein Basistyp neben `Date`/`DateTime`; Abzug Teil des Typs), damit jedes Programm denselben Typ in seiner Typbeschreibung nennt (ADR 0066: Oberflächen aus der Typbeschreibung).
   - **Auswahlfeld** in `fs-components` (Baustein mit festem Namen, ADR 0074; sucht in People, legt auf Wunsch eine Person an).
   - **Ohne installiertes People:** eine **kleine lokale Ablage im selben Format** (JSContact-Kern: Id, Name, E-Mail), damit der Verweis gültig bleibt. Kein Programm erfindet ein eigenes Namensformat.
   - **Später** gleicht der Hub die lokale Ablage mit People ab (ADR 0019 „Angleichen statt Verschmelzen“); **der Mensch bestätigt** jede Angleichung.
@@ -48,10 +54,10 @@ Quellen: `https://www.rfc-editor.org/rfc/rfc5545.txt`, `rfc8984.txt`, `rfc9557.t
 - **Bestand, belegt aus dem Quelltext:** siehe Kontext. Nicht belegt: ob alle Importer (zum Beispiel iCalendar über `calcard`) heute **jede** Zeit auf UTC/Zonen-Id normieren (nur das README sagt es).
 
 ## Folgen
-- **Typen:** `fs-interfaces` bekommt den Basistyp `PersonRef` (Name vorläufig) und erweitert `fs-types::DateTime`/Zeit um UTC-Zeitpunkt, `LocalDateTime` plus Zonen-Id und reines Datum; die heutige Lücke „Zonen sind `Unsupported`“ (`fs-types/src/datetime.rs`) wird geschlossen. Eine Typbeschreibung nennt nur diese Typen für Zeiten und Menschen.
+- **Typen:** `fs-interfaces` bekommt den Basistyp `PersonRef` (Abzug Teil des Typs) und erweitert `fs-types::DateTime`/Zeit um UTC-Zeitpunkt, `LocalDateTime` plus Zonen-Id und reines Datum; die heutige Lücke „Zonen sind `Unsupported`“ (`fs-types/src/datetime.rs`) wird geschlossen. Eine Typbeschreibung nennt nur diese Typen für Zeiten und Menschen.
 - **Baustein:** `fs-components` bekommt das Auswahlfeld „Personen-Verweis“ mit festem Namen und Stilteilen (ADR 0074); Aufbau wie die Editor-Bausteine (ADR 0084): ein Vertrag, Frontends wählen.
 - **Workflow `programm-neu`:** P1 Schritt 5 legt die Formate fest (inklusive Zeit- und Personenregel), ein neuer Schritt 9a in P3 baut Importer und Exporter als Grenz-Adapter mit Tests, P2 Schritt 6 verweist für Zeit- und Personenfelder auf diesen Entwurf. Der Workflow verweist auf einen **Entwurf**; Wortlaut und Zahlen müssen sich ändern, wenn der ADR sich ändert.
-- **Bestand:** Die Liste der Stellen mit freien Namen und lokalen Zeiten ist erstellt; ein Umbau ist **nicht** beschlossen und wäre ein eigener Auftrag je Programm (Kalender-Einladungen, Aufgaben-Datum, `PersonRef` bei den String-IRIs).
+- **Bestand:** Die Liste der Stellen mit freien Namen und lokalen Zeiten ist erstellt; Behoben wird einzeln in den Programm-Runden (bugfix-Einträge in `/srv/FreeSynergy/.scratch/plan-dossiers-welle1.md`), Reihenfolge: `fs-types` DateTime UTC plus Zone, dann Kalender-Einladungen und Kanban-`assignee` auf `PersonRef`, dann Tasks ganztägige Fälligkeit.
 - **Prüfbar:** Ein Skript kann in Typbeschreibungen Felder mit Namen wie `owner`/`author`/`assignee` vom Typ Text als Verstoß melden; Zeitfelder ohne UTC- oder Zonentyp ebenso (Vorschlag, noch nicht gebaut).
 
 ## Alternativen
@@ -64,10 +70,7 @@ Quellen: `https://www.rfc-editor.org/rfc/rfc5545.txt`, `rfc8984.txt`, `rfc9557.t
 | Jedes Programm normalisiert selbst | Verworfen: Gleiche Fremdformate würden verschieden gelesen; ein Baustein am Rand spart die Kopien. |
 
 ## Offen
-- Schwebende („floating“) Zeit: weiter zulassen (heute im Kalender, laut RFC 8984 erlaubt) oder an der Grenze verbieten? **[offen]**
-- Name und Zuschnitt des Typs (`PersonRef`, Abzug als Teil des Typs oder getrenntes Feld)? **[offen]**
-- Welche Dokumente zählen zur Ausnahme „eingefrorener Abzug“ (Liste der Arten)? **[offen]**
-- Zone des Betrachters: Einstellung der Person, Gerät, oder beides? **[nicht belegt]**
+- Echte „überall 8 Uhr“-Zeit als eigener, ausdrücklicher Typ: später. **[offen]**
 - Umgang mit abgelaufenen Zonen-Regeln beim Wiederabgleich gespeicherter Termine nach tz-Updates **[nicht belegt]**.
 - Ob die lokale Ablage ohne People denselben Speicher wie `fs-people` nutzt (gleiches Schema, anderes Programm) **[nicht belegt]**.
-- Umbau-Reihenfolge des Bestands (Kalender-Einladungen zuerst?) **[offen]**.
+- Geschlossen am 2026-11-14 (Nutzerentscheidung 4): schwebende Zeit, Typzuschnitt, Abzug-Ausnahme, Zone des Betrachters, Umbau-Reihenfolge.
