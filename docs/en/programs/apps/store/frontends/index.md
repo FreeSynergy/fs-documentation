@@ -8,6 +8,7 @@ Frontends of well-known programs in this category, analysed for their **function
 |---------|----------|------------|
 | [F-Droid](f-droid/index.md) | [latest](f-droid/latest/description.md) | F-Droid is a community-run catalogue and installer client for free-software Android apps. |
 | [Flathub](flathub/index.md) | [latest](flathub/latest/description.md) | Flathub is the main app store for Flatpak on Linux: a web catalogue plus a repository from which the Flatpak tools and software centres install apps in a sandbox. |
+| [KDE Discover](kde-discover/index.md) | [latest](kde-discover/latest/description.md) | KDE Discover is the software centre of the KDE Plasma desktop: it finds, installs, updates and removes applications and add-ons (Plasma add-ons, application add-ons) from several sources through ex… |
 | [Obtainium](obtainium/index.md) | [latest](obtainium/latest/description.md) | Obtainium is an Android app that installs and updates other apps directly from their release pages (for example Git hosting releases) and notifies the user about new versions. |
 
 ## File set per program (ADR 0012)
