@@ -31,7 +31,7 @@ Ein Server wird heute von Hand aufgebaut. Der Nutzer: Mit SSH-Zugang muss ein Se
    - **Gate `human`** vor jedem Schritt mit Datenverlust (Neuinstallation, Platten löschen/partitionieren, RAID neu).
    - **Trockenlauf:** Plan (alle Befehle, aufgelöste Variablen) vor der Ausführung; Ausführung nur nach Bestätigung.
    - **Idempotenz:** jeder Schritt prüft den Ist-Zustand; **Wiederaufnahme** ab dem letzten gelungenen Schritt.
-   - **Agenten (F6)** geben **nie** `human`-Gates frei (0056) und starten **nie** Läufe auf echten Servern (Nachtrag „Mensch führt aus“). Läufe, deren Schritte alle `gate=none` sind (z. B. Sicherheitsupdates), laufen nur über einen **Zeitplan auf dem Server** (systemd-Timer), den der Mensch einmal einrichtet; ohne KI, Protokoll wie immer.
+   - **Agenten (F6)** geben **nie** `human`-Gates frei (0056) und starten **nie** Läufe auf echten Servern und haben dort nie SSH oder Shell (Nachtrag „Mensch führt aus“, Präzisierung „Agenten auf Servern“). Läufe, deren Schritte alle `gate=none` sind (z. B. Sicherheitsupdates), laufen nur über einen **Zeitplan auf dem Server** (systemd-Timer), den der Mensch einmal einrichtet; ohne KI, Protokoll wie immer.
 11. **Tests ohne echten Server:** SSH-Fake (Aufzeichnung/Wiedergabe), Container und VM (QEMU) für Platten-, RAID- und ZFS-Schritte.
 
 ## Nachtrag 2026-11-14 (Nutzer): Ausgangspunkt immer SSH-Zugang
@@ -59,6 +59,9 @@ Gründe: btrfs ist im Kernel, ohne `contrib` oder DKMS; ZFS käme als Fremdmodul
 - **Anbieter-Adapter:** nur Hetzner, optional.
 - **Container-VServer** (OpenVZ/LXC): Weg A eingeschränkt, B und D nicht unterstützt; `bestand` meldet die Grenzen.
 - **Verschlüsselung:** im ersten Wurf **keine** Plattenverschlüsselung als Standard; Geheimnisse liegen im Tresor (0067), Backups sind verschlüsselt (restic, 0071). Optional später ein Workflow-Schritt: LUKS für den Datenteil, Entsperren per SSH (`dropbear-initramfs`, Debian-Standardpaket), nie mit Schlüsseldatei auf derselben Platte.
+
+## Präzisierung 2026-11-14: Agenten auf Servern
+Agenten bekommen **nie** SSH oder Shell auf einem Server. Ein Agent darf auf einem Server nur arbeiten, wenn wir ihn **einladen** und er über **unsere Programmschnittstellen** arbeitet, mit **ausdrücklichen Befugnissen** (ADR 0054: KIs als markierte Teilnehmer; ADR 0056: Admins und Agenten-Workbench). Ohne Einladung und Befugnis gibt es keinen Zugriff.
 
 ## Alternativen
 | Option | Lizenz (Quelle: LICENSE-Datei im Repo, gelesen 2026-11-14) | Bewertung |
