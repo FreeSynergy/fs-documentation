@@ -1,6 +1,6 @@
 # 0084 – Editor-Bausteine: ein Vertrag, mehrere Umsetzungen
 
-Status: **Entwurf** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Editor-Bausteine hinter einem Vertrag) · baut auf ADR 0031 und 0034 (Textmodell, Regal), 0057 (übersetzbare Texte), 0066 (Frontends ohne eigene Daten), 0072 (Blöcke), 0073 (Kollaboration, Loro), 0074 (Bausteine, feste Namen, Stil als Schicht), 0080 (`fs-text-model`)
+Status: **akzeptiert** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Editor-Bausteine, Daten nur über unser Modell) · baut auf ADR 0031 und 0034 (Textmodell, Regal), 0057 (übersetzbare Texte), 0066 (Frontends ohne eigene Daten), 0072 (Blöcke), 0073 (Kollaboration, Loro), 0074 (Bausteine, feste Namen, Stil als Schicht), 0080 (`fs-text-model`)
 
 ## Kontext
 - Heute hat jedes Frontend **seinen eigenen** Editor: das Notion-Frontend bearbeitet Blöcke, das Confluence-Frontend rohes Markdown. Die Bearbeitung steckt im jeweiligen Frontend, nicht in einem Baustein.
@@ -39,3 +39,4 @@ Status: **Entwurf** (Strategie, 2026-11-14; Nutzerentscheidung: mehrere Editor-B
 - Wer macht Rückgängig (Editor, Modell oder Änderungsstrom)? **[nicht belegt]**
 - Eingabemethoden (IME, Komposition) je Umsetzung **[nicht belegt]**.
 - Anbindung der Operationen an den Änderungsstrom (Entscheidung 6) **[offen]**.
+- Operationen tragen die Block-Ids aus ADR 0072, damit Übersetzung (sourceRev) und Kollaboration (0073) dieselben Ids sehen.
