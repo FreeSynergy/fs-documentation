@@ -1,6 +1,6 @@
 # 0080 – Umzug fs-wiki → fs-text: Repo, Crates, Version, Daten, Katalog
 
-Status: **Entwurf** (Strategie setzt „akzeptiert“; Entscheidungen F1–F8 vom Nutzer, 2026-11-14) · setzt ADR 0076 §5 Punkt 3 um · baut auf ADR 0031/0034 (Textstruktur), 0061 (Facetten), 0063 (ein Befehl), 0064 (Versionen), 0072 (Handbuch als Blöcke), 0077 (Katalog-Arten)
+Status: **akzeptiert** (Strategie, 2026-11-14; Nutzer-JA zu Umbenennung/Löschen und zum Wort „Projekt“; die übrigen Punkte F sind Strategie-Entscheide) · setzt ADR 0076 §5 Punkt 3 um · baut auf ADR 0031/0034 (Textstruktur), 0061 (Facetten), 0063 (ein Befehl), 0064 (Versionen), 0072 (Handbuch als Blöcke), 0077 (Katalog-Arten)
 
 ## Kontext
 ADR 0076 ordnet die Repositories ein. Wörtlich:
@@ -13,7 +13,7 @@ ADR 0076 ordnet die Repositories ein. Wörtlich:
 Punkt 5.3 verlangt die Umbenennung „als eigene, geprüfte Schritte, mit Weiterleitung, Katalog und Paketnamen“. Ist-Zustand: `fs-wiki` hat 7 Crates (ca. 46 000 Zeilen Rust), Tags bis v0.0.10, Branch `release-0.0.11` noch nicht veröffentlicht. Die Kern-Bibliothek heißt dort schon `fs-text`. Das Repo `fs-text` existiert als Platzhalter (README, DESIGN, Lizenzen, check.yml), ohne Code und ohne Tags.
 
 ## Entscheidung
-- **F1 Weg „umbenennen“.** Das Platzhalter-Repo `fs-text` wird **nicht gelöscht**, sondern nach Konvention in `fs-text-archive` umbenannt; sein README/DESIGN geht vorher in den neuen DESIGN-Abschnitt von fs-text. Danach wird `fs-wiki` in `fs-text` umbenannt (Tags, Releases, Issues, Weiterleitung bleiben). **Beide Umbenennungen sind Eigner-Freigabe**; bis dahin ändert niemand etwas an den Repos. Nach der Umbenennung wird **nie** wieder ein Repo `fs-wiki` angelegt (sonst bricht die Weiterleitung; der Name ist als Facettenbefehl reserviert, ADR 0063).
+- **F1 Weg „umbenennen“.** Das Platzhalter-Repo `fs-text` wird **gelöscht** (Nutzer: wird nicht gebraucht); sein Inhalt wird vorher gesichert und Brauchbares in den DESIGN-Abschnitt von fs-text übernommen. Fehlt das Löschrecht (`delete_repo`), wird es nach Konvention in `fs-text-archive` umbenannt. Danach wird `fs-wiki` in `fs-text` umbenannt (Tags, Releases, Issues, Weiterleitung bleiben). Der Nutzer hat Löschen/Umbenennen freigegeben; bis zur Veröffentlichung von 0.0.11 ändert niemand etwas an den Repos. Nach der Umbenennung wird **nie** wieder ein Repo `fs-wiki` angelegt (sonst bricht die Weiterleitung; der Name ist als Facettenbefehl reserviert, ADR 0063).
 - **F2 Crates.** Kern-Bibliothek `fs-text-model` (Dokument, Block, Verlauf, Links); Programm-Crates `fs-text-core`, `fs-text-server`, `fs-text-client`, `fs-text-app`; Binärdatei `fs-text`, `fs-wiki` bleibt als Link (argv[0], ADR 0063).
 - **F3 Version.** Die Zählung wird fortgesetzt (Crate-Version = Tag, ADR 0064); keine neue Zählung ab v0.0.1, weil die alten Tags im selben Repo liegen.
 - **F4 Thema.** Ein Thema `texts`; das Wiki-Eigene (ADR 0072, `WikiProvider.blocks`) wird Fähigkeit darin. Die Ausarbeitung ist ein Folge-ADR.
@@ -25,10 +25,10 @@ Punkt 5.3 verlangt die Umbenennung „als eigene, geprüfte Schritte, mit Weiter
 ## Umzugsschritte (Reihenfolge fest)
 1. **0.0.11 veröffentlichen** (Tag, Release, Katalog). Rückweg: entfällt.
 2. **Pakete im alten Repo umbenennen** (Branch): Lib → `fs-text-model`, `fs-wiki-*` → `fs-text-*`, Bin `fs-text` mit Link `fs-wiki`; CI-Dateien (release, typing-test, windows) anpassen. Test: alle Gates. Rückweg: Branch verwerfen.
-3. **Eigner-Freigabe, dann Repos umbenennen:** `fs-text` → `fs-text-archive`, `fs-wiki` → `fs-text`; Platzhalter-Inhalt in DESIGN. Rückweg: zurückbenennen (solange `fs-wiki` frei bleibt).
+3. **Repos umbenennen** (nach 0.0.11): Platzhalter `fs-text` sichern und löschen (ersatzweise → `fs-text-archive`), dann `fs-wiki` → `fs-text`; Brauchbares in DESIGN. Rückweg: zurückbenennen (solange `fs-wiki` frei bleibt); der gelöschte Platzhalter ist nur aus der Sicherung wiederherstellbar.
 4. **Release-Kette:** Allowlist (`fs-text` neben `fs-wiki`), `binaries`/`cargo-package`/`name` auf `fs-text`; Trockenlauf.
 5. **Datenkopie** (Ordner, Entwürfe, Socket `wiki.sock` → `text.sock`, Client probiert beide); Test mit Fixture von 0.0.10, byte-genau. Muss vor Schritt 6 fertig sein.
-6. **Erstes Release als fs-text** (nächster Tag der Zählung) und **Katalog** (siehe Folgen). Rückweg: Release zurückziehen, Katalog zurücksetzen.
+6. **Erstes Release als fs-text** (erst wenn `replaces` in Katalog und Store fertig ist, siehe Folgen) (nächster Tag der Zählung) und **Katalog** (siehe Folgen). Rückweg: Release zurückziehen, Katalog zurücksetzen.
 7. **Doku und Pins:** fs-documentation, `fs-interfaces`-Eigner von `texts.capnp`, Verweise in ADR-Statuszeilen (ADR-Texte werden nicht umgeschrieben, nur Folge-ADR).
 
 ## Folgen
@@ -49,11 +49,11 @@ Punkt 5.3 verlangt die Umbenennung „als eigene, geprüfte Schritte, mit Weiter
 | fs-catalog (`packages.toml`, `scripts/schema_base.py`, `gen_catalog.py`) | kein Feld für Ersatz/Umbenennung; `<provides>` nur mit `<mediatype>`; `fs:provides` meint Fähigkeiten, nicht IDs (`CHANGES-FOR-STORE.md`: „`<provides><mediatype>` (AppStream): not read“) | belegt (Fehlen) |
 | fs-store (Stand store-016) | Suche nach `replaces`, `obsolet`, `replaced`, `provides` im Quelltext: keine Ersatz-Logik; „installiert“ wird über den Namen erkannt (`current/<name>`, `installed.toml`, rpm-Abfrage nach Name); `fs-wiki` steht in `demo_data` und Tests | belegt (Fehlen) |
 
-**Folgerung:** Heute würde `fs-text` als neues Programm neben installiertem `fs-wiki` erscheinen (Doppelinstallation). **Minimale Erweiterung (Vorschlag):** (a) Katalogfeld `replaces = ["fs-wiki"]` je Paket, in `catalog.xml` als AppStream `<replaces><id>fs-wiki</id></replaces>` geschrieben, mit Prüfung in `gen_catalog.py` (ID existiert oder bestand im Katalog; nur im selben Repo-Eigner); (b) Store: ist eine ID aus `replaces` installiert, zeigt er `fs-text` als **Update** und führt Entfernen der alten ID und Datenhinweis in einem Auftrag aus (Datenregel: Daten bleiben); (c) Pakete: rpm `Obsoletes: fs-wiki` und `Provides: fs-wiki`, deb `Replaces`/`Breaks: fs-wiki` und `Provides: fs-wiki`. Neues Feld im Schema = Format-Änderung (Schema 2, `min_store`, ADR 0077).
+**Entscheidung (Strategie):** Heute würde `fs-text` neben installiertem `fs-wiki` erscheinen. Darum: (a) Katalogfeld `replaces = ["fs-wiki"]`, in `catalog.xml` als `<replaces><id>fs-wiki</id></replaces>`, mit Prüfung in `gen_catalog.py` (ID bestand im Katalog, gleicher Eigner); (b) der Store zeigt `fs-text` als **Update**, wenn eine ID aus `replaces` installiert ist; die Daten werden **kopiert**, nie verschoben; (c) Pakete: rpm `Obsoletes: fs-wiki` und `Provides: fs-wiki`, deb `Replaces`/`Breaks: fs-wiki` und `Provides: fs-wiki`. Das Feld ist Teil von **Schema 2** (`min_store`, ADR 0077) und **Pflicht vor Schritt 6** des Umzugs.
 
 ## Alternativen
 - **Neues Repo `fs-text` mit Code, `fs-wiki` archivieren:** verworfen; Historie, Tags, Releases und Issues bleiben getrennt, Weiterleitung entfällt.
-- **Platzhalter `fs-text` löschen:** verworfen (Nutzerentscheidung F1); nicht umkehrbar, Umbenennen nach Konvention genügt.
+- **Platzhalter nur umbenennen statt löschen:** nur Rückfall, falls das Löschrecht fehlt (F1).
 
 ## Risiken
 - Laufende Veröffentlichung 0.0.11 vermischt sich mit dem Namenswechsel (darum F7).
@@ -65,7 +65,6 @@ Punkt 5.3 verlangt die Umbenennung „als eigene, geprüfte Schritte, mit Weiter
 ## Offen [nicht belegt]
 - Weiterleitung von **Release-Assets** nach der GitHub-Umbenennung (nur Clone/Web-Weiterleitung angenommen; Test mit Download nötig).
 - Wirkung von `<replaces>`/`<provides><id>` in gängigen Software-Centern.
-- `Obsoletes`/`replaces`: Umsetzung in Katalog, Schema und Store (Vorschlag oben).
-- Umzugslogik im Store (Erkennung, Entfernen, Datenhinweis) und Tests mit alter und neuer ID.
+- Umsetzung von `replaces` (entschieden, noch nicht gebaut): Katalog, Schema 2, Store-Erkennung und Datenkopie, Tests mit alter und neuer ID.
 - Doku-Weiterleitungen alter Pfade `apps/wiki/…` (Redirect-Plugin in mkdocs nicht belegt).
 - Unterstützung von `Obsoletes`/`Replaces` in unserer eigenen Paketlinie (ADR 0078).
