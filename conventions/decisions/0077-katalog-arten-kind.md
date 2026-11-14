@@ -51,7 +51,7 @@ Reihenfolge der Umsetzung (aus dem Bericht):
 - Zuordnung der sechs Stil-Arten zu `addon` ist keine Vorgabe der Spezifikation.
 - Container-Registry und Signatur der Container (z. B. Sigstore/OpenPGP) noch nicht entschieden.
 - Installationskonzept für Systemdienste (Folge 6).
-- Module/Handler für eingebettete Inhalte (Embed: jedes eingebettete Ding nennt Medientyp und nötiges Modul, Files holt den Handler): eigene Art `module` oder `addon` mit `<extends/>`. Die Entscheidung folgt, sobald Embed gebaut wird.
+- ~~Module/Handler für eingebettete Inhalte: eigene Art `module` oder `addon`?~~ **Entschieden** im Nachtrag 2026-11-14 (Katalogart `module`).
 
 ## Nachtrag 2026-11-14: Katalogart `workflow`
 Der `kind`-Wert `workflow` (anbietbare Abläufe, z. B. `server-einrichtung`, ADR 0079) kommt zur Tabelle in §1 hinzu. AppStream-Typ: `addon` mit `<extends>` `fs-workflows`. Diese Zuordnung ist **unsere**, die Spezifikation gibt sie nicht vor (wie bei den Stil-Arten in §2). Das Angebot läuft über den Katalog, `fs-marketplace` später.
@@ -59,3 +59,10 @@ Der `kind`-Wert `workflow` (anbietbare Abläufe, z. B. `server-einrichtung`, ADR
 | kind | AppStream `type` | Beleg |
 |---|---|---|
 | `workflow` | `addon` (`<extends>` `fs-workflows`) | Unsere Zuordnung; „Some components are not standalone, but rather extend existing software“ (Spezifikation, nur zur Art `addon`) |
+
+## Nachtrag 2026-11-14: Katalogart `module` (akzeptiert, Strategie, 2026-11-14; Nutzerentscheidung)
+Entscheidet den Offen-Punkt „`module` oder `addon`“. Der `kind`-Wert `module` kommt zur Tabelle in §1 hinzu: eine Erweiterung eines Bausteins oder Programms (z. B. Sprachmodul für den `SourceEditor`, Blocktyp für den `BlockEditor`, Handler für eingebettete Inhalte; siehe ADR 0084). Der Eintrag **nennt, welchen Baustein oder welches Programm er erweitert**. AppStream-Typ: `addon` mit `<extends>` auf den erweiterten Baustein. Diese Zuordnung ist **unsere**, die Spezifikation gibt sie nicht vor (wie bei den Stil-Arten und `workflow`). Module laufen als Hot-Plugins (ADR 0045).
+
+| kind | AppStream `type` | Beleg |
+|---|---|---|
+| `module` | `addon` (`<extends>` erweiterter Baustein/Programm) | Unsere Zuordnung; „Some components are not standalone, but rather extend existing software“ (Spezifikation, nur zur Art `addon`) |
