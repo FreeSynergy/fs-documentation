@@ -27,6 +27,20 @@ _To do: what does this program do that others don't? Why is it documented here (
 | [menus.md](latest/menus.md) | Menu structure, context menus, menus by role |
 | [shortcuts.md](latest/shortcuts.md) | Keyboard shortcuts |
 | [api.md](latest/api.md) | APIs and protocols, authentication, rate limits |
+| [dialogs.md](latest/dialogs.md) | Every dialog: purpose, fields, buttons, default, cancel |
+| [workflows.md](latest/workflows.md) | Step-by-step workflows: goal, prerequisites, steps, failures, undo |
+| [acceptance.md](latest/acceptance.md) | Acceptance checklist: each workflow as a yes/no click test |
+| [gaps.md](latest/gaps.md) | What our program cannot do for these workflows, and what it needs |
 
 ⚠️ Missing required files: `themes/index.md`
 <!-- /gen:versions -->
+
+## Sources
+| Source | Kind | Retrieved |
+|--------|------|-----------|
+| https://support.atlassian.com/jira-software-cloud/ | official help of Jira Cloud (start page) | ✅ 2026-11-14 |
+| https://support.atlassian.com/jira-software-cloud/docs/use-keyboard-shortcuts/ , what-is-the-command-palette/ , navigate-all-work-with-your-keyboard/ , search-issues-projects-and-more-with-the-your-keyboard/ , and ten "... with your keyboard" articles | official keyboard shortcut pages | ⚠️ 2026-11-14, incomplete (in-app list not read) |
+| https://support.atlassian.com/jira-software-cloud/docs/what-is-the-new-navigation-in-jira/ , manage-and-customize-the-project-navigation/ , configure-a-company-managed-board/ , configure-columns/ , configure-swimlanes/ , edit-multiple-issues-at-once-from-the-backlog/ , edit-a-sprint-in-a-company-managed-project/ , delete-a-sprint/ | official help, menus | ✅ 2026-11-14 |
+| .../create-a-work-item-and-a-subtask/ , plan-a-sprint/ , complete-a-sprint/ , transition-an-issue/ , clone-an-issue/ , delete-multiple-issues/ , view-a-work-item/ , save-your-search-as-a-filter/ | official help, dialogs and workflows | ✅ 2026-11-14 |
+
+Earlier text of this dossier (description, features, layout, api, the three older tables in menus and shortcuts) has no source list: `[nicht belegt]`.
