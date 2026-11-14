@@ -112,3 +112,150 @@ Comment panel, next/previous comment shortcuts exist; the comment's own menu: **
 ## Role-based menus
 
 Access is set by permissions. Which menus appear for which role is not documented in the sources read (unverified).
+
+## Menü-Inventar
+
+Machine-readable inventory for `scripts/menue-vergleich` (format: [menue-vergleich](../../../../../../../../docs/menue-vergleich.md), nested list, indentation = depth). Names are Atlassian's menu names; `{de: ...}` is our own translation. Shortcuts: Windows first, then Mac (both in one bracket, comma separated); source S12 unless noted. Shortcuts whose key is `[`, `]` or `,` (sidebar toggle, comments panel, previous comment, inline comments) are left out here because they would break the bracket syntax; they are in [shortcuts.md](shortcuts.md). Re-read 2026-11-14 on the pages S14, S15, S16, S23 to S28 (index.md); items without a source stay out of the list. Atlassian names no `id`, so none is given.
+
+- Top bar {de: Kopfleiste}
+  - Search [Alt+Shift+Z, Ctrl+Opt+Z] {de: Suche}
+  - Create {de: Erstellen}
+    - Page [Win+Alt+C, Ctrl+Opt+C] {de: Seite}
+    - Live doc [Ctrl+Shift+D, Ctrl+Shift+D] {de: Live-Dokument}
+    - Database {de: Datenbank}
+    - Loom video
+    - Whiteboard
+    - Slides {de: Folien}
+    - Create with Rovo
+    - Blog post [Ctrl+Alt+Shift+B, Cmd+Opt+Shift+B] {de: Blogbeitrag}
+  - Chat [Ctrl+Win+., Cmd+.]
+  - Notifications [Ctrl+Alt+O, Cmd+Opt+O] {de: Benachrichtigungen}
+  - Help {de: Hilfe}
+    - Keyboard shortcuts [Shift+?, Shift+?] {de: Tastenkürzel}
+  - Your profile and settings {de: Profil und Einstellungen}
+- Sidebar {de: Seitenleiste}
+  - Expand/Collapse {de: Ein-/Ausklappen}
+  - For you
+  - Recent [Ctrl+Alt+G, Cmd+Opt+G] {de: Zuletzt}
+    - Today
+    - Worked on
+    - Owned by me
+  - Starred [Ctrl+Alt+8, Cmd+Opt+8] {de: Markiert}
+  - Spaces
+  - Apps
+  - More
+  - Teams
+  - Drafts {de: Entwürfe}
+  - Company Hub
+  - Customize sidebar
+  - Home [Ctrl+Alt+H, Cmd+Opt+H] {de: Start}
+- Space sidebar {de: Space-Seitenleiste}
+  - Content area plus button (+) {de: Neue Seite im Space}
+  - Go to space overview [Ctrl+Alt+V, Cmd+Opt+V]
+  - More actions (•••) neben dem Space-Namen
+    - Space settings {de: Space-Einstellungen}
+      - General
+        - Features
+        - Export space {de: Space exportieren}
+      - Content
+        - Trash {de: Papierkorb}
+        - Archived {de: Archiviert}
+        - Hidden {de: Ausgeblendet}
+        - Reorder {de: Neu ordnen}
+      - Content manager
+      - Space access
+      - Attachments {de: Anhänge}
+- Page, view mode, More actions (•••) {de: Seite in der Ansicht}
+  - Star [Ctrl+Alt+F, Ctrl+Opt+F] {de: Markieren}
+  - Watch settings [Ctrl+Alt+W, Cmd+Opt+W] {de: Beobachten}
+  - Preview {de: Vorschau}
+  - Find and replace [Ctrl+F, Cmd+F] {de: Suchen und ersetzen}
+  - View changes {de: Änderungen ansehen}
+  - Revert to previous version {de: Auf vorherige Version zurücksetzen}
+  - Version history {de: Versionsverlauf}
+    - Compare selected versions
+    - Restore this version {de: Diese Version wiederherstellen}
+    - Delete {de: Löschen}
+  - Move {de: Verschieben}
+  - Duplicate {de: Duplizieren}
+  - Convert to live doc
+  - Templates and import
+  - Export
+    - Export to Word
+    - Export to PDF
+  - Archive {de: Archivieren}
+  - Archive and delete
+    - Delete {de: Löschen}
+  - Automations
+  - Apps
+- Page, view mode, toolbar and header
+  - Edit [E, E] {de: Bearbeiten}
+  - Share [Ctrl+Alt+S, Cmd+Opt+S] {de: Teilen}
+  - Show details [Ctrl+Shift+I, Ctrl+Shift+I]
+  - Breadcrumbs
+    - Move {de: Verschieben}
+- Page, editor (draft or edit mode)
+  - Publish… [Ctrl+Enter, Cmd+Enter] {de: Veröffentlichen}
+  - Publish with note [Ctrl+Shift+Enter, Cmd+Shift+Enter]
+  - Update
+    - Adjust update settings
+  - Close draft {de: Entwurf schließen}
+  - Lock icon (page restrictions) {de: Seiteneinschränkungen}
+  - More actions (•••)
+    - Preview
+    - Find and replace [Ctrl+F, Cmd+F]
+    - Move
+    - Templates and import
+    - Convert to live doc
+    - Delete unpublished page {de: Unveröffentlichte Seite löschen}
+    - Delete draft {de: Entwurf löschen}
+    - Revert to previous version
+    - More options
+      - Publish as
+        - Page
+        - Blog
+      - Publish
+  - Toolbar menu (…)
+    - Fixed at the top
+    - In-line
+- Content tree entry (page, folder) {de: Seitenbaum-Eintrag}
+  - Plus button (+) on hover {de: Unterseite anlegen}
+  - More actions (•••)
+    - Delete (draft only) {de: Löschen}
+    - Archive {de: Archivieren}
+  - Drag to reorder {de: Ziehen zum Umordnen}
+- Floating action bar
+  - Comments panel
+  - Details [Ctrl+Shift+I, Ctrl+Shift+I]
+  - Emoji reaction
+  - Create a Loom video
+  - Atlassian Intelligence
+- Trash entry (Space settings > Content > Trash) {de: Papierkorb-Eintrag}
+  - Restore {de: Wiederherstellen}
+  - Purge {de: Endgültig löschen}
+  - Purge All {de: Alles endgültig löschen}
+- Archived item {de: Archivierter Inhalt}
+  - Restore
+  - Add note / Edit note
+  - View
+  - Delete
+  - Export to PDF
+  - Export to Word
+  - Watch / Unwatch
+  - Star / Unstar
+  - Edit restrictions
+  - View history
+- Attachment {de: Anhang}
+  - Download
+  - Download All
+  - Properties {de: Eigenschaften}
+  - Delete {de: Löschen}
+  - Version list
+    - Delete {de: Löschen}
+- Comment {de: Kommentar}
+  - Comment [Ctrl+Alt+C, Cmd+Opt+C]
+  - Next comment [Ctrl+., Ctrl+.]
+  - Previous comment
+  - Next unread comment [Ctrl+Shift+U, Cmd+Shift+U]
+  - Toggle inline comments
+  - Select comment [Ctrl+Alt+E, Cmd+Opt+E]

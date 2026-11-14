@@ -93,7 +93,10 @@ Folder for this snapshot: `latest/`.
 | S29 | Upload a file (search-result summary only, 2026-11-13; page not fetched) | https://support.atlassian.com/confluence-cloud/docs/upload-a-file/ |
 | S30 | Insert and manage links (search-result summary only, 2026-11-13; page not fetched) | https://support.atlassian.com/confluence-cloud/docs/insert-and-manage-links-on-your-pages/ |
 | S31 | Format a page with a template (search-result summary only, 2026-11-13; page not fetched) | https://support.atlassian.com/confluence-cloud/docs/create-a-page-from-a-template/ |
+| S32 | Share a page or blog post (fetched 2026-11-14) | https://support.atlassian.com/confluence-cloud/docs/share-a-page-or-blog-post/ |
+| S33 | Add or remove page restrictions (fetched 2026-11-14) | https://support.atlassian.com/confluence-cloud/docs/add-or-remove-page-restrictions/ |
+| S34 | Search for pages and posts (fetched 2026-11-14) | https://support.atlassian.com/confluence-cloud/docs/search-for-pages-and-posts/ |
 
 "search summary" in the workflow pages means a search-engine summary (2026-11-13) of the Version history and Search documentation; those pages were not fetched, so the points taken from them (compare, restore comment, archived content in search) are of lower certainty. Sources S23 and S25 to S28 were fetched; the version-history page URL itself was not identified.
 
-Pages that returned 404 or could not be read: webhooks landing page `https://developer.atlassian.com/cloud/confluence/webhooks/` (404 twice); OpenAPI request-body schemas (not reached in the JSON; see `api.md`).
+Pages that returned 404 on 2026-11-14 (the URL was guessed wrong): `.../docs/view-and-compare-page-history/`, `.../docs/search-for-content/`, `.../docs/make-a-page-restricted/`; their content was found in S23, S33 and S34 instead. Pages that returned 404 or could not be read: webhooks landing page `https://developer.atlassian.com/cloud/confluence/webhooks/` (404 twice); OpenAPI request-body schemas (not reached in the JSON; see `api.md`).

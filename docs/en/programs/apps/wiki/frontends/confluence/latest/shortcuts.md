@@ -118,6 +118,16 @@ Tools: S sticky, T text box, E ellipse, L line, H hand, V select; Ctrl/Cmd+K lin
 
 No shortcut is documented for: move, rename, delete, archive, restore, version history, import, export, duplicate, tree navigation with arrow keys, closing a draft. Whether the content tree is operable by keyboard: **[nicht belegt]**. Shortcut remapping: **[nicht belegt]**. These are the workflows of [workflows.md](workflows.md) W4 to W9, W11, W12.
 
+## Re-check 2026-11-14
+
+Both help pages (S12, S13) were read again; every row of the tables above matches the page. S13 only repeats a few example rows and the category list, no extra shortcut. Further points:
+
+- Select text for the inline toolbar: Ctrl+Shift+Left/Right (Windows), Cmd+Shift+Left/Right (Mac) [S15].
+- On the S12 page the chord Ctrl+Alt+E (Mac Cmd+Opt+E) is listed twice, for "Select comment" and for "Align centre". Kept as published; which one wins in the editor: **[nicht belegt]**.
+- Autocomplete triggers and Markdown autoformat have no key column on the page; they are typed triggers (see the table above), not chords.
+- Whiteboard and live-doc pages that S12 links to were not read; shortcuts only on those pages: **[nicht belegt]**.
+- The same shortcuts are bound to menu entries in the `## Menü-Inventar` of [menus.md](menus.md) (those with the keys `[`, `]` and `,` are only listed here).
+
 ## Not verified
 
 - Ctrl+Shift+P command palette, Ctrl+, as settings, Ctrl+S save, Ctrl+P print, Ctrl+N, Ctrl+O, Ctrl+W, Ctrl+Shift+F global search, Ctrl+Shift+O/G/H, Ctrl+Shift+V video, Ctrl+Shift+B box: none of these appears in the official table read. The earlier draft listed them. Removed.

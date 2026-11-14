@@ -102,3 +102,83 @@ Every dialog found in the help pages read: purpose, fields, buttons, default but
 ## D16 Page restrictions
 
 - **[nicht belegt]**. The lock icon next to **Publish…** changes access for drafts [S23]; the dialog fields are not described in the pages read.
+
+## Additions 2026-11-14 (S32 to S34, S23, S25, S28)
+
+These were read on 2026-11-14. Where one of the entries D1 to D16 above says **[nicht belegt]**, the pages read still do not state it unless named here.
+
+## D17 Share dialog (replaces D15) [S32][S33]
+
+- **Opened by:** **Share** button at the top of the content, Ctrl+Alt+S / Cmd+Opt+S [S12].
+- **Fields:** search field for people and groups (suggestions), permission choice view or edit where it applies, a notify checkbox, optional message [S32]. For restrictions the same dialog has the sections **General access** and **Specific access** (search, **Can edit** / **Can view**, per entry a menu with **Remove**) and a tab for access requests [S33].
+- **Buttons:** **Share** (send), link icon (copy link), **Save** (after changing General access), **Remove all**, **Remove**, **Approve**, **Deny** [S32][S33].
+- **Errors:** teams are not compatible with Share; invitations to outsiders may go to an administrator for approval, a refused request is mailed to the sender only [S32].
+- **Undo:** removing a person with **Remove** [S33]; withdrawing a share otherwise **[nicht belegt]**. Cancel behaviour **[nicht belegt]**.
+
+## D18 Share to Slack [S32]
+
+- **Opened by:** the Slack option of the Share dialog. **Buttons:** **Sign in**, **Add new workspace**, **Share**. **Fields:** workspace, channel or person, optional message. Cancel and errors **[nicht belegt]**.
+
+## D19 Access requests (restrictions) [S33]
+
+- **Buttons:** **Approve** (adds the person to Specific access and tells them), **Deny** (removes the request for everybody, the requester is not told). Closing keeps the request open [S33].
+
+## D20 Quick search drawer and Advanced search [S34]
+
+- **Opened by:** `/` or the search field in the top bar. **Content:** names of pages, blog posts, whiteboards, slides, people, files and spaces, newest first; at the end **Advanced**. Enter or **Advanced** opens the results page.
+- **Filters on the results page:** Spaces (with archived spaces), Contributors, Type (pages, live docs, blog posts, whiteboards, slides, attachments, comments), Last modified, Labels, Pages under, **Search titles only**. Several contributors or labels are an OR [S34].
+- **Errors:** the text shown for "no results" is **[nicht belegt]**.
+
+## D21 Recent drawer [S34]
+
+- Tabs **Visited**, **Worked on**, **Drafts**, **Starred**; a field filters by characters in the title (no full text) [S34]. The home page "Recent" part has the tabs **All**, **Worked on**, **Owned by me**.
+
+## D22 Show details panel (before a delete) [S25]
+
+- Shows incoming links, labels, outgoing links and content information. Not a confirmation: closing it changes nothing [S25].
+
+## D23 Archive note dialog [S28]
+
+- Fields: optional note. Buttons: **Archive** (first time), **Add** / **Update** (later, via the banner or the Archived list). Only the person who archived may change the note [S28].
+
+## D24 Revert to previous version [S23]
+
+- Shows the unpublished changes first and then discards them for good; the help says they cannot be recovered. A cancel control: **[nicht belegt]**.
+
+## Dialog-Inventar
+
+Machine-readable list for `scripts/menue-vergleich` (one dialog per line; indentation = parts of the dialog). Names are the names used in the help; where the help gives no name, the name of the button that opens it is used and the line says so in the section above.
+
+- Create panel {de: Erstellen-Fenster}
+- Template browser {de: Vorlagen-Fenster}
+- Publish dialog {de: Veröffentlichen-Dialog}
+  - Schedule publish
+- Adjust update settings {de: Aktualisierungs-Einstellungen}
+- Move dialog {de: Verschieben-Dialog}
+  - Browse
+  - Search
+- Duplicate dialog {de: Duplizieren-Dialog}
+- Delete confirmation {de: Löschen-Bestätigung}
+- Show details {de: Details anzeigen}
+- Restore from trash {de: Aus dem Papierkorb wiederherstellen}
+- Purge {de: Endgültig löschen}
+- Purge All
+- Import dialog {de: Import-Dialog}
+- Archive dialog {de: Archivieren-Dialog}
+- Archive note {de: Archiv-Notiz}
+- Version history {de: Versionsverlauf}
+  - Restore this version
+  - Compare selected versions
+- Revert to previous version
+- Keyboard shortcuts dialog {de: Tastenkürzel-Dialog}
+- Space export dialog {de: Space-Export-Dialog}
+- Share dialog {de: Teilen-Dialog}
+  - General access
+  - Specific access
+  - Access requests
+- Share to Slack
+- Quick search {de: Schnellsuche}
+- Advanced search {de: Erweiterte Suche}
+- Recent drawer {de: Zuletzt-Fenster}
+- Attachment properties {de: Anhang-Eigenschaften}
+- Page restrictions {de: Seiteneinschränkungen}

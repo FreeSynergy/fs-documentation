@@ -168,3 +168,34 @@ Paths and dialogs (files come from a system file chooser):
 1. Space level: space admins set permissions under **Space settings → Space access** (includes an Archive permission) [S28].
 2. Page level: the **lock icon** in the editor (drafts) and restrictions on published pages; restrictions can block deletion and survive archiving [S23][S25][S28]. The restriction dialog itself is **[nicht belegt]**.
 3. **Share** next to the more-actions menu shares an item (shortcut Ctrl+Alt+S) [S12].
+
+## Update 2026-11-14 (S32 to S34, S23, S28)
+
+### W10a Search in detail [S34]
+
+1. User presses `/` or clicks the search field → program opens the drawer with names of pages, blog posts, whiteboards, slides, people, files and spaces, newest first.
+2. User picks a hit (a person opens a profile); with no hit, Enter or **Advanced** opens the results page.
+3. User sets filters (Spaces, Contributors, Type, Last modified, Labels, Pages under, titles only) → program lists hits with highlight, date and breadcrumbs. Contributors and labels combine as OR.
+4. **Failure:** the "no results" text and indexing delays are **[nicht belegt]**. **Undo:** not applicable.
+
+### W15a Share and restrict in detail [S32][S33]
+
+1. **Share:** user clicks **Share** → program shows the dialog. User searches and picks people or groups, chooses view or edit where offered, ticks notify, adds a message, clicks **Share** → program sends the invitation. The link icon copies the link; the link alone gives no access [S32].
+2. **Failure (Share):** teams cannot be shared with; an invitation to an outsider may wait for administrator approval and a refusal is mailed to the sender only; outsiders get access to the whole site and billing starts [S32].
+3. **Restrict, edit only:** the same dialog; user sets **Anyone in this space** from **Can edit** to **Can view** and adds editors under **Specific access** [S33].
+4. **Restrict, fully:** user sets General access to **Restricted** and adds people or groups with **Can edit** / **Can view**; **Save** → program applies. Viewing restrictions are inherited by children, editing restrictions are not; a child shows "Restricted by a parent" [S33].
+5. **Remove:** the per-person menu → **Remove**, or **Remove all** → program drops the entry [S33]. Free plans have no restrictions [S33].
+6. **Access requests:** a person without access asks; owner, creator, last editor and space admin get a flag and **Approve** or **Deny**; Deny is silent to the requester [S33].
+7. **Failure:** content missing in tree and macros for lack of access; "You don't have permission" (details **[nicht belegt]**) [S33]. **Undo:** set the earlier state again; a dedicated undo **[nicht belegt]**.
+
+### W9a Revert unpublished changes [S23]
+
+1. User opens **More actions → Revert to previous version** → program shows the unpublished changes, then, after confirming, deletes them and shows the last published version. The help says they cannot be recovered. A version can also be deleted from the history; that renumbers the versions and is not recoverable either.
+
+### W8a Archive permissions [S28]
+
+1. Own items: any user who can see them; space-wide: the space-admin-granted Archive permission (**Space settings → Space access → Groups or Users → Edit**, tick Archive, **Save all**). **Restore** (banner or Archived list) needs the same permission and puts the item back in its tree [S28].
+
+### W5a Trash restore places the page at the top [S25]
+
+1. After **Restore** (space admin, **Space settings → Content → Trash**) the page loses inherited permissions and sits at the top level of the space, not at the old place; **Space settings → Content → Reorder** finds it. A name clash must be fixed by renaming first [S25].
