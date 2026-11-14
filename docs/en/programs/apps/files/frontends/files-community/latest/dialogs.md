@@ -18,3 +18,6 @@
 | Tag editor | Create a tag | Name, colour | | | | ✅ |
 | Extract / compress | Archive operations | | | | | `[nicht belegt]` |
 | Open with | | | | | | `[nicht belegt]` |
+| Settings | Configure the app | Pages General, Appearance, Files and folders, Actions, Advanced (the Appearance page was not opened) | Actions page: Edit, Delete, Add command, Restore defaults, Save, Yes (confirm reset) | | | ✅ (files.community/docs/customize-settings, 2026-11-14) |
+| Delete confirmation setting | When to ask | Always / only for permanent delete / never | | | | ✅ setting; dialog text and buttons `[nicht belegt]` |
+| Command Palette | Run any action | Search list of actions with their keys | | | | ✅ (files.community/docs/features/command-palette) |

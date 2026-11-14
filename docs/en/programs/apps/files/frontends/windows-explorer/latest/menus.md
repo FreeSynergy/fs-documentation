@@ -29,6 +29,8 @@ Command bar buttons: Cut, Copy, Paste, Rename, Share, Delete, View ✅ (partly n
 
 ## Menü-Inventar
 
+Note: Cut, Copy, Paste are file shortcuts only in the general Windows 10 table of the page (Windows 11 lists them for text); New tab [Ctrl+T] is Windows 11 only.
+
 Machine-readable inventory (format of docs/menue-vergleich.md). Entries and shortcuts only where a Microsoft support page that was actually opened (2026-11-14) names them: file-explorer-in-windows, keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec, zip-and-unzip-files, backup-and-restore-with-file-history, use-a-screen-reader-to-explore-and-navigate-file-explorer-in-windows, set-file-explorer-to-open-to-this-pc (all on support.microsoft.com). Everything else stays `[nicht belegt]` (empty-space menu, drive menu beyond "previous versions", Recycle Bin menu, navigation pane menu, tab menu, copy/replace dialog texts).
 
 - Command bar
