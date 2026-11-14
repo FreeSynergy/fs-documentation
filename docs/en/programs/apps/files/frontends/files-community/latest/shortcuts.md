@@ -55,4 +55,4 @@ Source: https://files.community/docs/features/command-palette (table "Supported 
 | Panes | Ctrl+Alt+W | Close the active pane |
 | Tools | Ctrl+Shift+. | Open the folder of the log file |
 
-Conflict between pages: Ctrl+Shift+W is "close all tabs" in the Command Palette table and "close current window" on the Tabs page `[nicht belegt]` which is right. Actions without a default key (e.g. dot files, sort, group, dual pane toggle, pin, archive create, recycle bin) have `[nicht belegt]` as a key on the page; the user can bind keys (Settings > Actions).
+Conflict between pages: Ctrl+Shift+W is "close all tabs" in the Command Palette table and "close current window" on the Tabs page (which is right is `[nicht belegt]`; check in the app). Actions without a default key (e.g. dot files, sort, group, dual pane toggle, pin, archive create, recycle bin) have `[nicht belegt]` as a key on the page; the user can bind keys (Settings > Actions).

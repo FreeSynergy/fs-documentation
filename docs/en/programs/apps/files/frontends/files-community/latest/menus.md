@@ -61,6 +61,8 @@ Machine-readable inventory (format of docs/menue-vergleich.md). Entries from the
   - Smart extract [Ctrl+Shift+E]
   - Open properties [Alt+Enter]
   - Open log file [Ctrl+.]
+  - Open log file location [Ctrl+Shift+.]
+  - Open File Explorer properties [Alt+Shift+Enter]
   - Open settings [Ctrl+,]
   - Open settings file [Ctrl+Shift+,]
   - Open terminal [Ctrl+`]
@@ -83,6 +85,7 @@ Machine-readable inventory (format of docs/menue-vergleich.md). Entries from the
   - Next tab [Ctrl+Tab]
   - Previous tab [Ctrl+Shift+Tab]
   - Close tab [Ctrl+W, Ctrl+F4]
+  - Close all tabs [Ctrl+Shift+W] (conflict: the Tabs page says "close current window")
   - Split horizontally [Alt+Shift+H]
   - Split vertically [Alt+Shift+V]
   - Close active pane [Ctrl+Alt+W]
